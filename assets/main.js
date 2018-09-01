@@ -29,9 +29,17 @@ if ('fetch' in window) {
     .catch(logError);
 }
 
+function getImage(post) {
+  const img = post.virtuals.previewImage;
+  if (!img || !img.imageId) {
+    return '/assets/illustrations/no-image.svg';
+  }
+  return 'https://cdn-images-1.medium.com/max/1000/' + img.imageId;
+}
+
 function toTemplateObject(post) {
   return {
-    IMAGE: './assets/illustrations/no-image.svg',
+    IMAGE: getImage(post),
     TITLE: post.title,
     URL: `https://medium.com/variant-as/${post.uniqueSlug}`,
     DESCRIPTION: post.previewContent.subtitle
