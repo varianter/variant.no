@@ -33,8 +33,8 @@ function toTemplateObject(post) {
   return {
     IMAGE: './assets/illustrations/no-image.svg',
     TITLE: post.title,
-    URL: `https://medium.com/@mikaelbrevik/${post.uniqueSlug}`,
-    DESCRIPTION: post.content.subtitle
+    URL: `https://medium.com/variant-as/${post.uniqueSlug}`,
+    DESCRIPTION: previewContent.subtitle
   };
 }
 
