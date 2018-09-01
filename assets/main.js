@@ -24,7 +24,7 @@ if ('fetch' in window) {
       if (!data.success) {
         return logError(data.error);
       }
-      showPosts(data.payload.references.Post);
+      showPosts(data.payload.posts);
     })
     .catch(logError);
 }
