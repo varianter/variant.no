@@ -34,7 +34,7 @@ function toTemplateObject(post) {
     IMAGE: './assets/illustrations/no-image.svg',
     TITLE: post.title,
     URL: `https://medium.com/variant-as/${post.uniqueSlug}`,
-    DESCRIPTION: previewContent.subtitle
+    DESCRIPTION: post.previewContent.subtitle
   };
 }
 
