@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikaelbr/variant-homepage.git"
+    "url": "git+https://github.com/varianter/variant.no.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikaelbr/variant-homepage/issues"
+    "url": "https://github.com/varianter/variant.no/issues"
   },
-  "homepage": "https://github.com/mikaelbr/variant-homepage#readme"
+  "homepage": "https://github.com/varianter/variant.no#readme"
 }
