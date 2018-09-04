@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url><loc>https://www.variant.no/</loc><lastmod>2018-09-04T08:05:05+00:00</lastmod><changefreq>daily</changefreq><priority>1.00</priority></url>
+<url><loc>https://handbook.variant.no</loc><lastmod>2018-09-04T14:01:33+00:00</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://handbook.variant.no/processes.html</loc><lastmod>2018-09-04T14:01:33+00:00</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://jobs.variant.no</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://jobs.variant.no/o/designer</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://jobs.variant.no/o/utvikler</loc><changefreq>daily</changefreq><priority>0.85</priority></url>
+<url><loc>https://jobs.variant.no/o/designer/c/new</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://jobs.variant.no/o/utvikler/c/new</loc><changefreq>daily</changefreq><priority>0.56</priority></url>
+<url><loc>https://styleguide.variant.no</loc><lastmod>2018-09-04T14:04:40+00:00</lastmod><changefreq>daily</changefreq><priority>0.69</priority></url>
+</urlset>
