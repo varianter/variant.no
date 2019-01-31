@@ -17,8 +17,8 @@ for (let row of content) {
 const generatedCode = `
 let getPay = (function () {
   const data = ${JSON.stringify(data)};
-  return function getPay (year, degree) { 
-    let calcYear = year + degree - 5;
+  return function getPay (year, degree) {
+    let calcYear = year + 5 - degree;
     return data[calcYear];
   }
 })();
