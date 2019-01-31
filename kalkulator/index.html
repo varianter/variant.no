@@ -149,50 +149,45 @@ h1,h2,h3,h4,h5,h6{
 </head>
 
 <body>
+  <form action="" class="js-form calc">
+    <div class="calc-group">
+      <h1>Variant Lønnskalkulator</h1>
+      <p>Vi tilbyr lik lønn basert på foo bar dsandsa dsa dsa dsa dsa. Merk justeringer og andre vilkår does apply.
+      </p>
+      <p>
+        Mer om hva vi menar om lønn finner du på <a href="https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d">bloggen
+          vår</a>
+      </p>
+    </div>
 
-  
-    <form action="" class="js-form calc">
-        <div class="calc-group">
-          <h1>Variant Lønnskalkulator</h1>
-          <p>Vi tilbyr lik lønn basert på foo bar dsandsa dsa dsa dsa dsa. Merk justeringer og andre vilkår does apply. 
-          </p><p>
-            Mer om hva vi menar om lønn finner du på <a href="https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d">bloggen vår</a></p>
-          </p>
-        </div>
-      
-        <div class="calc-group ">
-          <h4>Utdanning</h4>
-          <div class="calc-group-radios">
-            <label for="bachelor">
-              <input type="radio" id="bachelor" name="education" value="3"
-               checked>
-              <span class="input-label">Bachelor</span>
+    <div class="calc-group ">
+      <h4>Utdanning</h4>
+      <div class="calc-group-radios">
+        <label for="bachelor">
+          <input type="radio" id="bachelor" name="education" value="3" checked>
+          <span class="input-label">Bachelor</span>
         </label>
-      
-            <label for="master">  
-              <input type="radio" id="master" name="education" value="5">
-              <span class="input-label">Master</span>
+
+        <label for="master">
+          <input type="radio" id="master" name="education" value="5">
+          <span class="input-label">Master</span>
         </label>
-          </div>
-        </div>
-      
-        <div class="calc-group">
-          <label for="experience">
-            <h4>Eksamensår</h4>
-            <input class="input-number" name="experience" id="experience" type="number" value="2017" min="2000" max="2019">
-          </label>
-        </div>
-        <div class="calc-group ">
-          <div class="text-right">
-            Beregnet årslønn
-            <div class="js-result calc-result">0</div>
-          </div>
-        </div>
-      </form>
-  
+      </div>
+    </div>
 
-  
-
+    <div class="calc-group">
+      <label for="experience">
+        <h4>Eksamensår</h4>
+        <input class="input-number" name="experience" id="experience" type="number" value="2017" min="2000" max="2019">
+      </label>
+    </div>
+    <div class="calc-group ">
+      <div class="text-right">
+        Beregnet årslønn
+        <div class="js-result calc-result">0</div>
+      </div>
+    </div>
+  </form>
   <script>
 /*
  2017 Julian Garnier
