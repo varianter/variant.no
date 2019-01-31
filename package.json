@@ -14,7 +14,8 @@
   "scripts": {
     "css": "postcss ./assets/style.css -o dist/style.css",
     "watch": "postcss --watch ./assets/style.css -o dist/style.css",
-    "precommit": "npm run css"
+    "precommit": "npm run css",
+    "generatePay": "node tools/convert-pay.js"
   },
   "repository": {
     "type": "git",
