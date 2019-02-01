@@ -9,13 +9,14 @@
     "postcss-clean": "^1.1.0",
     "postcss-cli": "^6.0.0",
     "postcss-custom-properties": "^7.0.0",
-    "husky": "^0.14.3"
+    "recursive-copy": "^2.0.9"
   },
   "scripts": {
-    "css": "postcss ./assets/style.css -o dist/style.css",
-    "watch": "postcss --watch ./assets/style.css -o dist/style.css",
-    "precommit": "npm run css",
-    "generatePay": "node tools/convert-pay.js"
+    "css": "postcss ./assets/style.css -o build.css",
+    "watch": "postcss --watch ./assets/style.css -o build.css",
+    "generatePay": "node tools/convert-pay.js",
+    "build": "npm run css && node ./tools/build.js",
+    "now-build": "npm run build"
   },
   "repository": {
     "type": "git",
