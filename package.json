@@ -12,8 +12,8 @@
     "recursive-copy": "^2.0.9"
   },
   "scripts": {
-    "css": "postcss ./assets/style.css -o build.css",
-    "watch": "postcss --watch ./assets/style.css -o build.css",
+    "css": "postcss ./assets/style.css -o ./assets/build.css",
+    "watch": "postcss --watch ./assets/style.css -o ./assets/build.css",
     "generatePay": "node tools/convert-pay.js",
     "build": "npm run css && node ./tools/build.js",
     "now-build": "npm run build"
