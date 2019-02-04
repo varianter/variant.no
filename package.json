@@ -1,5 +1,5 @@
 {
-  "name": "variant-homepage",
+  "name": "@variant/variant-homepage",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -22,8 +22,11 @@
     "type": "git",
     "url": "git+https://github.com/varianter/variant.no.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "variant",
+    "variant.no"
+  ],
+  "author": "Variant.no",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/varianter/variant.no/issues"
