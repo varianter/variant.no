@@ -1,421 +1,475 @@
 <!DOCTYPE html>
 <html lang="no" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Variant</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Variant</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500%7CIBM+Plex+Serif:400,500"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500%7CIBM+Plex+Serif:400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet">
+    <meta
+      name="Description"
+      content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+    />
 
-  <meta name="Description" content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@variant_as" />
+    <meta property="og:title" content="Variant" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.variant.no/" />
+    <meta
+      property="og:description"
+      content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+    />
+    <meta property="og:image" content="https://www.variant.no/assets/og-header.jpg" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@variant_as">
-  <meta property="og:title" content="Variant">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.variant.no/">
-  <meta property="og:description" content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving.">
-  <meta property="og:image" content="https://www.variant.no/assets/og-header.jpg">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/build.css" />
+  </head>
 
-  <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./dist/style.css">
-</head>
+  <body>
+    <header class="hero">
+      <img
+        class="hero__illustration"
+        src="./assets/header-pattern.svg"
+        alt="Variant illustration"
+      />
 
-<body>
-
-  <header class="hero">
-    <img class="hero__illustration" src="./assets/header-pattern.svg" alt="Variant illustration">
-
-    <div class="hero__inner">
-      <h1 class="hero__logo">
-        <a href="/" title="Variant">variant</a>
-      </h1>
-      <nav class="hero__menu">
-        <ul class="hero__menuItems">
-          <li><a class="hero__menuItem hero__menuItem--what" href="#what">Hva</a></li>
-          <li><a class="hero__menuItem hero__menuItem--career" href="#career">Bli en variant</a></li>
-          <li><a class="hero__menuItem hero__menuItem--whatWeDo" href="#whatWeDo">Hva bistår vi med?</a></li>
-          <li><a class="hero__menuItem hero__menuItem--blog" href="#blog">Våre ytringer</a></li>
-          <li><a class="hero__menuItem hero__menuItem--footer" href="#footer">Ta kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <section id="what" class="textContainer textContainer--navable textContainer--imgRight textContainer--padded textContainer--top">
-      <div class="textContainer__text">
-        <h2>Raust, åpent og modig</h2>
-        <p>
-          IT handler ikke om designskisser, linjer av kode eller infrastruktur, men om samarbeid og forståelse. IT bør
-          være åpenhet,
-          ærlighet og endringsvilje.
-        </p>
-
-        <p>
-          Der er vi! En ny variant av et konsulentselskap som er raust, åpent og modig.
-        </p>
+      <div class="hero__inner">
+        <h1 class="hero__logo"><a href="/" title="Variant">variant</a></h1>
+        <nav class="hero__menu">
+          <ul class="hero__menuItems">
+            <li><a class="hero__menuItem hero__menuItem--what" href="#what">Hva</a></li>
+            <li>
+              <a class="hero__menuItem hero__menuItem--career" href="#career">Bli en variant</a>
+            </li>
+            <li>
+              <a class="hero__menuItem hero__menuItem--whatWeDo" href="#whatWeDo"
+                >Hva bistår vi med?</a
+              >
+            </li>
+            <li><a class="hero__menuItem hero__menuItem--blog" href="#blog">Våre ytringer</a></li>
+            <li><a class="hero__menuItem hero__menuItem--footer" href="#footer">Ta kontakt</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <figure class="textContainer__img textContainer__img--top">
-        <img src="./assets/photos/tent-min.jpg" alt="CEO på overnattingstur på fjellet i telt">
-      </figure>
-    </section>
-
-    <section class="career">
-      <header class="career__header">
-        <span class="career__header__illustration"></span>
-        <h2 id="career" class="career__title">Bli en variant</h2>
-      </header>
-
-      <div class="textContainer textContainer--imgLeft">
-        <figure class="textContainer__img">
-          <picture>
-            <source srcset="./assets/photos/marius-landscape.jpg" media="(max-width: 750px)">
-            <img src="./assets/photos/marius-portrait.jpg" alt="Marius i møte på Digs">
-          </picture>
-        </figure>
-
+    <main class="main">
+      <section
+        id="what"
+        class="textContainer textContainer--navable textContainer--imgRight textContainer--padded textContainer--top"
+      >
         <div class="textContainer__text">
+          <h2>Raust, åpent og modig</h2>
           <p>
-            For å kunne lage gode løsninger trenger vi forskjellige mennesker med forskjellig perspektiv. Vi trenger
-            flinke folk med
-            engasjerte stemmer. Det betyr deg.
+            IT handler ikke om designskisser, linjer av kode eller infrastruktur, men om samarbeid
+            og forståelse. IT bør være åpenhet, ærlighet og endringsvilje.
           </p>
 
-          <p>
-            Vi vil skape en arbeidsplass som jobber for de ansatte. Vi ønsker å samle mennesker som bryr seg og sammen
-            skape løsninger
-            som tjener samfunnet. Vi trenger mennesker som engasjerer seg for både design og utvikling.
-          </p>
-
-          <p>
-            For oss er det ikke viktig om du er en Java- eller F#-, JavaScript- eller Lisp-person. Sketch- eller Framer
-            X-person. Vi
-            ønsker ærlige, motiverte, hyggelige og delevillige personer. Personer som ønsker å påvirke hverdagen.
-          </p>
-        </div>
-      </div>
-
-      <div class="textContainer textContainer--imgRight">
-        <div class="textContainer__text">
-          <p>
-            Hos oss får du åpne, forutsigbare og gode betingelser. Likt for alle.
-          </p>
-          <p>
-            Vi tror på transparens og likeverd. Her spør ingen om noe kan publiseres, vi spør om vi virkelig må holde
-            det lukket. Derfor
-            har vi <a href="https://handbook.variant.no" title="Variant Håndbok" rel="external">åpne vilkår,
-              offentlig lønnsoversikt</a>,
-            <a href="https://handbook.variant.no/processes.html" title="Variant Håndbok: Interne prosedyrer" rel="external">tilgjengelige
-              rutiner
-            </a> og <a href="https://github.com/varianter" rel="external nofollow" title="Variant på Github">åpen
-              kildekode</a>.
-          </p>
-          <p>
-            Les mer om hva vi kan tilby <a href="https://handbook.variant.no" title="Variant Håndbok" rel="external">i
-              vår
-              publiserte håndbok</a>. Har du spørsmål? <a href="mailto:post@variant.no" rel="external" title="Send mail til Variant">Send
-              privat
-            </a> eller <a href="https://twitter.com/variant_as" title="Send oss en tweet" rel="external nofollow">still
-              spørsmål
-              via Twitter</a>.
-          </p>
-        </div>
-        <figure class="textContainer__img">
-          <img src="./assets/illustrations/book.svg" alt="Book illustration">
-        </figure>
-      </div>
-
-      <div class=career__joinUs>
-        <a href="https://jobs.variant.no/" class=career__joinUsLink>Bli en variant!</a>
-      </div>
-    </section>
-
-    <section id="whatWeDo" class="whatWeDo">
-      <header class="whatWeDo__header">
-        <h2 class="whatWeDo__headerTitle">Hva bistår vi med?</h2>
-      </header>
-
-      <div class="textContainer textContainer--imgLeft textContainer--salesDesign">
-        <figure class="textContainer__img">
-          <img src="./assets/illustrations/sales-design.svg" alt="Marius i møte på Digs">
-        </figure>
-
-        <div class="textContainer__text">
-          <h3>Design</h3>
-          <p>
-            Et begrep som betyr mye og som kan utgjøre like mye for et produkt eller prosjekt. Om det er
-            brukeropplevelse-, grafisk-
-            eller tjeneste-design, vil vi kunne bidra.
-          </p>
-        </div>
-      </div>
-
-      <div class="textContainer textContainer--imgRight textContainer--salesDev">
-
-        <div class="textContainer__text">
-          <h3>Utvikling</h3>
-          <p>
-            Enten du trenger en eller flere utviklere kan vi hjelpe med engasjerte og kunnskapsrike mennesker. Vi
-            leverer assistanse
-            til skysetting, utvikling av nye systemer og produkter og ekspertise på tradisjonell systemutvikling. Ta
-            kontakt
-            for å høre mer om hvordan vi kan hjelpe.
-          </p>
+          <p>Der er vi! En ny variant av et konsulentselskap som er raust, åpent og modig.</p>
         </div>
 
-        <figure class="textContainer__img">
-          <img src="./assets/illustrations/sales-dev.svg" alt="Marius i møte på Digs">
+        <figure class="textContainer__img textContainer__img--top">
+          <img src="./assets/photos/tent-min.jpg" alt="CEO på overnattingstur på fjellet i telt" />
         </figure>
-      </div>
+      </section>
 
-      <div class="textContainer textContainer--imgLeft textContainer--salessales">
-        <figure class="textContainer__img">
-          <img src="./assets/illustrations/sales-sales.svg" alt="Marius i møte på Digs">
-        </figure>
+      <section class="career">
+        <header class="career__header">
+          <span class="career__header__illustration"></span>
+          <h2 id="career" class="career__title">Bli en variant</h2>
+        </header>
 
-        <div class="textContainer__text">
-          <h3>Salg</h3>
-          <p>
-            Salg er vanskelig. Det krever kunnskap om marked, erfaring i tilbudsskriving, evne til å generere tekst,
-            pedagogikk, teknisk
-            kompetanse og ikke minst kapasitet. Hør hvordan vi kan bistå i en slik prosess for dere.
-          </p>
+        <div class="textContainer textContainer--imgLeft">
+          <figure class="textContainer__img">
+            <picture>
+              <source srcset="./assets/photos/marius-landscape.jpg" media="(max-width: 750px)" />
+              <img src="./assets/photos/marius-portrait.jpg" alt="Marius i møte på Digs" />
+            </picture>
+          </figure>
+
+          <div class="textContainer__text">
+            <p>
+              For å kunne lage gode løsninger trenger vi forskjellige mennesker med forskjellig
+              perspektiv. Vi trenger flinke folk med engasjerte stemmer. Det betyr deg.
+            </p>
+
+            <p>
+              Vi vil skape en arbeidsplass som jobber for de ansatte. Vi ønsker å samle mennesker
+              som bryr seg og sammen skape løsninger som tjener samfunnet. Vi trenger mennesker som
+              engasjerer seg for både design og utvikling.
+            </p>
+
+            <p>
+              For oss er det ikke viktig om du er en Java- eller F#-, JavaScript- eller Lisp-person.
+              Sketch- eller Framer X-person. Vi ønsker ærlige, motiverte, hyggelige og delevillige
+              personer. Personer som ønsker å påvirke hverdagen.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="textContainer textContainer--imgRight textContainer--salesTeaching">
-
-        <div class="textContainer__text">
-          <h3>Kursing og rådgivning</h3>
-          <p>
-            Utvikling er et felt i konstant endring, og det kan kreve mye å følge med på det som skjer. Men det trenger
-            ikke være slik.
-            Erfaringer er også noe som kan overføres og deles. Vi bistår med å gjøre grupper, enkeltpersoner og
-            prosjekt
-            mer oppdatert, mer effektive og flinkere. Vi tilbyr både ferdige kursopplegg og presentasjoner samt
-            skreddersydde
-            opplegg for din organisasjon.</p>
+        <div class="textContainer textContainer--imgRight">
+          <div class="textContainer__text">
+            <p>Hos oss får du åpne, forutsigbare og gode betingelser. Likt for alle.</p>
+            <p>
+              Vi tror på transparens og likeverd. Her spør ingen om noe kan publiseres, vi spør om
+              vi virkelig må holde det lukket. Derfor har vi
+              <a href="https://handbook.variant.no" title="Variant Håndbok" rel="external"
+                >åpne vilkår, offentlig lønnsoversikt</a
+              >,
+              <a
+                href="https://handbook.variant.no/processes.html"
+                title="Variant Håndbok: Interne prosedyrer"
+                rel="external"
+                >tilgjengelige rutiner
+              </a>
+              og
+              <a
+                href="https://github.com/varianter"
+                rel="external nofollow"
+                title="Variant på Github"
+                >åpen kildekode</a
+              >.
+            </p>
+            <p>
+              Les mer om hva vi kan tilby
+              <a href="https://handbook.variant.no" title="Variant Håndbok" rel="external"
+                >i vår publiserte håndbok</a
+              >. Har du spørsmål?
+              <a href="mailto:post@variant.no" rel="external" title="Send mail til Variant"
+                >Send privat
+              </a>
+              eller
+              <a
+                href="https://twitter.com/variant_as"
+                title="Send oss en tweet"
+                rel="external nofollow"
+                >still spørsmål via Twitter</a
+              >.
+            </p>
+          </div>
+          <figure class="textContainer__img">
+            <img src="./assets/illustrations/book.svg" alt="Book illustration" />
+          </figure>
         </div>
 
-        <figure class="textContainer__img">
-          <img src="./assets/illustrations/sales-teaching.svg" alt="Marius i møte på Digs">
-        </figure>
-      </div>
+        <div class="career__joinUs">
+          <a href="https://jobs.variant.no/" class="career__joinUsLink">Bli en variant!</a>
+        </div>
+      </section>
 
-    </section>
+      <section id="whatWeDo" class="whatWeDo">
+        <header class="whatWeDo__header">
+          <h2 class="whatWeDo__headerTitle">Hva bistår vi med?</h2>
+        </header>
 
-    <section id="blog" class="blog">
-      <span class="blog__illustration">
-        <span class="blog__illustration__inner"></span>
-      </span>
-      <header class="blog__header">
-        <h2>Våre ytringer</h2>
-      </header>
+        <div class="textContainer textContainer--imgLeft textContainer--salesDesign">
+          <figure class="textContainer__img">
+            <img src="./assets/illustrations/sales-design.svg" alt="Marius i møte på Digs" />
+          </figure>
 
-      <div class="blog__posts" id="blogContent">
-        <script type="text/template" id="blogTemplate">
-          <article class="blogPost">
-            <figure class="blogPost__figure" style="background-image: url({{IMAGE}})">
-              <img src="{{IMAGE}}" alt="{{TITLE}}">
+          <div class="textContainer__text">
+            <h3>Design</h3>
+            <p>
+              Et begrep som betyr mye og som kan utgjøre like mye for et produkt eller prosjekt. Om
+              det er brukeropplevelse-, grafisk- eller tjeneste-design, vil vi kunne bidra.
+            </p>
+          </div>
+        </div>
+
+        <div class="textContainer textContainer--imgRight textContainer--salesDev">
+          <div class="textContainer__text">
+            <h3>Utvikling</h3>
+            <p>
+              Enten du trenger en eller flere utviklere kan vi hjelpe med engasjerte og
+              kunnskapsrike mennesker. Vi leverer assistanse til skysetting, utvikling av nye
+              systemer og produkter og ekspertise på tradisjonell systemutvikling. Ta kontakt for å
+              høre mer om hvordan vi kan hjelpe.
+            </p>
+          </div>
+
+          <figure class="textContainer__img">
+            <img src="./assets/illustrations/sales-dev.svg" alt="Marius i møte på Digs" />
+          </figure>
+        </div>
+
+        <div class="textContainer textContainer--imgLeft textContainer--salessales">
+          <figure class="textContainer__img">
+            <img src="./assets/illustrations/sales-sales.svg" alt="Marius i møte på Digs" />
+          </figure>
+
+          <div class="textContainer__text">
+            <h3>Salg</h3>
+            <p>
+              Salg er vanskelig. Det krever kunnskap om marked, erfaring i tilbudsskriving, evne til
+              å generere tekst, pedagogikk, teknisk kompetanse og ikke minst kapasitet. Hør hvordan
+              vi kan bistå i en slik prosess for dere.
+            </p>
+          </div>
+        </div>
+
+        <div class="textContainer textContainer--imgRight textContainer--salesTeaching">
+          <div class="textContainer__text">
+            <h3>Kursing og rådgivning</h3>
+            <p>
+              Utvikling er et felt i konstant endring, og det kan kreve mye å følge med på det som
+              skjer. Men det trenger ikke være slik. Erfaringer er også noe som kan overføres og
+              deles. Vi bistår med å gjøre grupper, enkeltpersoner og prosjekt mer oppdatert, mer
+              effektive og flinkere. Vi tilbyr både ferdige kursopplegg og presentasjoner samt
+              skreddersydde opplegg for din organisasjon.
+            </p>
+          </div>
+
+          <figure class="textContainer__img">
+            <img src="./assets/illustrations/sales-teaching.svg" alt="Marius i møte på Digs" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="blog" class="blog">
+        <span class="blog__illustration"> <span class="blog__illustration__inner"></span> </span>
+        <header class="blog__header"><h2>Våre ytringer</h2></header>
+
+        <div class="blog__posts" id="blogContent">
+          <script type="text/template" id="blogTemplate">
+            <article class="blogPost">
+              <figure class="blogPost__figure" style="background-image: url({{IMAGE}})">
+                <img src="{{IMAGE}}" alt="{{TITLE}}">
+              </figure>
+
+              <div class="blogPost__content">
+                <header class="blogPost__header">
+                  <h3><a href="{{URL}}" title="{{TITLE}}" rel="external nofollow">{{TITLE}}</a></h3>
+                </header>
+                <div class="blogPost__text">
+                  <p>
+                    {{DESCRIPTION}}
+                  </p>
+
+                </div>
+                <div class="blogPost__readMore">
+                  <a href="{{URL}}" tabindex="-1" tabindex="-1" title="{{TITLE}}" rel="external nofollow">Les mer</a>
+                </div>
+              </div>
+            </article>
+          </script>
+
+          <a
+            href="https://medium.com/variant-as"
+            title="Variant på Medium"
+            rel="external"
+            id="blogReadMore"
+            class="blog__noScript"
+          >
+            <p>Sjekk oss ut på</p>
+            <img src="./assets/logos/medium-full.svg" alt="Medium.com" />
+          </a>
+        </div>
+      </section>
+
+      <section class="people">
+        <ul class="people__container">
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source srcset="./assets/photos/people/anders-150.jpg" media="(max-width: 850px)" />
+                <img alt="Anders Hammervold" src="./assets/photos/people/anders-300.jpg" />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Anders Hammervold</h3>
+              </figcaption>
             </figure>
-
-            <div class="blogPost__content">
-              <header class="blogPost__header">
-                <h3><a href="{{URL}}" title="{{TITLE}}" rel="external nofollow">{{TITLE}}</a></h3>
-              </header>
-              <div class="blogPost__text">
-                <p>
-                  {{DESCRIPTION}}
-                </p>
-
-              </div>
-              <div class="blogPost__readMore">
-                <a href="{{URL}}" tabindex="-1" tabindex="-1" title="{{TITLE}}" rel="external nofollow">Les mer</a>
-              </div>
-            </div>
-          </article>
-        </script>
-
-        <a href="https://medium.com/variant-as" title="Variant på Medium" rel="external" id="blogReadMore" class="blog__noScript">
-          <p>Sjekk oss ut på</p>
-          <img src="./assets/logos/medium-full.svg" alt="Medium.com">
-        </a>
-
-      </div>
-    </section>
-
-    <section class="people">
-      <ul class="people__container">
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/anders-150.jpg" media="(max-width: 850px)">
-              <img alt="Anders Hammervold" src="./assets/photos/people/anders-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Anders Hammervold</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/odd-morten-150.jpg" media="(max-width: 850px)">
-              <img alt="Odd Morten Sveås" src="./assets/photos/people/odd-morten-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Odd Morten Sveås</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/tonje-150.jpg" media="(max-width: 850px)">
-              <img alt="Tonje Evanger" src="./assets/photos/people/tonje-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Tonje Evanger</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/marius-150.jpg" media="(max-width: 850px)">
-              <img alt="Marius Krakeli" src="./assets/photos/people/marius-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Marius Krakeli</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/mikael-150.jpg" media="(max-width: 850px)">
-              <img alt="Mikael Brevik" src="./assets/photos/people/mikael-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Mikael Brevik</h3>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="people__figure">
-            <picture>
-              <source srcset="./assets/photos/people/tore-150.jpg" media="(max-width: 850px)">
-              <img alt="Illustrasjon som stand-in for manglende CV-bilde" src="./assets/photos/people/tore-300.jpg">
-            </picture>
-            <figcaption class="people__caption">
-              <h3 class="people__title">Tore Vestues</h3>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-
-    <img class="thumbsUp" src="./assets/illustrations/thumbs-up.svg" alt="Thumbs up! Takk for at du har sjekket ut Variant">
-  </main>
-
-  <footer id="footer" class="footer">
-    <h2 class="footer__header">Variant</h2>
-    <div class="footer__inner">
-      <div class="footer__section">
-        <h3>Utforsk</h3>
-        <ul>
-          <li><a href="https://jobs.variant.no/">Ledige stillinger</a></li>
-          <li><a href="https://handbook.variant.no">Håndbok</a></li>
-          <li><a href="https://medium.com/variant-as">Blogg</a></li>
-          <li><a href="https://github.com/varianter">Open Source</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__section">
-        <h3>Still oss spørsmål</h3>
-        <ul>
-          <li>Ring på <a href="tel:92807375">928 07 375</a></li>
-          <li>Mail på <a href="mailto:post@variant.no">post@variant.no</a></li>
-          <li>Tweet på <a href="https://twitter.com/variant_as">@variant_as</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__section">
-        <h3>Møt oss</h3>
-        <p>Vi holder til på <a href="https://digs.no/">Digs i Trondheim</a>. Kom innom for en kopp kaffe eller bare en
-          hyggelig
-          prat.
-        </p>
-        <address>
-          Variant AS <br> c/o Digs <br>Olav Tryggvasons gate 30 <br> 7011 TRONDHEIM
-        </address>
-      </div>
-
-      <aside class="footer__social">
-        <ul class="footer__social__list">
-          <li class="footer__socialLink">
-            <a href="https://medium.com/variant-as" title="Variant på Medium.com" rel="external">
-              <img src="./assets/logos/medium.svg" alt="Variant på Medium.com">
-            </a>
           </li>
-          <li class="footer__socialLink">
-            <a href="https://twitter.com/variant_as" title="Variant på Twitter" rel="external">
-              <img src="./assets/logos/twitter.svg" alt="Variant på Twitter">
-            </a>
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source
+                  srcset="./assets/photos/people/odd-morten-150.jpg"
+                  media="(max-width: 850px)"
+                />
+                <img alt="Odd Morten Sveås" src="./assets/photos/people/odd-morten-300.jpg" />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Odd Morten Sveås</h3>
+              </figcaption>
+            </figure>
           </li>
-          <li class="footer__socialLink">
-            <a href="https://github.com/varianter" title="Variant på Github" rel="external">
-              <img src="./assets/logos/github.svg" alt="Variant på Github">
-            </a>
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source srcset="./assets/photos/people/tonje-150.jpg" media="(max-width: 850px)" />
+                <img alt="Tonje Evanger" src="./assets/photos/people/tonje-300.jpg" />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Tonje Evanger</h3>
+              </figcaption>
+            </figure>
           </li>
-          <li class="footer__socialLink">
-            <a href="https://instagram.com/variant_as" title="Variant på Instagram" rel="external">
-              <img src="./assets/logos/instagram.svg" alt="Variant på Instagram">
-            </a>
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source srcset="./assets/photos/people/marius-150.jpg" media="(max-width: 850px)" />
+                <img alt="Marius Krakeli" src="./assets/photos/people/marius-300.jpg" />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Marius Krakeli</h3>
+              </figcaption>
+            </figure>
           </li>
-          <li class="footer__socialLink">
-            <a href="https://fb.me/varianter" title="Variant på Facebook" rel="external">
-              <img src="./assets/logos/facebook.svg" alt="Variant på Facebook">
-            </a>
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source srcset="./assets/photos/people/mikael-150.jpg" media="(max-width: 850px)" />
+                <img alt="Mikael Brevik" src="./assets/photos/people/mikael-300.jpg" />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Mikael Brevik</h3>
+              </figcaption>
+            </figure>
           </li>
-          <li class="footer__socialLink">
-            <a href="https://www.linkedin.com/company/variant-as/" title="Variant på LinkedIn" rel="external">
-              <img src="./assets/logos/linkedin.svg" alt="Variant på LinkedIn">
-            </a>
+          <li>
+            <figure class="people__figure">
+              <picture>
+                <source srcset="./assets/photos/people/tore-150.jpg" media="(max-width: 850px)" />
+                <img
+                  alt="Illustrasjon som stand-in for manglende CV-bilde"
+                  src="./assets/photos/people/tore-300.jpg"
+                />
+              </picture>
+              <figcaption class="people__caption">
+                <h3 class="people__title">Tore Vestues</h3>
+              </figcaption>
+            </figure>
           </li>
         </ul>
+      </section>
 
-        <p class="sendUpdateText">Denne siden er åpen på Github. <a href="https://github.com/varianter/variant.no"
-            title="Send oss oppdateringer via Github" rel="external nofollow">Send oss gjerne et spørsmål eller
-            oppdatering om noe er uklart, mangler eller
-            fungerer</a>.
-        </p>
-      </aside>
-    </div>
-  </footer>
+      <img
+        class="thumbsUp"
+        src="./assets/illustrations/thumbs-up.svg"
+        alt="Thumbs up! Takk for at du har sjekket ut Variant"
+      />
+    </main>
 
-  <script src="./assets/pay.js"></script>
-  <script src="./assets/main.js"></script>
+    <footer id="footer" class="footer">
+      <h2 class="footer__header">Variant</h2>
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h3>Utforsk</h3>
+          <ul>
+            <li><a href="https://jobs.variant.no/">Ledige stillinger</a></li>
+            <li><a href="https://handbook.variant.no">Håndbok</a></li>
+            <li><a href="https://medium.com/variant-as">Blogg</a></li>
+            <li><a href="https://github.com/varianter">Open Source</a></li>
+          </ul>
+        </div>
 
-  <!-- High privacy visit stats. No cookies, everything anonymous -->
-  <script type="text/javascript">
-    var _paq = _paq || [];
-    _paq.push(['disableCookies']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "https://variant.innocraft.cloud/";
-      _paq.push(['setTrackerUrl', u + 'piwik.php']);
-      _paq.push(['setSiteId', '1']);
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
-    })();
-  </script>
-</body>
+        <div class="footer__section">
+          <h3>Still oss spørsmål</h3>
+          <ul>
+            <li>Ring på <a href="tel:92807375">928 07 375</a></li>
+            <li>Mail på <a href="mailto:post@variant.no">post@variant.no</a></li>
+            <li>Tweet på <a href="https://twitter.com/variant_as">@variant_as</a></li>
+          </ul>
+        </div>
 
+        <div class="footer__section">
+          <h3>Møt oss</h3>
+          <p>
+            Vi holder til på <a href="https://digs.no/">Digs i Trondheim</a>. Kom innom for en kopp
+            kaffe eller bare en hyggelig prat.
+          </p>
+          <address>
+            Variant AS <br />
+            c/o Digs <br />Olav Tryggvasons gate 30 <br />
+            7011 TRONDHEIM
+          </address>
+        </div>
+
+        <aside class="footer__social">
+          <ul class="footer__social__list">
+            <li class="footer__socialLink">
+              <a href="https://medium.com/variant-as" title="Variant på Medium.com" rel="external">
+                <img src="./assets/logos/medium.svg" alt="Variant på Medium.com" />
+              </a>
+            </li>
+            <li class="footer__socialLink">
+              <a href="https://twitter.com/variant_as" title="Variant på Twitter" rel="external">
+                <img src="./assets/logos/twitter.svg" alt="Variant på Twitter" />
+              </a>
+            </li>
+            <li class="footer__socialLink">
+              <a href="https://github.com/varianter" title="Variant på Github" rel="external">
+                <img src="./assets/logos/github.svg" alt="Variant på Github" />
+              </a>
+            </li>
+            <li class="footer__socialLink">
+              <a
+                href="https://instagram.com/variant_as"
+                title="Variant på Instagram"
+                rel="external"
+              >
+                <img src="./assets/logos/instagram.svg" alt="Variant på Instagram" />
+              </a>
+            </li>
+            <li class="footer__socialLink">
+              <a href="https://fb.me/varianter" title="Variant på Facebook" rel="external">
+                <img src="./assets/logos/facebook.svg" alt="Variant på Facebook" />
+              </a>
+            </li>
+            <li class="footer__socialLink">
+              <a
+                href="https://www.linkedin.com/company/variant-as/"
+                title="Variant på LinkedIn"
+                rel="external"
+              >
+                <img src="./assets/logos/linkedin.svg" alt="Variant på LinkedIn" />
+              </a>
+            </li>
+          </ul>
+
+          <p class="sendUpdateText">
+            Denne siden er åpen på Github.
+            <a
+              href="https://github.com/varianter/variant.no"
+              title="Send oss oppdateringer via Github"
+              rel="external nofollow"
+              >Send oss gjerne et spørsmål eller oppdatering om noe er uklart, mangler eller
+              fungerer</a
+            >.
+          </p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="./assets/pay.js"></script>
+    <script src="./assets/main.js"></script>
+
+    <!-- High privacy visit stats. No cookies, everything anonymous -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["disableCookies"]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function() {
+        var u = "https://variant.innocraft.cloud/";
+        _paq.push(["setTrackerUrl", u + "piwik.php"]);
+        _paq.push(["setSiteId", "1"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "piwik.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+  </body>
 </html>
