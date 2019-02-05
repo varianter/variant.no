@@ -262,7 +262,8 @@ function updateValues(){
 }
 
 loadjs.ready('initCalculator', function() {
-  [].slice.call(document.querySelectorAll('input')).forEach( i => i.addEventListener('input', updateValues))
+  [].slice.call(document.querySelectorAll('input[type=radio]')).forEach( i => i.addEventListener('change', updateValues));
+  document.querySelectorAll('input[name=experience]').addEventListener('input', updateValues);
   updateValues();
 });
 
