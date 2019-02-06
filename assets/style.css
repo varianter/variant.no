@@ -529,7 +529,7 @@ _:-ms-fullscreen,
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  /*justify-content: center;*/
+  justify-content: center;
   list-style: none;
 }
 .people__figure {
