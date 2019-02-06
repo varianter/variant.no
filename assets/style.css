@@ -539,6 +539,10 @@ _:-ms-fullscreen,
 .people__figure img {
   display: block;
 }
+.people__container .link-box {
+  display: block;
+  border: none;
+}
 .people__caption {
   background-size: cover;
   position: absolute;
