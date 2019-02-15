@@ -248,6 +248,7 @@ _:-ms-fullscreen,
   padding-top: var(--verticalSpace);
 }
 .textContainer--salesDesign {
+  margin-top: 0;
   margin-left: 0;
 }
 .textContainer--salesTeaching {
