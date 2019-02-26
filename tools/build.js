@@ -6,7 +6,7 @@ const rel = (...args) => path.join(__dirname, ...args);
 
 async function start() {
   await copy(rel(".."), rel("../dist"), {
-    filter: ["*.html", "*.css", "*.xml", "assets/**", "kalkulator/**"],
+    filter: ["*.html", "*.css", "*.xml", "assets/**", "kalkulator/**", "utvikler/**"],
     overwrite: true
   });
 }
