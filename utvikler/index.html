@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Utvikler hos Variant</title>
 
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500%7CIBM+Plex+Serif:400,500"
+      rel="stylesheet"
+    />
+
     <style>
       html {
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "IBM Plex Sans", sans-serif;
       }
       article {
         width: 95%;
-        max-width: 1024px;
-        margin: 0 auto;
+        max-width: 900px;
+        margin: 5rem auto;
       }
       article img {
         max-width: 100%;
@@ -24,6 +29,35 @@
       p,
       li {
         line-height: 1.5;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "IBM Plex Serif", serif;
+      }
+      .career__joinUs {
+        text-align: center;
+      }
+      .career__joinUsLink {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #6200ee;
+        border-radius: 0.2rem;
+        box-shadow: 0.3rem 0.3rem 0 #ff0166;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 0;
+        font-family: "IBM Plex Sans", sans-serif;
+        text-decoration: none;
+
+        transition: box-shadow 200ms ease-in;
+      }
+      .career__joinUsLink:hover {
+        box-shadow: 0.5rem 0.5rem 0 #ff0166;
+      }
+      .career__joinUsLink:active {
+        box-shadow: 0.1rem 0.1rem 0 #ff0166;
       }
     </style>
   </head>
@@ -198,8 +232,11 @@
         <a href="mailto:mk@variant.no">Marius (mk@variant.no)</a> er rett person å spørre.
       </p>
 
-      <p>
-        <a href="https://jobs.variant.no/o/utvikler-trondheim/c/new" rel="nofollow"
+      <p class="career__joinUs">
+        <a
+          class="career__joinUsLink"
+          href="https://jobs.variant.no/o/utvikler-trondheim/c/new"
+          rel="nofollow"
           >Søk på stillingen</a
         >
       </p>
