@@ -48,7 +48,7 @@ html {
 
 html {
   font-size: var(--baseSize);
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: var(--black);
   background: var(--white);
 }
@@ -59,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
   font-weight: 500;
 }
 
@@ -135,8 +135,7 @@ _:-ms-fullscreen,
 }
 
 .hero__logo {
-  background: url('../assets/header-pattern.svg') no-repeat center
-    center;
+  background: url("../assets/header-pattern.svg") no-repeat center center;
 
   transition: color 200ms ease-in;
   background-clip: text;
@@ -183,7 +182,7 @@ _:-ms-fullscreen,
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -197,7 +196,7 @@ _:-ms-fullscreen,
 }
 
 .hero__logo {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   text-transform: lowercase;
   letter-spacing: -0.2rem;
@@ -306,7 +305,7 @@ _:-ms-fullscreen,
 
 .career__header__illustration {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -326,7 +325,7 @@ _:-ms-fullscreen,
   margin-bottom: 10rem;
   transform: rotateZ(-10deg);
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   bottom: 0;
   left: 0;
@@ -364,7 +363,7 @@ _:-ms-fullscreen,
   font-size: 2rem;
   font-weight: 500;
   border: 0;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   text-decoration: none;
 
   transition: box-shadow 200ms ease-in;
@@ -381,13 +380,13 @@ _:-ms-fullscreen,
   height: 30rem;
 }
 .whatWeDo__header::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   right: 0;
   margin-left: -50vw;
 
-  background: url('../assets/elements/sales.svg') no-repeat right 1rem;
+  background: url("../assets/elements/sales.svg") no-repeat right 1rem;
   height: 30rem;
 }
 .whatWeDo__headerTitle {
@@ -404,7 +403,7 @@ _:-ms-fullscreen,
 }
 .blog__illustration {
   z-index: 0;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 30%;
@@ -416,7 +415,7 @@ _:-ms-fullscreen,
 }
 .blog__illustration__inner {
   z-index: 0;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: -15rem;
@@ -427,7 +426,7 @@ _:-ms-fullscreen,
   overflow: hidden;
 }
 .blog__illustration__inner::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -556,11 +555,10 @@ _:-ms-fullscreen,
   transition: all 150ms ease-in;
 }
 .people__caption::before {
-  background: url('../assets/elements/cv-background.svg') center
-    center no-repeat;
+  background: url("../assets/elements/cv-background.svg") center center no-repeat;
   background-size: cover;
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -603,7 +601,7 @@ _:-ms-fullscreen,
   background: var(--black);
 }
 .footer::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -627,7 +625,7 @@ _:-ms-fullscreen,
   flex-wrap: wrap;
 }
 .footer__header {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
   text-transform: lowercase;
   letter-spacing: -0.1rem;
@@ -685,6 +683,9 @@ _:-ms-fullscreen,
 
 .footer__section address {
   margin-top: var(--smallPadding);
+}
+.footer__section address pre {
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .footer__social {
