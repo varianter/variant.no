@@ -523,7 +523,7 @@ _:-ms-fullscreen,
 }
 
 .people {
-  margin: var(--verticalSpace) var(--gridGutter);
+  margin: var(--verticalSpace) 0;
 }
 .people__container {
   display: flex;
