@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Variant 🔦 Kalas</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500%7CIBM+Plex+Serif:400,500"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        font-size: 24px;
+        font-family: "IBM Plex Sans", sans-serif;
+
+        background: url("/london/decoration.svg") center bottom no-repeat;
+        background-color: #000000;
+        background-size: 100%;
+        padding-bottom: 15rem;
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 10rem;
+        margin-bottom: 5rem;
+      }
+      article {
+        width: 95%;
+        max-width: 900px;
+        margin: 5rem auto;
+        text-align: center;
+      }
+      article img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+      span,
+      li {
+        display: inline-block;
+        list-style-type: none;
+        color: #fff;
+        line-height: 1.5;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "IBM Plex Serif", serif;
+      }
+      a {
+        color: #33333d;
+        text-decoration: none;
+        border-bottom: 2px solid #03dac6;
+        transition: border-color 200ms ease-in;
+      }
+      a:hover {
+        border-color: #ff0166;
+      }
+      #days,
+      #hours,
+      #minutes,
+      #seconds {
+        color: #ff0166;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <ul>
+        <li>
+          <span id="days">0</span>
+          dager
+        </li>
+        <li>
+          <span id="hours">0</span>
+          timer
+        </li>
+        <li>
+          <span id="minutes">0</span>
+          minutter
+        </li>
+        <li>
+          <span id="seconds">0</span>
+          sekunder
+        </li>
+      </ul>
+    </article>
+  </body>
+  <script type="text/javascript">
+    var msPerSecond = 1000,
+      msPerMinute = 60000,
+      msPerHour = 3600000,
+      msPerDay = 86400000;
+    var date = new Date(2020, 0, 24);
+    var days = document.getElementById("days");
+    var hours = document.getElementById("hours");
+    var minutes = document.getElementById("minutes");
+    var seconds = document.getElementById("seconds");
+    function update() {
+      var timespanMs = date - Date.now();
+      if (timespanMs > 0) {
+        days.innerText = Math.floor(timespanMs / msPerDay);
+        hours.innerText = Math.floor((timespanMs % msPerDay) / msPerHour);
+        minutes.innerText = Math.floor((timespanMs % msPerHour) / msPerMinute);
+        seconds.innerText = Math.floor(
+          (timespanMs % msPerMinute) / msPerSecond
+        );
+      }
+    }
+    update();
+    setInterval(update, msPerSecond);
+  </script>
+</html>
