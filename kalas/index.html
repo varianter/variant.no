@@ -9,7 +9,12 @@
   
   <style>
     
-    @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+    @font-face {
+      font-family: 'Recoleta'; 
+      font-weight: 400; 
+      src: url('3A95AC_6_0.woff2') format('woff2');
+    }
+
     
     :root{
       --font-size-min: 14;
@@ -21,7 +26,7 @@
     html {
       height: 100%;
       display: flex;
-      font-family: serif, 'Recoleta', serif;
+      font-family: 'Recoleta', serif;
       font-size: calc( (var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * ((100vw - (var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min))) );
       line-height: 1.45;
     }
@@ -29,7 +34,7 @@
     body {
       margin: auto;
       background-color: #1b2b34;
-      color: white;
+      color: #dde6e8;
     }
     
     h1,h2,h3,h4,h5{
@@ -51,6 +56,16 @@
     
     .intro__head{
       font-size: 3rem;
+      background: radial-gradient(#1b2b34, #1b2b3400);
+    }
+
+    .intro__head, .intro__sub{
+      margin: 0;
+      text-align: center;
+    }
+
+    .intro__sub{
+      font-size: 1rem;
     }
     
     .intro > *{
@@ -67,7 +82,7 @@
     
     @keyframes rotate {
       from { transform: rotate(0deg) }
-      to { transform: rotate(calc((360 * 2) * 1deg))}
+      to { transform: rotate(calc((360 * 2) * -1deg))}
     }
     
     .spinner{
@@ -79,14 +94,15 @@
       font-size: 1rem;
       width: var(--size);
       height: var(--size);
-      font-family: 'Poligon', 'IBM Plex Sans', sans-serif;
+      font-weight: 500;
     }
     
     textPath{
       letter-spacing: 0.12rem;
-      font-size: 0.7rem;
-      word-spacing: 1.2em;
+      font-size: 0.8rem;
+      /* word-spacing: 1.2em; */
       text-anchor: middle;
+      vertical-align: bottom;
     }
     
     .digit{
@@ -117,12 +133,15 @@
           <g fill="currentColor">
             <text>
               <textPath startOffset="50%" xlink:href="#textcircle" alignment-baseline="hanging">
-                Nyttårskalas — Nyttårskalas — Nyttårskalas — 
+                Gjengen der, ass! · Wow! · På'n igjen! · Gjentagelse! · Nye fjes!
               </textPath>
             </text>
           </g>
         </svg>
-        <h1 class="intro__head">Variants</h1>
+        <div class="intro__text">
+          <h4 class="intro__sub">Variants</h4>
+          <h4 class="intro__head">Nyttårskalas</h4>
+        </div>
       </div>
       <div class="content">
         <p>Hei venner, kolleger og andre folk vi liker. 🕺</p>
