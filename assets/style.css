@@ -28,6 +28,8 @@ html {
   --smallPadding: 1rem;
   --buttonPadding: var(--smallPadding) calc(var(--smallPadding) * 2);
 
+  --indent: 3rem;
+
   --verticalSpace: 12rem;
   --verticalSpace--half: calc(var(--verticalSpace) / 2);
 
@@ -71,7 +73,35 @@ h3 {
   font-size: 2rem;
 }
 
-p {
+li{
+  font-size: var(--fontSize);
+  margin: 0 var(--indent);
+}
+
+.checklist{
+  list-style-type: none;
+  padding-left: var(--indent);;
+  
+}
+
+.checklist li{
+    padding-left: var(--fontSize);  
+}
+
+.checklist li:before {
+    content: "☑"; 
+    display: inline-block;
+    margin-left: calc(var(--indent) * -1); 
+    margin-top: 0;
+    font-size: calc(var(--fontSize) * 1.8); 
+    width: var(--indent);
+}
+
+li.unchecked:before {
+  content: "☐"; 
+}
+
+p{
   font-size: var(--fontSize);
   margin: var(--fontSize) 0;
 }
