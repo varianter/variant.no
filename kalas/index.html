@@ -134,6 +134,23 @@
       stroke: transparent;
       display: none;
     }
+
+    dl {
+      font-size: 0.8em;
+      display: grid;
+	    grid-template: auto / auto 1fr;
+      column-gap: 1em;
+      row-gap: 0.5em;
+      margin: 2em 1em;
+    }
+    dl dd {
+      margin: 0;
+      grid-column: 2;
+    }
+    dl dt {
+      grid-column: 1;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -169,6 +186,30 @@
           Vi hadde det så moro på forrige fest, at vi bare må gjøre det igjen.
           Så, da sees vi om <span class="digit" id="days">0</span> dager, <span class="digit" id="hours">0</span> timer, <span class="digit" id="minutes">0</span> minutter og <span class="digit" id="seconds">0</span> sekunder. Give or take. <span class="hint">(Om du ikke har regnet det ut selv så er det 24. januar 2020, kl 19)</span> 
         </p>
+
+        <dl>
+          <dt>19:00 - 19:10</dt>
+          <dd>Åpningsshow - Sirkus Agio ute på Peter Egges plass. Servering av gløgg og popcorn.</dd>
+        
+          <dt>19:15</dt>
+          <dd>Dørene åpner</dd>
+        
+          <dt>20:00 - 20:30</dt>
+          <dd>Velkomsttaler ved Variant og skråblikk på konsulentbransjen ved Jonas Skybakmoen</dd>
+        
+          <dt>21:00-21:30</dt>
+          <dd>Konsert med Johndoe</dd>
+        
+          <dt>21:30</dt>
+          <dd>Festen fortsetter med Linesøya-Dj lag</dd>
+        </dl>
+
+        <p>
+          I tillegg har vi et spillhjørne man kan underholdes i utover kvelden.
+          Velkomstdrikker og snacks så langt lageret rekker. Forfriskninger
+          kjøpes også i baren.
+        </p>
+
         <p>
           xoxo,<br/>
           Variantene 🎉 
