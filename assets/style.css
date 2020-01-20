@@ -113,21 +113,33 @@ li{
 
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-gap: 1rem 3rem;
-  font-size: 1.35rem;
+  grid-gap: 1rem;
+  font-size: 1.25rem;
+}
 
+@media (min-width: 500px){
+  .checklist{
+    grid-gap: 1rem 3rem;
+    font-size: 1.35rem;
+  }
 }
 
 .checklist li{
-
     display: contents;
-
 }
 
 .checklist li:before {
   opacity: 0.5;
-    content: "done"; 
-    text-decoration: none;
+  content: "done"; 
+  text-decoration: none;
+
+}
+
+@media (max-width: 500px){
+  .checklist li:before{
+    font-size: 0.7em;
+    padding-top: 0.3em;
+  }
 }
 
 .checklist li.unchecked {
@@ -193,14 +205,28 @@ a:hover {
   justify-content: center;
 }
 
+@media (max-width: 500px){
+  .hero{
+    padding: 18rem 2rem 0rem;
+    height: auto;
+  }
+}
+
+
 
 .section-grid {
   align-items: center;
   position: relative;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;
-  padding: 0 4rem;
+  padding: 0 2rem;
   grid-gap: 1rem;
+}
+
+@media (min-width: 500px){
+  .section-grid{
+    padding: 0 4rem;
+  }
 }
 
 .section__header{
@@ -210,22 +236,44 @@ a:hover {
 }
 
 .content{
-  grid-column: 4 / span 3;
-  padding: 4rem 0;
+  grid-column: 1 / -1;
+  padding: 2rem 0;
 }
 
-.content:only-child{
-  grid-column: 2/6;
+
+@media (min-width: 500px){
+  .content{
+    grid-column: 4 / span 3;
+    padding: 4rem 0;
+  }
+  
+  .content:only-child{  
+    grid-column: 2/6;
+  }
 }
+
+
 
 .figure{
-  grid-column: 1 / span 2;
+  grid-column: 1/span 6;
+  margin-left: -2rem;
+}
+@media (min-width: 500px){
+  .figure{
+    grid-column: 1 / span 2;
+    margin-left: unset;
+  }
 }
 
-
 .footer{
-  background-color: aliceblue;
-  font-size: 0.8rem;
+  background-color: #fff;
+  color: var(--black);
+}
+
+@media (min-width: 500px){
+  .footer{
+    font-size: 0.8rem;
+  }
 }
 
 .footer__social__list{
@@ -242,11 +290,19 @@ a:hover {
 
 .footer__inner{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding: 2rem 4rem;
-  grid-gap: 1rem;
+
+  padding: 4rem 2rem;
+  grid-gap: 3rem;
+}
+
+@media (min-width: 500px){
+  .footer__inner{
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 6rem 4rem 4rem;
+  }
 }
 
 .footer__heading{
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
