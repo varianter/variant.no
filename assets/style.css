@@ -119,7 +119,10 @@ li{
 .checklist li.unchecked:before {
   opacity: 1;
   content: "doing!";
+}
 
+.checklist a{
+  text-decoration: line-through;
 }
 
 p{
@@ -136,21 +139,22 @@ a {
 
 
   color: #00f;
-    text-decoration: none;
-    box-shadow: 0 px 1px 0 currentColor;
-    transition: border-color .2s ease-in;
-    background: linear-gradient(to right,var(--purple),var(--pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(117, 107, 132, 0.25);
-    background-size: 100vw;
-    
-    text-decoration: line-through;
-    text-decoration: underline;
+  text-decoration: none;
+  box-shadow: 0 px 1px 0 currentColor;
+  transition: all .2s ease-in;
+  background: linear-gradient(to right,var(--purple),var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(117, 107, 132, 0.25);
+  background-size: 100vw;
+  
+  
+  text-decoration: underline;
   
 }
 
 a:hover {
   border-color: var(--pink);
+  -webkit-text-fill-color:rgba(255, 0, 0, 0.25);
 }
 
 .main {
