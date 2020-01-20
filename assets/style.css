@@ -197,11 +197,12 @@ a:hover {
 
 .hero {
   position: relative;
-  overflow: hidden;
-  max-height: 100vh;
+  /* overflow: hidden; */
+  /* max-height: 100vh; */
   height: 50vh;
   display: flex;
   align-items: center;
+  padding: 38vh 0 0rem;
   justify-content: center;
 }
 
