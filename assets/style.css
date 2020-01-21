@@ -112,7 +112,7 @@ li{
   grid-column: 1 / -1;
 
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: auto 1fr;
   grid-gap: 1rem;
   font-size: 1.25rem;
 }
