@@ -6,11 +6,18 @@ const rel = (...args) => path.join(__dirname, ...args);
 
 async function start() {
   await copy(rel(".."), rel("../dist"), {
-    filter: ["*.html", "*.css", "*.xml", "assets/**", "kalkulator/**", "utvikler/**", "kalas/**"],
-    overwrite: true
+    filter: [
+      "*.html",
+      "*.css",
+      "*.xml",
+      "assets/**",
+      "kalkulator/**",
+      "utvikler/**",
+      "kalas/**",
+      "varianttur/**",
+    ],
+    overwrite: true,
   });
 }
 
-start()
-  .then(console.log)
-  .catch(console.error);
+start().then(console.log).catch(console.error);
