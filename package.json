@@ -1,35 +1,35 @@
 {
-  "name": "@variant/variant-homepage",
+  "name": "@variant/homepage",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Mikael Brevik <mb@variant.no>",
+  "license": "MIT",
+  "description": "Homepage for Variant.no",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "postcss": "^7.0.17",
-    "postcss-clean": "^1.1.0",
-    "postcss-cli": "^6.1.3",
-    "postcss-custom-properties": "^9.0.2",
-    "recursive-copy": "^2.0.10"
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.43",
+    "next-compose-plugins": "^2.2.0",
+    "next-transpile-modules": "^4.0.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/react-lottie": "^1.2.5",
+    "@variant/profile": "^1.0.6",
+    "next": "^9.5.1",
+    "next-images": "^1.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-lottie": "^1.2.3"
+  },
+  "resolutions": {
+    "webpack": "^5.0.0-beta.22"
   },
   "scripts": {
-    "css": "postcss ./assets/style.css -o ./assets/build.css",
-    "watch": "postcss --watch ./assets/style.css -o ./assets/build.css",
-    "generatePay": "node tools/convert-pay.js",
-    "build": "npm run css && node ./tools/build.js",
-    "now-build": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/varianter/variant.no.git"
-  },
-  "keywords": [
-    "variant",
-    "variant.no"
-  ],
-  "author": "Variant.no",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/varianter/variant.no/issues"
-  },
-  "homepage": "https://github.com/varianter/variant.no#readme"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  }
 }

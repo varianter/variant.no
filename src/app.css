@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+
+@import "~@variant/profile/colors/index.module.css";
+@import "~@variant/profile/typography/index.module.css";
+
+#root {
+  position: relative;
+}
+
+html {
+  background: var(--color-secondary4__tint2);
+}
