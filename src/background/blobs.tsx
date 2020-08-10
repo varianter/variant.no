@@ -8,20 +8,30 @@ export type BlobVariations = "blob-1" | "blob-2" | "blob-3";
 
 export type BlobProps = {
   className?: string;
+  autoplay?: boolean;
   variation?: BlobVariations;
 };
 
-export default function Blob({ className, variation = "blob-1" }: BlobProps) {
+export default function Blob({
+  className,
+  autoplay = true,
+  variation = "blob-1",
+}: BlobProps) {
   return (
     <div className={className}>
-      <Lottie options={createDefaultOptions(typeToImport(variation))} />
+      <Lottie
+        options={createDefaultOptions(typeToImport(variation), autoplay)}
+      />
     </div>
   );
 }
 
-const createDefaultOptions = (animationData: unknown): Options => ({
+const createDefaultOptions = (
+  animationData: unknown,
+  autoplay: boolean
+): Options => ({
   loop: false,
-  autoplay: true,
+  autoplay,
   animationData,
 
   rendererSettings: {

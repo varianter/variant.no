@@ -17,6 +17,7 @@
   "dependencies": {
     "@types/react-lottie": "^1.2.5",
     "@variant/profile": "^1.0.6",
+    "framer-motion": "^2.3.0",
     "next": "^9.5.1",
     "next-images": "^1.4.1",
     "react": "^16.13.1",
