@@ -23,9 +23,7 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="icon" href={favicon} />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-
-      {children}
-
+      <div className={style.main__inner}>{children}</div>
       <AnimatingBackground />
     </div>
   );
