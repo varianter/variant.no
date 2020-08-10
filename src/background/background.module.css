@@ -17,13 +17,13 @@
 .background__first {
   composes: background__item;
   top: 60rem;
-  left: calc(50% - 20rem);
+  left: calc(50% - 26rem);
   width: 80rem;
 }
 .background__second {
   composes: background__item;
-  top: 160rem;
-  right: calc(50% - 20rem);
+  top: 152rem;
+  right: calc(50% - 15rem);
 }
 .background__third {
   composes: background__item;

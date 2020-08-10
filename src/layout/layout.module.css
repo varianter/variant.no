@@ -1,5 +1,6 @@
 .main {
   position: relative;
+  overflow-x: hidden;
 }
 .main__inner {
   max-width: 50rem;
