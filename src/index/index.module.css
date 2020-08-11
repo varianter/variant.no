@@ -91,3 +91,26 @@
   display: block;
   margin: 0.6rem auto 0;
 }
+
+.cases {
+  margin-top: 8.25rem;
+  padding: 0 1rem;
+}
+.cases__case {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+.cases__caseContent {
+  width: 45%;
+  order: 1;
+}
+
+.cases__caseContent h3 {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.cases__case figure img {
+  display: block;
+}
