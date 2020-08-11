@@ -1,9 +1,17 @@
 .omVariant {
   width: 70%;
-  padding-top: 7.2rem;
+  padding: 0 1rem 7.2rem;
   position: relative;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
+@media (max-width: 500px) {
+  .omVariant {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 .omVariant__title {
   font-weight: bold;
   margin: 2.4rem 0;
@@ -16,15 +24,28 @@
 
 .omVariant_image1 {
   position: relative;
+  max-width: 140%;
 }
 .omVariant_image2 {
   position: absolute;
   left: 25rem;
   top: 32rem;
+  max-width: 140%;
+}
+@media (max-width: 500px) {
+  .omVariant_image2 {
+    display: none;
+  }
 }
 .omVariant__us {
   width: 70%;
   margin-top: 3.4rem;
+}
+@media (max-width: 500px) {
+  .omVariant__us {
+    margin: 5.4rem auto 0;
+    text-align: center;
+  }
 }
 
 .omVariant__us p {
@@ -48,27 +69,44 @@
 .services h3 {
   margin-bottom: 2.4rem;
 }
-
-.services_image1 {
-  position: relative;
-  left: -7rem;
-}
-.services article + article {
+.services article {
   margin-top: 4.8rem;
-  width: 50%;
 }
-.services article:nth-child(2n) {
-  margin-left: 50%;
+.services_image1 {
+  max-width: 60%;
+  margin: 0 auto;
+  display: block;
 }
-.services img + article {
-  margin-top: -10rem;
+
+@media (min-width: 400px) {
+  .services_image1 {
+    position: relative;
+    margin: 0;
+    left: -7rem;
+    max-width: 60%;
+  }
+  .services article + article {
+    margin-top: 4.8rem;
+    width: 50%;
+  }
+  .services article:nth-child(2n) {
+    margin-left: 50%;
+  }
+  .services img + article {
+    margin-top: -10rem;
+  }
 }
 
 .blog {
   text-align: center;
-  margin: -5rem auto 0;
+  margin: 0 auto;
   padding: 8rem 0;
   position: relative;
+}
+@media (min-width: 400px) {
+  .blog {
+    margin: -5rem auto 0;
+  }
 }
 .blog__text {
   position: relative;
@@ -80,6 +118,7 @@
   top: 0;
   z-index: 1;
   left: calc(50% + 1rem);
+  max-width: 80%;
 }
 .blog a {
   color: var(--color-standard__black);
@@ -87,9 +126,10 @@
   margin-top: 2.4rem;
   display: block;
 }
-.blog img {
+.blog__mediumLogo {
   display: block;
   margin: 0.6rem auto 0;
+  max-width: 80%;
 }
 
 .cases {
@@ -97,20 +137,24 @@
   padding: 0 1rem;
 }
 .cases__case {
-  display: flex;
+  display: grid;
   padding: 2rem 0;
-  justify-content: space-between;
+  grid-template-columns: minmax(20rem, 2fr) minmax(23rem, 1fr);
+}
+@media (max-width: 600px) {
+  .cases__case {
+    grid-template-columns: 1fr;
+  }
 }
 .cases__caseContent {
-  width: 45%;
   order: 1;
 }
-
 .cases__caseContent h3 {
   font-size: 1.6rem;
   margin-bottom: 2.4rem;
 }
-
 .cases__case figure img {
   display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
