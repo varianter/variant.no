@@ -29,7 +29,7 @@ const Home = () => {
         <div className={style.omVariant__us}>
           <h3>Der er vi!</h3>
           <p>
-            En ny variant av et konsulentselskap som er raust, åpent og modig.
+            En ny variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
       </section>
