@@ -27,6 +27,8 @@
 }
 .background__third {
   composes: background__item;
-  top: 230rem;
-  left: calc(50% - 20rem);
+  height: 80rem;
+  width: 80rem;
+  top: 210rem;
+  left: calc(50% - 25rem);
 }
