@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Layout>
       <section className={style.omVariant}>
-        <h2 className={style.omVariant__title}>Raust, åpent og læreglede</h2>
+        <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
           IT handler ikke om designskisser, linjer av kode eller infrastruktur,
           men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
