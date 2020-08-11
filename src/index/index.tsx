@@ -44,8 +44,14 @@ const Home = () => {
         <p>
           <strong>Det betyr deg.</strong>
         </p>
+        <a href="https://jobs.variant.no" title="Les mer om jobb i Variant">
+          Bli en Variant
+        </a>
 
-        <button>Bli en Variant</button>
+        <p>
+          Vi har mange flotte kolleger, et fint hus, gode (og åpne) vilkår og
+          god lønn. Ikke minst har vi mange spennende prosjekter.
+        </p>
       </section>
 
       <section className={style.services}>
@@ -108,13 +114,17 @@ const Home = () => {
 
           <a href="http://variant.blog">
             Sjekk oss ut på
-            <img src={require("./images/medium.png")} alt="Logo of Medium" />
+            <img
+              className={style.blog__mediumLogo}
+              src={require("./images/medium.svg")}
+              alt="Logo of Medium"
+            />
           </a>
         </div>
 
         <img
           className={style.blog_image1}
-          src={require("./images/blob-ytringer.png")}
+          src={require("./images/blob-ytringer.svg")}
         />
       </section>
 
