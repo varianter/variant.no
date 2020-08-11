@@ -49,8 +49,15 @@ const Home = () => {
         </a>
 
         <p>
-          Vi har mange flotte kolleger, et fint hus, gode (og åpne) vilkår og
-          god lønn. Ikke minst har vi mange spennende prosjekter.
+          Vi har mange flotte kolleger, et fint hus,{" "}
+          <a href="https://handbook.variant.no" title="Variant Håndbok">
+            gode (og åpne) vilkår
+          </a>{" "}
+          og{" "}
+          <a href="https://www.variant.no/kalkulator" title="Lønnskalkulator">
+            god lønn
+          </a>
+          . Ikke minst har vi mange spennende prosjekter.
         </p>
       </section>
 
