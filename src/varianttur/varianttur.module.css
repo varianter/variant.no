@@ -1,0 +1,212 @@
+:root {
+  --font-size-min: 12;
+  --font-size-max: 22;
+  --viewport-min: 400;
+  --viewport-max: 1500;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  font-size: calc(
+    (var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) *
+      (
+        (100vw - (var(--viewport-min) * 1px)) /
+          (var(--viewport-max) - var(--viewport-min))
+      )
+  );
+  line-height: 1.45;
+  background: url("/varianttur/bg.jpg") center top;
+}
+
+body {
+  margin: auto;
+  color: #333;
+  font-family: "Charmonman", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Monsieur La Doulaise", cursive;
+}
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+.wrapper {
+  width: 70%;
+  max-width: 1024px;
+  background-color: #eae6da;
+  padding: 2rem;
+  border: solid #d5d1c5;
+
+  margin: 8rem auto;
+}
+.map {
+  background: url("/varianttur/map.png") #eae6da;
+  background-position: contain;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(30deg);
+  height: 30rem;
+  width: 40rem;
+  bottom: 0;
+}
+
+.intro {
+  transform: rotate(-3deg);
+  text-align: center;
+}
+
+.intro__head,
+.intro__sub {
+  margin: 0;
+  text-align: center;
+}
+
+.intro__sub {
+  margin-top: -0.5rem;
+}
+
+.content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.regards {
+  text-align: right;
+  margin-right: 3rem;
+}
+
+dl {
+  font-size: 0.8em;
+  display: grid;
+  grid-template: auto / 30% 1fr;
+  column-gap: 1em;
+  row-gap: 0.5em;
+  margin: 2em 1em;
+}
+dl dd {
+  margin: 0;
+  grid-column: 2;
+}
+dl dt {
+  grid-column: 1;
+  text-align: right;
+  font-weight: 700;
+}
+
+p,
+dl {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.paper {
+  position: relative;
+}
+
+.paper,
+.paper::before,
+.paper::after {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bbb;
+}
+
+.paper::before,
+.paper::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: #eae6da;
+}
+
+.paper::before {
+  right: 15px;
+  top: 0;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.paper::after {
+  top: 5px;
+  right: -1rem;
+  transform: rotate(1deg);
+  z-index: -2;
+}
+
+.firstPage::after {
+  background: url("/varianttur/map.png") #eae6da;
+  background-position: cover;
+  right: 3rem;
+  top: 5rem;
+  transform: rotate(-7deg);
+}
+.firstPage::before {
+  z-index: -3;
+}
+
+.firstPage {
+  padding: 12rem 2rem;
+}
+.firstPageBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  background: url("/varianttur/coffee.jpg") no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+}
+.wrapperContent {
+  position: relative;
+  z-index: 333;
+}
+
+.hildeMode {
+  font-family: "Graphik Web", Arial;
+}
+.hildeMode h1,
+.hildeMode h2,
+.hildeMode h3 {
+  font-family: "Recoleta-Regular", serif;
+}
+
+.hildeMode .agatha {
+  display: none;
+}
+.hilde {
+  display: none;
+}
+.hildeMode .hilde {
+  display: inline-block;
+}
+.hilde {
+  font-variant-numeric: tabular-nums;
+}
+
+.option {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
