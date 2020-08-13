@@ -1,13 +1,19 @@
 import React from "react";
 import Layout from "src/layout";
-
+import { useReducedMotionEffect } from "src/utils/hooks";
 import style from "./index.module.css";
 
 const Home = () => {
+  const reducedMotion = useReducedMotionEffect();
   return (
     <Layout>
       <section className={style.omVariant}>
-        <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
+        <h2
+          className={style.omVariant__title}
+          data-no-animation={reducedMotion}
+        >
+          Raus, åpen og læreglad
+        </h2>
         <p className={style.omVariant__p1}>
           IT handler ikke om designskisser, linjer av kode eller infrastruktur,
           men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
@@ -29,7 +35,8 @@ const Home = () => {
         <div className={style.omVariant__us}>
           <h3>Der er vi!</h3>
           <p>
-            En ny variant av et konsulentselskap som er raust, åpent og læreglad.
+            En ny variant av et konsulentselskap som er raust, åpent og
+            læreglad.
           </p>
         </div>
       </section>

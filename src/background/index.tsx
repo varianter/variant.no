@@ -1,11 +1,10 @@
 import React from "react";
 import Blob from "./blobs";
 import style from "./background.module.css";
-
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotionEffect } from "src/utils/hooks";
 
 export default function AnimatingBackground() {
-  const preventAuto = useReducedMotion();
+  const preventAuto = useReducedMotionEffect();
   return (
     <div className={style.backgroundContainer}>
       <Blob
