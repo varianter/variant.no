@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({
           <nav className={style.header__nav}>
             <ul>
               <li>
-                <a href="https://jobs.variant.no" rel="noopner">
+                <a href="https://jobs.variant.no" rel="noopener">
                   Bli en variant
                 </a>
               </li>
