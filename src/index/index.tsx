@@ -131,6 +131,7 @@ const Home = () => {
 
         <img
           className={style.blog_image1}
+          role="none"
           src={require("./images/blob-ytringer.svg")}
         />
       </section>
