@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({
                 </a>
               </li>
               <li>
-                <a href="http://handbook.variant.no" rel="noopner">
+                <a href="http://handbook.variant.no" rel="noopener">
                   Håndbok
                 </a>
               </li>
