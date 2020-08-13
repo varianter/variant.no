@@ -1,10 +1,5 @@
 const withPlugins = require("next-compose-plugins");
 const withImages = require("next-images");
-const withTM = require("next-transpile-modules")([
-  "@variant/profile",
-  "@variant/styleguide",
-  "../packages",
-]);
 
 const regexEqual = (x, y) => {
   return (
@@ -17,9 +12,12 @@ const regexEqual = (x, y) => {
   );
 };
 
-module.exports = withPlugins([withTM, withImages], {
+module.exports = withPlugins([withImages], {
   target: "serverless",
   webpack: (config) => {
+    // Allows for non-pure CSS Modules in Nextjs.
+    // Overrides css loader config setting modules mode to local
+
     const oneOf = config.module.rules.find(
       (rule) => typeof rule.oneOf === "object"
     );
