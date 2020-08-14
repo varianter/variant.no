@@ -65,6 +65,12 @@
 .footer {
   background: url("./footer.svg") no-repeat center top;
 }
+
+@media (max-width: 440px) {
+  .footer {
+    background-size: cover;
+  }
+}
 .footer__inner {
   max-width: 50rem;
   margin: 0 auto;
@@ -81,8 +87,8 @@
 .footer__item:nth-child(2) {
   margin-top: 8rem;
 }
-@media (max-width: 388px) {
-  .footer__item:nth-child(2) {
+@media (max-width: 440px) {
+  .footer__item:nth-child(1n) {
     margin-top: 2.4rem;
   }
 }
