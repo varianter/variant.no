@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "src/layout";
 import { useReducedMotionEffect } from "src/utils/hooks";
 import style from "./index.module.css";
+import { ButtonLink } from "src/components/button";
 
 const Home = () => {
   const reducedMotion = useReducedMotionEffect();
@@ -51,9 +52,12 @@ const Home = () => {
         <p>
           <strong>Det betyr deg.</strong>
         </p>
-        <a href="https://jobs.variant.no" title="Les mer om jobb i Variant">
+        <ButtonLink
+          href="https://jobs.variant.no"
+          title="Les mer om jobb i Variant"
+        >
           Bli en Variant
-        </a>
+        </ButtonLink>
 
         <p>
           Vi har mange flotte kolleger, et fint hus,{" "}
