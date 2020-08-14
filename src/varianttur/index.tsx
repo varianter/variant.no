@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import style from "./varianttur.module.css";
 import Head from "next/head";
-
-const and = (...classes: string[]) => classes.join(" ");
+import { and } from "src/utils/css";
 
 export default function VariantTur() {
   const [isHildeMode, setHildeMode] = useState(false);
