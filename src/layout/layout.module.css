@@ -63,7 +63,16 @@
 }
 
 .footer {
-  background: url("./footer.svg") no-repeat center top;
+  position: relative;
+  overflow: hidden;
+  /* background: url("./footer.svg") no-repeat center top; */
+}
+.footer__background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -2597px;
+  z-index: 1;
 }
 
 @media (max-width: 440px) {
@@ -72,6 +81,8 @@
   }
 }
 .footer__inner {
+  position: relative;
+  z-index: 2;
   max-width: 50rem;
   margin: 0 auto;
   padding: 5.6rem 1.2rem;

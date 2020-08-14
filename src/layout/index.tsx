@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import AnimatingBackground from "src/background";
 
 const favicon = require("@variant/profile/logo/favicon.png");
 import style from "./layout.module.css";
+import FooterImage from "./footer-image";
 
 type LayoutProps = {
   title?: string;
@@ -14,6 +15,8 @@ const Layout: React.FC<LayoutProps> = ({
   children,
   title = "Variant – En ny variant av et konsulentselskap",
 }) => {
+  const footerContainer = useRef<HTMLElement>(null);
+
   return (
     <div className={style.main}>
       <Head>
@@ -54,7 +57,7 @@ const Layout: React.FC<LayoutProps> = ({
 
         <AnimatingBackground />
       </div>
-      <footer className={style.footer}>
+      <footer className={style.footer} ref={footerContainer}>
         <div className={style.footer__inner}>
           <div className={style.footer__item}>
             <h2>Utforsk</h2>
@@ -138,6 +141,10 @@ const Layout: React.FC<LayoutProps> = ({
             </address>
           </div>
         </div>
+        <FooterImage
+          container={footerContainer}
+          className={style.footer__background}
+        />
       </footer>
     </div>
   );

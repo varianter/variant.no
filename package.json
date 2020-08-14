@@ -14,6 +14,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@react-hook/throttle": "^2.2.0",
     "@types/react-lottie": "^1.2.5",
     "@variant/profile": "^1.0.7",
     "framer-motion": "^2.3.0",
