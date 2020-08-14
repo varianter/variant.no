@@ -3,11 +3,17 @@ import Layout from "src/layout";
 import { useReducedMotionEffect } from "src/utils/hooks";
 import style from "./index.module.css";
 import { ButtonLink } from "src/components/button";
+import SayHi from "./say-hi";
 
 const Home = () => {
   const reducedMotion = useReducedMotionEffect();
   return (
     <Layout>
+      <SayHi
+        className={style.sayHi}
+        href="https://twitter.com/intent/tweet?screen_name=variant_as"
+        rel="noopener"
+      />
       <section className={style.omVariant}>
         <h2
           className={style.omVariant__title}

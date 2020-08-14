@@ -1,3 +1,10 @@
+.sayHi {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 20%;
+}
+
 .omVariant {
   width: 70%;
   padding: 0 1rem 7.2rem;

@@ -1104,10 +1104,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@variant/profile@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-1.0.7.tgz#1e6c51e5ea56e20d46d18282d277c6314074de1a"
-  integrity sha512-kXPQNx90gCstVJNIaOeeA6pLuPmH1DyqpogHcP83OB91WHr/0btprFyOMVsfarw/aDVyBER2m67VUuC8qY8Wng==
+"@variant/profile@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-1.0.8.tgz#9285b0b801d4450c555cb7ca1efd0911118e1100"
+  integrity sha512-qFPiDOS12CH8aJp+UHixy7WLCXU/dCxhAO1I9IFqUH1b75b3ZGc9fD1TIDQAZrJh/06UFC4xlP0bgM95Hs2r2w==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
