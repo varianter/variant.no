@@ -20,7 +20,7 @@
 }
 .header__nav {
   flex: 1;
-  min-width: 30rem;
+  min-width: 22rem;
 }
 .header__nav ul {
   display: flex;
