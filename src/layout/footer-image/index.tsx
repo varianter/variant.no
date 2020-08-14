@@ -1,6 +1,6 @@
 import { allColors } from "@variant/profile/colors";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type FooterProps<T extends HTMLElement> = {
   className?: string;
@@ -9,14 +9,12 @@ type FooterProps<T extends HTMLElement> = {
 
 export default function FooterImage<T extends HTMLElement>({
   className,
+  container,
 }: FooterProps<T>) {
   const x = useMotionValue(0);
   const width = useWindowSize();
-  useMouseMovement(
-    useCallback((pageX) => {
-      x.set(pageX);
-    }, [])
-  );
+  useMouseMovement(container, (pageX) => x.set(pageX));
+
   const offsetX = useTransform(x, [0, width], [0, 100]);
   const offsetY = useTransform(x, [0, width], [0, 30]);
   const offsetYInverted = useTransform(offsetY, (value) => value * -1);
@@ -64,10 +62,15 @@ function useWindowSize() {
   return width;
 }
 
-function useMouseMovement(setOffsetX: (val: number) => void) {
+function useMouseMovement<T extends HTMLElement>(
+  container: React.RefObject<T>,
+  setOffsetX: (val: number) => void
+) {
   useEffect(() => {
+    if (!container?.current) return;
     const handleMove = (e: MouseEvent) => setOffsetX(e.pageX);
-    window.addEventListener("mousemove", handleMove);
-    return () => window.removeEventListener("mousemove", handleMove);
+    container.current.addEventListener("mousemove", handleMove);
+    return () =>
+      container.current?.removeEventListener("mousemove", handleMove);
   }, []);
 }
