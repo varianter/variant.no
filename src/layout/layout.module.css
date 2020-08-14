@@ -17,6 +17,7 @@
 .header__logo img {
   display: block;
   margin: 1.2rem;
+  height: 0.9rem;
 }
 .header__nav {
   flex: 1;
@@ -35,6 +36,8 @@
   color: var(--color-standard__white--text);
   text-decoration: none;
   padding: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
 
   background: linear-gradient(
     to right,
