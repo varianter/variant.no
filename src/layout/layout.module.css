@@ -8,11 +8,16 @@
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
+.main__innerFullWidth {
+  max-width: unset;
+}
 
 .header {
   display: flex;
   flex-wrap: wrap;
   padding-right: 5.4rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 .header__logo img {
   display: block;

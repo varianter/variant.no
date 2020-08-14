@@ -6,14 +6,17 @@ import AnimatingBackground from "src/background";
 const favicon = require("@variant/profile/lib/logo/favicon.png");
 import style from "./layout.module.css";
 import FooterImage from "./footer-image";
+import { and } from "src/utils/css";
 
 type LayoutProps = {
   title?: string;
+  fullWidth?: boolean;
 };
 
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = "Variant – En ny variant av et konsulentselskap",
+  fullWidth = false,
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
 
@@ -24,7 +27,12 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="icon" href={favicon} />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <div className={style.main__inner}>
+      <div
+        className={and(
+          style.main__inner,
+          fullWidth ? style.main__innerFullWidth : ""
+        )}
+      >
         <header className={style.header}>
           <h1 className={style.header__logo}>
             <Link href="/">
