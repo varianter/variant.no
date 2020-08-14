@@ -74,11 +74,6 @@
   z-index: 1;
 }
 
-@media (max-width: 440px) {
-  .footer {
-    background-size: cover;
-  }
-}
 .footer__inner {
   position: relative;
   z-index: 2;
@@ -97,8 +92,8 @@
 .footer__item:nth-child(2) {
   margin-top: 8rem;
 }
-@media (max-width: 440px) {
-  .footer__item:nth-child(1n) {
+@media (max-width: 453px) {
+  .footer__item:nth-child(2) {
     margin-top: 2.4rem;
   }
 }
