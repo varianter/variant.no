@@ -156,8 +156,8 @@
 }
 .blog__mediumLogo {
   display: block;
-  margin: 0.6rem auto 0;
-  max-width: 80%;
+  margin: 1.2rem auto 0;
+  max-width: 50%;
 }
 
 .cases {
@@ -184,5 +184,5 @@
 .cases__case figure img {
   display: block;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 2.4rem;
 }
