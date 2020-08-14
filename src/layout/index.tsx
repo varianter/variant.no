@@ -6,9 +6,6 @@ import AnimatingBackground from "src/background";
 const favicon = require("@variant/profile/logo/favicon.png");
 import style from "./layout.module.css";
 
-// const logoBw = require("@variant/profile/logo/variant-bw.svg");
-// const logoColors = require("@variant/profile/logo/variant-colors.svg");
-
 type LayoutProps = {
   title?: string;
 };
@@ -53,10 +50,95 @@ const Layout: React.FC<LayoutProps> = ({
             </ul>
           </nav>
         </header>
+        <div className={style.main__inner}>{children}</div>
 
-        {children}
+        <AnimatingBackground />
       </div>
-      <AnimatingBackground />
+      <footer className={style.footer}>
+        <div className={style.footer__inner}>
+          <div className={style.footer__item}>
+            <h2>Utforsk</h2>
+            <ul>
+              <li>
+                <a href="https://jobs.variant.no" rel="noopener">
+                  Ledige stillinger
+                </a>
+              </li>
+              <li>
+                <a href="https://handbook.variant.no">Håndbok</a>
+              </li>
+              <li>
+                <a href="http://variant.blog" rel="noopener">
+                  Blogg
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/varianter" rel="noopener">
+                  Open Source
+                </a>
+              </li>
+              <li>
+                <Link href="/kalkulator">
+                  <a>Lønnskalkulator</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={style.footer__item}>
+            <h2>Still oss spørsmål</h2>
+            <ul>
+              <li>
+                Ring på{" "}
+                <a href="tel:+4792807375" title="Ring oss">
+                  928 07 375
+                </a>
+              </li>
+              <li>
+                Mail på{" "}
+                <a href="mailto:post@variant.no" title="Send oss epost">
+                  post@variant.no
+                </a>
+              </li>
+              <li>
+                Tweet på{" "}
+                <a
+                  href="https://twitter.com/variant_as"
+                  title="Følg oss på Twitter"
+                >
+                  @variant_as
+                </a>
+              </li>
+              <li>
+                Se bilder på{" "}
+                <a
+                  href="https://instagram.com/variant_as"
+                  title="Følg oss på Instagram"
+                >
+                  @variant_as
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className={style.footer__item}>
+            <h2>Møt oss</h2>
+
+            <p>
+              Vi holder til i vårt eget hus i{" "}
+              <Link href="/huset">
+                <a>Thomas Angellsgt. 10</a>
+              </Link>
+              . Kom innom for en kopp kaffe eller bare en hyggelig prat.
+            </p>
+
+            <address>
+              <strong>Variant AS</strong>
+              <br />
+              Thomas Angellsgate 10 <br />
+              7011 Trondheim
+            </address>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
