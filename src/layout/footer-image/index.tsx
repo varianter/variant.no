@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useThrottle } from "@react-hook/throttle";
 import style from "./footer-image.module.css";
+import { allColors } from "@variant/profile/colors";
 
 type FooterProps<T extends HTMLElement> = {
   className?: string;
@@ -34,12 +35,12 @@ export default function FooterImage<T extends HTMLElement>({
           fillRule="evenodd"
           clipRule="evenodd"
           d="M1682 183.658l60-24.038c60-24.038 180-72.114 300-66.105 120 6.01 240 66.105 360 78.124 120 12.019 240-24.038 360-18.029 120 6.01 240 54.086 300 78.124l60 24.038V370H1682V183.658z"
-          fill="#E61A6B"
           style={translateY(normalizedOffset)}
+          fill={allColors.primary}
         />
         <path
           d="M1372.5 97.5c-312-57-569-.5-837 283s-276 1005.5-535 2011h5194C4553 1869 4061 615 3872 380.5S3478.5 0 3012 0s-536.5 230-906.5 230-421-75.5-733-132.5z"
-          fill="#1A1837"
+          fill={allColors.secondary1__shade3}
           style={translateX(invertedOffset)}
         />
       </svg>
