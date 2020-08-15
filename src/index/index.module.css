@@ -197,7 +197,9 @@
 .employees {
   display: grid;
   place-content: center;
-  height: 15rem;
+  min-height: 15rem;
+  position: relative;
+  z-index: 2;
 }
 
 .employees__random {
@@ -210,10 +212,23 @@
   gap: 1rem 4rem;
   place-items: center;
 }
+@media (max-width: 600px) {
+  .employees__random {
+    grid-template-areas:
+      "image"
+      "text"
+      "button";
+    grid-template-columns: 15rem;
+    grid-template-rows: 15rem max-content max-content;
+    gap: 2rem;
+  }
+}
 
 .employees__random img {
   grid-area: image;
   height: 15rem;
+
+  /* Center alt text */
   display: grid;
   place-content: center;
 }
