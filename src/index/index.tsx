@@ -170,7 +170,7 @@ const Home = () => {
           <div className={style.employees__random}>
             <img
               srcSet={`/employees/${randomEmployee.imageSlug}-150.jpg 150w,
-      /employees/${randomEmployee.imageSlug}-300.jpg 300w`}
+                       /employees/${randomEmployee.imageSlug}-300.jpg 300w`}
               sizes="(max-width: 600px) 150px, 300px"
               src={`/employees/${randomEmployee.imageSlug}-300.jpg`}
               alt={`Bilde av ${randomEmployee.name}`}
