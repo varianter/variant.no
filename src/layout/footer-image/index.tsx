@@ -67,10 +67,10 @@ function useMouseMovement<T extends HTMLElement>(
   setOffsetX: (val: number) => void
 ) {
   useEffect(() => {
-    if (!container?.current) return;
+    const node = container?.current;
+    if (!node) return;
     const handleMove = (e: MouseEvent) => setOffsetX(e.pageX);
-    container.current.addEventListener("mousemove", handleMove);
-    return () =>
-      container.current?.removeEventListener("mousemove", handleMove);
-  }, []);
+    node.addEventListener("mousemove", handleMove);
+    return () => node.removeEventListener("mousemove", handleMove);
+  }, [container, setOffsetX]);
 }

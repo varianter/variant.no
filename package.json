@@ -10,6 +10,9 @@
   "devDependencies": {
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.43",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "next-compose-plugins": "^2.2.0",
     "typescript": "^3.9.7"
   },
@@ -30,6 +33,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
   }
 }
