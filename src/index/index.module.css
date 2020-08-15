@@ -193,3 +193,32 @@
   max-width: 100%;
   margin: 0 auto 2.4rem;
 }
+
+.employees {
+  display: grid;
+  place-content: center;
+  height: 15rem;
+}
+
+.employees__random {
+  display: grid;
+  grid-template-areas:
+    "image text"
+    "image button";
+  grid-template-columns: 15rem auto;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem 4rem;
+  place-items: center;
+}
+
+.employees__random img {
+  grid-area: image;
+  height: 15rem;
+  display: grid;
+  place-content: center;
+}
+
+.employees__random p {
+  grid-area: text;
+  align-self: end;
+}

@@ -46,8 +46,8 @@
   height: var(--image-width);
   display: grid;
   place-content: center;
-  background: var(--color-secondary1__tint1);
-  color: var(--color-secondary1__tint1--text);
+  background: var(--color-primary__tint1);
+  color: var(--color-primary__tint1--text);
 }
 
 .employee * {

@@ -1,0 +1,15 @@
+.link {
+  background: url(./background.svg) repeat-x center center
+    var(--color-secondary1__tint2);
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  color: var(--color-secondary1__tint2--text);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 250ms ease-out;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: var(--color-secondary1__tint1);
+}
