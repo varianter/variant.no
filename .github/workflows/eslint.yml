@@ -1,8 +1,11 @@
 name: Lint
 
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - master
+      - v2
+  pull_request:
 
 jobs:
   eslint:
