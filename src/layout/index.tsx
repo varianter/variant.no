@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import AnimatingBackground from "src/background";
 
-const favicon = require("@variant/profile/logo/favicon.png");
+const favicon = require("@variant/profile/lib/logo/favicon.png");
 import style from "./layout.module.css";
 import FooterImage from "./footer-image";
 

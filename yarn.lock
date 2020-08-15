@@ -1157,10 +1157,10 @@
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-"@variant/profile@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-1.0.8.tgz#9285b0b801d4450c555cb7ca1efd0911118e1100"
-  integrity sha512-qFPiDOS12CH8aJp+UHixy7WLCXU/dCxhAO1I9IFqUH1b75b3ZGc9fD1TIDQAZrJh/06UFC4xlP0bgM95Hs2r2w==
+"@variant/profile@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-2.0.1.tgz#aefdde40e2b6ce4d0c80ed23847fa7d00e45d393"
+  integrity sha512-h2tnfyvZbXfWmz2Y6g8mWzJwJ+pijBgz1KrKF6puMf7wrdMCZA3clT96fXoQplHhRg41CNdLTeKWcyWYDEFHjg==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

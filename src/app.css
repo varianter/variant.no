@@ -10,8 +10,8 @@ body {
   margin: 0;
 }
 
-@import "~@variant/profile/colors/index.module.css";
-@import "~@variant/profile/typography/index.module.css";
+@import "~@variant/profile/lib/colors/index.module.css";
+@import "~@variant/profile/lib/typography/index.module.css";
 
 #root {
   position: relative;
