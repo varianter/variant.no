@@ -1,4 +1,4 @@
-import { allColors } from "@variant/profile/colors";
+import { allColors } from "@variant/profile/lib/colors";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
