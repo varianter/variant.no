@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({
             </ul>
           </nav>
         </header>
-        <div className={style.main__inner}>{children}</div>
+        <div>{children}</div>
       </div>
       <AnimatingBackground />
       <footer className={style.footer} ref={footerContainer}>
