@@ -1,13 +1,26 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ButtonLink } from 'src/components/button';
+import { StyledLink } from 'src/components/link';
+import { Employee } from 'src/employees';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
+
+import employeeList from '../employees/employees.json';
 import style from './index.module.css';
 import SayHi from './say-hi';
 
 const Home = () => {
   const reducedMotion = useReducedMotionEffect();
+
+  const [randomEmployee, setRandomEmployee] = useState<Employee | null>(null);
+
+  useEffect(() => {
+    setRandomEmployee(
+      employeeList[Math.floor(Math.random() * employeeList.length)],
+    );
+  }, [employeeList.length]);
+
   return (
     <Layout>
       <SayHi
@@ -152,6 +165,26 @@ const Home = () => {
           role="none"
           src={require('./images/blob-ytringer.svg')}
         />
+      </section>
+
+      <section className={style.employees}>
+        {randomEmployee ? (
+          <div className={style.employees__random}>
+            <img
+              srcSet={`/employees/${randomEmployee.imageSlug}-150.jpg 150w,
+      /employees/${randomEmployee.imageSlug}-300.jpg 300w`}
+              sizes="(max-width: 600px) 150px, 300px"
+              src={`/employees/${randomEmployee.imageSlug}-300.jpg`}
+              alt={`Bilde av ${randomEmployee.name}`}
+              loading="lazy"
+            />
+
+            <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
+            <StyledLink href="/ansatte">Se alle andre varianter</StyledLink>
+          </div>
+        ) : (
+          <StyledLink href="/ansatte">Se alle varianter</StyledLink>
+        )}
       </section>
 
       <section className={style.cases}>

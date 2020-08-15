@@ -4,7 +4,7 @@ import Layout from "src/layout";
 import employeeList from "./employees.json";
 import style from "./employees.module.css";
 
-type Employee = {
+export type Employee = {
   fullName: string;
   name: string;
   phone: string;
@@ -68,6 +68,7 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         sizes="(max-width: 600px) 150px, 300px"
         src={`/employees/${imageSlug}-300.jpg`}
         alt={`Bilde av ${name}`}
+        loading="lazy"
       />
 
       <h4 className={`fancy ${style.employee__name}`}>{fullName}</h4>
