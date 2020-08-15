@@ -31,15 +31,7 @@ export default function Employees() {
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
-                  <div
-                    className={style.employee__new}
-                    style={
-                      { "--randomOffset": getRandomOffset() } as CSSProperties
-                    }
-                  >
-                    Er kanskje du en variant på lur?
-                  </div>
-
+                  <JobsLink text="Er kanskje du en variant på lur?" />
                   <EmployeeTile employee={employee} />
                 </React.Fragment>
               );
@@ -53,12 +45,7 @@ export default function Employees() {
             );
           })}
 
-          <div
-            className={style.employee__new}
-            style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
-          >
-            Se våre stillinger her
-          </div>
+          <JobsLink text="Se våre stillinger her" />
         </div>
       </div>
     </Layout>
@@ -84,10 +71,23 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
       />
 
       <h4 className={`fancy ${style.employee__name}`}>{fullName}</h4>
-      <p className="caption">{phone}</p>
+      <p className="caption">📞 {phone}</p>
     </div>
   );
 };
+
+function JobsLink({ text }: { text: string }) {
+  return (
+    <div
+      className={style.employee__jobsLink}
+      style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
+    >
+      <a href="https://jobs.variant.no" rel="noopener">
+        {text}
+      </a>
+    </div>
+  );
+}
 
 function getRandomOffset() {
   const max = 0.8;
