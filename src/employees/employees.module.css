@@ -34,7 +34,7 @@
 
 .employee {
   /* Add margin based on a random offset to make it look more random. */
-  margin: calc(-4rem + 1rem * var(--randomOffset))
+  margin: calc(-5rem + 1rem * var(--randomOffset))
     calc(1rem - 1rem * var(--randomOffset));
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@
     --columns: 2;
   }
   .employee:nth-child(2n + 2) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 @media (min-width: 1100px) and (max-width: 1440px) {
@@ -78,7 +78,7 @@
     --columns: 3;
   }
   .employee:nth-child(3n + 2) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 @media (min-width: 1440px) and (max-width: 1780px) {
@@ -86,7 +86,7 @@
     --columns: 4;
   }
   .employee:nth-child(2n + 2) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 @media (min-width: 1780px) and (max-width: 2120px) {
@@ -95,7 +95,7 @@
   }
   .employee:nth-child(5n + 2),
   .employee:nth-child(5n + 4) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 @media (min-width: 2120px) and (max-width: 2460px) {
@@ -103,7 +103,7 @@
     --columns: 6;
   }
   .employee:nth-child(2n + 2) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 @media (min-width: 2460px) {
@@ -113,7 +113,7 @@
   .employee:nth-child(7n + 2),
   .employee:nth-child(7n + 4),
   .employee:nth-child(7n + 6) {
-    margin-top: calc(10rem - var(--randomOffset) * 2rem);
+    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 
@@ -123,14 +123,24 @@
   margin-top: 2rem;
 }
 
-.employee__new {
+.employee__jobsLink {
   composes: employee;
-  width: var(--image-width);
-  height: var(--image-width);
+
+  padding-bottom: 6.25rem;
+}
+.employee__jobsLink a {
   font-size: 2.25rem;
-  background-color: var(--color-secondary1__tint1);
-  color: var(--color-secondary1__tint1--text);
+  line-height: 2.7rem;
+  text-decoration: none;
+  width: var(--image-width);
+  height: calc(var(--image-width));
+  padding: 1rem;
   display: grid;
   place-items: center;
-  padding: 1rem;
+  color: var(--color-secondary1__tint1--text);
+  background-color: var(--color-secondary1__tint1);
+  transition: opacity 200ms ease-out;
+}
+.employee__jobsLink a:hover {
+  opacity: 0.8;
 }
