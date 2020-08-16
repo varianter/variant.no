@@ -7,6 +7,7 @@ import SayHi from "./say-hi";
 import employeeList from "../employees/employees.json";
 import { Employee } from "src/employees";
 import { StyledLink } from "src/components/link";
+import { BaseBlob } from "@variant/components/lib/blob";
 
 const Home = () => {
   const reducedMotion = useReducedMotionEffect();
@@ -168,17 +169,27 @@ const Home = () => {
       <section className={style.employees}>
         {randomEmployee ? (
           <div className={style.employees__random}>
-            <img
-              srcSet={`/employees/${randomEmployee.imageSlug}-150.jpg 150w,
-                       /employees/${randomEmployee.imageSlug}-300.jpg 300w`}
-              sizes="(max-width: 600px) 150px, 300px"
-              src={`/employees/${randomEmployee.imageSlug}-300.jpg`}
-              alt={`Bilde av ${randomEmployee.name}`}
-              loading="lazy"
+            <BaseBlob
+              width={300}
+              height={300}
+              seed={"variant"}
+              imageProps={{
+                srcSet: `/employees/${randomEmployee.imageSlug}-150.jpg 150w,
+                         /employees/${randomEmployee.imageSlug}-300.jpg 300w`,
+                sizes: "(max-width: 600px) 150px, 300px",
+                src: `/employees/${randomEmployee.imageSlug}-300.jpg`,
+                alt: `Bilde av ${randomEmployee.name}`,
+                loading: "lazy",
+              }}
+              randomness={4}
+              extraPoints={4}
             />
 
             <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
-            <StyledLink href="/ansatte">Se alle andre varianter</StyledLink>
+
+            <StyledLink href="/ansatte" className={style.employees__button}>
+              Se alle andre varianter
+            </StyledLink>
           </div>
         ) : (
           <StyledLink href="/ansatte">Se alle varianter</StyledLink>
