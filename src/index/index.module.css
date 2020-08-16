@@ -237,3 +237,7 @@
   grid-area: text;
   align-self: end;
 }
+
+.employees__button {
+  grid-area: button;
+}

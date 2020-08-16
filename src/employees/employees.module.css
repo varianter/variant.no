@@ -120,13 +120,12 @@
 .employee__name {
   max-width: var(--image-width);
   text-align: center;
-  margin-top: 2rem;
 }
 
 .employee__jobsLink {
   composes: employee;
 
-  padding-bottom: 6.25rem;
+  padding-bottom: 4.25rem;
 }
 .employee__jobsLink a {
   font-size: 2.25rem;

@@ -3,6 +3,7 @@ import Layout from "src/layout";
 
 import employeeList from "./employees.json";
 import style from "./employees.module.css";
+import { BaseBlob } from "@variant/components/lib/blob";
 
 export type Employee = {
   fullName: string;
@@ -62,13 +63,20 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
       className={style.employee}
       style={{ "--randomOffset": randomOffset } as CSSProperties}
     >
-      <img
-        srcSet={`/employees/${imageSlug}-150.jpg 150w,
-        /employees/${imageSlug}-300.jpg 300w`}
-        sizes="(max-width: 600px) 150px, 300px"
-        src={`/employees/${imageSlug}-300.jpg`}
-        alt={`Bilde av ${name}`}
-        loading="lazy"
+      <BaseBlob
+        width={300}
+        height={300}
+        seed={name}
+        imageProps={{
+          srcSet: `/employees/${imageSlug}-150.jpg 150w,
+        /employees/${imageSlug}-300.jpg 300w`,
+          sizes: "(max-width: 600px) 150px, 300px",
+          src: `/employees/${imageSlug}-300.jpg`,
+          alt: `Bilde av ${name}`,
+          loading: "lazy",
+        }}
+        randomness={1}
+        extraPoints={9}
       />
 
       <h4 className={`fancy ${style.employee__name}`}>{fullName}</h4>
