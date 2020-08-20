@@ -1270,10 +1270,10 @@
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-"@variant/components@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@variant/components/-/components-2.0.2.tgz#a4e14e0ccb231fa30d8ba5ddfb2fd4c29b1809a4"
-  integrity sha512-t3S8PqSQM2DMmm4ukB31xJUcz+eFXK6Muf5+LRmnExtmsItF0TPE+UInr9sPlXFZ14BJu3j+bQrxnTDhLN8KDw==
+"@variant/components@2.0.3":
+  version "2.0.3"
+  resolved "https://pkgs.dev.azure.com/akvagroupsoftware/_packaging/frontend-commons/npm/registry/@variant/components/-/components-2.0.3.tgz#d3c98c8d5d120c7c2de6bb1d24845395b2b2fd7e"
+  integrity sha1-08mMjV0SDHwt5rsdJIRTlbKy/X4=
   dependencies:
     "@variant/profile" "^2.0.1"
     blobs "^2.1.0"

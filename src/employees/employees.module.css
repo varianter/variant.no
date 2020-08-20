@@ -8,13 +8,13 @@
 }
 
 .employees__header {
-  margin-top: 7rem;
+  margin-top: 4.8rem;
   margin-bottom: 1rem;
 }
 
 .employees__text {
   max-width: 30rem;
-  margin-bottom: 10rem;
+  margin-bottom: 7.2rem;
 }
 
 .employees__layout {
@@ -50,16 +50,12 @@
   color: var(--color-primary__tint1--text);
 }
 
-.employee * {
-  margin: 0.25rem 0;
-}
-
 @media (max-width: 760px) {
   .employee {
     margin: 0;
   }
   .employee:not(:first-of-type) {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   .employees__layout {
     justify-content: center;
@@ -120,26 +116,84 @@
 .employee__name {
   max-width: var(--image-width);
   text-align: center;
+  margin-top: 1.2rem;
 }
 
-.employee__jobsLink {
+.employee__phone {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-standard__white--text);
+  padding: 0.6rem 1.2rem;
+  line-height: 1;
+
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  animation: backgroundPos 2s ease-in-out infinite;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+.employee__phone:hover {
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes backgroundPos {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.employee__jobsLinkContainer {
   composes: employee;
 
   padding-bottom: 4.25rem;
 }
-.employee__jobsLink a {
-  font-size: 2.25rem;
-  line-height: 2.7rem;
-  text-decoration: none;
-  width: var(--image-width);
-  height: calc(var(--image-width));
-  padding: 1rem;
+.employee__jobsLink {
   display: grid;
-  place-items: center;
-  color: var(--color-secondary1__tint1--text);
-  background-color: var(--color-secondary1__tint1);
+  grid-template-rows: var(--image-width);
+  grid-template-columns: var(--image-width);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
   transition: opacity 200ms ease-out;
 }
-.employee__jobsLink a:hover {
+.employee__jobsLink p {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  max-width: var(--image-width);
+  padding: 2rem;
+  color: var(--color-secondary1__tint1--text);
+  text-align: center;
+}
+.employee__jobsLink:hover {
   opacity: 0.8;
+}
+
+.employee__jobsLink * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.employee__jobsLinkArrow {
+  position: absolute;
+  bottom: 15%;
+  left: 30%;
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .employee__jobsLink p {
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+  }
 }
