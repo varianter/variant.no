@@ -1,9 +1,12 @@
-import React, { CSSProperties } from "react";
-import Layout from "src/layout";
+import React, { CSSProperties } from 'react';
+import Layout from 'src/layout';
+import { and } from 'src/utils/css';
 
-import employeeList from "./employees.json";
-import style from "./employees.module.css";
-import { BaseBlob } from "@variant/components/lib/blob";
+import { BaseBlob } from '@variant/components/lib/blob';
+import { colors } from '@variant/profile/lib';
+
+import employeeList from './employees.json';
+import style from './employees.module.css';
 
 export type Employee = {
   fullName: string;
@@ -19,7 +22,9 @@ export default function Employees() {
     <Layout fullWidth>
       <div className={style.employeesContainer}>
         <header>
-          <h3 className={style.employees__header}>Vi i Variant</h3>
+          <h3 className={and(style.employees__header, "fancy")}>
+            Vi i Variant
+          </h3>
           <p className={style.employees__text}>
             Vi har i Variant en god gjeng erfarne og dyktige mennesker. Dette er
             faglige fyrtårn i byen og personer som virkelig ønsker å lære bort
@@ -32,7 +37,7 @@ export default function Employees() {
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
-                  <JobsLink text="Er kanskje du en variant på lur?" />
+                  <JobsLink text="Er kanskje du en Variant på lur?" />
                   <EmployeeTile employee={employee} />
                 </React.Fragment>
               );
@@ -56,12 +61,10 @@ export default function Employees() {
 const EmployeeTile: React.FC<{ employee: Employee }> = ({
   employee: { fullName, name, phone, imageSlug },
 }) => {
-  const randomOffset = getRandomOffset();
-
   return (
     <div
       className={style.employee}
-      style={{ "--randomOffset": randomOffset } as CSSProperties}
+      style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
     >
       <BaseBlob
         width={300}
@@ -69,18 +72,20 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         seed={name}
         imageProps={{
           srcSet: `/employees/${imageSlug}-150.jpg 150w,
-        /employees/${imageSlug}-300.jpg 300w`,
+                   /employees/${imageSlug}-300.jpg 300w`,
           sizes: "(max-width: 600px) 150px, 300px",
           src: `/employees/${imageSlug}-300.jpg`,
           alt: `Bilde av ${name}`,
           loading: "lazy",
         }}
-        randomness={1}
+        randomness={2}
         extraPoints={9}
       />
 
-      <h4 className={`fancy ${style.employee__name}`}>{fullName}</h4>
-      <p className="caption">📞 {phone}</p>
+      <h4 className={and(style.employee__name, "fancy")}>{fullName}</h4>
+      <a href={`tel:+47${phone}`} className={style.employee__phone}>
+        📞 {phone}
+      </a>
     </div>
   );
 };
@@ -88,15 +93,55 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
 function JobsLink({ text }: { text: string }) {
   return (
     <div
-      className={style.employee__jobsLink}
+      className={style.employee__jobsLinkContainer}
       style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
     >
-      <a href="https://jobs.variant.no" rel="noopener">
-        {text}
+      <a
+        href="https://jobs.variant.no"
+        rel="noopener"
+        className={style.employee__jobsLink}
+      >
+        <BaseBlob
+          width={300}
+          height={300}
+          randomness={2}
+          extraPoints={6}
+          color={colors.colorPairs.secondary1.default.bg}
+        />
+        <p>{text}</p>
+        <Arrow className={style.employee__jobsLinkArrow} />
       </a>
     </div>
   );
 }
+
+const Arrow: React.FC<{ className?: string }> = ({ className = "" }) => {
+  return (
+    <svg
+      width="157"
+      height="48"
+      viewBox="0 0 157 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M5.27573 24.2977C5.27573 24.2977 20.6786 9.43944 33.8571 8.80884C47.0357 8.17824 68.8066 22.5388 68.8066 22.5388C68.8066 22.5388 92.7033 39.7787 105.882 39.1481C119.06 38.5175 140.259 17.8386 140.259 17.8386"
+        stroke={colors.allColors.standard__white}
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="bevel"
+      />
+      <path
+        d="M123.386 8.77405L146.264 18.5305L143.3 43.218"
+        stroke={colors.allColors.standard__white}
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
 
 function getRandomOffset() {
   const max = 0.8;
