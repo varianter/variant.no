@@ -191,7 +191,7 @@ const Home = () => {
             <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
 
             <StyledLink href="/ansatte" className={style.employees__button}>
-              Se alle andre varianter
+              Se alle andre Varianter
             </StyledLink>
           </div>
         ) : (

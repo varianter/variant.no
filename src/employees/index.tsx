@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import Layout from 'src/layout';
 import { and } from 'src/utils/css';
 
@@ -16,6 +16,14 @@ export type Employee = {
 };
 
 export default function Employees() {
+  const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
+    employeeList
+  );
+
+  useEffect(() => {
+    setShuffledEmployeeList(shuffleArray(employeeList));
+  }, [employeeList]);
+
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
 
   return (
@@ -33,7 +41,7 @@ export default function Employees() {
         </header>
 
         <div className={style.employees__layout}>
-          {employeeList.map((employee, index) => {
+          {shuffledEmployeeList.map((employee, index) => {
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
@@ -51,7 +59,7 @@ export default function Employees() {
             );
           })}
 
-          <JobsLink text="Se våre stillinger her" />
+          <JobsLink text="Se alle våre stillinger her" />
         </div>
       </div>
     </Layout>
@@ -143,9 +151,27 @@ const Arrow: React.FC<{ className?: string }> = ({ className = "" }) => {
   );
 };
 
+/**
+ * Returns a random number clamped between the max and min.
+ */
 function getRandomOffset() {
   const max = 0.8;
   const min = 0.2;
 
   return Math.random() * (max - min) + min;
+}
+
+/**
+ * Shuffle function taken from here: https://javascript.info/task/shuffle
+ * @param array
+ */
+function shuffleArray(array: Employee[]) {
+  const tempArray = array.slice();
+
+  for (let i = tempArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tempArray[i], tempArray[j]] = [tempArray[j], tempArray[i]];
+  }
+
+  return tempArray;
 }
