@@ -195,9 +195,11 @@
 }
 
 .employees {
+  --image-height: 300px;
+
   display: grid;
   place-content: center;
-  min-height: 15rem;
+  min-height: var(--image-height);
   position: relative;
   z-index: 2;
 }
@@ -207,7 +209,7 @@
   grid-template-areas:
     "image text"
     "image button";
-  grid-template-columns: 15rem auto;
+  grid-template-columns: var(--image-height) auto;
   grid-template-rows: 1fr 1fr;
   gap: 1rem 4rem;
   place-items: center;
@@ -218,15 +220,15 @@
       "image"
       "text"
       "button";
-    grid-template-columns: 15rem;
-    grid-template-rows: 15rem max-content max-content;
+    grid-template-columns: var(--image-height);
+    grid-template-rows: var(--image-height) max-content max-content;
     gap: 2rem;
   }
 }
 
 .employees__random img {
   grid-area: image;
-  height: 15rem;
+  height: var(--image-height);
 
   /* Center alt text */
   display: grid;
