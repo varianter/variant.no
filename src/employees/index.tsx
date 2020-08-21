@@ -1,12 +1,13 @@
-import React, { CSSProperties, useEffect, useState } from 'react';
-import Layout from 'src/layout';
-import { and } from 'src/utils/css';
+import React, { CSSProperties, useEffect, useState } from "react";
+import Layout from "src/layout";
+import { and } from "src/utils/css";
 
-import { BaseBlob } from '@variant/components/lib/blob';
-import { colors } from '@variant/profile/lib';
+import { BaseBlob } from "@variant/components/lib/blob";
+import { colors } from "@variant/profile/lib";
 
-import employeeList from './employees.json';
-import style from './employees.module.css';
+import style from "./employees.module.css";
+import { InferGetStaticPropsType } from "next";
+import { getStaticProps } from "pages/ansatte";
 
 export type Employee = {
   fullName: string;
@@ -15,7 +16,9 @@ export type Employee = {
   imageSlug: string;
 };
 
-export default function Employees() {
+export default function Employees({
+  employeeList,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
     employeeList
   );
@@ -41,7 +44,7 @@ export default function Employees() {
         </header>
 
         <div className={style.employees__layout}>
-          {shuffledEmployeeList.map((employee, index) => {
+          {shuffledEmployeeList.map((employee: Employee, index: number) => {
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
