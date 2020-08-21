@@ -8,6 +8,7 @@ import { colors } from "@variant/profile/lib";
 import style from "./employees.module.css";
 import { InferGetStaticPropsType } from "next";
 import { getStaticProps } from "pages/ansatte";
+import { EmployeeJSON } from "src/utils/typings/Employee";
 
 export type Employee = {
   fullName: string;
@@ -178,3 +179,18 @@ function shuffleArray(array: Employee[]) {
 
   return tempArray;
 }
+
+export const massageEmployee = (
+  employee: EmployeeJSON
+): Omit<Employee, "imageSlug"> => {
+  return {
+    fullName: employee.name,
+    name: employee.name.split(" ")[0],
+    phone: (employee.telephone.startsWith("+47")
+      ? employee.telephone.slice(2)
+      : employee.telephone
+    )
+      .replace(/\s/g, "")
+      .replace(/(\d{3})(\d{2})/g, "$1 $2 "),
+  };
+};

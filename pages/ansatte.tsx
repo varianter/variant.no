@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { Employee } from "src/employees";
+import { Employee, massageEmployee } from "src/employees";
 import { handleImages } from "src/utils/imageHandler";
 import { EmployeeJSON } from "src/utils/typings/Employee";
 
@@ -27,14 +27,7 @@ export const getStaticProps: GetStaticProps<{
         )
         .map(async (employee: any) => {
           const imageSlug = await handleImages(employee);
-          return {
-            fullName: employee.name,
-            name: employee.name.split(" ")[0],
-            phone: employee.telephone.startsWith("+47")
-              ? employee.telephone.slice(2)
-              : employee.telephone,
-            imageSlug,
-          };
+          return { ...massageEmployee(employee), imageSlug };
         })
     );
     return { props: { employeeList }, revalidate: 24 * 60 * 60 };

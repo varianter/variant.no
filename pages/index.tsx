@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { EmployeeJSON } from "src/utils/typings/Employee";
 import { handleImages } from "src/utils/imageHandler";
-import { Employee } from "src/employees";
+import { Employee, massageEmployee } from "src/employees";
 
 export { default } from "src/index";
 
@@ -26,14 +26,7 @@ export const getStaticProps: GetStaticProps<{
     );
     const employee = filtered[Math.floor(Math.random() * filtered.length)];
     const imageSlug = await handleImages(employee);
-    const randomEmployee = {
-      fullName: employee.name,
-      name: employee.name.split(" ")[0],
-      phone: employee.telephone.startsWith("+47")
-        ? employee.telephone.slice(2)
-        : employee.telephone,
-      imageSlug,
-    };
+    const randomEmployee = { ...massageEmployee(employee), imageSlug };
     return { props: { randomEmployee }, revalidate: 24 * 60 * 60 };
   }
   // Trigger fallback on previous version
