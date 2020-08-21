@@ -1,9 +1,9 @@
-import React from "react";
-import Layout from "src/layout";
-import { useReducedMotionEffect } from "src/utils/hooks";
-import style from "./index.module.css";
-import { ButtonLink } from "src/components/button";
-import SayHi from "./say-hi";
+import React from 'react';
+import Layout from 'src/layout';
+import { useReducedMotionEffect } from 'src/utils/hooks';
+import style from './index.module.css';
+import { ButtonLink } from 'src/components/button';
+import SayHi from './say-hi';
 
 const Home = () => {
   const reducedMotion = useReducedMotionEffect();
@@ -29,13 +29,13 @@ const Home = () => {
 
         <img
           className={style.omVariant_image1}
-          src={require("./images/om-variant-1.png")}
+          src={require('./images/om-variant-1.png')}
           alt="Bilde av Kristin som sitter i en sofa"
         />
 
         <img
           className={style.omVariant_image2}
-          src={require("./images/om-variant-2.png")}
+          src={require('./images/om-variant-2.png')}
           alt="Bilde av Tonje og Odd Morten som sitter forran gamle Digs"
         />
 
@@ -66,11 +66,11 @@ const Home = () => {
         </ButtonLink>
 
         <p>
-          Vi har mange flotte kolleger, et fint hus,{" "}
+          Vi har mange flotte kolleger, et fint hus,{' '}
           <a href="https://handbook.variant.no" title="Variant Håndbok">
             gode (og åpne) vilkår
-          </a>{" "}
-          og{" "}
+          </a>{' '}
+          og{' '}
           <a href="https://www.variant.no/kalkulator" title="Lønnskalkulator">
             god lønn
           </a>
@@ -81,7 +81,7 @@ const Home = () => {
       <section className={style.services}>
         <img
           className={style.services_image1}
-          src={require("./images/bli-en-variant.png")}
+          src={require('./images/bli-en-variant.png')}
           alt="Bilde av gladfisen Jacob"
         />
 
@@ -140,7 +140,7 @@ const Home = () => {
             Sjekk oss ut på
             <img
               className={style.blog__mediumLogo}
-              src={require("./images/medium.svg")}
+              src={require('./images/medium.svg')}
               alt="Logo of Medium"
             />
           </a>
@@ -149,7 +149,7 @@ const Home = () => {
         <img
           className={style.blog_image1}
           role="none"
-          src={require("./images/blob-ytringer.svg")}
+          src={require('./images/blob-ytringer.svg')}
         />
       </section>
 
@@ -173,7 +173,7 @@ const Home = () => {
           </div>
           <figure>
             <img
-              src={require("./images/case-atb.png")}
+              src={require('./images/case-atb.png')}
               alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
             />
           </figure>
@@ -196,7 +196,7 @@ const Home = () => {
           </div>
           <figure>
             <img
-              src={require("./images/case-ten.png")}
+              src={require('./images/case-ten.png')}
               alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
             />
           </figure>
@@ -226,7 +226,7 @@ const Home = () => {
           </div>
           <figure>
             <img
-              src={require("./images/case-ren.png")}
+              src={require('./images/case-ren.png')}
               alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
             />
           </figure>

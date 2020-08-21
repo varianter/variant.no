@@ -1,1 +1,1 @@
-export { default } from "src/varianttur";
+export { default } from 'src/varianttur';

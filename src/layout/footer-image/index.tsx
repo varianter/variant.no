@@ -1,6 +1,6 @@
-import { allColors } from "@variant/profile/lib/colors";
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { allColors } from '@variant/profile/lib/colors';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 type FooterProps<T extends HTMLElement> = {
   className?: string;
@@ -56,21 +56,21 @@ function useWindowSize() {
     const handleResize = () => setWidth(window.innerWidth);
     handleResize();
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return width;
 }
 
 function useMouseMovement<T extends HTMLElement>(
   container: React.RefObject<T>,
-  setOffsetX: (val: number) => void
+  setOffsetX: (val: number) => void,
 ) {
   useEffect(() => {
     const node = container?.current;
     if (!node) return;
     const handleMove = (e: MouseEvent) => setOffsetX(e.pageX);
-    node.addEventListener("mousemove", handleMove);
-    return () => node.removeEventListener("mousemove", handleMove);
+    node.addEventListener('mousemove', handleMove);
+    return () => node.removeEventListener('mousemove', handleMove);
   }, [container, setOffsetX]);
 }

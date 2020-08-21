@@ -1,7 +1,7 @@
-import React from "react";
-import Blob from "./blobs";
-import style from "./background.module.css";
-import { useReducedMotionEffect } from "src/utils/hooks";
+import React from 'react';
+import Blob from './blobs';
+import style from './background.module.css';
+import { useReducedMotionEffect } from 'src/utils/hooks';
 
 export default function AnimatingBackground() {
   const preventAuto = useReducedMotionEffect();

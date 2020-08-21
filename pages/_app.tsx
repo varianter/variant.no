@@ -1,6 +1,6 @@
-import { AppProps } from "next/app";
-import "src/app.css";
-import React from "react";
+import { AppProps } from 'next/app';
+import 'src/app.css';
+import React from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
