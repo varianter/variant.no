@@ -5,7 +5,9 @@ import { EmployeeJSON } from "src/utils/typings/Employee";
 
 export { default } from "src/employees";
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<{
+  employeeList: Employee[];
+}> = async () => {
   const request = await fetch("https://variant.cvpartner.com/api/v1/users", {
     headers: [
       ["Authorization", `Bearer ${process.env.CV_PARTNER_API_TOKEN || ""}`],
