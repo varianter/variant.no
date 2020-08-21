@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useReducedMotion } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { useReducedMotion } from 'framer-motion';
 
 export const useReducedMotionEffect = () => {
   const [value, setValue] = useState(false);

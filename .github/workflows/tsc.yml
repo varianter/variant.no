@@ -3,8 +3,8 @@ name: TypeScript
 on:
   push:
     paths:
-      - "**.ts"
-      - "**.tsx"
+      - '**.ts'
+      - '**.tsx'
 
 jobs:
   tsc:
