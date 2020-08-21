@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
         : employee.telephone,
       imageSlug,
     };
-    return { props: { randomEmployee }, revalidate: 24 * 60 * 60 };
+    return { props: { randomEmployee }, revalidate: 7 * 24 * 60 * 60 };
   }
   // Trigger fallback on previous version
   throw new Error();
