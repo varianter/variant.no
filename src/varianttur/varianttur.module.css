@@ -16,13 +16,13 @@ html {
       )
   );
   line-height: 1.45;
-  background: url("/varianttur/bg.jpg") center top;
+  background: url('/varianttur/bg.jpg') center top;
 }
 
 body {
   margin: auto;
   color: #333;
-  font-family: "Charmonman", cursive;
+  font-family: 'Charmonman', cursive;
 }
 
 h1,
@@ -36,7 +36,7 @@ h5 {
 h1,
 h2,
 h3 {
-  font-family: "Monsieur La Doulaise", cursive;
+  font-family: 'Monsieur La Doulaise', cursive;
 }
 h1 {
   font-size: 6rem;
@@ -59,7 +59,7 @@ h3 {
   margin: 8rem auto;
 }
 .map {
-  background: url("/varianttur/map.png") #eae6da;
+  background: url('/varianttur/map.png') #eae6da;
   background-position: contain;
   position: absolute;
   z-index: -1;
@@ -131,7 +131,7 @@ dl {
 
 .paper::before,
 .paper::after {
-  content: "";
+  content: '';
   position: absolute;
   height: 95%;
   width: 99%;
@@ -153,7 +153,7 @@ dl {
 }
 
 .firstPage::after {
-  background: url("/varianttur/map.png") #eae6da;
+  background: url('/varianttur/map.png') #eae6da;
   background-position: cover;
   right: 3rem;
   top: 5rem;
@@ -173,7 +173,7 @@ dl {
   bottom: 0;
   left: 0;
   opacity: 0.5;
-  background: url("/varianttur/coffee.jpg") no-repeat;
+  background: url('/varianttur/coffee.jpg') no-repeat;
   background-position: left bottom;
   background-size: cover;
 }
@@ -183,12 +183,12 @@ dl {
 }
 
 .hildeMode {
-  font-family: "Graphik Web", Arial;
+  font-family: 'Graphik Web', Arial;
 }
 .hildeMode h1,
 .hildeMode h2,
 .hildeMode h3 {
-  font-family: "Recoleta-Regular", serif;
+  font-family: 'Recoleta-Regular', serif;
 }
 
 .hildeMode .agatha {

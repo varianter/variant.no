@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import style from "./varianttur.module.css";
-import Head from "next/head";
+import React, { useState } from 'react';
+import style from './varianttur.module.css';
+import Head from 'next/head';
 
-const and = (...classes: string[]) => classes.join(" ");
+const and = (...classes: string[]) => classes.join(' ');
 
 export default function VariantTur() {
   const [isHildeMode, setHildeMode] = useState(false);
-  const containerClass = isHildeMode ? style.hildeMode : "";
+  const containerClass = isHildeMode ? style.hildeMode : '';
 
   return (
     <div className={containerClass}>
@@ -155,7 +155,7 @@ export default function VariantTur() {
             :
           </dd>
           <dd>
-            🚣‍♂️{" "}
+            🚣‍♂️{' '}
             <a href="https://www.unionoye.no/no/aktiviteter/kajakk/">Kajakk</a>
           </dd>
           <dd>

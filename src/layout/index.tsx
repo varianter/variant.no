@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import AnimatingBackground from "src/background";
+import React, { useRef } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import AnimatingBackground from 'src/background';
 
-const favicon = require("@variant/profile/lib/logo/favicon.png");
-import style from "./layout.module.css";
-import FooterImage from "./footer-image";
+const favicon = require('@variant/profile/lib/logo/favicon.png');
+import style from './layout.module.css';
+import FooterImage from './footer-image';
 
 type LayoutProps = {
   title?: string;
@@ -13,7 +13,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({
   children,
-  title = "Variant – En ny variant av et konsulentselskap",
+  title = 'Variant – En ny variant av et konsulentselskap',
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
 
@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({
           <h1 className={style.header__logo}>
             <Link href="/">
               <a>
-                <img src={require("./variant.svg")} alt="Variant" />
+                <img src={require('./variant.svg')} alt="Variant" />
               </a>
             </Link>
           </h1>
@@ -90,19 +90,19 @@ const Layout: React.FC<LayoutProps> = ({
             <h2>Still oss spørsmål</h2>
             <ul>
               <li>
-                Ring på{" "}
+                Ring på{' '}
                 <a href="tel:+4792807375" title="Ring oss">
                   928 07 375
                 </a>
               </li>
               <li>
-                Mail på{" "}
+                Mail på{' '}
                 <a href="mailto:post@variant.no" title="Send oss epost">
                   post@variant.no
                 </a>
               </li>
               <li>
-                Tweet på{" "}
+                Tweet på{' '}
                 <a
                   href="https://twitter.com/variant_as"
                   title="Følg oss på Twitter"
@@ -111,7 +111,7 @@ const Layout: React.FC<LayoutProps> = ({
                 </a>
               </li>
               <li>
-                Se bilder på{" "}
+                Se bilder på{' '}
                 <a
                   href="https://instagram.com/variant_as"
                   title="Følg oss på Instagram"
@@ -125,7 +125,7 @@ const Layout: React.FC<LayoutProps> = ({
             <h2>Møt oss</h2>
 
             <p>
-              Vi holder til i vårt eget hus i{" "}
+              Vi holder til i vårt eget hus i{' '}
               <Link href="/huset">
                 <a>Thomas Angellsgt. 10</a>
               </Link>

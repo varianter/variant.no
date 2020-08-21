@@ -1,5 +1,5 @@
-const withPlugins = require("next-compose-plugins");
-const withImages = require("next-images");
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
 
 const regexEqual = (x, y) => {
   return (
@@ -13,25 +13,25 @@ const regexEqual = (x, y) => {
 };
 
 module.exports = withPlugins([withImages], {
-  target: "serverless",
+  target: 'serverless',
   webpack: (config) => {
     // Allows for non-pure CSS Modules in Nextjs.
     // Overrides css loader config setting modules mode to local
 
     const oneOf = config.module.rules.find(
-      (rule) => typeof rule.oneOf === "object"
+      (rule) => typeof rule.oneOf === 'object',
     );
     if (oneOf) {
       const moduleCssRule = oneOf.oneOf.find(
-        (rule) => regexEqual(rule.test, /\.module\.css$/)
+        (rule) => regexEqual(rule.test, /\.module\.css$/),
         // regexEqual(rule.test, /\.module\.(scss|sass)$/)
       );
       if (moduleCssRule) {
         const cssLoader = moduleCssRule.use.find(({ loader }) =>
-          loader.includes("css-loader")
+          loader.includes('css-loader'),
         );
         if (cssLoader) {
-          cssLoader.options.modules.mode = "local";
+          cssLoader.options.modules.mode = 'local';
         }
       }
     }

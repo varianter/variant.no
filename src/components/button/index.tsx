@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import style from "./button.module.css";
+import style from './button.module.css';
 
 type ButtonProps = React.PropsWithChildren<{
-  mode?: "primary";
+  mode?: 'primary';
 }>;
 
 type EType = React.DetailedHTMLProps<
@@ -12,7 +12,7 @@ type EType = React.DetailedHTMLProps<
 >;
 
 export function Button({
-  mode = "primary",
+  mode = 'primary',
   children,
   ...props
 }: ButtonProps & EType) {
@@ -29,7 +29,7 @@ type AType = React.DetailedHTMLProps<
 >;
 
 export function ButtonLink({
-  mode = "primary",
+  mode = 'primary',
   children,
   ...props
 }: ButtonProps & AType) {
