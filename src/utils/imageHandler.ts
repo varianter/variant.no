@@ -44,15 +44,15 @@ const downloadAndStore: (
 ) => Promise<void> = async (fileName: string, dirPath: string, image: any) => {
   try {
     const request = await fetch(image.large.url);
-    const buffer = new Buffer(await request.arrayBuffer());
+    const buffer = Buffer.from(await request.arrayBuffer());
     await Promise.all([
-      await Jimp.read(buffer).then((image) =>
+     Jimp.read(buffer).then((image) =>
         image
           .cover(300, 300)
           .quality(100)
           .writeAsync(path.join(dirPath, `${fileName}-300.jpg`))
       ),
-      await Jimp.read(buffer).then((image) =>
+     Jimp.read(buffer).then((image) =>
         image
           .cover(150, 150)
           .quality(100)
