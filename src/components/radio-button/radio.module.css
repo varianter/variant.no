@@ -4,6 +4,7 @@
 
 .input {
   opacity: 0;
+  position: absolute;
 }
 .input:checked + label:before {
   border-color: var(--color-secondary1);
@@ -11,8 +12,8 @@
 .input:checked + label:after {
   transform: scale(1);
 }
-.input:focus + label:after {
-  box-shadow: 1rem 1rem blue;
+.input:focus + label:before {
+  box-shadow: 0 0 0.5rem var(--color-secondary1);
 }
 
 .label {

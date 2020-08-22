@@ -21,6 +21,7 @@
   "dependencies": {
     "@types/animejs": "^3.1.2",
     "@types/react-lottie": "^1.2.5",
+    "@types/react-slider": "^1.0.0",
     "@variant/profile": "^2.0.1",
     "animejs": "^3.2.0",
     "framer-motion": "^2.3.0",
@@ -28,10 +29,11 @@
     "next-images": "^1.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-lottie": "^1.2.3"
+    "react-lottie": "^1.2.3",
+    "react-slider": "^1.0.8"
   },
   "resolutions": {
-    "lottie-web": "5.7.1"
+    "webpack": "^5.0.0-beta.22"
   },
   "scripts": {
     "dev": "next dev",

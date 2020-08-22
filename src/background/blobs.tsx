@@ -20,6 +20,7 @@ export default function Blob({
   return (
     <div className={className}>
       <Lottie
+        tabIndex={-1}
         options={createDefaultOptions(typeToImport(variation), autoplay)}
       />
     </div>

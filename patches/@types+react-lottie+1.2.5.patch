@@ -1,0 +1,12 @@
+diff --git a/node_modules/@types/react-lottie/index.d.ts b/node_modules/@types/react-lottie/index.d.ts
+index 1ade346..06f21be 100644
+--- a/node_modules/@types/react-lottie/index.d.ts
++++ b/node_modules/@types/react-lottie/index.d.ts
+@@ -95,6 +95,7 @@ export interface LottieProps {
+     direction?: number;
+     ariaRole?: string | 'button';
+     ariaLabel?: string | 'animation';
++    tabIndex?: number;
+     isClickToPauseDisabled?: boolean;
+     title?: string;
+     style?: React.CSSProperties;
