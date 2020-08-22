@@ -1,9 +1,0 @@
-diff --git a/node_modules/@rooks/use-boundingclientrect-ref/index.d.ts b/node_modules/@rooks/use-boundingclientrect-ref/index.d.ts
-index 9846750..316caf0 100644
---- a/node_modules/@rooks/use-boundingclientrect-ref/index.d.ts
-+++ b/node_modules/@rooks/use-boundingclientrect-ref/index.d.ts
-@@ -1 +1 @@
--export default function useBoundingclientrectRef():void
-\ No newline at end of file
-+export default function useBoundingclientrectRef<T>(): [React.RefObject<T>, ClientRect | DOMRect | null]
-\ No newline at end of file
