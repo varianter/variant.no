@@ -12,6 +12,12 @@ export type BlobProps = {
   variation?: BlobVariations;
 };
 
+declare module "react-lottie" {
+  interface LottieProps {
+    tabIndex?: number;
+  }
+}
+
 export default function Blob({
   className,
   autoplay = true,
