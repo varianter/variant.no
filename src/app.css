@@ -20,3 +20,13 @@ body {
 html {
   background: var(--color-secondary4__tint2);
 }
+
+a,
+a:visited {
+  color: var(--color-standard__black);
+  transition: color 250ms ease-in;
+}
+
+a:hover {
+  color: var(--color-secondary2__shade2);
+}
