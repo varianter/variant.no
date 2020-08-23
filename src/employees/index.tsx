@@ -1,14 +1,14 @@
-import React, { CSSProperties, useEffect, useState } from "react";
-import Layout from "src/layout";
-import { and } from "src/utils/css";
+import React, { CSSProperties, useEffect, useState } from 'react';
+import Layout from 'src/layout';
+import { and } from 'src/utils/css';
 
-import { BaseBlob } from "@variant/components/lib/blob";
-import { colors } from "@variant/profile/lib";
+import { BaseBlob } from '@variant/components/lib/blob';
+import { colors } from '@variant/profile/lib';
 
-import style from "./employees.module.css";
-import { InferGetStaticPropsType } from "next";
-import { getStaticProps } from "pages/ansatte";
-import { EmployeeJSON } from "src/utils/typings/Employee";
+import style from './employees.module.css';
+import { InferGetStaticPropsType } from 'next';
+import { getStaticProps } from 'pages/ansatte';
+import { EmployeeJSON } from 'src/utils/typings/Employee';
 
 export type Employee = {
   fullName: string;
@@ -21,7 +21,7 @@ export default function Employees({
   employeeList,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
-    employeeList
+    employeeList,
   );
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function Employees({
     <Layout fullWidth>
       <div className={style.employeesContainer}>
         <header>
-          <h3 className={and(style.employees__header, "fancy")}>
+          <h3 className={and(style.employees__header, 'fancy')}>
             Vi i Variant
           </h3>
           <p className={style.employees__text}>
@@ -76,7 +76,7 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
   return (
     <div
       className={style.employee}
-      style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
+      style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
     >
       <BaseBlob
         width={300}
@@ -85,17 +85,20 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         imageProps={{
           srcSet: `/employees/${imageSlug}-150.jpg 150w,
                    /employees/${imageSlug}-300.jpg 300w`,
-          sizes: "(max-width: 600px) 150px, 300px",
+          sizes: '(max-width: 600px) 150px, 300px',
           src: `/employees/${imageSlug}-300.jpg`,
           alt: `Bilde av ${name}`,
-          loading: "lazy",
+          loading: 'lazy',
         }}
         randomness={2}
         extraPoints={9}
       />
 
-      <h4 className={and(style.employee__name, "fancy")}>{fullName}</h4>
-      <a href={`tel:+47${phone}`} className={style.employee__phone}>
+      <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
+      <a
+        href={`tel:+47${phone.replace(/\s*/g, '')}`}
+        className={style.employee__phone}
+      >
         📞 {phone}
       </a>
     </div>
@@ -106,7 +109,7 @@ function JobsLink({ text }: { text: string }) {
   return (
     <div
       className={style.employee__jobsLinkContainer}
-      style={{ "--randomOffset": getRandomOffset() } as CSSProperties}
+      style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
     >
       <a
         href="https://jobs.variant.no"
@@ -127,7 +130,7 @@ function JobsLink({ text }: { text: string }) {
   );
 }
 
-const Arrow: React.FC<{ className?: string }> = ({ className = "" }) => {
+const Arrow: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <svg
       width="157"
@@ -181,16 +184,16 @@ function shuffleArray(array: Employee[]) {
 }
 
 export const massageEmployee = (
-  employee: EmployeeJSON
-): Omit<Employee, "imageSlug"> => {
+  employee: EmployeeJSON,
+): Omit<Employee, 'imageSlug'> => {
   return {
     fullName: employee.name,
-    name: employee.name.split(" ")[0],
-    phone: (employee.telephone.startsWith("+47")
+    name: employee.name.split(' ')[0],
+    phone: (employee.telephone.startsWith('+47')
       ? employee.telephone.slice(2)
       : employee.telephone
     )
-      .replace(/\s/g, "")
-      .replace(/(\d{3})(\d{2})/g, "$1 $2 "),
+      .replace(/\s/g, '')
+      .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
   };
 };
