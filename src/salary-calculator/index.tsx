@@ -89,7 +89,7 @@ const Calculator = () => {
             aria-labelledby="degree-title"
           >
             <h3 className={style.question} id="degree-title">
-              Hvilken grad du har eller får du?
+              Hvilken grad har eller får du?
             </h3>
 
             <RadioButton
