@@ -117,6 +117,7 @@
   max-width: var(--image-width);
   text-align: center;
   margin-top: 1.2rem;
+  margin-bottom: 0;
 }
 
 .employee__phone {
