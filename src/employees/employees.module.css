@@ -169,8 +169,8 @@
   transition: opacity 200ms ease-out;
 }
 .employee__jobsLink p {
-  font-size: 1.5rem;
-  line-height: 1.7rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   max-width: var(--image-width);
   padding: 2rem;
   color: var(--color-secondary1__tint1--text);
