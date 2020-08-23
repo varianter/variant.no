@@ -1,12 +1,12 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions";
-import fetch from "node-fetch";
+import { AzureFunction, Context, HttpRequest } from '@azure/functions';
+import fetch from 'node-fetch';
 
 const httpTrigger: AzureFunction = async function (
   context: Context,
-  req: HttpRequest
+  req: HttpRequest,
 ): Promise<void> {
   if (
-    process.env.NODE_ENV !== "production" &&
+    process.env.NODE_ENV !== 'production' &&
     !process.env.CV_PARTNER_API_SECRET
   ) {
     context.res = {
@@ -17,9 +17,9 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
     return;
   }
   try {
-    const request = await fetch("https://variant.cvpartner.com/api/v1/users", {
+    const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
       headers: [
-        ["Authorization", `Bearer ${process.env.CV_PARTNER_API_SECRET || ""}`],
+        ['Authorization', `Bearer ${process.env.CV_PARTNER_API_SECRET || ''}`],
       ],
     });
     if (request.ok) {
@@ -30,7 +30,7 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
           employee.deactivated ||
           // All employees that have started should be set
           // as countrymanager in cv-parter, when they start.
-          employee.roles.some((role) => role === "countrymanager")
+          employee.roles.some((role) => role === 'countrymanager'),
       );
       context.res = {
         body: employeeList,
@@ -38,7 +38,7 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
     } else {
       context.res = {
         status: 404,
-        body: await request.clone(),
+        body: await request.json(),
       };
     }
   } catch (e) {

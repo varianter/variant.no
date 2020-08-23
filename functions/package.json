@@ -2,6 +2,7 @@
   "name": "functions",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
