@@ -102,7 +102,7 @@
   align-items: center;
 }
 
-.calculation div:last-of-type span:last-of-type {
+.result {
   font-size: 1.7rem;
   font-weight: 500;
 }

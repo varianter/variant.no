@@ -5,6 +5,7 @@ import RadioButton from "../components/radio-button";
 import Slider from "../components/slider";
 import { calculateEstimatedSalaray, getMaxYear, Degree } from "./calculate";
 import style from "./index.module.css";
+import { and } from "src/utils/strings";
 
 const SalaryCalculator = () => {
   return (
@@ -127,23 +128,24 @@ const Calculator = () => {
 
           <footer className={style.summary}>
             <div className={style.calculation}>
-              <div className={style.question}>Da blir lønnen din sånn:</div>
-              <div className={style.flexRow}>
-                <span>Utdanning</span>
-                <span className={style.number}>
-                  {degree == "masters" ? 5 : 3} år
-                </span>
-              </div>
-              <div className={style.flexRow}>
-                <span>Erfaring</span>
-                <span className={style.number}>
-                  {maxYear - selectedYear} år
-                </span>
-              </div>
-              <div className={style.flexRow}>
-                <span>Din årslønn i Variant</span>
-                <span className={style.number}>{salary}</span>
-              </div>
+              <h3 className={style.question}>Da blir lønnen din sånn:</h3>
+
+              <dl>
+                <div className={style.flexRow}>
+                  <dt>Utdanning</dt>
+                  <dd className={style.number}>
+                    {degree == "masters" ? 5 : 3} år
+                  </dd>
+                </div>
+                <div className={style.flexRow}>
+                  <dt>Erfaring</dt>
+                  <dd className={style.number}>{maxYear - selectedYear} år</dd>
+                </div>
+                <div className={style.flexRow}>
+                  <dt>Din årslønn i Variant</dt>
+                  <dd className={and(style.number, style.result)}>{salary}</dd>
+                </div>
+              </dl>
             </div>
           </footer>
         </fieldset>
