@@ -79,6 +79,13 @@
   left: 50%;
   margin-left: -2597px;
   z-index: 1;
+  transition: margin-left 200ms ease-in;
+}
+
+@media (max-width: 600px) {
+  .footer__background {
+    margin-left: -2500px;
+  }
 }
 
 .footer__inner {
