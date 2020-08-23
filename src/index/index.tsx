@@ -74,7 +74,20 @@ const Home = ({
         </ButtonLink>
 
         <p>
-          Vi har mange flotte kolleger, et fint hus,{' '}
+          Vi har mange{' '}
+          <Link href="/ansatte">
+            <a title="Ansattoversikt">flotte kolleger</a>
+          </Link>
+          , et{' '}
+          <a
+            href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+            rel="noopener"
+            target="_blank"
+            title="Kart til Varianthuset"
+          >
+            fint hus
+          </a>
+          ,{' '}
           <a href="https://handbook.variant.no" title="Variant Håndbok">
             gode (og åpne) vilkår
           </a>{' '}
