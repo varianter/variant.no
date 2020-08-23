@@ -12,7 +12,7 @@ export function calculateEstimatedSalaray(
 
 export function getMaxYear(): number {
   const keys = Object.keys(data);
-  return parseInt(keys[keys.length - 1]);
+  return parseInt(keys[keys.length - 1]) - 2;
 }
 
 export type Degree = "masters" | "bachelor";

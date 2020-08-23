@@ -109,9 +109,7 @@ const Calculator = () => {
               aria-label="Grown lady icon"
               role="img"
             >
-              <span role="img" aria-label="Icon of an old lady">
-                👵
-              </span>
+              👵
             </span>
             <Slider
               initial={selectedYear}
@@ -120,9 +118,7 @@ const Calculator = () => {
               onChange={setSelectedYear}
             />
             <span className={style.icon} aria-label="Child icon" role="img">
-              <span role="img" aria-label="Icon of a child">
-                👶
-              </span>
+              👶
             </span>
           </div>
 

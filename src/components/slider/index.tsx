@@ -10,18 +10,21 @@ type SliderProps = {
 
 export default function Slider({ initial, to, from, onChange }: SliderProps) {
   return (
-    <ReactSlider
-      thumbClassName={style.slider__handler}
-      trackClassName={style.slider}
-      renderThumb={(props, state) => (
-        <div {...props}>
-          <div className={style.year}>{state.valueNow}</div>
-        </div>
-      )}
-      onChange={(e) => onChange(e as number)}
-      defaultValue={initial}
-      min={from}
-      max={to}
-    />
+    <div>
+      <ReactSlider
+        className={style.container}
+        thumbClassName={style.slider__handler}
+        trackClassName={style.slider}
+        renderThumb={(props, state) => (
+          <div {...props}>
+            <div className={style.year}>{state.valueNow}</div>
+          </div>
+        )}
+        onChange={(e) => onChange(e as number)}
+        defaultValue={initial}
+        min={from}
+        max={to}
+      />
+    </div>
   );
 }
