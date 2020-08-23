@@ -1,4 +1,5 @@
-.button {
+.button,
+.button:visited {
   border: 0;
   background: var(--color-secondary1__tint2);
   text-align: center;
