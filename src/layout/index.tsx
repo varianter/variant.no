@@ -29,17 +29,9 @@ const Layout: React.FC<LayoutProps> = ({
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@variant_as" />
-        <meta property="og:title" content="Variant" />
+        <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.variant.no/" />
-        <meta
-          property="og:description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
-        />
-        <meta
-          name="description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
-        />
         <meta
           property="og:image"
           content="https://www.variant.no/assets/og-header-min.png"

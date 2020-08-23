@@ -5,6 +5,7 @@ import React from 'react';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
+import Head from 'next/head';
 
 import { BaseBlob } from '@variant/components/lib/blob';
 
@@ -17,6 +18,16 @@ const Home = ({
   const reducedMotion = useReducedMotionEffect();
   return (
     <Layout>
+      <Head>
+        <meta
+          property="og:description"
+          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+        />
+        <meta
+          name="description"
+          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+        />
+      </Head>
       <SayHi
         className={style.sayHi}
         href="https://twitter.com/intent/tweet?screen_name=variant_as"
