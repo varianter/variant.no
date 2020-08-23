@@ -126,9 +126,14 @@ const Layout: React.FC<LayoutProps> = ({
 
             <p>
               Vi holder til i vårt eget hus i{' '}
-              <Link href="/huset">
-                <a>Thomas Angellsgt. 10</a>
-              </Link>
+              <a
+                href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+                rel="noopener"
+                target="_blank"
+                title="Kart til Varianthuset"
+              >
+                Thomas Angellsgt. 10
+              </a>
               . Kom innom for en kopp kaffe eller bare en hyggelig prat.
             </p>
 
