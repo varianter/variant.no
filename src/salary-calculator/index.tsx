@@ -111,7 +111,9 @@ const Calculator = () => {
             />
           </div>
 
-          <h3 className={style.question}>Når ble du ferdig med graden?</h3>
+          <h3 className={style.question}>
+            Når ble eller blir du ferdig med graden?
+          </h3>
           <div className={style.barSliderContainer}>
             <span
               className={style.icon}
