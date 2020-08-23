@@ -1,12 +1,12 @@
-import data from "./pay.json";
+import data from './pay.json';
 
 type SalaryData = { [year: string]: string };
 
 export function calculateEstimatedSalary(
   graduationYear: number,
-  degree: Degree
+  degree: Degree,
 ): string | undefined {
-  const year = String(graduationYear + (degree === "bachelor" ? 2 : 0));
+  const year = String(graduationYear + (degree === 'bachelor' ? 2 : 0));
   return (data as SalaryData)[year];
 }
 
@@ -15,4 +15,4 @@ export function getMaxYear(): number {
   return parseInt(keys[keys.length - 1]) - 2;
 }
 
-export type Degree = "masters" | "bachelor";
+export type Degree = 'masters' | 'bachelor';

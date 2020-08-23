@@ -12,7 +12,7 @@ export type BlobProps = {
   variation?: BlobVariations;
 };
 
-declare module "react-lottie" {
+declare module 'react-lottie' {
   interface LottieProps {
     tabIndex?: number;
   }

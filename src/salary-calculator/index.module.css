@@ -15,7 +15,7 @@
 .barSliderContainer {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
-  grid-template-areas: "old slider young";
+  grid-template-areas: 'old slider young';
   justify-content: center;
   align-items: center;
   gap: 0.5rem;

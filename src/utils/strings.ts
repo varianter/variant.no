@@ -1,1 +1,1 @@
-export const and = (...classes: string[]) => classes.join(" ");
+export const and = (...classes: string[]) => classes.join(' ');
