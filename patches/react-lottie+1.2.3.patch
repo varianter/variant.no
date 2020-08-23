@@ -1,0 +1,40 @@
+diff --git a/node_modules/react-lottie/dist/index.js b/node_modules/react-lottie/dist/index.js
+index b9015a6..f5610d0 100644
+--- a/node_modules/react-lottie/dist/index.js
++++ b/node_modules/react-lottie/dist/index.js
+@@ -197,6 +197,7 @@ var Lottie = function (_React$Component) {
+           height = _props2.height,
+           ariaRole = _props2.ariaRole,
+           ariaLabel = _props2.ariaLabel,
++          tabIndex = _props2.tabIndex,
+           isClickToPauseDisabled = _props2.isClickToPauseDisabled,
+           title = _props2.title;
+ 
+@@ -237,7 +238,7 @@ var Lottie = function (_React$Component) {
+           title: title,
+           role: ariaRole,
+           'aria-label': ariaLabel,
+-          tabIndex: '0'
++          tabIndex: tabIndex
+         })
+       );
+     }
+@@ -261,7 +262,8 @@ Lottie.propTypes = {
+   ariaRole: _propTypes2.default.string,
+   ariaLabel: _propTypes2.default.string,
+   isClickToPauseDisabled: _propTypes2.default.bool,
+-  title: _propTypes2.default.string
++  title: _propTypes2.default.string,
++  tabIndex: _propTypes2.default.number
+ };
+ 
+ Lottie.defaultProps = {
+@@ -272,5 +274,6 @@ Lottie.defaultProps = {
+   ariaRole: 'button',
+   ariaLabel: 'animation',
+   isClickToPauseDisabled: false,
+-  title: ''
++  title: '',
++  tabIndex: 0
+ };
+\ No newline at end of file
