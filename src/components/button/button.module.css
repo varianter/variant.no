@@ -12,7 +12,7 @@
 }
 .button:hover {
   background-color: var(--color-secondary1__tint1);
-  color: var(--color-secondary1__tint2--text);
+  color: var(--color-secondary1__tint1--text);
 }
 
 .buttonLink {
