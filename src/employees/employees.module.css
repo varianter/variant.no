@@ -55,7 +55,7 @@
     margin: 0;
   }
   .employee:not(:first-of-type) {
-    margin-top: 1rem;
+    margin-top: 4.8rem;
   }
   .employees__layout {
     justify-content: center;
