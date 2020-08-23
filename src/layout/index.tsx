@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import AnimatingBackground from 'src/background';
 
-const favicon = require("@variant/profile/lib/logo/favicon.png");
-import style from "./layout.module.css";
-import FooterImage from "./footer-image";
-import { and } from "src/utils/css";
+const favicon = require('@variant/profile/lib/logo/favicon.png');
+import style from './layout.module.css';
+import FooterImage from './footer-image';
+import { and } from 'src/utils/css';
 
 type LayoutProps = {
   title?: string;
@@ -15,7 +15,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({
   children,
-  title = "Variant – En ny variant av et konsulentselskap",
+  title = 'Variant – En ny variant av et konsulentselskap',
   fullWidth = false,
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
@@ -26,11 +26,25 @@ const Layout: React.FC<LayoutProps> = ({
         <title>{title}</title>
         <link rel="icon" href={favicon} />
         <link rel="manifest" href="/manifest.json" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@variant_as" />
+        <meta property="og:title" content="Variant" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.variant.no/" />
+        <meta
+          property="og:description"
+          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+        />
+        <meta
+          property="og:image"
+          content="https://www.variant.no/assets/og-header-min.png"
+        />
       </Head>
       <div
         className={and(
           style.main__inner,
-          fullWidth ? style.main__innerFullWidth : ""
+          fullWidth ? style.main__innerFullWidth : '',
         )}
       >
         <header className={style.header}>
