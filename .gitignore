@@ -120,4 +120,7 @@ dist
 
 .DS_Store
 
+#Remove emplyees images
+/public/employees/*
+
 .env.local

@@ -1,28 +1,19 @@
+import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import { getStaticProps } from 'pages/index';
+import React from 'react';
 import { ButtonLink } from 'src/components/button';
 import { StyledLink } from 'src/components/link';
-import { Employee } from 'src/employees';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
-
 import { BaseBlob } from '@variant/components/lib/blob';
-
-import employeeList from '../employees/employees.json';
 import style from './index.module.css';
 import SayHi from './say-hi';
 
-const Home = () => {
+const Home = ({
+  randomEmployee,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const reducedMotion = useReducedMotionEffect();
-
-  const [randomEmployee, setRandomEmployee] = useState<Employee | null>(null);
-
-  useEffect(() => {
-    setRandomEmployee(
-      employeeList[Math.floor(Math.random() * employeeList.length)],
-    );
-  }, [employeeList.length]);
-
   return (
     <Layout>
       <SayHi
