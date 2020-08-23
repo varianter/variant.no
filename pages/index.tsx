@@ -7,9 +7,12 @@ export { default } from "src/index";
 export const getStaticProps: GetStaticProps<{
   randomEmployee: Employee;
 }> = async () => {
-  const request = await fetch(
-    `${process.env.AZURE_PROXY_URL}/getEmployees?code=${process.env.AZURE_PROXY_KEY}`
-  );
+  // Set so we can run local as fallback.
+  const baseUrl = process.env.AZURE_PROXY_URL || "http://localhost:7071/api/";
+  const authKey = process.env.AZURE_PROXY_KEY
+    ? `?code=${process.env.AZURE_PROXY_KEY}`
+    : "";
+  const request = await fetch(`${baseUrl}/getEmployees${authKey}`);
   if (request.ok) {
     const employeesJSON = await request.json();
     // Make images
