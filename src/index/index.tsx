@@ -2,11 +2,12 @@ import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React from 'react';
-import { ButtonLink } from 'src/components/button';
-import { StyledLink } from 'src/components/link';
+import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
+
 import { BaseBlob } from '@variant/components/lib/blob';
+
 import style from './index.module.css';
 import SayHi from './say-hi';
 
@@ -181,12 +182,12 @@ const Home = ({
 
             <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
 
-            <StyledLink href="/ansatte" className={style.employees__button}>
+            <ButtonNextLink href="/ansatte" className={style.employees__button}>
               Se alle andre Varianter
-            </StyledLink>
+            </ButtonNextLink>
           </div>
         ) : (
-          <StyledLink href="/ansatte">Se alle varianter</StyledLink>
+          <ButtonNextLink href="/ansatte">Se alle varianter</ButtonNextLink>
         )}
       </section>
 
