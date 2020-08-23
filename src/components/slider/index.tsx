@@ -1,5 +1,5 @@
-import ReactSlider from "react-slider";
-import style from "./slider.module.css";
+import ReactSlider from 'react-slider';
+import style from './slider.module.css';
 
 type SliderProps = {
   initial: number;

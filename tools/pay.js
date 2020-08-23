@@ -11,24 +11,24 @@
 //
 // When we get new stats, update the filename constant
 
-const fs = require("fs");
-const path = require("path");
-const { exit } = require("process");
+const fs = require('fs');
+const path = require('path');
+const { exit } = require('process');
 
 // Update this on new statistics.
-const PAY_FILENAME = "tekna2019.txt";
+const PAY_FILENAME = 'tekna2019.txt';
 // Change this if location is changed
 const DESTINATION = path.join(
   __dirname,
-  "..",
-  "src",
-  "salary-calculator",
-  "pay.json"
+  '..',
+  'src',
+  'salary-calculator',
+  'pay.json',
 );
 
 // Contents.
 
-const source = path.join(__dirname, "..", "..", "payscale", PAY_FILENAME);
+const source = path.join(__dirname, '..', '..', 'payscale', PAY_FILENAME);
 
 try {
   fs.statSync(source);
@@ -44,15 +44,15 @@ try {
 
 console.log(`Parsing and formatting ${source}`);
 const content = fs
-  .readFileSync(path.join(__dirname, "..", "..", "payscale", "tekna2019.txt"))
+  .readFileSync(path.join(__dirname, '..', '..', 'payscale', 'tekna2019.txt'))
   .toString()
-  .split("\n")
+  .split('\n')
   .slice(1);
 
 let data = {};
 for (let row of content) {
-  const splitted = row.split("\t");
-  data[splitted[0]] = splitted[splitted.length - 1].trim().replace(/\s*/g, "");
+  const splitted = row.split('\t');
+  data[splitted[0]] = splitted[splitted.length - 1].trim().replace(/\s*/g, '');
 }
 
 console.log(`Generating pay file at ${DESTINATION}`);

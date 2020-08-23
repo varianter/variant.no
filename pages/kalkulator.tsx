@@ -1,1 +1,1 @@
-export { default } from "src/salary-calculator";
+export { default } from 'src/salary-calculator';

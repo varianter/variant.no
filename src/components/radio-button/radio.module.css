@@ -31,7 +31,7 @@
 .label:before,
 .label:after {
   position: absolute;
-  content: "";
+  content: '';
   border-radius: 50%;
   transition: all 0.3s ease;
   transition-property: transform, border-color;

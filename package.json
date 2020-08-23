@@ -13,9 +13,12 @@
     "@typescript-eslint/parser": "^3.9.0",
     "eslint": "^7.7.0",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "next-compose-plugins": "^2.2.0",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   },
   "dependencies": {
@@ -48,5 +51,14 @@
     "postinstall": "patch-package",
     "install:api": "cd ./functions && npm i",
     "prune:api": "cd ./functions && npm prune"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
