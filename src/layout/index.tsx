@@ -37,6 +37,10 @@ const Layout: React.FC<LayoutProps> = ({
           content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
         />
         <meta
+          name="description"
+          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+        />
+        <meta
           property="og:image"
           content="https://www.variant.no/assets/og-header-min.png"
         />
