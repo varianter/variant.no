@@ -1,12 +1,19 @@
+import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
+import { getStaticProps } from 'pages/index';
 import React from 'react';
-import { ButtonLink } from 'src/components/button';
+import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
+
+import { BaseBlob } from '@variant/components/lib/blob';
+
 import style from './index.module.css';
 import SayHi from './say-hi';
 
-const Home = () => {
+const Home = ({
+  randomEmployee,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const reducedMotion = useReducedMotionEffect();
   return (
     <Layout>
@@ -152,6 +159,36 @@ const Home = () => {
           role="none"
           src={require('./images/blob-ytringer.svg')}
         />
+      </section>
+
+      <section className={style.employees}>
+        {randomEmployee ? (
+          <div className={style.employees__random}>
+            <BaseBlob
+              width={300}
+              height={300}
+              seed={'variant'}
+              imageProps={{
+                srcSet: `/employees/${randomEmployee.imageSlug}-150.jpg 150w,
+                         /employees/${randomEmployee.imageSlug}-300.jpg 300w`,
+                sizes: '(max-width: 600px) 150px, 300px',
+                src: `/employees/${randomEmployee.imageSlug}-300.jpg`,
+                alt: `Bilde av ${randomEmployee.name}`,
+                loading: 'lazy',
+              }}
+              randomness={4}
+              extraPoints={4}
+            />
+
+            <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
+
+            <ButtonNextLink href="/ansatte" className={style.employees__button}>
+              Se alle andre Varianter
+            </ButtonNextLink>
+          </div>
+        ) : (
+          <ButtonNextLink href="/ansatte">Se alle varianter</ButtonNextLink>
+        )}
       </section>
 
       <section className={style.cases}>
