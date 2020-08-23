@@ -46,6 +46,7 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "gen:pay": "node tools/pay.js",
     "postinstall": "patch-package",
-    "install:api": "cd ./functions && npm i"
+    "install:api": "cd ./functions && npm i",
+    "prune:api": "cd ./functions && npm prune"
   }
 }
