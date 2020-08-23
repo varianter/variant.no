@@ -1,11 +1,11 @@
-import anime from "animejs";
-import React, { useEffect, useRef, useState } from "react";
-import Layout from "src/layout";
-import RadioButton from "../components/radio-button";
-import Slider from "../components/slider";
-import { calculateEstimatedSalary, getMaxYear, Degree } from "./calculate";
-import style from "./index.module.css";
-import { and } from "src/utils/strings";
+import anime from 'animejs';
+import React, { useEffect, useRef, useState } from 'react';
+import Layout from 'src/layout';
+import RadioButton from '../components/radio-button';
+import Slider from '../components/slider';
+import { calculateEstimatedSalary, getMaxYear, Degree } from './calculate';
+import style from './index.module.css';
+import { and } from 'src/utils/strings';
 
 const SalaryCalculator = () => {
   return (
@@ -21,16 +21,16 @@ export default SalaryCalculator;
 
 const formatCurrency = (pay: string | undefined) => {
   if (!pay) return pay;
-  return new Intl.NumberFormat("nb-NO").format(parseInt(pay));
+  return new Intl.NumberFormat('nb-NO').format(parseInt(pay));
 };
 
 const Calculator = () => {
-  const [degree, setDegree] = useState<Degree>("masters");
+  const [degree, setDegree] = useState<Degree>('masters');
   const [selectedYear, setSelectedYear] = useState(2007);
   const containerRef = useRef(null);
   const maxYear = getMaxYear();
 
-  const [salary, setSalary] = useState("0");
+  const [salary, setSalary] = useState('0');
 
   useEffect(() => {
     let payObj = { value: salary };
@@ -39,8 +39,8 @@ const Calculator = () => {
       value: calculateEstimatedSalary(selectedYear, degree),
       duration: 500,
       round: 1,
-      easing: "easeInOutExpo",
-      update: () => setSalary(formatCurrency(payObj.value) ?? ""),
+      easing: 'easeInOutExpo',
+      update: () => setSalary(formatCurrency(payObj.value) ?? ''),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedYear, degree]);
@@ -54,7 +54,7 @@ const Calculator = () => {
               <path
                 className="top-path"
                 d="M136.6,-181.3C183.8,-153.7,233.59999999999997,-122.9,248.4,-80.1C263.1,-37.3,242.8,17.5,201.7,41.2C160.5,64.9,98.5,57.5,61.400000000000006,61.5C24.299999999999997,65.4,12.100000000000001,80.7,-21.5,110.2C-55.1,139.8,-110.1,183.6,-132.6,174.9C-155.1,166.2,-145.1,105,-151.3,56.2C-157.6,7.3,-180.1,-29.3,-167.1,-49.6C-154.1,-70,-105.5,-74.3,-71.8,-106.3C-38,-138.3,-19,-198.2,12.8,-215.8C44.7,-233.5,89.3,-209,136.6,-181.3Z"
-                fill={"rgba(204, 52, 112, 1)"}
+                fill={'rgba(204, 52, 112, 1)'}
                 stroke="none"
                 strokeWidth="0"
               ></path>
@@ -83,25 +83,31 @@ const Calculator = () => {
             Vil du vite hva du vil tjene hos oss? Svar på to enkle spørsmål:
           </p>
 
-          <div className={style.gradeContainer}>
-            <h3 className={style.question}>
+          <div
+            className={style.gradeContainer}
+            role="group"
+            aria-labelledby="degree-title"
+          >
+            <h3 className={style.question} id="degree-title">
               Hvilken grad du har eller får du?
             </h3>
 
             <RadioButton
               changed={setDegree}
               id="degree-1"
-              isSelected={degree === "bachelor"}
+              isSelected={degree === 'bachelor'}
               label="Bachelor"
               value="bachelor"
+              name="degree"
             />
 
             <RadioButton
               changed={setDegree}
               id="degree-2"
-              isSelected={degree === "masters"}
+              isSelected={degree === 'masters'}
               label="Master"
               value="masters"
+              name="degree"
             />
           </div>
 
@@ -119,7 +125,7 @@ const Calculator = () => {
               to={maxYear}
               from={1990}
               onChange={setSelectedYear}
-              label={"Utdanningsår"}
+              label={'Utdanningsår'}
             />
             <span className={style.icon} aria-label="Child icon" role="img">
               👶
@@ -134,7 +140,7 @@ const Calculator = () => {
                 <div className={style.flexRow}>
                   <dt>Utdanning</dt>
                   <dd className={style.number}>
-                    {degree == "masters" ? 5 : 3} år
+                    {degree == 'masters' ? 5 : 3} år
                   </dd>
                 </div>
                 <div className={style.flexRow}>
