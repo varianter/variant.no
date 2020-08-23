@@ -6,10 +6,22 @@ import Slider from '../components/slider';
 import { calculateEstimatedSalary, getMaxYear, Degree } from './calculate';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
+import Head from 'next/head';
 
 const SalaryCalculator = () => {
   return (
     <Layout>
+      <Head>
+        <meta
+          property="og:description"
+          content="Variants åpne lønnskalkulator. Her kan du se lønnsnivået vi har og se hvilken lønn du kan få hos oss basert på din utdanning og utdanningsår."
+        />
+        <meta
+          name="description"
+          content="Variants åpne lønnskalkulator. Her kan du se lønnsnivået vi har og se hvilken lønn du kan få hos oss basert på din utdanning og utdanningsår."
+        />
+      </Head>
+
       <div className={style.wrapper}>
         <Calculator />
       </div>

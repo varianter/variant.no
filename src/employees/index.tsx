@@ -9,6 +9,7 @@ import style from './employees.module.css';
 import { InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/ansatte';
 import { EmployeeJSON } from 'src/utils/typings/Employee';
+import Head from 'next/head';
 
 export type Employee = {
   fullName: string;
@@ -31,7 +32,18 @@ export default function Employees({
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
 
   return (
-    <Layout fullWidth>
+    <Layout fullWidth title="Alle varianter – Variant">
+      <Head>
+        <meta
+          property="og:description"
+          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
+        />
+        <meta
+          name="description"
+          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
+        />
+      </Head>
+
       <div className={style.employeesContainer}>
         <header>
           <h3 className={and(style.employees__header, 'fancy')}>
