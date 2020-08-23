@@ -5,14 +5,23 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
-  context.log(process.env.CV_PARTNER_API_SECRET);
+  if (
+    process.env.NODE_ENV !== "production" &&
+    !process.env.CV_PARTNER_API_SECRET
+  ) {
+    context.res = {
+      status: 500,
+      body: `Environment variable CV_PARTNER_API_SECRET is missing.
+Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
+    };
+    return;
+  }
   try {
     const request = await fetch("https://variant.cvpartner.com/api/v1/users", {
       headers: [
         ["Authorization", `Bearer ${process.env.CV_PARTNER_API_SECRET || ""}`],
       ],
     });
-    context.log(request);
     if (request.ok) {
       const employeesJSON = await request.json();
       // Make images
