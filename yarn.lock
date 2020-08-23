@@ -1597,6 +1597,11 @@
   resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-2.0.1.tgz#aefdde40e2b6ce4d0c80ed23847fa7d00e45d393"
   integrity sha512-h2tnfyvZbXfWmz2Y6g8mWzJwJ+pijBgz1KrKF6puMf7wrdMCZA3clT96fXoQplHhRg41CNdLTeKWcyWYDEFHjg==
 
+"@variant/profile@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@variant/profile/-/profile-2.0.2.tgz#8c884198dbf4532bbcb543f039a82a66a9ff0f84"
+  integrity sha512-tijksaqFxdAdKN2Sfjj1i9u5U5RpAhF7r/g4XS9zEn5mOQVG0K/B79w2nprMGjzcXy4du2Lxnp4SEwBEuWVd5w==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
