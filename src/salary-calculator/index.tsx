@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Layout from "src/layout";
 import RadioButton from "../components/radio-button";
 import Slider from "../components/slider";
-import { calculateEstimatedSalaray, getMaxYear, Degree } from "./calculate";
+import { calculateEstimatedSalary, getMaxYear, Degree } from "./calculate";
 import style from "./index.module.css";
 import { and } from "src/utils/strings";
 
@@ -36,7 +36,7 @@ const Calculator = () => {
     let payObj = { value: salary };
     anime({
       targets: payObj,
-      value: calculateEstimatedSalaray(selectedYear, degree),
+      value: calculateEstimatedSalary(selectedYear, degree),
       duration: 500,
       round: 1,
       easing: "easeInOutExpo",

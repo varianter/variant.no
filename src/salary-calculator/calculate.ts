@@ -2,7 +2,7 @@ import data from "./pay.json";
 
 type SalaryData = { [year: string]: string };
 
-export function calculateEstimatedSalaray(
+export function calculateEstimatedSalary(
   graduationYear: number,
   degree: Degree
 ): string | undefined {
