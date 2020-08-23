@@ -41,9 +41,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:api": "cd ./functions && npm run start",
     "export": "next export",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "gen:pay": "node tools/pay.js",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "install:api": "cd ./functions && npm i"
   }
 }
