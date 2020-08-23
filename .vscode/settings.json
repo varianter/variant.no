@@ -4,9 +4,9 @@
   "scss.lint.validProperties": ["composes"],
   "scss.lint.unknownAtRules": "ignore",
   "azureFunctions.deploySubpath": "./functions",
-  "azureFunctions.postDeployTask": "npm install:api",
+  "azureFunctions.postDeployTask": "npm install",
   "azureFunctions.projectLanguage": "TypeScript",
   "azureFunctions.projectRuntime": "~2",
   "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.preDeployTask": "npm prune:api"
+  "azureFunctions.preDeployTask": "npm prune"
 }
