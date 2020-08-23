@@ -83,7 +83,9 @@ const Calculator = () => {
           </p>
 
           <div className={style.gradeContainer}>
-            <h3 className={style.question}>Si oss hvilken grad du har?</h3>
+            <h3 className={style.question}>
+              Hvilken grad du har eller får du?
+            </h3>
 
             <RadioButton
               changed={setDegree}
@@ -116,6 +118,7 @@ const Calculator = () => {
               to={maxYear}
               from={1990}
               onChange={setSelectedYear}
+              label={"Utdanningsår"}
             />
             <span className={style.icon} aria-label="Child icon" role="img">
               👶
