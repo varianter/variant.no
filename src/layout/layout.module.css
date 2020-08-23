@@ -15,7 +15,7 @@
 .header {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 5.4rem;
+  padding-right: 7.4rem;
   max-width: 50rem;
   margin: 0 auto;
 }
@@ -26,7 +26,6 @@
 }
 .header__nav {
   flex: 1;
-  min-width: 22rem;
 }
 .header__nav ul {
   display: flex;
