@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
+import { ButtonLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
 import style from './index.module.css';
-import { ButtonLink } from 'src/components/button';
 import SayHi from './say-hi';
 
 const Home = () => {
@@ -71,9 +72,9 @@ const Home = () => {
             gode (og åpne) vilkår
           </a>{' '}
           og{' '}
-          <a href="https://www.variant.no/kalkulator" title="Lønnskalkulator">
-            god lønn
-          </a>
+          <Link href="/kalkulator">
+            <a title="Lønnskalkulator">god lønn</a>
+          </Link>
           . Ikke minst har vi mange spennende prosjekter.
         </p>
       </section>
