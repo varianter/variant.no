@@ -8,27 +8,17 @@ export { default } from "src/employees";
 export const getStaticProps: GetStaticProps<{
   employeeList: Employee[];
 }> = async () => {
-  const request = await fetch("https://variant.cvpartner.com/api/v1/users", {
-    headers: [
-      ["Authorization", `Bearer ${process.env.CV_PARTNER_API_TOKEN || ""}`],
-    ],
-  });
+  const request = await fetch(
+    `${process.env.AZURE_PROXY_URL}/getEmployees?code=${process.env.AZURE_PROXY_KEY}`
+  );
   if (request.ok) {
     const employeesJSON = await request.json();
     // Make images
     const employeeList = await Promise.all<Employee>(
-      employeesJSON
-        .filter(
-          (employee: EmployeeJSON) =>
-            employee.deactivated ||
-            // All employees that have started should be set
-            // as countrymanager in cv-parter, when they start.
-            employee.roles.some((role) => role === "countrymanager")
-        )
-        .map(async (employee: any) => {
-          const imageSlug = await handleImages(employee);
-          return { ...massageEmployee(employee), imageSlug };
-        })
+      employeesJSON.map(async (employee: EmployeeJSON) => {
+        const imageSlug = await handleImages(employee);
+        return { ...massageEmployee(employee), imageSlug };
+      })
     );
     return { props: { employeeList }, revalidate: 24 * 60 * 60 };
   }

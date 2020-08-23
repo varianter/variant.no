@@ -2,5 +2,11 @@
   "css.lint.validProperties": ["composes"],
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.validProperties": ["composes"],
-  "scss.lint.unknownAtRules": "ignore"
+  "scss.lint.unknownAtRules": "ignore",
+  "azureFunctions.deploySubpath": "functions",
+  "azureFunctions.postDeployTask": "npm install",
+  "azureFunctions.projectLanguage": "TypeScript",
+  "azureFunctions.projectRuntime": "~2",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.preDeployTask": "npm prune"
 }
