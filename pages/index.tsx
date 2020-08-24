@@ -1,18 +1,14 @@
 import { GetStaticProps } from 'next';
 import { handleImages } from 'src/utils/imageHandler';
 import { Employee, massageEmployee } from 'src/employees';
+import { getEmployeesUrl } from 'src/utils/api/getEmployees';
 
 export { default } from 'src/index';
 
 export const getStaticProps: GetStaticProps<{
   randomEmployee: Employee;
 }> = async () => {
-  // Set so we can run local as fallback.
-  const baseUrl = process.env.AZURE_PROXY_URL || 'http://localhost:7071/api/';
-  const authKey = process.env.AZURE_PROXY_KEY
-    ? `?code=${process.env.AZURE_PROXY_KEY}`
-    : '';
-  const request = await fetch(`${baseUrl}/getEmployees${authKey}`);
+  const request = await fetch(getEmployeesUrl);
   if (request.ok) {
     const employeesJSON = await request.json();
     // Make images
