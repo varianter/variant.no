@@ -28,6 +28,7 @@ const Home = ({
           content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
         />
       </Head>
+
       <SayHi
         className={style.sayHi}
         href="https://twitter.com/intent/tweet?screen_name=variant_as"

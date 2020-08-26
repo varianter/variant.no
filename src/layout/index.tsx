@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import AnimatingBackground from 'src/background';
@@ -19,6 +19,24 @@ const Layout: React.FC<LayoutProps> = ({
   fullWidth = false,
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
+
+  /*NEW CODE UNDER*/
+
+  const [clickActive, setClickActive] = useState(true);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateWidth);
+    if (width > 599) {
+      setClickActive(true);
+    }
+    //console.log('width:', width);
+    return () => window.removeEventListener('resize', updateWidth);
+  });
+
+  const updateWidth = () => {
+    setWidth(window.innerWidth);
+  };
 
   return (
     <div className={style.main}>
@@ -52,7 +70,25 @@ const Layout: React.FC<LayoutProps> = ({
             </Link>
           </h1>
           <nav className={style.header__nav}>
-            <ul>
+            <button
+              className={style.container}
+              id="hamburger"
+              onClick={() =>
+                clickActive ? setClickActive(false) : setClickActive(true)
+              }
+            >
+              <div className={style.bar1}></div>
+              <div className={style.bar2}></div>
+              <div className={style.bar3}></div>
+            </button>
+            <ul
+              className={
+                clickActive
+                  ? style.header__nav__ul
+                  : style.header__nav__ul__show
+              }
+              id="nav-ul"
+            >
               <li>
                 <Link href="/ansatte">
                   <a>Alle varianter</a>
@@ -71,6 +107,14 @@ const Layout: React.FC<LayoutProps> = ({
               <li>
                 <a href="http://handbook.variant.no" rel="noopener">
                   Håndbok
+                </a>
+              </li>
+              <li id="ikke_vises">
+                <a
+                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
+                  rel="noopener"
+                >
+                  Si hallo!
                 </a>
               </li>
             </ul>
