@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import AnimatingBackground from 'src/background';
@@ -20,22 +20,7 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
 
-  const [clickActive, setClickActive] = useState(true);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
-  useEffect(() => {
-    if (width > 599) {
-      setClickActive(true);
-    }
-  }, [width]);
+  const [clickActive, setClickActive] = useState(false);
 
   return (
     <div className={style.main}>
@@ -68,6 +53,7 @@ const Layout: React.FC<LayoutProps> = ({
               </a>
             </Link>
           </h1>
+
           <nav className={style.header__nav}>
             <button
               className={style.container}
@@ -81,11 +67,10 @@ const Layout: React.FC<LayoutProps> = ({
               <div className={style.bar3}></div>
             </button>
             <ul
-              className={
-                clickActive
-                  ? style.header__nav__ul
-                  : style.header__nav__ul__show
-              }
+              className={and(
+                style.header__nav__ul,
+                clickActive ? '' : style.header__nav__ul__hidden,
+              )}
               id="nav-ul"
             >
               <li>
@@ -108,7 +93,7 @@ const Layout: React.FC<LayoutProps> = ({
                   Håndbok
                 </a>
               </li>
-              <li id="ikke_vises">
+              <li id="dont_show">
                 <a
                   href="https://twitter.com/intent/tweet?screen_name=variant_as"
                   rel="noopener"
