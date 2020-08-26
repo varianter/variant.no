@@ -20,23 +20,22 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
 
-  /*NEW CODE UNDER*/
-
   const [clickActive, setClickActive] = useState(true);
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+    };
     window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  useEffect(() => {
     if (width > 599) {
       setClickActive(true);
     }
-    //console.log('width:', width);
-    return () => window.removeEventListener('resize', updateWidth);
-  });
-
-  const updateWidth = () => {
-    setWidth(window.innerWidth);
-  };
+  }, [width]);
 
   return (
     <div className={style.main}>
