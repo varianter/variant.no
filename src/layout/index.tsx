@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import AnimatingBackground from 'src/background';
@@ -21,6 +21,21 @@ const Layout: React.FC<LayoutProps> = ({
   const footerContainer = useRef<HTMLElement>(null);
 
   const [clickActive, setClickActive] = useState(false);
+  const burgerRef = useRef<HTMLElement>(null);
+
+  const handleClick = (e: Event) => {
+    if (burgerRef.current && !burgerRef.current.contains(e.target as Node)) {
+      setClickActive(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
 
   return (
     <div className={style.main}>
@@ -54,10 +69,21 @@ const Layout: React.FC<LayoutProps> = ({
             </Link>
           </h1>
 
-          <nav className={style.header__nav}>
+          <span hidden id="menu-label">
+            Main menu
+          </span>
+
+          <nav
+            className={style.header__nav}
+            aria-labelledby="menu-label"
+            id="menu"
+            ref={burgerRef}
+          >
             <button
               className={style.container}
               id="hamburger"
+              aria-labelledby="menu-label"
+              aria-expanded={clickActive ? true : false}
               onClick={() =>
                 clickActive ? setClickActive(false) : setClickActive(true)
               }
