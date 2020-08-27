@@ -70,7 +70,7 @@ const Layout: React.FC<LayoutProps> = ({
           </h1>
 
           <span hidden id="menu-label">
-            Main menu
+            Hovedmeny
           </span>
 
           <nav
@@ -88,9 +88,24 @@ const Layout: React.FC<LayoutProps> = ({
                 clickActive ? setClickActive(false) : setClickActive(true)
               }
             >
-              <div className={style.bar1}></div>
-              <div className={style.bar2}></div>
-              <div className={style.bar3}></div>
+              <div
+                className={and(
+                  style.bar1,
+                  clickActive ? style.bar1_change : '',
+                )}
+              ></div>
+              <div
+                className={and(
+                  style.bar2,
+                  clickActive ? style.bar2_change : '',
+                )}
+              ></div>
+              <div
+                className={and(
+                  style.bar3,
+                  clickActive ? style.bar3_change : '',
+                )}
+              ></div>
             </button>
             <ul
               className={and(
