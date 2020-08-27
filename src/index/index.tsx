@@ -77,12 +77,7 @@ const Home = ({
         <p>
           <strong>Det betyr deg.</strong>
         </p>
-        <ButtonLink
-          href="https://jobs.variant.no"
-          title="Les mer om jobb i Variant"
-        >
-          Bli en Variant
-        </ButtonLink>
+        <ButtonNextLink href="/jobs">Bli en Variant</ButtonNextLink>
 
         <p>
           Vi har mange{' '}

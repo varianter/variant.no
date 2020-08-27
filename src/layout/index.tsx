@@ -59,9 +59,9 @@ const Layout: React.FC<LayoutProps> = ({
                 </Link>
               </li>
               <li>
-                <a href="https://jobs.variant.no" rel="noopener">
-                  Bli en variant
-                </a>
+                <Link href="/jobs">
+                  <a>Bli en variant</a>
+                </Link>
               </li>
               <li>
                 <a href="http://variant.blog" rel="noopener">
@@ -85,9 +85,9 @@ const Layout: React.FC<LayoutProps> = ({
             <h2>Utforsk</h2>
             <ul>
               <li>
-                <a href="https://jobs.variant.no" rel="noopener">
-                  Ledige stillinger
-                </a>
+                <Link href="/jobs">
+                  <a>Ledige stillinger</a>
+                </Link>
               </li>
               <li>
                 <a href="https://handbook.variant.no">Håndbok</a>
