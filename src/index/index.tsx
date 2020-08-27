@@ -2,7 +2,7 @@ import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React from 'react';
-import { ButtonLink, ButtonNextLink } from 'src/components/button';
+import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
 import Head from 'next/head';
