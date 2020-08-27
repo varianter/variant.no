@@ -21,11 +21,11 @@ const Home = ({
       <Head>
         <meta
           property="og:description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
         <meta
           name="description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
       </Head>
       <SayHi
@@ -144,13 +144,15 @@ const Home = ({
         </article>
 
         <article>
-          <h3>Salg</h3>
+          <h3>Prosjektledelse</h3>
 
           <p>
-            Salg er vanskelig. Det krever kunnskap om marked, erfaring i
-            tilbudsskriving, evne til å generere tekst, pedagogikk, teknisk
-            kompetanse og ikke minst kapasitet. Hør hvordan vi kan bistå i en
-            slik prosess for dere.
+            Prosjektledelse handler om å sy brikkene sammen. Det er å bidra til
+            et engasjerende og fruktbart samarbeid i et tverrfaglig team, og til
+            å skape fremdrift i riktig retning. Prosjektledelse er læreglede i
+            praksis, og vi deler raust vår erfaring og våre perspektiv i dine
+            prosjekter. Vi deler gjerne våre betraktninger om nettopp ditt
+            prosjekt, ta kontakt!
           </p>
         </article>
 
