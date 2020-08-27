@@ -234,6 +234,10 @@
   z-index: 2;
 }
 
+.employees a {
+  align-self: flex-start;
+}
+
 .employees__random {
   display: grid;
   grid-template-areas:
@@ -241,7 +245,7 @@
     'image button';
   grid-template-columns: var(--image-height) auto;
   grid-template-rows: 1fr 1fr;
-  gap: 1rem 4rem;
+  gap: 0.5rem 4rem;
   place-items: center;
 }
 @media (max-width: 600px) {
