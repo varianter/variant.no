@@ -88,13 +88,17 @@
   top: 20px;
 }
 
+.container:focus {
+  outline: 2px solid var(--color-secondary1);
+}
+
 .bar1,
 .bar2,
 .bar3 {
   position: relative;
   width: 25px;
   height: 3px;
-  background-color: #e61a6b;
+  background-color: var(--color-secondary1);
   margin: 4px 0;
   transition: 0.4s;
   border-radius: 5px;
@@ -104,13 +108,12 @@
   .header__nav__ul {
     width: 190px;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 60px;
+    right: 20px;
     z-index: 100;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #35316e;
-    background-image: url('burger-blob.svg');
+    background-color: #ede8d7;
     border-radius: 5px;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -120,7 +123,6 @@
   }
 
   .header__nav__ul li a {
-    color: var(--color-standard__white);
     cursor: pointer;
   }
 
