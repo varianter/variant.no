@@ -21,11 +21,11 @@ const Home = ({
       <Head>
         <meta
           property="og:description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, salg, kursing og rådgiving."
         />
         <meta
           name="description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, salg, kursing og rådgiving."
         />
       </Head>
       <SayHi
@@ -106,7 +106,11 @@ const Home = ({
           <Link href="/kalkulator">
             <a title="Lønnskalkulator">god lønn</a>
           </Link>
-          . Ikke minst har vi mange spennende prosjekter.
+          . Ikke minst har vi mange{' '}
+          <a href="#prosjekter" title="Prosjekteksempler">
+            spennende prosjekter
+          </a>
+          .
         </p>
       </section>
 
@@ -216,6 +220,7 @@ const Home = ({
       </section>
 
       <section className={style.cases}>
+        <h2 id="prosjekter">Noen av det vi gjør</h2>
         <article className={style.cases__case}>
           <div className={style.cases__caseContent}>
             <h3>Mobilitet for Trøndelag</h3>

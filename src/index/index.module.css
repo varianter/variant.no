@@ -74,7 +74,7 @@
 }
 .omVariant__us {
   width: 70%;
-  margin-top: 3.4rem;
+  margin-top: 2.4rem;
 }
 @media (max-width: 500px) {
   .omVariant__us {
@@ -102,7 +102,7 @@
   padding: 0 1.2rem;
 }
 .services h3 {
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 .services article {
   margin-top: 4.8rem;
@@ -135,26 +135,53 @@
 .blog {
   text-align: center;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 16rem 0 8rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 400px) {
   .blog {
     margin: -5rem auto 0;
   }
 }
+@media (max-width: 370px) {
+  .blog {
+    padding: 8rem 0;
+  }
+}
 .blog__text {
   position: relative;
 
   z-index: 2;
+  order: 2;
 }
 .blog_image1 {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  left: calc(50% + 1rem);
   max-width: 80%;
+  margin: 0 auto;
+  order: 1;
+  margin-bottom: 3rem;
 }
+@media (max-width: 700px) {
+  .blog_image1 {
+    top: -5rem;
+  }
+}
+@media (min-width: 370px) {
+  .blog_image1 {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: calc(50% + 1rem);
+    max-width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .blog_image1 {
+    top: -5rem;
+  }
+}
+
 .blog a {
   color: var(--color-standard__black);
   text-decoration: none;
@@ -171,6 +198,9 @@
   margin-top: 8.25rem;
   padding: 0 1rem;
 }
+.cases h2 {
+  text-align: center;
+}
 .cases__case {
   display: grid;
   padding: 2rem 0;
@@ -186,7 +216,7 @@
 }
 .cases__caseContent h3 {
   font-size: 1.6rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 .cases__case figure img {
   display: block;
