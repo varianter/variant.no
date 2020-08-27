@@ -107,6 +107,9 @@ const Layout: React.FC<LayoutProps> = ({
                   <a>Lønnskalkulator</a>
                 </Link>
               </li>
+              <li>
+                <a href="https://styleguide.variant.no">Styleguide</a>
+              </li>
             </ul>
           </div>
           <div className={style.footer__item}>
