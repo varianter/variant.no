@@ -91,19 +91,19 @@ const Layout: React.FC<LayoutProps> = ({
                   style.bar1,
                   clickActive ? style.bar1_change : '',
                 )}
-              ></div>
+              />
               <div
                 className={and(
                   style.bar2,
                   clickActive ? style.bar2_change : '',
                 )}
-              ></div>
+              />
               <div
                 className={and(
                   style.bar3,
                   clickActive ? style.bar3_change : '',
                 )}
-              ></div>
+              />
             </button>
 
             <nav
