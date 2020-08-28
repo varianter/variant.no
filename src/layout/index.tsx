@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({
   const footerContainer = useRef<HTMLElement>(null);
 
   const [clickActive, setClickActive] = useState(false);
-  const burgerRef = useRef<HTMLElement>(null);
+  const burgerRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (e: Event) => {
     if (burgerRef.current && !burgerRef.current.contains(e.target as Node)) {
@@ -38,7 +38,10 @@ const Layout: React.FC<LayoutProps> = ({
   }, []);
 
   return (
-    <div className={style.main}>
+    <div
+      className={style.main}
+      style={clickActive ? { position: 'fixed' } : { position: 'relative' }}
+    >
       <Head>
         <title>{title}</title>
         <link rel="icon" href={favicon} />
@@ -73,12 +76,7 @@ const Layout: React.FC<LayoutProps> = ({
             Hovedmeny
           </span>
 
-          <nav
-            className={style.header__nav}
-            aria-labelledby="menu-label"
-            id="menu"
-            ref={burgerRef}
-          >
+          <div ref={burgerRef}>
             <button
               className={style.container}
               id="hamburger"
@@ -107,43 +105,61 @@ const Layout: React.FC<LayoutProps> = ({
                 )}
               ></div>
             </button>
-            <ul
+
+            <nav
               className={and(
-                style.header__nav__ul,
-                clickActive ? '' : style.header__nav__ul__hidden,
+                style.header__nav,
+                clickActive ? '' : style.header__nav__hidden,
               )}
-              id="nav-ul"
+              aria-labelledby="menu-label"
+              aria-hidden={clickActive ? true : false}
+              id="menu"
             >
-              <li>
-                <Link href="/ansatte">
-                  <a>Alle varianter</a>
-                </Link>
-              </li>
-              <li>
-                <a href="https://jobs.variant.no" rel="noopener">
-                  Bli en variant
-                </a>
-              </li>
-              <li>
-                <a href="http://variant.blog" rel="noopener">
-                  Blogg
-                </a>
-              </li>
-              <li>
-                <a href="http://handbook.variant.no" rel="noopener">
-                  Håndbok
-                </a>
-              </li>
-              <li id="dont_show">
-                <a
-                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                  rel="noopener"
-                >
-                  Si hallo!
-                </a>
-              </li>
-            </ul>
-          </nav>
+              <ul className={style.header__nav__ul} id="nav-ul">
+                <li>
+                  <a
+                    href="https://jobs.variant.no"
+                    rel="noopener"
+                    tabIndex={clickActive ? 0 : -1}
+                  >
+                    Bli en variant
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://handbook.variant.no"
+                    rel="noopener"
+                    tabIndex={clickActive ? 0 : -1}
+                  >
+                    Håndbok
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://variant.blog"
+                    rel="noopener"
+                    tabIndex={clickActive ? 0 : -1}
+                  >
+                    Blogg
+                  </a>
+                </li>
+                <li>
+                  <Link href="/ansatte">
+                    <a tabIndex={clickActive ? 0 : -1}>Alle varianter</a>
+                  </Link>
+                </li>
+                <li id="dont_show">
+                  <a
+                    href="https://twitter.com/intent/tweet?screen_name=variant_as"
+                    rel="noopener"
+                    tabIndex={clickActive ? 0 : -1}
+                  >
+                    Si hallo!
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
         <div>{children}</div>
       </div>
