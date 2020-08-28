@@ -1,7 +1,7 @@
 import { getListings, getMatterFile } from 'src/jobs/utils/getLisings';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-export { default } from 'src/jobs/listing';
+export { default } from 'src/jobs/listing/listing';
 
 type JobListing = {
   data: { [key: string]: string };

@@ -6,9 +6,13 @@ application_url: https://jobs.variant.no/o/byens-beste-prosjektledere/c/new
 location: Trondheim, Norge
 ---
 
-### Kort om stillingen
-
 Vi trenger flere ledere som bryr seg, - bryr du deg?
+
+<div class="right">
+
+![blob](/work_images/coffe_blob.png 'Anders og Maicek drikker kaffe')
+
+ </div>
 
 ## Hva vil vi at du skal bli?
 
@@ -26,10 +30,15 @@ Felles for prosjektene du skal lede er at de ved hjelp av teknologi forbedrer si
 
 Ambisjonen vår er å bygge et nytt, kompetent og vitalt prosjektleder- og rådgivningsmiljø her i byen vår. Vi er allerede en god gjeng men ønsker å bli enda sterkere.
 
+<div class="left top-margin size-medium">
+
+![blob](/work_images/kristin_green.svg 'Kristin i diskusjon')
+
+</div>
+
 ## Hva ønsker vi å tilby?
 
 Vi ønsker å være rause. Vi gir god lønn og gode betingelser. Vi er veldig opptatt av å være rettferdig. Vi tror på at du tar gode avgjørelser, du har vår tillit. Vi ønsker å være åpne. Her er ingenting hemmelig. Alle har innsyn i alt. Og mye er til og med åpent for hele verden. Se bare på vår personalhåndbok som ligger åpent på nett. Vi ønsker å være modige. Vi skal gå etter de mest utfordrende oppdragene. vi skal tørre å høre på alle i selskapet. Vi skal tørre å være et ansvarlig selskap i vårt samfunn. Bli med og lag en ny variant av et it-selskap!
-Våre forventninger
 
 ## Hva ønsker vi at du er?
 

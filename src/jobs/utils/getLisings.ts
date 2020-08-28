@@ -27,6 +27,6 @@ export const getFileListingData = async () => {
     ),
   );
   return listings.sort(
-    (a, b) => Number(a.priority ?? 0) - Number(b.priority ?? 0),
+    (a, b) => Number(b.priority ?? 0) - Number(a.priority ?? 0),
   );
 };
