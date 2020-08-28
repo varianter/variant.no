@@ -147,7 +147,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: start;
-    background-color: var(--color-standard__white);
+    background-color: #f4f1e7; /*Same as main background color*/
   }
 
   .header__nav__ul li:last-child {
