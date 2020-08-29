@@ -106,14 +106,20 @@ export default function VariantTur() {
             <span className={style.hilde}>19:00</span>
             <span className={style.agatha}>I syvtiden</span>
           </dt>
+          <dd>🍽 Velkommen til hotellet (i konferansesalen)</dd>
+
+          <dt>
+            <span className={style.hilde}>19:30</span>
+            <span className={style.agatha}>I syvtreditiden</span>
+          </dt>
           <dd>
             🍽 <span className={style.hilde}>Middag</span>
             <span className={style.agatha}>Dinering</span> på hotellet
           </dd>
 
           <dt>
-            <span className={style.hilde}>22:00</span>
-            <span className={style.agatha}>Klokken ti på aftenen</span>
+            <span className={style.hilde}>21:30</span>
+            <span className={style.agatha}>Klokken halv ti på aftenen</span>
           </dt>
           <dd>🔪 Murder Mystery</dd>
         </dl>
@@ -122,8 +128,8 @@ export default function VariantTur() {
 
         <dl>
           <dt>
-            <span className={style.hilde}>07:00-09:00</span>
-            <span className={style.agatha}>Mellom syv og ni</span>
+            <span className={style.hilde}>08:00-10:00</span>
+            <span className={style.agatha}>Mellom åtte og ti</span>
           </dt>
           <dd>
             🍳 <span className={style.hilde}>Frokost</span>
@@ -143,8 +149,8 @@ export default function VariantTur() {
           </dd>
 
           <dt>
-            <span className={style.hilde}>11:00-15:00</span>
-            <span className={style.agatha}>Fra elleve til i tredien</span>
+            <span className={style.hilde}>10:30-14:00</span>
+            <span className={style.agatha}>Fra titredve til i totiden</span>
           </dt>
           <dd>
             Ulike <span className={style.hilde}>aktiviteter</span>
@@ -158,13 +164,6 @@ export default function VariantTur() {
             <a href="https://www.unionoye.no/no/aktiviteter/kajakk/">Kajakk</a>
           </dd>
           <dd>
-            🚴‍♀️
-            <a href="https://www.unionoye.no/no/aktiviteter/norangsdalen/">
-              <span className={style.hilde}>Sykkel</span>
-              <span className={style.agatha}>Velosiped</span>
-            </a>
-          </dd>
-          <dd>
             🐄
             <a href="https://www.unionoye.no/no/moter--selskap/oyes-beste-avloser/">
               <span className={style.hilde}>Avløserkonkurranse</span>
@@ -173,7 +172,7 @@ export default function VariantTur() {
           </dd>
 
           <dt>
-            <span className={style.hilde}>13:00</span>
+            <span className={style.hilde}>14:00</span>
             <span className={style.agatha}>Noe etter noon</span>
           </dt>
           <dd>
@@ -191,6 +190,12 @@ export default function VariantTur() {
           </dd>
 
           <dt>
+            <span className={style.hilde}>21:00</span>
+            <span className={style.agatha}>Midt på kvelden</span>
+          </dt>
+          <dd>😱 Overraskelse</dd>
+
+          <dt>
             <span className={style.hilde}>22:00</span>
             <span className={style.agatha}>Utover natten</span>
           </dt>
@@ -204,8 +209,8 @@ export default function VariantTur() {
 
         <dl>
           <dt>
-            <span className={style.hilde}>09:00-11:00</span>
-            <span className={style.agatha}>Mellom ni og elleve</span>
+            <span className={style.hilde}>08:00-10:00</span>
+            <span className={style.agatha}>Mellom åtte og ti</span>
           </dt>
           <dd>
             🥞 <span className={style.hilde}>Frokost</span>
@@ -216,13 +221,10 @@ export default function VariantTur() {
             <span className={style.hilde}>12:30</span>
             <span className={style.agatha}>Klokken halv ett</span>
           </dt>
-          <dd>
-            🚌 <span className={style.hilde}></span>
-            <span className={style.agatha}></span>Avgang mot Otta
-          </dd>
+          <dd>🚌 Avgang mot Lom</dd>
 
           <dt>
-            <span className={style.hilde}>15:00</span>
+            <span className={style.hilde}>15:30</span>
             <span className={style.agatha}>I tretiden på ettermiddagen</span>
           </dt>
           <dd>
@@ -231,19 +233,17 @@ export default function VariantTur() {
           </dd>
 
           <dt>
-            <span className={style.hilde}>17:36</span>
-            <span className={style.agatha}>Seks minutter over halv seks</span>
+            <span className={style.hilde}>17:00</span>
+            <span className={style.agatha}>Fem om ettermidagen</span>
           </dt>
           <dd>
-            🚝 <span className={style.hilde}>Tog til Trondheim</span>
+            🚝 <span className={style.hilde}>Buss til Trondheim</span>
             <span className={style.agatha}>Nidarosekspressen over Dovre</span>
           </dd>
 
           <dt>
-            <span className={style.hilde}>20:46</span>
-            <span className={style.agatha}>
-              Fjorten minutter på ni om aftenen
-            </span>
+            <span className={style.hilde}>20:30</span>
+            <span className={style.agatha}>I halvnitiden</span>
           </dt>
           <dd>
             💤 <span className={style.hilde}>Ankomst i byen</span>
