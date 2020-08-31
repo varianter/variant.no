@@ -93,7 +93,7 @@ const Layout: React.FC<LayoutProps> = ({
           </span>
 
           <button
-            className={style.buttonContainer}
+            className={style.burgerButtonContainer}
             id="hamburger"
             aria-labelledby="menu-label"
             aria-expanded={clickActive}
