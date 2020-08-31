@@ -222,7 +222,7 @@ const Home = ({
       </section>
 
       <section className={style.cases}>
-        <h2 id="prosjekter">Noen av det vi gjør</h2>
+        <h2 id="prosjekter">Noe av det vi gjør</h2>
         <article className={style.cases__case}>
           <div className={style.cases__caseContent}>
             <h3>Mobilitet for Trøndelag</h3>
