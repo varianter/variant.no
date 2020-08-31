@@ -21,26 +21,42 @@ const Layout: React.FC<LayoutProps> = ({
   const footerContainer = useRef<HTMLElement>(null);
 
   const [clickActive, setClickActive] = useState(false);
-  const burgerRef = useRef<HTMLDivElement>(null);
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const handleClick = (e: Event) => {
-    if (burgerRef.current && !burgerRef.current.contains(e.target as Node)) {
-      setClickActive(false);
-    }
-  };
-
+  //Listens to resize and updates the screenwidth to a hook. Has a timeout so it dont update all the time.
   useEffect(() => {
-    document.addEventListener('click', handleClick);
+    setScreenWidth(window.innerWidth);
+    let timeoutId: any = null;
+    const setWindowSize = () => {
+      clearTimeout(timeoutId);
 
+      timeoutId = setTimeout(() => setScreenWidth(window.innerWidth), 100);
+    };
+
+    window.addEventListener('resize', setWindowSize);
     return () => {
-      document.removeEventListener('click', handleClick);
+      window.removeEventListener('resize', setWindowSize);
     };
   }, []);
+
+  function setTabIndex() {
+    if (screenWidth > 600) {
+      return 0;
+    } else if (screenWidth <= 600 && clickActive) {
+      return 0;
+    } else {
+      return -1;
+    }
+  }
 
   return (
     <div
       className={style.main}
-      style={clickActive ? { position: 'fixed' } : { position: 'relative' }}
+      style={
+        clickActive && screenWidth < 600
+          ? { position: 'fixed' }
+          : { position: 'relative' }
+      }
     >
       <Head>
         <title>{title}</title>
@@ -76,90 +92,83 @@ const Layout: React.FC<LayoutProps> = ({
             Hovedmeny
           </span>
 
-          <div ref={burgerRef}>
-            <button
-              className={style.container}
-              id="hamburger"
-              aria-labelledby="menu-label"
-              aria-expanded={clickActive ? true : false}
-              onClick={() =>
-                clickActive ? setClickActive(false) : setClickActive(true)
-              }
-            >
-              <div
-                className={and(
-                  style.bar1,
-                  clickActive ? style.bar1_change : '',
-                )}
-              />
-              <div
-                className={and(
-                  style.bar2,
-                  clickActive ? style.bar2_change : '',
-                )}
-              />
-              <div
-                className={and(
-                  style.bar3,
-                  clickActive ? style.bar3_change : '',
-                )}
-              />
-            </button>
+          <button
+            className={style.buttonContainer}
+            id="hamburger"
+            aria-labelledby="menu-label"
+            aria-expanded={clickActive}
+            onClick={() => setClickActive(!clickActive)}
+          >
+            <div
+              className={and(style.bar1, clickActive ? style.bar1_change : '')}
+            />
+            <div
+              className={and(style.bar2, clickActive ? style.bar2_change : '')}
+            />
+            <div
+              className={and(style.bar3, clickActive ? style.bar3_change : '')}
+            />
+          </button>
 
-            <nav
-              className={and(
-                style.header__nav,
-                clickActive ? '' : style.header__nav__hidden,
-              )}
-              aria-labelledby="menu-label"
-              aria-hidden={clickActive ? true : false}
-              id="menu"
-            >
-              <ul className={style.header__nav__ul} id="nav-ul">
-                <li>
-                  <a
-                    href="https://jobs.variant.no"
-                    rel="noopener"
-                    tabIndex={clickActive ? 0 : -1}
-                  >
-                    Bli en variant
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://handbook.variant.no"
-                    rel="noopener"
-                    tabIndex={clickActive ? 0 : -1}
-                  >
-                    Håndbok
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://variant.blog"
-                    rel="noopener"
-                    tabIndex={clickActive ? 0 : -1}
-                  >
-                    Blogg
-                  </a>
-                </li>
-                <li>
-                  <Link href="/ansatte">
-                    <a tabIndex={clickActive ? 0 : -1}>Alle varianter</a>
-                  </Link>
-                </li>
-                <li id="dont_show">
-                  <a
-                    href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                    rel="noopener"
-                    tabIndex={clickActive ? 0 : -1}
-                  >
-                    Si hallo!
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <nav
+            className={and(
+              style.header__nav,
+              clickActive ? '' : style.header__nav__hidden,
+            )}
+            aria-labelledby="menu-label"
+            aria-hidden={!clickActive}
+            id="menu"
+            onClick={(event: any) => {
+              var ulList = document.getElementById('nav-ul');
+              if ((event.target as Node) != ulList) {
+                setClickActive(false);
+              }
+            }}
+          >
+            <ul className={style.header__nav__ul} id="nav-ul">
+              <li>
+                <a
+                  href="https://jobs.variant.no"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Bli en variant
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://handbook.variant.no"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Håndbok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://variant.blog"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Blogg
+                </a>
+              </li>
+              <li>
+                <Link href="/ansatte">
+                  <a tabIndex={setTabIndex()}>Alle varianter</a>
+                </Link>
+              </li>
+              <li id="dont_show">
+                <a
+                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Si hallo!
+                </a>
+              </li>
+            </ul>
+          </nav>
         </header>
         <div>{children}</div>
       </div>
