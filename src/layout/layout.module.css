@@ -69,7 +69,7 @@
   color: rgba(0, 0, 0, 0);
 }
 
-.buttonContainer {
+.burgerButtonContainer {
   background-color: transparent;
   border: 0;
   font-size: 1.2rem;
@@ -80,7 +80,7 @@
   top: 1.5rem;
 }
 
-.buttonContainer:focus {
+.burgerButtonContainer:focus {
   outline: none;
   box-shadow: 0 0 0 0.15rem rgba(21, 156, 228, 0.4);
 }
@@ -164,7 +164,7 @@
     margin-top: 0.5rem;
   }
 
-  .buttonContainer {
+  .burgerButtonContainer {
     display: block;
     z-index: 101;
   }
