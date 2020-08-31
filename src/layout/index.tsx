@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import AnimatingBackground from 'src/background';
@@ -20,8 +20,44 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
 
+  const [clickActive, setClickActive] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  //Listens to resize and updates the screenwidth to a hook. Has a timeout so it dont update all the time.
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    let timeoutId: any = null;
+    const setWindowSize = () => {
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => setScreenWidth(window.innerWidth), 100);
+    };
+
+    window.addEventListener('resize', setWindowSize);
+    return () => {
+      window.removeEventListener('resize', setWindowSize);
+    };
+  }, []);
+
+  function setTabIndex() {
+    if (screenWidth > 600) {
+      return 0;
+    } else if (screenWidth <= 600 && clickActive) {
+      return 0;
+    } else {
+      return -1;
+    }
+  }
+
   return (
-    <div className={style.main}>
+    <div
+      className={style.main}
+      style={
+        clickActive && screenWidth < 600
+          ? { position: 'fixed' }
+          : { position: 'relative' }
+      }
+    >
       <Head>
         <title>{title}</title>
         <link rel="icon" href={favicon} />
@@ -51,26 +87,84 @@ const Layout: React.FC<LayoutProps> = ({
               </a>
             </Link>
           </h1>
-          <nav className={style.header__nav}>
-            <ul>
+
+          <span hidden id="menu-label">
+            Hovedmeny
+          </span>
+
+          <button
+            className={style.burgerButtonContainer}
+            id="hamburger"
+            aria-labelledby="menu-label"
+            aria-expanded={clickActive}
+            onClick={() => setClickActive(!clickActive)}
+          >
+            <div
+              className={and(style.bar1, clickActive ? style.bar1_change : '')}
+            />
+            <div
+              className={and(style.bar2, clickActive ? style.bar2_change : '')}
+            />
+            <div
+              className={and(style.bar3, clickActive ? style.bar3_change : '')}
+            />
+          </button>
+
+          <nav
+            className={and(
+              style.header__nav,
+              clickActive ? '' : style.header__nav__hidden,
+            )}
+            aria-labelledby="menu-label"
+            aria-hidden={!clickActive}
+            id="menu"
+            onClick={(event: any) => {
+              var ulList = document.getElementById('nav-ul');
+              if ((event.target as Node) != ulList) {
+                setClickActive(false);
+              }
+            }}
+          >
+            <ul className={style.header__nav__ul} id="nav-ul">
               <li>
-                <Link href="/ansatte">
-                  <a>Alle varianter</a>
-                </Link>
-              </li>
-              <li>
-                <a href="https://jobs.variant.no" rel="noopener">
+                <a
+                  href="https://jobs.variant.no"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
                   Bli en variant
                 </a>
               </li>
               <li>
-                <a href="http://variant.blog" rel="noopener">
+                <a
+                  href="http://handbook.variant.no"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Håndbok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://variant.blog"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
                   Blogg
                 </a>
               </li>
               <li>
-                <a href="http://handbook.variant.no" rel="noopener">
-                  Håndbok
+                <Link href="/ansatte">
+                  <a tabIndex={setTabIndex()}>Alle varianter</a>
+                </Link>
+              </li>
+              <li id="dont_show">
+                <a
+                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
+                  rel="noopener"
+                  tabIndex={setTabIndex()}
+                >
+                  Si hallo!
                 </a>
               </li>
             </ul>
