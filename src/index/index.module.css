@@ -128,7 +128,7 @@
     margin-left: 50%;
   }
   .services img + article {
-    margin-top: -10rem;
+    margin-top: 0;
   }
 }
 
