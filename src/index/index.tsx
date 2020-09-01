@@ -147,12 +147,13 @@ const Home = ({
           <h3>Prosjektledelse</h3>
 
           <p>
-            Prosjektledelse handler om å sy brikkene sammen. Det er å bidra til
-            et engasjerende og fruktbart samarbeid i et tverrfaglig team, og til
-            å skape fremdrift i riktig retning. Prosjektledelse er læreglede i
+            Prosjektledelse handler om å legge sammen brikkene i riktig
+            rekkefølge og skape et bra resultat. Det blir ikke likt hver gang,
+            og det er det som er så spennende. Prosjektledelse er å bidra til et
+            engasjerende og fruktbart samarbeid i et tverrfaglig team, og til å
+            skape fremdrift i riktig retning. Prosjektledelse er læreglede i
             praksis, og vi deler raust vår erfaring og våre perspektiv i dine
-            prosjekter. Vi deler gjerne våre betraktninger om nettopp ditt
-            prosjekt, ta kontakt!
+            prosjekter.
           </p>
         </article>
 
