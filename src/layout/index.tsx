@@ -15,7 +15,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({
   children,
-  title = 'Variant – En ny variant av et konsulentselskap',
+  title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
 }) => {
   const footerContainer = useRef<HTMLElement>(null);
@@ -70,7 +70,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:url" content="https://www.variant.no/" />
         <meta
           property="og:image"
-          content="https://www.variant.no/assets/og-header-min.png"
+          content="https://www.variant.no/og-header-min.png"
         />
       </Head>
       <div

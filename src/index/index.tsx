@@ -21,11 +21,11 @@ const Home = ({
       <Head>
         <meta
           property="og:description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
+          content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
         <meta
           name="description"
-          content="En ny variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
+          content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
       </Head>
       <SayHi
@@ -61,8 +61,7 @@ const Home = ({
         <div className={style.omVariant__us}>
           <h3>Der er vi!</h3>
           <p>
-            En ny variant av et konsulentselskap som er raust, åpent og
-            læreglad.
+            En variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
       </section>
