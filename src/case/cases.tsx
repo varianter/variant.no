@@ -51,7 +51,7 @@ export const CaseList: CaseJSON[] = [
     image_alt: 'Ellen i forgunnen hvor det jobbes med planlegging i bakgrunnen',
   },
   {
-    heading: 'Miljødirektoratet - digitalisering med bruker i fokus',
+    heading: 'Miljødirektoratet - Design thinking',
     content: `Hilde og Kristin har  sammen med Miljødirektoratet utviklet et konsept 
       for håndtering av henvendelser fra eksterne aktører, basert på Design 
       thinking og Tjenestedesign. Håndtering av henvendelser utgjør en 
@@ -76,7 +76,7 @@ export const CaseList: CaseJSON[] = [
     image_alt: 'Placeholder',
   },
   {
-    heading: 'AKVA group - ',
+    heading: 'AKVA group - digitalisering av havbruksnæringen',
     content: `AKVA group er markedsledende i verden med sine produkter for sporing av 
       oppdrettslaks. Tore, Adrian, Line, Mikael og enda noen til har gjennom 
       flere år bidratt til utvikling og fornying. Med mer enn 20 års historikk 

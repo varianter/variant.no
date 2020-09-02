@@ -7,6 +7,10 @@ import { CaseList } from '../src/case/cases';
 
 export { default } from 'src/index';
 
+function shuffle(array: Array<CaseJSON>) {
+  array.sort(() => Math.random() - 0.5);
+}
+
 export const getStaticProps: GetStaticProps<{
   randomEmployee: Employee;
   randomCases: CaseJSON[];
@@ -21,18 +25,8 @@ export const getStaticProps: GetStaticProps<{
     const randomEmployee = { ...massageEmployee(employee), imageSlug };
 
     const getCases: CaseJSON[] = CaseList;
-    var numbers: Array<number> = [];
-    const randomCases = [];
-
-    for (let i = 0; i < 3; i++) {
-      let num = Math.floor(Math.random() * getCases.length);
-      if (!numbers.includes(num)) {
-        numbers.push(num);
-        randomCases.push(getCases[num]);
-      } else {
-        i--;
-      }
-    }
+    shuffle(getCases);
+    const randomCases = getCases.slice(0, 3);
 
     return { props: { randomEmployee, randomCases }, revalidate: 24 * 60 * 60 };
   }
