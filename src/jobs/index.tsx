@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from 'src/layout';
-import AnimatingBackground from 'src/background';
 import Head from 'next/head';
 
 import style from './index.module.css';
