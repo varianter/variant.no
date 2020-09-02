@@ -1,7 +1,7 @@
 import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import { useReducedMotionEffect } from 'src/utils/hooks';
@@ -14,8 +14,26 @@ import SayHi from './say-hi';
 
 const Home = ({
   randomEmployee,
+  randomCases,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const reducedMotion = useReducedMotionEffect();
+
+  const cases = useMemo(() => {
+    return randomCases.map((caseItem) => (
+      <article className={style.cases__case} key={caseItem.heading}>
+        <div className={style.cases__caseContent}>
+          <h3>{caseItem.heading}</h3>
+          {caseItem.content.split(/\n\s*\n/gm).map((e) => (
+            <p>{e}</p>
+          ))}
+        </div>
+        <figure>
+          <img src={caseItem.case_image} alt={caseItem.image_alt} />
+        </figure>
+      </article>
+    ));
+  }, [randomCases]);
+
   return (
     <Layout>
       <Head>
@@ -223,83 +241,7 @@ const Home = ({
 
       <section className={style.cases}>
         <h2 id="prosjekter">Noe av det vi gjør</h2>
-        <article className={style.cases__case}>
-          <div className={style.cases__caseContent}>
-            <h3>Mobilitet for Trøndelag</h3>
-
-            <p>
-              AtB ønsker å endre virksomheten til å levere mobilitet. I det
-              gjelder også å bidra til mer bærekraftig transport og et lavere
-              CO2-avtrykk gjennom kollektiv reising og utfasing av fossildrevne
-              transportmidler. Dette synes vi er så utrolig kult å være med på.
-            </p>
-
-            <p>
-              Mikael, Petter, Magnus og Christian jobber sammen med AtB for å
-              oppnå dette. De skal blant annet lage nye mobilapper, ny
-              nettbutikk, ny sanntidsvisning og bransjens beste ruteplanlegger.
-            </p>
-          </div>
-          <figure>
-            <img
-              src={require('./images/case-atb.png')}
-              alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
-            />
-          </figure>
-        </article>
-
-        <article className={style.cases__case}>
-          <div className={style.cases__caseContent}>
-            <h3>TrønderEnergi - i fronten av en ny energihverdag</h3>
-
-            <p>
-              TrønderEnergi opererer i en bransje som virkelig er i endring.
-              Elektrifisering i kombinasjon med økt andel fornybar energi fra
-              vindproduksjon krever mye større grad av fleksibilitet og
-              intelligens i styring av kraftproduksjon og handel på
-              kraftmarkedet. Her er TrønderEnergi pionerer. Tonje, Magnus og
-              Kristin er så heldige å få bidra til realisering av ulike
-              prosjekter som design av fysiske driftsmiljø, tjenestedesign for
-              AI-løsninger og prosjektkommunikasjon.
-            </p>
-          </div>
-          <figure>
-            <img
-              src={require('./images/case-ten.png')}
-              alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
-            />
-          </figure>
-        </article>
-
-        <article className={style.cases__case}>
-          <div className={style.cases__caseContent}>
-            <h3>
-              Ren Røros - lokal forretningsutvikling med globale ambisjoner
-            </h3>
-
-            <p>
-              Det som tidligere het Røros Elektrisitetsverk AS med alle sine
-              datterselskap, har gjennom de to siste årene gjennomgått en
-              voldsom endringsprosess. Selskapet har rigget seg til å bli Ren
-              Røros – en organisasjon som skal drive frem elektrifisering,
-              fornybar energiproduksjon og ny bærekraftig klimateknologi. Det
-              hele gjennom en helhetlig forretningsstruktur som fokuserer på
-              klima, brukerreiser og interne synergieffekter. I prosessen har
-              Tonje, Ellen og Magnus bistått med forretningsdesign,
-              strategiarbeid, tjenestedesign, selskapsidentitet og kulturbygging
-              i tett samarbeid med de ansatte. Ren Røros hevder med ordene i
-              behold at “Vi har både kunnskap om tilstanden jorda vår er i, og
-              kompetanse til å gjøre noe med det”. Vi er stolte over å jobbe med
-              kunder som våger å investere i fremtidens klimaløsninger!
-            </p>
-          </div>
-          <figure>
-            <img
-              src={require('./images/case-ren.png')}
-              alt="Mikael som jobber for AtB i forgrunn med AtBs busser i bakgrunnen"
-            />
-          </figure>
-        </article>
+        {cases}
       </section>
     </Layout>
   );
