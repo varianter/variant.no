@@ -15,6 +15,12 @@ Vi trenger mennesker som bryr seg om å skape en bedre hverdag. Er det deg?
 
 Vi vil at du skal være modig. Stole på at du er flink, fortelle verden hva du kan. Vi vil at du skal være raus. Dele din kunnskap med dine kollegaer og folka i byen her. Vi vil at du skal være åpen. Si ifra hvis noe plager deg, våge å være medmenneske med dine kollegaer.
 
+<div class="right margin">
+
+![Teal blob](/work_images/teal_blob.svg)
+
+</div>
+
 Vi ønsker at du er nysgjerrig. At du har lyst til å lære deg nye ting. Vi ønsker at du tar ansvar. Ansvar for at du blir dyktig og at du deler den kunnskapen du har med de rundt deg.
 
 Vi ønsker at du nærmer deg slutten på studiene. Altså at du går i går i 4. eller 3. klasse, og at du går data, informatikk, design eller tilsvarende. 2. klassinger som går bachelor-studium er også velkommen til å søke. Har du en venn du ønsker å jobbe sammen med så er vi helt åpne for det også.
@@ -31,6 +37,12 @@ I begge de to siste alternativene vil du få hjelp og sparring av våre erfarne 
 
 Som sommerjobber hos oss får du oppfølging og tilrettelegging for å lære så mye som mulig. Både ved å jobbe med kunder men også som en del av vårt sterke fagmiljø med engasjerte mennesker.
 
+<div class="left sm">
+
+![pink blob](/work_images/blob_pink.svg)
+
+</div>
+
 ### Hva ønsker vi å tilby?
 
 Vi ønsker å være rause. Vi gir god lønn og gode betingelser. Vi er veldig opptatt av å være rettferdig. Vi tror på at du tar gode avgjørelser, du har vår tillit. Vi ønsker å være åpne. Her er ingenting hemmelig. Alle har innsyn i alt - selv som sommerjobber. Og mye er til og med åpent for hele verden. Se bare på vår personalhåndbok som ligger åpent på nett. Vi ønsker å være modige. Vi skal tørre å høre på alle i selskapet.
@@ -43,17 +55,17 @@ Vi ser etter både ulike designere og utviklere – og alt i mellom. Utviklere k
 
 Det viktigste er at du bryr deg. Bryr deg om koden du skriver, bryr deg om brukeren du lager noe for, bryr deg om kunden du leverer til. Bryr deg om samfunnet rundt deg.
 
-<div class="center-image">
+<div class="polaroid">
 
-![Placeholder](https://source.unsplash.com/random/500x500)
+![Placeholder](/work_images/sommeransatte_utenfor_variant.png)
 
-<caption class="subtext">
-
-Årets sommervarianter var utleid til AtB på to forskjellige prosjekter. Johannes og Martin utviklet videre på en sanntidstavle som enkelt lar deg lage din egen oversikt over bussruter som er viktig for deg. Stina Sofie og Mats jobbet med en app til iPhone og Apple Watch som gjør det enklere å rekke den bussen man har planlagt å ta.
-
-</caption>
+<figcaption>
+Stina Sofie, Mats, Martin og Johannes utenfor våre lokaler
+</figcaption>
 
 </div>
+
+Årets sommervarianter var utleid til AtB på to forskjellige prosjekter. Johannes og Martin utviklet videre på en sanntidstavle som enkelt lar deg lage din egen oversikt over bussruter som er viktig for deg. Stina Sofie og Mats jobbet med en app til iPhone og Apple Watch som gjør det enklere å rekke den bussen man har planlagt å ta.
 
 Har du spørsmål?
 
@@ -61,4 +73,6 @@ Ta kontakt med Marius Krakeli på 416 37 572 (mk@variant.no) eller Sarah Serussi
 
 ### Søknadsfrist
 
+<p>
 4. oktober 2020
+</p>

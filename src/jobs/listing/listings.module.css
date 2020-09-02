@@ -92,7 +92,37 @@
   float: right;
 }
 
-.rendered__markdown__wrapper .left img {
+.rendered__markdown__wrapper :global(.left) img {
   float: left;
   margin-left: -16rem;
+  margin-right: 0;
+}
+
+.rendered__markdown__wrapper :global(.polaroid) {
+  float: right;
+  transform: rotateZ(10deg);
+  margin: 2rem;
+  margin-right: -0.45rem;
+  padding: 0.7em;
+  background: white;
+  width: 15rem;
+  box-shadow: 0 0 4vmin rgba(0, 0, 0, 0.3), 0 0 0.5vmin rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+  font-family: 'Recoleta-Medium';
+  transition: box-shadow 0.2s ease, filter 0.2s ease;
+}
+.rendered__markdown__wrapper :global(.polaroid) img {
+  float: none;
+  max-width: 100%;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rendered__markdown__wrapper :global(.polaroid) figcaption:nth-child(2) {
+  margin: 0;
+}
+
+.rendered__markdown__wrapper :global(.sm) img {
+  width: 17rem;
 }
