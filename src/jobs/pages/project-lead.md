@@ -30,7 +30,7 @@ Felles for prosjektene du skal lede er at de ved hjelp av teknologi forbedrer si
 
 Ambisjonen vår er å bygge et nytt, kompetent og vitalt prosjektleder- og rådgivningsmiljø her i byen vår. Vi er allerede en god gjeng men ønsker å bli enda sterkere.
 
-<div class="left top-margin size-medium">
+<div class="left">
 
 ![blob](/work_images/kristin_green.svg 'Kristin i diskusjon')
 

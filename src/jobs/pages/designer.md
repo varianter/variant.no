@@ -6,11 +6,7 @@ application_url: https://jobs.variant.no/o/designer-trondheim/c/new
 location: Trondheim, Norge
 ---
 
-<div class="right margin">
-
 ![Mikael, Marius og Ellen på taket](/work_images/rooftop_chill.svg)
-
-</div>
 
 ## Kort om stillingen
 
@@ -38,6 +34,8 @@ Så vil vi gjerne jobbe enda mer med:
 - De små detaljene som gir løsningene wow-effekt
 - Å lage den emosjonelle forbindelsen mellom menneskene og de digitale løsningene
 
+![placeholder blob](/work_images/blob_pink.svg)
+
 Du vil jobbe tett på våre kunder, fortrinnsvis i kundens lokaler for å bygge en god designkultur.
 
 Kundelisten endrer seg stadig, og for tiden bistår vi blant annet disse:
@@ -47,12 +45,6 @@ Kundelisten endrer seg stadig, og for tiden bistår vi blant annet disse:
 - Statens Vegvesen
 - Arbeidstilsynet
 - Uninett
-
-<div class="right margin size-small">
-
-![placeholder blob](/work_images/blob_pink.svg)
-
-</div>
 
 ## Hos oss får du:
 
@@ -67,15 +59,9 @@ Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure p�
 
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
 
-Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder [ymse meetups](https://www.meetup.com/IXDATrondheim/) i Trondheim. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
-
-<div class="left margin negative-left">
-
 ![placeholder blob](/work_images/teal_blob.svg)
 
-</div>
-
-##
+Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder [ymse meetups](https://www.meetup.com/IXDATrondheim/) i Trondheim. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
 

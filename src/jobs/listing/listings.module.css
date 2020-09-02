@@ -3,20 +3,22 @@
 .jobArticle {
   margin: 2rem 1rem 6rem;
   display: grid;
-  grid-template: 'a b' 'c c' 'd d' / 1fr auto;
+  grid-template: 'a a' 'c c' 'd d' / 1fr auto;
 }
 
-@media (max-width: media-small) {
-  .jobArticle {
-    grid-template: 'a a' 'b b' 'c c' 'd d' / 1fr auto;
-  }
+.titleWrapper {
+  grid-area: a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .jobArticle__title {
-  grid-area: a;
-  font-weight: bold;
   margin: 1.8rem 0;
   font-size: 3.3rem;
+  padding-right: 3rem;
 
   background: linear-gradient(
     to right,
@@ -37,14 +39,9 @@
 }
 
 .button__top {
-  grid-area: b;
-  margin: auto;
+  margin: auto 0;
 }
 @media (max-width: media-small) {
-  .button__top {
-    margin: 1rem 0 2rem;
-  }
-
   .button__top a,
   .button__bottom a {
     display: flex;
@@ -55,6 +52,14 @@
 
 .rendered__markdown__wrapper {
   grid-area: c;
+  max-width: 60ch;
+}
+.rendered__markdown__wrapper * + * {
+  margin-top: 1rem;
+}
+
+.rendered__markdown__wrapper * + h2 {
+  margin-top: 3.4rem;
 }
 
 .rendered__markdown__wrapper h1 {
@@ -64,13 +69,13 @@
 }
 
 .rendered__markdown__wrapper h2 {
-  font-weight: bold;
-  font-size: 2.3rem;
+  font-weight: 600;
+  font-size: 1.7rem;
 }
 
 .rendered__markdown__wrapper h3 {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
 }
 
 .rendered__markdown__wrapper ul {
@@ -80,6 +85,14 @@
   margin: 0.3rem 0;
 }
 .rendered__markdown__wrapper img {
-  shape-outside: circle();
-  margin: -1rem;
+  shape-outside: circle() padding-box;
+  width: 24rem;
+  padding: 1rem;
+  margin-right: -12rem;
+  float: right;
+}
+
+.rendered__markdown__wrapper .left img {
+  float: left;
+  margin-left: -16rem;
 }

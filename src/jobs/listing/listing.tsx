@@ -29,14 +29,18 @@ const Listing: NextPage<InferGetStaticPropsType<
         </title>
       </Head>
       <section className={style.jobArticle}>
-        <h1
-          className={style.jobArticle__title}
-          data-no-animation={reducedMotion}
-        >
-          {data.h1_title}
-        </h1>
-        <div className={style.button__top}>
-          <ButtonLink href={data.application_url}>Søk på stillingen</ButtonLink>
+        <div className={style.titleWrapper}>
+          <h1
+            className={style.jobArticle__title}
+            data-no-animation={reducedMotion}
+          >
+            {data.h1_title}
+          </h1>
+          <div className={style.button__top}>
+            <ButtonLink href={data.application_url}>
+              Søk på stillingen
+            </ButtonLink>
+          </div>
         </div>
         <article
           className={style.rendered__markdown__wrapper}
