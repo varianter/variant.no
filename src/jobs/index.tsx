@@ -111,7 +111,6 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             ></iframe>
           </div>
         </section>
-        <AnimatingBackground />
       </Layout>
     </>
   );
