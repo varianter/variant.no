@@ -7,7 +7,6 @@ export const getStaticProps = async () => {
     const listings = await getFileListingData();
     return {
       props: { listings },
-      revalidate: 60 * 60,
     };
   } catch (e) {
     console.error(e);
