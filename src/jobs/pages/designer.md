@@ -6,7 +6,7 @@ application_url: https://jobs.variant.no/o/designer-trondheim/c/new
 location: Trondheim, Norge
 ---
 
-![Mikael, Marius og Ellen på taket](/work_images/rooftop_chill.svg)
+![Mikael, Marius og Ellen på taket](/work_images/crimson_blob.svg)
 
 ## Kort om stillingen
 

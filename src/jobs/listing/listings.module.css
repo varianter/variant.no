@@ -98,6 +98,19 @@
   margin-right: 0;
 }
 
+.rendered__markdown__wrapper :global(.sm) img {
+  width: 20rem;
+}
+
+.rendered__markdown__wrapper :global(.blob1) img {
+  shape-margin: 2rem;
+  clip-path: url('#blobClip1');
+}
+.rendered__markdown__wrapper :global(.blob2) img {
+  shape-margin: 2rem;
+  clip-path: url('#blobClip2');
+}
+
 .rendered__markdown__wrapper :global(.polaroid) {
   float: right;
   transform: rotateZ(10deg);
@@ -121,8 +134,4 @@
 
 .rendered__markdown__wrapper :global(.polaroid) figcaption:nth-child(2) {
   margin: 0;
-}
-
-.rendered__markdown__wrapper :global(.sm) img {
-  width: 17rem;
 }
