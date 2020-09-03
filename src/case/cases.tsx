@@ -48,7 +48,8 @@ export const CaseList: CaseJSON[] = [
       kompetanse til å gjøre noe med det”. Vi er stolte over å jobbe med 
       kunder som våger å investere i fremtidens klimaløsninger!`,
     case_image: '/images/case-ren.png',
-    image_alt: 'Ellen i forgunnen hvor det jobbes med planlegging i bakgrunnen',
+    image_alt:
+      'Ellen i forgrunnen hvor det jobbes med planlegging i bakgrunnen',
   },
   {
     heading: 'Miljødirektoratet - Design thinking',

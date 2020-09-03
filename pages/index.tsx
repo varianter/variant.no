@@ -26,7 +26,10 @@ export const getStaticProps: GetStaticProps<{
 
     const randomCases = shuffle(CaseList).slice(0, 3);
 
-    return { props: { randomEmployee, randomCases }, revalidate: 24 * 60 * 60 };
+    return {
+      props: { randomEmployee, randomCases },
+      revalidate: 7 * 24 * 60 * 60,
+    };
   }
   // Trigger fallback on previous version
   throw new Error();
