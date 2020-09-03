@@ -5,7 +5,6 @@ import AnimatingBackground from 'src/background';
 
 const favicon = require('@variant/profile/lib/logo/favicon.png');
 import style from './layout.module.css';
-import FooterImage from './footer-image';
 import { and } from 'src/utils/css';
 
 type LayoutProps = {
@@ -173,6 +172,7 @@ const Layout: React.FC<LayoutProps> = ({
         <div>{children}</div>
       </div>
       <AnimatingBackground />
+
       <footer className={style.footer} ref={footerContainer}>
         <div className={style.footer__inner}>
           <div className={style.footer__item}>
@@ -265,10 +265,6 @@ const Layout: React.FC<LayoutProps> = ({
             </address>
           </div>
         </div>
-        <FooterImage
-          container={footerContainer}
-          className={style.footer__background}
-        />
       </footer>
     </div>
   );
