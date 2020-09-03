@@ -2,13 +2,13 @@ import { GetStaticProps } from 'next';
 import { handleImages } from 'src/utils/imageHandler';
 import { Employee, massageEmployee } from 'src/employees';
 import { getEmployeesUrl } from 'src/utils/api/getEmployees';
-import { CaseJSON } from '../src/case/Case';
-import { CaseList } from '../src/case/cases';
+import { CaseJSON } from 'src/case/Case';
+import { CaseList } from 'src/case/cases';
 
 export { default } from 'src/index';
 
-function shuffle(array: Array<CaseJSON>) {
-  array.sort(() => Math.random() - 0.5);
+function shuffle<T>(array: Array<T>): Array<T> {
+  return [...array].sort(() => Math.random() - 0.5);
 }
 
 export const getStaticProps: GetStaticProps<{
@@ -24,9 +24,7 @@ export const getStaticProps: GetStaticProps<{
     const imageSlug = await handleImages(employee);
     const randomEmployee = { ...massageEmployee(employee), imageSlug };
 
-    const getCases: CaseJSON[] = CaseList;
-    shuffle(getCases);
-    const randomCases = getCases.slice(0, 3);
+    const randomCases = shuffle(CaseList).slice(0, 3);
 
     return { props: { randomEmployee, randomCases }, revalidate: 24 * 60 * 60 };
   }
