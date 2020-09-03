@@ -1,11 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import AnimatingBackground from 'src/background';
+import { and } from 'src/utils/css';
+import style from './layout.module.css';
 
 const favicon = require('@variant/profile/lib/logo/favicon.png');
-import style from './layout.module.css';
-import { and } from 'src/utils/css';
 
 type LayoutProps = {
   title?: string;
@@ -17,8 +17,6 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
 }) => {
-  const footerContainer = useRef<HTMLElement>(null);
-
   const [clickActive, setClickActive] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -173,7 +171,7 @@ const Layout: React.FC<LayoutProps> = ({
       </div>
       <AnimatingBackground />
 
-      <footer className={style.footer} ref={footerContainer}>
+      <footer className={style.footer}>
         <div className={style.footer__inner}>
           <div className={style.footer__item}>
             <h2>Utforsk</h2>
