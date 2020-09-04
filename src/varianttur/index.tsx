@@ -95,7 +95,7 @@ export default function VariantTur() {
           </dt>
           <dd>
             🚤 <span className={style.hilde}>Båt</span>
-            <span className={style.agatha}>Dampskip</span> Nordic Lady og Fjord Explorer inn
+            <span className={style.agatha}>Dampskip</span> Nordic Lady og Fjord Explorer inn 
             <a href="https://no.visitalesund.com/toppattraksjonar/hjorundfjorden">
               Hjørundford
             </a>
@@ -141,10 +141,10 @@ export default function VariantTur() {
             <span className={style.agatha}>Like ved klokken ni</span>
           </dt>
           <dd>
-            ⛰ Avmars
+            ⛰ Avmars 
             <a href="https://no.visitalesund.com/sja-and-gjere/topptur-til-saksa-1073-m-o-h-p922123">
               Saksa
-            </a>
+            </a>.
            
           </dd>
 
