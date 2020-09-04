@@ -81,21 +81,21 @@ export default function VariantTur() {
           </dd>
 
           <dt>
-            <span className={style.hilde}>12:00</span>
+            <span className={style.hilde}>11:45</span>
             <span className={style.agatha}>Noon</span>
           </dt>
           <dd>
             🧆 <span className={style.hilde}>Lunsj</span>
-            <span className={style.agatha}>Nonsmat</span> i Ålesund
+            <span className={style.agatha}>Nonsmat</span> Apotekergata No. 5 i Ålesund
           </dd>
 
           <dt>
-            <span className={style.hilde}>14:00</span>
-            <span className={style.agatha}>På slaget to</span>
+            <span className={style.hilde}>13:15</span>
+            <span className={style.agatha}>Kvart over ett</span>
           </dt>
           <dd>
             🚤 <span className={style.hilde}>Båt</span>
-            <span className={style.agatha}>Dampskip</span> inn
+            <span className={style.agatha}>Dampskip</span> Nordic Lady og Fjord Explorer inn
             <a href="https://no.visitalesund.com/toppattraksjonar/hjorundfjorden">
               Hjørundford
             </a>
@@ -106,11 +106,11 @@ export default function VariantTur() {
             <span className={style.hilde}>19:00</span>
             <span className={style.agatha}>I syvtiden</span>
           </dt>
-          <dd>🍽 Velkommen til hotellet (i konferansesalen)</dd>
+          <dd>🍽 Aperitiff i dansesalen</dd>
 
           <dt>
             <span className={style.hilde}>19:30</span>
-            <span className={style.agatha}>I syvtreditiden</span>
+            <span className={style.agatha}>Halv åtte</span>
           </dt>
           <dd>
             🍽 <span className={style.hilde}>Middag</span>
@@ -142,10 +142,10 @@ export default function VariantTur() {
           </dt>
           <dd>
             ⛰ Avmars
-            <a href="https://www.visitnorway.no/listings/topptur-til-slogen-(1564-m-o-h-)/20373/">
-              Slogen
+            <a href="https://no.visitalesund.com/sja-and-gjere/topptur-til-saksa-1073-m-o-h-p922123">
+              Saksa
             </a>
-            , for de som ønsker det
+           
           </dd>
 
           <dt>
@@ -185,15 +185,15 @@ export default function VariantTur() {
             <span className={style.agatha}>På slaget syv om aftenen</span>
           </dt>
           <dd>
-            🦐 <span className={style.hilde}>Middag</span>
-            <span className={style.agatha}>Aftensmat</span>
+            🦐 <span className={style.hilde}>Jubileumsmiddag</span>
+            <span className={style.agatha}>Jubileumsmiddag</span>
           </dd>
 
           <dt>
             <span className={style.hilde}>21:00</span>
             <span className={style.agatha}>Midt på kvelden</span>
           </dt>
-          <dd>😱 Overraskelse</dd>
+          <dd>😱 Overraskelse i dansesalen</dd>
 
           <dt>
             <span className={style.hilde}>22:00</span>
@@ -218,32 +218,32 @@ export default function VariantTur() {
           </dd>
 
           <dt>
-            <span className={style.hilde}>12:30</span>
-            <span className={style.agatha}>Klokken halv ett</span>
+            <span className={style.hilde}>10:00</span>
+            <span className={style.agatha}>Klokken ti</span>
           </dt>
           <dd>🚌 Avgang mot Lom</dd>
 
           <dt>
-            <span className={style.hilde}>15:30</span>
-            <span className={style.agatha}>I tretiden på ettermiddagen</span>
+            <span className={style.hilde}>13:00</span>
+            <span className={style.agatha}>Klokka ett på ettermiddagen</span>
           </dt>
           <dd>
-            🥯 <span className={style.hilde}>Lunsj i Lom</span>
-            <span className={style.agatha}>Traktement i Lom</span>
+            🥯 <span className={style.hilde}>Lunsj hos Brimibue i Lom</span>
+            <span className={style.agatha}>Traktement hos Brimibue i Lom</span>
           </dd>
 
           <dt>
-            <span className={style.hilde}>17:00</span>
-            <span className={style.agatha}>Fem om ettermidagen</span>
+            <span className={style.hilde}>14:30</span>
+            <span className={style.agatha}>Halv tre på ettermidagen</span>
           </dt>
           <dd>
             🚝 <span className={style.hilde}>Buss til Trondheim</span>
-            <span className={style.agatha}>Nidarosekspressen over Dovre</span>
+            <span className={style.agatha}>Buss til Trondheim</span>
           </dd>
 
           <dt>
-            <span className={style.hilde}>20:30</span>
-            <span className={style.agatha}>I halvnitiden</span>
+            <span className={style.hilde}>19:00</span>
+            <span className={style.agatha}>I syvtiden</span>
           </dt>
           <dd>
             💤 <span className={style.hilde}>Ankomst i byen</span>
