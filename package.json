@@ -23,18 +23,15 @@
   },
   "dependencies": {
     "@types/animejs": "^3.1.2",
-    "@types/react-lottie": "^1.2.5",
     "@types/react-slider": "^1.0.0",
-    "@variant/components": "2.0.3",
-    "@variant/profile": "^2.0.4",
+    "@variant/components": "^2.0.9",
+    "@variant/profile": "^2.0.5",
     "animejs": "^3.2.0",
-    "framer-motion": "2.3.0",
     "jimp": "^0.16.0",
     "next": "^9.5.1",
     "next-images": "^1.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-lottie": "^1.2.3",
     "react-slider": "^1.0.8"
   },
   "resolutions": {
@@ -50,7 +47,8 @@
     "gen:pay": "node tools/pay.js",
     "postinstall": "patch-package",
     "install:api": "cd ./functions && npm i",
-    "prune:api": "cd ./functions && npm prune"
+    "prune:api": "cd ./functions && npm prune",
+    "analyze-bundle": "ANALYZE=true yarn build"
   },
   "husky": {
     "hooks": {

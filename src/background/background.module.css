@@ -29,6 +29,6 @@
   composes: background__item;
   height: 80rem;
   width: 80rem;
-  top: 210rem;
-  left: calc(50% - 25rem);
+  top: 225rem;
+  left: calc(50% - 5rem);
 }

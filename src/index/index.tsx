@@ -4,7 +4,6 @@ import { getStaticProps } from 'pages/index';
 import React from 'react';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
-import { useReducedMotionEffect } from 'src/utils/hooks';
 import Head from 'next/head';
 
 import { BaseBlob } from '@variant/components/lib/blob';
@@ -15,7 +14,6 @@ import SayHi from './say-hi';
 const Home = ({
   randomEmployee,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const reducedMotion = useReducedMotionEffect();
   return (
     <Layout>
       <Head>
@@ -34,12 +32,7 @@ const Home = ({
         rel="noopener"
       />
       <section className={style.omVariant}>
-        <h2
-          className={style.omVariant__title}
-          data-no-animation={reducedMotion}
-        >
-          Raus, åpen og læreglad
-        </h2>
+        <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
           IT handler ikke om designskisser, linjer av kode eller infrastruktur,
           men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
