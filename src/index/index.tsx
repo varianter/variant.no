@@ -4,7 +4,6 @@ import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
-import { useReducedMotionEffect } from 'src/utils/hooks';
 import Head from 'next/head';
 
 import { BaseBlob } from '@variant/components/lib/blob';
@@ -16,8 +15,6 @@ const Home = ({
   randomEmployee,
   randomCases,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const reducedMotion = useReducedMotionEffect();
-
   const cases = useMemo(() => {
     return randomCases.map((caseItem) => (
       <article className={style.cases__case} key={caseItem.heading}>
@@ -52,12 +49,7 @@ const Home = ({
         rel="noopener"
       />
       <section className={style.omVariant}>
-        <h2
-          className={style.omVariant__title}
-          data-no-animation={reducedMotion}
-        >
-          Raus, åpen og læreglad
-        </h2>
+        <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
           IT handler ikke om designskisser, linjer av kode eller infrastruktur,
           men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og

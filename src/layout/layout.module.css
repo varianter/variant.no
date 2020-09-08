@@ -188,22 +188,7 @@
 }
 
 .footer {
-  position: relative;
-  overflow: hidden;
-}
-.footer__background {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -2597px;
-  z-index: 1;
-  transition: margin-left 200ms ease-in;
-}
-
-@media (max-width: 600px) {
-  .footer__background {
-    margin-left: -2500px;
-  }
+  background: url('./footer.svg') no-repeat center top;
 }
 
 .footer__inner {
