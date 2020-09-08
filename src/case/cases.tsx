@@ -74,7 +74,7 @@ export const CaseList: CaseJSON[] = [
       prosjektet til å bygge en metodikk som direktoratet vil anvende til
       fremtidige digitalisering- og innovasjonsprosjekter.`,
     case_image: '/images/case-mil.png',
-    image_alt: 'Placeholder',
+    image_alt: 'Hilde til venstre og Kristin til høyre som jobber',
   },
   {
     heading: 'AKVA group - digitalisering av havbruksnæringen',
@@ -92,6 +92,6 @@ export const CaseList: CaseJSON[] = [
       generasjons produkter, og nå bistår vi AKVA i å designe og  utvikle nye 
       løsninger som skal sikre fortsatt markedsledelse i mange år.`,
     case_image: '/images/case-akv.png',
-    image_alt: 'Placeholder',
+    image_alt: 'Tore til venstre, Mette i midten og Line til høyre',
   },
 ];
