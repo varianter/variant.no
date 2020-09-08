@@ -52,7 +52,7 @@ export const CaseList: CaseJSON[] = [
       'Ellen i forgrunnen hvor det jobbes med planlegging i bakgrunnen',
   },
   {
-    heading: 'Miljødirektoratet - Design thinking',
+    heading: 'Miljødirektoratet - design thinking',
     content: `Hilde og Kristin har  sammen med Miljødirektoratet utviklet et konsept 
       for håndtering av henvendelser fra eksterne aktører, basert på Design 
       thinking og Tjenestedesign. Håndtering av henvendelser utgjør en 
@@ -73,7 +73,7 @@ export const CaseList: CaseJSON[] = [
       I tillegg til å løse selve utfordringen med henvendelser benyttes også 
       prosjektet til å bygge en metodikk som direktoratet vil anvende til
       fremtidige digitalisering- og innovasjonsprosjekter.`,
-    case_image: '/logo-512.png',
+    case_image: '/images/case-mil.png',
     image_alt: 'Placeholder',
   },
   {
@@ -91,7 +91,7 @@ export const CaseList: CaseJSON[] = [
       med kunden vært med å lage en plattform som skal være ryggraden for neste 
       generasjons produkter, og nå bistår vi AKVA i å designe og  utvikle nye 
       løsninger som skal sikre fortsatt markedsledelse i mange år.`,
-    case_image: '/logo-512.png',
+    case_image: '/images/case-akv.png',
     image_alt: 'Placeholder',
   },
 ];
