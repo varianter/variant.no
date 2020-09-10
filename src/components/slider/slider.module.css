@@ -23,3 +23,15 @@
   top: 110%;
   font-variant-numeric: tabular-nums;
 }
+
+.temp__handler {
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+}
+
+.temp__slider {
+  position: absolute;
+  top: calc(2rem / 2 - 0.4rem / 2);
+  width: 100%;
+}
