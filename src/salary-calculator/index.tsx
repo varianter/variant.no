@@ -2,11 +2,11 @@ import anime from 'animejs';
 import React, { useEffect, useRef, useState } from 'react';
 import Layout from 'src/layout';
 import RadioButton from '../components/radio-button';
-import Slider from '../components/slider';
 import { calculateEstimatedSalary, getMaxYear, Degree } from './calculate';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
 import Head from 'next/head';
+import Slider from 'src/components/slider';
 
 const SalaryCalculator = () => {
   return (
