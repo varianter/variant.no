@@ -202,7 +202,7 @@ export const massageEmployee = (
     fullName: employee.name,
     name: employee.name.split(' ')[0],
     phone: (employee.telephone.startsWith('+47')
-      ? employee.telephone.slice(2)
+      ? employee.telephone.slice(3)
       : employee.telephone
     )
       .replace(/\s/g, '')
