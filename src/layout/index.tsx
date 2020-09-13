@@ -252,7 +252,7 @@ const Layout: React.FC<LayoutProps> = ({
                 target="_blank"
                 title="Kart til Varianthuset"
               >
-                Thomas Angellsgt. 10
+                Thomas Angells gate 10
               </a>
               . Kom innom for en kopp kaffe eller bare en hyggelig prat.
             </p>
@@ -260,7 +260,7 @@ const Layout: React.FC<LayoutProps> = ({
             <address>
               <strong>Variant AS</strong>
               <br />
-              Thomas Angellsgate 10 <br />
+              Thomas Angells gate 10 <br />
               7011 Trondheim
             </address>
           </div>
