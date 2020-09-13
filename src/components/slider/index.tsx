@@ -1,5 +1,6 @@
-import ReactSlider from 'react-slider';
 import style from './slider.module.css';
+import dynamic from 'next/dynamic';
+import { and } from 'src/utils/css';
 
 type SliderProps = {
   initial: number;
@@ -9,6 +10,16 @@ type SliderProps = {
   label: string;
 };
 
+const ReactSlider = dynamic(() => import('react-slider'), {
+  ssr: false,
+  loading: () => (
+    <div className={style.container}>
+      <div className={and(style.slider, style.temp__slider)}>
+        <div className={and(style.slider__handler, style.temp__handler)}></div>
+      </div>
+    </div>
+  ),
+});
 export default function Slider({
   initial,
   to,

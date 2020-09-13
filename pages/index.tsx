@@ -2,11 +2,18 @@ import { GetStaticProps } from 'next';
 import { handleImages } from 'src/utils/imageHandler';
 import { Employee, massageEmployee } from 'src/employees';
 import { getEmployeesUrl } from 'src/utils/api/getEmployees';
+import { CaseJSON } from 'src/case/Case';
+import { CaseList } from 'src/case/cases';
 
 export { default } from 'src/index';
 
+function shuffle<T>(array: Array<T>): Array<T> {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
 export const getStaticProps: GetStaticProps<{
   randomEmployee: Employee;
+  randomCases: CaseJSON[];
 }> = async () => {
   const request = await fetch(getEmployeesUrl);
   if (request.ok) {
@@ -16,7 +23,13 @@ export const getStaticProps: GetStaticProps<{
       employeesJSON[Math.floor(Math.random() * employeesJSON.length)];
     const imageSlug = await handleImages(employee);
     const randomEmployee = { ...massageEmployee(employee), imageSlug };
-    return { props: { randomEmployee }, revalidate: 24 * 60 * 60 };
+
+    const randomCases = shuffle(CaseList).slice(0, 3);
+
+    return {
+      props: { randomEmployee, randomCases },
+      revalidate: 7 * 24 * 60 * 60,
+    };
   }
   // Trigger fallback on previous version
   throw new Error();

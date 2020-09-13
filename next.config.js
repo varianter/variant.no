@@ -37,4 +37,13 @@ module.exports = withPlugins([withImages], {
     }
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/sommerjobb',
+        destination: 'https://jobs.variant.no/o/sommerjobb-2021',
+        permanent: true,
+      },
+    ];
+  },
 });
