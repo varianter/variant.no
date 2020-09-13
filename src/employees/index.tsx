@@ -61,7 +61,7 @@ export default function Employees({
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
-                  <JobsLink text="Er kanskje du en Variant på lur?" />
+                  <JobsLink text="Er du kanskje en aspirerende Variant?" />
                   <EmployeeTile employee={employee} />
                 </React.Fragment>
               );
