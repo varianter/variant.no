@@ -8,10 +8,10 @@
   "license": "MIT",
   "description": "Homepage for Variant.no",
   "devDependencies": {
-    "@types/node": "^14.11.2",
-    "@types/react": "^16.9.49",
-    "@typescript-eslint/parser": "^4.3.0",
-    "eslint": "^7.10.0",
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.51",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.11.0",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": ">=4",
     "lint-staged": ">=10",
@@ -24,18 +24,15 @@
   "dependencies": {
     "@types/animejs": "^3.1.2",
     "@types/react-slider": "^1.0.0",
-    "@variant/components": "^2.0.9",
-    "@variant/profile": "^2.0.5",
+    "@variant/components": "^2.0.10",
+    "@variant/profile": "^3.0.0",
     "animejs": "^3.2.0",
     "jimp": "^0.16.1",
-    "next": "^9.5.3",
+    "next": "^9.5.5",
     "next-images": "^1.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-slider": "^1.0.11"
-  },
-  "resolutions": {
-    "webpack": "^5.0.0-beta.22"
   },
   "scripts": {
     "dev": "next dev",
