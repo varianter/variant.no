@@ -6,7 +6,7 @@ export function calculateEstimatedSalary(
   graduationYear: number,
   degree: Degree,
 ): string | undefined {
-  const year = String(graduationYear + (degree === 'bachelor' ? 2 : 0));
+  const year = String(graduationYear + (degree === 'bachelor' ? 1 : 0));
   return (data as SalaryData)[year];
 }
 
