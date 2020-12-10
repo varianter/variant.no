@@ -25,7 +25,7 @@
     "@types/animejs": "^3.1.2",
     "@types/react-slider": "^1.0.0",
     "@variant/components": "^2.0.10",
-    "@variant/profile": "^3.0.0",
+    "@variant/profile": "^3.0.1",
     "animejs": "^3.2.0",
     "jimp": "^0.16.1",
     "next": "^9.5.5",

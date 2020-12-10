@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AnimatingBackground from 'src/background';
 import { and } from 'src/utils/css';
 import style from './layout.module.css';
@@ -17,43 +17,19 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
 }) => {
-  const [clickActive, setClickActive] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  //Listens to resize and updates the screenwidth to a hook. Has a timeout so it dont update all the time.
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-    let timeoutId: any = null;
-    const setWindowSize = () => {
-      clearTimeout(timeoutId);
-
-      timeoutId = setTimeout(() => setScreenWidth(window.innerWidth), 100);
-    };
-
-    window.addEventListener('resize', setWindowSize);
-    return () => {
-      window.removeEventListener('resize', setWindowSize);
-    };
-  }, []);
-
-  function setTabIndex() {
-    if (screenWidth > 600) {
-      return 0;
-    } else if (screenWidth <= 600 && clickActive) {
-      return 0;
-    } else {
-      return -1;
-    }
-  }
+  const modalRef = React.createRef<HTMLDivElement>();
+  const navRef = React.createRef<HTMLUListElement>();
+  const closeRef = React.createRef<HTMLButtonElement>();
+  const { isMenuVisible, setMenuVisible, tabIndex } = useTogglableBurgerMenu(
+    modalRef,
+    navRef,
+    closeRef,
+  );
 
   return (
     <div
       className={style.main}
-      style={
-        clickActive && screenWidth < 600
-          ? { position: 'fixed' }
-          : { position: 'relative' }
-      }
+      style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
     >
       <Head>
         <title>{title}</title>
@@ -91,43 +67,47 @@ const Layout: React.FC<LayoutProps> = ({
 
           <button
             className={style.burgerButtonContainer}
+            ref={closeRef}
             id="hamburger"
             aria-labelledby="menu-label"
-            aria-expanded={clickActive}
-            onClick={() => setClickActive(!clickActive)}
+            aria-expanded={isMenuVisible}
+            onClick={() => setMenuVisible(!isMenuVisible)}
           >
             <div
-              className={and(style.bar1, clickActive ? style.bar1_change : '')}
+              className={and(
+                style.bar1,
+                isMenuVisible ? style.bar1_change : '',
+              )}
             />
             <div
-              className={and(style.bar2, clickActive ? style.bar2_change : '')}
+              className={and(
+                style.bar2,
+                isMenuVisible ? style.bar2_change : '',
+              )}
             />
             <div
-              className={and(style.bar3, clickActive ? style.bar3_change : '')}
+              className={and(
+                style.bar3,
+                isMenuVisible ? style.bar3_change : '',
+              )}
             />
           </button>
 
           <nav
             className={and(
               style.header__nav,
-              clickActive ? '' : style.header__nav__hidden,
+              isMenuVisible ? '' : style.header__nav__hidden,
             )}
             aria-labelledby="menu-label"
-            aria-hidden={!clickActive}
-            id="menu"
-            onClick={(event: any) => {
-              var ulList = document.getElementById('nav-ul');
-              if ((event.target as Node) != ulList) {
-                setClickActive(false);
-              }
-            }}
+            aria-hidden={!isMenuVisible}
+            ref={modalRef}
           >
-            <ul className={style.header__nav__ul} id="nav-ul">
+            <ul className={style.header__nav__ul} ref={navRef}>
               <li>
                 <a
                   href="https://jobs.variant.no"
                   rel="noopener"
-                  tabIndex={setTabIndex()}
+                  tabIndex={tabIndex}
                 >
                   Bli en variant
                 </a>
@@ -136,7 +116,7 @@ const Layout: React.FC<LayoutProps> = ({
                 <a
                   href="http://handbook.variant.no"
                   rel="noopener"
-                  tabIndex={setTabIndex()}
+                  tabIndex={tabIndex}
                 >
                   Håndbok
                 </a>
@@ -145,21 +125,21 @@ const Layout: React.FC<LayoutProps> = ({
                 <a
                   href="http://variant.blog"
                   rel="noopener"
-                  tabIndex={setTabIndex()}
+                  tabIndex={tabIndex}
                 >
                   Blogg
                 </a>
               </li>
               <li>
                 <Link href="/ansatte">
-                  <a tabIndex={setTabIndex()}>Alle varianter</a>
+                  <a tabIndex={tabIndex}>Alle varianter</a>
                 </Link>
               </li>
               <li id="dont_show">
                 <a
                   href="https://twitter.com/intent/tweet?screen_name=variant_as"
                   rel="noopener"
-                  tabIndex={setTabIndex()}
+                  tabIndex={tabIndex}
                 >
                   Si hallo!
                 </a>
@@ -269,3 +249,100 @@ const Layout: React.FC<LayoutProps> = ({
 };
 
 export default Layout;
+
+function useTogglableBurgerMenu<
+  T extends HTMLElement,
+  U extends HTMLElement,
+  R extends HTMLElement
+>(
+  modalRef: React.RefObject<T>,
+  ulRef: React.RefObject<U>,
+  closeButton: React.RefObject<R>,
+) {
+  const [isMenuVisible, setMenuVisible] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
+
+  useEffect(() => {
+    setTabIndex(isMenuVisible ? 0 : -1);
+
+    // Avoid scrolling when menu is visible.
+    if (isMenuVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'initial';
+    }
+  }, [isMenuVisible]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (closeButton.current?.contains(e.target as Node)) {
+        return;
+      }
+      if (!e.target || !ulRef.current?.contains(e.target as Node)) {
+        setMenuVisible(false);
+      }
+    };
+    document.body.addEventListener('click', handleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, [modalRef, ulRef]);
+
+  const handleTabKey = useCallback(
+    (e: KeyboardEvent) => {
+      const focusableModalElements =
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          '[role="button"],a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select',
+        ) ?? [];
+      const allFocusables =
+        document.querySelectorAll<HTMLElement>(
+          '[role="button"],a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select',
+        ) ?? [];
+
+      const first = focusableModalElements[0];
+      const last = focusableModalElements[focusableModalElements.length - 1];
+      const next =
+        Array.from(allFocusables).find(
+          (_, i) => allFocusables[i - 1] === document.activeElement,
+        ) ?? null;
+      const previous =
+        Array.from(allFocusables).find(
+          (_, i) => allFocusables[i + 1] === document.activeElement,
+        ) ?? null;
+
+      // On normal tabbing. If next element is outside modal, jump to first element
+      if (!e.shiftKey && !modalRef.current?.contains(next)) {
+        first?.focus();
+        return e.preventDefault();
+      }
+
+      // On "reversed" tabbing. If previous element is outside modal, jump to last element
+      if (e.shiftKey && !modalRef.current?.contains(previous)) {
+        last?.focus();
+        return e.preventDefault();
+      }
+
+      // Not start or end, follow normal tab flow.
+    },
+    [modalRef],
+  );
+  useEffect(() => {
+    function keyListener(e: KeyboardEvent) {
+      if (!isMenuVisible) {
+        return;
+      }
+      if (e.key === 'Escape') {
+        return setMenuVisible(false);
+      }
+      if (e.key === 'Tab') {
+        return handleTabKey(e);
+      }
+    }
+    document.addEventListener('keydown', keyListener);
+    return () => document.removeEventListener('keydown', keyListener);
+  }, [isMenuVisible, handleTabKey]);
+
+  return {
+    isMenuVisible,
+    setMenuVisible,
+    tabIndex,
+  };
+}
