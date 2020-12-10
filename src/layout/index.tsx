@@ -19,9 +19,11 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
+  const closeRef = React.createRef<HTMLButtonElement>();
   const { isMenuVisible, setMenuVisible, tabIndex } = useTogglableBurgerMenu(
     modalRef,
     navRef,
+    closeRef,
   );
 
   return (
@@ -65,6 +67,7 @@ const Layout: React.FC<LayoutProps> = ({
 
           <button
             className={style.burgerButtonContainer}
+            ref={closeRef}
             id="hamburger"
             aria-labelledby="menu-label"
             aria-expanded={isMenuVisible}
@@ -247,9 +250,14 @@ const Layout: React.FC<LayoutProps> = ({
 
 export default Layout;
 
-function useTogglableBurgerMenu<T extends HTMLElement, U extends HTMLElement>(
+function useTogglableBurgerMenu<
+  T extends HTMLElement,
+  U extends HTMLElement,
+  R extends HTMLElement
+>(
   modalRef: React.RefObject<T>,
   ulRef: React.RefObject<U>,
+  closeButton: React.RefObject<R>,
 ) {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
@@ -267,6 +275,9 @@ function useTogglableBurgerMenu<T extends HTMLElement, U extends HTMLElement>(
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
+      if (closeButton.current?.contains(e.target as Node)) {
+        return;
+      }
       if (!e.target || !ulRef.current?.contains(e.target as Node)) {
         setMenuVisible(false);
       }
