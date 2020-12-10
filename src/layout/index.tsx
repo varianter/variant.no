@@ -19,12 +19,10 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
-  const {
-    isMenuVisible,
-    setMenuVisible,
-    tabIndex,
-    // isNotHamburgerMode,
-  } = useTogglableBurgerMenu(modalRef, navRef);
+  const { isMenuVisible, setMenuVisible, tabIndex } = useTogglableBurgerMenu(
+    modalRef,
+    navRef,
+  );
 
   return (
     <div
@@ -311,7 +309,7 @@ function useTogglableBurgerMenu<T extends HTMLElement, U extends HTMLElement>(
         return e.preventDefault();
       }
 
-      // Normal tab flow.
+      // Not start or end, follow normal tab flow.
     },
     [modalRef],
   );
