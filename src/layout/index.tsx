@@ -18,12 +18,13 @@ const Layout: React.FC<LayoutProps> = ({
   fullWidth = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
+  const navRef = React.createRef<HTMLDivElement>();
   const {
     isMenuVisible,
     setMenuVisible,
     tabIndex,
     // isNotHamburgerMode,
-  } = useTogglableBurgerMenu(modalRef);
+  } = useTogglableBurgerMenu(modalRef, navRef);
 
   return (
     <div
@@ -98,10 +99,9 @@ const Layout: React.FC<LayoutProps> = ({
             )}
             aria-labelledby="menu-label"
             aria-hidden={!isMenuVisible}
-            id="menu"
             ref={modalRef}
           >
-            <ul className={style.header__nav__ul} id="nav-ul">
+            <ul className={style.header__nav__ul} ref={navRef}>
               <li>
                 <a
                   href="https://jobs.variant.no"
@@ -249,8 +249,9 @@ const Layout: React.FC<LayoutProps> = ({
 
 export default Layout;
 
-function useTogglableBurgerMenu<T extends HTMLElement>(
+function useTogglableBurgerMenu<T extends HTMLElement, U extends HTMLElement>(
   modalRef: React.RefObject<T>,
+  ulRef: React.RefObject<U>,
 ) {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
@@ -265,6 +266,16 @@ function useTogglableBurgerMenu<T extends HTMLElement>(
       document.body.style.overflow = 'initial';
     }
   }, [isMenuVisible]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!e.target || !ulRef.current?.contains(e.target as Node)) {
+        setMenuVisible(false);
+      }
+    };
+    document.body.addEventListener('click', handleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, [modalRef, ulRef]);
 
   const handleTabKey = useCallback(
     (e: KeyboardEvent) => {
