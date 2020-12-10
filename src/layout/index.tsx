@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({
   fullWidth = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
-  const navRef = React.createRef<HTMLDivElement>();
+  const navRef = React.createRef<HTMLUListElement>();
   const {
     isMenuVisible,
     setMenuVisible,
