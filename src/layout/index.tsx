@@ -182,6 +182,15 @@ const Layout: React.FC<LayoutProps> = ({
               <li>
                 <a href="https://styleguide.variant.no">Styleguide</a>
               </li>
+              <li>
+                <a
+                  href="https://medium.com/variant-as/tagged/b%C3%A6rekraft"
+                  rel="noopener"
+                  title="Les mer om Variants bærekraftsinitiativ"
+                >
+                  Bærekraft
+                </a>
+              </li>
             </ul>
           </div>
           <div className={style.footer__item}>
@@ -284,7 +293,7 @@ function useTogglableBurgerMenu<
     };
     document.body.addEventListener('click', handleClickOutside);
     return () => document.body.removeEventListener('click', handleClickOutside);
-  }, [modalRef, ulRef]);
+  }, [modalRef, closeButton, ulRef]);
 
   const handleTabKey = useCallback(
     (e: KeyboardEvent) => {
