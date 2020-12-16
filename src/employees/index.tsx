@@ -10,6 +10,7 @@ import { InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/ansatte';
 import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export type Employee = {
   fullName: string;
@@ -90,20 +91,12 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
       className={style.employee}
       style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
     >
-      <BaseBlob
+      <Image
         width={300}
         height={300}
-        seed={name}
-        imageProps={{
-          srcSet: `/employees/${imageSlug}-150.jpg 150w,
-                   /employees/${imageSlug}-300.jpg 300w`,
-          sizes: '(max-width: 600px) 150px, 300px',
-          src: `/employees/${imageSlug}-300.jpg`,
-          alt: `Bilde av ${name}`,
-          loading: 'lazy',
-        }}
-        randomness={2}
-        extraPoints={9}
+        alt={`Bilde av ${name}`}
+        src={`/employees/${imageSlug}.png`}
+        loading="lazy"
       />
 
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>

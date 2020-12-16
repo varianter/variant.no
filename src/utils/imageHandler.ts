@@ -1,15 +1,20 @@
-import { promises as fs } from 'fs';
+import { promises as fs, createWriteStream } from 'fs';
 import path from 'path';
+import mkdirp from 'mkdirp';
+
 import { EmployeeJSON } from './typings/Employee';
-import Jimp from 'jimp';
 // Temp comment to retrigger deployemtn
 const employeeDirectory = path.join(process.cwd(), 'public/employees');
 
 export const handleImages = async (employee: EmployeeJSON) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
+
+  // Create destination folder if it doesnt exist
+  await mkdirp(employeeDirectory);
+
   try {
-    await fs.stat(path.join(employeeDirectory, `${userFileName}-150.jpg`));
+    await fs.stat(path.join(employeeDirectory, `${userFileName}.png`));
     // if Stat is not throwing and error we have a file.
     // and return fileName in finally block
   } catch (e) {
@@ -42,24 +47,13 @@ const downloadAndStore: (
   dir: string,
   image: any,
 ) => Promise<void> = async (fileName: string, dirPath: string, image: any) => {
-  try {
-    const request = await fetch(image.large.url);
-    const buffer = Buffer.from(await request.arrayBuffer());
-    await Promise.all([
-      Jimp.read(buffer).then((image) =>
-        image
-          .cover(300, 300)
-          .quality(100)
-          .writeAsync(path.join(dirPath, `${fileName}-300.jpg`)),
-      ),
-      Jimp.read(buffer).then((image) =>
-        image
-          .cover(150, 150)
-          .quality(100)
-          .writeAsync(path.join(dirPath, `${fileName}-150.jpg`)),
-      ),
-    ]);
-  } catch (err) {
-    console.error(err);
-  }
+  const request = await fetch(image.large.url);
+  const buffer = Buffer.from(await request.arrayBuffer());
+  const outputFileName = `${fileName}.png`;
+  return new Promise<void>((resolve) => {
+    let stream = createWriteStream(path.join(dirPath, outputFileName));
+    stream.on('finish', resolve);
+    stream.write(buffer);
+    stream.end();
+  });
 };
