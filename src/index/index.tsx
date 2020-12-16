@@ -1,13 +1,11 @@
 import { InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
-import Head from 'next/head';
-
-import { BaseBlob } from '@variant/components/lib/blob';
-
 import style from './index.module.css';
 import SayHi from './say-hi';
 
@@ -204,21 +202,15 @@ const Home = ({
       <section className={style.employees}>
         {randomEmployee ? (
           <div className={style.employees__random}>
-            <BaseBlob
-              width={300}
-              height={300}
-              seed={'variant'}
-              imageProps={{
-                srcSet: `/employees/${randomEmployee.imageSlug}-150.jpg 150w,
-                         /employees/${randomEmployee.imageSlug}-300.jpg 300w`,
-                sizes: '(max-width: 600px) 150px, 300px',
-                src: `/employees/${randomEmployee.imageSlug}-300.jpg`,
-                alt: `Bilde av ${randomEmployee.name}`,
-                loading: 'lazy',
-              }}
-              randomness={4}
-              extraPoints={4}
-            />
+            <div className={style.employees__random__image}>
+              <Image
+                width={300}
+                height={300}
+                alt={`Bilde av ${randomEmployee.name}`}
+                src={`/employees/${randomEmployee.imageSlug}.png`}
+                loading="lazy"
+              />
+            </div>
 
             <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
 

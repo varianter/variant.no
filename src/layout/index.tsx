@@ -68,7 +68,6 @@ const Layout: React.FC<LayoutProps> = ({
           <button
             className={style.burgerButtonContainer}
             ref={closeRef}
-            id="hamburger"
             aria-labelledby="menu-label"
             aria-expanded={isMenuVisible}
             onClick={() => setMenuVisible(!isMenuVisible)}
@@ -284,7 +283,7 @@ function useTogglableBurgerMenu<
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (closeButton.current?.contains(e.target as Node)) {
+      if (!isMenuVisible || closeButton.current?.contains(e.target as Node)) {
         return;
       }
       if (!e.target || !ulRef.current?.contains(e.target as Node)) {
@@ -293,7 +292,7 @@ function useTogglableBurgerMenu<
     };
     document.body.addEventListener('click', handleClickOutside);
     return () => document.body.removeEventListener('click', handleClickOutside);
-  }, [modalRef, closeButton, ulRef]);
+  }, [isMenuVisible, modalRef, closeButton, ulRef]);
 
   const handleTabKey = useCallback(
     (e: KeyboardEvent) => {

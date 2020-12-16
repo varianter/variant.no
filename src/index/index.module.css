@@ -260,7 +260,7 @@
   }
 }
 
-.employees__random img {
+.employees__random__image {
   grid-area: image;
   height: var(--image-height);
 
