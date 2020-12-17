@@ -4,7 +4,7 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: ['plugin:react-hooks/recommended'],
+  extends: ['plugin:react-hooks/recommended', 'plugin:jsx-a11y/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
