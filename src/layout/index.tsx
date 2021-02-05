@@ -266,12 +266,15 @@ function useTogglableBurgerMenu<
   modalRef: React.RefObject<T>,
   ulRef: React.RefObject<U>,
   closeButton: React.RefObject<R>,
+  breakpointMinWidth = '600px',
 ) {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
+  const isNotHamburgerMode =
+    useMediaQuery(`(min-width: ${breakpointMinWidth})`) ?? true;
 
   useEffect(() => {
-    setTabIndex(isMenuVisible ? 0 : -1);
+    setTabIndex(isMenuVisible || isNotHamburgerMode ? 0 : -1);
 
     // Avoid scrolling when menu is visible.
     if (isMenuVisible) {
@@ -279,7 +282,7 @@ function useTogglableBurgerMenu<
     } else {
       document.body.style.overflow = 'initial';
     }
-  }, [isMenuVisible]);
+  }, [isMenuVisible, isNotHamburgerMode]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -334,7 +337,7 @@ function useTogglableBurgerMenu<
   );
   useEffect(() => {
     function keyListener(e: KeyboardEvent) {
-      if (!isMenuVisible) {
+      if (!isMenuVisible || isNotHamburgerMode) {
         return;
       }
       if (e.key === 'Escape') {
@@ -346,11 +349,55 @@ function useTogglableBurgerMenu<
     }
     document.addEventListener('keydown', keyListener);
     return () => document.removeEventListener('keydown', keyListener);
-  }, [isMenuVisible, handleTabKey]);
+  }, [isMenuVisible, isNotHamburgerMode, handleTabKey]);
 
   return {
     isMenuVisible,
     setMenuVisible,
     tabIndex,
   };
+}
+
+function hasWindow() {
+  return typeof window !== 'undefined';
+}
+
+const useMediaQuery = (mediaQuery: string) => {
+  const [isMatched, setMatched] = useState(() => {
+    if (!hasWindow()) return false;
+    return Boolean(window.matchMedia(mediaQuery).matches);
+  });
+
+  useEffect(() => {
+    if (!hasWindow()) return;
+    const mediaQueryList = window.matchMedia(mediaQuery);
+    const documentChangeHandler = () =>
+      setMatched(Boolean(mediaQueryList.matches));
+    listenTo(mediaQueryList, documentChangeHandler);
+
+    documentChangeHandler();
+    return () => removeListener(mediaQueryList, documentChangeHandler);
+  }, [mediaQuery]);
+
+  return isMatched;
+};
+
+function listenTo(
+  matcher: MediaQueryList,
+  cb: (ev: MediaQueryListEvent) => void,
+) {
+  if ('addEventListener' in (matcher as any)) {
+    return matcher.addEventListener('change', cb);
+  }
+  return matcher.addListener(cb);
+}
+
+function removeListener(
+  matcher: MediaQueryList,
+  cb: (ev: MediaQueryListEvent) => void,
+) {
+  if ('removeEventListener' in (matcher as any)) {
+    return matcher.removeEventListener('change', cb);
+  }
+  return matcher.removeListener(cb);
 }
