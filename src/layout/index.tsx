@@ -365,12 +365,12 @@ function hasWindow() {
 const useMediaQuery = (mediaQuery: string) => {
   const [isMatched, setMatched] = useState(() => {
     if (!hasWindow()) return false;
-    return Boolean(window?.matchMedia(mediaQuery).matches);
+    return Boolean(window.matchMedia(mediaQuery).matches);
   });
 
   useEffect(() => {
     if (!hasWindow()) return;
-    const mediaQueryList = window?.matchMedia(mediaQuery);
+    const mediaQueryList = window.matchMedia(mediaQuery);
     const documentChangeHandler = () =>
       setMatched(Boolean(mediaQueryList.matches));
     listenTo(mediaQueryList, documentChangeHandler);
