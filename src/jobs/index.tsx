@@ -95,7 +95,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </section>
           ))}
         </section>
-        <section>
+        <section className={style.omVariant}>
           <h2>Variantdag - November 2019 </h2>
           <p>
             Første fredag hver måned har vi variantdag. I november i fjor lagde
