@@ -3,7 +3,7 @@ import Layout from 'src/layout';
 import Head from 'next/head';
 
 import style from './index.module.css';
-import { useReducedMotionEffect } from 'src/utils/hooks';
+import { useReducedMotion } from 'framer-motion';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
 import { ButtonNextLink } from 'src/components/button';
@@ -13,7 +13,7 @@ import { colors } from '@variant/profile';
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
 }) => {
-  const reducedMotion = useReducedMotionEffect();
+  const reducedMotion = useReducedMotion();
   return (
     <>
       <Layout>

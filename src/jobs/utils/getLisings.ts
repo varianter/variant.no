@@ -16,17 +16,30 @@ export const getMatterFile = async (
   return matter(file);
 };
 
+type Listing = {
+  title: string;
+  h1_title: string;
+  company: string;
+  application_url: string;
+  location: string;
+  priority?: string;
+  visible: string;
+  name: string;
+};
 export const getFileListingData = async () => {
   const files = await getListings();
   const listings = await Promise.all(
     files.map(
-      async (fileName): Promise<{ [key: string]: string | number }> => {
+      async (fileName): Promise<Listing> => {
         const matterFile = await getMatterFile(fileName);
-        return { ...matterFile.data, name: fileName.replace('.md', '') };
+        return {
+          ...matterFile.data,
+          name: fileName.replace('.md', ''),
+        } as Listing;
       },
     ),
   );
-  return listings.sort(
-    (a, b) => Number(b.priority ?? 0) - Number(a.priority ?? 0),
-  );
+  return listings
+    .filter((a) => a.visible)
+    .sort((a, b) => Number(b.priority ?? 0) - Number(a.priority ?? 0));
 };
