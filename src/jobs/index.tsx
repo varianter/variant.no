@@ -9,6 +9,7 @@ import { getStaticProps } from 'pages/jobs';
 import { ButtonNextLink } from 'src/components/button';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
+import { and } from 'src/utils/css';
 
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
@@ -76,8 +77,9 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </article>
         </section>
         <section className={style.job__listing}>
-          <h2 className={style.withSubTitle}>Bli en Variant</h2>
-          <h5>Ledige stillinger</h5>
+          <h3 className={and(style.withSubTitle, 'fancy')}>
+            Ledige stillinger
+          </h3>
           {listings.map(({ name, title, location }: any) => (
             <section
               className={style.job__listing__container}
