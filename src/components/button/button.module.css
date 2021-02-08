@@ -9,6 +9,8 @@
   border-radius: 0.5rem;
   font-weight: 500;
   transition: background-color 250ms ease-out;
+  display: inline-block;
+  margin: auto;
 }
 .button:hover {
   background-color: var(--color-secondary1__tint1);

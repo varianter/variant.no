@@ -103,13 +103,9 @@ const Layout: React.FC<LayoutProps> = ({
           >
             <ul className={style.header__nav__ul} ref={navRef}>
               <li>
-                <a
-                  href="https://jobs.variant.no"
-                  rel="noopener"
-                  tabIndex={tabIndex}
-                >
-                  Bli en variant
-                </a>
+                <Link href="/jobs">
+                  <a tabIndex={tabIndex}>Bli en variant</a>
+                </Link>
               </li>
               <li>
                 <a
@@ -156,9 +152,9 @@ const Layout: React.FC<LayoutProps> = ({
             <h2>Utforsk</h2>
             <ul>
               <li>
-                <a href="https://jobs.variant.no" rel="noopener">
-                  Ledige stillinger
-                </a>
+                <Link href="/jobs">
+                  <a>Ledige stillinger</a>
+                </Link>
               </li>
               <li>
                 <a href="https://handbook.variant.no">Håndbok</a>

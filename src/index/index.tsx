@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
-import { ButtonLink, ButtonNextLink } from 'src/components/button';
+import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import style from './index.module.css';
 import SayHi from './say-hi';
@@ -84,12 +84,7 @@ const Home = ({
         <p>
           <strong>Det betyr deg.</strong>
         </p>
-        <ButtonLink
-          href="https://jobs.variant.no"
-          title="Les mer om jobb i Variant"
-        >
-          Bli en Variant
-        </ButtonLink>
+        <ButtonNextLink href="/jobs">Bli en Variant</ButtonNextLink>
 
         <p>
           Vi har mange{' '}
