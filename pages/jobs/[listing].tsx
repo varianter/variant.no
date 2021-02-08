@@ -1,4 +1,4 @@
-import { getListings, getListing, Listing } from 'src/jobs/utils/getLisings';
+import { getListings, getListing, Listing } from 'src/jobs/utils/getListings';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 export { default } from 'src/jobs/listing/listing';

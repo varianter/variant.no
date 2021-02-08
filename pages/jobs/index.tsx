@@ -1,4 +1,4 @@
-import { getFileListingData } from 'src/jobs/utils/getLisings';
+import { getFileListingData } from 'src/jobs/utils/getListings';
 
 export { default } from 'src/jobs';
 

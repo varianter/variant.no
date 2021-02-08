@@ -45,7 +45,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 height={350}
                 color={colors.colorPairs.secondary3.default.bg}
                 imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-                alt="Lady supporting a phone showing code"
+                alt="Dame som holder smartelefon som viser kode"
               />
             </div>
             <div>
