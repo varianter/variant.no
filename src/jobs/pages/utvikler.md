@@ -1,11 +1,7 @@
 ---
 title: Utvikler
 h1_title: Utvikler
-company: Variant AS
-application_url: https://jobs.variant.no/o/utvikler-trondheim/c/new
-location: Trondheim, Norge
-priority: 9
-visible: true
+id: 264453
 ---
 
 ## Kort om stillingen

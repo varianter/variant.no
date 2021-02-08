@@ -9,9 +9,9 @@ import { ButtonLink } from 'src/components/button';
 import style from './listings.module.css';
 import { useReducedMotion } from 'framer-motion';
 
-const Listing: NextPage<InferGetStaticPropsType<
-  typeof getStaticProps
->> = React.memo(({ data, content }) => {
+const Listing: NextPage<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = React.memo(({ listing }) => {
   const reducedMotion = useReducedMotion();
   const innerHtml = useMemo(() => {
     const md = new MarkdownIt({
@@ -19,25 +19,25 @@ const Listing: NextPage<InferGetStaticPropsType<
       html: true,
       typographer: true,
     });
-    return { __html: md.render(content) };
-  }, [content]);
+    return { __html: md.render(listing.content) };
+  }, [listing.content]);
   return (
     <Layout>
       <Head>
         <title>
-          {data.title} - {data.company}
+          {listing.title} - {listing.company_name}
         </title>
       </Head>
       <section className={style.jobArticle}>
         <div className={style.titleWrapper}>
-          <h1
+          <h2
             className={style.jobArticle__title}
             data-no-animation={reducedMotion}
           >
-            {data.h1_title}
-          </h1>
+            {listing.h1_title}
+          </h2>
           <div className={style.button__top}>
-            <ButtonLink href={data.application_url}>
+            <ButtonLink href={listing.careers_apply_url}>
               Søk på stillingen
             </ButtonLink>
           </div>
@@ -47,7 +47,7 @@ const Listing: NextPage<InferGetStaticPropsType<
           dangerouslySetInnerHTML={innerHtml}
         />
         <div className={style.button__bottom}>
-          <ButtonLink href={data.application_url} mode="primary">
+          <ButtonLink href={listing.careers_apply_url} mode="primary">
             Søk på stillingen
           </ButtonLink>
         </div>

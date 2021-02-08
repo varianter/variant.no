@@ -1,12 +1,7 @@
-import { getListings, getMatterFile } from 'src/jobs/utils/getLisings';
+import { getListings, getListing, Listing } from 'src/jobs/utils/getLisings';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 export { default } from 'src/jobs/listing/listing';
-
-type JobListing = {
-  data: { [key: string]: string };
-  content: string;
-};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
@@ -24,13 +19,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<
-  JobListing,
+  { listing: Listing },
   { listing: string }
 > = async (context) => {
   // This will never be empty as that path is caught by 'index.tsx' file
   const fileName = `${context?.params?.listing}.md`;
-  const { data, content } = await getMatterFile(fileName);
+  const listing = await getListing(fileName);
 
   //Parse DAta
-  return { props: { data, content } };
+  return { props: { listing }, revalidate: 24 * 60 * 60 };
 };

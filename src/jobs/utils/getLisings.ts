@@ -7,39 +7,72 @@ export const getListings = async () => {
   return files.filter((a) => a.endsWith('.md'));
 };
 
-export const getMatterFile = async (
+export const getListing = async (
   fileName: string,
-): Promise<matter.GrayMatterFile<Buffer>> => {
+  metadataListInput?: Offer[],
+): Promise<Listing> => {
+  const metadataList = metadataListInput ?? (await getValidityStatuses());
   const file = await fs.readFile(
     path.join(process.cwd(), 'src/jobs/pages', fileName),
   );
-  return matter(file);
+  const matterFile = matter(file);
+
+  const matterData = matterFile.data as Listing;
+  const metadata = findStatus(metadataList, matterData.id);
+  return {
+    ...matterData,
+    ...metadata,
+    name: fileName.replace('.md', ''),
+    content: matterFile.content,
+  } as Listing;
 };
 
-type Listing = {
+export type Listing = {
+  id: number;
   title: string;
   h1_title: string;
-  company: string;
-  application_url: string;
-  location: string;
-  priority?: string;
-  visible: string;
   name: string;
-};
-export const getFileListingData = async () => {
+  content: string;
+} & Offer;
+export async function getFileListingData(): Promise<Listing[]> {
   const files = await getListings();
+  const metadataList = await getValidityStatuses();
   const listings = await Promise.all(
     files.map(
-      async (fileName): Promise<Listing> => {
-        const matterFile = await getMatterFile(fileName);
-        return {
-          ...matterFile.data,
-          name: fileName.replace('.md', ''),
-        } as Listing;
-      },
+      (fileName): Promise<Listing> => getListing(fileName, metadataList),
     ),
   );
   return listings
-    .filter((a) => a.visible)
-    .sort((a, b) => Number(b.priority ?? 0) - Number(a.priority ?? 0));
+    .filter((a) => a.status === 'published')
+    .sort((a, b) => Number(b.position ?? 0) - Number(a.position ?? 0));
+}
+
+type Offer = {
+  status: string;
+  slug: string;
+  careers_apply_url: string;
+  id: number;
+  position: number;
+  location: string;
+  company_name: string;
 };
+
+type OfferResult = {
+  offers: Array<Offer>;
+};
+const API_URL = 'https://variantas.recruitee.com/api/offers/';
+async function getValidityStatuses(): Promise<Offer[]> {
+  const result = await fetch(API_URL);
+  if (!result.ok) {
+    return [];
+  }
+  const data = (await result.json()) as OfferResult;
+  if (!data.offers) {
+    return [];
+  }
+  return !data.offers ? [] : data.offers;
+}
+
+function findStatus(offers: Offer[], id: number): Offer | undefined {
+  return offers.find((i) => i.id === id);
+}

@@ -1,10 +1,7 @@
 ---
 title: Designer
 h1_title: Designer
-company: Variant AS
-application_url: https://jobs.variant.no/o/designer-trondheim/c/new
-location: Trondheim, Norge
-visible: true
+id: 367464
 ---
 
 ![Mikael, Marius og Ellen på taket](/work_images/crimson_blob.svg)

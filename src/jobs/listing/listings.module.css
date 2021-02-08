@@ -17,8 +17,8 @@
 
 .jobArticle__title {
   margin: 1.8rem 0;
-  font-size: 3.3rem;
   padding-right: 3rem;
+  font-weight: bold;
 
   background: linear-gradient(
     to right,
