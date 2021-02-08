@@ -38,7 +38,6 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </h2>
           <article className={style.omVariant__wrapper}>
             <div className={style.omVariant__blob}>
-              {/* TODO FIX WROK-AROUND when 2.0.7 is published  */}
               <BaseBlob
                 seed="Variant"
                 width={350}
