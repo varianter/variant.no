@@ -11,6 +11,7 @@ import { getStaticProps } from 'pages/ansatte';
 import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export type Employee = {
   fullName: string;
@@ -116,21 +117,19 @@ function JobsLink({ text }: { text: string }) {
       className={style.employee__jobsLinkContainer}
       style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
     >
-      <a
-        href="https://jobs.variant.no"
-        rel="noopener"
-        className={style.employee__jobsLink}
-      >
-        <BaseBlob
-          width={300}
-          height={300}
-          randomness={2}
-          extraPoints={6}
-          color={colors.colorPairs.secondary1.default.bg}
-        />
-        <p>{text}</p>
-        <Arrow className={style.employee__jobsLinkArrow} />
-      </a>
+      <Link href="/jobs">
+        <a className={style.employee__jobsLink}>
+          <BaseBlob
+            width={300}
+            height={300}
+            randomness={2}
+            extraPoints={6}
+            color={colors.colorPairs.secondary1.default.bg}
+          />
+          <p>{text}</p>
+          <Arrow className={style.employee__jobsLinkArrow} />
+        </a>
+      </Link>
     </div>
   );
 }
