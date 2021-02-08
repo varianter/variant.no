@@ -88,7 +88,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 <h4>{title}</h4>
                 <span>{location}</span>
               </div>
-              <ButtonNextLink href="/jobs/[lising]" as={`jobs/${name}`}>
+              <ButtonNextLink href={`/jobs/${name}`}>
                 Se på stillingen
               </ButtonNextLink>
             </section>

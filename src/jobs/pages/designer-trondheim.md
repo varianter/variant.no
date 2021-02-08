@@ -1,7 +1,7 @@
 ---
 title: Designer
 h1_title: Designer
-id: 367464
+slug: designer-trondheim
 ---
 
 ![Mikael, Marius og Ellen på taket](/work_images/crimson_blob.svg)

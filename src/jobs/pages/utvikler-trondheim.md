@@ -1,7 +1,7 @@
 ---
 title: Utvikler
 h1_title: Utvikler
-id: 264453
+slug: utvikler-trondheim
 ---
 
 ## Kort om stillingen
