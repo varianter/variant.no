@@ -97,6 +97,7 @@
   position: relative;
   width: calc(100% - 2rem);
   height: 0;
+  /* "Established hack" for making iframes responsive and follow aspect ratio */
   padding-bottom: calc(56.18% - 2rem);
   margin: 1rem 1rem 4rem;
 }

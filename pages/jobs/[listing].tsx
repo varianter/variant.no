@@ -25,7 +25,5 @@ export const getStaticProps: GetStaticProps<
   // This will never be empty as that path is caught by 'index.tsx' file
   const fileName = `${context?.params?.listing}.md`;
   const listing = await getListing(fileName);
-
-  //Parse DAta
   return { props: { listing }, revalidate: 24 * 60 * 60 };
 };
