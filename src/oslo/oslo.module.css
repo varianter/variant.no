@@ -1,6 +1,7 @@
 .wrapper {
-  margin: auto;
-  width: 1000px;
+  padding: 0 1rem 7.2rem;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
 .content {
@@ -9,10 +10,52 @@
 
 .number {
   text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tableContainer {
+  position: relative;
+  overflow: auto;
+  margin: 6rem 0;
 }
 
 .forecast {
-  margin: 6rem auto;
+  margin: 0 auto;
+}
+
+.forecast tbody tr td,
+.forecast th:first-child {
+  background: var(--color-secondary4__tint2);
+}
+.forecast tbody tr:nth-child(2n + 1) td {
+  background: var(--color-secondary4__tint1);
+}
+
+.forecast th,
+.forecast td {
+  padding: 1rem;
+}
+.forecast td:first-child,
+.forecast th:first-child {
+  position: sticky;
+  min-width: 150px;
+  left: 0;
+}
+
+.varianthuset {
+  shape-outside: url(./varianthuset.png);
+  float: right;
+  top: -1rem;
+  right: -1rem;
+  position: relative;
+  display: block;
+}
+@media (max-width: 500px) {
+  .varianthuset {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 .forecast_heading {
@@ -23,7 +66,7 @@
 
 .title {
   font-weight: bold;
-  margin: 1.8rem 0;
+  margin: 2.8rem 0;
   font-size: 3.3rem;
 
   background: linear-gradient(

@@ -3,51 +3,60 @@ import Layout from 'src/layout';
 import style from './oslo.module.css';
 import { useReducedMotion } from 'framer-motion';
 
+const varianthuset = require('./varianthuset.png');
+
 export default function VariantTur() {
   const reducedMotion = useReducedMotion();
   return (
     <Layout>
-      <div >
+      <div>
         <Head>
           <title>Verdiutvikling Variant Oslo AS</title>
-        
         </Head>
         <div className={style.wrapper}>
-            <header className={style.intro}>
-              <h2
-              className={style.title}
-              data-no-animation={reducedMotion}
-            >
-              Verdiutvikling Variant Oslo AS
+          <header className={style.intro}>
+            <h2 className={style.title} data-no-animation={reducedMotion}>
+              Verdiutvikling
+              <br />
+              Variant Oslo AS
             </h2>
-            </header>
-            <div className={style.content}>
-              <p>En god del av kompensasjonen som leder i Variant er knyttet til verdiutvikling 
-                av selskapet og avkastning på aksjer. Begge disse momentene er relatert til vekst. 
-                Vi er ambisiøse på Oslos vegne. Variants egenart bygger på at en relativt stor gruppe 
-                flinke mennesker sammen utfordrer hverandre og bygger på hverandre. Dette er ikke et 
-                selskap som skal våge å vokse fort. Vi har en modell for bærekraftig vekst, og et 
-                realistisk mål om å bygge et fagmiljø med 50 dyktige varianter på 3 år. 
-              </p>
-              
-              <p>
-              Tabellen under beskriver våre vekstmål de neste årene. Dette er altså de mål vi sikter mot og som 
-              vil kunne gi en pekepinn på hva avkastning på dine aksjer og verdiutvikling av din eierandel. 
-              </p>
+          </header>
+          <div className={style.content}>
+            <img
+              className={style.varianthuset}
+              src={varianthuset}
+              alt="Varianthuset midt i gågata i Trondheim"
+            />
+            <p>
+              En god del av kompensasjonen som leder i Variant er knyttet til
+              verdiutvikling av selskapet og avkastning på aksjer. Begge disse
+              momentene er relatert til vekst. Vi er ambisiøse på Oslos vegne.
+              Variants egenart bygger på at en relativt stor gruppe flinke
+              mennesker sammen utfordrer hverandre og bygger på hverandre. Dette
+              er ikke et selskap som skal våge å vokse fort. Vi har en modell
+              for bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø
+              med 50 dyktige varianter på 3 år.
+            </p>
 
-              <table className={style.forecast}> 
+            <p>
+              Tabellen under beskriver våre vekstmål de neste årene. Dette er
+              altså de mål vi sikter mot og som vil kunne gi en pekepinn på hva
+              avkastning på dine aksjer og verdiutvikling av din eierandel.
+            </p>
+
+            <div className={style.tableContainer}>
+              <table className={style.forecast} cellSpacing={0} cellPadding={0}>
                 <thead>
-                <tr>
+                  <tr>
                     <th></th>
                     <th className={style.forecast_heading}>2021</th>
                     <th className={style.forecast_heading}>2022</th>
                     <th className={style.forecast_heading}>2023</th>
                   </tr>
-
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Ansatte per 31.12	</td>
+                    <td>Ansatte per 31.12 </td>
                     <td className={style.number}>6 varianter</td>
                     <td className={style.number}>20 varianter</td>
                     <td className={style.number}>40 varianter</td>
@@ -84,8 +93,9 @@ export default function VariantTur() {
                   </tr>
                 </tbody>
               </table>
-          </div>        
-        </div>     
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
