@@ -8,6 +8,8 @@ slug: ceo-i-variant-oslo
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
+Les mer om våre Oslo-vyer i [denne brosjyren](https://brosjyre.vercel.app/).
+
 ## Hvem ser vi etter?
 
 Helt overordnet ser vi etter en kvinne eller mann som kan lede en gjeng dyktige og læreglade mennesker. Våre verdier er åpenhet, raushet og nettopp læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse.
