@@ -18,7 +18,8 @@ export const getListing = async (
   const matterFile = matter(file);
 
   const matterData = matterFile.data as Listing;
-  const metadata = findStatus(metadataList, matterData.id);
+  const metadata = findStatus(metadataList, matterData.slug);
+
   return {
     ...matterData,
     ...metadata,
@@ -64,7 +65,7 @@ const API_URL = 'https://variantas.recruitee.com/api/offers/';
 async function getValidityStatuses(): Promise<Offer[]> {
   const result = await fetch(API_URL);
   if (!result.ok) {
-    return [];
+    throw new Error('Could not fetch data from Recruitee');
   }
   const data = (await result.json()) as OfferResult;
   if (!data.offers) {
@@ -73,6 +74,6 @@ async function getValidityStatuses(): Promise<Offer[]> {
   return !data.offers ? [] : data.offers;
 }
 
-function findStatus(offers: Offer[], id: number): Offer | undefined {
-  return offers.find((i) => i.id === id);
+function findStatus(offers: Offer[], slug: string): Offer | undefined {
+  return offers.find((i) => i.slug === slug);
 }
