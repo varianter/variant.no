@@ -34,7 +34,7 @@
 
 .forecast th,
 .forecast td {
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .forecast td:first-child,
 .forecast th:first-child {
@@ -43,8 +43,8 @@
   left: 0;
 }
 
-.varianthuset {
-  shape-outside: url(./varianthuset.png);
+.barcode {
+  shape-outside: url(./barcode.png);
   float: right;
   top: -1rem;
   right: -1rem;
@@ -52,7 +52,7 @@
   display: block;
 }
 @media (max-width: 500px) {
-  .varianthuset {
+  .barcode {
     float: none;
     margin: 0 auto;
   }
