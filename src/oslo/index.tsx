@@ -33,7 +33,7 @@ export default function VariantTur() {
               momentene er relatert til vekst. Vi er ambisiøse på Oslos vegne.
               Variants egenart bygger på at en relativt stor gruppe flinke
               mennesker sammen utfordrer hverandre og bygger på hverandre. Dette
-              er ikke et selskap som skal våge å vokse fort. Vi har en modell
+              er et selskap som våger å vokse fort. Vi har en modell
               for bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø
               med 50 dyktige varianter på 3 år.
             </p>
