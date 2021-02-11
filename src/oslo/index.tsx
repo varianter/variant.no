@@ -3,7 +3,7 @@ import Layout from 'src/layout';
 import style from './oslo.module.css';
 import { useReducedMotion } from 'framer-motion';
 
-const varianthuset = require('./varianthuset.png');
+const barcode = require('./barcode.png');
 
 export default function VariantTur() {
   const reducedMotion = useReducedMotion();
@@ -23,9 +23,9 @@ export default function VariantTur() {
           </header>
           <div className={style.content}>
             <img
-              className={style.varianthuset}
-              src={varianthuset}
-              alt="Varianthuset midt i gågata i Trondheim"
+              className={style.barcode}
+              src={barcode}
+              alt="Barcode by Jacek Dylag on Unsplash"
             />
             <p>
               En god del av kompensasjonen som leder i Variant er knyttet til
