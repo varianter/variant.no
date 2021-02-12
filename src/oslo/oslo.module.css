@@ -76,13 +76,9 @@
     var(--color-secondary2)
   );
   background-size: 200% 200%;
-  animation: backgroundPos 10s ease-in-out infinite;
   background-clip: text;
   transition: color 0.2s ease-in-out;
   color: rgba(0, 0, 0, 0);
-}
-.title[data-no-animation='true'] {
-  animation: none;
 }
 
 @media (max-width: 760px) {

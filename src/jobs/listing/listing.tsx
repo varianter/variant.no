@@ -7,12 +7,10 @@ import Head from 'next/head';
 import MarkdownIt from 'markdown-it';
 import { ButtonLink } from 'src/components/button';
 import style from './listings.module.css';
-import { useReducedMotion } from 'framer-motion';
 
 const Listing: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = React.memo(({ listing }) => {
-  const reducedMotion = useReducedMotion();
   const innerHtml = useMemo(() => {
     const md = new MarkdownIt({
       linkify: true,
@@ -30,12 +28,7 @@ const Listing: NextPage<
       </Head>
       <section className={style.jobArticle}>
         <div className={style.titleWrapper}>
-          <h2
-            className={style.jobArticle__title}
-            data-no-animation={reducedMotion}
-          >
-            {listing.h1_title}
-          </h2>
+          <h2 className={style.jobArticle__title}>{listing.h1_title}</h2>
           <div className={style.button__top}>
             <ButtonLink href={listing.careers_apply_url}>
               Søk på stillingen
