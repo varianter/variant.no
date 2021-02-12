@@ -26,30 +26,18 @@
   font-size: 4.8rem;
 
   background: linear-gradient(
-    to right,
+    120deg,
     var(--color-primary),
     var(--color-secondary1),
     var(--color-secondary2)
   );
-  background-size: 200% 200%;
-  animation: backgroundPos 10s ease-in-out infinite;
+  background-size: 130% 130%;
   background-clip: text;
-  transition: color 0.2s ease-in-out;
   color: rgba(0, 0, 0, 0);
+  background-position-x: 60%;
 }
 .omVariant__title[data-no-animation='true'] {
   animation: none;
-}
-@keyframes backgroundPos {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
 }
 
 .omVariant__p1 {
