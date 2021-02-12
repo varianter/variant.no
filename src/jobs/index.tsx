@@ -3,7 +3,6 @@ import Layout from 'src/layout';
 import Head from 'next/head';
 
 import style from './index.module.css';
-import { useReducedMotion } from 'framer-motion';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
 import { ButtonNextLink } from 'src/components/button';
@@ -14,7 +13,6 @@ import { and } from 'src/utils/css';
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
 }) => {
-  const reducedMotion = useReducedMotion();
   return (
     <>
       <Layout>
@@ -30,12 +28,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <title>Variant - Ledige stillinger</title>
         </Head>
         <section className={style.omVariant}>
-          <h2
-            className={style.omVariant__title}
-            data-no-animation={reducedMotion}
-          >
-            Hva står vi for?
-          </h2>
+          <h2 className={style.omVariant__title}>Hva står vi for?</h2>
           <article className={style.omVariant__wrapper}>
             <div className={style.omVariant__blob}>
               <BaseBlob

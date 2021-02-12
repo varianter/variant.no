@@ -1,12 +1,10 @@
 import Head from 'next/head';
 import Layout from 'src/layout';
 import style from './oslo.module.css';
-import { useReducedMotion } from 'framer-motion';
 
 const barcode = require('./barcode.png');
 
 export default function VariantTur() {
-  const reducedMotion = useReducedMotion();
   return (
     <Layout>
       <div>
@@ -15,7 +13,7 @@ export default function VariantTur() {
         </Head>
         <div className={style.wrapper}>
           <header className={style.intro}>
-            <h2 className={style.title} data-no-animation={reducedMotion}>
+            <h2 className={style.title}>
               Verdiutvikling
               <br />
               Variant Oslo AS
@@ -33,9 +31,9 @@ export default function VariantTur() {
               momentene er relatert til vekst. Vi er ambisiøse på Oslos vegne.
               Variants egenart bygger på at en relativt stor gruppe flinke
               mennesker sammen utfordrer hverandre og bygger på hverandre. Dette
-              er et selskap som våger å vokse fort. Vi har en modell
-              for bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø
-              med 40 dyktige varianter på 3 år.
+              er et selskap som våger å vokse fort. Vi har en modell for
+              bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø med
+              40 dyktige varianter på 3 år.
             </p>
 
             <p>
@@ -95,7 +93,7 @@ export default function VariantTur() {
               </table>
             </div>
             <p>
-              Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. 
+              Vi er ambisiøse og søker deg som også har lyst til å oppnå noe.
             </p>
           </div>
         </div>
