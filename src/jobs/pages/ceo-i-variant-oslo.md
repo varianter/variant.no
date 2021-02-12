@@ -10,7 +10,7 @@ slug: ceo-i-variant-oslo
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
-Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I tillegg har Odd Morten skrevet litt om [hvorfor vil etablerer oss i Tigerstaden](https://medium.com/variant-as/hei-oslo-717ea91e45b9).
+Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Tigerstaden](https://medium.com/variant-as/hei-oslo-717ea91e45b9).
 
 ## Hvem ser vi etter?
 
