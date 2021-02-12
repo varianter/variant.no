@@ -20,7 +20,7 @@ Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, 
 
 ## Ansvar og oppgaver
 
-<div class="left"><img alt="Signering av avtale" src="/images/startup.png"/></div>
+<div class="left blob1"><img alt="Signering av avtale" src="/images/startup.jpg"/></div>
 
 Du vil bli en del av Variants konsernledelse, og gjennom dette bistå med strategiarbeid både på selskap- og konsernnivå. Du vil jobber med selskapsutvikling og samarbeide med de øvrige selskapene i vårt konsern.
 Som daglig leder i Variant Oslo AS vil du har personalansvar for minst de øvrige medlemmene av ledergruppen, og gjerne flere. Du vil ha et overordnet ansvar for salg selv om dette absolutt er et teamarbeid i Variant. Tilsvarende vil du ha et ansvar for rekruttering, igjen sammen med andre både i Oslo og konsernet.
@@ -28,13 +28,13 @@ Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal l
 
 ## Lønn og kompensasjoner
 
-Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel
+Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være 1 100 000 og øke trinnvis mot 1 500 000 i det selskapet har 40 ansatte.
+- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være 1 100 000 og øke mot 1 500 000 i det selskapet har 40 ansatte.
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
 - Daglig leder vil tilbys å kjøpe 10% av aksjene i Variant Oslo AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
-  Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og vekst og et realistisk mål om å bygge et fagmiljø med 40 dyktige fagpersoner på 3 år.
+  Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 40 dyktige fagpersoner på 3 år.
 
 Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/oslo) de første årene.
 
