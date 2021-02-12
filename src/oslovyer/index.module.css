@@ -1,5 +1,45 @@
 @import '~@variant/profile/lib/colors/index.module.css';
 
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('/Graphik-LightItalic-Web.woff2') format('woff2'),
+    url('/Graphik-LightItalic-Web.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+:global(html) {
+  --font-size-min: 12;
+  --font-size-max: 18;
+  --viewport-min: 400;
+  --viewport-max: 1400;
+  line-height: 1.6;
+  /* Explanation for this madness: https://css-tricks.com/snippets/css/fluid-typography/ */
+  font-size: calc(
+    (var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) *
+      (
+        (100vh - (var(--viewport-min) * 1px)) /
+          (var(--viewport-max) - var(--viewport-min))
+      )
+  );
+}
+
+:global(h1) {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+:global(h2) {
+  line-height: 1.2;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .wrapper {
   background: var(--color-secondary4__tint3);
   padding: 5rem 2rem;
