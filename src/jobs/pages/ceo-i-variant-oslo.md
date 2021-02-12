@@ -20,7 +20,7 @@ Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, 
 
 ## Ansvar og oppgaver
 
-<div class="left"><img src="/images/startup.png"/></div>
+<div class="left"><img alt="Signering av avtale" src="/images/startup.png"/></div>
 
 Du vil bli en del av Variants konsernledelse, og gjennom dette bistå med strategiarbeid både på selskap- og konsernnivå. Du vil jobber med selskapsutvikling og samarbeide med de øvrige selskapene i vårt konsern.
 Som daglig leder i Variant Oslo AS vil du har personalansvar for minst de øvrige medlemmene av ledergruppen, og gjerne flere. Du vil ha et overordnet ansvar for salg selv om dette absolutt er et teamarbeid i Variant. Tilsvarende vil du ha et ansvar for rekruttering, igjen sammen med andre både i Oslo og konsernet.
