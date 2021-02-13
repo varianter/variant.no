@@ -33,9 +33,10 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
           employee.roles.some((role) => role === 'countrymanager'),
       );
       context.res = {
-        body: employeeList.map(({ name, telephone, image }) => ({
+        body: employeeList.map(({ name, telephone, image, email }) => ({
           name,
           telephone,
+          email,
           image,
         })),
       };

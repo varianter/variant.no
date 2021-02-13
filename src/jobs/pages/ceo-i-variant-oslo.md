@@ -2,6 +2,7 @@
 title: Daglig leder for Variant Oslo AS
 h1_title: Daglig leder for Variant Oslo AS
 slug: ceo-i-variant-oslo
+contact_emails: oms@variant.no
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
@@ -53,6 +54,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-<div class="small"><img alt="Bilde av Odd Morten" src="/employees/odd-morten.png"/> </div>
-
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår konsernleder Odd Morten Sveås på 928 07 375 eller oms@variant.no
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår konsernleder Odd Morten Sveås.
