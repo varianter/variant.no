@@ -97,8 +97,8 @@ export const ContactTile: React.FC<{ contact: Employee }> = ({
     <div className={style.contact}>
       <div className={style.contact__img}>
         <Image
-          width={80}
-          height={80}
+          width={120}
+          height={120}
           alt={`Bilde av ${name}`}
           src={`/employees/${imageSlug}.png`}
           loading="lazy"
