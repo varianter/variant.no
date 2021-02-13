@@ -95,24 +95,28 @@ export const ContactTile: React.FC<{ contact: Employee }> = ({
 }) => {
   return (
     <div className={style.contact}>
-      <Image
-        width={300}
-        height={300}
-        alt={`Bilde av ${name}`}
-        src={`/employees/${imageSlug}.png`}
-        loading="lazy"
-      />
+      <div className={style.contact__img}>
+        <Image
+          width={80}
+          height={80}
+          alt={`Bilde av ${name}`}
+          src={`/employees/${imageSlug}.png`}
+          loading="lazy"
+        />
+      </div>
 
-      <h4 className={and(style.contact__name, 'fancy')}>{fullName}</h4>
-      <a href={`mailto:${email}`} className={style.contact__type}>
-        📬 {email}
-      </a>
-      <a
-        href={`tel:+47${phone.replace(/\s*/g, '')}`}
-        className={style.contact__type}
-      >
-        📞 {phone}
-      </a>
+      <div className={style.contact__content}>
+        <h4 className={and(style.contact__name, 'fancy')}>{fullName}</h4>
+        <a href={`mailto:${email}`} className={style.contact__type}>
+          📬 {email}
+        </a>
+        <a
+          href={`tel:+47${phone.replace(/\s*/g, '')}`}
+          className={style.contact__type}
+        >
+          📞 {phone}
+        </a>
+      </div>
     </div>
   );
 };
