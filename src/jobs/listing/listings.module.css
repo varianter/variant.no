@@ -138,3 +138,43 @@
 .rendered__markdown__wrapper :global(.polaroid) figcaption:nth-child(2) {
   margin: 0;
 }
+
+.contacts__layout {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, 400px);
+}
+.contact {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.contact__img {
+  margin-right: 0.5rem;
+}
+.contact__name {
+  margin: 0;
+}
+.contact__type {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-standard__white--text);
+  display: block;
+
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+.contact__type:not(:last-child) {
+  margin-right: 1rem;
+}
+.contact__type:hover {
+  color: rgba(0, 0, 0, 0);
+}

@@ -4,9 +4,12 @@ import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs/[listing]';
 import Layout from 'src/layout';
 import Head from 'next/head';
+import Image from 'next/image';
 import MarkdownIt from 'markdown-it';
 import { ButtonLink } from 'src/components/button';
 import style from './listings.module.css';
+import { Employee } from 'src/employees';
+import { and } from 'src/utils/css';
 
 const Listing: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -19,6 +22,7 @@ const Listing: NextPage<
     });
     return { __html: md.render(listing.content) };
   }, [listing.content]);
+
   return (
     <Layout>
       <Head>
@@ -35,10 +39,19 @@ const Listing: NextPage<
             </ButtonLink>
           </div>
         </div>
-        <article
-          className={style.rendered__markdown__wrapper}
-          dangerouslySetInnerHTML={innerHtml}
-        />
+        <div>
+          <article
+            className={style.rendered__markdown__wrapper}
+            dangerouslySetInnerHTML={innerHtml}
+          />
+          {!!listing.contacts.length && (
+            <div className={style.contacts__layout}>
+              {listing.contacts.map((c) => (
+                <ContactTile key={c.email} contact={c} />
+              ))}
+            </div>
+          )}
+        </div>
         <div className={style.button__bottom}>
           <ButtonLink href={listing.careers_apply_url} mode="primary">
             Søk på stillingen
@@ -76,5 +89,36 @@ const Listing: NextPage<
     </Layout>
   );
 });
+
+export const ContactTile: React.FC<{ contact: Employee }> = ({
+  contact: { fullName, name, email, phone, imageSlug },
+}) => {
+  return (
+    <div className={style.contact}>
+      <div className={style.contact__img}>
+        <Image
+          width={120}
+          height={120}
+          alt={`Bilde av ${name}`}
+          src={`/employees/${imageSlug}.png`}
+          loading="lazy"
+        />
+      </div>
+
+      <div className={style.contact__content}>
+        <h4 className={and(style.contact__name, 'fancy')}>{fullName}</h4>
+        <a href={`mailto:${email}`} className={style.contact__type}>
+          📬 {email}
+        </a>
+        <a
+          href={`tel:+47${phone.replace(/\s*/g, '')}`}
+          className={style.contact__type}
+        >
+          📞 {phone}
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default Listing;

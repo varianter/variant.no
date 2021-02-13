@@ -17,7 +17,7 @@ export const getListing = async (
   );
   const matterFile = matter(file);
 
-  const matterData = matterFile.data as Listing;
+  const matterData = matterFile.data as ListingMetadata;
   const metadata = findStatus(metadataList, matterData.slug);
 
   return {
@@ -28,13 +28,19 @@ export const getListing = async (
   } as Listing;
 };
 
-export type Listing = {
-  id: number;
+type ListingMetadata = {
   title: string;
   h1_title: string;
+  slug: string;
+  contact_emails?: string;
+};
+
+export type Listing = {
+  id: number;
   name: string;
   content: string;
-} & Offer;
+} & ListingMetadata &
+  Offer;
 export async function getFileListingData(): Promise<Listing[]> {
   const files = await getListings();
   const metadataList = await getValidityStatuses();

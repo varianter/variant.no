@@ -17,6 +17,7 @@ export type Employee = {
   fullName: string;
   name: string;
   phone: string;
+  email: string;
   imageSlug: string;
 };
 
@@ -193,6 +194,7 @@ export const massageEmployee = (
   return {
     fullName: employee.name,
     name: employee.name.split(' ')[0],
+    email: employee.email,
     phone: (employee.telephone.startsWith('+47')
       ? employee.telephone.slice(3)
       : employee.telephone
