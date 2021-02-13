@@ -91,6 +91,10 @@
   float: right;
 }
 
+.rendered__markdown__wrapper :global(.small) img {
+  width: 12rem;
+}
+
 .rendered__markdown__wrapper :global(.left) img {
   float: left;
   margin-left: -16rem;

@@ -50,3 +50,9 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 - [Åpen og delt kompetansebygging](https://medium.com/variant-as/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://medium.com/variant-as/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://medium.com/variant-as/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
+
+## Kontakt
+
+<div class="small"><img alt="Bilde av Odd Morten" src="/employees/odd-morten.png"/> </div>
+
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår konsernleder Odd Morten Sveås på 928 07 375 eller oms@variant.no
