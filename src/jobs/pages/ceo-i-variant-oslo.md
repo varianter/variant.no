@@ -16,8 +16,7 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I t
 ## Hvem ser vi etter?
 
 Helt overordnet ser vi etter en kvinne eller mann som kan lede en gjeng dyktige og læreglade mennesker. Våre verdier er åpenhet, raushet og nettopp læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse.
-Vi er et konsulentselskap som tilbyr tjenester i sfæren knyttet til utvikling av IT-systemer. Vi tror det vil være en stor fordel om du har erfaring fra dette. For eksempel som utvikler, designer eller prosjektleder. Vi tror at det absolutt er en fordel om du har jobbet noen år i konsulentbransjen også.
-Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må være motivert av å tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
+Vi er et konsulentselskap som tilbyr tjenester i sfæren knyttet til utvikling av IT-systemer. Vi tror det vil være en stor fordel om du har erfaring fra dette. For eksempel som utvikler, designer eller prosjektleder. Vi tror at det absolutt er en fordel om du har jobbet 5-10 år i konsulentbransjen også. Da ikke nødvendigvis som leder, men med brennende ønske og intresse for ledelse. Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må være motivert av å tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
 
 ## Ansvar og oppgaver
 
