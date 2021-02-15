@@ -2,6 +2,7 @@
 title: Utvikler
 h1_title: Utvikler
 slug: utvikler-trondheim
+contact_emails: mk@variant.no
 ---
 
 ## Kort om stillingen
@@ -22,11 +23,11 @@ Hos oss vil du jobbe med ulike arbeidsoppgaver ut i fra egne ønsker om bransje 
 
 For tiden jobber vi mye med:
 
-- JavaScript (i alle mulige former, som f.eks React og node.js),
+- JavaScript (i alle mulige former, som f.eks React og Node.js),
 - [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327),
 - Docker og Kubernetes,
 - C#, .NET Core,
-- Skyplattformer (Azure, AWS, Vecrel og Heroku),
+- Skyplattformer (Azure, AWS, Vercel og Heroku),
 - og ikke minst: empati, utviklerkultur og samarbeid.
 
 Så vil vi gjerne jobbe mer med:
@@ -75,7 +76,7 @@ Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure p�
 
 ## Om Variant
 
-Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
+Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder [ymse meetups](https://www.meetup.com/IXDATrondheim/) i Trondheim. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
@@ -84,8 +85,10 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 - [Åpen og delt kompetansebygging](https://medium.com/variant-as/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://medium.com/variant-as/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://medium.com/variant-as/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
-- På tide med bedre jobbintervjuer
+- [På tide med bedre jobbintervjuer](https://medium.com/variant-as/paa-tide-med-bedre-jobbintervjuer-e59f6789a134)
 
-Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på [https://github.com/varianter](https://github.com/varianter)
+Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på [https://github.com/varianter](https://github.com/varianter).
 
-Uansett hvilken utviklerprofil du assosierer deg med eller teknologi du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår utvikler Marius [(mk@variant.no)](mailto:mk@variant.no) er rett person å spørre.
+## Kontakt
+
+Uansett hvilken utviklerprofil du assosierer deg med eller teknologi du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår utvikler Marius Krakeli er rett person å spørre.
