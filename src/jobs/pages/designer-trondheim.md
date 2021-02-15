@@ -2,6 +2,7 @@
 title: Designer
 h1_title: Designer
 slug: designer-trondheim
+contact_emails: mk@variant.no
 ---
 
 ![Mikael, Marius og Ellen på taket](/work_images/crimson_blob.svg)
@@ -55,7 +56,7 @@ Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure p�
 
 ## Om Variant
 
-Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
+Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
 
 ![placeholder blob](/work_images/teal_blob.svg)
 
@@ -67,4 +68,6 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 - Tillitsbasert ledelse: [del 1](https://medium.com/variant-as/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://medium.com/variant-as/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
 
-Uansett hvilken designprofil du assosierer deg med eller arbeidsmåte du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår rekrutteringsansvarlig [Marius (mk@variant.no)](mailto:mk@variant.no) er rett person å spørre.
+## Kontakt
+
+Uansett hvilken designprofil du assosierer deg med eller arbeidsmåte du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår rekrutteringsansvarlig Marius Krakeli er rett person å spørre.
