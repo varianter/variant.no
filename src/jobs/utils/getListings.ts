@@ -70,12 +70,18 @@ type OfferResult = {
 const API_URL = 'https://variantas.recruitee.com/api/offers/';
 async function getValidityStatuses(): Promise<Offer[]> {
   const result = await fetch(API_URL);
-  // if (!result.ok) {
-  throw new Error('Could not fetch data from Recruitee');
-  // }
+  if (!result.ok) {
+    throw new Error('Could not fetch data from Recruitee');
+  }
   const data = (await result.json()) as OfferResult;
   if (!data.offers) {
     throw new Error('Could not fetch data from Recruitee');
+  }
+
+  for (let offer of data.offers) {
+    if (!offer.careers_apply_url) {
+      throw new Error('Could not fetch data from Recruitee');
+    }
   }
   return data.offers;
 }
