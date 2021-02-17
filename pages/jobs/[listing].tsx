@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<
   }
   return {
     props: { listing: { ...listing, contacts } },
-    revalidate: 24 * 60 * 60,
+    revalidate: 60 * 60,
   };
 };
 
