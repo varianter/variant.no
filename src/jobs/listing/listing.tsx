@@ -34,7 +34,9 @@ const Listing: NextPage<
         <div className={style.titleWrapper}>
           <h2 className={style.jobArticle__title}>{listing.h1_title}</h2>
           <div className={style.button__top}>
-            <ButtonLink href={listing.careers_apply_url}>
+            <ButtonLink
+              href={listing.careers_apply_url ?? 'https://jobs.variant.no/'}
+            >
               Søk på stillingen
             </ButtonLink>
           </div>
@@ -53,7 +55,10 @@ const Listing: NextPage<
           )}
         </div>
         <div className={style.button__bottom}>
-          <ButtonLink href={listing.careers_apply_url} mode="primary">
+          <ButtonLink
+            href={listing.careers_apply_url ?? 'https://jobs.variant.no/'}
+            mode="primary"
+          >
             Søk på stillingen
           </ButtonLink>
         </div>
