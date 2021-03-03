@@ -1,10 +1,12 @@
 ---
-title: Designsjef Variant Oslo AS
-h1_title: Designsjef Variant Oslo AS
+title: Chief Design Officer i Variant Oslo AS
+h1_title: Chief Design Officer i Variant Oslo AS
 slug: cdo-i-variant-oslo
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
+
+![Flotte Varianter](/images/design1.png)
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
@@ -12,11 +14,17 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer).
 
 ## Hvem ser vi etter?
 
-Helt overordnet ser vi etter en kvinne eller mann som kan lede en gjeng dyktige og læreglade mennesker. Våre verdier er åpenhet, raushet og nettopp læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse.
-Vi er et konsulentselskap som tilbyr tjenester i sfæren knyttet til utvikling av IT-systemer. Vi tror det vil være en stor fordel om du har erfaring fra dette som designer i en eller flere varianter. Vi tror det kan være en fordel om du har jobbet noen år i konsulentbransjen også.
-Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må være motivert av å tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
+Design har blitt et bredt fagområde som strekker seg fra interaksjonsdesign til strategisk design. Vi ser etter en ledestjerne som kan design og som gjerne har erfart utviklingen designfaget har hatt de siste årene og som har en forståelse for designs brede fagspekter. Vi er et konsulentselskap som tilbyr tjenester i sfæren digital utvikling, og det er en stor fordel om du har erfaring med dette. For design begrenser det seg derimot ikke til kun design av digitale løsninger, selv om vi fortsatt tror at hovedbehovet i markedet er digital design og UX en stund til. Vi jobber også med design i kontekst av forretningsutvikling og organisasjonsutvikling. Hvilken designvariant du er er ikke det viktigste, men det er viktig å forstå helheten og hvordan hver fagspiss er gjensidig likeverdig. Vi opplever nesten alltid at en helhetlig tilnærming til design tilfører ekstra verdi og engasjement. Både internt og for kundene våre.
+
+Våre verdier er åpenhet, raushet og læreglede, og vi tror våre ledere bør ha verdi-og tankesett som harmonerer med disse. Læreglede smitter, og vi leter etter en designleder som kan motivere andre og utvikle faget.
 
 ## Ansvar og oppgaver
+
+<div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design3.png"/></div>
+
+Du vil bli en del av ledergruppen i Variant Oslo AS, og gjennom dette være med på å forme selskapets kultur og retning. Du vil ha personalansvar, være medansvarlig for tjenesteutvikling, salg og rekruttering. Ikke minst vil du ha ansvar for den designfaglige utviklingen.
+
+Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal lede og kundene våre. Våre ledere bruker derfor en stor del av sin tid som operative konsulenter ute i kundeoppdrag.
 
 ## Lønn og kompensasjoner
 
@@ -24,7 +32,7 @@ Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfo
 
 - Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være ???? og øke trinnvis mot ???? i det selskapet har 40 ansatte.
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
-- Designsjef vil tilbys å kjøpe 10% av aksjene i Variant Oslo AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
+- Chief Design Officer vil tilbys å kjøpe 10% av aksjene i Variant Oslo AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og vekst og et realistisk mål om å bygge et fagmiljø med 40 dyktige fagpersoner på 3 år.
 
@@ -32,6 +40,7 @@ Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi ha
 
 ## Om Variant
 
+![Workshop med Post-its](/images/design2.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
