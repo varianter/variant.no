@@ -2,12 +2,12 @@
 title: Teknologisjef for Variant Oslo AS
 h1_title: Teknologisjef for Variant Oslo AS
 slug: cto-i-variant-oslo
-contact_emails: oms@variant.no
+contact_emails: cb@variant.no
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
 
-![Akerselva av Liam Martens](/images/akerselva.png)
+![Veggkunst ved Rådhuskaia i Oslo, bilde av Maria Bobrova](/images/utvikler-oslo-av-maria-bobrova.png)
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
@@ -15,15 +15,21 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I t
 
 ## Hvem ser vi etter?
 
-Helt overordnet ser vi etter en kvinne eller mann som kan lede en gjeng dyktige og læreglade mennesker. Våre verdier er åpenhet, raushet og nettopp læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse.
-Vi er et konsulentselskap som tilbyr tjenester i sfæren knyttet til utvikling av IT-systemer. Vi tror det vil være en stor fordel om du har erfaring som utvikler, arkitekt eller tilsvarende. Vi tror det kan være en fordel om du har jobbet noen år i konsulentbransjen også.
+Våre verdier er åpenhet, raushet og læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse. Dette betyr at vi ser etter en teknologisjef som kan motivere andre teknologer innad i firmaet, med en god porsjon entusiasme og nysgjerrighet.
+
+Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn bare å kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Gjerne med roller som arkitekt, utvikler eller tilsvarende. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+
+Som teknologisjef vil du være en brobygger. Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne motivere andre til å gjøre det samme.
+
 Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må være motivert av å tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
 
 ## Ansvar og oppgaver
 
-<div class="left blob1"><img alt="Signering av avtale" src="/images/startup.jpg"/></div>
+<div class="left"><img alt="Tore, vår CTO i Trondheim" src="/images/utvikler-tore-margin.png"/></div>
 
-...
+Du vil bli en del av ledergruppen i Variant Oslo AS, og gjennom dette være med på å forme selskapets kultur og retning. Du vil ha personalansvar, være medansvarlig for tjenesteutvikling, salg og rekruttering. Ikke minst vil du ha ansvar for den teknisk faglige utviklingen.
+
+Vi er sterke tilhengere av at våre ledere forstår situasjonen til de skal lede og kundene våre. Våre ledere bruker derfor en stor del av sin tid som operative konsulenter ute i kundeoppdrag.
 
 ## Lønn og kompensasjoner
 
@@ -39,6 +45,7 @@ Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi ha
 
 ## Om Variant
 
+![Christian, Jacob og Maciek hos Variant](/images/utvikler-jacob.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
@@ -51,4 +58,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår konsernleder Odd Morten Sveås.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår utvikler Christian Brevik.
