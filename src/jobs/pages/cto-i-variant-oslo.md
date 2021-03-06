@@ -15,13 +15,13 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I t
 
 ## Hvem ser vi etter?
 
-Våre verdier er åpenhet, raushet og læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse. Dette betyr at vi ser etter en teknologisjef som kan motivere andre teknologer innad i firmaet, med en god porsjon entusiasme og nysgjerrighet.
+Vi ser etter en teknologisjef som kan motivere andre teknologer innad i firmaet, med en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og vi tror våre ledere bør ha verdi- og tankesett som harmonerer med disse.
 
 Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Gjerne med roller som arkitekt, utvikler eller tilsvarende. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
-Som Chief Technology Officer vil du være en brobygger. Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne motivere andre til å gjøre det samme.
+Som Chief Technology Officer vil du være en brobygger. Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
-Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må være motivert av å tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
+Uansett vil det viktigste være at du er dyktig med mennesker og evner å lede, motivere og utvikle andre. Du må kunne tenke langsiktig samtidig som du evner å jobbe operativt og kortsiktig.
 
 ## Ansvar og oppgaver
 
