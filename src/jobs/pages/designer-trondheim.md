@@ -49,8 +49,8 @@ Kundelisten endrer seg stadig, og for tiden bistår vi blant annet disse:
 
 - [Gode og rettferdige betingelser](https://handbook.variant.no/#betingelser)
 - [God lønn som er åpen for alle](https://www.variant.no/kalkulator)
-- [Innsikt og påvirkning](https://medium.com/variant-as/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
-- [Vokse faglig og hjelpe andre vokse](https://medium.com/variant-as/aapen-og-delt-kompetansebygging-c229771eee93)
+- [Innsikt og påvirkning](https://blog.variant.no/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
+- [Vokse faglig og hjelpe andre vokse](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 
 Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre goder og ytelser")
 
@@ -60,13 +60,13 @@ Variant er menneskene som jobber her. Vi har kommet sammen for å være med å s
 
 ![placeholder blob](/work_images/teal_blob.svg)
 
-Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder [ymse meetups](https://www.meetup.com/IXDATrondheim/) i Trondheim. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://medium.com/variant-as/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
+Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder [ymse meetups](https://www.meetup.com/IXDATrondheim/) i Trondheim. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
 
-- [Åpen og delt kompetansebygging](https://medium.com/variant-as/aapen-og-delt-kompetansebygging-c229771eee93)
-- Tillitsbasert ledelse: [del 1](https://medium.com/variant-as/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://medium.com/variant-as/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
-- [Om lønn](https://medium.com/variant-as/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
+- [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
+- Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
+- [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
 
 ## Kontakt
 

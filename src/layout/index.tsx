@@ -179,7 +179,7 @@ const Layout: React.FC<LayoutProps> = ({
               </li>
               <li>
                 <a
-                  href="https://medium.com/variant-as/tagged/b%C3%A6rekraft"
+                  href="https://blog.variant.no/tagged/b%C3%A6rekraft"
                   rel="noopener"
                   title="Les mer om Variants bærekraftsinitiativ"
                 >
