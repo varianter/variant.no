@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
-import { ButtonNextLink } from 'src/components/button';
+import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import style from './index.module.css';
 import SayHi from './say-hi';
@@ -177,14 +177,9 @@ const Home = ({
         <div className={style.blog__text}>
           <h2>Våre ytringer</h2>
 
-          <a href="http://variant.blog">
-            Sjekk oss ut på
-            <img
-              className={style.blog__mediumLogo}
-              src={require('./images/medium.svg')}
-              alt="Logo of Medium"
-            />
-          </a>
+          <ButtonLink href="http://variant.blog">
+            Sjekk ut bloggen vår
+          </ButtonLink>
         </div>
 
         <img
