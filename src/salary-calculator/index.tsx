@@ -5,10 +5,17 @@ import RadioButton from '../components/radio-button';
 import { calculateEstimatedSalary, getMaxYear, Degree } from './calculate';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Slider from 'src/components/slider';
 
-const SalaryCalculator = () => {
+type Props = {
+  year: number;
+  degree: Degree;
+  addition?: number;
+};
+
+const SalaryCalculator: NextPage<Props> = ({ year, degree, addition }) => {
   return (
     <Layout>
       <Head>
@@ -23,10 +30,18 @@ const SalaryCalculator = () => {
       </Head>
 
       <div className={style.wrapper}>
-        <Calculator />
+        <Calculator year={year} degree={degree} addition={addition} />
       </div>
     </Layout>
   );
+};
+
+SalaryCalculator.getInitialProps = (ctx) => {
+  return {
+    year: parseInt((ctx.query.year as string) ?? '2007'),
+    degree: (ctx.query.degree as Degree) ?? 'masters',
+    addition: parseInt((ctx.query.addition as string) ?? '0'),
+  };
 };
 
 export default SalaryCalculator;
@@ -36,26 +51,26 @@ const formatCurrency = (pay: string | undefined) => {
   return new Intl.NumberFormat('nb-NO').format(parseInt(pay));
 };
 
-const Calculator = () => {
-  const [degree, setDegree] = useState<Degree>('masters');
-  const [selectedYear, setSelectedYear] = useState(2007);
+const Calculator = (props: Props) => {
+  const [degree, setDegree] = useState<Degree>(props.degree);
+  const [selectedYear, setSelectedYear] = useState<number>(props.year);
   const containerRef = useRef(null);
   const maxYear = getMaxYear();
-
   const [salary, setSalary] = useState('0');
 
   useEffect(() => {
     let payObj = { value: salary };
     anime({
       targets: payObj,
-      value: calculateEstimatedSalary(selectedYear, degree),
+      value:
+        calculateEstimatedSalary(selectedYear, degree) + (props.addition ?? 0),
       duration: 500,
       round: 1,
       easing: 'easeInOutExpo',
       update: () => setSalary(formatCurrency(payObj.value) ?? ''),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedYear, degree]);
+  }, [selectedYear, degree, props.addition]);
 
   return (
     <div className={style.container} ref={containerRef}>
@@ -161,6 +176,14 @@ const Calculator = () => {
                   <dt>Erfaring</dt>
                   <dd className={style.number}>{maxYear - selectedYear} år</dd>
                 </div>
+                {!!props.addition && (
+                  <div className={style.flexRow}>
+                    <dt>Ledertillegg</dt>
+                    <dd className={style.number}>
+                      {formatCurrency(props.addition.toString())}
+                    </dd>
+                  </div>
+                )}
                 <div className={style.flexRow}>
                   <dt>Din årslønn i Variant</dt>
                   <dd className={and(style.number, style.result)}>{salary}</dd>
