@@ -2,12 +2,12 @@
 title: Chief Design Officer i Variant Oslo AS
 h1_title: Chief Design Officer i Variant Oslo AS
 slug: cdo-i-variant-oslo
-contact_emails: te@variant.no
+contact_emails: te@variant.no, mk@variant.no
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
 
-![Flotte Varianter](/images/design1.png)
+![Flotte Varianter](/images/design-takterasse.png)
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
@@ -21,7 +21,7 @@ Våre verdier er åpenhet, raushet og læreglede, og vi tror våre ledere bør h
 
 ## Ansvar og oppgaver
 
-<div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design3.png"/></div>
+<div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
 Du vil bli en del av ledergruppen i Variant Oslo AS, og gjennom dette være med på å forme selskapets kultur og retning. Du vil ha personalansvar, være medansvarlig for tjenesteutvikling, salg og rekruttering. Ikke minst vil du ha ansvar for den designfaglige utviklingen.
 
@@ -31,7 +31,7 @@ Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal l
 
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være ???? og øke trinnvis mot ???? i det selskapet har 40 ansatte.
+- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg som er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil ledertillegg være 150 000 og øke trinnvis mot 300 000 i det selskapet har 40 ansatte. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2008, vil din startlønn være 1 093 746](/kalkulator?year=2008&degree=masters&addition=150000).
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
 - Chief Design Officer vil tilbys å kjøpe 10% av aksjene i Variant Oslo AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
@@ -41,7 +41,7 @@ Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi ha
 
 ## Om Variant
 
-![Workshop med Post-its](/images/design2.png)
+![Workshop med Post-its](/images/design-workshop.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
@@ -54,4 +54,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer Tonje Evanger.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
