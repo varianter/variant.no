@@ -1,0 +1,13 @@
+.time {
+  display: inline-block;
+  width: 8rem;
+}
+
+.agenda {
+  list-style: none;
+}
+
+h2,
+h3 {
+  margin: 5rem 0 2rem 0;
+}
