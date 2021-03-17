@@ -54,4 +54,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer i Variant konsern Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
