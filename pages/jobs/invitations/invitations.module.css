@@ -7,7 +7,21 @@
   list-style: none;
 }
 
+.prep {
+  padding: 0 3rem;
+  font-style: italic;
+}
+
+.right_image {
+  float: right;
+  width: 10rem;
+}
+
 h2,
 h3 {
   margin: 5rem 0 2rem 0;
+}
+
+p {
+  margin-top: 1rem;
 }
