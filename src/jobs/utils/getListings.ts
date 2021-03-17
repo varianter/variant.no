@@ -75,9 +75,15 @@ async function getValidityStatuses(): Promise<Offer[]> {
   }
   const data = (await result.json()) as OfferResult;
   if (!data.offers) {
-    return [];
+    throw new Error('Could not fetch data from Recruitee');
   }
-  return !data.offers ? [] : data.offers;
+
+  for (let offer of data.offers) {
+    if (!offer.careers_apply_url) {
+      throw new Error('Could not fetch data from Recruitee');
+    }
+  }
+  return data.offers;
 }
 
 function findStatus(offers: Offer[], slug: string): Offer | undefined {

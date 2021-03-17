@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<
   }
   return {
     props: { listing: { ...listing, contacts } },
-    revalidate: 24 * 60 * 60,
+    revalidate: 60 * 60,
   };
 };
 
@@ -51,7 +51,9 @@ async function getContactsByEmails(emails: string[]): Promise<Employee[]> {
         return { ...massageEmployee(employee), imageSlug };
       }),
     );
-    return employees.filter((e) => emails.includes(e.email));
+    return emails
+      .map((email) => employees.find((emp) => emp.email === email))
+      .filter((emp): emp is Employee => !!emp);
   }
   // Trigger fallback on previous version
   throw new Error();

@@ -170,18 +170,6 @@
   }
 }
 
-.blog a {
-  color: var(--color-standard__black);
-  text-decoration: none;
-  margin-top: 2.4rem;
-  display: block;
-}
-.blog__mediumLogo {
-  display: block;
-  margin: 1.2rem auto 0;
-  max-width: 50%;
-}
-
 .cases {
   margin-top: 8.25rem;
   padding: 0 1rem;
