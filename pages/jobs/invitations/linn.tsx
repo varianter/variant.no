@@ -53,7 +53,7 @@ export default function Invitation() {
             </p>
 
             <p className={style.prep}>
-              Til denne samtalen ønsker vi at du tenker igjennom: I hvilke
+              Til samtalen ønsker vi at du tenker igjennom: I hvilke
               situasjoner er du mest motivert? Hva gjør at du blir frustrert,
               irritert eller sint? Hvordan liker du å løse utfordringer?
             </p>
@@ -77,7 +77,7 @@ export default function Invitation() {
               alt="Mikael Brevik"
             />
             <p className={style.prep}>
-              Til denne delen ønsker vi at du forbereder en innledning der
+              Til caset ønsker vi at du forbereder en innledning der
               du forteller litt om dine tanker rundt Oslos rekrutering på kort og lengre sikt. 
               Format er helt opp til deg. Lengden bør ikke være mer enn 10 minutter, og kort er
               bedre enn langt.
