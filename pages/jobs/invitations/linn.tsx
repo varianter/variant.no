@@ -47,9 +47,9 @@ export default function Invitation() {
             <p>
               Som du sikkert er klar over baserer vi vår medarbeiderutvikling på
               positiv psykologi og legger styrkebasert utvikling til grunn for
-              hvordan vi ønsker bygge våre varianter. Første ledd i en slik
+              hvordan vi ønsker bygge varianter. Første ledd i en slik
               utvikling er å kartlegge våre styrker og våre verdier. Dette gjør
-              vi med alle mennesker i selskapet gjennom en styrkesamtale.
+              vi for alle mennesker i selskapet gjennom en styrkesamtale.
             </p>
 
             <p className={style.prep}>
@@ -78,7 +78,7 @@ export default function Invitation() {
             />
             <p className={style.prep}>
               Til caset ønsker vi at du forbereder en innledning der
-              du forteller litt om dine tanker rundt Oslos rekrutering på kort og lengre sikt. 
+              du forteller litt om dine tanker rundt Oslos rekruttering på kort og lengre sikt. 
               Format er helt opp til deg. Lengden bør ikke være mer enn 10 minutter, og kort er
               bedre enn langt.
             </p>
@@ -88,7 +88,7 @@ export default function Invitation() {
               alt="Anders Hammervold"
             />
             <p>
-              Etter din innledning vil du, Anders, Mikael og jeg spinne videre
+              Etter din innledning vil du, Anders, Mikael og Odd Morten spinne videre
               på dine tanker. Vi kommer til å utfordre eller male videre, og
               ønsker at du gjør det samme. Altså slik vi faktisk kommer til å
               jobbe når vi samarbeider om å bygge et selskap i framtiden. Idéer
@@ -102,7 +102,7 @@ export default function Invitation() {
             <p>
               Vi tror samarbeidsevne og kompabilitet med resten av
               konsernledelsen er en nøkkel til å lykkes. Hovedpoenget med denne
-              sesjoner er derfor å se på hvordan vi samarbeider. Hvordan vi
+              sesjonen er derfor å se på hvordan vi samarbeider. Hvordan vi
               klarer å utnytte hverandres potensial. Hvordan ditt samspill i
               gruppen vil være. Sluttproduktet, hvis vi kommer så langt, kommer
               vi ikke til å evaluere.
@@ -112,14 +112,14 @@ export default function Invitation() {
           <div>
             <h3 className="fancy">Utlegg</h3>
             <p>
-              Vi setter stor pris på at du er villig ti å bruke en dag på oss
+              Vi setter stor pris på at du er villig til å bruke en dag på oss
               her i Trondheim. Vi dekker selvsagt kostnader til selve reisen. Vi
               ber deg derfor å legge ut for turen, og så sende oss kopi av
-              kvitteringer sammen med kontonummer på mail til{' '}
+              kvitteringer sammen med bankkontonummer på mail til{' '}
               <a
                 href="mailto:faktura@variant.no?subject=Utlegg i forbindelse med intervju&body=Vedlagt kvitteringer for min reise til Trondheim i forbindelse med intervju.%0D%0A
                 %0D%0A
-                Kontonr:"
+                Utbetales til kontonr:"
               >
                 faktura@variant.no
               </a>
