@@ -39,7 +39,11 @@ export default function Invitation() {
           </div>
           <div>
             <h3 className="fancy">Styrkesamtale</h3>
-            <img className={style.right_image} src="/images/tonje.png" />
+            <img
+              className={style.right_image}
+              src="/images/tonje.png"
+              alt="Tonje Evanger"
+            />
             <p>
               Som du sikkert er klar over baserer vi vår medarbeiderutvikling på
               positiv psykologi og legger styrkebasert utvikling til grunn for
@@ -67,14 +71,22 @@ export default function Invitation() {
               samarbeidscase på hvordan vi kan utvikle en god
               rekrutteringsstrategi for Variant Oslo.
             </p>
-            <img className={style.right_image} src="/images/mikael.png" />
+            <img
+              className={style.right_image}
+              src="/images/mikael.png"
+              alt="Mikael Brevik"
+            />
             <p className={style.prep}>
               Til denne delen ønsker vi at du forbereder en innledning, med at
               du forteller litt om dine tanker rundt dette. Format er helt opp
               til deg. Lengden bør ikke være mer enn 10 minutter, og kort er
               bedre enn langt.
             </p>
-            <img className={style.right_image} src="/images/anders.png" />
+            <img
+              className={style.right_image}
+              src="/images/anders.png"
+              alt="Anders Hammervold"
+            />
             <p>
               Etter din innledning vil du, Anders, Mikael og jeg spinne videre
               på dine tanker. Vi kommer til å utfordre eller male videre, og
@@ -82,7 +94,11 @@ export default function Invitation() {
               jobbe når vi samarbeider om å bygge et selskap i framtiden. Idéer
               som du bringer til torgs, skal vi ikke stjele.
             </p>
-            <img className={style.right_image} src="/images/odd-morten.png" />
+            <img
+              className={style.right_image}
+              src="/images/odd-morten.png"
+              alt="Odd Morten Sveås"
+            />
             <p>
               Vi tror samarbeidsevne og kapabilitet med resten av
               konsernledelsen er en nøkkel til å lykkes. Hovedpoenget med denne
