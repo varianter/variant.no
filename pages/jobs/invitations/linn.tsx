@@ -16,7 +16,7 @@ export default function Invitation() {
           <div>
             <p>
               Det er med stor glede vi inviterer til en liten dag hos oss på
-              Varianthuset i Trondheim. Målet med dagen er å bli bedre kjent med
+              Varianthuset i Trondheim onsdag 24.mars. Målet med dagen er å bli bedre kjent med
               deg, men også at du får truffet flere av oss. Adressen er Thomas
               Angells gate 10. Det er midt i sentum.
             </p>
