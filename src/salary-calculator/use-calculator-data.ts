@@ -1,5 +1,5 @@
 import anime from 'animejs';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   calculateEstimatedSalary,
   Degree,
@@ -49,7 +49,6 @@ export default function useCalculatorData(
     minYear,
     maxYear,
     salary,
-    setSalary,
     incrementYear,
     decrementYear,
   };
