@@ -23,17 +23,17 @@ export default function Invitation() {
           </div>
 
           <div>
-            <h3 className="fancy">Tidsplan torsdag 25. mars</h3>
+            <h3 className="fancy">Tidsplan onsdag 24. mars</h3>
             <ul className={style.agenda}>
               <li>
-                <span className={style.time}>13.00-14.00</span> 💪🏻 Styrkesamtale
+                <span className={style.time}>12.00-13.00</span> 💪🏻 Styrkesamtale
               </li>
               <li>
-                <span className={style.time}>15.00-17.00</span> 👩‍👦‍👦
+                <span className={style.time}>14.00-16.00</span> 👩‍👦‍👦
                 Samarbeidscase{' '}
               </li>
               <li>
-                <span className={style.time}>17.00-18.30</span> 🥘 Enkel middag
+                <span className={style.time}>16.30-18.00</span> 🥘 Enkel middag
               </li>
             </ul>
           </div>
@@ -100,7 +100,7 @@ export default function Invitation() {
               alt="Odd Morten Sveås"
             />
             <p>
-              Vi tror samarbeidsevne og kapabilitet med resten av
+              Vi tror samarbeidsevne og kompabilitet med resten av
               konsernledelsen er en nøkkel til å lykkes. Hovedpoenget med denne
               sesjoner er derfor å se på hvordan vi samarbeider. Hvordan vi
               klarer å utnytte hverandres potensial. Hvordan ditt samspill i
