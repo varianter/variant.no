@@ -77,9 +77,9 @@ export default function Invitation() {
               alt="Mikael Brevik"
             />
             <p className={style.prep}>
-              Til denne delen ønsker vi at du forbereder en innledning, med at
-              du forteller litt om dine tanker rundt dette. Format er helt opp
-              til deg. Lengden bør ikke være mer enn 10 minutter, og kort er
+              Til denne delen ønsker vi at du forbereder en innledning der
+              du forteller litt om dine tanker rundt Oslos rekrutering på kort og lengre sikt. 
+              Format er helt opp til deg. Lengden bør ikke være mer enn 10 minutter, og kort er
               bedre enn langt.
             </p>
             <img
