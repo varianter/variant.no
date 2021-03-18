@@ -166,6 +166,14 @@ const Calculator = (props: Props) => {
               <h3 className={style.question}>Da blir lønnen din sånn:</h3>
 
               <dl>
+                {!!props.addition && (
+                  <div className={style.flexRow}>
+                    <dt>Ledertillegg</dt>
+                    <dd className={style.number}>
+                      {formatCurrency(props.addition.toString())}
+                    </dd>
+                  </div>
+                )}
                 <div className={style.flexRow}>
                   <dt>Utdanning</dt>
                   <dd className={style.number}>
@@ -176,14 +184,6 @@ const Calculator = (props: Props) => {
                   <dt>Erfaring</dt>
                   <dd className={style.number}>{maxYear - selectedYear} år</dd>
                 </div>
-                {!!props.addition && (
-                  <div className={style.flexRow}>
-                    <dt>Ledertillegg</dt>
-                    <dd className={style.number}>
-                      {formatCurrency(props.addition.toString())}
-                    </dd>
-                  </div>
-                )}
                 <div className={style.flexRow}>
                   <dt>Din årslønn i Variant</dt>
                   <dd className={and(style.number, style.result)}>{salary}</dd>
