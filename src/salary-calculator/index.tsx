@@ -1,13 +1,13 @@
-import anime from 'animejs';
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Layout from 'src/layout';
 import RadioButton from '../components/radio-button';
-import { calculateEstimatedSalary, getMaxYear, Degree } from './calculate';
+import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Slider from 'src/components/slider';
+import useCalculatorData from './use-calculator-data';
 
 type Props = {
   year: number;
@@ -46,34 +46,21 @@ SalaryCalculator.getInitialProps = (ctx) => {
 
 export default SalaryCalculator;
 
-const formatCurrency = (pay: string | undefined) => {
-  if (!pay) return pay;
-  return new Intl.NumberFormat('nb-NO').format(parseInt(pay));
-};
-
 const Calculator = (props: Props) => {
-  const [degree, setDegree] = useState<Degree>(props.degree);
-  const [selectedYear, setSelectedYear] = useState<number>(props.year);
-  const containerRef = useRef(null);
-  const maxYear = getMaxYear();
-  const [salary, setSalary] = useState('0');
-
-  useEffect(() => {
-    let payObj = { value: salary };
-    anime({
-      targets: payObj,
-      value:
-        calculateEstimatedSalary(selectedYear, degree) + (props.addition ?? 0),
-      duration: 500,
-      round: 1,
-      easing: 'easeInOutExpo',
-      update: () => setSalary(formatCurrency(payObj.value) ?? ''),
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedYear, degree, props.addition]);
+  const {
+    selectedYear,
+    setSelectedYear,
+    degree,
+    setDegree,
+    minYear,
+    maxYear,
+    salary,
+    incrementYear,
+    decrementYear,
+  } = useCalculatorData(props.year, props.degree, props.addition);
 
   return (
-    <div className={style.container} ref={containerRef}>
+    <div className={style.container}>
       <div className={style.calculatorContainer}>
         <div className={style.topSvgContainer}>
           <svg width="100%" height="100%" viewBox="0 0 600 600">
@@ -142,23 +129,30 @@ const Calculator = (props: Props) => {
             Når ble eller blir du ferdig med graden?
           </h3>
           <div className={style.barSliderContainer}>
-            <span
-              className={style.icon}
+            <button
+              onClick={decrementYear}
+              className={style.iconButton}
               aria-label="Grown lady icon"
               role="img"
             >
               👵
-            </span>
+            </button>
             <Slider
               initial={selectedYear}
               to={maxYear}
-              from={1990}
+              from={minYear}
               onChange={setSelectedYear}
+              value={selectedYear}
               label={'Utdanningsår'}
             />
-            <span className={style.icon} aria-label="Child icon" role="img">
+            <button
+              onClick={incrementYear}
+              className={style.iconButton}
+              aria-label="Child icon"
+              role="img"
+            >
               👶
-            </span>
+            </button>
           </div>
 
           <footer className={style.summary}>
