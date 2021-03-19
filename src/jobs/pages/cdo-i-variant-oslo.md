@@ -3,6 +3,9 @@ title: Chief Design Officer i Variant Oslo AS
 h1_title: Chief Design Officer i Variant Oslo AS
 slug: cdo-i-variant-oslo
 contact_emails: te@variant.no, mk@variant.no
+meta_title: Vi søker CDO til Variant Oslo!
+meta_description: Bli med å etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens.
+meta_image: https://www.variant.no/images/cdo_meta_image.jpg
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo

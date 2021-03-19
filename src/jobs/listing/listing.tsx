@@ -39,12 +39,18 @@ const Listing: NextPage<
           />
         )}
         {listing.meta_description && (
-          <meta
-            name="description"
-            property="og:description"
-            content={listing.meta_description}
-            key="og:description"
-          />
+          <>
+            <meta
+              name="description"
+              content={listing.meta_description}
+              key="description"
+            />
+            <meta
+              property="og:description"
+              content={listing.meta_description}
+              key="og:description"
+            />
+          </>
         )}
         {listing.meta_image && (
           <meta
