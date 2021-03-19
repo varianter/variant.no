@@ -26,6 +26,11 @@ const Listing: NextPage<
   return (
     <Layout title={`${listing.title} - ${listing.company_name}`}>
       <Head>
+        <meta
+          property="og:url"
+          content={`https://www.variant.no/jobs/${listing.name}`}
+          key="og:url"
+        />
         {listing.meta_title && (
           <meta
             property="og:title"
