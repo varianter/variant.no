@@ -3,6 +3,9 @@ title: Chief Technology Officer for Variant Oslo AS
 h1_title: Chief Technology Officer for Variant Oslo AS
 slug: cto-i-variant-oslo
 contact_emails: cb@variant.no, mb@variant.no
+meta_title: Vi søker CTO til Variant Oslo!
+meta_description: Vi ser etter en teknologisjef som kan motivere andre teknologer innad i firmaet, med en god porsjon entusiasme og nysgjerrighet.
+meta_image: https://www.variant.no/images/cto_meta_image.jpg
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo

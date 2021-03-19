@@ -33,6 +33,9 @@ type ListingMetadata = {
   h1_title: string;
   slug: string;
   contact_emails?: string;
+  meta_title?: string;
+  meta_description?: string;
+  meta_image?: string;
 };
 
 export type Listing = {
