@@ -15,4 +15,9 @@ export function getMaxYear(): number {
   return parseInt(keys[keys.length - 1]) - 2;
 }
 
+export const formatCurrency = (pay: string | undefined) => {
+  if (!pay) return pay;
+  return new Intl.NumberFormat('nb-NO').format(parseInt(pay));
+};
+
 export type Degree = 'masters' | 'bachelor';

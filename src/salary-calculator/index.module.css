@@ -22,7 +22,12 @@
   margin: 2.4rem 0;
 }
 
-.icon {
+.iconButton {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
   font-size: 1.5rem;
 }
 
