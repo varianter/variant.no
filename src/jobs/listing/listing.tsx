@@ -24,11 +24,30 @@ const Listing: NextPage<
   }, [listing.content]);
 
   return (
-    <Layout>
+    <Layout title={`${listing.title} - ${listing.company_name}`}>
       <Head>
-        <title>
-          {listing.title} - {listing.company_name}
-        </title>
+        {listing.meta_title && (
+          <meta
+            property="og:title"
+            content={listing.meta_title}
+            key="og:title"
+          />
+        )}
+        {listing.meta_description && (
+          <meta
+            name="description"
+            property="og:description"
+            content={listing.meta_description}
+            key="og:description"
+          />
+        )}
+        {listing.meta_image && (
+          <meta
+            property="og:image"
+            content={listing.meta_image}
+            key="og:image"
+          />
+        )}
       </Head>
       <section className={style.jobArticle}>
         <div className={style.titleWrapper}>
