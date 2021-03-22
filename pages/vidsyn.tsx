@@ -14,8 +14,14 @@ export default function Invitation() {
                         <h2 className={style.omVariant__title}>Velkommen til Vidsyn 21</h2>
                     </header>
                     <div>
+                        <img
+                            className={style.right_image}
+                            src="/images/vidsyn.png"
+                            alt="Oversiktssbilde over et landskap"
+                            />
+                        
                         <p>
-                            Det er med stor glede vi inviterer til Variants årlige ledersamling Vidsyn. Ved gjevne
+                            Det er med stor glede vi inviterer til Variants årlige ledersamling Vidsyn. Ved jevne
                             mellomrom har vi behov for å stoppe opp, løfte blikket og tenke lengre og bredere tanker.
                             Vidsyn defineres som en åpen og fordomsfri innstilling. Som en tenkemåte preget av
                             bredde i erfaringer, kunnskaper. Dette er målet med med samlingen.
@@ -29,24 +35,28 @@ export default function Invitation() {
 
                     <div>
                         <h3 className="fancy">Tidsplan 19. - 20. april</h3>
+                        Mandag 19. april
                         <ul className={style.agenda}>
                             <li>
-                                <span className={style.time}>Mandag 12.00-13.00</span> 🥙 Lunsj
+                                <span className={style.time}> 12.00-13.00</span> 🥙 Lunsj
                             </li>
                             <li>
-                                <span className={style.time}>Mandag 13.00-17.00</span> 👁 Vidsyn og langsyn
+                                <span className={style.time}> 13.00-17.00</span> 👁 Vidsyn og langsyn
                             </li>
                             <li>
-                                <span className={style.time}>Mandag 19.00-23.30</span> 🍽 Middag
+                                <span className={style.time}> 19.00-23.30</span> 🍽 Middag
+                            </li>
+                        </ul>
+                        Tirsdag 20. april
+                        <ul className={style.agenda}>
+                            <li>
+                                <span className={style.time}> 07.30-09.00</span> 🍳 Frokost
                             </li>
                             <li>
-                                <span className={style.time}>Tirsdag 07.30-09.00</span> 🍳 Frokost
+                                <span className={style.time}> 13.00-17.00</span> 👓 Smalsyn
                             </li>
                             <li>
-                                <span className={style.time}>Tirsdag 13.00-17.00</span> 👓 Smalsyn
-                            </li>
-                            <li>
-                                <span className={style.time}>Tirsdag 19.00-23.30</span> 🥪 Lunsj
+                                <span className={style.time}> 19.00-23.30</span> 🥪 Lunsj
                             </li>
                         </ul>
                     </div>
@@ -66,7 +76,7 @@ export default function Invitation() {
                                     Hvilke behov har vi som skal løses av konsernet? Innledning Anders
                                 </li>
                                 <li>
-                                    Hvordan kan øke engasjementet rundt læreglede? Innledning Mikael
+                                    Hvordan kan vi øke engasjementet rundt læreglede? Innledning Mikael
                                 </li>
                                 <li>
                                     Ledig
@@ -90,8 +100,8 @@ export default function Invitation() {
                         <h3 className="fancy">Middag</h3>
                         <p>
                             Med dagens vidsyn som bakteppe spiser vi en bedre middag. Sammen med sosialt samvær og
-                            mulighet til å bli bedre kjent på tvers av kontor, er håpet en annen setting og nytt perspektiv
-                            gir diskusjonene tidligre på dagen en ny dimensjon.
+                            mulighet til å bli bedre kjent på tvers av kontor, er målet at en annen setting og 
+                            nytt fysisk perspektiv gir diskusjonene tidligre på dagen en ny dimensjon.
                         </p>
                     </div>
 
