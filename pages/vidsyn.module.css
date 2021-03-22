@@ -36,6 +36,12 @@
   width: 12rem;
 }
 
+@media (max-width: 500px) {
+  .time {
+    width: 8rem;
+  }
+}
+
 .agenda {
   list-style: none;
 }

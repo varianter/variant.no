@@ -62,10 +62,10 @@ export default function Invitation() {
                                 <span className={style.time}> 07.30-09.00</span> 🍳 Frokost
                             </li>
                             <li>
-                                <span className={style.time}> 13.00-17.00</span> 👓 Smalsyn
+                                <span className={style.time}> 09.00-12.00</span> 👓 Smalsyn
                             </li>
                             <li>
-                                <span className={style.time}> 19.00-23.30</span> 🥪 Lunsj
+                                <span className={style.time}> 12.00-13.00</span> 🥪 Lunsj
                             </li>
                         </ul>
                     </div>
