@@ -149,7 +149,9 @@ export default function Invitation() {
                         <p>
                             Det er mulig å reise både fra Trondheim og Oslo med tog. Vi vil dog 
                             anbefale å bruke personbil. Og da at man samkjører i den grad det er mulig. 
-                            Fra Trondheim må man beregne 5 timer en vei, fra Oslo ca det halve. 
+                            Fra Trondheim må man beregne <a href="https://www.google.com/maps/dir/Trondheim/Pellestova+Hotell+Hafjell,+Hunders%C3%A6tervegen+910,+2636+%C3%98yer/@62.3003486,8.0188826,7z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x466d319747037e53:0xbf7c8288f3cf3d4!2m2!1d10.3950528!2d63.4305149!1m5!1m1!1s0x466a8b722a5f3955:0x9fb5dcb04d3bd7f6!2m2!1d10.5450106!2d61.2261239!3e0"> 
+                            5 timer en vei,</a> og fra Oslo <a href="https://www.google.com/maps/dir/Oslo/Pellestova+Hotell+Hafjell,+Hunders%C3%A6tervegen+910,+2636+%C3%98yer/@60.5591075,9.7356218,8z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46416e61f267f039:0x7e92605fd3231e9a!2m2!1d10.7522454!2d59.9138688!1m5!1m1!1s0x466a8b722a5f3955:0x9fb5dcb04d3bd7f6!2m2!1d10.5450106!2d61.2261239!3e0"> 
+                            ca det halve. </a>
                         </p>
                     </div>
                 </section>
