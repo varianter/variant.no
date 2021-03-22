@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from 'src/layout';
+import { and } from 'src/utils/css';
 import style from './vidsyn.module.css';
 
 export default function Invitation() {
@@ -12,6 +13,7 @@ export default function Invitation() {
                 <section className={style.omVariant}>
                     <header>
                         <h2 className={style.omVariant__title}>Velkommen til Vidsyn 21</h2>
+                        <p className={style.subtitle}>Oslo pluss Trondheim er sant!</p>
                     </header>
                     <div>
                         <img
@@ -31,6 +33,13 @@ export default function Invitation() {
                             ledelsen i alle selskaper sammen med konsernets ledelse samles. De enkelte selskapene har
                             utover dette egne ledersamlinger med fokus på sitt selskap.
                         </p>
+                        <p>
+                            I anledningen av å være Variants første Vidsynsamling er det naturlig nok den første 
+                            samlingen hvor vi konkret kan forholde oss til Oslo. Temaet for årets samling blir
+                            derfor selvfølgelig <i>"Oslo pluss Trondheim er sant!"</i> Hovedmelodien på samlingen
+                            er altså hvordan skal vi få dette konsernet til å fly!
+                        </p>
+
                     </div>
 
                     <div>
@@ -79,7 +88,7 @@ export default function Invitation() {
                                     Hvordan kan vi øke engasjementet rundt læreglede? Innledning Mikael
                                 </li>
                                 <li>
-                                    Ledig
+                                    Hvilke synergier kan vi få på tvers av byer? Innledning Tonje 
                                 </li>
                                 <li>
                                     Ledig
@@ -97,7 +106,7 @@ export default function Invitation() {
                     </div>
 
                     <div>
-                        <h3 className="fancy">Middag</h3>
+                        <h4 >Middag</h4>
                         <p>
                             Med dagens vidsyn som bakteppe spiser vi en bedre middag. Sammen med sosialt samvær og
                             mulighet til å bli bedre kjent på tvers av kontor, er målet at en annen setting og 
@@ -106,7 +115,7 @@ export default function Invitation() {
                     </div>
 
                     <div>
-                        <h3 className="fancy">Smalsyn</h3>
+                        <h4 >Smalsyn</h4>
                         <p>
                             Tirsdagens smalsynsesjon handler om å konkretisere og operasjonalisere gårsdagens
                             diskusjoner og mulighetsbilde. De samme tema som ble diskutert i går skal i dag behandles.

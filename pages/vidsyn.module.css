@@ -55,6 +55,19 @@ h3 {
   margin: 5rem 0 2rem 0;
 }
 
+h4 {
+  margin: 3rem 0 -0.4rem 0;
+  font-family: 'Graphik';
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: -2rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
 p {
   margin-top: 1rem;
 }
