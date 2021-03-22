@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from 'src/layout';
-import { and } from 'src/utils/css';
+//import { and } from 'src/utils/css';
 import style from './vidsyn.module.css';
 
 export default function Invitation() {
