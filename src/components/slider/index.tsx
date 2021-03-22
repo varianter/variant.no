@@ -7,6 +7,7 @@ type SliderProps = {
   to: number;
   from: number;
   onChange(value: number): void;
+  value: number;
   label: string;
 };
 
@@ -25,6 +26,7 @@ export default function Slider({
   to,
   from,
   onChange,
+  value,
   label,
 }: SliderProps) {
   return (
@@ -40,6 +42,7 @@ export default function Slider({
           </div>
         )}
         onChange={(e) => onChange(e as number)}
+        value={value}
         defaultValue={initial}
         min={from}
         max={to}

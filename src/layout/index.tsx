@@ -38,12 +38,17 @@ const Layout: React.FC<LayoutProps> = ({
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@variant_as" />
-        <meta property="og:title" content={title} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.variant.no/" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta
+          property="og:url"
+          content="https://www.variant.no/"
+          key="og:url"
+        />
         <meta
           property="og:image"
           content="https://www.variant.no/og-header-min.png"
+          key="og:image"
         />
       </Head>
       <div

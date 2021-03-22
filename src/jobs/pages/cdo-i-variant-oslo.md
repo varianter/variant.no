@@ -3,6 +3,9 @@ title: Chief Design Officer i Variant Oslo AS
 h1_title: Chief Design Officer i Variant Oslo AS
 slug: cdo-i-variant-oslo
 contact_emails: te@variant.no, mk@variant.no
+meta_title: Vi søker CDO til Variant Oslo!
+meta_description: Bli med å etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens.
+meta_image: https://www.variant.no/images/cdo_meta_image.jpg
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
@@ -31,7 +34,7 @@ Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal l
 
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg som er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil ledertillegg være 150 000 og øke trinnvis mot 300 000 i det selskapet har 40 ansatte. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2008, vil din startlønn være 1 093 746](/kalkulator?year=2008&degree=masters&addition=150000).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Vi legger opp til et ledertillegg som er trinnvis, og representerer størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil ledertillegg være 150 000 og øke trinnvis mot 300 000 i det selskapet har 40 ansatte. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2008, vil din startlønn være 1 093 746](/kalkulator?year=2008&degree=masters&addition=150000).
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
 - Chief Design Officer vil tilbys å kjøpe 10% av aksjene i Variant Oslo AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
