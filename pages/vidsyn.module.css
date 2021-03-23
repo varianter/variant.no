@@ -67,13 +67,38 @@ h4 {
   font-size: 1.3rem;
 }
 
+header {
+  text-align: center;
+  margin: 3rem 0;
+}
+
 .subtitle {
   font-size: 1.5rem;
-  margin-top: -2rem;
+  margin-top: -2.5rem;
   font-style: italic;
-  margin-bottom: 3rem;
+}
+
+.supertitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: -2rem;
 }
 
 p {
   margin-top: 1rem;
+}
+
+.image {
+  width: 20rem;
+}
+
+@media (max-width: 500px) {
+  .image {
+    width: 100%;
+  }
+}
+
+.footerLogo {
+  display: block;
+  margin: 8rem auto 0 auto;
 }

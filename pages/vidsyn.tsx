@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from 'src/layout';
-//import { and } from 'src/utils/css';
+import { and } from 'src/utils/css';
 import style from './vidsyn.module.css';
 
 export default function Invitation() {
@@ -12,12 +12,13 @@ export default function Invitation() {
                 </Head>
                 <section className={style.omVariant}>
                     <header>
-                        <h2 className={style.omVariant__title}>Velkommen til Vidsyn 21</h2>
+                        <p className={style.supertitle}>Velkommen til </p>
+                        <h2 className={style.omVariant__title}>Vidsyn 21</h2>
                         <p className={style.subtitle}>Oslo pluss Trondheim er sant!</p>
                     </header>
                     <div>
                         <img
-                            className={style.right_image}
+                            className={and(style.right_image, style.image)}
                             src="/images/vidsyn.png"
                             alt="Oversiktssbilde over et landskap"
                             />
@@ -91,7 +92,7 @@ export default function Invitation() {
                                     Hvilke synergier kan vi få på tvers av byer? Innledning Tonje 
                                 </li>
                                 <li>
-                                    Ledig
+                                    Variantkulturen,  hvordan oppnå  2 + 2 = 5? Innledning Any takers?
                                 </li>
                             </ul>
                         </p>
@@ -126,7 +127,7 @@ export default function Invitation() {
                     <div>
                         <h3 className="fancy">Pellestova</h3>
                         <img
-                            className={style.right_image}
+                            className={and(style.right_image, style.image)}
                             src="/images/pellestova.png"
                             alt="Peisen i Pellestova"
                             />
@@ -153,6 +154,7 @@ export default function Invitation() {
                             5 timer en vei,</a> og fra Oslo <a href="https://www.google.com/maps/dir/Oslo/Pellestova+Hotell+Hafjell,+Hunders%C3%A6tervegen+910,+2636+%C3%98yer/@60.5591075,9.7356218,8z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46416e61f267f039:0x7e92605fd3231e9a!2m2!1d10.7522454!2d59.9138688!1m5!1m1!1s0x466a8b722a5f3955:0x9fb5dcb04d3bd7f6!2m2!1d10.5450106!2d61.2261239!3e0"> 
                             ca det halve. </a>
                         </p>
+                        <img className={style.footerLogo} src="/images/vidsyn.svg" alt="Logo for Vidsyn"/>
                     </div>
                 </section>
             </div>
