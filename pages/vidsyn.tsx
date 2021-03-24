@@ -83,16 +83,21 @@ export default function Invitation() {
                             Foreløpig har vi følgende forslag:
                             <ul>
                                 <li>
-                                    Hvilke behov har vi som skal løses av konsernet? Innledning Anders
+                                    <p className={style.topic}>Hvilke behov har vi som skal løses av konsernet?</p> 
+                                    <p className={style.initiator}>Innledning <strong>Anders</strong></p>
                                 </li>
                                 <li>
-                                    Hvordan kan vi øke engasjementet rundt læreglede? Innledning Mikael
+                                    <p className={style.topic}>Hvordan kan vi øke engasjementet rundt læreglede? </p>
+                                    <p className={style.initiator}>Innledning <strong>Mikael</strong></p>
                                 </li>
                                 <li>
-                                    Hvilke synergier kan vi få på tvers av byer? Innledning Tonje 
+                                    <p className={style.topic}>Variantkulturen,  hvordan oppnå  2 + 2 = 5? 
+                                    Hvilke synergier kan vi få på tvers av byer? </p>
+                                    <p className={style.initiator}>Innledning <strong>Tonje</strong> </p>
                                 </li>
                                 <li>
-                                    Variantkulturen,  hvordan oppnå  2 + 2 = 5? Innledning Any takers?
+                                    <p className={style.topic}>Variant post korona, muligheter og trusler. </p>
+                                    <p className={style.initiator}>Innledning <strong>Odd Morten</strong></p>
                                 </li>
                             </ul>
                         </p>

@@ -102,3 +102,12 @@ p {
   display: block;
   margin: 8rem auto 0 auto;
 }
+
+.topic {
+  margin: 0;
+}
+
+.initiator {
+  font-style: italic;
+  margin: 0;
+}
