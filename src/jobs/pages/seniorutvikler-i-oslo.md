@@ -3,8 +3,8 @@ title: Seniorutvikler
 h1_title: Erfaren utvikler med entreprenørånd
 slug: seniorutvikler-i-oslo
 contact_emails: cb@variant.no, mb@variant.no
-meta_title: Vi søker CTO til Variant Oslo!
-meta_description: Vi ser etter en teknologisjef som kan motivere andre teknologer innad i firmaet, med en god porsjon entusiasme og nysgjerrighet.
+meta_title: Vi søker seniorutvikler til Variant Oslo!
+meta_description: Vi ser etter en dyktig og erfaren utvikler med entreprenørånd som kan være med å forme et nytt selskap.
 meta_image: https://www.variant.no/images/cto_meta_image.jpg
 ---
 
