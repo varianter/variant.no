@@ -18,15 +18,15 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I t
 
 ## Hvem ser vi etter?
 
-Vi ser etter en erfaren utvikler, kvinne eller mann, som har jobbet noen år med ett eller flera av følgende områder:
+Vi ser etter en erfarn utvikler som har jobbet noen år med ett eller flere av følgende områder:
 
-- Frontendutvikling med React, Vue eller Angular
-- Utvikling mot og i Azure, GCP eller AWS
-- Backendutvikling med .Net, Java eller Kotlin
+- Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier.
+- Utvikling mot og i Azure, GCP eller AWS.
+- Backendutvikling med .NET, Java eller Kotlin.
 
-Vi skal nå etablere et oppstartsteam og ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at våre første varianter har verdi- og tankesett som harmonerer med disse.
+Vi skal nå etablere et oppstartsteam og ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Dette er en person som skal være med å etablere kultur og finne retning sammen med resten av oppstartsteamet i Oslo. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at våre første varianter har verdi- og tankesett som harmonerer med disse.
 
-Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
