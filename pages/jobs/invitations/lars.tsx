@@ -11,7 +11,7 @@ export default function Invitation() {
         </Head>
         <section className={style.omVariant}>
           <header>
-            <h2 className={style.omVariant__title}>Hei Lars Erik</h2>
+            <h2 className={style.omVariant__title}>Hei Lars</h2>
           </header>
           <div>
             <p>
@@ -19,10 +19,10 @@ export default function Invitation() {
               av flere steg og er beskrevet i oversikten under.
             </p>
             <p> 
-              Blant annet ønsker vi å invite til en liten dag på Varianthuset i Trondheim den 16. april. 
-              Målet med denne dagen er å bli bedre kjent med deg, men også at du får truffet flere av oss. 
-              Adressen er Thomas Angells gate 10. Det er midt i sentum. Det er fint hvis du kan være i 
-              Trondheim fra 12.00 til 17.00 denne dagen. 
+              Blant annet ønsker vi gjerne at du den 16. april kan bruke en liten dag på Varianthuset 
+              i Trondheim sammen med oss. Målet med denne dagen er å bli bedre kjent med deg, men 
+              også at du får truffet flere av oss. Adressen er Thomas Angells gate 10. Det er midt i 
+              sentum. Det er fint hvis du kan være i Trondheim fra 12.00 til 17.00 denne dagen. 
             </p>
           </div>
 
@@ -108,6 +108,12 @@ export default function Invitation() {
               src="/images/marius.png"
               alt="Marius Krakeli"
             />
+            <p>
+              Under denne seansen får du blant annet hilse på Linn Sandvik, som har fått og tatt 
+              oppgaven med å lede Osloselskapet. Linn begynner ikke før i august, men har mulighet 
+              til å bruke litt tid på å bistå oss med å etablere oppstartsteamet i Oslo. 
+            </p>
+
             <p>
               Etter din innledning vil du, Linn, Tonje og Marius spinne videre
               på dine tanker. Vi kommer til å utfordre eller male videre, og
