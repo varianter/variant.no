@@ -8,10 +8,11 @@ meta_description: Bli med å etablere neste generasjons selskapskultur hvor meda
 meta_image: https://www.variant.no/images/cdo_meta_image.jpg
 ---
 
-## Vi søker etter noen som vil utvikle Oslo
+## Søknadsfristen har gått ut for denne stillingen
 
 ![Flotte Varianter](/images/design-takterasse.png)
 
+**Vi søker etter noen som vil utvikle Oslo**
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
 Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer).

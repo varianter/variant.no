@@ -5,10 +5,11 @@ slug: ceo-i-variant-oslo
 contact_emails: oms@variant.no
 ---
 
-## Vi søker etter noen som vil utvikle Oslo
+## Denne stillingen er nå besatt
 
 ![Akerselva av Liam Martens](/images/akerselva.png)
 
+**Vi søker etter noen som vil utvikle Oslo**
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 
 Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Tigerstaden](https://blog.variant.no/hei-oslo-717ea91e45b9).
