@@ -30,7 +30,7 @@ export default function Invitation() {
             <h3 className="fancy">Tidsplan</h3>
             <ul className={style.agenda}>
               <li>
-                <span className={style.time}>13. april</span> 👂🏻 Kommunikasjonspreferansekartlegging (video)
+                <span className={style.time}>13. april</span> 👂🏻 Kartlegging av kommunikasjonspreferanser (video)
               </li>
               <li>
                 <span className={style.time}>16. april</span> 💪🏻 Styrkesamtale
@@ -41,7 +41,7 @@ export default function Invitation() {
             </ul>
           </div>
           <div>
-            <h3 className="fancy">Kommunikasjonspreferanser</h3>
+            <h3 className="fancy">Kartlegging av kommunikasjonspreferanser</h3>
             <img
               className={style.right_image}
               src="/images/odd-morten.png"
