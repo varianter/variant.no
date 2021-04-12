@@ -36,8 +36,19 @@
   width: 8rem;
 }
 
-.agenda {
+ul {
   list-style: none;
+  padding: 0;
+}
+
+ul.agenda {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+ul.agenda > li {
+  display: contents;
 }
 
 .prep {

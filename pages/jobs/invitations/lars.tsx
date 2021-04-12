@@ -30,18 +30,19 @@ export default function Invitation() {
             <h3 className="fancy">Tidsplan</h3>
             <ul className={style.agenda}>
               <li>
-                <span className={style.time}>13. april</span> 👂🏻 Kartlegging av kommunikasjonspreferanser (video)
+                <span className={style.time}> 13. april</span>Kartlegging av kommunikasjons&shy;preferanser (video)
               </li>
               <li>
-                <span className={style.time}>16. april</span> 💪🏻 Styrkesamtale
-              </li>
-              <li>
-                <span className={style.time}>16. april</span> 👩‍👦‍👦 Samarbeidscase{' '}
+                <span className={style.time}> 16. april</span>
+                  <ul >
+                    <li>Styrkesamtale</li> 
+                    <li>Samarbeidscase</li>
+                  </ul>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="fancy">Kartlegging av kommunikasjonspreferanser</h3>
+            <h3 className="fancy">Kartlegging av kommunikasjons&shy;preferanser</h3>
             <img
               className={style.right_image}
               src="/images/odd-morten.png"
