@@ -43,7 +43,7 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus:
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2008, vil din startlønn være 1 093 746](/kalkulator?year=2008&degree=masters).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 808 168](/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
 
 ## Om Variant
