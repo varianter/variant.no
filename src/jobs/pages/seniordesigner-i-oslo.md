@@ -5,7 +5,7 @@ slug: seniordesigner-i-oslo
 contact_emails: te@variant.no, mk@variant.no
 meta_title: Vi søker seniordesigner til Variant Oslo!
 meta_description: Vi ser etter en dyktig og erfaren designer med entreprenørånd som kan være med å forme et nytt selskap.
-meta_image: https://www.variant.no/images/cto_meta_image.jpg
+meta_image: https://www.variant.no/images/seniordesigner_meta_image.jpg
 ---
 
 ## Vi søker etter noen som vil forme Oslo
