@@ -34,14 +34,15 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 <div class="left"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
-- **_Prosjekter_** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen, Miljødirektoratet, Lånekassen for å nevne noen.
-- **_Salg_** I tillegg er vi avhengig av at dyktige tekniske ressurser med kommersiell teft i salgsarbeidet for å utarbeide gode tilbud. salg og rekruttering. Ikke minst vil du ha ansvar å forme strategien for, og holde i gjennomføringen av den teknisk faglige utviklingen.
+**_Prosjekter_** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen, Miljødirektoratet, Lånekassen for å nevne noen.
 
-- **_Læreglde_** For at vi skal lykkes i å etablere et læreglad kultur er vi helt avhengig av et oppstartesteam som tar et særlig ansvar i å forme strukturer og prosesser som leder til smittsom faglig utvikling og ønske om å lære. (Om 6 måneder begynner noen langt mindre erfarne som trenger deg som forbilde.)
+**_Salg_** I tillegg er vi avhengig av at dyktige tekniske ressurser med kommersiell teft i salgsarbeidet for å utarbeide gode tilbud. Ikke minst vil du også være sentral i utformingen av strategien for, og gjennomføringen av den teknisk faglige utviklingen.
+
+**_Læreglede_** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av et oppstartesteam som tar et særlig ansvar i å forme strukturer og prosesser som leder til smittsom faglig utvikling og ønske om å lære. (Om 6 måneder begynner noen langt mindre erfarne som trenger deg som forbilde.)
 
 ## Lønn og kompensasjoner
 
-Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus:
+Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
 
 - Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 808 168](/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
