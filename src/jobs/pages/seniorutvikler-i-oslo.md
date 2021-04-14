@@ -18,7 +18,7 @@ Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I t
 
 ## Hvem ser vi etter?
 
-Vi ser etter en erfarn utvikler som har jobbet noen år med ett eller flere av følgende områder:
+Vi ser etter en erfaren utvikler som har jobbet noen år med ett eller flere av følgende områder:
 
 - Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier.
 - Utvikling mot og i Azure, GCP eller AWS.
@@ -36,7 +36,7 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 **_Prosjekter_** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen, Miljødirektoratet, Lånekassen for å nevne noen.
 
-**_Salg_** I tillegg er vi avhengig av at dyktige tekniske ressurser med kommersiell teft i salgsarbeidet for å utarbeide gode tilbud. Ikke minst vil du også være sentral i utformingen av strategien for, og gjennomføringen av den teknisk faglige utviklingen.
+**_Salg_** I tillegg er vi avhengig av dyktige tekniske ressurser med kommersiell teft i salgsarbeidet for å utarbeide gode tilbud. Ikke minst vil du også være sentral i utformingen av strategien for, og gjennomføringen av den teknisk faglige utviklingen.
 
 **_Læreglede_** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av et oppstartesteam som tar et særlig ansvar i å forme strukturer og prosesser som leder til smittsom faglig utvikling og ønske om å lære. (Om 6 måneder begynner noen langt mindre erfarne som trenger deg som forbilde.)
 
