@@ -55,7 +55,7 @@ Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsig
 
 - Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 808 168](/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
-- Gjennom Medeierskapsprogrammet i Variant tilbys alle ansatte å kjøpe aksjer i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
+- Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 ## Om Variant
 
