@@ -19,7 +19,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <Head>
           <meta
             property="og:url"
-            content={"https://www.variant.no/jobs/"}
+            content={'https://www.variant.no/jobs/'}
             key="og:url"
           />
           <meta
@@ -30,10 +30,12 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <meta
             property="og:description"
             content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            key="og:description"
           />
           <meta
             name="description"
             content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            key="description"
           />
           <meta
             property="og:image"
