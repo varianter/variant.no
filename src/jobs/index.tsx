@@ -18,12 +18,29 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <Layout>
         <Head>
           <meta
+            property="og:url"
+            content={'https://www.variant.no/jobs/'}
+            key="og:url"
+          />
+          <meta
+            property="og:title"
+            content="Bli en variant! Se på ledige stillinger i Trondheim og Oslo."
+            key="og:title"
+          />
+          <meta
             property="og:description"
-            content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            key="og:description"
           />
           <meta
             name="description"
-            content="En ny variant av et konsulentselskap som er raust, åpent og modig. Vi bistår med utvikling, design, salg, kursing og rådgiving."
+            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            key="description"
+          />
+          <meta
+            property="og:image"
+            content="https://www.variant.no/images/jobs_meta_image.png"
+            key="og:image"
           />
           <title>Variant - Ledige stillinger</title>
         </Head>

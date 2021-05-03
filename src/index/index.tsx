@@ -75,7 +75,7 @@ const Home = ({
       </section>
 
       <section className={style.join}>
-        <h2>Bli en Variant!</h2>
+        <h2>Bli en variant!</h2>
         <p>
           For å kunne lage gode løsninger trenger vi forskjellige mennesker med
           forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer.
@@ -84,7 +84,7 @@ const Home = ({
         <p>
           <strong>Det betyr deg.</strong>
         </p>
-        <ButtonNextLink href="/jobs">Bli en Variant</ButtonNextLink>
+        <ButtonNextLink href="/jobs">Bli en variant</ButtonNextLink>
 
         <p>
           Vi har mange{' '}
