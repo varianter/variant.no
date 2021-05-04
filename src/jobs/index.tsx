@@ -29,12 +29,12 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           />
           <meta
             property="og:description"
-            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og vil skape løsninger som tjener samfunnet vi lever i."
             key="og:description"
           />
           <meta
             name="description"
-            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og sammen skape løsninger som tjener samfunnet vi lever i."
+            content="Vi trenger mennesker som engasjerer seg for design og utvikling. Vi ønsker å samle mennesker som bryr seg og vil skape løsninger som tjener samfunnet vi lever i."
             key="description"
           />
           <meta
