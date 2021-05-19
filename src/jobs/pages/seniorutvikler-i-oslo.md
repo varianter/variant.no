@@ -5,7 +5,7 @@ slug: seniorutvikler-i-oslo
 contact_emails: cb@variant.no, mb@variant.no
 meta_title: Vi søker seniorutvikler til Variant Oslo!
 meta_description: Vi ser etter en dyktig og erfaren utvikler med entreprenørånd som kan være med å forme et nytt selskap.
-meta_image: https://www.variant.no/images/seniorutvikler_meta_image.jpg
+meta_image: https://www.variant.no/images/erfaren_utvikler_meta.jpg
 ---
 
 ## Vi søker etter noen som vil utvikle Oslo
