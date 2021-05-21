@@ -33,6 +33,8 @@ Det er også spennende om du har interesse for andre språk eller plattformer, f
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, og vi er rause med å dele av egen kompetanse, og hjelpe andre til å gjøre det samme.
 
+<div class="left"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
+
 ## Våre forventninger
 
 Hos oss vil du jobbe med ulike arbeidsoppgaver ut i fra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får. Det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. Viktigste for oss er at du har et ønske om å være faglig dyktig.
