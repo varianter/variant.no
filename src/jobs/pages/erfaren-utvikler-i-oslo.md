@@ -1,7 +1,7 @@
 ---
 title: Seniorutvikler
 h1_title: Erfaren utvikler med entreprenørånd
-slug: seniorutvikler-i-oslo
+slug: erfaren-utvikler-i-oslo
 contact_emails: cb@variant.no, mb@variant.no
 meta_title: Vi søker seniorutvikler til Variant Oslo!
 meta_description: Vi ser etter en dyktig og erfaren utvikler med entreprenørånd som kan være med å forme et nytt selskap.
