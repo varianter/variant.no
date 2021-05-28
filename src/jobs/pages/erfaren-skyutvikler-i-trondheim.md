@@ -33,7 +33,7 @@ Det er også spennende om du har interesse for andre språk eller plattformer, f
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, og vi er rause med å dele av egen kompetanse, og hjelpe andre til å gjøre det samme.
 
-<div class="left"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
+<div class="left"><img alt="Ole Jørgen og Mathias koder" src="/images/utvikler-olejorgen-mathias.png"/></div>
 
 ## Våre forventninger
 
@@ -50,9 +50,10 @@ Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsig
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 - Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut [Andre goder og ytelser](https://handbook.variant.no/#andre-goder-og-ytelser))
 
+![Sarah hos Variant holder et foredrag](/images/utvikler-sarah.png)
+
 ## Om Variant
 
-![Christian, Jacob og Maciek hos Variant](/images/utvikler-jacob.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen skriver [bloggposts](https://blog.variant.no/), noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og andre deler et eller annet interessant de har lært den siste tiden på vår Slack eller gjennom uformelle lærekvelder eller foredrag. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
