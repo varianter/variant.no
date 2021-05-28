@@ -29,7 +29,7 @@ Det er også spennende om du har interesse for andre språk eller plattformer, f
 
 - Andre språk som F#, Scala, Go eller Rust
 - Serverless arkitektur
-- Nye teknologier og plattformer, for eksempel IoT, edge computing eller spillutvikling
+- Nye teknologier og plattformer, for eksempel IoT, edge computing, eller kanskje noe som spillutvikling?
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, og vi er rause med å dele av egen kompetanse, og hjelpe andre til å gjøre det samme.
 
@@ -64,7 +64,7 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 - [På tide med bedre jobbintervjuer](https://blog.variant.no/paa-tide-med-bedre-jobbintervjuer-e59f6789a134)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
 
-Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Se mer på [https://github.com/varianter](https://github.com/varianter), hvor også kildekoden til vår håndbok og andre ting ligger. Blir du trigget av denne annonsen, men føler den trenger litt justering, så [ligger også denne på GitHub](https://github.com/varianter/variant.no/blob/master/src/jobs/pages/erfaren-skyutvikler-i-trondheim.md).
+Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Se mer på [https://github.com/varianter](https://github.com/varianter), hvor også kildekoden til vår håndbok og andre ting ligger. Blir du trigget av denne annonsen, men føler den trenger litt justering, så [ligger også denne på GitHub](https://github.com/varianter/variant.no/blob/master/src/jobs/pages/erfaren-skyutvikler-i-trondheim.md) 😉.
 
 ## Kontakt
 
