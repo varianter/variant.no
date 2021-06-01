@@ -5,7 +5,7 @@ slug: erfaren-skyutvikler-i-trondheim
 contact_emails: mikkel@variant.no, mk@variant.no
 meta_title: Er du vår nye kollega? Vi søker en erfaren skyutvikler til Variant Trondheim!
 meta_description: Vi ser etter en erfaren utvikler med interesse for utvikling med skyteknologi.
-meta_image: https://www.variant.no/images/erfaren_skyutvikler_trondheim_meta.jpg
+meta_image: https://www.variant.no/images/erfaren_skyutvikler_trondheim_meta_corrected.jpg
 ---
 
 ## Vi utvikler fagmiljøet for sky i Variant Trondheim
