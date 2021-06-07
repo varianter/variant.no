@@ -66,4 +66,4 @@ Vi håper jo egentlig det ikke er noe å tenke på, send søknad i dag så høre
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår designsjef i Variant konsern Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår designsjef i Variant Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
