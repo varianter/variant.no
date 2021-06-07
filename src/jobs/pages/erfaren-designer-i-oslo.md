@@ -1,9 +1,9 @@
 ---
 title: Seniordesigner
 h1_title: Erfaren designer med entreprenørånd
-slug: seniordesigner-i-oslo
+slug: erfaren-designer-i-oslo
 contact_emails: te@variant.no, mk@variant.no
-meta_title: Vi søker seniordesigner til Variant Oslo!
+meta_title: Vi søker erfaren designer til Variant Oslo!
 meta_description: Vi ser etter en dyktig og erfaren designer med entreprenørånd som kan være med å forme et nytt selskap.
 meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
 ---
