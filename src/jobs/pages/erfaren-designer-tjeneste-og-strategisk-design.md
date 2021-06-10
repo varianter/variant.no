@@ -39,7 +39,7 @@ Nå ser vi etter deg som har noen (ja - gjerne mange) års erfaring som designer
 - Tjenestedesign, både av uoppdagede tjenester og forbedring av eksisterende.
 - Tett samarbeid med mange roller, som ledere, team og virksomhetsstøtte.
 
-Tonje har skrevet en bloggpost om hvordan vi anvender designprosessen strategisk. [Her](https://blog.variant.no/har-vi-n%C3%A5dd-toppen-av-designernes-gullalder-9e1bbe867a2d) kan du lese mer om hva en stilling som strategisk- og tjenestedesigner vil være.
+Tonje har skrevet en bloggpost om hvordan vi anvender designprosessen strategisk og det kan du lese mer om [her](https://blog.variant.no/har-vi-n%C3%A5dd-toppen-av-designernes-gullalder-9e1bbe867a2d).
 
 ## Hva vi kan tilby
 
