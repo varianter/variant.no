@@ -46,7 +46,8 @@ export default function Varianttur() {
             Vi er henrykte, ja bortimot ekstatiske, over å igjen kunne invitere
             varianter og deres nærmeste til varianttur. Dette er noe vi har sett
             fram til og virkelig gledet oss til. I år bærer ferden til perlen
-            blant kystbyene (Edvard Munch) nemlig Kragerø. Vi skal bo på flotte{' '}
+            blant kystbyene (ifølge Edvard Munch) nemlig Kragerø. Vi skal bo på
+            flotte{' '}
             <a href="https://www.krageroresort.no/" target="_blank">
               Kragerø Resort
             </a>
@@ -64,7 +65,7 @@ export default function Varianttur() {
             Blant annet inviterer vi til tidenes første åpne variantdag. Som
             alltid skal vi på båttur, denne gang i Telemarks skjærgård. Selv om
             programmet er innholdsrikt vil det også være rom for litt egen tid i
-            SPA-avdelingen for de som har lyst til det.
+            spaavdelingen for de som har lyst til det.
           </p>
 
           <p>Med dette ønsker vi alle en flott helg og god tur! Vi sees.</p>
