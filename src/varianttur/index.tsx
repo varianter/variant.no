@@ -97,10 +97,14 @@ export default function Varianttur() {
 
               <div className={style.informationContentGroupContact}>
                 <p>Odd Morten</p>
-                <p>92 80 73 75</p>
+                <p>
+                  <a href="tel:92807375">92 80 73 75</a>
+                </p>
 
                 <p>Kragerø Resort</p>
-                <p>35 97 11 00</p>
+                <p>
+                  <a href="tel:35971100">35 97 11 00</a>
+                </p>
               </div>
             </div>
           </div>
@@ -158,7 +162,7 @@ export default function Varianttur() {
             </li>
             <li>
               <p>10:00 - 12:00</p>
-              <p>Vår egen Mesternes mester/71° nord-konkurranse</p>
+              <p>Vår egen Variant Team Challenge</p>
             </li>
             <li>
               <p>12:30</p>
