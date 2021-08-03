@@ -19,7 +19,10 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
   try {
     const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
       headers: [
-        ['Authorization', `Bearer ${process.env.CV_PARTNER_API_SECRET || ''}`],
+        [
+          'Authorization',
+          `Token token="${process.env.CV_PARTNER_API_SECRET || ''}"`,
+        ],
       ],
     });
     if (request.ok) {
