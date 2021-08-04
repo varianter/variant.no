@@ -108,7 +108,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h2>Variantdag - November 2019 </h2>
           <p>
             Første fredag hver måned har vi variantdag. I november 2019 lagde
-            vi en liten film som viser litt av hva variantdager går ut på
+            vi en liten film som viser litt av hva variantdager går ut på!
           </p>
           <div className={style.aspect__ratio}>
             <iframe
