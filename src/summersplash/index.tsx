@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
-import { ButtonNextLink } from 'src/components/button';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import LogoBlob from './logo-blob';
@@ -44,11 +44,19 @@ const SummerSplash: NextPage<
         />
         <title>Variant - Din neste sommerjobb?</title>
       </Head>
-      <LogoBlob className={style.logoblob} href="/" />
 
       <section className={style.firstSection}>
+        <LogoBlob className={style.logoblob} href="/" />
+        <Link href="/jobs">
+          <a className={style.otherJobsLink}>
+            Ikke sommerjobb du er på utkikk etter? Sjekk ut våre faste
+            stillinger her! <img src={require('./arrow.svg')} />
+          </a>
+        </Link>
+
         <h1 className={style.omVariant__title}>Sommerjobb 2022</h1>
         <p>Søk innen 12. oktober</p>
+
         <article className={style.omVariant__wrapper}>
           <div className={style.omVariant__blob}>
             <BaseBlob
@@ -60,20 +68,40 @@ const SummerSplash: NextPage<
               alt="Dame som holder smarttelefon som viser kode"
             />
           </div>
-          <div>
-            <p>
-              Sjekk ut den{' '}
-              <a href="https://handbook.variant.no" rel="noopeneer">
-                åpne håndboken vår
-              </a>{' '}
-              om du vil se mer om hva vi står for og kan tilby.
-            </p>
-          </div>
         </article>
+
+        <section className={style.applyLinksContainer}>
+          <Link href="/jobs/utvikler-trondheim">
+            <a className={style.applyLink}>
+              Søk som designer
+              <span role="img" aria-label="blyant">
+                ✏️
+              </span>
+            </a>
+          </Link>
+
+          <Link href="/jobs/utvikler-trondheim">
+            <a className={style.applyLink}>
+              Søk som utvikler
+              <span role="img" aria-label="datamaskin">
+                💻
+              </span>
+            </a>
+          </Link>
+        </section>
       </section>
 
       <section className={style.secondSection}>
         <h2>Seksjon</h2>
+        <div>
+          <p>
+            Sjekk ut den{' '}
+            <a href="https://handbook.variant.no" rel="noopeneer">
+              åpne håndboken vår
+            </a>{' '}
+            om du vil se mer om hva vi står for og kan tilby.
+          </p>
+        </div>
       </section>
 
       <section className={style.thirdSection}>
@@ -86,6 +114,17 @@ const SummerSplash: NextPage<
 
       <section className={style.fifthSection}>
         <h2>Seksjon</h2>
+        <p>Snakk med Marius</p>
+        <div className={style.omVariant__blob}>
+          <BaseBlob
+            seed="Variant"
+            width={350}
+            height={350}
+            color={colors.colorPairs.secondary2.default.bg}
+            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
+            alt="Dame som holder smarttelefon som viser kode"
+          />
+        </div>
       </section>
     </>
   );

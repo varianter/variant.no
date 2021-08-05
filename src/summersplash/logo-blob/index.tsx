@@ -19,7 +19,7 @@ export default function LogoBlob({ className, href }: LogoBlobProps) {
           <img src={require('./logo-blob.svg')} role="none" />
           <div className={style.text}>
             <img src={require('../images/variant-white.svg')} role="none" />
-            <p>Ikke på jakt etter sommerjobb?</p>
+            <p>Ikke på jakt etter jobb?</p>
           </div>
         </a>
       </Link>

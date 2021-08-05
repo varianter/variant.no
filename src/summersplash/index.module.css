@@ -5,6 +5,22 @@
   width: 450px;
 }
 
+.applyLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.otherJobsLink {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  color: black;
+}
+
+.applyLink {
+  color: black;
+}
+
 .splashSection {
   border: 1px dotted black;
   min-height: 100vh;
@@ -96,7 +112,6 @@
   float: right;
   margin: 1rem -1rem;
 }
-
 @media (max-width: 700px) {
   .omVariant__wrapper {
     grid-template: 'a' 'b' /1fr;
