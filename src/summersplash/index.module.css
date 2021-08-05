@@ -1,14 +1,46 @@
+.logoblob {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  max-width: 20%;
+}
+
 .splashSection {
   border: 1px dotted black;
-  background-color: #fad2e2;
   min-height: 100vh;
-  padding: 4rem;
+  padding: 8rem;
   overflow-x: hidden;
 }
 
-.header_title {
-  font-family: 'Futura';
-  font-weight: 500;
+.firstSection {
+  composes: splashSection;
+  background-color: #fad2e2;
+}
+
+.secondSection {
+  composes: splashSection;
+  background-color: #028377;
+  color: white;
+}
+
+.thirdSection {
+  composes: splashSection;
+  background-color: #f4f1e7;
+}
+
+.fourthSection {
+  composes: splashSection;
+  background-color: #423d89;
+  color: white;
+}
+
+.fifthSection {
+  composes: splashSection;
+  background-color: #fad2e2;
+}
+
+.header_logo {
+  z-index: 1;
 }
 
 .omVariant {

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
@@ -10,6 +9,7 @@ import { getStaticProps } from 'pages/jobs';
 import { ButtonNextLink } from 'src/components/button';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
+import LogoBlob from './logo-blob';
 
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -44,69 +44,48 @@ const SummerSplash: NextPage<
         />
         <title>Variant - Din neste sommerjobb?</title>
       </Head>
-      <section className={style.splashScrollContainer}>
-        <section className={style.splashSection}>
-          <h1 className={style.header__logo}>
-            <Link href="/">
-              <a>
-                <img
-                  src={require('./images/variant-white.svg')}
-                  alt="Variant"
-                />
-                <p>Gå til ordinær hjemmeside</p>
-              </a>
-            </Link>
-          </h1>
-          <h1 className={style.omVariant__title}>Sommerjobb 2022</h1>
-          <p>Søk innen 12. oktober</p>
-          <article className={style.omVariant__wrapper}>
-            <div className={style.omVaria0nt__blob}>
-              <BaseBlob
-                seed="Variant"
-                width={350}
-                height={350}
-                color={colors.colorPairs.secondary2.default.bg}
-                imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-                alt="Dame som holder smarttelefon som viser kode"
-              />
-            </div>
-            <div>
-              <p>
-                Sjekk ut den{' '}
-                <a href="https://handbook.variant.no" rel="noopeneer">
-                  åpne håndboken vår
-                </a>{' '}
-                om du vil se mer om hva vi står for og kan tilby.
-              </p>
-            </div>
-          </article>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={'#E61A6B'}
-          />
-        </section>
+      <LogoBlob className={style.logoblob} href="/" />
 
-        <section className={style.splashSection}>
-          <h2>Seksjon</h2>
-        </section>
+      <section className={style.firstSection}>
+        <h1 className={style.omVariant__title}>Sommerjobb 2022</h1>
+        <p>Søk innen 12. oktober</p>
+        <article className={style.omVariant__wrapper}>
+          <div className={style.omVaria0nt__blob}>
+            <BaseBlob
+              seed="Variant"
+              width={350}
+              height={350}
+              color={colors.colorPairs.secondary2.default.bg}
+              imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
+              alt="Dame som holder smarttelefon som viser kode"
+            />
+          </div>
+          <div>
+            <p>
+              Sjekk ut den{' '}
+              <a href="https://handbook.variant.no" rel="noopeneer">
+                åpne håndboken vår
+              </a>{' '}
+              om du vil se mer om hva vi står for og kan tilby.
+            </p>
+          </div>
+        </article>
+      </section>
 
-        <section className={style.splashSection}>
-          <h2>Seksjon</h2>
-        </section>
+      <section className={style.secondSection}>
+        <h2>Seksjon</h2>
+      </section>
 
-        <section className={style.splashSection}>
-          <h2>Seksjon</h2>
-        </section>
+      <section className={style.thirdSection}>
+        <h2>Seksjon</h2>
+      </section>
 
-        <section className={style.splashSection}>
-          <h2>Seksjon</h2>
-        </section>
+      <section className={style.fourthSection}>
+        <h2>Seksjon</h2>
+      </section>
 
-        <section className={style.splashSection}>
-          <h2>Seksjon</h2>
-        </section>
+      <section className={style.fifthSection}>
+        <h2>Seksjon</h2>
       </section>
     </>
   );

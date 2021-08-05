@@ -1,0 +1,25 @@
+.logoblob {
+  position: relative;
+  text-align: left;
+  display: block;
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+  max-width: 100%;
+}
+
+.logoblob:hover {
+  opacity: 0.8;
+}
+
+.logoblob img {
+  display: block;
+  max-width: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 20%;
+  left: 16px;
+  color: var(--color-secondary1--text);
+  text-decoration: none;
+}
