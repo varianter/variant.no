@@ -1,3 +1,16 @@
+.splashSection {
+  border: 1px dotted black;
+  background-color: #fad2e2;
+  min-height: 100vh;
+  padding: 4rem;
+  overflow-x: hidden;
+}
+
+.header_title {
+  font-family: 'Futura';
+  font-weight: 500;
+}
+
 .omVariant {
   padding: 0 1rem 4rem;
   position: relative;
