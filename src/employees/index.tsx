@@ -19,6 +19,7 @@ export type Employee = {
   phone: string;
   email: string;
   imageSlug: string;
+  officeName: string;
 };
 
 export default function Employees({
@@ -86,7 +87,7 @@ export default function Employees({
 }
 
 const EmployeeTile: React.FC<{ employee: Employee }> = ({
-  employee: { fullName, name, phone, imageSlug },
+  employee: { fullName, name, phone, imageSlug, officeName },
 }) => {
   return (
     <div
@@ -100,8 +101,10 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         src={`/employees/${imageSlug}.png`}
         loading="lazy"
       />
-
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
+      <div className={style.employee__office}>
+        {officeName}
+      </div>
       <a
         href={`tel:+47${phone.replace(/\s*/g, '')}`}
         className={style.employee__phone}
@@ -201,5 +204,6 @@ export const massageEmployee = (
     )
       .replace(/\s/g, '')
       .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
+    officeName: employee.office_name,
   };
 };
