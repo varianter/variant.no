@@ -19,7 +19,7 @@
 .text {
   position: absolute;
   top: 20%;
-  left: 16px;
+  left: 2rem;
   color: var(--color-secondary1--text);
   text-decoration: none;
 }

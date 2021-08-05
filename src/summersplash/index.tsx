@@ -50,7 +50,7 @@ const SummerSplash: NextPage<
         <h1 className={style.omVariant__title}>Sommerjobb 2022</h1>
         <p>Søk innen 12. oktober</p>
         <article className={style.omVariant__wrapper}>
-          <div className={style.omVaria0nt__blob}>
+          <div className={style.omVariant__blob}>
             <BaseBlob
               seed="Variant"
               width={350}
