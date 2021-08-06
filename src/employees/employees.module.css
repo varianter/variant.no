@@ -34,7 +34,7 @@
 
 .employee {
   /* Add margin based on a random offset to make it look more random. */
-  margin: calc(-5rem + 1rem * var(--randomOffset))
+  margin: calc(-4rem + 1rem * var(--randomOffset))
     calc(1rem - 1rem * var(--randomOffset));
   display: flex;
   flex-direction: column;
@@ -116,9 +116,27 @@
   }
 }
 
+.employee__office {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-standard__white--text);
+  padding: 0.4rem 1.2rem;
+  line-height: 1;
+
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+
 .employee__jobsLinkContainer {
   composes: employee;
-
+  padding-top: 4.25rem;
   padding-bottom: 4.25rem;
 }
 .employee__jobsLink {
