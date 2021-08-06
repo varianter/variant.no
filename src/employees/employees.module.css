@@ -136,7 +136,7 @@
 
 .employee__jobsLinkContainer {
   composes: employee;
-
+  padding-top: 4.25rem;
   padding-bottom: 4.25rem;
 }
 .employee__jobsLink {
