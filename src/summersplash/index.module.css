@@ -1,8 +1,12 @@
-.logoblob {
+.logoblobfef {
   position: absolute;
   top: 0;
   left: -1px;
   width: 450px;
+}
+
+.logoblob {
+  grid-area: logo;
 }
 
 .applyLinksContainer {
@@ -24,15 +28,62 @@
 }
 
 .splashSection {
-  border: 1px dotted black;
+  display: grid;
+  position: relative;
   min-height: 100vh;
-  padding: 12rem 4rem;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .firstSection {
   composes: splashSection;
   background-color: #fad2e2;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 10rem 1fr 10rem;
+  grid-template-areas:
+    'logo top fulltimelink fulltimelink'
+    'title title title title'
+    'bottom bottom bottom bottom';
+}
+
+.mainTitleSection {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.fulltimelinkSection {
+  grid-area: fulltimelink;
+}
+
+.mulitplePageBlob {
+  position: absolute;
+}
+
+.multiplePageBlobTopLeft {
+  composes: mulitplePageBlob;
+  left: -300px;
+  top: -508px;
+}
+
+.multiplePageBlobBottomLeft {
+  composes: mulitplePageBlob;
+  left: -300px;
+  bottom: -500px;
+}
+
+.multiplePageBlobTopRight {
+  composes: mulitplePageBlob;
+  right: -300px;
+  top: -508px;
+}
+
+.multiplePageBlobBottomRight {
+  composes: mulitplePageBlob;
+  right: -300px;
+  bottom: -500px;
 }
 
 .secondSection {
