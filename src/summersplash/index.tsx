@@ -86,7 +86,8 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary3.default.bg}
-            alt="Dame som holder smarttelefon som viser kode"
+            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
       </section>
@@ -109,8 +110,8 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-            alt="Dame som holder smarttelefon som viser kode"
+            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
 
@@ -120,8 +121,6 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-            alt="Dame som holder smarttelefon som viser kode"
           />
         </div>
       </section>
@@ -135,8 +134,6 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-            alt="Dame som holder smarttelefon som viser kode"
           />
         </div>
 
@@ -146,7 +143,8 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary3.default.bg}
-            alt="Dame som holder smarttelefon som viser kode"
+            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
       </section>
@@ -160,8 +158,8 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-            alt="Dame som holder smarttelefon som viser kode"
+            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
 
@@ -171,42 +169,24 @@ const SummerSplash: NextPage<
             width={1000}
             height={1000}
             color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-            alt="Dame som holder smarttelefon som viser kode"
+            imageProps={{ src: require('public/images/marius.png') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
       </section>
 
       <section className={style.fifthSection}>
-        <section>
+        <section className={style.applicationInfo}>
+          <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
           <p>
-            Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du
-            spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt med meg.
+            Har du spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt
+            med meg.
           </p>
           <p>- Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant</p>
-          <p>41 63 75 72 | mk@variant.no</p>
-
-          <div className={style.multiplePageBlobTopLeft}>
-            <BaseBlob
-              seed="Variant"
-              width={1000}
-              height={1000}
-              color={colors.colorPairs.secondary2.default.bg}
-              imageProps={{ src: require('src/jobs/images/undraw_lynx.png') }}
-              alt="Dame som holder smarttelefon som viser kode"
-            />
-          </div>
-
-          <div className={style.omVariant__blob}>
-            <BaseBlob
-              seed="Variant"
-              width={350}
-              height={350}
-              color={colors.colorPairs.secondary2.default.bg}
-              imageProps={{ src: require('public/images/marius.png') }}
-              alt="Bilde av Marius Krakeli"
-            />
-          </div>
+          <p>
+            <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
+            <a href="tel:41637572">41 63 75 72</a>
+          </p>
         </section>
 
         <section className={style.applyLinksContainer}>
@@ -228,6 +208,17 @@ const SummerSplash: NextPage<
             </a>
           </Link>
         </section>
+
+        <div className={style.multiplePageBlobTopLeft}>
+          <BaseBlob
+            seed="Variant"
+            width={1000}
+            height={1000}
+            color={colors.colorPairs.secondary2.default.bg}
+            imageProps={{ src: require('public/images/marius.png') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+          />
+        </div>
       </section>
     </>
   );
