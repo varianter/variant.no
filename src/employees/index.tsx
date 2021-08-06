@@ -24,6 +24,7 @@ export type Employee = {
 
 export default function Employees({
   employeeList,
+  officeName,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
     employeeList,
@@ -34,6 +35,20 @@ export default function Employees({
   }, [employeeList]);
 
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
+
+  const createFilterLink = (linkName: string, link: string) => {
+    const isActive =
+      (!officeName && link === '/ansatte') || linkName === officeName;
+    return isActive ? (
+      <li className={style.employees__navActive}>{linkName}</li>
+    ) : (
+      <Link href={link}>
+        <a>
+          <li>{linkName}</li>
+        </a>
+      </Link>
+    );
+  };
 
   return (
     <Layout fullWidth title="Alle varianter – Variant">
@@ -59,6 +74,14 @@ export default function Employees({
             alt de kan til sine kollegaer.
           </p>
         </header>
+
+        <nav className={style.employees__nav}>
+          <ul>
+            {createFilterLink('Alle', '/ansatte')}
+            {createFilterLink('Oslo', '/ansatte/oslo')}
+            {createFilterLink('Trondheim', '/ansatte/trondheim')}
+          </ul>
+        </nav>
 
         <div className={style.employees__layout}>
           {shuffledEmployeeList.map((employee: Employee, index: number) => {
@@ -102,9 +125,7 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         loading="lazy"
       />
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
-      <div className={style.employee__office}>
-        {officeName}
-      </div>
+      <div className={style.employee__office}>{officeName}</div>
       <a
         href={`tel:+47${phone.replace(/\s*/g, '')}`}
         className={style.employee__phone}
