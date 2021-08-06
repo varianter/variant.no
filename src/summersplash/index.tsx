@@ -120,7 +120,7 @@ const SummerSplash: NextPage<
             seed="Variant"
             width={1000}
             height={1000}
-            color={colors.colorPairs.secondary2.default.bg}
+            color={'#02AE9E'}
           />
         </div>
       </section>
@@ -133,7 +133,7 @@ const SummerSplash: NextPage<
             seed="Variant"
             width={1000}
             height={1000}
-            color={colors.colorPairs.secondary2.default.bg}
+            color={colors.colorPairs.secondary4.default.bg}
           />
         </div>
 
@@ -142,8 +142,7 @@ const SummerSplash: NextPage<
             seed="Variant"
             width={1000}
             height={1000}
-            color={colors.colorPairs.secondary3.default.bg}
-            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            color={'#F8F6EF'}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
@@ -157,8 +156,7 @@ const SummerSplash: NextPage<
             seed="Variant"
             width={1000}
             height={1000}
-            color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            color={'#736EBE'}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
