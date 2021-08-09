@@ -12,6 +12,7 @@ import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Office } from './utils/getStaticProps';
 
 export type Employee = {
   fullName: string;
@@ -24,6 +25,7 @@ export type Employee = {
 
 export default function Employees({
   employeeList,
+  officeName,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
     employeeList,
@@ -35,18 +37,47 @@ export default function Employees({
 
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
 
+  const createFilterLink = (linkName: string, link: string) => {
+    const isActive =
+      (!officeName && link === '/ansatte') || linkName === officeName;
+    return isActive ? (
+      <li className={style.employees__navActive}>{linkName}</li>
+    ) : (
+      <Link href={link}>
+        <a>
+          <li>{linkName}</li>
+        </a>
+      </Link>
+    );
+  };
+
+  const getSoMeMetadata = (officeName?: Office) => {
+    let description;
+    switch (officeName) {
+      case 'Oslo':
+        description =
+          'Oversikt over alle ansatte i Variant Oslo. Her finner du alle varianter i Oslo og hvordan du kan ta kontakt for spørsmål.';
+        break;
+      case 'Trondheim':
+        description =
+          'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
+        break;
+      default:
+        description =
+          'Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål.';
+    }
+
+    return (
+      <Head>
+        <meta property="og:description" content={description} />
+        <meta name="description" content={description} />
+      </Head>
+    );
+  };
+
   return (
     <Layout fullWidth title="Alle varianter – Variant">
-      <Head>
-        <meta
-          property="og:description"
-          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
-        />
-        <meta
-          name="description"
-          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
-        />
-      </Head>
+      {getSoMeMetadata(officeName)}
 
       <div className={style.employeesContainer}>
         <header>
@@ -59,6 +90,14 @@ export default function Employees({
             alt de kan til sine kollegaer.
           </p>
         </header>
+
+        <nav className={style.employees__nav}>
+          <ul>
+            {createFilterLink('Alle', '/ansatte')}
+            {createFilterLink('Oslo', '/ansatte/oslo')}
+            {createFilterLink('Trondheim', '/ansatte/trondheim')}
+          </ul>
+        </nav>
 
         <div className={style.employees__layout}>
           {shuffledEmployeeList.map((employee: Employee, index: number) => {
@@ -102,9 +141,7 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         loading="lazy"
       />
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
-      <div className={style.employee__office}>
-        {officeName}
-      </div>
+      <div className={style.employee__office}>{officeName}</div>
       <a
         href={`tel:+47${phone.replace(/\s*/g, '')}`}
         className={style.employee__phone}
