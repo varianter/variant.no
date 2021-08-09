@@ -12,6 +12,7 @@ import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Office } from './utils/getEmployeesList';
 
 export type Employee = {
   fullName: string;
@@ -50,18 +51,33 @@ export default function Employees({
     );
   };
 
+  const getSoMeMetadata = (officeName?: Office) => {
+    let description;
+    switch (officeName) {
+      case 'Oslo':
+        description =
+          'Oversikt over alle ansatte i Variant Oslo. Her finner du alle varianter i Oslo og hvordan du kan ta kontakt for spørsmål.';
+        break;
+      case 'Trondheim':
+        description =
+          'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
+        break;
+      default:
+        description =
+          'Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål.';
+    }
+
+    return (
+      <Head>
+        <meta property="og:description" content={description} />
+        <meta name="description" content={description} />
+      </Head>
+    );
+  };
+
   return (
     <Layout fullWidth title="Alle varianter – Variant">
-      <Head>
-        <meta
-          property="og:description"
-          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
-        />
-        <meta
-          name="description"
-          content="Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål."
-        />
-      </Head>
+      {getSoMeMetadata(officeName)}
 
       <div className={style.employeesContainer}>
         <header>
