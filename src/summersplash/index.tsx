@@ -1,6 +1,6 @@
 // Based on existing Jobs page
 
-import React from 'react';
+import React, { ReactComponentElement } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -120,11 +120,19 @@ const SummerSplash: NextPage<
 
         <p>
           Variant har sentrale lokaler i{' '}
-          <a href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117">
+          <a
+            target="blank"
+            rel="noopener"
+            href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+          >
             Varianthuset i Trondheim sentrum
           </a>{' '}
           og{' '}
-          <a href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068">
+          <a
+            target="blank"
+            rel="noopener"
+            href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
+          >
             Kvadraturen i Oslo.
           </a>
         </p>
@@ -211,23 +219,22 @@ const SummerSplash: NextPage<
             </div>
 
             <div className={style.timelineEvent}>
-              <h4>4 uker arbeid</h4>
-              <h5>13. juni - 8. juli</h5>
+              <h4>Første arbeidsperiode</h4>
+              <h5>13. juni - 8. juli (4 uker)</h5>
             </div>
 
             <div className={style.timelineEvent}>
-              <h4>3 uker ferie</h4>
-              <h5>11. - 29. juli</h5>
+              <h4>Fellesferie</h4>
+              <h5>11. - 29. juli (3 uker)</h5>
             </div>
 
             <div className={style.timelineEvent}>
-              <h4>2 uker arbeid</h4>
-              <h5>8. oktober</h5>
+              <h4>Andre arbeidsperiode</h4>
+              <h5>1. - 12. august</h5>
             </div>
 
             <div className={style.timelineEvent}>
               <h4>Tilbud om fast ansettelse?</h4>
-              <h5>8. oktober</h5>
             </div>
           </div>
         </article>

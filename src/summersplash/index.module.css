@@ -1,3 +1,14 @@
+/* Make sure text is not hidden by blobs with some screen resolutions */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  z-index: 1;
+}
+
 .logoblob {
   grid-area: logo;
   width: 450px;
@@ -99,7 +110,7 @@ h1 {
 
 .secondSection {
   composes: splashSection;
-  background-color: #028377;
+  background-color: #01574f;
   color: white;
 }
 
@@ -115,12 +126,40 @@ h1 {
 }
 
 .timelineContainer {
-  border-left: 6px solid white;
-  min-height: 200px;
   position: absolute;
-  left: 16rem;
-  top: 16rem;
-  padding-left: 1rem;
+  z-index: 1;
+  left: 40%;
+  bottom: 8rem;
+  padding-left: 24px;
+  border-left: 1px solid white;
+}
+
+/* Titles for timelineEvents */
+.timelineEvent > h4 {
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+/* The circles on the timeline */
+.timelineEvent > h4::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -8.5px;
+  border: 1px solid white;
+  background-color: #423d89;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Subtitle for timelineEvents */
+.timelineEvent > h5 {
+  font-family: Graphik;
+  margin: 0.25rem 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .fifthSection {
@@ -161,6 +200,13 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .timelineContainer {
+    position: absolute;
+    left: 1rem;
+    bottom: 8rem;
+    padding-left: 24px;
   }
 }
 
