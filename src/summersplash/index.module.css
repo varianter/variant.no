@@ -131,6 +131,15 @@ h1 {
   left: 40%;
   bottom: 8rem;
   padding-left: 24px;
+}
+
+.timelineContainer::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 10px;
+  height: calc(100% - 2rem);
+  justify-content: center;
   border-left: 1px solid white;
 }
 
