@@ -136,8 +136,8 @@ h1 {
 
 /* Titles for timelineEvents */
 .timelineEvent > h4 {
-  margin: 1rem 0 0 0;
-  padding: 0;
+  position: relative;
+  margin: 0;
 }
 
 /* The circles on the timeline */
@@ -146,7 +146,8 @@ h1 {
   position: absolute;
   width: 16px;
   height: 16px;
-  left: -8.5px;
+  left: -32.5px;
+  top: 0.33rem;
   border: 1px solid white;
   background-color: #423d89;
   border-radius: 50%;
@@ -156,8 +157,7 @@ h1 {
 /* Subtitle for timelineEvents */
 .timelineEvent > h5 {
   font-family: Graphik;
-  margin: 0.25rem 0;
-  padding: 0;
+  margin: 0 0 2rem 0;
   font-style: italic;
   font-weight: normal;
 }

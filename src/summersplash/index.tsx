@@ -1,6 +1,6 @@
 // Based on existing Jobs page
 
-import React, { ReactComponentElement } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -230,7 +230,7 @@ const SummerSplash: NextPage<
 
             <div className={style.timelineEvent}>
               <h4>Andre arbeidsperiode</h4>
-              <h5>1. - 12. august</h5>
+              <h5>1. - 12. august (2 uker)</h5>
             </div>
 
             <div className={style.timelineEvent}>
