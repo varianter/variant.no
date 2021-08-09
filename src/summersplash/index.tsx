@@ -188,6 +188,50 @@ const SummerSplash: NextPage<
       <section className={style.fourthSection}>
         <h2>Hva skjer etter søknadsfristen?</h2>
 
+        <article>
+          <div className={style.timelineContainer}>
+            <div className={style.timelineEvent}>
+              <h4>Søknadsfrist</h4>
+              <h5>3. oktober</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>Kaffeprat med utvalgte kandidater</h4>
+              <h5>6. - 7. oktober</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>Tilbud om sommerjobb</h4>
+              <h5>8. oktober</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>Mulighet for å delta på alle sosiale arrangementer</h4>
+              <h5>november - juni</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>4 uker arbeid</h4>
+              <h5>13. juni - 8. juli</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>3 uker ferie</h4>
+              <h5>11. - 29. juli</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>2 uker arbeid</h4>
+              <h5>8. oktober</h5>
+            </div>
+
+            <div className={style.timelineEvent}>
+              <h4>Tilbud om fast ansettelse?</h4>
+              <h5>8. oktober</h5>
+            </div>
+          </div>
+        </article>
+
         <div className={style.multiplePageBlobTopRight}>
           <BaseBlob
             seed="Variant"

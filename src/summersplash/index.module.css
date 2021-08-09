@@ -114,6 +114,15 @@ h1 {
   color: white;
 }
 
+.timelineContainer {
+  border-left: 6px solid white;
+  min-height: 200px;
+  position: absolute;
+  left: 16rem;
+  top: 16rem;
+  padding-left: 1rem;
+}
+
 .fifthSection {
   composes: splashSection;
   background-color: #ffdcd7;
