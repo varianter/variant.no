@@ -97,16 +97,37 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.secondSection}>
-        <h2>Seksjon</h2>
-        <div>
-          <p>
-            Sjekk ut den{' '}
-            <a href="https://handbook.variant.no" rel="noopeneer">
-              åpne håndboken vår
-            </a>{' '}
-            om du vil se mer om hva vi står for og kan tilby.
-          </p>
-        </div>
+        <h2>Hva går en sommerjobb i Variant ut på?</h2>
+
+        <p>
+          En sommerjobb i Variant passer for deg som har lyst å anvende læring
+          fra studiene i praksis.
+        </p>
+
+        <p>
+          Hos oss vil du jobbe i et tverrfaglig team sammen med andre utviklere
+          og designere der målet er å løse et reellt oppdrag for en av våre
+          kunder.
+        </p>
+
+        <p>
+          Du trenger ikke å være spesialist for å få sommerjobb hos oss, men du
+          bør ha et ønske om å lære mens du er her. Gjennom sommeren vil
+          sommerstudentene få god oppfølging fra erfarne konsulenter som vil at
+          du skal lykkes, og for å sikre dette har sommerstudentene våre ferie i
+          fellesferien.
+        </p>
+
+        <p>
+          Variant har sentrale lokaler i{' '}
+          <a href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117">
+            Varianthuset i Trondheim sentrum
+          </a>{' '}
+          og{' '}
+          <a href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068">
+            Kvadraturen i Oslo.
+          </a>
+        </p>
 
         <div className={style.multiplePageBlobTopRight}>
           <BaseBlob
@@ -130,7 +151,19 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.thirdSection}>
-        <h2>Seksjon</h2>
+        <h2>En Variant av verdier</h2>
+
+        <p>
+          Selv om det siste året har vært helt spesielt så gleder vi oss masse
+          til å ta imot dere i sommer og gi dere gode og trygge rammer for både
+          læreglede, utvikling og en smak av livet i Variant.
+        </p>
+
+        <p>
+          Til tross for en litt uforutsigbar periode så har vi satt opp en plan
+          for både hvordan vi ønsker å ivareta dere faglig, men også for å bli
+          bedre kjent med hverandre.
+        </p>
 
         <div className={style.multiplePageBlobTopLeft}>
           <BaseBlob
@@ -153,7 +186,7 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.fourthSection}>
-        <h2>Seksjon</h2>
+        <h2>Hva skjer etter søknadsfristen?</h2>
 
         <div className={style.multiplePageBlobTopRight}>
           <BaseBlob
@@ -176,7 +209,21 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.fifthSection}>
-        <h2>Seksjon</h2>
+        <h2>Hva skal du sende inn?</h2>
+
+        <p>
+          Selv om det siste året har vært helt spesielt så gleder vi oss masse
+          til å ta imot dere i sommer og gi dere gode og trygge rammer for både
+          læreglede, utvikling og en smak av livet i Variant.
+        </p>
+
+        <p>
+          Til tross for en litt uforutsigbar periode så har vi satt opp en plan
+          for både hvordan vi ønsker å ivareta dere faglig, men også for å bli
+          bedre kjent med hverandre.
+        </p>
+
+        <p>Ikke nøl med å spør oss om dere lurer på noe!</p>
 
         <div className={style.multiplePageBlobTopLeft}>
           <BaseBlob
