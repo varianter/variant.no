@@ -72,6 +72,7 @@ h1 {
 
 .multiplePageBlob {
   position: absolute;
+  object-fit: scale-down;
 }
 
 .multiplePageBlobTop {
@@ -93,7 +94,7 @@ h1 {
 .multiplePageBlobBottomLeft {
   composes: multiplePageBlobBottom;
   left: -300px;
-  bottom: -500px;
+  bottom: 0;
 }
 
 .multiplePageBlobTopRight {
@@ -182,6 +183,13 @@ h1 {
   padding-left: 12rem;
   padding-top: 12rem;
   overflow-y: hidden;
+}
+
+.finalBlob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(-1);
 }
 
 .applicationInfo {

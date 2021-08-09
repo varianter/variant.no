@@ -62,26 +62,6 @@ const SummerSplash: NextPage<
             Både i Trondheim og Oslo!{' '}
             <span aria-label="konfetti-emoji">🎉</span>
           </h4>
-
-          <section className={style.applyLinksContainer}>
-            <Link href="/jobs/utvikler-trondheim">
-              <a className={style.applyLink}>
-                Søk som designer
-                <span role="img" aria-label="blyant">
-                  ✏️
-                </span>
-              </a>
-            </Link>
-
-            <Link href="/jobs/utvikler-trondheim">
-              <a className={style.applyLink}>
-                Søk som utvikler
-                <span role="img" aria-label="datamaskin">
-                  💻
-                </span>
-              </a>
-            </Link>
-          </section>
         </section>
 
         <div className={style.multiplePageBlobBottomRight}>
@@ -341,17 +321,12 @@ const SummerSplash: NextPage<
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
         </div>
-      </section>
 
-      <div className={style.multiplePageBlobBottomLeft}>
-        <BaseBlob
-          seed="Variant"
-          width={1000}
-          height={1000}
-          color={'#F5A4C4'}
-          alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+        <img
+          className={style.finalBlob}
+          src={require('./images/bunnblob.png')}
         />
-      </div>
+      </section>
     </>
   );
 };
