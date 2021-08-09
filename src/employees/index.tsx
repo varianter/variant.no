@@ -7,12 +7,12 @@ import { colors } from '@variant/profile/lib';
 
 import style from './employees.module.css';
 import { InferGetStaticPropsType } from 'next';
-import { getStaticProps } from 'pages/ansatte';
+import { getStaticProps } from 'pages/ansatte/oslo';
 import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Office } from './utils/getEmployeesList';
+import { Office } from './utils/getStaticProps';
 
 export type Employee = {
   fullName: string;

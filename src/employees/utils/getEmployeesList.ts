@@ -3,7 +3,6 @@ import { getEmployeesUrl } from "../../utils/api/getEmployees";
 import { handleImages } from "../../utils/imageHandler";
 import { EmployeeJSON } from "../../utils/typings/Employee";
 
-export type Office = "Oslo" | "Trondheim";
 
 export const getEmployeesList = async () => {
   // Set so we can run local as fallback.
