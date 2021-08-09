@@ -7,7 +7,7 @@ import { colors } from '@variant/profile/lib';
 
 import style from './employees.module.css';
 import { InferGetStaticPropsType } from 'next';
-import { getStaticProps } from 'pages/ansatte/oslo';
+import { getStaticProps } from 'pages/ansatte';
 import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
