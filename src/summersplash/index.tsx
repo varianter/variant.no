@@ -56,8 +56,12 @@ const SummerSplash: NextPage<
         </div>
 
         <section className={style.mainTitleSection}>
-          <h1 className={style.omVariant__title}>Sommerjobb 2022</h1>
-          <p>Søk innen 3. oktober</p>
+          <span>Søk innen 3. oktober</span>
+          <h1 className={style.job_title}>Sommerjobb 2022</h1>
+          <h4>
+            Både i Trondheim og Oslo!{' '}
+            <span aria-label="konfetti-emoji">🎉</span>
+          </h4>
 
           <section className={style.applyLinksContainer}>
             <Link href="/jobs/utvikler-trondheim">
@@ -166,6 +170,28 @@ const SummerSplash: NextPage<
             seed="Variant"
             width={1000}
             height={1000}
+            color={'#534DAC'}
+          />
+        </div>
+      </section>
+
+      <section className={style.fifthSection}>
+        <h2>Seksjon</h2>
+
+        <div className={style.multiplePageBlobTopLeft}>
+          <BaseBlob
+            seed="Variant"
+            width={1000}
+            height={1000}
+            color={'#FFC4BC'}
+          />
+        </div>
+
+        <div className={style.multiplePageBlobBottomRight}>
+          <BaseBlob
+            seed="Variant"
+            width={1000}
+            height={1000}
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('public/images/marius.png') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
@@ -173,7 +199,7 @@ const SummerSplash: NextPage<
         </div>
       </section>
 
-      <section className={style.fifthSection}>
+      <section className={style.sixtSection}>
         <section className={style.applicationInfo}>
           <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
           <p>
@@ -207,7 +233,7 @@ const SummerSplash: NextPage<
           </Link>
         </section>
 
-        <div className={style.multiplePageBlobTopLeft}>
+        <div className={style.multiplePageBlobTopRight}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -218,6 +244,16 @@ const SummerSplash: NextPage<
           />
         </div>
       </section>
+
+      <div className={style.multiplePageBlobBottomLeft}>
+        <BaseBlob
+          seed="Variant"
+          width={1000}
+          height={1000}
+          color={'#F5A4C4'}
+          alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+        />
+      </div>
     </>
   );
 };

@@ -19,10 +19,6 @@ export default function LogoBlob({ className, href }: LogoBlobProps) {
           <img src={require('./logo-blob.svg')} role="none" />
           <div className={style.text}>
             <img src={require('../images/variant-white.svg')} role="none" />
-            <span>
-              <p>Gå til hjemmesiden</p>
-              <img src={require('./arrow-white.svg')} />
-            </span>
           </div>
         </a>
       </Link>

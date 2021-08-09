@@ -1,12 +1,6 @@
-.logoblobfef {
-  position: absolute;
-  top: 0;
-  left: -1px;
-  width: 450px;
-}
-
 .logoblob {
   grid-area: logo;
+  width: 450px;
 }
 
 .applyLinksContainer {
@@ -27,61 +21,78 @@
   color: black;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
 .splashSection {
   display: grid;
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
+  padding: 4rem;
 }
 
 .firstSection {
   composes: splashSection;
+  padding: 0;
   background-color: #fad2e2;
-  grid-template-columns: 10% 1fr 1fr 10%;
-  grid-template-rows: 10rem 1fr 10rem;
+  grid-template-columns: 20% 1fr 1fr 20%;
+  grid-template-rows: 20% 1fr 20%;
   grid-template-areas:
     'logo top fulltimelink fulltimelink'
-    'title title title title'
+    'middle-left title title middle-right'
     'bottom bottom bottom bottom';
 }
 
 .mainTitleSection {
   grid-area: title;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  padding: 0 2rem;
+  align-items: left;
   flex-direction: column;
+  text-align: left;
 }
 
 .fulltimelinkSection {
   grid-area: fulltimelink;
 }
 
-.mulitplePageBlob {
+.multiplePageBlob {
   position: absolute;
 }
 
+.multiplePageBlobTop {
+  composes: multiplePageBlob;
+  clip-path: inset(500px 0 0 0);
+}
+
+.multiplePageBlobBottom {
+  composes: multiplePageBlob;
+  clip-path: inset(0 0 500px 0);
+}
+
 .multiplePageBlobTopLeft {
-  composes: mulitplePageBlob;
+  composes: multiplePageBlobTop;
   left: -300px;
   top: -508px;
 }
 
 .multiplePageBlobBottomLeft {
-  composes: mulitplePageBlob;
+  composes: multiplePageBlobBottom;
   left: -300px;
   bottom: -500px;
 }
 
 .multiplePageBlobTopRight {
-  composes: mulitplePageBlob;
+  composes: multiplePageBlobTop;
   right: -300px;
   top: -508px;
 }
 
 .multiplePageBlobBottomRight {
-  composes: mulitplePageBlob;
+  composes: multiplePageBlobBottom;
   right: -300px;
   bottom: -500px;
 }
@@ -105,7 +116,15 @@
 
 .fifthSection {
   composes: splashSection;
+  background-color: #ffdcd7;
+}
+
+.sixtSection {
+  composes: splashSection;
   background-color: #fad2e2;
+  padding-left: 12rem;
+  padding-top: 12rem;
+  overflow-y: hidden;
 }
 
 .applicationInfo {
@@ -114,96 +133,47 @@
   left: 16rem;
 }
 
-.header_logo {
-  z-index: 1;
-}
+@media screen and (max-width: 1400px) {
+  .logoblob {
+    grid-area: logo;
+  }
 
-.omVariant {
-  padding: 0 1rem 4rem;
-  position: relative;
-  margin-bottom: 3rem;
-}
+  .firstSection {
+    grid-template-columns: 40% 1fr 40%;
+    grid-template-rows: 14rem 1fr 14rem;
+    grid-template-areas:
+      'logo top fulltimelink'
+      'title title title'
+      'bottom bottom bottom';
+  }
 
-@media (max-width: 500px) {
-  .omVariant {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+  .applyLinksContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
-.omVariant__title {
-  font-weight: bold;
-  margin: 1.8rem 0;
-  font-size: 3.3rem;
-
-  background: linear-gradient(
-    to right,
-    var(--color-primary),
-    var(--color-secondary1),
-    var(--color-secondary2)
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
-  color: rgba(0, 0, 0, 0);
-}
-.omVariant__title[data-no-animation='true'] {
-  animation: none;
-}
-
-.omVariant__subTitle {
-  font-size: 1.4rem;
-  margin: 0 0 2.3rem 1.5rem;
-}
-
-.omVariant__wrapper__p {
-  text-align: justify;
-  position: relative;
-}
-
-.omVariant__wrapper {
-  display: grid;
-  grid-template: 'a b' / 1fr auto;
-}
-
-.omVariant__blob {
-  grid-area: b;
-  float: right;
-  margin: 1rem -1rem;
-}
-@media (max-width: 700px) {
-  .omVariant__wrapper {
-    grid-template: 'a' 'b' /1fr;
+@media screen and (max-height: 1000px) {
+  .multiplePageBlobBottomLeft {
+    display: none;
   }
-}
 
-.withSubTitle {
-  margin-bottom: -1rem;
-}
-.job__listing {
-  padding: 0 1rem 7rem;
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-@media (max-width: 500px) {
-  .job__listing__container {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+  .multiplePageBlobTopLeft {
+    left: 0;
+    top: 0;
   }
-}
 
-.job__listing__container {
-  background-color: var(--color-secondary2);
-  margin: 2rem 0;
-  border-radius: 2rem;
-  padding: 2rem;
-  display: grid;
-  grid-template: 'a b' 1fr / 1fr auto;
-}
-@media (max-width: 500px) {
-  .job__listing__container {
-    grid-template: 'a' 'b';
-    gap: 1rem;
+  .multiplePageBlobTopRight {
+    display: block;
+    position: static;
+    left: 0;
+    top: 0;
+  }
+
+  .multiplePageBlobBottomRight {
+    display: nonde;
+    border: 5px solid yellow;
   }
 }
