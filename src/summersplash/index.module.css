@@ -179,7 +179,8 @@ h1 {
 
 .sixtSection {
   composes: splashSection;
-  background-color: #fad2e2;
+  background-color: #01574f;
+  color: white;
   padding-left: 12rem;
   padding-top: 12rem;
   overflow-y: hidden;
@@ -196,6 +197,30 @@ h1 {
   position: absolute;
   top: 600px;
   left: 16rem;
+}
+
+.arrow {
+  height: 4rem;
+  margin: 0;
+}
+
+.upsideDown {
+  composes: arrow;
+  transform: scaleY(-1);
+}
+
+.rotate90cw {
+  composes: arrow;
+  position: relative;
+  left: 16rem;
+  top: -3rem;
+  transform: rotate(90deg);
+}
+
+.mainTitleSection > .arrow {
+  position: relative;
+  left: -16rem;
+  top: 1rem;
 }
 
 @media screen and (max-width: 1400px) {

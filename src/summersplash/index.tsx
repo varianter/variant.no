@@ -10,6 +10,7 @@ import { getStaticProps } from 'pages/jobs';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import LogoBlob from './logo-blob';
+import { and } from 'src/utils/css';
 
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -58,6 +59,11 @@ const SummerSplash: NextPage<
         <section className={style.mainTitleSection}>
           <span>Søk innen 3. oktober</span>
           <h1 className={style.job_title}>Sommerjobb 2022</h1>
+          <img
+            className={style.arrow}
+            aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
+            src={require('./images/pil.svg')}
+          />
           <h4>
             Både i Trondheim og Oslo!{' '}
             <span aria-label="konfetti-emoji">🎉</span>
@@ -152,6 +158,25 @@ const SummerSplash: NextPage<
           for både hvordan vi ønsker å ivareta dere faglig, men også for å bli
           bedre kjent med hverandre.
         </p>
+
+        <div className="handbookAd">
+          <h4>Sjekk ut håndboka vår?</h4>
+
+          <img
+            className={style.rotate90cw}
+            aria-label="Pil til Variant sin håndbok"
+            src={require('./images/pil.svg')}
+          />
+
+          <a href="https://handbook.variant.no/" target="blank">
+            <BaseBlob
+              seed="Variant"
+              width={200}
+              height={200}
+              color={colors.colorPairs.secondary4.default.bg}
+            />
+          </a>
+        </div>
 
         <div className={style.multiplePageBlobTopLeft}>
           <BaseBlob
@@ -255,6 +280,15 @@ const SummerSplash: NextPage<
         </p>
 
         <p>Ikke nøl med å spør oss om dere lurer på noe!</p>
+
+        <div className="applyArrow">
+          <h4>Du kan søke på neste side!</h4>
+          <img
+            className={and(style.arrow, style.upsideDown)}
+            aria-label="Pil som viser at du kan søke lenger nede på siden"
+            src={require('./images/pil.svg')}
+          />
+        </div>
 
         <div className={style.multiplePageBlobTopLeft}>
           <BaseBlob
