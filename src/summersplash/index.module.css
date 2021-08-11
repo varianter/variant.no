@@ -104,6 +104,10 @@ h1 {
     'footer footer footer';
 }
 
+.fourthSection > h4 {
+  grid-area: title;
+}
+
 .afterApplication {
   grid-area: text;
 }
@@ -154,12 +158,26 @@ h1 {
 .fifthSection {
   composes: splashSection;
   background-color: #ffdcd7;
+  grid-template-columns: 30% 20% 50%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    'top-left top top-right'
+    'image border text'
+    'footer-left footer footer-right';
+}
+
+.neededInApplication {
+  grid-area: text;
 }
 
 .fifthSection > .imageBlob {
   position: absolute;
-  left: 0;
-  top: -30vh;
+  top: -40vh;
+}
+
+.applyArrow {
+  display: static;
+  grid-area: footer-left;
 }
 
 .sixtSection {
@@ -184,7 +202,7 @@ h1 {
 }
 
 .applicationInfo > p > a {
-  color: rgb(189, 189, 189);
+  color: white;
 }
 
 .applyLinksContainer {
@@ -243,40 +261,22 @@ h1 {
       'bottom bottom bottom';
   }
 
+  .fourthSection {
+    composes: splashSection;
+    background-color: #423d89;
+    color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'title'
+      'text'
+      'timeline';
+  }
+
   .applyLinksContainer {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
-
-  .timelineContainer {
-    position: absolute;
-    left: 1rem;
-    bottom: 8rem;
-    padding-left: 24px;
-  }
-}
-
-@media screen and (max-height: 1000px) {
-  .multiplePageBlobBottomLeft {
-    display: none;
-  }
-
-  .multiplePageBlobTopLeft {
-    left: 0;
-    top: 0;
-  }
-
-  .multiplePageBlobTopRight {
-    display: block;
-    position: static;
-    left: 0;
-    top: 0;
-  }
-
-  .multiplePageBlobBottomRight {
-    display: nonde;
-    border: 5px solid yellow;
   }
 }

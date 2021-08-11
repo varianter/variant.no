@@ -251,23 +251,25 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.fifthSection}>
-        <h2>Hva skal du sende inn?</h2>
+        <section className={style.neededInApplication}>
+          <h2>Hva skal du sende inn?</h2>
 
-        <p>
-          Selv om det siste året har vært helt spesielt så gleder vi oss masse
-          til å ta imot dere i sommer og gi dere gode og trygge rammer for både
-          læreglede, utvikling og en smak av livet i Variant.
-        </p>
+          <p>
+            Selv om vi liker å skille oss ut på mange områder, setter vi pris på
+            en søknad eller et motivasjonsbrev og en CV.
+          </p>
 
-        <p>
-          Til tross for en litt uforutsigbar periode så har vi satt opp en plan
-          for både hvordan vi ønsker å ivareta dere faglig, men også for å bli
-          bedre kjent med hverandre.
-        </p>
+          <p>
+            Når dette er på plass, finner du søknadsskjema for både designere og
+            utviklere nederst på denne siden. I skjemaet vil du også bli spurt
+            om du kan tenke deg å bli en av seks sommerstudenter i Trondheim,
+            eller en av fire sommerstudenter i Oslo.
+          </p>
 
-        <p>Ikke nøl med å spør oss om dere lurer på noe!</p>
+          <p>Kanskje føler du deg eventyrlysten og krysser av for begge?</p>
+        </section>
 
-        <div className="applyArrow">
+        <div className={style.applyArrow}>
           <h4>Du kan søke på neste side!</h4>
           <img
             className={and(style.arrow, style.upsideDown)}
