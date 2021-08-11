@@ -14,21 +14,10 @@ p {
   width: 450px;
 }
 
-.applyLinksContainer {
-  max-width: 25%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .otherJobsLink {
   position: absolute;
   top: 3rem;
   right: 3rem;
-  color: black;
-}
-
-.applyLink {
   color: black;
 }
 
@@ -57,6 +46,13 @@ h1 {
     'bottom bottom bottom bottom';
 }
 
+.firstSection > .imageBlob {
+  position: absolute;
+  bottom: -500px;
+  right: 0;
+  border: 1px solid yellow;
+}
+
 .mainTitleSection {
   grid-area: title;
   display: flex;
@@ -70,49 +66,15 @@ h1 {
   grid-area: fulltimelink;
 }
 
-.multiplePageBlob {
-  position: absolute;
-  object-fit: scale-down;
-}
-
-.multiplePageBlobTop {
-  composes: multiplePageBlob;
-  clip-path: inset(500px 0 0 0);
-}
-
-.multiplePageBlobBottom {
-  composes: multiplePageBlob;
-  clip-path: inset(0 0 500px 0);
-}
-
-.multiplePageBlobTopLeft {
-  composes: multiplePageBlobTop;
-  left: -300px;
-  top: -508px;
-}
-
-.multiplePageBlobBottomLeft {
-  composes: multiplePageBlobBottom;
-  left: -300px;
-  bottom: 0;
-}
-
-.multiplePageBlobTopRight {
-  composes: multiplePageBlobTop;
-  right: -300px;
-  top: -508px;
-}
-
-.multiplePageBlobBottomRight {
-  composes: multiplePageBlobBottom;
-  right: -300px;
-  bottom: -500px;
-}
-
 .secondSection {
   composes: splashSection;
   background-color: #01574f;
   color: white;
+}
+
+.secondSection > .imageBlob {
+  position: absolute;
+  right: 0;
 }
 
 .thirdSection {
@@ -120,10 +82,21 @@ h1 {
   background-color: #f4f1e7;
 }
 
+.thirdSection > .imageBlob {
+  position: absolute;
+  right: 0;
+}
+
 .fourthSection {
   composes: splashSection;
   background-color: #423d89;
   color: white;
+}
+
+.fourthSection > .imageBlob {
+  position: absolute;
+  left: -10vw;
+  bottom: -40vw;
 }
 
 .timelineContainer {
@@ -177,8 +150,16 @@ h1 {
   background-color: #ffdcd7;
 }
 
+.fifthSection > .imageBlob {
+  position: absolute;
+  right: 0;
+}
+
 .sixtSection {
   composes: splashSection;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 'content picture' 'links picture';
   background-color: #01574f;
   color: white;
   padding-left: 12rem;
@@ -186,17 +167,35 @@ h1 {
   overflow-y: hidden;
 }
 
+.sixtSection > .imageBlob {
+  grid-area: picture;
+  width: 200px;
+}
+
+.applicationInfo {
+  grid-area: content;
+}
+
+.applicationInfo > p > a {
+  color: rgb(189, 189, 189);
+}
+
+.applyLinksContainer {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.applyLinksContainer > a {
+  color: white;
+}
+
 .finalBlob {
   position: absolute;
   bottom: 0;
   left: 0;
   transform: scaleX(-1);
-}
-
-.applicationInfo {
-  position: absolute;
-  top: 600px;
-  left: 16rem;
 }
 
 .arrow {

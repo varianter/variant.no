@@ -70,7 +70,7 @@ const SummerSplash: NextPage<
           </h4>
         </section>
 
-        <div className={style.multiplePageBlobBottomRight}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -123,7 +123,7 @@ const SummerSplash: NextPage<
           </a>
         </p>
 
-        <div className={style.multiplePageBlobTopRight}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -131,15 +131,6 @@ const SummerSplash: NextPage<
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
-
-        <div className={style.multiplePageBlobBottomLeft}>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={'#02AE9E'}
           />
         </div>
       </section>
@@ -178,16 +169,7 @@ const SummerSplash: NextPage<
           </a>
         </div>
 
-        <div className={style.multiplePageBlobTopLeft}>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={colors.colorPairs.secondary4.default.bg}
-          />
-        </div>
-
-        <div className={style.multiplePageBlobBottomRight}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -244,17 +226,7 @@ const SummerSplash: NextPage<
           </div>
         </article>
 
-        <div className={style.multiplePageBlobTopRight}>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={'#736EBE'}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
-
-        <div className={style.multiplePageBlobBottomLeft}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -290,16 +262,7 @@ const SummerSplash: NextPage<
           />
         </div>
 
-        <div className={style.multiplePageBlobTopLeft}>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={'#FFC4BC'}
-          />
-        </div>
-
-        <div className={style.multiplePageBlobBottomRight}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
             width={1000}
@@ -345,11 +308,11 @@ const SummerSplash: NextPage<
           </Link>
         </section>
 
-        <div className={style.multiplePageBlobTopRight}>
+        <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('public/images/marius.png') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
