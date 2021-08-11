@@ -73,8 +73,8 @@ const SummerSplash: NextPage<
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             color={colors.colorPairs.secondary3.default.bg}
             imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
@@ -126,8 +126,8 @@ const SummerSplash: NextPage<
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
@@ -172,8 +172,8 @@ const SummerSplash: NextPage<
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             color={'#F8F6EF'}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
@@ -183,56 +183,70 @@ const SummerSplash: NextPage<
       <section className={style.fourthSection}>
         <h2>Hva skjer etter søknadsfristen?</h2>
 
-        <article>
-          <div className={style.timelineContainer}>
-            <div className={style.timelineEvent}>
-              <h4>Søknadsfrist</h4>
-              <h5>3. oktober</h5>
-            </div>
+        <section className={style.afterApplication}>
+          <p>
+            Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer søker
+            i en unaturlig situasjon, og man blir ikke godt nok kjent med
+            hverandre. Etter at vi har sett igjennom alle søknadene inviterer vi
+            derfor alle utvalgte kandidater til en uformell samtale. Dette er
+            det vi kaller kaffeprat. Hensikten med samtalen er for å finne ut om
+            begge parter har felles verdier og mål. Og nei, du er selvsagt ikke
+            nødt til å drikke kaffe.
+          </p>
 
-            <div className={style.timelineEvent}>
-              <h4>Kaffeprat med utvalgte kandidater</h4>
-              <h5>6. - 7. oktober</h5>
-            </div>
+          <p>
+            Dersom du får jobbtilbud og takker ja, inkluderes du straks i
+            Variant på lik linje med de fast ansatte. Du får tilgang til
+            Slack´en vår, og mulighet til å delta på alle sosiale og faglige
+            arrangementer. Dette inkluderer blant annet spill- og fagkvelder,
+            nyttårskalas og variantdager, som er fine muligheter til å bli bedre
+            kjent før sommerjobben starter i juni.
+          </p>
+        </section>
 
-            <div className={style.timelineEvent}>
-              <h4>Tilbud om sommerjobb</h4>
-              <h5>8. oktober</h5>
-            </div>
-
-            <div className={style.timelineEvent}>
-              <h4>Mulighet for å delta på alle sosiale arrangementer</h4>
-              <h5>november - juni</h5>
-            </div>
-
-            <div className={style.timelineEvent}>
-              <h4>Første arbeidsperiode</h4>
-              <h5>13. juni - 8. juli (4 uker)</h5>
-            </div>
-
-            <div className={style.timelineEvent}>
-              <h4>Fellesferie</h4>
-              <h5>11. - 29. juli (3 uker)</h5>
-            </div>
-
-            <div className={style.timelineEvent}>
-              <h4>Andre arbeidsperiode</h4>
-              <h5>1. - 12. august (2 uker)</h5>
-            </div>
-
-            <div className={style.timelineEvent}>
-              <h4>Tilbud om fast ansettelse?</h4>
-            </div>
+        <section className={style.timelineContainer}>
+          <div className={style.timelineEvent}>
+            <h4>Søknadsfrist</h4>
+            <h5>3. oktober</h5>
           </div>
-        </article>
+
+          <div className={style.timelineEvent}>
+            <h4>Kaffeprat med utvalgte kandidater</h4>
+            <h5>6. - 7. oktober</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Tilbud om sommerjobb</h4>
+            <h5>8. oktober</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Mulighet for å delta på alle sosiale arrangementer</h4>
+            <h5>november - juni</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Første arbeidsperiode</h4>
+            <h5>13. juni - 8. juli (4 uker)</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Fellesferie</h4>
+            <h5>11. - 29. juli (3 uker)</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Andre arbeidsperiode</h4>
+            <h5>1. - 12. august (2 uker)</h5>
+          </div>
+
+          <div className={style.timelineEvent}>
+            <h4>Tilbud om fast ansettelse?</h4>
+          </div>
+        </section>
 
         <div className={style.imageBlob}>
-          <BaseBlob
-            seed="Variant"
-            width={1000}
-            height={1000}
-            color={'#534DAC'}
-          />
+          <BaseBlob seed="Variant" width={500} height={500} color={'#534DAC'} />
         </div>
       </section>
 
@@ -265,8 +279,8 @@ const SummerSplash: NextPage<
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('public/images/marius.png') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"

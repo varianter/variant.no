@@ -48,7 +48,7 @@ h1 {
 
 .firstSection > .imageBlob {
   position: absolute;
-  bottom: -500px;
+  bottom: -25vh;
   right: 0;
   border: 1px solid yellow;
 }
@@ -72,6 +72,10 @@ h1 {
   color: white;
 }
 
+.secondSection > p > a {
+  color: white;
+}
+
 .secondSection > .imageBlob {
   position: absolute;
   right: 0;
@@ -91,29 +95,31 @@ h1 {
   composes: splashSection;
   background-color: #423d89;
   color: white;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 20% 40% auto 1fr;
+  grid-template-areas:
+    'title title title'
+    'text border timeline'
+    'blank border timeline'
+    'footer footer footer';
 }
 
-.fourthSection > .imageBlob {
-  position: absolute;
-  left: -10vw;
-  bottom: -40vw;
+.afterApplication {
+  grid-area: text;
 }
 
 .timelineContainer {
-  position: absolute;
+  grid-area: timeline;
+  position: relative;
   z-index: 1;
-  left: 40%;
-  bottom: 8rem;
-  padding-left: 24px;
 }
 
 .timelineContainer::before {
   content: '';
   position: absolute;
-  left: -1px;
+  left: -24.5px;
   top: 10px;
   height: calc(100% - 2rem);
-  justify-content: center;
   border-left: 1px solid white;
 }
 
@@ -152,7 +158,8 @@ h1 {
 
 .fifthSection > .imageBlob {
   position: absolute;
-  right: 0;
+  left: 0;
+  top: -30vh;
 }
 
 .sixtSection {
