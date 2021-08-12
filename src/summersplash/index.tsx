@@ -59,15 +59,19 @@ const SummerSplash: NextPage<
         </div>
 
         <section className={style.mainTitleSection}>
-          <span>Søk innen 3. oktober</span>
-          <h1 className={style.job_title}>Sommerjobb 2022</h1>
+          <span>Søk senest 3. oktober</span>
+          <h1 className={style.job_title}>
+            Er du en av 10 sommer
+            <wbr />
+            varianter i 2022?
+          </h1>
           <img
             className={style.arrow}
             aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
             src={require('./images/pil.svg')}
           />
           <h4>
-            Både i Trondheim og Oslo!{' '}
+            Enten i Trondheim og Oslo!{' '}
             <span aria-label="konfetti-emoji">🎉</span>
           </h4>
         </section>
@@ -86,41 +90,42 @@ const SummerSplash: NextPage<
 
       <section className={style.secondSection}>
         <section className={style.leftText}>
-          <h3>Hva går en sommerjobb i Variant ut på?</h3>
+          <h3>Hva går sommerjobben ut på?</h3>
+          <div>
+            <p>
+              En sommerjobb i Variant passer for deg som har lyst å anvende
+              læring fra studiene i praksis. Hos oss vil du jobbe i et
+              tverrfaglig team sammen med andre utviklere og designere der målet
+              er å løse et reelt oppdrag for en av våre kunder.
+            </p>
 
-          <p>
-            En sommerjobb i Variant passer for deg som har lyst å anvende læring
-            fra studiene i praksis. Hos oss vil du jobbe i et tverrfaglig team
-            sammen med andre utviklere og designere der målet er å løse et
-            reellt oppdrag for en av våre kunder.
-          </p>
+            <p>
+              Du trenger ikke å være spesialist for å få sommerjobb hos oss, men
+              du bør ha et ønske om å lære mens du er her. Gjennom sommeren vil
+              sommerstudentene få god oppfølging fra erfarne konsulenter som vil
+              at du skal lykkes, og for å sikre dette har sommerstudentene våre
+              ferie i fellesferien.
+            </p>
 
-          <p>
-            Du trenger ikke å være spesialist for å få sommerjobb hos oss, men
-            du bør ha et ønske om å lære mens du er her. Gjennom sommeren vil
-            sommerstudentene få god oppfølging fra erfarne konsulenter som vil
-            at du skal lykkes, og for å sikre dette har sommerstudentene våre
-            ferie i fellesferien.
-          </p>
-
-          <p>
-            Variant har sentrale lokaler i{' '}
-            <a
-              target="blank"
-              rel="noopener"
-              href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
-            >
-              Varianthuset i Trondheim sentrum
-            </a>{' '}
-            og{' '}
-            <a
-              target="blank"
-              rel="noopener"
-              href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
-            >
-              Kvadraturen i Oslo.
-            </a>
-          </p>
+            <p>
+              Variant har sentrale lokaler i{' '}
+              <a
+                target="blank"
+                rel="noopener"
+                href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+              >
+                Varianthuset i Trondheim sentrum
+              </a>{' '}
+              og{' '}
+              <a
+                target="blank"
+                rel="noopener"
+                href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
+              >
+                Kvadraturen i Oslo.
+              </a>
+            </p>
+          </div>
         </section>
 
         <div className={style.rightText}>
@@ -132,6 +137,13 @@ const SummerSplash: NextPage<
             imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
           />
+
+          <p>
+            Prosjektet varer i fire + to uker med tre uker ferie i mellomtiden,
+            og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen.
+            Du kommer til å lære masse nyttig, samtidig som du har det gøy med
+            de andre variantene.{' '}
+          </p>
         </div>
       </section>
 
@@ -139,33 +151,35 @@ const SummerSplash: NextPage<
         <section className={style.leftText}>
           <h3>Hvorfor jobbe i Variant?</h3>
 
-          <p>
-            Variant er en variant av et konsulentselskap som er raus, åpen og
-            læreglad.
-          </p>
+          <div>
+            <p>
+              Variant er en variant av et konsulentselskap som er raus, åpen og
+              læreglad.
+            </p>
 
-          <p>
-            En sommerjobb i Variant er en god arena for personlig utvikling,
-            både faglig og sosialt. og vi mener at en sommer hos oss vil gjøre
-            deg bedre rustet både for resterende tid på skolebenken, men også
-            senere i arbeidslivet.
-          </p>
+            <p>
+              En sommerjobb i Variant er en god arena for personlig utvikling,
+              både faglig og sosialt. og vi mener at en sommer hos oss vil gjøre
+              deg bedre rustet både for resterende tid på skolebenken, men også
+              senere i arbeidslivet.
+            </p>
 
-          <p>
-            Håndboka vår beskriver hvem vi er og hva vi står for. I Variant
-            trenger du ikke lure på hvordan{' '}
-            <a href="https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html">
-              kontrakten
-            </a>{' '}
-            din vil se ut dersom du skulle få tilbud om sommerjobb, den ligger
-            selvsagt åpent tilgjengelig på våre nettsider.
-          </p>
+            <p>
+              Håndboka vår beskriver hvem vi er og hva vi står for. I Variant
+              trenger du ikke lure på hvordan{' '}
+              <a href="https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html">
+                kontrakten
+              </a>{' '}
+              din vil se ut dersom du skulle få tilbud om sommerjobb, den ligger
+              selvsagt åpent tilgjengelig på våre nettsider.
+            </p>
 
-          <p>
-            Til tross for en litt uforutsigbar periode så har vi satt opp en
-            plan for både hvordan vi ønsker å ivareta dere faglig, men også for
-            å bli bedre kjent med hverandre.
-          </p>
+            <p>
+              Til tross for en litt uforutsigbar periode så har vi satt opp en
+              plan for både hvordan vi ønsker å ivareta dere faglig, men også
+              for å bli bedre kjent med hverandre.
+            </p>
+          </div>
         </section>
 
         <section className={style.rightText}>
@@ -326,28 +340,27 @@ const SummerSplash: NextPage<
             </Link>
           </section>
 
-          <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
-          <p>
-            Har du spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt
-            med meg.
-          </p>
-          <p>- Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant</p>
-          <p>
-            <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
-            <a href="tel:41637572">41 63 75 72</a>
-          </p>
+          <div>
+            <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
+            <p>
+              Har du spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt
+              med meg.
+            </p>
+            <p>
+              - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
+            </p>
+            <p>
+              <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
+              <a href="tel:41637572">41 63 75 72</a>
+            </p>
+          </div>
         </section>
 
-        <div className={style.imageBlob}>
-          <BaseBlob
-            seed="Variant"
-            width={500}
-            height={500}
-            color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('public/images/marius.png') }}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
+        <img
+          className={style.imageBlob}
+          src={require('public/images/marius.png')}
+          alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+        />
 
         <img
           className={style.finalBlob}
