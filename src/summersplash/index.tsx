@@ -51,7 +51,9 @@ const SummerSplash: NextPage<
         <div className={style.fulltimelinkSection}>
           <Link href="/jobs">
             <a className={style.otherJobsLink}>
-              Fast stilling? <img src={require('./arrow.svg')} />
+              <h4>
+                Fast stilling? <img src={require('./arrow.svg')} />
+              </h4>
             </a>
           </Link>
         </div>
@@ -83,47 +85,45 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.secondSection}>
-        <h2>Hva går en sommerjobb i Variant ut på?</h2>
+        <section className={style.leftText}>
+          <h3>Hva går en sommerjobb i Variant ut på?</h3>
 
-        <p>
-          En sommerjobb i Variant passer for deg som har lyst å anvende læring
-          fra studiene i praksis.
-        </p>
+          <p>
+            En sommerjobb i Variant passer for deg som har lyst å anvende læring
+            fra studiene i praksis. Hos oss vil du jobbe i et tverrfaglig team
+            sammen med andre utviklere og designere der målet er å løse et
+            reellt oppdrag for en av våre kunder.
+          </p>
 
-        <p>
-          Hos oss vil du jobbe i et tverrfaglig team sammen med andre utviklere
-          og designere der målet er å løse et reellt oppdrag for en av våre
-          kunder.
-        </p>
+          <p>
+            Du trenger ikke å være spesialist for å få sommerjobb hos oss, men
+            du bør ha et ønske om å lære mens du er her. Gjennom sommeren vil
+            sommerstudentene få god oppfølging fra erfarne konsulenter som vil
+            at du skal lykkes, og for å sikre dette har sommerstudentene våre
+            ferie i fellesferien.
+          </p>
 
-        <p>
-          Du trenger ikke å være spesialist for å få sommerjobb hos oss, men du
-          bør ha et ønske om å lære mens du er her. Gjennom sommeren vil
-          sommerstudentene få god oppfølging fra erfarne konsulenter som vil at
-          du skal lykkes, og for å sikre dette har sommerstudentene våre ferie i
-          fellesferien.
-        </p>
+          <p>
+            Variant har sentrale lokaler i{' '}
+            <a
+              target="blank"
+              rel="noopener"
+              href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+            >
+              Varianthuset i Trondheim sentrum
+            </a>{' '}
+            og{' '}
+            <a
+              target="blank"
+              rel="noopener"
+              href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
+            >
+              Kvadraturen i Oslo.
+            </a>
+          </p>
+        </section>
 
-        <p>
-          Variant har sentrale lokaler i{' '}
-          <a
-            target="blank"
-            rel="noopener"
-            href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
-          >
-            Varianthuset i Trondheim sentrum
-          </a>{' '}
-          og{' '}
-          <a
-            target="blank"
-            rel="noopener"
-            href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
-          >
-            Kvadraturen i Oslo.
-          </a>
-        </p>
-
-        <div className={style.imageBlob}>
+        <div className={style.rightText}>
           <BaseBlob
             seed="Variant"
             width={500}
@@ -136,54 +136,66 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.thirdSection}>
-        <h2>En Variant av verdier</h2>
+        <section className={style.leftText}>
+          <h3>Hvorfor jobbe i Variant?</h3>
 
-        <p>
-          Selv om det siste året har vært helt spesielt så gleder vi oss masse
-          til å ta imot dere i sommer og gi dere gode og trygge rammer for både
-          læreglede, utvikling og en smak av livet i Variant.
-        </p>
+          <p>
+            Variant er en variant av et konsulentselskap som er raus, åpen og
+            læreglad.
+          </p>
 
-        <p>
-          Til tross for en litt uforutsigbar periode så har vi satt opp en plan
-          for både hvordan vi ønsker å ivareta dere faglig, men også for å bli
-          bedre kjent med hverandre.
-        </p>
+          <p>
+            En sommerjobb i Variant er en god arena for personlig utvikling,
+            både faglig og sosialt. og vi mener at en sommer hos oss vil gjøre
+            deg bedre rustet både for resterende tid på skolebenken, men også
+            senere i arbeidslivet.
+          </p>
 
-        <div className="handbookAd">
-          <h4>Sjekk ut håndboka vår?</h4>
+          <p>
+            Håndboka vår beskriver hvem vi er og hva vi står for. I Variant
+            trenger du ikke lure på hvordan{' '}
+            <a href="https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html">
+              kontrakten
+            </a>{' '}
+            din vil se ut dersom du skulle få tilbud om sommerjobb, den ligger
+            selvsagt åpent tilgjengelig på våre nettsider.
+          </p>
 
-          <img
-            className={style.rotate90cw}
-            aria-label="Pil til Variant sin håndbok"
-            src={require('./images/pil.svg')}
-          />
+          <p>
+            Til tross for en litt uforutsigbar periode så har vi satt opp en
+            plan for både hvordan vi ønsker å ivareta dere faglig, men også for
+            å bli bedre kjent med hverandre.
+          </p>
+        </section>
 
-          <a href="https://handbook.variant.no/" target="blank">
-            <BaseBlob
-              seed="Variant"
-              width={200}
-              height={200}
-              color={colors.colorPairs.secondary4.default.bg}
+        <section className={style.rightText}>
+          <div className={style.handbookAd}>
+            <h4>Sjekk ut håndboka vår?</h4>
+
+            <img
+              className={style.handbookArrow}
+              aria-label="Pil til Variant sin håndbok"
+              src={require('./images/pil.svg')}
             />
-          </a>
-        </div>
 
-        <div className={style.imageBlob}>
-          <BaseBlob
-            seed="Variant"
-            width={500}
-            height={500}
-            color={'#F8F6EF'}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
+            <a href="https://handbook.variant.no/" target="blank">
+              <BaseBlob
+                seed="Variant"
+                width={500}
+                height={500}
+                color={colors.colorPairs.secondary2.default.bg}
+                imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+                alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+              />
+            </a>
+          </div>
+        </section>
       </section>
 
       <section className={style.fourthSection}>
-        <h2>Hva skjer etter søknadsfristen?</h2>
+        <section className={style.leftText}>
+          <h3>Hva skjer etter søknadsfristen?</h3>
 
-        <section className={style.afterApplication}>
           <p>
             Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer søker
             i en unaturlig situasjon, og man blir ikke godt nok kjent med
@@ -251,32 +263,29 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.fifthSection}>
-        <section className={style.neededInApplication}>
-          <h2>Hva skal du sende inn?</h2>
+        <section className={style.rightText}>
+          <h3>Hva ser vi etter i en søknad?</h3>
 
           <p>
-            Selv om vi liker å skille oss ut på mange områder, setter vi pris på
-            en søknad eller et motivasjonsbrev og en CV.
+            Selv om vi liker å skille oss ut, setter vi pris på en søknad med
+            CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
+            et helhetlig bilde. Både av deg som person, din eksisterende
+            kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
+            sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
+            en bedre hverdag. Er det deg?
           </p>
-
-          <p>
-            Når dette er på plass, finner du søknadsskjema for både designere og
-            utviklere nederst på denne siden. I skjemaet vil du også bli spurt
-            om du kan tenke deg å bli en av seks sommerstudenter i Trondheim,
-            eller en av fire sommerstudenter i Oslo.
-          </p>
-
-          <p>Kanskje føler du deg eventyrlysten og krysser av for begge?</p>
         </section>
 
-        <div className={style.applyArrow}>
-          <h4>Du kan søke på neste side!</h4>
-          <img
-            className={and(style.arrow, style.upsideDown)}
-            aria-label="Pil som viser at du kan søke lenger nede på siden"
-            src={require('./images/pil.svg')}
-          />
-        </div>
+        <section className={style.leftText}>
+          <div className={style.applyArrow}>
+            <h4>Du kan søke på neste side!</h4>
+            <img
+              className={and(style.arrow, style.upsideDown)}
+              aria-label="Pil som viser at du kan søke lenger nede på siden"
+              src={require('./images/pil.svg')}
+            />
+          </div>
+        </section>
 
         <div className={style.imageBlob}>
           <BaseBlob
@@ -291,7 +300,31 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.sixtSection}>
-        <section className={style.applicationInfo}>
+        <section className={style.leftText}>
+          <section className={style.applyLinksContainer}>
+            <Link href="/jobs/utvikler-trondheim">
+              <a className={style.applyLink}>
+                <h3>
+                  Søk som designer
+                  <span role="img" aria-label="blyant">
+                    ✏️
+                  </span>
+                </h3>
+              </a>
+            </Link>
+
+            <Link href="/jobs/utvikler-trondheim">
+              <a className={style.applyLink}>
+                <h3>
+                  Søk som utvikler
+                  <span role="img" aria-label="datamaskin">
+                    💻
+                  </span>
+                </h3>
+              </a>
+            </Link>
+          </section>
+
           <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
           <p>
             Har du spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt
@@ -302,26 +335,6 @@ const SummerSplash: NextPage<
             <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
             <a href="tel:41637572">41 63 75 72</a>
           </p>
-        </section>
-
-        <section className={style.applyLinksContainer}>
-          <Link href="/jobs/utvikler-trondheim">
-            <a className={style.applyLink}>
-              Søk som designer
-              <span role="img" aria-label="blyant">
-                ✏️
-              </span>
-            </a>
-          </Link>
-
-          <Link href="/jobs/utvikler-trondheim">
-            <a className={style.applyLink}>
-              Søk som utvikler
-              <span role="img" aria-label="datamaskin">
-                💻
-              </span>
-            </a>
-          </Link>
         </section>
 
         <div className={style.imageBlob}>
@@ -338,6 +351,11 @@ const SummerSplash: NextPage<
         <img
           className={style.finalBlob}
           src={require('./images/bunnblob.png')}
+        />
+        <img
+          className={style.variantLogo}
+          src={require('./images/variant-white.svg')}
+          role="none"
         />
       </section>
     </>
