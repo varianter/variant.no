@@ -193,28 +193,33 @@ const SummerSplash: NextPage<
       </section>
 
       <section className={style.fourthSection}>
+        <h3>Hva skjer etter søknadsfristen?</h3>
         <section className={style.leftText}>
-          <h3>Hva skjer etter søknadsfristen?</h3>
+          <div>
+            <p>
+              Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer
+              søker i en unaturlig situasjon, og man blir ikke godt nok kjent
+              med hverandre. Etter at vi har sett igjennom alle søknadene
+              inviterer vi derfor alle utvalgte kandidater til en uformell
+              samtale. Dette er det vi kaller kaffeprat. Hensikten med samtalen
+              er for å finne ut om begge parter har felles verdier og mål. Og
+              nei, du er selvsagt ikke nødt til å drikke kaffe.
+            </p>
 
-          <p>
-            Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer søker
-            i en unaturlig situasjon, og man blir ikke godt nok kjent med
-            hverandre. Etter at vi har sett igjennom alle søknadene inviterer vi
-            derfor alle utvalgte kandidater til en uformell samtale. Dette er
-            det vi kaller kaffeprat. Hensikten med samtalen er for å finne ut om
-            begge parter har felles verdier og mål. Og nei, du er selvsagt ikke
-            nødt til å drikke kaffe.
-          </p>
-
-          <p>
-            Dersom du får jobbtilbud og takker ja, inkluderes du straks i
-            Variant på lik linje med de fast ansatte. Du får tilgang til
-            Slack´en vår, og mulighet til å delta på alle sosiale og faglige
-            arrangementer. Dette inkluderer blant annet spill- og fagkvelder,
-            nyttårskalas og variantdager, som er fine muligheter til å bli bedre
-            kjent før sommerjobben starter i juni.
-          </p>
+            <p>
+              Dersom du får jobbtilbud og takker ja, inkluderes du straks i
+              Variant på lik linje med de fast ansatte. Du får tilgang til
+              Slack´en vår, og mulighet til å delta på alle sosiale og faglige
+              arrangementer. Dette inkluderer blant annet spill- og fagkvelder,
+              nyttårskalas og variantdager, som er fine muligheter til å bli
+              bedre kjent før sommerjobben starter i juni.
+            </p>
+          </div>
         </section>
+
+        <div className={style.imageBlob}>
+          <BaseBlob seed="Variant" width={500} height={500} color={'#534DAC'} />
+        </div>
 
         <section className={style.timelineContainer}>
           <div className={style.timelineEvent}>
@@ -256,10 +261,6 @@ const SummerSplash: NextPage<
             <h4>Tilbud om fast ansettelse?</h4>
           </div>
         </section>
-
-        <div className={style.imageBlob}>
-          <BaseBlob seed="Variant" width={500} height={500} color={'#534DAC'} />
-        </div>
       </section>
 
       <section className={style.fifthSection}>
