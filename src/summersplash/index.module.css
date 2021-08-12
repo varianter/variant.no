@@ -139,13 +139,14 @@ h3 {
   position: relative;
   z-index: 1;
   padding-left: 33.5px;
+  height: fit-content;
 }
 
 .timelineContainer::before {
   content: '';
   position: absolute;
   left: 8.5px;
-  top: 10px;
+  top: 1rem;
   height: calc(100% - 2rem);
   border-left: 1px solid white;
 }
@@ -163,7 +164,7 @@ h3 {
   width: 16px;
   height: 16px;
   left: -32.5px;
-  top: 0.33rem;
+  top: 0.5rem;
   border: 1px solid white;
   background-color: #423d89;
   border-radius: 50%;
