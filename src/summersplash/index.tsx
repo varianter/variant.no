@@ -60,18 +60,14 @@ const SummerSplash: NextPage<
 
         <section className={style.mainTitleSection}>
           <span>Søk senest 3. oktober</span>
-          <h1 className={style.job_title}>
-            Er du en av 10 sommer
-            <wbr />
-            varianter i 2022?
-          </h1>
+          <h1 className={style.job_title}>Vil du bli en variant i 2022?</h1>
           <img
             className={style.arrow}
             aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
             src={require('./images/pil.svg')}
           />
           <h4>
-            Enten i Trondheim og Oslo!{' '}
+            Kontorer i både Trondheim og Oslo!{' '}
             <span aria-label="konfetti-emoji">🎉</span>
           </h4>
         </section>
