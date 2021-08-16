@@ -1,6 +1,6 @@
 // Based on existing Jobs page
 
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -11,10 +11,17 @@ import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import LogoBlob from './logo-blob';
 import { and } from 'src/utils/css';
+import { Button } from 'src/components/button';
 
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
+  const [mode, setMode] = useState<'internship' | 'job'>('internship');
+
+  const handleToggle = () => {
+    mode === 'internship' ? setMode('job') : setMode('internship');
+  };
+
   return (
     <>
       <Head>
@@ -43,7 +50,10 @@ const SummerSplash: NextPage<
           content="https://www.variant.no/images/jobs_meta_image.png"
           key="og:image"
         />
-        <title>Variant - Din neste sommerjobb?</title>
+        {mode === 'internship' && (
+          <title>Variant - Din neste sommerjobb?</title>
+        )}
+        {mode === 'job' && <title>Variant - Din neste jobb?</title>}
       </Head>
 
       <section className={style.firstSection}>
@@ -58,19 +68,41 @@ const SummerSplash: NextPage<
           </Link>
         </div>
 
-        <section className={style.mainTitleSection}>
-          <span>Søk senest 3. oktober</span>
-          <h1 className={style.job_title}>Vil du bli en variant i 2022?</h1>
-          <img
-            className={style.arrow}
-            aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
-            src={require('./images/pil.svg')}
-          />
-          <h4>
-            Kontorer i både Trondheim og Oslo!{' '}
-            <span aria-label="konfetti-emoji">🎉</span>
-          </h4>
-        </section>
+        {mode === 'internship' && (
+          <section className={style.mainTitleSection}>
+            <span>Søk senest 3. oktober</span>
+            <h1 className={style.job_title}>
+              Vil du bli en sommervariant i 2022?
+            </h1>
+            <img
+              className={style.arrow}
+              aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
+              src={require('./images/pil.svg')}
+            />
+            <h4>
+              Enten i Trondheim eller Oslo!{' '}
+              <span aria-label="konfetti-emoji">🎉</span>
+            </h4>
+          </section>
+        )}
+
+        {mode === 'job' && (
+          <section className={style.mainTitleSection}>
+            <span>Søk senest 3. oktober</span>
+            <h1 className={style.job_title}>Vil du bli en variant i 2022?</h1>
+            <img
+              className={style.arrow}
+              aria-label="Pil som forklarer at Variant i 2022 tilbyr fast jobb både i Trondheim og Oslo"
+              src={require('./images/pil.svg')}
+            />
+            <h4>
+              Kontorer i både Trondheim og Oslo!{' '}
+              <span aria-label="konfetti-emoji">🎉</span>
+            </h4>
+          </section>
+        )}
+
+        <Button onClick={handleToggle}>Skift modus</Button>
 
         <div className={style.imageBlob}>
           <BaseBlob
