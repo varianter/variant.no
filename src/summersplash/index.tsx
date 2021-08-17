@@ -9,9 +9,9 @@ import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
-import LogoBlob from './logo-blob';
 import { and } from 'src/utils/css';
 import { Button } from 'src/components/button';
+import Layout from 'src/splashLayout';
 
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -23,7 +23,7 @@ const SummerSplash: NextPage<
   };
 
   return (
-    <>
+    <Layout>
       <Head>
         <meta
           property="og:url"
@@ -57,17 +57,6 @@ const SummerSplash: NextPage<
       </Head>
 
       <section className={style.firstSection}>
-        <LogoBlob className={style.logoblob} href="/" />
-        <div className={style.fulltimelinkSection}>
-          <Link href="/jobs">
-            <a className={style.otherJobsLink}>
-              <h4>
-                Fast stilling? <img src={require('./arrow.svg')} />
-              </h4>
-            </a>
-          </Link>
-        </div>
-
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>
@@ -400,7 +389,7 @@ const SummerSplash: NextPage<
           role="none"
         />
       </section>
-    </>
+    </Layout>
   );
 };
 
