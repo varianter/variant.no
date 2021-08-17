@@ -108,11 +108,6 @@ const SplashLayout: React.FC<LayoutProps> = ({
           >
             <ul className={style.header__nav__ul} ref={navRef}>
               <li>
-                <Link href="/jobs">
-                  <a tabIndex={tabIndex}>Bli en variant</a>
-                </Link>
-              </li>
-              <li>
                 <a
                   href="http://handbook.variant.no"
                   rel="noopener"
@@ -134,15 +129,6 @@ const SplashLayout: React.FC<LayoutProps> = ({
                 <Link href="/ansatte">
                   <a tabIndex={tabIndex}>Alle varianter</a>
                 </Link>
-              </li>
-              <li id="dont_show">
-                <a
-                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                  rel="noopener"
-                  tabIndex={tabIndex}
-                >
-                  Si hallo!
-                </a>
               </li>
             </ul>
           </nav>

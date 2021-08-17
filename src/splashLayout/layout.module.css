@@ -42,10 +42,6 @@
   transition: 0.4s;
 }
 
-.header__nav__ul li:last-child {
-  display: none;
-}
-
 .header__nav a {
   display: block;
   color: var(--color-standard__white--text);
