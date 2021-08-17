@@ -1,16 +1,18 @@
 ---
-title: Seniorutvikler
-h1_title: Erfaren utvikler med entreprenørånd
+title: Utvikler
+h1_title: En variant av en utvikler
 slug: erfaren-utvikler-i-oslo
-contact_emails: cb@variant.no, mb@variant.no
-meta_title: Vi søker seniorutvikler til Variant Oslo!
-meta_description: Vi ser etter en dyktig og erfaren utvikler med entreprenørånd som kan være med å forme et nytt selskap.
+contact_emails: nikolai@variant.no
+meta_title: En variant av en utvikler
+meta_description: Vil du være med oss å bygge Variant Oslo?
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta.png
 ---
 
 ## Vi søker etter noen vil være med oss å bygge Variant Oslo!
 
 ![Varianter på en takterrasse](/images/utvikler-takterrasse.png)
+
+Det er det vi ønsker du skal gjøre, _- sammen med flere og sammen med oss._
 
 Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
@@ -61,4 +63,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår utvikler Christian Brevik om det vi skriver her. Hvis du har spørsmål om vår faglige tilnærming, eller filosofi rundt rekruttering, må du gjerne plinge på vår Chief Community Officer Mikael Brevik.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår teknologisjef Nikolai Norman Andersen. Det gjelder også om du har spørsmål om vår faglige tilnærming, eller filosofi rundt rekruttering.
