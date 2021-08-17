@@ -8,15 +8,13 @@ meta_description: Vi ser etter en dyktig og erfaren designer med entreprenørån
 meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
 ---
 
-## Vi søker etter noen som vil forme Oslo
+## Vi søker etter noen vil være med oss å bygge Variant Oslo!
 
 ![Varianter på en takterasse](/images/design-takterasse.png)
 
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss.
 
-Variant er et selskap av og for mennesker med stor læreglede, som styrer sin egen hverdag og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design-og teknologikompetanse finner sammen og tar plass i kundens kultur. Her oppdager vi nesten alltid at en helhetlig tilnærming til design tilfører ekstra verdi og engasjement.
-
-Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Tigerstaden](https://blog.variant.no/hei-oslo-717ea91e45b9).
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
 ## Hvem ser vi etter?
 

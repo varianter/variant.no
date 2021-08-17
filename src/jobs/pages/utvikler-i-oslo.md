@@ -8,23 +8,21 @@ meta_description: Vi ser etter en dyktig og erfaren utvikler med entreprenørån
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta.png
 ---
 
-## Vi søker etter noen som vil utvikle Oslo
+## Vi søker etter noen vil være med oss å bygge Variant Oslo!
 
 ![Varianter på en takterrasse](/images/utvikler-takterrasse.png)
 
-Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
-
-Les mer om våre Oslo-vyer i [denne brosjyren](https://variant.no/oslovyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Tigerstaden](https://blog.variant.no/hei-oslo-717ea91e45b9).
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
 ## Hvem ser vi etter?
 
-Vi ser etter en erfaren utvikler som har jobbet noen år med ett eller flere av følgende områder:
+Vi ser etter en utvikler som har jobbet noen år med ett eller flere av følgende områder:
 
-- Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier.
-- Utvikling mot og i Azure, GCP eller AWS.
-- Backendutvikling med .NET, Java eller Kotlin.
+- Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier
+- Utvikling mot og i Azure, GCP, AWS eller lignende skyplattformer
+- Backendutvikling med .NET, Java eller Kotlin
 
-Vi skal nå etablere et oppstartsteam og ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Dette er en person som skal være med å etablere kultur og finne retning sammen med resten av oppstartsteamet i Oslo. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at våre første varianter har verdi- og tankesett som harmonerer med disse.
+Vi ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Dette er en person som skal være med å etablere kultur og finne retning sammen med resten av oppstartsteamet i Oslo. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at du har verdi- og tankesett som harmonerer med disse.
 
 Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
@@ -34,11 +32,11 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 <div class="left"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
-**_Prosjekter_** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen, Miljødirektoratet, Lånekassen for å nevne noen.
+**_Prosjekter_:** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Helsedirektoratet, Sparebank 1, Skatteetaten og Lånekassen for å nevne noen.
 
-**_Salg_** I tillegg er vi avhengig av dyktige tekniske ressurser med kommersiell teft i salgsarbeidet for å utarbeide gode tilbud. Ikke minst vil du også være sentral i utformingen av strategien for, og gjennomføringen av den teknisk faglige utviklingen.
+**_Læreglede_:** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
-**_Læreglede_** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av et oppstartesteam som tar et særlig ansvar i å forme strukturer og prosesser som leder til smittsom faglig utvikling og ønske om å lære. (Om 6 måneder begynner noen langt mindre erfarne som trenger deg som forbilde.)
+**_Mulighet til å påvirke_:** Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
 
 ## Lønn og kompensasjoner
 

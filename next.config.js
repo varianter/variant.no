@@ -46,7 +46,17 @@ module.exports = withPlugins([withImages], {
       },
       {
         source: '/jobs/seniorutvikler-i-oslo',
-        destination: '/jobs/erfaren-utvikler-i-oslo',
+        destination: '/jobs/utvikler-i-oslo',
+        permanent: true,
+      },
+      {
+        source: '/jobs/erfaren-utvikler-i-oslo',
+        destination: '/jobs/utvikler-i-oslo',
+        permanent: true,
+      },
+      {
+        source: '/jobs/erfaren-designer-i-oslo',
+        destination: '/jobs/designer-i-oslo',
         permanent: true,
       },
     ];
