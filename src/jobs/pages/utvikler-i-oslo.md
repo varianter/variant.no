@@ -34,11 +34,11 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 <div class="left"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
-**_Prosjekter_:** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Helsedirektoratet, Sparebank 1, Skatteetaten og Lånekassen for å nevne noen.
+**_Prosjekter_** - Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Helsedirektoratet, Sparebank 1, Skatteetaten og Lånekassen for å nevne noen.
 
-**_Læreglede_:** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
+**_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
-**_Mulighet til å påvirke_:** Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
+**_Mulighet til å påvirke_** - Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
 
 ## Lønn og kompensasjoner
 

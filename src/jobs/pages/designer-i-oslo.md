@@ -1,9 +1,9 @@
 ---
 title: Designer i Oslo
-h1_title: Erfaren designer med entreprenørånd
+h1_title: En variant av en designer
 slug: erfaren-designer-i-oslo
-contact_emails: te@variant.no, mk@variant.no
-meta_title: Vi søker designer til Variant Oslo!
+contact_emails: lel@variant.no
+meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en dyktig designer som vil være med å bygge Variant Oslo!
 meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
 ---
@@ -12,9 +12,9 @@ meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
 
 ![Varianter på en takterasse](/images/design-takterasse.png)
 
-Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss.
+Det er det vi ønsker du skal gjøre, _- sammen med flere og sammen med oss._
 
-Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur. Her oppdager vi nesten alltid at en helhetlig tilnærming til design tilfører ekstra verdi og engasjement.
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
 ## Hvem ser vi etter?
 
@@ -41,11 +41,11 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-**_Prosjekter_:** Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Helsedirektoratet, Sparebank 1, Skatteetaten og Lånekassen for å nevne noen.
+**_Prosjekter_** - Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Helsedirektoratet, Sparebank 1, Skatteetaten og Lånekassen for å nevne noen.
 
-**_Læreglede_** For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
+**_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
-**_Mulighet til å påvirke_** Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
+**_Mulighet til å påvirke_** - Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
 
 ## Lønn og kompensasjoner
 
@@ -70,4 +70,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer i Variant konsern Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår Chief Design Officer Lars Erik Løwenborg.
