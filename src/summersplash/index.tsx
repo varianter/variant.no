@@ -16,14 +16,14 @@ import Layout from 'src/splashLayout';
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
-  const [mode, setMode] = useState<'internship' | 'job'>('internship');
+  const [mode, setMode] = useState('internship');
 
   const handleToggle = () => {
     mode === 'internship' ? setMode('job') : setMode('internship');
   };
 
   return (
-    <Layout>
+    <Layout mode={mode}>
       <Head>
         <meta
           property="og:url"
@@ -56,7 +56,12 @@ const SummerSplash: NextPage<
         {mode === 'job' && <title>Variant - Din neste jobb?</title>}
       </Head>
 
-      <section className={style.firstSection}>
+      <section
+        className={style.firstSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#FFDCD7' : '#FAD2E2',
+        }}
+      >
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>

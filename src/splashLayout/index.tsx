@@ -10,12 +10,14 @@ const favicon = require('@variant/profile/lib/logo/favicon.png');
 type LayoutProps = {
   title?: string;
   fullWidth?: boolean;
+  mode?: string;
 };
 
 const SplashLayout: React.FC<LayoutProps> = ({
   children,
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
+  mode,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
@@ -61,7 +63,12 @@ const SplashLayout: React.FC<LayoutProps> = ({
           <h1 className={style.header__logo}>
             <Link href="/">
               <a>
-                <img src={require('./variant.svg')} alt="Variant" />
+                <img
+                  src={require(mode === 'job'
+                    ? './variant-white.svg'
+                    : './variant.svg')}
+                  alt="Variant"
+                />
               </a>
             </Link>
           </h1>
