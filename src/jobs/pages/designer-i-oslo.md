@@ -1,7 +1,7 @@
 ---
 title: Designer i Oslo
 h1_title: En variant av en designer
-slug: erfaren-designer-i-oslo
+slug: designer-i-oslo
 contact_emails: lel@variant.no
 meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en dyktig designer som vil være med å bygge Variant Oslo!

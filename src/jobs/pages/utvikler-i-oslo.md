@@ -1,7 +1,7 @@
 ---
 title: Utvikler
 h1_title: En variant av en utvikler
-slug: erfaren-utvikler-i-oslo
+slug: utvikler-i-oslo
 contact_emails: nikolai@variant.no
 meta_title: En variant av en utvikler
 meta_description: Vil du være med oss å bygge Variant Oslo?
