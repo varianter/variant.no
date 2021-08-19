@@ -122,7 +122,7 @@
 
 .header__dark {
   composes: header;
-  background-color: purple;
+  background-color: #423d89;
   transition: 1000ms linear;
 }
 
@@ -211,7 +211,8 @@
   .header__nav__ul {
     width: 100%;
     position: fixed;
-    right: 0rem;
+    right: 0;
+    padding-left: 4rem;
     height: 100%;
     z-index: 100;
     flex-wrap: wrap;
@@ -226,17 +227,17 @@
 
   .header__nav__ul li a {
     cursor: pointer;
-    font-size: 1.1rem;
-    font-family: Recoleta, serif;
+    font-size: 2.5rem;
+    font-family: Graphik, serif;
     color: var(--color-standard__black);
   }
 
   .header__nav__ul li:first-child {
-    margin-top: 3.5rem;
+    margin-top: 5rem;
   }
 
   .header__nav__ul li {
-    margin-top: 0.5rem;
+    margin-top: 2rem;
   }
 
   .burgerButtonContainer {
@@ -251,7 +252,7 @@
 
   .header__nav__ul_dark {
     composes: header__nav__ul;
-    background-color: purple;
+    background-color: #423d89;
   }
 
   .header__nav__ul_dark li a {
