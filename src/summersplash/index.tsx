@@ -10,7 +10,6 @@ import { getStaticProps } from 'pages/jobs';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import { and } from 'src/utils/css';
-import { Button } from 'src/components/button';
 import Layout from 'src/splashLayout';
 
 const SummerSplash: NextPage<
