@@ -79,6 +79,7 @@ h3 {
 }
 
 .leftTab {
+  border: none;
   width: 50vw;
   height: 3rem;
   text-align: center;
@@ -87,9 +88,7 @@ h3 {
 }
 
 .rightTab {
-  width: 50vw;
-  height: 3rem;
-  text-align: center;
+  composes: leftTab;
   background-color: #028377;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

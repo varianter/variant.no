@@ -58,10 +58,14 @@ const SummerSplash: NextPage<
 
       <section className={style.modeTabs}>
         <a onClick={() => handleToggle('internship')}>
-          <div className={style.leftTab}>Sommerjobb</div>
+          <button className={style.leftTab}>
+            <h4>Sommerjobb</h4>
+          </button>
         </a>
         <a onClick={() => handleToggle('job')}>
-          <div className={style.rightTab}>Fastjobb</div>
+          <button className={style.rightTab}>
+            <h4>Fastjobb</h4>
+          </button>
         </a>
       </section>
 
