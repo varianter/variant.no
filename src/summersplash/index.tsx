@@ -75,7 +75,7 @@ const SummerSplash: NextPage<
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>
             <h1 className={style.job_title}>
-              Vil du bli en sommervariant i 2022?
+              Er du en av våre 10 sommervarianter i 2022?
             </h1>
             <img
               className={style.arrow}
@@ -92,7 +92,9 @@ const SummerSplash: NextPage<
         {mode === 'job' && (
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>
-            <h1 className={style.job_title}>Vil du bli en variant i 2022?</h1>
+            <h1 className={style.job_title}>
+              Er du en av våre fire nye varianter?
+            </h1>
             <img
               className={style.arrow}
               aria-label="Pil som forklarer at Variant i 2022 tilbyr fast jobb både i Trondheim og Oslo"
