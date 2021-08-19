@@ -73,6 +73,7 @@ const SummerSplash: NextPage<
         className={style.firstSection}
         style={{
           backgroundColor: mode === 'job' ? '#028377' : '#FAD2E2',
+          color: mode === 'job' ? 'white' : '#333333',
         }}
       >
         {mode === 'internship' && (
