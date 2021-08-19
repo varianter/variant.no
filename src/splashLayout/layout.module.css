@@ -228,7 +228,9 @@
   .header__nav__ul li a {
     cursor: pointer;
     font-size: 2.5rem;
-    font-family: Graphik, serif;
+    font-family: Graphik, sans-serif;
+    src: url('/Graphik-Web.woff2') format('woff2'),
+      url('/Graphik-Web.woff') format('woff');
     color: var(--color-standard__black);
   }
 

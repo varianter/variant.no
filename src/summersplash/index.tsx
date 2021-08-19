@@ -18,8 +18,8 @@ const SummerSplash: NextPage<
 > = () => {
   const [mode, setMode] = useState('internship');
 
-  const handleToggle = () => {
-    mode === 'internship' ? setMode('job') : setMode('internship');
+  const handleToggle = (newMode: 'job' | 'internship') => {
+    newMode === 'job' ? setMode('job') : setMode('internship');
   };
 
   return (
@@ -62,6 +62,14 @@ const SummerSplash: NextPage<
           backgroundColor: mode === 'job' ? '#FFDCD7' : '#FAD2E2',
         }}
       >
+        <section className={style.modeTabs}>
+          <a onClick={() => handleToggle('internship')}>
+            <div className={style.leftTab}>Sommerjobb</div>
+          </a>
+          <a onClick={() => handleToggle('job')}>
+            <div className={style.rightTab}>Fastjobb</div>
+          </a>
+        </section>
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>
@@ -95,8 +103,6 @@ const SummerSplash: NextPage<
             </h4>
           </section>
         )}
-
-        <Button onClick={handleToggle}>Skift modus</Button>
 
         <div className={style.imageBlob}>
           <BaseBlob
