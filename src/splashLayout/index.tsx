@@ -86,19 +86,19 @@ const SplashLayout: React.FC<LayoutProps> = ({
           >
             <div
               className={and(
-                style.bar1,
+                mode === 'job' ? style.bar1_dark : style.bar1,
                 isMenuVisible ? style.bar1_change : '',
               )}
             />
             <div
               className={and(
-                style.bar2,
+                mode === 'job' ? style.bar2_dark : style.bar2,
                 isMenuVisible ? style.bar2_change : '',
               )}
             />
             <div
               className={and(
-                style.bar3,
+                mode === 'job' ? style.bar3_dark : style.bar3,
                 isMenuVisible ? style.bar3_change : '',
               )}
             />

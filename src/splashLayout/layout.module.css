@@ -67,6 +67,53 @@
   color: rgba(0, 0, 0, 0);
 }
 
+.burgerButtonContainer {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.burgerButtonContainer:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(21, 156, 228, 0.4);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: relative;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: var(--color-secondary1);
+  margin: 0.29rem 0;
+  transition: 0.3s;
+}
+
+.bar1_change,
+.bar2_change,
+.bar3_change {
+  composes: bar1;
+}
+
+.bar1_change {
+  -webkit-transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+  transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+}
+
+.bar2_change {
+  opacity: 0;
+}
+
+.bar3_change {
+  -webkit-transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+  transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+}
+
 /* CSS for dark theme navbar */
 
 .header__dark {
@@ -105,52 +152,38 @@
   transition: color 0.2s ease-in-out;
 }
 
-/* END CSS for dark theme navbar */
-
-.burgerButtonContainer {
-  background-color: transparent;
-  border: 0;
-  font-size: 1.2rem;
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
-}
-
-.burgerButtonContainer:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.15rem rgba(21, 156, 228, 0.4);
-}
-
-.bar1,
-.bar2,
-.bar3 {
+.bar1_dark,
+.bar2_dark,
+.bar3_dark {
   position: relative;
   width: 1.8rem;
   height: 0.2rem;
-  background-color: var(--color-secondary1);
+  background-color: white;
   margin: 0.29rem 0;
   transition: 0.3s;
 }
 
-.bar1_change,
-.bar2_change,
-.bar3_change {
-  composes: bar1;
+.bar1_dark_change,
+.bar2_dark_change,
+.bar3_dark_change {
+  composes: bar1_dark;
 }
 
-.bar1_change {
+.bar1_dark_change {
   -webkit-transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
   transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
 }
-.bar2_change {
+
+.bar2_dark_change {
   opacity: 0;
 }
-.bar3_change {
+
+.bar3_dark_change {
   -webkit-transform: rotate(45deg) translate(-0.35rem, -0.35rem);
   transform: rotate(45deg) translate(-0.35rem, -0.35rem);
 }
+
+/* END CSS for dark theme navbar */
 
 @media (max-width: 600px) {
   .header__nav {
