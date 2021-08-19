@@ -90,6 +90,7 @@ h3 {
 .rightTab {
   composes: leftTab;
   background-color: #028377;
+  color: white;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
