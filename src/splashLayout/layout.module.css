@@ -41,6 +41,10 @@
   transition: 0.4s;
 }
 
+.header__nav__ul_dark {
+  composes: header__nav__ul;
+}
+
 .header__nav a {
   display: block;
   color: var(--color-standard__white--text);
@@ -243,6 +247,15 @@
   .header__logo img {
     margin-top: 1.85rem;
     margin-left: 1.3rem;
+  }
+
+  .header__nav__ul_dark {
+    composes: header__nav__ul;
+    background-color: purple;
+  }
+
+  .header__nav__ul_dark li a {
+    color: white;
   }
 }
 

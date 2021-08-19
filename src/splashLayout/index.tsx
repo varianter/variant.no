@@ -113,7 +113,14 @@ const SplashLayout: React.FC<LayoutProps> = ({
             aria-hidden={!isMenuVisible}
             ref={modalRef}
           >
-            <ul className={style.header__nav__ul} ref={navRef}>
+            <ul
+              className={
+                mode === 'job'
+                  ? style.header__nav__ul_dark
+                  : style.header__nav__ul
+              }
+              ref={navRef}
+            >
               <li>
                 <a
                   href="http://handbook.variant.no"
