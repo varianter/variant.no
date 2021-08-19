@@ -72,6 +72,7 @@
 .header__dark {
   composes: header;
   background-color: purple;
+  transition: 1000ms linear;
 }
 
 .header__nav_dark {
@@ -81,6 +82,7 @@
 .header__nav_dark a {
   display: block;
   color: white;
+  transition: 1000ms linear;
   text-decoration: none;
   padding: 1.2rem;
   font-size: 1rem;
