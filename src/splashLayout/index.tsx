@@ -59,7 +59,7 @@ const SplashLayout: React.FC<LayoutProps> = ({
           fullWidth ? style.main__innerFullWidth : '',
         )}
       >
-        <header className={style.header}>
+        <header className={mode === 'job' ? style.header__dark : style.header}>
           <h1 className={style.header__logo}>
             <Link href="/">
               <a>
@@ -106,7 +106,7 @@ const SplashLayout: React.FC<LayoutProps> = ({
 
           <nav
             className={and(
-              style.header__nav,
+              mode === 'job' ? style.header__nav_dark : style.header__nav,
               isMenuVisible ? '' : style.header__nav__hidden,
             )}
             aria-labelledby="menu-label"

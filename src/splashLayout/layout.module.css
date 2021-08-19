@@ -59,12 +59,51 @@
   background-clip: text;
   transition: color 0.2s ease-in-out;
 }
+
 .header__nav li:nth-child(2n) a {
   background-position-x: right;
 }
 .header__nav a:hover {
   color: rgba(0, 0, 0, 0);
 }
+
+/* CSS for dark theme navbar */
+
+.header__dark {
+  composes: header;
+  background-color: purple;
+}
+
+.header__nav_dark {
+  composes: header__nav;
+}
+
+.header__nav_dark a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.header__nav_dark li:nth-child(2n) a {
+  background-position-x: right;
+}
+
+.header__nav_dark a:hover {
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+
+/* END CSS for dark theme navbar */
 
 .burgerButtonContainer {
   background-color: transparent;
