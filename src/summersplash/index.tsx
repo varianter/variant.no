@@ -56,20 +56,21 @@ const SummerSplash: NextPage<
         {mode === 'job' && <title>Variant - Din neste jobb?</title>}
       </Head>
 
+      <section className={style.modeTabs}>
+        <a onClick={() => handleToggle('internship')}>
+          <div className={style.leftTab}>Sommerjobb</div>
+        </a>
+        <a onClick={() => handleToggle('job')}>
+          <div className={style.rightTab}>Fastjobb</div>
+        </a>
+      </section>
+
       <section
         className={style.firstSection}
         style={{
-          backgroundColor: mode === 'job' ? '#FFDCD7' : '#FAD2E2',
+          backgroundColor: mode === 'job' ? '#028377' : '#FAD2E2',
         }}
       >
-        <section className={style.modeTabs}>
-          <a onClick={() => handleToggle('internship')}>
-            <div className={style.leftTab}>Sommerjobb</div>
-          </a>
-          <a onClick={() => handleToggle('job')}>
-            <div className={style.rightTab}>Fastjobb</div>
-          </a>
-        </section>
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
             <span>Søk senest 3. oktober</span>
