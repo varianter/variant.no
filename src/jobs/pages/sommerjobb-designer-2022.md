@@ -34,7 +34,7 @@ Som sommerjobber hos oss får du oppfølging og tilrettelegging for å lære så
 
 <div class="left sm blob2">
 
-![pink blob](/work_images/sommeransatte_i_diskusjon_2021.jpg)
+<div class="left"><img alt="Sommeransatte i diskusjon" src="/work_images/sommeransatte_i_diskusjon_2021.jpg"/></div>
 
 </div>
 
