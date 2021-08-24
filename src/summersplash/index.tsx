@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import DefaultErrorPage from 'next/error';
+import ScrollingColorBackground from 'react-scrolling-color-background';
 
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
@@ -79,12 +80,16 @@ const SummerSplash: NextPage<
         </Link>
       </section>
 
+      <ScrollingColorBackground
+        selector=".splashSection[data-background-color]"
+        colorDataAttribute="data-background-color"
+        initialRgb="#FAD2E2"
+      />
+
       <section
-        className={style.firstSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#028377' : '#FAD2E2',
-          color: mode === 'job' ? 'white' : '#333333',
-        }}
+        key={0}
+        className={and(style.firstSection, 'splashSection')}
+        data-background-color={'#FAD2E2'}
       >
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
@@ -135,11 +140,9 @@ const SummerSplash: NextPage<
       </section>
 
       <section
-        className={style.secondSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#FAD2E2' : '#423D89',
-          color: mode === 'job' ? '#333333' : 'white',
-        }}
+        key={1}
+        className={and(style.secondSection, 'splashSection')}
+        data-background-color={'#423D89'}
       >
         <section className={style.leftText}>
           <h3>Hva går sommerjobben ut på?</h3>
@@ -200,11 +203,9 @@ const SummerSplash: NextPage<
       </section>
 
       <section
-        className={style.thirdSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#423D89' : '#F4F1E7',
-          color: mode === 'job' ? 'white' : '#333333',
-        }}
+        key={2}
+        className={and(style.thirdSection, 'splashSection')}
+        data-background-color={'#F4F1E7'}
       >
         <section className={style.leftText}>
           <h3>Hvorfor jobbe i Variant?</h3>
@@ -265,11 +266,9 @@ const SummerSplash: NextPage<
       </section>
 
       <section
-        className={style.fourthSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#FAD2E2' : '#028377',
-          color: mode === 'job' ? '#333333' : 'white',
-        }}
+        key={3}
+        className={and(style.fourthSection, 'splashSection')}
+        data-background-color={'#028377'}
       >
         <h3>Hva skjer etter søknadsfristen?</h3>
         <section className={style.leftText}>
@@ -342,11 +341,9 @@ const SummerSplash: NextPage<
       </section>
 
       <section
-        className={style.fifthSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#028377' : '#FFDCD7',
-          color: mode === 'job' ? 'white' : '#333333',
-        }}
+        key={4}
+        className={and(style.fifthSection, 'splashSection')}
+        data-background-color={'#FFDCD7'}
       >
         <section className={style.rightText}>
           <h3>Hva ser vi etter i en søknad?</h3>
@@ -385,11 +382,9 @@ const SummerSplash: NextPage<
       </section>
 
       <section
-        className={style.sixtSection}
-        style={{
-          backgroundColor: mode === 'job' ? '#F4F1E7' : '#423D89',
-          color: mode === 'job' ? '#333333' : 'white',
-        }}
+        key={5}
+        className={and(style.sixtSection, 'splashSection')}
+        data-background-color={'#423D89'}
       >
         <section className={style.leftText}>
           <section className={style.applyLinksContainer}>

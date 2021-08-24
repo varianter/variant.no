@@ -56,7 +56,6 @@ h3 {
 .firstSection {
   composes: splashSection;
   padding: 0;
-  background-color: #fad2e2;
   grid-template-columns: 20% 1fr 1fr 20%;
   grid-template-rows: 20% 1fr 20%;
   grid-template-areas:
@@ -109,7 +108,6 @@ h3 {
 
 .secondSection {
   composes: splashSection;
-  background-color: #01574f;
   color: white;
 }
 
@@ -124,7 +122,6 @@ h3 {
 
 .thirdSection {
   composes: splashSection;
-  background-color: #f4f1e7;
 }
 
 .thirdSection > .leftText > p > a {
@@ -158,8 +155,6 @@ h3 {
   grid-template-areas:
     'title title title'
     'center-left . center-right';
-  background-color: #423d89;
-  color: white;
 }
 
 .fourthSection > h3 {
@@ -224,7 +219,6 @@ h3 {
 
 .fifthSection {
   composes: splashSection;
-  background-color: #ffdcd7;
 }
 
 .fifthSection > .imageBlob {
@@ -242,8 +236,6 @@ h3 {
 
 .sixtSection {
   composes: splashSection;
-  background-color: #01574f;
-  color: white;
 }
 
 .sixtSection > .imageBlob {
