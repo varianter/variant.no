@@ -1,6 +1,6 @@
 // Based on existing Jobs page
 
-import React, { useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -27,6 +27,10 @@ const SummerSplash: NextPage<
   const [mode, setMode] = useState(
     router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job',
   );
+
+  useEffect(() => {
+    setMode(router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job');
+  }, [router.query.dynamicPath]);
 
   return (
     <Layout mode={mode}>
@@ -63,16 +67,16 @@ const SummerSplash: NextPage<
       </Head>
 
       <section className={style.modeTabs}>
-        <a onClick={() => handleToggle('internship')}>
+        <Link href="/sommerjobb">
           <button className={style.leftTab}>
             <h4>Sommerjobb</h4>
           </button>
-        </a>
-        <a onClick={() => handleToggle('job')}>
+        </Link>
+        <Link href="/nyutdannet">
           <button className={style.rightTab}>
             <h4>Fastjobb</h4>
           </button>
-        </a>
+        </Link>
       </section>
 
       <section
