@@ -10,7 +10,6 @@
   font-weight: 500;
   transition: background-color 250ms ease-out;
   display: inline-block;
-  margin: 4rem 0;
 }
 .button:hover {
   background-color: var(--color-secondary1__tint1);
