@@ -134,7 +134,13 @@ const SummerSplash: NextPage<
         </div>
       </section>
 
-      <section className={style.secondSection}>
+      <section
+        className={style.secondSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#FAD2E2' : '#423D89',
+          color: mode === 'job' ? '#333333' : 'white',
+        }}
+      >
         <section className={style.leftText}>
           <h3>Hva går sommerjobben ut på?</h3>
           <div>
@@ -193,7 +199,13 @@ const SummerSplash: NextPage<
         </div>
       </section>
 
-      <section className={style.thirdSection}>
+      <section
+        className={style.thirdSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#423D89' : '#F4F1E7',
+          color: mode === 'job' ? 'white' : '#333333',
+        }}
+      >
         <section className={style.leftText}>
           <h3>Hvorfor jobbe i Variant?</h3>
 
@@ -252,7 +264,13 @@ const SummerSplash: NextPage<
         </section>
       </section>
 
-      <section className={style.fourthSection}>
+      <section
+        className={style.fourthSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#FAD2E2' : '#028377',
+          color: mode === 'job' ? '#333333' : 'white',
+        }}
+      >
         <h3>Hva skjer etter søknadsfristen?</h3>
         <section className={style.leftText}>
           <div>
@@ -323,7 +341,13 @@ const SummerSplash: NextPage<
         </section>
       </section>
 
-      <section className={style.fifthSection}>
+      <section
+        className={style.fifthSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#028377' : '#FFDCD7',
+          color: mode === 'job' ? 'white' : '#333333',
+        }}
+      >
         <section className={style.rightText}>
           <h3>Hva ser vi etter i en søknad?</h3>
 
@@ -360,7 +384,13 @@ const SummerSplash: NextPage<
         </div>
       </section>
 
-      <section className={style.sixtSection}>
+      <section
+        className={style.sixtSection}
+        style={{
+          backgroundColor: mode === 'job' ? '#F4F1E7' : '#423D89',
+          color: mode === 'job' ? '#333333' : 'white',
+        }}
+      >
         <section className={style.leftText}>
           <section className={style.applyLinksContainer}>
             <Link href="/jobs/utvikler-trondheim">
