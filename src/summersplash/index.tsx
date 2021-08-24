@@ -1,8 +1,10 @@
 // Based on existing Jobs page
 
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import DefaultErrorPage from 'next/error';
 
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
@@ -15,11 +17,16 @@ import Layout from 'src/splashLayout';
 const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
-  const [mode, setMode] = useState('internship');
+  const router = useRouter();
+  const queryedPage = router.query.dynamicPath;
 
-  const handleToggle = (newMode: 'job' | 'internship') => {
-    newMode === 'job' ? setMode('job') : setMode('internship');
-  };
+  if (queryedPage !== 'sommerjobb' && queryedPage !== 'nyutdannet') {
+    return <DefaultErrorPage statusCode={404} />;
+  }
+
+  const [mode, setMode] = useState(
+    router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job',
+  );
 
   return (
     <Layout mode={mode}>
