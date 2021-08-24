@@ -67,6 +67,12 @@ const SummerSplash: NextPage<
         {mode === 'job' && <title>Variant - Din neste jobb?</title>}
       </Head>
 
+      <ScrollingColorBackground
+        selector=".color-scroll-section[data-background-color]"
+        colorDataAttribute="data-background-color"
+        initialRgb="#FAD2E2"
+      />
+
       <section className={style.modeTabs}>
         <Link href="/sommerjobb">
           <button className={style.leftTab}>
@@ -80,15 +86,9 @@ const SummerSplash: NextPage<
         </Link>
       </section>
 
-      <ScrollingColorBackground
-        selector=".splashSection[data-background-color]"
-        colorDataAttribute="data-background-color"
-        initialRgb="#FAD2E2"
-      />
-
       <section
         key={0}
-        className={and(style.firstSection, 'splashSection')}
+        className={and(style.firstSection, 'color-scroll-section')}
         data-background-color={'#FAD2E2'}
       >
         {mode === 'internship' && (
@@ -141,7 +141,7 @@ const SummerSplash: NextPage<
 
       <section
         key={1}
-        className={and(style.secondSection, 'splashSection')}
+        className={and(style.secondSection, 'color-scroll-section')}
         data-background-color={'#423D89'}
       >
         <section className={style.leftText}>
@@ -204,7 +204,7 @@ const SummerSplash: NextPage<
 
       <section
         key={2}
-        className={and(style.thirdSection, 'splashSection')}
+        className={and(style.thirdSection, 'color-scroll-section')}
         data-background-color={'#F4F1E7'}
       >
         <section className={style.leftText}>
@@ -267,7 +267,7 @@ const SummerSplash: NextPage<
 
       <section
         key={3}
-        className={and(style.fourthSection, 'splashSection')}
+        className={and(style.fourthSection, 'color-scroll-section')}
         data-background-color={'#028377'}
       >
         <h3>Hva skjer etter søknadsfristen?</h3>
@@ -342,7 +342,7 @@ const SummerSplash: NextPage<
 
       <section
         key={4}
-        className={and(style.fifthSection, 'splashSection')}
+        className={and(style.fifthSection, 'color-scroll-section')}
         data-background-color={'#FFDCD7'}
       >
         <section className={style.rightText}>
@@ -383,7 +383,7 @@ const SummerSplash: NextPage<
 
       <section
         key={5}
-        className={and(style.sixtSection, 'splashSection')}
+        className={and(style.sixtSection, 'color-scroll-section')}
         data-background-color={'#423D89'}
       >
         <section className={style.leftText}>
