@@ -5,8 +5,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import DefaultErrorPage from 'next/error';
-import ScrollingColorBackground from 'react-scrolling-color-background';
 
+// @ts-ignore
+import ScrollingColorBackground from 'react-scrolling-color-background';
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
