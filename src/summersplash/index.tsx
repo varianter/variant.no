@@ -434,10 +434,6 @@ const SummerSplash: NextPage<
         />
 
         <img
-          className={style.finalBlob}
-          src={require('./images/bunnblob.png')}
-        />
-        <img
           className={style.variantLogo}
           src={require('./images/variant-white.svg')}
           role="none"
