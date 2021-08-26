@@ -164,12 +164,16 @@ h3 {
   bottom: 0;
 }
 
-.timelineContainer {
+.calculatorContainer {
   grid-area: center-right;
   position: relative;
   z-index: 1;
-  padding-left: 33.5px;
   height: fit-content;
+}
+
+.timelineContainer {
+  composes: calculatorContainer;
+  padding-left: 33.5px;
 }
 
 .timelineContainer::before {

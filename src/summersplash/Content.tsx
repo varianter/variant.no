@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import style from './index.module.css';
 import Link from 'next/link';
 
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import { and } from 'src/utils/css';
+import { Calculator } from '../salary-calculator';
 
 interface ContentProps {
   mode: 'job' | 'internship';
@@ -411,8 +412,8 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'job' && (
-          <section className={style.timelineContainer}>
-            <p>Her kommer lønnskalkulator</p>
+          <section className={style.calculatorContainer}>
+            <Calculator year={2021} degree={'masters'} />
           </section>
         )}
       </section>
