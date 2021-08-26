@@ -70,7 +70,7 @@ const SummerSplash: NextPage<
       <ScrollingColorBackground
         selector=".color-scroll-section[data-background-color]"
         colorDataAttribute="data-background-color"
-        initialRgb="#FAD2E2"
+        initialRgb={mode === 'job' ? '#028377' : '#FAD2E2'}
       />
 
       <section className={style.modeTabs}>

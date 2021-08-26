@@ -16,7 +16,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={0}
         className={and(style.firstSection, 'color-scroll-section')}
-        data-background-color={'#FAD2E2'}
+        data-background-color={mode === 'job' ? '#028377' : '#FAD2E2'}
       >
         {mode === 'internship' && (
           <section className={style.mainTitleSection}>
@@ -69,7 +69,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={1}
         className={and(style.secondSection, 'color-scroll-section')}
-        data-background-color={'#423D89'}
+        data-background-color={mode === 'job' ? '#FFDCD7' : '#423D89'}
       >
         <section className={style.leftText}>
           <h3>Hva går sommerjobben ut på?</h3>
@@ -132,7 +132,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={2}
         className={and(style.thirdSection, 'color-scroll-section')}
-        data-background-color={'#F4F1E7'}
+        data-background-color={mode === 'job' ? '#423D89' : '#F4F1E7'}
       >
         <section className={style.leftText}>
           <h3>Hvorfor jobbe i Variant?</h3>
@@ -197,7 +197,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={3}
         className={and(style.fourthSection, 'color-scroll-section')}
-        data-background-color={'#028377'}
+        data-background-color={mode === 'job' ? '#FAD2E2' : '#028377'}
       >
         <h3>Hva skjer etter søknadsfristen?</h3>
         <section className={style.leftText}>
@@ -272,7 +272,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={4}
         className={and(style.fifthSection, 'color-scroll-section')}
-        data-background-color={'#FFDCD7'}
+        data-background-color={mode === 'job' ? '#028377' : '#FFDCD7'}
       >
         <section className={style.rightText}>
           <h3>Hva ser vi etter i en søknad?</h3>
@@ -313,7 +313,7 @@ export default function ContentComponent({ mode }: ContentProps) {
       <section
         key={5}
         className={and(style.sixtSection, 'color-scroll-section')}
-        data-background-color={'#423D89'}
+        data-background-color={mode === 'job' ? '#F4F1E7' : '#423D89'}
       >
         <section className={style.leftText}>
           <section className={style.applyLinksContainer}>
