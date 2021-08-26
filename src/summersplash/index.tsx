@@ -21,10 +21,6 @@ const SummerSplash: NextPage<
   const router = useRouter();
   const queryedPage = router.query.dynamicPath;
 
-  if (queryedPage !== 'sommerjobb' && queryedPage !== 'nyutdannet') {
-    return <DefaultErrorPage statusCode={404} />;
-  }
-
   const [mode, setMode] = useState(
     router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job',
   );
@@ -32,6 +28,10 @@ const SummerSplash: NextPage<
   useEffect(() => {
     setMode(router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job');
   }, [router.query.dynamicPath]);
+
+  if (queryedPage !== 'sommerjobb' && queryedPage !== 'nyutdannet') {
+    return <DefaultErrorPage statusCode={404} />;
+  }
 
   return (
     <Layout mode={mode}>
