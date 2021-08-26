@@ -67,11 +67,21 @@ const SummerSplash: NextPage<
         {mode === 'job' && <title>Variant - Din neste jobb?</title>}
       </Head>
 
-      <ScrollingColorBackground
-        selector=".color-scroll-section[data-background-color]"
-        colorDataAttribute="data-background-color"
-        initialRgb={mode === 'job' ? '#028377' : '#FAD2E2'}
-      />
+      {mode === 'job' && (
+        <ScrollingColorBackground
+          selector=".color-scroll-section[data-background-color]"
+          colorDataAttribute="data-background-color"
+          initialRgb={'#028377'}
+        />
+      )}
+
+      {mode === 'internship' && (
+        <ScrollingColorBackground
+          selector=".color-scroll-section[data-background-color]"
+          colorDataAttribute="data-background-color"
+          initialRgb={'#FAD2E2'}
+        />
+      )}
 
       <section className={style.modeTabs}>
         <Link href="/sommerjobb">
