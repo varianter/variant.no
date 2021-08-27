@@ -97,6 +97,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   target="blank"
                   rel="noopener"
                   href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
+                  style={{ color: 'white' }}
                 >
                   Varianthuset i Trondheim sentrum
                 </a>{' '}
@@ -105,6 +106,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   target="blank"
                   rel="noopener"
                   href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
+                  style={{ color: 'white' }}
                 >
                   Kvadraturen i Oslo.
                 </a>
@@ -489,7 +491,7 @@ export default function ContentComponent({ mode }: ContentProps) {
           <section className={style.leftText}>
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
-                <a>
+                <a style={{ color: 'white' }}>
                   <h3>
                     Søk som designer
                     <span role="img" aria-label="blyant">
@@ -500,7 +502,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               </Link>
 
               <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
+                <a style={{ color: 'white' }}>
                   <h3>
                     Søk som utvikler
                     <span role="img" aria-label="datamaskin">
@@ -523,8 +525,13 @@ export default function ContentComponent({ mode }: ContentProps) {
                 - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
               </p>
               <p>
-                <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
-                <a href="tel:41637572">41 63 75 72</a>
+                <a style={{ color: 'white' }} href="mailto:mk@variant.no">
+                  mk@variant.no
+                </a>{' '}
+                |{' '}
+                <a style={{ color: 'white' }} href="tel:41637572">
+                  41 63 75 72
+                </a>
               </p>
             </div>
           </section>
