@@ -583,7 +583,9 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         <img
           className={style.variantLogo}
-          src={require('./images/variant-white.svg')}
+          src={require(mode === 'job'
+            ? './images/variant.svg'
+            : './images/variant-white.svg')}
           role="none"
         />
       </section>
