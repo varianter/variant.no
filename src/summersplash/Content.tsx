@@ -38,7 +38,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'job' && (
-          <section className={style.mainTitleSection}>
+          <section className={and(style.mainTitleSection, style.white)}>
             <span>Søk senest 3. oktober</span>
             <h1 className={style.job_title}>
               Er du en av våre fire nye varianter?
@@ -73,7 +73,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         data-background-color={mode === 'job' ? '#FFDCD7' : '#423D89'}
       >
         {mode === 'internship' && (
-          <section className={style.leftText}>
+          <section className={and(style.leftText, style.white)}>
             <h3>Hva går sommerjobben ut på?</h3>
             <div>
               <p>
@@ -157,7 +157,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'internship' && (
-          <div className={style.rightText}>
+          <div className={and(style.rightText, style.white)}>
             <BaseBlob
               seed="Variant"
               width={500}
@@ -239,7 +239,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'job' && (
-          <section className={style.leftText}>
+          <section className={and(style.leftText, style.white)}>
             <h3>Hva jobber vi med?</h3>
             <p>
               Variant er en variant av et konsulentselskap som er raust, åpent
@@ -304,8 +304,8 @@ export default function ContentComponent({ mode }: ContentProps) {
       >
         {mode === 'internship' && (
           <>
-            <h3>Hva skjer etter søknadsfristen?</h3>
-            <section className={style.leftText}>
+            <h3 className={style.white}>Hva skjer etter søknadsfristen?</h3>
+            <section className={and(style.leftText, style.white)}>
               <div>
                 <p>
                   Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer
@@ -369,7 +369,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         </div>
 
         {mode === 'internship' && (
-          <section className={style.timelineContainer}>
+          <section className={and(style.timelineContainer, style.white)}>
             <div className={style.timelineEvent}>
               <h4>Søknadsfrist</h4>
               <h5>3. oktober</h5>
@@ -423,20 +423,41 @@ export default function ContentComponent({ mode }: ContentProps) {
         className={and(style.fifthSection, 'color-scroll-section')}
         data-background-color={mode === 'job' ? '#028377' : '#FFDCD7'}
       >
-        <section className={style.rightText}>
-          <h3>Hva ser vi etter i en søknad?</h3>
+        {mode === 'internship' && (
+          <section className={style.rightText}>
+            <h3>Hva ser vi etter i en søknad?</h3>
 
-          <p>
-            Selv om vi liker å skille oss ut, setter vi pris på en søknad med
-            CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
-            et helhetlig bilde. Både av deg som person, din eksisterende
-            kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
-            sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
-            en bedre hverdag. Er det deg?
-          </p>
-        </section>
+            <p>
+              Selv om vi liker å skille oss ut, setter vi pris på en søknad med
+              CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
+              et helhetlig bilde. Både av deg som person, din eksisterende
+              kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
+              sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
+              en bedre hverdag. Er det deg?
+            </p>
+          </section>
+        )}
 
-        <section className={style.leftText}>
+        {mode === 'job' && (
+          <section className={and(style.rightText, style.white)}>
+            <h3>Hva ser vi etter i en søknad?</h3>
+
+            <p>
+              Selv om vi liker å skille oss ut, setter vi pris på en søknad med
+              CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
+              et helhetlig bilde. Både av deg som person, din eksisterende
+              kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
+              sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
+              en bedre hverdag. Er det deg?
+            </p>
+          </section>
+        )}
+
+        <section
+          className={
+            mode === 'job' ? and(style.leftText, style.white) : style.leftText
+          }
+        >
           <div className={style.applyArrow}>
             <h4>Du kan søke på neste side!</h4>
             <img
@@ -464,46 +485,95 @@ export default function ContentComponent({ mode }: ContentProps) {
         className={and(style.sixtSection, 'color-scroll-section')}
         data-background-color={mode === 'job' ? '#F4F1E7' : '#423D89'}
       >
-        <section className={style.leftText}>
-          <section className={style.applyLinksContainer}>
-            <Link href="/jobs/utvikler-trondheim">
-              <a className={style.applyLink}>
-                <h3>
-                  Søk som designer
-                  <span role="img" aria-label="blyant">
-                    ✏️
-                  </span>
-                </h3>
-              </a>
-            </Link>
+        {mode === 'internship' && (
+          <section className={style.leftText}>
+            <section className={style.applyLinksContainer}>
+              <Link href="/jobs/utvikler-trondheim">
+                <a>
+                  <h3>
+                    Søk som designer
+                    <span role="img" aria-label="blyant">
+                      ✏️
+                    </span>
+                  </h3>
+                </a>
+              </Link>
 
-            <Link href="/jobs/utvikler-trondheim">
-              <a className={style.applyLink}>
-                <h3>
-                  Søk som utvikler
-                  <span role="img" aria-label="datamaskin">
-                    💻
-                  </span>
-                </h3>
-              </a>
-            </Link>
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
+                  <h3>
+                    Søk som utvikler
+                    <span role="img" aria-label="datamaskin">
+                      💻
+                    </span>
+                  </h3>
+                </a>
+              </Link>
+            </section>
+
+            <div className={style.white}>
+              <p>
+                Vi håper du søker, og ser frem til å bli bedre kjent med deg.
+              </p>
+              <p>
+                Har du spørsmål om sommerjobbene eller Variant? Ta gjerne
+                kontakt med meg.
+              </p>
+              <p>
+                - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
+              </p>
+              <p>
+                <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
+                <a href="tel:41637572">41 63 75 72</a>
+              </p>
+            </div>
           </section>
+        )}
 
-          <div>
-            <p>Vi håper du søker, og ser frem til å bli bedre kjent med deg.</p>
-            <p>
-              Har du spørsmål om sommerjobbene eller Variant? Ta gjerne kontakt
-              med meg.
-            </p>
-            <p>
-              - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
-            </p>
-            <p>
-              <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
-              <a href="tel:41637572">41 63 75 72</a>
-            </p>
-          </div>
-        </section>
+        {mode === 'job' && (
+          <section className={style.leftText}>
+            <section className={style.applyLinksContainer}>
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
+                  <h3>
+                    Søk som designer
+                    <span role="img" aria-label="blyant">
+                      ✏️
+                    </span>
+                  </h3>
+                </a>
+              </Link>
+
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
+                  <h3>
+                    Søk som utvikler
+                    <span role="img" aria-label="datamaskin">
+                      💻
+                    </span>
+                  </h3>
+                </a>
+              </Link>
+            </section>
+
+            <div>
+              <p>
+                Vi håper du søker, og ser frem til å bli bedre kjent med deg.
+              </p>
+              <p>
+                Har du spørsmål om sommerjobbene eller Variant? Ta gjerne
+                kontakt med meg.
+              </p>
+              <p>
+                - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
+              </p>
+              <p>
+                <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
+                <a href="tel:41637572">41 63 75 72</a>
+              </p>
+            </div>
+          </section>
+        )}
 
         <img
           className={style.imageBlob}

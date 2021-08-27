@@ -9,6 +9,10 @@ p {
   z-index: 1;
 }
 
+.white {
+  color: white;
+}
+
 .logoblob {
   grid-area: logo;
   width: 450px;
@@ -18,7 +22,6 @@ p {
   position: absolute;
   top: 3rem;
   right: 3rem;
-  color: black;
 }
 
 h3 {
@@ -106,24 +109,10 @@ h3 {
 
 .secondSection {
   composes: splashSection;
-  color: white;
-}
-
-.secondSection {
-  color: white;
-}
-
-.leftText > div > p > a,
-.rightText > p > a {
-  color: white;
 }
 
 .thirdSection {
   composes: splashSection;
-}
-
-.thirdSection > .leftText > p > a {
-  color: black;
 }
 
 .handbookAd {
@@ -249,10 +238,6 @@ h3 {
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: space-between;
-}
-
-.applyLinksContainer > a {
-  color: white;
 }
 
 .finalBlob {
