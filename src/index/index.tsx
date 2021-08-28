@@ -47,30 +47,32 @@ const Home = ({
         rel="noopener"
       />
       <section className={style.omVariant}>
-        <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
+        <h2 className={style.omVariant__title}>
+          Hei, Oslo <img src={require('./images/wave.png')} alt="Wave emoji" />{' '}
+          <br />
+          Nå er vi i gang
+        </h2>
         <p className={style.omVariant__p1}>
-          IT handler ikke om designskisser, linjer av kode eller infrastruktur,
-          men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
-          endringsvilje.
+          I august åpnet dørene til Variant Oslo, og vi er supergira på å bygge
+          videre på de gode Variant-verdiene. Vi er allerede syv fine folk, og
+          flere skal vi bli. Kanskje du vil bli en av oss?
         </p>
 
         <img
           className={style.omVariant_image1}
-          src={require('./images/om-variant-1.png')}
+          src={require('./images/oslo-roof.png')}
           alt="Bilde av Kristin som sitter i en sofa"
         />
 
         <img
           className={style.omVariant_image2}
-          src={require('./images/om-variant-2.png')}
+          src={require('./images/oslo-street-boys.png')}
           alt="Bilde av Tonje og Odd Morten som sitter forran gamle Digs"
         />
 
         <div className={style.omVariant__us}>
-          <h3>Der er vi!</h3>
-          <p>
-            En variant av et konsulentselskap som er raust, åpent og læreglad.
-          </p>
+          <h3>Her er vi!</h3>
+          <p>Like rause, åpne og læreglade som varianter alltid har vært.</p>
         </div>
       </section>
 
@@ -78,7 +80,8 @@ const Home = ({
         <h2>Bli en variant!</h2>
         <p>
           For å kunne lage gode løsninger trenger vi forskjellige mennesker med
-          forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer.
+          forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer
+          både i Trondheim og Oslo!
         </p>
 
         <p>
