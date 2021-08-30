@@ -139,12 +139,12 @@ h3 {
   margin-top: 200px;
 }
 
-.handbookAd > .imageBlob {
+.groupArrow > .imageBlob {
   object-fit: contain;
   max-width: 100%;
 }
 
-.handbookAd {
+.groupArrow {
   grid-area: center-right;
   position: relative;
 }

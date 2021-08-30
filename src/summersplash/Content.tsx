@@ -269,7 +269,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         <section className={style.rightText}>
-          <div className={style.handbookAd}>
+          <div className={style.groupArrow}>
             {mode === 'internship' && (
               <>
                 <h4>Sommerstudentene i 2021</h4>
@@ -459,7 +459,9 @@ export default function ContentComponent({ mode }: ContentProps) {
             <img
               className={and(style.arrow, style.upsideDown)}
               aria-label="Pil som viser at du kan søke lenger nede på siden"
-              src={require('./images/pil.svg')}
+              src={require(mode === 'job'
+                ? './images/hvit-pil.svg'
+                : './images/pil.svg')}
             />
           </div>
         </section>
