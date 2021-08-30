@@ -491,6 +491,7 @@ export default function ContentComponent({ mode }: ContentProps) {
         key={5}
         className={and(style.sixtSection, 'color-scroll-section')}
         data-background-color={mode === 'job' ? '#F4F1E7' : '#423D89'}
+        ref={endRef}
       >
         {mode === 'internship' && (
           <section className={style.leftText}>
@@ -602,8 +603,6 @@ export default function ContentComponent({ mode }: ContentProps) {
             : './images/variant-white.svg')}
           role="none"
         />
-
-        <div ref={endRef}></div>
       </section>
     </>
   );
