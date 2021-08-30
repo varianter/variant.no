@@ -247,10 +247,14 @@ h3 {
 }
 
 .sixtSection > .imageBlob {
-  grid-area: center-right;
+  position: absolute;
+  top: -8rem;
+  right: 8rem;
 }
 
 .applyLinksContainer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
@@ -261,6 +265,24 @@ h3 {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.applyLink {
+  position: relative;
+}
+
+.applyLink > div {
+  position: absolute;
+  bottom: 0px;
+}
+
+.layerText {
+  position: relative;
+  bottom: 200px;
+  z-index: 100;
+  left: 3rem;
+  color: white;
+  text-decoration: none;
 }
 
 .variantLogo {

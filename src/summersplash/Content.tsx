@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { AnimatedBlob } from '@variant/components/lib/blob';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
@@ -495,31 +496,8 @@ export default function ContentComponent({ mode }: ContentProps) {
       >
         {mode === 'internship' && (
           <section className={style.leftText}>
-            <section className={style.applyLinksContainer}>
-              <Link href="/jobs/utvikler-trondheim">
-                <a style={{ color: 'white' }}>
-                  <h3>
-                    Søk som designer
-                    <span role="img" aria-label="blyant">
-                      ✏️
-                    </span>
-                  </h3>
-                </a>
-              </Link>
-
-              <Link href="/jobs/utvikler-trondheim">
-                <a style={{ color: 'white' }}>
-                  <h3>
-                    Søk som utvikler
-                    <span role="img" aria-label="datamaskin">
-                      💻
-                    </span>
-                  </h3>
-                </a>
-              </Link>
-            </section>
-
             <div className={style.white}>
+              <h3>Søk sommerjobb</h3>
               <p>
                 Vi håper du søker, og ser frem til å bli bedre kjent med deg.
               </p>
@@ -541,14 +519,10 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </p>
             </div>
-          </section>
-        )}
 
-        {mode === 'job' && (
-          <section className={style.leftText}>
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
+                <a style={{ color: 'white' }}>
                   <h3>
                     Søk som designer
                     <span role="img" aria-label="blyant">
@@ -559,7 +533,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               </Link>
 
               <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
+                <a style={{ color: 'white' }}>
                   <h3>
                     Søk som utvikler
                     <span role="img" aria-label="datamaskin">
@@ -569,8 +543,13 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
             </section>
+          </section>
+        )}
 
+        {mode === 'job' && (
+          <section className={style.leftText}>
             <div>
+              <h3>Søk fast jobb</h3>
               <p>
                 Vi håper du søker, og ser frem til å bli bedre kjent med deg.
               </p>
@@ -587,6 +566,54 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <a href="mailto:mk@variant.no">mk@variant.no</a>
               </p>
             </div>
+
+            <section className={style.applyLinksContainer}>
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
+                  <div>
+                    <AnimatedBlob
+                      height={500}
+                      width={500}
+                      extraPoints={9}
+                      randomness={20}
+                      animationSpeed={10}
+                      seed={'5663717603842959'}
+                      color="#5F5D56"
+                    />
+                  </div>
+
+                  <h3 className={style.layerText}>
+                    Søk som designer
+                    <span role="img" aria-label="blyant">
+                      ✏️
+                    </span>
+                  </h3>
+                </a>
+              </Link>
+
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
+                  <div>
+                    <AnimatedBlob
+                      height={500}
+                      width={500}
+                      extraPoints={9}
+                      randomness={20}
+                      animationSpeed={10}
+                      seed={'5663717603842959'}
+                      color="#423D89"
+                    />
+                  </div>
+
+                  <h3 className={style.layerText}>
+                    Søk som utvikler
+                    <span role="img" aria-label="datamaskin">
+                      💻
+                    </span>
+                  </h3>
+                </a>
+              </Link>
+            </section>
           </section>
         )}
 
