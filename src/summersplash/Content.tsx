@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
@@ -9,6 +9,12 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
+  const endRef = useRef<null | HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    endRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section
@@ -17,38 +23,49 @@ export default function ContentComponent({ mode }: ContentProps) {
         data-background-color={mode === 'job' ? '#028377' : '#FAD2E2'}
       >
         {mode === 'internship' && (
-          <section className={style.mainTitleSection}>
+          <section>
+            <section className={style.arrowContainer}>
+              <h4>
+                Enten i Trondheim eller Oslo!{' '}
+                <span aria-label="konfetti-emoji">🎉</span>
+              </h4>
+              <img
+                className={style.arrow}
+                aria-label="Pil som forklarer at Variant nå har kontorer i både Trondheim og Oslo"
+                src={require('./images/pil.svg')}
+              />
+            </section>
+
             <span>Søk senest 3. oktober</span>
             <h1 className={style.job_title}>
               Er du en av våre 10 sommervarianter i 2022?
             </h1>
-            <img
-              className={style.arrow}
-              aria-label="Pil som forklarer at Variant i 2022 tilbyr sommerjobb både i Trondheim og Oslo"
-              src={require('./images/pil.svg')}
-            />
-            <h4>
-              Enten i Trondheim eller Oslo!{' '}
-              <span aria-label="konfetti-emoji">🎉</span>
-            </h4>
+            <button onClick={scrollToBottom}>Søk sommerjobb</button>
           </section>
         )}
 
         {mode === 'job' && (
-          <section className={and(style.mainTitleSection, style.white)}>
+          <section className={style.white}>
+            <section className={style.arrowContainer}>
+              <h4>
+                Kontorer i både Trondheim og Oslo!{' '}
+                <span aria-label="konfetti-emoji">🎉</span>
+              </h4>
+              <img
+                className={style.arrow}
+                aria-label="Pil som forklarer at Variant i 2022 tilbyr fast jobb både i Trondheim og Oslo"
+                src={require(mode === 'job'
+                  ? './images/hvit-pil.svg'
+                  : './images/pil.svg')}
+              />
+            </section>
+
             <span>Søk senest 3. oktober</span>
             <h1 className={style.job_title}>
               Er du en av våre fire nye varianter?
             </h1>
-            <img
-              className={style.arrow}
-              aria-label="Pil som forklarer at Variant i 2022 tilbyr fast jobb både i Trondheim og Oslo"
-              src={require('./images/pil.svg')}
-            />
-            <h4>
-              Kontorer i både Trondheim og Oslo!{' '}
-              <span aria-label="konfetti-emoji">🎉</span>
-            </h4>
+
+            <button onClick={scrollToBottom}>Søk fast jobb</button>
           </section>
         )}
 
@@ -585,6 +602,8 @@ export default function ContentComponent({ mode }: ContentProps) {
             : './images/variant-white.svg')}
           role="none"
         />
+
+        <div ref={endRef}></div>
       </section>
     </>
   );

@@ -61,19 +61,19 @@ h3 {
 
 .firstSection {
   composes: splashSection;
-  padding: 0;
-  grid-template-columns: 20% 1fr 1fr 20%;
-  grid-template-rows: 20% 1fr 20%;
-  grid-template-areas:
-    'logo top fulltimelink fulltimelink'
-    'middle-left title title middle-right'
-    'bottom bottom bottom bottom';
+  display: block;
 }
 
 .firstSection > .imageBlob {
   position: absolute;
   bottom: -18rem;
   right: 8rem;
+}
+
+.firstSection .arrowContainer {
+  position: absolute;
+  top: 5%;
+  right: 10%;
 }
 
 .modeTabs {
@@ -97,19 +97,6 @@ h3 {
   background-color: #028377;
   color: white;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.mainTitleSection {
-  grid-area: title;
-  display: flex;
-  padding: 0 2rem;
-  align-items: left;
-  flex-direction: column;
-  text-align: left;
-}
-
-.fulltimelinkSection {
-  grid-area: fulltimelink;
 }
 
 .secondSection {
@@ -152,6 +139,7 @@ h3 {
 .arrow {
   height: 4rem;
   margin: 0;
+  transform: rotate(180deg);
 }
 
 .upsideDown {
