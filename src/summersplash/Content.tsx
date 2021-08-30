@@ -58,8 +58,8 @@ export default function ContentComponent({ mode }: ContentProps) {
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             color={colors.colorPairs.secondary3.default.bg}
             imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
@@ -160,15 +160,6 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'internship' && (
           <div className={and(style.rightText, style.white)}>
-            <BaseBlob
-              seed="Variant"
-              width={500}
-              height={500}
-              color={colors.colorPairs.secondary2.default.bg}
-              imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
-              alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-            />
-
             <p>
               Prosjektet varer i fire + to uker med tre uker ferie i
               mellomtiden, og vil gi god innsikt i hva det vil si å jobbe i
@@ -180,15 +171,6 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <div className={style.rightText}>
-            <BaseBlob
-              seed="Variant"
-              width={500}
-              height={500}
-              color={colors.colorPairs.secondary2.default.bg}
-              imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
-              alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-            />
-
             <p>
               Det er ikke viktig hvilket språk eller verktøy du bruker. Det er
               langt viktigere at du bryr deg. Bryr deg om koden du skriver, bryr
@@ -197,6 +179,17 @@ export default function ContentComponent({ mode }: ContentProps) {
             </p>
           </div>
         )}
+
+        <div className={style.blob}>
+          <BaseBlob
+            seed="Variant"
+            width={600}
+            height={600}
+            color={colors.colorPairs.secondary2.default.bg}
+            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
+            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
+          />
+        </div>
       </section>
 
       <section
@@ -286,8 +279,8 @@ export default function ContentComponent({ mode }: ContentProps) {
             <a href="https://handbook.variant.no/" target="blank">
               <BaseBlob
                 seed="Variant"
-                width={500}
-                height={500}
+                width={600}
+                height={600}
                 color={colors.colorPairs.secondary2.default.bg}
                 imageProps={{
                   src: require('./images/sommerjobbere2020.jpg'),
@@ -365,10 +358,6 @@ export default function ContentComponent({ mode }: ContentProps) {
             </section>
           </>
         )}
-
-        <div className={style.imageBlob}>
-          <BaseBlob seed="Variant" width={500} height={500} color={'#534DAC'} />
-        </div>
 
         {mode === 'internship' && (
           <section className={and(style.timelineContainer, style.white)}>
@@ -473,8 +462,8 @@ export default function ContentComponent({ mode }: ContentProps) {
         <div className={style.imageBlob}>
           <BaseBlob
             seed="Variant"
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             color={colors.colorPairs.secondary2.default.bg}
             imageProps={{ src: require('public/images/marius.png') }}
             alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"

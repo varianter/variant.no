@@ -33,6 +33,7 @@ h3 {
   min-height: 100vh;
   padding: 8rem;
   display: grid;
+  border: 1px solid yellow;
   grid-template-columns: 40% 20% 40%;
   grid-template-rows: 100%;
   grid-template-areas: 'center-left . center-right';
@@ -67,7 +68,7 @@ h3 {
 
 .firstSection > .imageBlob {
   position: absolute;
-  bottom: -25vh;
+  bottom: -500px;
   right: 0;
 }
 
@@ -111,8 +112,26 @@ h3 {
   composes: splashSection;
 }
 
+.secondSection > .leftText {
+  margin-bottom: 200px;
+}
+
+.secondSection > .rightText {
+  margin-top: 500px;
+}
+
+.secondSection > .blob {
+  position: absolute;
+  bottom: -300px;
+  left: 5%;
+}
+
 .thirdSection {
   composes: splashSection;
+}
+
+.thirdSection > .leftText {
+  margin-top: 200px;
 }
 
 .handbookAd {
@@ -146,11 +165,6 @@ h3 {
 
 .fourthSection > h3 {
   grid-area: title;
-}
-
-.fourthSection > .imageBlob {
-  position: absolute;
-  bottom: 0;
 }
 
 .calculatorContainer {
@@ -214,7 +228,7 @@ h3 {
 
 .fifthSection > .imageBlob {
   position: absolute;
-  top: -20vh;
+  top: -400px;
 }
 
 .fifthSection > .leftText {
@@ -223,6 +237,10 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+}
+
+.fifthSection > .rightText {
+  margin: 10rem 0;
 }
 
 .sixtSection {
