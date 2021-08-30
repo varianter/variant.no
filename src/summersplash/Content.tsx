@@ -55,16 +55,17 @@ export default function ContentComponent({ mode }: ContentProps) {
           </section>
         )}
 
-        <div className={style.imageBlob}>
-          <BaseBlob
-            seed="Variant"
-            width={800}
-            height={800}
-            color={colors.colorPairs.secondary3.default.bg}
-            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
+        <img
+          className={style.imageBlob}
+          src={require(mode === 'job'
+            ? './images/utvikler-jacob.png'
+            : './images/pekende.png')}
+          alt={
+            mode === 'job'
+              ? 'Bilde av geipende Jacob'
+              : 'Bilde av engasjert sommerstudent'
+          }
+        />
       </section>
 
       <section
@@ -180,16 +181,17 @@ export default function ContentComponent({ mode }: ContentProps) {
           </div>
         )}
 
-        <div className={style.blob}>
-          <BaseBlob
-            seed="Variant"
-            width={600}
-            height={600}
-            color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('./images/sommerjobbere2020.jpg') }}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
+        <img
+          className={style.imageBlob}
+          src={require(mode === 'job'
+            ? './images/strategisk-ellen-hilde.png'
+            : './images/presentasjon.png')}
+          alt={
+            mode === 'job'
+              ? 'Ellen og Hilde under entusiastisk diskusjon'
+              : 'Sommerstudent som deler kunnskap og erfaringer'
+          }
+        />
       </section>
 
       <section
@@ -268,26 +270,29 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         <section className={style.rightText}>
           <div className={style.handbookAd}>
-            <h4>Sjekk ut håndboka vår?</h4>
+            {mode === 'internship' && (
+              <>
+                <h4>Sommerstudentene i 2021</h4>
+
+                <img
+                  className={style.handbookArrow}
+                  aria-label="Pil til bildet av årets sommerstudenter"
+                  src={require('./images/pil.svg')}
+                />
+              </>
+            )}
 
             <img
-              className={style.handbookArrow}
-              aria-label="Pil til Variant sin håndbok"
-              src={require('./images/pil.svg')}
+              className={style.imageBlob}
+              src={require(mode === 'job'
+                ? './images/design-konsentrert.png'
+                : './images/sommerjobbere2021.png')}
+              alt={
+                mode === 'job'
+                  ? 'Designere under en workshop'
+                  : 'De fem sommerstudentene i Variant i 2021'
+              }
             />
-
-            <a href="https://handbook.variant.no/" target="blank">
-              <BaseBlob
-                seed="Variant"
-                width={600}
-                height={600}
-                color={colors.colorPairs.secondary2.default.bg}
-                imageProps={{
-                  src: require('./images/sommerjobbere2020.jpg'),
-                }}
-                alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-              />
-            </a>
           </div>
         </section>
       </section>
@@ -459,16 +464,11 @@ export default function ContentComponent({ mode }: ContentProps) {
           </div>
         </section>
 
-        <div className={style.imageBlob}>
-          <BaseBlob
-            seed="Variant"
-            width={800}
-            height={800}
-            color={colors.colorPairs.secondary2.default.bg}
-            imageProps={{ src: require('public/images/marius.png') }}
-            alt="Variant sine sommerstudenter i 2020 foran Varianthuset i Trondheim"
-          />
-        </div>
+        <img
+          className={style.imageBlob}
+          src={require('./images/rundbord.png')}
+          alt={'Ni varianter som diskuterer rundt et bord'}
+        />
       </section>
 
       <section

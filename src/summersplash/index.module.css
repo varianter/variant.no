@@ -9,6 +9,10 @@ p {
   z-index: 1;
 }
 
+h3 {
+  font-family: 'Recoleta', serif;
+}
+
 .white {
   color: white;
 }
@@ -22,10 +26,6 @@ p {
   position: absolute;
   top: 3rem;
   right: 3rem;
-}
-
-h3 {
-  font-family: 'Recoleta', serif;
 }
 
 .splashSection {
@@ -51,6 +51,10 @@ h3 {
   grid-area: center-left;
 }
 
+.imageBlob {
+  height: 36rem;
+}
+
 .rightText {
   grid-area: center-right;
 }
@@ -68,8 +72,8 @@ h3 {
 
 .firstSection > .imageBlob {
   position: absolute;
-  bottom: -500px;
-  right: 0;
+  bottom: -18rem;
+  right: 2rem;
 }
 
 .modeTabs {
@@ -120,10 +124,11 @@ h3 {
   margin-top: 500px;
 }
 
-.secondSection > .blob {
+.secondSection > .imageBlob {
   position: absolute;
-  bottom: -300px;
-  left: 5%;
+  height: 28rem;
+  bottom: -14rem;
+  left: 2rem;
 }
 
 .thirdSection {
@@ -277,7 +282,7 @@ h3 {
   top: 1rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 0px) {
   .logoblob {
     grid-area: logo;
   }
@@ -313,5 +318,41 @@ h3 {
       'center-right'
       '.'
       'center-left';
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .job_title {
+    font-size: 3em;
+  }
+
+  .imageBlob {
+    max-width: 80%;
+  }
+
+  .splashSection {
+    padding: 2rem;
+    display: grid;
+    border: 1px solid yellow;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'center-left'
+      'center-right';
+  }
+
+  .fourthSection {
+    composes: splashSection;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'title'
+      'center-left'
+      'center-right';
   }
 }
