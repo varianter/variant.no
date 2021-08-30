@@ -506,19 +506,20 @@ export default function ContentComponent({ mode }: ContentProps) {
                 Vi håper du søker, og ser frem til å bli bedre kjent med deg.
               </p>
               <p>
-                Har du spørsmål om sommerjobbene eller Variant? Ta gjerne
-                kontakt med meg.
+                Har du spørsmål om jobben eller Variant? <br />
+                Ta gjerne kontakt med meg.
               </p>
               <p>
-                - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
-              </p>
-              <p>
-                <a style={{ color: 'white' }} href="mailto:mk@variant.no">
-                  mk@variant.no
-                </a>{' '}
-                |{' '}
+                Marius Krakeli
+                <br />
+                Utvikler og rekrutteringsansvarlig i Variant
+                <br />
                 <a style={{ color: 'white' }} href="tel:41637572">
                   41 63 75 72
+                </a>{' '}
+                |{' '}
+                <a style={{ color: 'white' }} href="mailto:mk@variant.no">
+                  mk@variant.no
                 </a>
               </p>
             </div>
@@ -556,15 +557,16 @@ export default function ContentComponent({ mode }: ContentProps) {
                 Vi håper du søker, og ser frem til å bli bedre kjent med deg.
               </p>
               <p>
-                Har du spørsmål om sommerjobbene eller Variant? Ta gjerne
-                kontakt med meg.
+                Har du spørsmål om jobben eller Variant? <br />
+                Ta gjerne kontakt med meg.
               </p>
               <p>
-                - Marius Krakeli, utvikler og rekrutteringsansvarlig i Variant
-              </p>
-              <p>
-                <a href="mailto:mk@variant.no">mk@variant.no</a> |{' '}
-                <a href="tel:41637572">41 63 75 72</a>
+                Marius Krakeli
+                <br />
+                Utvikler og rekrutteringsansvarlig i Variant
+                <br />
+                <a href="tel:41637572">41 63 75 72</a> |{' '}
+                <a href="mailto:mk@variant.no">mk@variant.no</a>
               </p>
             </div>
           </section>
