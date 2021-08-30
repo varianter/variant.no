@@ -73,7 +73,7 @@ h3 {
 .firstSection > .imageBlob {
   position: absolute;
   bottom: -18rem;
-  right: 2rem;
+  right: 8rem;
 }
 
 .modeTabs {
@@ -128,7 +128,7 @@ h3 {
   position: absolute;
   height: 28rem;
   bottom: -14rem;
-  left: 2rem;
+  left: 8rem;
 }
 
 .thirdSection {
@@ -137,6 +137,11 @@ h3 {
 
 .thirdSection > .leftText {
   margin-top: 200px;
+}
+
+.handbookAd > .imageBlob {
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .handbookAd {
@@ -233,7 +238,8 @@ h3 {
 
 .fifthSection > .imageBlob {
   position: absolute;
-  top: -400px;
+  top: -18rem;
+  left: 8rem;
 }
 
 .fifthSection > .leftText {
