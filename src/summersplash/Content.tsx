@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { AnimatedBlob } from '@variant/components/lib/blob';
+import React, { useRef, useState } from 'react';
+import { AnimatedBlob, BaseBlob } from '@variant/components/lib/blob';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
@@ -10,7 +10,14 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
+  const [buttonOneIsHovered, setButtonOneIsHovered] = useState(false);
+  const [buttonTwoIsHovered, setButtonTwoIsHovered] = useState(false);
   const endRef = useRef<null | HTMLDivElement>(null);
+
+  const handleHover = (button: 1 | 2, action: boolean) => {
+    if (button === 1) setButtonOneIsHovered(action);
+    if (button === 2) setButtonTwoIsHovered(action);
+  };
 
   const scrollToBottom = () => {
     endRef?.current?.scrollIntoView({ behavior: 'smooth' });
@@ -569,17 +576,34 @@ export default function ContentComponent({ mode }: ContentProps) {
 
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
+                <a
+                  className={style.applyLink}
+                  onMouseOver={() => handleHover(1, true)}
+                  onMouseOut={() => handleHover(1, false)}
+                >
                   <div>
-                    <AnimatedBlob
-                      height={500}
-                      width={500}
-                      extraPoints={9}
-                      randomness={20}
-                      animationSpeed={10}
-                      seed={'5663717603842959'}
-                      color="#5F5D56"
-                    />
+                    {!buttonOneIsHovered && (
+                      <BaseBlob
+                        height={500}
+                        width={500}
+                        extraPoints={9}
+                        randomness={20}
+                        seed={'5663111603842959'}
+                        color="#5F5D56"
+                      />
+                    )}
+
+                    {buttonOneIsHovered && (
+                      <AnimatedBlob
+                        height={500}
+                        width={500}
+                        extraPoints={9}
+                        randomness={20}
+                        animationSpeed={10}
+                        seed={'5663111603842959'}
+                        color="#5F5D56"
+                      />
+                    )}
                   </div>
 
                   <h3 className={style.layerText}>
@@ -592,17 +616,34 @@ export default function ContentComponent({ mode }: ContentProps) {
               </Link>
 
               <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
+                <a
+                  className={style.applyLink}
+                  onMouseOver={() => handleHover(2, true)}
+                  onMouseOut={() => handleHover(2, false)}
+                >
                   <div>
-                    <AnimatedBlob
-                      height={500}
-                      width={500}
-                      extraPoints={9}
-                      randomness={20}
-                      animationSpeed={10}
-                      seed={'5663717603842959'}
-                      color="#423D89"
-                    />
+                    {!buttonTwoIsHovered && (
+                      <BaseBlob
+                        height={500}
+                        width={500}
+                        extraPoints={9}
+                        randomness={20}
+                        seed={'5663717603842959'}
+                        color="#423D89"
+                      />
+                    )}
+
+                    {buttonTwoIsHovered && (
+                      <AnimatedBlob
+                        height={500}
+                        width={500}
+                        extraPoints={9}
+                        randomness={20}
+                        animationSpeed={10}
+                        seed={'5663717603842959'}
+                        color="#423D89"
+                      />
+                    )}
                   </div>
 
                   <h3 className={style.layerText}>
