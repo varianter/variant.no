@@ -100,39 +100,17 @@ export default function ContentComponent({ mode }: ContentProps) {
             <h3>Hva går sommerjobben ut på?</h3>
             <div>
               <p>
-                En sommerjobb i Variant passer for deg som har lyst å anvende
-                læring fra studiene i praksis. Hos oss vil du jobbe i et
-                tverrfaglig team sammen med andre utviklere og designere der
-                målet er å løse et reelt oppdrag for en av våre kunder.
-              </p>
-
-              <p>
-                Du trenger ikke å være spesialist for å få sommerjobb hos oss,
-                men du bør ha et ønske om å lære mens du er her. Gjennom
-                sommeren vil sommerstudentene få god oppfølging fra erfarne
-                konsulenter som vil at du skal lykkes, og for å sikre dette har
-                sommerstudentene våre ferie i fellesferien.
-              </p>
-
-              <p>
-                Variant har sentrale lokaler i{' '}
-                <a
-                  target="blank"
-                  rel="noopener"
-                  href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
-                  style={{ color: 'white' }}
-                >
-                  Varianthuset i Trondheim sentrum
-                </a>{' '}
-                og{' '}
-                <a
-                  target="blank"
-                  rel="noopener"
-                  href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
-                  style={{ color: 'white' }}
-                >
-                  Kvadraturen i Oslo.
-                </a>
+                En sommerjobb i Variant er en fin mulighet til å anvende det du
+                har lært på skolen i praksis. Det forventes ikke at du er
+                utlært, men at du ønsker å lære mer. Det viktigste er at du bryr
+                deg. Bryr deg om koden du skriver, bryr deg om brukeren du
+                designer noe for, bryr deg om kunden du leverer til. I
+                tverrfaglige team bestående av designere og utviklere kommer
+                dere til å jobbe sammen på et av de spennende kundeprosjektene
+                vi har. Underveis får du god oppfølging og tilrettelegging fra
+                erfarne konsulenter som ønsker at du lykkes. Er du nysgjerrig på
+                hva tidligere sommervarianter har gjort? Les mer om
+                sommerprosjektene.
               </p>
             </div>
           </section>
@@ -143,39 +121,13 @@ export default function ContentComponent({ mode }: ContentProps) {
             <h3>Hvem søker vi?</h3>
             <div>
               <p>
-                Vi søker fire nyutdannede designere og utviklere som engasjerer
-                og motiverer, med oppstart 1. august 2022.
-              </p>
-
-              <p>
-                Gjennom både strukturert og impulsiv kunnskapsutveksling lærer
-                vi av hverandre og de vi jobber med for å bli flinkere, modigere
-                og rausere. Til felles har vi at vi elsker utfordringer hvor
-                design- og teknologikompetanse finner sammen og tar plass i
-                kundens kultur. Her oppdager vi stadig at en helhetlig
-                tilnærming til utvikling og design tilfører ekstra verdi og
-                engasjement. Variant er et selskap av og for de ansatte
-                mennesker, der med læreglede står i sentrum. Deler du samme
-                filosofi? . Er det deg?
-              </p>
-
-              <p>
-                Variant har sentrale lokaler i{' '}
-                <a
-                  target="blank"
-                  rel="noopener"
-                  href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
-                >
-                  Varianthuset i Trondheim sentrum
-                </a>{' '}
-                og{' '}
-                <a
-                  target="blank"
-                  rel="noopener"
-                  href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
-                >
-                  Kvadraturen i Oslo.
-                </a>
+                Vi søker 4 nyutdannede designere og utviklere som engasjerer og
+                motiverer, med oppstart 1. august 2022. Stillingene er fordelt
+                på våre kontorer i Trondheim og Oslo med henholdsvis 1 designer
+                og 1 utvikler i hver by. Det er ikke viktig hvilke verktøy eller
+                språk du bruker. Det er langt viktigere at du bryr deg. Bryr deg
+                om koden du skriver, bryr deg om brukeren du lager noe for, bryr
+                deg om kunden du leverer til.
               </p>
             </div>
           </section>
@@ -184,10 +136,12 @@ export default function ContentComponent({ mode }: ContentProps) {
         {mode === 'internship' && (
           <div className={and(style.rightText, style.white)}>
             <p>
-              Prosjektet varer i fire + to uker med tre uker ferie i
-              mellomtiden, og vil gi god innsikt i hva det vil si å jobbe i
+              I 2022 tilbyr vi sommerjobb i både Trondheim og Oslo, til
+              henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
+              naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
+              ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i
               konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som
-              du har det gøy med de andre variantene.{' '}
+              du har det gøy sammen med oss andre varianter.  
             </p>
           </div>
         )}
@@ -195,10 +149,14 @@ export default function ContentComponent({ mode }: ContentProps) {
         {mode === 'job' && (
           <div className={style.rightText}>
             <p>
-              Det er ikke viktig hvilket språk eller verktøy du bruker. Det er
-              langt viktigere at du bryr deg. Bryr deg om koden du skriver, bryr
-              deg om brukeren du lager noe for, bryr deg om kunden du leverer
-              til.
+              Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi
+              av hverandre og de vi jobber med for å bli flinkere, modigere og
+              rausere. Vi elsker utfordringer hvor design- og
+              teknologikompetanse finner sammen og tar plass i kundens kultur.
+              Her oppdager vi stadig at en helhetlig tilnærming til utvikling og
+              design skaper entusiasme og tilfører ekstra verdi. Variant er et
+              selskap av og for de ansatte, der læreglede står i sentrum. Deler
+              du også denne filosofien?
             </p>
           </div>
         )}
@@ -224,34 +182,26 @@ export default function ContentComponent({ mode }: ContentProps) {
         {mode === 'internship' && (
           <section className={style.leftText}>
             <h3>Hvorfor jobbe i Variant?</h3>
-
             <div>
               <p>
-                Variant er en variant av et konsulentselskap som er raus, åpen
-                og læreglad.
+                Variant er en variant av et konsulentselskap som er raust, åpent
+                og læreglad. Disse verdiene ligger til grunn for hvordan vi
+                møter hverandre og våre kunder. Vi er en gjeng hyggelige og
+                dyktige mennesker som ønsker å både tilegne og dele kunnskap.
+                Sammen skaper vi løsninger som tjener samfunnet.
               </p>
-
               <p>
-                En sommerjobb i Variant er en god arena for personlig utvikling,
-                både faglig og sosialt. og vi mener at en sommer hos oss vil
-                gjøre deg bedre rustet både for resterende tid på skolebenken,
-                men også senere i arbeidslivet.
-              </p>
-
-              <p>
-                Håndboka vår beskriver hvem vi er og hva vi står for. I Variant
-                trenger du ikke lure på hvordan{' '}
+                I Variant har alle innsyn i alt - selv som sommerstudent. Derfor
+                trenger du selvsagt ikke å lure på hvordan{' '}
                 <a href="https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html">
-                  kontrakten
+                  kontrakten din
                 </a>{' '}
-                din vil se ut dersom du skulle få tilbud om sommerjobb, den
-                ligger selvsagt åpent tilgjengelig på våre nettsider.
-              </p>
-
-              <p>
-                Til tross for en litt uforutsigbar periode så har vi satt opp en
-                plan for både hvordan vi ønsker å ivareta dere faglig, men også
-                for å bli bedre kjent med hverandre.
+                vil se ut for sommeren. Den ligger åpent og tilgjengelig på våre
+                nettsider. Lønna trenger du heller ikke å lure på. Du får 266,66
+                kr timen, og til sammen 59998 og femti øre. Perfekt rett under
+                fribeløpet! Dersom du har lyst til å lese mer om hva Variant
+                står for kan du sjekke ut vår egen{' '}
+                <a href="https://handbook.variant.no/">håndbok</a>.
               </p>
             </div>
           </section>
@@ -259,34 +209,37 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <section className={and(style.leftText, style.white)}>
-            <h3>Hva jobber vi med?</h3>
+            <h3>Hvorfor jobbe i Variant?</h3>
             <p>
               Variant er en variant av et konsulentselskap som er raust, åpent
               og læreglad. Disse verdiene ligger til grunn for hvordan vi møter
-              hverandre og våre kunder. Vi er en gjeng hyggelige og dyktige
-              utviklere, designere og prosjektledere konsulenter som ønsker å
-              både tilegne og dele kunnskap. Sammen skaper vi løsninger som
-              tjener samfunnet. Vi bruker vår kompetanse til å løse utfordringer
-              for våre kunder.
+              hverandre og våre kunder. Vi er en gjeng dyktige utviklere,
+              designere og prosjektledere som ønsker å både tilegne og dele
+              kunnskap. Sammen skaper vi løsninger som tjener samfunnet. Hos oss
+              er det din kompetanse og dine ønsker som påvirker våre neste
+              oppdrag.
             </p>
-
-            <p>Akkurat nå jobber vi blant annet med disse prosjektene:</p>
-            <ul>
-              <li>AtB</li>
-              <li>Uninett</li>
-              <li>Sparebank 1</li>
-              <li>Statens Vegvesen</li>
-            </ul>
 
             <p>
-              I Variant liker vi å være åpnejobber vi for åpenhet. Derfor spør
-              vi heller hvorfor ting skal holdes hemmelig enn hvorfor de skal
-              være åpne. Det betyr blant annet at du ikke trenger å lure på
-              hvordan kontrakten din vil se utvære, eller hva lønna blir. Dentte
-              ligger nemlig åpent tilgjengelig på våre nettsider for alle som
-              vil se. Dersom du vil lese mer om hva Variant står for og tilbyr,
-              kan du sjekke ut håndboka vår.
+              Kundelisten vår endrer seg stadig, men for tiden bistår vi blant
+              annet på disse prosjektene:
             </p>
+
+            <ul>
+              <li>
+                For RiksTV designer vi tjenester og plattformer som gjør folks
+                underholdningshverdag bedre, enklere og mer inspirerende.
+              </li>
+              <li>
+                For Telenor designer og utvikler vi støtteverktøy for
+                morgendagens mobiloperatørløsninger.
+              </li>
+              <li>
+                For Sparebank 1 designer vi ny og bedre funksjonalitet i
+                nettbanken til privatkunder, så bank blir enkelt og intuitivt
+                for alle brukergrupper.
+              </li>
+            </ul>
           </section>
         )}
 
@@ -330,21 +283,20 @@ export default function ContentComponent({ mode }: ContentProps) {
             <section className={and(style.leftText, style.white)}>
               <div>
                 <p>
-                  Vi i Variant liker ikke tradisjonelle intervjuer. De plasserer
-                  søker i en unaturlig situasjon, og man blir ikke godt nok
-                  kjent med hverandre. Etter at vi har sett igjennom alle
-                  søknadene inviterer vi derfor alle utvalgte kandidater til en
-                  uformell samtale. Dette er det vi kaller kaffeprat. Hensikten
-                  med samtalen er for å finne ut om begge parter har felles
-                  verdier og mål. Og nei, du er selvsagt ikke nødt til å drikke
-                  kaffe.
+                  Vi liker ikke tradisjonelle intervjuer. De plasserer søker i
+                  en unaturlig situasjon, og man blir ikke godt kjent med
+                  hverandre. Etter at vi har vurdert alle søknadene inviterer vi
+                  utvalgte kandidater til en uformell samtale. Dette er det vi
+                  kaller kaffeprat. Hensikten med samtalen er å finne ut om
+                  begge parter har felles verdier og mål. Og nei – du er
+                  selvsagt ikke nødt til å drikke kaffe.
                 </p>
 
                 <p>
                   Dersom du får jobbtilbud og takker ja, inkluderes du straks i
                   Variant på lik linje med de fast ansatte. Du får tilgang til
-                  Slack´en vår, og mulighet til å delta på alle sosiale og
-                  faglige arrangementer. Dette inkluderer blant annet spill- og
+                  vår Slack, og mulighet til å delta på alle sosiale og faglige
+                  arrangementer. Dette inkluderer blant annet spill- og
                   fagkvelder, nyttårskalas og variantdager, som er fine
                   muligheter til å bli bedre kjent før sommerjobben starter i
                   juni.
@@ -361,25 +313,27 @@ export default function ContentComponent({ mode }: ContentProps) {
               <div>
                 <p>
                   Som nyutdannet konsulent i Variant blir du en del av
-                  utviklingsprogrammet vi kaller variant:skudd. Programmet er
+                  utviklingsprogrammet vi kaller Variant:skudd. Programmet er
                   skreddersydd for deg som kommer rett fra skolen, og bidrar til
                   at du raskt blir en skikkelig god konsulent. Samtidig tror vi
                   at du lærer best ute i prosjekt, og det vil derfor ikke gå
                   lang tid før du starter i oppdrag hos en av våre kunder. Du
                   vil samarbeide med andre varianter, og få god oppfølging
-                  underveis. Hos oss vil du jobbe med ulike arbeidsoppgaver ut
-                  ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig
-                  hvilke oppdrag vi får. Men, det er faktisk slik at din
-                  kompetanse og dine ønsker ofte styrer det neste oppdraget.
+                  underveis.
                 </p>
 
                 <p>
-                  I Variant liker vi å være rause, og dette gjenspeiles blant
-                  annet også i betingelsene våre. Lønna finner du i
-                  lønnskalkulatoren vår, og du får selvsagt en like stor bonus
-                  som alle andre varianter. Utenom dette har vi også gode
-                  betingelser knyttet til gadgeter, treningsabonnement,
-                  forsikringer og mobilbruk.
+                  I Variant jobber vi for å være åpne og rause, og dette
+                  gjenspeiles blant annet i betingelsene våre. Du trenger for
+                  eksempel ikke å lure på hvordan kontrakten din vil se ut. Den
+                  ligger nemlig åpent på våre nettsider for alle som vil se.
+                  Lønna ligger også tilgjengelig og kan enkelt regnes ut ved
+                  hjelp av lønnskalkulatoren vår. Etter hvert kvartal utbetales
+                  det bonus, og denne summen fordeles selvsagt likt på alle
+                  ansatte. Utenom lønn har vi også gode betingelser knyttet til
+                  gadgets, treningsabonnement, forsikringer og mobilbruk. Dersom
+                  du vil lese mer om hva Variant står for og tilbyr, sjekk
+                  gjerne ut håndboka vår.
                 </p>
               </div>
             </section>
@@ -458,15 +412,28 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <section className={and(style.rightText, style.white)}>
-            <h3>Hva ser vi etter i en søknad?</h3>
+            <h3>Hva skjer etter at du har søkt?</h3>
 
             <p>
-              Selv om vi liker å skille oss ut, setter vi pris på en søknad med
-              CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
-              et helhetlig bilde. Både av deg som person, din eksisterende
-              kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
-              sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
-              en bedre hverdag. Er det deg?
+              Alle søknader til fast jobb behandles fortløpende, og aktuelle
+              kandidater inviteres like etterpå til det vi kaller kaffeprat.
+              Kaffepraten er en uformell samtale hvor vi finner ut om begge
+              parter har felles verdier og mål. Og nei - du er selvsagt ikke
+              nødt til å drikke kaffe. Dersom begge er interessert, fortsetter
+              ansettelsesprosessen. Her samarbeider vi først om å løse en
+              avgrenset problemstilling, før sluttkandidatene inviteres til en
+              forventningssamtale. Vi vil være sikre på at begge parter ønsker
+              seg i samme retning, og gjennom en mer praktisk rettet samtale
+              tilrettelegges det for å snakke litt mer sammen og avklare om vi
+              er en match.
+            </p>
+
+            <p>
+              Dersom du får jobbtilbud og takker ja, inkluderes du straks i
+              Variant. Du får tilgang til vår Slack, og mulighet til å delta på
+              alle sosiale og faglige arrangementer. Dette inkluderer blant
+              annet spill- og fagkvelder, nyttårskalas og variantdager, som er
+              fine muligheter til å bli bedre kjent før oppstart i august.
             </p>
           </section>
         )}
