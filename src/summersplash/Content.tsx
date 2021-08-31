@@ -123,11 +123,16 @@ export default function ContentComponent({ mode }: ContentProps) {
               <p>
                 Vi søker 4 nyutdannede designere og utviklere som engasjerer og
                 motiverer, med oppstart 1. august 2022. Stillingene er fordelt
-                på våre kontorer i Trondheim og Oslo med henholdsvis 1 designer
-                og 1 utvikler i hver by. Det er ikke viktig hvilke verktøy eller
-                språk du bruker. Det er langt viktigere at du bryr deg. Bryr deg
-                om koden du skriver, bryr deg om brukeren du lager noe for, bryr
-                deg om kunden du leverer til.
+                på våre kontorer i{' '}
+                <a href="https://handbook.variant.no/avdelinger/trondheim">
+                  Trondheim
+                </a>{' '}
+                og{' '}
+                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>{' '}
+                med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
+                viktig hvilke verktøy eller språk du bruker. Det er langt
+                viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
+                om brukeren du lager noe for, bryr deg om kunden du leverer til.
               </p>
             </div>
           </section>
@@ -201,7 +206,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 kr timen, og til sammen 59998 og femti øre. Perfekt rett under
                 fribeløpet! Dersom du har lyst til å lese mer om hva Variant
                 står for kan du sjekke ut vår egen{' '}
-                <a href="https://handbook.variant.no/">håndbok</a>.
+                <a href="https://handbook.variant.no/handbook">håndbok</a>.
               </p>
             </div>
           </section>
@@ -313,27 +318,44 @@ export default function ContentComponent({ mode }: ContentProps) {
               <div>
                 <p>
                   Som nyutdannet konsulent i Variant blir du en del av
-                  utviklingsprogrammet vi kaller Variant:skudd. Programmet er
-                  skreddersydd for deg som kommer rett fra skolen, og bidrar til
-                  at du raskt blir en skikkelig god konsulent. Samtidig tror vi
-                  at du lærer best ute i prosjekt, og det vil derfor ikke gå
-                  lang tid før du starter i oppdrag hos en av våre kunder. Du
-                  vil samarbeide med andre varianter, og få god oppfølging
-                  underveis.
+                  utviklingsprogrammet vi kaller{' '}
+                  <a href="https://handbook.variant.no/handbook#utviklingsprogram">
+                    Variant:skudd
+                  </a>
+                  . Programmet er skreddersydd for deg som kommer rett fra
+                  skolen, og bidrar til at du raskt blir en skikkelig god
+                  konsulent. Samtidig tror vi at du lærer best ute i prosjekt,
+                  og det vil derfor ikke gå lang tid før du starter i oppdrag
+                  hos en av våre kunder. Du vil samarbeide med andre varianter,
+                  og få god oppfølging underveis.
                 </p>
 
                 <p>
                   I Variant jobber vi for å være åpne og rause, og dette
                   gjenspeiles blant annet i betingelsene våre. Du trenger for
-                  eksempel ikke å lure på hvordan kontrakten din vil se ut. Den
-                  ligger nemlig åpent på våre nettsider for alle som vil se.
-                  Lønna ligger også tilgjengelig og kan enkelt regnes ut ved
-                  hjelp av lønnskalkulatoren vår. Etter hvert kvartal utbetales
-                  det bonus, og denne summen fordeles selvsagt likt på alle
-                  ansatte. Utenom lønn har vi også gode betingelser knyttet til
-                  gadgets, treningsabonnement, forsikringer og mobilbruk. Dersom
-                  du vil lese mer om hva Variant står for og tilbyr, sjekk
-                  gjerne ut håndboka vår.
+                  eksempel ikke å lure på hvordan{' '}
+                  <a href="https://avtaler.variant.no/avtaler/ansettelse.html">
+                    kontrakten din
+                  </a>{' '}
+                  vil se ut. Den ligger nemlig åpent på våre nettsider for alle
+                  som vil se. Lønna ligger også tilgjengelig og kan enkelt
+                  regnes ut ved hjelp av lønnskalkulatoren vår. Etter hvert
+                  kvartal utbetales det{' '}
+                  <a href="https://handbook.variant.no/handbook#bonus">bonus</a>
+                  , og denne summen fordeles selvsagt likt på alle ansatte.
+                  Utenom lønn har vi også gode betingelser knyttet til{' '}
+                  <a href="https://handbook.variant.no/handbook#pensjon-og-forsikring">
+                    pensjon og forsikringer
+                  </a>
+                  ,{' '}
+                  <a href="https://handbook.variant.no/handbook#goder-og-ytelser">
+                    gadgets, treningsabonnement og mobiltelefoni.
+                  </a>{' '}
+                  Dersom du vil lese mer om hva Variant står for og tilbyr,
+                  sjekk gjerne ut{' '}
+                  <a href="https://handbook.variant.no/handbook">
+                    håndboka vår.
+                  </a>
                 </p>
               </div>
             </section>
@@ -419,21 +441,31 @@ export default function ContentComponent({ mode }: ContentProps) {
               kandidater inviteres like etterpå til det vi kaller kaffeprat.
               Kaffepraten er en uformell samtale hvor vi finner ut om begge
               parter har felles verdier og mål. Og nei - du er selvsagt ikke
-              nødt til å drikke kaffe. Dersom begge er interessert, fortsetter
-              ansettelsesprosessen. Her samarbeider vi først om å løse en
-              avgrenset problemstilling, før sluttkandidatene inviteres til en
-              forventningssamtale. Vi vil være sikre på at begge parter ønsker
-              seg i samme retning, og gjennom en mer praktisk rettet samtale
-              tilrettelegges det for å snakke litt mer sammen og avklare om vi
-              er en match.
+              nødt til å drikke kaffe. Dersom begge er interessert, fortsetter{' '}
+              <a href="https://blog.variant.no/paa-tide-med-bedre-jobbintervjuer-e59f6789a134">
+                ansettelsesprosessen
+              </a>
+              . Her samarbeider vi først om å løse en avgrenset problemstilling,
+              før sluttkandidatene inviteres til en forventningssamtale. Vi vil
+              være sikre på at begge parter ønsker seg i samme retning, og
+              gjennom en mer praktisk rettet samtale tilrettelegges det for å
+              snakke litt mer sammen og avklare om vi er en match.
             </p>
 
             <p>
               Dersom du får jobbtilbud og takker ja, inkluderes du straks i
               Variant. Du får tilgang til vår Slack, og mulighet til å delta på
-              alle sosiale og faglige arrangementer. Dette inkluderer blant
-              annet spill- og fagkvelder, nyttårskalas og variantdager, som er
-              fine muligheter til å bli bedre kjent før oppstart i august.
+              alle{' '}
+              <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
+                sosiale
+              </a>{' '}
+              og faglige arrangementer. Dette inkluderer blant annet spill- og
+              fagkvelder, nyttårskalas og{' '}
+              <a href="https://handbook.variant.no/handbook#variantdag">
+                variantdager
+              </a>
+              , som er fine muligheter til å bli bedre kjent før oppstart i
+              august.
             </p>
           </section>
         )}
