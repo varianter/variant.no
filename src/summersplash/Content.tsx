@@ -110,7 +110,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 vi har. Underveis får du god oppfølging og tilrettelegging fra
                 erfarne konsulenter som ønsker at du lykkes. Er du nysgjerrig på
                 hva tidligere sommervarianter har gjort? Les mer om
-                sommerprosjektene.
+                <a href="blog.variant.no">sommerprosjektene</a>.
               </p>
             </div>
           </section>
@@ -141,8 +141,12 @@ export default function ContentComponent({ mode }: ContentProps) {
         {mode === 'internship' && (
           <div className={and(style.rightText, style.white)}>
             <p>
-              I 2022 tilbyr vi sommerjobb i både Trondheim og Oslo, til
-              henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
+              I 2022 tilbyr vi sommerjobb i både{' '}
+              <a href="https://handbook.variant.no/avdelinger/trondheim">
+                Trondheim
+              </a>{' '}
+              og <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>{' '}
+              , til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
               naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
               ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i
               konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som
@@ -300,11 +304,17 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <p>
                   Dersom du får jobbtilbud og takker ja, inkluderes du straks i
                   Variant på lik linje med de fast ansatte. Du får tilgang til
-                  vår Slack, og mulighet til å delta på alle sosiale og faglige
-                  arrangementer. Dette inkluderer blant annet spill- og
-                  fagkvelder, nyttårskalas og variantdager, som er fine
-                  muligheter til å bli bedre kjent før sommerjobben starter i
-                  juni.
+                  vår Slack, og mulighet til å delta på alle{' '}
+                  <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
+                    sosiale
+                  </a>{' '}
+                  og faglige arrangementer. Dette inkluderer blant annet spill-
+                  og fagkvelder, nyttårskalas og{' '}
+                  <a href="https://handbook.variant.no/handbook#variantdag">
+                    variantdager
+                  </a>
+                  , som er fine muligheter til å bli bedre kjent før
+                  sommerjobben starter i juni.
                 </p>
               </div>
             </section>
