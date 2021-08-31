@@ -285,6 +285,11 @@ h3 {
   text-decoration: none;
 }
 
+.layerText_dark {
+  composes: layerText;
+  color: #333333;
+}
+
 .variantLogo {
   position: absolute;
   bottom: 24px;

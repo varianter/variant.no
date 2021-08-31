@@ -568,7 +568,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                     )}
                   </div>
 
-                  <h3 className={style.layerText}>
+                  <h3 className={style.layerText_dark}>
                     Søk som designer
                     <span role="img" aria-label="blyant">
                       ✏️
@@ -608,7 +608,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                     )}
                   </div>
 
-                  <h3 className={style.layerText}>
+                  <h3 className={style.layerText_dark}>
                     Søk som utvikler
                     <span role="img" aria-label="datamaskin">
                       💻
