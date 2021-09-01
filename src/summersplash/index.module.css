@@ -17,6 +17,10 @@ h3 {
   color: white;
 }
 
+.white a {
+  color: white;
+}
+
 .logoblob {
   grid-area: logo;
   width: 450px;
@@ -257,8 +261,6 @@ h3 {
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: space-between;
 }
 
 .finalBlob {
@@ -268,7 +270,7 @@ h3 {
 }
 
 .applyLink {
-  position: relative;
+  height: 500px;
 }
 
 .applyLink > div {
@@ -278,11 +280,11 @@ h3 {
 
 .layerText {
   position: relative;
-  bottom: 200px;
-  z-index: 100;
-  left: 3rem;
+  bottom: -200px;
+  width: 500px;
   color: white;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .layerText_dark {

@@ -109,8 +109,8 @@ export default function ContentComponent({ mode }: ContentProps) {
                 dere til å jobbe sammen på et av de spennende kundeprosjektene
                 vi har. Underveis får du god oppfølging og tilrettelegging fra
                 erfarne konsulenter som ønsker at du lykkes. Er du nysgjerrig på
-                hva tidligere sommervarianter har gjort? Les mer om
-                <a href="blog.variant.no">sommerprosjektene</a>.
+                hva tidligere sommervarianter har gjort? Les mer om{' '}
+                <a href="https://blog.variant.no">sommerprosjektene</a>.
               </p>
             </div>
           </section>
