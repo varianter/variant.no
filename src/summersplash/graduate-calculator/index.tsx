@@ -60,7 +60,8 @@ export const Calculator = (props: Props) => {
             <p>
               I tillegg til lønn, får alle varianter også kvartalsvis bonus.
               Denne utgjør 30% av kvartalets overskudd, fratrukket arbeidsavgift
-              på 14,1%.
+              på 14,1%. Dette har det siste året utgjort ca kr. 70 000 for hver
+              variant.
             </p>
           </div>
 
