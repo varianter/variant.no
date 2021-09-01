@@ -1,9 +1,15 @@
 import React from 'react';
 import RadioButton from '../../components/radio-button';
-import { formatCurrency } from './utils';
+import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
 import useCalculatorData from './use-calculator-data';
+
+type Props = {
+  year: number;
+  degree: Degree;
+  addition?: number;
+};
 
 export const Calculator = (props: Props) => {
   const { degree, setDegree, salary } = useCalculatorData(
