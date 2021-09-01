@@ -273,11 +273,11 @@ export default function ContentComponent({ mode }: ContentProps) {
             <img
               className={style.imageBlob}
               src={require(mode === 'job'
-                ? './images/design-konsentrert.png'
+                ? './images/progging.png'
                 : './images/sommerjobbere2021.png')}
               alt={
                 mode === 'job'
-                  ? 'Designere under en workshop'
+                  ? 'En programmerende variant med tilskuer'
                   : 'De fem sommerstudentene i Variant i 2021'
               }
             />
@@ -503,8 +503,14 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         <img
           className={style.imageBlob}
-          src={require('./images/rundbord.png')}
-          alt={'Ni varianter som diskuterer rundt et bord'}
+          src={require(mode === 'job'
+            ? './images/simen.png'
+            : './images/rundbord.png')}
+          alt={
+            mode === 'job'
+              ? 'Simen som koser seg på variantdag'
+              : 'Ni varianter som diskuterer rundt et bord'
+          }
         />
       </section>
 
