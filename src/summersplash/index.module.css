@@ -280,9 +280,10 @@ h3 {
 
 .layerText {
   position: relative;
-  bottom: -200px;
+  top: 200px;
   width: 500px;
   color: white;
+  text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
 }
