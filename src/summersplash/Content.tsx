@@ -4,6 +4,7 @@ import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
 import { Calculator } from './graduate-calculator';
+import { Button } from 'src/components/button';
 
 interface ContentProps {
   mode: 'job' | 'internship';
@@ -48,7 +49,15 @@ export default function ContentComponent({ mode }: ContentProps) {
             <h1 className={style.job_title}>
               Er du en av våre 10 sommervarianter i 2022?
             </h1>
-            <button onClick={scrollToBottom}>Søk sommerjobb</button>
+            <Button
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid black',
+              }}
+              onClick={scrollToBottom}
+            >
+              Søk sommerjobb
+            </Button>
           </section>
         )}
 
@@ -73,7 +82,15 @@ export default function ContentComponent({ mode }: ContentProps) {
               Er du en av våre fire nye varianter?
             </h1>
 
-            <button onClick={scrollToBottom}>Søk fast jobb</button>
+            <Button
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid white',
+              }}
+              onClick={scrollToBottom}
+            >
+              Søk fast jobb
+            </Button>
           </section>
         )}
 
