@@ -52,6 +52,7 @@ export default function ContentComponent({ mode }: ContentProps) {
             <Button
               style={{
                 backgroundColor: 'transparent',
+                color: 'black',
                 border: '1px solid black',
               }}
               onClick={scrollToBottom}
