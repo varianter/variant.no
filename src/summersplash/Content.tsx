@@ -196,8 +196,9 @@ export default function ContentComponent({ mode }: ContentProps) {
                 Variant er en variant av et konsulentselskap som er raust, åpent
                 og læreglad. Disse verdiene ligger til grunn for hvordan vi
                 møter hverandre og våre kunder. Vi er en gjeng hyggelige og
-                dyktige mennesker som ønsker å både tilegne og dele kunnskap.
-                Sammen skaper vi løsninger som tjener samfunnet.
+                dyktige <a href="https://www.variant.no/ansatte">mennesker</a>{' '}
+                som ønsker å både tilegne og dele kunnskap. Sammen skaper vi
+                løsninger som tjener samfunnet.
               </p>
               <p>
                 I Variant har alle innsyn i alt - selv som sommerstudent. Derfor
