@@ -45,7 +45,7 @@ h3 {
 .leftText,
 .rightText {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: left;
 }
