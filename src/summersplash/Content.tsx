@@ -3,7 +3,7 @@ import { AnimatedBlob, BaseBlob } from '@variant/components/lib/blob';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
-import { Calculator } from '../salary-calculator';
+import { Calculator } from './graduate-calculator';
 
 interface ContentProps {
   mode: 'job' | 'internship';
@@ -193,11 +193,14 @@ export default function ContentComponent({ mode }: ContentProps) {
             <h3>Hvorfor jobbe i Variant?</h3>
             <div>
               <p>
-                Variant er en variant av et konsulentselskap som er raust, åpent
-                og læreglad. Disse verdiene ligger til grunn for hvordan vi
-                møter hverandre og våre kunder. Vi er en gjeng hyggelige og
-                dyktige <a href="https://www.variant.no/ansatte">mennesker</a>{' '}
-                som ønsker å både tilegne og dele kunnskap. Sammen skaper vi
+                Variant er en variant av et konsulentselskap som er{' '}
+                <a href="https://handbook.variant.no/handbook#form%C3%A5l-og-verdier">
+                  raust, åpent og læreglad{' '}
+                </a>
+                . Disse verdiene ligger til grunn for hvordan vi møter hverandre
+                og våre kunder. Vi er en gjeng hyggelige og dyktige{' '}
+                <a href="https://www.variant.no/ansatte">mennesker</a> som
+                ønsker å både tilegne og dele kunnskap. Sammen skaper vi
                 løsninger som tjener samfunnet.
               </p>
               <p>
@@ -305,12 +308,12 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <p>
                   Dersom du får jobbtilbud og takker ja, inkluderes du straks i
                   Variant på lik linje med de fast ansatte. Du får tilgang til
-                  vår Slack, og mulighet til å delta på alle{' '}
+                  vår Slack, og mulighet til å delta på alle faglige og{' '}
                   <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
-                    sosiale
+                    sosiale arrangementer
                   </a>{' '}
-                  og faglige arrangementer. Dette inkluderer blant annet spill-
-                  og fagkvelder, nyttårskalas og{' '}
+                  . Dette inkluderer blant annet spill- og fagkvelder,
+                  nyttårskalas og{' '}
                   <a href="https://handbook.variant.no/handbook#variantdag">
                     variantdager
                   </a>
@@ -466,12 +469,12 @@ export default function ContentComponent({ mode }: ContentProps) {
             <p>
               Dersom du får jobbtilbud og takker ja, inkluderes du straks i
               Variant. Du får tilgang til vår Slack, og mulighet til å delta på
-              alle{' '}
+              alle faglige og{' '}
               <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
-                sosiale
-              </a>{' '}
-              og faglige arrangementer. Dette inkluderer blant annet spill- og
-              fagkvelder, nyttårskalas og{' '}
+                sosiale arrangementer
+              </a>
+              . Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas
+              og{' '}
               <a href="https://handbook.variant.no/handbook#variantdag">
                 variantdager
               </a>

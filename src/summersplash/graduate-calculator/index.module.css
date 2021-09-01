@@ -1,0 +1,120 @@
+.wrapper {
+  display: flex;
+  margin: 2.4rem;
+}
+.wrapper fieldset {
+  border: none;
+}
+
+.container {
+  margin: auto;
+}
+.gradeContainer {
+  margin-top: 2.4rem;
+}
+.barSliderContainer {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas: 'old slider young';
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2.4rem 0;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.calculatorContainer {
+  position: relative;
+  border-radius: 2rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    margin: 0;
+  }
+  .wrapper fieldset {
+    padding: 0;
+  }
+}
+
+.topSvgContainer {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -48%);
+  height: 80%;
+  width: 80%;
+  mix-blend-mode: multiply;
+}
+
+.svgContainer {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  transform: translate(35%, 55%);
+  z-index: 0;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+.title {
+  margin: 2.4rem 0 1.2rem;
+  hyphens: auto;
+}
+
+.graduation {
+  display: grid;
+  grid-auto-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.question {
+  font-size: 1rem;
+  color: var(--color-secondary1);
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.summary {
+  margin-top: 9.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.calculation {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(max-content, 5);
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number {
+  font-variant-numeric: tabular-nums;
+}
