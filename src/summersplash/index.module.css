@@ -37,7 +37,6 @@ h3 {
   min-height: 100vh;
   padding: 8rem;
   display: grid;
-  border: 1px solid yellow;
   grid-template-columns: 40% 20% 40%;
   grid-template-rows: 100%;
   grid-template-areas: 'center-left . center-right';
@@ -371,7 +370,6 @@ h3 {
   .splashSection {
     padding: 2rem;
     display: grid;
-    border: 1px solid yellow;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
