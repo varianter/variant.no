@@ -8,6 +8,7 @@ meta_description: Vi ser etter flere læreglade utviklere til å ha sommerjobb h
 meta_image: https://www.variant.no/images/sommerjobb_utvikler_2022_meta.jpg
 ---
 
+<br/>
 Vi trenger mennesker som bryr seg om å skape en bedre hverdag. Er det deg?
 
 ### Hvem ønsker vi at du er?
@@ -38,7 +39,7 @@ Som sommerjobber hos oss får du oppfølging og tilrettelegging for å lære så
 
 ### Hva ønsker vi å tilby?
 
-Vi ønsker å være rause. Vi gir god lønn og gode betingelser. Helt spesifikt ønsker vi å tilby deg som sommervariant 250 kroner i timen.
+Vi ønsker å være rause. Vi gir god lønn og gode betingelser. Helt spesifikt ønsker vi å tilby deg som sommervariant 266,66 kroner i timen.
 
 Vi er veldig opptatt av å være rettferdig. Vi tror på at du tar gode avgjørelser, til det har du har vår tillit. Vi ønsker å være åpne. Her er ingenting hemmelig. Alle har innsyn i alt - selv som sommerjobber. Og mye er til og med åpent for hele verden. Se bare på vår [personalhåndbok](https://handbook.variant.no/) som ligger åpent på nett. Vi ønsker å være modige. Vi skal tørre å høre på alle i selskapet.
 
@@ -58,7 +59,7 @@ Adam, Morten, Magnus, Mathilde og Neva utenfor Varianthuset i Trondheim.
 
 </div>
 
-Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med spennende sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things videre produktutvikling.
+Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med spennende sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things' videre produktutvikling.
 
 Har du spørsmål?
 
@@ -67,5 +68,5 @@ Ta kontakt med Marius Krakeli på 416 37 572 (mk@variant.no).
 ### Søknadsfrist
 
 <p>
-3. oktober 2020
+3. oktober 2021
 </p>
