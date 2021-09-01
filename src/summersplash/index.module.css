@@ -87,6 +87,14 @@ h3 {
   width: 100%;
 }
 
+.modeTabs h4 {
+  font-family: 'Graphik Web';
+  font-weight: lighter;
+  src: url('/Graphik-LightItalic-Web.woff2') format('woff2'),
+    url('/Graphik-LightItalic-Web.woff') format('woff');
+  font-size: 1.33rem;
+}
+
 .leftTab {
   border: none;
   width: 50vw;
