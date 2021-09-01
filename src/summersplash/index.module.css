@@ -32,16 +32,6 @@ h3 {
   right: 3rem;
 }
 
-img {
-  transform: scale(1) rotate(0deg);
-  transition: transform 0.2s;
-}
-
-img:hover {
-  transform: scale(1.01) rotate(1deg);
-  transition: transform 0.2s;
-}
-
 .splashSection {
   position: relative;
   min-height: 100vh;
