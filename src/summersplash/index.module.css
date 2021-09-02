@@ -240,6 +240,8 @@ h3 {
   position: absolute;
   top: -18rem;
   left: 8rem;
+  max-width: 40%;
+  object-fit: contain;
 }
 
 .fifthSection > .leftText {
@@ -314,61 +316,7 @@ h3 {
   top: 1rem;
 }
 
-@media screen and (max-width: 0px) {
-  .logoblob {
-    grid-area: logo;
-  }
-
-  .splashSection {
-    padding: 4rem 2rem;
-    gap: 4rem;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 2rem auto;
-    grid-template-areas:
-      'center-left '
-      'center-middle'
-      'center-right';
-  }
-
-  .firstSection {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .fourthSection {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'title'
-      'center-left'
-      'center-right';
-  }
-
-  .fifthSection {
-    grid-template-areas:
-      'center-right'
-      '.'
-      'center-left';
-  }
-}
-
 @media screen and (orientation: portrait) {
-  .firstSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .job_title {
-    font-size: 3em;
-  }
-
-  .imageBlob {
-    max-width: 80%;
-    object-fit: contain;
-  }
-
   .splashSection {
     padding: 2rem;
     display: grid;
@@ -377,14 +325,97 @@ h3 {
     grid-template-areas:
       'center-left'
       'center-right';
+    border: 1px solid yellow;
+  }
+
+  .firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstSection .imageBlob {
+    right: 0;
+  }
+
+  .secondSection .leftText {
+    margin-top: 20rem;
+  }
+
+  .secondSection > .rightText {
+    margin-top: 0;
+  }
+
+  .secondSection .imageBlob {
+    position: relative;
+    left: -2rem;
+    bottom: 0;
+  }
+
+  .thirdSection .imageBlob {
+    position: relative;
+    right: -2rem;
   }
 
   .fourthSection {
-    composes: splashSection;
+    padding-bottom: 20rem;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       'title'
       'center-left'
       'center-right';
+  }
+
+  .fifthSection > .imageBlob {
+    max-width: 80%;
+    left: -2rem;
+  }
+
+  .job_title {
+    font-size: 3em;
+  }
+
+  .imageBlob {
+    position: static;
+    max-width: 80%;
+    object-fit: contain;
+  }
+
+  .sixtSection {
+    display: block;
+    padding-top: 16rem;
+  }
+
+  .sixtSection > .imageBlob {
+    max-width: 50%;
+    right: -50px;
+    top: -12rem;
+  }
+
+  .blobButtons {
+    display: none;
+  }
+
+  .applyLinksContainer {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .applyLink {
+    height: auto;
+  }
+
+  .layerText {
+    position: static;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .layerText_dark {
+    composes: layerText;
+    color: white;
   }
 }

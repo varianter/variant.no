@@ -158,6 +158,18 @@ export default function ContentComponent({ mode }: ContentProps) {
           </section>
         )}
 
+        <img
+          className={style.imageBlob}
+          src={require(mode === 'job'
+            ? './images/strategisk-ellen-hilde.png'
+            : './images/presentasjon.png')}
+          alt={
+            mode === 'job'
+              ? 'Ellen og Hilde under entusiastisk diskusjon'
+              : 'Sommerstudent som deler kunnskap og erfaringer'
+          }
+        />
+
         {mode === 'internship' && (
           <div className={and(style.rightText, style.white)}>
             <p>
@@ -189,18 +201,6 @@ export default function ContentComponent({ mode }: ContentProps) {
             </p>
           </div>
         )}
-
-        <img
-          className={style.imageBlob}
-          src={require(mode === 'job'
-            ? './images/strategisk-ellen-hilde.png'
-            : './images/presentasjon.png')}
-          alt={
-            mode === 'job'
-              ? 'Ellen og Hilde under entusiastisk diskusjon'
-              : 'Sommerstudent som deler kunnskap og erfaringer'
-          }
-        />
       </section>
 
       <section
@@ -578,7 +578,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   onMouseOver={() => handleHover(1, true)}
                   onMouseOut={() => handleHover(1, false)}
                 >
-                  <div>
+                  <div className={style.blobButtons}>
                     {!buttonOneIsHovered && (
                       <BaseBlob
                         height={500}
@@ -618,7 +618,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   onMouseOver={() => handleHover(2, true)}
                   onMouseOut={() => handleHover(2, false)}
                 >
-                  <div>
+                  <div className={style.blobButtons}>
                     {!buttonTwoIsHovered && (
                       <BaseBlob
                         height={500}
