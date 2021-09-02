@@ -365,6 +365,7 @@ h3 {
 
   .imageBlob {
     max-width: 80%;
+    object-fit: contain;
   }
 
   .splashSection {
