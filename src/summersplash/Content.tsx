@@ -54,6 +54,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 backgroundColor: 'transparent',
                 color: 'black',
                 border: '1px solid black',
+                cursor: 'pointer',
               }}
               onClick={scrollToBottom}
             >
@@ -87,6 +88,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               style={{
                 backgroundColor: 'transparent',
                 border: '1px solid white',
+                cursor: 'pointer',
               }}
               onClick={scrollToBottom}
             >
