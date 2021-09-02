@@ -403,14 +403,16 @@ h3 {
   }
 
   .applyLink {
-    height: auto;
+    height: 2rem;
+    width: 100%;
+    margin: 1rem 0;
   }
 
   .layerText {
     position: static;
     color: #333333;
-    text-align: center;
-    text-decoration: none;
+    text-align: left;
+    text-decoration: underline;
     font-size: 1.5rem;
   }
 

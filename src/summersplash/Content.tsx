@@ -683,7 +683,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   onMouseOver={() => handleHover(1, true)}
                   onMouseOut={() => handleHover(1, false)}
                 >
-                  <div>
+                  <div className={style.blobButtons}>
                     {!buttonOneIsHovered && (
                       <BaseBlob
                         height={500}
@@ -723,7 +723,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   onMouseOver={() => handleHover(2, true)}
                   onMouseOut={() => handleHover(2, false)}
                 >
-                  <div>
+                  <div className={style.blobButtons}>
                     {!buttonTwoIsHovered && (
                       <BaseBlob
                         height={500}
