@@ -373,6 +373,11 @@ h3 {
     font-size: 3em;
   }
 
+  .applyArrow {
+    position: absolute;
+    bottom: 0;
+  }
+
   .imageBlob {
     position: static;
     max-width: 80%;
