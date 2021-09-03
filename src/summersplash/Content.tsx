@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { AnimatedBlob, BaseBlob } from '@variant/components/lib/blob';
+import React, { useRef } from 'react';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
