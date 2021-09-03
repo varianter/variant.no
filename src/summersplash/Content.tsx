@@ -545,8 +545,6 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <h3>Søk sommerjobb</h3>
                 <p>
                   Vi håper du søker, og ser frem til å bli bedre kjent med deg.
-                </p>
-                <p>
                   Har du spørsmål om jobben eller Variant? <br />
                   Ta gjerne kontakt med meg.
                 </p>
@@ -615,8 +613,6 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <h3>Søk fast jobb</h3>
                 <p>
                   Vi håper du søker, og ser frem til å bli bedre kjent med deg.
-                </p>
-                <p>
                   Har du spørsmål om jobben eller Variant? <br />
                   Ta gjerne kontakt med meg.
                 </p>
