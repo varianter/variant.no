@@ -565,6 +565,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </p>
               </div>
             </section>
+
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
                 <a className={style.applyLink}>
@@ -608,26 +609,27 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'job' && (
-          <section className={style.leftText}>
-            <div>
-              <h3>Søk fast jobb</h3>
-              <p>
-                Vi håper du søker, og ser frem til å bli bedre kjent med deg.
-              </p>
-              <p>
-                Har du spørsmål om jobben eller Variant? <br />
-                Ta gjerne kontakt med meg.
-              </p>
-              <p>
-                Marius Krakeli
-                <br />
-                Utvikler og rekrutteringsansvarlig i Variant
-                <br />
-                <a href="tel:41637572">41 63 75 72</a> |{' '}
-                <a href="mailto:mk@variant.no">mk@variant.no</a>
-              </p>
-            </div>
-
+          <>
+            <section className={style.leftText}>
+              <div>
+                <h3>Søk fast jobb</h3>
+                <p>
+                  Vi håper du søker, og ser frem til å bli bedre kjent med deg.
+                </p>
+                <p>
+                  Har du spørsmål om jobben eller Variant? <br />
+                  Ta gjerne kontakt med meg.
+                </p>
+                <p>
+                  Marius Krakeli
+                  <br />
+                  Utvikler og rekrutteringsansvarlig i Variant
+                  <br />
+                  <a href="tel:41637572">41 63 75 72</a> |{' '}
+                  <a href="mailto:mk@variant.no">mk@variant.no</a>
+                </p>
+              </div>
+            </section>
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
                 <a className={style.applyLink}>
@@ -665,7 +667,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
             </section>
-          </section>
+          </>
         )}
 
         <img

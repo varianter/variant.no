@@ -62,28 +62,10 @@ h3 {
   grid-area: center-right;
 }
 
-.firstSection {
-  composes: splashSection;
-  display: block;
-}
-
-.firstSection > section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 2rem;
-}
-
-.firstSection > .imageBlob {
-  position: absolute;
-  bottom: -18rem;
-  right: 8rem;
-}
-
-.firstSection .arrowContainer {
-  position: absolute;
-  top: 5%;
-  right: 10%;
+.mainTitleSection > .arrow {
+  position: relative;
+  left: -16rem;
+  top: 1rem;
 }
 
 .modeTabs {
@@ -116,6 +98,30 @@ h3 {
   background-color: #028377;
   color: white;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.firstSection {
+  composes: splashSection;
+  display: block;
+}
+
+.firstSection > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.firstSection > .imageBlob {
+  position: absolute;
+  bottom: -18rem;
+  right: 8rem;
+}
+
+.firstSection .arrowContainer {
+  position: absolute;
+  top: 5%;
+  right: 10%;
 }
 
 .secondSection {
@@ -265,6 +271,10 @@ h3 {
 
 .sixtSection {
   composes: splashSection;
+  grid-template-areas:
+    'center-left . center-right'
+    'buttons buttons buttons';
+  grid-template-rows: auto 1fr;
 }
 
 .sixtSection > .imageBlob {
@@ -274,7 +284,9 @@ h3 {
 }
 
 .applyLinksContainer {
+  grid-area: buttons;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -317,12 +329,6 @@ h3 {
   bottom: 24px;
   right: 36px;
   width: 200px;
-}
-
-.mainTitleSection > .arrow {
-  position: relative;
-  left: -16rem;
-  top: 1rem;
 }
 
 @media screen and (orientation: portrait) {
