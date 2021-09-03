@@ -47,6 +47,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 color: 'black',
                 border: '1px solid black',
                 cursor: 'pointer',
+                marginLeft: 0,
               }}
               onClick={scrollToBottom}
             >
@@ -538,31 +539,32 @@ export default function ContentComponent({ mode }: ContentProps) {
         ref={endRef}
       >
         {mode === 'internship' && (
-          <section className={style.leftText}>
-            <div className={style.white}>
-              <h3>Søk sommerjobb</h3>
-              <p>
-                Vi håper du søker, og ser frem til å bli bedre kjent med deg.
-              </p>
-              <p>
-                Har du spørsmål om jobben eller Variant? <br />
-                Ta gjerne kontakt med meg.
-              </p>
-              <p>
-                Marius Krakeli
-                <br />
-                Utvikler og rekrutteringsansvarlig i Variant
-                <br />
-                <a style={{ color: 'white' }} href="tel:41637572">
-                  41 63 75 72
-                </a>{' '}
-                |{' '}
-                <a style={{ color: 'white' }} href="mailto:mk@variant.no">
-                  mk@variant.no
-                </a>
-              </p>
-            </div>
-
+          <>
+            <section className={style.leftText}>
+              <div className={style.white}>
+                <h3>Søk sommerjobb</h3>
+                <p>
+                  Vi håper du søker, og ser frem til å bli bedre kjent med deg.
+                </p>
+                <p>
+                  Har du spørsmål om jobben eller Variant? <br />
+                  Ta gjerne kontakt med meg.
+                </p>
+                <p>
+                  Marius Krakeli
+                  <br />
+                  Utvikler og rekrutteringsansvarlig i Variant
+                  <br />
+                  <a style={{ color: 'white' }} href="tel:41637572">
+                    41 63 75 72
+                  </a>{' '}
+                  |{' '}
+                  <a style={{ color: 'white' }} href="mailto:mk@variant.no">
+                    mk@variant.no
+                  </a>
+                </p>
+              </div>
+            </section>
             <section className={style.applyLinksContainer}>
               <Link href="/jobs/utvikler-trondheim">
                 <a className={style.applyLink}>
@@ -602,7 +604,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
             </section>
-          </section>
+          </>
         )}
 
         {mode === 'job' && (

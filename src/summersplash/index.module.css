@@ -67,6 +67,13 @@ h3 {
   display: block;
 }
 
+.firstSection > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
 .firstSection > .imageBlob {
   position: absolute;
   bottom: -18rem;
@@ -271,6 +278,10 @@ h3 {
   flex-wrap: wrap;
 }
 
+.applyLinksContainer h3 {
+  margin: 0;
+}
+
 .buttonBlob {
   transform: scale(1);
   transition: linear 0.2s;
@@ -326,6 +337,11 @@ h3 {
     border: 1px solid yellow;
   }
 
+  .leftText,
+  .rightText {
+    margin: 2rem 0;
+  }
+
   .firstSection {
     display: flex;
     align-items: center;
@@ -338,6 +354,7 @@ h3 {
 
   .secondSection .leftText {
     margin-top: 20rem;
+    margin-bottom: 1rem;
   }
 
   .secondSection > .rightText {
@@ -353,6 +370,10 @@ h3 {
   .thirdSection .imageBlob {
     position: relative;
     right: -2rem;
+  }
+
+  .thirdSection > .leftText {
+    margin-bottom: 4rem;
   }
 
   .fourthSection {
