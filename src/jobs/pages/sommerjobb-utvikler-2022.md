@@ -4,50 +4,17 @@ h1_title: Sommerjobb utvikler 2022
 slug: sommerjobb-utvikler-2022
 contact_emails: mk@variant.no
 meta_title: Vi søker utviklerstudenter til sommerjobb hos Variant!
-meta_description: Vi ser etter flere læreglade utviklere til å ha sommerjobb hos oss i 2022.
+meta_description: Vi ser etter læreglade utviklere til å ha sommerjobb hos oss i 2022.
 meta_image: https://www.variant.no/images/sommerjobb_utvikler_2022_meta.jpg
 ---
 
 <br/>
-Vi trenger mennesker som bryr seg om å skape en bedre hverdag. Er det deg?
 
-### Hvem ønsker vi at du er?
+### Hva går sommerjobben ut på?
 
-Vi vil at du skal være modig. Stole på at du er flink, fortelle verden hva du kan. Vi vil at du skal være raus og dele din kunnskap med dine kollegaer og folka i byen du jobber i. Vi vil at du skal være åpen, si ifra hvis noe plager deg og våge å være medmenneske med dine kollegaer.
+En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på skolen i praksis. Det forventes ikke at du er utlært, men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr deg om koden du skriver, bryr deg om brukeren du designer noe for, bryr deg om kunden du leverer til. I tverrfaglige team bestående av designere og utviklere kommer dere til å jobbe sammen på et av de spennende kundeprosjektene vi har. Underveis får du god oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
-<div class="right blob1">
-
-![En av våre sommeransatte presentere sitt prosjekt](/work_images/sommeransatt_presentasjon_2_2021.png)
-
-</div>
-
-Vi ønsker at du er nysgjerrig. At du har lyst til å lære deg nye ting. Vi ønsker at du er nysgjerrig og at du har lyst til å lære deg nye ting. Vi ønsker at du tar ansvar, både for å bli god og for at du deler den kunnskapen du har med de rundt deg.
-
-Vi ønsker at du nærmer deg slutten på studiene. Altså at du går i går i 4. eller 3. klasse, og at du går data, informatikk eller tilsvarende. Har du en venn du ønsker å jobbe sammen med? Vi tar gjerne i mot fellessøknader!
-
-### Hva vil du jobbe med?
-
-Gjennom en sommerjobb hos oss ønsker vi å gi et så realistisk bilde av hvordan det er å jobbe i Variant som mulig. I tiden opp mot sommerjobben vil vårt salgsteam jobbe med å selge deg og dine medsommerjobbere ut på relevante prosjekt ute hos våre kunder. Her vil dere få jobbe sammen som team, med mulighet for hjelp og sparring av våre erfarne utviklere og designere. Akkurat slik vi andre Varianter ellers pleier å jobbe.
-
-Som sommerjobber hos oss får du oppfølging og tilrettelegging for å lære så mye som mulig. Både ved å jobbe med kunder, og som en del av vårt sterke fagmiljø med engasjerte mennesker.
-
-<div class="left sm blob2">
-
-<div class="left"><img alt="Sommeransatte i diskusjon" src="/work_images/sommeransatte_i_diskusjon_2_2021.JPG"/></div>
-
-</div>
-
-### Hva ønsker vi å tilby?
-
-Vi ønsker å være rause. Vi gir god lønn og gode betingelser. Helt spesifikt ønsker vi å tilby deg som sommervariant 266,66 kroner i timen.
-
-Vi er veldig opptatt av å være rettferdig. Vi tror på at du tar gode avgjørelser, til det har du har vår tillit. Vi ønsker å være åpne. Her er ingenting hemmelig. Alle har innsyn i alt - selv som sommerjobber. Og mye er til og med åpent for hele verden. Se bare på vår [personalhåndbok](https://handbook.variant.no/) som ligger åpent på nett. Vi ønsker å være modige. Vi skal tørre å høre på alle i selskapet.
-
-## Våre forventninger
-
-Vi ser etter ulike utviklere. Om du er frontend-tung eller backend-engasjert, eller interesse i begge deler – Hvilket språk du bruker er ikke det viktigste.
-
-Det viktigste er at du interesserer deg for det du driver med og at du bryr deg. Bryr deg om brukeren du lager noe for, bryr deg om kunden du leverer til. Bryr deg om samfunnet rundt deg.
+I 2022 tilbyr vi sommerjobb i både [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo), til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du naturligvis selv. Sommerjobben varer i fire + to uker med tre uker ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter.
 
 <div class="polaroid">
 
@@ -61,9 +28,38 @@ Adam, Morten, Magnus, Mathilde og Neva utenfor Varianthuset i Trondheim.
 
 Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med spennende sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things' videre produktutvikling.
 
-Har du spørsmål?
+### Hvorfor jobbe i Variant?
 
-Ta kontakt med Marius Krakeli på 416 37 572 (mk@variant.no).
+Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad](https://handbook.variant.no/handbook#form%C3%A5l-og-verdier). Disse verdiene ligger til grunn for hvordan vi møter hverandre og våre kunder. Vi er en gjeng hyggelige og dyktige [mennesker](https://www.variant.no/ansatte) som ønsker å både tilegne og dele kunnskap. Sammen skaper vi løsninger som tjener samfunnet.
+
+I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 266,66 kr timen, og til sammen 59998 og femti øre. Perfekt rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
+
+<div class="left sm blob2">
+
+<div class="left"><img alt="Sommeransatte i diskusjon" src="/work_images/sommeransatte_i_diskusjon_2_2021.JPG"/></div>
+
+</div>
+
+### Hva skjer etter søknadsfristen?
+
+Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en unaturlig situasjon, og man blir ikke godt kjent med hverandre. Etter at vi har vurdert alle søknadene inviterer vi utvalgte kandidater til en uformell samtale. Dette er det vi kaller [kaffeprat](https://handbook.variant.no/quality_manual#1-kaffeprat-%EF%B8%8F-30-min). Hensikten med samtalen er å finne ut om begge parter har felles verdier og mål. Og nei – du er selvsagt ikke nødt til å drikke kaffe.
+
+Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik linje med de fast ansatte. Du får tilgang til vår Slack, og mulighet til å delta på alle faglige og [sosiale arrangementer](https://handbook.variant.no/quality_manual#sosiale-aktiviteter). Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas og [variantdager](https://handbook.variant.no/handbook#variantdag), som er fine muligheter til å bli bedre kjent før sommerjobben starter i juni.
+
+<div class="right blob1">
+
+![En av våre sommeransatte presentere sitt prosjekt](/work_images/sommeransatt_presentasjon_2_2021.png)
+
+</div>
+
+### Hva ser vi etter i en søknad?
+
+Vi setter pris på en søknad med CV, motivasjonsbrev og karakterutskrift. Det viktigste for oss er å få et helhetlig bilde. Både av deg som person, din eksisterende kompetanse og dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape en bedre hverdag. Er det deg?
+
+### Har du spørsmål?
+
+Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant?
+Ta gjerne kontakt med meg.
 
 ### Søknadsfrist
 
