@@ -273,6 +273,16 @@ h3 {
   flex-wrap: wrap;
 }
 
+.buttonBlob {
+  transform: scale(1);
+  transition: linear 0.2s;
+}
+
+.buttonBlob:hover {
+  transform: scale(1.02);
+  transition: linear 0.2s;
+}
+
 .finalBlob {
   position: absolute;
   bottom: 0;
@@ -392,32 +402,23 @@ h3 {
     top: -12rem;
   }
 
-  .blobButtons {
-    display: none;
-  }
-
   .applyLinksContainer {
     position: static;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .applyLink {
-    height: 2rem;
-    width: 100%;
-    margin: 1rem 0;
+    height: 500px;
   }
 
   .layerText {
-    position: static;
-    color: #333333;
-    text-align: left;
-    text-decoration: underline;
-    font-size: 1.5rem;
-  }
-
-  .layerText_dark {
-    composes: layerText;
+    position: relative;
+    bottom: 250px;
+    width: auto;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
   }
 }
