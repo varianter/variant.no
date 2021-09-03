@@ -636,14 +636,13 @@ export default function ContentComponent({ mode }: ContentProps) {
                       src={require('./images/blobs/1-1.png')}
                       alt="Klikkbar blob"
                     />
+                    <h3 className={style.layerText_dark}>
+                      Søk som designer
+                      <span role="img" aria-label="blyant">
+                        ✏️
+                      </span>
+                    </h3>
                   </div>
-
-                  <h3 className={style.layerText_dark}>
-                    Søk som designer
-                    <span role="img" aria-label="blyant">
-                      ✏️
-                    </span>
-                  </h3>
                 </a>
               </Link>
 
@@ -655,14 +654,13 @@ export default function ContentComponent({ mode }: ContentProps) {
                       src={require('./images/blobs/2-2.png')}
                       alt="Klikkbar blob"
                     />
+                    <h3 className={style.layerText_dark}>
+                      Søk som utvikler
+                      <span role="img" aria-label="datamaskin">
+                        💻
+                      </span>
+                    </h3>
                   </div>
-
-                  <h3 className={style.layerText_dark}>
-                    Søk som utvikler
-                    <span role="img" aria-label="datamaskin">
-                      💻
-                    </span>
-                  </h3>
                 </a>
               </Link>
             </section>

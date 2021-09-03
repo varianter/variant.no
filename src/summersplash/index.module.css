@@ -267,8 +267,6 @@ h3 {
 }
 
 .applyLinksContainer {
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -289,19 +287,9 @@ h3 {
   right: 0;
 }
 
-.applyLink {
-  height: 500px;
-}
-
-.applyLink > div {
-  position: absolute;
-  bottom: 0px;
-}
-
 .layerText {
   position: relative;
-  top: 200px;
-  width: 500px;
+  bottom: 250px;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -404,19 +392,19 @@ h3 {
 
   .applyLinksContainer {
     position: static;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    flex-direction: column;
   }
 
-  .applyLink {
-    height: 500px;
+  .applyLink > div {
+    position: static;
+    bottom: auto;
   }
 
   .layerText {
     position: relative;
     bottom: 250px;
     width: auto;
-    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 1.5rem;
