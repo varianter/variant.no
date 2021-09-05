@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
@@ -10,10 +10,23 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
+  // Should be calculated using intersection API
+  // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+  const [currentSlide, setCurrentSlide] = useState(1);
+
   const endRef = useRef<null | HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     endRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleArrowClick = (action: 'next' | 'prev') => {
+    if (action === 'next') {
+      if (currentSlide < 6) setCurrentSlide(currentSlide + 1);
+    }
+    if (action === 'prev') {
+      if (currentSlide > 1) setCurrentSlide(currentSlide - 1);
+    }
   };
 
   return (
@@ -679,6 +692,18 @@ export default function ContentComponent({ mode }: ContentProps) {
             : './images/variant-white.svg')}
           role="none"
         />
+      </section>
+      <section className={style.slideCounter}>
+        <a onClick={() => handleArrowClick('prev')}>
+          <img src={require('./images/arrow.png')} />
+        </a>
+        <span>{currentSlide}/6</span>
+        <a onClick={() => handleArrowClick('next')}>
+          <img
+            style={{ transform: 'rotate(180deg)', marginLeft: 'auto' }}
+            src={require('./images/arrow.png')}
+          />
+        </a>
       </section>
     </>
   );
