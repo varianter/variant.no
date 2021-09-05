@@ -1,6 +1,6 @@
 ---
 title: Sommerjobb designer 2022
-h1_title: Sommerjobb designer 2022
+h1_title: Sommerjobb for designstudenter i 2022
 slug: sommerjobb-designer-2022
 contact_emails: mk@variant.no
 meta_title: Vi søker designstudenter til sommerjobb hos Variant!
@@ -16,13 +16,9 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 
 I 2022 tilbyr vi sommerjobb i både [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo), til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du naturligvis selv. Sommerjobben varer i fire + to uker med tre uker ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter.
 
-<div class="polaroid">
+<div class="right blob2">
 
-![Placeholder](/work_images/sommeransatte_utenfor_variant_2021.JPG)
-
-<figcaption>
-Adam, Morten, Magnus, Mathilde og Neva utenfor Varianthuset i Trondheim.
-</figcaption>
+![Sommerjobbere utenfor Varianthuset](/work_images/sommeransatte_utenfor_variant_2021.JPG)
 
 </div>
 
