@@ -221,9 +221,9 @@ h3 {
 .timelineEvent > h4::before {
   content: '';
   position: absolute;
-  width: 16px;
-  height: 16px;
-  left: -32.5px;
+  width: 9px;
+  height: 9px;
+  left: -29px;
   top: 0.5rem;
   border: 1px solid white;
   background-color: white;
