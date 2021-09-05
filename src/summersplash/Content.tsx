@@ -551,7 +551,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <p>
                   Marius Krakeli
                   <br />
-                  Utvikler og rekrutteringsansvarlig i Variant
+                  Utvikler og rekrutteringsansvarlig
                   <br />
                   <a style={{ color: 'white' }} href="tel:41637572">
                     41 63 75 72
@@ -619,7 +619,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <p>
                   Marius Krakeli
                   <br />
-                  Utvikler og rekrutteringsansvarlig i Variant
+                  Utvikler og rekrutteringsansvarlig
                   <br />
                   <a href="tel:41637572">41 63 75 72</a> |{' '}
                   <a href="mailto:mk@variant.no">mk@variant.no</a>
