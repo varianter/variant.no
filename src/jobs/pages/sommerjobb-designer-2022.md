@@ -22,7 +22,7 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 
 I 2022 tilbyr vi sommerjobb i både [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo), til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du naturligvis selv. Sommerjobben varer i fire + to uker med tre uker ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter.
 
-Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med spennende sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things' videre produktutvikling.
+Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things' videre produktutvikling.
 
 ### Hvorfor jobbe i Variant?
 
