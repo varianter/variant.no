@@ -85,6 +85,16 @@ h3 {
   font-size: 1.33rem;
 }
 
+.inactiveTabText {
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.selectedTabText {
+  composes: inactiveTabText;
+  font-weight: 500;
+}
+
 .leftTab {
   border: none;
   width: 50vw;

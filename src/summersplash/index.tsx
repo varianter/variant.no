@@ -87,18 +87,18 @@ const SummerSplash: NextPage<
         <Link href="/sommerjobb">
           <button className={style.leftTab}>
             {mode === 'internship' ? (
-              <h4 style={{ fontWeight: 500 }}>Sommerjobb</h4>
+              <span className={style.selectedTabText}>Sommerjobb</span>
             ) : (
-              <h4>Sommerjobb</h4>
+              <span className={style.inactiveTabText}>Sommerjobb</span>
             )}
           </button>
         </Link>
         <Link href="/nyutdannet">
           <button className={style.rightTab}>
             {mode === 'job' ? (
-              <h4 style={{ fontWeight: 500 }}>Fast jobb</h4>
+              <span style={{color: 'white'}} className={style.selectedTabText}>Fast jobb</span>
             ) : (
-              <h4>Fast jobb</h4>
+              <span style={{color: 'white'}} className={style.inactiveTabText}>Fast jobb</span>
             )}
           </button>
         </Link>
