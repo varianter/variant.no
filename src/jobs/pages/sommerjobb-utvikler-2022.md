@@ -14,13 +14,13 @@ meta_image: https://www.variant.no/images/sommerjobb_utvikler_2022_meta.jpg
 
 En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på skolen i praksis. Det forventes ikke at du er utlært, men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr deg om koden du skriver, bryr deg om brukeren du designer noe for, bryr deg om kunden du leverer til. I tverrfaglige team bestående av designere og utviklere kommer dere til å jobbe sammen på et av de spennende kundeprosjektene vi har. Underveis får du god oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
-I 2022 tilbyr vi sommerjobb i både [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo), til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du naturligvis selv. Sommerjobben varer i fire + to uker med tre uker ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter.
+<div class="right">
 
-<div class="right blob2">
-
-![Sommerjobbere utenfor Varianthuset](/work_images/sommeransatte_utenfor_variant_2021.JPG)
+![Sommeransatte utenfor Varianthuset](/work_images/sommerjobbere_utenfor_variant_2021.png)
 
 </div>
+
+I 2022 tilbyr vi sommerjobb i både [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo), til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du naturligvis selv. Sommerjobben varer i fire + to uker med tre uker ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter.
 
 Årets sommervarianter var utleid til Oppdal Skisenter og Vital Things. Mathilde, Morten og Neva lagde et nytt system for administrasjon av skiheiser for Oppdal Skisenter. Her var de en del av produktet hele veien fra idèfase til implementasjon og brukertesting. Magnus og Adam jobbet med spennende sensorteknologi hos Vital Things. Her fikk de bryne seg på et spennende domene innefor helseteknologi og lagde prototyper til Vital Things' videre produktutvikling.
 
@@ -30,9 +30,9 @@ Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad]
 
 I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 266,66 kr timen, og til sammen 59998 og femti øre. Perfekt rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
 
-<div class="left sm blob2">
+<div class="left">
 
-<div class="left"><img alt="Sommeransatte i diskusjon" src="/work_images/sommeransatte_i_diskusjon_2_2021.JPG"/></div>
+![Sommeransatte i diskusjon](/work_images/sommerjobbere_diskusjon1_2021.png)
 
 </div>
 
@@ -42,9 +42,9 @@ Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en unaturlig situa
 
 Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik linje med de fast ansatte. Du får tilgang til vår Slack, og mulighet til å delta på alle faglige og [sosiale arrangementer](https://handbook.variant.no/quality_manual#sosiale-aktiviteter). Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas og [variantdager](https://handbook.variant.no/handbook#variantdag), som er fine muligheter til å bli bedre kjent før sommerjobben starter i juni.
 
-<div class="right blob1">
+<div class="right">
 
-![En av våre sommeransatte presentere sitt prosjekt](/work_images/sommeransatt_presentasjon_2_2021.png)
+![En av våre sommeransatte presentere sitt prosjekt](/work_images/sommerjobbere_presentasjon_utvikler_2021.png)
 
 </div>
 
