@@ -3,7 +3,6 @@ import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
 import { Calculator } from './graduate-calculator';
-import { Button } from 'src/components/button';
 
 interface ContentProps {
   mode: 'job' | 'internship';
