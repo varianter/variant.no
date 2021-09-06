@@ -15,15 +15,18 @@
 }
 
 .header {
-  position: static;
+  position: relative;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 100vw;
   margin: 0 auto;
+  background-color: white;
+  z-index: 1;
 }
 
 .header__logo {
-  background-color: white;
+  padding: 0.5rem;
 }
 
 .header__logo img {
@@ -45,7 +48,7 @@
   justify-content: flex-end;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem 1rem;
   transition: 0.4s;
 }
 

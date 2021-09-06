@@ -50,22 +50,16 @@ export default function ContentComponent({ mode }: ContentProps) {
               />
             </section>
 
-            <span>Søk senest 3. oktober</span>
-            <h1 className={style.job_title}>
+            <span className={style.deadline}>Søk senest 3. oktober</span>
+            <h1>
               Er du en av våre 10 sommervarianter i 2022?
             </h1>
-            <Button
-              style={{
-                backgroundColor: 'transparent',
-                color: 'black',
-                border: '1px solid black',
-                cursor: 'pointer',
-                marginLeft: 0,
-              }}
-              onClick={scrollToBottom}
-            >
-              Søk sommerjobb
-            </Button>
+              <a onClick={scrollToBottom}>
+                <h3 style={{position: "relative", top: "240px", left: "4rem"}}>
+                  Søk sommerjobb
+                </h3>
+                <img style={{width: "500px"}} src={require("./images/blobs/firstSlideBlob.svg")} alt="Blob" />
+              </a>
           </section>
         )}
 
@@ -85,21 +79,17 @@ export default function ContentComponent({ mode }: ContentProps) {
               />
             </section>
 
-            <span>Søk senest 3. oktober</span>
-            <h1 className={style.job_title}>
+            <span className={style.deadline}>Søk senest 3. oktober</span>
+            <h1>
               Er du en av våre fire nye varianter?
             </h1>
 
-            <Button
-              style={{
-                backgroundColor: 'transparent',
-                border: '1px solid white',
-                cursor: 'pointer',
-              }}
-              onClick={scrollToBottom}
-            >
-              Søk fast jobb
-            </Button>
+            <a onClick={scrollToBottom}>
+                <h3 style={{position: "relative", top: "240px", left: "4rem"}}>
+                  Søk fast jobb
+                </h3>
+                <img style={{width: "500px"}} src={require("./images/blobs/firstSlideBlob.svg")} alt="Blob" />
+              </a>
           </section>
         )}
 
@@ -188,7 +178,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
               ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i
               konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som
-              du har det gøy sammen med oss andre varianter.  
+              du har det gøy sammen med oss andre varianter.  
             </p>
           </div>
         )}

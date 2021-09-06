@@ -126,6 +126,10 @@ h3 {
   right: 10%;
 }
 
+.deadline {
+  font-size: 1.5rem;
+}
+
 .secondSection {
   composes: splashSection;
 }
@@ -412,8 +416,8 @@ h3 {
     left: -2rem;
   }
 
-  .job_title {
-    font-size: 3em;
+  .jobtitle {
+    font-size: 4rem;
   }
 
   .applyArrow {
