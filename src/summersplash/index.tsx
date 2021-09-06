@@ -87,7 +87,7 @@ const SummerSplash: NextPage<
         <Link href="/sommerjobb">
           <button className={style.leftTab}>
             {mode === 'internship' ? (
-              <h4 style={{ fontWeight: 'bolder' }}>Sommerjobb</h4>
+              <h4 style={{ fontWeight: 500 }}>Sommerjobb</h4>
             ) : (
               <h4>Sommerjobb</h4>
             )}
@@ -96,7 +96,7 @@ const SummerSplash: NextPage<
         <Link href="/nyutdannet">
           <button className={style.rightTab}>
             {mode === 'job' ? (
-              <h4 style={{ fontWeight: 'bolder' }}>Fast jobb</h4>
+              <h4 style={{ fontWeight: 500 }}>Fast jobb</h4>
             ) : (
               <h4>Fast jobb</h4>
             )}
