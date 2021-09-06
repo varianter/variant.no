@@ -12,7 +12,7 @@ meta_image: https://www.variant.no/images/sommerjobb_designer_2022_meta.jpg
 
 ### Hva går sommerjobben ut på?
 
-En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på skolen i praksis. Det forventes ikke at du er utlært, men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr deg om koden du skriver, bryr deg om brukeren du designer noe for, bryr deg om kunden du leverer til. I tverrfaglige team bestående av designere og utviklere kommer dere til å jobbe sammen på et av de spennende kundeprosjektene vi har. Underveis får du god oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
+En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på skolen i praksis. Det forventes ikke at du er utlært, men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til. I tverrfaglige team bestående av designere og utviklere kommer dere til å jobbe sammen på et av de spennende kundeprosjektene vi har. Underveis får du god oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
 <div class="right">
 
