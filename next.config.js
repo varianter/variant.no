@@ -41,7 +41,12 @@ module.exports = withPlugins([withImages], {
     return [
       {
         source: '/sommerjobb',
-        destination: 'https://jobs.variant.no/o/sommerjobb-2021',
+        destination: 'https://variant.no/jobs/sommerjobb-utvikler-2022',
+        permanent: true,
+      },
+      {
+        source: '/nyutdannet',
+        destination: 'https://variant.no/jobs',
         permanent: true,
       },
       {
