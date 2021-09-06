@@ -132,8 +132,18 @@ h3 {
 
 .firstSection .arrowContainer {
   position: absolute;
-  top: 5%;
-  right: 10%;
+  top: 15%;
+  right: 15%;
+}
+
+.arrowContainer h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.firstSection .arrow {
+  position: relative;
 }
 
 .deadline {
@@ -178,7 +188,7 @@ h3 {
 }
 
 .arrow {
-  height: 4rem;
+  height: 3rem;
   margin: 0;
   transform: rotate(180deg);
 }
