@@ -69,10 +69,12 @@ h3 {
 }
 
 .modeTabs {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  background-color: white;
 }
 
 .modeTabs h4 {
