@@ -38,7 +38,7 @@
 .header__nav {
   flex: 1;
   position: relative;
-  background-color: white;
+  background-color: #fbfaf7;
   z-index: 1;
 }
 
@@ -87,7 +87,7 @@
   cursor: pointer;
   position: absolute;
   right: 1.5rem;
-  top: 1.5rem;
+  top: 1.2rem;
 }
 
 .burgerButtonContainer:focus {
@@ -99,11 +99,11 @@
 .bar2,
 .bar3 {
   position: relative;
-  width: 1.8rem;
-  height: 0.2rem;
+  width: 24px;
+  height: 3px;
   background-color: #333333;
-  margin: 0.29rem 0;
-  transition: 0.3s;
+  margin: 4px 0;
+  transition: 0.2s;
 }
 
 .bar1_change,
@@ -253,11 +253,6 @@
   .burgerButtonContainer {
     display: block;
     z-index: 101;
-  }
-
-  .header__logo img {
-    margin-top: 1.85rem;
-    margin-left: 1.3rem;
   }
 
   .header__nav__ul_dark {
