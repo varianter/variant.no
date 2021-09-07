@@ -59,16 +59,11 @@ const SplashLayout: React.FC<LayoutProps> = ({
           fullWidth ? style.main__innerFullWidth : '',
         )}
       >
-        <header className={mode === 'job' ? style.header__dark : style.header}>
+        <header className={style.header}>
           <h1 className={style.header__logo}>
             <Link href="/">
               <a>
-                <img
-                  src={require(mode === 'job'
-                    ? './variant-white.svg'
-                    : './variant.svg')}
-                  alt="Variant"
-                />
+                <img src={require('./variant.svg')} alt="Variant" />
               </a>
             </Link>
           </h1>
@@ -86,19 +81,19 @@ const SplashLayout: React.FC<LayoutProps> = ({
           >
             <div
               className={and(
-                mode === 'job' ? style.bar1_dark : style.bar1,
+                style.bar1,
                 isMenuVisible ? style.bar1_change : '',
               )}
             />
             <div
               className={and(
-                mode === 'job' ? style.bar2_dark : style.bar2,
+                style.bar2,
                 isMenuVisible ? style.bar2_change : '',
               )}
             />
             <div
               className={and(
-                mode === 'job' ? style.bar3_dark : style.bar3,
+                style.bar3,
                 isMenuVisible ? style.bar3_change : '',
               )}
             />
@@ -106,21 +101,14 @@ const SplashLayout: React.FC<LayoutProps> = ({
 
           <nav
             className={and(
-              mode === 'job' ? style.header__nav_dark : style.header__nav,
+              style.header__nav,
               isMenuVisible ? '' : style.header__nav__hidden,
             )}
             aria-labelledby="menu-label"
             aria-hidden={!isMenuVisible}
             ref={modalRef}
           >
-            <ul
-              className={
-                mode === 'job'
-                  ? style.header__nav__ul_dark
-                  : style.header__nav__ul
-              }
-              ref={navRef}
-            >
+            <ul className={style.header__nav__ul} ref={navRef}>
               <li>
                 <a
                   href="http://handbook.variant.no"

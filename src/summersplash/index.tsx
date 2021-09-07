@@ -96,9 +96,19 @@ const SummerSplash: NextPage<
         <Link href="/nyutdannet">
           <button className={style.rightTab}>
             {mode === 'job' ? (
-              <span style={{color: 'white'}} className={style.selectedTabText}>Fast jobb</span>
+              <span
+                style={{ color: 'white' }}
+                className={style.selectedTabText}
+              >
+                Fast jobb
+              </span>
             ) : (
-              <span style={{color: 'white'}} className={style.inactiveTabText}>Fast jobb</span>
+              <span
+                style={{ color: 'white' }}
+                className={style.inactiveTabText}
+              >
+                Fast jobb
+              </span>
             )}
           </button>
         </Link>
