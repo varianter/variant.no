@@ -17,7 +17,6 @@ const SplashLayout: React.FC<LayoutProps> = ({
   children,
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
-  mode,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
