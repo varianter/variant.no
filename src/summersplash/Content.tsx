@@ -87,7 +87,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 <h3 style={{position: "relative", top: "240px", left: "4rem"}}>
                   Søk fast jobb
                 </h3>
-                <img style={{width: "500px"}} src={require("./images/blobs/firstSlideBlob.svg")} alt="Blob" />
+                <img style={{width: "500px"}} src={require("./images/blobs/firstSlideBlob-white.svg")} alt="Blob" />
               </a>
           </section>
         )}
