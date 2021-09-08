@@ -319,6 +319,10 @@ h3 {
   margin-left: -2rem;
 }
 
+.applyLink {
+  text-decoration: none;
+}
+
 .blobButtons {
   margin: 0 2rem;
   display: flex;

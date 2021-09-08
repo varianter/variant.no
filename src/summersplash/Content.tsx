@@ -589,23 +589,21 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
 
-              <Link href="/jobs/utvikler-trondheim">
-                <a className={style.applyLink}>
-                  <div className={style.blobButtons}>
-                    <img
-                      className={style.buttonBlob}
-                      src={require('./images/blobs/Rightblob_crop.png')}
-                      alt="Klikkbar blob"
-                    />
-                    <h3 className={style.layerText_dark}>
-                      Søk som utvikler{' '}
-                      <span role="img" aria-label="datamaskin">
-                        💻
-                      </span>
-                    </h3>
-                  </div>
-                </a>
-              </Link>
+              <a className={style.applyLink} href="/jobs/utvikler-trondheim">
+                <div className={style.blobButtons}>
+                  <img
+                    className={style.buttonBlob}
+                    src={require('./images/blobs/Rightblob_crop.png')}
+                    alt="Klikkbar blob"
+                  />
+                  <h3 className={style.layerText_dark}>
+                    Søk som utvikler{' '}
+                    <span role="img" aria-label="datamaskin">
+                      💻
+                    </span>
+                  </h3>
+                </div>
+              </a>
             </section>
           </>
         )}
