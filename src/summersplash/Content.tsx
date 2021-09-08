@@ -580,7 +580,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                       alt="Klikkbar blob"
                     />
                     <h3 className={style.layerText_dark}>
-                      Søk som designer
+                      Søk som designer{' '}
                       <span role="img" aria-label="blyant">
                         ✏️
                       </span>
@@ -598,7 +598,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                       alt="Klikkbar blob"
                     />
                     <h3 className={style.layerText_dark}>
-                      Søk som utvikler
+                      Søk som utvikler{' '}
                       <span role="img" aria-label="datamaskin">
                         💻
                       </span>
@@ -636,11 +636,11 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/Leftblob_crop.png')}
+                      src={require('./images/blobs/Leftblob_ny_crop.png')}
                       alt="Klikkbar blob"
                     />
-                    <h3 className={style.layerText_dark}>
-                      Søk som designer
+                    <h3 className={style.layerText}>
+                      Søk som designer{' '}
                       <span role="img" aria-label="blyant">
                         ✏️
                       </span>
@@ -654,11 +654,11 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/Rightblob_crop.png')}
+                      src={require('./images/blobs/Rightblob_ny_crop.png')}
                       alt="Klikkbar blob"
                     />
-                    <h3 className={style.layerText_dark}>
-                      Søk som utvikler
+                    <h3 className={style.layerText}>
+                      Søk som utvikler{' '}
                       <span role="img" aria-label="datamaskin">
                         💻
                       </span>
