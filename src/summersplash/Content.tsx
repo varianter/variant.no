@@ -346,7 +346,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   vår Slack, og mulighet til å delta på alle faglige og{' '}
                   <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
                     sosiale arrangementer
-                  </a>{' '}
+                  </a>
                   . Dette inkluderer blant annet spill- og fagkvelder,
                   nyttårskalas og{' '}
                   <a href="https://handbook.variant.no/handbook#variantdag">
