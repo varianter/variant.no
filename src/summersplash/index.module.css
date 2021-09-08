@@ -234,13 +234,13 @@ h3 {
 
 .timelineContainer {
   composes: calculatorContainer;
-  padding-left: 33.5px;
+  padding-left: 30px;
 }
 
 .timelineContainer::before {
   content: '';
   position: absolute;
-  left: 8.5px;
+  left: 5px;
   top: 1rem;
   height: calc(100% - 2rem);
   border-left: 1px solid white;
