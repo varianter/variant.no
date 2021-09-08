@@ -87,7 +87,7 @@ export default function ContentComponent({ mode }: ContentProps) {
             </section>
 
             <span className={style.deadline}>Søk senest 3. oktober</span>
-            <h1>Er du en av våre 4 nye varianter i 2022?</h1>
+            <h1>Er du en av våre 4 nyutdannede varianter i 2022?</h1>
 
             <a className={style.applyLink} onClick={scrollToBottom}>
               <div className={style.blobButtons}>
