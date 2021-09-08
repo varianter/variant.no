@@ -9,6 +9,7 @@ import DefaultErrorPage from 'next/error';
 // @ts-ignore
 import ScrollingColorBackground from 'react-scrolling-color-background';
 import style from './index.module.css';
+import { and } from 'src/utils/css';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
 
@@ -85,7 +86,13 @@ const SummerSplash: NextPage<
 
       <section className={style.modeTabs}>
         <Link href="/sommerjobb">
-          <button className={style.leftTab}>
+          <button
+            className={
+              mode === 'job'
+                ? style.leftTab
+                : and(style.leftTab, style.activeTab)
+            }
+          >
             {mode === 'internship' ? (
               <span className={style.selectedTabText}>Sommerjobb</span>
             ) : (
@@ -94,7 +101,13 @@ const SummerSplash: NextPage<
           </button>
         </Link>
         <Link href="/nyutdannet">
-          <button className={style.rightTab}>
+          <button
+            className={
+              mode === 'job'
+                ? and(style.rightTab, style.activeTab)
+                : style.rightTab
+            }
+          >
             {mode === 'job' ? (
               <span
                 style={{ color: 'white' }}
