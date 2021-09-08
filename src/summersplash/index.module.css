@@ -149,6 +149,12 @@ h3 {
   bottom: 146px;
 }
 
+.firstSection .applyLink {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -2rem;
+}
+
 .arrowContainer h4 {
   display: flex;
   justify-content: center;
@@ -492,11 +498,11 @@ h3 {
 }
 
 @media screen and (max-width: 820px) {
-  .applyLink:first-of-type {
+  .sixtSection .applyLink:first-of-type {
     margin-right: auto;
   }
 
-  .applyLink:last-of-type {
+  .sixtSection .applyLink:last-of-type {
     margin-left: auto;
   }
 }

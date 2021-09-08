@@ -59,7 +59,12 @@ export default function ContentComponent({ mode }: ContentProps) {
                   src={require('./images/blobs/Topblob_crop.png')}
                   alt="Søk nå knapp"
                 />
-                <h3 className={style.layerText_dark}>Søk nå</h3>
+                <h3 className={style.layerText_dark}>
+                  Søk nå{' '}
+                  <span role="img" aria-label="Postkasse">
+                    📬
+                  </span>
+                </h3>
               </div>
             </a>
           </section>
@@ -91,7 +96,12 @@ export default function ContentComponent({ mode }: ContentProps) {
                   src={require('./images/blobs/Topblob_ny_crop.png')}
                   alt="Søk nå knapp"
                 />
-                <h3 className={style.layerText}>Søk nå</h3>
+                <h3 className={style.layerText}>
+                  Søk nå{' '}
+                  <span role="img" aria-label="Postkasse">
+                    📬
+                  </span>
+                </h3>
               </div>
             </a>
           </section>
