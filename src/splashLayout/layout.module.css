@@ -126,77 +126,6 @@
   transform: rotate(45deg) translate(-0.35rem, -0.35rem);
 }
 
-/* CSS for dark theme navbar */
-
-.header__dark {
-  composes: header;
-  background-color: #423d89;
-  transition: 1000ms linear;
-}
-
-.header__nav_dark {
-  composes: header__nav;
-}
-
-.header__nav_dark a {
-  display: block;
-  color: white;
-  transition: 1000ms linear;
-  text-decoration: none;
-  padding: 1.2rem;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.header__nav_dark li:nth-child(2n) a {
-  background-position-x: right;
-}
-
-.header__nav_dark a:hover {
-  background: linear-gradient(
-    to right,
-    var(--color-secondary1),
-    var(--color-primary__shade1),
-    var(--color-secondary2)
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
-}
-
-.bar1_dark,
-.bar2_dark,
-.bar3_dark {
-  position: relative;
-  width: 1.8rem;
-  height: 0.2rem;
-  background-color: white;
-  margin: 0.29rem 0;
-  transition: 0.3s;
-}
-
-.bar1_dark_change,
-.bar2_dark_change,
-.bar3_dark_change {
-  composes: bar1_dark;
-}
-
-.bar1_dark_change {
-  -webkit-transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
-  transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
-}
-
-.bar2_dark_change {
-  opacity: 0;
-}
-
-.bar3_dark_change {
-  -webkit-transform: rotate(45deg) translate(-0.35rem, -0.35rem);
-  transform: rotate(45deg) translate(-0.35rem, -0.35rem);
-}
-
-/* END CSS for dark theme navbar */
-
 @media (max-width: 600px) {
   .header__nav {
     width: 100%;
@@ -221,8 +150,8 @@
     position: fixed;
     right: 0;
     padding-left: 4rem;
-    height: 100%;
-    z-index: 100;
+    height: 100vh;
+    z-index: 10000000;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: start;
