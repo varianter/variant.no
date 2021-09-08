@@ -318,14 +318,6 @@ h3 {
   margin-top: 6rem;
 }
 
-.applyLinksContainer:nth-child(odd) {
-  justify-self: flex-start;
-}
-
-.applyLinksContainer:nth-child(odd) {
-  justify-self: flex-end;
-}
-
 .blobButtons {
   display: flex;
   flex-direction: column;
