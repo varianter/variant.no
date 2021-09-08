@@ -506,3 +506,9 @@ h3 {
     margin-left: auto;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .firstSection h1 {
+    font-size: 3rem;
+  }
+}
