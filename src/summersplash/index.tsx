@@ -100,14 +100,14 @@ const SummerSplash: NextPage<
                 style={{ color: 'white' }}
                 className={style.selectedTabText}
               >
-                Fast jobb
+                Nyutdannet
               </span>
             ) : (
               <span
                 style={{ color: 'white' }}
                 className={style.inactiveTabText}
               >
-                Fast jobb
+                Nyutdannet
               </span>
             )}
           </button>
