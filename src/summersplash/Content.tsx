@@ -51,15 +51,16 @@ export default function ContentComponent({ mode }: ContentProps) {
 
             <span className={style.deadline}>Søk senest 3. oktober</span>
             <h1>Er du en av våre 10 sommervarianter i 2022?</h1>
-            <a onClick={scrollToBottom}>
-              <h3 style={{ position: 'relative', top: '240px', left: '4rem' }}>
-                Søk sommerjobb
-              </h3>
-              <img
-                style={{ width: '500px', cursor: 'pointer' }}
-                src={require('./images/blobs/Topblob_crop.png')}
-                alt="Blob"
-              />
+
+            <a className={style.applyLink} onClick={scrollToBottom}>
+              <div className={style.blobButtons}>
+                <img
+                  className={style.buttonBlob}
+                  src={require('./images/blobs/Topblob_crop.png')}
+                  alt="Søk nå knapp"
+                />
+                <h3 className={style.layerText_dark}>Søk nå</h3>
+              </div>
             </a>
           </section>
         )}
@@ -83,15 +84,15 @@ export default function ContentComponent({ mode }: ContentProps) {
             <span className={style.deadline}>Søk senest 3. oktober</span>
             <h1>Er du en av våre 4 nye varianter i 2022?</h1>
 
-            <a onClick={scrollToBottom}>
-              <h3 style={{ position: 'relative', top: '240px', left: '4rem' }}>
-                Søk nå
-              </h3>
-              <img
-                style={{ width: '500px', cursor: 'pointer' }}
-                src={require('./images/blobs/firstSlideBlob-white.svg')}
-                alt="Blob"
-              />
+            <a className={style.applyLink} onClick={scrollToBottom}>
+              <div className={style.blobButtons}>
+                <img
+                  className={style.buttonBlob}
+                  src={require('./images/blobs/Topblob_ny_crop.png')}
+                  alt="Søk nå knapp"
+                />
+                <h3 className={style.layerText}>Søk nå</h3>
+              </div>
             </a>
           </section>
         )}
@@ -589,21 +590,23 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
 
-              <a className={style.applyLink} href="/jobs/utvikler-trondheim">
-                <div className={style.blobButtons}>
-                  <img
-                    className={style.buttonBlob}
-                    src={require('./images/blobs/Rightblob_crop.png')}
-                    alt="Klikkbar blob"
-                  />
-                  <h3 className={style.layerText_dark}>
-                    Søk som utvikler{' '}
-                    <span role="img" aria-label="datamaskin">
-                      💻
-                    </span>
-                  </h3>
-                </div>
-              </a>
+              <Link href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink} href="/jobs/utvikler-trondheim">
+                  <div className={style.blobButtons}>
+                    <img
+                      className={style.buttonBlob}
+                      src={require('./images/blobs/Rightblob_crop.png')}
+                      alt="Klikkbar blob"
+                    />
+                    <h3 className={style.layerText_dark}>
+                      Søk som utvikler{' '}
+                      <span role="img" aria-label="datamaskin">
+                        💻
+                      </span>
+                    </h3>
+                  </div>
+                </a>
+              </Link>
             </section>
           </>
         )}
