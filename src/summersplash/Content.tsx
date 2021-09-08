@@ -39,7 +39,7 @@ export default function ContentComponent({ mode }: ContentProps) {
           <section>
             <section className={style.arrowContainer}>
               <h4>
-                Enten i Trondheim eller Oslo!{' '}
+                Sommerjobb i både Trondheim og Oslo!
                 <span aria-label="konfetti-emoji">🎉</span>
               </h4>
               <img
@@ -57,7 +57,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               </h3>
               <img
                 style={{ width: '500px', cursor: 'pointer' }}
-                src={require('./images/blobs/firstSlideBlob.svg')}
+                src={require('./images/blobs/Topblob_crop.png')}
                 alt="Blob"
               />
             </a>
@@ -81,11 +81,11 @@ export default function ContentComponent({ mode }: ContentProps) {
             </section>
 
             <span className={style.deadline}>Søk senest 3. oktober</span>
-            <h1>Er du en av våre fire nye varianter?</h1>
+            <h1>Er du en av våre 4 nye varianter i 2022?</h1>
 
             <a onClick={scrollToBottom}>
               <h3 style={{ position: 'relative', top: '240px', left: '4rem' }}>
-                Søk fast jobb
+                Søk nå
               </h3>
               <img
                 style={{ width: '500px', cursor: 'pointer' }}
@@ -576,17 +576,16 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/1-1.png')}
+                      src={require('./images/blobs/Leftblob_crop.png')}
                       alt="Klikkbar blob"
                     />
+                    <h3 className={style.layerText_dark}>
+                      Søk som designer
+                      <span role="img" aria-label="blyant">
+                        ✏️
+                      </span>
+                    </h3>
                   </div>
-
-                  <h3 className={style.layerText_dark}>
-                    Søk som designer
-                    <span role="img" aria-label="blyant">
-                      ✏️
-                    </span>
-                  </h3>
                 </a>
               </Link>
 
@@ -595,17 +594,16 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/2-2.png')}
+                      src={require('./images/blobs/Rightblob_crop.png')}
                       alt="Klikkbar blob"
                     />
+                    <h3 className={style.layerText_dark}>
+                      Søk som utvikler
+                      <span role="img" aria-label="datamaskin">
+                        💻
+                      </span>
+                    </h3>
                   </div>
-
-                  <h3 className={style.layerText_dark}>
-                    Søk som utvikler
-                    <span role="img" aria-label="datamaskin">
-                      💻
-                    </span>
-                  </h3>
                 </a>
               </Link>
             </section>
@@ -638,7 +636,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/1-1.png')}
+                      src={require('./images/blobs/Leftblob_crop.png')}
                       alt="Klikkbar blob"
                     />
                     <h3 className={style.layerText_dark}>
@@ -656,7 +654,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
-                      src={require('./images/blobs/2-2.png')}
+                      src={require('./images/blobs/Rightblob_crop.png')}
                       alt="Klikkbar blob"
                     />
                     <h3 className={style.layerText_dark}>
