@@ -694,18 +694,6 @@ export default function ContentComponent({ mode }: ContentProps) {
           role="none"
         />
       </section>
-      <section className={style.slideCounter}>
-        <a onClick={() => handleArrowClick('prev')}>
-          <img src={require('./images/arrow.png')} />
-        </a>
-        <span>{currentSlide}/6</span>
-        <a onClick={() => handleArrowClick('next')}>
-          <img
-            style={{ transform: 'rotate(180deg)', marginLeft: 'auto' }}
-            src={require('./images/arrow.png')}
-          />
-        </a>
-      </section>
     </>
   );
 }
