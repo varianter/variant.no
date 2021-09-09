@@ -439,6 +439,7 @@ h3 {
 
   .firstSection .imageBlob {
     right: 0;
+    max-width: 60%;
   }
 
   .secondSection .leftText {
