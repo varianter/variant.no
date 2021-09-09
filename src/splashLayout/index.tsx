@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useCallback, useEffect, useState } from 'react';
-import AnimatingBackground from 'src/background';
 import { and } from 'src/utils/css';
 import style from './layout.module.css';
 
@@ -136,7 +135,6 @@ const SplashLayout: React.FC<LayoutProps> = ({
         </header>
         <div>{children}</div>
       </div>
-      <AnimatingBackground />
     </div>
   );
 };
