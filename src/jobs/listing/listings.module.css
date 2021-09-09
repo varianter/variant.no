@@ -47,6 +47,9 @@
     align-items: center;
     justify-content: center;
   }
+  .jobArticle__title {
+    font-size: 2.7rem;
+  }
 }
 
 .rendered__markdown__wrapper {
