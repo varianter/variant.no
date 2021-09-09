@@ -30,6 +30,7 @@ const SummerSplash: NextPage<
     setMode(router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job');
   }, [router.query.dynamicPath]);
 
+  if (queryedPage === undefined) return null;
   if (queryedPage !== 'sommerjobb' && queryedPage !== 'nyutdannet') {
     return <DefaultErrorPage statusCode={404} />;
   }
