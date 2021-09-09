@@ -93,7 +93,7 @@ h3 {
   border: none;
   position: relative;
   width: 52vw;
-  height: 3rem;
+  height: 3.1rem;
   text-align: center;
 }
 
@@ -106,7 +106,7 @@ h3 {
 
 .rightTab {
   composes: baseTab;
-  top: -3rem;
+  top: -3.1rem;
   width: 52vw;
   left: 48vw;
   background-color: #028377;
