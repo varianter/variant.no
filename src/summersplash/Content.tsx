@@ -304,19 +304,18 @@ export default function ContentComponent({ mode }: ContentProps) {
                 />
               </>
             )}
-
-            <img
-              className={style.imageBlob}
-              src={require(mode === 'job'
-                ? './images/progging.png'
-                : './images/sommerjobbere2021.png')}
-              alt={
-                mode === 'job'
-                  ? 'En programmerende variant med tilskuer'
-                  : 'De fem sommerstudentene i Variant i 2021'
-              }
-            />
           </div>
+          <img
+            className={style.imageBlob}
+            src={require(mode === 'job'
+              ? './images/progging.png'
+              : './images/sommerjobbere2021.png')}
+            alt={
+              mode === 'job'
+                ? 'En programmerende variant med tilskuer'
+                : 'De fem sommerstudentene i Variant i 2021'
+            }
+          />
         </section>
       </section>
 
