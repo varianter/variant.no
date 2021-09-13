@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import style from './index.module.css';
 import Link from 'next/link';
 import { and } from 'src/utils/css';
@@ -9,23 +9,10 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
-  // Should be calculated using intersection API
-  // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-  const [currentSlide, setCurrentSlide] = useState(1);
-
   const endRef = useRef<null | HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     endRef?.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleArrowClick = (action: 'next' | 'prev') => {
-    if (action === 'next') {
-      if (currentSlide < 6) setCurrentSlide(currentSlide + 1);
-    }
-    if (action === 'prev') {
-      if (currentSlide > 1) setCurrentSlide(currentSlide - 1);
-    }
   };
 
   return (
