@@ -10,9 +10,8 @@ export default function useCalculatorData(
   const [selectedYear, setSelectedYear] = useState<number>(initialYear);
   const minBonus = 0;
   const maxBonus = 100000;
-  const estimatedBonus = 70420;
   const [salary, setSalary] = useState<number>(0);
-  const [bonus, setBonus] = useState<number>(0);
+  const [bonus, setBonus] = useState<number>(70000);
 
   useEffect(() => {
     let payObj = { value: salary };
@@ -28,13 +27,13 @@ export default function useCalculatorData(
   }, [selectedYear, bonus, degree]);
 
   function increaseBonus() {
-    const yr = bonus + 10000;
-    if (yr <= maxBonus) setBonus(bonus);
+    const yr = bonus + 5000;
+    if (yr <= maxBonus) setBonus(bonus + 5000);
   }
 
   function decreaseBonus() {
-    const yr = bonus - 10000;
-    if (yr >= minBonus) setBonus(bonus);
+    const yr = bonus - 5000;
+    if (yr >= minBonus) setBonus(bonus - 5000);
   }
 
   return {
@@ -42,7 +41,6 @@ export default function useCalculatorData(
     setSelectedYear,
     degree,
     setDegree,
-    estimatedBonus,
     bonus,
     setBonus,
     minBonus,

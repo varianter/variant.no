@@ -64,6 +64,20 @@ export const Calculator = (props: Props) => {
           </div>
 
           <h3 className={style.question}>Hvor optimistisk er du på bonus?</h3>
+
+          <div>
+            <p>
+              Variant tilbyr lik bonus for alle ansatte, basert på 30 prosent av
+              overskuddet hvert kvartal.
+            </p>
+
+            <p>I 2020 var total bonus 70 420 kroner.</p>
+          </div>
+
+          <h3 className={style.question}>
+            Estimer bonus for ditt første år her:
+          </h3>
+
           <div className={style.barSliderContainer}>
             <button
               onClick={decreaseBonus}
@@ -90,12 +104,6 @@ export const Calculator = (props: Props) => {
             >
               🥳
             </button>
-          </div>
-
-          <div>
-            <p>I Variant får alle ansatte lik bonus.</p>
-
-            <p>I 2020 var bonusen 70 420 kroner.</p>
           </div>
 
           <footer className={style.summary}>
