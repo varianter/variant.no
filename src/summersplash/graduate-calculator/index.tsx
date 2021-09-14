@@ -13,7 +13,6 @@ type Props = {
 
 export const Calculator = (props: Props) => {
   const {
-    selectedYear,
     degree,
     setDegree,
     bonus,
