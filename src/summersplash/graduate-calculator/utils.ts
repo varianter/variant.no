@@ -10,14 +10,9 @@ export function calculateEstimatedSalary(
   return parseInt((data as SalaryData)[year] ?? '0');
 }
 
-export function getMaxYear(): number {
-  const keys = Object.keys(data);
-  return parseInt(keys[keys.length - 1]) - 2;
-}
-
-export const formatCurrency = (pay: string | undefined) => {
+export const formatCurrency = (pay: number | undefined) => {
   if (!pay) return pay;
-  return new Intl.NumberFormat('nb-NO').format(parseInt(pay));
+  return new Intl.NumberFormat('nb-NO').format(parseInt(pay.toString()));
 };
 
 export type Degree = 'masters' | 'bachelor';

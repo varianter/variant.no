@@ -1,44 +1,40 @@
 import anime from 'animejs';
 import { useEffect, useState } from 'react';
-import {
-  calculateEstimatedSalary,
-  Degree,
-  formatCurrency,
-  getMaxYear,
-} from './utils';
+import { calculateEstimatedSalary, Degree } from './utils';
 
 export default function useCalculatorData(
   initialYear: number,
   initialDegree: Degree,
-  addition?: number,
 ) {
   const [degree, setDegree] = useState<Degree>(initialDegree);
   const [selectedYear, setSelectedYear] = useState<number>(initialYear);
-  const minYear = 1990;
-  const maxYear = getMaxYear();
-  const [salary, setSalary] = useState('0');
+  const minBonus = 0;
+  const maxBonus = 100000;
+  const estimatedBonus = 70420;
+  const [salary, setSalary] = useState<number>(0);
+  const [bonus, setBonus] = useState<number>(0);
 
   useEffect(() => {
     let payObj = { value: salary };
     anime({
       targets: payObj,
-      value: calculateEstimatedSalary(selectedYear, degree) + (addition ?? 0),
+      value: calculateEstimatedSalary(selectedYear, degree),
       duration: 500,
       round: 1,
       easing: 'easeInOutExpo',
-      update: () => setSalary(formatCurrency(payObj.value) ?? ''),
+      update: () => setSalary(payObj.value ?? 0),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedYear, degree, addition]);
+  }, [selectedYear, bonus, degree]);
 
-  function incrementYear() {
-    const yr = selectedYear + 1;
-    if (yr <= maxYear) setSelectedYear(yr);
+  function increaseBonus() {
+    const yr = bonus + 10000;
+    if (yr <= maxBonus) setBonus(bonus);
   }
 
-  function decrementYear() {
-    const yr = selectedYear - 1;
-    if (yr >= minYear) setSelectedYear(yr);
+  function decreaseBonus() {
+    const yr = bonus - 10000;
+    if (yr >= minBonus) setBonus(bonus);
   }
 
   return {
@@ -46,10 +42,13 @@ export default function useCalculatorData(
     setSelectedYear,
     degree,
     setDegree,
-    minYear,
-    maxYear,
+    estimatedBonus,
+    bonus,
+    setBonus,
+    minBonus,
+    maxBonus,
     salary,
-    incrementYear,
-    decrementYear,
+    increaseBonus,
+    decreaseBonus,
   };
 }

@@ -442,7 +442,7 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <section className={style.calculatorContainer}>
-            <Calculator year={2021} degree={'masters'} />
+            <Calculator year={2021} degree={'masters'} estimatedBonus={70420} />
           </section>
         )}
       </section>

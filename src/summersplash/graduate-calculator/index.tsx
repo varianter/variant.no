@@ -1,5 +1,6 @@
 import React from 'react';
 import RadioButton from '../../components/radio-button';
+import Slider from 'src/components/slider';
 import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
@@ -8,15 +9,22 @@ import useCalculatorData from './use-calculator-data';
 type Props = {
   year: number;
   degree: Degree;
-  addition?: number;
 };
 
 export const Calculator = (props: Props) => {
-  const { degree, setDegree, salary } = useCalculatorData(
-    props.year,
-    props.degree,
-    props.addition,
-  );
+  const {
+    selectedYear,
+    degree,
+    setDegree,
+    estimatedBonus,
+    bonus,
+    setBonus,
+    minBonus,
+    maxBonus,
+    salary,
+    increaseBonus,
+    decreaseBonus,
+  } = useCalculatorData(props.year, props.degree);
 
   return (
     <div className={style.container}>
@@ -26,7 +34,7 @@ export const Calculator = (props: Props) => {
 
           <p>Vil du vite hva du vil tjene i Variant som nyutdannet i 2022?</p>
 
-          <p>Da trenger du bare svare på ett eneste spørsmål:</p>
+          <p>Da trenger du bare svare på to spørsmål:</p>
 
           <div
             className={style.gradeContainer}
@@ -56,13 +64,39 @@ export const Calculator = (props: Props) => {
             />
           </div>
 
+          <h3 className={style.question}>Hvor optimistisk er du på bonus?</h3>
+          <div className={style.barSliderContainer}>
+            <button
+              onClick={decreaseBonus}
+              className={style.iconButton}
+              aria-label="Minske bonusbeløp med 10 000 kr"
+              role="img"
+            >
+              😬
+            </button>
+            <Slider
+              initial={bonus}
+              to={maxBonus}
+              from={minBonus}
+              onChange={setBonus}
+              value={bonus}
+              label={'Estimert bonus'}
+              step={1000}
+            />
+            <button
+              onClick={increaseBonus}
+              className={style.iconButton}
+              aria-label="Øke bonusbeløp med 10 000 kr"
+              role="img"
+            >
+              🥳
+            </button>
+          </div>
+
           <div>
-            <p>
-              I tillegg til lønn, får alle varianter også kvartalsvis bonus.
-              Denne utgjør 30% av kvartalets overskudd, fratrukket arbeidsavgift
-              på 14,1%. Dette har det siste året utgjort ca kr. 70 000 for hver
-              variant.
-            </p>
+            <p>I Variant får alle ansatte lik bonus.</p>
+
+            <p>I 2020 var bonusen 70 420 kroner.</p>
           </div>
 
           <footer className={style.summary}>
@@ -70,17 +104,21 @@ export const Calculator = (props: Props) => {
               <h3 className={style.question}>Da blir lønnen din sånn:</h3>
 
               <dl>
-                {!!props.addition && (
-                  <div className={style.flexRow}>
-                    <dd className={style.number}>
-                      {formatCurrency(props.addition.toString())}
-                    </dd>
-                  </div>
-                )}
+                <div className={style.flexRow}>
+                  <dt>Fast årslønn</dt>
+                  <dd className={style.number}>{formatCurrency(salary)}</dd>
+                </div>
+
+                <div className={style.flexRow}>
+                  <dt>Bonusestimat</dt>
+                  <dd className={style.number}>{formatCurrency(bonus)}</dd>
+                </div>
 
                 <div className={style.flexRow}>
                   <dt>Din årslønn i Variant</dt>
-                  <dd className={and(style.number, style.result)}>{salary}</dd>
+                  <dd className={and(style.number, style.result)}>
+                    {formatCurrency(salary + bonus)}
+                  </dd>
                 </div>
               </dl>
             </div>
