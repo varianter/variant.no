@@ -9,6 +9,7 @@ type SliderProps = {
   onChange(value: number): void;
   value: number;
   label: string;
+  step?: number | 1;
 };
 
 const ReactSlider = dynamic(() => import('react-slider'), {
@@ -28,6 +29,7 @@ export default function Slider({
   onChange,
   value,
   label,
+  step,
 }: SliderProps) {
   return (
     <div>
@@ -46,6 +48,7 @@ export default function Slider({
         defaultValue={initial}
         min={from}
         max={to}
+        step={step}
       />
     </div>
   );
