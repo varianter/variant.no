@@ -1,6 +1,6 @@
 import React from 'react';
 import RadioButton from '../../components/radio-button';
-import Slider from 'src/components/slider';
+import Slider from './slider';
 import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
 import { and } from 'src/utils/strings';
@@ -16,7 +16,6 @@ export const Calculator = (props: Props) => {
     selectedYear,
     degree,
     setDegree,
-    estimatedBonus,
     bonus,
     setBonus,
     minBonus,

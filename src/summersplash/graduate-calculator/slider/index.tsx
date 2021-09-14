@@ -1,6 +1,7 @@
 import style from './slider.module.css';
 import dynamic from 'next/dynamic';
 import { and } from 'src/utils/css';
+import { formatCurrency } from '../utils';
 
 type SliderProps = {
   initial: number;
@@ -40,7 +41,7 @@ export default function Slider({
         ariaLabel={label}
         renderThumb={(props, state) => (
           <div {...props}>
-            <div className={style.year}>{state.valueNow}</div>
+            <div className={style.year}>{formatCurrency(state.valueNow)}</div>
           </div>
         )}
         onChange={(e) => onChange(e as number)}
