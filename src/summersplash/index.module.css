@@ -97,7 +97,7 @@ h3 {
   display: inline-block;
   border: none;
   position: relative;
-  width: 52vw;
+  width: 51vw;
   height: 3.1rem;
   text-align: center;
 }
@@ -112,8 +112,7 @@ h3 {
 .rightTab {
   composes: baseTab;
   top: -3.1rem;
-  width: 52vw;
-  left: 48vw;
+  left: 49vw;
   background-color: #028377;
   color: white;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
