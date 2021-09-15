@@ -119,6 +119,7 @@ h3 {
 
 .leftTab_inactive {
   composes: leftTab;
+  top: -0.05rem;
 }
 
 .leftTab_inactive:hover {
@@ -128,6 +129,7 @@ h3 {
 
 .rightTab_inactive {
   composes: rightTab;
+  top: -3.15rem;
 }
 
 .rightTab_inactive:hover {
