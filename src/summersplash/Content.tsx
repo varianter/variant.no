@@ -600,7 +600,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               </Link>
 
               <Link href="/jobs/sommerjobb-utvikler-2022">
-                <a className={style.applyLink} href="/jobs/utvikler-trondheim">
+                <a className={style.applyLink}>
                   <div className={style.blobButtons}>
                     <img
                       className={style.buttonBlob}
