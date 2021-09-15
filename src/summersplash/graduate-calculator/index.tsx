@@ -28,12 +28,7 @@ export const Calculator = (props: Props) => {
     <div className={style.container}>
       <div className={style.calculatorContainer}>
         <fieldset className={style.contentContainer}>
-          <h3 className={style.title}>Lønnskalkulator</h3>
-
-          <p>Vil du vite hva du vil tjene i Variant som nyutdannet i 2022?</p>
-
-          <p>Da trenger du bare svare på to spørsmål:</p>
-
+          <h4>Lønnskalkulator</h4>
           <div
             className={style.gradeContainer}
             role="group"
@@ -62,20 +57,16 @@ export const Calculator = (props: Props) => {
             />
           </div>
 
-          <h3 className={style.question}>Hvor optimistisk er du på bonus?</h3>
-
-          <div>
-            <p>
-              Variant tilbyr lik bonus for alle ansatte, basert på 30 prosent av
-              overskuddet hvert kvartal.
-            </p>
-
-            <p>I 2020 var total bonus 70 420 kroner.</p>
-          </div>
-
           <h3 className={style.question}>
             Estimer bonus for ditt første år her:
           </h3>
+
+          <div>
+            <p>
+              Variant fordeler 30% av overskuddet likt på alle ansatte. I 2020
+              var denne bonusen på 12 345 kr.
+            </p>
+          </div>
 
           <div className={style.barSliderContainer}>
             <button
@@ -93,7 +84,7 @@ export const Calculator = (props: Props) => {
               onChange={setBonus}
               value={bonus}
               label={'Estimert bonus'}
-              step={1000}
+              step={5000}
             />
             <button
               onClick={increaseBonus}

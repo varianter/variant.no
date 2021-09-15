@@ -7,12 +7,19 @@
   border: none;
 }
 
+fieldset {
+  margin: 0;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 2rem;
+}
+
 .container {
   margin: auto;
 }
 
 .gradeContainer {
-  margin-top: 2.4rem;
+  margin-top: 1.2rem;
 }
 
 .barSliderContainer {
@@ -22,7 +29,11 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin: 2.4rem 0;
+  margin: 3rem 0;
+}
+
+dl {
+  margin: 0;
 }
 
 .iconButton {
@@ -37,6 +48,7 @@
 .calculatorContainer {
   position: relative;
   overflow: hidden;
+  outline: none;
 }
 
 @media (max-width: 400px) {
@@ -69,12 +81,6 @@
 .contentContainer {
   position: relative;
   z-index: 2;
-  padding: 1.5rem;
-}
-
-.title {
-  margin: 2.4rem 0 1.2rem;
-  hyphens: auto;
 }
 
 .graduation {
@@ -85,15 +91,9 @@
 
 .question {
   font-size: 1rem;
-  color: var(--color-secondary1);
-  font-weight: 600;
+  color: #333333;
+  font-weight: 500;
   grid-column: 1 / -1;
-}
-
-.summary {
-  margin-top: 9.6rem;
-  display: flex;
-  justify-content: center;
 }
 
 .calculation {

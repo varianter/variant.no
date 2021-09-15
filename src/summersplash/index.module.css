@@ -238,12 +238,16 @@ h3 {
   composes: splashSection;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    'title . .'
+    'left-title . right-title'
     'center-left . center-right';
 }
 
 .fourthSection > h3 {
-  grid-area: title;
+  grid-area: left-title;
+}
+
+.fourthSection > .rightText > h3 {
+  grid-area: right-title;
 }
 
 .calculatorContainer {

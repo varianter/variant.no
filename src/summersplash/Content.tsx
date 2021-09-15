@@ -442,8 +442,10 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'job' && (
-          <section className={style.calculatorContainer}>
-            <Calculator year={2021} degree={'masters'} />
+          <section className={style.rightText}>
+            <section className={style.calculatorContainer}>
+              <Calculator year={2021} degree={'masters'} />
+            </section>
           </section>
         )}
       </section>
