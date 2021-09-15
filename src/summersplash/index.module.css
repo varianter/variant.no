@@ -260,16 +260,12 @@ h3 {
   composes: splashSection;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    'left-title . right-title'
+    'title . .'
     'center-left . center-right';
 }
 
 .fourthSection > h3 {
-  grid-area: left-title;
-}
-
-.fourthSection > .rightText > h3 {
-  grid-area: right-title;
+  grid-area: title;
 }
 
 .calculatorContainer {
@@ -334,7 +330,7 @@ h3 {
 
 .fifthSection > .imageBlob {
   position: absolute;
-  top: -18rem;
+  top: -8rem;
   left: 8rem;
   max-width: 40%;
   object-fit: contain;
@@ -358,6 +354,7 @@ h3 {
     'center-left . center-right'
     'buttons buttons buttons';
   grid-template-rows: auto 1fr;
+  padding: 8rem 8rem 0 8rem;
 }
 
 .sixtSection > .imageBlob {
@@ -521,6 +518,7 @@ h3 {
   .fifthSection > .imageBlob {
     max-width: 80%;
     left: -2rem;
+    top: -16rem;
   }
 
   .jobtitle {
@@ -553,7 +551,8 @@ h3 {
   }
 
   .sixtSection .leftText {
-    width: 40%;
+    margin-top: 4rem;
+    width: 100%;
   }
 }
 
