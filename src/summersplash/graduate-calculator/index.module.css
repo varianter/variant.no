@@ -22,6 +22,11 @@ fieldset {
   margin-top: 1.2rem;
 }
 
+.radioContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .barSliderContainer {
   display: grid;
   grid-template-columns: max-content 1fr max-content;

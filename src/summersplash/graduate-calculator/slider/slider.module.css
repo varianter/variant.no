@@ -22,7 +22,9 @@
 }
 
 .year {
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
   bottom: 125%;
   font-variant-numeric: tabular-nums;
 }

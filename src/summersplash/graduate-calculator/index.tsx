@@ -38,23 +38,25 @@ export const Calculator = (props: Props) => {
               Hvilken grad får du?
             </h3>
 
-            <RadioButton
-              changed={setDegree}
-              id="degree-1"
-              isSelected={degree === 'bachelor'}
-              label="Bachelor"
-              value="bachelor"
-              name="degree"
-            />
+            <section className={style.radioContainer}>
+              <RadioButton
+                changed={setDegree}
+                id="degree-1"
+                isSelected={degree === 'bachelor'}
+                label="Bachelor"
+                value="bachelor"
+                name="degree"
+              />
 
-            <RadioButton
-              changed={setDegree}
-              id="degree-2"
-              isSelected={degree === 'masters'}
-              label="Master"
-              value="masters"
-              name="degree"
-            />
+              <RadioButton
+                changed={setDegree}
+                id="degree-2"
+                isSelected={degree === 'masters'}
+                label="Master"
+                value="masters"
+                name="degree"
+              />
+            </section>
           </div>
 
           <h3 className={style.question}>
