@@ -90,7 +90,7 @@ const SummerSplash: NextPage<
           <button
             className={
               mode === 'job'
-                ? style.leftTab
+                ? style.leftTab_inactive
                 : and(style.leftTab, style.activeTab)
             }
           >
@@ -106,7 +106,7 @@ const SummerSplash: NextPage<
             className={
               mode === 'job'
                 ? and(style.rightTab, style.activeTab)
-                : style.rightTab
+                : style.rightTab_inactive
             }
           >
             {mode === 'job' ? (

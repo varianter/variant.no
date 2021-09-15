@@ -106,7 +106,6 @@ h3 {
   composes: baseTab;
   background-color: #fad2e2;
   clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
-  cursor: pointer;
 }
 
 .rightTab {
@@ -116,6 +115,24 @@ h3 {
   background-color: #028377;
   color: white;
   clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.leftTab_inactive {
+  composes: leftTab;
+}
+
+.leftTab_inactive:hover {
+  cursor: pointer;
+  background-color: #f5a4c4;
+}
+
+.rightTab_inactive {
+  composes: rightTab;
+}
+
+.rightTab_inactive:hover {
+  cursor: pointer;
+  background-color: #01574f;
 }
 
 .activeTab {
