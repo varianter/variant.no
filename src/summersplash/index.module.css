@@ -222,6 +222,10 @@ h3 {
   transform: rotate(180deg);
 }
 
+.groupArrow h4 {
+  font-size: 1.25rem;
+}
+
 .upsideDown {
   composes: arrow;
   transform: scaleY(-1);
@@ -341,6 +345,16 @@ h3 {
   position: absolute;
   top: -8rem;
   right: 8rem;
+}
+
+.applyArrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.applyArrow h4 {
+  font-size: 1.25rem;
 }
 
 .applyLinksContainer {
