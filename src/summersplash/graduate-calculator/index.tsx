@@ -66,7 +66,7 @@ export const Calculator = (props: Props) => {
           <div>
             <p>
               Variant fordeler 30% av overskuddet likt på alle ansatte. I 2020
-              var denne bonusen på 12 345 kr.
+              utgjorde denne bonusen omtrent 70 000 kr.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export const Calculator = (props: Props) => {
             <button
               onClick={decreaseBonus}
               className={style.iconButton}
-              aria-label="Minske bonusbeløp med 10 000 kr"
+              aria-label="Minske bonusbeløp med 5 000 kr"
               role="img"
             >
               😬
@@ -91,7 +91,7 @@ export const Calculator = (props: Props) => {
             <button
               onClick={increaseBonus}
               className={style.iconButton}
-              aria-label="Øke bonusbeløp med 10 000 kr"
+              aria-label="Øke bonusbeløp med 5 000 kr"
               role="img"
             >
               🥳
@@ -109,12 +109,12 @@ export const Calculator = (props: Props) => {
                 </div>
 
                 <div className={style.flexRow}>
-                  <dt>Bonusestimat</dt>
+                  <dt>Estimert bonus</dt>
                   <dd className={style.number}>{formatCurrency(bonus)}</dd>
                 </div>
 
                 <div className={style.flexRow}>
-                  <dt>Din årslønn i Variant</dt>
+                  <dt>Estimert årslønn i Variant</dt>
                   <dd className={and(style.number, style.result)}>
                     {formatCurrency(salary + bonus)}
                   </dd>
