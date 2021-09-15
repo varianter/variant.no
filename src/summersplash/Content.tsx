@@ -581,7 +581,7 @@ export default function ContentComponent({ mode }: ContentProps) {
             </section>
 
             <section className={style.applyLinksContainer}>
-              <Link href="/jobs/utvikler-trondheim">
+              <Link href="/jobs/sommerjobb-designer-2022">
                 <a className={style.applyLink}>
                   <div className={style.blobButtons}>
                     <img
@@ -599,7 +599,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
 
-              <Link href="/jobs/utvikler-trondheim">
+              <Link href="/jobs/sommerjobb-utvikler-2022">
                 <a className={style.applyLink} href="/jobs/utvikler-trondheim">
                   <div className={style.blobButtons}>
                     <img
@@ -641,7 +641,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               </div>
             </section>
             <section className={style.applyLinksContainer}>
-              <Link href="/jobs/utvikler-trondheim">
+              <Link href="/jobs/nyutdannet-designer-2022">
                 <a className={style.applyLink}>
                   <div className={style.blobButtons}>
                     <img
@@ -659,7 +659,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                 </a>
               </Link>
 
-              <Link href="/jobs/utvikler-trondheim">
+              <Link href="/jobs/nyutdannet-utvikler-2022">
                 <a className={style.applyLink}>
                   <div className={style.blobButtons}>
                     <img
