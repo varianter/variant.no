@@ -143,11 +143,16 @@ h3 {
 
 .firstSection .arrowContainer {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.firstSection .arrow {
+  position: relative;
+  top: 8rem;
 }
 
 .firstSection .buttonBlob {
@@ -439,8 +444,9 @@ h3 {
 
   .firstSection .arrow {
     transform: rotate(0deg);
+    transform: scaleX(-1);
     position: relative;
-    top: 4rem;
+    top: 2rem;
   }
 
   .secondSection .leftText {
