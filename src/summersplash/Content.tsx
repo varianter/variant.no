@@ -37,7 +37,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               <h4>
                 Sommerjobb i både Trondheim og Oslo!
                 <span
-                  style={{ marginLeft: '1rem' }}
+                  style={{ marginLeft: '0.33rem' }}
                   aria-label="konfetti-emoji"
                 >
                   🎉
@@ -79,7 +79,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               <h4>
                 Kontorer i både Trondheim og Oslo!
                 <span
-                  style={{ marginLeft: '1rem' }}
+                  style={{ marginLeft: '0.33rem' }}
                   aria-label="konfetti-emoji"
                 >
                   🎉
