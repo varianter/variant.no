@@ -16,7 +16,7 @@ export default function ContentComponent({ mode }: ContentProps) {
   };
 
   return (
-    <>
+    <article className={style.contentWrapper}>
       <section
         key={0}
         className={and(style.firstSection, 'color-scroll-section')}
@@ -24,20 +24,21 @@ export default function ContentComponent({ mode }: ContentProps) {
       >
         {mode === 'internship' && (
           <section>
+            <span className={style.deadline}>Søk senest 3. oktober</span>
+            <h1>Er du en av våre 10 sommervarianter i 2022?</h1>
+
             <section className={style.arrowContainer}>
-              <h4>
-                Sommerjobb i både Trondheim og Oslo!
-                <span aria-label="konfetti-emoji">🎉</span>
-              </h4>
               <img
                 className={style.arrow}
                 aria-label="Pil som forklarer at Variant nå har kontorer i både Trondheim og Oslo"
                 src={require('./images/pil.svg')}
               />
-            </section>
 
-            <span className={style.deadline}>Søk senest 3. oktober</span>
-            <h1>Er du en av våre 10 sommervarianter i 2022?</h1>
+              <h4>
+                Sommerjobb i både Trondheim og Oslo!
+                <span aria-label="konfetti-emoji">🎉</span>
+              </h4>
+            </section>
 
             <a className={style.applyLink} onClick={scrollToBottom}>
               <div className={style.blobButtons}>
@@ -59,11 +60,10 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <section className={style.white}>
+            <span className={style.deadline}>Søk senest 3. oktober</span>
+            <h1>Er du en av våre 4 nyutdannede varianter i 2022?</h1>
+
             <section className={style.arrowContainer}>
-              <h4>
-                Kontorer i både Trondheim og Oslo!{' '}
-                <span aria-label="konfetti-emoji">🎉</span>
-              </h4>
               <img
                 className={style.arrow}
                 aria-label="Pil som forklarer at Variant i 2022 tilbyr fast jobb både i Trondheim og Oslo"
@@ -71,10 +71,11 @@ export default function ContentComponent({ mode }: ContentProps) {
                   ? './images/hvit-pil.svg'
                   : './images/pil.svg')}
               />
+              <h4>
+                Kontorer i både Trondheim og Oslo!{' '}
+                <span aria-label="konfetti-emoji">🎉</span>
+              </h4>
             </section>
-
-            <span className={style.deadline}>Søk senest 3. oktober</span>
-            <h1>Er du en av våre 4 nyutdannede varianter i 2022?</h1>
 
             <a className={style.applyLink} onClick={scrollToBottom}>
               <div className={style.blobButtons}>
@@ -681,6 +682,6 @@ export default function ContentComponent({ mode }: ContentProps) {
           role="none"
         />
       </section>
-    </>
+    </article>
   );
 }

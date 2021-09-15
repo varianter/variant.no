@@ -22,6 +22,11 @@ h3 {
   right: 3rem;
 }
 
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .splashSection {
   scroll-snap-align: start;
   position: relative;
@@ -426,6 +431,16 @@ h3 {
   .firstSection .imageBlob {
     right: 0;
     max-width: 60%;
+  }
+
+  .firstSection .arrowContainer {
+    position: static;
+  }
+
+  .firstSection .arrow {
+    transform: rotate(0deg);
+    position: relative;
+    top: 4rem;
   }
 
   .secondSection .leftText {
