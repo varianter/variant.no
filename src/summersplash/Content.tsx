@@ -9,7 +9,7 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
-  const endRef = useRef<null | HTMLDivElement>(null);
+  const endRef = useRef<null | HTMLImgElement>(null);
 
   const scrollToBottom = () => {
     endRef?.current?.scrollIntoView({ behavior: 'smooth' });
@@ -552,7 +552,6 @@ export default function ContentComponent({ mode }: ContentProps) {
         key={5}
         className={and(style.sixtSection, 'color-scroll-section')}
         data-background-color={mode === 'job' ? '#F4F1E7' : '#423D89'}
-        ref={endRef}
       >
         {mode === 'internship' && (
           <>
@@ -692,6 +691,7 @@ export default function ContentComponent({ mode }: ContentProps) {
             ? './images/variant.svg'
             : './images/variant-white.svg')}
           role="none"
+          ref={endRef}
         />
       </section>
     </article>
