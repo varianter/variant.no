@@ -156,7 +156,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   Trondheim
                 </a>{' '}
                 og{' '}
-                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>{' '}
+                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>
                 med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
                 viktig hvilke verktøy eller språk du bruker. Det er langt
                 viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
@@ -185,8 +185,8 @@ export default function ContentComponent({ mode }: ContentProps) {
               <a href="https://handbook.variant.no/avdelinger/trondheim">
                 Trondheim
               </a>{' '}
-              og <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>{' '}
-              , til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
+              og <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>,
+              til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
               naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
               ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i
               konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som
