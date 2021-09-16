@@ -515,10 +515,10 @@ h3 {
       'center-right';
   }
 
-  .fifthSection > .imageBlob {
-    max-width: 80%;
+  .fifthSection .imageBlob {
+    max-width: 60%;
     left: -2rem;
-    top: -16rem;
+    top: -20rem;
   }
 
   .jobtitle {
