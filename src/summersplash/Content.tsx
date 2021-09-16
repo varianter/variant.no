@@ -49,7 +49,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               <div className={style.blobButtons}>
                 <img
                   className={style.buttonBlob}
-                  src={require('./images/blobs/Topblob_crop.png')}
+                  src={require('./images/blobs/Topblob_black_crop.png')}
                   alt="Søk nå knapp"
                 />
                 <h3 className={style.layerText_dark}>
@@ -91,7 +91,7 @@ export default function ContentComponent({ mode }: ContentProps) {
               <div className={style.blobButtons}>
                 <img
                   className={style.buttonBlob}
-                  src={require('./images/blobs/Topblob_ny_crop.png')}
+                  src={require('./images/blobs/Topblob_white_crop.png')}
                   alt="Søk nå knapp"
                 />
                 <h3 className={style.layerText}>
