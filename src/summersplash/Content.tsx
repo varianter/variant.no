@@ -9,7 +9,7 @@ interface ContentProps {
 }
 
 export default function ContentComponent({ mode }: ContentProps) {
-  const endRef = useRef<null | HTMLImgElement>(null);
+  const endRef = useRef<null | HTMLImageElement>(null);
 
   const scrollToBottom = () => {
     endRef?.current?.scrollIntoView({ behavior: 'smooth' });
