@@ -8,6 +8,7 @@
   "license": "MIT",
   "description": "Homepage for Variant.no",
   "devDependencies": {
+    "@types/markdown-it": "^10.0.2",
     "@types/mkdirp": "^1.0.1",
     "@types/node": "^14.14.14",
     "@types/react": "^17.0.0",
@@ -15,7 +16,6 @@
     "autoprefixer": "^10.1.0",
     "eslint": "^7.15.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "@types/markdown-it": "^10.0.2",
     "husky": ">=4",
     "lint-staged": ">=10",
     "next-compose-plugins": "^2.2.1",
@@ -30,14 +30,15 @@
     "@variant/components": "^2.0.11",
     "@variant/profile": "^3.0.1",
     "animejs": "^3.2.1",
+    "gray-matter": "^4.0.2",
+    "markdown-it": "^11.0.0",
     "mkdirp": "^1.0.4",
     "next": "10.0.2",
     "next-images": "^1.6.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-slider": "^1.1.2",
-    "gray-matter": "^4.0.2",
-    "markdown-it": "^11.0.0"
+    "react-scrolling-color-background": "^1.0.2",
+    "react-slider": "^1.1.2"
   },
   "scripts": {
     "dev": "next dev",

@@ -40,16 +40,6 @@ module.exports = withPlugins([withImages], {
   async redirects() {
     return [
       {
-        source: '/sommerjobb',
-        destination: 'https://variant.no/jobs/sommerjobb-utvikler-2022',
-        permanent: true,
-      },
-      {
-        source: '/nyutdannet',
-        destination: 'https://variant.no/jobs',
-        permanent: true,
-      },
-      {
         source: '/jobs/(senior|erfaren-)utvikler-i-oslo',
         destination: '/jobs/utvikler-i-oslo',
         permanent: true,
