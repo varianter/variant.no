@@ -400,6 +400,14 @@ h3 {
   font-size: 1.2rem;
 }
 
+.firstSection .buttonBlob {
+  height: 8rem;
+}
+
+.firstSection .layerText {
+  bottom: 7rem;
+}
+
 .buttonBlob {
   height: 13rem;
   object-fit: contain;
