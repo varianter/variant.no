@@ -156,7 +156,7 @@ export default function ContentComponent({ mode }: ContentProps) {
                   Trondheim
                 </a>{' '}
                 og{' '}
-                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>
+                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>{' '}
                 med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
                 viktig hvilke verktøy eller språk du bruker. Det er langt
                 viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
