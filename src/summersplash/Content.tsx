@@ -324,8 +324,8 @@ export default function ContentComponent({ mode }: ContentProps) {
       >
         {mode === 'internship' && (
           <>
-            <h3 className={style.white}>Hva skjer etter søknadsfristen?</h3>
             <section className={and(style.leftText, style.white)}>
+              <h3 className={style.white}>Hva skjer etter søknadsfristen?</h3>
               <div>
                 <p>
                   Vi liker ikke tradisjonelle intervjuer. De plasserer søker i
@@ -359,8 +359,8 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         {mode === 'job' && (
           <>
-            <h3>Hva kan vi tilby?</h3>
             <section className={style.leftText}>
+              <h3>Hva kan vi tilby?</h3>
               <div>
                 <p>
                   Som nyutdannet konsulent i Variant blir du en del av
@@ -409,45 +409,47 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         {mode === 'internship' && (
-          <section className={and(style.timelineContainer, style.white)}>
-            <div className={style.timelineEvent}>
-              <h4>Søknadsfrist</h4>
-              <h5>3. oktober</h5>
-            </div>
+          <section className={style.rightText}>
+            <section className={and(style.timelineContainer, style.white)}>
+              <div className={style.timelineEvent}>
+                <h4>Søknadsfrist</h4>
+                <h5>3. oktober</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Kaffeprat med utvalgte kandidater</h4>
-              <h5>6. - 7. oktober</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Kaffeprat med utvalgte kandidater</h4>
+                <h5>6. - 7. oktober</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Tilbud om sommerjobb</h4>
-              <h5>8. oktober</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Tilbud om sommerjobb</h4>
+                <h5>8. oktober</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Mulighet for å delta på alle sosiale arrangementer</h4>
-              <h5>november - juni</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Mulighet for å delta på alle sosiale arrangementer</h4>
+                <h5>november - juni</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Første arbeidsperiode</h4>
-              <h5>13. juni - 8. juli (4 uker)</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Første arbeidsperiode</h4>
+                <h5>13. juni - 8. juli (4 uker)</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Fellesferie</h4>
-              <h5>11. - 29. juli (3 uker)</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Fellesferie</h4>
+                <h5>11. - 29. juli (3 uker)</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Andre arbeidsperiode</h4>
-              <h5>1. - 12. august (2 uker)</h5>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Andre arbeidsperiode</h4>
+                <h5>1. - 12. august (2 uker)</h5>
+              </div>
 
-            <div className={style.timelineEvent}>
-              <h4>Tilbud om fast ansettelse?</h4>
-            </div>
+              <div className={style.timelineEvent}>
+                <h4>Tilbud om fast ansettelse?</h4>
+              </div>
+            </section>
           </section>
         )}
 
@@ -518,22 +520,16 @@ export default function ContentComponent({ mode }: ContentProps) {
           </section>
         )}
 
-        <section
-          className={
-            mode === 'job' ? and(style.leftText, style.white) : style.leftText
-          }
-        >
-          <div className={style.applyArrow}>
-            <h4>Du kan søke på neste side!</h4>
-            <img
-              className={and(style.arrow, style.upsideDown)}
-              aria-label="Pil som viser at du kan søke lenger nede på siden"
-              src={require(mode === 'job'
-                ? './images/hvit-pil.svg'
-                : './images/pil.svg')}
-            />
-          </div>
-        </section>
+        <div className={style.applyArrow}>
+          <h4 className={style.white}>Du kan søke på neste side!</h4>
+          <img
+            className={and(style.arrow, style.upsideDown)}
+            aria-label="Pil som viser at du kan søke lenger nede på siden"
+            src={require(mode === 'job'
+              ? './images/hvit-pil.svg'
+              : './images/pil.svg')}
+          />
+        </div>
 
         <img
           className={style.imageBlob}
