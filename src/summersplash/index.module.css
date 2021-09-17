@@ -31,7 +31,7 @@ h3 {
   scroll-snap-align: start;
   position: relative;
   min-height: 100vh;
-  padding: 8rem;
+  padding: 0 8rem;
   display: grid;
   grid-template-columns: 40% 20% 40%;
   grid-template-rows: 100%;
@@ -41,7 +41,7 @@ h3 {
 .leftText,
 .rightText {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   text-align: left;
 }
@@ -120,21 +120,25 @@ h3 {
 .leftTab_inactive {
   composes: leftTab;
   top: -0.05rem;
+  transition: 0.2s;
 }
 
 .leftTab_inactive:hover {
   cursor: pointer;
-  background-color: #f5a4c4;
+  background-color: #f1bed2;
+  transition: 0.2s;
 }
 
 .rightTab_inactive {
   composes: rightTab;
   top: -3.15rem;
+  transition: 0.2s;
 }
 
 .rightTab_inactive:hover {
   cursor: pointer;
-  background-color: #01574f;
+  background-color: #007267;
+  transition: 0.2s;
 }
 
 .activeTab {
@@ -144,6 +148,9 @@ h3 {
 .firstSection {
   composes: splashSection;
   display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .firstSection > section {
@@ -179,7 +186,7 @@ h3 {
   object-fit: contain;
 }
 
-.firstSection .applyLink {
+.firstSection .applyLinkContainer {
   display: flex;
   justify-content: flex-start;
   margin-left: -2rem;
@@ -200,26 +207,23 @@ h3 {
 }
 
 .secondSection > .leftText {
-  margin-bottom: 200px;
+  justify-content: flex-start;
+  padding-top: 100px;
 }
 
 .secondSection > .rightText {
-  margin-top: 500px;
+  margin-top: 12rem;
 }
 
 .secondSection > .imageBlob {
   position: absolute;
-  height: 28rem;
-  bottom: -14rem;
+  height: 24rem;
+  bottom: -4rem;
   left: 8rem;
 }
 
 .thirdSection {
   composes: splashSection;
-}
-
-.thirdSection > .leftText {
-  margin-top: 200px;
 }
 
 .thirdSection .imageBlob {
@@ -328,24 +332,16 @@ h3 {
   composes: splashSection;
 }
 
+.fifthSection .rightText {
+  padding-bottom: 4rem;
+}
+
 .fifthSection > .imageBlob {
   position: absolute;
-  top: -8rem;
+  top: -4rem;
   left: 8rem;
   max-width: 40%;
   object-fit: contain;
-}
-
-.fifthSection > .leftText {
-  grid-area: center-left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.fifthSection > .rightText {
-  margin: 10rem 0;
 }
 
 .sixtSection {
@@ -359,14 +355,17 @@ h3 {
 
 .sixtSection > .imageBlob {
   position: absolute;
-  top: -8rem;
-  right: 8rem;
+  top: -4rem;
+  right: 4rem;
 }
 
 .applyArrow {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 8rem;
 }
 
 .applyArrow h4 {
@@ -422,11 +421,12 @@ h3 {
 
 .layerText {
   position: relative;
-  bottom: 9rem;
+  bottom: 9.8rem;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .layerText_dark {
@@ -449,7 +449,7 @@ h3 {
 
 @media screen and (max-width: 1367px) {
   .splashSection {
-    padding: 2rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -460,7 +460,7 @@ h3 {
 
   .leftText,
   .rightText {
-    margin: 2rem 0;
+    margin: 0;
   }
 
   .arrowContainer h4 {
@@ -496,7 +496,7 @@ h3 {
   }
 
   .secondSection .leftText {
-    margin-top: 20rem;
+    margin-top: 16rem;
     margin-bottom: 1rem;
   }
 
@@ -522,12 +522,26 @@ h3 {
   }
 
   .fourthSection {
-    padding-bottom: 20rem;
+    padding-bottom: 30rem;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       'title'
       'center-left'
       'center-right';
+  }
+
+  .fourthSection h3 {
+    margin-top: 2rem;
+  }
+
+  .fourthSection .leftText {
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+  }
+
+  .fifthSection {
+    grid-template-rows: auto;
+    grid-template-areas: 'center-right';
   }
 
   .fifthSection .imageBlob {
@@ -543,6 +557,7 @@ h3 {
   .applyArrow {
     position: absolute;
     bottom: 0;
+    left: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -8,7 +8,7 @@ export default function useCalculatorData(
 ) {
   const [degree, setDegree] = useState<Degree>(initialDegree);
   const [selectedYear, setSelectedYear] = useState<number>(initialYear);
-  const minBonus = 0;
+  const minBonus = 60000;
   const maxBonus = 100000;
   const [salary, setSalary] = useState<number>(0);
   const [bonus, setBonus] = useState<number>(70000);
