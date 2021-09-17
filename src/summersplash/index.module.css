@@ -182,7 +182,7 @@ h3 {
   object-fit: contain;
 }
 
-.firstSection .applyLink {
+.firstSection .applyLinkContainer {
   display: flex;
   justify-content: flex-start;
   margin-left: -2rem;
@@ -421,6 +421,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .layerText_dark {

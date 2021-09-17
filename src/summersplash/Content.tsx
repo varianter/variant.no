@@ -45,21 +45,23 @@ export default function ContentComponent({ mode }: ContentProps) {
               </h4>
             </section>
 
-            <a className={style.applyLink} onClick={scrollToBottom}>
-              <div className={style.blobButtons}>
-                <img
-                  className={style.buttonBlob}
-                  src={require('./images/blobs/Topblob_black_crop.png')}
-                  alt="Søk nå knapp"
-                />
-                <h3 className={style.layerText_dark}>
-                  Søk nå{' '}
-                  <span role="img" aria-label="Postkasse">
-                    📬
-                  </span>
-                </h3>
-              </div>
-            </a>
+            <div className={style.applyLinkContainer}>
+              <a className={style.applyLink} onClick={scrollToBottom}>
+                <div className={style.blobButtons}>
+                  <img
+                    className={style.buttonBlob}
+                    src={require('./images/blobs/Topblob_black_crop.png')}
+                    alt="Søk nå knapp"
+                  />
+                  <h3 className={style.layerText_dark}>
+                    Søk nå{' '}
+                    <span role="img" aria-label="Postkasse">
+                      📬
+                    </span>
+                  </h3>
+                </div>
+              </a>
+            </div>
           </section>
         )}
 
@@ -87,21 +89,23 @@ export default function ContentComponent({ mode }: ContentProps) {
               </h4>
             </section>
 
-            <a className={style.applyLink} onClick={scrollToBottom}>
-              <div className={style.blobButtons}>
-                <img
-                  className={style.buttonBlob}
-                  src={require('./images/blobs/Topblob_white_crop.png')}
-                  alt="Søk nå knapp"
-                />
-                <h3 className={style.layerText}>
-                  Søk nå{' '}
-                  <span role="img" aria-label="Postkasse">
-                    📬
-                  </span>
-                </h3>
-              </div>
-            </a>
+            <div className={style.applyLinkContainer}>
+              <a className={style.applyLink} onClick={scrollToBottom}>
+                <div className={style.blobButtons}>
+                  <img
+                    className={style.buttonBlob}
+                    src={require('./images/blobs/Topblob_white_crop.png')}
+                    alt="Søk nå knapp"
+                  />
+                  <h3 className={style.layerText}>
+                    Søk nå{' '}
+                    <span role="img" aria-label="Postkasse">
+                      📬
+                    </span>
+                  </h3>
+                </div>
+              </a>
+            </div>
           </section>
         )}
 
@@ -522,9 +526,9 @@ export default function ContentComponent({ mode }: ContentProps) {
 
         <div className={style.applyArrow}>
           {mode === 'job' && (
-            <h4 className={style.white}>Du kan søke på neste side!</h4>
+            <h4 className={style.white}>Du kan søke her nede!</h4>
           )}
-          {mode === 'internship' && <h4>Du kan søke på neste side!</h4>}
+          {mode === 'internship' && <h4>Du kan søke her nede!</h4>}
 
           <img
             className={and(style.arrow, style.upsideDown)}
