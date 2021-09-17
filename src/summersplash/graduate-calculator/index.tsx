@@ -65,8 +65,9 @@ export const Calculator = (props: Props) => {
 
           <div>
             <p>
-              Variant fordeler 30% av overskuddet likt på alle ansatte. I 2020
-              utgjorde denne bonusen omtrent 70 000 kr.
+              I Variant får du bonus fra dag én! 30% av overskuddet deles likt
+              på alle ansatte. Bonusen for 2021 ligger an til å ende på ca. 70
+              000 kr.
             </p>
           </div>
 
@@ -77,7 +78,7 @@ export const Calculator = (props: Props) => {
               aria-label="Minske bonusbeløp med 5 000 kr"
               role="img"
             >
-              😬
+              😃
             </button>
             <Slider
               initial={bonus}
@@ -98,6 +99,16 @@ export const Calculator = (props: Props) => {
             </button>
           </div>
 
+          <div className={style.calculatorArrowContainer}>
+            <img
+              className={style.calculatorArrow}
+              aria-label="Pil til bildet av årets sommerstudenter"
+              src={require('./../images/pil.svg')}
+            />
+
+            <h4>Garantibonus første år</h4>
+          </div>
+
           <footer className={style.summary}>
             <div className={style.calculation}>
               <h3 className={style.question}>Da blir lønnen din sånn:</h3>
@@ -114,7 +125,7 @@ export const Calculator = (props: Props) => {
                 </div>
 
                 <div className={style.flexRow}>
-                  <dt>Estimert årslønn i Variant</dt>
+                  <dt>Årslønn i Variant</dt>
                   <dd className={and(style.number, style.result)}>
                     {formatCurrency(salary + bonus)}
                   </dd>

@@ -28,6 +28,7 @@ h3 {
 }
 
 .splashSection {
+  border: 2px solid black;
   scroll-snap-align: start;
   position: relative;
   min-height: 100vh;
@@ -203,7 +204,8 @@ h3 {
 }
 
 .secondSection > .leftText {
-  margin-bottom: 200px;
+  justify-content: flex-start;
+  padding-top: 100px;
 }
 
 .secondSection > .rightText {
@@ -530,6 +532,7 @@ h3 {
   }
 
   .fourthSection .leftText {
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
