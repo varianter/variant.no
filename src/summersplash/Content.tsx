@@ -108,7 +108,6 @@ export default function ContentComponent({ mode }: ContentProps) {
             </div>
           </section>
         )}
-
         <img
           className={style.imageBlob}
           src={require(mode === 'job'

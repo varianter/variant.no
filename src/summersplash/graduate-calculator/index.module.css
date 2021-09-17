@@ -148,3 +148,14 @@ dl {
 .number {
   font-variant-numeric: tabular-nums;
 }
+
+@media screen and (max-width: 1367px) {
+  .salaryRow {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .salaryRow dd {
+    margin-left: 0;
+  }
+}

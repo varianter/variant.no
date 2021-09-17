@@ -162,8 +162,10 @@ h3 {
 
 .firstSection > .imageBlob {
   position: absolute;
-  bottom: -18rem;
-  right: 8rem;
+  object-fit: contain;
+  width: 50vw;
+  bottom: -16rem;
+  right: -5vw;
 }
 
 .firstSection .arrowContainer {
@@ -208,7 +210,8 @@ h3 {
 
 .secondSection > .leftText {
   justify-content: flex-start;
-  padding-top: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .secondSection > .rightText {
@@ -217,13 +220,18 @@ h3 {
 
 .secondSection > .imageBlob {
   position: absolute;
-  height: 24rem;
-  bottom: -4rem;
-  left: 8rem;
+  object-fit: contain;
+  width: 40vw;
+  bottom: -8rem;
+  left: 4rem;
 }
 
 .thirdSection {
   composes: splashSection;
+}
+
+.thirdSection .leftText {
+  padding-top: 2rem;
 }
 
 .thirdSection .imageBlob {
@@ -479,9 +487,9 @@ h3 {
   }
 
   .firstSection .imageBlob {
-    bottom: -12rem;
+    bottom: -10rem;
     right: -2rem;
-    max-width: 80%;
+    width: 70vw;
   }
 
   .firstSection .arrowContainer {
@@ -502,14 +510,16 @@ h3 {
 
   .secondSection > .rightText {
     margin-top: 0;
+    margin-bottom: 4rem;
   }
 
   .secondSection .imageBlob {
-    position: relative;
+    position: static;
     height: auto;
-    max-width: 100%;
+    width: 80%;
     left: -4rem;
-    bottom: -2rem;
+    bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .thirdSection .imageBlob {
@@ -547,7 +557,7 @@ h3 {
   .fifthSection .imageBlob {
     max-width: 80%;
     left: -2rem;
-    top: -20rem;
+    top: -22rem;
   }
 
   .jobtitle {
@@ -565,7 +575,7 @@ h3 {
 
   .imageBlob {
     position: static;
-    max-width: 80%;
+    max-width: 100%;
     object-fit: contain;
   }
 
