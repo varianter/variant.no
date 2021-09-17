@@ -120,21 +120,25 @@ h3 {
 .leftTab_inactive {
   composes: leftTab;
   top: -0.05rem;
+  transition: 0.2s;
 }
 
 .leftTab_inactive:hover {
   cursor: pointer;
-  background-color: #f5a4c4;
+  background-color: #f1bed2;
+  transition: 0.2s;
 }
 
 .rightTab_inactive {
   composes: rightTab;
   top: -3.15rem;
+  transition: 0.2s;
 }
 
 .rightTab_inactive:hover {
   cursor: pointer;
-  background-color: #01574f;
+  background-color: #007267;
+  transition: 0.2s;
 }
 
 .activeTab {
@@ -417,7 +421,7 @@ h3 {
 
 .layerText {
   position: relative;
-  bottom: 9rem;
+  bottom: 9.8rem;
   color: white;
   text-align: center;
   text-decoration: none;
