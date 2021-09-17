@@ -111,23 +111,16 @@ export const Calculator = (props: Props) => {
 
           <footer className={style.summary}>
             <div className={style.calculation}>
-              <h3 className={style.question}>Da blir lønnen din sånn:</h3>
-
               <dl>
                 <div className={style.flexRow}>
-                  <dt>Fast årslønn</dt>
-                  <dd className={style.number}>{formatCurrency(salary)}</dd>
-                </div>
-
-                <div className={style.flexRow}>
-                  <dt>Estimert bonus</dt>
-                  <dd className={style.number}>{formatCurrency(bonus)}</dd>
-                </div>
-
-                <div className={style.flexRow}>
-                  <dt>Årslønn i Variant</dt>
-                  <dd className={and(style.number, style.result)}>
-                    {formatCurrency(salary + bonus)}
+                  <dt style={{ marginTop: '1rem', fontWeight: 500 }}>
+                    Årslønn i Variant
+                  </dt>
+                  <dd
+                    style={{ marginTop: '1rem' }}
+                    className={and(style.number, style.result)}
+                  >
+                    {formatCurrency(salary + bonus)} kr
                   </dd>
                 </div>
               </dl>
