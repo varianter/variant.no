@@ -136,10 +136,13 @@ dl {
   font-weight: 500;
 }
 
-.flexRow {
+.salaryRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+
+  font-weight: 500;
+  margin-top: 1rem;
 }
 
 .number {

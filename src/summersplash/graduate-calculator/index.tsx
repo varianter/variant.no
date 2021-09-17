@@ -112,14 +112,9 @@ export const Calculator = (props: Props) => {
           <footer className={style.summary}>
             <div className={style.calculation}>
               <dl>
-                <div className={style.flexRow}>
-                  <dt style={{ marginTop: '1rem', fontWeight: 500 }}>
-                    Årslønn i Variant
-                  </dt>
-                  <dd
-                    style={{ marginTop: '1rem' }}
-                    className={and(style.number, style.result)}
-                  >
+                <div className={and(style.salaryRow)}>
+                  <dt>Startlønn i Variant</dt>
+                  <dd className={and(style.number, style.result)}>
                     {formatCurrency(salary + bonus)} kr
                   </dd>
                 </div>
