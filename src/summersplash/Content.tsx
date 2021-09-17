@@ -521,7 +521,11 @@ export default function ContentComponent({ mode }: ContentProps) {
         )}
 
         <div className={style.applyArrow}>
-          <h4 className={style.white}>Du kan søke på neste side!</h4>
+          {mode === 'job' && (
+            <h4 className={style.white}>Du kan søke på neste side!</h4>
+          )}
+          {mode === 'internship' && <h4>Du kan søke på neste side!</h4>}
+
           <img
             className={and(style.arrow, style.upsideDown)}
             aria-label="Pil som viser at du kan søke lenger nede på siden"
