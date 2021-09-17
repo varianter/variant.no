@@ -20,15 +20,15 @@ const SummerSplash: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
   const router = useRouter();
-  const queryedPage = router.query.dynamicPath;
+  const queryedPage = router.query.dynamicPath ?? 'sommerjobb';
 
   const [mode, setMode] = useState(
-    router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job',
+    queryedPage === 'sommerjobb' ? 'internship' : 'job',
   );
 
   useEffect(() => {
-    setMode(router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job');
-  }, [router.query.dynamicPath]);
+    setMode(queryedPage === 'sommerjobb' ? 'internship' : 'job');
+  }, [queryedPage]);
 
   if (queryedPage === undefined) return null;
   if (queryedPage !== 'sommerjobb' && queryedPage !== 'nyutdannet') {
