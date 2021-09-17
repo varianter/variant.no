@@ -478,6 +478,10 @@ h3 {
     padding-left: 2rem;
   }
 
+  .thirdSection {
+    padding: 2rem 2rem;
+  }
+
   .firstSection .imageBlob {
     bottom: -12rem;
     right: -2rem;
