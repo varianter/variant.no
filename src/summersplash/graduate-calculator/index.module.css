@@ -153,6 +153,9 @@ dl {
   .salaryRow {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .salaryRow dd {
     margin-left: 0;
   }
 }
