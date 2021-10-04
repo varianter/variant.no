@@ -5,7 +5,7 @@ import { getEmployeesUrl } from 'src/utils/api/getEmployees';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
 
-export { default } from 'src/summersplash';
+export { default } from 'src/index';
 
 function shuffle<T>(array: Array<T>): Array<T> {
   return [...array].sort(() => Math.random() - 0.5);
