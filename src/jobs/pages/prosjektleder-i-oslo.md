@@ -5,10 +5,8 @@ slug: prosjektleder-i-oslo
 contact_emails: linn@variant.no
 meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en dyktig prosjektleder som vil være med å bygge Variant Oslo!
-meta_image: <todo: Input meta image here>
+meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
 ---
-
-<br />
 
 ## Vi søker etter noen som vil være med oss å bygge Variant Oslo!
 
@@ -53,7 +51,6 @@ Du finner all info om oss i vår Håndbok, åpen for alle den også :blush: http
 ## Om Variant
 
 ![Workshop med Post-its](/images/strategisk-tonje-hilde-vikas.png)
-
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
