@@ -46,7 +46,7 @@ Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsig
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
-Du finner all info om oss i vår Håndbok, åpen for alle den også :blush: https://handbook.variant.no/
+Du finner all info om oss i vår Håndbok, åpen for alle den også 😊 https://handbook.variant.no/
 
 ## Om Variant
 
