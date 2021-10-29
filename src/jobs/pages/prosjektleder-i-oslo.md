@@ -5,7 +5,7 @@ slug: prosjektleder-i-oslo
 contact_emails: linn@variant.no
 meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en dyktig prosjektleder som vil være med å bygge Variant Oslo!
-meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
+meta_image: https://www.variant.no/images/prosjektleder-oslo-meta.jpg
 ---
 
 ## Vi søker etter noen som vil være med oss å bygge Variant Oslo!
