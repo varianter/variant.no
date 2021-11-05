@@ -73,7 +73,7 @@ export default function Home() {
 
       <Wrapper className={styles.page3}>
         <Content mode="left">
-          <h2>2024</h2>
+          <h2>2025</h2>
           <div className={styles.strong}>
             <p>
               Vi har latt tankene spinne. Vi har latt fantasien løpe fritt.
@@ -157,7 +157,7 @@ export default function Home() {
               </p>
 
               <p>
-                Fokus resten av 2021 er todelt, rekruttere flere og få folk ut i
+                Fokus resten av 2022 er todelt, rekruttere flere og få folk ut i
                 oppdrag. I løpet av høsten har vi signert 6 nye, og de første
                 begynner i januar. Idet selskapet er ett år jobber det 15
                 mennesker der, 2 av dem er nyutdannede som startet i august.
