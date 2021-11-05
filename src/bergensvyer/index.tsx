@@ -163,7 +163,11 @@ export default function Home() {
                 mennesker der, 2 av dem er nyutdannede som startet i august.
                 Bergen støtter seg kraftig på konsernets rekrutteringskapasitet.
               </p>
-
+              <p>
+                Allerede i September inviteres dere med på Varianttur med fadderen
+                Variant Trondheim. Da blir dere sammen med følge, samboer eller kone 
+                introdusert for oss ogg vi og dere får sjansen til å bli godt kjent.
+              </p>
               <p>
                 Det første halvåret selger vi oppdrag basert på CV-salg til
                 eksisterende Variantkunder og gjennom megleravtaler og
