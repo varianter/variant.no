@@ -73,7 +73,7 @@ export default function Home() {
 
       <Wrapper className={styles.page3}>
         <Content mode="left">
-          <h2>2024</h2>
+          <h2>2025</h2>
           <div className={styles.strong}>
             <p>
               Vi har latt tankene spinne. Vi har latt fantasien løpe fritt.
