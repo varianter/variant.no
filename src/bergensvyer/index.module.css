@@ -120,7 +120,7 @@
 .page3 {
   background: url('./assets/bg-page3-1.svg') top left no-repeat,
     url('./assets/bg-page3-2.svg') bottom center no-repeat,
-    url('./assets/bg-page3-3.jpg') bottom right no-repeat,
+    url('./assets/bg-page3-3.jpg') right 250px no-repeat,
     var(--color-secondary4__tint3);
 }
 @media (max-width: 1100px) {
