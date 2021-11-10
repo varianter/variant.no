@@ -36,9 +36,6 @@
   color: rgba(0, 0, 0, 0);
   background-position-x: 60%;
 }
-.omVariant__title img {
-  max-height: 4.8rem;
-}
 .omVariant__title[data-no-animation='true'] {
   animation: none;
 }
@@ -50,22 +47,15 @@
 
 .omVariant_image1 {
   position: relative;
-  max-width: 100%;
+  max-width: 140%;
 }
 .omVariant_image2 {
   position: absolute;
-  left: 35rem;
+  left: 25rem;
   top: 32rem;
-  max-width: 110%;
+  max-width: 140%;
 }
-@media (max-width: 1000px) {
-  .omVariant_image2 {
-    left: 25rem;
-    top: 40rem;
-    max-width: 110%;
-  }
-}
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   .omVariant_image2 {
     display: none;
   }
