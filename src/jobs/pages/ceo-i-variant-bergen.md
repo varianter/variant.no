@@ -14,7 +14,7 @@ contact_emails: oms@variant.no
 ![Trapp til Ulriken av Francois Olwage på Unsplash](/images/ulriken-trapp.png)
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensiale utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 ​
- Les mer om våre Bergensvyer i [denne brosjyren](https://variant.no/bergensvyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss blant de syv fjell](https://blog.variant.no/hallaisen-bergen-d88c7b976ef4).
+Les mer om våre Bergensvyer i [denne brosjyren](https://variant.no/bergensvyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss blant de syv fjell](https://blog.variant.no/hallaisen-bergen-d88c7b976ef4).
 ​
 
 ## Hvem ser vi etter?
