@@ -187,7 +187,7 @@ export default function Home() {
               Oslo eller Trondheim og dels på egenhånd. Noen ganger reiser varianter mellom
               byene, andre ganger benyttes video. 1. september 2023
               feirer Bergen ettårsdagen med en Varianttur på egenhånd sammen med
-              følge til utlandet.
+              følge til Reykjavik.
             </p>
 
             <p>
