@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <Wrapper mode="purple" className={styles.page1}>
         <Content mode="right_bottom">
-          <h1>Hei!</h1>
+          <h1>Hallaien!</h1>
 
           <p>
             Her har vi skrevet litt om våre tanker om å bygge Variant i Bergen. Nå
@@ -44,8 +44,8 @@ export default function Home() {
             />
             <p>
               Det er det vi ønsker du skal gjøre, – sammen med flere og sammen
-              med oss. Vi har tillit til dine tanker og dine forslag til hvordan
-              Bergensselskapet skal bygges og drives. Vi gir dere frihet som om
+              med oss. Vi har tillit til dine tanker og forslag til hvordan
+              selskapet mellom de syv fjell skal bygges og drives. Vi gir dere frihet som om
               dere skulle startet for dere selv. Så gir vi dere trygghet for at
               det dere ønsker å gjøre lykkes. Frihet og trygghet – vi kommer
               tilbake til det.
@@ -62,8 +62,8 @@ export default function Home() {
               Variants plikt å lære bort like sterkt som å lære av. Vi har lovd
               oss selv å alltid være ydmyk for andres erfaringer, kunnskap og
               idéer. Vi har erfaring med å prøve ut ting. Om det ikke fungerer
-              så revurderer vi. Dette gjelder stort og smått. Vi kommer med et
-              standpunkt og en filosofi slik håndboka vår beskriver. Utover det
+              så justerer vi. Dette gjelder stort og smått. Vi kommer med et
+              standpunkt og en filosofi slik håndboken vår beskriver. Utover det
               ønsker vi at du og ditt team bidrar til å utvikle konsernet
               Variant på lik linje med oss.
             </p>
@@ -86,7 +86,7 @@ export default function Home() {
 
           <div className={styles.em}>
             <p>
-              I løpet året flytter Variant Bergen inn et eget lokale Strandgaten. 
+              I løpet året flytter Variant Bergen inn et eget lokale på Strandgaten med utsikt mot Bryggen. 
               Lokalene er store og attraktive, og er
               optimalisert for samhandling. Store fellesarealer for å
               gjennomføre Variantdager, kundeworkshops og lignende. Her er det
@@ -95,7 +95,7 @@ export default function Home() {
             </p>
 
             <p>
-              I løpet av høsten starter konsulent nr 30. Det er en god balanse
+              I løpet av høsten starter konsulent nr. 30. Det er en god balanse
               mellom designere og utviklere. I tillegg er det en litt mindre
               gruppe prosjektledere. I år omsetter selskapet for 45 millioner og
               genererer et overskudd på 4,5 millioner. Omsetningen kommer fra en
@@ -107,7 +107,7 @@ export default function Home() {
               Under både lokale og nasjonale variantdager, bidrar bergensvarianter
               med læreglede, faglige bidrag og innsats for å utvikle selskap og
               konsern. Variantdagen i november arrangeres bare for Bergen. Her
-              gjennomføres 3 ulike faglige track. Et av dem er variant:skudd som
+              gjennomføres 3 ulike faglige sesjoner parallelt. Et av dem er variant:skudd som
               bidrar til å gjøre konsulenter av de 6 nyutdannede variantene som
               startet i august. Hver måned publiserer bergensvarianter faglige
               bloggposer i tillegg publiserer de en månedlig video med utviklerinnhold.
@@ -164,9 +164,9 @@ export default function Home() {
                 Bergen støtter seg kraftig på konsernets rekrutteringskapasitet.
               </p>
               <p>
-                Allerede i September inviteres dere med på Varianttur med fadderen
+                Allerede i september inviteres dere med på Varianttur med fadderen
                 Variant Trondheim. Da blir dere sammen med følge, samboer eller kone 
-                introdusert for oss ogg vi og dere får sjansen til å bli godt kjent.
+                introdusert for oss, og vi og dere får sjansen til å bli godt kjent.
               </p>
               <p>
                 Det første halvåret selger vi oppdrag basert på CV-salg til
@@ -183,11 +183,11 @@ export default function Home() {
         <Content mode="right">
           <div className={styles.em}>
             <p>
-              Det første året gjennomføres Variantdager dels sammen sammen med 
+              Det første året gjennomføres Variantdager dels sammen med 
               Oslo eller Trondheim og dels på egenhånd. Noen ganger reiser varianter mellom
               byene, andre ganger benyttes video. 1. september 2023
               feirer Bergen ettårsdagen med en Varianttur på egenhånd sammen med
-              følge til Berlin.
+              følge til utlandet.
             </p>
 
             <p>
@@ -210,7 +210,7 @@ export default function Home() {
               Vi husker det så godt. Hvor givende det var å kunne forme
               selskapet slik vi mente det helst skulle gjøres. Noen ganger
               trådte vi feil og måtte justere kurs, men det var like fullt så
-              veldig morsomt. Denne opplevelsen ønsker vi å gi deg og ditt team.
+              morsomt. Denne opplevelsen ønsker vi å gi deg og ditt team.
               Og det er ikke først og fremst for at vi er så snille eller så
               ivrig på å gi folk gode opplevelser, selv om vi er det også. Av
               samme grunn som vi har tillit til at summen av enkeltpersoners
