@@ -10,6 +10,7 @@ contact_emails: oms@variant.no
 ![Trapp til Ulriken av Francois Olwage på Unsplash](/images/ulriken-trapp.png)
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
 ​
+
 Les mer om våre Bergensvyer i [denne brosjyren](https://variant.no/bergensvyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss blant de syv fjell](https://blog.variant.no/hallaisen-bergen-d88c7b976ef4).
 
 ## Hvem ser vi etter?
@@ -36,7 +37,8 @@ Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfo
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 30 dyktige fagpersoner på 3 år.
   ​
-  Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen) de første årene.
+
+Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen) de første årene.
 
 ## Om Variant
 
