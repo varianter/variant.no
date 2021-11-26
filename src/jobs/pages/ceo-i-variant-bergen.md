@@ -9,7 +9,7 @@ contact_emails: oms@variant.no
 
 ![Trapp til Ulriken av Francois Olwage på Unsplash](/images/ulriken-trapp.png)
 Det er det vi ønsker du skal gjøre, - sammen med flere og sammen med oss. Etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av det samme.
-​
+
 Les mer om våre Bergensvyer i [denne brosjyren](https://variant.no/bergensvyer). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss blant de syv fjell](https://blog.variant.no/hallaisen-bergen-d88c7b976ef4).
 
 ## Hvem ser vi etter?
@@ -20,14 +20,16 @@ Vi er et konsulentselskap som tilbyr tjenester i sfæren knyttet til utvikling a
 ## Ansvar og oppgaver
 
 <div class="left blob1"><img alt="Hilde og Maciek på variantdag" src="/images/hilde-maciek.png"/></div>
-​
+
+
 Du vil bli en del av Variants konsernledelse, og gjennom dette bistå med strategiarbeid både på selskap- og konsernnivå. Du vil jobbe med selskapsutvikling og samarbeide med de øvrige selskapene i konsernet.
+
 Som daglig leder i Variant Bergen AS vil du har personalansvar for minst de øvrige medlemmene av ledergruppen, og gjerne flere. Du vil ha et overordnet ansvar for salg og rekruttering selv om dette absolutt er et teamarbeid i Variant på tvers av byene.
+
 Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal lede og kundene våre. Våre ledere bruker derfor gjerne en viss andel av sin tid som operative konsulenter ute i kundeoppdrag.
 
 ## Lønn og kompensasjoner
 
-​
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
 - Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være 1 100 000 og øke mot 1 500 000 over tre år.
@@ -35,8 +37,8 @@ Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfo
 - Daglig leder vil tilbys å kjøpe 10% av aksjene i Variant Bergen AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 30 dyktige fagpersoner på 3 år.
-  ​
-  Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen) de første årene.
+  
+Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen) de første årene.
 
 ## Om Variant
 
