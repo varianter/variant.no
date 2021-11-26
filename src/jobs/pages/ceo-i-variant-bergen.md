@@ -37,16 +37,16 @@ Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfo
 - Daglig leder vil tilbys å kjøpe 10% av aksjene i Variant Bergen AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 30 dyktige fagpersoner på 3 år.
-  
+
 Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen) de første årene.
 
 ## Om Variant
 
 ![Variant med vision](/images/flaske.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
-​
+
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen dag for faglig påfyll. Og, ikke minst, for å møtes.
-​
+
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
 
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
