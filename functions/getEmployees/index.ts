@@ -54,8 +54,8 @@ Go to https://id.getharvest.com/developers and find account ID you want to inclu
     // Map emails and flatten, we don't care if duplicates occur
     // (i.e same user in different companies) since this will be used
     // for contains filter
-    const validEmployeeEmails: Array<string> = harvestUsers.flatMap(
-      (companies) => companies.users.map(({ email }) => email),
+    const validEmployeeEmails: Array<string> = harvestUsers.reduce(
+      (acc, companies) => [...acc, ...companies.users.map(({ email }) => email)], []
     );
 
     if (validEmployeeEmails.length === 0) {
