@@ -52,23 +52,38 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               src={bergen}
               alt="Bryggen i Bergen"
             />
-
-            <p>Her har vi en introtekst som kommer en gang.</p>
-
             <p>
-              It's ends here. Does it come in black? I'm Batman Swear to me! No
-              guns, no killing. I seek the means to fight injustice. To turn
-              fear against those who prey on the fearful. I'm not wearing hockey
-              pads. Accomplice? I'm gonna tell them the whole thing was your
-              idea. I will go back to Gotham and I will fight men Iike this but
-              I will not become an executioner.
+              Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen
+              sammen med oss. Å etablere neste generasjon selskapskultur hvor
+              medarbeideres potensiale utnyttes til det fulle med tillit og
+              transparens. En kultur som bygger på gjensidig raushet, åpenhet og
+              læreglede. Dette er gode verdier som{' '}
+              <a
+                href="https://handbook.variant.no"
+                title="Håndboken til Variant"
+              >
+                du lese mer om i den åpne håndboken vår
+              </a>
+              .
             </p>
-
             <p>
-              This isn't a car. Bats frighten me. It's time my enemies shared my
-              dread. Swear to me! Swear to me! My anger outweights my guilt.
-              Well, you see... I'm buying this hotel and setting some new rules
-              about the pool area. I'm Batman Does it come in black?
+              Her har vi samlet all informasjon om våre ambisjoner i Bergen. Odd
+              Morten har også tidligere skrevet en bloggpost om{' '}
+              <a
+                href="https://blog.variant.no/hallaisen-bergen-d88c7b976ef4"
+                title="Hallaisen, Bergen!"
+              >
+                hvorfor vi etablerer oss i en av Norges vakreste byer
+              </a>
+              . Vi anbefaler også at du leser om våre{' '}
+              <Link href="bergen/vyer">
+                <a>Bergensvyer</a>
+              </Link>{' '}
+              og{' '}
+              <Link href="bergen/verdiutvikling">
+                <a>verdiutvikling til Variant Bergen AS</a>
+              </Link>
+              .
             </p>
           </div>
 
