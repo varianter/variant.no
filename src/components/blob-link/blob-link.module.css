@@ -1,0 +1,41 @@
+.blobLink {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  transition: opacity 200ms ease-out;
+}
+.blobLink span {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  padding: 2rem;
+  color: var(--color-secondary1__tint1--text);
+  text-align: center;
+}
+.blobLink:hover {
+  opacity: 0.8;
+}
+
+.blobLink * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.blobLink svg {
+  max-width: 100%;
+}
+.blobLinkArrow {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .blobLink span {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}

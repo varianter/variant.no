@@ -1,1 +1,2 @@
-export const and = (...classes: string[]) => classes.join(' ');
+export const and = (...classes: (string | undefined)[]) =>
+  classes.filter(Boolean).join(' ');
