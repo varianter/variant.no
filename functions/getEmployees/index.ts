@@ -5,19 +5,67 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest,
 ): Promise<void> {
-  if (
-    process.env.NODE_ENV !== 'production' &&
-    !process.env.CV_PARTNER_API_SECRET
-  ) {
-    context.res = {
-      status: 500,
-      body: `Environment variable CV_PARTNER_API_SECRET is missing.
+  const harvestUrl = 'https://api.harvestapp.com/v2';
+  const cvPartnerUrl = 'https://variant.cvpartner.com/api/v1';
+
+  if (process.env.NODE_ENV !== 'production') {
+    if (!process.env.CV_PARTNER_API_SECRET) {
+      context.res = {
+        status: 500,
+        body: `Environment variable CV_PARTNER_API_SECRET is missing.
 Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
-    };
-    return;
+      };
+      return;
+    }
+    if (!process.env.HARVEST_API_TOKEN) {
+      context.res = {
+        status: 500,
+        body: `Environment variable HARVEST_API_TOKEN is missing.
+Go to https://id.getharvest.com/developers and get a PAT, add under "Values" in local.settings.json`,
+      };
+      return;
+    }
+    if (!process.env.HARVEST_API_ACCOUNT_IDS) {
+      context.res = {
+        status: 500,
+        body: `Environment variable HARVEST_API_ACCOUNT_IDS is missing.
+Go to https://id.getharvest.com/developers and find account ID you want to include, add under "Values" in local.settings.json`,
+      };
+      return;
+    }
   }
   try {
-    const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
+    // Fetch all users for each account
+    const harvestUsers: any[] = await Promise.all(
+      process.env.HARVEST_API_ACCOUNT_IDS.split(';').map(
+        async (harvestAccountId) => {
+          const request = await fetch(`${harvestUrl}/users?is_active=true`, {
+            headers: [
+              ['Authorization', `Bearer ${process.env.HARVEST_API_TOKEN}`],
+              ['Harvest-Account-ID', harvestAccountId],
+              ['User-Agent', 'Variant-no function'],
+            ],
+          });
+          if (request.ok) return await request.json();
+        },
+      ),
+    );
+
+    // Map emails and flatten, we don't care if duplicates occur
+    // (i.e same user in different companies) since this will be used
+    // for contains filter
+    const validEmployeeEmails: Array<string> = harvestUsers.flatMap(
+      (companies) => companies.users.map(({ email }) => email),
+    );
+
+    if (validEmployeeEmails.length === 0) {
+      context.res = {
+        status: 404,
+        body: [],
+      };
+    }
+
+    const request = await fetch(`${cvPartnerUrl}/users`, {
       headers: [
         [
           'Authorization',
@@ -31,18 +79,21 @@ Go to cv-partner and get an API key, add under "Values" in local.settings.json`,
       const employeeList = employeesJSON.filter(
         (employee) =>
           employee.deactivated ||
-          // All employees that have started should be set
-          // as countrymanager in cv-parter, when they start.
-          employee.roles.some((role) => role === 'countrymanager'),
+          // Filter on valid employees fetched from harvest
+          validEmployeeEmails.some(
+            (validEmployeeEmail) => validEmployeeEmail === employee.email,
+          ),
       );
       context.res = {
-        body: employeeList.map(({ name, telephone, image, email, office_name }) => ({
-          name,
-          telephone,
-          email,
-          image,
-          office_name,
-        })),
+        body: employeeList.map(
+          ({ name, telephone, image, email, office_name }) => ({
+            name,
+            telephone,
+            email,
+            image,
+            office_name,
+          }),
+        ),
       };
     } else {
       context.res = {
