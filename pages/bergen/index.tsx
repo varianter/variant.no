@@ -4,10 +4,7 @@ export { default } from 'src/bergen';
 
 export const getStaticProps = async () => {
   try {
-    const listings = await getFileListingData();
-    // .filter(
-    //   (i) => i.location == 'trondheim',
-    // );
+    const listings = await getFileListingData('bergen');
 
     return {
       props: { listings },

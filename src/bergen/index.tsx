@@ -65,16 +65,18 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             />
           </div>
 
-          <div className={style.content}>
-            <h3 className="fancy">Høres det interessant ut?</h3>
+          {listings.length > 0 && (
+            <div className={style.content}>
+              <h3 className="fancy">Høres det interessant ut?</h3>
 
-            {listings.map((item) => (
-              <JobListingItem
-                item={item}
-                key={`${item.name}_${item.title}_${item.location}`}
-              />
-            ))}
-          </div>
+              {listings.map((item) => (
+                <JobListingItem
+                  item={item}
+                  key={`${item.name}_${item.title}_${item.location}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </Layout>
