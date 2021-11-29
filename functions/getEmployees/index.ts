@@ -5,7 +5,6 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest,
 ): Promise<void> {
-
   const cvPartnerUrl = 'https://variant.cvpartner.com/api/v1';
 
   if (process.env.NODE_ENV !== 'production') {
@@ -43,8 +42,8 @@ Go to https://id.getharvest.com/developers and find account ID you want to inclu
           if (error) {
             context.log('Error: ', error);
             console.error(error);
-            throw new Error(error)
-          } 
+            throw new Error(error);
+          }
           return data ? data : [];
         },
       ),
@@ -54,7 +53,8 @@ Go to https://id.getharvest.com/developers and find account ID you want to inclu
     // (i.e same user in different companies) since this will be used
     // for contains filter
     const validEmployeeEmails: Array<string> = harvestUsers.reduce(
-      (acc, companies) => [...acc, ...companies.map(({ email }) => email)], []
+      (acc, companies) => [...acc, ...companies.map(({ email }) => email)],
+      [],
     );
 
     if (validEmployeeEmails.length === 0) {
@@ -110,39 +110,50 @@ Go to https://id.getharvest.com/developers and find account ID you want to inclu
 
 export default httpTrigger;
 
-
-async function fetchHarvestPaged(harvestAccountId: string): Promise<[any[], string]> {
+async function fetchHarvestPaged(
+  harvestAccountId: string,
+): Promise<[any[], string]> {
   try {
-
     const initialRequest = await fetchHarvest(harvestAccountId);
     if (initialRequest.ok) {
       const first_response = await initialRequest.json();
-      if ( first_response.total_pages === 1 ) return [first_response.users, null]
+      if (first_response.total_pages === 1) return [first_response.users, null];
       // If more than one page with users, we can do a get all since we know the total amount of pages.
       const totalPagesToQuery = first_response.total_pages - 1;
-      const extraPages = await Promise.all([...Array(totalPagesToQuery)].map(async (_, i) => {
-        const request = await fetchHarvest(harvestAccountId, i + 2);
-        if (request.ok) return await request.json()
-        throw new Error(await request.text());
-      }))
-      
-      return [extraPages.reduce((acc, curr) => [...acc, ...curr.users], first_response.users), null]
-    }else {
-      return [null, await initialRequest.text()]
+      const extraPages = await Promise.all(
+        [...Array(totalPagesToQuery)].map(async (_, i) => {
+          const request = await fetchHarvest(harvestAccountId, i + 2);
+          if (request.ok) return await request.json();
+          throw new Error(await request.text());
+        }),
+      );
+
+      return [
+        extraPages.reduce(
+          (acc, curr) => [...acc, ...curr.users],
+          first_response.users,
+        ),
+        null,
+      ];
+    } else {
+      return [null, await initialRequest.text()];
     }
-  }catch(e) {
-    return [null, e.message]
+  } catch (e) {
+    return [null, e.message];
   }
 }
 
 async function fetchHarvest(harvestAccountId: string, page?: number) {
   const harvestUrl = 'https://api.harvestapp.com/v2';
   // Do weak comparison on page to also catch undefined
-  return fetch(`${harvestUrl}/users?is_active=true${ page != null ? `&page=${page}`: ''}`, {
-            headers: [
-              ['Authorization', `Bearer ${process.env.HARVEST_API_TOKEN}`],
-              ['Harvest-Account-ID', harvestAccountId],
-              ['User-Agent', 'Variant-no function'],
-            ],
-          });
+  return fetch(
+    `${harvestUrl}/users?is_active=true${page != null ? `&page=${page}` : ''}`,
+    {
+      headers: [
+        ['Authorization', `Bearer ${process.env.HARVEST_API_TOKEN}`],
+        ['Harvest-Account-ID', harvestAccountId],
+        ['User-Agent', 'Variant-no function'],
+      ],
+    },
+  );
 }
