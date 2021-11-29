@@ -1,12 +1,18 @@
 import { colors } from '@variant/profile';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
 import BlobLink from 'src/components/blob-link';
+import JobListingItem from 'src/jobs/list-item';
 import Layout from 'src/layout';
 import style from './bergen.module.css';
+import { getStaticProps } from 'pages/bergen';
 
 const bergen = require('./bergen-blob.png');
 
-export default function VariantTur() {
+const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  listings,
+}) => {
   return (
     <Layout>
       <div>
@@ -23,25 +29,23 @@ export default function VariantTur() {
               src={bergen}
               alt="Bilde av bane til Bergen Lufthavn av Jørgen Håland fra Unsplash"
             />
+
+            <p>Her har vi en introtekst som kommer en gang.</p>
+
             <p>
-              En god del av kompensasjonen som leder i Variant er knyttet til
-              verdiutvikling av selskapet og avkastning på aksjer. Begge disse
-              momentene er relatert til vekst. Vi er ambisiøse på Bergens vegne.
-              Variants egenart bygger på at en relativt stor gruppe flinke
-              mennesker sammen utfordrer hverandre og bygger på hverandre. Dette
-              er et selskap som våger å vokse fort. Vi har en modell for
-              bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø med
-              30 dyktige varianter på 3 år.
+              It's ends here. Does it come in black? I'm Batman Swear to me! No
+              guns, no killing. I seek the means to fight injustice. To turn
+              fear against those who prey on the fearful. I'm not wearing hockey
+              pads. Accomplice? I'm gonna tell them the whole thing was your
+              idea. I will go back to Gotham and I will fight men Iike this but
+              I will not become an executioner.
             </p>
 
             <p>
-              Tabellen under beskriver våre vekstmål de neste årene. Dette er
-              altså de mål vi sikter mot og som vil kunne gi en pekepinn på hva
-              avkastning på dine aksjer og verdiutvikling av din eierandel.
-            </p>
-
-            <p>
-              Vi er ambisiøse og søker deg som også har lyst til å oppnå noe.
+              This isn't a car. Bats frighten me. It's time my enemies shared my
+              dread. Swear to me! Swear to me! My anger outweights my guilt.
+              Well, you see... I'm buying this hotel and setting some new rules
+              about the pool area. I'm Batman Does it come in black?
             </p>
           </div>
 
@@ -60,8 +64,21 @@ export default function VariantTur() {
               background={colors.colorPairs.primary.default.bg}
             />
           </div>
+
+          <div className={style.content}>
+            <h3 className="fancy">Høres det interessant ut?</h3>
+
+            {listings.map((item) => (
+              <JobListingItem
+                item={item}
+                key={`${item.name}_${item.title}_${item.location}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
   );
-}
+};
+
+export default Bergen;
