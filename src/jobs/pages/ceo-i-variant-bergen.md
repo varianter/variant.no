@@ -31,13 +31,28 @@ Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal l
 
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. I starten vil lønn samt ledertillegg være 1 100 000 og øke mot 1 500 000 over tre år.
+- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. Startlønnen tilsammen være 1 100 000 kr.
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
-- Daglig leder vil tilbys å kjøpe 10% av aksjene i Variant Bergen AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
+- Du vil tilbys å kjøpe deg inn i Variant Bergen AS. (Se også neste avsnitt.) Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 30 dyktige fagpersoner på 3 år.
 
 Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi har her laget en [prognose for denne utviklingen](/bergen/verdiutvikling) de første årene.
+
+## Eierskap og selskapsutvikling
+
+Vi har god erfaring med at eierandeler i aksjeselskapet benyttes for å etablere et handlekraftig og godt oppstartsteam. Derfor vil vi selge 30% av aksjeene til oppstartsteamet. Og vi utfordrer deg som lederkandidat til å vurdere hvordan du ønsker å utnytte disse for å utvikle Variant Bergen AS best mulig.
+
+<details >
+  <summary>Vi har også tenkt litt ... men ikke lurkikk 😜 </summary>
+
+Det er mange tilnæringer her som alle kan fungere. Det er nettopp derfor vi er spente på hva du mener, men en måte å gjøre det på kan være:
+
+- 7,5% til CEO - Daglig leder
+- 7,5% til CDO - Designsjef
+- 7,5% til CTO - Teknologisjef
+- 1,5% til 5 erfarne og faglig sterke personer med godt nettverk. Dette er personer som det er vanskelig å ellers få løs der de er ansatt i dag, typisk i jobber de trives godt i og hvor de får gått betalt.
+</details>
 
 ## Om Variant
 
