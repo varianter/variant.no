@@ -150,3 +150,32 @@
   align-self: flex-end;
   margin-top: -2rem;
 }
+
+.infoBlock {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.infoBlock__blob {
+  flex: 1;
+  display: block;
+  min-width: 20rem;
+  max-width: 50%;
+}
+.infoBlock__link {
+  text-align: left;
+}
+.infoBlock__title {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  min-width: 20rem;
+  padding: 2rem;
+  margin: 0;
+}
+.infoBlock__arrow {
+  display: block;
+  margin: 1rem auto 0;
+}

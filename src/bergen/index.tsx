@@ -7,8 +7,31 @@ import JobListingItem from 'src/jobs/list-item';
 import Layout from 'src/layout';
 import style from './bergen.module.css';
 import { getStaticProps } from 'pages/bergen';
+import Link from 'next/link';
+import Arrow from 'src/components/arrow';
 
 const bergen = require('./bergen-blob.png');
+
+export function BergenInfoBlock() {
+  return (
+    <div className={style.infoBlock}>
+      <img
+        className={style.infoBlock__blob}
+        src={bergen}
+        alt="Bryggen i Bergen"
+      />
+
+      <h2 className={style.infoBlock__title}>
+        <Link href="/bergen">
+          <a className={style.infoBlock__link}>
+            <span className={style.infoBlock__text}>Ny variant i Bergen</span>
+            <Arrow className={style.infoBlock__arrow} color="standard__black" />
+          </a>
+        </Link>
+      </h2>
+    </div>
+  );
+}
 
 const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
@@ -27,7 +50,7 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <img
               className={style.bergenBlob}
               src={bergen}
-              alt="Bilde av bane til Bergen Lufthavn av Jørgen Håland fra Unsplash"
+              alt="Bryggen i Bergen"
             />
 
             <p>Her har vi en introtekst som kommer en gang.</p>
