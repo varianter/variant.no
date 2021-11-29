@@ -10,12 +10,14 @@ const favicon = require('@variant/profile/lib/logo/favicon.png');
 type LayoutProps = {
   title?: string;
   fullWidth?: boolean;
+  crazy?: boolean;
 };
 
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
+  crazy = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
@@ -149,7 +151,7 @@ const Layout: React.FC<LayoutProps> = ({
         </header>
         <div>{children}</div>
       </div>
-      <AnimatingBackground />
+      <AnimatingBackground crazy={crazy} />
 
       <footer className={style.footer}>
         <div className={style.footer__inner}>
@@ -240,7 +242,8 @@ const Layout: React.FC<LayoutProps> = ({
                 title="Kart til Varianthuset"
               >
                 Thomas Angells gate 10
-              </a> i Trondheim og på{' '}  
+              </a>{' '}
+              i Trondheim og på{' '}
               <a
                 href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
                 rel="noopener"
@@ -248,8 +251,8 @@ const Layout: React.FC<LayoutProps> = ({
                 title="Kart til Varianthuset"
               >
                 Spaces Kvadraturen
-              </a> i Oslo.{' '}
-              Kom innom for en kopp kaffe eller bare en hyggelig prat.
+              </a>{' '}
+              i Oslo. Kom innom for en kopp kaffe eller bare en hyggelig prat.
             </p>
 
             <p>
@@ -264,8 +267,7 @@ const Layout: React.FC<LayoutProps> = ({
               <address>
                 <strong>Variant Oslo AS</strong>
                 <br />
-                C/O Spaces Kvadraturen
-                Tollbugata 8<br />
+                C/O Spaces Kvadraturen Tollbugata 8<br />
                 0152 Oslo
               </address>
             </p>

@@ -5,6 +5,15 @@
   max-width: 20%;
 }
 
+.bergen {
+  margin: 15rem 0;
+}
+@media (max-width: 610px) {
+  .bergen {
+    margin: 8rem 0;
+  }
+}
+
 .omVariant {
   width: 70%;
   padding: 0 1rem 7.2rem;

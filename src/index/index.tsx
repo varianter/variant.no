@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
+import { BergenInfoBlock } from 'src/bergen';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import style from './index.module.css';
@@ -30,7 +31,7 @@ const Home = ({
   }, [randomCases]);
 
   return (
-    <Layout>
+    <Layout crazy>
       <Head>
         <meta
           property="og:description"
@@ -72,6 +73,10 @@ const Home = ({
             En variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
+      </section>
+
+      <section className={style.bergen}>
+        <BergenInfoBlock />
       </section>
 
       <section className={style.join}>

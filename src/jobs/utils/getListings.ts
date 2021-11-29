@@ -2,6 +2,8 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export type Departments = 'trondheim' | 'oslo' | 'bergen';
+
 export const getListings = async () => {
   const files = await fs.readdir(path.join(process.cwd(), '/src/jobs/pages'));
   return files.filter((a) => a.endsWith('.md'));
@@ -10,8 +12,10 @@ export const getListings = async () => {
 export const getListing = async (
   fileName: string,
   metadataListInput?: Offer[],
+  department?: Departments,
 ): Promise<Listing> => {
-  const metadataList = metadataListInput ?? (await getValidityStatuses());
+  const metadataList =
+    metadataListInput ?? (await getValidityStatuses(department));
   const file = await fs.readFile(
     path.join(process.cwd(), 'src/jobs/pages', fileName),
   );
@@ -44,9 +48,11 @@ export type Listing = {
   content: string;
 } & ListingMetadata &
   Offer;
-export async function getFileListingData(): Promise<Listing[]> {
+export async function getFileListingData(
+  department?: Departments,
+): Promise<Listing[]> {
   const files = await getListings();
-  const metadataList = await getValidityStatuses();
+  const metadataList = await getValidityStatuses(department);
   const listings = await Promise.all(
     files.map(
       (fileName): Promise<Listing> => getListing(fileName, metadataList),
@@ -71,12 +77,14 @@ type OfferResult = {
   offers: Array<Offer>;
 };
 const API_URL = 'https://variantas.recruitee.com/api/offers/';
-async function getValidityStatuses(): Promise<Offer[]> {
-  const result = await fetch(API_URL);
+async function getValidityStatuses(department?: Departments): Promise<Offer[]> {
+  let url = department ? `${API_URL}?department=${department}` : API_URL;
+  const result = await fetch(url);
   if (!result.ok) {
     throw new Error('Could not fetch data from Recruitee');
   }
   const data = (await result.json()) as OfferResult;
+
   if (!data.offers) {
     throw new Error('Could not fetch data from Recruitee');
   }
