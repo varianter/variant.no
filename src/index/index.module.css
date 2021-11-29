@@ -8,6 +8,11 @@
 .bergen {
   margin: 15rem 0;
 }
+@media (max-width: 610px) {
+  .bergen {
+    margin: 8rem 0;
+  }
+}
 
 .omVariant {
   width: 70%;

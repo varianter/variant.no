@@ -25,7 +25,7 @@ export function BergenInfoBlock() {
         <Link href="/bergen">
           <a className={style.infoBlock__link}>
             <span className={style.infoBlock__text}>Ny variant i Bergen</span>
-            <Arrow className={style.infoBlock__arrow} color="standard__black" />
+            <Arrow className={style.infoBlock__arrow} color="standard__white" />
           </a>
         </Link>
       </h2>

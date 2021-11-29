@@ -164,7 +164,9 @@
   min-width: 20rem;
   max-width: 50%;
 }
-.infoBlock__link {
+.infoBlock__link:link,
+.infoBlock__link:visited {
+  color: var(--color-standard__white);
   text-align: left;
 }
 .infoBlock__title {

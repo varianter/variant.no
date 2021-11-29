@@ -31,7 +31,7 @@ const Home = ({
   }, [randomCases]);
 
   return (
-    <Layout>
+    <Layout crazy>
       <Head>
         <meta
           property="og:description"

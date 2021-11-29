@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type BlobVariations = 'blob-1' | 'blob-2' | 'blob-3';
+export type BlobVariations = 'blob-1' | 'blob-2' | 'blob-3' | 'crazy-1';
 
 export type BlobProps = {
   className?: string;
@@ -21,6 +21,8 @@ function typeToImport(variation: BlobVariations) {
       return require('./blob1.svg');
     case 'blob-2':
       return require('./blob2.svg');
+    case 'crazy-1':
+      return require('./crazy1.svg');
     case 'blob-3':
       return require('./blob3.svg');
   }
