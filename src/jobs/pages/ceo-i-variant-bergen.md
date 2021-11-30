@@ -31,7 +31,7 @@ Vi er sterke tilhengere av at våre ledere forstår situasjonen til de de skal l
 
 Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilby. Totalt består dette av fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. Startlønnen tilsammen være 1 100 000 kr.
+- Lønn. [Variant justerer lønn basert på Teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Ledertillegg utvikler seg trinnvis sammen med størrelsen på selskapet. Dette for å opprettholde konkurransedyktighet samtidig som selskapets lønnskostnader skal harmonere til dets økonomi. Startlønnen vil tilsammen være 1 100 000 kr.
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
 - Du vil tilbys å kjøpe deg inn i Variant Bergen AS. (Se også neste avsnitt.) Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
