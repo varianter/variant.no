@@ -62,7 +62,7 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                 href="https://handbook.variant.no"
                 title="Håndboken til Variant"
               >
-                du lese mer om i den åpne håndboken vår
+                du kan lese mer om i den åpne håndboken vår
               </a>
               .
             </p>
