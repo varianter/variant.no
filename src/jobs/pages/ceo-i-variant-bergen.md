@@ -43,8 +43,11 @@ Kompensasjonen er med andre ord knyttet til verdiutviklingen av selskapet. Vi ha
 
 Vi har god erfaring med at eierandeler i aksjeselskapet benyttes for å etablere et handlekraftig og godt oppstartsteam. Derfor vil vi selge 30% av aksjeene til oppstartsteamet. Og vi utfordrer deg som lederkandidat til å vurdere hvordan du ønsker å utnytte disse for å utvikle Variant Bergen AS best mulig.
 
-<details >
-  <summary>Vi har også tenkt litt ... men ikke lurkikk 😜 </summary>
+<flip-card variant="click" class="flipCard">
+  <button class="flipCard__details" slot="front" type="button" aria-label="Les våre tanker rundt utnytting av aksjer">Vi har også tenkt litt ... men ikke lurkikk 😜</button>
+  <div class="flipCard__details" slot="back">
+  
+  <div>
 
 Det er mange tilnæringer her som alle kan fungere. Det er nettopp derfor vi er spente på hva du mener, men en måte å gjøre det på kan være:
 
@@ -52,7 +55,11 @@ Det er mange tilnæringer her som alle kan fungere. Det er nettopp derfor vi er 
 - 7,5% til CDO - Designsjef
 - 7,5% til CTO - Teknologisjef
 - 1,5% til 5 erfarne og faglig sterke personer med godt nettverk. Dette er personer som det er vanskelig å ellers få løs der de er ansatt i dag, typisk i jobber de trives godt i og hvor de får gått betalt.
-</details>
+
+    </div>
+
+    </div>
+  </flip-card>
 
 ## Om Variant
 

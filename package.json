@@ -30,6 +30,7 @@
     "@variant/components": "^2.0.11",
     "@variant/profile": "^3.0.1",
     "animejs": "^3.2.1",
+    "flip-card-wc": "^1.3.0",
     "gray-matter": "^4.0.2",
     "markdown-it": "^11.0.0",
     "mkdirp": "^1.0.4",

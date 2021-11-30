@@ -182,3 +182,31 @@
 .contact__type:hover {
   color: rgba(0, 0, 0, 0);
 }
+
+:global .flipCard {
+  --flip-card-height: 300px;
+  --flip-card-transition-duration: 800ms;
+  --flip-card-border-radius: 4px;
+  --flip-card-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --flip-card-background-color-front: var(--color-secondary4__tint2);
+  --flip-card-background-color-back: var(--color-standard__white);
+  --flip-card-transition-timing-function: ease;
+}
+
+:global .flipCard__details {
+  height: var(--flip-card-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+:global button.flipCard__details {
+  cursor: pointer;
+  display: block;
+  background: var(--flip-card-background-color-front);
+  width: 100%;
+  border: 0;
+  padding: 0;
+}

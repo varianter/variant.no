@@ -23,6 +23,10 @@ const Listing: NextPage<
     return { __html: md.render(listing.content) };
   }, [listing.content]);
 
+  React.useEffect(() => {
+    import('flip-card-wc');
+  }, []);
+
   return (
     <Layout title={`${listing.title} - ${listing.company_name}`}>
       <Head>
