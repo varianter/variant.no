@@ -41,6 +41,31 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <div>
         <Head>
           <title>En ny Variant i Bergen</title>
+          <meta
+            property="og:url"
+            content={'https://www.variant.no/bergen'}
+            key="og:url"
+          />
+          <meta
+            property="og:title"
+            content="En ny Variant i Bergen. Vi ønsker at du skal utvikle Bergen sammen med oss."
+            key="og:title"
+          />
+          <meta
+            property="og:description"
+            content="Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen sammen med oss. Å etablere neste generasjon selskapskultur hvor medarbeideres potensiale utnyttes til det fulle med tillit og transparens."
+            key="og:description"
+          />
+          <meta
+            name="description"
+            content="Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen sammen med oss. Å etablere neste generasjon selskapskultur hvor medarbeideres potensiale utnyttes til det fulle med tillit og transparens."
+            key="description"
+          />
+          <meta
+            property="og:image"
+            content="http://localhost:3000/images/eg_ve_te_bergen.jpg"
+            key="og:image"
+          />
         </Head>
         <div className={style.wrapper}>
           <header className={style.intro}>

@@ -18,7 +18,7 @@ export default function Layout({ children, title = 'Variant' }: LayoutProps) {
         <meta name="twitter:site" content="@variant_as" />
         <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.variant.no/oslovyer" />
+        <meta property="og:url" content="https://www.variant.no/bergen/vyer" />
         <meta
           property="og:image"
           content="https://www.variant.no/og-header-min.png"
