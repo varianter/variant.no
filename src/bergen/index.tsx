@@ -1,97 +1,124 @@
+import { colors } from '@variant/profile';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
+import BlobLink from 'src/components/blob-link';
+import JobListingItem from 'src/jobs/list-item';
 import Layout from 'src/layout';
 import style from './bergen.module.css';
+import { getStaticProps } from 'pages/bergen';
+import Link from 'next/link';
+import Arrow from 'src/components/arrow';
 
-const bergenLufthavn = require('./bergen-lufthavn.png');
+const bergen = require('./bergen-blob.png');
 
-export default function VariantTur() {
+export function BergenInfoBlock() {
+  return (
+    <div className={style.infoBlock}>
+      <img
+        className={style.infoBlock__blob}
+        src={bergen}
+        alt="Bryggen i Bergen"
+      />
+
+      <h2 className={style.infoBlock__title}>
+        <Link href="/bergen">
+          <a className={style.infoBlock__link}>
+            <span className={style.infoBlock__text}>Ny variant i Bergen</span>
+            <Arrow className={style.infoBlock__arrow} color="standard__white" />
+          </a>
+        </Link>
+      </h2>
+    </div>
+  );
+}
+
+const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  listings,
+}) => {
   return (
     <Layout>
       <div>
         <Head>
-          <title>Verdiutvikling Variant Bergen AS</title>
+          <title>En ny Variant i Bergen</title>
         </Head>
         <div className={style.wrapper}>
           <header className={style.intro}>
-            <h2 className={style.title}>
-              Verdiutvikling
-              <br />
-              Variant Bergen AS
-            </h2>
+            <h2 className={style.title}>En ny Variant i Bergen</h2>
           </header>
           <div className={style.content}>
             <img
-              className={style.lufthavn}
-              src={bergenLufthavn}
-              alt="Bilde av bane til Bergen Lufthavn av Jørgen Håland fra Unsplash"
+              className={style.bergenBlob}
+              src={bergen}
+              alt="Bryggen i Bergen"
             />
             <p>
-              En god del av kompensasjonen som leder i Variant er knyttet til
-              verdiutvikling av selskapet og avkastning på aksjer. Begge disse
-              momentene er relatert til vekst. Vi er ambisiøse på Bergens vegne.
-              Variants egenart bygger på at en relativt stor gruppe flinke
-              mennesker sammen utfordrer hverandre og bygger på hverandre. Dette
-              er et selskap som våger å vokse fort. Vi har en modell for
-              bærekraftig vekst, og et realistisk mål om å bygge et fagmiljø med
-              30 dyktige varianter på 3 år.
+              Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen
+              sammen med oss. Å etablere neste generasjon selskapskultur hvor
+              medarbeideres potensiale utnyttes til det fulle med tillit og
+              transparens. En kultur som bygger på gjensidig raushet, åpenhet og
+              læreglede. Dette er gode verdier som{' '}
+              <a
+                href="https://handbook.variant.no"
+                title="Håndboken til Variant"
+              >
+                du lese mer om i den åpne håndboken vår
+              </a>
+              .
             </p>
-
             <p>
-              Tabellen under beskriver våre vekstmål de neste årene. Dette er
-              altså de mål vi sikter mot og som vil kunne gi en pekepinn på hva
-              avkastning på dine aksjer og verdiutvikling av din eierandel.
-            </p>
-
-            <div className={style.tableContainer}>
-              <table className={style.forecast} cellSpacing={0} cellPadding={0}>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th className={style.forecast_heading}>2022</th>
-                    <th className={style.forecast_heading}>2023</th>
-                    <th className={style.forecast_heading}>2024</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Ansatte per 31.12 </td>
-                    <td className={style.number}>6 varianter</td>
-                    <td className={style.number}>15 varianter</td>
-                    <td className={style.number}>30 varianter</td>
-                  </tr>
-                  <tr>
-                    <td>Omsetning (i kr)</td>
-                    <td className={style.number}>3 000 000</td>
-                    <td className={style.number}>21 000 000</td>
-                    <td className={style.number}>45 000 000</td>
-                  </tr>
-                  <tr>
-                    <td>Resultat før skatt (i kr)</td>
-                    <td className={style.number}>100 000</td>
-                    <td className={style.number}>3 500 000</td>
-                    <td className={style.number}>5 500 000</td>
-                  </tr>
-                  <tr>
-                    <td>Totalt utbytte for selskapet (i kr)</td>
-                    <td className={style.number}>50 000</td>
-                    <td className={style.number}>2 000 000</td>
-                    <td className={style.number}>3 500 000</td>
-                  </tr>
-                  <tr>
-                    <td>Selskapets totale verdiutvikling (i kr)</td>
-                    <td className={style.number}>8 000 000</td>
-                    <td className={style.number}>20 000 000</td>
-                    <td className={style.number}>60 000 000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
-              Vi er ambisiøse og søker deg som også har lyst til å oppnå noe.
+              Her har vi samlet all informasjon om våre ambisjoner i Bergen. Odd
+              Morten har også tidligere skrevet en bloggpost om{' '}
+              <a
+                href="https://blog.variant.no/hallaisen-bergen-d88c7b976ef4"
+                title="Hallaisen, Bergen!"
+              >
+                hvorfor vi etablerer oss i en av Norges vakreste byer
+              </a>
+              . Vi anbefaler også at du leser om våre{' '}
+              <Link href="bergen/vyer">
+                <a>Bergensvyer</a>
+              </Link>{' '}
+              og{' '}
+              <Link href="bergen/verdiutvikling">
+                <a>verdiutvikling til Variant Bergen AS</a>
+              </Link>
+              .
             </p>
           </div>
+
+          <div className={style.buttonGroup}>
+            <BlobLink
+              text="Se Bergensvyer"
+              href="bergen/vyer"
+              size={400}
+              className={style.buttonGroup__first}
+            />
+            <BlobLink
+              text="Les om verdiutvikling"
+              href="bergen/verdiutvikling"
+              size={400}
+              className={style.buttonGroup__second}
+              background={colors.colorPairs.primary.default.bg}
+            />
+          </div>
+
+          {listings.length > 0 && (
+            <div className={style.content}>
+              <h3 className="fancy">Høres det interessant ut?</h3>
+
+              {listings.map((item) => (
+                <JobListingItem
+                  item={item}
+                  key={`${item.name}_${item.title}_${item.location}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </Layout>
   );
-}
+};
+
+export default Bergen;

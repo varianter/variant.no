@@ -44,13 +44,28 @@
 }
 
 .lufthavn {
-  shape-outside: url(./bergen-lufthavn.png);
+  shape-outside: url(./verdiutvikling/bergen-lufthavn.png);
   float: right;
   right: -1rem;
   position: relative;
   display: block;
 }
+
+.bergenBlob {
+  shape-outside: url(./bergen-blob.png);
+  float: right;
+  right: -1rem;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  width: 100%;
+}
 @media (max-width: 500px) {
+  .bergenBlob,
+  .lufthavn {
+    float: none;
+    margin-bottom: 2rem;
+  }
   .barcode {
     float: none;
     margin: 0 auto;
@@ -78,6 +93,8 @@
   background-clip: text;
   transition: color 0.2s ease-in-out;
   color: rgba(0, 0, 0, 0);
+
+  text-align: left;
 }
 
 @media (max-width: 760px) {
@@ -118,4 +135,49 @@
   100% {
     background-position: left;
   }
+}
+
+.buttonGroup {
+  width: 80%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.buttonGroup__first {
+  align-self: flex-start;
+}
+.buttonGroup__second {
+  align-self: flex-end;
+  margin-top: -2rem;
+}
+
+.infoBlock {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.infoBlock__blob {
+  flex: 1;
+  display: block;
+  min-width: 20rem;
+  max-width: 50%;
+}
+.infoBlock__link:link,
+.infoBlock__link:visited {
+  color: var(--color-standard__white);
+  text-align: left;
+}
+.infoBlock__title {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  min-width: 20rem;
+  padding: 2rem;
+  margin: 0;
+}
+.infoBlock__arrow {
+  display: block;
+  margin: 1rem auto 0;
 }

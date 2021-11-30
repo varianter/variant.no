@@ -5,10 +5,10 @@ import Head from 'next/head';
 import style from './index.module.css';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/jobs';
-import { ButtonNextLink } from 'src/components/button';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import { and } from 'src/utils/css';
+import JobListingItem from './list-item';
 
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
@@ -89,26 +89,18 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h3 className={and(style.withSubTitle, 'fancy')}>
             Ledige stillinger
           </h3>
-          {listings.map(({ name, title, location }: any) => (
-            <section
-              className={style.job__listing__container}
-              key={`${name}_${title}`}
-            >
-              <div>
-                <h4>{title}</h4>
-                <span>{location}</span>
-              </div>
-              <ButtonNextLink href={`/jobs/${name}`}>
-                Se på stillingen
-              </ButtonNextLink>
-            </section>
+          {listings.map((item) => (
+            <JobListingItem
+              item={item}
+              key={`${item.name}_${item.title}_${item.location}`}
+            />
           ))}
         </section>
         <section className={style.omVariant}>
           <h2>Variantdag - November 2019 </h2>
           <p>
-            Første fredag hver måned har vi variantdag. I november 2019 lagde
-            vi en liten film som viser litt av hva variantdager går ut på!
+            Første fredag hver måned har vi variantdag. I november 2019 lagde vi
+            en liten film som viser litt av hva variantdager går ut på!
           </p>
           <div className={style.aspect__ratio}>
             <iframe
