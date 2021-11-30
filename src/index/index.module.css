@@ -8,9 +8,14 @@
 .bergen {
   margin: 15rem 0;
 }
-@media (max-width: 610px) {
+@media (max-width: 640px) {
   .bergen {
-    margin: 8rem 0;
+    margin: 4rem 0 15rem;
+  }
+}
+@media (max-width: 500px) {
+  .bergen {
+    margin: 13rem 0 10rem;
   }
 }
 
