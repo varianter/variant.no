@@ -184,7 +184,7 @@
 }
 
 :global .flipCard {
-  --flip-card-height: 300px;
+  --flip-card-height: 400px;
   --flip-card-transition-duration: 800ms;
   --flip-card-border-radius: 4px;
   --flip-card-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
