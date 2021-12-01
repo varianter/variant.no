@@ -10,6 +10,21 @@ export default function VariantTur() {
       <div>
         <Head>
           <title>Verdiutvikling Variant Bergen AS</title>
+          <meta
+            property="og:title"
+            content="Verdiutvikling Variant Bergen AS"
+            key="og:title"
+          />
+          <meta
+            property="og:description"
+            content="Vi er ambisiøse på Bergens vegne. Variants egenart bygger på at en relativt stor gruppe flinke mennesker sammen utfordrer hverandre og bygger på hverandre. Dette er et selskap som våger å vokse fort."
+            key="og:description"
+          />
+          <meta
+            name="description"
+            content="Vi er ambisiøse på Bergens vegne. Variants egenart bygger på at en relativt stor gruppe flinke mennesker sammen utfordrer hverandre og bygger på hverandre. Dette er et selskap som våger å vokse fort."
+            key="description"
+          />
         </Head>
         <div className={style.wrapper}>
           <header className={style.intro}>
