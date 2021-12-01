@@ -3,6 +3,9 @@ title: Daglig leder for Variant Bergen AS
 h1_title: Daglig leder for Variant Bergen AS
 slug: ceo-i-variant-bergen
 contact_emails: oms@variant.no
+meta_title: Vi søker CEO til Variant Bergen
+meta_description: Vi søker etter deg som vil utvikle Bergen – sammen med flere og sammen med oss!
+meta_image: https://www.variant.no/images/ceo-bergen.jpg
 ---
 
 ## Vi søker etter deg som vil utvikle Bergen
