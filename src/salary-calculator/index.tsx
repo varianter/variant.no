@@ -183,6 +183,15 @@ const Calculator = (props: Props) => {
                   <dd className={and(style.number, style.result)}>{salary}</dd>
                 </div>
               </dl>
+
+              <p>
+                <small>
+                  <em>
+                    * Tallene gjelder fra 2022 og er basert på Teknas statistikk
+                    fra 2021
+                  </em>
+                </small>
+              </p>
             </div>
           </footer>
         </fieldset>
