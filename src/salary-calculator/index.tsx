@@ -30,7 +30,7 @@ const SalaryCalculator: NextPage<Props> = ({ year, degree, addition }) => {
         <meta
           property="og:url"
           content="https://www.variant.no/kalkulator"
-          key="og:image"
+          key="og:url"
         />
         <meta
           property="og:image"
