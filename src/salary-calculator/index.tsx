@@ -27,7 +27,11 @@ const SalaryCalculator: NextPage<Props> = ({ year, degree, addition }) => {
           name="description"
           content="Variants åpne lønnskalkulator. Her kan du se lønnsnivået vi har og se hvilken lønn du kan få hos oss basert på din utdanning og utdanningsår."
         />
-        <meta property="og:url" content="https://www.variant.no/kalkulator" />
+        <meta
+          property="og:url"
+          content="https://www.variant.no/kalkulator"
+          key="og:image"
+        />
         <meta
           property="og:image"
           content="https://www.variant.no/images/pay.jpg"
