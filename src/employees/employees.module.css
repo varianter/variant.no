@@ -15,7 +15,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(4, max-content);
   gap: 1rem;
 }
 .employees__nav a {

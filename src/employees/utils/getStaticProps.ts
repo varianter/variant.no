@@ -1,10 +1,9 @@
 import { getEmployeesList } from './getEmployeesList';
 
-export type Office = 'Oslo' | 'Trondheim';
+export const offices = ['oslo', 'trondheim', 'bergen'] as const;
+export type Office = typeof offices[number];
 
-export async function getStaticPropsEmployees(
-  officeName?: Office,
-) {
+export async function getStaticPropsEmployees(officeName?: Office) {
   // Set so we can run local as fallback.
   const employeeList = await getEmployeesList();
   if (employeeList) {
@@ -12,7 +11,7 @@ export async function getStaticPropsEmployees(
       props: officeName
         ? {
             employeeList: employeeList.filter(
-              (employee) => employee.officeName === officeName,
+              (employee) => employee.officeName?.toLowerCase() === officeName,
             ),
             officeName,
           }

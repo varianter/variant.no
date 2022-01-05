@@ -40,7 +40,7 @@ export default function Employees({
 
   const createFilterLink = (linkName: string, link: string) => {
     const isActive =
-      (!officeName && link === '/ansatte') || linkName === officeName;
+      (!officeName && link === '/ansatte') || link.includes(officeName!);
     return isActive ? (
       <li className={style.employees__navActive}>{linkName}</li>
     ) : (
@@ -55,13 +55,17 @@ export default function Employees({
   const getSoMeMetadata = (officeName?: Office) => {
     let description;
     switch (officeName) {
-      case 'Oslo':
+      case 'oslo':
         description =
           'Oversikt over alle ansatte i Variant Oslo. Her finner du alle varianter i Oslo og hvordan du kan ta kontakt for spørsmål.';
         break;
-      case 'Trondheim':
+      case 'trondheim':
         description =
           'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
+        break;
+      case 'bergen':
+        description =
+          'Oversikt over alle ansatte i Variant Bergen. Her finner du alle varianter i Bergen og hvordan du kan ta kontakt for spørsmål.';
         break;
       default:
         description =
@@ -97,6 +101,7 @@ export default function Employees({
             {createFilterLink('Alle', '/ansatte')}
             {createFilterLink('Oslo', '/ansatte/oslo')}
             {createFilterLink('Trondheim', '/ansatte/trondheim')}
+            {createFilterLink('Bergen', '/ansatte/bergen')}
           </ul>
         </nav>
 
