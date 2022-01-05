@@ -239,38 +239,69 @@ const Layout: React.FC<LayoutProps> = ({
                 href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
                 rel="noopener"
                 target="_blank"
-                title="Kart til Varianthuset"
+                title="Kart til Varianthuset i Trondheim"
               >
                 Thomas Angells gate 10
               </a>{' '}
-              i Trondheim og på{' '}
+              i Trondheim, på{' '}
               <a
                 href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
                 rel="noopener"
                 target="_blank"
-                title="Kart til Varianthuset"
+                title="Kart til Variant Oslo"
               >
                 Spaces Kvadraturen
               </a>{' '}
-              i Oslo. Kom innom for en kopp kaffe eller bare en hyggelig prat.
+              i Oslo og på{' '}
+              <a
+                href="https://g.page/Vaskerelven-39-5323"
+                rel="noopener"
+                target="_blank"
+                title="Kart til Variant Bergen"
+              >
+                Spaces Vaskerelven
+              </a>{' '}
+              i Bergen . Kom innom for en kopp kaffe eller bare en hyggelig
+              prat.
             </p>
-
-            <p>
-              <address>
-                <strong>Variant AS</strong>
-                <br />
-                Thomas Angells gate 10 <br />
-                7011 Trondheim
-              </address>
-            </p>
-            <p>
-              <address>
-                <strong>Variant Oslo AS</strong>
-                <br />
-                C/O Spaces Kvadraturen Tollbugata 8<br />
-                0152 Oslo
-              </address>
-            </p>
+          </div>
+        </div>
+        <div
+          className={and(style.footer__inner, style['footer__inner--bottom'])}
+        >
+          <div
+            className={and(style.footer__item, style['footer__item--address'])}
+          >
+            <address>
+              <strong>Variant AS</strong>
+              <br />
+              Thomas Angells gate 10 <br />
+              7011 Trondheim
+            </address>
+          </div>
+          <div
+            className={and(style.footer__item, style['footer__item--address'])}
+          >
+            <address>
+              <strong>Variant Oslo AS</strong>
+              <br />
+              C/O Spaces Kvadraturen
+              <br />
+              Tollbugata 8<br />
+              0152 Oslo
+            </address>
+          </div>
+          <div
+            className={and(style.footer__item, style['footer__item--address'])}
+          >
+            <address>
+              <strong>Variant Bergen AS</strong>
+              <br />
+              C/O Spaces Vaskerelven <br />
+              Vaskerelven 39
+              <br />
+              5014 Bergen
+            </address>
           </div>
         </div>
       </footer>
