@@ -40,7 +40,7 @@ export default function Employees({
 
   const createFilterLink = (linkName: string, link: string) => {
     const isActive =
-      (!officeName && link === '/ansatte') || link.includes(officeName ?? '');
+      (!officeName && link === '/ansatte') || link.includes(officeName!);
     return isActive ? (
       <li className={style.employees__navActive}>{linkName}</li>
     ) : (
