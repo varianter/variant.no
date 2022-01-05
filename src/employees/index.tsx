@@ -63,6 +63,10 @@ export default function Employees({
         description =
           'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
         break;
+      case 'bergen':
+        description =
+          'Oversikt over alle ansatte i Variant Bergen. Her finner du alle varianter i Bergen og hvordan du kan ta kontakt for spørsmål.';
+        break;
       default:
         description =
           'Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål.';
@@ -97,6 +101,7 @@ export default function Employees({
             {createFilterLink('Alle', '/ansatte')}
             {createFilterLink('Oslo', '/ansatte/oslo')}
             {createFilterLink('Trondheim', '/ansatte/trondheim')}
+            {createFilterLink('Bergen', '/ansatte/bergen')}
           </ul>
         </nav>
 

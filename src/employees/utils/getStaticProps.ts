@@ -1,6 +1,6 @@
 import { getEmployeesList } from './getEmployeesList';
 
-export const offices = ['Oslo', 'Trondheim'] as const;
+export const offices = ['oslo', 'trondheim', 'bergen'] as const;
 export type Office = typeof offices[number];
 
 export async function getStaticPropsEmployees(officeName?: Office) {
