@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from 'src/layout';
 import style from '../invitations.module.css';
 
@@ -84,9 +85,12 @@ export function MainInfo() {
         </p>
 
         <p>
-          Bruk av medeierskap er et virkemiddel vi har god erfaring med. Dette 
-          ble også beskrevet i <a href="../../jobs/ceo-i-variant-bergen">utlysningen </a> til stillingen. Hva er dine tanker 
-          over hvordan dette kan løses? 
+          Bruk av medeierskap er et virkemiddel vi har god erfaring med. Dette
+          ble også beskrevet i{' '}
+          <Link href="/jobs/ceo-i-variant-bergen">
+            <a>utlysningen</a>
+          </Link>{' '}
+          til stillingen. Hva er dine tanker over hvordan dette kan løses?
         </p>
 
         <p className={style.prep}>
