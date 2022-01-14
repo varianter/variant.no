@@ -121,7 +121,7 @@ export default function Invitation() {
                 %0D%0A
                 Utbetales til kontonr:"
               >
-                faktura@variant.no
+                faktura.bergen@variant.no
               </a>
             </p>
           </div>
