@@ -1,0 +1,170 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from 'src/layout';
+import style from '../invitations.module.css';
+
+export default function Invitation() {
+  return (
+    <Layout>
+      <div>
+        <Head>
+          <title>Velkommen til Trondheim</title>
+        </Head>
+        <section className={style.omVariant}>
+          <header>
+            <h2 className={style.omVariant__title}>Velkommen Celie!</h2>
+          </header>
+          <div>
+            <p>
+              Det er med stor glede vi inviterer til en liten dag hos oss på
+              Varianthuset i Trondheim 20. januar. Målet med dagen er å bli
+              bedre kjent med deg, men også at du får truffet flere av oss.
+              Adressen er Thomas Angells gate 10. Det er midt i sentum.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="fancy">Tidsplan 20. januar</h3>
+            <ul className={style.agenda}>
+              <li>
+                <span className={style.time}>11.00-12.00</span> 💪🏻 Styrkesamtale
+              </li>
+              <li>
+                <span className={style.time}>13.00-15.00</span> 👩‍👦‍👦
+                Samarbeidscase{' '}
+              </li>
+              <li>
+                <span className={style.time}>15.30-17.00</span> 🥘 Enkel middag
+              </li>
+            </ul>
+          </div>
+
+          <MainInfo />
+        </section>
+      </div>
+    </Layout>
+  );
+}
+
+export function MainInfo() {
+  return (
+    <>
+      <div>
+        <h3 className="fancy">Styrkesamtale</h3>
+        <img
+          className={style.right_image}
+          src="/images/linn.png"
+          alt="Linn Sandvik"
+        />
+        <p>
+          Som du sikkert er klar over baserer vi vår medarbeiderutvikling på
+          positiv psykologi og legger styrkebasert utvikling til grunn for
+          hvordan vi ønsker bygge varianter. Første ledd i en slik utvikling er
+          å kartlegge våre styrker og våre verdier. Dette gjør vi for alle
+          mennesker i selskapet gjennom en styrkesamtale.
+        </p>
+
+        <p className={style.prep}>
+          Til samtalen ønsker vi at du tenker igjennom: I hvilke situasjoner er
+          du mest motivert? Hva gjør at du blir frustrert, irritert eller sint?
+          Hvordan liker du å løse utfordringer?
+        </p>
+        <p>
+          Linn kommer til å gjennomføre denne samtalen, og som et resultat får
+          du ditt eget styrkekart.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="fancy">Samarbeidscase - Rekrutteringsstrategi</h3>
+        <p>
+          En forutsetning for å lykkes i Bergen er at vi lykkes med
+          rekrutteringen. Vi har derfor lyst til at å kjøre et samarbeidscase på
+          hvordan vi kan utvikle en god rekrutteringsstrategi for Variant
+          Bergen.
+        </p>
+
+        <p>
+          Bruk av medeierskap er et virkemiddel vi har god erfaring med. Dette
+          ble også beskrevet i{' '}
+          <Link href="/jobs/ceo-i-variant-bergen">
+            <a>utlysningen</a>
+          </Link>{' '}
+          til stillingen. Hva er dine tanker over hvordan dette kan løses?
+        </p>
+
+        <p className={style.prep}>
+          Til caset ønsker vi at du forbereder en innledning der du forteller
+          litt om dine tanker rundt Bergens rekruttering på kort og lengre sikt.
+          Format er helt opp til deg. Lengden bør ikke være mer enn 10 minutter,
+          og kort er bedre enn langt.
+        </p>
+
+        <p>
+          Etter din innledning vil du, Kristin, Anders, Mikael og Odd Morten
+          spinne videre på dine tanker. Marius stiller som observatør. Vi kommer
+          til å utfordre eller male videre, og ønsker at du gjør det samme.
+          Altså slik vi faktisk kommer til å jobbe når vi samarbeider om å bygge
+          et selskap i framtiden. Idéer som du bringer til torgs, skal vi ikke
+          stjele.
+        </p>
+
+        <div className={style.profileBlock}>
+          <img
+            className={style.profileImage}
+            src="/images/kristin.png"
+            alt="Kristin Qvenild Nesset"
+          />
+
+          <img
+            className={style.profileImage}
+            src="/images/anders.png"
+            alt="Anders Hammervold"
+          />
+
+          <img
+            className={style.profileImage}
+            src="/images/mikael.png"
+            alt="Mikael Brevik"
+          />
+
+          <img
+            className={style.profileImage}
+            src="/images/odd-morten.png"
+            alt="Odd Morten Sveås"
+          />
+
+          <img
+            className={style.profileImage}
+            src="/images/marius.png"
+            alt="Marius Krakeli"
+          />
+        </div>
+        <p>
+          Vi tror samarbeidsevne og kompabilitet med resten av konsernledelsen
+          er en nøkkel til å lykkes. Hovedpoenget med denne sesjonen er derfor å
+          se på hvordan vi samarbeider. Hvordan vi klarer å utnytte hverandres
+          potensial. Hvordan ditt samspill i gruppen vil være. Sluttproduktet,
+          hvis vi kommer så langt, kommer vi ikke til å evaluere.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="fancy">Utlegg</h3>
+        <p>
+          Vi setter stor pris på at du er villig til å bruke en dag på oss her i
+          Trondheim. Vi dekker selvsagt kostnader til selve reisen. Vi ber deg
+          derfor å legge ut for turen, og så sende oss kopi av kvitteringer
+          sammen med bankkontonummer på mail til{' '}
+          <a
+            href="mailto:faktura.bergen@variant.no?subject=Utlegg i forbindelse med intervju&body=Vedlagt kvitteringer for min reise til Trondheim i forbindelse med intervju.%0D%0A
+                %0D%0A
+                Utbetales til kontonr:"
+          >
+            faktura.bergen@variant.no
+          </a>
+        </p>
+      </div>
+    </>
+  );
+}

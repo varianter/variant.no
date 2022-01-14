@@ -1,0 +1,69 @@
+.omVariant {
+  padding: 0 1rem 4rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 500px) {
+  .omVariant {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.omVariant__title {
+  font-weight: bold;
+  margin: 1.8rem 0;
+  font-size: 3.3rem;
+
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+  color: rgba(0, 0, 0, 0);
+}
+.omVariant__title[data-no-animation='true'] {
+  animation: none;
+}
+
+.time {
+  display: inline-block;
+  width: 8rem;
+}
+
+.agenda {
+  list-style: none;
+}
+
+.prep {
+  padding: 0 3rem;
+  font-style: italic;
+}
+
+.profileBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.profileImage {
+  max-width: 8rem;
+}
+.right_image {
+  float: right;
+  max-width: 10rem;
+}
+
+h2,
+h3 {
+  margin: 5rem 0 2rem 0;
+}
+
+p {
+  margin-top: 1rem;
+}
