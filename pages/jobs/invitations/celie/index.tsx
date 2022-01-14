@@ -76,12 +76,17 @@ export function MainInfo() {
 
       <div>
         <h3 className="fancy">Samarbeidscase - Rekrutteringsstrategi</h3>
-
         <p>
           En forutsetning for å lykkes i Bergen er at vi lykkes med
           rekrutteringen. Vi har derfor lyst til at å kjøre et samarbeidscase på
           hvordan vi kan utvikle en god rekrutteringsstrategi for Variant
           Bergen.
+        </p>
+
+        <p>
+          Bruk av medeierskap er et virkemiddel vi har god erfaring med. Dette 
+          ble også beskrevet i <a href="../../jobs/ceo-i-variant-bergen">utlysningen </a> til stillingen. Hva er dine tanker 
+          over hvordan dette kan løses? 
         </p>
 
         <p className={style.prep}>
