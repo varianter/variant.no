@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from 'src/layout';
-import style from './invitations.module.css';
+import style from '../invitations.module.css';
 
 export default function Invitation() {
   return (
@@ -16,9 +16,9 @@ export default function Invitation() {
           <div>
             <p>
               Det er med stor glede vi inviterer til en liten dag hos oss på
-              Varianthuset i Trondheim 20. januar. Målet med dagen er å bli bedre
-              kjent med deg, men også at du får truffet flere av oss. Adressen
-              er Thomas Angells gate 10. Det er midt i sentum.
+              Varianthuset i Trondheim 20. januar. Målet med dagen er å bli
+              bedre kjent med deg, men også at du får truffet flere av oss.
+              Adressen er Thomas Angells gate 10. Det er midt i sentum.
             </p>
           </div>
 
@@ -78,9 +78,9 @@ export default function Invitation() {
             />
             <p className={style.prep}>
               Til caset ønsker vi at du forbereder en innledning der du
-              forteller litt om dine tanker rundt Bergens rekruttering på kort og
-              lengre sikt. Format er helt opp til deg. Lengden bør ikke være mer
-              enn 10 minutter, og kort er bedre enn langt.
+              forteller litt om dine tanker rundt Bergens rekruttering på kort
+              og lengre sikt. Format er helt opp til deg. Lengden bør ikke være
+              mer enn 10 minutter, og kort er bedre enn langt.
             </p>
             <img
               className={style.right_image}
