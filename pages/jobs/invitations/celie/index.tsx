@@ -136,7 +136,7 @@ export function MainInfo() {
 
           <img
             className={style.profileImage}
-            src="/images/Marius.png"
+            src="/images/marius.png"
             alt="Marius Krakeli"
           />
         </div>
