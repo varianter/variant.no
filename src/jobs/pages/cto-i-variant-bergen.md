@@ -3,6 +3,9 @@ title: Chief Technology Officer for Variant Bergen AS
 h1_title: Chief Technology Officer for Variant Bergen AS
 slug: cto-i-variant-bergen
 contact_emails: ah@variant.no, mb@variant.no
+meta_title: Vi søker CTO til Variant Bergen
+meta_description: Vi søker etter deg som vil utvikle Bergen – sammen med flere og sammen med oss!
+meta_image: https://www.variant.no/images/cto-bergen.jpg
 ---
 
 ## Vi søker etter noen som vil utvikle Bergen
