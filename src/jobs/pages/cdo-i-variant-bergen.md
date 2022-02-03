@@ -36,7 +36,7 @@ Vi tilstreber åpenhet i alt vårt arbeid. Også når vi ser etter ledere. Derfo
 
 - Lønn. [Variant justerer lønn basert på teknas lønsstatistikk.](/kalkulator) For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Dette ledertillegget vil være 150 000. [Med en mastergrad fra 2008, vil din startlønn være 1 151 610](/kalkulator?year=2008&degree=masters&addition=150000).
 - Bonus. Du vil som alle ansatte får en flat resultatbonus pr kvartal som utgjør 30% av overskuddet.
-- Chief Design Officer vil tilbys å kjøpe en andel av aksjene i Variant Bergen AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
+- Chief Design Officer vil tilbys å kjøpe 10% av aksjene i Variant Bergen AS. Dette vil årlig medføre utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelig utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og som raskt stiger i verdi etter hvert som antall ansatte øker.
   Vi er ambisiøse og søker deg som også har lyst til å oppnå noe. Vi har en modell for bærekraftig vekst og et realistisk mål om å bygge et fagmiljø med 40 dyktige fagpersoner på 3 år.
 
