@@ -12,7 +12,7 @@ meta_image: https://www.variant.no/images/cto-bergen.jpg
 
 ![Varianter på en takterrasse](/images/utvikler-takterrasse.png)
 
-Det er det vi ønsker du skal gjøre, - sammen med oss. Vi ser etter deg som vil etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre, men også har ydmykhet nok til å lære underveis.
+Det er det vi ønsker du skal gjøre, - sammen med oss. Vi ser etter deg som vil etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre, og med ydmykhet nok til å lære underveis.
 
 Les mer om våre ambisjoner for Bergen [her](https://variant.no/bergen). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Vestlandets hovedstad](https://blog.variant.no/hallaisen-bergen-d88c7b976ef4).
 
