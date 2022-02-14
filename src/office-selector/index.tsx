@@ -7,7 +7,7 @@ export type Office = typeof offices[number];
 export function stringToDepartment(dep?: string): Office | undefined {
   // Check if we have valid office, if not we can just return undefined.
   if ((offices as ReadonlyArray<string>).includes(dep!)) return dep as Office;
-      return undefined;
+  return undefined;
 }
 
 type FilterLinkProps = {
@@ -23,7 +23,7 @@ export function FilterLink({
   return isSelected ? (
     <li className={style.office__navActive}>{linkName}</li>
   ) : (
-    <Link href={link}>
+    <Link href={link} scroll={false}>
       <a>
         <li>{linkName}</li>
       </a>
