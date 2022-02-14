@@ -13,7 +13,9 @@ const regexEqual = (x, y) => {
 };
 
 module.exports = withPlugins([withImages], {
-  target: 'serverless',
+  images: {
+    disableStaticImages: true,
+  },
   webpack: (config) => {
     // Allows for non-pure CSS Modules in Nextjs.
     // Overrides css loader config setting modules mode to local
