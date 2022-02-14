@@ -5,7 +5,7 @@ import AnimatingBackground from 'src/background';
 import { and } from 'src/utils/css';
 import style from './layout.module.css';
 
-const favicon = require('@variant/profile/lib/logo/favicon.png');
+import favicon from '@variant/profile/lib/logo/favicon.png';
 
 type LayoutProps = {
   title?: string;

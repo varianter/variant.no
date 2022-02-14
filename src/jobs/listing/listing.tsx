@@ -23,8 +23,9 @@ const Listing: NextPage<
     return { __html: md.render(listing.content) };
   }, [listing.content]);
 
+  const newLocal = 'flip-card-wc';
   React.useEffect(() => {
-    import('flip-card-wc');
+    import(newLocal);
   }, []);
 
   return (
