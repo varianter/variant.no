@@ -83,6 +83,7 @@ export default function Employees({
 
         <OfficeSelector
           currentOffice={officeName}
+          defaultLink="/ansatte"
           officeMap={{
             Alle: '/ansatte',
             Bergen: '/ansatte/bergen',
