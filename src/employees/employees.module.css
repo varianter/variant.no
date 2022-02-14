@@ -7,26 +7,6 @@
   align-items: center;
 }
 
-.employees__nav {
-  max-width: 75%;
-  margin: 1rem auto;
-}
-.employees__nav ul {
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 1rem;
-}
-.employees__nav a {
-  font-size: 1.25rem;
-}
-.employees__navActive {
-  font-size: 1.25rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
 .employees__header {
   margin-top: 4.8rem;
   margin-bottom: 1rem;
