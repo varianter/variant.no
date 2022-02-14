@@ -5,16 +5,9 @@ export const offices = ['trondheim', 'oslo', 'bergen'] as const;
 export type Office = typeof offices[number];
 
 export function stringToDepartment(dep?: string): Office | undefined {
-  switch (dep) {
-    case 'trondheim':
-      return 'trondheim';
-    case 'oslo':
-      return 'oslo';
-    case 'bergen':
-      return 'bergen';
-    default:
+  // Check if we have valid office, if not we can just return undefined.
+  if ((offices as ReadonlyArray<string>).includes(dep!)) return dep as Office;
       return undefined;
-  }
 }
 
 type FilterLinkProps = {
