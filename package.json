@@ -55,11 +55,6 @@
     "analyze-bundle": "ANALYZE=true yarn build",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "browserslist": [
     ">0.3%",
     "not ie 11",
