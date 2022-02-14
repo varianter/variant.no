@@ -9,9 +9,11 @@ import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile';
 import { and } from 'src/utils/css';
 import JobListingItem from './list-item';
+import { OfficeSelector } from 'src/office-selector';
 
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
+  office,
 }) => {
   return (
     <>
@@ -89,6 +91,17 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h3 className={and(style.withSubTitle, 'fancy')}>
             Ledige stillinger
           </h3>
+
+          <OfficeSelector
+            currentOffice={office}
+            defaultLink="/jobs"
+            officeMap={{
+              Alle: '/jobs',
+              Bergen: '/jobs/office/bergen',
+              Oslo: '/jobs/office/oslo',
+              Trondheim: '/jobs/office/trondheim',
+            }}
+          />
           {listings.map((item) => (
             <JobListingItem
               item={item}

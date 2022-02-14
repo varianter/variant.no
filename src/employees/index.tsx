@@ -1,19 +1,18 @@
-import React, { CSSProperties, useEffect, useState } from 'react';
-import Layout from 'src/layout';
-import { and } from 'src/utils/css';
-
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile/lib';
-
-import style from './employees.module.css';
 import { InferGetStaticPropsType } from 'next';
-import { getStaticProps } from 'pages/ansatte';
-import { EmployeeJSON } from 'src/utils/typings/Employee';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Office } from './utils/getStaticProps';
+import { getStaticProps } from 'pages/ansatte';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import Arrow from 'src/components/arrow';
+import Layout from 'src/layout';
+import { OfficeSelector } from 'src/office-selector';
+import { and } from 'src/utils/css';
+import { EmployeeJSON } from 'src/utils/typings/Employee';
+import style from './employees.module.css';
+import { Office } from './utils/getStaticProps';
 
 export type Employee = {
   fullName: string;
@@ -37,20 +36,6 @@ export default function Employees({
   }, [employeeList]);
 
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
-
-  const createFilterLink = (linkName: string, link: string) => {
-    const isActive =
-      (!officeName && link === '/ansatte') || link.includes(officeName!);
-    return isActive ? (
-      <li className={style.employees__navActive}>{linkName}</li>
-    ) : (
-      <Link href={link}>
-        <a>
-          <li>{linkName}</li>
-        </a>
-      </Link>
-    );
-  };
 
   const getSoMeMetadata = (officeName?: Office) => {
     let description;
@@ -96,14 +81,15 @@ export default function Employees({
           </p>
         </header>
 
-        <nav className={style.employees__nav}>
-          <ul>
-            {createFilterLink('Alle', '/ansatte')}
-            {createFilterLink('Oslo', '/ansatte/oslo')}
-            {createFilterLink('Trondheim', '/ansatte/trondheim')}
-            {createFilterLink('Bergen', '/ansatte/bergen')}
-          </ul>
-        </nav>
+        <OfficeSelector
+          currentOffice={officeName}
+          officeMap={{
+            Alle: '/ansatte',
+            Bergen: '/ansatte/bergen',
+            Oslo: '/ansatte/oslo',
+            Trondheim: '/ansatte/trondheim',
+          }}
+        />
 
         <div className={style.employees__layout}>
           {shuffledEmployeeList.map((employee: Employee, index: number) => {
