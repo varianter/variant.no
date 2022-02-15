@@ -1023,11 +1023,6 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.0.tgz#a5d06b4a8b01e3a63771daa5cb7a1903e2e57067"
   integrity sha512-tW+UkmtNg/jv9CSofAKvgVcO7c2URjhTdW1ZTkcAritblu8tajiYy7YisnIflEwtKssCtOxpnBRoCB7iap0/TA==
 
-flip-card-wc@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/flip-card-wc/-/flip-card-wc-1.3.0.tgz#9f84d45a2862548be8d327335f766868ebb6e90b"
-  integrity sha512-UppqlwOvd4MLZQ87t35ZCttJCC2LIAQL+gJ8raws981Vzk6kbndgyEPyVNgSF1JTaCsXZQn3OnLEwlf2mXnWFw==
-
 fraction.js@^4.1.2:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.1.3.tgz#be65b0f20762ef27e1e793860bc2dfb716e99e65"
