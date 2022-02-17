@@ -1,42 +1,45 @@
-import { Employee, massageEmployee } from '..';
-import { getEmployeesUrl } from '../../utils/api/getEmployees';
-import { handleImages } from '../../utils/imageHandler';
-import { EmployeeJSON } from '../../utils/typings/Employee';
+import { handleImages } from 'src/utils/imageHandler/_local';
+import { ApiEmployee, EmployeeItem } from '../types';
+import { requestByEmail, requestEmployees } from './request';
 
 export const getEmployeesList = async () => {
-  // Set so we can run local as fallback.
-  const response = await fetch(getEmployeesUrl);
-  if (response.ok) {
-    const employeesJSON = await response.json();
-    // Make images
-    const employeeList = await Promise.all<Employee>(
-      employeesJSON.map(async (employee: EmployeeJSON) => {
-        const imageSlug = await handleImages(employee);
-        return { ...massageEmployee(employee), imageSlug };
-      }),
-    );
-    return employeeList;
+  const employees = await requestEmployees();
+
+  if (!employees) {
+    return false;
   }
-  return false;
+
+  // Make images
+  return await Promise.all<EmployeeItem>(
+    employees.map(async (employee) => {
+      const imageUrl = await handleImages(employee);
+      return { ...massageEmployee(employee), imageUrl };
+    }),
+  );
 };
 
-export const getEmployeesListByEmail = async (
-  emails: string[],
-): Promise<Employee[]> => {
-  // Set so we can run local as fallback.
-  const response = await fetch(getEmployeesUrl);
-  if (response.ok) {
-    const employeesJSON = await response.json();
-    // Make images
-    const employeeList = await Promise.all<Employee>(
-      employeesJSON
-        .filter((j: EmployeeJSON) => emails.includes(j.email))
-        .map(async (employee: EmployeeJSON) => {
-          const imageSlug = await handleImages(employee);
-          return { ...massageEmployee(employee), imageSlug };
-        }),
-    );
-    return employeeList;
+export const getEmployeeByEmail = async (email: string) => {
+  const employee = await requestByEmail(email);
+
+  if (!employee) {
+    return false;
   }
-  return [];
+
+  const imageSlug = await handleImages(employee);
+  return { ...massageEmployee(employee), imageSlug };
 };
+
+function massageEmployee(employee: ApiEmployee) {
+  return {
+    fullName: employee.name,
+    name: employee.name.split(' ')[0],
+    email: employee.email,
+    telephone: (employee.telephone.startsWith('+47')
+      ? employee.telephone.slice(3)
+      : employee.telephone
+    )
+      .replace(/\s/g, '')
+      .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
+    officeName: employee.office_name,
+  };
+}

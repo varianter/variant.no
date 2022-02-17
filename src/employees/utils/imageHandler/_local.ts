@@ -1,12 +1,12 @@
 import { promises as fs, createWriteStream } from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
+import { ApiEmployee } from 'src/employees/types';
 
-import { EmployeeJSON } from './typings/Employee';
 // Temp comment to retrigger deployemtn
 const employeeDirectory = path.join(process.cwd(), 'public/employees');
 
-export const handleImages = async (employee: EmployeeJSON) => {
+export const handleImages = async (employee: ApiEmployee) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
 
