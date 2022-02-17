@@ -1,4 +1,4 @@
-import { handleImages } from 'src/utils/imageHandler/_local';
+import { handleImages } from 'src/employees/utils/imageHandler/local';
 import { ApiEmployee, EmployeeItem } from '../types';
 import { requestByEmail, requestEmployees } from './request';
 

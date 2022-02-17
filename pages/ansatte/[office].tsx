@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Employee } from 'src/employees';
+import { EmployeeItem } from 'src/employees/types';
 import {
   getStaticPropsEmployees,
   Office,
@@ -30,7 +30,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<{
-  employeeList: Employee[];
+  employeeList: EmployeeItem[];
   officeName?: Office;
 }> = async (context) => {
   return getStaticPropsEmployees(queryToOffice(context.params?.office));
