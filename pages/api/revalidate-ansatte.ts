@@ -15,6 +15,7 @@ export default async function handler(
     await res.unstable_revalidate('/ansatte');
     return res.json({ revalidated: true });
   } catch (err) {
+    console.error(err);
     return res.status(500).send('Error revalidating');
   }
 }
