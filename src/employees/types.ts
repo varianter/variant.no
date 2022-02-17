@@ -15,6 +15,6 @@ export type EmployeeItem = {
   name: string;
   email: string;
   telephone: string;
-  imageSlug: string;
+  imageUrl: string;
   officeName: string;
 };

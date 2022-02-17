@@ -120,7 +120,7 @@ const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
         width={300}
         height={300}
         alt={`Bilde av ${name}`}
-        src={`/employees/${imageUrl}.png`}
+        src={imageUrl}
         loading="lazy"
       />
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>

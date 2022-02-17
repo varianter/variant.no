@@ -15,7 +15,9 @@ const regexEqual = (x, y) => {
 module.exports = withPlugins([withImages], {
   images: {
     disableStaticImages: true,
+    domains: ['variantno.blob.core.windows.net'],
   },
+
   webpack: (config) => {
     // Allows for non-pure CSS Modules in Nextjs.
     // Overrides css loader config setting modules mode to local

@@ -1,8 +1,8 @@
-import { handleImages } from 'src/employees/utils/imageHandler/local';
+import { handleImages } from 'src/employees/utils/imageHandler';
 import { ApiEmployee, EmployeeItem } from '../types';
 import { requestByEmail, requestEmployees } from './request';
 
-export const getEmployeesList = async () => {
+export const getEmployeesList = async (): Promise<EmployeeItem[] | false> => {
   const employees = await requestEmployees();
 
   if (!employees) {
@@ -18,15 +18,30 @@ export const getEmployeesList = async () => {
   );
 };
 
-export const getEmployeeByEmail = async (email: string) => {
+export const getRandomEmployee = async (): Promise<EmployeeItem | false> => {
+  const employees = await requestEmployees();
+
+  if (!employees) {
+    return false;
+  }
+
+  const randomEmployee =
+    employees[Math.floor(Math.random() * employees.length)];
+  const imageUrl = await handleImages(randomEmployee);
+  return { ...massageEmployee(randomEmployee), imageUrl };
+};
+
+export const getEmployeeByEmail = async (
+  email: string,
+): Promise<EmployeeItem | false> => {
   const employee = await requestByEmail(email);
 
   if (!employee) {
     return false;
   }
 
-  const imageSlug = await handleImages(employee);
-  return { ...massageEmployee(employee), imageSlug };
+  const imageUrl = await handleImages(employee);
+  return { ...massageEmployee(employee), imageUrl };
 };
 
 function massageEmployee(employee: ApiEmployee) {

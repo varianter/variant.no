@@ -126,7 +126,7 @@ const Listing: NextPage<
 });
 
 export const ContactTile: React.FC<{ contact: EmployeeItem }> = ({
-  contact: { fullName, name, email, telephone, imageSlug },
+  contact: { fullName, name, email, telephone, imageUrl },
 }) => {
   return (
     <div className={style.contact}>
@@ -135,7 +135,7 @@ export const ContactTile: React.FC<{ contact: EmployeeItem }> = ({
           width={120}
           height={120}
           alt={`Bilde av ${name}`}
-          src={`/employees/${imageSlug}.png`}
+          src={imageUrl}
           loading="lazy"
         />
       </div>

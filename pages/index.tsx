@@ -2,7 +2,10 @@ import { GetStaticProps } from 'next';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
 import { EmployeeItem } from 'src/employees/types';
-import { getEmployeesList } from 'src/employees/utils/getEmployeesList';
+import {
+  getEmployeesList,
+  getRandomEmployee,
+} from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/index';
 
@@ -14,10 +17,8 @@ export const getStaticProps: GetStaticProps<{
   randomEmployee: EmployeeItem;
   randomCases: CaseJSON[];
 }> = async () => {
-  const employeesJSON = await getEmployeesList();
-  if (employeesJSON) {
-    const randomEmployee =
-      employeesJSON[Math.floor(Math.random() * employeesJSON.length)];
+  const randomEmployee = await getRandomEmployee();
+  if (randomEmployee) {
     const randomCases = shuffle(CaseList).slice(0, 3);
 
     return {

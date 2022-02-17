@@ -24,7 +24,7 @@ export const handleImages = async (employee: ApiEmployee) => {
       console.error(er);
     }
   } finally {
-    return userFileName;
+    return `/employees/${userFileName}.png`;
   }
 };
 

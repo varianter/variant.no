@@ -1,66 +1,7 @@
-import {
-  BlobServiceClient,
-  StorageSharedKeyCredential,
-  newPipeline,
-  ContainerClient,
-} from '@azure/storage-blob';
-import { ApiEmployee } from 'src/employees/types';
+import { handleImages as handleImages_blob } from './blob';
+import { handleImages as handleImages_local } from './local';
 
-if (
-  !process.env.AZURE_STORAGE_ACCOUNT_NAME ||
-  !process.env.AZURE_STORAGE_ACCOUNT_ACCESS_KEY ||
-  !process.env.AZURE_STORAGE_ACCOUNT_NAME
-) {
-  throw new Error('Required Azure Storage environment variables not set');
-}
-
-const sharedKeyCredential = new StorageSharedKeyCredential(
-  process.env.AZURE_STORAGE_ACCOUNT_NAME,
-  process.env.AZURE_STORAGE_ACCOUNT_ACCESS_KEY,
-);
-const pipeline = newPipeline(sharedKeyCredential);
-
-const blobServiceClient = new BlobServiceClient(
-  `https://${process.env.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net`,
-  pipeline,
-);
-
-const containerName = 'employees';
-
-export const handleImages = async (employee: ApiEmployee) => {
-  // Check if images exsist already
-  const userFileName = toFileName(employee.name);
-  const containerClient = blobServiceClient.getContainerClient(containerName);
-  return downloadAndStore(userFileName, containerClient, employee.image);
-};
-
-async function downloadAndStore(
-  fileName: string,
-  containerClient: ContainerClient,
-  image: { large: { url: string } },
-) {
-  const request = await fetch(image.large.url);
-  const outputFileName = `${fileName}.png`;
-  const blockBlobClient = containerClient.getBlockBlobClient(outputFileName);
-
-  // Always download and set new image
-  await blockBlobClient.uploadData(await request.arrayBuffer(), {
-    blobHTTPHeaders: { blobContentType: 'image/png' },
-  });
-
-  return blockBlobClient.url;
-}
-
-function toFileName(name: string) {
-  // Could be unstable when string is large
-  const baseString = name.trimStart().replace(' ', '-');
-  let hash = 0,
-    i,
-    chr;
-  for (i = 0; i < baseString.length; i++) {
-    chr = baseString.charCodeAt(i);
-    hash = (hash << 5) - hash + chr;
-    hash |= 0; // Convert to 32bit integer
-  }
-  return hash.toString(16);
-}
+export const handleImages =
+  process.env.NODE_ENV !== 'development' || process.env.BLOB_OVERRIDE == 'true'
+    ? handleImages_blob
+    : handleImages_local;

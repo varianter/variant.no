@@ -202,7 +202,7 @@ const Home = ({
                 width={300}
                 height={300}
                 alt={`Bilde av ${randomEmployee.name}`}
-                src={`/employees/${randomEmployee.imageSlug}.png`}
+                src={randomEmployee.imageUrl}
                 loading="lazy"
               />
             </div>
