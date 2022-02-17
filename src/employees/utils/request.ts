@@ -32,7 +32,21 @@ type EmployeeJSON = {
   selected_tag_ids: any[];
   override_language_code: null;
   default_cv_template_id: string;
-  image: any;
+  image: {
+    url: string;
+    thumb: {
+      url: string;
+    };
+    fit_thumb: {
+      url: string;
+    };
+    large: {
+      url: string;
+    };
+    small_thumb: {
+      url: string;
+    };
+  };
   name: string;
   telephone: string;
   default_cv_id: string;
@@ -82,17 +96,6 @@ export async function requestByEmail(
     return undefined;
   }
 
-  const selected = employeeList.find((e) => e.email == email);
-
-  if (!selected) {
-    return undefined;
-  }
-
-  return {
-    name: selected.name,
-    telephone: selected.telephone,
-    email: selected.email,
-    image: selected.image,
-    office_name: selected.office_name,
-  };
+  const employee = employeeList.find((e) => e.email == email);
+  return employee;
 }

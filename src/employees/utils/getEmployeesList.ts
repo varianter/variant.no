@@ -27,6 +27,7 @@ export const getRandomEmployee = async (): Promise<EmployeeItem | false> => {
 
   const randomEmployee =
     employees[Math.floor(Math.random() * employees.length)];
+
   const imageUrl = await handleImages(randomEmployee);
   return { ...massageEmployee(randomEmployee), imageUrl };
 };

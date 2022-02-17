@@ -3,7 +3,17 @@ export type ApiEmployee = {
   email: string;
   telephone: string;
   image: {
+    url: string;
+    thumb: {
+      url: string;
+    };
+    fit_thumb: {
+      url: string;
+    };
     large: {
+      url: string;
+    };
+    small_thumb: {
       url: string;
     };
   };

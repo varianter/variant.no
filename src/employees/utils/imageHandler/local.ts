@@ -45,9 +45,9 @@ const toFileName = (name: string): string => {
 const downloadAndStore: (
   path: string,
   dir: string,
-  image: any,
-) => Promise<void> = async (fileName: string, dirPath: string, image: any) => {
-  const request = await fetch(image.large.url);
+  image: ApiEmployee['image'],
+) => Promise<void> = async (fileName, dirPath, image) => {
+  const request = await fetch(image.fit_thumb.url);
   const buffer = Buffer.from(await request.arrayBuffer());
   const outputFileName = `${fileName}.png`;
   return new Promise<void>((resolve) => {

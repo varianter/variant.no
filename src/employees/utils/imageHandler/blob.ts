@@ -36,15 +36,11 @@ export const handleImages = async (employee: ApiEmployee) => {
 async function downloadAndStore(
   fileName: string,
   containerClient: ContainerClient,
-  image: { large: { url: string } },
+  image: ApiEmployee['image'],
 ) {
-  const request = await fetch(image.large.url);
+  const request = await fetch(image.fit_thumb.url);
   const outputFileName = `${fileName}.png`;
   const blockBlobClient = containerClient.getBlockBlobClient(outputFileName);
-
-  if (await blockBlobClient.exists()) {
-    return blockBlobClient.url;
-  }
 
   await blockBlobClient.uploadData(await request.arrayBuffer(), {
     blobHTTPHeaders: { blobContentType: 'image/png' },
