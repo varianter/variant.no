@@ -2,10 +2,7 @@ import { GetStaticProps } from 'next';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
 import { EmployeeItem } from 'src/employees/types';
-import {
-  getEmployeesList,
-  getRandomEmployee,
-} from 'src/employees/utils/getEmployeesList';
+import { getRandomEmployee } from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/index';
 
