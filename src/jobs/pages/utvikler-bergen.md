@@ -1,20 +1,20 @@
 ---
-title: Designer som vil bygge Variant bergen
-h1_title: Erfaren designer som vil bygge bergen
-slug: designer-bergen
+title: Utvikler som vil bygge Variant bergen
+h1_title: Erfaren utvikler som vil bygge bergen
+slug: utvikler-bergen
 contact_emails: andreas@variant.no
 meta_title: Vil du være med å bygge Variant Bergen?
-meta_description: Vi ser etter en dyktig designer som vil være med å bygge Variant Bergen!
-meta_image: https://www.variant.no/images/erfaren_designer_meta.jpg
+meta_description: Vi ser etter en dyktig utvikler som vil være med å bygge Variant Bergen!
+meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
-Kort fortalt, vi ser etter designere som vil være med å utvikle Variant og Bergen. Det er det vi inviterer deg med på, - sammen med flere og sammen med oss
+Kort fortalt, vi ser etter utviklere som vil være med å utvikle Variant og Bergen. Det er det vi inviterer deg med på, - sammen med flere og sammen med oss
 
 ## Hvem er Variant
 
 ![Varianter på en takterasse](/images/design-takterasse.png)
 
-Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Vi er en sammensetting av ulike bakgrunner som har til felles at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur. 
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Vi er en sammensetting av ulike bakgrunner som har til felles at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
 Vi tilbyr mer enn rettferdige vilkår, god lønn, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er bygd med transparens som et fundament.
 
@@ -28,23 +28,15 @@ I tillegg til dette så ser etter deg som har en god porsjon entusiasme og nysgj
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
-## Hva ser vi etter i designere i Variant?
+## Hva ser vi etter i utviklere i Variant?
 
-Nå ser vi etter deg som har 2 eller flere (ja - gjerne en del) års erfaring som designer. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Nå ser vi etter deg som har 2 eller flere (ja - gjerne en del) års erfaring fra utvikling. Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
-Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrker og vi ser etter en designer som har jobbet noen år med ett eller flere av følgende områder: 
+Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker og vi ser etter en utvikler som har jobbet noen år med ett eller flere av følgende områder:
 
-- Design av forretningskritiske digitale løsninger som er inkluderende og som er i henhold til universell utforming
-- Strategisk design for å bygge merkevare og nye forretningsstrategier
-- Å styrke designprofil og skape helhet mellom nye og eksisterende tjenester/produkter
-- Å abstrahere de gode ideene for å lage attraktive og engasjerende løsninger
-- Forbedring av brukeropplevelse av eksisterende produkter
-- Å bygge forståelse for design som tilnærming ved å holde kurs i designprinsipper og designmetoder
-- Prototyping og testing av nye konsepter og ideer.
-- Utvikling av designsystem
-- Visuell identitet og taktile elementer som brukeren interagerer med
-- De små detaljene som gir løsningene wow-effekt
-- Å lage den emosjonelle forbindelsen mellom menneskene og de digitale løsningene
+- Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier
+- Utvikling mot og i Azure, GCP, AWS eller lignende skyplattformer
+- Backendutvikling med .NET, Java eller Kotlin
 
 ## Ansvar og oppgaver
 
