@@ -88,9 +88,19 @@ p {
   margin-top: 1rem;
 }
 
+.agendaDetails {
+  width: 60%;
+  
+}
+
+.agendaItem {
+  font-weight: bold;
+}
+
 .image {
   width: 20rem;
 }
+
 
 @media (max-width: 500px) {
   .image {
@@ -110,4 +120,5 @@ p {
 .initiator {
   font-style: italic;
   margin: 0;
+  text-align: right;
 }
