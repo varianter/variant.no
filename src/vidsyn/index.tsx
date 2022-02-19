@@ -83,37 +83,32 @@ export default function Invitation() {
                     <div >
                         <h3 className="fancy">Retrospektiv, nåtid og perspektiv</h3>
                         <div className={style.agendaDetails}>
-                            <p >
-                                <p className={style.agendaItem}>Retrospektive</p>
+                                <p className={style.agendaItem} > Retrospektive</p>
                                 <p className={style.topic}>Samspillet mellom konsernet, Trondheim og Oslo. 
                                     Hva fungerer bra, og hva kan bli bedre? Hvilke læringsmomenter er det viktig å ta med 
                                     nå som vi etablerer i Bergen?</p> 
                                 <p className={style.initiator}>Fasilitering <strong>Tore</strong></p>
-                            </p>
-                            <p >
-                                <p className={style.agendaItem}>Forretningsmodell</p>
+
+                                <p className={style.agendaItem} > Forretningsmodell</p>
                                 <p className={style.topic}>Hvordan henger vår forretningsmodell sammen? 
                                 Hvordan og hvor godt passer våre ulike strategier med vår forretningsmodell. Harmonerer våre strategier, og 
                                 har vi gode måter å styre etter disse strategiene. 
                                 </p>
                                 <p className={style.initiator}>Innledning <strong>Odd Morten</strong></p>
-                            </p>
-                            <p>
+
                                 <p className={style.agendaItem}>Tjenesteområder</p>
                                 <p className={style.topic}>Hvilke tjenesteområder har vi i dag? 
                                 Hvor godt treffe de kunder og ansatte? Finnes det andre områder? Det er ønskelig at vi kommer fram til 
                                 flere ambisjoner på konsernnivå, som de ulike driftsselskapene velge blant for å jobbe mot.  </p>
                                 <p className={style.initiator}>Innledning <strong>Anders</strong> </p>
-                            </p>
-                            <p>
+                                
                                 <p className={style.agendaItem}>Perspektiv</p>
                                 <p className={style.topic}>Hva skjer med Variant Utland? 
                                 Hvordan ser vårt fjellkart ut nå? Hvile småtopper har vi foran oss? Hvilke vekstambisjoner har vi og hvorfor?
                                 Perspektiv 2028 - i 2028 er vi 10 år. Skal vi fortsatt sponse langrennslaget? Hvordan ser vi ut da? 
                                 Kan vi i dag skrive en framtidig pressemelding?</p>
                                 <p className={style.initiator}>Innledning <strong>Anders</strong> og <strong>Odd Morten</strong> </p>
-                            </p>
-                        </div>
+                         </div>
                     
                         
 
