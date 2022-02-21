@@ -17,6 +17,7 @@ module.exports = withPlugins([withImages], {
     disableStaticImages: true,
     domains: ['variantno.blob.core.windows.net'],
   },
+  optimizeFonts: false,
 
   webpack: (config) => {
     // Allows for non-pure CSS Modules in Nextjs.
@@ -39,6 +40,18 @@ module.exports = withPlugins([withImages], {
         }
       }
     }
+
+    config.module.rules.push({
+      test: /\.(woff|woff2|ttf|eot)$/,
+      loader: 'file-loader',
+      options: {
+        esModule: false,
+        name: '[name].[ext]',
+        outputPath: 'static/media/fonts/',
+        publicPath: '../assets/fonts/',
+      },
+    });
+
     return config;
   },
   async redirects() {

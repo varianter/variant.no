@@ -13,6 +13,16 @@ body {
 @import '~@variant/profile/lib/colors/index.module.css';
 @import '~@variant/profile/lib/typography/index.module.css';
 
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('/fonts/Graphik-LightItalic-Web.woff2') format('woff2'),
+    url('/fonts/Graphik-LightItalic-Web.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
 #root {
   position: relative;
 }
