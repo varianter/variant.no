@@ -70,7 +70,10 @@ export default function Invitation() {
                                 <span className={style.time}> 07.00-08.00</span> 🍳 Frokost
                             </li>
                             <li>
-                                <span className={style.time}> 08.00-11.30</span> 🧑🏻‍🔧 Tjenesteområder
+                                <span className={style.time}> 08.00-09.00</span> 🙋🏻 Min rollemodell
+                            </li>
+                            <li>
+                                <span className={style.time}> 09.00-11.30</span> 🧑🏻‍🔧 Tjenesteområder
                             </li>
                             <li>
                                 <span className={style.time}> 11.30-12.30</span> 🥪 Lunsj
@@ -101,6 +104,16 @@ export default function Invitation() {
                                 Hvor godt treffe de kunder og ansatte? Finnes det andre områder? Det er ønskelig at vi kommer fram til 
                                 flere ambisjoner på konsernnivå, som de ulike driftsselskapene velge blant for å jobbe mot.  </p>
                                 <p className={style.initiator}>Innledning <strong>Anders</strong> </p>
+
+                                <p className={style.agendaItem}>Min rollemodell</p>
+                                <p className={style.topic}> Dette er noen øvelser som går på å utvikle oss som 
+                                    ledergruppe, som ledere og som team. <br/> <strong>NB! her er det forberedsler:</strong>  <i>Lag 
+                                    en 2 minutters pitch om en person du har i livet ditt, har hatt eller en kjent person, 
+                                        som du ser opp til og som du kan kalle en rollemodell for deg. 
+                                        Du velger selv hvilket format du presenterer i, men det er 
+                                        viktig at vi alle holder oss til 2 minutter per person. 
+                                        Si ifra til Linn om noen lurer på noe rundt oppgaven :)</i></p>
+                                <p className={style.initiator}>Fasilitering <strong>Linn</strong> </p>
                                 
                                 <p className={style.agendaItem}>Perspektiv</p>
                                 <p className={style.topic}>Hva skjer med Variant Utland? 
