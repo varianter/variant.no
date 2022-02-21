@@ -12,7 +12,7 @@ meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-1.jpg
 
 ### Hvem søker vi?
 
-Vi søker 2 nyutdannede designere som engasjerer og motiverer, med oppstart 1. august 2022. Stillingene er fordelt på våre kontorer i [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo) med 1 designer i hver by. Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
+Vi søker 1 nyutdannet designer som engasjerer og motiverer, med oppstart 1. august 2022 til vårt kontor i [Trondheim](https://handbook.variant.no/avdelinger/trondheim). Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
 
 <div class="right">
 
@@ -64,5 +64,5 @@ Ta gjerne kontakt med meg.
 ### Søknadsfrist
 
 <p>
-3. oktober 2021
+13. mars 2022
 </p>

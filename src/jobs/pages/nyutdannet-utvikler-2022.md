@@ -64,5 +64,5 @@ Ta gjerne kontakt med meg.
 ### Søknadsfrist
 
 <p>
-3. oktober 2021
+13. mars 2022
 </p>
