@@ -13,7 +13,7 @@ const getIntroFromEncodedHtml = (encodedHtml: string) => {
   return { snippet, img };
 } 
 
-const myLoader = ({ src, width }: {src: string, width: number}) => {
+const loader = ({ src, width }: {src: string, width: number}) => {
   return `${src}?w=${width}&h=${width}`;
 };
 
@@ -31,7 +31,7 @@ export default function Blog({
       <div className={style.media}>
         {img && (
           <Image
-            loader={myLoader}
+            loader={loader}
             className={style.cover}
             src={img}
             width={500}
