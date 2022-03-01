@@ -9,7 +9,7 @@ const getFullsizeThumbnailFromYouTube = (url: string) => {
   if(!url) return;
 
   const id = new URL(url).searchParams.get('v');
-  return <img className={style.thumbnail} src={`https://img.youtube.com/vi/${id}/0.jpg`}/>
+  return <img className={style.thumbnail__image} src={`https://img.youtube.com/vi/${id}/0.jpg`}/>
 }
 export default function YouTube({
   item,
@@ -22,19 +22,22 @@ export default function YouTube({
 
   return (
     <div className={style.card}>
-      <figure className={style.media}>{thumbnail}</figure>
+      <figure className={style.media}>
+        <div className={style.thumbnail}>{thumbnail}</div>
+      </figure>
       <div className={style.text}>
         <a
           key={item.link}
-          className="rss-link"
+          className={style.link}
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4>{item.title}</h4>
+          <h4 className={style.title}>{item.title}</h4>
         </a>
-        <small>Video</small>
-        {publishedDate}{' '}
+        <div className={style.published}>
+          Publisert {publishedDate}
+        </div>
       </div>
     </div>
   );

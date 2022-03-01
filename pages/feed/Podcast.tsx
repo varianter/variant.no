@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 import { PodcastFeedItem } from '../../tools/rss';
@@ -12,23 +13,33 @@ export default function Podcast({
   item: PodcastFeedItem;
   publishedDate: string;
 }) {
+  console.log(item.itunes?.image);
   return (
     <div className={`${style.card} ${style.podcast}`}>
       <div className={style.media}>
-        {item.enclosure && <Player url={item.enclosure?.url} />}
+        <div className={style.podcast__cover}>
+          <Image
+            className={style.cover}
+            src={item.itunes?.image}
+            alt=""
+            width={500}
+            height={500}
+          />
+        </div>
       </div>
       <div className={style.text}>
-        <a
-          key={item.link}
-          className="rss-link"
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h4>{item.title}</h4>
-        </a>
-        <p>{item.itunes?.summary}</p>
-        <div className={style.published}>{publishedDate}</div>
+        <div className={style.podcast__content}>
+          {item.enclosure && (
+            <Player url={item.enclosure?.url} withScrubber={true}>
+              <h4 className={style.title}>{item.title}</h4>
+            </Player>
+          )}
+
+          <p className={style.summary}>
+            {item.itunes?.summary}{' '}
+            <span style={{ opacity: 0.5 }}>— {publishedDate}</span>
+          </p>
+        </div>
       </div>
     </div>
   );

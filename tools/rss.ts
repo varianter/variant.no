@@ -1,4 +1,4 @@
-import Parser, {Item, Enclosure} from "rss-parser";
+import Parser, {Item} from "rss-parser";
 
 export type FeedType = 'blog' | 'podcast' | 'youtube';
 
@@ -12,7 +12,11 @@ export type FeedResult<T = Item> = {
     [key: string]: any;
 } & Parser.Output<T>;
 
-
+type Enclosure = {
+  url: string;
+  length?: string;
+  type?: string;
+}
 
 type ParentFeedItem = {
   title?: string;
@@ -51,6 +55,6 @@ export async function getFeed<T = Item>({
   const parser = new Parser<{ [key: string]: any }, T>();
   let result = await parser.parseURL(url);
   const { items, ...feed } = result;
-
+  
   return { type, items: items.map((i) => ({ type, ...i })) };
 }

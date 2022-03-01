@@ -5,7 +5,12 @@ import style from './feed.module.css';
 import Podcast from './Podcast';
 import YouTube from './YouTube';
 
-
+/* 
+  ?Färger baserat på vilken typ innehåll det är
+  Hämta ut först paragraf och bild
+  Göra så att alla är kort
+  Lägga 3 blog, 1 video och 1 podcast på förstasidan.
+*/
 
 interface FeedProps {
   feeds: FeedResult[];
@@ -24,12 +29,20 @@ const feedsList: FeedInput[] = [
     url: 'https://podcast.variant.no/feed.xml',
     type: 'podcast',
   },
-  {
+  /* {
     title: 'YouTube',
     url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCMBx54cKNj8i9R51IE4bfCg',
     type: 'youtube',
-  },
+  }, */
 ];
+
+const dateLocaleString = (date?: string) => {
+  return date ? new Date(date).toLocaleDateString('nb-NO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }) : '';
+}
 
 export default function RSSFeed({ feeds, items }: FeedProps) {
   return (
@@ -47,9 +60,7 @@ export default function RSSFeed({ feeds, items }: FeedProps) {
           </div>
         </div>
         {items.map((item) => {
-          const publishedDate = item.isoDate
-            ? new Date(item.isoDate).toLocaleDateString('nb-NO')
-            : '';
+          const publishedDate = dateLocaleString(item.isoDate);
 
           switch (item.type) {
             case 'youtube':
@@ -78,39 +89,6 @@ export default function RSSFeed({ feeds, items }: FeedProps) {
               );
           }
         })}
-        {/* {feeds.map(({ items, type }) =>
-          items.map((item) => {
-            const publishedDate = item.isoDate
-              ? new Date(item.isoDate).toLocaleDateString('nb-NO')
-              : '';
-            return (
-              <div className={style.card} key={item.title}>
-                {item.id ? (
-                  <img
-                    src={`https://img.youtube.com/vi/${
-                      item.id.split(':').reverse()[0]
-                    }/0.jpg`}
-                  />
-                ) : (
-                  ''
-                )}
-
-                <a
-                  key={item.link}
-                  className="rss-link"
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h4>{item.title}</h4>
-                </a>
-                <div>
-                  Skrevet av {item.creator}, {publishedDate}
-                </div>
-              </div>
-            );
-          }),
-        )} */}
       </div>
     </Layout>
   );
@@ -119,7 +97,6 @@ export default function RSSFeed({ feeds, items }: FeedProps) {
 
 export async function getStaticProps() {
   const feeds = await Promise.all(feedsList.map((feed) => getFeed(feed)));
-  //const feedsWithType = feeds.map( ({items, type}) => items.map(item => ({...item, type})) )
   const items = feeds.flatMap(({ items }) => items).sort((a,b) => new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime());
   return {
     props: {
