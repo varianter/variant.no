@@ -14,6 +14,11 @@ const regexEqual = (x, y) => {
 
 module.exports = withPlugins([withImages], {
   images: {
+    domains: [
+      'podcast.variant.no',
+      'images.transistor.fm',
+      'cdn-images-1.medium.com',
+    ],
     disableStaticImages: true,
   },
   webpack: (config) => {
