@@ -1,6 +1,6 @@
 ---
 title: Utvikler som vil bygge Variant bergen
-h1_title: Utvikler som vil bygge Variant Bergen
+h1_title: Utvikler som vil være med å bygge Variant Bergen
 slug: utvikler-som-vil-bygge-variant-bergen
 contact_emails: andreas@variant.no
 meta_title: Vil du være med å bygge Variant Bergen?
