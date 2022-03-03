@@ -26,6 +26,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@components/*": ["src/components/*"],
       "src": ["src/"]
     },
     "incremental": true

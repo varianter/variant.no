@@ -15,9 +15,10 @@ const regexEqual = (x, y) => {
 module.exports = withPlugins([withImages], {
   images: {
     domains: [
-      'podcast.variant.no',
-      'images.transistor.fm',
-      'cdn-images-1.medium.com',
+      'podcast.variant.no', // Need this to get the images for the RSS feed
+      'images.transistor.fm', // this
+      'img.youtube.com', // this
+      'cdn-images-1.medium.com', // aaaaand this
     ],
     disableStaticImages: true,
   },
