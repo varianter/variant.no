@@ -2,16 +2,16 @@
 import { parse } from 'node-html-parser';
 import Image from 'next/image';
 
-import { BlogFeedItem } from '../../tools/rss';
+import { BlogItem } from '../index';
 import style from './feed.module.css';
 
 
-const getIntroFromEncodedHtml = (encodedHtml: string) => {
+/* const getIntroFromEncodedHtml = (encodedHtml: string) => {
   const article = parse(encodedHtml);
   const snippet = article.querySelector('p')?.textContent || '';
   const img = article.querySelector('img')?.getAttribute('src');
   return { snippet, img };
-} 
+}  */
 
 const loader = ({ src, width }: {src: string, width: number}) => {
   return `${src}?w=${width}&h=${width}`;
@@ -21,19 +21,19 @@ export default function Blog({
   item,
   publishedDate,
 }: {
-  item: BlogFeedItem;
+  item: BlogItem;
   publishedDate: string;
 }) {
-  const {img, snippet} = getIntroFromEncodedHtml(item['content:encoded']);
+  //const {img, snippet} = getIntroFromEncodedHtml(item['content:encoded']);
 
   return (
     <div className={style.card}>
       <div className={style.media}>
-        {img && (
-          <Image
+        {item.imageCoverUrl && (
+           <Image
             loader={loader}
             className={style.cover}
-            src={img}
+            src={item.imageCoverUrl}
             width={500}
             height={500}
             alt=""
@@ -43,9 +43,9 @@ export default function Blog({
       </div>
       <div className={style.text}>
         <a
-          key={item.link}
+          key={item.url}
           className={style.link}
-          href={item.link}
+          href={item.url}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,10 +56,9 @@ export default function Blog({
           {publishedDate}
         </div>
         <p className={style.summary}>
-          {snippet} <a href="#">Les hele artikeln</a>
+          {item.description} <a href={item.url}>Les hele artikeln</a>
         </p>
       </div>
-      {/* {item.type} {item.title} {publishedDate}{' '} */}
     </div>
   );
 }

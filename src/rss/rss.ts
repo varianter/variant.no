@@ -19,9 +19,9 @@ type Enclosure = {
 }
 
 type ParentFeedItem = {
-  title?: string;
+  title: string;
   link?: string;
-  isoDate?: string;
+  isoDate: string;
 }
 
 export type YoutubeFeedItem = ParentFeedItem & {
@@ -31,7 +31,7 @@ export type YoutubeFeedItem = ParentFeedItem & {
 
 export type PodcastFeedItem = ParentFeedItem & {
   type: 'podcast';
-  enclosure?: Enclosure;
+  enclosure: Enclosure;
   itunes?: {
       image?: string;
       author?: string;
@@ -44,6 +44,7 @@ export type PodcastFeedItem = ParentFeedItem & {
 export type BlogFeedItem = ParentFeedItem & {
   type: 'blog';
   creator?: string;
+  'content:encoded': string;
 };
 
 export type FeedItem = YoutubeFeedItem | BlogFeedItem | PodcastFeedItem

@@ -4,7 +4,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import style from './feed.module.css';
-import { PropsWithChildren } from 'react';
 
 type States = 'INITIAL' | 'PAUSED' | 'PLAYING';
 
