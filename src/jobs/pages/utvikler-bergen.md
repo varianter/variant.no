@@ -10,17 +10,9 @@ meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 
 Kort fortalt, vi ser etter utviklere som vil være med å utvikle Variant og Bergen. Det er det vi inviterer deg med på, - sammen med flere og sammen med oss
 
-## Hvem er Variant
-
-![Varianter på en takterasse](/images/design-takterasse.png)
-
-Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Vi er en sammensetting av ulike bakgrunner som har til felles at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
-
-Vi tilbyr mer enn rettferdige vilkår, god lønn, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er bygd med transparens som et fundament.
-
 Er dette noe du blir engasjert av?
 
-## Hvilken personer ser vi etter??
+## Hvilken personer ser vi etter?
 
 Først og fremst, så ser vi etter deg som blir motivert av å være med å bygge noe opp fra starten. Noen som tørr å utfordre og som ønsker å bidra til å forme Bergenskontoret. Det er mange måter å bygge bedrift på. Noen skinner når det kommer til kulturbygging, andre er faglige ledestjerner, noen drives av salg og noen er flink med rekruttering. Dette er alle viktige bidrag til å bygge Variant Bergen.
 
@@ -56,7 +48,15 @@ Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsig
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
-## Karrierer og liv i Variant
+## Hvem er Variant
+
+![Varianter på en takterasse](/images/design-takterasse.png)
+
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde, hvor alle blir sett og hørt, og som er rause med hverandre. Vi er en sammensetting av ulike bakgrunner som har til felles at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
+
+Vi tilbyr mer enn rettferdige vilkår, god lønn, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er bygd med transparens som et fundament.
+
+## Liv i Variant
 
 ![Workshop med Post-its](/images/design-workshop.png)
 
