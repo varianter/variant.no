@@ -1,4 +1,3 @@
-import { colors } from '@variant/profile';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -9,15 +8,20 @@ import style from './bergen.module.css';
 import { getStaticProps } from 'pages/bergen';
 import Link from 'next/link';
 import Arrow from 'src/components/arrow';
+import { and } from 'src/utils/css';
+import { EmployeeTile } from 'src/employees';
 
-const bergen = require('./bergen-blob.png');
+const bergenBlobUrl = require('./assets/bergen.png');
+const timelineUrl = require('./assets/timeline.svg');
+const blobmapUrl = require('./assets/blobmap.svg');
+const mapUrl = require('./assets/map.png');
 
 export function BergenInfoBlock() {
   return (
     <div className={style.infoBlock}>
       <img
         className={style.infoBlock__blob}
-        src={bergen}
+        src={bergenBlobUrl}
         alt="Bryggen i Bergen"
       />
 
@@ -35,7 +39,10 @@ export function BergenInfoBlock() {
 
 const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
+  employees,
 }) => {
+  const [firstEmployee, secondEmployee] = employees;
+
   return (
     <Layout>
       <div>
@@ -68,63 +75,150 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           />
         </Head>
         <div className={style.wrapper}>
-          <header className={style.intro}>
-            <h2 className={style.title}>En ny Variant i Bergen</h2>
-          </header>
           <div className={style.content}>
             <img
               className={style.bergenBlob}
-              src={bergen}
+              src={bergenBlobUrl}
               alt="Bryggen i Bergen"
             />
+
+            <header className={style.intro}>
+              <h2 className={style.title}>Hey, en ny Variant i Bergen!</h2>
+            </header>
+
+            <p className="lead">
+              På kort tid har vi sikret oss de aller første ansatte (hipp
+              hurra!), vi har fått kontorer hos{' '}
+              <a
+                href="https://www.spacesworks.com/bergen/vaskerelven/"
+                rel="external nofollow"
+              >
+                Spaces i Vaskerelven
+              </a>{' '}
+              og nå er vi klare for flere folk. Vil du være med å forme et
+              annerledes konsulentselskap?
+            </p>
             <p>
-              Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen
-              sammen med oss. Å etablere neste generasjon selskapskultur hvor
-              medarbeideres potensiale utnyttes til det fulle med tillit og
-              transparens. En kultur som bygger på gjensidig raushet, åpenhet og
-              læreglede. Dette er gode verdier som{' '}
+              Les mer om oss og våre verdier i{' '}
               <a
                 href="https://handbook.variant.no"
                 title="Håndboken til Variant"
               >
-                du kan lese mer om i den åpne håndboken vår
+                den åpne håndboken vår
               </a>
-              .
-            </p>
-            <p>
-              Her har vi samlet all informasjon om våre ambisjoner i Bergen. Odd
-              Morten har også tidligere skrevet en bloggpost om{' '}
-              <a
-                href="https://blog.variant.no/hallaisen-bergen-d88c7b976ef4"
-                title="Hallaisen, Bergen!"
-              >
-                hvorfor vi etablerer oss i en av Norges vakreste byer
-              </a>
-              . Vi anbefaler også at du leser om våre{' '}
-              <Link href="bergen/vyer">
-                <a>Bergensvyer</a>
-              </Link>{' '}
-              og{' '}
-              <Link href="bergen/verdiutvikling">
-                <a>verdiutvikling til Variant Bergen AS</a>
-              </Link>
               .
             </p>
           </div>
 
-          <div className={style.buttonGroup}>
-            <BlobLink
-              text="Se Bergensvyer"
-              href="bergen/vyer"
-              size={400}
-              className={style.buttonGroup__first}
+          <div
+            className={and(
+              style.content,
+              style['content--block'],
+              style['content--map'],
+            )}
+          >
+            <h3 className="fancy">Så, hvorfor Bergen?</h3>
+
+            <p className={and('lead', style.map__text__lead)}>
+              Den korte oppsummeringen er; Bergen har et spennende marked og
+              kunder, spennende fagmiljøer og studiesteder, og ikke minst
+              spennende folk.
+            </p>
+
+            <p className={style.map__text__first}>
+              Den litt lengre forklaringen er at siden Variant ble startet i
+              2018 har vi hatt stor vekst. Variant-konseptet har blitt veldig
+              godt mottatt og vi får også tilbakemeldinger på at vi har
+              inspirert andre. Vi ønsker derfor å spre verdiene og tankesettene
+              våre videre.
+            </p>
+
+            <img
+              className={style.mapImage}
+              src={mapUrl}
+              alt="Kart over kontorer i Trondheim, Bergen og Oslo."
             />
+
+            <p className={style.map__text__second}>
+              Vi lærte mye fra oppstarten i Oslo som vi ønsker å ta med oss
+              vestover. Det er vanskelig å ha gode diskusjoner mellom byer når
+              man bare er to, og Bergen vil gi oss enda en stemme og nye
+              perspektiver inn i det som begynner å bli et stort
+              Variant-fellesskap.
+            </p>
+
+            <p className={style.map__text__third}>
+              Om du ønsker å lese mer så kan du{' '}
+              <a
+                href="https://blog.variant.no/hallaisen-bergen-d88c7b976ef4"
+                title="Hallaisen, Bergen!"
+              >
+                lese Odd Mortens bloggpost om hvorfor vi drar til Bergen
+              </a>
+              .
+            </p>
+          </div>
+
+          <div
+            className={and(
+              style.content,
+              style['content--block'],
+              style['content--timeline'],
+            )}
+          >
+            <h4 className="fancy">Reisen har startet og vi har en plan...</h4>
+
+            <img
+              src={timelineUrl}
+              className={style.timeline}
+              alt="Tidslinje som viser progresjon med 12 varianter i desember 2022."
+            />
+
             <BlobLink
-              text="Les om verdiutvikling"
-              href="bergen/verdiutvikling"
-              size={400}
-              className={style.buttonGroup__second}
-              background={colors.colorPairs.primary.default.bg}
+              text="Les våre Bergensscenarioer"
+              href="bergen/vyer"
+              size={220}
+              className={style.timelineButton}
+            />
+
+            <p className={style.timelineText}>
+              Vi vet hvor vi vil, og har allerede kommet godt i gang på
+              Bergensreisen. Vi har samlet noen scenarioer som skaper et bilde
+              av hvor vi ønsker å være i 2025, men om du fortsatt synes at det
+              er litt lenge til så har{' '}
+              <a
+                href="https://blog.variant.no/nytt-%C3%A5r-nytt-kontor-og-endelig-ny-variantdag-d147bf855d22"
+                rel="external noopner"
+              >
+                Andreas skrevet noen ord om den første måneden i Variant
+              </a>
+              .
+            </p>
+          </div>
+
+          <div
+            className={and(
+              style.content,
+              style['content--block'],
+              style['content--blobmap'],
+            )}
+          >
+            <h3 className="fancy">
+              Vi skal bygge et miljø med fokus på tverrfaglighet
+            </h3>
+
+            <p className={and('lead', style.blobmap__text__lead)}>
+              Noe tekst om hvorfor og hva vi legger i dette. Noe tekst om
+              hvorfor og hva vi legger i dette. Noe tekst om hvorfor og hva vi
+              legger i dette. Noe tekst om hvorfor og hva vi legger i dette. Noe
+              tekst om hvorfor og hva vi legger i dette. Noe tekst om hvorfor og
+              hva vi legger i dette.
+            </p>
+
+            <img
+              src={blobmapUrl}
+              className={style.blobmap__image}
+              alt="Fordeling Oslo, Bergen og Trondheim. Hvor Trondheim er størst og Oslo er større enn Bergen."
             />
           </div>
 
@@ -140,6 +234,24 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               ))}
             </div>
           )}
+
+          <div className={and(style.content, style['content--block'])}>
+            <p className={and('lead', 'fancy', style.footerLine)}>
+              Er det noe du lurer på? Det enkleste er å ta en prat med oss hvis
+              du er nysgjerrig (det liker vi!)!
+            </p>
+          </div>
+
+          <div
+            className={and(
+              style.content,
+              style['content--block'],
+              style['content--employees'],
+            )}
+          >
+            {firstEmployee && <EmployeeTile employee={firstEmployee} />}
+            {secondEmployee && <EmployeeTile employee={secondEmployee} />}
+          </div>
         </div>
       </div>
     </Layout>
