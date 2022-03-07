@@ -27,9 +27,8 @@ export default function Employees({
   employeeList,
   officeName,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
-    employeeList,
-  );
+  const [shuffledEmployeeList, setShuffledEmployeeList] =
+    useState(employeeList);
 
   useEffect(() => {
     setShuffledEmployeeList(shuffleArray(employeeList));
@@ -118,7 +117,7 @@ export default function Employees({
   );
 }
 
-const EmployeeTile: React.FC<{ employee: Employee }> = ({
+export const EmployeeTile: React.FC<{ employee: Employee }> = ({
   employee: { fullName, name, phone, imageSlug, officeName },
 }) => {
   return (
