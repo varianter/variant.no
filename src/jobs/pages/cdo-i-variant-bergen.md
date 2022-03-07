@@ -58,4 +58,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Marius Krakeli eller Chief Design Officer i Variant Trondheim Tonje Evanger.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Marius Krakeli eller CDO i Trondheim Tonje Evanger.
