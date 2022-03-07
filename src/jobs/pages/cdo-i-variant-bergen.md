@@ -2,7 +2,7 @@
 title: Chief Design Officer i Variant Bergen AS
 h1_title: Chief Design Officer i Variant Bergen AS
 slug: cdo-i-variant-bergen
-contact_emails: mk@variant.no, lel@variant.no
+contact_emails: mk@variant.no, te@variant.no
 meta_title: Vi søker CDO til Variant Bergen
 meta_description: Vi søker deg som vil utvikle Bergen – sammen med flere og sammen med oss!
 meta_image: https://www.variant.no/images/cdo-bergen.jpg
@@ -58,4 +58,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Marius Krakeli eller Chief Design Officer i Variant Oslo Lars Løwenborg.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Marius Krakeli eller Chief Design Officer i Variant Trondheim Tonje Evanger.
