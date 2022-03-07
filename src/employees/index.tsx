@@ -8,11 +8,10 @@ import { getStaticProps } from 'pages/ansatte';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import Arrow from 'src/components/arrow';
 import Layout from 'src/layout';
-import { OfficeSelector } from 'src/office-selector';
+import { Office, OfficeSelector } from 'src/office-selector';
 import { and } from 'src/utils/css';
 import style from './employees.module.css';
 import { EmployeeItem } from './types';
-import { Office } from './utils/getStaticProps';
 
 export default function Employees({
   employeeList,

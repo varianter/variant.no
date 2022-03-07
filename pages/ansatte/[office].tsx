@@ -1,10 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { EmployeeItem } from 'src/employees/types';
-import {
-  getStaticPropsEmployees,
-  Office,
-  offices,
-} from '../../src/employees/utils/getStaticProps';
+import { Office, offices } from 'src/office-selector';
+import { getStaticPropsEmployees } from '../../src/employees/utils/getStaticProps';
 
 export { default } from 'src/employees';
 

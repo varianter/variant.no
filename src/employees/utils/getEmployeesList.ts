@@ -1,4 +1,5 @@
 import { handleImages } from 'src/employees/utils/imageHandler';
+import { Office } from 'src/office-selector';
 import { ApiEmployee, EmployeeItem } from '../types';
 import { requestByEmail, requestEmployees } from './request';
 
@@ -15,6 +16,26 @@ export const getEmployeesList = async (): Promise<EmployeeItem[] | false> => {
       const imageUrl = await handleImages(employee);
       return { ...massageEmployee(employee), imageUrl };
     }),
+  );
+};
+
+export const getEmployeesByOffice = async (
+  officeName?: Office,
+): Promise<EmployeeItem[] | false> => {
+  const employees = await requestEmployees();
+
+  if (!employees) {
+    return false;
+  }
+
+  // Make images
+  return await Promise.all<EmployeeItem>(
+    employees
+      .filter((employee) => employee.office_name?.toLowerCase() === officeName)
+      .map(async (employee) => {
+        const imageUrl = await handleImages(employee);
+        return { ...massageEmployee(employee), imageUrl };
+      }),
   );
 };
 
