@@ -18,7 +18,7 @@ Les mer om våre ambisjoner for Bergen [her](https://variant.no/bergen). I tille
 
 ## Hvem ser vi etter?
 
-For oss er design et bredt fagområde som strekker seg fra strategisk design til interaksjonsdesign. og vi håper at du også har god forståelse for bredden i faget. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Gjerne som UXer, tjenestedesigner eller innen andre deler av designfaget. Det viktigste er ikke hvilken designvariant du er, men at du forstår helheten og hvordan hver fagspiss utfyller hverandre. Vi opplever alltid at en helhetlig tilnærming til design tilfører ekstra verdi og engasjement.
+For oss er design et bredt fagområde som strekker seg fra strategisk design til interaksjonsdesign, og vi håper at du også har god forståelse for bredden i faget. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Gjerne som UXer, tjenestedesigner eller innen andre deler av designfaget. Det viktigste er ikke hvilken designvariant du er, men at du forstår helheten og hvordan hver fagspiss utfyller hverandre. Vi opplever alltid at en helhetlig tilnærming til design tilfører ekstra verdi og engasjement.
 
 Våre verdier er åpenhet, raushet og læreglede, og du bør ha et verdi- og tankesett som harmonerer med disse. Læreglede smitter, og vi leter etter en designleder som både er nysgjerrig selv og som trives med å motivere andre til læring og utvikling.
 
@@ -28,7 +28,7 @@ Våre verdier er åpenhet, raushet og læreglede, og du bør ha et verdi- og tan
 
 Du vil bli en del av ledergruppen i Variant Bergen AS, og gjennom dette være med på å forme selskapets retning og kultur. Du vil ha personalansvar, og være medansvarlig for tjenesteutvikling, salg og rekruttering.
 
-Du får ansvar for selskapet faglige utvikling innen design, men vi vil også tilrettelegge for samarbeid med designlederne i Trondheim og Oslo der det er naturlig.
+Du vil også ha ansvar for selskapets faglige utvikling innen design. Feltet vi jobber innenfor endrer seg hyppig, og det kan være muligheter vi ikke har tenkt på fra før. Det betyr ikke at vi trenger å slenge oss med på alle nye trender, men vi håper allikevel at du kan foreslå nye fokusområder som du mener kan bli viktig for selskapet. Du vil også samarbeide med CDOene i Trondheim og Oslo der det er naturlig.
 
 Vi er tilhengere av at våre ledere forstår behovene til både egne konsulent-kolleger og kundene våre. Våre ledere bruker derfor en stor del av sin tid som operative konsulenter ute i kundeoppdrag.
 
