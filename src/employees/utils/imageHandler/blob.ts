@@ -42,7 +42,7 @@ async function downloadAndStore(
   const outputFileName = `${fileName}.png`;
   const blockBlobClient = containerClient.getBlockBlobClient(outputFileName);
 
-  if (await blockBlobClient.exists()) return blobServiceClient.url;
+  if (await blockBlobClient.exists()) return blockBlobClient.url;
 
   await blockBlobClient.uploadData(await request.arrayBuffer(), {
     blobHTTPHeaders: { blobContentType: 'image/png' },
