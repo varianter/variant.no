@@ -107,7 +107,7 @@ export default function Employees({
   );
 }
 
-const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
+export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
   employee: { fullName, name, telephone, imageUrl, officeName },
 }) => {
   return (

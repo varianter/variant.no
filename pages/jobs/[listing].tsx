@@ -1,7 +1,7 @@
 import { getListings, getListing, Listing } from 'src/jobs/utils/getListings';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { EmployeeItem } from 'src/employees/types';
-import { getEmployeeByEmail } from 'src/employees/utils/getEmployeesList';
+import { getContactsByEmails } from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/jobs/listing/listing';
 
@@ -37,9 +37,3 @@ export const getStaticProps: GetStaticProps<
     revalidate: 60 * 60,
   };
 };
-
-async function getContactsByEmails(emails: string[]): Promise<EmployeeItem[]> {
-  return (await Promise.all(emails.map(getEmployeeByEmail))).filter(
-    Boolean,
-  ) as EmployeeItem[];
-}

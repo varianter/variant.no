@@ -1,4 +1,4 @@
-import { getEmployeesListByEmail } from 'src/employees/utils/getEmployeesList';
+import { getContactsByEmails } from 'src/employees/utils/getEmployeesList';
 import { getFileListingData } from 'src/jobs/utils/getListings';
 
 export { default } from 'src/bergen';
@@ -6,7 +6,7 @@ export { default } from 'src/bergen';
 export const getStaticProps = async () => {
   try {
     const listings = await getFileListingData('bergen');
-    const employees = await getEmployeesListByEmail([
+    const employees = await getContactsByEmails([
       'ah@variant.no',
       'andreas@variant.no',
     ]);

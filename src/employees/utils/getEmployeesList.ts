@@ -66,6 +66,14 @@ export const getEmployeeByEmail = async (
   return { ...massageEmployee(employee), imageUrl };
 };
 
+export async function getContactsByEmails(
+  emails: string[],
+): Promise<EmployeeItem[]> {
+  return (await Promise.all(emails.map(getEmployeeByEmail))).filter(
+    Boolean,
+  ) as EmployeeItem[];
+}
+
 function massageEmployee(employee: ApiEmployee) {
   return {
     fullName: employee.name,
