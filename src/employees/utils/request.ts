@@ -87,15 +87,15 @@ export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
   }));
 }
 
-export async function requestByEmail(
-  email: string,
-): Promise<ApiEmployee | undefined> {
+export async function requestByEmails(
+  emails: string[],
+): Promise<ApiEmployee[]> {
   const employeeList = await requestEmployees();
 
   if (!employeeList) {
-    return undefined;
+    return [];
   }
 
-  const employee = employeeList.find((e) => e.email == email);
+  const employee = employeeList.filter((e) => emails.includes(e.email));
   return employee;
 }

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { requestByEmail, requestEmployees } from 'src/employees/utils/request';
+import { requestByEmails, requestEmployees } from 'src/employees/utils/request';
 
 export default async function handler(
   req: NextApiRequest,
@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   try {
     if (req.query.email) {
-      const employee = await requestByEmail(String(req.query.email));
+      const employee = (await requestByEmails([String(req.query.email)]))[0];
       if (!employee) {
         return res.status(404).json({ message: 'No employee found' });
       }

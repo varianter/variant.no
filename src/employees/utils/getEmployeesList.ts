@@ -1,7 +1,7 @@
 import { handleImages } from 'src/employees/utils/imageHandler';
 import { Office } from 'src/office-selector';
 import { ApiEmployee, EmployeeItem } from '../types';
-import { requestByEmail, requestEmployees } from './request';
+import { requestByEmails, requestEmployees } from './request';
 
 export const getEmployeesList = async (): Promise<EmployeeItem[] | false> => {
   const employees = await requestEmployees();
@@ -53,25 +53,22 @@ export const getRandomEmployee = async (): Promise<EmployeeItem | false> => {
   return { ...massageEmployee(randomEmployee), imageUrl };
 };
 
-export const getEmployeeByEmail = async (
-  email: string,
-): Promise<EmployeeItem | false> => {
-  const employee = await requestByEmail(email);
-
-  if (!employee) {
-    return false;
-  }
-
-  const imageUrl = await handleImages(employee);
-  return { ...massageEmployee(employee), imageUrl };
-};
-
 export async function getContactsByEmails(
   emails: string[],
 ): Promise<EmployeeItem[]> {
-  return (await Promise.all(emails.map(getEmployeeByEmail))).filter(
-    Boolean,
-  ) as EmployeeItem[];
+  const employees = await requestByEmails(emails);
+
+  if (!employees) {
+    return [];
+  }
+
+  // Make images
+  return await Promise.all<EmployeeItem>(
+    employees.map(async (employee) => {
+      const imageUrl = await handleImages(employee);
+      return { ...massageEmployee(employee), imageUrl };
+    }),
+  );
 }
 
 function massageEmployee(employee: ApiEmployee) {
