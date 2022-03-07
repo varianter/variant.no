@@ -8,8 +8,8 @@ import Image from 'next/image';
 import MarkdownIt from 'markdown-it';
 import { ButtonLink } from 'src/components/button';
 import style from './listings.module.css';
-import { Employee } from 'src/employees';
 import { and } from 'src/utils/css';
+import { EmployeeItem } from 'src/employees/types';
 
 const Listing: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -22,11 +22,6 @@ const Listing: NextPage<
     });
     return { __html: md.render(listing.content) };
   }, [listing.content]);
-
-  const newLocal = 'flip-card-wc';
-  React.useEffect(() => {
-    import(newLocal);
-  }, []);
 
   return (
     <Layout title={`${listing.title} - ${listing.company_name}`}>
@@ -130,8 +125,8 @@ const Listing: NextPage<
   );
 });
 
-export const ContactTile: React.FC<{ contact: Employee }> = ({
-  contact: { fullName, name, email, phone, imageSlug },
+export const ContactTile: React.FC<{ contact: EmployeeItem }> = ({
+  contact: { fullName, name, email, telephone, imageUrl },
 }) => {
   return (
     <div className={style.contact}>
@@ -140,7 +135,7 @@ export const ContactTile: React.FC<{ contact: Employee }> = ({
           width={120}
           height={120}
           alt={`Bilde av ${name}`}
-          src={`/employees/${imageSlug}.png`}
+          src={imageUrl}
           loading="lazy"
         />
       </div>
@@ -151,10 +146,10 @@ export const ContactTile: React.FC<{ contact: Employee }> = ({
           📬 {email}
         </a>
         <a
-          href={`tel:+47${phone.replace(/\s*/g, '')}`}
+          href={`tel:+47${telephone.replace(/\s*/g, '')}`}
           className={style.contact__type}
         >
-          📞 {phone}
+          📞 {telephone}
         </a>
       </div>
     </div>
