@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
       revalidate: 60 * 60,
     };
   } catch (e) {
+    console.error(e);
     return {
       props: { listings: [], employees: [] },
       revalidate: 60 * 60,
