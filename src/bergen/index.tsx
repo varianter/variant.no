@@ -207,13 +207,13 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               Vi skal bygge et miljø med fokus på tverrfaglighet
             </h3>
 
-            <p className={and('lead', style.blobmap__text__lead)}>
+            {/* <p className={and('lead', style.blobmap__text__lead)}>
               Noe tekst om hvorfor og hva vi legger i dette. Noe tekst om
               hvorfor og hva vi legger i dette. Noe tekst om hvorfor og hva vi
               legger i dette. Noe tekst om hvorfor og hva vi legger i dette. Noe
               tekst om hvorfor og hva vi legger i dette. Noe tekst om hvorfor og
               hva vi legger i dette.
-            </p>
+            </p> */}
 
             <img
               src={blobmapUrl}
