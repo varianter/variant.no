@@ -4,12 +4,13 @@ import {
   BlogFeedItem,
   PodcastFeedItem,
   YoutubeFeedItem,
-  FeedInput,
 } from './rss';
+
+import type { FeedInput } from './rss';
 
 import { parse } from 'node-html-parser';
 
-/* export type FeedInput; */
+
 
 type ItemBase = {
   isoDate: string;
@@ -56,17 +57,37 @@ export async function createFeedList(lists: FeedInput[]) {
 
 export async function chronologicalFeedList(lists: FeedInput[]){
     const list = await createFeedList(lists);
-    return list.flatMap(({items}) => items).sort((a, b) => new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime());
+    return list.flatMap(({items}) => items).sort(sortByDate);
 }
 
-/* function getTopList () {
-    return feedItems.map(selectTopItem).map(transformToModels);
-}*/
+function sortByDate(a: MediaItem, b: MediaItem) {
+  return new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime();
+}
 
-/* async function getHiglightedItems(lists: FeedInput[]) {
+
+export async function getHiglightedItems(lists: FeedInput[]) {
   const list = await createFeedList(lists);
-  return result.map(({ items }) => items.map(mapDataToType));
-} */
+
+  const youtube = list
+    .filter(({ type }) => type === 'youtube')
+    .flatMap(({ items }) => [...items])
+    .sort(sortByDate)
+    .slice(0, 1);
+
+  const blog = list
+    .filter(({ type }) => type === 'blog')
+    .flatMap(({ items }) => [...items])
+    .sort(sortByDate)
+    .slice(0, 3);
+
+  const podcast = list
+    .filter(({ type }) => type === 'podcast')
+    .flatMap(({ items }) => [...items])
+    .sort(sortByDate)
+    .slice(0, 1);
+
+  return { youtube, blog, podcast };
+}
 
 function mapDataToType(data: FeedItem) {
   switch (data.type) {

@@ -1,19 +1,12 @@
 import Layout from 'src/layout';
-import { FeedInput, FeedItem, chronologicalFeedList } from 'src/rss/service';
+import {MediaItem, chronologicalFeedList } from 'src/rss/service';
+import { FeedInput } from 'src/rss/rss';
 import style from './feed.module.css';
 
 import List from 'src/rss/feed/List';
 
-/* 
-  ?Färger baserat på vilken typ innehåll det är
-  x Hämta ut först paragraf och bild
-  x Göra så att alla är kort
-  Lägga 3 blog, 1 video och 1 podcast på förstasidan.
-  x Breakpoints 
-*/
-
 interface FeedProps {
-  items: FeedItem[]
+  items: MediaItem[];
 }
 
 
@@ -30,8 +23,8 @@ export default function RSSFeed({ items }: FeedProps) {
               </p>
             </div>
         </div>
-        <List items={items}/>
       </div>
+      <List items={items}/>
     </Layout>
   );
 }

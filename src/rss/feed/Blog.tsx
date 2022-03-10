@@ -1,17 +1,8 @@
 
-import { parse } from 'node-html-parser';
 import Image from 'next/image';
 
 import { BlogItem } from '../index';
 import style from './feed.module.css';
-
-
-/* const getIntroFromEncodedHtml = (encodedHtml: string) => {
-  const article = parse(encodedHtml);
-  const snippet = article.querySelector('p')?.textContent || '';
-  const img = article.querySelector('img')?.getAttribute('src');
-  return { snippet, img };
-}  */
 
 const loader = ({ src, width }: {src: string, width: number}) => {
   return `${src}?w=${width}&h=${width}`;
@@ -19,18 +10,15 @@ const loader = ({ src, width }: {src: string, width: number}) => {
 
 export default function Blog({
   item,
-  publishedDate,
 }: {
   item: BlogItem;
-  publishedDate: string;
 }) {
-  //const {img, snippet} = getIntroFromEncodedHtml(item['content:encoded']);
 
   return (
     <div className={style.card}>
       <div className={style.media}>
         {item.imageCoverUrl && (
-           <Image
+          <Image
             loader={loader}
             className={style.cover}
             src={item.imageCoverUrl}
@@ -53,7 +41,7 @@ export default function Blog({
         </a>
         <div className={style.published}>
           Skrevet av <span className={style.author}>{item.creator}</span>,{' '}
-          {publishedDate}
+          {item.publishDate}
         </div>
         <p className={style.summary}>
           {item.description} <a href={item.url}>Les hele artikeln</a>

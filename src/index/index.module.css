@@ -135,7 +135,6 @@
 }
 
 .blog {
-  text-align: center;
   margin: 0 auto;
   padding: 16rem 0 8rem;
   position: relative;
@@ -156,7 +155,7 @@
   position: relative;
 
   z-index: 2;
-  order: 2;
+  /* order: 2; */
 }
 .blog_image1 {
   max-width: 80%;
@@ -266,4 +265,19 @@
 
 .employees__button {
   grid-area: button;
+}
+
+.feed {
+  display: grid;
+  grid-gap: 1.5rem;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .feed {
+    padding: 1rem;
+  }
+}
+
+.feed__head {
+  padding: 3rem 2rem;
 }

@@ -30,3 +30,7 @@ a:visited {
 a:hover {
   color: var(--color-secondary2__shade2);
 }
+
+.text-center {
+  text-align: center;
+}

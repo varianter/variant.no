@@ -7,11 +7,9 @@ import style from './feed.module.css';
 const Player = dynamic(() => import('./Player'), { ssr: false });
 
 export default function Podcast({
-  item,
-  publishedDate,
+  item
 }: {
   item: PodcastItem;
-  publishedDate: string;
 }) {
 
   return (
@@ -35,7 +33,7 @@ export default function Podcast({
 
           <p className={style.summary}>
             {item.description}{' '}
-            <span style={{ opacity: 0.5 }}>— {publishedDate}</span>
+            <span style={{ opacity: 0.5 }}>— {item.publishDate}</span>
           </p>
         </div>
       </div>

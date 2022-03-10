@@ -4,10 +4,8 @@ import style from './feed.module.css';
 
 export default function YouTube({
   item,
-  publishedDate,
 }: {
   item: YoutubeVideoItem;
-  publishedDate: string;
 }) {
   return (
     <div className={style.card}>
@@ -32,7 +30,7 @@ export default function YouTube({
         >
           <h4 className={style.title}>{item.title}</h4>
         </a>
-        <div className={style.published}>Publisert {publishedDate}</div>
+        <div className={style.published}>Publisert {item.publishDate}</div>
       </div>
     </div>
   );

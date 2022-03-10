@@ -7,12 +7,14 @@ import React, { useMemo } from 'react';
 import { BergenInfoBlock } from 'src/bergen';
 import { ButtonLink, ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
+import List from 'src/rss/feed/List';
 import style from './index.module.css';
 import SayHi from './say-hi';
 
 const Home = ({
   randomEmployee,
   randomCases,
+  feeds
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem) => (
@@ -180,13 +182,22 @@ const Home = ({
 
       <section className={style.blog}>
         <div className={style.blog__text}>
-          <h2>Våre ytringer</h2>
+          {/* <h2 className="text-center">Våre ytringer</h2> */}
 
-          <ButtonLink href="http://variant.blog">
+          {/*  <ButtonLink href="http://variant.blog">
             Sjekk ut bloggen vår
-          </ButtonLink>
+          </ButtonLink> */}
         </div>
+        <section className={style.feed}>
+          {/* <h4>Det sista vi skrivit på bloggen vår</h4> */}
+          <List items={feeds.blog} />
 
+          {/* <h4>Senaste podcasten</h4> */}
+          <List items={feeds.podcast} />
+
+          {/* <h4>Det sista vi lagt ut på tuben</h4> */}
+          <List items={feeds.youtube} />
+        </section>
         <img
           className={style.blog_image1}
           role="none"
