@@ -26,7 +26,7 @@ const blobServiceClient = new BlobServiceClient(
 
 const containerName = 'employees';
 
-export const handleImages = async (employee: ApiEmployee) => {
+export default async (employee: ApiEmployee) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
   const containerClient = blobServiceClient.getContainerClient(containerName);

@@ -1,7 +1,11 @@
-import { handleImages as handleImages_blob } from './blob';
-import { handleImages as handleImages_local } from './local';
+import { ApiEmployee } from 'src/employees/types';
 
-export const handleImages =
-  process.env.NODE_ENV !== 'development' || process.env.BLOB_OVERRIDE == 'true'
-    ? handleImages_blob
-    : handleImages_local;
+export default async function handleImages(employee: ApiEmployee) {
+  const handler =
+    process.env.NODE_ENV !== 'development' ||
+    process.env.BLOB_OVERRIDE == 'true'
+      ? await import('./blob')
+      : await import('./local');
+
+  return handler.default(employee);
+}

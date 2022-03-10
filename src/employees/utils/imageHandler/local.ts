@@ -6,7 +6,7 @@ import { ApiEmployee } from 'src/employees/types';
 // Temp comment to retrigger deployemtn
 const employeeDirectory = path.join(process.cwd(), 'public/employees');
 
-export const handleImages = async (employee: ApiEmployee) => {
+export default async (employee: ApiEmployee) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
 

@@ -1,4 +1,4 @@
-import { handleImages } from 'src/employees/utils/imageHandler';
+import handleImages from 'src/employees/utils/imageHandler';
 import { Office } from 'src/office-selector';
 import { ApiEmployee, EmployeeItem } from '../types';
 import { requestByEmails, requestEmployees } from './request';
