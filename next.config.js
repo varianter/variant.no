@@ -14,14 +14,14 @@ const regexEqual = (x, y) => {
 
 module.exports = withPlugins([withImages], {
   images: {
+    disableStaticImages: true,
     domains: [
+      'variantno.blob.core.windows.net',
       'podcast.variant.no', // Need this to get the images for the RSS feed
       'images.transistor.fm', // this
       'img.youtube.com', // this
       'cdn-images-1.medium.com', // aaaaand this
     ],
-    disableStaticImages: true,
-    domains: ['variantno.blob.core.windows.net'],
   },
 
   webpack: (config) => {
