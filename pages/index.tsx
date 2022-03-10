@@ -1,11 +1,10 @@
 import { GetStaticProps } from 'next';
-import { handleImages } from 'src/utils/imageHandler';
-import { Employee, massageEmployee } from 'src/employees';
-import { getEmployeesUrl } from 'src/utils/api/getEmployees';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
-import { createFeedList, getHiglightedItems } from 'src/rss/service';
+import { getHiglightedItems } from 'src/rss/service';
 import { FeedInput } from 'src/rss/rss';
+import { EmployeeItem } from 'src/employees/types';
+import { getRandomEmployee } from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/index';
 
@@ -34,19 +33,11 @@ const feedsList: FeedInput[] = [
 ];
 
 export const getStaticProps: GetStaticProps<{
-  randomEmployee: Employee;
+  randomEmployee: EmployeeItem;
   randomCases: CaseJSON[];
 }> = async () => {
-  const request = await fetch(getEmployeesUrl);
-  
-  if (request.ok) {
-    const employeesJSON = await request.json();
-    // Make images
-    const employee =
-      employeesJSON[Math.floor(Math.random() * employeesJSON.length)];
-    const imageSlug = await handleImages(employee);
-    const randomEmployee = { ...massageEmployee(employee), imageSlug };
-
+  const randomEmployee = await getRandomEmployee();
+  if (randomEmployee) {
     const randomCases = shuffle(CaseList).slice(0, 3);
 
     const feeds = await getHiglightedItems(feedsList);

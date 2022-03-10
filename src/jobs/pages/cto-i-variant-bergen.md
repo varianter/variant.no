@@ -8,7 +8,7 @@ meta_description: Vi søker etter deg som vil utvikle Bergen – sammen med fler
 meta_image: https://www.variant.no/images/cto-bergen.jpg
 ---
 
-## Vi søker etter noen som vil utvikle Bergen
+## Vi søker etter deg som vil utvikle Bergen!
 
 ![Varianter på en takterrasse](/images/utvikler-takterrasse.png)
 

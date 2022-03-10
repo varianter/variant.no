@@ -1,10 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Employee } from 'src/employees';
-import {
-  getStaticPropsEmployees,
-  Office,
-  offices,
-} from '../../src/employees/utils/getStaticProps';
+import { EmployeeItem } from 'src/employees/types';
+import { Office, offices } from 'src/office-selector';
+import { getStaticPropsEmployees } from '../../src/employees/utils/getStaticProps';
 
 export { default } from 'src/employees';
 
@@ -30,7 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<{
-  employeeList: Employee[];
+  employeeList: EmployeeItem[];
   officeName?: Office;
 }> = async (context) => {
   return getStaticPropsEmployees(queryToOffice(context.params?.office));

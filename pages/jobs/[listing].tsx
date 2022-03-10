@@ -1,9 +1,7 @@
 import { getListings, getListing, Listing } from 'src/jobs/utils/getListings';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Employee, massageEmployee } from 'src/employees';
-import { getEmployeesUrl } from 'src/utils/api/getEmployees';
-import { EmployeeJSON } from 'src/utils/typings/Employee';
-import { handleImages } from 'src/utils/imageHandler';
+import { EmployeeItem } from 'src/employees/types';
+import { getContactsByEmails } from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/jobs/listing/listing';
 
@@ -23,14 +21,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<
-  { listing: Listing & { contacts: Employee[] } },
+  { listing: Listing & { contacts: EmployeeItem[] } },
   { listing: string }
 > = async (context) => {
   // This will never be empty as that path is caught by 'index.tsx' file
   const fileName = `${context?.params?.listing}.md`;
   const listing = await getListing(fileName);
   const contactEmails = listing.contact_emails?.split(',').map((e) => e.trim());
-  let contacts: Employee[] = [];
+  let contacts: EmployeeItem[] = [];
   if (contactEmails?.length) {
     contacts = await getContactsByEmails(contactEmails);
   }
@@ -39,22 +37,3 @@ export const getStaticProps: GetStaticProps<
     revalidate: 60 * 60,
   };
 };
-
-async function getContactsByEmails(emails: string[]): Promise<Employee[]> {
-  const request = await fetch(getEmployeesUrl);
-  if (request.ok) {
-    const employeesJSON = await request.json();
-    // Make images
-    const employees = await Promise.all<Employee>(
-      employeesJSON.map(async (employee: EmployeeJSON) => {
-        const imageSlug = await handleImages(employee);
-        return { ...massageEmployee(employee), imageSlug };
-      }),
-    );
-    return emails
-      .map((email) => employees.find((emp) => emp.email === email))
-      .filter((emp): emp is Employee => !!emp);
-  }
-  // Trigger fallback on previous version
-  throw new Error();
-}

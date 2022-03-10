@@ -1,18 +1,17 @@
-import { getEmployeesList } from './getEmployeesList';
-
-export const offices = ['oslo', 'trondheim', 'bergen'] as const;
-export type Office = typeof offices[number];
+import { Office } from 'src/office-selector';
+import { getEmployeesByOffice, getEmployeesList } from './getEmployeesList';
 
 export async function getStaticPropsEmployees(officeName?: Office) {
   // Set so we can run local as fallback.
-  const employeeList = await getEmployeesList();
+  const employeeList = officeName
+    ? await getEmployeesByOffice(officeName)
+    : await getEmployeesList();
+
   if (employeeList) {
     return {
       props: officeName
         ? {
-            employeeList: employeeList.filter(
-              (employee) => employee.officeName?.toLowerCase() === officeName,
-            ),
+            employeeList,
             officeName,
           }
         : {

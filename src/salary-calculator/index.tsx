@@ -3,11 +3,11 @@ import Layout from 'src/layout';
 import RadioButton from '../components/radio-button';
 import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
-import { and } from 'src/utils/strings';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Slider from 'src/components/slider';
 import useCalculatorData from './use-calculator-data';
+import { and } from 'src/utils/css';
 
 type Props = {
   year: number;

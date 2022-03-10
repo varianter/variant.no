@@ -1,13 +1,12 @@
 import { GetStaticProps } from 'next';
-import { Employee } from 'src/employees';
-import {
-  getStaticPropsEmployees, Office,
-} from '../../src/employees/utils/getStaticProps';
+import { EmployeeItem } from 'src/employees/types';
+import { Office } from 'src/office-selector';
+import { getStaticPropsEmployees } from '../../src/employees/utils/getStaticProps';
 
 export { default } from 'src/employees';
 
 export const getStaticProps: GetStaticProps<{
-  employeeList: Employee[];
+  employeeList: EmployeeItem[];
   officeName?: Office;
 }> = async () => {
   return await getStaticPropsEmployees();

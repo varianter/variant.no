@@ -8,28 +8,17 @@ import { getStaticProps } from 'pages/ansatte';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import Arrow from 'src/components/arrow';
 import Layout from 'src/layout';
-import { OfficeSelector } from 'src/office-selector';
+import { Office, OfficeSelector } from 'src/office-selector';
 import { and } from 'src/utils/css';
-import { EmployeeJSON } from 'src/utils/typings/Employee';
 import style from './employees.module.css';
-import { Office } from './utils/getStaticProps';
-
-export type Employee = {
-  fullName: string;
-  name: string;
-  phone: string;
-  email: string;
-  imageSlug: string;
-  officeName: string;
-};
+import { EmployeeItem } from './types';
 
 export default function Employees({
   employeeList,
   officeName,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [shuffledEmployeeList, setShuffledEmployeeList] = useState(
-    employeeList,
-  );
+  const [shuffledEmployeeList, setShuffledEmployeeList] =
+    useState(employeeList);
 
   useEffect(() => {
     setShuffledEmployeeList(shuffleArray(employeeList));
@@ -93,7 +82,7 @@ export default function Employees({
         />
 
         <div className={style.employees__layout}>
-          {shuffledEmployeeList.map((employee: Employee, index: number) => {
+          {shuffledEmployeeList.map((employee: EmployeeItem, index: number) => {
             if (index === indexToInsertLink) {
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
@@ -118,8 +107,8 @@ export default function Employees({
   );
 }
 
-const EmployeeTile: React.FC<{ employee: Employee }> = ({
-  employee: { fullName, name, phone, imageSlug, officeName },
+export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
+  employee: { fullName, name, telephone, imageUrl, officeName },
 }) => {
   return (
     <div
@@ -130,16 +119,16 @@ const EmployeeTile: React.FC<{ employee: Employee }> = ({
         width={300}
         height={300}
         alt={`Bilde av ${name}`}
-        src={`/employees/${imageSlug}.png`}
+        src={imageUrl}
         loading="lazy"
       />
       <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
       <div className={style.employee__office}>{officeName}</div>
       <a
-        href={`tel:+47${phone.replace(/\s*/g, '')}`}
+        href={`tel:+47${telephone.replace(/\s*/g, '')}`}
         className={style.employee__phone}
       >
-        📞 {phone}
+        📞 {telephone}
       </a>
     </div>
   );
@@ -182,7 +171,7 @@ function getRandomOffset() {
  * Shuffle function taken from here: https://javascript.info/task/shuffle
  * @param array
  */
-function shuffleArray(array: Employee[]) {
+function shuffleArray(array: EmployeeItem[]) {
   const tempArray = array.slice();
 
   for (let i = tempArray.length - 1; i > 0; i--) {
@@ -192,20 +181,3 @@ function shuffleArray(array: Employee[]) {
 
   return tempArray;
 }
-
-export const massageEmployee = (
-  employee: EmployeeJSON,
-): Omit<Employee, 'imageSlug'> => {
-  return {
-    fullName: employee.name,
-    name: employee.name.split(' ')[0],
-    email: employee.email,
-    phone: (employee.telephone.startsWith('+47')
-      ? employee.telephone.slice(3)
-      : employee.telephone
-    )
-      .replace(/\s/g, '')
-      .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
-    officeName: employee.office_name,
-  };
-};
