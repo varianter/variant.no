@@ -64,5 +64,5 @@ Ta gjerne kontakt med meg.
 ### Søknadsfrist
 
 <p>
-13. mars 2022
+27. mars 2022
 </p>

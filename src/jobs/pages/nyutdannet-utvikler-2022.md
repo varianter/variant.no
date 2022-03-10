@@ -12,7 +12,7 @@ meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-2.jpg
 
 ### Hvem søker vi?
 
-Vi søker 2 nyutdannede utviklere som engasjerer og motiverer, med oppstart 1. august 2022. Stillingene er fordelt på våre kontorer i [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Oslo](https://handbook.variant.no/avdelinger/oslo) med 1 utvikler i hver by. Det er ikke viktig hvilke verktøy eller språk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om koden du skriver og bryr deg om kunden du leverer til.
+Vi søker 2 nyutdannede utviklere som engasjerer og motiverer, med oppstart 1. august 2022 til vårt kontor i [Trondheim](https://handbook.variant.no/avdelinger/trondheim). Det er ikke viktig hvilke verktøy eller språk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om koden du skriver og bryr deg om kunden du leverer til.
 
 <div class="right">
 
@@ -64,5 +64,5 @@ Ta gjerne kontakt med meg.
 ### Søknadsfrist
 
 <p>
-13. mars 2022
+27. mars 2022
 </p>
