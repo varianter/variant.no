@@ -1,7 +1,7 @@
 ---
 title: Chief Design Officer i Variant Bergen AS
 h1_title: Chief Design Officer i Variant Bergen AS
-slug: cdo-i-variant-bergen
+slug: chief-design-officer-i-variant-bergen
 contact_emails: mk@variant.no, te@variant.no
 meta_title: Vi søker CDO til Variant Bergen
 meta_description: Vi søker deg som vil utvikle Bergen – sammen med flere og sammen med oss!
