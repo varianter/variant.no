@@ -96,9 +96,8 @@ export default function AudioPlayer({
     }
   };
 
-  const onScrubEnd = (event: React.MouseEvent<HTMLInputElement>|React.KeyboardEvent<HTMLInputElement>) => {
+  const onScrubEnd = () => {
     setCurrentState('PLAYING');
-    //startTimer();
   };
 
   return (
@@ -116,10 +115,10 @@ export default function AudioPlayer({
       </button>
       <div className={style.player__content}>{children}</div>
       <div className={style.player__duration}>
-        {currentState !== 'INITIAL' ? (<>
+        {currentState !== 'INITIAL' && (<>
         <span>{formatDuration((duration / 100) * trackProgress)}</span>
         <span>/</span>
-        </>) : ''}
+        </>)}
         
         <span>{formatDuration(duration)}</span>
       </div>

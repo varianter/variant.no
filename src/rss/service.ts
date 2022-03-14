@@ -15,40 +15,35 @@ import { parse } from 'node-html-parser';
 type ItemBase = {
   isoDate: string;
   publishDate: string;
+  imageCoverUrl?: string;
 };
 
-export type PodcastItem = ItemBase & {
+export type PodcastItem = {
   type: 'podcast';
   media: {
     url: string;
   };
-  imageCoverUrl: string;
   description: string;
   title: string;
 } & ItemBase;
 
-export type YoutubeVideoItem = ItemBase & {
+export type YoutubeVideoItem = {
   type: 'youtube';
   title: string;
   description: string;
   url: string;
-  imageCoverUrl: string;
 } & ItemBase;
 
-export type BlogItem = ItemBase & {
+export type BlogItem = {
   type: 'blog';
   title: string;
   description: string;
   url: string;
-  imageCoverUrl: string;
   creator: string;
-};
+} & ItemBase;
 
 export type MediaItem = PodcastItem | YoutubeVideoItem | BlogItem;
-
 export type MediaItems = MediaItem[];
-
-/* export type FeedItem; */
 
 export async function createFeedList(lists: FeedInput[]) {
   const result = await Promise.all(lists.map(getFeed));
@@ -64,8 +59,15 @@ function sortByDate(a: MediaItem, b: MediaItem) {
   return new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime();
 }
 
+export type HighlightedItemsLists = {
+  youtube: MediaItems;
+  blog: MediaItems;
+  podcast: MediaItems;
+};
 
-export async function getHiglightedItems(lists: FeedInput[]) {
+export async function getHiglightedItems(
+  lists: FeedInput[],
+): Promise<HighlightedItemsLists> {
   const list = await createFeedList(lists);
 
   const youtube = list
@@ -86,6 +88,7 @@ export async function getHiglightedItems(lists: FeedInput[]) {
     .sort(sortByDate)
     .slice(0, 1);
 
+
   return { youtube, blog, podcast };
 }
 
@@ -105,10 +108,11 @@ function mapFeedToBlog(item: BlogFeedItem): BlogItem {
     type: 'blog',
     title: item.title || '',
     url: item.link || '',
-    isoDate: item.isoDate,
+    isoDate: item.isoDate || '',
     publishDate: dateLocaleString(item.isoDate),
-    imageCoverUrl: parseAndGetFirstImage(item['content:encoded']),
-    description: parseAndGetFirstParagraph(item['content:encoded']),
+    imageCoverUrl:
+      item['content:encoded'] && parseAndGetFirstImage(item['content:encoded']),
+    description: item['content:encoded'] && parseAndGetFirstParagraph(item['content:encoded']) || '',
     creator: item.creator || '',
   };
 }
@@ -116,12 +120,12 @@ function mapFeedToBlog(item: BlogFeedItem): BlogItem {
 function mapFeedToPodcast(item: PodcastFeedItem): PodcastItem {
   return {
     type: 'podcast',
-    title: item.title,
-    isoDate: item.isoDate,
+    title: item.title || '',
+    isoDate: item.isoDate || '',
     publishDate: dateLocaleString(item.isoDate),
     imageCoverUrl: item.itunes?.image || '',
     media: {
-      url: item.enclosure.url,
+      url: item.enclosure?.url || '',
     },
     description: item.itunes?.summary || '',
   };
@@ -130,11 +134,11 @@ function mapFeedToPodcast(item: PodcastFeedItem): PodcastItem {
 function mapFeedToYoutube(item: YoutubeFeedItem): YoutubeVideoItem {
   return {
     type: 'youtube',
-    title: item.title,
-    isoDate: item.isoDate,
+    title: item.title || '',
+    isoDate: item.isoDate || '',
     url: item.link || '',
     description: '',
-    imageCoverUrl: getFullsizeThumbnailFromYouTube(item.link),
+    imageCoverUrl: item.link && getFullsizeThumbnailFromYouTube(item.link),
     publishDate: dateLocaleString(item.isoDate),
   };
 }
@@ -152,7 +156,7 @@ const dateLocaleString = (date?: string) => {
 const parseAndGetFirstParagraph = (encodedHtml: string) => {
   const article = parse(encodedHtml);
   const firstParagraph = article.querySelector('p')?.textContent || '';
-  return firstParagraph;
+  return firstParagraph || '';
 };
 
 const parseAndGetFirstImage = (encodedHtml: string) => {

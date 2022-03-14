@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
 import { BergenInfoBlock } from 'src/bergen';
-import { ButtonLink, ButtonNextLink } from 'src/components/button';
+import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';

@@ -1,7 +1,10 @@
 import { GetStaticProps } from 'next';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
-import { getHiglightedItems } from 'src/rss/service';
+import {
+  getHiglightedItems,
+  HighlightedItemsLists
+} from 'src/rss/service';
 import { FeedInput } from 'src/rss/rss';
 import { EmployeeItem } from 'src/employees/types';
 import { getRandomEmployee } from 'src/employees/utils/getEmployeesList';
@@ -35,13 +38,13 @@ const feedsList: FeedInput[] = [
 export const getStaticProps: GetStaticProps<{
   randomEmployee: EmployeeItem;
   randomCases: CaseJSON[];
+  feeds: HighlightedItemsLists;
 }> = async () => {
   const randomEmployee = await getRandomEmployee();
   if (randomEmployee) {
     const randomCases = shuffle(CaseList).slice(0, 3);
 
     const feeds = await getHiglightedItems(feedsList);
-    
 
     return {
       props: { randomEmployee, randomCases, feeds },
