@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { deleteAll } from 'src/employees/utils/imageHandler';
 
 export default async function handler(
   req: NextApiRequest,
@@ -12,6 +13,7 @@ export default async function handler(
   }
 
   try {
+    await deleteAll();
     await res.unstable_revalidate('/ansatte');
     return res.json({ revalidated: true });
   } catch (err) {

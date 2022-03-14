@@ -6,7 +6,7 @@ import { ApiEmployee } from 'src/employees/types';
 // Temp comment to retrigger deployemtn
 const employeeDirectory = path.join(process.cwd(), 'public/employees');
 
-export default async (employee: ApiEmployee) => {
+export default async (employee: ApiEmployee, _regenerate: boolean = false) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
 
@@ -27,6 +27,8 @@ export default async (employee: ApiEmployee) => {
     return `/employees/${userFileName}.png`;
   }
 };
+
+export async function deleteAll() {}
 
 const toFileName = (name: string): string => {
   // Could be unstable when string is large
