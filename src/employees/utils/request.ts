@@ -72,7 +72,8 @@ export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
 
   const employeeList = employeesJSON.filter(
     (employee) =>
-      employee.deactivated ||
+      !employee.deactivated &&
+      employee.image.url &&
       // All employees that have started should be set
       // as countrymanager in cv-parter, when they start.
       employee.roles.some((role) => role === 'countrymanager'),
