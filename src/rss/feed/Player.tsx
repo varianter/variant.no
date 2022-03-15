@@ -24,6 +24,7 @@ const machine: Machine = {
     next: 'PLAYING',
   },
 };
+
 function formatDuration(seconds: number) {
   const miliseconds = seconds * 1000;
   const date = new Date(miliseconds);
@@ -108,6 +109,8 @@ export default function AudioPlayer({
 
       <button
         onClick={buttonHandler}
+        aria-label="Play Pause"
+        aria-pressed={currentState === 'PLAYING'}
         className={style.player__button}
         data-state={currentState}
       >
@@ -115,17 +118,20 @@ export default function AudioPlayer({
       </button>
       <div className={style.player__content}>{children}</div>
       <div className={style.player__duration}>
-        {currentState !== 'INITIAL' && (<>
-        <span>{formatDuration((duration / 100) * trackProgress)}</span>
-        <span>/</span>
-        </>)}
-        
+        {currentState !== 'INITIAL' && (
+          <>
+            <span>{formatDuration((duration / 100) * trackProgress)}</span>
+            <span>/</span>
+          </>
+        )}
+
         <span>{formatDuration(duration)}</span>
       </div>
       {withScrubber ? (
         <div className={style.player__scrubber}>
           <input
             type="range"
+            aria-label="Posisjon i lydsporet"
             value={trackProgress}
             step="1"
             min="0"
