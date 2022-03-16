@@ -187,20 +187,11 @@ const Home = ({
             <h4 className="">Meninger og sånn</h4>
             <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
           </div>
-          {/* <h4>Det sista vi skrivit på bloggen vår</h4> */}
+
           <List items={feeds.blog} />
-
-          {/* <h4>Senaste podcasten</h4> */}
           <List items={feeds.podcast} />
-
-          {/* <h4>Det sista vi lagt ut på tuben</h4> */}
           <List items={feeds.youtube} />
         </section>
-        {/* <img
-          className={style.blog_image1}
-          role="none"
-          src={require('./images/blob-ytringer.svg')}
-        /> */}
       </section>
 
       <section className={style.employees}>

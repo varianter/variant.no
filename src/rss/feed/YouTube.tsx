@@ -8,7 +8,7 @@ export default function YouTube({
   item: YoutubeVideoItem;
 }) {
   return (
-    <div className={style.card}>
+    <div className={`${style.card} ${style['card-youtube']}`}>
       <figure className={style.media}>
         <a href={item.url}>
           <div className={style.thumbnail}>
@@ -21,6 +21,7 @@ export default function YouTube({
         </a>
       </figure>
       <div className={style.text}>
+        <div>Video</div>
         <a
           key={item.url}
           className={style.link}

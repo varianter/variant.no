@@ -1,7 +1,6 @@
 // https://gist.github.com/SgtPooki/477014cf16436384f10a68268f86255b
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
 
-
 import React, { useState, useEffect, useRef } from 'react';
 import style from './feed.module.css';
 
@@ -117,18 +116,14 @@ export default function AudioPlayer({
         <div className={style.player__play}></div>
       </button>
       <div className={style.player__content}>{children}</div>
-      <div className={style.player__duration}>
-        {currentState !== 'INITIAL' && (
-          <>
-            <span>{formatDuration((duration / 100) * trackProgress)}</span>
-            <span>/</span>
-          </>
-        )}
 
-        <span>{formatDuration(duration)}</span>
-      </div>
       {withScrubber ? (
         <div className={style.player__scrubber}>
+          <div className={style.player__duration}>
+            <span>{formatDuration((duration / 100) * trackProgress)}</span>
+            <span>/</span>
+            <span>{formatDuration(duration)}</span>
+          </div>
           <input
             type="range"
             aria-label="Posisjon i lydsporet"
