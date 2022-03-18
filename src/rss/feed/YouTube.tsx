@@ -32,7 +32,10 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
             </span>
           </h4>
         </a>
-        <div className={style.published}>Publisert {item.publishDate}</div>
+        <p className={style.summary}>
+          {item.description}{' '}
+          <span style={{ opacity: 0.5 }}>— {item.publishDate}</span>
+        </p>
       </div>
     </div>
   );

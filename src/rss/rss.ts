@@ -15,6 +15,9 @@ export type FeedResult<T = Item> = {
 export type YoutubeFeedItem = Item & {
   type: FeedType;
   id?: string;
+  'media:group'?: {
+    'media:description': string[];
+  };
 };
 
 export type PodcastFeedItem = Item & {
@@ -36,11 +39,15 @@ export type BlogFeedItem = Item & {
 
 export type FeedItem = YoutubeFeedItem | BlogFeedItem | PodcastFeedItem;
 
-export async function getFeed<T = Item>({
+export async function getFeed({
   url,
   type,
 }: FeedInput): Promise<{ type: FeedType; items: FeedItem[] }> {
-  const parser = new Parser<{ [key: string]: any }, T>();
+  const parser = new Parser({
+    customFields: {
+      item: ['media:group'],
+    },
+  });
   const result = await parser.parseURL(url);
   const { items } = result;
 

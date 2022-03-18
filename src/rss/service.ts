@@ -140,7 +140,9 @@ function mapFeedToYoutube(item: YoutubeFeedItem): YoutubeVideoItem {
     title: item.title || '',
     isoDate: item.isoDate || '',
     url: item.link || '',
-    description: '',
+    description: getFirstNewLine(
+      item['media:group']?.['media:description']?.[0] ?? '',
+    ),
     imageCoverUrl: item.link && getFullsizeThumbnailFromYouTube(item.link),
     publishDate: dateLocaleString(item.isoDate),
   };
@@ -160,6 +162,10 @@ const parseAndGetFirstParagraph = (encodedHtml: string) => {
   const article = parse(encodedHtml);
   const firstParagraph = article.querySelector('p')?.textContent || '';
   return firstParagraph || '';
+};
+
+const getFirstNewLine = (str: string) => {
+  return str.split('\n')[0];
 };
 
 const parseAndGetFirstImage = (encodedHtml: string) => {

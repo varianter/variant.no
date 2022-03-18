@@ -26,6 +26,7 @@
 }
 .card {
   padding: 2rem;
+  margin: 0 1rem;
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 10rem 1fr;
