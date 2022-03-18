@@ -14,7 +14,7 @@ import SayHi from './say-hi';
 const Home = ({
   randomEmployee,
   randomCases,
-  feeds
+  feeds,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem) => (
@@ -180,18 +180,23 @@ const Home = ({
         </article>
       </section>
 
-      <section className={style.blog}>
-        <div className={style.blog__text}></div>
-        <section className={style.feed}>
-          <div className="text-center">
-            <h4 className="">Meninger og sånn</h4>
-            <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
-          </div>
+      <section className={style.feed}>
+        <header className={style.feed__header}>
+          <h2>Meninger og sånn</h2>
+          <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
+        </header>
 
+        <img
+          className={style.feed__image1}
+          role="none"
+          src={require('./images/blob-ytringer.svg')}
+        />
+
+        <div className={style.feed__content}>
           <List items={feeds.blog} />
           <List items={feeds.podcast} />
           <List items={feeds.youtube} />
-        </section>
+        </div>
       </section>
 
       <section className={style.employees}>
