@@ -1,17 +1,11 @@
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
-
+import Image from 'next/image';
 import { PodcastItem } from '../index';
 import style from './feed.module.css';
 
 const Player = dynamic(() => import('./Player'), { ssr: false });
 
-export default function Podcast({
-  item
-}: {
-  item: PodcastItem;
-}) {
-
+export default function Podcast({ item }: { item: PodcastItem }) {
   return (
     <div className={`${style.card} ${style.podcast}`}>
       <div className={style.media}>
@@ -30,7 +24,9 @@ export default function Podcast({
           <Player url={item.media.url} withScrubber={true}>
             <h4 className={style.title}>
               {item.title}{' '}
-              <span className={`${style.category} ${style['category--podcast']}`}>
+              <span
+                className={`${style.category} ${style['category--podcast']}`}
+              >
                 Podcast
               </span>
             </h4>

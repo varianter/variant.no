@@ -1,1 +1,1 @@
-export type { BlogItem, YoutubeVideoItem, PodcastItem } from './service';
+export type { BlogItem, PodcastItem, YoutubeVideoItem } from './service';

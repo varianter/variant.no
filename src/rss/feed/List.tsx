@@ -15,6 +15,6 @@ const mediaComponentPicker = (items: MediaItems) =>
     }
   });
 
-export default function List({ items }: {items: MediaItems}) {
+export default function List({ items }: { items: MediaItems }) {
   return <>{mediaComponentPicker(items)}</>;
 }

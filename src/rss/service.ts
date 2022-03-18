@@ -10,8 +10,6 @@ import type { FeedInput } from './rss';
 
 import { parse } from 'node-html-parser';
 
-
-
 type ItemBase = {
   isoDate: string;
   publishDate: string;
@@ -47,12 +45,15 @@ export type MediaItems = MediaItem[];
 
 export async function createFeedList(lists: FeedInput[]) {
   const result = await Promise.all(lists.map(getFeed));
-  return result.map(({ items, type }) => ({type, items: items.map(mapDataToType)}));
+  return result.map(({ items, type }) => ({
+    type,
+    items: items.map(mapDataToType),
+  }));
 }
 
-export async function chronologicalFeedList(lists: FeedInput[]){
-    const list = await createFeedList(lists);
-    return list.flatMap(({items}) => items).sort(sortByDate);
+export async function chronologicalFeedList(lists: FeedInput[]) {
+  const list = await createFeedList(lists);
+  return list.flatMap(({ items }) => items).sort(sortByDate);
 }
 
 function sortByDate(a: MediaItem, b: MediaItem) {
@@ -88,7 +89,6 @@ export async function getHiglightedItems(
     .sort(sortByDate)
     .slice(0, 1);
 
-
   return { youtube, blog, podcast };
 }
 
@@ -112,7 +112,10 @@ function mapFeedToBlog(item: BlogFeedItem): BlogItem {
     publishDate: dateLocaleString(item.isoDate),
     imageCoverUrl:
       item['content:encoded'] && parseAndGetFirstImage(item['content:encoded']),
-    description: item['content:encoded'] && parseAndGetFirstParagraph(item['content:encoded']) || '',
+    description:
+      (item['content:encoded'] &&
+        parseAndGetFirstParagraph(item['content:encoded'])) ||
+      '',
     creator: item.creator || '',
   };
 }

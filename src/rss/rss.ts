@@ -1,4 +1,4 @@
-import Parser, {Item} from "rss-parser";
+import Parser, { Item } from 'rss-parser';
 
 export type FeedType = 'youtube' | 'blog' | 'podcast';
 
@@ -6,10 +6,10 @@ export type FeedInput = {
   title?: string;
   url: string;
   type: FeedType;
-}
+};
 
 export type FeedResult<T = Item> = {
-    [key: string]: any;
+  [key: string]: any;
 } & Parser.Output<T>;
 
 export type YoutubeFeedItem = Item & {
@@ -34,7 +34,7 @@ export type BlogFeedItem = Item & {
   'content:encoded'?: string;
 };
 
-export type FeedItem = YoutubeFeedItem | BlogFeedItem | PodcastFeedItem
+export type FeedItem = YoutubeFeedItem | BlogFeedItem | PodcastFeedItem;
 
 export async function getFeed<T = Item>({
   url,
@@ -42,7 +42,7 @@ export async function getFeed<T = Item>({
 }: FeedInput): Promise<{ type: FeedType; items: FeedItem[] }> {
   const parser = new Parser<{ [key: string]: any }, T>();
   const result = await parser.parseURL(url);
-  const { items } = result; 
+  const { items } = result;
 
   return {
     type,

@@ -1,19 +1,13 @@
-
 import Image from 'next/image';
 
 import { BlogItem } from '../index';
 import style from './feed.module.css';
 
-const loader = ({ src, width }: {src: string, width: number}) => {
+const loader = ({ src, width }: { src: string; width: number }) => {
   return `${src}?w=${width}&h=${width}`;
 };
 
-export default function Blog({
-  item,
-}: {
-  item: BlogItem;
-}) {
-
+export default function Blog({ item }: { item: BlogItem }) {
   return (
     <div className={style.card}>
       <div className={style.media}>
