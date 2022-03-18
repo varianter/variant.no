@@ -28,7 +28,12 @@ export default function Podcast({
       <div className={style.text}>
         <div className={style.podcast__content}>
           <Player url={item.media.url} withScrubber={true}>
-            <h4 className={style.title}>{item.title}</h4>
+            <h4 className={style.title}>
+              {item.title}{' '}
+              <span className={`${style.category} ${style['category--podcast']}`}>
+                Podcast
+              </span>
+            </h4>
           </Player>
 
           <p className={style.summary}>

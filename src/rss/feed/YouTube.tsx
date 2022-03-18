@@ -29,7 +29,12 @@ export default function YouTube({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={style.title}>{item.title}</h4>
+          <h4 className={style.title}>
+            {item.title}{' '}
+            <span className={`${style.category} ${style['category--video']}`}>
+              Video
+            </span>
+          </h4>
         </a>
         <div className={style.published}>Publisert {item.publishDate}</div>
       </div>
