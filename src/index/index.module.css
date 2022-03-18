@@ -254,7 +254,7 @@
 @media (min-width: 1020px) {
   .feed__image1 {
     position: absolute;
-    top: 10rem;
+    top: 5rem;
     right: -13rem;
     max-width: 20rem;
     z-index: 1;
