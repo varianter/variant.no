@@ -16,8 +16,24 @@ export default function RSSFeed({ items }: FeedProps) {
         <div className={style.feed__head}>
           <h2 className={and(style.feed__title, 'fancy')}>Våre ytringer</h2>
           <p>
-            Du har funnet vår feed! Her har vi samlet de siste vi gjort av
-            bloginnlegg, podcasts og videos
+            Du har funnet vår feed! Her har vi samlet de siste vi gjort av{' '}
+            <a href="https://blog.variant.no/" rel="external noopner">
+              blogginnlegg
+            </a>
+            ,{' '}
+            <a
+              href="https://variantsnakk.transistor.fm/episodes"
+              rel="external noopner"
+            >
+              podcasts
+            </a>{' '}
+            og{' '}
+            <a
+              href="https://www.youtube.com/channel/UCMBx54cKNj8i9R51IE4bfCg"
+              rel="external noopner"
+            >
+              videoer
+            </a>
           </p>
         </div>
         <List items={items} />
