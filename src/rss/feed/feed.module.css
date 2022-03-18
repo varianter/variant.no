@@ -8,8 +8,12 @@
   }
 }
 
+.feed__title {
+  margin-bottom: 1rem;
+}
 .feed__head {
-  padding: 3rem 2rem;
+  max-width: 30rem;
+  margin: 4.8rem auto 1rem;
 }
 
 .title {

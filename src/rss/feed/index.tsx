@@ -2,6 +2,7 @@ import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import { FeedInput } from 'src/rss/rss';
 import { chronologicalFeedList, MediaItem } from 'src/rss/service';
+import { and } from 'src/utils/css';
 import style from './feed.module.css';
 
 interface FeedProps {
@@ -13,13 +14,11 @@ export default function RSSFeed({ items }: FeedProps) {
     <Layout>
       <div className={style.feed}>
         <div className={style.feed__head}>
-          <div className={style.text}>
-            <h2 className="fancy">Våre ytringer</h2>
-            <p>
-              Du har funnet vår feed! Her har vi samlet de siste vi gjort av
-              bloginnlegg, podcasts og videos
-            </p>
-          </div>
+          <h2 className={and(style.feed__title, 'fancy')}>Våre ytringer</h2>
+          <p>
+            Du har funnet vår feed! Her har vi samlet de siste vi gjort av
+            bloginnlegg, podcasts og videos
+          </p>
         </div>
         <List items={items} />
       </div>
