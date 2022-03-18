@@ -150,7 +150,7 @@ function mapFeedToYoutube(item: YoutubeFeedItem): YoutubeVideoItem {
 
 const dateLocaleString = (date?: string) => {
   return date
-    ? new Date(date).toLocaleDateString('nb-NO', {
+    ? new Date(date).toLocaleDateString('nb', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
