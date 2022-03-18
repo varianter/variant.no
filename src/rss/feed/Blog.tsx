@@ -49,7 +49,7 @@ export default function Blog({
           {item.publishDate}
         </div>
         <p className={style.summary}>
-          {item.description} <a href={item.url}>Les hele artikeln</a>
+          {item.description} <a href={item.url}>Les hele artikkelen</a>
         </p>
       </div>
     </div>
