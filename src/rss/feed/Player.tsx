@@ -1,7 +1,7 @@
 // https://gist.github.com/SgtPooki/477014cf16436384f10a68268f86255b
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import style from './feed.module.css';
 
 type States = 'INITIAL' | 'PAUSED' | 'PLAYING';
@@ -44,53 +44,48 @@ export default function AudioPlayer({
   children?: React.ReactNode;
 }) {
   const audioElement = useRef<HTMLAudioElement>(null);
-  const intervalRef: { current: NodeJS.Timeout | null } = useRef(null);
   const [currentState, setCurrentState] = useState<States>('INITIAL');
-  const [duration, setDuration] = useState(0)
+  const [duration, setDuration] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
 
   useEffect(() => {
+    let intervalTimer: NodeJS.Timer | null = null;
     if (currentState === 'PLAYING') {
       audioElement.current?.play();
-      startTimer();
+
+      intervalTimer = setInterval(() => {
+        if (audioElement?.current) {
+          const elapsed = (audioElement.current.currentTime / duration) * 100;
+          setTrackProgress(elapsed);
+        }
+      }, 1000);
     }
 
     if (currentState === 'PAUSED') {
       audioElement.current?.pause();
     }
+
     return () => {
-      clearInterval(intervalRef.current as NodeJS.Timeout);
-    }
-  }, [currentState]);
+      clearInterval(intervalTimer!);
+    };
+  }, [currentState, duration]);
 
   useEffect(() => {
     audioElement.current?.addEventListener('loadedmetadata', (event) => {
-      const {duration} = event.target as HTMLAudioElement;
+      const { duration } = event.target as HTMLAudioElement;
       setDuration(duration);
     });
   }, []);
 
-  const startTimer = () => {
-      intervalRef.current = setInterval(() => {
-        if(audioElement && audioElement.current) {
-          const elapsed = (audioElement.current.currentTime / duration) * 100;
-          setTrackProgress(elapsed);
-        }
-      }, 1000);
-    
-  };
-
-  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+  const buttonHandler = () => {
     setCurrentState(machine[currentState].next);
   };
 
   const onScrub = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const {value} = event.target as HTMLInputElement;
+    const { value } = event.target as HTMLInputElement;
     setCurrentState('PAUSED');
-    clearInterval(intervalRef.current as NodeJS.Timeout);
 
-    if(audioElement.current){
+    if (audioElement.current) {
       audioElement.current.currentTime = (duration / 100) * parseInt(value);
       setTrackProgress(parseInt(value));
     }
@@ -108,7 +103,7 @@ export default function AudioPlayer({
 
       <button
         onClick={buttonHandler}
-        aria-label="Play Pause"
+        aria-label="Play/Pause"
         aria-pressed={currentState === 'PLAYING'}
         className={style.player__button}
         data-state={currentState}
