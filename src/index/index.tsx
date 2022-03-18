@@ -182,7 +182,7 @@ const Home = ({
 
       <section className={style.feed}>
         <header className={style.feed__header}>
-          <h2>Meninger og sånn</h2>
+          <h2 id="feed">Meninger og sånn</h2>
           <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
         </header>
 
