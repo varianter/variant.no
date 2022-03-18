@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { and } from 'src/utils/css';
 import { PodcastItem } from '../index';
 import style from './feed.module.css';
 
@@ -7,7 +8,7 @@ const Player = dynamic(() => import('./Player'), { ssr: false });
 
 export default function Podcast({ item }: { item: PodcastItem }) {
   return (
-    <div className={`${style.card} ${style.podcast}`}>
+    <div className={and(style.card, style['card--podcast'])}>
       <div className={style.media}>
         <div className={style.podcast__cover}>
           <Image

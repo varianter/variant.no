@@ -1,9 +1,10 @@
+import { and } from 'src/utils/css';
 import { YoutubeVideoItem } from '../index';
 import style from './feed.module.css';
 
 export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
-    <div className={`${style.card} ${style['card-youtube']}`}>
+    <div className={and(style.card, style['card--youtube'])}>
       <figure className={style.media}>
         <a href={item.url}>
           <div className={style.thumbnail}>

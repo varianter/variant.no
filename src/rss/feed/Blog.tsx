@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { and } from 'src/utils/css';
 
 import { BlogItem } from '../index';
 import style from './feed.module.css';
@@ -9,7 +10,7 @@ const loader = ({ src, width }: { src: string; width: number }) => {
 
 export default function Blog({ item }: { item: BlogItem }) {
   return (
-    <div className={style.card}>
+    <div className={and(style.card, style['card--blog'])}>
       <div className={style.media}>
         {item.imageCoverUrl && (
           <Image

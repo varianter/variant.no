@@ -28,22 +28,14 @@
   grid-template-areas: 'media text';
   border-radius: 0.5rem;
 
-  background: #fbfaf7;
+  min-height: 15rem;
+
+  background: var(--color-secondary4__tint4);
   box-shadow: 0px 73px 80px rgba(0, 0, 0, 0.05),
     0px 26.6462px 29.2013px rgba(0, 0, 0, 0.0344991),
     0px 12.9362px 14.1767px rgba(0, 0, 0, 0.0278145),
     0px 6.34158px 6.94968px rgba(0, 0, 0, 0.0221855),
     0px 2.50747px 2.74791px rgba(0, 0, 0, 0.0155009);
-}
-
-.card-youtube {
-  background-color: var(--color-secondary4);
-  grid-template-columns: 25rem 1fr;
-  box-shadow: 0px 73px 80px rgb(0 0 0 / 5%),
-    0px 26.6462px 29.2013px rgb(0 0 0 / 3%),
-    0px 12.9362px 14.1767px rgb(0 0 0 / 3%),
-    0px 6.34158px 6.94968px rgb(0 0 0 / 2%),
-    0px 2.50747px 2.74791px rgb(0 0 0 / 2%);
 }
 
 @media (max-width: 600px) {
@@ -53,6 +45,7 @@
       'media'
       'text';
     padding: 2rem 1.5rem;
+    margin: 1rem;
   }
 }
 
@@ -60,8 +53,6 @@
   font-size: 0.5rem;
   font-size: clamp(10px, 2vw, 0.5rem);
   padding: 0.33em 0.6em;
-  /* background: var(--color-secondary1__tint2);
-  color: var(--color-secondary4__tint1); */
   border-radius: 1rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -87,7 +78,7 @@
 }
 
 .podcast {
-  background: #fbfaf7;
+  background: var(--color-secondary4__tint4);
   box-shadow: 0px 73px 80px rgba(0, 0, 0, 0.05),
     0px 26.6462px 29.2013px rgba(0, 0, 0, 0.0344991),
     0px 12.9362px 14.1767px rgba(0, 0, 0, 0.0278145),
@@ -118,10 +109,12 @@
   margin: 0;
   border-radius: inherit;
   position: relative;
+  max-width: 15rem;
 
   display: grid;
   align-items: start;
   justify-content: center;
+  justify-self: center;
 }
 
 .text {
