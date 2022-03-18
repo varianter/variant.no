@@ -60,9 +60,9 @@ export default function Employees({
 
       <div className={style.employeesContainer}>
         <header>
-          <h3 className={and(style.employees__header, 'fancy')}>
+          <h2 className={and(style.employees__header, 'fancy')}>
             Vi i Variant
-          </h3>
+          </h2>
           <p className={style.employees__text}>
             Vi har i Variant en god gjeng erfarne og dyktige mennesker. Dette er
             faglige fyrtårn i byen og personer som virkelig ønsker å lære bort

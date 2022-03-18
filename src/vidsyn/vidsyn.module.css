@@ -90,7 +90,6 @@ p {
 
 .agendaDetails {
   width: 60%;
-  
 }
 
 .agendaItem {
@@ -100,7 +99,6 @@ p {
 .image {
   width: 20rem;
 }
-
 
 @media (max-width: 500px) {
   .image {
