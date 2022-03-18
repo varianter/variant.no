@@ -228,7 +228,6 @@
   margin-top: 7rem;
 }
 .feed__header {
-  order: 2;
   margin: 8.25rem 1rem 2rem;
 
   text-align: center;
@@ -243,14 +242,12 @@
   z-index: 2;
   display: grid;
   grid-gap: 1.5rem;
-  order: 3;
 }
 .feed__image1 {
-  order: 1;
+  order: -1;
   max-width: 40%;
   margin: 0 auto;
 }
-
 @media (min-width: 1020px) {
   .feed__image1 {
     position: absolute;
@@ -259,4 +256,8 @@
     max-width: 20rem;
     z-index: 1;
   }
+}
+.feed__readMore {
+  text-align: center;
+  margin: 1rem auto;
 }

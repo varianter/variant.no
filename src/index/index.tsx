@@ -197,6 +197,12 @@ const Home = ({
           <List items={feeds.podcast} />
           <List items={feeds.youtube} />
         </div>
+
+        <div className={style.feed__readMore}>
+          <Link href="/feed">
+            <a>Se mer innhold</a>
+          </Link>
+        </div>
       </section>
 
       <section className={style.employees}>
