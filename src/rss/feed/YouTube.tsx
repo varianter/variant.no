@@ -17,7 +17,6 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         </a>
       </figure>
       <div className={style.text}>
-        <div>Video</div>
         <a
           key={item.url}
           className={style.link}
