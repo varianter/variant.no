@@ -12,7 +12,7 @@ export function calculateEstimatedSalary(
 
 export function getMaxYear(): number {
   const keys = Object.keys(data);
-  return parseInt(keys[keys.length - 1]) - 2;
+  return parseInt(keys[keys.length - 1]) - 1;
 }
 
 export const formatCurrency = (pay: string | undefined) => {
