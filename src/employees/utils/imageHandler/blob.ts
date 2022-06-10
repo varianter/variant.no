@@ -26,23 +26,40 @@ const blobServiceClient = new BlobServiceClient(
 
 const containerName = 'employees';
 
-export default async (employee: ApiEmployee) => {
+export default async (employee: ApiEmployee, regenerate: boolean = false) => {
   // Check if images exsist already
   const userFileName = toFileName(employee.name);
   const containerClient = blobServiceClient.getContainerClient(containerName);
-  return downloadAndStore(userFileName, containerClient, employee.image);
+
+  await containerClient.createIfNotExists({
+    access: 'blob',
+  });
+
+  return downloadAndStore(
+    userFileName,
+    containerClient,
+    employee.image,
+    regenerate,
+  );
 };
+
+export async function deleteAll() {
+  const containerClient = blobServiceClient.getContainerClient(containerName);
+  await containerClient.deleteIfExists();
+}
 
 async function downloadAndStore(
   fileName: string,
   containerClient: ContainerClient,
   image: ApiEmployee['image'],
+  regenerate: boolean,
 ) {
   const request = await fetch(image.fit_thumb.url);
   const outputFileName = `${fileName}.png`;
   const blockBlobClient = containerClient.getBlockBlobClient(outputFileName);
 
-  if (await blockBlobClient.exists()) return blockBlobClient.url;
+  if (!regenerate && (await blockBlobClient.exists()))
+    return blockBlobClient.url;
 
   await blockBlobClient.uploadData(await request.arrayBuffer(), {
     blobHTTPHeaders: { blobContentType: 'image/png' },
