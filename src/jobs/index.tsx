@@ -73,7 +73,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               </p>
               <p>
                 For oss er det ikke viktig om du er en Java- eller F#-,
-                JavaScript eller Lisp-person. Sketch- eller Framer X-person. Vi
+                JavaScript eller Lisp-person. Figma- eller Framer X-person. Vi
                 ønsker ærlige, motiverte, hyggelige og delevillige personer.
                 Personer som ønsker å påvirke hverdagen.
               </p>
