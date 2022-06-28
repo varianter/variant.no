@@ -10,7 +10,7 @@ export type BlobProps = {
 export default function Blob({ className, variation = 'blob-1' }: BlobProps) {
   return (
     <div className={className}>
-      <img src={typeToImport(variation)} role="none" alt="" />
+      <img src={typeToImport(variation).src} role="none" alt="" />
     </div>
   );
 }

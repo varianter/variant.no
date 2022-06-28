@@ -59,13 +59,13 @@ const Home = ({
 
         <img
           className={style.omVariant_image1}
-          src={require('./images/om-variant-1.png')}
+          src={require('./images/om-variant-1.png').src}
           alt="Bilde av Kristin som sitter i en sofa"
         />
 
         <img
           className={style.omVariant_image2}
-          src={require('./images/om-variant-2.png')}
+          src={require('./images/om-variant-2.png').src}
           alt="Bilde av Tonje og Odd Morten som sitter forran gamle Digs"
         />
 
@@ -126,7 +126,7 @@ const Home = ({
       <section className={style.services}>
         <img
           className={style.services_image1}
-          src={require('./images/bli-en-variant.png')}
+          src={require('./images/bli-en-variant.png').src}
           alt="Bilde av gladfisen Jacob"
         />
 
@@ -189,7 +189,7 @@ const Home = ({
         <img
           className={style.feed__image1}
           role="none"
-          src={require('./images/blob-ytringer.svg')}
+          src={require('./images/blob-ytringer.svg').src}
         />
 
         <div className={style.feed__content}>

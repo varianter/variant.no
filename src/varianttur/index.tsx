@@ -10,10 +10,18 @@ export default function Varianttur() {
 
       <div className={style.background}>
         <div className={style.backgroundFirst}>
-          <img src={require('./background-blob-1.svg')} role="none" alt="" />
+          <img
+            src={require('./background-blob-1.svg').src}
+            role="none"
+            alt=""
+          />
         </div>
         <div className={style.backgroundSecond}>
-          <img src={require('./background-blob-2.svg')} role="none" alt="" />
+          <img
+            src={require('./background-blob-2.svg').src}
+            role="none"
+            alt=""
+          />
         </div>
       </div>
 
@@ -73,14 +81,14 @@ export default function Varianttur() {
         </section>
 
         <img
-          src={require('./travel-blob.svg')}
+          src={require('./travel-blob.svg').src}
           role="none"
           alt=""
           className={style.travelBlob}
         />
 
         <section className={style.information}>
-          <img src={require('./information-blob.png')} role="none" alt="" />
+          <img src={require('./information-blob.png').src} role="none" alt="" />
 
           <div className={style.informationContent}>
             <div className={style.informationContentGroup}>

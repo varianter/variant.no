@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React, { PropsWithChildren } from 'react';
 
-const favicon = require('@variant/profile/lib/logo/favicon.png');
+const favicon = require('@variant/profile/lib/logo/favicon.png').src;
 
 type LayoutProps = PropsWithChildren<{
   title?: string;
