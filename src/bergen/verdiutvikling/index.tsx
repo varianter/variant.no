@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from 'src/layout';
 import style from '../bergen.module.css';
 
-const bergenLufthavn = require('./bergen-lufthavn.png').src;
+const bergenLufthavn = require('./bergen-lufthavn.png');
 
 export default function VariantTur() {
   return (

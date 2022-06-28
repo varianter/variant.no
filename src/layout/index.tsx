@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({
     >
       <Head>
         <title>{title}</title>
-        <link rel="icon" href={(favicon as any).src} />
+        <link rel="icon" href={favicon} />
         <link rel="manifest" href="/manifest.json" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -63,7 +63,7 @@ const Layout: React.FC<LayoutProps> = ({
           <h1 className={style.header__logo}>
             <Link href="/">
               <a>
-                <img src={require('./variant.svg').src} alt="Variant" />
+                <img src={require('./variant.svg')} alt="Variant" />
               </a>
             </Link>
           </h1>

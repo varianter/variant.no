@@ -7,7 +7,6 @@
   "author": "Mikael Brevik <mb@variant.no>",
   "license": "MIT",
   "description": "Homepage for Variant.no",
-  "type": "module",
   "devDependencies": {
     "@types/d3-array": "^3.0.3",
     "@types/markdown-it": "^12.2.3",

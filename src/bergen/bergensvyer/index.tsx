@@ -1,8 +1,8 @@
 import styles from './index.module.css';
 import Layout from './layout';
 
-const logo = require('./assets/variant.svg').src;
-const varianthuset = require('./assets/varianthuset.png').src;
+const logo = require('./assets/variant.svg');
+const varianthuset = require('./assets/varianthuset.png');
 
 export default function Home() {
   return (

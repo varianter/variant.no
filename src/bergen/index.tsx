@@ -11,10 +11,10 @@ import Arrow from 'src/components/arrow';
 import { and } from 'src/utils/css';
 import { EmployeeTile } from 'src/employees';
 
-const bergenBlobUrl = require('./assets/bergen.png').src;
-const timelineUrl = require('./assets/timeline.svg').src;
-const blobmapUrl = require('./assets/blobmap.svg').src;
-const mapUrl = require('./assets/map.png').src;
+const bergenBlobUrl = require('./assets/bergen.png');
+const timelineUrl = require('./assets/timeline.svg');
+const blobmapUrl = require('./assets/blobmap.svg');
+const mapUrl = require('./assets/map.png');
 
 export function BergenInfoBlock() {
   return (

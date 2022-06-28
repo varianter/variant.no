@@ -17,7 +17,7 @@ export default function SayHi({
   return (
     <div className={className}>
       <a className={style.sayHi} href={href} rel={rel}>
-        <img src={require('./say-hi.svg').src} role="none" />
+        <img src={require('./say-hi.svg')} role="none" />
         <div className={style.text}>{text}</div>
       </a>
     </div>
