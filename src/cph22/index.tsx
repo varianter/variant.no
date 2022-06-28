@@ -17,209 +17,173 @@ export default function Cph22() {
         </div>
       </div>
 
-      <div className={style.wrapper}>
-        <header className={style.header}>
-          <h1>
-            København, <span>2. - 4. sep</span>
-          </h1>
-          <p>Varianttur</p>
-        </header>
+      <section className={style.fullheightSection}>
+        <div className={style.introHalf}>
+          <header className={style.header}>
+            <h5>Varianttur</h5>
+            <h1>København</h1>
+            <h1>2. - 4. september</h1>
+          </header>
 
-        <nav className={style.nav}>
-          <h4>Hopp til</h4>
-          <ul>
-            <a href="#fredag">
-              <li>Fredag</li>
-            </a>
-            <a href="#lørdag">
-              <li>Lørdag</li>
-            </a>
-            <a href="#søndag">
-              <li>Søndag</li>
-            </a>
-          </ul>
-        </nav>
+          <nav className={style.nav}>
+            <a href="#fredag">Ta meg til programmet</a>
+            <h4>Hopp til</h4>
+            <ul>
+              <a href="#fredag">
+                <li>Fredag</li>
+              </a>
+              <a href="#lørdag">
+                <li>Lørdag</li>
+              </a>
+              <a href="#søndag">
+                <li>Søndag</li>
+              </a>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <li>Mandag</li>
+              </a>
+            </ul>
+          </nav>
+        </div>
 
-        <section className={style.description}>
-          <h4>Velkommen til København!</h4>
-          <p>
-            Vi er henrykte, ja bortimot ekstatiske, over å igjen kunne invitere
-            varianter og deres nærmeste til varianttur. Dette er noe vi har sett
-            fram til og virkelig gledet oss til. I år bærer ferden til perlen
-            blant kystbyene (ifølge Edvard Munch) nemlig Kragerø. Vi skal bo på
-            flotte{' '}
-            <a
-              href="https://guldsmedenhotels.com/da/axel-hotel-copenhagen-vesterbro/"
-              target="_blank"
-            >
-              Axel Guldsmeden
-            </a>
-            .
-          </p>
-          <p>
-            Etter et år med til dels betydelige sosiale restriksjoner er det
-            ekstra morsomt å vite at vi kan sette av andre helga i september til
-            å bli kjent med nye medlemmer i variantfamilien. Og enda bedre kjent
-            med gamle.
-          </p>
-          <p>
-            I år har vi jobbet for å lage et opplegg som både er avslappende,
-            ernærende og utviklende samtidig som det sosiale står i sentrum.
-            Blant annet inviterer vi til tidenes første åpne variantdag. Som
-            alltid skal vi på båttur, denne gang i Telemarks skjærgård. Selv om
-            programmet er innholdsrikt vil det også være rom for litt egen tid i
-            spaavdelingen for de som har lyst til det.
-          </p>
+        <div className={style.introHalf}>
+          <img
+            className={style.introPic}
+            src={require('./85349472523692.png')}
+            role="none"
+            alt="Dette MÅ da være København?"
+          />
+        </div>
+      </section>
 
-          <p>Med dette ønsker vi alle en flott helg og god tur! Vi sees.</p>
-          <p>Mvh Turkomitéen</p>
-        </section>
+      <section className={style.fullheightSection} id="fredag">
+        <h3 className="fancy">Fredag</h3>
+        <table>
+          <tr>
+            <td>07:30</td>
+            <td>Avreise fra Værnes</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>Variantdagen starter med en matbit</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>Følger har mulighet til å sjekke ut byen</td>
+          </tr>
+          <tr>
+            <td>17:00</td>
+            <td>Innsjekk og fritid før middag</td>
+          </tr>
+          <tr>
+            <td>19:00</td>
+            <td>
+              Uformell middag på{' '}
+              <a href="https://boathouse.dk/" target="_blank">
+                Boathouse
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
 
-        <img
-          src={require('./travel-blob.svg')}
-          role="none"
-          alt=""
-          className={style.travelBlob}
-        />
+      <section className={style.fullheightSection}>
+        <h3 className="fancy">Lørdag</h3>
+        <table>
+          <tr>
+            <td>08:00 - 10:00</td>
+            <td>Frokost på hotellet</td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td>Vi går til båten</td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td>Vi utforsker farvannene rundt København</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>Vi utforsker København i grupper</td>
+          </tr>
+          <tr>
+            <td>18:00</td>
+            <td>Felles transport til Refshaleøen</td>
+          </tr>
+          <tr>
+            <td>19:00</td>
+            <td>
+              En trtt mer formell middag på{' '}
+              <a href="https://afkrog.dk/" target="_blank">
+                Afkrog - en rå juvel på Reffen
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>02:00 (+1)</td>
+            <td>Afkrog blir en avkrok</td>
+          </tr>
+        </table>
+      </section>
 
-        <section className={style.information}>
-          <img src={require('./information-blob.png')} role="none" alt="" />
+      <section className={style.fullheightSection}>
+        <h3 className="fancy">Søndag</h3>
+        <table>
+          <tr>
+            <td>08:00 - 10:00</td>
+            <td>Frokost</td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td>Utsjekking</td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td>Vi utforsker Tivoli</td>
+          </tr>
+          <tr>
+            <td>15:00</td>
+            <td>Felles lunsj et sted i Tivoli</td>
+          </tr>
+          <tr>
+            <td>17:00</td>
+            <td>Hjemreise (vi tar toget til Kastrup)</td>
+          </tr>
+          <tr>
+            <td>19:45</td>
+            <td>Fly til Værnes</td>
+          </tr>
+        </table>
+      </section>
 
-          <div className={style.informationContent}>
-            <div className={style.informationContentGroup}>
-              <h4>Hotell</h4>
-              <p>
-                <a
-                  href="https://guldsmedenhotels.com/da/axel-hotel-copenhagen-vesterbro/"
-                  target="_blank"
-                >
-                  Axel Guldsmeden
-                </a>
-              </p>
-            </div>
+      <section className={style.fullheightSection}>
+        <h1>Det praktiske</h1>
 
-            <div className={style.informationContentGroup}>
-              <h4>Lurer du på noe underveis?</h4>
+        <div className={style.informationContentGroup}>
+          <h4>Lurer du på noe underveis?</h4>
 
-              <div className={style.informationContentGroupContact}>
-                <p>Odd Morten</p>
-                <p>
-                  <a href="tel:+4792807375">+47 92 80 73 75</a>
-                </p>
+          <div className={style.informationContentGroupContact}>
+            <p>Odd Morten</p>
+            <p>
+              <a href="tel:+4792807375">+47 92 80 73 75</a>
+            </p>
 
-                <p>Axel Guldsmeden Hotel</p>
-                <p>
-                  <a href="tel:+4533313266">+45 33 31 32 66</a>
-                </p>
-              </div>
-            </div>
+            <p>
+              <a
+                href="https://guldsmedenhotels.com/axel-hotel-copenhagen-vesterbro/"
+                target="_blank"
+              >
+                Hotell Axel Guldsmeden
+              </a>
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className={style.agenda} id="fredag">
-          <h3 className="fancy">Fredag</h3>
-          <ul>
-            <li>
-              <p>07:30</p>
-              <p>Avreise fra Værnes</p>
-            </li>
-            <li>
-              <p>12:00</p>
-              <p>Variantdagen starter med en matbit</p>
-            </li>
-            <li>
-              <p>12:00</p>
-              <p>Følger har mulighet til å sjekke ut byen</p>
-            </li>
-            <li>
-              <p>17:00</p>
-              <p>Innsjekk og fritid før middag</p>
-            </li>
-            <li>
-              <p>19:00</p>
-              <p>
-                Uformell middag på{' '}
-                <a href="https://boathouse.dk/" target="_blank">
-                  Boathouse
-                </a>
-              </p>
-            </li>
-          </ul>
-        </section>
-
-        <section className={style.agenda} id="lørdag">
-          <h3 className="fancy">Lørdag</h3>
-          <ul>
-            <li>
-              <p>08:00 - 10:00</p>
-              <p>Frokost på hotellet</p>
-            </li>
-            <li>
-              <p>10:00</p>
-              <p>Vi går til båten</p>
-            </li>
-            <li>
-              <p>11:00</p>
-              <p>Vi utforsker farvannene rundt København</p>
-            </li>
-            <li>
-              <p>12:00</p>
-              <p>Vi utforsker København i grupper</p>
-            </li>
-            <li>
-              <p>18:00</p>
-              <p>Felles transport til Refshaleøen</p>
-            </li>
-            <li>
-              <p>19:00</p>
-              <p>
-                En litt mer formell middag på{' '}
-                <a href="https://afkrog.dk/" target="_blank">
-                  Afkrog - en rå juvel på Reffen
-                </a>
-              </p>
-            </li>
-            <li>
-              <p>02:00 (+1)</p>
-              <p>Afkrog blir en avkrok</p>
-            </li>
-          </ul>
-        </section>
-
-        <section className={style.agenda} id="søndag">
-          <h3 className="fancy">Søndag</h3>
-          <ul>
-            <li>
-              <p>08:00 - 10:00</p>
-              <p>Frokost</p>
-            </li>
-            <li>
-              <p>11:00</p>
-              <p>Utsjekking</p>
-            </li>
-            <li>
-              <p>11:00</p>
-              <p>Vi utforsker Tivoli</p>
-            </li>
-            <li>
-              <p>15:00</p>
-              <p>Felles lunsj et sted i Tivoli</p>
-            </li>
-            <li>
-              <p>17:00</p>
-              <p>Hjemreise (vi tar toget til Kastrup)</p>
-            </li>
-            <li>
-              <p>19:45</p>
-              <p>Fly til Værnes</p>
-            </li>
-          </ul>
-        </section>
-      </div>
-
-      <a href="#" className={style.toTop}>
-        Til toppen
-      </a>
+      <section className={style.fullheightSection}>
+        <a href="#" className={style.toTop}>
+          Dette høres helt topp ut, ta meg med 🚀
+        </a>
+      </section>
     </div>
   );
 }

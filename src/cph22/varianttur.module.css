@@ -10,17 +10,12 @@
   overflow-x: hidden;
   z-index: 0;
 }
-.wrapper {
-  max-width: 50rem;
-  margin: 0 auto;
-  min-height: 100%;
-  padding: 4rem 1rem;
-}
 
 .header {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .header h1 {
   font-size: 3.75rem;
@@ -28,6 +23,65 @@
 }
 .header span {
   white-space: nowrap;
+}
+
+td,
+tr {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+table {
+  margin-top: 3rem;
+  width: 40vw;
+}
+
+tr {
+  line-height: 3rem;
+}
+
+td {
+  margin: 1rem;
+}
+
+.introHalf {
+  height: 90vh;
+  width: 30vw;
+}
+
+.fullheightSection {
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 10vh 10vw;
+  scroll-snap-align: start;
+}
+.fullheightSection:nth-child(even) {
+  background-color: #b7b4de;
+}
+.fullheightSection:nth-child(odd) {
+  background-color: #fad2e2;
+}
+.fullheightSection:first-child {
+  display: flex;
+  flex-direction: row;
+}
+.fullheightSection:last-child {
+  height: 20vh;
+}
+
+.introPic {
+  max-width: 90vw;
+  right: 20vw;
+  top: 20vh;
+}
+
+.toTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.25rem;
 }
 
 .nav {
@@ -38,7 +92,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(4, max-content);
   gap: 1rem;
 }
 .nav a {
@@ -102,7 +156,7 @@
   font-size: 2.75rem;
   font-weight: 500;
 }
-.agenda ul {
+.agenda table {
   list-style: none;
   display: grid;
   grid-template-columns: minmax(12ch, max-content) auto;
@@ -148,11 +202,4 @@
   composes: backgroundItem;
   top: 40%;
   left: 0;
-}
-
-.toTop {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-  font-size: 1.25rem;
 }
