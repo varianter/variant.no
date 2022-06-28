@@ -8,11 +8,13 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
       <figure className={style.media}>
         <a href={item.url}>
           <div className={style.thumbnail}>
-            <img
-              className={style.thumbnail__image}
-              src={item.imageCoverUrl}
-              alt=""
-            />
+            {item.imageCoverUrl && (
+              <img
+                className={style.thumbnail__image}
+                src={item.imageCoverUrl}
+                alt=""
+              />
+            )}
           </div>
         </a>
       </figure>

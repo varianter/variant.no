@@ -11,13 +11,15 @@ export default function Podcast({ item }: { item: PodcastItem }) {
     <div className={and(style.card, style['card--podcast'])}>
       <div className={style.media}>
         <div className={style.podcast__cover}>
-          <Image
-            className={style.cover}
-            src={item.imageCoverUrl}
-            alt=""
-            width={500}
-            height={500}
-          />
+          {item.imageCoverUrl && (
+            <Image
+              className={style.cover}
+              src={item.imageCoverUrl}
+              alt=""
+              width={500}
+              height={500}
+            />
+          )}
         </div>
       </div>
       <div className={style.text}>
