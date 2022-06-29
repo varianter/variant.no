@@ -72,6 +72,7 @@ Variant er en stolt bærekraftig bedrift, [faktisk er vi blitt Miljøfyrtårn](h
 
 Hvis du ikke er varm i ørene enda, og ønsker å lese enda mer om filosofien og konseptet vårt, er denne godt behandlet i detalj. Det er bare å lene seg tilbake med en god kopp kaffe og dypdykke:
 
+- [Les mer om våre planer for Variant Bergen](https://variant.no/bergen)
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
