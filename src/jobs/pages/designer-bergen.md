@@ -20,7 +20,7 @@ I tillegg til dette så ser etter deg som har en god porsjon entusiasme og nysgj
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
-## Hva ser vi etter i designere i Variant?
+## Hvilken designer ser vi etter?
 
 Nå ser vi etter deg som har 2 eller flere år erfaring med design av digitale løsninger. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
