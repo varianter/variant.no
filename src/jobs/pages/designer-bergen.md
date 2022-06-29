@@ -42,7 +42,7 @@ Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrk
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-**_Prosjekter_** - Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen.
+**_Prosjekter_** - Den aller viktigste faktoren når det kommer til trivsel og faglig utvikling i hverdagen er prosjektet vi jobber på. Derfor er du selv med på å påvirke dette. Om du er interessert i å delta salgsprosessene, eller om det holder å få en telefon når du vurderes til et oppdrag, bestemmer du selv. Du vil jobbe i spennende prosjekter ute hos våre kunder.
 
 **_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
@@ -50,7 +50,7 @@ Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrk
 
 ## Det økonomiske
 
-Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
+Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
 
 - Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 872 482](https://www.variant.no/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
