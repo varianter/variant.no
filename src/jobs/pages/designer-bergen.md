@@ -22,7 +22,7 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 ## Hva ser vi etter i designere i Variant?
 
-Nå ser vi etter deg som har 2 eller flere (ja - gjerne en del) års erfaring som designer. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Nå ser vi etter deg som har 2 eller flere år erfaring med design av digitale løsninger. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
 Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrker og vi ser etter en designer som har jobbet noen år med ett eller flere av følgende områder:
 
