@@ -2,7 +2,7 @@
 title: Designer som vil bygge Variant bergen
 h1_title: Designer som vil være med å bygge Variant Bergen
 slug: designer-som-vil-bygge-variant-bergen
-contact_emails: andreas@variant.no, te@variant.no
+contact_emails: andreas@variant.no, marie@variant.no
 meta_title: Vil du være med å bygge Variant Bergen?
 meta_description: Vi ser etter en dyktig designer som vil være med å bygge Variant Bergen!
 meta_image: https://www.variant.no/images/erfaren_designer_meta_bergen.jpg
