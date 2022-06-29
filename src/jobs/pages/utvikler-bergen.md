@@ -22,9 +22,9 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 ## Hvilken utvikler ser vi etter?
 
-Nå ser vi etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger. Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Nå ser vi etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger. Du bør være noen som holder seg oppdatert innen utvikling. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
-Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker og vi ser etter en utvikler som har jobbet noen år med ett eller flere av følgende områder:
+Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker og vi ser etter en utvikler som har jobbet med:
 
 - Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier
 - Utvikling mot og i Azure, GCP, AWS eller lignende skyplattformer
