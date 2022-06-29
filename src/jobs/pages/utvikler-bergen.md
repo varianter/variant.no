@@ -21,14 +21,9 @@ I tillegg til dette så ser etter deg som har en god porsjon entusiasme og nysgj
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
 ## Hvilken utvikler ser vi etter?
+Er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker.
 
-Nå ser vi etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger. Du bør være noen som holder seg oppdatert innen utvikling. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
-
-Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker og vi ser etter en utvikler som har jobbet med:
-
-- Frontendutvikling med React, Vue, Angular eller andre moderne frontend-teknologier
-- Utvikling mot og i Azure, GCP, AWS eller lignende skyplattformer
-- Backendutvikling med .NET, Java eller Kotlin
+Vi etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger. Du bør være noen som holder seg oppdatert innen utvikling. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
 ## Ansvar og oppgaver
 
