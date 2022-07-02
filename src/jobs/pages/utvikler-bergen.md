@@ -1,5 +1,5 @@
 ---
-title: Utvikler som vil bygge Variant bergen
+title: Utvikler som vil være med å bygge Variant Bergen
 h1_title: Utvikler som vil være med å bygge Variant Bergen
 slug: utvikler-som-vil-bygge-variant-bergen
 contact_emails: andreas@variant.no, marie@variant.no
@@ -8,28 +8,25 @@ meta_description: Vi ser etter en dyktig utvikler som vil være med å bygge Var
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
-Kort fortalt, vi ser etter utviklere som vil være med å utvikle Variant og Bergen. Det er det vi inviterer deg med på, - sammen med flere og sammen med oss.
+Kort fortalt, vi ser etter utviklere som vil være med på oppstarten av et annerledes konsulentselskap i Bergen. Det er det vi inviterer deg med på, - sammen med flere og sammen med oss.
 
-Er dette noe du blir engasjert av?
+Variant er et konsulentselskap av og for mennesker med stor læreglede, som styrer sin egen hverdag enten det er fra hjemmekontor, på kontoret vårt eller ute hos kunde. Et selskap der informasjon er tilgjengelig for alle, hvor alle blir sett og hørt, og hvor vi er rause med hverandre. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
-## Hvilken personer ser vi etter?
+## Hvem ser vi etter?
 
-Først og fremst, så ser vi etter deg som blir motivert av å være med å bygge noe opp fra starten. Noen som tørr å utfordre og som ønsker å bidra til å forme Bergenskontoret. Det er mange måter å bygge bedrift på. Noen skinner når det kommer til kulturbygging, andre er faglige ledestjerner, noen drives av salg og noen er flink med rekruttering. Dette er alle viktige bidrag til å bygge Variant Bergen.
+Er du en kløpper på **React, Vue, Angular eller andre moderne frontend-teknologier?** Eller kanskje du har jobbet mer **.NET, Java eller Kotlin?** Kanskje du har hode i skyen og erfaring med **Azure, GCP, AWS eller lignende skyplattformer?** Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker og ser nå etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger.
 
-I tillegg til dette så ser etter deg som har en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at vi alle har verdi- og tankesett som harmonerer med disse.
+I tillegg til dette så ser vi etter deg som har en god porsjon entusiasme og nysgjerrighet. Du vil være med å etablere kultur og finne retning sammen med resten av Bergensvariantene. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at vi alle har verdi- og tankesett som harmonerer med disse.
 
-Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
+Du bør være en som holder seg oppdatert innen utvikling. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
-## Hvilken utvikler ser vi etter?
-Er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Vi ønsker å skape et miljø av utviklere med ulik bakgrunn, fagprofil og styrker.
-
-Vi etter deg som har 2 eller flere år erfaring med utvikling av digitale løsninger. Du bør være noen som holder seg oppdatert innen utvikling. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
 ## Ansvar og oppgaver
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-**_Prosjekter_** - Den aller viktigste faktoren når det kommer til trivsel og faglig utvikling i hverdagen er prosjektet vi jobber på. Derfor er du selv med på å påvirke dette. Om du er interessert i å delta salgsprosessene, eller om det holder å få en telefon når du vurderes til et oppdrag, bestemmer du selv. Du vil jobbe i spennende prosjekter ute hos våre kunder.
+**_Prosjekter_** - Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen, men også mindre oppstartbedrifter innen Helsesektoren, for å nevne noen. 
 
 **_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
