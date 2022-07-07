@@ -73,4 +73,4 @@ PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om stillingen? Vi tar gjerne en uforpliktet prat når som helst. Ikke vær redd for å ta kontakt med Andreas (designer i Bergen) eller Anders (midlertidig daglig leder i Bergen).
+Har du spørsmål eller ønsker å snakke med oss om stillingen? Vi tar gjerne en uforpliktet prat når som helst. Ikke vær redd for å ta kontakt med Andreas (designer i Bergen) eller Marie (daglig leder i Bergen).
