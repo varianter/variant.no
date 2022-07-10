@@ -1,6 +1,5 @@
 :global(html) {
-  scroll-behavior: smooth;
-  background-color: var(--color-secondary3);
+  background-color: var(--color-secondary1);
 }
 
 .container {
@@ -9,6 +8,23 @@
   position: relative;
   overflow-x: hidden;
   z-index: 0;
+  color: var(--color-standard__white);
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@supports (scroll-snap-align: start) {
+  .container {
+    scroll-snap-type: y mandatory;
+  }
+  .fullheightSection {
+    scroll-snap-align: start;
+  }
+}
+
+.container a {
+  color: white;
 }
 
 .header {
@@ -16,151 +32,107 @@
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 .header h1 {
-  font-size: 3.75rem;
+  font-size: 5rem;
   font-weight: 500;
 }
-.header span {
-  white-space: nowrap;
-}
-
-td,
-tr {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-table {
-  margin-top: 3rem;
-  width: 40vw;
-}
-
-tr {
-  line-height: 3rem;
-}
-
-td {
-  margin: 1rem;
-}
-
-.introHalf {
-  height: 90vh;
-  width: 30vw;
+.header h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  font-weight: 500;
 }
 
 .fullheightSection {
   left: 0;
   height: 100vh;
   width: 100vw;
-  padding: 10vh 10vw;
+  padding: 2rem;
   scroll-snap-align: start;
 }
-.fullheightSection:nth-child(even) {
-  background-color: #b7b4de;
-}
 .fullheightSection:nth-child(odd) {
-  background-color: #fad2e2;
+  background-color: var(--color-secondary1);
 }
-.fullheightSection:first-child {
-  display: flex;
-  flex-direction: row;
-}
-.fullheightSection:last-child {
-  height: 20vh;
+.fullheightSection:nth-child(even) {
+  background-color: var(--color-secondary1__tint1);
 }
 
-.introPic {
-  max-width: 90vw;
-  right: 20vw;
-  top: 20vh;
+.firstPage {
+  composes: fullheightSection;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.toProgram {
+  position: absolute;
+  top: calc(100% + 10rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.imageMaxWidth {
+  max-width: 100%;
 }
 
 .toTop {
+  composes: fullheightSection;
+  /* height: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 1.25rem;
+  padding: 5rem 0;
 }
 
-.nav {
-  max-width: 75%;
-  margin: 3rem auto 0;
+.info {
+  composes: firstPage;
 }
-.nav ul {
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
+.info h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.info p {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.infoGroup {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
-.nav a {
-  font-size: 1.25rem;
+.infoGroup {
+  margin-top: 4rem;
 }
-
-.description {
-  margin: 3rem auto 0;
-  max-width: 75%;
+.infoGroup h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
 }
-.description p {
-  font-size: 1.25rem;
-}
-
-.travelBlob {
-  position: absolute;
-  right: 10%;
-  top: 15%;
-  z-index: -1;
-}
-
-@media (max-width: 1400px) {
-  .travelBlob {
-    display: none;
-  }
-}
-
-.information {
-  position: relative;
-  display: flex;
-  padding: 2rem;
-  justify-content: center;
-}
-.information img {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.informationContent {
-  padding: 6rem 0 5rem 0;
-}
-.informationContent p {
-  font-size: 1.25rem;
-  margin: 0;
-}
-.informationContentGroup:not(:first-child) {
-  margin-top: 2rem;
-}
-.informationContentGroupContact {
+.infoGroupContact {
   display: grid;
   grid-template-columns: max-content max-content;
   gap: 0 2rem;
 }
 
 .agenda {
-  margin-top: 4rem;
+  composes: fullheightSection;
+  padding: 8rem;
 }
 .agenda h3 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
-.agenda table {
+.agenda ul {
   list-style: none;
   display: grid;
   grid-template-columns: minmax(12ch, max-content) auto;
-  gap: 0.5rem 2.375rem;
+  gap: 1rem 3rem;
+  margin-top: 3rem;
   padding-left: 1rem;
 }
 .agenda li {
@@ -180,26 +152,28 @@ td {
   }
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-
-  z-index: -1;
-  overflow: hidden;
-}
-.backgroundItem {
-  position: absolute;
+.firstPageLeft {
+  position: relative;
 }
 
-.backgroundFirst {
-  composes: backgroundItem;
+.jippiBlob {
+  position: absolute;
   top: 0;
-  right: 0;
-}
-.backgroundSecond {
-  composes: backgroundItem;
-  top: 40%;
   left: 0;
+  transform: translate(-25%, -25%);
+  pointer-events: none;
+}
+
+.jippiBlobArrow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-80%, -140%);
+  pointer-events: none;
+}
+.jippiBlobArrow p {
+  font-weight: 500;
 }
