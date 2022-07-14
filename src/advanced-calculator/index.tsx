@@ -309,7 +309,7 @@ export default function Calculator() {
       <CalculatorSection>
         <CalculatorMain>
           <TextSplitter>
-            <h3>De små stora sakerna, eller de (andre betingelser) </h3>
+            <h3>De små og store sakene</h3>
           </TextSplitter>
           <InView>
             <ul>
