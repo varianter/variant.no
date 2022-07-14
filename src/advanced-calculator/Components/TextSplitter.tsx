@@ -6,7 +6,7 @@ type SplitTextProps = {
   children: string;
 } & HTMLMotionProps<'span'>;
 export function SplitText({ children, ...rest }: SplitTextProps) {
-  let words = children.split('') as string[];
+  let words = children.split(' ').map(String) as string[];
   return (
     <>
       {words.map((word, i) => {
@@ -17,7 +17,7 @@ export function SplitText({ children, ...rest }: SplitTextProps) {
             style={{ display: 'inline-block', willChange: 'transform' }}
             custom={i}
           >
-            {word + (i !== words.length - 1 ? '\u00A0' : '')}
+            {String(word) + (i !== words.length - 1 ? '\u00A0' : '')}
           </motion.span>
         );
       })}
@@ -55,8 +55,8 @@ export function recursiveSplit(children: React.ReactNode): ReactNode {
   const arrayChildren = Children.toArray(children);
 
   return Children.map(arrayChildren, (child) => {
-    if (typeof child === 'string') {
-      return <SplitText variants={wordVariants}>{child as string}</SplitText>;
+    if (typeof child === 'string' || typeof child === 'number') {
+      return <SplitText variants={wordVariants}>{String(child)}</SplitText>;
     }
     if (!React.isValidElement(child)) return child;
     return React.cloneElement(

@@ -3,7 +3,7 @@ import { Group } from '@visx/group';
 import { ParentSize } from '@visx/responsive';
 import { scaleBand, scaleLinear } from '@visx/scale';
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Counter from '../Counter';
 import { formatCurrencyFromNumber } from '../helpers/utils';
@@ -25,6 +25,7 @@ export type BarsProps = {
 };
 
 export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
+  const [visible, setVisible] = useState(false);
   const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.8,
@@ -32,6 +33,10 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
 
   const xMax = parentWidth;
   const yMax = parentHeight - verticalMargin;
+
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 300);
+  }, []);
 
   const xScale = useMemo(
     () =>
@@ -55,12 +60,12 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
     [yMax, data],
   );
 
-  return parentWidth < 10 ? null : (
+  return parentWidth < 10 || !visible ? null : (
     <svg
       ref={ref}
       width={parentWidth}
       height={parentHeight}
-      style={{ overflow: 'visible' }}
+      style={{ overflow: 'visible', display: 'block' }}
     >
       <GradientTealBlue id="teal" />
       <LinearGradient
@@ -72,15 +77,6 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
         from="#534DAC"
         to="#FFE7E4"
       />
-      {/* <LinearGradient
-          id={"purple"}
-          y1={"-50%"}
-          y2={"150%"}
-          x1={"0%"}
-          x2={"0%"}
-          from="#534DAC"
-          to="rgba(255,255,255,0)"
-        /> */}
 
       <Group top={verticalMargin}>
         {data.map((d, index) => {
@@ -96,11 +92,13 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
             offscreen: {
               height: 0,
               y: yMax,
+              x: 0,
               opacity: 0.5,
             },
             onscreen: {
               height: barHeight,
               y: barY,
+              x: 0,
               opacity: 1,
             },
           };
@@ -125,6 +123,7 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
                 rx={20}
                 transition={transition}
                 variants={barRectVariant}
+                initial="offscreen"
                 animate={inView ? 'onscreen' : 'offscreen'}
               />
 
@@ -166,9 +165,15 @@ const BonusGraphParent = ({ bonus }: { bonus: BarData[] }) => {
   return (
     <div style={{ aspectRatio: '7/3', width: '100%' }}>
       <ParentSize>
-        {({ width, height }) => (
-          <BonusGraph parentHeight={height} parentWidth={width} data={bonus} />
-        )}
+        {({ width, height }) => {
+          return (
+            <BonusGraph
+              parentHeight={height}
+              parentWidth={width}
+              data={bonus}
+            />
+          );
+        }}
       </ParentSize>
     </div>
   );

@@ -33,11 +33,9 @@ const DEGREE: { [key: string]: string } = {
   master: 'Master',
 };
 
-export const Calculator = () => {
+export default function Calculator() {
   const [selectedYear, setSelectedYear] = useState(2015);
   const [degree, setDegree] = useState('bachelor');
-  //const [sections, setSections] = useState({ bonus: false, pension: false });
-  /* const [touchedInputs, setTouchedInput] = useState({ experience: false }); */
   const thisYear = new Date().getFullYear();
   const year = selectedYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
@@ -58,15 +56,6 @@ export const Calculator = () => {
   function onSelectedYearChange(value: number) {
     setSelectedYear(value);
   }
-
-  /*  function onInputBlur(name: string) {
-    const omg = {
-      ...touchedInputs,
-      [name]: true
-    };
-    setTouchedInput(omg);
-    console.log(touchedInputs);
-  } */
 
   return (
     <div className={style['calculator']}>
@@ -290,8 +279,11 @@ export const Calculator = () => {
               <p>
                 {' '}
                 Det vil si at du slipper bruke dine feriedager i jula. I{' '}
-                {thisYear} er det {numberOfWorkingDaysInChristmas(thisYear)}{' '}
-                dager du kan bruke på en lengre sommerferie, det!
+                {thisYear} er det{' '}
+                <strong>
+                  {numberOfWorkingDaysInChristmas(thisYear)} dager
+                </strong>{' '}
+                du kan bruke på en lengre sommerferie, det!
               </p>
             </div>
           </InView>
@@ -305,11 +297,16 @@ export const Calculator = () => {
           </TextSplitter>
           <InView>
             <ul>
-              <li>Gadgetbudsjett på 10 000</li>
-              <li>Dekt telefonabonnement</li>
-              <li>Dekt bredbånd hjemme</li>
               <li>
-                Treningsmedlemskap eller treningsutstyr{' '}
+                Gadgetbudsjett på <strong>10 000 kr</strong>
+              </li>
+              <li>Dekt telefonabonnement</li>
+              <li>
+                Dekt bredbånd hjemme opp til <strong>500 kr</strong> i måneden
+              </li>
+              <li>
+                Treningsmedlemskap eller treningsutstyr opp til{' '}
+                <strong>500 kr</strong> i måneden{' '}
                 <span aria-label="trening" role="img">
                   👟🏋️🎿
                 </span>
@@ -322,21 +319,31 @@ export const Calculator = () => {
               <li>
                 Full lønn under permisjon. NAV dekker opp til{' '}
                 <span>{formatCurrencyFromNumber(ONE_G * 6)}</span> (6G). Variant
-                tar sig av resten.
+                tar seg av resten.
               </li>
               <li>
-                [Note to self: om man inte har arbetat upp 9 månader så betalat
-                vi ändå permisjon?]
+                Dersom du ikke har spart opp nok til å få foreldrepenger av NAV
+                dekker Variant halve permisjonen.
               </li>
               <li>Betalt 2 uker permisjon for partner etter fødsel.</li>
-              <li>2 (betalte?) dager til barnehagetilvenning.</li>
+              <li>2 dager til barnehagetilvenning.</li>
               <li>
-                Utvidede rettigheter til egenmelding og sykepenger. (Vad betyder
-                detta egentligen?)
+                Utvidede rettigheter til egenmelding og sykepenger. Du kan ta
+                enkeltdager som egenmelding uten at du "mister" dager. (les: som
+                en{' '}
+                <a
+                  href="https://www.regjeringen.no/no/tema/arbeidsliv/arbeidsmiljo-og-sikkerhet/inkluderende_arbeidsliv/id947/"
+                  title="Inkluderende arbeidsliv (IA)"
+                  target="_blank"
+                  rel="external"
+                >
+                  IA-bedrift
+                </a>
+                )
               </li>
               <li>
                 Ansatte som er i foreldrepermisjon eller som er sykemeldte får
-                full bonus
+                full bonus og ansiennitet.
               </li>
               <li>
                 Reiseforsikring for deg og din familie.
@@ -348,15 +355,24 @@ export const Calculator = () => {
             </ul>
           </InView>
           <InView>
-            <p>
-              Konferanser Faglig litteratur, Kurser, Årlig Varianttur (London,
-              Øye, Kragerø, København) Detaljer finner du i Håndboken vår.
-            </p>
+            <h5>Fag og sosialt</h5>
+
+            <ul>
+              <li>
+                En konferanse, kurs eller tilsvarende i året. Så mange du vil om
+                du snakker på de.
+              </li>
+              <li>
+                Årlig Varianttur <strong>med ledsager/venn/følge</strong> (fra
+                tidligere: London, Øye, Kragerø, København).
+              </li>
+              <li>
+                Julebord <strong>med ledsager/venn/følge</strong>.
+              </li>
+            </ul>
           </InView>
         </CalculatorMain>
-
-        {/* <CalculatorAside></CalculatorAside> */}
       </CalculatorSection>
     </div>
   );
-};
+}

@@ -1,13 +1,19 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { Calculator } from 'src/advanced-calculator';
 import Layout from 'src/layout';
 import 'src/advanced-calculator/calculator.module.css';
 
+// import dynamic from 'next/dynamic';
+import Calculator from 'src/advanced-calculator';
+
+// const Calculator = dynamic(() => import('src/advanced-calculator'), {
+//   ssr: false,
+// });
+
 const SalaryCalculator: NextPage<{}> = ({}) => {
   return (
-    <Layout>
+    <Layout fullWidth>
       <Head>
         <meta
           property="og:description"
