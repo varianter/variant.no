@@ -11,6 +11,7 @@ type LayoutProps = {
   title?: string;
   fullWidth?: boolean;
   crazy?: boolean;
+  noOverflow?: boolean;
 };
 
 const Layout: React.FC<LayoutProps> = ({
@@ -18,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
   crazy = false,
+  noOverflow = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
@@ -28,9 +30,14 @@ const Layout: React.FC<LayoutProps> = ({
     closeRef,
   );
 
+  const mainClass = and(
+    style.main,
+    !noOverflow ? style['main--overflow'] : undefined,
+  );
+
   return (
     <div
-      className={style.main}
+      className={mainClass}
       style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
     >
       <Head>

@@ -13,7 +13,7 @@ import Calculator from 'src/advanced-calculator';
 
 const SalaryCalculator: NextPage<{}> = ({}) => {
   return (
-    <Layout fullWidth>
+    <Layout fullWidth noOverflow>
       <Head>
         <meta
           property="og:description"
