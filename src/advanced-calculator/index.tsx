@@ -175,7 +175,7 @@ export default function Calculator() {
       <CalculatorSection>
         <CalculatorMain>
           <TextSplitter>
-            <h2>Du får bonus, du får bonus! Alla får boooonuuuuus! 💰💰💰</h2>
+            <h2>Du får bonus, du får bonus! Alle får boooonuuuuus! 💰💰💰</h2>
           </TextSplitter>
           <InView>
             <div className={style['text-section']}>
@@ -184,7 +184,7 @@ export default function Calculator() {
                 beregnes som 30% av overskuddet dette kvartalet, delt{' '}
                 <strong>likt</strong> på <strong>alle ansatte</strong>. Med
                 andre ord spiller det ingen rolle om du er rett fra skolebenken
-                eller daglig leder.
+                eller daglig leder. Dette gjelder fra første arbeidsdag.
               </p>
             </div>
             <div>
@@ -222,13 +222,20 @@ export default function Calculator() {
       <CalculatorSection>
         <CalculatorMain>
           <TextSplitter>
-            <h2>Hvordan det fungerar i</h2>
+            <h2>Lønnsvekst</h2>
           </TextSplitter>
           <InView>
             <div className={style['text-section']}>
               <p>
-                Grafen nedan visar historisk ökning av lön i Variant givet en
-                erfarenhet av {totalExperience}.
+                Høy startlønn er en start, men med økende årlige kostnader er vi
+                like avhengige av å ha god lønnsvekst. Dette er ofte noe du må
+                forhandle deg frem til og som du ikke vet ved signering av ny
+                kontrakt. Vi kan derimot, på grunn av vår lønnsmodell, gi noe
+                sannsynlige tall.
+              </p>
+              <p>
+                Grafen her viser en indikasjon på lønnsvekst i Variant gitt en
+                erfaring av {totalExperience}.
               </p>
             </div>
           </InView>
@@ -239,19 +246,28 @@ export default function Calculator() {
       <CalculatorSection>
         <CalculatorMain>
           <TextSplitter>
-            <h2>
-              Så, med det sagt så er det {daysUntilSalaryRaise(new Date())}{' '}
-              dager til lønnsøkning.
-            </h2>
+            <h3>
+              Det er {daysUntilSalaryRaise(new Date())} dager til lønnsøkning.
+            </h3>
           </TextSplitter>
           <InView>
             <div className={style['text-section']}>
               <p>
-                Som du kanske notert så är det erfaring som bestemmer lønn i
-                Variant. Det mener vi er likt og rettferdig. Og neste år har du
-                jo blitt mer erfaren, ikke sant? Så vi justerar lønn rett etter
-                starten av året basert på Teknas statstikk [noe om det]. Ingen
-                mer vanskelige lønnsforhandlinger — ingen likte de jo!
+                Vi har en helt åpen og lik lønnsmodell i Variant, som baserer
+                seg på antall år siden du var ferdig utdannet. Lønnen baserer vi
+                på Teknas årlige statistikk. Dette har noen klare fordeler, som
+                f.eks vi slipper lønnsforhandleringer, vi sikrer en god
+                lønnsvekst og ikke minst vi kan gi lønnsjustering tidlig.
+              </p>
+              <p>
+                Ved årsbytte vil du få ny ansiennitet som vil gi deg automatisk
+                lønnsforhøyning. Siden det skjer så tidlig kan det også bety at
+                du tjener mer i løpet av året sammenlignet med dersom
+                lønnsveksten skjer ved sommertid som ved enkelte andre steder.
+              </p>
+              <p>
+                Ingen mer vanskelige lønnsforhandlinger — ingen likte de jo! God
+                lønn og god lønnsvekst som en standard!
               </p>
               <p>
                 PS: Vi regner og foreldreperm som erfaring.{' '}
@@ -277,13 +293,13 @@ export default function Calculator() {
           <InView>
             <div className={style['text-section']}>
               <p>
-                {' '}
                 Det vil si at du slipper bruke dine feriedager i jula. I{' '}
                 {thisYear} er det{' '}
                 <strong>
                   {numberOfWorkingDaysInChristmas(thisYear)} dager
                 </strong>{' '}
-                du kan bruke på en lengre sommerferie, det!
+                du kan bruke på en lengre sommerferie, det! Dette er dager som
+                ikke regnes som ferie, men som er utbetalt som vanlig lønn.
               </p>
             </div>
           </InView>
@@ -298,7 +314,7 @@ export default function Calculator() {
           <InView>
             <ul>
               <li>
-                Gadgetbudsjett på <strong>10 000 kr</strong>
+                Gadgetbudsjett på <strong>10 000 kr</strong> i året.
               </li>
               <li>Dekt telefonabonnement</li>
               <li>
@@ -361,6 +377,10 @@ export default function Calculator() {
               <li>
                 En konferanse, kurs eller tilsvarende i året. Så mange du vil om
                 du snakker på de.
+              </li>
+              <li>
+                Du kan selvfølgelig kjøpe alle bøker og digitale kurs du ønsker
+                i løpet av året. Vi lever trossalt av kunnskap.
               </li>
               <li>
                 Årlig Varianttur <strong>med ledsager/venn/følge</strong> (fra

@@ -88,7 +88,7 @@ export function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
                 width={barWidth}
                 height={barHeight}
                 x={barX}
-                animate={{ height: barHeight, y: barY }}
+                animate={{ height: barHeight, y: barY, x: 0 }}
                 fill={`url(#lol-${index})`}
                 rx={10}
               />

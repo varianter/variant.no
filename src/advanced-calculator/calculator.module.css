@@ -44,6 +44,7 @@
 
 .text-section {
   font-size: calc((24 / 16) * 1rem);
+  margin-bottom: 1rem;
 }
 
 .form-wrapper {
@@ -114,10 +115,13 @@
   width: 100%;
   max-width: calc((320 / 16) * 1rem);
 }
+.pension__info {
+  margin-bottom: 2rem;
+}
 
 .pension-graph {
   /* height: 30rem; */
-  width: 6rem;
+  /* width: 6rem; */
   aspect-ratio: 1/4;
 }
 

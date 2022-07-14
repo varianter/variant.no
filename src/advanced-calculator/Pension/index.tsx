@@ -50,16 +50,28 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
     <div>
       <div className={style.pension}>
         <div className={style.pension__controls}>
-          <div>
-            <h4>Vi tåles å sammenlignes</h4>
+          <div className={style.pension__info}>
+            <h4>Vi kan sammenlignes</h4>
             <p>
-              En liten text om vad som skjer her vore jo på sin plass. Kanskje
-              med lenke til statistikk, kilde eller noe lignende.
+              Pensjon er ikke alltid enkelt å tenke over, særlig ikke i starten.
+              Men det er en viktig ting å tenke på, særlig for unge som i mindre
+              grad får dekt pensjonen av staten fremover.
+            </p>
+
+            <p>
+              Pensjon kan faktisk utgjøre mye av lønna de og det er i praksis
+              ekstra sparing som arbeidsplassen gjør for deg. Det er derfor
+              viktig å ta det med i beregninger av betingelser.
+            </p>
+
+            <p>
+              Variant betaler 7% av årslønn opp til 12G ekstra til sparing i
+              pensjon for deg.
             </p>
           </div>
           <div className={style['form-wrapper']}>
             <label htmlFor="compareSalary">
-              Årslønn
+              Gjeldende årslønn
               <RangeSlider
                 min={500000}
                 max={1200000}
