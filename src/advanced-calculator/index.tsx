@@ -284,7 +284,7 @@ export default function Calculator() {
         <CalculatorMain>
           <TextSplitter>
             <h2>
-              Variant tar fri hele julen!{' '}
+              Variant tar fri hele jula!{' '}
               <span aria-label="jul" role="img">
                 🎅🏻
               </span>
@@ -293,8 +293,8 @@ export default function Calculator() {
           <InView>
             <div className={style['text-section']}>
               <p>
-                Det vil si at du slipper bruke dine feriedager i jula. I{' '}
-                {thisYear} er det{' '}
+                Jula er for familie og venner. Og du skal slippe å bruke opp
+                dine feriedager. I {thisYear} er det{' '}
                 <strong>
                   {numberOfWorkingDaysInChristmas(thisYear)} dager
                 </strong>{' '}
@@ -316,13 +316,13 @@ export default function Calculator() {
               <li>
                 Gadgetbudsjett på <strong>10 000 kr</strong> i året.
               </li>
-              <li>Dekt telefonabonnement</li>
+              <li>Dekt telefonabonnement.</li>
               <li>
-                Dekt bredbånd hjemme opp til <strong>500 kr</strong> i måneden
+                Dekt bredbånd hjemme opp til <strong>500 kr</strong> i måneden.
               </li>
               <li>
                 Treningsmedlemskap eller treningsutstyr opp til{' '}
-                <strong>500 kr</strong> i måneden{' '}
+                <strong>500 kr</strong> i måneden.{' '}
                 <span aria-label="trening" role="img">
                   👟🏋️🎿
                 </span>
@@ -345,7 +345,7 @@ export default function Calculator() {
               <li>2 dager til barnehagetilvenning.</li>
               <li>
                 Utvidede rettigheter til egenmelding og sykepenger. Du kan ta
-                enkeltdager som egenmelding uten at du "mister" dager. (les: som
+                enkeltdager som egenmelding uten at du "mister" dager (les: som
                 en{' '}
                 <a
                   href="https://www.regjeringen.no/no/tema/arbeidsliv/arbeidsmiljo-og-sikkerhet/inkluderende_arbeidsliv/id947/"
@@ -355,7 +355,7 @@ export default function Calculator() {
                 >
                   IA-bedrift
                 </a>
-                )
+                ).
               </li>
               <li>
                 Ansatte som er i foreldrepermisjon eller som er sykemeldte får
