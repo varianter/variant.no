@@ -4,8 +4,8 @@
 
   min-height: 100vh;
   width: 100%;
-  max-width: calc(1170 / 16 * 1rem);
-  max-width: 100vw;
+  max-width: calc(1440 / 16 * 1rem);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: auto calc((300 / 16) * 1rem);
   grid-template-rows: var(--ensure-next-content-in-view);
