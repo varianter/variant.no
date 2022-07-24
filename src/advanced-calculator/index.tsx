@@ -15,8 +15,12 @@ import getPayscale from './helpers/getPayscale';
 import { numberOfWorkingDaysInChristmas } from './helpers/paidHolidaysOff';
 import { formatCurrencyFromNumber, getMaxYear } from './helpers/utils';
 import Pension from './Pension';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import style from './calculator.module.css';
+import { Button } from '@components/button';
+import { and } from 'src/utils/css';
+import { useMediaQuery } from 'src/utils/use-media-query';
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
@@ -39,6 +43,11 @@ export default function Calculator() {
   const thisYear = new Date().getFullYear();
   const year = selectedYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
+
+  const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
+
+  const [mobileVisibleInternal, setMobileVisible] = useState(true);
+  const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience =
     firstDayOfTheYear(maxYear).getFullYear() - selectedYear;
@@ -73,104 +82,163 @@ export default function Calculator() {
           </TextSplitter>
         </h1>
       </div>
-      <div className={style['calculator-controls']}>
-        <div className={style['form-row']}>
-          <div className={style['form-label']}>Hva slags utdanning har du?</div>
-          <div
-            style={{
-              display: 'flex',
-              gap: '1rem',
-              alignContent: 'center',
-            }}
-          >
-            <div className={style['radio-button-wrapper']}>
-              <input
-                className={style.inputRadio}
-                type="radio"
-                id="Bachelor"
-                name="education"
-                value="bachelor"
-                onChange={onDegreeChange}
-                defaultChecked
-              />
-              <label htmlFor="Bachelor">Bachelor</label>
-            </div>
-
-            <div className={style['radio-button-wrapper']}>
-              <input
-                className={style.inputRadio}
-                type="radio"
-                id="Master"
-                name="education"
-                value="master"
-                onChange={onDegreeChange}
-              />
-              <label htmlFor="Master">Master</label>
-            </div>
+      <AnimatePresence initial={false}>
+        <div
+          className={and(
+            style['calculator-controls'],
+            mobileVisible
+              ? undefined
+              : style['calculator-controls--mobileHidden'],
+          )}
+        >
+          <div className={style['calculator-phoneSummary']}>
+            {!mobileVisible && (
+              <motion.p
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  collapsed: { opacity: 0, y: 20 },
+                }}
+              >
+                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
+                <Counter
+                  num={payscale.current + getAverageBonus()}
+                  formatter={formatCurrencyFromNumber}
+                />{' '}
+                kr +{' '}
+                <Counter
+                  num={payscale.current * 0.07}
+                  formatter={formatCurrencyFromNumber}
+                />{' '}
+                i årlig pensjon.
+              </motion.p>
+            )}
+            <Button
+              onClick={() => setMobileVisible((b) => !b)}
+              aria-controls="controls-content"
+              aria-expanded={mobileVisible}
+            >
+              {mobileVisible ? 'Skjul' : 'Endre'}
+            </Button>
           </div>
+
+          {mobileVisible && (
+            <motion.div
+              id="controls-content"
+              role="region"
+              className={style['calculator-content']}
+              initial="collapsed"
+              animate="open"
+              exit="collapsed"
+              variants={{
+                open: { opacity: 1, height: 'auto' },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+            >
+              <div className={style['form-row']}>
+                <div className={style['form-label']}>
+                  Hva slags utdanning har du?
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '1rem',
+                    alignContent: 'center',
+                  }}
+                >
+                  <div className={style['radio-button-wrapper']}>
+                    <input
+                      className={style.inputRadio}
+                      type="radio"
+                      id="Bachelor"
+                      name="education"
+                      value="bachelor"
+                      onChange={onDegreeChange}
+                      defaultChecked
+                    />
+                    <label htmlFor="Bachelor">Bachelor</label>
+                  </div>
+
+                  <div className={style['radio-button-wrapper']}>
+                    <input
+                      className={style.inputRadio}
+                      type="radio"
+                      id="Master"
+                      name="education"
+                      value="master"
+                      onChange={onDegreeChange}
+                    />
+                    <label htmlFor="Master">Master</label>
+                  </div>
+                </div>
+              </div>
+              <label htmlFor="experience" className={style['form-row']}>
+                <div className={style['form-label']}>
+                  Når ble eller blir du ferdig med studiene?
+                </div>
+
+                <RangeSlider
+                  name="År"
+                  id="experience"
+                  min={1990}
+                  max={maxYear}
+                  value={selectedYear}
+                  onChange={onSelectedYearChange}
+                />
+              </label>
+
+              <div className={style['calculator-controls__summary']}>
+                <div className={style['calculator-controls__row']}>
+                  <div className={style['calculator-controls__label']}>
+                    Vi baserer lønn på erfaring
+                  </div>
+                  <div className={style['calculator-controls__value']}>
+                    {totalExperience}
+                  </div>
+                </div>
+
+                <div className={style['calculator-controls__row']}>
+                  <div className={style['calculator-controls__label']}>
+                    Det vil gi en årslønn på
+                  </div>
+                  <div className={style['calculator-controls__value']}>
+                    <Counter
+                      num={payscale.current}
+                      formatter={formatCurrencyFromNumber}
+                    />
+                  </div>
+                </div>
+
+                <div className={style['calculator-controls__row']}>
+                  <div className={style['calculator-controls__label']}>
+                    Årslønn + gjenomsnittlig bonus
+                  </div>
+                  <div className={style['calculator-controls__value']}>
+                    <Counter
+                      num={payscale.current + getAverageBonus()}
+                      formatter={formatCurrencyFromNumber}
+                    />
+                  </div>
+                </div>
+
+                <div className={style['calculator-controls__row']}>
+                  <div className={style['calculator-controls__label']}>
+                    Årlig pensjon, 7%
+                  </div>
+                  <div className={style['calculator-controls__value']}>
+                    <Counter
+                      num={payscale.current * 0.07}
+                      formatter={formatCurrencyFromNumber}
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
-        <label htmlFor="experience" className={style['form-row']}>
-          <div className={style['form-label']}>
-            Når ble eller blir du ferdig med studiene?
-          </div>
-
-          <RangeSlider
-            name="År"
-            id="experience"
-            min={1990}
-            max={maxYear}
-            value={selectedYear}
-            onChange={onSelectedYearChange}
-          />
-        </label>
-
-        <div className={style['calculator-controls__summary']}>
-          <div className={style['calculator-controls__row']}>
-            <div className={style['calculator-controls__label']}>
-              Vi baserer lønn på erfaring
-            </div>
-            <div className={style['calculator-controls__value']}>
-              {totalExperience}
-            </div>
-          </div>
-
-          <div className={style['calculator-controls__row']}>
-            <div className={style['calculator-controls__label']}>
-              Det vil gi en årslønn på
-            </div>
-            <div className={style['calculator-controls__value']}>
-              <Counter
-                num={payscale.current}
-                formatter={formatCurrencyFromNumber}
-              />
-            </div>
-          </div>
-
-          <div className={style['calculator-controls__row']}>
-            <div className={style['calculator-controls__label']}>
-              Årslønn + gjenomsnittlig bonus
-            </div>
-            <div className={style['calculator-controls__value']}>
-              <Counter
-                num={payscale.current + getAverageBonus()}
-                formatter={formatCurrencyFromNumber}
-              />
-            </div>
-          </div>
-
-          <div className={style['calculator-controls__row']}>
-            <div className={style['calculator-controls__label']}>
-              Årlig pensjon, 7%
-            </div>
-            <div className={style['calculator-controls__value']}>
-              <Counter
-                num={payscale.current * 0.07}
-                formatter={formatCurrencyFromNumber}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      </AnimatePresence>
 
       <CalculatorSection>
         <CalculatorMain>
