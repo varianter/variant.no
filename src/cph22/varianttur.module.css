@@ -105,8 +105,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-.infoGroup {
   margin-top: 4rem;
 }
 .infoGroup h3 {
@@ -130,10 +128,10 @@
 .agenda ul {
   list-style: none;
   display: grid;
-  grid-template-columns: minmax(12ch, max-content) auto;
+  grid-template-columns: minmax(6ch, max-content) auto;
   gap: 1rem 3rem;
   margin-top: 3rem;
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .agenda li {
   display: contents;
@@ -144,12 +142,6 @@
 .agenda p {
   font-size: 1.25rem;
   margin-top: 0;
-}
-
-@media (max-width: 600px) {
-  .agenda ul {
-    padding: 0;
-  }
 }
 
 .firstPageLeft {
@@ -176,4 +168,92 @@
 }
 .jippiBlobArrow p {
   font-weight: 500;
+}
+
+.bouncingArrow {
+  --size: 1rem;
+  --thickness: 0.25rem;
+  --color: white;
+
+  width: var(--size);
+  height: var(--size);
+  background: transparent;
+  border-right: var(--thickness) solid var(--color);
+  border-bottom: var(--thickness) solid var(--color);
+  transform: rotate(45deg);
+  animation: bounce 3.5s infinite, fadeIn 1s 1 forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0%,
+  10%,
+  25%,
+  40%,
+  50%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  20% {
+    transform: translateY(-75%) rotate(45deg);
+  }
+  30% {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .agenda ul {
+    padding: 0;
+  }
+
+  .firstPage {
+    grid-template-columns: 1fr;
+  }
+  .toProgram {
+    display: none;
+  }
+  .jippiBlobArrow {
+    display: none;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+  .header h2 {
+    font-size: 2rem;
+  }
+  .imageMaxWidth {
+    z-index: 0;
+  }
+  .agenda {
+    padding: 2rem;
+    margin-top: 0;
+  }
+  .info {
+    justify-items: start;
+  }
+  .infoGroup {
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+  .infoGroup h3 {
+    font-size: 1.25rem;
+  }
+  .info p {
+    font-size: 1rem;
+  }
+  .bouncingArrow {
+    display: block;
+  }
 }

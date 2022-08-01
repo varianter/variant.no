@@ -29,6 +29,8 @@ export default function Cph22() {
           role="none"
           alt="Dette MÅ da være København?"
         />
+
+        <div className={style.bouncingArrow} />
       </section>
 
       <section className={style.agenda} id="fredag">
@@ -89,7 +91,7 @@ export default function Cph22() {
           <li>
             <p>19:00</p>
             <p>
-              En trtt mer formell middag på{' '}
+              En litt mer formell middag på{' '}
               <a href="https://afkrog.dk/" target="_blank">
                 Afkrog - en rå juvel på Reffen
               </a>
