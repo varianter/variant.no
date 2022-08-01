@@ -92,7 +92,7 @@ export default function Cph22() {
             <p>19:00</p>
             <p>
               En litt mer formell middag på{' '}
-              <a href="https://afkrog.dk/" target="_blank">
+              <a href="https://afkrog-reffen.dk/" target="_blank">
                 Afkrog - en rå juvel på Reffen
               </a>
             </p>
@@ -139,7 +139,14 @@ export default function Cph22() {
           <h3 className="fancy">Det praktiske</h3>
 
           <div className={style.infoGroup}>
-            <h3>Hotell Axel Guldsmeden</h3>
+            <h3>
+              <a
+                href="https://guldsmedenhotels.com/axel-hotel-copenhagen-vesterbro/"
+                target="_blank"
+              >
+                Hotell Axel Guldsmeden
+              </a>
+            </h3>
             <p>
               Tlf: <a href="tel:+4533313266">+45 333 13 266</a>
             </p>
