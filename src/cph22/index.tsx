@@ -73,12 +73,11 @@ export default function Cph22() {
             <p>Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:00</p>
-            <p>Vi spankulerer til vår egen private båt</p>
-          </li>
-          <li>
-            <p>10:?? - 12:00</p>
-            <p>Utforsker farvannene rundt København</p>
+            <p>10:00 - 12:00</p>
+            <p>
+              Vi spaserer sammen til vår egen private båt og utforsker
+              farvannene rundt København
+            </p>
           </li>
           <li>
             <p>12:00</p>
