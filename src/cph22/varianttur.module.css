@@ -138,6 +138,7 @@
 }
 .agenda li p:first-child {
   justify-self: end;
+  white-space: nowrap;
 }
 .agenda p {
   font-size: 1.25rem;
@@ -215,6 +216,8 @@
 @media (max-width: 600px) {
   .agenda ul {
     padding: 0;
+    gap: 0.5rem 1.5rem;
+    margin-top: 2rem;
   }
 
   .firstPage {

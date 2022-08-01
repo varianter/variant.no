@@ -75,8 +75,8 @@ export default function Cph22() {
           <li>
             <p>10:00 - 12:00</p>
             <p>
-              Vi spaserer sammen til vår egen private båt og utforsker
-              farvannene rundt København
+              Vi går sammen til vår private båt og utforsker farvannene rundt
+              København
             </p>
           </li>
           <li>
@@ -88,17 +88,13 @@ export default function Cph22() {
             <p>Felles transport til Refshaleøen</p>
           </li>
           <li>
-            <p>19:00</p>
+            <p>19:00 - 02:00</p>
             <p>
               En litt mer formell middag på{' '}
               <a href="https://afkrog-reffen.dk/" target="_blank">
                 Afkrog - en rå juvel på Reffen
               </a>
             </p>
-          </li>
-          <li>
-            <p>02:00 (+1)</p>
-            <p>Afkrog blir en avkrok</p>
           </li>
         </ul>
       </section>
