@@ -135,7 +135,7 @@ function getMockEmployee() {
     givenName[Math.floor(Math.random() * givenName.length)];
   const randomSureName = sureName[Math.floor(Math.random() * sureName.length)];
 
-  const mock = {
+  return {
     name: `${randomGivenName} ${randomSureName}`,
     email: 'email',
     telephone: '81549300',
@@ -156,13 +156,8 @@ function getMockEmployee() {
     },
     office_name: randomOffice,
   };
-  return mock;
 }
 
 export function getMockEmployeeList(numberOfEmployeesToGenerate: number) {
-  const employeeList = [];
-  for (let index = 0; index < numberOfEmployeesToGenerate; index++) {
-    employeeList.push(getMockEmployee());
-  }
-  return employeeList;
+  return [...Array(numberOfEmployeesToGenerate)].map(getMockEmployee);
 }
