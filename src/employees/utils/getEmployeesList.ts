@@ -39,11 +39,13 @@ export const getEmployeesByOffice = async (
   );
 };
 
-export const getRandomEmployee = async (): Promise<EmployeeItem | false> => {
+export const getRandomEmployee = async (): Promise<
+  EmployeeItem | undefined
+> => {
   const employees = await requestEmployees();
 
   if (!employees) {
-    return false;
+    return undefined;
   }
 
   const randomEmployee =
