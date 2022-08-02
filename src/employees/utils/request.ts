@@ -54,7 +54,7 @@ type EmployeeJSON = {
 };
 
 export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
-  if (!process.env.CV_PARTNER_API_SECRET) {
+  if (process.env.NODE_ENV === "development" && !process.env.CV_PARTNER_API_SECRET) {
     return getMockEmployeeList(50);
   }
   const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
