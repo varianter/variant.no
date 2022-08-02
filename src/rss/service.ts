@@ -23,6 +23,7 @@ export type PodcastItem = {
   };
   description: string;
   title: string;
+  duration: number;
 } & ItemBase;
 
 export type YoutubeVideoItem = {
@@ -131,6 +132,7 @@ function mapFeedToPodcast(item: PodcastFeedItem): PodcastItem {
       url: item.enclosure?.url || '',
     },
     description: item.itunes?.summary || '',
+    duration: item.itunes?.duration? parseInt(item.itunes.duration) : 0,
   };
 }
 
