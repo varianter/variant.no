@@ -28,6 +28,7 @@ export type PodcastFeedItem = Item & {
     summary?: string;
     categories?: string[];
     keywords?: string[];
+    duration?: string;
   };
 };
 
