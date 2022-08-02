@@ -22,7 +22,7 @@ export default function Podcast({ item }: { item: PodcastItem }) {
       </div>
       <div className={style.text}>
         <div className={style.podcast__content}>
-          <Player url={item.media.url} withScrubber={true}>
+          <Player duration={item.duration} url={item.media.url} withScrubber={true}>
             <h4 className={style.title}>
               {item.title}{' '}
               <span
