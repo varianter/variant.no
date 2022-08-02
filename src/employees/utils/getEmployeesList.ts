@@ -88,42 +88,81 @@ function massageEmployee(employee: ApiEmployee) {
   };
 }
 
-const offices = ["Trondheim", "Oslo", "Bergen"];
-const givenName = ['Nora', 'Emma', 'Sofie', 'Olivia', 'Ella', 'Sofia', 'Maya', 'Lea', 'Frida', 'Ingrid', 'Noah', 'Oskar', 'Oliver', 'Lukas', 'Isak', 'Axel', 'Emil', 'Fillip', 'Jakob', 'Will']
-const sureName = ['Hansen', 'Johansen', 'Olsen', 'Larsen', 'Andersen', 'Pedersen', 'Nilsen', 'Kristiansen', 'Jensen', 'Karlsen', 'Johnsen', 'Pettersen', 'Eriksen', 'Berg', 'Haugen', 'Johannessen']
-function getMockEmployee(index: number) {
+const offices = ['Trondheim', 'Oslo', 'Bergen'];
+const givenName = [
+  'Nora',
+  'Emma',
+  'Sofie',
+  'Olivia',
+  'Ella',
+  'Sofia',
+  'Maya',
+  'Lea',
+  'Frida',
+  'Ingrid',
+  'Noah',
+  'Oskar',
+  'Oliver',
+  'Lukas',
+  'Isak',
+  'Axel',
+  'Emil',
+  'Fillip',
+  'Jakob',
+  'Will',
+];
+const sureName = [
+  'Hansen',
+  'Johansen',
+  'Olsen',
+  'Larsen',
+  'Andersen',
+  'Pedersen',
+  'Nilsen',
+  'Kristiansen',
+  'Jensen',
+  'Karlsen',
+  'Johnsen',
+  'Pettersen',
+  'Eriksen',
+  'Berg',
+  'Haugen',
+  'Johannessen',
+];
+function getMockEmployee() {
   const randomOffice = offices[Math.floor(Math.random() * offices.length)];
-  const randomGivenName = givenName[Math.floor(Math.random() * givenName.length)];
+  const randomGivenName =
+    givenName[Math.floor(Math.random() * givenName.length)];
   const randomSureName = sureName[Math.floor(Math.random() * sureName.length)];
 
   const mock = {
     name: `${randomGivenName} ${randomSureName}`,
-    email: "email",
-    telephone: "81549300",
+    email: 'email',
+    telephone: '81549300',
     image: {
       url: `https://robohash.org/${randomGivenName}${randomSureName}`,
       thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`
+        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
       },
       fit_thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}` 
+        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
       },
       large: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`
+        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
       },
       small_thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`
-      }
+        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+      },
     },
-    office_name: randomOffice
-  }
-  return mock;  
+    office_name: randomOffice,
+  };
+  return mock;
 }
 
-export function getMockEmployeeList(employeeNum: number) {
-  const employeeList = []
-  for (let index = 0; index < employeeNum; index++) {
-    employeeList.push(getMockEmployee(index));
+export function getMockEmployeeList(numberOfEmployeesToGenerate: number) {
+  const employeeList = [];
+  for (let index = 0; index < numberOfEmployeesToGenerate; index++) {
+    employeeList.push(getMockEmployee());
   }
   return employeeList;
 }
