@@ -25,7 +25,7 @@ export default function Cph22() {
 
         <img
           className={style.imageMaxWidth}
-          src={require('./cph-blob.svg')}
+          src={require('./cph-blob.png')}
           role="none"
           alt="Dette MÅ da være København?"
         />
