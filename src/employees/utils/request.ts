@@ -54,8 +54,11 @@ type EmployeeJSON = {
 };
 
 export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
-  if (process.env.NODE_ENV === "development" && !process.env.CV_PARTNER_API_SECRET) {
-    return getMockEmployeeList(50);
+  if (!process.env.CV_PARTNER_API_SECRET) {
+    if (process.env.NODE_ENV === 'development') {
+      return getMockEmployeeList(50);
+    }
+    throw new Error('Environment variable CV_PARTNER_API_SECRET is missing');
   }
   const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
     headers: [
