@@ -1,4 +1,5 @@
 import { ApiEmployee } from 'src/employees/types';
+import { getMockEmployeeList } from 'src/employees/utils/getEmployeesList';
 
 type EmployeeJSON = {
   user_id: string;
@@ -54,7 +55,7 @@ type EmployeeJSON = {
 
 export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
   if (!process.env.CV_PARTNER_API_SECRET) {
-    throw new Error('Environment variable CV_PARTNER_API_SECRET is missing');
+    return getMockEmployeeList(50);
   }
   const request = await fetch('https://variant.cvpartner.com/api/v1/users', {
     headers: [
