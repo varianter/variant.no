@@ -29,6 +29,8 @@ const Home = ({
           </Link>
         </div>
         <figure>
+          <div className={style.cases__decorationBox} />
+          <div className={style.cases__decorationBox} />
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
         </figure>
       </article>
