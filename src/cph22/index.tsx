@@ -17,7 +17,7 @@ export default function Cph22() {
           </header>
 
           <nav className={style.toProgram}>
-            <a href="#intro">Ta meg til programmet</a>
+            <a href="#fredag">Ta meg til programmet</a>
           </nav>
 
           <JippiBlob />
