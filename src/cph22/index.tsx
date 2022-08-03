@@ -17,7 +17,7 @@ export default function Cph22() {
           </header>
 
           <nav className={style.toProgram}>
-            <a href="#fredag">Ta meg til programmet</a>
+            <a href="#intro">Ta meg til programmet</a>
           </nav>
 
           <JippiBlob />
@@ -31,6 +31,25 @@ export default function Cph22() {
         />
 
         <div className={style.bouncingArrow} />
+      </section>
+
+      <section className={style.introPage} id="intro">
+        <h1>Hold kæft, hvor bliver det sjovt!</h1>
+        <p>
+          Sommeren er kanskje på hell, og vi nærmer oss nok en fødselsdag for
+          Variant. Og da er det en eneste stor glede å kunne invitere alle
+          varianter med sine nærmeste til nok en varianttur. Og denne gangen
+          skal vi tilbake til utlandet, eller nærmere bestemt Søren Kierkegaard,
+          Kim Larsen og Michael Laudrups fødested. Til et land med røyka flyndre
+          og bayerøl og syndere.. oh lala! Vi skal selvsagt til København!
+        </p>
+        <p>
+          Vi har prøvd å lage et opplegg som treffer både de shoppinghungrige,
+          adrenalinhungrige og de bare hungrige. Som vanlig skal vi på båttur,
+          og som vanlig skal det være rom for å finne sin indre ro og zen, eller
+          finne en liflig bar. :shrug:
+        </p>
+        <p>Æbleskiver!</p>
       </section>
 
       <section className={style.agenda} id="fredag">
