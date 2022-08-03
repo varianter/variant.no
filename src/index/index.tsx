@@ -24,6 +24,9 @@ const Home = ({
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
+          <Link href={'/'}>
+            <a title="Prosjektinfo">Les mer</a>
+          </Link>
         </div>
         <figure>
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
@@ -230,7 +233,12 @@ const Home = ({
       </section>
 
       <section className={style.cases}>
-        <h2 id="prosjekter">Noe av det vi gjør</h2>
+        <h2 id="prosjekter">Variantarbeid</h2>
+        <p>
+          Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
+          prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
+          mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
+        </p>
         {cases}
       </section>
     </Layout>

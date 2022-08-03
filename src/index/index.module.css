@@ -141,6 +141,9 @@
 .cases h2 {
   text-align: center;
 }
+.cases article:nth-child(2n) {
+  direction: rtl;
+}
 .cases__case {
   display: grid;
   padding: 2rem 0;
