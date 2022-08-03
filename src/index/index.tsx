@@ -89,9 +89,7 @@ const Home = ({
           forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer!
         </p>
 
-        <p>
-          Kanskje det er deg?
-        </p>
+        <p>Kanskje det er deg?</p>
 
         <div className={style.join_info}>
           <div>
@@ -107,8 +105,9 @@ const Home = ({
               </Link>
               ,{' '}
               <a href="https://handbook.variant.no" title="Variant Håndbok">
-                gode (og selvølfelig åpne) vilkår
-              </a>{' '} og {' '}
+                gode (og selvfølgelig åpne) vilkår
+              </a>{' '}
+              og{' '}
               <Link href="/kalkulator">
                 <a title="Lønnskalkulator">god lønn</a>
               </Link>
