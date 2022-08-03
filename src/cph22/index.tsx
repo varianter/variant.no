@@ -47,7 +47,7 @@ export default function Cph22() {
           Vi har prøvd å lage et opplegg som treffer både de shoppinghungrige,
           adrenalinhungrige og de bare hungrige. Som vanlig skal vi på båttur,
           og som vanlig skal det være rom for å finne sin indre ro og zen, eller
-          finne en liflig bar. :shrug:
+          finne en liflig bar. 🤷
         </p>
         <p>Æbleskiver!</p>
       </section>
