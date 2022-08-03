@@ -24,9 +24,11 @@ const Home = ({
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
-          <Link href={'/'}>
+          {/* Link leading to project sub-pages is commented 
+          out for now, as the sub-pages are not ready yet. */}
+          {/* <Link href={'/'}>
             <a title="Prosjektinfo">Les mer</a>
-          </Link>
+          </Link> */}
         </div>
         <figure>
           <div className={style.cases__decorationBox} />
