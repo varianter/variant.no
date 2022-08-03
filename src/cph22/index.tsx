@@ -162,7 +162,7 @@ export default function Cph22() {
 
         <img
           className={style.imageMaxWidth}
-          src={require('./axel-blob.svg')}
+          src={require('./axel-blob.png')}
           role="none"
           alt="Dobbeltseng på hotell Axel Guldsmeden"
         />
