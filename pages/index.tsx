@@ -37,8 +37,6 @@ export const getStaticProps: GetStaticProps<{
   feeds: HighlightedItemsLists;
 }> = async () => {
   const randomEmployee = await getRandomEmployee();
-
-  // Allows the front page to load locally even if employees cannot be fetched
   if (randomEmployee) {
     const randomCases = shuffle(CaseList).slice(0, 3);
 

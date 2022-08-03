@@ -88,70 +88,75 @@ function massageEmployee(employee: ApiEmployee) {
   };
 }
 
+function getRandomElementFromList(list: Array<string>) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
 const offices = ['Trondheim', 'Oslo', 'Bergen'];
 const givenName = [
-  'Nora',
-  'Emma',
-  'Sofie',
-  'Olivia',
-  'Ella',
-  'Sofia',
-  'Maya',
-  'Lea',
-  'Frida',
-  'Ingrid',
-  'Noah',
-  'Oskar',
-  'Oliver',
-  'Lukas',
-  'Isak',
-  'Axel',
-  'Emil',
-  'Fillip',
-  'Jakob',
-  'Will',
+  'Wall-E',
+  'R2D2',
+  'HAL 9000',
+  'ASIOMO',
+  'K9',
+  'MICRO',
+  'Machina',
+  'EVA',
+  'Screwie',
+  'Sparkles',
+  'Alexa',
+  'Siri',
+  'Rusty',
+  'Omega',
+  'Intel',
+  'Bender',
 ];
-const sureName = [
-  'Hansen',
-  'Johansen',
-  'Olsen',
-  'Larsen',
-  'Andersen',
-  'Pedersen',
-  'Nilsen',
-  'Kristiansen',
-  'Jensen',
-  'Karlsen',
-  'Johnsen',
-  'Pettersen',
-  'Eriksen',
-  'Berg',
-  'Haugen',
-  'Johannessen',
+const surname = [
+  'Spirit',
+  'Ratchet',
+  'Cybel',
+  'Droid',
+  'Ahx',
+  'Ijg',
+  'Ratchet',
+  'Ixim',
+  'Utaqroid',
+  'Plex',
+  'Scrappie',
+  'Silver',
+  'Grezzer',
+  'Odu',
+  'Adx',
+  'Tracker',
+  'Ash',
+  'Mach',
+  'Ejukroid',
+  'Icaf',
+  'Rodríguez',
 ];
+
 function getMockEmployee() {
-  const randomOffice = offices[Math.floor(Math.random() * offices.length)];
-  const randomGivenName =
-    givenName[Math.floor(Math.random() * givenName.length)];
-  const randomSureName = sureName[Math.floor(Math.random() * sureName.length)];
+  const randomOffice = getRandomElementFromList(offices);
+  const randomGivenName = getRandomElementFromList(givenName);
+  const randomSurname = getRandomElementFromList(surname);
 
   return {
-    name: `${randomGivenName} ${randomSureName}`,
+    name: `${randomGivenName} ${randomSurname}`,
     email: 'email',
     telephone: '81549300',
     image: {
-      url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+      url: `https://robohash.org/${randomGivenName}${randomSurname}`,
       thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
       },
       fit_thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
       },
       large: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
       },
       small_thumb: {
-        url: `https://robohash.org/${randomGivenName}${randomSureName}`,
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
       },
     },
     office_name: randomOffice,
