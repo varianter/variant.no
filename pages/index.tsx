@@ -32,18 +32,12 @@ const feedsList: FeedInput[] = [
 ];
 
 export const getStaticProps: GetStaticProps<{
-  randomEmployee: EmployeeItem | undefined;
+  randomEmployee: EmployeeItem;
   randomCases: CaseJSON[];
   feeds: HighlightedItemsLists;
 }> = async () => {
   const randomEmployee = await getRandomEmployee();
-
-  // Allows the front page to load locally even if employees cannot be fetched
-  if (
-    randomEmployee ||
-    (process.env.NODE_ENV === 'development' &&
-      !process.env.CV_PARTNER_API_SECRET)
-  ) {
+  if (randomEmployee) {
     const randomCases = shuffle(CaseList).slice(0, 3);
 
     const feeds = await getHiglightedItems(feedsList);
