@@ -156,10 +156,20 @@
 }
 .cases__caseContent {
   order: 1;
+  direction: ltr;
 }
-.cases__caseContent h3 {
+.cases__caseContent h4 {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
+}
+.cases__caseContent p {
+  font-size: 0.8rem;
+}
+.cases__caseContent a {
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-decoration-color: var(--color-primary);
+  text-underline-offset: 0.3rem;
 }
 .cases__case figure img {
   display: block;

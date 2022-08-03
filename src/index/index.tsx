@@ -20,7 +20,7 @@ const Home = ({
     return randomCases.map((caseItem) => (
       <article className={style.cases__case} key={caseItem.heading}>
         <div className={style.cases__caseContent}>
-          <h3>{caseItem.heading}</h3>
+          <h4>{caseItem.heading}</h4>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
