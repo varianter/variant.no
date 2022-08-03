@@ -38,25 +38,50 @@ export default function Cph22() {
 
         <ul>
           <li>
+            <p>06:30</p>
+            <p>🧳 Innsjekk Værnes</p>
+          </li>
+          <li>
             <p>07:30</p>
-            <p>Avreise fra Værnes</p>
+            <p>✈️ Fly til Oslo - DY 745 </p>
+          </li>
+          <li>
+            <p>09:05</p>
+            <p>✈️ Fly til København - D8 3222</p>
           </li>
           <li>
             <p>12:00</p>
-            <p>Variantdag! Vi starter med en matbit</p>
+            <p>
+              🍱 Lunsj på{' '}
+              <a href="https://goo.gl/maps/e8pYHP3aLQ3pndC18" target="_blank">
+                Kælderen 13
+              </a>{' '}
+              - like ved Strøget
+            </p>
           </li>
           <li>
-            <p></p>
-            <p>Reisefølger har fritid og kan sjekke ut København</p>
+            <p>13:00</p>
+            <p>
+              🎨 Variantdag! Reisefølger har fri, og kan sjekke ut København
+            </p>
           </li>
           <li>
             <p>17:00</p>
-            <p>Innsjekk på hotellet og fri før middag</p>
+            <p>
+              🏢 Vi går til{' '}
+              <a
+                href="https://guldsmedenhotels.com/axel-hotel-copenhagen-vesterbro/"
+                target="_blank"
+              >
+                hotellet
+              </a>{' '}
+              og sjekker inn
+            </p>
           </li>
           <li>
             <p>19:00</p>
             <p>
-              Uformell middag på{' '}
+              🍱 Uformell middag på{' '}
               <a href="https://boathouse.dk/" target="_blank">
                 Boathouse
               </a>
@@ -70,27 +95,24 @@ export default function Cph22() {
         <ul>
           <li>
             <p>08:00 - 10:00</p>
-            <p>Frokost på hotellet</p>
+            <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:00 - 12:00</p>
-            <p>
-              Vi går sammen til vår private båt og utforsker farvannene rundt
-              København
-            </p>
+            <p>10:00</p>
+            <p>🛥️ Privat kanalbåtcruise. Vi møtes utenfor resepsjonen.</p>
           </li>
           <li>
             <p>12:00</p>
-            <p>Vi utforsker København i grupper</p>
+            <p>🏙️ Byvandring i grupper</p>
           </li>
           <li>
             <p>18:00</p>
-            <p>Felles transport til Refshaleøen</p>
+            <p>💺 Felles transport til Refshaleøen</p>
           </li>
           <li>
             <p>19:00 - 02:00</p>
             <p>
-              En litt mer formell middag på{' '}
+              🍱 En litt mer formell middag på{' '}
               <a href="https://afkrog-reffen.dk/" target="_blank">
                 Afkrog - en rå juvel på Reffen
               </a>
@@ -104,27 +126,39 @@ export default function Cph22() {
         <ul>
           <li>
             <p>08:00 - 10:00</p>
-            <p>Frokost</p>
+            <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
             <p>11:00</p>
-            <p>Utsjekking</p>
+            <p>🔑 Utsjekk</p>
           </li>
           <li>
             <p>11:00</p>
-            <p>Vi utforsker Tivoli</p>
+            <p>🎢 Tivoli</p>
           </li>
           <li>
             <p>14:30</p>
-            <p>Felles lunsj i Tivoli på Over Plænen</p>
+            <p>
+              🍱 Felles lunsj i Tivoli på{' '}
+              <a
+                href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
+                target="_blank"
+              >
+                Over Plænen
+              </a>
+            </p>
           </li>
           <li>
             <p>16:30</p>
-            <p>Felles avreise med tog til Kastrup</p>
+            <p>🚅 Felles avreise med tog til Kastrup</p>
+          </li>
+          <li>
+            <p>17:45</p>
+            <p>🧳 Innsjekk Kastrup</p>
           </li>
           <li>
             <p>19:45</p>
-            <p>Fly til Værnes</p>
+            <p>✈️ Fly til Værnes - DY 902</p>
           </li>
         </ul>
       </section>
