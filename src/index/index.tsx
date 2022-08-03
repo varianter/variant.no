@@ -90,7 +90,7 @@ const Home = ({
         </p>
 
         <p>
-          Kanskje det er <strong>deg</strong>?
+          Kanskje det er deg?
         </p>
 
         <div className={style.join_info}>
@@ -108,7 +108,7 @@ const Home = ({
               ,{' '}
               <a href="https://handbook.variant.no" title="Variant Håndbok">
                 gode (og selvølfelig åpne) vilkår
-              </a>{' '}
+              </a>{' '} og {' '}
               <Link href="/kalkulator">
                 <a title="Lønnskalkulator">god lønn</a>
               </Link>
