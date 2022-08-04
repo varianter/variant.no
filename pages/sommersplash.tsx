@@ -1,1 +1,1 @@
-export { default } from 'src/sommersplash2022'
+export { default } from 'src/summersplash2022'
