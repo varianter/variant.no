@@ -2,6 +2,19 @@ import Head from 'next/head';
 import style from './varianttur.module.css';
 
 export default function Cph22() {
+  const currentDate = new Date();
+  const formattedCurrentDate = currentDate
+    .getDate()
+    .toString()
+    .concat(
+      (currentDate.getMonth() + 1).toString(),
+      currentDate.getFullYear().toString(),
+    );
+
+  let currentProgramDay = 'fredag';
+  if (formattedCurrentDate === '392022') currentProgramDay = 'lordag';
+  else if (formattedCurrentDate === '492022') currentProgramDay = 'sondag';
+
   return (
     <div className={style.container}>
       <Head>
@@ -17,7 +30,7 @@ export default function Cph22() {
           </header>
 
           <nav className={style.toProgram}>
-            <a href="#fredag">Ta meg til programmet</a>
+            <a href={`#${currentProgramDay}`}>Ta meg til programmet</a>
           </nav>
 
           <JippiBlob />
@@ -38,10 +51,10 @@ export default function Cph22() {
         <p>
           Sommeren er kanskje på hell, og vi nærmer oss nok en fødselsdag for
           Variant. Og da er det en eneste stor glede å kunne invitere alle
-          varianter med sine nærmeste til nok en varianttur. Og denne gangen
-          skal vi tilbake til utlandet, eller nærmere bestemt Søren Kierkegaard,
-          Kim Larsen og Michael Laudrups fødested. Til et land med røyka flyndre
-          og bayerøl og syndere.. oh lala! Vi skal selvsagt til København!
+          varianter med sine nærmeste til nok en varianttur. Denne gangen skal
+          vi tilbake til utlandet, eller nærmere bestemt Søren Kierkegaard, Kim
+          Larsen og Michael Laudrups fødested. Til et land med røyka flyndre og
+          bayerøl og syndere.. oh lala! Vi skal selvsagt til København!
         </p>
         <p>
           Vi har prøvd å lage et opplegg som treffer både de shoppinghungrige,
@@ -109,7 +122,7 @@ export default function Cph22() {
         </ul>
       </section>
 
-      <section className={style.agenda}>
+      <section className={style.agenda} id="lordag">
         <h3 className="fancy">Lørdag</h3>
         <ul>
           <li>
@@ -140,7 +153,7 @@ export default function Cph22() {
         </ul>
       </section>
 
-      <section className={style.agenda}>
+      <section className={style.agenda} id="sondag">
         <h3 className="fancy">Søndag</h3>
         <ul>
           <li>
