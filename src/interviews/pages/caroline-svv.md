@@ -12,7 +12,7 @@ duration: 01.2022 ->
 
 ## Design av ekspertløsninger for bompengesektoren
 
-### I Statens Vegvesen jobber Caroline som designer i prosjektet, hvor hun i stor grad driver med brukerinnvolvering og samarbeid på tvers av kunder og brukere.
+### I Statens Vegvesen jobber Caroline som designer i prosjektet, hvor hun i stor grad driver med brukerinvolvering og samarbeid på tvers av kunder og brukere.
 
 variant_info_placeholder
 
