@@ -29,24 +29,20 @@
 .rendered__markdown__wrapper {
   margin: 2rem 0;
 }
-.rendered__markdown__wrapper h1 {
-  font-size: 3.875rem;
-  font-weight: 400;
-}
-.rendered__markdown__wrapper h2 {
-  font-family: Graphik Web, Arial, sans-serif;
-  font-size: 1.875rem;
-  font-weight: 400;
-  line-height: 2.875rem;
-}
+
 .rendered__markdown__wrapper h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.rendered__markdown__wrapper h4 {
+  font-family: Graphik Web, Arial, sans-serif;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 1.6;
   margin: 3.5rem 0 1rem 0;
 }
 .rendered__markdown__wrapper p {
-  font-size: 1.25rem;
+  line-height: 1.6;
 }
 .rendered__markdown__wrapper :global(.variant) {
   padding: 3rem;
