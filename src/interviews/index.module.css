@@ -1,0 +1,171 @@
+.sayhi {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  max-width: 20%;
+}
+.sayhi a div {
+  transform: none;
+}
+.interview {
+  margin: 2rem 0;
+  display: grid;
+  grid-template: 'a a' / 1fr auto;
+}
+.nav {
+  margin-top: 8.75rem;
+}
+.nav * {
+  margin: 0 0.25rem;
+}
+.nav__subject {
+  font-weight: 500;
+}
+.nav__arrow {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.rendered__markdown__wrapper {
+  margin: 2rem 0;
+}
+.rendered__markdown__wrapper h1 {
+  font-size: 3.875rem;
+  font-weight: 400;
+}
+.rendered__markdown__wrapper h2 {
+  font-family: Graphik Web, Arial, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.875rem;
+}
+.rendered__markdown__wrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin: 3.5rem 0 1rem 0;
+}
+.rendered__markdown__wrapper p {
+  font-size: 1.25rem;
+}
+.rendered__markdown__wrapper :global(.variant) {
+  padding: 3rem;
+  margin-right: -5rem;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+.rendered__markdown__wrapper :global(.variant) img {
+  max-width: 20rem;
+}
+.rendered__markdown__wrapper :global(.variant__location),
+.rendered__markdown__wrapper :global(.variant__duration) {
+  padding-bottom: 1rem;
+}
+.rendered__markdown__wrapper :global(.variant__location) *,
+.rendered__markdown__wrapper :global(.variant__duration) * {
+  padding: 0.5rem 0;
+}
+.rendered__markdown__wrapper :global(.variant__location) span {
+  border: 1px solid var(--color-secondary1);
+  border-radius: 40px;
+  padding: 4px 24px;
+}
+.rendered__markdown__wrapper :global(.variant__location) p,
+.rendered__markdown__wrapper :global(.variant__duration) p {
+  font-weight: 500;
+}
+.rendered__markdown__wrapper blockquote {
+  margin: 2rem auto;
+  position: relative;
+  max-width: 32rem;
+  font-family: Graphik Web, Arial, sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.875rem;
+  padding: 3rem;
+}
+.rendered__markdown__wrapper blockquote:before {
+  display: block;
+  content: '\201C';
+  font-size: 5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  color: var(--color-secondary1__shade2);
+}
+.rendered__markdown__wrapper blockquote:after {
+  display: block;
+  content: '\201D';
+  font-size: 5rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  color: var(--color-secondary1__shade2);
+}
+.rendered__markdown__wrapper :global(.right) {
+  margin-right: -20%;
+  padding: 3rem;
+  float: right;
+}
+
+.rendered__markdown__wrapper :global(.imageContainer) figure {
+  position: relative;
+  height: min-content;
+}
+
+.rendered__markdown__wrapper :global(.img__decorationBox) {
+  width: 75%;
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: -1;
+}
+.rendered__markdown__wrapper :global(.img__decorationBox):nth-of-type(1) {
+  top: -5%;
+  right: 30%;
+  background-color: var(--color-secondary1__tint4);
+}
+.rendered__markdown__wrapper :global(.img__decorationBox):nth-of-type(2) {
+  top: 10%;
+  left: 30%;
+  background-color: var(--color-secondary2__tint3);
+}
+/* Creates a 1:1 aspect ratio */
+.rendered__markdown__wrapper :global(.img__decorationBox)::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+@media (max-width: 1200px) {
+  .rendered__markdown__wrapper :global(.right) {
+    margin: 3rem auto;
+    float: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .sayhi {
+    display: none;
+  }
+  .interview {
+    display: flex;
+    padding: 0 1rem;
+  }
+  .rendered__markdown__wrapper :global(.variant) {
+    margin: 2rem 0;
+    float: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    padding: 0 1rem;
+  }
+  .rendered__markdown__wrapper blockquote {
+    position: relative;
+    max-width: auto;
+  }
+}

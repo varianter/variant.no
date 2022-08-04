@@ -1,0 +1,42 @@
+import { promises as fs } from 'fs';
+import matter from 'gray-matter';
+
+import path from 'path';
+
+type InterviewMetadata = {
+  meta_title: string;
+  meta_description: string;
+  meta_image: string;
+  project: string;
+  projectSlug: string;
+  variant: string;
+  location: string;
+  duration: string;
+  image: string;
+  imageAltText: string;
+};
+
+export type Interview = {
+  name: string;
+  content: string;
+} & InterviewMetadata;
+
+export const getInterviews = async () => {
+  const files = await fs.readdir(
+    path.join(process.cwd(), '/src/interviews/pages'),
+  );
+  return files.filter((a) => a.endsWith('.md'));
+};
+
+export const getInterview = async (filename: string): Promise<Interview> => {
+  const file = await fs.readFile(
+    path.join(process.cwd(), 'src/interviews/pages', filename),
+  );
+  const matterFile = matter(file);
+  const matterData = matterFile.data as InterviewMetadata;
+  return {
+    ...matterData,
+    name: filename.replace('.md', ''),
+    content: matterFile.content,
+  } as Interview;
+};
