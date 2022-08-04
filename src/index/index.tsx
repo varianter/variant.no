@@ -20,12 +20,19 @@ const Home = ({
     return randomCases.map((caseItem) => (
       <article className={style.cases__case} key={caseItem.heading}>
         <div className={style.cases__caseContent}>
-          <h3>{caseItem.heading}</h3>
+          <h4>{caseItem.heading}</h4>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
+          {/* Link leading to project sub-pages is commented 
+          out for now, as the sub-pages are not ready yet. */}
+          {/* <Link href={'/'}>
+            <a title="Prosjektinfo">Les mer</a>
+          </Link> */}
         </div>
         <figure>
+          <div className={style.cases__decorationBox} />
+          <div className={style.cases__decorationBox} />
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
         </figure>
       </article>
@@ -244,7 +251,12 @@ const Home = ({
       </section>
 
       <section className={style.cases}>
-        <h2 id="prosjekter">Noe av det vi gjør</h2>
+        <h2 id="prosjekter">Variantarbeid</h2>
+        <p>
+          Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
+          prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
+          mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
+        </p>
         {cases}
       </section>
     </Layout>
