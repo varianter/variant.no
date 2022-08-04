@@ -1,8 +1,8 @@
 ---
 meta_title: Tittel plasseres her
 meta_description: Intervju med Andreas hos Statens vegvesen
-meta_image: https://variant.no/work_images/andreas_hos_svv.png
-image: /work_images/andreas_hos_svv.png
+meta_image: https://variant.no/interviews/andreas_hos_svv.png
+image: /interviews/andreas_hos_svv.png
 imageAltText: Andreas hos Statens vegvesen
 project: Statens vegvesen
 variant: Andreas
