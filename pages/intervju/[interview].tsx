@@ -4,6 +4,7 @@ import {
   Interview,
 } from 'src/interviews/utils/interviewHandlers';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { getContactsByEmails } from 'src/employees/utils/getEmployeesList';
 
 export { default } from 'src/interviews';
 
@@ -27,6 +28,8 @@ export const getStaticProps: GetStaticProps<
 > = async (context) => {
   const fileName = `${context?.params?.interview}.md`;
   const interview = await getInterview(fileName);
+  const variant = await getContactsByEmails([interview.variantEmail]);
+  interview.image = variant[0]?.imageUrl || '/interviews/placeholder_blob.png';
   return {
     props: { interview: { ...interview } },
     revalidate: 60 * 60,

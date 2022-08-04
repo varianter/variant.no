@@ -1,11 +1,10 @@
 ---
 meta_title: Tittel plasseres her
 meta_description: Intervju med Andreas hos Statens vegvesen
-meta_image: https://variant.no/interviews/andreas_hos_svv.png
-image: /interviews/andreas_hos_svv.png
 imageAltText: Andreas hos Statens vegvesen
 project: Statens vegvesen
 variant: Andreas
+variantEmail: andreas@variant.no
 location: Bergen/remote
 duration: dd.åååå ->
 ---

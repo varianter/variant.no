@@ -1,11 +1,10 @@
 ---
 meta_title: Prosjektstøtte på leveransestrøm
 meta_description: Intervju med Marthe hos Statens vegvesen
-meta_image: https://variant.no/interviews/placeholder_blob.png
-image: /interviews/placeholder_blob.png
 imageAltText: Marthe hos Statens vegvesen
 project: Statens vegvesen
 variant: Marthe
+variantEmail: msd@variant.no
 location: Oslo
 duration: 04.2022 ->
 ---

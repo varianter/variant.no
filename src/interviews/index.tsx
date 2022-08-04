@@ -35,7 +35,13 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
         '</div>';
 
       return { __html: html.replace('variant_info_placeholder', newHtml) };
-    }, [interview.content, interview.image, interview.imageAltText, interview.location, interview.duration]);
+    }, [
+      interview.content,
+      interview.image,
+      interview.imageAltText,
+      interview.location,
+      interview.duration,
+    ]);
 
     return (
       <Layout title={`${interview.meta_title}`}>
@@ -65,13 +71,6 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                 key="og:description"
               />
             </>
-          )}
-          {interview.meta_image && (
-            <meta
-              property="og:image"
-              content={interview.meta_image}
-              key="og:image"
-            />
           )}
         </Head>
 

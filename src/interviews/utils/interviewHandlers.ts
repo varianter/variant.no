@@ -6,7 +6,6 @@ import path from 'path';
 type InterviewMetadata = {
   meta_title: string;
   meta_description: string;
-  meta_image: string;
   project: string;
   projectSlug: string;
   variant: string;
@@ -14,6 +13,7 @@ type InterviewMetadata = {
   duration: string;
   image: string;
   imageAltText: string;
+  variantEmail: string;
 };
 
 export type Interview = {
