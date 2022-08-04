@@ -4,7 +4,7 @@ import { JobOrInternship } from './utils/utils';
 
 const Content = ({ selected }: JobOrInternship) => {
   // Undefined for now. Need to be changed to 'internship' when index sends a prop.
-  if (selected == undefined) {
+  if (selected === 'internship') {
     return (
       <>
         <section>
@@ -146,11 +146,36 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
       </>
     );
-  }
-  else {
+  } else if (selected === 'job') {
     return (
-      <h1>ingenting</h1>
-    )
+      <>
+        <section>
+          <h1>Er du en av de x nyutdannede varrianter i 2023</h1>
+        </section>
+
+        <section>
+          <h3>Hvem søker vi?</h3>
+          <div>
+          <p>
+                Vi søker 4 nyutdannede designere og utviklere som engasjerer og
+                motiverer, med oppstart 1. august 2022. Stillingene er fordelt
+                på våre kontorer i{' '}
+                <a href="https://handbook.variant.no/avdelinger/trondheim">
+                  Trondheim
+                </a>{' '}
+                og{' '}
+                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>
+                med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
+                viktig hvilke verktøy eller språk du bruker. Det er langt
+                viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
+                om brukeren du lager noe for, bryr deg om kunden du leverer til.
+              </p>
+          </div>
+        </section>
+      </>
+    );
+  } else {
+    return <h1>ingenting</h1>;
   }
 };
 
