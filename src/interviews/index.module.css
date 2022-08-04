@@ -74,7 +74,6 @@
 .rendered__markdown__wrapper blockquote {
   margin: 2rem auto;
   position: relative;
-  max-width: 32rem;
   font-family: Graphik Web, Arial, sans-serif;
   font-size: 1.875rem;
   line-height: 2.875rem;
@@ -99,6 +98,7 @@
   color: var(--color-secondary1__shade2);
 }
 .rendered__markdown__wrapper :global(.right) {
+  max-width: 32rem;
   margin-right: -20%;
   padding: 3rem;
   float: right;
