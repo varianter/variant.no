@@ -6,3 +6,96 @@
   margin-left: 50%;
   margin-bottom: 4%;
 }
+
+.underDev {
+  margin-top: 4000px;
+}
+
+.searchNewVariants {
+  width: 600px;
+  margin-bottom: 10%;
+  margin-left: -20%;
+}
+
+.marginTopMore {
+  margin-top: 20px;
+  margin-left: -20%;
+}
+
+.marginLeftLess {
+  margin-left: -20%;
+}
+
+.imageBlob1 {
+  position: relative;
+  margin-left: 70%;
+  margin-top: -30%;
+}
+
+.imageBlob2 {
+  margin-top: -2%;
+  margin-left: -43%;
+}
+
+.arrow {
+  align-self: center;
+  margin-top: 30%;
+}
+
+.navigationSlider {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-left: 70%;
+}
+
+.navigationButton {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 30%;
+}
+
+.aboutSummerjob {
+  margin-right: 50%;
+}
+
+.positionTextLeft {
+  width: 540px;
+  margin-left: -20%;
+  margin-top: -5%;
+}
+
+.officeMap {
+  position: relative;
+  margin-left: 40%;
+  margin-top: -35%;
+}
+
+.jenga {
+  margin-left: -35%;
+  margin-top: -5%;
+}
+
+.whyWorkAtVariant {
+  margin-left: -20%;
+  margin-top: 20%;
+}
+
+.handbook {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.handbookButton {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  margin: 3%;
+}

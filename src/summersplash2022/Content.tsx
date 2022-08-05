@@ -1,20 +1,127 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './index.module.css';
+// import HandBooKPages from './utils/handBookPages';
 import { JobOrInternship } from './utils/utils';
 
 const Content = ({ selected }: JobOrInternship) => {
+  const blobSection1 = require('./img/Vector.png');
+  const blobSection2 = require('./img/hva går sommerjobben ut på.png');
+  const upArrow = require('./img/Vector-2.png');
+  const downArrow = require('./img/Vector-3.png');
+  const map = require('./img/kart.png');
+  const jenga = require('./img/jenga.png');
+
+  const [whichIsPressed, setwhichIsPressed] = useState('');
+
   // Undefined for now. Need to be changed to 'internship' when index sends a prop.
   if (selected === 'internship') {
     return (
       <>
+        {/* Navigation bar on the right side */}
+        <div className={style.navigationSlider}>
+          <img
+            className={style.arrow}
+            src={upArrow}
+            alt="arrow up"
+            height="30px"
+            width="30px"
+          />
+          <button className={style.navigationButton}>
+            Hvorfor sommerjobb hos akkuratt Variant?
+          </button>
+          <button className={style.navigationButton}>Hvem er vi</button>
+          <button className={style.navigationButton}>Søknadsprosess</button>
+          <button className={style.navigationButton}>Søk hos oss</button>
+          <img
+            className={style.arrow}
+            src={downArrow}
+            alt="arrow down"
+            height="30px"
+            width="30px"
+          />
+        </div>
         <section>
           <span>
-            <h1>Er du en av våre 10 sommervarianter i 2022?</h1>
-            <h4> Sommerjobb i både Trondheim og Oslo!</h4>
+            <h1 className={style.searchNewVariants}>Vi søker nye Varianter</h1>
+          </span>
+          <span>
+            {/* middlertidig link. usikker på hvilken vi skal bruke */}
+            <a
+              className={style.marginLeftLess}
+              href="https://www.variant.no/jobs"
+            >
+              Søk her
+            </a>
+            <p className={style.marginTopMore}>Eller</p>
+            <p className={style.marginTopMore}>naviger med menyen</p>
+          </span>
+          <span>
+            <img
+              className={style.imageBlob1}
+              src={blobSection1}
+              alt="To fra Variant"
+            />
           </span>
         </section>
 
         <section>
+          <img
+            className={style.imageBlob2}
+            src={blobSection2}
+            alt="green blobb"
+          />
+          <div className={style.positionTextLeft}>
+            <p>
+              En sommerjobb i Variant er en fin mulighet til å anvende det du
+              har lært på skolen i praksis. Det forventes ikke at du er utlært,
+              men at du ønsker å lære mer. I tverrfaglige team bestående av
+              designere og utviklere kommer dere til å jobbe sammen på et av de
+              spennende kundeprosjektene vi har. Underveis får du god oppfølging
+              og tilrettelegging fra erfarne konsulenter som ønsker at du
+              lykkes.
+            </p>
+            <p>
+              I 2022 tilbyr vi sommerjobb i både Trondheim og Oslo, til
+              henholdsvis seks og fire studenter. Hvor du vil jobbe bestemmer du
+              naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
+              ferie i mellomtiden, og vil gi god innsikt i hva det vil si å
+              jobbe i konsulentbransjen. Du kommer til å lære masse nyttig,
+              samtidig som du har det gøy med de andre variantene.
+            </p>
+          </div>
+          <img
+            className={style.officeMap}
+            src={map}
+            alt="kart over kontorene i norge"
+          />
+        </section>
+
+        <section className={style.jenga}>
+          <img src={jenga} alt="jenga spill" />
+        </section>
+
+        <section className={style.whyWorkAtVariant}>
+          <h3>Hvorfor jobbe i Variant</h3>
+          <div className={style.handbook}>
+            <button
+              className={style.handbookButton}
+              onClick={() => setwhichIsPressed('value')}
+            >
+              Formål og verdier
+            </button>
+            <button className={style.handbookButton}>Tillit og ansvar</button>
+            <button className={style.handbookButton}>Fleksitid</button>
+            <button className={style.handbookButton}>Fri i jula</button>
+            <button className={style.handbookButton}>
+              Kompetanseutvikling
+            </button>
+            <button className={style.handbookButton}>Formål og verdier</button>
+          </div>
+          <div></div>
+        </section>
+
+        {/* Gammelt */}
+        <section className={style.underDev}>
           <span>Søk senest 3. oktober</span>
           <h4>Kontorer både i Trondheim og Oslo</h4>
         </section>
@@ -31,8 +138,8 @@ const Content = ({ selected }: JobOrInternship) => {
               av designere og utviklere kommer dere til å jobbe sammen på et av
               de spennende kundeprosjektene vi har. Underveis får du god
               oppfølging og tilrettelegging fra erfarne konsulenter som ønsker
-              at du lykkes. Er du nysgjerrig på hva tidligere sommervarianter
-              har gjort? Les mer om{' '}
+              at du. Er du nysgjerrig på hva tidligere sommervarianter har
+              gjort? Les mer om{' '}
               <a href="https://blog.variant.no">sommerprosjektene</a>.
             </p>
           </div>
@@ -156,20 +263,19 @@ const Content = ({ selected }: JobOrInternship) => {
         <section>
           <h3>Hvem søker vi?</h3>
           <div>
-          <p>
-                Vi søker 4 nyutdannede designere og utviklere som engasjerer og
-                motiverer, med oppstart 1. august 2022. Stillingene er fordelt
-                på våre kontorer i{' '}
-                <a href="https://handbook.variant.no/avdelinger/trondheim">
-                  Trondheim
-                </a>{' '}
-                og{' '}
-                <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>
-                med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
-                viktig hvilke verktøy eller språk du bruker. Det er langt
-                viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
-                om brukeren du lager noe for, bryr deg om kunden du leverer til.
-              </p>
+            <p>
+              Vi søker 4 nyutdannede designere og utviklere som engasjerer og
+              motiverer, med oppstart 1. august 2022. Stillingene er fordelt på
+              våre kontorer i{' '}
+              <a href="https://handbook.variant.no/avdelinger/trondheim">
+                Trondheim
+              </a>{' '}
+              og <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>
+              med henholdsvis 1 designer og 1 utvikler i hver by. Det er ikke
+              viktig hvilke verktøy eller språk du bruker. Det er langt
+              viktigere at du bryr deg. Bryr deg om koden du skriver, bryr deg
+              om brukeren du lager noe for, bryr deg om kunden du leverer til.
+            </p>
           </div>
         </section>
       </>
