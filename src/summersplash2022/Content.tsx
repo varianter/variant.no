@@ -1,8 +1,17 @@
-import React from 'react';
+// import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import style from './index.module.css';
 import { JobOrInternship } from './utils/utils';
 
 const Content = ({ selected }: JobOrInternship) => {
+
+	const endRef = useRef<HTMLImageElement>(null);
+	const midRef = useRef<HTMLImageElement>(null);
+	
+	const goToRef = (ref : React.RefObject<HTMLImageElement>) => {
+		ref?.current?.scrollIntoView({behavior: 'smooth'});
+	};
+
   // Undefined for now. Need to be changed to 'internship' when index sends a prop.
   if (selected === 'internship') {
     return (
@@ -16,6 +25,8 @@ const Content = ({ selected }: JobOrInternship) => {
 
         <section>
           <span>Søk senest 3. oktober</span>
+					<button onClick={() => goToRef(midRef)}>go to text</button>
+					<button onClick={() => goToRef(endRef)}>go to bottom</button>
           <h4>Kontorer både i Trondheim og Oslo</h4>
         </section>
 
@@ -55,7 +66,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
 
-        <section className={style.positionRight}>
+        <section className={style.positionRight}ref={midRef}>
           <h3>Hvorfor jobbe i Variant?</h3>
           <div>
             <p>
@@ -140,9 +151,10 @@ const Content = ({ selected }: JobOrInternship) => {
           </p>
         </section>
 
-        <section>
+        <section ref={endRef}>
           <h3>Søk sommerjobb</h3>
           <h3>Søk som designer</h3>
+
         </section>
       </>
     );
