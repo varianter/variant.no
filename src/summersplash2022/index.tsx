@@ -16,6 +16,7 @@ import { getStaticProps } from 'pages';
 import Layout from 'src/layout';
 import Content from './Content';
 import Link from 'next/link';
+import { rqdp } from './utils/utils';
 
 const Summersplash2022: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -24,7 +25,7 @@ const Summersplash2022: NextPage<
   // as a route.
   const router = useRouter();
 
-  const queryedPage = router.query.dynamicPath;
+  const queryedPage = rqdp(router);
 
   // New useState called 'mode'.
   // useState gives us two things: a variable to hold the state 'mode' and a
@@ -32,7 +33,7 @@ const Summersplash2022: NextPage<
   // A useState is a hook that helps us manage states in function based components
   // A hook is something that lets us use states and other React features without writing a class
   const [mode, setMode] = useState(
-    router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job',
+    rqdp(router) === 'sommerjobb' ? 'internship' : 'job',
   );
 
   // useEffects are where we put the 'side effecs', and that means: "when
@@ -43,8 +44,8 @@ const Summersplash2022: NextPage<
   // ? Cause setMode don't need parameters the parentheses are empty, and the
   // fatarrow just means that we don't need to use the function keyword.
   useEffect(() => {
-    setMode(router.query.dynamicPath === 'sommerjobb' ? 'internship' : 'job');
-  }, [router.query.dynamicPath]);
+    setMode(rqdp(router) === 'sommerjobb' ? 'internship' : 'job');
+  }, [rqdp(router)]);
 
   if (queryedPage === undefined) {
     return null;
