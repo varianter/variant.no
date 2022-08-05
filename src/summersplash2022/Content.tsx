@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+// import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
+>>>>>>> a24cb90f1e04b4d01e2f627f2c09951b7cb2c2c6
 import style from './index.module.css';
 // import HandBooKPages from './utils/handBookPages';
 import { JobOrInternship } from './utils/utils';
 
 const Content = ({ selected }: JobOrInternship) => {
+<<<<<<< HEAD
   const blobSection1 = require('./img/Vector.png');
   const blobSection2 = require('./img/hva går sommerjobben ut på.png');
   const upArrow = require('./img/Vector-2.png');
@@ -12,6 +18,15 @@ const Content = ({ selected }: JobOrInternship) => {
   const jenga = require('./img/jenga.png');
 
   const [whichIsPressed, setwhichIsPressed] = useState('');
+=======
+
+	const endRef = useRef<HTMLImageElement>(null);
+	const midRef = useRef<HTMLImageElement>(null);
+	
+	const goToRef = (ref : React.RefObject<HTMLImageElement>) => {
+		ref?.current?.scrollIntoView({behavior: 'smooth'});
+	};
+>>>>>>> a24cb90f1e04b4d01e2f627f2c09951b7cb2c2c6
 
   // Undefined for now. Need to be changed to 'internship' when index sends a prop.
   if (selected === 'internship') {
@@ -123,6 +138,8 @@ const Content = ({ selected }: JobOrInternship) => {
         {/* Gammelt */}
         <section className={style.underDev}>
           <span>Søk senest 3. oktober</span>
+					<button onClick={() => goToRef(midRef)}>go to text</button>
+					<button onClick={() => goToRef(endRef)}>go to bottom</button>
           <h4>Kontorer både i Trondheim og Oslo</h4>
         </section>
 
@@ -162,7 +179,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
 
-        <section className={style.positionRight}>
+        <section className={style.positionRight}ref={midRef}>
           <h3>Hvorfor jobbe i Variant?</h3>
           <div>
             <p>
@@ -247,9 +264,10 @@ const Content = ({ selected }: JobOrInternship) => {
           </p>
         </section>
 
-        <section>
+        <section ref={endRef}>
           <h3>Søk sommerjobb</h3>
           <h3>Søk som designer</h3>
+
         </section>
       </>
     );
