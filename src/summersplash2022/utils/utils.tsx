@@ -1,4 +1,4 @@
-import Router, { NextRouter, useRouter } from "next/router";
+import { NextRouter } from "next/router";
 
 export interface JobOrInternship {
   selected: 'internship' | 'job';
