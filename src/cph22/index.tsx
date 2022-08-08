@@ -131,14 +131,14 @@ export default function Cph22() {
           </li>
           <li>
             <p>10:00</p>
-            <p>🛥️ Privat kanalbåtcruise. Vi møtes utenfor resepsjonen.</p>
+            <p>🛥️ Privat kanalbåtcruise, vi møtes utenfor resepsjonen</p>
           </li>
           <li>
             <p>12:00</p>
             <p>🏙️ Byvandring i grupper</p>
           </li>
           <li>
-            <p>18:00</p>
+            <p>17:30</p>
             <p>💺 Felles transport til Refshaleøen</p>
           </li>
           <li>
