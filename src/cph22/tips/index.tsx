@@ -35,7 +35,10 @@ export default function Tips({
           </div>
 
           <div className={style.categoryImage}>
-            <img src={require('./shopping.png')} />
+            <img
+              src={require('./shopping.png')}
+              alt="Fotografi av en fontene"
+            />
           </div>
         </article>
 
@@ -60,7 +63,7 @@ export default function Tips({
           </div>
 
           <div className={style.categoryImage}>
-            <img src={require('./kultur.png')} />
+            <img src={require('./kultur.png')} alt="Fotografi fra et museum" />
           </div>
         </article>
         <article className={style.category}>
@@ -83,7 +86,10 @@ export default function Tips({
           </div>
 
           <div className={style.categoryImage}>
-            <img src={require('./pusterom.png')} />
+            <img
+              src={require('./pusterom.png')}
+              alt="Fotografi fra botanisk have"
+            />
           </div>
         </article>
       </section>
