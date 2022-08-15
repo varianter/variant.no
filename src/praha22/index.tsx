@@ -29,6 +29,10 @@ export default function Praha22() {
             <h2>2. - 4. september</h2>
           </header>
 
+          <nav className={style.toProgram}>
+            <a href={`#${currentProgramDay}`}>Ta meg til programmet</a>
+          </nav>
+
           <JippiBlob />
         </div>
 
