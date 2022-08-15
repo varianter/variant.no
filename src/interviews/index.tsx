@@ -53,7 +53,7 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       return {
         __html: html.replace('variant_info_placeholder', htmlFromMetadata),
       };
-    }, [interview.content]);
+    }, [interview]);
 
     return (
       <Layout title={`${interview.meta_title}`}>

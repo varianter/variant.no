@@ -10,7 +10,7 @@ durationFrom: 01.2022
 durationTill:
 ---
 
-## Verktøy for gjennomføring og oppfølging av Trafikksikkerhetsinspeksjoner
+## Verktøy for gjennomføring og oppfølging av Trafikksikkerhets- inspeksjoner
 
 ### Som UX-designer for Statens vegvesen får Andreas Hartveit ta del i hele prosessen for utvikling av nye støtteverktøy som skal gjøre veiene tryggere. – For meg har det vært verdifullt å få lov til å ta del i, og ansvar for, produktutviklingen og valgene vi gjør for produktet vi utvikler, forteller han.
 
