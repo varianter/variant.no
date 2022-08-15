@@ -6,7 +6,8 @@ project: Statens vegvesen
 variant: Marthe
 variantEmail: msd@variant.no
 location: Oslo
-duration: 04.2022 ->
+durationFrom: 04.2022
+durationTill:
 ---
 
 ## Prosjektstøtte på leveransestrøm

@@ -6,7 +6,8 @@ project: Statens vegvesen
 variant: Andreas
 variantEmail: andreas@variant.no
 location: Bergen/remote
-duration: 01.2022 ->
+durationFrom: 01.2022
+durationTill:
 ---
 
 ## Verktøy for gjennomføring og oppfølging av Trafikksikkerhetsinspeksjoner

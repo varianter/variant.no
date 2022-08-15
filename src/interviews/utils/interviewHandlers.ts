@@ -9,8 +9,9 @@ type InterviewMetadata = {
   project: string;
   projectSlug: string;
   variant: string;
-  location: string;
-  duration: string;
+  location: string[];
+  durationFrom: string;
+  durationTill: string;
   image: string;
   imageAltText: string;
   variantEmail: string;
@@ -33,7 +34,9 @@ export const getInterview = async (filename: string): Promise<Interview> => {
     path.join(process.cwd(), 'src/interviews/pages', filename),
   );
   const matterFile = matter(file);
-  const matterData = matterFile.data as InterviewMetadata;
+  const locations = matterFile.data.location.split(',');
+  const matterData = { ...(matterFile.data as InterviewMetadata) };
+  matterData.location = locations;
   return {
     ...matterData,
     name: filename.replace('.md', ''),

@@ -9,6 +9,35 @@ import style from './index.module.css';
 import Link from 'next/link';
 import SayHi from 'src/index/say-hi';
 
+const createHtmlFromMetadata = (interview: Interview) => {
+  let locationsHtml = '';
+  interview.location.forEach((location: string) => {
+    locationsHtml += `<span>${location}</span>`;
+  });
+  let html =
+    '<div class="variant">' +
+    '<div class="imageContainer">' +
+    '<figure>' +
+    '<div class="img__decorationBox"></div>' +
+    '<div class="img__decorationBox"></div>' +
+    `<img src="${interview.image}" alt="${interview.imageAltText}"/>` +
+    '</figure>' +
+    '</div>' +
+    '<div>' +
+    `<div class="variant__location"><p>Lokasjon</p>${locationsHtml}</div>` +
+    `<div class="variant__duration"><p>Tid hos kunden</p><span>${
+      interview.durationFrom
+    } ${
+      interview.durationTill
+        ? '- ' + interview.durationTill
+        : '<img src="/images/arrow.svg" alt="Pil mot høyre"'
+    }</span></div>` +
+    '</div>' +
+    '</div>';
+
+  return html;
+};
+
 const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ interview }) => {
     const innerHtml = useMemo(() => {
@@ -19,29 +48,12 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       });
       let html = md.render(interview.content);
 
-      let newHtml =
-        '<div class="variant">' +
-        '<div class="imageContainer">' +
-        '<figure>' +
-        '<div class="img__decorationBox"></div>' +
-        '<div class="img__decorationBox"></div>' +
-        `<img src="${interview.image}" alt="${interview.imageAltText}"/>` +
-        '</figure>' +
-        '</div>' +
-        '<div>' +
-        `<div class="variant__location"><p>Lokasjon</p><span>${interview.location}</span></div>` +
-        `<div class="variant__duration"><p>Tid hos kunden</p><span>${interview.duration}</span></div>` +
-        '</div>' +
-        '</div>';
+      const htmlFromMetadata = createHtmlFromMetadata(interview);
 
-      return { __html: html.replace('variant_info_placeholder', newHtml) };
-    }, [
-      interview.content,
-      interview.image,
-      interview.imageAltText,
-      interview.location,
-      interview.duration,
-    ]);
+      return {
+        __html: html.replace('variant_info_placeholder', htmlFromMetadata),
+      };
+    }, [interview.content]);
 
     return (
       <Layout title={`${interview.meta_title}`}>

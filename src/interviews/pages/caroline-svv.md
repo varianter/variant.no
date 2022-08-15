@@ -6,7 +6,8 @@ project: Statens vegvesen
 variant: Caroline
 variantEmail: cs@variant.no
 location: Oslo
-duration: 01.2022 ->
+durationFrom: 01.2022
+durationTill:
 ---
 
 ## Design av ekspertløsninger for bompengesektoren
