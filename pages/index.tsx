@@ -1,10 +1,7 @@
 import { GetStaticProps } from 'next';
 import { CaseJSON } from 'src/case/Case';
 import { CaseList } from 'src/case/cases';
-import {
-  getHiglightedItems,
-  HighlightedItemsLists
-} from 'src/rss/service';
+import { getHiglightedItems, HighlightedItemsLists } from 'src/rss/service';
 import { FeedInput } from 'src/rss/rss';
 import { EmployeeItem } from 'src/employees/types';
 import { getRandomEmployee } from 'src/employees/utils/getEmployeesList';
@@ -14,7 +11,6 @@ export { default } from 'src/index';
 function shuffle<T>(array: Array<T>): Array<T> {
   return [...array].sort(() => Math.random() - 0.5);
 }
-
 
 const feedsList: FeedInput[] = [
   { title: 'Medium', url: 'https://blog.variant.no/feed', type: 'blog' },
@@ -51,6 +47,7 @@ export const getStaticProps: GetStaticProps<{
       revalidate: 7 * 24 * 60 * 60,
     };
   }
+
   // Trigger fallback on previous version
   throw new Error();
 };

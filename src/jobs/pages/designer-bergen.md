@@ -2,7 +2,7 @@
 title: Designer som vil bygge Variant bergen
 h1_title: Designer som vil være med å bygge Variant Bergen
 slug: designer-som-vil-bygge-variant-bergen
-contact_emails: andreas@variant.no, te@variant.no
+contact_emails: andreas@variant.no, marie@variant.no
 meta_title: Vil du være med å bygge Variant Bergen?
 meta_description: Vi ser etter en dyktig designer som vil være med å bygge Variant Bergen!
 meta_image: https://www.variant.no/images/erfaren_designer_meta_bergen.jpg
@@ -20,9 +20,9 @@ I tillegg til dette så ser etter deg som har en god porsjon entusiasme og nysgj
 
 Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beriker kolleger i bransjen, og kunder vi jobber hos. Derfor har vi som mål om å være et synlig og engasjert fagmiljø, i flere kanaler. Om det være seg Meetups, YouTube, podcasts eller Open Source. Læreglede smitter, så du bør være raus med å dele av din egen kompetanse, og kunne hjelpe andre til å gjøre det samme.
 
-## Hva ser vi etter i designere i Variant?
+## Hvilken designer ser vi etter?
 
-Nå ser vi etter deg som har 2 eller flere (ja - gjerne en del) års erfaring som designer. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Nå ser vi etter deg som har 2 eller flere år erfaring med design av digitale løsninger. Om du kaller deg ux-designer, interaksjonsdesigner, digital designer eller noe annet, er ikke så viktig. Det betyr mer at du er en som holder deg oppdatert innen design. Vi lever i skjæringspunktet mellom design og utvikling, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
 Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrker og vi ser etter en designer som har jobbet noen år med ett eller flere av følgende områder:
 
@@ -42,7 +42,7 @@ Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrk
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-**_Prosjekter_** - Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen.
+**_Prosjekter_** - Den aller viktigste faktoren når det kommer til trivsel og faglig utvikling i hverdagen er prosjektet vi jobber på. Derfor er du selv med på å påvirke dette. Om du er interessert i å delta salgsprosessene, eller om det holder å få en telefon når du vurderes til et oppdrag, bestemmer du selv. Du vil jobbe i spennende prosjekter ute hos våre kunder.
 
 **_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling og ønske om å lære.
 
@@ -50,7 +50,7 @@ Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrk
 
 ## Det økonomiske
 
-Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
+Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
 
 - Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 872 482](https://www.variant.no/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
@@ -80,6 +80,7 @@ Variant er en stolt bærekraftig bedrift, [faktisk er vi blitt Miljøfyrtårn](h
 
 Hvis du ikke er varm i ørene enda, og ønsker å lese enda mer om filosofien og konseptet vårt, er denne godt behandlet i detalj. Det er bare å lene seg tilbake med en god kopp kaffe og dypdykke:
 
+- [Les mer om våre planer for Variant Bergen](https://variant.no/bergen)
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)

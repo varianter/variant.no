@@ -256,14 +256,14 @@ const Layout: React.FC<LayoutProps> = ({
               >
                 Thomas Angells gate 10
               </a>{' '}
-              i Trondheim, på{' '}
+              i Trondheim, i våre egne lokaler i{' '}
               <a
-                href="https://www.google.com/maps/place/Spaces+-+Spaces+Oslo+Kvadraturen/@59.9096596,10.7460537,18z/data=!4m5!3m4!1s0x46416e89a671fbe3:0x278831a2eb8f70ea!8m2!3d59.9097229!4d10.7467068"
+                href="https://www.google.com/maps/place/Tollbugata+24,+0157+Oslo,+Norway/@59.910812,10.7393748,17z/"
                 rel="noopener"
                 target="_blank"
                 title="Kart til Variant Oslo"
               >
-                Spaces Kvadraturen
+                Tollbugata 24
               </a>{' '}
               i Oslo og på{' '}
               <a
@@ -274,7 +274,7 @@ const Layout: React.FC<LayoutProps> = ({
               >
                 Spaces Vaskerelven
               </a>{' '}
-              i Bergen . Kom innom for en kopp kaffe eller bare en hyggelig
+              i Bergen. Kom innom for en kopp kaffe eller bare en hyggelig
               prat.
             </p>
           </div>
@@ -298,10 +298,8 @@ const Layout: React.FC<LayoutProps> = ({
             <address>
               <strong>Variant Oslo AS</strong>
               <br />
-              C/O Spaces Kvadraturen
-              <br />
-              Tollbugata 8<br />
-              0152 Oslo
+              Tollbugata 24<br />
+              0157 Oslo
             </address>
           </div>
           <div

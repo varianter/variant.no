@@ -38,14 +38,15 @@ export default function AudioPlayer({
   url,
   withScrubber = true,
   children,
+  duration,
 }: {
   url: string;
   withScrubber?: boolean;
   children?: React.ReactNode;
+  duration: number;
 }) {
   const audioElement = useRef<HTMLAudioElement>(null);
   const [currentState, setCurrentState] = useState<States>('INITIAL');
-  const [duration, setDuration] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
 
   useEffect(() => {
@@ -70,13 +71,6 @@ export default function AudioPlayer({
     };
   }, [currentState, duration]);
 
-  useEffect(() => {
-    audioElement.current?.addEventListener('loadedmetadata', (event) => {
-      const { duration } = event.target as HTMLAudioElement;
-      setDuration(duration);
-    });
-  }, []);
-
   const buttonHandler = () => {
     setCurrentState(machine[currentState].next);
   };
@@ -97,7 +91,7 @@ export default function AudioPlayer({
 
   return (
     <div className={style.player}>
-      <audio preload="metadata" ref={audioElement}>
+      <audio preload="none" ref={audioElement}>
         <source src={url} />
       </audio>
 

@@ -39,11 +39,13 @@ export const getEmployeesByOffice = async (
   );
 };
 
-export const getRandomEmployee = async (): Promise<EmployeeItem | false> => {
+export const getRandomEmployee = async (): Promise<
+  EmployeeItem | undefined
+> => {
   const employees = await requestEmployees();
 
   if (!employees) {
-    return false;
+    return undefined;
   }
 
   const randomEmployee =
@@ -84,4 +86,83 @@ function massageEmployee(employee: ApiEmployee) {
       .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
     officeName: employee.office_name,
   };
+}
+
+function getRandomElementFromList(list: Array<string>) {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+const offices = ['Trondheim', 'Oslo', 'Bergen'];
+const givenName = [
+  'Wall-E',
+  'R2D2',
+  'HAL 9000',
+  'ASIOMO',
+  'K9',
+  'MICRO',
+  'Machina',
+  'EVA',
+  'Screwie',
+  'Sparkles',
+  'Alexa',
+  'Siri',
+  'Rusty',
+  'Omega',
+  'Intel',
+  'Bender',
+];
+const surname = [
+  'Spirit',
+  'Ratchet',
+  'Cybel',
+  'Droid',
+  'Ahx',
+  'Ijg',
+  'Ratchet',
+  'Ixim',
+  'Utaqroid',
+  'Plex',
+  'Scrappie',
+  'Silver',
+  'Grezzer',
+  'Odu',
+  'Adx',
+  'Tracker',
+  'Ash',
+  'Mach',
+  'Ejukroid',
+  'Icaf',
+  'Rodríguez',
+];
+
+function getMockEmployee() {
+  const randomOffice = getRandomElementFromList(offices);
+  const randomGivenName = getRandomElementFromList(givenName);
+  const randomSurname = getRandomElementFromList(surname);
+
+  return {
+    name: `${randomGivenName} ${randomSurname}`,
+    email: 'email',
+    telephone: '81549300',
+    image: {
+      url: `https://robohash.org/${randomGivenName}${randomSurname}`,
+      thumb: {
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
+      },
+      fit_thumb: {
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
+      },
+      large: {
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
+      },
+      small_thumb: {
+        url: `https://robohash.org/${randomGivenName}${randomSurname}`,
+      },
+    },
+    office_name: randomOffice,
+  };
+}
+
+export function getMockEmployeeList(numberOfEmployeesToGenerate: number) {
+  return [...Array(numberOfEmployeesToGenerate)].map(getMockEmployee);
 }
