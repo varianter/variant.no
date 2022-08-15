@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 
 import path from 'path';
 
-type InterviewMetadata = {
+export type InterviewMetadata = {
   meta_title: string;
   meta_description: string;
   project: string;
@@ -15,6 +15,8 @@ type InterviewMetadata = {
   image: string;
   imageAltText: string;
   variantEmail: string;
+  variantTitle: string;
+  quote: string;
 };
 
 export type Interview = {

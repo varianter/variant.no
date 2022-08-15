@@ -5,9 +5,11 @@ imageAltText: Marthe hos Statens vegvesen
 project: Statens vegvesen
 variant: Marthe
 variantEmail: msd@variant.no
+variantTitle: Prosjektleder, Oslo
 location: Oslo
 durationFrom: 04.2022
 durationTill:
+quote: «Det å komme inn i en helt ny bransje samtidig som at det er en ny erfaring å jobbe som konsulent har i seg selv være en aha-opplevelse.»
 ---
 
 ## Prosjektstøtte på leveransestrøm
