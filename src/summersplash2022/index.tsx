@@ -65,18 +65,7 @@ const Summersplash2022: NextPage<
       </Head>
 
       {mode === 'intership'}
-
-      <section>
-        <Link href="/sommerjobb">
-          <a>sommerjobb</a>
-        </Link>
-        <Link href="/nyutdannet">
-          <a>nyutdannet</a>
-        </Link>
-      </section>
-      <>
-        <Content selected={mode === 'job' ? 'job' : 'internship'} />
-      </>
+      <Content />
     </Layout>
   );
 };

@@ -1,107 +1,15 @@
-.positionLeft {
-  margin-right: 50%;
-}
-
-.positionRight {
-  margin-left: 50%;
-  margin-bottom: 4%;
-}
-
-.underDev {
-  margin-top: 4000px;
+.section1 {
+  position: sticky;
 }
 
 .searchNewVariants {
-  width: 600px;
-  margin-bottom: 10%;
-  margin-left: -20%;
-}
-
-.marginTopMore {
-  margin-top: 20px;
-  margin-left: -20%;
-}
-
-.marginLeftLess {
-  margin-left: -20%;
+  width: auto;
 }
 
 .imageBlob1 {
-  position: relative;
-  margin-left: 70%;
-  margin-top: -30%;
-}
-
-.imageBlob2 {
-  margin-top: -2%;
-  margin-left: -43%;
-}
-
-.arrow {
-  align-self: center;
-  margin-top: 30%;
-}
-
-.navigationSlider {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  margin-left: 70%;
-}
-
-.navigationButton1,
-.navigationButton2,
-.navigationButton3,
-.navigationButton4,
-.navigationButton5 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  margin-top: 30%;
-}
-
-.aboutSummerjob {
-  margin-right: 50%;
-}
-
-.positionTextLeft {
-  width: 540px;
-  margin-left: -20%;
-  margin-top: -5%;
-}
-
-.officeMap {
-  position: relative;
-  margin-left: 40%;
-  margin-top: -35%;
-}
-
-.jenga {
-  margin-left: -35%;
-  margin-top: -5%;
-}
-
-.whyWorkAtVariant {
-  margin-left: -20%;
-  margin-top: 20%;
-}
-
-.handbook {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10%;
-}
-
-.handbookButton {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  cursor: pointer;
-  margin: 3%;
+  position: absolute;
+  right: -200px;
+  top: 25%;
 }
 
 .ApplyForJobButton {
@@ -109,49 +17,55 @@
   height: 100px;
 }
 
+.displayFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.applyAsDeveloper {
+  position: relative;
+  left: 40%;
+}
+
+.applyAsDesigner {
+  position: relative;
+  margin-top: 5%;
+}
+
 @media (max-width: 760px) {
   .searchNewVariants {
     width: 70%;
     margin-bottom: 0%;
-    margin-left: 0%;
+    margin-left: 5%;
   }
-  .navigationSlider {
-    display: block;
-    margin-left: 0%;
-    position: absolute;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .arrow {
-    visibility: hidden;
-  }
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5 {
-    position: static;
-    margin-top: 0;
-    display: flex;
-    margin-top: 5%;
-    height: 50px;
-    text-align: center;
-    color: black;
+
+  .moreInfo {
+    margin-left: 5%;
   }
 
   .imageBlob1 {
     position: absolute;
     margin-left: 0%;
     margin-top: 0%;
-    height: 13%;
-    width: auto;
-    right: 0px;
+    height: auto;
+    width: 60%;
+    right: -35px;
   }
 
   .displayFlex {
     display: flex;
     flex-direction: column;
     margin-top: 40%;
+  }
+
+  .applyAsDeveloper {
+    position: static;
+    left: 0%;
+  }
+
+  .applyAsDesigner {
+    position: static;
+    left: 0%;
   }
 
   .navigationButton1 {
@@ -186,10 +100,20 @@
     margin-bottom: 20%;
   }
 
-  .applyAsDeveloper {
+  .applyAsDeveloper,
+  .applyAsDesigner {
     width: 40%;
     height: auto;
     margin-top: 5%;
     margin-left: 5%;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 760px) {
+  .imageBlob1 {
+    height: 40%;
+    width: auto;
+    right: 0px;
+    top: 30%;
   }
 }

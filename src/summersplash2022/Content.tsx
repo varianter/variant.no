@@ -1,6 +1,4 @@
-// import React from 'react';
 import style from './index.module.css';
-// import HandBooKPages from './utils/handBookPages';
 
 const Content = () => {
   const sommervarianterBlob1 = require('./img/sommervarianterBlob1.png');
@@ -16,23 +14,27 @@ const Content = () => {
           <img className={style.searchNewVariants} src={searchNewVariants} />
         </span>
         <span>
-          <p>Mer info kommer</p>
+          <p className={style.moreInfo}>Mer info kommer</p>
           <img
             className={style.imageBlob1}
             src={sommervarianterBlob1}
             alt="To fra Variant"
           />
           <span className={style.displayFlex}>
-            <img
-              className={style.applyAsDeveloper}
-              src={applyAsDesigner}
-              alt="Søk som utvikler"
-            />
-            <img
-              className={style.applyAsDeveloper}
-              src={applyAsDeveloper}
-              alt="Søk som utvikler"
-            />
+            <a href="https://www.variant.no/jobs">
+              <img
+                className={style.applyAsDesigner}
+                src={applyAsDesigner}
+                alt="Søk som utvikler"
+              />
+            </a>
+            <a href="https://www.variant.no/jobs">
+              <img
+                className={style.applyAsDeveloper}
+                src={applyAsDeveloper}
+                alt="Søk som utvikler"
+              />
+            </a>
           </span>
         </span>
       </section>
