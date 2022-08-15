@@ -60,23 +60,35 @@ export default function Praha22() {
           </li>
           <li>
             <p>12:50</p>
-            <p>🏢 Buss fra flyplassen til Century Old Town. Innsjekk.</p>
+            <p>🚌 Buss fra flyplassen til hotellet.</p>
           </li>
           <li>
-            <p>13:30 - 19:00</p>
-            <p>
-              🎨 Variantdag! Historik tog til Smetana Q fra Century Old Town.
-              Lunsj kl 15:00.
-            </p>
+            <p>13:10</p>
+            <p>🧳 Innsjekk på Century Old Town Hotel.</p>
           </li>
           <li>
-            <p>20:20</p>
-            <p>🍱 Går fra hotellet til Cerveny Jelen</p>
+            <p>13:30</p>
+            <p>🚋 Historisk trikketur til Smetana Q.</p>
           </li>
           <li>
-            <p>22:30</p>
-            <p>
-              🍱 Vi tar noe godt i glasset på Nebe Celnice, 3 min fra hotellet, på
+            <p>14:00 - 19:00</p>
+            <p>🎨 Variantdag!</p>
+          </li>
+          <li>
+            <p>15:00</p>
+            <p>🥪 Lunsj!</p>
+          </li>
+          <li>
+            <p>19:00</p>
+            <p>🚶‍♀️🚶Går tilbake til hotellet og gjør oss klar for middag.</p>
+          </li>
+          <li>
+            <p>20:30</p>
+            <p>🍽️ Uformell middag på Cerveny Jelen.</p>
+          </li>
+          <li>
+            <p>23:00</p>
+            <p>🍹 Vi tar noe godt i glasset på Nebe Celnice, 3 min fra hotellet, på
               egen regning for de som ønsker.
             </p>
           </li>
@@ -87,8 +99,8 @@ export default function Praha22() {
         <h3 className="fancy">Lørdag</h3>
         <ul>
           <li>
-            <p>07:00 - 10:30</p>
-            <p>🍱 Frokost på hotellet</p>
+            <p>07:00</p>
+            <p>☕ Frokost på hotellet</p>
           </li>
           <li>
             <p>10:00</p>
@@ -96,28 +108,23 @@ export default function Praha22() {
           </li>
           <li>
             <p>10:15</p>
-            <p>🛥️ Dragebåter</p>
+            <p>🚣‍♂️ Dragebåter!</p>
           </li>
           <li>
             <p>13:00</p>
-            <p>🍱 Brunch på Mlynec</p>
+            <p>🥗 Brunch på Mlynec</p>
           </li>
           <li>
-            <p>15:00 - 19:15</p>
-            <p>🏙️ Egentid. Forslag til aktiviteter vil gis på forhånd.</p>
+            <p>15:00 - 19:00</p>
+            <p>🪁 Egentid. Forslag til aktiviteter vil gis på forhånd.</p>
           </li>
           <li>
             <p>19:15 - 22:30</p>
-            <p>
-              🍱 Vi går fra hotellet for middag på V ZÁTISI
-            </p>
+            <p>🍱 Vi går fra hotellet for en litt finere middag på V ZÁTISI!</p>
           </li>
           <li>
             <p>22:30</p>
-            <p>
-              🍱 Vi tar noe godt i glasset på Hangar, 10 min fra hotellet, på
-              egen regning for de som ønsker.
-            </p>
+            <p>🥂 Vi tar noe godt i glasset på Hangar, 10 min fra hotellet, på egen regning for de som ønsker.</p>
           </li>
         </ul>
       </section>
@@ -127,11 +134,11 @@ export default function Praha22() {
         <ul>
           <li>
             <p>07:00</p>
-            <p>🍱 Frokost på hotellet og utsjekk</p>
+            <p>☕ Frokost på hotellet og utsjekk</p>
           </li>
           <li>
             <p>08:20</p>
-            <p>🚅 Felles avreise med buss til flyplassen</p>
+            <p>🚌 Felles avreise med buss til flyplassen</p>
           </li>
           <li>
             <p>08:40</p>
@@ -170,6 +177,12 @@ export default function Praha22() {
               <p>Sondre</p>
               <p>
                 <a href="tel:+4745447385">+47 454 47 385</a>
+              </p>
+            </div>
+            <div className={style.infoGroupContact}>
+              <p>Kine - Reiseleder</p>
+              <p>
+                <a href="tel:+4793222744">+47 93 222 744</a>
               </p>
             </div>
           </div>
