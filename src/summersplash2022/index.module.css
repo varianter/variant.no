@@ -1,15 +1,21 @@
+.maskStyle {
+  mask-type: alpha;
+}
+
 .section1 {
   position: sticky;
 }
 
 .searchNewVariants {
   width: auto;
+  margin-top: 10%;
 }
 
 .imageBlob1 {
   position: absolute;
   right: -200px;
-  top: 25%;
+  top: 30%;
+  width: 50%;
 }
 
 .ApplyForJobButton {
@@ -24,7 +30,8 @@
 
 .applyAsDeveloper {
   position: relative;
-  left: 40%;
+  left: 30%;
+  bottom: 10%;
 }
 
 .applyAsDesigner {
@@ -34,9 +41,10 @@
 
 @media (max-width: 760px) {
   .searchNewVariants {
-    width: 70%;
+    width: 90%;
     margin-bottom: 0%;
     margin-left: 5%;
+    margin-top: 0%;
   }
 
   .moreInfo {
@@ -68,44 +76,21 @@
     left: 0%;
   }
 
-  .navigationButton1 {
-    background: #e61a6b;
-    color: white;
-  }
-  .navigationButton2 {
-    background: #ffc4bc;
-  }
-  .navigationButton3 {
-    background: #423d89;
-    color: white;
-  }
-  .navigationButton4 {
-    background: #03dac6;
-  }
-  .navigationButton5 {
-    background: '#9591CE';
-  }
-
-  .ApplyForJobButton {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: #e61a6b;
-    color: white;
-    border: 0cm;
-    margin-top: 40%;
-  }
-
   .section1 {
     margin-bottom: 20%;
   }
 
   .applyAsDeveloper,
   .applyAsDesigner {
-    width: 40%;
+    width: 60%;
     height: auto;
     margin-top: 5%;
     margin-left: 5%;
+  }
+
+  .applyAsDeveloper {
+    position: relative;
+    left: 30%;
   }
 }
 
@@ -114,6 +99,6 @@
     height: 40%;
     width: auto;
     right: 0px;
-    top: 30%;
+    top: 40%;
   }
 }

@@ -15,7 +15,6 @@ import { getStaticProps } from 'pages';
 // import {JobOrInternship} from './utils/utils'
 import Layout from 'src/layout';
 import Content from './Content';
-import Link from 'next/link';
 import { rqdp } from './utils/utils';
 
 const Summersplash2022: NextPage<
