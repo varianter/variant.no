@@ -1,3 +1,5 @@
+import { BaseBlob } from '@variant/components/lib/blob';
+
 import Image from 'next/image';
 import { and } from 'src/utils/css';
 
@@ -13,14 +15,19 @@ export default function Blog({ item }: { item: BlogItem }) {
     <div className={and(style.card, style['card--blog'])}>
       <div className={style.media}>
         {item.imageCoverUrl && (
-          <Image
-            loader={loader}
-            className={style.cover}
-            src={item.imageCoverUrl}
-            width={500}
+          // <Image
+          //   loader={loader}
+          //   className={style.cover}
+          //   src={item.imageCoverUrl}
+          //   width={500}
+          //   height={500}
+          //   alt=""
+          //   layout="intrinsic"
+          // />
+          <BaseBlob
             height={500}
-            alt=""
-            layout="intrinsic"
+            width={500}
+            imageProps={{ src: item.imageCoverUrl, alt: '' }}
           />
         )}
       </div>
