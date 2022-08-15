@@ -10,19 +10,21 @@ export default function Podcast({ item }: { item: PodcastItem }) {
   return (
     <div className={and(style.card, style['card--podcast'])}>
       <div className={style.media}>
-        <div className={style.podcast__cover}>
-          <Image
-            className={style.cover}
-            src={item.imageCoverUrl}
-            alt=""
-            width={500}
-            height={500}
-          />
-        </div>
+        <Image
+          className={style.cover}
+          src={item.imageCoverUrl}
+          alt=""
+          width={500}
+          height={500}
+        />
       </div>
       <div className={style.text}>
         <div className={style.podcast__content}>
-          <Player duration={item.duration} url={item.media.url} withScrubber={true}>
+          <Player
+            duration={item.duration}
+            url={item.media.url}
+            withScrubber={true}
+          >
             <h4 className={style.title}>
               {item.title}{' '}
               <span

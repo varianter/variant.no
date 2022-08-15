@@ -91,10 +91,6 @@
     0px 2.50747px 2.74791px rgba(0, 0, 0, 0.0155009);
 }
 
-.podcast__cover {
-  /*  padding: 0.5rem 1rem; */
-}
-
 .podcast__content {
   display: grid;
   gap: 0.75rem;
