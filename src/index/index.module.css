@@ -345,20 +345,6 @@
   display: grid;
   grid-gap: 1.5rem;
 }
-.feed__image1 {
-  order: -1;
-  max-width: 40%;
-  margin: 0 auto;
-}
-@media (min-width: 1020px) {
-  .feed__image1 {
-    position: absolute;
-    top: 5rem;
-    right: -13rem;
-    max-width: 20rem;
-    z-index: 1;
-  }
-}
 .feed__readMore {
   text-align: center;
   margin: 1rem auto;
