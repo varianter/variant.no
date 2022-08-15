@@ -104,6 +104,11 @@
   margin: 3%;
 }
 
+.ApplyForJobButton {
+  width: 200px;
+  height: 100px;
+}
+
 @media (max-width: 760px) {
   .searchNewVariants {
     width: 70%;
@@ -134,6 +139,21 @@
     color: black;
   }
 
+  .imageBlob1 {
+    position: absolute;
+    margin-left: 0%;
+    margin-top: 0%;
+    height: 13%;
+    width: auto;
+    right: 0px;
+  }
+
+  .displayFlex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40%;
+  }
+
   .navigationButton1 {
     background: #e61a6b;
     color: white;
@@ -150,5 +170,26 @@
   }
   .navigationButton5 {
     background: '#9591CE';
+  }
+
+  .ApplyForJobButton {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #e61a6b;
+    color: white;
+    border: 0cm;
+    margin-top: 40%;
+  }
+
+  .section1 {
+    margin-bottom: 20%;
+  }
+
+  .applyAsDeveloper {
+    width: 40%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
   }
 }
