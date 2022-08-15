@@ -348,4 +348,5 @@
 .feed__readMore {
   text-align: center;
   margin: 1rem auto;
+  text-underline-offset: 0.5rem;
 }

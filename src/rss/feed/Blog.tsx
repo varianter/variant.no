@@ -43,9 +43,11 @@ export default function Blog({ item }: { item: BlogItem }) {
           Skrevet av <span className={style.author}>{item.creator}</span>,{' '}
           {item.publishDate}
         </div>
-        <p className={style.summary}>
-          {item.description} <a href={item.url}>Les hele artikkelen</a>
-        </p>
+        <p className={style.summary}>{item.description}</p>
+        <div className={style.card__link}>
+          <a href={item.url}>Les artikkel</a>
+          <img src="/images/arrow.svg" alt="Pil mot høyre" />
+        </div>
       </div>
     </div>
   );

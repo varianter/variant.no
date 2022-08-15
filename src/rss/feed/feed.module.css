@@ -132,8 +132,19 @@
   object-fit: cover;
 }
 
-.summary {
+.summary,
+.card__link {
   font-size: 0.85rem;
+}
+
+.card__link {
+  text-underline-offset: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.card__link > img {
+  height: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .thumbnail {
