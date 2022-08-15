@@ -5,12 +5,7 @@ export interface JobOrInternship {
 }
 
 export interface WhichButtonPressed {
-  selectedButton:
-    | 'values'
-    | 'responsibility'
-    | 'flex'
-    | 'christmas'
-    | 'competance';
+  selectedButton: string;
 }
 
 export const rqdp = (router: NextRouter) => {
