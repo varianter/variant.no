@@ -20,7 +20,7 @@ const Content = () => {
               src={sommervarianterBlob1}
               alt="To fra Variant"
             />
-            <span className={style.displayFlex}>
+            <span className={style.applyButtons}>
               <a href="https://www.variant.no/jobs">
                 <ApplyAsDesigner />
               </a>

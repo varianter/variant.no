@@ -4,51 +4,54 @@
 
 .section1 {
   position: sticky;
+  margin: 3%;
+  margin-bottom: 20%;
 }
 
 .searchNewVariants {
   width: auto;
-  margin-top: 10%;
 }
 
 .imageBlob1 {
   position: absolute;
-  right: -200px;
+  right: 5%;
   top: 30%;
-  width: 50%;
+  width: 35%;
 }
 
 .ApplyForJobButton {
   width: 200px;
-  height: 100px;
 }
 
-.displayFlex {
-  display: flex;
-  flex-direction: column;
+.applyButtons {
+  margin-bottom: 20%;
+  margin-left: 0px;
 }
 
 .applyAsDeveloper {
   position: relative;
-  left: 30%;
-  bottom: 10%;
+  margin-top: 5%;
+  left: 8%;
+  top: 150px;
 }
 
 .applyAsDesigner {
   position: relative;
-  margin-top: 5%;
+  margin: 0px;
 }
 
 @media (max-width: 760px) {
   .searchNewVariants {
     width: 90%;
+    height: 10%;
     margin-bottom: 0%;
-    margin-left: 5%;
-    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 5%;
+    margin-top: 15%;
   }
 
   .moreInfo {
-    margin-left: 5%;
+    margin-left: 0%;
   }
 
   .imageBlob1 {
@@ -56,27 +59,27 @@
     margin-left: 0%;
     margin-top: 0%;
     height: auto;
-    width: 60%;
-    right: -35px;
-  }
-
-  .displayFlex {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40%;
+    width: 70%;
+    top: 30%;
+    overflow: hidden;
   }
 
   .applyAsDeveloper {
-    position: static;
+    position: relative;
     left: 0%;
   }
 
   .applyAsDesigner {
-    position: static;
-    left: 0%;
+    position: relative;
+    left: -20px;
+    top: 200px;
+  }
+  .section1 {
+    margin-right: 0%;
+    margin-bottom: 20%;
   }
 
-  .section1 {
+  .displayFlex {
     margin-bottom: 20%;
   }
 
@@ -94,11 +97,15 @@
   }
 }
 
-@media (max-width: 1050px) and (min-width: 760px) {
+@media (max-width: 1200px) and (min-width: 760px) {
   .imageBlob1 {
-    height: 40%;
+    height: 50%;
     width: auto;
     right: 0px;
     top: 40%;
+  }
+
+  .searchNewVariants {
+    margin-top: 0px;
   }
 }

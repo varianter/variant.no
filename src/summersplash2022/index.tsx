@@ -54,7 +54,7 @@ const Summersplash2022: NextPage<
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <meta
           property="og:image"
@@ -65,7 +65,7 @@ const Summersplash2022: NextPage<
 
       {mode === 'intership'}
       <Content />
-    </Layout>
+    </>
   );
 };
 
