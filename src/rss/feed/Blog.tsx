@@ -1,14 +1,14 @@
 import { BaseBlob } from '@variant/components/lib/blob';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { and } from 'src/utils/css';
 
 import { BlogItem } from '../index';
 import style from './feed.module.css';
 
-const loader = ({ src, width }: { src: string; width: number }) => {
-  return `${src}?w=${width}&h=${width}`;
-};
+// const loader = ({ src, width }: { src: string; width: number }) => {
+//   return `${src}?w=${width}&h=${width}`;
+// };
 
 export default function Blog({ item }: { item: BlogItem }) {
   return (

@@ -1,6 +1,6 @@
 import { BaseBlob } from '@variant/components/lib/blob';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { and } from 'src/utils/css';
 import { PodcastItem } from '../index';
 import style from './feed.module.css';
