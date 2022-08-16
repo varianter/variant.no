@@ -141,57 +141,64 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
-          <h3>Hvorfor jobbe i Variant</h3>
-          <p className={style.positionTextLeft}>
-            Variant er en variant av et konsulentselskap som er raust, åpent og
-            læreglad. Disse verdiene ligger til grunn for hvordan vi møter
-            hverandre, våre kunder og alle andre. I håndboken vår kan du lese om
-            hvordan ting gjøres i Variant, hva vi prøver å oppnå og hvorfor vi
-            tenker som vi gjør. Under kan du sjekke ut er et par utvalgte
-            temaer.
-          </p>
           <div className={style.handbook}>
-            <button
-              className={style.handbookButton1}
-              onClick={() => setWhichButtonSelected('Formmal og verdier')}
-            >
-              Formål og verdier
-            </button>
-            <button
-              className={style.handbookButton2}
-              onClick={() => setWhichButtonSelected('Tillit og ansvar')}
-            >
-              Tillit og ansvar
-            </button>
-            <button
-              className={style.handbookButton3}
-              onClick={() => setWhichButtonSelected('Variantdag')}
-            >
-              Variantdag
-            </button>
-            <button
-              className={style.handbookButton4}
-              onClick={() => setWhichButtonSelected('Miljofyrtarn')}
-            >
-              Miljøfyrtårn
-            </button>
-            <button
-              className={style.handbookButton5}
-              onClick={() => setWhichButtonSelected('Fleksitid')}
-            >
-              Fleksitid
-            </button>
+            <div className={style.handbookChildButton}>
+              <h3 className={style.positionTextSubLeft}>
+                Hvorfor akkurat Variant
+              </h3>
+              <p className={style.positionTextLeft}>
+                Variant er en variant av et konsulentselskap som er raust, åpent
+                og læreglad. Disse verdiene ligger til grunn for hvordan vi
+                møter hverandre, våre kunder og alle andre. I håndboken vår kan
+                du lese om hvordan ting gjøres i Variant, hva vi prøver å oppnå
+                og hvorfor vi tenker som vi gjør. Under kan du sjekke ut er et
+                par utvalgte temaer.
+              </p>
+
+              <button
+                className={style.handbookButton1}
+                onClick={() => setWhichButtonSelected('Formmal og verdier')}
+              >
+                Formål og verdier
+              </button>
+              <button
+                className={style.handbookButton2}
+                onClick={() => setWhichButtonSelected('Tillit og ansvar')}
+              >
+                Tillit og ansvar
+              </button>
+              <button
+                className={style.handbookButton3}
+                onClick={() => setWhichButtonSelected('Variantdag')}
+              >
+                Variantdag
+              </button>
+              <button
+                className={style.handbookButton4}
+                onClick={() => setWhichButtonSelected('Miljofyrtarn')}
+              >
+                Miljøfyrtårn
+              </button>
+              <button
+                className={style.handbookButton5}
+                onClick={() => setWhichButtonSelected('Fleksitid')}
+              >
+                Fleksitid
+              </button>
+
+              <h3>Hva er Viktigst for deg?</h3>
+              <a href="https://handbook.variant.no">
+                Sjekk ut hele håndboka vår her
+              </a>
+            </div>
+            <div className={style.flexbox}>
+              <HandBooKPages selectedButton={whichButtonSelected} />
+            </div>
           </div>
-          <div>
-            <HandBooKPages selectedButton={whichButtonSelected} />
-          </div>
-          <div>
-            <h3>Hva er Viktigst for deg?</h3>
-            <a href="https://handbook.variant.no">
-              Sjekk ut hele håndboka vår her
-            </a>
-          </div>
+
+          <div></div>
         </section>
+
         <section className={style.section5}>
           <h3 className={style.section5Heading}>
             Hva skjer etter søknadsfristen?

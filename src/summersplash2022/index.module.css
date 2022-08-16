@@ -3,7 +3,8 @@
 .section2,
 .section3,
 .section5,
-.section6 {
+.section6,
+.whyWorkAtVariant {
   margin: 5%;
 }
 
@@ -13,11 +14,11 @@
 }
 
 .searchNewVariants {
-  margin: 5%;
+  margin: 0%;
 }
 
 .underHeader {
-  margin-left: 5%;
+  margin-left: 0%;
 }
 
 .h4Section1 {
@@ -100,14 +101,19 @@
   bottom: 200px;
 }
 
-/* Section 6 styling*/
-.section6Paragraph {
-  width: 550px;
+.marginTopMore {
   margin-top: 20px;
 }
 
+/* Section 6 styling*/
+
 .section6Underline {
   text-decoration: underline;
+}
+
+.section6Paragraph {
+  width: 550px;
+  margin-top: 20px;
 }
 
 .contactInfo {
@@ -168,12 +174,11 @@
 
 .imageBlob2 {
   margin-top: -2%;
-  /* margin-left: -43%; */
 }
 
 .arrow {
   align-self: center;
-  margin-top: 30%;
+  margin-top: 50%;
 }
 
 .navigationSlider {
@@ -186,8 +191,6 @@
 }
 
 .navigationButton1 {
-  /* border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px; */
   background: none;
   border: none;
   margin: 0;
@@ -310,17 +313,12 @@
 .positionTextLeft {
   padding-top: 1%;
   width: 540px;
-  /* margin-left: -20%; */
-  /* margin-top: -5%; */
 }
 
 .positionTextSubLeft {
   padding-top: 1%;
   padding-bottom: 2%;
-  padding-left: 20%;
   width: 540px;
-  /* margin-left: -20%; */
-  /* margin-top: -5%; */
 }
 
 .officeMap {
@@ -334,43 +332,41 @@
   /* margin-top: -5%; */
 }
 
-.whyWorkAtVariant {
-  /* margin-left: -20%; */
-  margin-top: 20%;
-}
-
 .handbook {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 15%;
+  justify-content: flex-start;
   margin-top: 10%;
 }
 
-.handbookText {
-  background: #03dac6;
-  border: none;
-  margin: 0;
-  padding: 0;
+.whyWorkAtVariant {
+  margin-top: 20%;
+}
+
+.handbookChildButton {
+  display: flex;
   text-align: left;
-  cursor: pointer;
-  margin: 3%;
+  flex-direction: column;
 }
 
 .handbookButton1 {
   background: none;
   border: none;
-  margin: 2%;
+  margin-top: 2%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
+  display: grid;
 }
 
 .handbookButton1:hover,
 .handbookButton1:focus {
   background: #03dac6;
   border: none;
-  margin: 2%;
+  margin-top: 2%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
@@ -380,41 +376,20 @@
 .handbookButton2 {
   background: none;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
+  display: grid;
 }
 
 .handbookButton2:hover,
 .handbookButton2:focus {
   background: #9591ce;
   border: none;
-  margin: 2%;
-  padding: 1% 1%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.handbookButton2 {
-  background: none;
-  border: none;
-  margin: 2%;
-  padding: 1% 1%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-}
-
-.handbookButton2:hover,
-.handbookButton2:focus {
-  background: #9591ce;
-  border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
@@ -424,19 +399,20 @@
 .handbookButton3 {
   background: none;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
+  display: grid;
 }
 
 .handbookButton3:hover,
 .handbookButton3:focus {
   background: #e61a6b;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
@@ -446,19 +422,20 @@
 .handbookButton4 {
   background: none;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
+  display: grid;
 }
 
 .handbookButton4:hover,
 .handbookButton4:focus {
   background: #ffc4bc;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
@@ -468,12 +445,13 @@
 .handbookButton5 {
   background: none;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
+  display: grid;
 }
 
 .handbookButton5:hover,
@@ -481,11 +459,12 @@
   background: #423d89;
   color: white;
   border: none;
-  margin: 2%;
+  margin-top: 6%;
   padding: 1% 1%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
+  max-width: fit-content;
 }
 
 @media (max-width: 760px) {
