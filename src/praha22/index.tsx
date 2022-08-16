@@ -80,7 +80,7 @@ export default function Praha22() {
           </li>
           <li>
             <p>19:00</p>
-            <p>🚶‍♀️🚶Går tilbake til hotellet og gjør oss klar for middag.</p>
+            <p>🚶‍♀️🚶Går til hotellet og gjør oss klar for middag.</p>
           </li>
           <li>
             <p>20:30</p>
@@ -88,8 +88,7 @@ export default function Praha22() {
           </li>
           <li>
             <p>23:00</p>
-            <p>🍹 Vi tar noe godt i glasset på Nebe Celnice, 3 min fra hotellet, på
-              egen regning for de som ønsker.
+            <p>🍹 Vi tar noe godt i glasset på Nebe Celnice.
             </p>
           </li>
         </ul>
@@ -124,7 +123,7 @@ export default function Praha22() {
           </li>
           <li>
             <p>22:30</p>
-            <p>🥂 Vi tar noe godt i glasset på Hangar, 10 min fra hotellet, på egen regning for de som ønsker.</p>
+            <p>🥂 Vi tar noe godt i glasset på Hangar.</p>
           </li>
         </ul>
       </section>
