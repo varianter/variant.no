@@ -8,15 +8,25 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
     <div className={and(style.card, style['card--youtube'])}>
       <figure className={style.media}>
-        <a href={item.url}>
-          <div className={style.thumbnail}>
+        {/* TODO: Remove if unwanted */}
+        {/*<a href={item.url}>
+           <div className={style.thumbnail}>
             <img
               className={style.thumbnail__image}
               src={item.imageCoverUrl}
               alt=""
             />
           </div>
-        </a>
+        </a> */}
+        <BaseBlob
+          height={200}
+          width={200}
+          imageProps={{
+            src: '/logo-512.png',
+            alt: '',
+            className: style.cover,
+          }}
+        />
       </figure>
       <div className={style.text}>
         <a
