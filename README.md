@@ -19,7 +19,7 @@ Navigate to `http://localhost:3000`. Have fun!
 
 ## Configuration
 
-It should run without configuring any environment variables using mocked data an local storage of images. If you want to integrate with actual CV Partner for fetching employees and Blob Storage to cache/store CV photos you can set that by creating a `.env.local` file based on the [`.env.example` file](./env.example).
+It should run without configuring any environment variables using mocked data and local storage of images. If you want to integrate with actual CV Partner for fetching employees and Blob Storage to cache/store CV photos you can set that by creating a `.env.local` file based on the [`.env.example` file](./env.example).
 
 ```
 # Set if you want to integrate with CV Partner
