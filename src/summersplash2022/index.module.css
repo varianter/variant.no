@@ -1,35 +1,169 @@
-.positionLeft {
-  margin-right: 50%;
+/* Felles styling*/
+.section1,
+.section2,
+.section3,
+.section5,
+.section6 {
+  margin: 5%;
 }
 
-.positionRight {
-  margin-left: 50%;
-  margin-bottom: 4%;
-}
-
-.underDev {
-  margin-top: 4000px;
+/* Section 1 styling*/
+.maskStyling {
+  mask-type: alpha;
 }
 
 .searchNewVariants {
-  width: 600px;
+  margin: 5%;
+}
+
+.underHeader {
+  margin-left: 5%;
+}
+
+.h4Section1 {
   margin-bottom: 10%;
-  /* margin-left: -20%; */
-}
-
-.marginTopMore {
-  margin-top: 20px;
-  /* margin-left: -20%; */
-}
-
-.marginLeftLess {
-  margin-left: -10%;
 }
 
 .imageBlob1 {
+  position: absolute;
+  left: 45%;
+  height: 8%;
+  top: 400px;
+  width: auto;
+}
+
+/* Section 2 styling*/
+.section2 {
+  margin-top: 20%;
+  width: 80%;
+}
+
+.section2Heading {
+  margin-bottom: 20px;
+}
+
+.section2Paragraph {
+  width: 40%;
+}
+
+.officeMap {
   position: relative;
-  margin-left: 70%;
-  margin-top: -30%;
+  right: 0%;
+  top: 0%;
+}
+
+/* Section 3 styling */
+
+.section3 {
+  margin-top: 15%;
+}
+
+.summerstudent1 {
+  display: flex;
+}
+
+.summerstudent1picture {
+  margin-top: 5%;
+  margin-left: 7%;
+  width: 30%;
+}
+
+.summerstudent1Paragraph {
+  width: 400px;
+  position: relative;
+  top: 150px;
+}
+
+/* Section 5 styling */
+
+.section5Heading {
+  margin-bottom: 20px;
+}
+
+.section5ParagraphLeft {
+  position: relative;
+}
+
+.section5Paragraph {
+  width: 500px;
+}
+
+.section5ParagraphRight {
+  position: relative;
+  left: 600px;
+  bottom: 350px;
+}
+
+.timeLine {
+  position: relative;
+  left: 800px;
+  bottom: 200px;
+}
+
+/* Section 6 styling*/
+.section6Paragraph {
+  width: 550px;
+  margin-top: 20px;
+}
+
+.section6Underline {
+  text-decoration: underline;
+}
+
+.contactInfo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.applyAsDesigner:hover {
+  display: none;
+}
+
+.applyAsDesigner:hover ~ .applyAsDesignerBig {
+  display: block;
+}
+
+.applyAsDesignerBig {
+  display: none;
+}
+
+.ApplyAsDeveloper:hover {
+  display: none;
+}
+
+.ApplyAsDeveloper:hover ~ .ApplyAsDeveloperBig {
+  display: block;
+}
+
+.ApplyAsDeveloperBig {
+  display: none;
+}
+
+.ApplyAsDesignerDiv,
+.ApplyAsDeveloperDiv {
+  width: 300px;
+  margin: 20px;
+  height: 200px;
+}
+
+.ApplyAsDeveloperDiv {
+  position: relative;
+  left: 200px;
+}
+.Marius {
+  width: 35%;
+  position: absolute;
+  right: 300px;
+  bottom: 150px;
+}
+
+/* Gammelt */
+
+.underDev {
+  margin-top: 4000px;
 }
 
 .imageBlob2 {

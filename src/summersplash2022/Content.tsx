@@ -1,20 +1,21 @@
 // import React from 'react';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import NewVariants from './img/newVariants';
+import Map from './img/map';
 import style from './index.module.css';
 import HandBooKPages from './utils/handBookPages';
 // import HandBooKPages from './utils/handBookPages';
-import { JobOrInternship, WhichButtonPressed } from './utils/utils';
+import { JobOrInternship } from './utils/utils';
+import TimeLine from './img/tidslinje';
+import ApplyAsDesigner from './img/søkSomDesigner';
+import ApplyAsDesignerBiggerBlob from './img/søkSomDesignerBigBlob';
+import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
+import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 
 const Content = ({ selected }: JobOrInternship) => {
-  const blobSection1 = require('./img/Vector.png');
-  const blobSection2 = require('./img/hva går sommerjobben ut på.png');
-  // const upArrow = require('./img/Vector-2.png');
-  // const downArrow = require('./img/Vector-3.png');
-  const map = require('./img/kart.png');
-  const jenga = require('./img/jenga.png');
-  const pinkBlobb = require('./img/rosaBlobb.png');
-  const Even = require('./img/Even.png');
-  const searchNewVariants = require('./img/vi søker nye varianter.png');
+  const blobSection1 = require('./img/section1Blob.png');
+  const summerstudent1 = require('./img/sommerstudent1.png');
+  const Marius = require('./img/Marius.png');
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
 
@@ -34,52 +35,49 @@ const Content = ({ selected }: JobOrInternship) => {
       <>
         {/* Navigation bar on the right side */}
         <div className={style.navigationSlider}>
-          {/* <img
-            className={style.arrow}
-            src={upArrow}
-            alt="arrow up"
-            height="30px"
-            width="30px"
-          /> */}
-          <button className={style.navigationButton1} onClick={() => goToRef(sommerjobbHandling)}>
+          <button
+            className={style.navigationButton1}
+            onClick={() => goToRef(sommerjobbHandling)}
+          >
             Hva går sommerjobben ut på
           </button>
-          <button className={style.navigationButton2} onClick={() => goToRef(sommerjobbereMening)}>
+          <button
+            className={style.navigationButton2}
+            onClick={() => goToRef(sommerjobbereMening)}
+          >
             Hva mener årets sommerstudenter?
           </button>
-          <button className={style.navigationButton3} onClick={() => goToRef(hvorforVariant)}>
+          <button
+            className={style.navigationButton3}
+            onClick={() => goToRef(hvorforVariant)}
+          >
             Hvorfor jobbe i Variant?
           </button>
-          <button className={style.navigationButton4} onClick={() => goToRef(etterSoknad)}>
+          <button
+            className={style.navigationButton4}
+            onClick={() => goToRef(etterSoknad)}
+          >
             Hva skjer etter søknadsfristen?
           </button>
-          <button className={style.navigationButton5} onClick={() => goToRef(sokSommerjobb)}>
-						Søk sommerjobb 
-					</button>
-
-          {/* <img
-            className={style.arrow}
-            src={downArrow}
-            alt="arrow down"
-            height="30px"
-            width="30px"
-          /> */}
+          <button
+            className={style.navigationButton5}
+            onClick={() => goToRef(sokSommerjobb)}
+          >
+            Søk sommerjobb
+          </button>
         </div>
-        <section>
-          <span>
-            <img className={style.searchNewVariants} src={searchNewVariants} />
+        <section className={style.section1}>
+          <span className={style.searchNewVariants}>
+            <NewVariants />
           </span>
-          <span>
+          <br />
+          <div className={style.underHeader}>
             {/* middlertidig link. usikker på hvilken vi skal bruke */}
-            <a
-              className={style.marginLeftLess}
-              href="https://www.variant.no/jobs"
-            >
-              Søk her
-            </a>
-            <p className={style.marginTopMore}>Eller</p>
-            <p className={style.marginTopMore}>naviger med menyen</p>
-          </span>
+            <h4 className={style.h4Section1}>Søk innen 4. Oktober</h4>
+            <a href="https://www.variant.no/jobs">Søk her</a>
+            <p>Eller</p>
+            <p>naviger med menyen</p>
+          </div>
           <span>
             <img
               className={style.imageBlob1}
@@ -89,53 +87,69 @@ const Content = ({ selected }: JobOrInternship) => {
           </span>
         </section>
 
-        <section>
-          <img
-            className={style.imageBlob2}
-						ref={sommerjobbHandling}
-            src={blobSection2}
-            alt="green blobb"
-          />
-          <div className={style.positionTextLeft}>
-            <p>
+        <section className={style.section2}>
+          <div>
+            <h3 className={style.section2Heading}>
+              Hva går sommerjobben ut på ?
+            </h3>
+            <p className={style.section2Paragraph}>
               En sommerjobb i Variant er en fin mulighet til å anvende det du
               har lært på skolen i praksis. Det forventes ikke at du er utlært,
-              men at du ønsker å lære mer. I tverrfaglige team bestående av
-              designere og utviklere kommer dere til å jobbe sammen på et av de
-              spennende kundeprosjektene vi har. Underveis får du god oppfølging
-              og tilrettelegging fra erfarne konsulenter som ønsker at du
-              lykkes.
+              men at du ønsker å lære mer. I et tverrfaglig team bestående av
+              designere og utviklere kommer du til å jobbe på et av de spennende
+              kundeprosjektene vi har. Underveis får du god oppfølging og
+              tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
+              Sjekk ut denne bloggposten for å lese mer om hva årets
+              sommerstudenter i Oslo jobbet med.
             </p>
-            <p>
-              I 2022 tilbyr vi sommerjobb i både Trondheim og Oslo, til
-              henholdsvis seks og fire studenter. Hvor du vil jobbe bestemmer du
-              naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
-              ferie i mellomtiden, og vil gi god innsikt i hva det vil si å
-              jobbe i konsulentbransjen. Du kommer til å lære masse nyttig,
-              samtidig som du har det gøy med de andre variantene.
+            <p className={style.section2Paragraph}>
+              I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og Bergen, til
+              henholdsvis seks, fem og to studenter. Hvor du vil jobbe bestemmer
+              du naturligvis selv. Sommerjobben varer i fire + to uker med tre
+              uker ferie i mellomtiden.
+            </p>
+
+            <p className={style.section2Paragraph}>
+              I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke trenger
+              å lure på hvordan kontrakten din vil se ut for sommeren, den
+              ligger nemlig åpent og tilgjengelig på våre nettsider. Timelønnen
+              trenger du heller ikke å lure på, den er på 265 kr. Under “Hvorfor
+              jobbe i Variant?” ned kan du lese mer om hva Variant står for og
+              tilbyr.
             </p>
           </div>
-          <img
-            className={style.officeMap}
-            src={map}
-            alt="kart over kontorene i norge"
-          />
+          <div className={style.officeMap}>
+            <Map />
+          </div>
         </section>
 
-        <section className={style.jenga}>
-          <img src={jenga} alt="jenga spill" />
+        <section className={style.section3}>
+          <h3>Hva mener årets sommerstudenter?</h3>
+          <div className={style.summerstudent1}>
+            <img
+              className={style.summerstudent1picture}
+              src={summerstudent1}
+              alt=""
+            />
+            <p className={style.summerstudent1Paragraph}>
+              “Teamet hos kunden stilte gjerne til rådgivning uansett hva.[...]
+              Jeg følte man ble en del av firmaet selv om det «bare» var en
+              sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker å hjelpe
+              der man kan og løfte hverandre frem.”
+            </p>
+          </div>
         </section>
 
         <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
           <h3>Hvorfor jobbe i Variant</h3>
-					<p className={style.positionTextLeft}>
-					Variant er en variant av et konsulentselskap som er raust, åpent 
-					og læreglad. Disse verdiene ligger til grunn for hvordan vi møter 
-					hverandre, våre kunder og alle andre. I håndboken vår kan du lese 
-					om hvordan ting gjøres i Variant, hva vi prøver å oppnå og 
-					hvorfor vi tenker som vi gjør. Under kan du sjekke ut er et par 
-					utvalgte temaer. 
-					</p>
+          <p className={style.positionTextLeft}>
+            Variant er en variant av et konsulentselskap som er raust, åpent og
+            læreglad. Disse verdiene ligger til grunn for hvordan vi møter
+            hverandre, våre kunder og alle andre. I håndboken vår kan du lese om
+            hvordan ting gjøres i Variant, hva vi prøver å oppnå og hvorfor vi
+            tenker som vi gjør. Under kan du sjekke ut er et par utvalgte
+            temaer.
+          </p>
           <div className={style.handbook}>
             <button
               className={style.handbookButton1}
@@ -178,161 +192,93 @@ const Content = ({ selected }: JobOrInternship) => {
             </a>
           </div>
         </section>
-        <section>
-          <img src={pinkBlobb} ref={etterSoknad}  alt="pink blobb" />
-          <div>
-            <h3>Hva skjer etter søknadsfristen?</h3>
-            <p>
-              Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
-              unaturlig situasjon, og man blir ikke godt kjent med hverandre.
-              Etter at vi har vurdert alle søknadene inviterer vi utvalgte
-              kandidater til en uformell samtale. Dette er det vi kaller
-              kaffeprat. Hensikten med samtalen er å finne ut om begge parter
-              har felles verdier og mål. Og nei – du er selvsagt ikke nødt til å
-              drikke kaffe.
-            </p>
-            <p>
-              Dersom du får jobbtilbud og takker ja, inkluderes du straks i
-              Variant på lik linje med de fast ansatte. Du får tilgang til vår
-              Slack, og mulighet til å delta på alle faglige og sosiale
-              arrangementer. Dette inkluderer blant annet spill- og fagkvelder,
-              nyttårskalas og variantdager, som er fine muligheter til å bli
-              bedre kjent før sommerjobben starter i juni.
-            </p>
+        <section className={style.section5}>
+          <h3 className={style.section5Heading}>
+            Hva skjer etter søknadsfristen?
+          </h3>
+          <div className={style.section5ParagraphLeft}>
+            <div>
+              <p className={style.section5Paragraph}>
+                Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
+                unaturlig situasjon, og man blir ikke godt kjent med hverandre.
+                Etter at vi har vurdert alle søknadene inviterer vi utvalgte
+                kandidater til en uformell samtale. Dette er det vi kaller
+                kaffeprat. Hensikten med samtalen er å finne ut om begge parter
+                har felles verdier og mål. Og nei – du er selvsagt ikke nødt til
+                å drikke kaffe.
+              </p>
+              <p className={style.section5Paragraph}>
+                Dersom du får jobbtilbud og takker ja, inkluderes du straks i
+                Variant på lik linje med de faste ansatte. Du får tilgang til
+                vår Slack, og mulighet til å delta på alle faglige og sosiale
+                arrangementer. Dette inkluderer blant annet spill- og
+                fagkvelder, nyttårskalas og variantdager, som er fine muligheter
+                til å bli bedre kjent før sommerjobben starter i juni.
+              </p>
+            </div>
+            <div className={style.section5ParagraphRight}>
+              <h4>Søknadstips:</h4>
+              <p className={style.section5Paragraph}>
+                Vi setter pris på en søknad med CV, søknadsbrev og
+                karakterutskrift. Det viktigste for oss er å få et helhetlig
+                bilde. Både av deg som person, din eksisterende kompetanse og
+                dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i
+                Variant? Vi trenger mennesker som bryr seg om å skape en bedre
+                hverdag. Er det deg?
+              </p>
+            </div>
           </div>
-          <img src={Even} alt="picture of Even" />
-        </section>
-
-        {/* Gammelt */}
-        <section className={style.underDev}>
-          <span>Søk senest 3. oktober</span>
-          <h4>Kontorer både i Trondheim og Oslo</h4>
-        </section>
-
-        <section className={style.positionRight}>
-          <h3>Hva går sommerjobben ut på</h3>
-          <div>
-            <p>
-              En sommerjobb i Variant er en fin mulighet til å anvende det du
-              har lært på skolen i praksis. Det forventes ikke at du er utlært,
-              men at du ønsker å lære mer. Det viktigste er at du bryr deg. Bryr
-              deg om koden du skriver, bryr deg om brukeren du designer noe for,
-              bryr deg om kunden du leverer til. I tverrfaglige team bestående
-              av designere og utviklere kommer dere til å jobbe sammen på et av
-              de spennende kundeprosjektene vi har. Underveis får du god
-              oppfølging og tilrettelegging fra erfarne konsulenter som ønsker
-              at du. Er du nysgjerrig på hva tidligere sommervarianter har
-              gjort? Les mer om{' '}
-              <a href="https://blog.variant.no">sommerprosjektene</a>.
-            </p>
+          <div className={style.timeLine}>
+            <TimeLine />
           </div>
         </section>
 
-        <section className={style.positionLeft}>
+        <section className={style.section6}>
           <div>
-            <p>
-              I 2022 tilbyr vi sommerjobb i både{' '}
-              <a href="https://handbook.variant.no/avdelinger/trondheim">
-                Trondheim
-              </a>{' '}
-              og <a href="https://handbook.variant.no/avdelinger/oslo">Oslo</a>,
-              til henholdsvis 6 og 4 studenter. Hvor du vil jobbe bestemmer du
-              naturligvis selv. Sommerjobben varer i fire + to uker med tre uker
-              ferie imellom, og vil gi god innsikt i hva det vil si å jobbe i
-              konsulentbransjen. Du kommer til å lære masse nyttig, samtidig som
-              du har det gøy sammen med oss andre varianter.
+            <h3>Søk sommerjobb</h3>
+            <p className={style.section6Paragraph}>
+              Vi håper du søker, og vi ser frem til å bli bedre kjent med deg.
+              Har du spørsmål om sommerjobben eller Variant? Ta gjerne kontakt
+              med meg.
             </p>
+            <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
+            <div className={style.contactInfo}>
+              <div>
+                <p className={style.section6Underline}>41 63 75 72</p>
+              </div>
+              <div>
+                <p> | </p>
+              </div>
+              <div>
+                <p className={style.section6Underline}>mk@variant.no</p>
+              </div>
+            </div>
           </div>
-        </section>
-
-        <section className={style.positionRight}>
-          <h3>Hvorfor jobbe i Variant?</h3>
-          <div>
-            <p>
-              Variant er en variant av et konsulentselskap som er{' '}
-              <a href="https://handbook.variant.no/handbook#form%C3%A5l-og-verdier">
-                raust, åpent og læreglad
+          <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
+          <div className={style.ApplyAsDesignerDiv}>
+            <div className={style.applyAsDesigner}>
+              <a href="https://www.variant.no/jobs">
+                <ApplyAsDesigner />
               </a>
-              . Disse verdiene ligger til grunn for hvordan vi møter hverandre
-              og våre kunder. Vi er en gjeng hyggelige og dyktige{' '}
-              <a href="https://www.variant.no/ansatte">mennesker</a> som ønsker
-              å både tilegne og dele kunnskap. Sammen skaper vi løsninger som
-              tjener samfunnet.
-            </p>
-            <p>
-              I Variant har alle innsyn i alt - selv som sommerstudent. Derfor
-              trenger du selvsagt ikke å lure på hvordan{' '}
-              <a href="https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html">
-                kontrakten din
-              </a>{' '}
-              vil se ut for sommeren. Den ligger åpent og tilgjengelig på våre
-              nettsider. Lønna trenger du heller ikke å lure på. Du får 266,66
-              kr timen, og til sammen 59998 og femti øre. Perfekt rett under
-              fribeløpet! Dersom du har lyst til å lese mer om hva Variant står
-              for kan du sjekke ut vår egen{' '}
-              <a href="https://handbook.variant.no/handbook">håndbok</a>.
-            </p>
-          </div>
-        </section>
-
-        <section className={style.positionLeft}>
-          <div>
-            <h4>Sommerstudentene i 2022</h4>
-            <img src="" alt="" />
-            <h4>Bilder går her feks</h4>
-          </div>
-        </section>
-
-        <section className={style.positionRight}>
-          <h3>Hva skjer etter søknadsfristen</h3>
-          <div>
-            <p>
-              Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
-              unaturlig situasjon, og man blir ikke godt kjent med hverandre.
-              Etter at vi har vurdert alle søknadene inviterer vi utvalgte
-              kandidater til en uformell samtale. Dette er det vi kaller
-              kaffeprat. Hensikten med samtalen er å finne ut om begge parter
-              har felles verdier og mål. Og nei – du er selvsagt ikke nødt til å
-              drikke kaffe.
-            </p>
-
-            <p>
-              Dersom du får jobbtilbud og takker ja, inkluderes du straks i
-              Variant på lik linje med de fast ansatte. Du får tilgang til vår
-              Slack, og mulighet til å delta på alle faglige og{' '}
-              <a href="https://handbook.variant.no/quality_manual#sosiale-aktiviteter">
-                sosiale arrangementer
+            </div>
+            <div className={style.applyAsDesignerBig}>
+              <a href="https://www.variant.no/jobs">
+                <ApplyAsDesignerBiggerBlob />
               </a>
-              . Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas
-              og{' '}
-              <a href="https://handbook.variant.no/handbook#variantdag">
-                variantdager
-              </a>
-              , som er fine muligheter til å bli bedre kjent før sommerjobben
-              starter i juni.
-            </p>
+            </div>
           </div>
-        </section>
-
-        <section className={style.positionLeft}>
-          <p>TIDSLINJE. FRA SØKNAD TIL SLUTT PROSESS</p>
-        </section>
-
-        <section className={style.positionRight}>
-          <h3>Hva ser vi etter i en søknad?</h3>
-          <p>
-            Selv om vi liker å skille oss ut, setter vi pris på en søknad med
-            CV, søknadsbrev og karakterutskrift. Det viktigste for oss er å få
-            et helhetlig bilde. Både av deg som person, din eksisterende
-            kompetanse og dine ambisjoner. Så hvem er du, og hvorfor søker du
-            sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
-            en bedre hverdag. Er det deg?
-          </p>
-        </section>
-
-        <section ref={sokSommerjobb}>
-          <h3>Søk sommerjobb</h3>
-          <h3>Søk som designer</h3>
+          <div className={style.ApplyAsDeveloperDiv}>
+            <div className={style.ApplyAsDeveloper}>
+              <a href="">
+                <ApplyAsDeveloper />
+              </a>
+            </div>
+            <div className={style.ApplyAsDeveloperBig}>
+              <a href="">
+                <ApplyAsDeveloperBiggerBlob />
+              </a>
+            </div>
+          </div>
         </section>
       </>
     );
