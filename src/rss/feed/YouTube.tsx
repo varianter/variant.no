@@ -1,3 +1,5 @@
+import { BaseBlob } from '@variant/components/lib/blob';
+
 import { and } from 'src/utils/css';
 import { YoutubeVideoItem } from '../index';
 import style from './feed.module.css';
@@ -24,16 +26,16 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={style.title}>
-            {item.title}{' '}
+          <div className={style.card__title__container}>
+            <h3 className={style.title}>{item.title} </h3>
             <span className={`${style.category} ${style['category--video']}`}>
               Video
             </span>
-          </h4>
+          </div>
         </a>
         <p className={style.summary}>
-          {item.description}{' '}
-          <span style={{ opacity: 0.5 }}>— {item.publishDate}</span>
+          {item.description} {/* TODO: Remove if unwanted */}
+          {/* <span style={{ opacity: 0.5 }}>— {item.publishDate}</span> */}
         </p>
       </div>
     </div>

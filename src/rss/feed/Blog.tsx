@@ -15,19 +15,24 @@ export default function Blog({ item }: { item: BlogItem }) {
     <div className={and(style.card, style['card--blog'])}>
       <div className={style.media}>
         {item.imageCoverUrl && (
-          // <Image
-          //   loader={loader}
-          //   className={style.cover}
-          //   src={item.imageCoverUrl}
-          //   width={500}
-          //   height={500}
-          //   alt=""
-          //   layout="intrinsic"
-          // />
-          <BaseBlob
-            height={500}
+          // TODO: Remove the version we end up deciding against
+          /*<Image
+            loader={loader}
+            className={style.cover}
+            src={item.imageCoverUrl}
             width={500}
-            imageProps={{ src: item.imageCoverUrl, alt: '' }}
+            height={500}
+            alt=""
+            layout="intrinsic"
+          />*/
+          <BaseBlob
+            height={200}
+            width={200}
+            imageProps={{
+              src: item.imageCoverUrl,
+              alt: '',
+              className: style.cover,
+            }}
           />
         )}
       </div>
@@ -39,16 +44,15 @@ export default function Blog({ item }: { item: BlogItem }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className={style.title}>
-            {item.title}{' '}
+          <div className={style.card__title__container}>
+            <h3 className={style.title}>{item.title} </h3>
             <span className={`${style.category} ${style['category--blog']}`}>
               Blogg
             </span>
-          </h4>
+          </div>
         </a>
         <div className={style.published}>
-          Skrevet av <span className={style.author}>{item.creator}</span>,{' '}
-          {item.publishDate}
+          Skrevet av {item.creator}, {item.publishDate}
         </div>
         <p className={style.summary}>{item.description}</p>
         <div className={style.card__link}>
