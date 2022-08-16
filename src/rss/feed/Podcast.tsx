@@ -21,6 +21,7 @@ export default function Podcast({ item }: { item: PodcastItem }) {
         <BaseBlob
           height={200}
           width={200}
+          randomness={2}
           imageProps={{
             src: item.imageCoverUrl,
             alt: '',
@@ -44,7 +45,7 @@ export default function Podcast({ item }: { item: PodcastItem }) {
               </span>
             </div>
           </Player>
-
+          <div className={style.published}>Publisert {item.publishDate}</div>
           <p className={style.summary}>
             {item.description}
             {/* TODO: Remove if unwanted */}

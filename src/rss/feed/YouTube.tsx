@@ -21,6 +21,7 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         <BaseBlob
           height={200}
           width={200}
+          randomness={2}
           imageProps={{
             src: '/logo-512.png',
             alt: '',
@@ -43,6 +44,7 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
             </span>
           </div>
         </a>
+        <div className={style.published}>Publisert {item.publishDate}</div>
         <p className={style.summary}>
           {item.description} {/* TODO: Remove if unwanted */}
           {/* <span style={{ opacity: 0.5 }}>— {item.publishDate}</span> */}

@@ -28,6 +28,7 @@ export default function Blog({ item }: { item: BlogItem }) {
           <BaseBlob
             height={200}
             width={200}
+            randomness={2}
             imageProps={{
               src: item.imageCoverUrl,
               alt: '',
