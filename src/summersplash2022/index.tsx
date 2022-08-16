@@ -55,7 +55,7 @@ const Summersplash2022: NextPage<
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <meta
           property="og:image"
@@ -77,7 +77,7 @@ const Summersplash2022: NextPage<
       <>
         <Content selected={mode === 'job' ? 'job' : 'internship'} />
       </>
-    </Layout>
+    </>
   );
 };
 

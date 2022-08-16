@@ -14,16 +14,16 @@
 .searchNewVariants {
   width: 600px;
   margin-bottom: 10%;
-  margin-left: -20%;
+  /* margin-left: -20%; */
 }
 
 .marginTopMore {
   margin-top: 20px;
-  margin-left: -20%;
+  /* margin-left: -20%; */
 }
 
 .marginLeftLess {
-  margin-left: -20%;
+  margin-left: -10%;
 }
 
 .imageBlob1 {
@@ -34,7 +34,7 @@
 
 .imageBlob2 {
   margin-top: -2%;
-  margin-left: -43%;
+  /* margin-left: -43%; */
 }
 
 .arrow {
@@ -43,33 +43,150 @@
 }
 
 .navigationSlider {
+  padding-top: 15%;
   display: flex;
   flex-direction: column;
   position: fixed;
-  margin-left: 70%;
+  right: 0px;
+  max-width: fit-content;
 }
 
-.navigationButton1,
-.navigationButton2,
-.navigationButton3,
-.navigationButton4,
+.navigationButton1 {
+  /* border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px; */
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton1:hover,
+.navigationButton1:focus {
+  background: #e61a6b;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton2 {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton2:hover,
+.navigationButton2:focus {
+  background: #ffc4bc;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton3 {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton3:hover,
+.navigationButton3:focus {
+  background: #423d89;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton4 {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton4:hover,
+.navigationButton4:focus {
+  background: #03dac6;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
 .navigationButton5 {
   background: none;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 5%;
   cursor: pointer;
-  margin-top: 30%;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
+}
+
+.navigationButton5:hover,
+.navigationButton5:focus {
+  background: #9591ce;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  max-width: fit-content;
 }
 
 .aboutSummerjob {
-  margin-right: 50%;
+  /* margin-right: 50%; */
 }
 
 .positionTextLeft {
+  padding-top: 1%;
   width: 540px;
-  margin-left: -20%;
-  margin-top: -5%;
+  /* margin-left: -20%; */
+  /* margin-top: -5%; */
+}
+
+.positionTextSubLeft {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  padding-left: 20%;
+  width: 540px;
+  /* margin-left: -20%; */
+  /* margin-top: -5%; */
 }
 
 .officeMap {
@@ -79,12 +196,12 @@
 }
 
 .jenga {
-  margin-left: -35%;
-  margin-top: -5%;
+  /* margin-left: -35%; */
+  /* margin-top: -5%; */
 }
 
 .whyWorkAtVariant {
-  margin-left: -20%;
+  /* margin-left: -20%; */
   margin-top: 20%;
 }
 
@@ -94,14 +211,147 @@
   margin-top: 10%;
 }
 
-.handbookButton {
-  background: none;
+.handbookText {
+  background: #03dac6;
   border: none;
   margin: 0;
   padding: 0;
   text-align: left;
   cursor: pointer;
   margin: 3%;
+}
+
+.handbookButton1 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton1:hover,
+.handbookButton1:focus {
+  background: #03dac6;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.handbookButton2 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton2:hover,
+.handbookButton2:focus {
+  background: #9591ce;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.handbookButton2 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton2:hover,
+.handbookButton2:focus {
+  background: #9591ce;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.handbookButton3 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton3:hover,
+.handbookButton3:focus {
+  background: #e61a6b;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.handbookButton4 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton4:hover,
+.handbookButton4:focus {
+  background: #ffc4bc;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.handbookButton5 {
+  background: none;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+.handbookButton5:hover,
+.handbookButton5:focus {
+  background: #423d89;
+  color: white;
+  border: none;
+  margin: 2%;
+  padding: 1% 1%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 @media (max-width: 760px) {

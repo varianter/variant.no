@@ -8,8 +8,8 @@ import { JobOrInternship, WhichButtonPressed } from './utils/utils';
 const Content = ({ selected }: JobOrInternship) => {
   const blobSection1 = require('./img/Vector.png');
   const blobSection2 = require('./img/hva går sommerjobben ut på.png');
-  const upArrow = require('./img/Vector-2.png');
-  const downArrow = require('./img/Vector-3.png');
+  // const upArrow = require('./img/Vector-2.png');
+  // const downArrow = require('./img/Vector-3.png');
   const map = require('./img/kart.png');
   const jenga = require('./img/jenga.png');
   const pinkBlobb = require('./img/rosaBlobb.png');
@@ -18,8 +18,11 @@ const Content = ({ selected }: JobOrInternship) => {
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
 
-  const endRef = useRef<HTMLImageElement>(null);
-  const midRef = useRef<HTMLImageElement>(null);
+  const sommerjobbHandling = useRef<HTMLImageElement>(null);
+  const sommerjobbereMening = useRef<HTMLImageElement>(null);
+  const hvorforVariant = useRef<HTMLImageElement>(null);
+  const etterSoknad = useRef<HTMLImageElement>(null);
+  const sokSommerjobb = useRef<HTMLImageElement>(null);
 
   const goToRef = (ref: React.RefObject<HTMLImageElement>) => {
     ref?.current?.scrollIntoView({ behavior: 'smooth' });
@@ -31,34 +34,36 @@ const Content = ({ selected }: JobOrInternship) => {
       <>
         {/* Navigation bar on the right side */}
         <div className={style.navigationSlider}>
-          <img
+          {/* <img
             className={style.arrow}
             src={upArrow}
             alt="arrow up"
             height="30px"
             width="30px"
-          />
-          <button className={style.navigationButton1}>
+          /> */}
+          <button className={style.navigationButton1} onClick={() => goToRef(sommerjobbHandling)}>
             Hva går sommerjobben ut på
           </button>
-          <button className={style.navigationButton2}>
+          <button className={style.navigationButton2} onClick={() => goToRef(sommerjobbereMening)}>
             Hva mener årets sommerstudenter?
           </button>
-          <button className={style.navigationButton3}>
+          <button className={style.navigationButton3} onClick={() => goToRef(hvorforVariant)}>
             Hvorfor jobbe i Variant?
           </button>
-          <button className={style.navigationButton4}>
+          <button className={style.navigationButton4} onClick={() => goToRef(etterSoknad)}>
             Hva skjer etter søknadsfristen?
           </button>
-          <button className={style.navigationButton5}>Søk sommerjobb </button>
+          <button className={style.navigationButton5} onClick={() => goToRef(sokSommerjobb)}>
+						Søk sommerjobb 
+					</button>
 
-          <img
+          {/* <img
             className={style.arrow}
             src={downArrow}
             alt="arrow down"
             height="30px"
             width="30px"
-          />
+          /> */}
         </div>
         <section>
           <span>
@@ -87,6 +92,7 @@ const Content = ({ selected }: JobOrInternship) => {
         <section>
           <img
             className={style.imageBlob2}
+						ref={sommerjobbHandling}
             src={blobSection2}
             alt="green blobb"
           />
@@ -120,44 +126,46 @@ const Content = ({ selected }: JobOrInternship) => {
           <img src={jenga} alt="jenga spill" />
         </section>
 
-        <section className={style.whyWorkAtVariant}>
+        <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
           <h3>Hvorfor jobbe i Variant</h3>
+					<p className={style.positionTextLeft}>
+					Variant er en variant av et konsulentselskap som er raust, åpent 
+					og læreglad. Disse verdiene ligger til grunn for hvordan vi møter 
+					hverandre, våre kunder og alle andre. I håndboken vår kan du lese 
+					om hvordan ting gjøres i Variant, hva vi prøver å oppnå og 
+					hvorfor vi tenker som vi gjør. Under kan du sjekke ut er et par 
+					utvalgte temaer. 
+					</p>
           <div className={style.handbook}>
             <button
-              className={style.handbookButton}
-              onClick={() => setWhichButtonSelected('verdier')}
+              className={style.handbookButton1}
+              onClick={() => setWhichButtonSelected('Formmal og verdier')}
             >
               Formål og verdier
             </button>
             <button
-              className={style.handbookButton}
+              className={style.handbookButton2}
               onClick={() => setWhichButtonSelected('Tillit og ansvar')}
             >
               Tillit og ansvar
             </button>
             <button
-              className={style.handbookButton}
+              className={style.handbookButton3}
+              onClick={() => setWhichButtonSelected('Variantdag')}
+            >
+              Variantdag
+            </button>
+            <button
+              className={style.handbookButton4}
+              onClick={() => setWhichButtonSelected('Miljofyrtarn')}
+            >
+              Miljøfyrtårn
+            </button>
+            <button
+              className={style.handbookButton5}
               onClick={() => setWhichButtonSelected('Fleksitid')}
             >
               Fleksitid
-            </button>
-            <button
-              className={style.handbookButton}
-              onClick={() => setWhichButtonSelected('Fri i jula')}
-            >
-              Fri i jula
-            </button>
-            <button
-              className={style.handbookButton}
-              onClick={() => setWhichButtonSelected('Kompetanseutvikling')}
-            >
-              Kompetanseutvikling
-            </button>
-            <button
-              className={style.handbookButton}
-              onClick={() => setWhichButtonSelected('values')}
-            >
-              Formål og verdier
             </button>
           </div>
           <div>
@@ -171,7 +179,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
         <section>
-          <img src={pinkBlobb} alt="pink blobb" />
+          <img src={pinkBlobb} ref={etterSoknad}  alt="pink blobb" />
           <div>
             <h3>Hva skjer etter søknadsfristen?</h3>
             <p>
@@ -198,8 +206,6 @@ const Content = ({ selected }: JobOrInternship) => {
         {/* Gammelt */}
         <section className={style.underDev}>
           <span>Søk senest 3. oktober</span>
-          <button onClick={() => goToRef(midRef)}>go to text</button>
-          <button onClick={() => goToRef(endRef)}>go to bottom</button>
           <h4>Kontorer både i Trondheim og Oslo</h4>
         </section>
 
@@ -239,7 +245,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
 
-        <section className={style.positionRight} ref={midRef}>
+        <section className={style.positionRight}>
           <h3>Hvorfor jobbe i Variant?</h3>
           <div>
             <p>
@@ -324,7 +330,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </p>
         </section>
 
-        <section ref={endRef}>
+        <section ref={sokSommerjobb}>
           <h3>Søk sommerjobb</h3>
           <h3>Søk som designer</h3>
         </section>
