@@ -8,8 +8,6 @@ import { JobOrInternship, WhichButtonPressed } from './utils/utils';
 const Content = ({ selected }: JobOrInternship) => {
   const blobSection1 = require('./img/Vector.png');
   const blobSection2 = require('./img/hva går sommerjobben ut på.png');
-  // const upArrow = require('./img/Vector-2.png');
-  // const downArrow = require('./img/Vector-3.png');
   const map = require('./img/kart.png');
   const jenga = require('./img/jenga.png');
   const pinkBlobb = require('./img/rosaBlobb.png');
@@ -34,36 +32,36 @@ const Content = ({ selected }: JobOrInternship) => {
       <>
         {/* Navigation bar on the right side */}
         <div className={style.navigationSlider}>
-          {/* <img
-            className={style.arrow}
-            src={upArrow}
-            alt="arrow up"
-            height="30px"
-            width="30px"
-          /> */}
-          <button className={style.navigationButton1} onClick={() => goToRef(sommerjobbHandling)}>
+          <button
+            className={style.navigationButton1}
+            onClick={() => goToRef(sommerjobbHandling)}
+          >
             Hva går sommerjobben ut på
           </button>
-          <button className={style.navigationButton2} onClick={() => goToRef(sommerjobbereMening)}>
+          <button
+            className={style.navigationButton2}
+            onClick={() => goToRef(sommerjobbereMening)}
+          >
             Hva mener årets sommerstudenter?
           </button>
-          <button className={style.navigationButton3} onClick={() => goToRef(hvorforVariant)}>
+          <button
+            className={style.navigationButton3}
+            onClick={() => goToRef(hvorforVariant)}
+          >
             Hvorfor jobbe i Variant?
           </button>
-          <button className={style.navigationButton4} onClick={() => goToRef(etterSoknad)}>
+          <button
+            className={style.navigationButton4}
+            onClick={() => goToRef(etterSoknad)}
+          >
             Hva skjer etter søknadsfristen?
           </button>
-          <button className={style.navigationButton5} onClick={() => goToRef(sokSommerjobb)}>
-						Søk sommerjobb 
-					</button>
-
-          {/* <img
-            className={style.arrow}
-            src={downArrow}
-            alt="arrow down"
-            height="30px"
-            width="30px"
-          /> */}
+          <button
+            className={style.navigationButton5}
+            onClick={() => goToRef(sokSommerjobb)}
+          >
+            Søk sommerjobb
+          </button>
         </div>
         <section>
           <span>
@@ -92,7 +90,7 @@ const Content = ({ selected }: JobOrInternship) => {
         <section>
           <img
             className={style.imageBlob2}
-						ref={sommerjobbHandling}
+            ref={sommerjobbHandling}
             src={blobSection2}
             alt="green blobb"
           />
@@ -127,59 +125,65 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
-          <h3>Hvorfor jobbe i Variant</h3>
-					<p className={style.positionTextLeft}>
-					Variant er en variant av et konsulentselskap som er raust, åpent 
-					og læreglad. Disse verdiene ligger til grunn for hvordan vi møter 
-					hverandre, våre kunder og alle andre. I håndboken vår kan du lese 
-					om hvordan ting gjøres i Variant, hva vi prøver å oppnå og 
-					hvorfor vi tenker som vi gjør. Under kan du sjekke ut er et par 
-					utvalgte temaer. 
-					</p>
           <div className={style.handbook}>
-            <button
-              className={style.handbookButton1}
-              onClick={() => setWhichButtonSelected('Formmal og verdier')}
-            >
-              Formål og verdier
-            </button>
-            <button
-              className={style.handbookButton2}
-              onClick={() => setWhichButtonSelected('Tillit og ansvar')}
-            >
-              Tillit og ansvar
-            </button>
-            <button
-              className={style.handbookButton3}
-              onClick={() => setWhichButtonSelected('Variantdag')}
-            >
-              Variantdag
-            </button>
-            <button
-              className={style.handbookButton4}
-              onClick={() => setWhichButtonSelected('Miljofyrtarn')}
-            >
-              Miljøfyrtårn
-            </button>
-            <button
-              className={style.handbookButton5}
-              onClick={() => setWhichButtonSelected('Fleksitid')}
-            >
-              Fleksitid
-            </button>
+            <div className={style.handbookChildButton}>
+              <h3 className={style.positionTextSubLeft}>
+                Hvorfor akkurat Variant
+              </h3>
+              <p className={style.positionTextLeft}>
+                Variant er en variant av et konsulentselskap som er raust, åpent
+                og læreglad. Disse verdiene ligger til grunn for hvordan vi
+                møter hverandre, våre kunder og alle andre. I håndboken vår kan
+                du lese om hvordan ting gjøres i Variant, hva vi prøver å oppnå
+                og hvorfor vi tenker som vi gjør. Under kan du sjekke ut er et
+                par utvalgte temaer.
+              </p>
+
+              <button
+                className={style.handbookButton1}
+                onClick={() => setWhichButtonSelected('Formmal og verdier')}
+              >
+                Formål og verdier
+              </button>
+              <button
+                className={style.handbookButton2}
+                onClick={() => setWhichButtonSelected('Tillit og ansvar')}
+              >
+                Tillit og ansvar
+              </button>
+              <button
+                className={style.handbookButton3}
+                onClick={() => setWhichButtonSelected('Variantdag')}
+              >
+                Variantdag
+              </button>
+              <button
+                className={style.handbookButton4}
+                onClick={() => setWhichButtonSelected('Miljofyrtarn')}
+              >
+                Miljøfyrtårn
+              </button>
+              <button
+                className={style.handbookButton5}
+                onClick={() => setWhichButtonSelected('Fleksitid')}
+              >
+                Fleksitid
+              </button>
+
+              <h3>Hva er Viktigst for deg?</h3>
+              <a href="https://handbook.variant.no">
+                Sjekk ut hele håndboka vår her
+              </a>
+            </div>
+            <div className={style.flexbox}>
+              <HandBooKPages selectedButton={whichButtonSelected} />
+            </div>
           </div>
-          <div>
-            <HandBooKPages selectedButton={whichButtonSelected} />
-          </div>
-          <div>
-            <h3>Hva er Viktigst for deg?</h3>
-            <a href="https://handbook.variant.no">
-              Sjekk ut hele håndboka vår her
-            </a>
-          </div>
+
+          <div></div>
         </section>
         <section>
-          <img src={pinkBlobb} ref={etterSoknad}  alt="pink blobb" />
+          <img src={pinkBlobb} ref={etterSoknad} alt="pink blobb" />
           <div>
             <h3>Hva skjer etter søknadsfristen?</h3>
             <p>
