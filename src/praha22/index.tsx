@@ -46,6 +46,26 @@ export default function Praha22() {
         <div className={style.bouncingArrow} />
       </section>
 
+      <section className={style.introPage} id="intro">
+        <h1>Dobrý den!</h1>
+        <p>
+          Gratulerer med vel overstått, Variant! Variant Oslo er nå ett år gammel,
+          og det er på tide å komme oss ut i verden. Det er med stor glede at vi
+          kan invitere alle varianter sammen med sine nærmeste til vår første
+          utenlandstur! La oss ikke gi slipp på sommeren helt enda, så pakk ned
+          solfaktor 50, de feteste solbrillene du har, og gjør deg klar for
+          gotisk arkitektur, rikelig med kunst og et pulserende natteliv!
+        </p>
+        <p>
+          Vi har fått hjelp fra noen veldig dyktige globetrottere til å spikre
+          et program hvor vi finner aktiviteter for alle og enhver.
+          Blant annet skal vi dra på en historisk trikketur, besøke kunstmuseum,
+          ro dragebåter og smake på den beste maten Tsjekkia har å by på! Kanskje
+          vi til og med tester ut noen sprudlende barer i løpet av turen også?
+        </p>
+        <p>Měj se!</p>
+      </section>
+
       <section className={style.agenda} id="fredag">
         <h3 className="fancy">Fredag</h3>
 
@@ -71,7 +91,7 @@ export default function Praha22() {
             <p>🚋 Historisk trikketur til Smetana Q.</p>
           </li>
           <li>
-            <p>14:00 - 19:00</p>
+            <p>14:00</p>
             <p>🎨 Variantdag!</p>
           </li>
           <li>
@@ -114,11 +134,11 @@ export default function Praha22() {
             <p>🥗 Brunch på Mlynec</p>
           </li>
           <li>
-            <p>15:00 - 19:00</p>
+            <p>15:00</p>
             <p>🪁 Egentid. Forslag til aktiviteter vil gis på forhånd.</p>
           </li>
           <li>
-            <p>19:15 - 22:30</p>
+            <p>19:15</p>
             <p>🍱 Vi går fra hotellet for en litt finere middag på V ZÁTISI!</p>
           </li>
           <li>
