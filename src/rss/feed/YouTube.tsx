@@ -38,6 +38,10 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         <p className={style.summary}>
           {truncateOnSpace(item.description, 180)}
         </p>
+        <div className={style.card__link}>
+          <a href={item.url}>Se video</a>
+          <img src="/images/arrow.svg" alt="Pil mot høyre" />
+        </div>
       </div>
     </div>
   );
