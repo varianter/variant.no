@@ -133,30 +133,13 @@
   margin-left: 0.75rem;
 }
 
-.thumbnail {
-  width: 100%;
-  overflow: hidden;
-  border-radius: inherit;
-  opacity: 1;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  align-self: center;
-}
-
-.thumbnail__image {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
 .player {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: max-content max-content;
   grid-template-areas:
-    'button content duration'
-    'scrubber scrubber scrubber';
+    'button content'
+    'scrubber scrubber';
   gap: 0.5rem;
   align-items: baseline;
 }

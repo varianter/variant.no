@@ -1,6 +1,5 @@
 import { BaseBlob } from '@variant/components/lib/blob';
 import dynamic from 'next/dynamic';
-// import Image from 'next/image';
 import { and } from 'src/utils/css';
 import { PodcastItem } from '../index';
 import style from './feed.module.css';
@@ -11,13 +10,6 @@ export default function Podcast({ item }: { item: PodcastItem }) {
   return (
     <div className={and(style.card, style['card--podcast'])}>
       <div className={style.media}>
-        {/* <Image
-          className={style.cover}
-          src={item.imageCoverUrl}
-          alt=""
-          width={500}
-          height={500}
-        /> */}
         <BaseBlob
           height={200}
           width={200}
@@ -46,11 +38,7 @@ export default function Podcast({ item }: { item: PodcastItem }) {
             </div>
           </Player>
           <div className={style.published}>Publisert {item.publishDate}</div>
-          <p className={style.summary}>
-            {item.description}
-            {/* TODO: Remove if unwanted */}
-            {/* <span style={{ opacity: 0.5 }}>— {item.publishDate}</span> */}
-          </p>
+          <p className={style.summary}>{item.description}</p>
         </div>
       </div>
     </div>

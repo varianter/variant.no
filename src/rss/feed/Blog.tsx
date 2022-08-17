@@ -1,29 +1,14 @@
 import { BaseBlob } from '@variant/components/lib/blob';
-// import Image from 'next/image';
 import { and } from 'src/utils/css';
 import { BlogItem } from '../index';
 import style from './feed.module.css';
 import { truncateOnSpace } from './utils';
-
-// const loader = ({ src, width }: { src: string; width: number }) => {
-//   return `${src}?w=${width}&h=${width}`;
-// };
 
 export default function Blog({ item }: { item: BlogItem }) {
   return (
     <div className={and(style.card, style['card--blog'])}>
       <div className={style.media}>
         {item.imageCoverUrl && (
-          // TODO: Remove the version we end up deciding against
-          /*<Image
-            loader={loader}
-            className={style.cover}
-            src={item.imageCoverUrl}
-            width={500}
-            height={500}
-            alt=""
-            layout="intrinsic"
-          />*/
           <BaseBlob
             height={200}
             width={200}

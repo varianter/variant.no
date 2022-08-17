@@ -1,5 +1,4 @@
 import { BaseBlob } from '@variant/components/lib/blob';
-
 import { and } from 'src/utils/css';
 import { YoutubeVideoItem } from '../index';
 import style from './feed.module.css';
@@ -9,16 +8,6 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
     <div className={and(style.card, style['card--youtube'])}>
       <figure className={style.media}>
-        {/* TODO: Remove if unwanted */}
-        {/*<a href={item.url}>
-           <div className={style.thumbnail}>
-            <img
-              className={style.thumbnail__image}
-              src={item.imageCoverUrl}
-              alt=""
-            />
-          </div>
-        </a> */}
         <BaseBlob
           height={200}
           width={200}
@@ -48,8 +37,6 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         <div className={style.published}>Publisert {item.publishDate}</div>
         <p className={style.summary}>
           {truncateOnSpace(item.description, 180)}
-          {/* TODO: Remove if unwanted */}
-          {/* <span style={{ opacity: 0.5 }}>— {item.publishDate}</span> */}
         </p>
       </div>
     </div>
