@@ -33,44 +33,44 @@ const Content = ({ selected }: JobOrInternship) => {
   if (selected === 'internship') {
     return (
       <>
-        {/* Navigation bar on the right side */}
-        <div className={style.navigationSlider}>
-          <button
-            className={style.navigationButton1}
-            onClick={() => goToRef(sommerjobbHandling)}
-          >
-            Hva går sommerjobben ut på
-          </button>
-          <button
-            className={style.navigationButton2}
-            onClick={() => goToRef(sommerjobbereMening)}
-          >
-            Hva mener årets sommerstudenter?
-          </button>
-          <button
-            className={style.navigationButton3}
-            onClick={() => goToRef(hvorforVariant)}
-          >
-            Hvorfor jobbe i Variant?
-          </button>
-          <button
-            className={style.navigationButton4}
-            onClick={() => goToRef(etterSoknad)}
-          >
-            Hva skjer etter søknadsfristen?
-          </button>
-          <button
-            className={style.navigationButton5}
-            onClick={() => goToRef(sokSommerjobb)}
-          >
-            Søk sommerjobb
-          </button>
-        </div>
         <section className={style.section1}>
           <span className={style.searchNewVariants}>
             <NewVariants />
           </span>
           <br />
+          {/* Navigation bar on the right side */}
+          <div className={style.navigationSlider}>
+            <button
+              className={style.navigationButton1}
+              onClick={() => goToRef(sommerjobbHandling)}
+            >
+              Hva går sommerjobben ut på
+            </button>
+            <button
+              className={style.navigationButton2}
+              onClick={() => goToRef(sommerjobbereMening)}
+            >
+              Hva mener årets sommerstudenter?
+            </button>
+            <button
+              className={style.navigationButton3}
+              onClick={() => goToRef(hvorforVariant)}
+            >
+              Hvorfor jobbe i Variant?
+            </button>
+            <button
+              className={style.navigationButton4}
+              onClick={() => goToRef(etterSoknad)}
+            >
+              Hva skjer etter søknadsfristen?
+            </button>
+            <button
+              className={style.navigationButton5}
+              onClick={() => goToRef(sokSommerjobb)}
+            >
+              Søk sommerjobb
+            </button>
+          </div>
           <div className={style.underHeader}>
             {/* middlertidig link. usikker på hvilken vi skal bruke */}
             <h4 className={style.h4Section1}>Søk innen 2. Oktober</h4>
@@ -89,7 +89,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </span>
         </section>
 
-        <section className={style.section2}>
+        <section className={style.section2} ref={sommerjobbHandling}>
           <div>
             <h3 className={style.section2Heading}>
               Hva går sommerjobben ut på?
@@ -125,7 +125,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
 
-        <section className={style.section3}>
+        <section className={style.section3} ref={sommerjobbereMening}>
           <h3 className={style.section3Heading}>
             Hva mener årets sommerstudenter?
           </h3>
@@ -147,9 +147,7 @@ const Content = ({ selected }: JobOrInternship) => {
         <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
           <div className={style.handbook}>
             <div className={style.handbookChildButton}>
-              <h3 className={style.positionTextSubLeft}>
-                Hvorfor akkurat Variant
-              </h3>
+              <h3 className={style.section5Heading}>Hvorfor akkurat Variant</h3>
               <p className={style.positionTextLeft}>
                 Variant er en variant av et konsulentselskap som er raust, åpent
                 og læreglad. Disse verdiene ligger til grunn for hvordan vi
@@ -208,7 +206,7 @@ const Content = ({ selected }: JobOrInternship) => {
           <div></div>
         </section>
 
-        <section className={style.section5}>
+        <section className={style.section5} ref={etterSoknad}>
           <h3 className={style.section5Heading}>
             Hva skjer etter søknadsfristen?
           </h3>
@@ -249,7 +247,7 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
         </section>
 
-        <section className={style.section6}>
+        <section className={style.section6} ref={sokSommerjobb}>
           <div>
             <h3 className={style.section6Heading}>Søk sommerjobb</h3>
             <p className={style.section6Paragraph}>

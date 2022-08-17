@@ -117,7 +117,7 @@
 }
 
 .summerstudent1Paragraph {
-  width: 400px;
+  width: 34%;
   position: relative;
   top: 150px;
   font-family: 'Recoleta';
@@ -143,7 +143,7 @@
 }
 
 .section5Paragraph {
-  width: 500px;
+  width: 40%;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 400;
@@ -192,7 +192,7 @@
 }
 
 .section6Paragraph {
-  width: 550px;
+  width: 40%;
   margin-top: 20px;
   font-family: 'Graphik';
   font-style: normal;
@@ -243,7 +243,7 @@
 
 .ApplyAsDesignerDiv,
 .ApplyAsDeveloperDiv {
-  width: 300px;
+  width: 20%;
   margin: 20px;
   height: 200px;
 }
@@ -275,11 +275,11 @@
 }
 
 .navigationSlider {
-  padding-top: 15%;
+  padding-top: 0%;
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: 0px;
+  left: 88%;
   max-width: fit-content;
 }
 
@@ -405,7 +405,7 @@
 
 .positionTextLeft {
   padding-top: 1%;
-  width: 540px;
+  width: 50%;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 400;
@@ -413,10 +413,14 @@
   line-height: 27px;
 }
 
-.positionTextSubLeft {
+.positionTextSubLeft,
+.section5Heading {
   padding-top: 1%;
   padding-bottom: 2%;
-  width: 540px;
+  width: 80%;
+}
+
+.section5Heading {
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
@@ -584,50 +588,77 @@
 }
 
 @media (max-width: 760px) {
-  .searchNewVariants {
-    width: 70%;
-    margin-bottom: 0%;
-    margin-left: 0%;
-  }
-  .navigationSlider {
-    display: block;
-    margin-left: 0%;
-    position: absolute;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .arrow {
-    visibility: hidden;
-  }
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5 {
+  /* Position to static */
+  .imageBlob1 {
     position: static;
-    margin-top: 0;
-    display: flex;
-    margin-top: 5%;
-    height: 50px;
-    text-align: center;
-    color: black;
+    left: 45%;
+    height: 8%;
+    top: 400px;
+    width: auto;
   }
 
-  .navigationButton1 {
-    background: #e61a6b;
-    color: white;
+  .summerstudent1Paragraph {
+    position: static;
   }
-  .navigationButton2 {
-    background: #ffc4bc;
+
+  .section5ParagraphLeft {
+    position: static;
   }
-  .navigationButton3 {
-    background: #423d89;
-    color: white;
+
+  .timeLine {
+    position: static;
   }
-  .navigationButton4 {
-    background: #03dac6;
+
+  .ApplyAsDeveloperDiv {
+    position: static;
   }
-  .navigationButton5 {
-    background: '#9591CE';
+
+  .officeMap {
+    position: static;
+  }
+  .imageBlob1 {
+    position: static;
+    width: 10px;
+  }
+
+  .Marius {
+    position: static;
+  }
+
+  .navigationSlider {
+    position: static;
+  }
+
+  .handbook {
+    display: block;
+  }
+
+  .handbookChildButton {
+    display: block;
+  }
+
+  .section5ParagraphRight {
+    position: static;
+  }
+
+  .map {
+    width: 100%;
+    height: auto;
+  }
+
+  .newVariantsSVG {
+    width: 100%;
+    height: auto;
+  }
+
+  .summerstudent1 {
+    display: block;
+  }
+
+  .positionTextSubLeft,
+  .section5Heading {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    width: 100%;
   }
 }

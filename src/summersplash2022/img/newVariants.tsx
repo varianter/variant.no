@@ -3,6 +3,7 @@ const NewVariants = () => {
   return (
     <>
       <svg
+        className={style.newVariantsSVG}
         xmlns="http://www.w3.org/2000/svg"
         width="823"
         height="248"
