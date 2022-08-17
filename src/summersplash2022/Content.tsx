@@ -158,36 +158,38 @@ const Content = ({ selected }: JobOrInternship) => {
                 par utvalgte temaer.
               </p>
 
-              <button
-                className={style.handbookButton1}
-                onClick={() => setWhichButtonSelected('Formmal og verdier')}
-              >
-                Formål og verdier
-              </button>
-              <button
-                className={style.handbookButton2}
-                onClick={() => setWhichButtonSelected('Tillit og ansvar')}
-              >
-                Tillit og ansvar
-              </button>
-              <button
-                className={style.handbookButton3}
-                onClick={() => setWhichButtonSelected('Variantdag')}
-              >
-                Variantdag
-              </button>
-              <button
-                className={style.handbookButton4}
-                onClick={() => setWhichButtonSelected('Miljofyrtarn')}
-              >
-                Miljøfyrtårn
-              </button>
-              <button
-                className={style.handbookButton5}
-                onClick={() => setWhichButtonSelected('Fleksitid')}
-              >
-                Fleksitid
-              </button>
+              <div className={style.handbookGrid}>
+                <button
+                  className={style.handbookButton1}
+                  onClick={() => setWhichButtonSelected('Formmal og verdier')}
+                >
+                  Formål og verdier
+                </button>
+                <button
+                  className={style.handbookButton2}
+                  onClick={() => setWhichButtonSelected('Tillit og ansvar')}
+                >
+                  Tillit og ansvar
+                </button>
+                <button
+                  className={style.handbookButton3}
+                  onClick={() => setWhichButtonSelected('Variantdag')}
+                >
+                  Variantdag
+                </button>
+                <button
+                  className={style.handbookButton4}
+                  onClick={() => setWhichButtonSelected('Miljofyrtarn')}
+                >
+                  Miljøfyrtårn
+                </button>
+                <button
+                  className={style.handbookButton5}
+                  onClick={() => setWhichButtonSelected('Fleksitid')}
+                >
+                  Fleksitid
+                </button>
+              </div>
 
               <h3 className={style.mostImportantForYou}>
                 Hva er Viktigst for deg?
@@ -232,7 +234,7 @@ const Content = ({ selected }: JobOrInternship) => {
               </p>
             </div>
             <div className={style.section5ParagraphRight}>
-              <h4>Søknadstips:</h4>
+              <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
               <p className={style.section5Paragraph}>
                 Vi setter pris på en søknad med CV, søknadsbrev og
                 karakterutskrift. Det viktigste for oss er å få et helhetlig
@@ -267,7 +269,9 @@ const Content = ({ selected }: JobOrInternship) => {
                 <p> | </p>
               </div>
               <div>
-                <p className={style.section6Underline}>mk@variant.no</p>
+                <p className={style.section6Underline}>
+                  <a href="mailto: mk@variant.no">mk@variant.no</a>
+                </p>
               </div>
             </div>
           </div>
