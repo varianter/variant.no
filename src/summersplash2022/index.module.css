@@ -423,7 +423,7 @@
 
 .positionTextLeft {
   padding-top: 1%;
-  width: 50%;
+  width: 500px;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 400;
@@ -473,8 +473,8 @@
 .handbook {
   display: flex;
   align-items: flex-start;
-  gap: 15%;
-  justify-content: flex-start;
+  gap: 10%;
+  justify-content: left;
   margin-top: 10%;
 }
 
@@ -486,6 +486,8 @@
   display: flex;
   text-align: left;
   flex-direction: column;
+  justify-content: center;
+  gap: 10%;
 }
 
 .handbookButton1 {
@@ -605,8 +607,22 @@
   max-width: fit-content;
 }
 
+.handbookHeaderDeskotop {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  width: 100%;
+  font-family: 'Recoleta';
+  font-style: normal;
+}
+
 .section5HandbookLinkMobile {
   display: none;
+}
+
+.readMoreArrow {
+  position: relative;
+  right: 370px;
+  top: 170px;
 }
 
 @media (max-width: 760px) {
@@ -653,6 +669,10 @@
 
   .handbookChildButton {
     display: block;
+  }
+
+  .readMoreArrow {
+    display: none;
   }
 
   .handbookGrid {
@@ -819,8 +839,12 @@
     max-width: fit-content;
     font-weight: bold;
   }
+  .handbookHeaderDeskotop {
+    display: none;
+  }
+
   .mostImportantForYou {
-    font-family: 'Recoleta';
+    font-family: 'Grafik';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -861,10 +885,6 @@
     width: 100%;
     font-family: 'Graphik';
     font-style: normal;
-  }
-  .positionTextSubLeft {
-    padding-top: 5%;
-    padding-bottom: 10%;
   }
 
   .positionTextLeft {
@@ -940,7 +960,17 @@
   .navigationButton2,
   .navigationButton3,
   .navigationButton4,
-  .navigationButton5 {
+  .navigationButton5,
+  .navigationButton1:focus,
+  .navigationButton2:focus,
+  .navigationButton3:focus,
+  .navigationButton4:focus,
+  .navigationButton5:focus,
+  .navigationButton1:hover,
+  .navigationButton2:hover,
+  .navigationButton3:hover,
+  .navigationButton4:hover,
+  .navigationButton5:hover {
     padding: 5%;
     margin-top: 1%;
   }
