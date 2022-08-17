@@ -37,6 +37,8 @@ const Content = ({ selected }: JobOrInternship) => {
           <span className={style.searchNewVariants}>
             <NewVariants />
           </span>
+          <h4 className={style.h4Section1}>Søk innen 2. Oktober</h4>
+
           <br />
           {/* Navigation bar on the right side */}
           <div className={style.navigationSlider}>
@@ -73,7 +75,6 @@ const Content = ({ selected }: JobOrInternship) => {
           </div>
           <div className={style.underHeader}>
             {/* middlertidig link. usikker på hvilken vi skal bruke */}
-            <h4 className={style.h4Section1}>Søk innen 2. Oktober</h4>
             <a className={style.søkHer} href="https://www.variant.no/jobs">
               Søk her
             </a>
@@ -104,6 +105,9 @@ const Content = ({ selected }: JobOrInternship) => {
               Sjekk ut denne bloggposten for å lese mer om hva årets
               sommerstudenter i Oslo jobbet med.
             </p>
+            <div className={style.officeMap}>
+              <Map />
+            </div>
             <p className={style.section2Paragraph}>
               I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og Bergen, til
               henholdsvis seks, fem og to studenter. Hvor du vil jobbe bestemmer
@@ -119,9 +123,6 @@ const Content = ({ selected }: JobOrInternship) => {
               jobbe i Variant?” ned kan du lese mer om hva Variant står for og
               tilbyr.
             </p>
-          </div>
-          <div className={style.officeMap}>
-            <Map />
           </div>
         </section>
 

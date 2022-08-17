@@ -280,7 +280,21 @@
   flex-direction: column;
   position: fixed;
   left: 88%;
+  bottom: 25%;
   max-width: fit-content;
+}
+
+/* Button font */
+.navigationButton1,
+.navigationButton2,
+.navigationButton3,
+.navigationButton4,
+.navigationButton5 {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .navigationButton1 {
@@ -591,10 +605,6 @@
   /* Position to static */
   .imageBlob1 {
     position: static;
-    left: 45%;
-    height: 8%;
-    top: 400px;
-    width: auto;
   }
 
   .summerstudent1Paragraph {
@@ -660,5 +670,133 @@
     padding-top: 1%;
     padding-bottom: 2%;
     width: 100%;
+  }
+
+  /* Section 1 mobile*/
+
+  .section1 {
+    overflow: hidden;
+    margin: 0%;
+  }
+
+  .navigationSlider {
+    max-width: 100%;
+  }
+  .h4Section1 {
+    margin-top: 0px;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  .h4Section1 {
+    margin: 0%;
+  }
+
+  .søkHer,
+  .eller,
+  .scroll {
+    display: none;
+  }
+
+  .navigationButton1,
+  .navigationButton2,
+  .navigationButton3,
+  .navigationButton4,
+  .navigationButton5 {
+    padding: 5%;
+    margin-top: 1%;
+  }
+
+  .navigationButton1 {
+    color: white;
+    background-color: #e61a6b;
+  }
+
+  .navigationButton2 {
+    color: black;
+    background-color: #ffc4bc;
+  }
+
+  .navigationButton3 {
+    color: white;
+    background-color: #423d89;
+  }
+
+  .navigationButton4 {
+    color: black;
+    background-color: #03dac6;
+  }
+
+  .navigationButton5 {
+    color: white;
+    background-color: #9591ce;
+  }
+
+  .imageBlob1 {
+    position: static;
+    margin-left: 30%;
+    height: 300px;
+    top: 5%;
+    width: auto;
+  }
+
+  .newVariantsSVG {
+    width: 90%;
+  }
+
+  .navigationSlider,
+  .h4Section1,
+  .searchNewVariants {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Section 2 mobile*/
+
+  .section2Heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.0688px;
+    line-height: 27px;
+  }
+
+  .section2Paragraph {
+    width: 100%;
+  }
+
+  .officeMap {
+    margin: 2%;
+  }
+
+  /* Section 3 mobile*/
+
+  .section3Heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.0688px;
+    line-height: 27px;
+  }
+
+  .summerstudent1 {
+    display: flex;
+  }
+
+  .summerstudent1Paragraph {
+    width: 100%;
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .summerstudent1picture {
+    width: 50%;
+    margin-left: 0px;
   }
 }
