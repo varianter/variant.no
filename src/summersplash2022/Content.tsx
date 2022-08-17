@@ -73,10 +73,12 @@ const Content = ({ selected }: JobOrInternship) => {
           <br />
           <div className={style.underHeader}>
             {/* middlertidig link. usikker på hvilken vi skal bruke */}
-            <h4 className={style.h4Section1}>Søk innen 4. Oktober</h4>
-            <a href="https://www.variant.no/jobs">Søk her</a>
-            <p>Eller</p>
-            <p>naviger med menyen</p>
+            <h4 className={style.h4Section1}>Søk innen 2. Oktober</h4>
+            <a className={style.søkHer} href="https://www.variant.no/jobs">
+              Søk her
+            </a>
+            <p className={style.eller}>Eller</p>
+            <p className={style.scroll}>Scroll deg nedover</p>
           </div>
           <span>
             <img
@@ -90,7 +92,7 @@ const Content = ({ selected }: JobOrInternship) => {
         <section className={style.section2}>
           <div>
             <h3 className={style.section2Heading}>
-              Hva går sommerjobben ut på ?
+              Hva går sommerjobben ut på?
             </h3>
             <p className={style.section2Paragraph}>
               En sommerjobb i Variant er en fin mulighet til å anvende det du
@@ -124,7 +126,9 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.section3}>
-          <h3>Hva mener årets sommerstudenter?</h3>
+          <h3 className={style.section3Heading}>
+            Hva mener årets sommerstudenter?
+          </h3>
           <div className={style.summerstudent1}>
             <img
               className={style.summerstudent1picture}
@@ -186,8 +190,13 @@ const Content = ({ selected }: JobOrInternship) => {
                 Fleksitid
               </button>
 
-              <h3>Hva er Viktigst for deg?</h3>
-              <a href="https://handbook.variant.no">
+              <h3 className={style.mostImportantForYou}>
+                Hva er Viktigst for deg?
+              </h3>
+              <a
+                className={style.handbookRef}
+                href="https://handbook.variant.no"
+              >
                 Sjekk ut hele håndboka vår her
               </a>
             </div>
@@ -242,13 +251,15 @@ const Content = ({ selected }: JobOrInternship) => {
 
         <section className={style.section6}>
           <div>
-            <h3>Søk sommerjobb</h3>
+            <h3 className={style.section6Heading}>Søk sommerjobb</h3>
             <p className={style.section6Paragraph}>
               Vi håper du søker, og vi ser frem til å bli bedre kjent med deg.
               Har du spørsmål om sommerjobben eller Variant? Ta gjerne kontakt
               med meg.
             </p>
-            <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
+            <p className={style.section6Paragraph2}>
+              - Marius Krakeli, Utvikler og rekrutteringsansvarlig
+            </p>
             <div className={style.contactInfo}>
               <div>
                 <p className={style.section6Underline}>41 63 75 72</p>
