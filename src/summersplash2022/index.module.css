@@ -138,6 +138,10 @@
   line-height: 39px;
 }
 
+.section5HeadingH4 {
+  border: none;
+}
+
 .section5ParagraphLeft {
   position: relative;
 }
@@ -637,6 +641,89 @@
     display: block;
   }
 
+  .handbookGrid {
+    display: flex;
+    flex-flow: row;
+    flex-direction: column;
+  }
+
+  .handbookButton1,
+  .handbookButton1:hover,
+  .handbookButton1:active,
+  .handbookButton1:focus {
+    background: #e61a6b;
+    border: none;
+    margin-top: 6%;
+    padding: 1% 1%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
+  .handbookButton2,
+  .handbookButton2:hover,
+  .handbookButton2:active,
+  .handbookButton2:focus {
+    background: #ffc4bc;
+    border: none;
+    margin-top: 6%;
+    padding: 1% 1%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
+  .handbookButton3,
+  .handbookButton3:hover,
+  .handbookButton3:active,
+  .handbookButton3:focus {
+    background: #03dac6;
+    border: none;
+    margin-top: 6%;
+    padding: 1% 1%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
+  .handbookButton4,
+  .handbookButton4:hover,
+  .handbookButton4:active,
+  .handbookButton4:focus {
+    background: #423d89;
+    color: white;
+    border: none;
+    margin-top: 6%;
+    padding: 1% 1%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
+  .handbookButton5,
+  .handbookButton5:hover,
+  .handbookButton5:active,
+  .handbookButton5:focus {
+    background: #9591ce;
+    color: white;
+    border: none;
+    margin-top: 6%;
+    padding: 1% 1%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
   .section5ParagraphRight {
     position: static;
   }
@@ -660,5 +747,47 @@
     padding-top: 1%;
     padding-bottom: 2%;
     width: 100%;
+    font-family: 'Graphik';
+    font-style: normal;
+  }
+
+  .positionTextLeft {
+    padding-top: 1%;
+    width: 100%;
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .section6Paragraph {
+    width: 100%;
+    margin-top: 20px;
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .section5Paragraph {
+    width: 100%;
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .section5HeadingH4 {
+    padding-top: 5%;
+  }
+
+  .timeLine {
+    position: relative;
+    margin-top: 10%;
+    left: 0%;
+    bottom: 0%;
   }
 }
