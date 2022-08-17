@@ -705,7 +705,17 @@
   .navigationButton2,
   .navigationButton3,
   .navigationButton4,
-  .navigationButton5 {
+  .navigationButton5,
+  .navigationButton1:focus,
+  .navigationButton2:focus,
+  .navigationButton3:focus,
+  .navigationButton4:focus,
+  .navigationButton5:focus,
+  .navigationButton1:hover,
+  .navigationButton2:hover,
+  .navigationButton3:hover,
+  .navigationButton4:hover,
+  .navigationButton5:hover {
     padding: 5%;
     margin-top: 1%;
   }
