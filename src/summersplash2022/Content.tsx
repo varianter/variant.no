@@ -190,9 +190,24 @@ const Content = ({ selected }: JobOrInternship) => {
                   Fleksitid
                 </button>
               </div>
-
+              <div className={style.section5HandbookLink}>
+                <h3 className={style.mostImportantForYou}>
+                  Hva er Viktigst for deg?
+                </h3>
+                <a
+                  className={style.handbookRef}
+                  href="https://handbook.variant.no"
+                >
+                  Sjekk ut hele håndboka vår her
+                </a>
+              </div>
+            </div>
+            <div className={style.flexbox}>
+              <HandBooKPages selectedButton={whichButtonSelected} />
+            </div>
+            <div className={style.section5HandbookLinkMobile}>
               <h3 className={style.mostImportantForYou}>
-                Hva er Viktigst for deg?
+                Hva er viktigst for deg?
               </h3>
               <a
                 className={style.handbookRef}
@@ -200,9 +215,6 @@ const Content = ({ selected }: JobOrInternship) => {
               >
                 Sjekk ut hele håndboka vår her
               </a>
-            </div>
-            <div className={style.flexbox}>
-              <HandBooKPages selectedButton={whichButtonSelected} />
             </div>
           </div>
 

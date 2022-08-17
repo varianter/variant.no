@@ -605,6 +605,10 @@
   max-width: fit-content;
 }
 
+.section5HandbookLinkMobile {
+  display: none;
+}
+
 @media (max-width: 760px) {
   /* Position to static */
   .imageBlob1 {
@@ -653,85 +657,183 @@
 
   .handbookGrid {
     display: flex;
-    flex-flow: row;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
   }
 
   .handbookButton1,
+  .handbookButton2,
+  .handbookButton3,
+  .handbookButton4,
+  .handbookButton5,
   .handbookButton1:hover,
-  .handbookButton1:active,
-  .handbookButton1:focus {
+  .handbookButton2:hover,
+  .handbookButton3:hover,
+  .handbookButton4:hover,
+  .handbookButton5:hover {
+    /* font-family: 'Graphik'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .handbookButton1 {
     background: #e61a6b;
+    color: white;
     border: none;
-    margin-top: 6%;
-    padding: 1% 1%;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: left;
     cursor: pointer;
     max-width: fit-content;
-    font-family: 'Graphik';
-    font-style: normal;
   }
 
-  .handbookButton2,
-  .handbookButton2:hover,
-  .handbookButton2:active,
-  .handbookButton2:focus {
+  .handbookButton1:focus,
+  .handbookButton1:hover {
+    background: #e61a6b;
+    color: white;
+    border: none;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-weight: bold;
+  }
+
+  .handbookButton2 {
     background: #ffc4bc;
     border: none;
-    margin-top: 6%;
-    padding: 1% 1%;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: left;
     cursor: pointer;
     max-width: fit-content;
-    font-family: 'Graphik';
-    font-style: normal;
   }
 
-  .handbookButton3,
-  .handbookButton3:hover,
-  .handbookButton3:active,
-  .handbookButton3:focus {
+  .handbookButton2:focus,
+  .handbookButton2:hover {
+    background: #ffc4bc;
+    border: none;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-weight: bold;
+  }
+
+  .handbookButton3 {
     background: #03dac6;
     border: none;
-    margin-top: 6%;
-    padding: 1% 1%;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: left;
     cursor: pointer;
     max-width: fit-content;
-    font-family: 'Graphik';
-    font-style: normal;
   }
 
-  .handbookButton4,
-  .handbookButton4:hover,
-  .handbookButton4:active,
-  .handbookButton4:focus {
+  .handbookButton3:focus,
+  .handbookButton3:hover {
+    background: #03dac6;
+    border: none;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-weight: bold;
+  }
+
+  .handbookButton4 {
     background: #423d89;
     color: white;
     border: none;
-    margin-top: 6%;
-    padding: 1% 1%;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: left;
     cursor: pointer;
     max-width: fit-content;
-    font-family: 'Graphik';
-    font-style: normal;
   }
 
-  .handbookButton5,
-  .handbookButton5:hover,
-  .handbookButton5:active,
-  .handbookButton5:focus {
+  .handbookButton4:focus,
+  .handbookButton4:hover {
+    background: #423d89;
+    color: white;
+    border: none;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-weight: bold;
+  }
+
+  .handbookButton5 {
     background: #9591ce;
     color: white;
     border: none;
-    margin-top: 6%;
-    padding: 1% 1%;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: left;
     cursor: pointer;
     max-width: fit-content;
-    font-family: 'Graphik';
+  }
+
+  .handbookButton5:focus,
+  .handbookButton5:hover {
+    background: #9591ce;
+    color: white;
+    border: none;
+    margin: 1%;
+    padding: 5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    cursor: pointer;
+    max-width: fit-content;
+    font-weight: bold;
+  }
+  .mostImportantForYou {
+    font-family: 'Recoleta';
     font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    padding-bottom: 5%;
+  }
+
+  .section5HandbookLink {
+    display: none;
+  }
+
+  .section5HandbookLinkMobile {
+    display: block;
   }
 
   .section5ParagraphRight {
@@ -759,6 +861,10 @@
     width: 100%;
     font-family: 'Graphik';
     font-style: normal;
+  }
+  .positionTextSubLeft {
+    padding-top: 5%;
+    padding-bottom: 10%;
   }
 
   .positionTextLeft {
