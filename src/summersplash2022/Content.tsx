@@ -231,12 +231,12 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.section5} ref={etterSoknad}>
-          <div className={style.section5ParagraphLeft}>
-            <div>
-              <h3 className={style.section5Heading}>
-                Hva skjer etter søknadsfristen?
-              </h3>
-              <p className={style.section5Paragraph}>
+          <h3 className={style.section5Heading}>
+            Hva skjer etter søknadsfristen?
+          </h3>
+          <div className={style.flexTimeline}>
+            <div className={style.section5Div}>
+              <p className={style.section5ParagraphLeft}>
                 Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
                 unaturlig situasjon, og man blir ikke godt kjent med hverandre.
                 Etter at vi har vurdert alle søknadene inviterer vi utvalgte
@@ -245,7 +245,7 @@ const Content = ({ selected }: JobOrInternship) => {
                 har felles verdier og mål. Og nei – du er selvsagt ikke nødt til
                 å drikke kaffe.
               </p>
-              <p className={style.section5Paragraph}>
+              <p className={style.section5ParagraphLeft}>
                 Dersom du får jobbtilbud og takker ja, inkluderes du straks i
                 Variant på lik linje med de faste ansatte. Du får tilgang til
                 vår Slack, og mulighet til å delta på alle faglige og sosiale
@@ -254,19 +254,21 @@ const Content = ({ selected }: JobOrInternship) => {
                 til å bli bedre kjent før sommerjobben starter i juni.
               </p>
             </div>
-            <div className={style.section5ParagraphRight}>
+            <div className={style.section5Div2}>
               <div className={style.timeLine}>
                 <TimeLine />
               </div>
-              <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
-              <p className={style.section5Paragraph}>
-                Vi setter pris på en søknad med CV, søknadsbrev og
-                karakterutskrift. Det viktigste for oss er å få et helhetlig
-                bilde. Både av deg som person, din eksisterende kompetanse og
-                dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i
-                Variant? Vi trenger mennesker som bryr seg om å skape en bedre
-                hverdag. Er det deg?
-              </p>
+              <div className={style.søknadstips}>
+                <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
+                <p className={style.section5Paragraph}>
+                  Vi setter pris på en søknad med CV, søknadsbrev og
+                  karakterutskrift. Det viktigste for oss er å få et helhetlig
+                  bilde. Både av deg som person, din eksisterende kompetanse og
+                  dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb
+                  i Variant? Vi trenger mennesker som bryr seg om å skape en
+                  bedre hverdag. Er det deg?
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -143,11 +143,11 @@
 }
 
 .section5ParagraphLeft {
-  position: relative;
+  /* position: relative; */
 }
 
 .section5Paragraph {
-  width: 40%;
+  width: 100%;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 400;
@@ -155,20 +155,42 @@
   line-height: 26px;
 }
 
+.section5ParagraphLeft {
+  width: 500px;
+}
 .section5ParagraphRight {
-  position: relative;
-  left: 600px;
+  /* position: relative; */
+  /* left: 600px;
   bottom: 350px;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 27px; */
+}
+.flexTimeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 20%;
+}
+
+.søknadstips {
+  margin-top: 5%;
+  margin-bottom: 30%;
+  position: relative;
+  right: 150px;
+}
+
+.section5Div1 {
+  width: 50%;
+}
+
+.section5Div2 {
+  width: 100%;
 }
 
 .timeLine {
-  position: relative;
-  left: 10%;
 }
 
 .marginTopMore {
@@ -649,6 +671,10 @@
   .officeMap {
     position: static;
   }
+
+  .søknadstips {
+    position: static;
+  }
   .imageBlob1 {
     position: static;
     width: 10px;
@@ -875,6 +901,14 @@
 
   .summerstudent1 {
     display: block;
+  }
+
+  .flexTimeline {
+    display: block;
+  }
+
+  .section5ParagraphLeft {
+    width: 100%;
   }
 
   .positionTextSubLeft,
