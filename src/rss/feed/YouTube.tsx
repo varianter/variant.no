@@ -3,6 +3,7 @@ import { BaseBlob } from '@variant/components/lib/blob';
 import { and } from 'src/utils/css';
 import { YoutubeVideoItem } from '../index';
 import style from './feed.module.css';
+import { truncateOnSpace } from './utils';
 
 export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
@@ -46,7 +47,8 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         </a>
         <div className={style.published}>Publisert {item.publishDate}</div>
         <p className={style.summary}>
-          {item.description} {/* TODO: Remove if unwanted */}
+          {truncateOnSpace(item.description, 180)}
+          {/* TODO: Remove if unwanted */}
           {/* <span style={{ opacity: 0.5 }}>— {item.publishDate}</span> */}
         </p>
       </div>

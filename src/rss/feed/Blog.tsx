@@ -1,10 +1,9 @@
 import { BaseBlob } from '@variant/components/lib/blob';
-
 // import Image from 'next/image';
 import { and } from 'src/utils/css';
-
 import { BlogItem } from '../index';
 import style from './feed.module.css';
+import { truncateOnSpace } from './utils';
 
 // const loader = ({ src, width }: { src: string; width: number }) => {
 //   return `${src}?w=${width}&h=${width}`;
@@ -55,7 +54,9 @@ export default function Blog({ item }: { item: BlogItem }) {
         <div className={style.published}>
           Skrevet av {item.creator}, {item.publishDate}
         </div>
-        <p className={style.summary}>{item.description}</p>
+        <p className={style.summary}>
+          {truncateOnSpace(item.description, 180)}
+        </p>
         <div className={style.card__link}>
           <a href={item.url}>Les artikkel</a>
           <img src="/images/arrow.svg" alt="Pil mot høyre" />
