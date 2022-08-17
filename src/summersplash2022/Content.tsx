@@ -11,6 +11,7 @@ import ApplyAsDesigner from './img/søkSomDesigner';
 import ApplyAsDesignerBiggerBlob from './img/søkSomDesignerBigBlob';
 import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
 import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
+import ReadMoreArrow from './img/lesMerPil';
 
 const Content = ({ selected }: JobOrInternship) => {
   const blobSection1 = require('./img/section1Blob.png');
@@ -201,8 +202,16 @@ const Content = ({ selected }: JobOrInternship) => {
                 Sjekk ut hele håndboka vår her
               </a>
             </div>
-            <div className={style.flexbox}>
-              <HandBooKPages selectedButton={whichButtonSelected} />
+            <div>
+              {whichButtonSelected ? (
+                <HandBooKPages selectedButton={whichButtonSelected} />
+              ) : (
+                <ReadMoreArrow />
+              )}
+
+              {/* <div className={style.readMoreArrow}></div>
+              
+            </div> */}
             </div>
           </div>
 

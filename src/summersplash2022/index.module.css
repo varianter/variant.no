@@ -423,7 +423,7 @@
 
 .positionTextLeft {
   padding-top: 1%;
-  width: 50%;
+  width: 500px;
   font-family: 'Graphik';
   font-style: normal;
   font-weight: 400;
@@ -473,8 +473,8 @@
 .handbook {
   display: flex;
   align-items: flex-start;
-  gap: 15%;
-  justify-content: flex-start;
+  gap: 10%;
+  justify-content: left;
   margin-top: 10%;
 }
 
@@ -486,6 +486,8 @@
   display: flex;
   text-align: left;
   flex-direction: column;
+  justify-content: center;
+  gap: 10%;
 }
 
 .handbookButton1 {
@@ -605,6 +607,12 @@
   max-width: fit-content;
 }
 
+.readMoreArrow {
+  position: relative;
+  right: 370px;
+  top: 170px;
+}
+
 @media (max-width: 760px) {
   /* Position to static */
   .imageBlob1 {
@@ -649,6 +657,10 @@
 
   .handbookChildButton {
     display: block;
+  }
+
+  .readMoreArrow {
+    display: none;
   }
 
   .handbookGrid {
