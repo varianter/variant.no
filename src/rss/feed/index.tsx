@@ -14,7 +14,7 @@ export default function RSSFeed({ items }: FeedProps) {
     <Layout>
       <div className={style.feed}>
         <div className={style.feed__head}>
-          <h2 className={and(style.feed__title, 'fancy')}>Våre ytringer</h2>
+          <h2 className={and(style.feed__title, 'fancy')}>Meninger og sånn</h2>
           <p>
             Du har funnet feeden vår! Her har vi samlet det siste vi har gjort
             av{' '}
