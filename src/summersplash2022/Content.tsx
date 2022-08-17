@@ -219,11 +219,11 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.section5} ref={etterSoknad}>
-          <h3 className={style.section5Heading}>
-            Hva skjer etter søknadsfristen?
-          </h3>
           <div className={style.section5ParagraphLeft}>
             <div>
+              <h3 className={style.section5Heading}>
+                Hva skjer etter søknadsfristen?
+              </h3>
               <p className={style.section5Paragraph}>
                 Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
                 unaturlig situasjon, og man blir ikke godt kjent med hverandre.
@@ -243,6 +243,9 @@ const Content = ({ selected }: JobOrInternship) => {
               </p>
             </div>
             <div className={style.section5ParagraphRight}>
+              <div className={style.timeLine}>
+                <TimeLine />
+              </div>
               <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
               <p className={style.section5Paragraph}>
                 Vi setter pris på en søknad med CV, søknadsbrev og
@@ -253,9 +256,6 @@ const Content = ({ selected }: JobOrInternship) => {
                 hverdag. Er det deg?
               </p>
             </div>
-          </div>
-          <div className={style.timeLine}>
-            <TimeLine />
           </div>
         </section>
 
