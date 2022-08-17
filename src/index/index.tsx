@@ -204,14 +204,8 @@ const Home = ({
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
-          <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
+          <p>Våre siste ytringer i form av blogginnlegg, podcasts og video.</p>
         </header>
-
-        <img
-          className={style.feed__image1}
-          role="none"
-          src={require('./images/blob-ytringer.svg')}
-        />
 
         <div className={style.feed__content}>
           <List items={feeds.blog} />
