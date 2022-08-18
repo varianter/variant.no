@@ -8,6 +8,45 @@
   margin: 5%;
 }
 
+/* Scroll */
+
+/* 900px*/
+.scrollContainer,
+.section1,
+.section2,
+.section3,
+.whyWorkAtVariant,
+.section5,
+.section6 {
+  height: 900px;
+}
+
+.section5 {
+  height: 1200px;
+}
+
+.section2 {
+  height: 1200px;
+}
+
+.section6 {
+  height: 1100px;
+}
+
+.scrollContainer {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section1,
+.section2,
+.section3,
+.whyWorkAtVariant,
+.section5,
+.section6 {
+  scroll-snap-align: start;
+}
+
 /* Section 1 styling*/
 .maskStyling {
   mask-type: alpha;
@@ -55,16 +94,16 @@
 }
 
 .imageBlob1 {
-  position: absolute;
-  left: 35%;
-  height: 12%;
-  top: 300px;
+  position: relative;
+  left: 30%;
+  height: 700px;
+  bottom: 400px;
   width: auto;
 }
 
 /* Section 2 styling*/
 .section2 {
-  margin-top: 20%;
+  margin-top: 0%;
   width: 80%;
 }
 
@@ -128,6 +167,10 @@
 }
 
 /* Section 5 styling */
+
+.section5 {
+  margin-top: 30%;
+}
 
 .section5Heading {
   margin-bottom: 20px;
@@ -198,6 +241,10 @@
 }
 
 /* Section 6 styling*/
+
+.section6 {
+  margin-top: 20%;
+}
 
 .section6Underline {
   text-decoration: underline;
@@ -275,12 +322,18 @@
 
 .ApplyAsDeveloperDiv {
   position: relative;
-  left: 200px;
+  left: 300px;
+  bottom: 600px;
+}
+
+.ApplyAsDesignerDiv {
+  position: relative;
+  bottom: 500px;
 }
 .Marius {
   width: 35%;
-  position: absolute;
-  right: 300px;
+  position: relative;
+  left: 45%;
   bottom: 150px;
 }
 
@@ -472,7 +525,8 @@
 }
 
 .whyWorkAtVariant {
-  margin-top: 20%;
+  margin-top: 40%;
+  margin-bottom: 20%;
 }
 
 .handbookChildButton {
@@ -636,7 +690,8 @@
     position: static;
   }
 
-  .ApplyAsDeveloperDiv {
+  .ApplyAsDeveloperDiv,
+  .ApplyAsDesignerDiv {
     position: static;
   }
 
@@ -940,7 +995,6 @@
 
   .section1 {
     overflow: hidden;
-    margin: 0%;
   }
 
   .navigationSlider {

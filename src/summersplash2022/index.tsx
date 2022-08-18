@@ -65,7 +65,7 @@ const Summersplash2022: NextPage<
       </Head>
 
       {mode === 'intership'}
-
+      {/* 
       <section>
         <Link href="/sommerjobb">
           <a>sommerjobb</a>
@@ -73,7 +73,7 @@ const Summersplash2022: NextPage<
         <Link href="/nyutdannet">
           <a>nyutdannet</a>
         </Link>
-      </section>
+      </section> */}
       <>
         <Content selected={mode === 'job' ? 'job' : 'internship'} />
       </>
