@@ -53,7 +53,7 @@ Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik l
 - Vi vil starte å sende ut tilbud den 7. oktober.
 
 Selve sommerjobben er delt opp i to perioder, hvor man har ferie 3 uker i fellesferien.
-I 2023 vil første arbeidsperiode være fra 12. juni - 7. juli (4 uker). Deretter 3 uker ferie. Andre arbeidsperiode starter opp igjen 31. juli og varer frem til 11. august (2 uker). 
+I 2023 vil første arbeidsperiode være fra 12. juni - 7. juli (4 uker). Andre arbeidsperiode starter opp igjen 31. juli og varer frem til 11. august (2 uker). 
 
 <div class="right">
 
