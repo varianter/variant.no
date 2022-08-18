@@ -21,7 +21,8 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 I 2023 tilbyr vi sommerjobb i hele tre(!) byer: I Trondheim søker vi 3 designere. I Oslo 2, og i vårt nyeste kontor i Bergen ser vi etter 1.
 Vi har tro på at både kunder og sluttbrukere får det beste resultatet når vi jobber i tverrfaglige team. Derfor rekrutterer vi også utviklere parallelt. Sammen vil dere jobbe på et av våre spennende oppdrag for kundene våre. Selvfølgelig med god støtte, oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
-Årets sommervarianter var blant annet utleid til Opplev Oppdal, Statens vegvesen og Piscada. todo
+Årets sommervarianter fikk blant annet bryne seg på tjenestekartlegging for Opplev Oppdal, bookingtjeneste for Inatur, oppfølging av fiskehelse for Piscada og digital støtte av trafikksikkerhetsinspeksjoner i Statens vegvesen. 
+
 
 ### Hvorfor jobbe i Variant?
 
