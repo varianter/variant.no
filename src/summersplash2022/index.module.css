@@ -56,9 +56,9 @@
 
 .imageBlob1 {
   position: absolute;
-  left: 45%;
-  height: 8%;
-  top: 400px;
+  left: 35%;
+  height: 12%;
+  top: 300px;
   width: auto;
 }
 
@@ -462,9 +462,13 @@
 .handbook {
   display: flex;
   align-items: flex-start;
-  gap: 10%;
+  gap: 5%;
   justify-content: left;
   margin-top: 10%;
+}
+
+.handbookPages {
+  width: 50%;
 }
 
 .whyWorkAtVariant {
@@ -658,6 +662,10 @@
 
   .handbook {
     display: block;
+  }
+
+  .handbookPages {
+    width: 100%;
   }
 
   .handbookChildButton {
@@ -957,6 +965,11 @@
     display: none;
   }
 
+  .navigationSlider {
+    align-items: flex-start;
+    width: 100%;
+  }
+
   .navigationButton1,
   .navigationButton2,
   .navigationButton3,
@@ -974,6 +987,7 @@
   .navigationButton5:hover {
     padding: 5%;
     margin-top: 1%;
+    text-align: left;
   }
 
   .navigationButton1 {
@@ -1007,8 +1021,8 @@
 
   .imageBlob1 {
     position: static;
-    margin-left: 30%;
-    height: 300px;
+    margin-left: 23%;
+    height: 350px;
     top: 5%;
     width: auto;
   }
@@ -1068,5 +1082,26 @@
   .summerstudent1picture {
     width: 50%;
     margin-left: 0px;
+  }
+
+  /* Section 6 mobile */
+
+  .section6Flex {
+    display: flex;
+    align-items: flex-start;
+    order: 1;
+    flex-direction: row-reverse;
+  }
+
+  .section6Text {
+    width: 80%;
+  }
+
+  .Marius {
+    width: 40%;
+  }
+
+  .contactInfo {
+    gap: 3px;
   }
 }
