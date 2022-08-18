@@ -26,11 +26,11 @@ Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av hverandre
 
 Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad](https://handbook.variant.no/handbook#form%C3%A5l-og-verdier). Disse verdiene ligger til grunn for hvordan vi møter hverandre og våre kunder. Vi er en gjeng dyktige [utviklere, designere og prosjektledere](https://www.variant.no/ansatte) som ønsker å både tilegne og dele kunnskap. Sammen skaper vi løsninger som tjener samfunnet. Hos oss er det din kompetanse og dine ønsker som påvirker våre neste oppdrag. Kundelisten vår endrer seg stadig, men for tiden bistår vi blant annet på disse prosjektene:
 
-- For RiksTV designer vi tjenester og plattformer som gjør folks underholdningshverdag bedre, enklere og mer inspirerende.
+- For Ruter utvikler vi løsninger for tilrettelagt transport, slik at alle kan komme seg dit de skal.
 
 - For Telenor designer og utvikler vi støtteverktøy for morgendagens mobiloperatørløsninger.
 
-- For Sparebank 1 designer vi ny og bedre funksjonalitet i nettbanken til privatkunder, så bank blir enkelt og intuitivt for alle brukergrupper.
+- For Sparebank 1 designer og utvikler vi ny og bedre funksjonalitet i nettbanken til privatkunder, så bank blir enkelt og intuitivt for alle brukergrupper.
 
 <div class="left">
 
@@ -40,7 +40,9 @@ Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad]
 
 ### Hva kan vi tilby?
 
-Som nyutdannet konsulent i Variant blir du en del av utviklingsprogrammet vi kaller [Variant:skudd](https://handbook.variant.no/handbook#utviklingsprogram). Programmet er skreddersydd for deg som kommer rett fra skolen, og bidrar til at du raskt blir en skikkelig god konsulent. Samtidig tror vi at du lærer best ute i prosjekt, og det vil derfor ikke gå lang tid før du starter i oppdrag hos en av våre kunder. Du vil samarbeide med andre varianter, og få god [oppfølging](https://handbook.variant.no/quality_manual#personaloppf%C3%B8lging) underveis.
+Som nyutdannet i Variant blir du en del av utviklingsprogrammet vi kaller [Variant:skudd](https://handbook.variant.no/handbook#utviklingsprogram). Programmet er skreddersydd for deg som kommer rett fra skolen, og bidrar til at du blir en trygg og god konsulent. En viktig del av programmet er Startskudd. En hel uke dedikert til å lære om Variant, konsulentvirket og andre nye (og gamle) Varianter bedre å kjenne. I 2022 gjennomførte vi Startskudd i idylliske omgivelser på Bjerkeløkkja på Oppdal, med fjelltur, kubb og øl-kurs som noen av aktivitetene som bidro til en god sosial ramme rundt det hele. Læreglede står sterkt, også i Variant:skudd. Likevel tror vi at du lærer best når du kommer ut i oppdrag, og vi jobber derfor for at du raskt skal komme ut og jobbe med våre kunder. Du vil samarbeide med andre varianter, og få god [oppfølging](https://handbook.variant.no/quality_manual#personaloppf%C3%B8lging) underveis. Selv om vi jobber ute hos mange ulike kunder på ulike oppdrag, så har du alltid tryggheten av å ha hele Variants fagmiljø i ryggen om du trenger noen å sparre med eller få hjelp.
+
+Vi er opptatt av at alle i Variant skal få utvikle seg og vokse både faglig og som menneske. Sammen med din personansvarlige (som du forresten også kan velge selv), kartlegger dere hva dine styrker er, hvilke områder du ønsker å utvikle deg videre innenfor, og legger en plan for hvordan du skal komme deg dit. 
 
 I Variant jobber vi for å være åpne og rause, og dette gjenspeiles blant annet i betingelsene våre. Du trenger for eksempel ikke å lure på hvordan [kontrakten](https://avtaler.variant.no/avtaler/ansettelse.html) din vil se ut. Som nyutdannet i 2023 vil du tjene 590 000 kr (master) og 560 000 kr (bachelor) i året. I tillegg vil du hvert kvartal få utbetalt en [bonus](https://handbook.variant.no/#bonus), som årlig har pleid å ligge på rundt 70 000 kr per ansatt. Utenom lønn har vi også gode betingelser knyttet til [gadgets](https://handbook.variant.no/information#gadgets), [pensjon og forsikring](https://handbook.variant.no/handbook#pensjon-og-forsikring), samt andre [goder og ytelser](https://handbook.variant.no/handbook#goder-og-ytelser). Dersom du vil lese mer om hva Variant står for og tilbyr, sjekk gjerne ut [håndboka](https://handbook.variant.no/handbook) vår.
 
