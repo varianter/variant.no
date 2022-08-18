@@ -44,6 +44,15 @@ Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en unaturlig situa
 
 Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik linje med de fast ansatte. Du får tilgang til vår Slack, og mulighet til å delta på alle faglige og [sosiale arrangementer](https://handbook.variant.no/quality_manual#sosiale-aktiviteter). Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas og [variantdager](https://handbook.variant.no/handbook#variantdag), som er fine muligheter til å bli bedre kjent før sommerjobben starter i juni.
 
+### Hvordan ser alt dette ut i kalendertid?
+
+- Vi går gjennom alle søknadene 3. - 4. oktober. Da vil vi også fortløpende sende ut invitasjoner til kaffeprater. 
+- Kaffeprater blir så gjennomført primært 5. og 6. oktober. 
+- Vi vil starte å sende ut tilbud den 7. oktober.
+
+Selve sommerjobben er delt opp i to perioder, hvor man har ferie 3 uker i fellesferien.
+I 2023 vil første arbeidsperiode være fra 12. juni - 7. juli (4 uker). Deretter 3 uker ferie. Andre arbeidsperiode starter opp igjen 31. juli og varer frem til 11. august (2 uker). 
+
 <div class="right">
 
 ![En av våre sommeransatte presentere sitt prosjekt](/work_images/sommerjobbere_diskusjon1_2022.png)
