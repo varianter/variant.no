@@ -5,7 +5,7 @@ slug: nyutdannet-designer-2023
 contact_emails: mk@variant.no
 meta_title: Vi søker designstudenter til fast jobb i Variant!
 meta_description: Vi ser etter læreglade designere til å starte i fast jobb hos oss i 2023.
-meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-1.jpg
+meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo_2023.png
 ---
 
 <br />
@@ -16,7 +16,7 @@ Vi søker nyutdannede designere som engasjerer og motiverer, med oppstart 1. aug
 
 <div class="right">
 
-![Glade varianter](/work_images/nyutdannet-blob-5.png)
+![Glade Varianter på Startskudd](/work_images/kull_2022_paa_startskudd.png)
 
 </div>
 
@@ -46,7 +46,7 @@ I Variant jobber vi for å være åpne og rause, og dette gjenspeiles blant anne
 
 <div class="right">
 
-![Ole Jørgen og Adrian tester sin nye applikasjon](/work_images/nyutdannet-blob-6.png)
+![Sommervarianter Sigmund og Sigrid samarbeider](/work_images/varianter_samarbeider_2022.png)
 
 </div>
 

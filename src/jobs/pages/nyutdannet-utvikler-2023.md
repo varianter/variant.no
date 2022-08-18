@@ -5,7 +5,7 @@ slug: nyutdannet-utvikler-2023
 contact_emails: mk@variant.no
 meta_title: Vi søker utviklerstudenter til fast jobb i Variant!
 meta_description: Vi ser etter læreglade utviklere til å starte i fast jobb hos oss i 2023.
-meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-2.jpg
+meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-2_2023.png
 ---
 
 <br />
@@ -16,7 +16,7 @@ Vi søker nyutdannede utviklere som engasjerer og motiverer, med oppstart 1. aug
 
 <div class="right">
 
-![Varianter i ivrig arbeid](/work_images/nyutdannet-blob-1.png)
+![Glade Varianter på Startskudd](/work_images/kull_2022_paa_startskudd.png)
 
 </div>
 
