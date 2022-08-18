@@ -232,7 +232,7 @@ const Content = ({ selected }: JobOrInternship) => {
               </div>
               <div className={style.section5HandbookLink}>
                 <h3 className={style.mostImportantForYou}>
-                  Hva er Viktigst for deg?
+                  Hva er viktigst for deg?
                 </h3>
                 <a
                   className={style.handbookRef}
