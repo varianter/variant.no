@@ -56,9 +56,9 @@
 
 .imageBlob1 {
   position: absolute;
-  left: 45%;
-  height: 8%;
-  top: 400px;
+  left: 35%;
+  height: 12%;
+  top: 300px;
   width: auto;
 }
 
@@ -89,7 +89,7 @@
 .officeMap {
   position: relative;
   right: 0%;
-  top: 0%;
+  top: 450px;
 }
 
 /* Section 3 styling */
@@ -358,9 +358,11 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 88%;
+  align-items: flex-end;
+  left: 80%;
   bottom: 25%;
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  width: 250px;
 }
 
 /* Button font */
@@ -368,7 +370,8 @@
 .navigationButton2,
 .navigationButton3,
 .navigationButton4,
-.navigationButton5 {
+.navigationButton5,
+.navigationButton6 {
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
@@ -376,8 +379,34 @@
   line-height: 23px;
 }
 
-.navigationButton1 {
+.navigationButton1,
+.navigationButton2,
+.navigationButton3,
+.navigationButton4,
+.navigationButton5,
+.navigationButton6 {
   background: none;
+  border: none;
+  margin: 0;
+  padding: 5%;
+  cursor: pointer;
+  margin-top: 10%;
+  text-align: right;
+  /* max-width: fit-content; */
+}
+
+.navigationButton1:hover,
+.navigationButton1:focus,
+.navigationButton2:hover,
+.navigationButton2:focus,
+.navigationButton3:hover,
+.navigationButton3:focus,
+.navigationButton4:hover,
+.navigationButton4:focus,
+.navigationButton5:hover,
+.navigationButton5:focus,
+.navigationButton6:hover,
+.navigationButton6:focus {
   border: none;
   margin: 0;
   padding: 5%;
@@ -390,106 +419,45 @@
 .navigationButton1:hover,
 .navigationButton1:focus {
   background: #e61a6b;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
-}
+  color: white;
 
-.navigationButton2 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .navigationButton2:hover,
 .navigationButton2:focus {
   background: #ffc4bc;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
-}
 
-.navigationButton3 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .navigationButton3:hover,
 .navigationButton3:focus {
   background: #423d89;
   color: white;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
-}
 
-.navigationButton4 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .navigationButton4:hover,
 .navigationButton4:focus {
   background: #03dac6;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
-}
 
-.navigationButton5 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
+  /* max-width: fit-content; */
 }
 
 .navigationButton5:hover,
 .navigationButton5:focus {
   background: #9591ce;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  max-width: fit-content;
+
+  /* max-width: fit-content; */
+}
+
+.navigationButton6:hover,
+.navigationButton6:focus {
+  background: #fad2e2;
+
+  /* max-width: fit-content; */
 }
 
 .aboutSummerjob {
@@ -548,9 +516,13 @@
 .handbook {
   display: flex;
   align-items: flex-start;
-  gap: 10%;
+  gap: 5%;
   justify-content: left;
   margin-top: 10%;
+}
+
+.handbookPages {
+  width: 50%;
 }
 
 .whyWorkAtVariant {
@@ -740,6 +712,10 @@
 
   .handbook {
     display: block;
+  }
+
+  .handbookPages {
+    width: 100%;
   }
 
   .handbookChildButton {
@@ -1040,6 +1016,11 @@
     display: none;
   }
 
+  .navigationSlider {
+    align-items: flex-start;
+    width: 100%;
+  }
+
   .navigationButton1,
   .navigationButton2,
   .navigationButton3,
@@ -1057,6 +1038,7 @@
   .navigationButton5:hover {
     padding: 5%;
     margin-top: 1%;
+    text-align: left;
   }
 
   .navigationButton1 {
@@ -1084,10 +1066,14 @@
     background-color: #9591ce;
   }
 
+  .navigationButton6 {
+    display: none;
+  }
+
   .imageBlob1 {
     position: static;
-    margin-left: 30%;
-    height: 300px;
+    margin-left: 23%;
+    height: 350px;
     top: 5%;
     width: auto;
   }
@@ -1224,5 +1210,26 @@
   .summerstudent3picture {
     width: 40%;
     height: 40%;
+  }
+
+  /* Section 6 mobile */
+
+  .section6Flex {
+    display: flex;
+    align-items: flex-start;
+    order: 1;
+    flex-direction: row-reverse;
+  }
+
+  .section6Text {
+    width: 80%;
+  }
+
+  .Marius {
+    width: 40%;
+  }
+
+  .contactInfo {
+    gap: 3px;
   }
 }

@@ -22,6 +22,7 @@ const Content = ({ selected }: JobOrInternship) => {
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
 
+  const forside = useRef<HTMLImageElement>(null);
   const sommerjobbHandling = useRef<HTMLImageElement>(null);
   const sommerjobbereMening = useRef<HTMLImageElement>(null);
   const hvorforVariant = useRef<HTMLImageElement>(null);
@@ -36,7 +37,7 @@ const Content = ({ selected }: JobOrInternship) => {
   if (selected === 'internship') {
     return (
       <>
-        <section className={style.section1}>
+        <section className={style.section1} ref={forside}>
           <span className={style.searchNewVariants}>
             <NewVariants />
           </span>
@@ -45,6 +46,12 @@ const Content = ({ selected }: JobOrInternship) => {
           <br />
           {/* Navigation bar on the right side */}
           <div className={style.navigationSlider}>
+            <button
+              className={style.navigationButton6}
+              onClick={() => goToRef(forside)}
+            >
+              Forside
+            </button>
             <button
               className={style.navigationButton1}
               onClick={() => goToRef(sommerjobbHandling)}
@@ -235,7 +242,7 @@ const Content = ({ selected }: JobOrInternship) => {
                 </a>
               </div>
             </div>
-            <div>
+            <div className={style.handbookPages}>
               {whichButtonSelected ? (
                 <HandBooKPages selectedButton={whichButtonSelected} />
               ) : (
@@ -306,31 +313,32 @@ const Content = ({ selected }: JobOrInternship) => {
         </section>
 
         <section className={style.section6} ref={sokSommerjobb}>
-          <div>
-            <h3 className={style.section6Heading}>Søk sommerjobb</h3>
-            <p className={style.section6Paragraph}>
-              Vi håper du søker, og vi ser frem til å bli bedre kjent med deg.
-              Har du spørsmål om sommerjobben eller Variant? Ta gjerne kontakt
-              med meg.
-            </p>
-            <p className={style.section6Paragraph2}>
-              - Marius Krakeli, Utvikler og rekrutteringsansvarlig
-            </p>
-            <div className={style.contactInfo}>
-              <div>
-                <p className={style.section6Underline}>41 63 75 72</p>
-              </div>
-              <div>
-                <p> | </p>
-              </div>
-              <div>
+          <h3 className={style.section6Heading}>Søk sommerjobb</h3>
+          <div className={style.section6Flex}>
+            <div className={style.section6Text}>
+              <p className={style.section6Paragraph}>
+                Vi håper du søker, og vi ser frem til å bli bedre kjent med deg.
+                Har du spørsmål om sommerjobben eller Variant? Ta gjerne kontakt
+                med meg.
+              </p>
+              <p className={style.section6Paragraph2}>
+                - Marius Krakeli, Utvikler og rekrutteringsansvarlig
+              </p>
+              <div className={style.contactInfo}>
+                <div>
+                  <p className={style.section6Underline}>41637572</p>
+                </div>
+                <div>
+                  <p> | </p>
+                </div>
+                <div></div>
                 <p className={style.section6Underline}>
                   <a href="mailto: mk@variant.no">mk@variant.no</a>
                 </p>
               </div>
             </div>
+            <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
           </div>
-          <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
           <div className={style.ApplyAsDesignerDiv}>
             <div className={style.applyAsDesigner}>
               <a href="https://www.variant.no/jobs">
