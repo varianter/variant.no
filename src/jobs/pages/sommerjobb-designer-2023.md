@@ -30,13 +30,14 @@ Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad]
 
 Sommerjobben varer i fire + to uker med tre uker ferie i mellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen og hvordan hverdagen i Variant er. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter. Vi er opptatt av at sommerjobben skal ha en god dose av både sosialt og faglig påfyll.
 
-I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 266,66 kr timen, og til sammen 59998 og femti øre. Perfekt rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
-
 <div class="left">
 
 ![Sommeransatte i diskusjon](/work_images/sommerjobbere_i_mote_2022.png)
 
 </div>
+
+I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 266,66 kr timen, og til sammen 59998 og femti øre. Perfekt rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
+
 
 ### Hva skjer etter søknadsfristen?
 
