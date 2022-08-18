@@ -47,6 +47,7 @@ Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik l
 
 ### Hvordan ser alt dette ut i kalendertid?
 </br>
+
 - Vi går gjennom alle søknadene 3. - 4. oktober. Da vil vi også fortløpende sende ut invitasjoner til kaffeprater. 
 - Kaffeprater blir så gjennomført primært 5. og 6. oktober. 
 - Vi vil starte å sende ut tilbud den 7. oktober.
