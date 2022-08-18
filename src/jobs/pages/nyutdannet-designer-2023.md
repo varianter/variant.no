@@ -26,7 +26,7 @@ Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av hverandre
 
 Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad](https://handbook.variant.no/handbook#form%C3%A5l-og-verdier). Disse verdiene ligger til grunn for hvordan vi møter hverandre og våre kunder. Vi er en gjeng dyktige [utviklere, designere og prosjektledere](https://www.variant.no/ansatte) som ønsker å både tilegne og dele kunnskap. Sammen skaper vi løsninger som tjener samfunnet. Hos oss er det din kompetanse og dine ønsker som påvirker våre neste oppdrag. Kundelisten vår endrer seg stadig, men for tiden bistår vi blant annet på disse prosjektene:
 
-- For RiksTV designer vi tjenester og plattformer som gjør folks underholdningshverdag bedre, enklere og mer inspirerende.
+- For Sikt designer vi fremtidens læremiljø og har blant annet etablert en designlab for å støtte og utvikle nye tjenester i kunnskapssektoren.
 
 - For Telenor designer og utvikler vi støtteverktøy for morgendagens mobiloperatørløsninger.
 
