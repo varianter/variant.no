@@ -20,6 +20,7 @@ const Content = ({ selected }: JobOrInternship) => {
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
 
+  const forside = useRef<HTMLImageElement>(null);
   const sommerjobbHandling = useRef<HTMLImageElement>(null);
   const sommerjobbereMening = useRef<HTMLImageElement>(null);
   const hvorforVariant = useRef<HTMLImageElement>(null);
@@ -34,7 +35,7 @@ const Content = ({ selected }: JobOrInternship) => {
   if (selected === 'internship') {
     return (
       <>
-        <section className={style.section1}>
+        <section className={style.section1} ref={forside}>
           <span className={style.searchNewVariants}>
             <NewVariants />
           </span>
@@ -43,6 +44,12 @@ const Content = ({ selected }: JobOrInternship) => {
           <br />
           {/* Navigation bar on the right side */}
           <div className={style.navigationSlider}>
+            <button
+              className={style.navigationButton6}
+              onClick={() => goToRef(forside)}
+            >
+              Forside
+            </button>
             <button
               className={style.navigationButton1}
               onClick={() => goToRef(sommerjobbHandling)}
