@@ -1,7 +1,6 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { getStaticProps } from 'pages/prosjekter/[project]';
 import { Project } from './utils/projectHandlers';
-import MarkdownIt from 'markdown-it';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import Layout from 'src/layout';
 import style from './index.module.css';
@@ -11,6 +10,7 @@ import { Interview } from 'src/interviews/utils/interviewHandlers';
 
 const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ project, interviews }) => {
+    /* TODO: Use this
     const innerHtml = useMemo(() => {
       const md = new MarkdownIt({
         linkify: true,
@@ -21,8 +21,7 @@ const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
 
       return { __html: html };
     }, [project]);
-
-    console.log(innerHtml);
+    */
 
     return (
       <Layout title={`${project.meta_title}`}>
@@ -118,9 +117,9 @@ const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           <div>
             <h2 className={style.textCenter}>Variantenes egne ord</h2>
             <div className={style.project__interviews}>
-              {interviews.map((interview: Interview) => {
+              {interviews.map((interview: Interview, idx) => {
                 return (
-                  <div className={style.project__interview}>
+                  <div key={idx} className={style.project__interview}>
                     <p className={style.textCenter}>
                       <strong>{interview.variant}</strong>
                     </p>
