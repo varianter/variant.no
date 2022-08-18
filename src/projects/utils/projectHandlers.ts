@@ -62,10 +62,7 @@ export const getInterview = async (filename: string): Promise<Interview> => {
   } as Interview;
 };
 
-const createInterviewObject = async (
-  projectname: string,
-  filename: string,
-): Promise<Interview> => {
+const createInterviewObject = async (filename: string): Promise<Interview> => {
   const file = await fs.readFile(
     path.join(process.cwd(), 'src/interviews/pages/', filename),
   );
@@ -88,7 +85,7 @@ export const getInterviewsByProject = async (
   files = files.filter((a) => a.includes(projectName));
 
   const unresolvedPromises = files.map((filename) =>
-    createInterviewObject(projectName, filename),
+    createInterviewObject(filename),
   );
   const interviews = await Promise.all(unresolvedPromises);
   return interviews;

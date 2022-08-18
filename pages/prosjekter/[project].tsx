@@ -26,9 +26,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<
-  { project: Project },
-  { project: string },
-  { interviews: Interview[] }
+  { project: Project; interviews: Interview[] },
+  { project: string }
 > = async (context) => {
   const fileName = `${context?.params?.project}.md`;
   const project = await getProject(fileName);
@@ -40,7 +39,10 @@ export const getStaticProps: GetStaticProps<
       variant[0]?.imageUrl || '/interviews/placeholder_blob.png';
   }
   return {
-    props: { project: { ...project }, interviews: interviews },
+    props: {
+      project: { ...project },
+      interviews: interviews,
+    },
     revalidate: 60 * 60,
   };
 };
