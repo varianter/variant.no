@@ -25,13 +25,6 @@ const createHtmlFromMetadata = (interview: Interview) => {
     '</div>' +
     '<div>' +
     `<div class="variant__location"><p>Lokasjon</p>${locationsHtml}</div>` +
-    `<div class="variant__duration"><p>Tid hos kunden</p><span>${
-      interview.durationFrom
-    } ${
-      interview.durationTill
-        ? '- ' + interview.durationTill
-        : '<img src="/images/arrow.svg" alt="Pil mot høyre"'
-    }</span></div>` +
     '</div>' +
     '</div>';
 

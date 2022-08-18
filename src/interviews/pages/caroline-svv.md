@@ -8,8 +8,6 @@ variant: Caroline
 variantEmail: cs@variant.no
 variantTitle: Designer, Oslo
 location: Oslo
-durationFrom: 01.2022
-durationTill:
 quote: «Til det daglige jobber jeg i stor grad med designarbeid. Det varierer hva jeg gjør til daglig, men over en periode er jeg innom intervjuer med brukere, behovskartlegging, skissering og prototyping, og brukertesting.»
 ---
 

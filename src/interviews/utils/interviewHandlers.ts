@@ -10,8 +10,6 @@ export type InterviewMetadata = {
   projectSlug: string;
   variant: string;
   location: string[];
-  durationFrom: string;
-  durationTill: string;
   image: string;
   imageAltText: string;
   variantEmail: string;
