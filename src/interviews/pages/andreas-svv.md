@@ -3,7 +3,7 @@ meta_title: Verktøy for gjennomføring og oppfølging av Trafikksikkerhetsinspe
 meta_description: Intervju med Andreas hos Statens vegvesen
 imageAltText: Andreas hos Statens vegvesen
 project: Statens vegvesen
-project_slug: svv
+projectSlug: svv
 variant: Andreas
 variantEmail: andreas@variant.no
 variantTitle: Designer, Bergen

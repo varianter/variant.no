@@ -3,6 +3,7 @@ meta_title: Prosjektstøtte på leveransestrøm
 meta_description: Intervju med Marthe hos Statens vegvesen
 imageAltText: Marthe hos Statens vegvesen
 project: Statens vegvesen
+projectSlug: svv
 variant: Marthe
 variantEmail: msd@variant.no
 variantTitle: Prosjektleder, Oslo
