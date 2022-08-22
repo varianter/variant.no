@@ -619,6 +619,10 @@
   font-style: normal;
 }
 
+.handbookParagraphHeader {
+  padding-top: 5%;
+}
+
 .section5HandbookLinkMobile {
   display: none;
 }
