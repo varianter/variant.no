@@ -58,13 +58,15 @@ Alle søknader behandles i hovedsak etter at søknadsfristen har utløpt, men se
 
 Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant. Du får tilgang til vår Slack, og mulighet til å delta på alle faglige og [sosiale arrangementer](https://handbook.variant.no/quality_manual#sosiale-aktiviteter). Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas og [variantdager](https://handbook.variant.no/handbook#variantdag), som er fine muligheter til å bli bedre kjent før oppstart i august.
 
-### Har du spørsmål?
-
-Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant?  
-Ta gjerne kontakt med meg.
-
 ### Søknadsfrist
 
 <p>
 2. oktober 2022
 </p>
+
+### Har du spørsmål?
+
+Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant?  
+Ta gjerne kontakt med meg.
+
+
