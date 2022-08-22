@@ -23,15 +23,15 @@
 }
 
 .section2 {
-  height: 1200px;
+  height: 1400px;
 }
 
 .section3 {
-  height: 1800px;
+  height: 2200px;
 }
 
 .section5 {
-  height: 1200px;
+  height: 1500px;
 }
 
 .section6 {
@@ -75,14 +75,14 @@
   line-height: 34px;
 }
 
-.h4Section1 {
+/* .h4Section1 {
   margin-bottom: 10%;
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-}
+} */
 
 .section2Heading {
   margin-bottom: 20px;
@@ -124,14 +124,14 @@
 }
 
 .underHeader {
-  margin-left: 0%;
+  margin-top: 5%;
 }
 
 .imageBlob1 {
   position: relative;
-  left: 30%;
-  height: 700px;
-  bottom: 400px;
+  left: 50%;
+  height: 60%;
+  bottom: 220px;
   width: auto;
 }
 
@@ -139,6 +139,11 @@
 .section2 {
   width: 80%;
   color: white;
+}
+
+.blogpostLink {
+  color: white;
+  text-decoration: underline;
 }
 
 .section2Color {

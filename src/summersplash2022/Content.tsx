@@ -40,8 +40,6 @@ const Content = ({ selected }: JobOrInternship) => {
             <span className={style.searchNewVariants}>
               <NewVariants />
             </span>
-            <h4 className={style.h4Section1}>Søk innen 2. Oktober</h4>
-
             <br />
             {/* Navigation bar on the right side */}
             <div className={style.navigationSlider}>
@@ -84,11 +82,13 @@ const Content = ({ selected }: JobOrInternship) => {
             </div>
             <div className={style.underHeader}>
               {/* middlertidig link. usikker på hvilken vi skal bruke */}
-              <a className={style.søkHer} href="https://www.variant.no/jobs">
-                Søk her
-              </a>
-              <p className={style.eller}>Eller</p>
-              <p className={style.scroll}>Scroll deg nedover</p>
+              <p>
+                <a className={style.søkHer} href="https://www.variant.no/jobs">
+                  Søk her innen 2. oktober
+                </a>
+              </p>
+              <p className={style.eller}>eller</p>
+              <p className={style.scroll}>scroll deg nedover</p>
             </div>
             <span>
               <img
@@ -112,8 +112,9 @@ const Content = ({ selected }: JobOrInternship) => {
                     bestående av designere og utviklere kommer du til å jobbe på
                     et av de spennende kundeprosjektene vi har. Underveis får du
                     god oppfølging og tilrettelegging fra erfarne konsulenter
-                    som ønsker at du lykkes. Sjekk ut denne bloggposten for å
-                    lese mer om hva årets sommerstudenter i Oslo jobbet med.
+                    som ønsker at du lykkes. Sjekk ut{' '}
+                    <a className={style.blogpostLink}>bloggen vår</a> for å lese
+                    mer om hva årets sommerstudenter jobbet med.
                   </p>
                 </div>
                 <div className={style.officeMap}>
@@ -202,7 +203,7 @@ const Content = ({ selected }: JobOrInternship) => {
                     hvordan vi møter hverandre, våre kunder og alle andre. I
                     håndboken vår kan du lese om hvordan ting gjøres i Variant,
                     hva vi prøver å oppnå og hvorfor vi tenker som vi gjør.
-                    Under kan du sjekke ut er et par utvalgte temaer.
+                    Under kan du sjekke ut noen utvalgte temaer.
                   </p>
 
                   <div className={style.handbookGrid}>
@@ -284,19 +285,18 @@ const Content = ({ selected }: JobOrInternship) => {
                     Vi liker ikke tradisjonelle intervjuer. De plasserer søker i
                     en unaturlig situasjon, og man blir ikke godt kjent med
                     hverandre. Etter at vi har vurdert alle søknadene inviterer
-                    vi utvalgte kandidater til en uformell samtale. Dette er det
-                    vi kaller kaffeprat. Hensikten med samtalen er å finne ut om
-                    begge parter har felles verdier og mål. Og nei – du er
-                    selvsagt ikke nødt til å drikke kaffe.
+                    vi utvalgte kandidater til en kaffeprat. Dette er en
+                    uformell samtale hvor målet er å bli bedre kjent med
+                    hverandre, med fokus på både det faglige og det personlige.
+                    Og nei – du er selvsagt ikke nødt til å drikke kaffe.
                   </p>
                   <p className={style.section5ParagraphLeft}>
                     Dersom du får jobbtilbud og takker ja, inkluderes du straks
-                    i Variant på lik linje med de faste ansatte. Du får tilgang
-                    til vår Slack, og mulighet til å delta på alle faglige og
-                    sosiale arrangementer. Dette inkluderer blant annet spill-
-                    og fagkvelder, nyttårskalas og variantdager, som er fine
-                    muligheter til å bli bedre kjent før sommerjobben starter i
-                    juni.
+                    i Variant. Du får tilgang til vår Slack, og mulighet til å
+                    delta på faglige og sosiale arrangementer. Dette inkluderer
+                    blant annet spill- og fagkvelder, nyttårskalas og
+                    variantdager, som er fine muligheter til å bli bedre kjent
+                    før sommerjobben starter i juni.
                   </p>
                 </div>
                 <div className={style.section5Div2}>
@@ -364,12 +364,12 @@ const Content = ({ selected }: JobOrInternship) => {
             </div>
             <div className={style.ApplyAsDeveloperDiv}>
               <div className={style.ApplyAsDeveloper}>
-                <a href="">
+                <a href="https://www.variant.no/jobs">
                   <ApplyAsDeveloper />
                 </a>
               </div>
               <div className={style.ApplyAsDeveloperBig}>
-                <a href="">
+                <a href="https://www.variant.no/jobs">
                   <ApplyAsDeveloperBiggerBlob />
                 </a>
               </div>

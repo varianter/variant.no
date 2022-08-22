@@ -5,28 +5,30 @@ import { NextPage, InferGetStaticPropsType } from 'next';
 import DefaultErrorPage from 'next/error';
 import { getStaticProps } from 'pages';
 import Content from './Content';
-import { rqdp } from './utils/utils';
+import { routerQueryDynamicPath } from './utils/utils';
 
 const Summersplash2022: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
   const router = useRouter();
 
-  const queryedPage = rqdp(router);
+  const queryedPage = routerQueryDynamicPath(router);
 
   const [mode, setMode] = useState(
-    rqdp(router) === 'sommerjobb' ? 'internship' : 'job',
+    routerQueryDynamicPath(router) === 'sommerjobb' ? 'internship' : 'job',
   );
 
   useEffect(() => {
-    setMode(rqdp(router) === 'sommerjobb' ? 'internship' : 'job');
-  }, [rqdp(router)]);
+    setMode(
+      routerQueryDynamicPath(router) === 'sommerjobb' ? 'internship' : 'job',
+    );
+  }, [routerQueryDynamicPath(router)]);
 
   if (queryedPage === undefined) {
     return null;
   }
   if (queryedPage != 'sommerjobb' && queryedPage != 'nyutdannet') {
-    return <DefaultErrorPage statusCode={404} />;
+    // return <DefaultErrorPage statusCode={404} />;
   }
 
   return (
