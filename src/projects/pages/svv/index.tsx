@@ -1,6 +1,6 @@
 import React from 'react';
-import { getStaticProps } from 'pages/prosjekter/[project]';
-import { Project } from './utils/projectHandlers';
+import { getStaticProps } from 'pages/prosjekter/svv';
+import { Project } from '../../utils/projectHandlers';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import Layout from 'src/layout';
 import style from './index.module.css';
@@ -9,22 +9,9 @@ import Link from 'next/link';
 import { Interview } from 'src/interviews/utils/interviewHandlers';
 
 const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
-  React.memo(({ project, interviews }) => {
-    /* TODO: Use this
-    const innerHtml = useMemo(() => {
-      const md = new MarkdownIt({
-        linkify: true,
-        html: true,
-        typographer: true,
-      });
-      let html = md.render(project.content);
-
-      return { __html: html };
-    }, [project]);
-    */
-
+  React.memo(({ interviews }) => {
     return (
-      <Layout title={`${project.meta_title}`}>
+      <Layout title="Økt trafikksikkerhet og ...">
         <SayHi
           className={style.sayhi}
           href="/jobs"

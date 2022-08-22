@@ -6,39 +6,8 @@ import {
 } from 'src/interviews/utils/interviewHandlers';
 import path from 'path';
 
-type ProjectMetadata = {
-  meta_title: string;
-  meta_description: string;
-  meta_image: string;
-  project: string;
-  projectSlug: string;
-  location: string;
-};
-
-export type Project = {
-  name: string;
-  content: string;
-} & ProjectMetadata;
-
-export const getProjects = async () => {
-  const files = await fs.readdir(
-    path.join(process.cwd(), '/src/projects/pages'),
-  );
-  return files.filter((a) => a.endsWith('.md'));
-};
-
-export const getProject = async (filename: string): Promise<Project> => {
-  const file = await fs.readFile(
-    path.join(process.cwd(), 'src/projects/pages', filename),
-  );
-  const matterFile = matter(file);
-  const matterData = matterFile.data as ProjectMetadata;
-  return {
-    ...matterData,
-    name: filename.replace('.md', ''),
-    content: matterFile.content,
-  } as Project;
-};
+export const projects = ['svv'] as const;
+export type Project = typeof projects[number];
 
 export const getInterviews = async () => {
   const files = await fs.readdir(
@@ -76,7 +45,7 @@ const createInterviewObject = async (filename: string): Promise<Interview> => {
 };
 
 export const getInterviewsByProject = async (
-  projectName: string,
+  projectName: Project,
 ): Promise<Interview[]> => {
   let files = await fs.readdir(
     path.join(process.cwd(), `src/interviews/pages/`),
