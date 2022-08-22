@@ -30,11 +30,11 @@
 }
 
 .section3 {
-  height: 1500px;
+  height: 1800px;
 }
 
 .section6 {
-  height: 1100px;
+  height: 800px;
 }
 
 .scrollContainer {
@@ -107,7 +107,7 @@
 
 /* Section 2 styling*/
 .section2 {
-  margin-top: 0%;
+  margin-top: 10%;
   width: 80%;
 }
 
@@ -119,6 +119,9 @@
   font-size: 32px;
   line-height: 59px;
 }
+.section2Div2 {
+  margin-top: 20%;
+}
 
 .section2Paragraph {
   width: 40%;
@@ -128,11 +131,13 @@
   font-size: 18px;
   line-height: 26px;
 }
-
+/*300px top*/
 .officeMap {
-  position: relative;
-  right: 0%;
-  top: 450px;
+  position: static;
+  width: 70%;
+  top: 300px;
+  right: 10%;
+  margin-bottom: 10%;
 }
 
 /* Section 3 styling */
@@ -753,6 +758,8 @@
 
   .officeMap {
     position: static;
+    margin: 2%;
+    width: 330px;
   }
 
   .søknadstips {
@@ -1151,6 +1158,11 @@
 
   /* Section 2 mobile*/
 
+  .section2 {
+    height: 1700px;
+    /* margin-bottom: 20%; */
+  }
+
   .section2Heading {
     font-family: 'Recoleta';
     font-style: normal;
@@ -1161,10 +1173,6 @@
 
   .section2Paragraph {
     width: 100%;
-  }
-
-  .officeMap {
-    margin: 2%;
   }
 
   /* Section 3 mobile*/
@@ -1181,6 +1189,7 @@
     /* padding: 0; */
     /* margin: 0; */
     /* background: purple; */
+    height: 900px;
   }
 
   .summerstudent1 {
@@ -1270,6 +1279,16 @@
   .summerstudent3picture {
     width: 40%;
     height: 40%;
+  }
+
+  /* Section 4 mobile*/
+  .whyWorkAtVariant {
+    height: 1500px;
+  }
+
+  /* Section 5 mobile*/
+  .section5 {
+    height: 1800px;
   }
 
   /* Section 6 mobile */

@@ -106,34 +106,38 @@ const Content = ({ selected }: JobOrInternship) => {
                 <h3 className={style.section2Heading}>
                   Hva går sommerjobben ut på?
                 </h3>
-                <p className={style.section2Paragraph}>
-                  En sommerjobb i Variant er en fin mulighet til å anvende det
-                  du har lært på skolen i praksis. Det forventes ikke at du er
-                  utlært, men at du ønsker å lære mer. I et tverrfaglig team
-                  bestående av designere og utviklere kommer du til å jobbe på
-                  et av de spennende kundeprosjektene vi har. Underveis får du
-                  god oppfølging og tilrettelegging fra erfarne konsulenter som
-                  ønsker at du lykkes. Sjekk ut denne bloggposten for å lese mer
-                  om hva årets sommerstudenter i Oslo jobbet med.
-                </p>
+                <div className={style.section2Div}>
+                  <p className={style.section2Paragraph}>
+                    En sommerjobb i Variant er en fin mulighet til å anvende det
+                    du har lært på skolen i praksis. Det forventes ikke at du er
+                    utlært, men at du ønsker å lære mer. I et tverrfaglig team
+                    bestående av designere og utviklere kommer du til å jobbe på
+                    et av de spennende kundeprosjektene vi har. Underveis får du
+                    god oppfølging og tilrettelegging fra erfarne konsulenter
+                    som ønsker at du lykkes. Sjekk ut denne bloggposten for å
+                    lese mer om hva årets sommerstudenter i Oslo jobbet med.
+                  </p>
+                </div>
                 <div className={style.officeMap}>
                   <Map />
                 </div>
-                <p className={style.section2Paragraph}>
-                  I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og Bergen,
-                  til henholdsvis seks, fem og to studenter. Hvor du vil jobbe
-                  bestemmer du naturligvis selv. Sommerjobben varer i fire + to
-                  uker med tre uker ferie i mellomtiden.
-                </p>
+                <div className={style.section2Div2}>
+                  <p className={style.section2Paragraph}>
+                    I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og
+                    Bergen, til henholdsvis seks, fem og to studenter. Hvor du
+                    vil jobbe bestemmer du naturligvis selv. Sommerjobben varer
+                    i fire + to uker med tre uker ferie i mellomtiden.
+                  </p>
 
-                <p className={style.section2Paragraph}>
-                  I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
-                  trenger å lure på hvordan kontrakten din vil se ut for
-                  sommeren, den ligger nemlig åpent og tilgjengelig på våre
-                  nettsider. Timelønnen trenger du heller ikke å lure på, den er
-                  på 265 kr. Under “Hvorfor jobbe i Variant?” ned kan du lese
-                  mer om hva Variant står for og tilbyr.
-                </p>
+                  <p className={style.section2Paragraph}>
+                    I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
+                    trenger å lure på hvordan kontrakten din vil se ut for
+                    sommeren, den ligger nemlig åpent og tilgjengelig på våre
+                    nettsider. Timelønnen trenger du heller ikke å lure på, den
+                    er på 265 kr. Under “Hvorfor jobbe i Variant?” ned kan du
+                    lese mer om hva Variant står for og tilbyr.
+                  </p>
+                </div>
               </div>
             </section>
           </div>
