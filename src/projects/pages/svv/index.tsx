@@ -20,10 +20,7 @@ const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
         />
         <section className={style.project}>
           <div className={style.project__introduction}>
-            <p>
-              <strong>Statens vegvesen</strong>
-            </p>
-            <h2>Økt trafikksikkerhet og ...</h2>
+            <h2>Statens Vegvesen</h2>
             <p className="lead">
               Statens vegvesen har vært en viktig samarbeidspartner siden
               Variant så sitt lys. I løpet av årene har flere av Variantene vært

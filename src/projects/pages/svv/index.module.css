@@ -147,11 +147,15 @@ blockquote:after {
   position: relative;
   height: min-content;
 }
+.imageContainer > img {
+  z-index: 1;
+  position: relative;
+}
 .img__decorationBox {
   width: 75%;
   border-radius: 0.5rem;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 .img__decorationBox:nth-of-type(1) {
   top: -5%;
@@ -170,14 +174,21 @@ blockquote:after {
   padding-top: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .project {
     padding: 0 1rem;
+    margin-top: 4rem;
   }
   .subproject {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     margin-bottom: 5rem;
+    gap: 3rem;
+  }
+
+  .subproject:nth-of-type(2n) > div {
+    order: 1;
   }
 
   .subproject > * {
@@ -191,5 +202,26 @@ blockquote:after {
   }
   .imageContainer {
     padding: 0 4rem;
+    max-width: unset;
+  }
+
+  .img__decorationBox {
+    width: 60%;
+  }
+
+  .project__interviews {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .project__interview:nth-child(1),
+  .project__interview:nth-child(2n),
+  .project__interview:nth-child(3n) {
+    margin-top: 3.5rem;
+  }
+
+  .contribution > div {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
