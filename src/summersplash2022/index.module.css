@@ -22,16 +22,16 @@
   height: 900px;
 }
 
-.section5 {
-  height: 1200px;
-}
-
 .section2 {
   height: 1200px;
 }
 
 .section3 {
   height: 1800px;
+}
+
+.section5 {
+  height: 1200px;
 }
 
 .section6 {
@@ -52,25 +52,15 @@
   scroll-snap-align: start;
 }
 
-/* Section 1 styling*/
+/* SVG Style*/
 .maskStyling {
   mask-type: alpha;
 }
 
-.section1 {
-  background-color: #f4f1e7;
-}
-
-.søkHer {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 34px;
-}
-
+/* Fonts */
+.søkHer,
 .scroll {
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -85,14 +75,6 @@
   line-height: 34px;
 }
 
-.searchNewVariants {
-  margin: 0%;
-}
-
-.underHeader {
-  margin-left: 0%;
-}
-
 .h4Section1 {
   margin-bottom: 10%;
   font-family: 'Recoleta';
@@ -100,6 +82,49 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+}
+
+.section2Heading {
+  margin-bottom: 20px;
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 59px;
+}
+
+.section3Heading,
+.section5Heading,
+.section6Heading,
+.mostImportantForYou {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.section6Paragraph,
+.section6Paragraph2,
+.section6Underline,
+.handbookRef,
+.section2Paragraph,
+.section5Paragraph {
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Section 1 styling*/
+
+.section1 {
+  background-color: #f4f1e7;
+}
+
+.underHeader {
+  margin-left: 0%;
 }
 
 .imageBlob1 {
@@ -112,7 +137,6 @@
 
 /* Section 2 styling*/
 .section2 {
-  /* margin-top: 10%; */
   width: 80%;
   color: white;
 }
@@ -121,27 +145,14 @@
   background-color: #1a1837;
 }
 
-.section2Heading {
-  margin-bottom: 20px;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 59px;
-}
 .section2Div2 {
   margin-top: 20%;
 }
 
 .section2Paragraph {
   width: 40%;
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
 }
-/*300px top*/
+
 .officeMap {
   position: static;
   width: 70%;
@@ -153,17 +164,11 @@
 /* Section 3 styling */
 
 .section3 {
-  /* margin-top: 15%; */
   background-color: #01574f;
   color: white;
 }
 
 .section3Heading {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
 }
 
 .summerstudent1 {
@@ -174,7 +179,6 @@
 .summerstudent2 {
   display: flex;
   position: static;
-  /* bottom: 150%; */
 }
 
 .summerstudent3 {
@@ -189,42 +193,36 @@
   width: 30%;
   height: auto;
   position: static;
-  /* height: fit-content; */
 }
 
 .summerstudent2picture {
-  /* height: fit-content; */
   width: 32%;
   margin-right: 10%;
 }
 
 .summerstudent3picture {
-  /* height: fit-content; */
   width: 37%;
 }
-
-.summerstudent1Paragraph {
-  height: fit-content;
-  width: 34%;
-  position: relative;
-  padding-top: 15%;
+.summerstudent1Paragraph,
+.summerstudent2Paragraph,
+.summerstudent3Paragraph {
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
+  position: relative;
+  height: fit-content;
+}
+
+.summerstudent1Paragraph {
+  width: 34%;
+  padding-top: 15%;
 }
 
 .summerstudent2Paragraph {
   width: 30%;
-  position: relative;
-  height: fit-content;
   padding-top: 8%;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
   margin-left: 10%;
   width: 100%;
   text-align: right;
@@ -232,63 +230,32 @@
 
 .summerstudent3Paragraph {
   width: 25%;
-  position: relative;
-  height: fit-content;
   padding-top: 15%;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
 }
 
 /* Section 5 styling */
 
 .section5 {
-  /* margin-top: 30%; */
   background-color: #5d0a2b;
   color: white;
 }
 
 .section5Heading {
   margin-bottom: 20px;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
 }
 
 .section5HeadingH4 {
   border: none;
 }
 
-.section5ParagraphLeft {
-  /* position: relative; */
-}
-
 .section5Paragraph {
   width: 100%;
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
 }
 
 .section5ParagraphLeft {
   width: 500px;
 }
-.section5ParagraphRight {
-  /* position: relative; */
-  /* left: 600px;
-  bottom: 350px;
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px; */
-}
+
 .flexTimeline {
   display: flex;
   align-items: flex-start;
@@ -311,53 +278,19 @@
   width: 100%;
 }
 
-.timeLine {
-}
-
-.marginTopMore {
-  margin-top: 20px;
-}
-
 /* Section 6 styling*/
 
 .section6 {
-  /* margin-top: 20%; */
   background-color: #f4f1e7;
 }
 
 .section6Underline {
   text-decoration: underline;
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.section6Paragraph2 {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
 }
 
 .section6Paragraph {
   width: 40%;
   margin-top: 20px;
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.section6Heading {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
 }
 
 .contactInfo {
@@ -418,19 +351,6 @@
 
 /* Gammelt */
 
-.underDev {
-  margin-top: 4000px;
-}
-
-.imageBlob2 {
-  margin-top: -2%;
-}
-
-.arrow {
-  align-self: center;
-  margin-top: 50%;
-}
-
 .navigationSlider {
   padding-top: 0%;
   display: flex;
@@ -439,7 +359,6 @@
   align-items: flex-end;
   left: 80%;
   bottom: 25%;
-  /* max-width: fit-content; */
   width: 250px;
 }
 
@@ -464,17 +383,7 @@
 .navigationButton3,
 .navigationButton4,
 .navigationButton5,
-.navigationButton6 {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 10%;
-  text-align: right;
-  /* max-width: fit-content; */
-}
-
+.navigationButton6,
 .navigationButton1:hover,
 .navigationButton1:focus,
 .navigationButton2:hover,
@@ -487,61 +396,44 @@
 .navigationButton5:focus,
 .navigationButton6:hover,
 .navigationButton6:focus {
+  background: none;
   border: none;
-  margin: 0;
   padding: 5%;
   cursor: pointer;
   margin-top: 10%;
   text-align: right;
-  max-width: fit-content;
 }
 
 .navigationButton1:hover,
 .navigationButton1:focus {
   background: #e61a6b;
   color: white;
-
-  /* max-width: fit-content; */
 }
 
 .navigationButton2:hover,
 .navigationButton2:focus {
   background: #ffc4bc;
-
-  /* max-width: fit-content; */
 }
 
 .navigationButton3:hover,
 .navigationButton3:focus {
   background: #423d89;
   color: white;
-
-  /* max-width: fit-content; */
 }
 
 .navigationButton4:hover,
 .navigationButton4:focus {
   background: #03dac6;
-
-  /* max-width: fit-content; */
 }
 
 .navigationButton5:hover,
 .navigationButton5:focus {
   background: #9591ce;
-
-  /* max-width: fit-content; */
 }
 
 .navigationButton6:hover,
 .navigationButton6:focus {
   background: #fad2e2;
-
-  /* max-width: fit-content; */
-}
-
-.aboutSummerjob {
-  /* margin-right: 50%; */
 }
 
 .positionTextLeft {
@@ -568,30 +460,15 @@
   font-size: 32px;
   line-height: 59px;
 }
+
 .mostImportantForYou {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
   padding-top: 10%;
 }
-.handbookRef {
-  font-family: 'Graphik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-}
+
 .officeMap {
   position: relative;
   margin-left: 40%;
   margin-top: -35%;
-}
-
-.jenga {
-  /* margin-left: -35%; */
-  /* margin-top: -5%; */
 }
 
 .handbook {
@@ -606,8 +483,6 @@
 }
 
 .whyWorkAtVariant {
-  /* margin-top: 40%; */
-  /* margin-bottom: 20%; */
   background-color: #fff3f2;
 }
 
@@ -824,25 +699,21 @@
   .handbookButton3,
   .handbookButton4,
   .handbookButton5,
+  .handbookButton1:focus,
+  .handbookButton2:focus,
+  .handbookButton3:focus,
+  .handbookButton4:focus,
+  .handbookButton5:focus,
   .handbookButton1:hover,
   .handbookButton2:hover,
   .handbookButton3:hover,
   .handbookButton4:hover,
   .handbookButton5:hover {
-    /* font-family: 'Graphik'; */
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-  }
-
-  .handbookButton1 {
-    background: #e61a6b;
-    color: white;
     border: none;
     margin: 1%;
     padding: 5% 5%;
@@ -853,128 +724,64 @@
     max-width: fit-content;
   }
 
+  .handbookButton1,
   .handbookButton1:focus,
   .handbookButton1:hover {
     background: #e61a6b;
     color: white;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
+  }
+
+  .handbookButton1:focus,
+  .handbookButton1:hover {
     font-weight: bold;
   }
 
-  .handbookButton2 {
+  .handbookButton2,
+  .handbookButton2:focus,
+  .handbookButton2:hover {
     background: #ffc4bc;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
   }
 
   .handbookButton2:focus,
   .handbookButton2:hover {
-    background: #ffc4bc;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
     font-weight: bold;
   }
 
-  .handbookButton3 {
+  .handbookButton3,
+  .handbookButton3:focus,
+  .handbookButton3:hover {
     background: #03dac6;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
   }
 
   .handbookButton3:focus,
   .handbookButton3:hover {
-    background: #03dac6;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
     font-weight: bold;
   }
 
-  .handbookButton4 {
-    background: #423d89;
-    color: white;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
-  }
-
+  .handbookButton4,
   .handbookButton4:focus,
   .handbookButton4:hover {
     background: #423d89;
     color: white;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
+  }
+
+  .handbookButton4:focus,
+  .handbookButton4:hover {
     font-weight: bold;
   }
 
-  .handbookButton5 {
-    background: #9591ce;
-    color: white;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
-  }
-
+  .handbookButton5,
   .handbookButton5:focus,
   .handbookButton5:hover {
     background: #9591ce;
     color: white;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
+  }
+
+  .handbookButton5:focus,
+  .handbookButton5:hover {
     font-weight: bold;
   }
+
   .handbookHeaderDeskotop {
     display: none;
   }
@@ -1067,8 +874,6 @@
   .timeLine {
     position: relative;
     margin-top: 10%;
-    left: 0%;
-    bottom: 0%;
   }
 
   .navigationButton1,
@@ -1097,10 +902,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
-  }
-
-  .h4Section1 {
-    margin: 0%;
   }
 
   .søkHer,
@@ -1187,7 +988,6 @@
   .section2 {
     height: 1700px;
     width: 100%;
-    /* margin-bottom: 20%; */
   }
 
   .section2Heading {
@@ -1213,81 +1013,49 @@
   }
 
   .section3 {
-    /* padding: 0; */
-    /* margin: 0; */
-    /* background: purple; */
     height: 900px;
   }
 
   .summerstudent1 {
     display: flex;
     position: static;
-    /* top: 0; */
-    /* margin: 0; */
-    /* padding: 0; */
     padding-bottom: 5%;
   }
 
   .summerstudent2 {
     display: flex;
     position: static;
-    /* top: 0; */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* padding-bottom: 5%; */
   }
 
   .summerstudent3 {
     display: flex;
     position: static;
-    /* top: 0; */
-    /* margin: 0; */
-    /* padding: 0; */
+  }
+
+  .summerstudent1Paragraph,
+  .summerstudent2Paragraph,
+  .summerstudent3Paragraph {
+    position: static;
+    width: 100%;
+    height: fit-content;
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   .summerstudent1Paragraph {
-    /* background: green; */
-    position: static;
-    width: 100%;
-    /* max-width: fit-content; */
-    height: fit-content;
-    /* font-family: 'Graphik'; */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
     padding-top: 12%;
-    top: 0;
   }
 
   .summerstudent2Paragraph {
-    /* background: red; */
-    position: static;
-    width: 100%;
-    /* max-width: fit-content; */
-    height: fit-content;
-    /* font-family: 'Graphik'; */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    text-align: left;
     padding-top: 5%;
   }
 
   .summerstudent3Paragraph {
-    /* background: blue; */
-    position: static;
-    width: 100%;
-    /* max-width: fit-content; */
-    height: fit-content;
-    /* font-family: 'Graphik'; */
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
     padding-top: 14%;
   }
 
@@ -1298,9 +1066,7 @@
 
   .summerstudent2picture {
     width: 40%;
-    height: 40%;
-    padding: 0;
-    margin: 0;
+    height: 0%;
   }
 
   .summerstudent3picture {

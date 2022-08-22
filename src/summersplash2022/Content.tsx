@@ -1,10 +1,8 @@
-// import React from 'react';
-import React, { createRef, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import NewVariants from './img/newVariants';
 import Map from './img/map';
 import style from './index.module.css';
 import HandBooKPages from './utils/handBookPages';
-// import HandBooKPages from './utils/handBookPages';
 import { JobOrInternship } from './utils/utils';
 import TimeLine from './img/tidslinje';
 import ApplyAsDesigner from './img/søkSomDesigner';
@@ -181,7 +179,7 @@ const Content = ({ selected }: JobOrInternship) => {
               <img
                 className={style.summerstudent3picture}
                 src={summerStudent3}
-                alt=""
+                alt="summerstudent 3"
               ></img>
               <p className={style.summerstudent3Paragraph}>
                 “Det har vært helt fantastisk å være en del av Variant i sommer.
@@ -259,10 +257,6 @@ const Content = ({ selected }: JobOrInternship) => {
                   ) : (
                     <ReadMoreArrow />
                   )}
-
-                  {/* <div className={style.readMoreArrow}></div>
-              
-            </div> */}
                 </div>
                 <div className={style.section5HandbookLinkMobile}>
                   <h3 className={style.mostImportantForYou}>
