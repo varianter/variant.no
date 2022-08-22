@@ -5,7 +5,8 @@
 .section5,
 .section6,
 .whyWorkAtVariant {
-  margin: 5%;
+  padding: 5%;
+  margin-bottom: 0%;
 }
 
 /* Scroll */
@@ -34,7 +35,7 @@
 }
 
 .section6 {
-  height: 800px;
+  height: 900px;
 }
 
 .scrollContainer {
@@ -54,6 +55,10 @@
 /* Section 1 styling*/
 .maskStyling {
   mask-type: alpha;
+}
+
+.section1 {
+  background-color: #f4f1e7;
 }
 
 .søkHer {
@@ -107,8 +112,13 @@
 
 /* Section 2 styling*/
 .section2 {
-  margin-top: 10%;
+  /* margin-top: 10%; */
   width: 80%;
+  color: white;
+}
+
+.section2Color {
+  background-color: #1a1837;
 }
 
 .section2Heading {
@@ -143,7 +153,9 @@
 /* Section 3 styling */
 
 .section3 {
-  margin-top: 15%;
+  /* margin-top: 15%; */
+  background-color: #01574f;
+  color: white;
 }
 
 .section3Heading {
@@ -233,7 +245,9 @@
 /* Section 5 styling */
 
 .section5 {
-  margin-top: 30%;
+  /* margin-top: 30%; */
+  background-color: #5d0a2b;
+  color: white;
 }
 
 .section5Heading {
@@ -307,7 +321,8 @@
 /* Section 6 styling*/
 
 .section6 {
-  margin-top: 20%;
+  /* margin-top: 20%; */
+  background-color: #f4f1e7;
 }
 
 .section6Underline {
@@ -440,6 +455,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+  text-shadow: 1px 1px black;
+  color: white;
 }
 
 .navigationButton1,
@@ -582,7 +599,6 @@
   align-items: flex-start;
   gap: 5%;
   justify-content: left;
-  margin-top: 10%;
 }
 
 .handbookPages {
@@ -590,8 +606,9 @@
 }
 
 .whyWorkAtVariant {
-  margin-top: 40%;
-  margin-bottom: 20%;
+  /* margin-top: 40%; */
+  /* margin-bottom: 20%; */
+  background-color: #fff3f2;
 }
 
 .handbookChildButton {
@@ -1054,6 +1071,15 @@
     bottom: 0%;
   }
 
+  .navigationButton1,
+  .navigationButton2,
+  .navigationButton3,
+  .navigationButton4,
+  .navigationButton5,
+  .navigationButton6 {
+    text-shadow: none;
+  }
+
   /* Section 1 mobile*/
 
   .section1 {
@@ -1160,6 +1186,7 @@
 
   .section2 {
     height: 1700px;
+    width: 100%;
     /* margin-bottom: 20%; */
   }
 
