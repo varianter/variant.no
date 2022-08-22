@@ -66,12 +66,14 @@ Vi setter pris på en søknad med CV, motivasjonsbrev og karakterutskrift. Det v
 
 Du bestemmer selv hvor du vil søke, men vi er ærlige på at vi håper at sommerjobben kan være første skritt mot å bli en fast Variant. Da kan det være lurt å tenke gjennom hvor du kan se for deg å slå røtter etter studiet. I sommerjobben har du nemlig muligheten til å bli kjent med folk som kan bli dine nærmeste kollegaer etter endt studie, og sommerjobben er like mye for at du også skal kjenne på om Variant er et sted du føler deg komfortabel og hjemme.
 
-### Har du spørsmål?
-
-Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant? Ta gjerne kontakt med meg.
 
 ### Søknadsfrist
 
 <p>
 2. oktober 2022
 </p>
+
+### Har du spørsmål?
+
+Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant? Ta gjerne kontakt med meg.
+
