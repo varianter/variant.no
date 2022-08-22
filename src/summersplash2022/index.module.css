@@ -68,7 +68,7 @@
 }
 
 .eller {
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -110,7 +110,7 @@
 .handbookRef,
 .section2Paragraph,
 .section5Paragraph {
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -439,7 +439,7 @@
 .positionTextLeft {
   padding-top: 1%;
   width: 500px;
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -834,14 +834,14 @@
     padding-top: 1%;
     padding-bottom: 2%;
     width: 100%;
-    font-family: 'Graphik';
+    font-family: 'Graphik Web';
     font-style: normal;
   }
 
   .positionTextLeft {
     padding-top: 1%;
     width: 100%;
-    font-family: 'Graphik';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -851,7 +851,7 @@
   .section6Paragraph {
     width: 100%;
     margin-top: 20px;
-    font-family: 'Graphik';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -860,7 +860,7 @@
 
   .section5Paragraph {
     width: 100%;
-    font-family: 'Graphik';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1038,7 +1038,7 @@
     position: static;
     width: 100%;
     height: fit-content;
-    font-family: 'Graphik';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
