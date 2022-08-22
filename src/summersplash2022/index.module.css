@@ -29,6 +29,10 @@
   height: 1200px;
 }
 
+.section3 {
+  height: 1500px;
+}
+
 .section6 {
   height: 1100px;
 }
@@ -147,18 +151,73 @@
 
 .summerstudent1 {
   display: flex;
+  position: static;
+}
+
+.summerstudent2 {
+  display: flex;
+  position: static;
+  /* bottom: 150%; */
+}
+
+.summerstudent3 {
+  display: flex;
+  position: static;
+  bottom: 200%;
 }
 
 .summerstudent1picture {
   margin-top: 5%;
   margin-left: 7%;
   width: 30%;
+  height: auto;
+  position: static;
+  /* height: fit-content; */
+}
+
+.summerstudent2picture {
+  /* height: fit-content; */
+  width: 32%;
+  margin-right: 10%;
+}
+
+.summerstudent3picture {
+  /* height: fit-content; */
+  width: 37%;
 }
 
 .summerstudent1Paragraph {
+  height: fit-content;
   width: 34%;
   position: relative;
-  top: 150px;
+  padding-top: 15%;
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.summerstudent2Paragraph {
+  width: 30%;
+  position: relative;
+  height: fit-content;
+  padding-top: 8%;
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  margin-left: 10%;
+  width: 100%;
+  text-align: right;
+}
+
+.summerstudent3Paragraph {
+  width: 25%;
+  position: relative;
+  height: fit-content;
+  padding-top: 15%;
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
@@ -493,6 +552,7 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
+  padding-top: 10%;
 }
 .handbookRef {
   font-family: 'Graphik';
@@ -672,13 +732,9 @@
   top: 170px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   /* Position to static */
   .imageBlob1 {
-    position: static;
-  }
-
-  .summerstudent1Paragraph {
     position: static;
   }
 
@@ -1000,6 +1056,7 @@
   .navigationSlider {
     max-width: 100%;
   }
+
   .h4Section1 {
     margin-top: 0px;
     font-family: 'Recoleta';
@@ -1120,22 +1177,99 @@
     line-height: 27px;
   }
 
+  .section3 {
+    /* padding: 0; */
+    /* margin: 0; */
+    /* background: purple; */
+  }
+
   .summerstudent1 {
     display: flex;
+    position: static;
+    /* top: 0; */
+    /* margin: 0; */
+    /* padding: 0; */
+    padding-bottom: 5%;
+  }
+
+  .summerstudent2 {
+    display: flex;
+    position: static;
+    /* top: 0; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* padding-bottom: 5%; */
+  }
+
+  .summerstudent3 {
+    display: flex;
+    position: static;
+    /* top: 0; */
+    /* margin: 0; */
+    /* padding: 0; */
   }
 
   .summerstudent1Paragraph {
+    /* background: green; */
+    position: static;
     width: 100%;
-    font-family: 'Graphik';
+    /* max-width: fit-content; */
+    height: fit-content;
+    /* font-family: 'Graphik'; */
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    padding-top: 12%;
+    top: 0;
+  }
+
+  .summerstudent2Paragraph {
+    /* background: red; */
+    position: static;
+    width: 100%;
+    /* max-width: fit-content; */
+    height: fit-content;
+    /* font-family: 'Graphik'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+  }
+
+  .summerstudent3Paragraph {
+    /* background: blue; */
+    position: static;
+    width: 100%;
+    /* max-width: fit-content; */
+    height: fit-content;
+    /* font-family: 'Graphik'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 14%;
   }
 
   .summerstudent1picture {
-    width: 50%;
-    margin-left: 0px;
+    width: 40%;
+    height: 40%;
+  }
+
+  .summerstudent2picture {
+    width: 40%;
+    height: 40%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .summerstudent3picture {
+    width: 40%;
+    height: 40%;
   }
 
   /* Section 6 mobile */

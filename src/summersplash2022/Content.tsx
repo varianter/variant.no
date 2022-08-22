@@ -15,8 +15,10 @@ import ReadMoreArrow from './img/lesMerPil';
 
 const Content = ({ selected }: JobOrInternship) => {
   const blobSection1 = require('./img/section1Blob.png');
-  const summerstudent1 = require('./img/sommerstudent1.png');
   const Marius = require('./img/Marius.png');
+  const summerStudent1 = require('./img/Vilde summerstudent.png');
+  const summerStudent2 = require('./img/Olepetter summerstudent.png');
+  const summerStudent3 = require('./img/Nora summerstudent.png');
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
 
@@ -136,26 +138,54 @@ const Content = ({ selected }: JobOrInternship) => {
             </section>
           </div>
 
-          <div className={style.section3Color}>
-            <section className={style.section3} ref={sommerjobbereMening}>
-              <h3 className={style.section3Heading}>
-                Hva mener årets sommerstudenter?
-              </h3>
-              <div className={style.summerstudent1}>
-                <img
-                  className={style.summerstudent1picture}
-                  src={summerstudent1}
-                  alt=""
-                />
-                <p className={style.summerstudent1Paragraph}>
-                  “Teamet hos kunden stilte gjerne til rådgivning uansett
-                  hva.[...] Jeg følte man ble en del av firmaet selv om det
-                  «bare» var en sommerjobb. [...] Utrolig hyggelige kollegaer
-                  som ønsker å hjelpe der man kan og løfte hverandre frem.”
-                </p>
-              </div>
-            </section>
-          </div>
+          <section className={style.section3} ref={sommerjobbereMening}>
+            <h3 className={style.section3Heading}>
+              Hva mener årets sommerstudenter?
+            </h3>
+            <div className={style.summerstudent1}>
+              <img
+                className={style.summerstudent1picture}
+                src={summerStudent1}
+                alt=""
+              />
+              <p className={style.summerstudent1Paragraph}>
+                “Teamet hos kunden stilte gjerne til rådgivning uansett
+                hva.[...] Jeg følte man ble en del av firmaet selv om det «bare»
+                var en sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker
+                å hjelpe der man kan og løfte hverandre frem.” <br></br>
+                <br></br>-Vilde
+              </p>
+            </div>
+
+            <div className={style.summerstudent2}>
+              <p className={style.summerstudent2Paragraph}>
+                “Det har vært fantastisk å være en nevø i variantfamilien
+                gjennom sommeren! Fagkvelder, felles lunsj, sosialt opplegg, alt
+                som skal til for en bonding opplevelse var der. [...] Store ord
+                om kjerneverdier kan fremstå som grunn markedsføring. I Variant
+                synes de når man kommer på jobb!” <br></br>
+                <br></br>-Ole Petter
+              </p>
+              <img
+                className={style.summerstudent2picture}
+                src={summerStudent2}
+                alt=""
+              ></img>
+            </div>
+
+            <div className={style.summerstudent3}>
+              <img
+                className={style.summerstudent3picture}
+                src={summerStudent3}
+                alt=""
+              ></img>
+              <p className={style.summerstudent3Paragraph}>
+                “Det har vært helt fantastisk å være en del av Variant i sommer.
+                For en bra, varm og inkluderende gjeng!” <br></br>
+                <br></br>-Nora
+              </p>
+            </div>
+          </section>
 
           <div className={style.section4Color}>
             <section className={style.whyWorkAtVariant} ref={hvorforVariant}>
@@ -209,7 +239,7 @@ const Content = ({ selected }: JobOrInternship) => {
                   </div>
                   <div className={style.section5HandbookLink}>
                     <h3 className={style.mostImportantForYou}>
-                      Hva er Viktigst for deg?
+                      Hva er viktigst for deg?
                     </h3>
                     <a
                       className={style.handbookRef}
