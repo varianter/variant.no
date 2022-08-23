@@ -1,23 +1,21 @@
-/* Should be moved to a general component at this point */
-/* Also needs some redesign */
-/* TODO: Create general component that can be used
- everywhere, that has the new design */
 .sayHi {
   position: absolute;
   top: 0;
   right: -1px;
   max-width: 20%;
 }
-/* .sayhi a div {
+.sayHi a div {
   top: 28%;
-} */
+}
 
-.header {
+.header p {
+  font-size: 1.5rem;
 }
 
 .header__title {
   font-weight: 500;
   margin: 4rem 0 2rem 0;
+  font-size: 4rem;
 
   background: linear-gradient(
     120deg,
@@ -35,6 +33,45 @@
   display: flex;
   flex-direction: column;
   gap: 12rem;
+}
+
+.nav-row {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  margin: 1.5rem 0 0 0;
+}
+
+.nav-row a {
+  font-size: 1.25rem;
+}
+
+.nav-row__arrow-comment {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 6rem;
+  margin: 0 0 -0.5rem 5rem;
+}
+
+.nav-row__arrow-comment p {
+  font-size: 1.5rem;
+  transform: rotate(20deg);
+  line-height: 2rem;
+}
+
+.nav-row__arrow-comment img {
+  width: 40%;
+}
+
+.primary-container {
+  margin-top: 8rem;
+}
+
+.primary-container h3 {
+  font-family: 'Recoleta';
 }
 
 .project-category {
@@ -59,4 +96,26 @@
 
 .project-article__text {
   height: fit-content;
+}
+
+.project-article__text q {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  display: block;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact h3 {
+  margin: 0.5rem;
+}
+
+.contact Button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10rem;
 }
