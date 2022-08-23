@@ -1091,25 +1091,31 @@
 
   .summerstudent1 {
     display: flex;
-    position: static;
+    position: relative;
+    right: 100px;
     padding-bottom: 5%;
+    width: 150%;
   }
-
   .summerstudent2 {
     display: flex;
-    position: static;
+    position: relative;
+    right: 30px;
+    width: 150%;
   }
 
   .summerstudent3 {
     display: flex;
-    position: static;
+    position: relative;
+    bottom: 0px;
+    width: 150%;
+    right: 80px;
   }
 
   .summerstudent1Paragraph,
   .summerstudent2Paragraph,
   .summerstudent3Paragraph {
     position: static;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     font-family: 'Graphik Web';
     font-style: normal;
@@ -1123,13 +1129,14 @@
   }
 
   .summerstudent2Paragraph {
-    margin: 0%;
     text-align: left;
     padding-top: 5%;
+    width: 100%;
   }
 
   .summerstudent3Paragraph {
     padding-top: 14%;
+    width: 60%;
   }
 
   .summerstudent1picture {
