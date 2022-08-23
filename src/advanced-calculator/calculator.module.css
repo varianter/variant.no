@@ -125,6 +125,10 @@
     align-self: unset;
   }
 
+  .calculator__section h2 {
+    font-size: 2.8rem;
+  }
+
   .calculator-controls {
     grid-column: 1;
     height: auto;

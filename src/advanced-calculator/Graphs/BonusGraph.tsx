@@ -164,7 +164,7 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
 
 const BonusGraphParent = ({ bonus }: { bonus: BarData[] }) => {
   return (
-    <div style={{ aspectRatio: '7/3', width: '100%', margin: 'auto' }}>
+    <div style={{ aspectRatio: '7/3', width: '90%', margin: 'auto' }}>
       <ParentSize>
         {({ width, height }) => {
           return (
