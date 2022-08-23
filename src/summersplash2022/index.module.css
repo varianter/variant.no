@@ -1162,22 +1162,6 @@
     height: auto;
   }
 
-  .section2 {
-    height: auto;
-  }
-
-  .section3 {
-    height: auto;
-  }
-
-  .section5 {
-    height: auto;
-  }
-
-  .section6 {
-    height: auto;
-  }
-
   .navigationSlider {
     padding-top: 0%;
     display: flex;
@@ -1358,19 +1342,29 @@
   .readMoreArrow {
     position: relative;
     right: 20%;
-    top: 170px;
+    top: 250px;
   }
 
-  .section4Color {
-    background-color: #fff3f2;
+  /* Section 5 & Section 6*/
+  .section6Paragraph,
+  .section6Underline,
+  .section6Paragraph2,
+  .section5Paragraph {
+    font-family: 'Graphik Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 120%;
   }
 
-  .whyWorkAtVariant {
-    background-color: #fff3f2;
+  .section5Paragraph {
+    width: 60%;
   }
 
-  /* Section 5 */
-  .section5 {
-    margin-top: 10%;
+  .flexTimeline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 20%;
   }
 }
