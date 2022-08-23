@@ -36,8 +36,7 @@ Sommerjobben varer i fire + to uker med tre uker ferie i mellom, og vil gi god i
 
 </div>
 
-I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 266,66 kr timen, og til sammen 59998 og femti øre. Perfekt rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
-
+I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 271.83 kr (eller 100e) for hver time, slik at du havner rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
 
 ### Hva skjer etter søknadsfristen?
 
