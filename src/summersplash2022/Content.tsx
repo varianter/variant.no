@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import NewVariants from './img/newVariants';
 import Map from './img/map';
 import style from './index.module.css';
@@ -29,17 +29,6 @@ const Content = () => {
     setWhichButtonSelected(buttonValue);
   };
 
-  const forside = useRef<HTMLImageElement>(null);
-  const sommerjobbHandling = useRef<HTMLImageElement>(null);
-  const sommerjobbereMening = useRef<HTMLImageElement>(null);
-  const hvorforVariant = useRef<HTMLImageElement>(null);
-  const etterSoknad = useRef<HTMLImageElement>(null);
-  const sokSommerjobb = useRef<HTMLImageElement>(null);
-
-  const goToRef = (ref: React.RefObject<HTMLImageElement>) => {
-    ref?.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <>
       <div className={style.scrollContainer}>
@@ -53,7 +42,10 @@ const Content = () => {
             <a href="#forside" className={style.navigationButton6}>
               <p className={style.tests}>Forside</p>
             </a>
-            <a href="#hvagarsommerjobbutpa" className={style.navigationButton1}>
+            <a
+              href="#hvagarsommerjobbenutpa"
+              className={style.navigationButton1}
+            >
               Hva går sommerjobben ut på
             </a>
             <a
@@ -78,7 +70,7 @@ const Content = () => {
           <div className={style.underHeader}>
             {/* middlertidig link. usikker på hvilken vi skal bruke */}
             <p>
-              <a className={style.søkHer} href="https://www.variant.no/jobs">
+              <a className={style.søkHer} href="/jobs">
                 Søk her innen 2. oktober
               </a>
             </p>
@@ -146,24 +138,28 @@ const Content = () => {
               src={summerStudent1}
               alt=""
             />
-            <p className={style.summerstudent1Paragraph}>
-              “Teamet hos kunden stilte gjerne til rådgivning uansett hva.[...]
-              Jeg følte man ble en del av firmaet selv om det «bare» var en
-              sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker å hjelpe
-              der man kan og løfte hverandre frem.” <br></br>
-              <br></br>-Vilde
-            </p>
+            <div>
+              <p className={style.summerstudent1Paragraph}>
+                “Teamet hos kunden stilte gjerne til rådgivning uansett
+                hva.[...] Jeg følte man ble en del av firmaet selv om det «bare»
+                var en sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker
+                å hjelpe der man kan og løfte hverandre frem.”
+              </p>
+              <p className={style.summerstudentName}>-Vilde</p>
+            </div>
           </div>
 
           <div className={style.summerstudent2}>
-            <p className={style.summerstudent2Paragraph}>
-              “Det har vært fantastisk å være en nevø i variantfamilien gjennom
-              sommeren! Fagkvelder, felles lunsj, sosialt opplegg, alt som skal
-              til for en bonding opplevelse var der. [...] Store ord om
-              kjerneverdier kan fremstå som grunn markedsføring. I Variant synes
-              de når man kommer på jobb!” <br></br>
-              <br></br>-Ole Petter
-            </p>
+            <div>
+              <p className={style.summerstudent2Paragraph}>
+                “Det har vært fantastisk å være en nevø i variantfamilien
+                gjennom sommeren! Fagkvelder, felles lunsj, sosialt opplegg, alt
+                som skal til for en bonding opplevelse var der. [...] Store ord
+                om kjerneverdier kan fremstå som grunn markedsføring. I Variant
+                synes de når man kommer på jobb!”
+              </p>
+              <p className={style.summerstudentName2}>-Ole Petter</p>
+            </div>
             <img
               className={style.summerstudent2picture}
               src={summerStudent2}
@@ -177,11 +173,13 @@ const Content = () => {
               src={summerStudent3}
               alt="summerstudent 3"
             ></img>
-            <p className={style.summerstudent3Paragraph}>
-              “Det har vært helt fantastisk å være en del av Variant i sommer.
-              For en bra, varm og inkluderende gjeng!” <br></br>
-              <br></br>-Nora
-            </p>
+            <div>
+              <p className={style.summerstudent3Paragraph}>
+                “Det har vært helt fantastisk å være en del av Variant i sommer.
+                For en bra, varm og inkluderende gjeng!”
+              </p>
+              <p className={style.summerstudentName}>-Nora</p>
+            </div>
           </div>
         </section>
 
@@ -339,24 +337,24 @@ const Content = () => {
           </div>
           <div className={style.ApplyAsDesignerDiv}>
             <div className={style.applyAsDesigner}>
-              <a href="https://www.variant.no/jobs">
+              <a href="/jobs">
                 <ApplyAsDesigner />
               </a>
             </div>
             <div className={style.applyAsDesignerBig}>
-              <a href="https://www.variant.no/jobs">
+              <a href="/jobs">
                 <ApplyAsDesignerBiggerBlob />
               </a>
             </div>
           </div>
           <div className={style.ApplyAsDeveloperDiv}>
             <div className={style.ApplyAsDeveloper}>
-              <a href="https://www.variant.no/jobs">
+              <a href="/jobs">
                 <ApplyAsDeveloper />
               </a>
             </div>
             <div className={style.ApplyAsDeveloperBig}>
-              <a href="https://www.variant.no/jobs">
+              <a href="/jobs">
                 <ApplyAsDeveloperBiggerBlob />
               </a>
             </div>

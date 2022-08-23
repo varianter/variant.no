@@ -42,9 +42,9 @@ const NewVariants = () => {
           y2="93.0001"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E61A6B" />
-          <stop offset="0.515625" stop-color="#534DAC" />
-          <stop offset="1" stop-color="#02AE9E" />
+          <stop stopColor="#E61A6B" />
+          <stop offset="0.515625" stopColor="#534DAC" />
+          <stop offset="1" stopColor="#02AE9E" />
         </linearGradient>
       </defs>
     </svg>

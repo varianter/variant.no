@@ -208,7 +208,9 @@
 }
 .summerstudent1Paragraph,
 .summerstudent2Paragraph,
-.summerstudent3Paragraph {
+.summerstudent3Paragraph,
+.summerstudentName,
+.summerstudentName2 {
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
@@ -219,7 +221,7 @@
 }
 
 .summerstudent1Paragraph {
-  width: 34%;
+  width: 50%;
   padding-top: 15%;
 }
 
@@ -231,8 +233,12 @@
   text-align: right;
 }
 
+.summerstudentName2 {
+  text-align: right;
+}
+
 .summerstudent3Paragraph {
-  width: 25%;
+  width: 70%;
   padding-top: 15%;
 }
 
@@ -432,7 +438,7 @@
   background: #ffc4bc;
 }
 
-.navigationButton3:visited {
+.navigationButton2:visited {
   color: white;
 }
 
