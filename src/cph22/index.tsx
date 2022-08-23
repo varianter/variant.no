@@ -175,24 +175,8 @@ export default function Cph22() {
           </li>
           <li>
             <p>11:00</p>
-            <p>🔑 Utsjekk</p>
-          </li>
-          <li>
-            <p>11:15</p>
             <p>
-              🎢 Tivoli - vi kan oppbevare bagasje på{' '}
-              <a
-                href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
-                target="_blank"
-              >
-                Over Plænen
-              </a>{' '}
-            </p>
-          </li>
-          <li>
-            <p>14:30</p>
-            <p>
-              🍱 Felles lunsj i Tivoli på{' '}
+              🔑 Utsjekk - bagasjeoppbevaring på{' '}
               <a
                 href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
                 target="_blank"
@@ -202,8 +186,25 @@ export default function Cph22() {
             </p>
           </li>
           <li>
+            <p>11:15</p>
+            <p>🎢 Tivoli</p>
+          </li>
+          <li>
+            <p>14:30</p>
+            <p>
+              🍱 Lunsj på{' '}
+              <a
+                href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
+                target="_blank"
+              >
+                Over Plænen
+              </a>{' '}
+              i Tivoli
+            </p>
+          </li>
+          <li>
             <p>16:30</p>
-            <p>🚅 Felles avreise med tog til Kastrup</p>
+            <p>🚅 Tog til Kastrup fra København H</p>
           </li>
           <li>
             <p>17:45</p>
