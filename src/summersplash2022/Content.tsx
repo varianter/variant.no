@@ -187,7 +187,13 @@ const Content = () => {
           <section
             className={style.whyWorkAtVariant}
             id="hvorforjobbeivariant"
-            style={{ height: buttonClicked ? '1500px' : '900px' }}
+            style={{
+              height: buttonClicked
+                ? '1500px'
+                : '900px' || window.matchMedia('(min-width: 1800px)').matches
+                ? 'auto'
+                : '900px',
+            }}
           >
             <div className={style.handbook}>
               <div className={style.handbookChildButton}>
