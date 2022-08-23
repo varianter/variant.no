@@ -974,33 +974,43 @@
   .navigationButton2:hover,
   .navigationButton3:hover,
   .navigationButton4:hover,
-  .navigationButton5:hover {
+  .navigationButton5:hover,
+  .navigationButton1:link,
+  .navigationButton2:link,
+  .navigationButton3:link,
+  .navigationButton4:link,
+  .navigationButton5:link {
     padding: 5%;
     margin-top: 1%;
     text-align: left;
   }
 
-  .navigationButton1 {
+  .navigationButton1,
+  .navigationButton1:link {
     color: white;
     background-color: #e61a6b;
   }
 
-  .navigationButton2 {
+  .navigationButton2,
+  .navigationButton2:link {
     color: black;
     background-color: #ffc4bc;
   }
 
-  .navigationButton3 {
+  .navigationButton3,
+  .navigationButton3:link {
     color: white;
     background-color: #423d89;
   }
 
-  .navigationButton4 {
+  .navigationButton4,
+  .navigationButton4:link {
     color: black;
     background-color: #03dac6;
   }
 
-  .navigationButton5 {
+  .navigationButton5,
+  .navigationButton5:link {
     color: white;
     background-color: #9591ce;
   }
