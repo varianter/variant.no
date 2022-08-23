@@ -31,7 +31,32 @@
   background-position-x: -20%;
 }
 
-.primaryContainer {
+.primary-container {
   display: flex;
   flex-direction: column;
+  gap: 12rem;
+}
+
+.project-category {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.project-article {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.project-article img {
+  max-width: 40%;
+}
+
+.project-article:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.project-article__text {
+  height: fit-content;
 }
