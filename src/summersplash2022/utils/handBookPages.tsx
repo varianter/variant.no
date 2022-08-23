@@ -10,28 +10,28 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
           Så, hvorfor Variant? Hvorfor er vi egentlig til? Vårt formål er å
           utvikle samfunnet vi lever i. Flinke personer som tenker nye tanker,
           og så lager de riktige løsningene.
-          <p className={style.handbookParagraphHeader}>
-            <strong>Våre tre grunnverdier er:</strong>
-          </p>
-          <p>
-            <strong>Raushet</strong> - Dette vises i hvordan vi møter hverandre,
-            våre kunder og folk i nærmiljøet.
-          </p>
-          <p>
-            <strong>Åpenhet</strong> - Hva i all verden skal et selskap tjene på
-            å holde informasjon hemmelig for sine ansatte?
-          </p>
-          <p>
-            <strong>Læreglede</strong> - Vi er folk som ønsker å lære og lære
-            bort. Vi skal ha ydmykhet nok til å skjønne at vi kan lære noe fra
-            alle, og troen på at alle kan lære noe fra oss.
-          </p>
-          <p>
-            Disse verdiene ligger til grunn for hvordan vi behandler hverandre.
-            Det skal være lav terskel for ros og tilbakemeldinger fordi vi
-            ønsker at du lykkes. Vær den som sier hva du har på hjertet ditt og
-            som tør å utfordre sannheter og gjeldende praksis.
-          </p>
+        </p>
+        <p>
+          <strong>Våre tre grunnverdier er:</strong>
+        </p>
+        <p>
+          <strong>Raushet</strong> - Dette vises i hvordan vi møter hverandre,
+          våre kunder og folk i nærmiljøet.
+        </p>
+        <p>
+          <strong>Åpenhet</strong> - Hva i all verden skal et selskap tjene på å
+          holde informasjon hemmelig for sine ansatte?
+        </p>
+        <p>
+          <strong>Læreglede</strong> - Vi er folk som ønsker å lære og lære
+          bort. Vi skal ha ydmykhet nok til å skjønne at vi kan lære noe fra
+          alle, og troen på at alle kan lære noe fra oss.
+        </p>
+        <p>
+          Disse verdiene ligger til grunn for hvordan vi behandler hverandre.
+          Det skal være lav terskel for ros og tilbakemeldinger fordi vi ønsker
+          at du lykkes. Vær den som sier hva du har på hjertet ditt og som tør å
+          utfordre sannheter og gjeldende praksis.
         </p>
       </div>
     );
@@ -95,32 +95,6 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
           over eget avfall, energiforbruk og reiser med fly og bil.
           Miljøfyrtårnansvarlig har ansvar for oppfølging og håndtering av
           dette.
-        </p>
-      </div>
-    );
-  } else if (selectedButton === 'Fleksitid') {
-    return (
-      <div>
-        <h3 className={style.handbookHeaderDeskotop}> Fleksitid</h3>
-        <p className={style.positionTextSubLeft}>
-          Arbeidsdagen er 7,5 timer per dag. Vi har ikke kjernetid i Variant,
-          men kunder kan jo ofte ha dette. Vi synes det er viktig å følge kunden
-          på dette, for å bli en del av deres kultur. Vi oppnår mest når vi får
-          jobbe tett med andre, så når du velger din arbeidsrytme regner vi med
-          at det er med i vurderingen.
-        </p>
-
-        <p className={style.positionTextSubLeft}>
-          Likevel er det slik at mange av våre kunder har kjernetid, eller at
-          oppdraget du er på avtaler en kjernetid. Dette må vi forholde oss til.
-        </p>
-
-        <p className={style.positionTextSubLeft}>
-          Vi vet at livet har ulike faser, i noen perioder ønsker eller trenger
-          man å kunne bruke mindre tid på jobb. Hos oss er det mulig å senke
-          stillingsgraden i perioder. Dette avgjør du best selv du. Med åpenhet
-          mellom deg, ledere og kunden om behovet og ønskene dine, vil vi sammen
-          jobbe for å finne løsningen alle trives med.
         </p>
       </div>
     );

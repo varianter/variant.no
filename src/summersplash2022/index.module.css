@@ -39,6 +39,7 @@
 }
 
 .scrollContainer {
+  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
@@ -171,9 +172,6 @@
 .section3 {
   background-color: #01574f;
   color: white;
-}
-
-.section3Heading {
 }
 
 .summerstudent1 {
@@ -400,17 +398,31 @@
 .navigationButton5:hover,
 .navigationButton5:focus,
 .navigationButton6:hover,
-.navigationButton6:focus {
+.navigationButton6:focus,
+.navigationButton1:link,
+.navigationButton2:link,
+.navigationButton3:link,
+.navigationButton4:link,
+.navigationButton5:link,
+.navigationButton6:link,
+.navigationButton1:visited,
+.navigationButton2:visited,
+.navigationButton3:visited,
+.navigationButton4:visited,
+.navigationButton5:visited,
+.navigationButton6:visited {
   background: none;
   border: none;
   padding: 5%;
   cursor: pointer;
   margin-top: 10%;
   text-align: right;
+  text-decoration: none;
 }
 
 .navigationButton1:hover,
-.navigationButton1:focus {
+.navigationButton1:focus,
+.navigationButton1:visited {
   background: #e61a6b;
   color: white;
 }
@@ -420,8 +432,13 @@
   background: #ffc4bc;
 }
 
+.navigationButton3:visited {
+  color: white;
+}
+
 .navigationButton3:hover,
-.navigationButton3:focus {
+.navigationButton3:focus,
+.navigationButton3:visited {
   background: #423d89;
   color: white;
 }
@@ -431,14 +448,26 @@
   background: #03dac6;
 }
 
+.navigationButton4:visited {
+  color: white;
+}
+
 .navigationButton5:hover,
 .navigationButton5:focus {
   background: #9591ce;
 }
 
+.navigationButton5:visited {
+  color: white;
+}
+
 .navigationButton6:hover,
 .navigationButton6:focus {
   background: #fad2e2;
+}
+
+.navigationButton6:visited {
+  color: white;
 }
 
 .positionTextLeft {
@@ -697,7 +726,7 @@
 
   .handbookGrid {
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 5%;
@@ -796,7 +825,7 @@
   }
 
   .mostImportantForYou {
-    font-family: 'Grafik';
+    font-family: 'Grafik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
