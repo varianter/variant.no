@@ -188,6 +188,7 @@
 .summerstudent2picture {
   width: 32%;
   margin-right: 10%;
+  float: right;
 }
 
 .summerstudent3picture {
@@ -198,6 +199,7 @@
 .summerstudent2Paragraph,
 .summerstudent3Paragraph,
 .summerstudentName,
+.summerstudentName1,
 .summerstudentName2 {
   font-family: 'Recoleta';
   font-style: normal;
@@ -1090,25 +1092,25 @@
   }
 
   .summerstudent1 {
-    display: flex;
-    position: relative;
-    right: 100px;
+    display: static;
     padding-bottom: 5%;
-    width: 150%;
+    position: relative;
   }
   .summerstudent2 {
-    display: flex;
+    display: static;
     position: relative;
-    right: 30px;
-    width: 150%;
   }
 
   .summerstudent3 {
     display: flex;
     position: relative;
     bottom: 0px;
-    width: 150%;
-    right: 80px;
+    right: 15%;
+  }
+
+  .summerstudentName1 {
+    position: relative;
+    left: 30%;
   }
 
   .summerstudent1Paragraph,
@@ -1126,11 +1128,13 @@
 
   .summerstudent1Paragraph {
     padding-top: 12%;
+    width: 100%;
   }
 
   .summerstudent2Paragraph {
     text-align: left;
     padding-top: 5%;
+    margin: 0;
     width: 100%;
   }
 
@@ -1140,13 +1144,19 @@
   }
 
   .summerstudent1picture {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: auto;
+    shape-outside: circle() padding-box;
+    float: left;
   }
 
   .summerstudent2picture {
-    width: 40%;
-    height: 0%;
+    float: right;
+    shape-outside: circle() padding-box;
+    width: 60%;
+    height: auto;
+    margin: 0px;
+    margin-right: -20%;
   }
 
   .summerstudent3picture {
@@ -1383,6 +1393,7 @@
   .summerstudent2Paragraph,
   .summerstudent3Paragraph,
   .summerstudentName,
+  .summerstudentName1,
   .summerstudentName2 {
     font-family: 'Recoleta';
     font-style: normal;

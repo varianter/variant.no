@@ -146,12 +146,17 @@ const Content = () => {
                 var en sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker
                 å hjelpe der man kan og løfte hverandre frem.”
               </p>
-              <p className={style.summerstudentName}>-Vilde</p>
+              <p className={style.summerstudentName1}>-Vilde</p>
             </div>
           </div>
 
           <div className={style.summerstudent2}>
             <div>
+              <img
+                className={style.summerstudent2picture}
+                src={summerStudent2}
+                alt=""
+              ></img>
               <p className={style.summerstudent2Paragraph}>
                 “Det har vært fantastisk å være en nevø i variantfamilien
                 gjennom sommeren! Fagkvelder, felles lunsj, sosialt opplegg, alt
@@ -161,11 +166,6 @@ const Content = () => {
               </p>
               <p className={style.summerstudentName2}>-Ole Petter</p>
             </div>
-            <img
-              className={style.summerstudent2picture}
-              src={summerStudent2}
-              alt=""
-            ></img>
           </div>
 
           <div className={style.summerstudent3}>
