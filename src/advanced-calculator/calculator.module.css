@@ -112,10 +112,21 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
+  .calculator-intro > h1 {
+    font-size: 4rem;
+  }
+
+  /* Remove as many styles as possible to see what breaks */
+  .calculator__section {
+    grid-column: unset;
+    display: unset;
+    align-content: unset;
+    align-self: unset;
+  }
+
   .calculator-controls {
     grid-column: 1;
-    grid-row: 1;
-    order: -1;
     height: auto;
     grid-gap: 3rem;
     top: 2rem;
@@ -128,10 +139,15 @@
   }
   .calculator-phoneSummary {
     display: flex;
+    gap: 0;
   }
   .calculator-controls__summary {
     grid-column: 2 / 3;
     grid-row: 2 / 4;
+  }
+
+  .calculator-content {
+    display: unset;
   }
 }
 
@@ -190,6 +206,23 @@
 
 .pension-graph__text {
   font-size: 1rem;
+}
+
+/* Pension mobile stuff */
+@media (max-width: 900px) {
+  .pension {
+    grid-template-columns: 1fr;
+  }
+
+  .pension__controls {
+    max-width: unset;
+  }
+
+  .pension-graph {
+    height: 30rem;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .radio-button-wrapper,

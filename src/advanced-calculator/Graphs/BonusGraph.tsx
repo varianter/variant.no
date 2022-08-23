@@ -10,8 +10,6 @@ import { formatCurrencyFromNumber } from '../helpers/utils';
 
 import style from '../calculator.module.css';
 
-const verticalMargin = 80;
-
 // accessors
 const getNumber = (d: BarData) => d[1];
 const getText = (d: BarData) => String(d[0]);
@@ -30,6 +28,9 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
     /* Optional options */
     threshold: 0.8,
   });
+
+  const isMobile = parentWidth < 400;
+  const verticalMargin = isMobile ? 50 : 80;
 
   const xMax = parentWidth;
   const yMax = parentHeight - verticalMargin;
@@ -163,7 +164,7 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
 
 const BonusGraphParent = ({ bonus }: { bonus: BarData[] }) => {
   return (
-    <div style={{ aspectRatio: '7/3', width: '100%' }}>
+    <div style={{ aspectRatio: '7/3', width: '100%', margin: 'auto' }}>
       <ParentSize>
         {({ width, height }) => {
           return (

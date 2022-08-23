@@ -31,6 +31,9 @@ const SalaryGraph = ({
     right: 30,
   };
 
+  const isMobile = parentWidth < 400;
+  const payFontSize = isMobile ? '14px' : '20px';
+
   const yMin = padding.top;
   const yMax = height - (padding.top + padding.bottom);
   // const xMin = 0;
@@ -120,7 +123,13 @@ const SalaryGraph = ({
             key={year}
             transform={`translate(${yearScale(date)} ${payScale(pay)})`}
           >
-            <foreignObject x="10" y="0" width="100" height="100">
+            <foreignObject
+              x={isMobile ? '-50' : '0'}
+              y={isMobile ? '2' : '0'}
+              width="100"
+              height="100"
+              style={isMobile ? { textAlign: 'center' } : {}}
+            >
               <div>
                 <span
                   style={{
@@ -130,7 +139,7 @@ const SalaryGraph = ({
                 >
                   {year}
                 </span>
-                <div style={{ fontSize: '20px', lineHeight: 1 }}>
+                <div style={{ fontSize: payFontSize, lineHeight: 1 }}>
                   {formatCurrencyFromNumber(pay)}
                 </div>
               </div>
@@ -153,7 +162,7 @@ const SalaryGraph = ({
 
 const SalaryGraphParent = ({ payscale }: { payscale: Payscale }) => {
   return (
-    <div style={{ aspectRatio: '5/3', width: '100%' }}>
+    <div style={{ aspectRatio: '5/3', width: '90%', margin: 'auto' }}>
       <ParentSize>
         {({ width, height }) => (
           <SalaryGraph
