@@ -1,4 +1,4 @@
-import { Button, ButtonNextLink } from '@components/button';
+import { ButtonNextLink } from '@components/button';
 import Head from 'next/head';
 import SayHi from 'src/index/say-hi';
 import Layout from 'src/layout';
@@ -108,7 +108,8 @@ const Diversity = () => {
         <section className={style.contact}>
           <h3>Samarbeid?</h3>
           <h3>Kontakt?</h3>
-          <Button>Ta kontakt</Button>
+          {/* Button should lead to contact page once it exists */}
+          <ButtonNextLink href="">Ta kontakt</ButtonNextLink>
         </section>
 
         <section className={style['project-category']}>
