@@ -66,5 +66,4 @@ Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant. Du får 
 
 ### Har du spørsmål?
 
-Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant?  
-Ta gjerne kontakt med meg.
+Vi håper du søker, og ser frem til å bli bedre kjent med deg. Har du spørsmål om jobben eller Variant? Ta gjerne kontakt med meg.
