@@ -7,6 +7,7 @@ const NewVariants = () => {
       height="248"
       viewBox="0 0 936 248"
       fill="none"
+      className={style.newVariantsSVG}
     >
       <title>Section 1 header</title>
       <mask

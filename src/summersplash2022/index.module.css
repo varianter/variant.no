@@ -206,6 +206,7 @@
 .summerstudent3picture {
   width: 37%;
 }
+
 .summerstudent1Paragraph,
 .summerstudent2Paragraph,
 .summerstudent3Paragraph,
@@ -1147,5 +1148,229 @@
 
   .contactInfo {
     gap: 3px;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* 900px*/
+  .scrollContainer,
+  .section1,
+  .section2,
+  .section3,
+  .section5,
+  .section6 {
+    height: auto;
+  }
+
+  .section2 {
+    height: auto;
+  }
+
+  .section3 {
+    height: auto;
+  }
+
+  .section5 {
+    height: auto;
+  }
+
+  .section6 {
+    height: auto;
+  }
+
+  .navigationSlider {
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: flex-end;
+    left: 60%;
+    bottom: 25%;
+    width: 35%;
+  }
+
+  .navigationButton1,
+  .navigationButton2,
+  .navigationButton3,
+  .navigationButton4,
+  .navigationButton5,
+  .navigationButton6 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 23px;
+    text-shadow: 1px 1px black;
+    color: white;
+  }
+
+  .navigationButton1,
+  .navigationButton2,
+  .navigationButton3,
+  .navigationButton4,
+  .navigationButton5,
+  .navigationButton6,
+  .navigationButton1:hover,
+  .navigationButton1:focus,
+  .navigationButton2:hover,
+  .navigationButton2:focus,
+  .navigationButton3:hover,
+  .navigationButton3:focus,
+  .navigationButton4:hover,
+  .navigationButton4:focus,
+  .navigationButton5:hover,
+  .navigationButton5:focus,
+  .navigationButton6:hover,
+  .navigationButton6:focus,
+  .navigationButton1:link,
+  .navigationButton2:link,
+  .navigationButton3:link,
+  .navigationButton4:link,
+  .navigationButton5:link,
+  .navigationButton6:link,
+  .navigationButton1:visited,
+  .navigationButton2:visited,
+  .navigationButton3:visited,
+  .navigationButton4:visited,
+  .navigationButton5:visited,
+  .navigationButton6:visited {
+    background: none;
+    border: none;
+    padding: 5%;
+    cursor: pointer;
+    margin-top: 5%;
+    text-align: right;
+    text-decoration: none;
+  }
+
+  /* Headings */
+  .section3Heading,
+  .section5Heading,
+  .section6Heading,
+  .mostImportantForYou {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200%;
+    line-height: 39px;
+  }
+
+  /* Section 1 */
+  .imageBlob1 {
+    position: relative;
+    left: 30%;
+    height: auto;
+    bottom: 220px;
+    width: 50%;
+  }
+
+  .newVariantsSVG {
+    width: 70%;
+    height: auto;
+  }
+
+  .søkHer,
+  .scroll {
+    font-family: 'Graphik Web';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 150%;
+    line-height: 34px;
+  }
+
+  .eller {
+    font-family: 'Graphik Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150%;
+    line-height: 34px;
+  }
+
+  /* Section 2 styling*/
+  .section2 {
+    width: 80%;
+    color: white;
+  }
+
+  .section2Heading {
+    margin-bottom: 20px;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200%;
+    line-height: 59px;
+  }
+
+  .blogpostLink {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .section2Color {
+    background-color: #1a1837;
+  }
+
+  .section2Div2 {
+    margin-top: 50%;
+  }
+
+  .section2Paragraph {
+    width: 40%;
+    font-size: 120%;
+    line-height: 120%;
+  }
+
+  .officeMap {
+    position: relative;
+    width: 70%;
+    height: auto;
+    top: 570px;
+    right: 13%;
+    margin-bottom: 10%;
+  }
+
+  /* Section 3 */
+  .summerstudent1Paragraph,
+  .summerstudent2Paragraph,
+  .summerstudent3Paragraph,
+  .summerstudentName,
+  .summerstudentName2 {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 120%;
+    position: relative;
+    height: fit-content;
+  }
+
+  /* Section 4 */
+  .positionTextLeft {
+    padding-top: 1%;
+    width: 500px;
+    font-family: 'Graphik Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 120%;
+  }
+
+  .readMoreArrow {
+    position: relative;
+    right: 20%;
+    top: 170px;
+  }
+
+  .section4Color {
+    background-color: #fff3f2;
+  }
+
+  .whyWorkAtVariant {
+    background-color: #fff3f2;
+  }
+
+  /* Section 5 */
+  .section5 {
+    margin-top: 10%;
   }
 }
