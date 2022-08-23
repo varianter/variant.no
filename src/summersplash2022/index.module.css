@@ -34,10 +34,6 @@
   height: 1500px;
 }
 
-.section6 {
-  height: 900px;
-}
-
 .scrollContainer {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
@@ -75,15 +71,6 @@
   font-size: 18px;
   line-height: 34px;
 }
-
-/* .h4Section1 {
-  margin-bottom: 10%;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-} */
 
 .section2Heading {
   margin-bottom: 20px;
@@ -430,7 +417,7 @@
 .navigationButton1:hover,
 .navigationButton1:focus,
 .navigationButton1:visited {
-  background: #e61a6b;
+  background: #b91456;
   color: white;
 }
 
@@ -595,7 +582,7 @@
 
 .handbookButton3:hover,
 .handbookButton3:focus {
-  background: #e61a6b;
+  background: #b91456;
   border: none;
   margin-top: 6%;
   padding: 1% 1%;
@@ -675,6 +662,21 @@
 }
 
 @media (max-width: 900px) {
+  /* Scroll mobile*/
+  .scrollContainer,
+  .section1,
+  .section2,
+  .section3,
+  .whyWorkAtVariant,
+  .section5,
+  .section6 {
+    height: 850px;
+  }
+
+  .section6 {
+    height: 850;
+  }
+
   /* Position to static */
   .imageBlob1 {
     position: static;
@@ -772,7 +774,7 @@
   .handbookButton1,
   .handbookButton1:focus,
   .handbookButton1:hover {
-    background: #e61a6b;
+    background: #b91456;
     color: white;
   }
 
@@ -988,11 +990,12 @@
   .navigationButton1,
   .navigationButton1:link {
     color: white;
-    background-color: #e61a6b;
+    background-color: #b91456;
   }
 
   .navigationButton2,
-  .navigationButton2:link {
+  .navigationButton2:link,
+  .navigationButton2:visited {
     color: black;
     background-color: #ffc4bc;
   }
@@ -1004,14 +1007,16 @@
   }
 
   .navigationButton4,
-  .navigationButton4:link {
+  .navigationButton4:link,
+  .navigationButton4:visited {
     color: black;
     background-color: #03dac6;
   }
 
   .navigationButton5,
-  .navigationButton5:link {
-    color: white;
+  .navigationButton5:link,
+  .navigationButton5:visited {
+    color: black;
     background-color: #9591ce;
   }
 
@@ -1051,6 +1056,8 @@
     font-weight: 400;
     font-size: 21.0688px;
     line-height: 27px;
+    background-color: #b91456;
+    padding: 5%;
   }
 
   .section2Paragraph {
@@ -1063,8 +1070,11 @@
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 400;
-    font-size: 21.0688px;
+    font-size: 140%;
     line-height: 27px;
+    background-color: #ffc4bc;
+    color: black;
+    padding: 5%;
   }
 
   .section3 {
@@ -1134,9 +1144,31 @@
     height: 1500px;
   }
 
+  .section4Heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.0688px;
+    line-height: 25px;
+    background-color: #423d89;
+    color: white;
+    padding: 5%;
+  }
+
   /* Section 5 mobile*/
   .section5 {
     height: 1800px;
+  }
+
+  .section5Heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.0688px;
+    line-height: 27px;
+    padding: 5%;
+    background-color: #03dac6;
+    color: black;
   }
 
   /* Section 6 mobile */
@@ -1146,6 +1178,16 @@
     align-items: flex-start;
     order: 1;
     flex-direction: row-reverse;
+  }
+  .section6Heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.0688px;
+    line-height: 27px;
+    background-color: #b7b4de;
+    padding: 5%;
+    margin-bottom: 10%;
   }
 
   .section6Text {

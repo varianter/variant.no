@@ -191,13 +191,13 @@ const Content = () => {
               height: buttonClicked
                 ? '1500px'
                 : '900px' || window.matchMedia('(min-width: 1550px)').matches
-                ? 'auto'
+                ? '1300px'
                 : '900px',
             }}
           >
             <div className={style.handbook}>
               <div className={style.handbookChildButton}>
-                <h3 className={style.section5Heading}>
+                <h3 className={style.section4Heading}>
                   Hvorfor akkurat Variant
                 </h3>
                 <p className={style.positionTextLeft}>
