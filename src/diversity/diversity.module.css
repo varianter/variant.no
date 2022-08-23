@@ -1,0 +1,37 @@
+/* Should be moved to a general component at this point */
+/* Also needs some redesign */
+/* TODO: Create general component that can be used
+ everywhere, that has the new design */
+.sayHi {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  max-width: 20%;
+}
+/* .sayhi a div {
+  top: 28%;
+} */
+
+.header {
+}
+
+.header__title {
+  font-weight: 500;
+  margin: 4rem 0 2rem 0;
+
+  background: linear-gradient(
+    120deg,
+    var(--color-primary),
+    var(--color-secondary1),
+    var(--color-secondary2)
+  );
+  background-size: 70% 70%;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-position-x: -20%;
+}
+
+.primaryContainer {
+  display: flex;
+  flex-direction: column;
+}
