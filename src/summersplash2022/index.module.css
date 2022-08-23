@@ -31,7 +31,7 @@
 }
 
 .section5 {
-  height: 1500px;
+  height: 1800px;
 }
 
 .scrollContainer {
@@ -251,6 +251,10 @@
 
 .section5ParagraphLeft {
   width: 500px;
+}
+
+.Even {
+  margin-top: 5%;
 }
 
 .flexTimeline {
@@ -673,8 +677,12 @@
     height: 850px;
   }
 
+  .section5 {
+    height: 2300px;
+  }
+
   .section6 {
-    height: 850;
+    height: 850px;
   }
 
   /* Position to static */
@@ -1156,9 +1164,6 @@
   }
 
   /* Section 5 mobile*/
-  .section5 {
-    height: 1800px;
-  }
 
   .section5Heading {
     font-family: 'Recoleta';

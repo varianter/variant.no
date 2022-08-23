@@ -13,6 +13,7 @@ import ReadMoreArrow from './img/lesMerPil';
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
   const Marius = require('./img/Marius.png');
+  const Even = require('./img/Even.png');
   const summerStudent1 = require('./img/Vilde summerstudent.png');
   const summerStudent2 = require('./img/Olepetter summerstudent.png');
   const summerStudent3 = require('./img/Nora summerstudent.png');
@@ -293,11 +294,15 @@ const Content = () => {
                   er fine muligheter til å bli bedre kjent før sommerjobben
                   starter i juni.
                 </p>
+                <div className={style.Even}>
+                  <img src={Even} alt="Even" />
+                </div>
               </div>
               <div className={style.section5Div2}>
                 <div className={style.timeLine}>
                   <TimeLine />
                 </div>
+
                 <div className={style.søknadstips}>
                   <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
                   <p className={style.section5Paragraph}>
