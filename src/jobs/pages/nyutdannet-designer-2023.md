@@ -12,7 +12,7 @@ meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo_2023.png
 
 ### Hvem søker vi?
 
-Vi søker nyutdannede designere som engasjerer og motiverer, med oppstart 1. august 2023 til våre kontorer i [Trondheim](https://handbook.variant.no/avdelinger/trondheim), [Oslo](https://handbook.variant.no/avdelinger/oslo) og [Bergen](https://handbook.variant.no/avdelinger/bergen). Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
+Vi søker nyutdannede designere som engasjerer og motiverer, med oppstart 1. august 2023 til våre kontorer i [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Bergen](https://handbook.variant.no/avdelinger/bergen). Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
 
 <div class="right">
 
