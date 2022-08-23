@@ -190,7 +190,7 @@ const Content = () => {
             style={{
               height: buttonClicked
                 ? '1500px'
-                : '900px' || window.matchMedia('(min-width: 1800px)').matches
+                : '900px' || window.matchMedia('(min-width: 1550px)').matches
                 ? 'auto'
                 : '900px',
             }}

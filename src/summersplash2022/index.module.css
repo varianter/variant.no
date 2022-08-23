@@ -1151,13 +1151,14 @@
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1550px) {
   /* 900px*/
   .scrollContainer,
   .section1,
   .section2,
   .section3,
   .section5,
+  .whyWorkAtVariant,
   .section6 {
     height: auto;
   }
@@ -1308,7 +1309,7 @@
     position: relative;
     width: 70%;
     height: auto;
-    top: 570px;
+    top: 500px;
     right: 13%;
     margin-bottom: 10%;
   }
@@ -1353,6 +1354,11 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
+    font-size: 120%;
+    line-height: 120%;
+  }
+
+  .section5ParagraphLeft {
     font-size: 120%;
     line-height: 120%;
   }
