@@ -109,7 +109,9 @@ const Diversity = () => {
           <h3>Samarbeid?</h3>
           <h3>Kontakt?</h3>
           {/* Button should lead to contact page once it exists */}
-          <ButtonNextLink href="">Ta kontakt</ButtonNextLink>
+          <ButtonNextLink href="" className={style['contact__button']}>
+            Ta kontakt
+          </ButtonNextLink>
         </section>
 
         <section className={style['project-category']}>
@@ -140,7 +142,7 @@ const Diversity = () => {
                 Linn er en av Variantene som er mentor hos ODA. Hun bidrar med
                 kunnskap, erfaring og spre læreglede.
               </p>
-              <q>Sitat Linn</q>
+              <q>Sitat fra Linn</q>
             </section>
             <img
               src="/images/diversity/linn_oda.png"
