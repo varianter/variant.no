@@ -94,10 +94,15 @@ export function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
               />
 
               <motion.g
-                style={{ overflow: 'visible' }}
                 animate={{ x: barX, y: barY - 50 }} // subtract the height
               >
-                <motion.foreignObject width={barWidth} height="50">
+                <motion.foreignObject
+                  width={barWidth}
+                  height="50"
+                  style={{
+                    overflow: 'visible',
+                  }}
+                >
                   <div
                     className={style['pension-graph__text-wrapper']}
                     data-position={d.settings.position}
