@@ -93,26 +93,28 @@ export function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
                 rx={10}
               />
 
-              <motion.foreignObject
+              <motion.g
                 style={{ overflow: 'visible' }}
-                width={barWidth}
-                height="50"
                 animate={{ x: barX, y: barY - 50 }} // subtract the height
-                className={style['pension-graph__foreign-object']}
               >
-                <div
-                  className={style['pension-graph__text-wrapper']}
-                  data-position={d.settings.position}
-                >
-                  <span className={style['pension-graph__percentage']}>
-                    {text}
-                  </span>
-                  <div className={style['pension-graph__number']}>
-                    <Counter num={d.num} formatter={formatCurrencyFromNumber} />
-                    {/* {formatCurrencyFromNumber(d.num)} */}
+                <motion.foreignObject width={barWidth} height="50">
+                  <div
+                    className={style['pension-graph__text-wrapper']}
+                    data-position={d.settings.position}
+                  >
+                    <span className={style['pension-graph__percentage']}>
+                      {text}
+                    </span>
+                    <div className={style['pension-graph__number']}>
+                      <Counter
+                        num={d.num}
+                        formatter={formatCurrencyFromNumber}
+                      />
+                      {/* {formatCurrencyFromNumber(d.num)} */}
+                    </div>
                   </div>
-                </div>
-              </motion.foreignObject>
+                </motion.foreignObject>
+              </motion.g>
             </g>
           );
         })}

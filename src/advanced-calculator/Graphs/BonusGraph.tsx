@@ -110,7 +110,7 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
               opacity: 0,
             },
             onscreen: {
-              y: barY - 50,
+              y: barY - (isMobile ? 30 : 50),
               opacity: 1,
             },
           };
@@ -128,32 +128,36 @@ export function BonusGraph({ data, parentWidth, parentHeight }: BarsProps) {
                 animate={inView ? 'onscreen' : 'offscreen'}
               />
 
-              <foreignObject
-                className={style['pension-graph__foreign-object']}
-                style={{ overflow: 'visible' }}
-                width={barWidth}
-                height="50"
-                x={barX}
+              <motion.g
+                className={style['pension-graph__text-wrapper']}
+                variants={barLabelVariant}
+                animate={inView ? 'onscreen' : 'offscreen'}
+                transition={transition}
+                initial="offscreen"
               >
-                <motion.div
-                  className={style['pension-graph__text-wrapper']}
-                  variants={barLabelVariant}
-                  animate={inView ? 'onscreen' : 'offscreen'}
-                  transition={transition}
-                  //data-position={d.settings.position}
+                <foreignObject
+                  className={style['pension-graph__foreign-object']}
+                  style={{
+                    overflow: 'visible',
+                  }}
+                  width={barWidth}
+                  height="50"
+                  x={barX}
                 >
-                  <span className={style['pension-graph__percentage']}>
-                    {text}
-                  </span>
-                  <div className={style['pension-graph__number']}>
-                    <Counter
-                      initial={0}
-                      num={inView ? num : 0}
-                      formatter={formatCurrencyFromNumber}
-                    />
-                  </div>
-                </motion.div>
-              </foreignObject>
+                  <motion.div>
+                    <span className={style['pension-graph__percentage']}>
+                      {text}
+                    </span>
+                    <div className={style['pension-graph__number']}>
+                      <Counter
+                        initial={0}
+                        num={inView ? num : 0}
+                        formatter={formatCurrencyFromNumber}
+                      />
+                    </div>
+                  </motion.div>
+                </foreignObject>
+              </motion.g>
             </g>
           );
         })}
