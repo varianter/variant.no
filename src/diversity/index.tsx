@@ -1,8 +1,9 @@
-import { ButtonNextLink } from '@components/button';
+import { Button } from '@components/button';
 import Head from 'next/head';
 import SayHi from 'src/index/say-hi';
 import Layout from 'src/layout';
 import style from './diversity.module.css';
+// TODO: Finalize content: Text, images, image alt text
 
 const Diversity = () => {
   return (
@@ -108,10 +109,8 @@ const Diversity = () => {
         <section className={style.contact}>
           <h3>Samarbeid?</h3>
           <h3>Kontakt?</h3>
-          {/* Button should lead to contact page once it exists */}
-          <ButtonNextLink href="" className={style['contact__button']}>
-            Ta kontakt
-          </ButtonNextLink>
+          {/* TODO: Button should email someone (who?) */}
+          <Button>Ta kontakt</Button>
         </section>
 
         <section className={style['project-category']}>
