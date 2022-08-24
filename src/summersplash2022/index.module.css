@@ -1259,12 +1259,9 @@
     flex-direction: column;
     position: fixed;
     align-items: flex-end;
-    left: 60%;
+    left: 80%;
     bottom: 25%;
-    width: 35%;
-    /* mix-blend-mode: difference; */
-    color: white;
-    mix-blend-mode: exclusion;
+    width: fit-content;
   }
 
   .navigationButton1,
@@ -1279,9 +1276,7 @@
     font-size: 120%;
     line-height: 23px;
     color: white;
-    /* text-shadow: 1px 1px red; */
-    mix-blend-mode: difference;
-    z-index: 5;
+    /* text-shadow: 1px 1px black; */
   }
 
   .navigationButton1,
@@ -1320,8 +1315,6 @@
     cursor: pointer;
     margin-top: 5%;
     text-align: right;
-    text-decoration: none;
-    mix-blend-mode: difference;
   }
 
   .navigationButton1:hover,
@@ -1329,7 +1322,6 @@
   .navigationButton1:visited {
     background: #b91456;
     color: white;
-    mix-blend-mode: difference;
   }
 
   .navigationButton2:hover,
