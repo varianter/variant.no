@@ -248,11 +248,12 @@
   color: white;
 }
 
-.section5Heading {
-  margin-bottom: 20px;
-}
-
 .section5HeadingH4 {
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
   border: none;
 }
 
@@ -262,10 +263,15 @@
 
 .section5ParagraphLeft {
   width: 500px;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .Even {
-  margin-top: 5%;
+  margin-top: 12%;
 }
 
 .flexTimeline {
@@ -276,7 +282,8 @@
 }
 
 .søknadstips {
-  margin-top: 5%;
+  margin-top: 20%;
+  margin-top: 120px;
   margin-bottom: 30%;
   position: relative;
   right: 150px;
@@ -424,7 +431,7 @@
   border: none;
   padding: 5%;
   cursor: pointer;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: right;
   text-decoration: none;
 }
