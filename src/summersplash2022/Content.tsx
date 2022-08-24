@@ -23,6 +23,7 @@ const Content = () => {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const [offset, setOffset] = useState(0);
+  const [isMobile, setIsMobile] = useState(true);
   const [navColor, setNavColor] = useState(false);
 
   const handleOnClick = (buttonValue: string) => {
@@ -36,19 +37,24 @@ const Content = () => {
   //True White
   useEffect(() => {
     const scrollContainer = document.querySelector('#scrollContainer');
-    if (scrollContainer) {
-      scrollContainer.addEventListener('scroll', () => {
-        setOffset(scrollContainer.scrollTop);
-      });
-      if (offset < 899) {
-        setNavColor(false);
-      } else if (
-        (offset > 899 && offset < 4499) ||
-        (offset > 5799 && offset < 7600)
-      ) {
-        setNavColor(true);
-      } else {
-        setNavColor(false);
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      setNavColor(true);
+      setIsMobile(false);
+    } else {
+      if (scrollContainer) {
+        scrollContainer.addEventListener('scroll', () => {
+          setOffset(scrollContainer.scrollTop);
+        });
+        if (offset < 899) {
+          setNavColor(false);
+        } else if (
+          (offset > 899 && offset < 4499) ||
+          (offset > 5799 && offset < 7600)
+        ) {
+          setNavColor(true);
+        } else {
+          setNavColor(false);
+        }
       }
     }
   }, [offset, navColor]);
@@ -65,43 +71,43 @@ const Content = () => {
           <div className={style.navigationSlider}>
             <a
               href="#forside"
-              className={style.navigationButton6}
               style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton6}
             >
               <p className={style.tests}>Forside</p>
             </a>
             <a
               href="#hvagarsommerjobbenutpa"
-              className={style.navigationButton1}
               style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton1}
             >
               Hva går sommerjobben ut på
             </a>
             <a
               href="#hvameneraretssommerstudenter"
+              style={{ color: navColor && isMobile ? 'white' : 'black' }}
               className={style.navigationButton2}
-              style={{ color: navColor ? 'white' : 'black' }}
             >
               Hva mener årets sommerstudenter?
             </a>
             <a
               href="#hvorforjobbeivariant"
-              className={style.navigationButton3}
               style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton3}
             >
               Hvorfor jobbe i Variant?
             </a>
             <a
               href="#hvaskjerettersoknadsfristen"
+              style={{ color: navColor && isMobile ? 'white' : 'black' }}
               className={style.navigationButton4}
-              style={{ color: navColor ? 'white' : 'black' }}
             >
               Hva skjer etter søknadsfristen?
             </a>
             <a
               href="#soksommerjobb"
-              className={style.navigationButton5}
               style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton5}
             >
               Søk sommerjobb
             </a>
