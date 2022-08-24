@@ -379,9 +379,8 @@ const Content = () => {
                   <p className={style.section6Underline}>41637572</p>
                 </div>
                 <div>
-                  <p> | </p>
+                  <p>|</p>
                 </div>
-                <div></div>
                 <p className={style.section6Underline}>
                   <a href="mailto: mk@variant.no">mk@variant.no</a>
                 </p>
@@ -389,28 +388,30 @@ const Content = () => {
             </div>
             <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
           </div>
-          <div className={style.ApplyAsDesignerDiv}>
-            <div className={style.applyAsDesigner}>
-              <a href="/jobs">
-                <ApplyAsDesigner />
-              </a>
+          <div className={style.ApplyDiv}>
+            <div className={style.ApplyAsDesignerDiv}>
+              <div className={style.applyAsDesigner}>
+                <a href="/jobs">
+                  <ApplyAsDesigner />
+                </a>
+              </div>
+              <div className={style.applyAsDesignerBig}>
+                <a href="/jobs">
+                  <ApplyAsDesignerBiggerBlob />
+                </a>
+              </div>
             </div>
-            <div className={style.applyAsDesignerBig}>
-              <a href="/jobs">
-                <ApplyAsDesignerBiggerBlob />
-              </a>
-            </div>
-          </div>
-          <div className={style.ApplyAsDeveloperDiv}>
-            <div className={style.ApplyAsDeveloper}>
-              <a href="/jobs">
-                <ApplyAsDeveloper />
-              </a>
-            </div>
-            <div className={style.ApplyAsDeveloperBig}>
-              <a href="/jobs">
-                <ApplyAsDeveloperBiggerBlob />
-              </a>
+            <div className={style.ApplyAsDeveloperDiv}>
+              <div className={style.ApplyAsDeveloper}>
+                <a href="/jobs">
+                  <ApplyAsDeveloper />
+                </a>
+              </div>
+              <div className={style.ApplyAsDeveloperBig}>
+                <a href="/jobs">
+                  <ApplyAsDeveloperBiggerBlob />
+                </a>
+              </div>
             </div>
           </div>
         </section>
