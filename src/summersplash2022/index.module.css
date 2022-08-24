@@ -6,6 +6,7 @@
 .section6,
 .whyWorkAtVariant {
   padding: 5%;
+  padding-left: 7%;
   margin-bottom: 0%;
 }
 
@@ -143,15 +144,23 @@
 }
 
 .section2Paragraph {
-  width: 40%;
+  width: 50%;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.section2Flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .officeMap {
-  position: static;
-  width: 70%;
-  top: 300px;
+  width: 75%;
+  position: relative;
   right: 10%;
-  margin-bottom: 10%;
 }
 
 /* Section 3 styling */
@@ -378,6 +387,7 @@
   font-size: 18px;
   line-height: 23px;
   color: white;
+  width: 90%;
 }
 
 .navigationButton1,
