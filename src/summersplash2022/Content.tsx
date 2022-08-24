@@ -241,7 +241,7 @@ const Content = () => {
             id="hvorforjobbeivariant"
             style={{
               height: buttonClicked
-                ? '1500px'
+                ? '1600px'
                 : '900px' || window.matchMedia('(min-width: 1550px)').matches
                 ? '1300px'
                 : '900px',

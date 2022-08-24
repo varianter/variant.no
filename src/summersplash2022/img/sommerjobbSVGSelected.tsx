@@ -1,6 +1,9 @@
+import style from '../index.module.css';
+
 const SummerjobSelected = () => {
   return (
     <svg
+      className={style.summerjobSelected}
       xmlns="http://www.w3.org/2000/svg"
       width="459"
       height="78"
