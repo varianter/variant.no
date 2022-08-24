@@ -6,6 +6,7 @@
 .section6,
 .whyWorkAtVariant {
   padding: 5%;
+  padding-left: 7%;
   margin-bottom: 0%;
 }
 
@@ -140,15 +141,23 @@
 }
 
 .section2Paragraph {
-  width: 40%;
+  width: 50%;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.section2Flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .officeMap {
-  position: static;
-  width: 70%;
-  top: 300px;
+  width: 75%;
+  position: relative;
   right: 10%;
-  margin-bottom: 10%;
 }
 
 /* Section 3 styling */
@@ -185,9 +194,8 @@
 .summerstudent2picture {
   position: relative;
   width: 32%;
-  height: 32%;
   margin-right: 10%;
-  bottom: 50px;
+  float: right;
 }
 
 .summerstudent3picture {
@@ -201,6 +209,7 @@
 .summerstudent2Paragraph,
 .summerstudent3Paragraph,
 .summerstudentName,
+.summerstudentName1,
 .summerstudentName2 {
   font-family: 'Recoleta';
   font-style: normal;
@@ -216,13 +225,14 @@
 }
 
 .summerstudent2Paragraph {
-  width: 55%;
-  padding-top: 3%;
-  margin-left: 45%;
+  padding-top: 8%;
+  margin-left: 10%;
+  width: 40%;
   text-align: right;
 }
 
 .summerstudentName2 {
+  width: 50%;
   text-align: right;
 }
 
@@ -237,11 +247,12 @@
   color: white;
 }
 
-.section5Heading {
-  margin-bottom: 20px;
-}
-
 .section5HeadingH4 {
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
   border: none;
 }
 
@@ -251,10 +262,15 @@
 
 .section5ParagraphLeft {
   width: 500px;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .Even {
-  margin-top: 5%;
+  margin-top: 12%;
 }
 
 .flexTimeline {
@@ -265,7 +281,8 @@
 }
 
 .søknadstips {
-  margin-top: 5%;
+  margin-top: 20%;
+  margin-top: 120px;
   margin-bottom: 30%;
   position: relative;
   right: 150px;
@@ -295,11 +312,16 @@
 }
 
 .contactInfo {
-  margin-top: 10px;
+  margin-top: 2%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
+}
+
+.ApplyDiv {
+  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .applyAsDesigner:hover {
@@ -375,8 +397,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  text-shadow: 1px 1px black;
   color: white;
+  width: 90%;
 }
 
 .navigationButton1,
@@ -413,7 +435,7 @@
   border: none;
   padding: 5%;
   cursor: pointer;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: right;
   text-decoration: none;
 }
@@ -1069,26 +1091,32 @@
   }
 
   .summerstudent1 {
-    display: flex;
-    position: static;
+    display: static;
     padding-bottom: 5%;
+    position: relative;
   }
-
   .summerstudent2 {
-    display: flex;
-    position: static;
+    display: static;
+    position: relative;
   }
 
   .summerstudent3 {
     display: flex;
-    position: static;
+    position: relative;
+    bottom: 0px;
+    right: 15%;
+  }
+
+  .summerstudentName1 {
+    position: relative;
+    left: 30%;
   }
 
   .summerstudent1Paragraph,
   .summerstudent2Paragraph,
   .summerstudent3Paragraph {
     position: static;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     font-family: 'Graphik Web';
     font-style: normal;
@@ -1099,26 +1127,35 @@
 
   .summerstudent1Paragraph {
     padding-top: 12%;
+    width: 100%;
   }
 
   .summerstudent2Paragraph {
-    margin: 0%;
     text-align: left;
     padding-top: 5%;
+    margin: 0;
+    width: 100%;
   }
 
   .summerstudent3Paragraph {
     padding-top: 14%;
+    width: 60%;
   }
 
   .summerstudent1picture {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: auto;
+    shape-outside: circle() padding-box;
+    float: left;
   }
 
   .summerstudent2picture {
-    width: 40%;
-    height: 0%;
+    float: right;
+    shape-outside: circle() padding-box;
+    width: 60%;
+    height: auto;
+    margin: 0px;
+    margin-right: -20%;
   }
 
   .summerstudent3picture {
@@ -1421,6 +1458,7 @@
   .summerstudent2Paragraph,
   .summerstudent3Paragraph,
   .summerstudentName,
+  .summerstudentName1,
   .summerstudentName2 {
     font-family: 'Recoleta';
     font-style: normal;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NewVariants from './img/newVariants';
 import Map from './img/map';
 import style from './index.module.css';
@@ -22,6 +22,10 @@ const Content = () => {
 
   const [buttonClicked, setButtonClicked] = useState(false);
 
+  const [offset, setOffset] = useState(0);
+  const [isMobile, setIsMobile] = useState(true);
+  const [navColor, setNavColor] = useState(false);
+
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
       setButtonClicked(true);
@@ -30,9 +34,34 @@ const Content = () => {
     setWhichButtonSelected(buttonValue);
   };
 
+  //True White
+  useEffect(() => {
+    const scrollContainer = document.querySelector('#scrollContainer');
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      setNavColor(true);
+      setIsMobile(false);
+    } else {
+      if (scrollContainer) {
+        scrollContainer.addEventListener('scroll', () => {
+          setOffset(scrollContainer.scrollTop);
+        });
+        if (offset < 899) {
+          setNavColor(false);
+        } else if (
+          (offset > 899 && offset < 4499) ||
+          (offset > 5799 && offset < 7600)
+        ) {
+          setNavColor(true);
+        } else {
+          setNavColor(false);
+        }
+      }
+    }
+  }, [offset, navColor]);
+
   return (
     <>
-      <div className={style.scrollContainer}>
+      <div className={style.scrollContainer} id="scrollContainer">
         <section className={style.section1} id="forside">
           <span className={style.searchNewVariants}>
             <NewVariants />
@@ -40,31 +69,46 @@ const Content = () => {
           <br />
           {/* Navigation bar on the right side */}
           <div className={style.navigationSlider}>
-            <a href="#forside" className={style.navigationButton6}>
+            <a
+              href="#forside"
+              style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton6}
+            >
               Forside
             </a>
             <a
               href="#hvagarsommerjobbenutpa"
+              style={{ color: navColor ? 'white' : 'black' }}
               className={style.navigationButton1}
             >
               Hva går sommerjobben ut på
             </a>
             <a
               href="#hvameneraretssommerstudenter"
+              style={{ color: navColor && isMobile ? 'white' : 'black' }}
               className={style.navigationButton2}
             >
               Hva mener årets sommerstudenter?
             </a>
-            <a href="#hvorforjobbeivariant" className={style.navigationButton3}>
+            <a
+              href="#hvorforjobbeivariant"
+              style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton3}
+            >
               Hvorfor jobbe i Variant?
             </a>
             <a
               href="#hvaskjerettersoknadsfristen"
+              style={{ color: navColor && isMobile ? 'white' : 'black' }}
               className={style.navigationButton4}
             >
               Hva skjer etter søknadsfristen?
             </a>
-            <a href="#soksommerjobb" className={style.navigationButton5}>
+            <a
+              href="#soksommerjobb"
+              style={{ color: navColor ? 'white' : 'black' }}
+              className={style.navigationButton5}
+            >
               Søk sommerjobb
             </a>
           </div>
@@ -88,45 +132,42 @@ const Content = () => {
         </section>
         <div className={style.section2Color}>
           <section className={style.section2} id="hvagarsommerjobbenutpa">
-            <div>
+            <div className={style.section2Flex}>
               <h3 className={style.section2Heading}>
                 Hva går sommerjobben ut på?
               </h3>
-              <div className={style.section2Div}>
-                <p className={style.section2Paragraph}>
-                  En sommerjobb i Variant er en fin mulighet til å anvende det
-                  du har lært på skolen i praksis. Det forventes ikke at du er
-                  utlært, men at du ønsker å lære mer. I et tverrfaglig team
-                  bestående av designere og utviklere kommer du til å jobbe på
-                  et av de spennende kundeprosjektene vi har. Underveis får du
-                  god oppfølging og tilrettelegging fra erfarne konsulenter som
-                  ønsker at du lykkes. Sjekk ut{' '}
-                  <a className={style.blogpostLink}>bloggen vår</a> for å lese
-                  mer om hva årets sommerstudenter jobbet med.
-                </p>
-              </div>
-              <div className={style.officeMap}>
-                <Map />
-              </div>
-              <div className={style.section2Div2}>
-                <p className={style.section2Paragraph}>
-                  I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og Bergen,
-                  til henholdsvis seks, fem og to studenter. Hvor du vil jobbe
-                  bestemmer du naturligvis selv. Sommerjobben varer i fire + to
-                  uker med tre uker ferie i mellomtiden.
-                </p>
+              <p className={style.section2Paragraph}>
+                En sommerjobb i Variant er en fin mulighet til å anvende det du
+                har lært på skolen i praksis. Det forventes ikke at du er
+                utlært, men at du ønsker å lære mer. I et tverrfaglig team
+                bestående av designere og utviklere kommer du til å jobbe på et
+                av de spennende kundeprosjektene vi har. Underveis får du god
+                oppfølging og tilrettelegging fra erfarne konsulenter som ønsker
+                at du lykkes. Sjekk ut{' '}
+                <a className={style.blogpostLink}>bloggen vår</a> for å lese mer
+                om hva årets sommerstudenter jobbet med.
+              </p>
 
-                <p className={style.section2Paragraph}>
-                  I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
-                  trenger å lure på hvordan kontrakten din vil se ut for
-                  sommeren, den ligger nemlig åpent og tilgjengelig på våre
-                  nettsider. Timelønnen trenger du heller ikke å lure på, den er
-                  på 271,83kr (eller 100
-                  <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e</em>
-                  &#128526;). Under “Hvorfor jobbe i Variant?” ned kan du lese
-                  mer om hva Variant står for og tilbyr.
-                </p>
-              </div>
+              <p className={style.section2Paragraph}>
+                I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og Bergen,
+                til henholdsvis seks, fem og to studenter. Hvor du vil jobbe
+                bestemmer du naturligvis selv. Sommerjobben varer i fire + to
+                uker med tre uker ferie i mellomtiden.
+              </p>
+
+              <p className={style.section2Paragraph}>
+                I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
+                trenger å lure på hvordan kontrakten din vil se ut for sommeren,
+                den ligger nemlig åpent og tilgjengelig på våre nettsider.
+                Timelønnen trenger du heller ikke å lure på, den er på 271,83kr
+                (eller 100
+                <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
+                &#128526;). Under “Hvorfor jobbe i Variant?” ned kan du lese mer
+                om hva Variant står for og tilbyr.
+              </p>
+            </div>
+            <div className={style.officeMap}>
+              <Map />
             </div>
           </section>
         </div>
@@ -148,12 +189,17 @@ const Content = () => {
                 var en sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker
                 å hjelpe der man kan og løfte hverandre frem.”
               </p>
-              <p className={style.summerstudentName}>-Vilde</p>
+              <p className={style.summerstudentName1}>-Vilde</p>
             </div>
           </div>
 
           <div className={style.summerstudent2}>
             <div>
+              <img
+                className={style.summerstudent2picture}
+                src={summerStudent2}
+                alt=""
+              ></img>
               <p className={style.summerstudent2Paragraph}>
                 “Det har vært fantastisk å være en nevø i variantfamilien
                 gjennom sommeren! Fagkvelder, felles lunsj, sosialt opplegg, alt
@@ -163,11 +209,6 @@ const Content = () => {
               </p>
               <p className={style.summerstudentName2}>-Ole Petter</p>
             </div>
-            <img
-              className={style.summerstudent2picture}
-              src={summerStudent2}
-              alt=""
-            ></img>
           </div>
 
           <div className={style.summerstudent3}>
@@ -338,9 +379,8 @@ const Content = () => {
                   <p className={style.section6Underline}>41637572</p>
                 </div>
                 <div>
-                  <p> | </p>
+                  <p>|</p>
                 </div>
-                <div></div>
                 <p className={style.section6Underline}>
                   <a href="mailto: mk@variant.no">mk@variant.no</a>
                 </p>
@@ -348,28 +388,30 @@ const Content = () => {
             </div>
             <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
           </div>
-          <div className={style.ApplyAsDesignerDiv}>
-            <div className={style.applyAsDesigner}>
-              <a href="/jobs">
-                <ApplyAsDesigner />
-              </a>
+          <div className={style.ApplyDiv}>
+            <div className={style.ApplyAsDesignerDiv}>
+              <div className={style.applyAsDesigner}>
+                <a href="/jobs">
+                  <ApplyAsDesigner />
+                </a>
+              </div>
+              <div className={style.applyAsDesignerBig}>
+                <a href="/jobs">
+                  <ApplyAsDesignerBiggerBlob />
+                </a>
+              </div>
             </div>
-            <div className={style.applyAsDesignerBig}>
-              <a href="/jobs">
-                <ApplyAsDesignerBiggerBlob />
-              </a>
-            </div>
-          </div>
-          <div className={style.ApplyAsDeveloperDiv}>
-            <div className={style.ApplyAsDeveloper}>
-              <a href="/jobs">
-                <ApplyAsDeveloper />
-              </a>
-            </div>
-            <div className={style.ApplyAsDeveloperBig}>
-              <a href="/jobs">
-                <ApplyAsDeveloperBiggerBlob />
-              </a>
+            <div className={style.ApplyAsDeveloperDiv}>
+              <div className={style.ApplyAsDeveloper}>
+                <a href="/jobs">
+                  <ApplyAsDeveloper />
+                </a>
+              </div>
+              <div className={style.ApplyAsDeveloperBig}>
+                <a href="/jobs">
+                  <ApplyAsDeveloperBiggerBlob />
+                </a>
+              </div>
             </div>
           </div>
         </section>
