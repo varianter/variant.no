@@ -10,6 +10,7 @@ import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
+import { off } from 'process';
 
 const Content = () => {
   const blobSection1 = require('./img/section1BlobSummer.png');
@@ -45,6 +46,7 @@ const Content = () => {
       if (scrollContainer) {
         scrollContainer.addEventListener('scroll', () => {
           setOffset(scrollContainer.scrollTop);
+          // console.log(offset);
         });
         if (offset < 899) {
           setNavColor(false);
@@ -56,6 +58,17 @@ const Content = () => {
         } else {
           setNavColor(false);
         }
+      }
+    }
+    if (window.matchMedia('(min-width: 1550px)').matches) {
+      const onScroll = () => setOffset(window.pageYOffset);
+      window.addEventListener('scroll', onScroll);
+
+      if (offset > 3551 || offset > 6370) {
+        setNavColor(false);
+      }
+      if (offset > 4850 && offset < 6370) {
+        setNavColor(true);
       }
     }
   }, [offset, navColor]);
