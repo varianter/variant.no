@@ -105,7 +105,22 @@
 
 .section1 {
   background-color: #f4f1e7;
-  z-index: 1;
+}
+
+.section1H3 {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 53px;
+}
+
+.in2023 {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 53px;
 }
 
 .underHeader {
@@ -114,9 +129,9 @@
 
 .imageBlob1 {
   position: relative;
-  left: 50%;
-  height: 60%;
-  bottom: 220px;
+  left: 30%;
+  height: 70%;
+  bottom: 50%;
   width: auto;
 }
 
@@ -133,7 +148,6 @@
 
 .section2Color {
   background-color: #1a1837;
-  z-index: 2;
 }
 
 .section2Div2 {
