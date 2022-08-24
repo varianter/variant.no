@@ -973,6 +973,15 @@
     max-width: 100%;
   }
 
+  .navigationButton1,
+  .navigationButton2,
+  .navigationButton3,
+  .navigationButton4,
+  .navigationButton5,
+  .navigationButton6 {
+    width: auto;
+  }
+
   .h4Section1 {
     margin-top: 0px;
     font-family: 'Recoleta';
