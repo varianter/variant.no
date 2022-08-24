@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import NewVariants from './img/newVariants';
 import Map from './img/map';
 import style from './index.module.css';
 import HandBooKPages from './utils/handBookPages';
@@ -9,9 +8,11 @@ import ApplyAsDesignerBiggerBlob from './img/søkSomDesignerBigBlob';
 import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
 import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 import ReadMoreArrow from './img/lesMerPil';
+import SummerjobSelected from './img/sommerjobbSVGSelected';
+import Job from './img/fastjobbSVG';
 
 const Content = () => {
-  const blobSection1 = require('./img/section1Blob.png');
+  const blobSection1 = require('./img/section1BlobSummer.png');
   const Marius = require('./img/Marius.png');
   const Even = require('./img/Even.png');
   const summerStudent1 = require('./img/Vilde summerstudent.png');
@@ -64,7 +65,14 @@ const Content = () => {
       <div className={style.scrollContainer} id="scrollContainer">
         <section className={style.section1} id="forside">
           <span className={style.searchNewVariants}>
-            <NewVariants />
+            <h3 className={style.section1H3}>Jeg ser etter</h3>
+            <div>
+              <SummerjobSelected />
+            </div>
+            <a href="/nyutdannet">
+              <Job />
+            </a>
+            <h3 className={style.in2023}>i 2023</h3>
           </span>
           <br />
           {/* Navigation bar on the right side */}
