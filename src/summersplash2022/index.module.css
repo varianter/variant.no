@@ -63,6 +63,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 34px;
+  margin-top: 1%;
 }
 
 .eller {
@@ -71,6 +72,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 34px;
+  margin-top: 1%;
 }
 
 .section2Heading,
@@ -121,6 +123,7 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 53px;
+  margin-top: 0px;
 }
 
 .underHeader {
@@ -129,9 +132,9 @@
 
 .imageBlob1 {
   position: relative;
-  left: 30%;
-  height: 70%;
-  bottom: 50%;
+  left: 40%;
+  height: 60%;
+  bottom: 40%;
   width: auto;
 }
 
@@ -693,7 +696,7 @@
   }
 
   .section5 {
-    height: 2300px;
+    height: 2700px;
   }
 
   .section6 {
@@ -959,6 +962,15 @@
 
   .section1 {
     overflow: hidden;
+    height: 1200px;
+  }
+
+  .summerjobSelected {
+    width: 100%;
+  }
+
+  .job {
+    width: 89%;
   }
 
   .navigationSlider {
@@ -1184,11 +1196,14 @@
   .summerstudent3picture {
     width: 40%;
     height: 40%;
+    float: left;
+    position: relative;
+    bottom: 20%;
   }
 
   /* Section 4 mobile*/
   .whyWorkAtVariant {
-    height: 1500px;
+    height: 1600px;
   }
 
   .section4Heading {
@@ -1200,6 +1215,10 @@
     background-color: #423d89;
     color: white;
     padding: 5%;
+  }
+
+  .handbookParagraphs {
+    width: 100%;
   }
 
   /* Section 5 mobile*/

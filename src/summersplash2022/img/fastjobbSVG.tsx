@@ -1,6 +1,9 @@
+import style from '../index.module.css';
+
 const Job = () => {
   return (
     <svg
+      className={style.job}
       xmlns="http://www.w3.org/2000/svg"
       width="316"
       height="97"
