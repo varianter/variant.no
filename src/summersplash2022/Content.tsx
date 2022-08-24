@@ -41,7 +41,7 @@ const Content = () => {
           {/* Navigation bar on the right side */}
           <div className={style.navigationSlider}>
             <a href="#forside" className={style.navigationButton6}>
-              <p className={style.tests}>Forside</p>
+              Forside
             </a>
             <a
               href="#hvagarsommerjobbenutpa"
@@ -121,7 +121,9 @@ const Content = () => {
                   trenger å lure på hvordan kontrakten din vil se ut for
                   sommeren, den ligger nemlig åpent og tilgjengelig på våre
                   nettsider. Timelønnen trenger du heller ikke å lure på, den er
-                  på 265 kr. Under “Hvorfor jobbe i Variant?” ned kan du lese
+                  på 271,83kr (eller 100
+                  <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e</em>
+                  &#128526;). Under “Hvorfor jobbe i Variant?” ned kan du lese
                   mer om hva Variant står for og tilbyr.
                 </p>
               </div>

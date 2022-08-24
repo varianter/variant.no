@@ -72,19 +72,14 @@
   line-height: 34px;
 }
 
-.section2Heading {
-  margin-bottom: 20px;
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 59px;
-}
-
+.section2Heading,
 .section3Heading,
+.section4Heading,
 .section5Heading,
 .section6Heading,
-.mostImportantForYou {
+.mostImportantForYou,
+.handbookHeaderDeskotop {
+  margin-bottom: 20px;
   font-family: 'Recoleta';
   font-style: normal;
   font-weight: 400;
@@ -109,6 +104,7 @@
 
 .section1 {
   background-color: #f4f1e7;
+  z-index: 1;
 }
 
 .underHeader {
@@ -136,6 +132,7 @@
 
 .section2Color {
   background-color: #1a1837;
+  z-index: 2;
 }
 
 .section2Div2 {
@@ -178,20 +175,26 @@
 }
 
 .summerstudent1picture {
+  position: relative;
   margin-top: 5%;
   margin-left: 7%;
   width: 30%;
-  height: auto;
-  position: static;
+  height: 30%;
 }
 
 .summerstudent2picture {
+  position: relative;
   width: 32%;
+  height: 32%;
   margin-right: 10%;
+  bottom: 50px;
 }
 
 .summerstudent3picture {
+  position: relative;
   width: 37%;
+  height: 37%;
+  bottom: 150px;
 }
 
 .summerstudent1Paragraph,
@@ -205,7 +208,6 @@
   font-size: 18px;
   line-height: 26px;
   position: relative;
-  height: fit-content;
 }
 
 .summerstudent1Paragraph {
@@ -214,10 +216,9 @@
 }
 
 .summerstudent2Paragraph {
-  width: 30%;
-  padding-top: 8%;
-  margin-left: 10%;
-  width: 100%;
+  width: 55%;
+  padding-top: 3%;
+  margin-left: 45%;
   text-align: right;
 }
 
@@ -226,12 +227,11 @@
 }
 
 .summerstudent3Paragraph {
-  width: 70%;
-  padding-top: 15%;
+  width: 50%;
+  padding-top: 2%;
 }
 
 /* Section 5 styling */
-
 .section5 {
   background-color: #5d0a2b;
   color: white;
@@ -468,7 +468,8 @@
   color: white;
 }
 
-.positionTextLeft {
+.positionTextLeft,
+.handbookParagraphs {
   padding-top: 1%;
   width: 500px;
   font-family: 'Graphik Web';
@@ -478,11 +479,14 @@
   line-height: 27px;
 }
 
-.positionTextSubLeft,
+.handbookParagraphs {
+  width: 68%;
+}
+
 .section5Heading {
   padding-top: 1%;
   padding-bottom: 2%;
-  width: 80%;
+  width: 68%;
 }
 
 .section5Heading {
@@ -493,14 +497,14 @@
   line-height: 59px;
 }
 
-.mostImportantForYou {
-  padding-top: 10%;
-}
-
 .officeMap {
   position: relative;
   margin-left: 40%;
   margin-top: -35%;
+}
+
+.mostImportantForYou {
+  padding-top: 10%;
 }
 
 .handbook {
@@ -518,6 +522,10 @@
   background-color: #fff3f2;
 }
 
+.handbookGrid {
+  padding-top: 2%;
+}
+
 .handbookChildButton {
   display: flex;
   text-align: left;
@@ -527,10 +535,11 @@
 }
 
 .handbookButton1 {
+  color: #333333;
   background: none;
   border: none;
-  margin-top: 2%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
@@ -540,20 +549,22 @@
 
 .handbookButton1:hover,
 .handbookButton1:focus {
+  color: #333333;
   background: #03dac6;
   border: none;
-  margin-top: 2%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .handbookButton2 {
+  color: #333333;
   background: none;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
@@ -563,20 +574,22 @@
 
 .handbookButton2:hover,
 .handbookButton2:focus {
+  color: #333333;
   background: #9591ce;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .handbookButton3 {
+  color: #333333;
   background: none;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
@@ -586,20 +599,22 @@
 
 .handbookButton3:hover,
 .handbookButton3:focus {
+  color: #333333;
   background: #b91456;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .handbookButton4 {
+  color: #333333;
   background: none;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
@@ -609,50 +624,14 @@
 
 .handbookButton4:hover,
 .handbookButton4:focus {
+  color: #333333;
   background: #ffc4bc;
   border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
+  margin-top: 4%;
+  padding: 3% 3%;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
-}
-
-.handbookButton5 {
-  background: none;
-  border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-  display: grid;
-}
-
-.handbookButton5:hover,
-.handbookButton5:focus {
-  background: #423d89;
-  color: white;
-  border: none;
-  margin-top: 6%;
-  padding: 1% 1%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-}
-
-.handbookHeaderDeskotop {
-  padding-top: 1%;
-  padding-bottom: 2%;
-  width: 100%;
-  font-family: 'Recoleta';
-  font-style: normal;
-}
-
-.handbookParagraphHeader {
-  padding-top: 5%;
 }
 
 .section5HandbookLinkMobile {
@@ -662,7 +641,7 @@
 .readMoreArrow {
   position: relative;
   right: 370px;
-  top: 170px;
+  top: 130px;
 }
 
 @media (max-width: 900px) {
@@ -1218,8 +1197,16 @@
   .whyWorkAtVariant,
   .section6 {
     height: auto;
+    scroll-behavior: smooth;
   }
 
+  .scrollContainer {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  /* Navigation button */
   .navigationSlider {
     padding-top: 0%;
     display: flex;
@@ -1229,6 +1216,9 @@
     left: 60%;
     bottom: 25%;
     width: 35%;
+    /* mix-blend-mode: difference; */
+    color: white;
+    mix-blend-mode: exclusion;
   }
 
   .navigationButton1,
@@ -1242,8 +1232,10 @@
     font-weight: 400;
     font-size: 120%;
     line-height: 23px;
-    text-shadow: 1px 1px black;
     color: white;
+    /* text-shadow: 1px 1px red; */
+    mix-blend-mode: difference;
+    z-index: 5;
   }
 
   .navigationButton1,
@@ -1253,16 +1245,16 @@
   .navigationButton5,
   .navigationButton6,
   .navigationButton1:hover,
-  .navigationButton1:focus,
   .navigationButton2:hover,
-  .navigationButton2:focus,
   .navigationButton3:hover,
-  .navigationButton3:focus,
   .navigationButton4:hover,
-  .navigationButton4:focus,
   .navigationButton5:hover,
-  .navigationButton5:focus,
   .navigationButton6:hover,
+  .navigationButton1:focus,
+  .navigationButton2:focus,
+  .navigationButton3:focus,
+  .navigationButton4:focus,
+  .navigationButton5:focus,
   .navigationButton6:focus,
   .navigationButton1:link,
   .navigationButton2:link,
@@ -1283,12 +1275,65 @@
     margin-top: 5%;
     text-align: right;
     text-decoration: none;
+    mix-blend-mode: difference;
+  }
+
+  .navigationButton1:hover,
+  .navigationButton1:focus,
+  .navigationButton1:visited {
+    background: #b91456;
+    color: white;
+    mix-blend-mode: difference;
+  }
+
+  .navigationButton2:hover,
+  .navigationButton2:focus {
+    background: #ffc4bc;
+  }
+
+  .navigationButton2:visited {
+    color: white;
+  }
+
+  .navigationButton3:hover,
+  .navigationButton3:focus,
+  .navigationButton3:visited {
+    background: #423d89;
+    color: white;
+  }
+
+  .navigationButton4:hover,
+  .navigationButton4:focus {
+    background: #03dac6;
+  }
+
+  .navigationButton4:visited {
+    color: white;
+  }
+
+  .navigationButton5:hover,
+  .navigationButton5:focus {
+    background: #9591ce;
+  }
+
+  .navigationButton5:visited {
+    color: white;
+  }
+
+  .navigationButton6:hover,
+  .navigationButton6:focus {
+    background: #fad2e2;
+  }
+
+  .navigationButton6:visited {
+    color: white;
   }
 
   /* Headings */
   .section3Heading,
   .section5Heading,
   .section6Heading,
+  .section4Heading,
   .mostImportantForYou {
     font-family: 'Recoleta';
     font-style: normal;
@@ -1353,7 +1398,7 @@
   }
 
   .section2Div2 {
-    margin-top: 50%;
+    /* margin-top: 50%; */
   }
 
   .section2Paragraph {
@@ -1365,10 +1410,10 @@
   .officeMap {
     position: relative;
     width: 70%;
-    height: auto;
-    top: 500px;
+    height: fit-content;
+    display: flex;
     right: 13%;
-    margin-bottom: 10%;
+    padding-top: 13%;
   }
 
   /* Section 3 */
