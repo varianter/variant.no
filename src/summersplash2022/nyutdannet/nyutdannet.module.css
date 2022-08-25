@@ -1,0 +1,140 @@
+/* Sections styling */
+.section1,
+.section5 {
+  padding: 5%;
+  padding-left: 7%;
+  margin-bottom: 0%;
+}
+
+/* global var */
+:root {
+  /* Heading */
+  --recoleta-font-family: 'Recoleta';
+  --heading-font-style: normal;
+  --heading-font-weight: 400;
+  --heading-font-size: 36px;
+  --headig-line-height: 53px;
+
+  /* paragraph */
+  --graphik-font-family: 'Graphik Web';
+  --paragraph-font-style: normal;
+  --paragraph-font-size: 18px;
+  --paragraph-line-height: 34px;
+}
+
+/* Navgation */
+.navigationSlider {
+  padding-top: 0%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: flex-end;
+  right: 2%;
+  bottom: 25%;
+  width: 250px;
+}
+
+.navigationButton1,
+.navigationButton2,
+.navigationButton3,
+.navigationButton4,
+.navigationButton5,
+.navigationButton6,
+.navigationButton1:hover,
+.navigationButton1:focus,
+.navigationButton2:hover,
+.navigationButton2:focus,
+.navigationButton3:hover,
+.navigationButton3:focus,
+.navigationButton4:hover,
+.navigationButton4:focus,
+.navigationButton5:hover,
+.navigationButton5:focus,
+.navigationButton6:hover,
+.navigationButton6:focus,
+.navigationButton1:link,
+.navigationButton2:link,
+.navigationButton3:link,
+.navigationButton4:link,
+.navigationButton5:link,
+.navigationButton6:link,
+.navigationButton1:visited,
+.navigationButton2:visited,
+.navigationButton3:visited,
+.navigationButton4:visited,
+.navigationButton5:visited,
+.navigationButton6:visited {
+  font-family: var(--recoleta-font-family);
+  font-style: var(--paragraph-font-style);
+  font-weight: 400;
+  font-size: var(--paragraph-font-size);
+  line-height: 23px;
+  color: white;
+  width: 90%;
+  padding: 5%;
+  text-align: right;
+  text-decoration: none;
+}
+
+/* Section1 */
+/* Section1 fonts */
+
+.section1 {
+  background-color: #1a1837;
+  color: white;
+}
+
+/* Section1 Paragraph */
+.section1 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+}
+
+.søkHer {
+  color: white;
+}
+
+/* Section1 Heading */
+.section1H3,
+.in2023 {
+  font-family: var(--recoleta-font-family);
+  font-style: var(--heading-font-style);
+  font-weight: var(--heading-font-weight);
+  font-size: var(--heading-font-size);
+  line-height: var(--headig-line-height);
+}
+
+/* Section 1 image*/
+.imageBlob1 {
+  position: relative;
+  left: 40%;
+  width: 50%;
+  bottom: 10rem;
+}
+
+/* Section 5*/
+.section5 {
+  background-color: #5d0a2b;
+  color: white;
+}
+
+.section5H3 {
+  font-family: var(--recoleta-font-family);
+  font-style: var(--heading-font-style);
+  font-weight: var(--heading-font-weight);
+  font-size: var(--heading-font-size);
+  line-height: var(--headig-line-height);
+}
+
+.section5 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+
+  width: 21%;
+  margin-top: 2%;
+}

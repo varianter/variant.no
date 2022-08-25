@@ -13,7 +13,7 @@ import Job from './img/fastjobbSVG';
 import { changeNavbarColor } from './utils/utils';
 
 const Content = () => {
-  const blobSection1 = require('./img/section1BlobSummer.png');
+  const blobSection1 = require('./img/section1Blob.png');
   const Marius = require('./img/Marius.png');
   const Even = require('./img/Even.png');
   const summerStudent1 = require('./img/Vilde summerstudent.png');
