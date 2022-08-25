@@ -7,7 +7,7 @@ const Apply = () => {
 
   return (
     <section className={style2.section7} id="soksommerjobb">
-      <h3 className={style2.section7Heading}>Søk sommerjobb</h3>
+      <h3 className={style2.heading}>Søk sommerjobb</h3>
       <p>
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
         spørsmål om sommerjobben eller Variant? Ta gjerne kontakt med meg.

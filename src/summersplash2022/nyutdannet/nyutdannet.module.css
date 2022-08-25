@@ -1,5 +1,7 @@
 /* Sections styling */
 .section1,
+.section2,
+.section4,
 .section5,
 .section7 {
   padding: 5%;
@@ -24,9 +26,7 @@
 }
 
 /* Headings */
-.section1H3,
-.in2023,
-.section7Heading {
+.heading {
   font-family: var(--recoleta-font-family);
   font-style: var(--heading-font-style);
   font-weight: var(--heading-font-weight);
@@ -121,24 +121,58 @@
   bottom: 10rem;
 }
 
+/* Section 2 */
+.section2 {
+  height: auto;
+  background-color: '#F4F1E7';
+}
+
+.section2Flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.section2Text {
+  width: 50%;
+}
+
+.officeMap2 {
+  width: 100%;
+  position: relative;
+  top: 6rem;
+  margin-bottom: 20%;
+}
+
 /* Section 3 */
 
 .timeLine2 {
   width: 100%;
 }
 
+/* Section 4 */
+.wrapper {
+  width: 40%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  margin-right: 2%;
+}
+
+.section4Flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+}
+
+.section4Text {
+  width: 40%;
+  align-self: center;
+  margin-left: 7%;
+}
+
 /* Section 5*/
 .section5 {
   background-color: #5d0a2b;
   color: white;
-}
-
-.section5H3 {
-  font-family: var(--recoleta-font-family);
-  font-style: var(--heading-font-style);
-  font-weight: var(--heading-font-weight);
-  font-size: var(--heading-font-size);
-  line-height: var(--headig-line-height);
 }
 
 .section5 p {
@@ -164,6 +198,31 @@
 
 .contactMail {
   color: white;
+}
+
+/* Breakpoint for Lønnskalkulator*/
+@media (max-width: 1134px) {
+  .section4Flex {
+    display: block;
+  }
+  .section4Text {
+    width: auto;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+/* Breakpoint for office map*/
+@media (max-width: 1134px) {
+  .section2Flex {
+    display: block;
+  }
+
+  .section2Text {
+    width: auto;
+  }
 }
 
 /* Mobile */

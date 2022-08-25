@@ -56,7 +56,7 @@ SalaryCalculator.getInitialProps = (ctx) => {
 
 export default SalaryCalculator;
 
-const Calculator = (props: Props) => {
+export const Calculator = (props: Props) => {
   const {
     selectedYear,
     setSelectedYear,

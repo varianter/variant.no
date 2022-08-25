@@ -18,14 +18,14 @@ const LandingPage = () => {
     <>
       <section className={style.section1} id="jobForside">
         <span className={style.searchNewVariants}>
-          <h3 className={style.section1H3}>Jeg ser etter</h3>
+          <h3 className={style.heading}>Jeg ser etter</h3>
           <a href="/sommerjobb">
             <SummerJob />
           </a>
           <div>
             <JobSelected />
           </div>
-          <h3 className={style.in2023}>i 2023</h3>
+          <h3 className={style.heading}>i 2023</h3>
         </span>
         <br />
         {/* Navigation bar on the right side */}

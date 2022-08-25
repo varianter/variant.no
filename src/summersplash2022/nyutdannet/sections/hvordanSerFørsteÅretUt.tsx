@@ -4,7 +4,7 @@ const FirstYear = () => {
   return (
     <>
       <section className={style.section5}>
-        <h3 className={style.section5H3}>Hvordan ser første året ut?</h3>
+        <h3 className={style.heading}>Hvordan ser første året ut?</h3>
         <p>
           For å bidra til personlig og faglig utvikling av nyutdanne
           gjennomfører vi oppstartsprogrammet variant:skudd. Programmet
