@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Map from './img/map';
+import MapMobile from './img/mapMobile';
 import style from './index.module.css';
 import HandBooKPages from './utils/handBookPages';
 import TimeLine from './img/tidslinje';
@@ -46,14 +47,15 @@ const Content = () => {
       <div className={style.scrollContainer} id="scrollContainer">
         <section className={style.section1} id="forside">
           <span className={style.searchNewVariants}>
-            <h3 className={style.section1H3}>Jeg ser etter</h3>
+            <h3 className={style.section1H3}>
+              Vi ser etter nye varianter! Hva ser du etter?
+            </h3>
             <div>
               <SummerjobSelected />
             </div>
             <a href="/nyutdannet">
               <Job />
             </a>
-            <h3 className={style.in2023}>i 2023</h3>
           </span>
           <br />
           {/* Navigation bar on the right side */}
@@ -157,6 +159,9 @@ const Content = () => {
             </div>
             <div className={style.officeMap}>
               <Map />
+            </div>
+            <div className={style.officeMapMobile}>
+              <MapMobile />
             </div>
           </section>
         </div>

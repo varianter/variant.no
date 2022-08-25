@@ -171,10 +171,8 @@
   flex-direction: column;
 }
 
-.officeMap {
-  width: 75%;
-  position: relative;
-  right: 10%;
+.officeMapMobile {
+  display: none;
 }
 
 /* Section 3 styling */
@@ -547,6 +545,11 @@
   margin-left: 40%;
   margin-top: -35%;
 }
+.officeMap {
+  width: 75%;
+  position: relative;
+  right: 10%;
+}
 
 .mostImportantForYou {
   padding-top: 10%;
@@ -710,6 +713,10 @@
     overflow: hidden;
   }
 
+  .section6 {
+    height: 1100px;
+  }
+
   /* Position to static */
   .imageBlob1 {
     position: static;
@@ -728,10 +735,16 @@
     position: static;
   }
 
-  .officeMap {
+  .officeMapMobile {
+    display: block;
     position: static;
-    margin: 2%;
-    width: 330px;
+    margin: 0;
+    width: 100%;
+    /* bottom: 50px; */
+  }
+
+  .officeMap {
+    display: none;
   }
 
   .søknadstips {
@@ -966,7 +979,6 @@
   }
 
   /* Section 1 mobile*/
-
   .section1 {
     overflow: hidden;
     height: 1200px;
@@ -974,10 +986,12 @@
 
   .summerjobSelected {
     width: 100%;
+    max-width: fit-content;
   }
 
   .job {
-    width: 89%;
+    width: 100%;
+    max-width: fit-content;
   }
 
   .navigationSlider {
@@ -1097,7 +1111,6 @@
   }
 
   /* Section 2 mobile*/
-
   .section2 {
     height: 1700px;
     width: 100%;
@@ -1118,7 +1131,6 @@
   }
 
   /* Section 3 mobile*/
-
   .section3Heading {
     font-family: 'Graphik Web';
     font-style: normal;
@@ -1524,6 +1536,10 @@
     display: flex;
     right: 13%;
     padding-top: 13%;
+  }
+
+  .officeMapMobile {
+    display: none;
   }
 
   /* Section 3 */
