@@ -1,10 +1,10 @@
-import JobSelected from '../img/fastjobbSVGSelected';
-import SummerJob from '../img/SommerjobbSVG';
-import style from '../index.module.css';
 import { useEffect, useState } from 'react';
-import { changeNavbarColor } from '../utils/utils';
+import { changeNavbarColor } from 'src/summersplash2022/utils/utils';
+import style from 'src/summersplash2022/index.module.css';
+import SummerJob from 'src/summersplash2022/img/SommerjobbSVG';
+import JobSelected from 'src/summersplash2022/img/fastjobbSVGSelected';
 
-const Nyutdannet = () => {
+const LandingPage = () => {
   const blobSection1 = require('../img/section1BlobSummer.png');
 
   const [offset, setOffset] = useState(0);
@@ -102,4 +102,4 @@ const Nyutdannet = () => {
   );
 };
 
-export default Nyutdannet;
+export default LandingPage;
