@@ -96,7 +96,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
             </label>
 
             <label htmlFor="comparePension">
-              Tjener du over 7.1G kan arbeidsgiver
+              Pensjon, i prosent (over 7.1G)
               <RangeSlider
                 min={2}
                 max={25}
@@ -117,7 +117,10 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
         <PensionGraph
           data={[
             {
-              text: `[sammenlign]`,
+              text: `Sammenligning, ${(
+                ((pensionBelow7G + pensionAbove7G) * 100) /
+                compareSalary
+              ).toPrecision(2)}%`,
               num: pensionBelow7G + pensionAbove7G,
               settings: {
                 gradient: ['#534DAC', '#FFE7E4'],

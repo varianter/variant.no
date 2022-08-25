@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: auto calc((300 / 16) * 1rem);
   grid-template-rows: var(--ensure-next-content-in-view);
-  grid-auto-rows: minmax(50vh, max-content);
+  grid-auto-rows: max-content;
   align-items: center;
   gap: var(--grid-gap) 3rem;
   padding: 2rem;

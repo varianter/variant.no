@@ -33,15 +33,16 @@ const CalculatorMain = ({ children }: { children: ReactNode }) => {
 const maxYear = getMaxYear();
 
 const DEGREE: { [key: string]: string } = {
-  bachelor: 'Bachelor',
-  master: 'Master',
+  bachelor: 'bachelor',
+  master: 'master',
 };
 
 export default function Calculator() {
   const [selectedYear, setSelectedYear] = useState(2015);
   const [degree, setDegree] = useState('bachelor');
   const thisYear = new Date().getFullYear();
-  const year = selectedYear + (degree === 'bachelor' ? 1 : 0);
+  const year =
+    clampNumber(selectedYear, 1990, maxYear) + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
 
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
@@ -50,7 +51,8 @@ export default function Calculator() {
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience =
-    firstDayOfTheYear(maxYear).getFullYear() - selectedYear;
+    firstDayOfTheYear(maxYear).getFullYear() -
+    clampNumber(selectedYear, 1990, maxYear);
 
   const totalExperience =
     yearsOfExperience === 0
@@ -60,6 +62,16 @@ export default function Calculator() {
   function onDegreeChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
     setDegree(value);
+  }
+
+  function clampNumber(num: number, min: number, max: number) {
+    if (num > max) {
+      return max;
+    }
+    if (num < min) {
+      return min;
+    }
+    return num;
   }
 
   function onSelectedYearChange(value: number) {
