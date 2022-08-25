@@ -97,9 +97,7 @@ export default function Cph22() {
           </li>
           <li>
             <p>13:00</p>
-            <p>
-              🎨 Variantdag! Reisefølger har fri, og kan sjekke ut København
-            </p>
+            <p>🎨 Variantdag! Følger har fri, og kan sjekke ut København</p>
           </li>
           <li>
             <p>17:00</p>
