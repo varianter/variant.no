@@ -41,7 +41,7 @@ const Diversity = () => {
         <a href="#oda">ODA-Nettverket</a>
         <div className={style['nav-row__arrow-comment']}>
           <p>Klikk for å hoppe</p>
-          <img src="/images/curved_arrow.svg" />
+          <img alt="liten pil" src="/images/curved_arrow.svg" />
         </div>
       </nav> */}
 
