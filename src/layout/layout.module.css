@@ -1,5 +1,7 @@
 .main {
   position: relative;
+}
+.main--overflow {
   overflow-x: hidden;
 }
 

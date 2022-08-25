@@ -21,8 +21,7 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 I 2023 tilbyr vi sommerjobb i hele tre(!) byer: I Trondheim søker vi 3 designere. I Oslo 2, og i vårt nyeste kontor i Bergen ser vi etter 1.
 Vi har tro på at både kunder og sluttbrukere får det beste resultatet når vi jobber i tverrfaglige team. Derfor rekrutterer vi også utviklere parallelt. Sammen vil dere jobbe på et av våre spennende oppdrag for kundene våre. Selvfølgelig med god støtte, oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
-Årets sommervarianter fikk blant annet bryne seg på tjenestekartlegging for Opplev Oppdal, bookingtjeneste for Inatur, oppfølging av fiskehelse for Piscada og digital støtte av trafikksikkerhetsinspeksjoner i Statens vegvesen. 
-
+Årets sommervarianter fikk blant annet bryne seg på tjenestekartlegging for Opplev Oppdal, bookingtjeneste for Inatur, oppfølging av fiskehelse for Piscada og digital støtte av trafikksikkerhetsinspeksjoner i Statens vegvesen.
 
 ### Hvorfor jobbe i Variant?
 
@@ -45,14 +44,15 @@ Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en unaturlig situa
 Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant på lik linje med de fast ansatte. Du får tilgang til vår Slack, og mulighet til å delta på alle faglige og [sosiale arrangementer](https://handbook.variant.no/quality_manual#sosiale-aktiviteter). Dette inkluderer blant annet spill- og fagkvelder, nyttårskalas og [variantdager](https://handbook.variant.no/handbook#variantdag), som er fine muligheter til å bli bedre kjent før sommerjobben starter i juni.
 
 ### Hvordan ser alt dette ut i kalendertid?
+
 </br>
 
-- Vi går gjennom alle søknadene 3. - 4. oktober. Da vil vi også fortløpende sende ut invitasjoner til kaffeprater. 
-- Kaffeprater blir så gjennomført primært 5. og 6. oktober. 
+- Vi går gjennom alle søknadene 3. - 4. oktober. Da vil vi også fortløpende sende ut invitasjoner til kaffeprater.
+- Kaffeprater blir så gjennomført primært 5. og 6. oktober.
 - Vi vil starte å sende ut tilbud den 7. oktober.
 
 Selve sommerjobben er delt opp i to perioder, hvor man har ferie 3 uker i fellesferien.
-I 2023 vil første arbeidsperiode være fra 12. juni - 7. juli (4 uker). Andre arbeidsperiode starter opp igjen 31. juli og varer frem til 11. august (2 uker). 
+I 2023 vil første arbeidsperiode være fra 12. juni - 7. juli (4 uker). Andre arbeidsperiode starter opp igjen 31. juli og varer frem til 11. august (2 uker).
 
 <div class="right">
 
