@@ -85,18 +85,18 @@ const Diversity = () => {
             <section className={style['project-article__text']}>
               <h3>TENK Tech Camp</h3>
               <p>
-                Jenteprosjektet ADA jobber for å bidra til kjønnsbalanse i
-                teknologi- og ingeniørfag for studenter. De har tett tilknytning
-                til næringslivet - deriblant oss.
+                TENK tech camp arrangeres hvert år for jenter på ungdomsskolen og 
+                videregående. 
               </p>
-              <p>
-                Formålet deres er å å øke trivselen og motivere jenter til å
-                fullføre studieløpet innenfor disse fagområdene.
+                <p>
+                Campen går over to dager hvor jentene får et innblikk i teknologiverden, 
+                møter kvinnelige forbilder fra bransjen, får veiledning og opplever læreglede.
               </p>
-              <p>Dette synes vi er skikkelig kult!</p>
-              <p>
-                Derfor har vi et samarbeid med ADA hvor vi har en mentorrolle,
-                stiller lokalene våre til disposisjon og arrangerer eventer.
+              <p> Dette synes vi er spesielt viktig og en god mulighet for kommende 
+                tech-generasjoner.
+              </p>
+              Vi har et samarbeid med TENK Tech Camp hvor Sarah er et av forbildene, 
+              og bidrar med en veileder- og mentorrolle under campen. 
               </p>
             </section>
             <img
