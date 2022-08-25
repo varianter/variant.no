@@ -70,7 +70,7 @@ export default function Cph22() {
 
         <ul>
           <li>
-            <p>06:30</p>
+            <p>06:00</p>
             <p>🧳 Innsjekk Værnes</p>
           </li>
           <li>
@@ -80,6 +80,10 @@ export default function Cph22() {
           <li>
             <p>09:05</p>
             <p>✈️ Fly til København - D8 3222</p>
+          </li>
+          <li>
+            <p>11:00</p>
+            <p>🚌 Privat buss til Kælderen</p>
           </li>
           <li>
             <p>12:00</p>
@@ -100,18 +104,17 @@ export default function Cph22() {
           <li>
             <p>17:00</p>
             <p>
-              🏢 Vi går til{' '}
+              🏃 Apostlenes hester eller metro til innsjekk på{' '}
               <a
                 href="https://guldsmedenhotels.com/axel-hotel-copenhagen-vesterbro/"
                 target="_blank"
               >
-                Hotel Axel Guldsmeden
+                Axel Guldsmeden
               </a>{' '}
-              og sjekker inn
             </p>
           </li>
           <li>
-            <p>20:00</p>
+            <p>19:00</p>
             <p>
               🍱 Uformell middag på{' '}
               <a href="https://boathouse.dk/" target="_blank">
@@ -152,7 +155,7 @@ export default function Cph22() {
           </li>
           <li>
             <p>17:25</p>
-            <p>💺 Felles transport til Reffen - vi møtes i resepsjonen</p>
+            <p>💺 Felles transport til Reffen - vi møtes utenfor resepsjonen</p>
           </li>
           <li>
             <p>19:00 - 02:00</p>
@@ -203,8 +206,8 @@ export default function Cph22() {
             </p>
           </li>
           <li>
-            <p>16:30</p>
-            <p>🚅 Tog til Kastrup fra København H</p>
+            <p>17:00</p>
+            <p>🚌 Vi hentes av privat buss ved Tivoli</p>
           </li>
           <li>
             <p>17:45</p>
