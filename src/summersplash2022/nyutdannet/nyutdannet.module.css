@@ -1,6 +1,7 @@
 /* Sections styling */
 .section1,
-.section5 {
+.section5,
+.section7 {
   padding: 5%;
   padding-left: 7%;
   margin-bottom: 0%;
@@ -20,6 +21,18 @@
   --paragraph-font-style: normal;
   --paragraph-font-size: 18px;
   --paragraph-line-height: 34px;
+}
+
+/* Headings */
+.section1H3,
+.in2023,
+.section7Heading {
+  font-family: var(--recoleta-font-family);
+  font-style: var(--heading-font-style);
+  font-weight: var(--heading-font-weight);
+  font-size: var(--heading-font-size);
+  line-height: var(--headig-line-height);
+  margin-bottom: 2%;
 }
 
 /* Navgation */
@@ -84,6 +97,10 @@
   color: white;
 }
 
+.sommerjobbHeading {
+  width: auto;
+}
+
 /* Section1 Paragraph */
 .section1 p {
   font-family: var(--graphik-font-family);
@@ -96,22 +113,18 @@
   color: white;
 }
 
-/* Section1 Heading */
-.section1H3,
-.in2023 {
-  font-family: var(--recoleta-font-family);
-  font-style: var(--heading-font-style);
-  font-weight: var(--heading-font-weight);
-  font-size: var(--heading-font-size);
-  line-height: var(--headig-line-height);
-}
-
 /* Section 1 image*/
 .imageBlob1 {
   position: relative;
   left: 40%;
   width: 50%;
   bottom: 10rem;
+}
+
+/* Section 3 */
+
+.timeLine2 {
+  width: 100%;
 }
 
 /* Section 5*/
@@ -137,4 +150,43 @@
 
   width: 21%;
   margin-top: 2%;
+}
+
+/* Section 7 */
+.section7 {
+  background-color: #1a1837;
+  color: white;
+}
+
+.section7 p {
+  width: 40%;
+}
+
+.contactMail {
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  /* Section 1*/
+  .sommerjobbHeading {
+    width: 100%;
+  }
+
+  .imageBlob1 {
+    position: static;
+  }
+
+  .fastjobbheading {
+    width: fit-content;
+  }
+
+  /* Section 5*/
+  .section5 p {
+    width: auto;
+  }
+
+  .section7 p {
+    width: 100%;
+  }
 }

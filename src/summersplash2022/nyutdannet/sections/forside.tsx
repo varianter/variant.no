@@ -29,9 +29,9 @@ const LandingPage = () => {
         </span>
         <br />
         {/* Navigation bar on the right side */}
-        <div className={style.navigationSlider}>
+        {/* <div className={style.navigationSlider}>
           <a
-            href="#forside"
+            href="#jobForside"
             style={{ color: navColor ? 'white' : 'black' }}
             className={style.navigationButton6}
           >
@@ -72,7 +72,7 @@ const LandingPage = () => {
           >
             Søk sommerjobb
           </a>
-        </div>
+        </div> */}
         <div className={style.underHeader}>
           {/* middlertidig link. usikker på hvilken vi skal bruke */}
           <p>
