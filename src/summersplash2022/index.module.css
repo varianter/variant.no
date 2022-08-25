@@ -701,17 +701,13 @@
     height: 850px;
   }
 
-  .section5 {
-    height: 2700px;
-    overflow: hidden;
-  }
-
   .section3 {
     overflow: hidden;
   }
 
-  .section6 {
-    height: 1100px;
+  .section5 {
+    height: 2400px;
+    overflow: hidden;
   }
 
   /* Position to static */
@@ -1037,6 +1033,7 @@
   .navigationButton3:link,
   .navigationButton4:link,
   .navigationButton5:link {
+    font-size: 130%;
     padding: 5%;
     font-family: 'Graphik Web';
     margin-top: 1%;
@@ -1095,8 +1092,8 @@
   .navigationSlider,
   .h4Section1,
   .searchNewVariants {
-    margin-left: 5%;
     margin-right: 5%;
+    /* margin-left: 5%; */
   }
 
   /* Section 2 mobile*/
@@ -1110,7 +1107,7 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 21.0688px;
+    font-size: 130%;
     line-height: 27px;
     background-color: #b91456;
     padding: 5%;
@@ -1126,7 +1123,7 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 140%;
+    font-size: 130%;
     line-height: 27px;
     background-color: #ffc4bc;
     color: black;
@@ -1134,15 +1131,16 @@
   }
 
   .section3 {
-    height: 900px;
+    height: 1100px;
   }
 
   .summerstudent1 {
     display: static;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
     position: relative;
   }
   .summerstudent2 {
+    padding-bottom: 15%;
     display: static;
     position: relative;
   }
@@ -1157,6 +1155,10 @@
   .summerstudentName1 {
     position: relative;
     left: 30%;
+  }
+
+  .summerstudentName2 {
+    text-align: left;
   }
 
   .summerstudent1Paragraph,
@@ -1175,6 +1177,7 @@
   .summerstudent1Paragraph {
     padding-top: 12%;
     width: 100%;
+    /* Paragraph should be placed a bit to the left */
   }
 
   .summerstudent2Paragraph {
@@ -1185,29 +1188,30 @@
   }
 
   .summerstudent3Paragraph {
-    padding-top: 14%;
-    width: 60%;
+    padding-top: 16%;
+    width: 100%;
   }
 
   .summerstudent1picture {
-    width: 50%;
+    width: 60%;
     height: auto;
     shape-outside: circle() padding-box;
     float: left;
+    right: 15%;
   }
 
   .summerstudent2picture {
+    width: 60%;
     float: right;
     shape-outside: circle() padding-box;
-    width: 60%;
     height: auto;
     margin: 0px;
     margin-right: -20%;
   }
 
   .summerstudent3picture {
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    /* height: 40%; */
     float: left;
     position: relative;
     bottom: 20%;
@@ -1222,7 +1226,7 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 21.0688px;
+    font-size: 130%;
     line-height: 25px;
     background-color: #423d89;
     color: white;
@@ -1239,7 +1243,7 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 21.0688px;
+    font-size: 130%;
     line-height: 27px;
     padding: 5%;
     background-color: #03dac6;
@@ -1250,10 +1254,11 @@
     background: black;
   }
 
-  .Even {
-    position: static;
-    height: 20%;
-    width: auto;
+  .EvenPicture {
+    position: relative;
+    width: 70%;
+    display: flex;
+    margin: auto;
   }
 
   /* Section 6 mobile */
@@ -1268,7 +1273,7 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 21.0688px;
+    font-size: 130%;
     line-height: 27px;
     background-color: #b7b4de;
     padding: 5%;

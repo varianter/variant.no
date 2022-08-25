@@ -70,7 +70,7 @@ const Content = () => {
               style={{ color: navColor ? 'white' : 'black' }}
               className={style.navigationButton1}
             >
-              Hva går sommerjobben <br></br>ut på?
+              Hva går sommerjobben ut på?
             </a>
             <a
               href="#hvameneraretssommerstudenter"
@@ -327,7 +327,7 @@ const Content = () => {
                   starter i juni.
                 </p>
                 <div className={style.Even}>
-                  <img src={Even} alt="Even" />
+                  <img src={Even} className={style.EvenPicture} alt="Even" />
                 </div>
               </div>
               <div className={style.section5Div2}>
