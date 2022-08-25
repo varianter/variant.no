@@ -68,6 +68,7 @@ type Offer = {
   careers_apply_url: string;
   id: number;
   position: number;
+  department: string;
   location: string;
   company_name: string;
 };
@@ -77,10 +78,7 @@ type OfferResult = {
 };
 const API_URL = 'https://variantas.recruitee.com/api/offers/';
 async function getValidityStatuses(department?: Office): Promise<Offer[]> {
-  let url = department
-    ? `${API_URL}?department=${officeToDepartment(department)}`
-    : API_URL;
-  const result = await fetch(url);
+  const result = await fetch(API_URL);
   if (!result.ok) {
     throw new Error('Could not fetch data from Recruitee');
   }
@@ -90,23 +88,30 @@ async function getValidityStatuses(department?: Office): Promise<Offer[]> {
     throw new Error('Could not fetch data from Recruitee');
   }
 
+  let offers: Offer[] = [];
   for (let offer of data.offers) {
     if (!offer.careers_apply_url) {
       throw new Error('Could not fetch data from Recruitee');
     }
+
+    if (!department) {
+      offers.push(offer);
+    } else if (offer.department.match(officeToDepartmentRegex(department))) {
+      offers.push(offer);
+    }
   }
-  return data.offers;
+  return offers;
 }
 
 // Loose coupling between internal types and departments in Recruitee
-function officeToDepartment(department: Office) {
+function officeToDepartmentRegex(department: Office) {
   switch (department) {
     case 'bergen':
-      return 'Bergen';
+      return /bergen/i;
     case 'oslo':
-      return 'Oslo';
+      return /oslo/i;
     case 'trondheim':
-      return 'Trondheim';
+      return /trondheim/i;
   }
 }
 
