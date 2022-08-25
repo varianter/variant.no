@@ -159,7 +159,7 @@
 
 .section2Paragraph {
   width: 50%;
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -228,12 +228,18 @@
 .summerstudentName,
 .summerstudentName1,
 .summerstudentName2 {
-  font-family: 'Recoleta';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
   position: relative;
+}
+
+.summerstudentName,
+.summerstudentName1,
+.summerstudentName2 {
+  font-family: 'Recoleta';
 }
 
 .summerstudent1Paragraph {
@@ -265,7 +271,7 @@
 }
 
 .section5HeadingH4 {
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -279,7 +285,7 @@
 
 .section5ParagraphLeft {
   width: 500px;
-  font-family: 'Graphik';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -409,7 +415,7 @@
 .navigationButton4,
 .navigationButton5,
 .navigationButton6 {
-  font-family: 'Recoleta';
+  font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1027,6 +1033,7 @@
   .navigationButton4:link,
   .navigationButton5:link {
     padding: 5%;
+    font-family: 'Graphik Web';
     margin-top: 1%;
     text-align: left;
   }
@@ -1095,7 +1102,7 @@
   }
 
   .section2Heading {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 21.0688px;
@@ -1111,7 +1118,7 @@
   /* Section 3 mobile*/
 
   .section3Heading {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 140%;
@@ -1207,7 +1214,7 @@
   }
 
   .section4Heading {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 21.0688px;
@@ -1224,7 +1231,7 @@
   /* Section 5 mobile*/
 
   .section5Heading {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 21.0688px;
@@ -1243,7 +1250,7 @@
     flex-direction: row-reverse;
   }
   .section6Heading {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 21.0688px;
@@ -1267,6 +1274,12 @@
 }
 
 @media (min-width: 1550px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
   /* 900px*/
   .scrollContainer,
   .section1,
@@ -1292,7 +1305,7 @@
     flex-direction: column;
     position: fixed;
     align-items: flex-end;
-    left: 80%;
+    left: 75%;
     bottom: 25%;
     width: fit-content;
   }
@@ -1303,11 +1316,11 @@
   .navigationButton4,
   .navigationButton5,
   .navigationButton6 {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
     font-size: 120%;
-    line-height: 23px;
+    line-height: 140%;
     color: white;
     /* text-shadow: 1px 1px black; */
   }
@@ -1342,61 +1355,75 @@
   .navigationButton4:visited,
   .navigationButton5:visited,
   .navigationButton6:visited {
+    width: fit-content;
     background: none;
     border: none;
-    padding: 5%;
     cursor: pointer;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: right;
   }
 
   .navigationButton1:hover,
   .navigationButton1:focus,
   .navigationButton1:visited {
+    width: fit-content;
     background: #b91456;
     color: white;
   }
 
   .navigationButton2:hover,
   .navigationButton2:focus {
+    width: fit-content;
     background: #ffc4bc;
   }
 
   .navigationButton2:visited {
+    width: fit-content;
     color: white;
+  }
+
+  .navigationButton2 {
+    width: 20px;
   }
 
   .navigationButton3:hover,
   .navigationButton3:focus,
   .navigationButton3:visited {
     background: #423d89;
+    width: fit-content;
     color: white;
   }
 
   .navigationButton4:hover,
   .navigationButton4:focus {
     background: #03dac6;
+    width: fit-content;
   }
 
   .navigationButton4:visited {
+    width: fit-content;
     color: white;
   }
 
   .navigationButton5:hover,
   .navigationButton5:focus {
+    width: fit-content;
     background: #9591ce;
   }
 
   .navigationButton5:visited {
+    width: fit-content;
     color: white;
   }
 
   .navigationButton6:hover,
   .navigationButton6:focus {
+    width: fit-content;
     background: #fad2e2;
   }
 
   .navigationButton6:visited {
+    width: fit-content;
     color: white;
   }
 
@@ -1469,9 +1496,11 @@
   }
 
   .section2Paragraph {
-    width: 40%;
-    font-size: 120%;
-    line-height: 120%;
+    font-family: 'Graphik Web';
+    font-style: normal;
+    width: 50%;
+    font-size: 110%;
+    line-height: 140%;
   }
 
   .officeMap {
@@ -1490,13 +1519,19 @@
   .summerstudentName,
   .summerstudentName1,
   .summerstudentName2 {
-    font-family: 'Recoleta';
+    font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 120%;
-    line-height: 120%;
+    font-size: 110%;
+    line-height: 140%;
     position: relative;
     height: fit-content;
+  }
+
+  .summerstudentName,
+  .summerstudentName1,
+  .summerstudentName2 {
+    font-family: 'Recoleta';
   }
 
   /* Section 4 */
@@ -1506,8 +1541,17 @@
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 120%;
-    line-height: 120%;
+    font-size: 110%;
+    line-height: 140%;
+  }
+
+  .handbookParagraphs {
+    width: 500px;
+    font-family: 'Graphik Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110%;
+    line-height: 140%;
   }
 
   .readMoreArrow {
@@ -1520,17 +1564,26 @@
   .section6Paragraph,
   .section6Underline,
   .section6Paragraph2,
-  .section5Paragraph {
+  .section5Paragraph,
+  .section5HeadingH4 {
     font-family: 'Graphik Web';
     font-style: normal;
     font-weight: 400;
-    font-size: 120%;
-    line-height: 120%;
+    font-size: 110%;
+    line-height: 140%;
+  }
+
+  .section5HeadingH4 {
+    font-weight: bold;
+  }
+
+  .søknadstips {
+    width: 100%;
   }
 
   .section5ParagraphLeft {
-    font-size: 120%;
-    line-height: 120%;
+    font-size: 110%;
+    line-height: 140%;
   }
 
   .section5Paragraph {

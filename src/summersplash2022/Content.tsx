@@ -101,7 +101,7 @@ const Content = () => {
               style={{ color: navColor ? 'white' : 'black' }}
               className={style.navigationButton1}
             >
-              Hva går sommerjobben ut på
+              Hva går sommerjobben <br></br>ut på?
             </a>
             <a
               href="#hvameneraretssommerstudenter"
@@ -115,7 +115,7 @@ const Content = () => {
               style={{ color: navColor ? 'white' : 'black' }}
               className={style.navigationButton3}
             >
-              Hvorfor jobbe i Variant?
+              Hvorfor akkurat Variant?
             </a>
             <a
               href="#hvaskjerettersoknadsfristen"
@@ -182,7 +182,7 @@ const Content = () => {
                 Timelønnen trenger du heller ikke å lure på, den er på 271,83kr
                 (eller 100
                 <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
-                &#128526;). Under “Hvorfor jobbe i Variant?” ned kan du lese mer
+                &#128526;). Under “Hvorfor akkurat Variant?” ned kan du lese mer
                 om hva Variant står for og tilbyr.
               </p>
             </div>
@@ -204,10 +204,10 @@ const Content = () => {
             />
             <div>
               <p className={style.summerstudent1Paragraph}>
-                “Teamet hos kunden stilte gjerne til rådgivning uansett
-                hva.[...] Jeg følte man ble en del av firmaet selv om det «bare»
-                var en sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker
-                å hjelpe der man kan og løfte hverandre frem.”
+                “Jeg følte man ble en del av firmaet selv om det «bare» var en
+                sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker å
+                hjelpe der man kan og løfte hverandre frem. [...] Teamet hos
+                kunden stilte gjerne til rådgivning uansett hva.”
               </p>
               <p className={style.summerstudentName1}>-Vilde</p>
             </div>
@@ -262,7 +262,7 @@ const Content = () => {
             <div className={style.handbook}>
               <div className={style.handbookChildButton}>
                 <h3 className={style.section4Heading}>
-                  Hvorfor akkurat Variant
+                  Hvorfor akkurat Variant?
                 </h3>
                 <p className={style.positionTextLeft}>
                   Variant er en variant av et konsulentselskap som er raust,
@@ -276,7 +276,7 @@ const Content = () => {
                 <div className={style.handbookGrid}>
                   <button
                     className={style.handbookButton1}
-                    onClick={() => handleOnClick('Formmal og verdier')}
+                    onClick={() => handleOnClick('Formal og verdier')}
                   >
                     Formål og verdier
                   </button>
