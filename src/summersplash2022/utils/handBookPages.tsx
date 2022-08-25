@@ -2,10 +2,10 @@ import { WhichButtonPressed } from './utils';
 import style from '../index.module.css';
 
 const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
-  if (selectedButton === 'Formmal og verdier') {
+  if (selectedButton === 'Formal og verdier') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Formmål og verdier</h3>
+        <h3 className={style.handbookHeaderDeskotop}>Formål og verdier</h3>
         <p className={style.handbookParagraphs}>
           Så, hvorfor Variant? Hvorfor er vi egentlig til? Vårt formål er å
           utvikle samfunnet vi lever i. Flinke personer som tenker nye tanker,
