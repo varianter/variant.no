@@ -1,13 +1,16 @@
 import LandingPage from './sections/forside';
-import style from '../index.module.css';
 import FirstYear from './sections/hvordanSerFørsteÅretUt';
+import WhyVariant from './sections/hvorforAkkurattVariant';
+import Apply from './sections/søkJobb';
 
 const Nyutdannet = () => {
   return (
-    <div className={style.scrollContainer} id="scrollContainer">
+    <>
       <LandingPage />
+      <WhyVariant />
       <FirstYear />
-    </div>
+      <Apply />
+    </>
   );
 };
 

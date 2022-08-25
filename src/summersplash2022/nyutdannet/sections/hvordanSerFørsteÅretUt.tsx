@@ -1,5 +1,5 @@
 import style from '../nyutdannet.module.css';
-import TimeLine from './img/tidslinje';
+import TimeLine2 from '../img/tidslinje';
 const FirstYear = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const FirstYear = () => {
           gjennomføres i løpet av det første året den nyutdannede jobber i
           Variant.{' '}
         </p>
-        <TimeLine />
+        <TimeLine2 />
       </section>
     </>
   );

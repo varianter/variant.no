@@ -1,6 +1,8 @@
-const TimeLine = () => {
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+const TimeLine2 = () => {
   return (
     <svg
+      className={style.timeLine2}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="1293"
@@ -149,4 +151,4 @@ const TimeLine = () => {
   );
 };
 
-export default TimeLine;
+export default TimeLine2;

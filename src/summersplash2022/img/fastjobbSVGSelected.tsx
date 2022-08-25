@@ -1,6 +1,8 @@
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 const JobSelected = () => {
   return (
     <svg
+      className={style.fastjobbheading}
       xmlns="http://www.w3.org/2000/svg"
       width="313"
       height="78"
