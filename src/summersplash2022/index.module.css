@@ -703,10 +703,15 @@
 
   .section5 {
     height: 2700px;
+    overflow: hidden;
+  }
+
+  .section3 {
+    overflow: hidden;
   }
 
   .section6 {
-    height: 850px;
+    height: 1100px;
   }
 
   /* Position to static */
@@ -1239,6 +1244,16 @@
     padding: 5%;
     background-color: #03dac6;
     color: black;
+  }
+
+  .section5Color {
+    background: black;
+  }
+
+  .Even {
+    position: static;
+    height: 20%;
+    width: auto;
   }
 
   /* Section 6 mobile */
