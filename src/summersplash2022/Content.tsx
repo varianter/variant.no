@@ -10,7 +10,6 @@ import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
-import { off } from 'process';
 
 const Content = () => {
   const blobSection1 = require('./img/section1BlobSummer.png');
