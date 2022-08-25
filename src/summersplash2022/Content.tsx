@@ -10,7 +10,6 @@ import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
-import { off } from 'process';
 import { changeNavbarColor } from './utils/utils';
 
 const Content = () => {
