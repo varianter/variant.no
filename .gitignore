@@ -125,3 +125,6 @@ dist
 
 .env.local
 .vercel
+
+# IntelliJ
+.idea
