@@ -103,15 +103,20 @@ export default function Calculator() {
                 }}
               >
                 {totalExperience} gir årslønn og snitt bonus på totalt{' '}
-                <Counter
-                  num={payscale.current + getAverageBonus()}
-                  formatter={formatCurrencyFromNumber}
-                />{' '}
-                kr +{' '}
-                <Counter
-                  num={payscale.current * 0.07}
-                  formatter={formatCurrencyFromNumber}
-                />{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current + getAverageBonus()}
+                    formatter={formatCurrencyFromNumber}
+                  />{' '}
+                  kr
+                </strong>{' '}
+                +{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current * 0.07}
+                    formatter={formatCurrencyFromNumber}
+                  />
+                </strong>{' '}
                 i årlig pensjon.
               </motion.p>
             )}
@@ -385,6 +390,16 @@ export default function Calculator() {
           <TextSplitter>
             <h3>De små og store sakene</h3>
           </TextSplitter>
+          <InView>
+            <p className={style.handbook}>
+              Dette er et uttrekk fra den{' '}
+              <a href="https://handbook.variant.no" rel="noopeneer">
+                åpne håndboka
+              </a>{' '}
+              vår. Om du er nysgjerrig på hvordan ting er i praksis er det mer
+              enn nok innhold å dypdykke i der.
+            </p>
+          </InView>
           <InView>
             <ul>
               <li>

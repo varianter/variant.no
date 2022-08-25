@@ -107,6 +107,10 @@
   margin-left: auto;
 }
 
+.handbook {
+  margin: 2rem 0;
+}
+
 @media (max-width: 900px) {
   .calculator {
     grid-template-columns: 1fr;
@@ -143,7 +147,7 @@
   }
   .calculator-phoneSummary {
     display: flex;
-    gap: 0;
+    gap: 1rem;
   }
   .calculator-controls__summary {
     grid-column: 2 / 3;
