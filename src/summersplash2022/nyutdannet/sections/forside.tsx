@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { changeNavbarColor } from 'src/summersplash2022/utils/utils';
+// import { useEffect, useState } from 'react';
+// import { changeNavbarColor } from 'src/summersplash2022/utils/utils';
 import SummerJob from 'src/summersplash2022/img/SommerjobbSVG';
 import JobSelected from 'src/summersplash2022/img/fastjobbSVGSelected';
 import style from '../nyutdannet.module.css';
@@ -7,13 +7,13 @@ import style from '../nyutdannet.module.css';
 const LandingPage = () => {
   const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
 
-  const [offset, setOffset] = useState(0);
-  const [isMobile, setIsMobile] = useState(true);
-  const [navColor, setNavColor] = useState(false);
+  // const [offset, setOffset] = useState(0);
+  // const setIsMobile = useState(true);
+  // const [navColor, setNavColor] = useState(false);
 
-  useEffect(() => {
-    changeNavbarColor(setNavColor, setIsMobile, setOffset, offset);
-  }, [offset, navColor]);
+  // useEffect(() => {
+  //   changeNavbarColor(setNavColor, setIsMobile, setOffset, offset);
+  // }, [offset, navColor]);
   return (
     <>
       <section className={style.section1} id="jobForside">
