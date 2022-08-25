@@ -150,6 +150,7 @@ export default function Calculator() {
                 >
                   <div className={style['radio-button-wrapper']}>
                     <input
+                      aria-labelledby="bachelorLabel"
                       className={style.inputRadio}
                       type="radio"
                       id="Bachelor"
@@ -158,11 +159,14 @@ export default function Calculator() {
                       onChange={onDegreeChange}
                       defaultChecked
                     />
-                    <label htmlFor="Bachelor">Bachelor</label>
+                    <label id="bachelorLabel" htmlFor="Bachelor">
+                      Bachelor
+                    </label>
                   </div>
 
                   <div className={style['radio-button-wrapper']}>
                     <input
+                      aria-labelledby="masterLabel"
                       className={style.inputRadio}
                       type="radio"
                       id="Master"
@@ -170,7 +174,9 @@ export default function Calculator() {
                       value="master"
                       onChange={onDegreeChange}
                     />
-                    <label htmlFor="Master">Master</label>
+                    <label id="masterLabel" htmlFor="Master">
+                      Master
+                    </label>
                   </div>
                 </div>
               </div>
