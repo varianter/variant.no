@@ -77,7 +77,9 @@ type OfferResult = {
 };
 const API_URL = 'https://variantas.recruitee.com/api/offers/';
 async function getValidityStatuses(department?: Office): Promise<Offer[]> {
-  let url = department ? `${API_URL}?department=${department}` : API_URL;
+  let url = department
+    ? `${API_URL}?department=${officeToDepartment(department)}`
+    : API_URL;
   const result = await fetch(url);
   if (!result.ok) {
     throw new Error('Could not fetch data from Recruitee');
@@ -94,6 +96,18 @@ async function getValidityStatuses(department?: Office): Promise<Offer[]> {
     }
   }
   return data.offers;
+}
+
+// Loose coupling between internal types and departments in Recruitee
+function officeToDepartment(department: Office) {
+  switch (department) {
+    case 'bergen':
+      return 'Bergen';
+    case 'oslo':
+      return 'Oslo';
+    case 'trondheim':
+      return 'Trondheim';
+  }
 }
 
 function findStatus(offers: Offer[], slug: string): Offer | undefined {
