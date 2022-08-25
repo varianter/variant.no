@@ -134,7 +134,7 @@
   position: relative;
   left: 40%;
   height: 60%;
-  bottom: 40%;
+  bottom: 200px;
   width: auto;
 }
 
@@ -1273,13 +1273,7 @@
   }
 }
 
-@media (min-width: 1550px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
+@media (min-width: 2000px) {
   /* 900px*/
   .scrollContainer,
   .section1,
