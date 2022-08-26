@@ -36,9 +36,15 @@
 }
 
 .scrollContainer {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+  max-height: 100vh;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .section1,
@@ -47,7 +53,7 @@
 .whyWorkAtVariant,
 .section5,
 .section6 {
-  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
 }
 
 /* SVG Style*/
@@ -106,6 +112,7 @@
 /* Section 1 styling*/
 
 .section1 {
+  height: 1200px;
   background-color: #f4f1e7;
 }
 
@@ -133,9 +140,9 @@
 .imageBlob1 {
   position: relative;
   left: 40%;
-  height: 60%;
+  height: auto;
   bottom: 200px;
-  width: auto;
+  width: 40%;
 }
 
 /* Section 2 styling*/
@@ -158,7 +165,7 @@
 }
 
 .section2Paragraph {
-  width: 50%;
+  width: 100%;
   font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
@@ -166,9 +173,14 @@
   line-height: 32px;
 }
 
+.section2Text {
+  width: 60%;
+}
+
 .section2Flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 5%;
 }
 
 .officeMapMobile {
@@ -543,12 +555,14 @@
 .officeMap {
   position: relative;
   margin-left: 40%;
-  margin-top: -35%;
+  margin-bottom: 30%;
 }
 .officeMap {
-  width: 75%;
   position: relative;
   right: 10%;
+}
+.officeMapSVG {
+  width: auto;
 }
 
 .mostImportantForYou {
@@ -743,7 +757,7 @@
     /* bottom: 50px; */
   }
 
-  .officeMap {
+  .officeMapSVG {
     display: none;
   }
 
@@ -1114,6 +1128,10 @@
   .section2 {
     height: 1700px;
     width: 100%;
+  }
+
+  .section2Text {
+    width: auto;
   }
 
   .section2Heading {

@@ -3,7 +3,7 @@ import style from '../index.module.css';
 const Map = () => {
   return (
     <svg
-      className={style.officeMap}
+      className={style.officeMapSVG}
       xmlns="http://www.w3.org/2000/svg"
       width="660"
       height="542"
