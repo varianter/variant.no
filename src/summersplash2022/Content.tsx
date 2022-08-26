@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Map from './img/map';
 import MapMobile from './img/mapMobile';
 import style from './index.module.css';
@@ -9,7 +9,6 @@ import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
-import { changeNavbarColor } from './utils/utils';
 import Header from './components/header/header';
 
 const Content = () => {
@@ -24,10 +23,6 @@ const Content = () => {
 
   const [buttonClicked, setButtonClicked] = useState(false);
 
-  const [offset, setOffset] = useState(0);
-  const [isMobile, setIsMobile] = useState(true);
-  const [navColor, setNavColor] = useState(false);
-
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
       setButtonClicked(true);
@@ -35,11 +30,6 @@ const Content = () => {
 
     setWhichButtonSelected(buttonValue);
   };
-
-  //True White
-  useEffect(() => {
-    changeNavbarColor(setNavColor, setIsMobile, setOffset, offset);
-  }, [offset, navColor]);
 
   return (
     <>
