@@ -258,7 +258,7 @@ const Layout: React.FC<LayoutProps> = ({
               </a>{' '}
               i Trondheim, i våre egne lokaler i{' '}
               <a
-                href="https://www.google.com/maps/place/Tollbugata+24,+0157+Oslo,+Norway/@59.910812,10.7393748,17z/"
+                href="https://www.google.com/maps/place/Variant+Oslo/@59.910812,10.7393748,17z/data=!4m5!3m4!1s0x46416f4127442c2b:0xe0534eff4f975859!8m2!3d59.9108093!4d10.7415635"
                 rel="noopener"
                 target="_blank"
                 title="Kart til Variant Oslo"
