@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { changeNavbarColor } from 'src/summersplash2022/utils/utils';
+// import { useEffect, useState } from 'react';
+// import { changeNavbarColor } from 'src/summersplash2022/utils/utils';
 import SummerJob from 'src/summersplash2022/img/SommerjobbSVG';
 import JobSelected from 'src/summersplash2022/img/fastjobbSVGSelected';
 import style from '../nyutdannet.module.css';
@@ -7,25 +7,25 @@ import style from '../nyutdannet.module.css';
 const LandingPage = () => {
   const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
 
-  const [offset, setOffset] = useState(0);
-  const [isMobile, setIsMobile] = useState(true);
-  const [navColor, setNavColor] = useState(false);
+  // const [offset, setOffset] = useState(0);
+  // const setIsMobile = useState(true);
+  // const [navColor, setNavColor] = useState(false);
 
-  useEffect(() => {
-    changeNavbarColor(setNavColor, setIsMobile, setOffset, offset);
-  }, [offset, navColor]);
+  // useEffect(() => {
+  //   changeNavbarColor(setNavColor, setIsMobile, setOffset, offset);
+  // }, [offset, navColor]);
   return (
     <>
       <section className={style.section1} id="jobForside">
         <span className={style.searchNewVariants}>
-          <h3 className={style.section1H3}>Jeg ser etter</h3>
+          <h3 className={style.heading}>Jeg ser etter</h3>
           <a href="/sommerjobb">
             <SummerJob />
           </a>
           <div>
             <JobSelected />
           </div>
-          <h3 className={style.in2023}>i 2023</h3>
+          <h3 className={style.heading}>i 2023</h3>
         </span>
         <br />
         {/* Navigation bar on the right side */}
@@ -90,11 +90,6 @@ const LandingPage = () => {
             alt="To fra Variant"
           />
         </span>
-      </section>
-
-      <section className={style.section1}>
-        <a href="/sommerjobb"></a>
-        <div></div>
       </section>
     </>
   );

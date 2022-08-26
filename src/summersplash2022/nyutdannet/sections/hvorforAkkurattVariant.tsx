@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import ReadMoreArrow from 'src/summersplash2022/img/lesMerPil';
 import style from 'src/summersplash2022/index.module.css';
+import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import ReadMoreArrowWhite from '../img/lesMerPilHvit';
 import HandBooKPagesJob from '../utils/handBookPagesJob';
 
 const WhyVariant = () => {
@@ -30,7 +31,7 @@ const WhyVariant = () => {
     >
       <div className={style.handbook}>
         <div className={style.handbookChildButton}>
-          <h3 className={style.section4Heading}>Hvorfor akkurat Variant?</h3>
+          <h3 className={style2.heading}>Hvorfor akkurat Variant?</h3>
           <p className={style.positionTextLeft}>
             Variant er en variant av et konsulentselskap som er raust, åpent og
             læreglad. Disse verdiene ligger til grunn for hvordan vi møter
@@ -86,7 +87,9 @@ const WhyVariant = () => {
           {whichButtonSelected ? (
             <HandBooKPagesJob selectedButton={whichButtonSelected} />
           ) : (
-            <ReadMoreArrow />
+            <div className={style2.arrowDiv}>
+              <ReadMoreArrowWhite />
+            </div>
           )}
         </div>
         <div className={style.section5HandbookLinkMobile}>
