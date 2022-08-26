@@ -1,5 +1,4 @@
 /* Felles styling*/
-.section1,
 .section2,
 .section3,
 .section5,
@@ -114,6 +113,7 @@
 .section1 {
   height: 1200px;
   background-color: #f4f1e7;
+  padding-left: 7%;
 }
 
 .section1H3 {
@@ -122,6 +122,7 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 53px;
+  margin-top: 5%;
 }
 
 .in2023 {

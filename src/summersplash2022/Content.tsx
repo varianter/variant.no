@@ -10,6 +10,7 @@ import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
 import { changeNavbarColor } from './utils/utils';
+import Header from './components/header/header';
 
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
@@ -45,6 +46,9 @@ const Content = () => {
       <div className={style.scrollContainer} id="scrollContainer">
         <div>
           <section className={style.section1} id="forside">
+            <header>
+              <Header />
+            </header>
             <span className={style.searchNewVariants}>
               <h3 className={style.section1H3}>
                 Vi ser etter nye varianter! Hva ser du etter?
