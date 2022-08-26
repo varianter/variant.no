@@ -275,11 +275,11 @@
 }
 
 .section5ParagraphLeft {
-  width: 500px;
+  width: 56%;
   font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
 }
 
@@ -291,7 +291,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: left;
-  gap: 20%;
 }
 
 .søknadstips {
@@ -365,10 +364,11 @@
   bottom: 500px;
 }
 .Marius {
+  z-index: 1;
   width: 35%;
   position: relative;
   left: 45%;
-  bottom: 150px;
+  bottom: 200px;
 }
 
 /* Gammelt */

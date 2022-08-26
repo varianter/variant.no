@@ -1,5 +1,6 @@
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import Section6Blob from '../img/section6Blob';
 import TimeLineBlack from '../img/tidslinjeSvart';
 
 const AfterApplying = () => {
@@ -9,7 +10,7 @@ const AfterApplying = () => {
     <section className={style2.section6} id="hvaskjerettersoknadsfristen">
       <h3 className={style.section5Heading}>Hva skjer etter søknadsfristen?</h3>
       <div className={style2.flexTimeline}>
-        <div className={style.section5Div}>
+        <div className={style2.section6Div}>
           <p className={style.section5ParagraphLeft}>
             Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
             unaturlig situasjon, og man blir ikke godt kjent med hverandre.
@@ -28,6 +29,9 @@ const AfterApplying = () => {
           </p>
           <div className={style.Even}>
             <img src={Even} className={style.EvenPicture} alt="Even" />
+          </div>
+          <div className={style2.section6Blob}>
+            <Section6Blob />
           </div>
         </div>
         <div className={style.section5Div2}>

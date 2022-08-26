@@ -61,51 +61,6 @@ const Content = () => {
               </a>
             </span>
             <br />
-            {/* Navigation bar on the right side */}
-            <div className={style.navigationSlider}>
-              <a
-                href="#forside"
-                style={{ color: navColor ? 'white' : 'black' }}
-                className={style.navigationButton6}
-              >
-                Forside
-              </a>
-              <a
-                href="#hvagarsommerjobbenutpa"
-                style={{ color: navColor ? 'white' : 'black' }}
-                className={style.navigationButton1}
-              >
-                Hva går sommerjobben ut på?
-              </a>
-              <a
-                href="#hvameneraretssommerstudenter"
-                style={{ color: navColor && isMobile ? 'white' : 'black' }}
-                className={style.navigationButton2}
-              >
-                Hva mener årets sommerstudenter?
-              </a>
-              <a
-                href="#hvorforjobbeivariant"
-                style={{ color: navColor ? 'white' : 'black' }}
-                className={style.navigationButton3}
-              >
-                Hvorfor akkurat Variant?
-              </a>
-              <a
-                href="#hvaskjerettersoknadsfristen"
-                style={{ color: navColor && isMobile ? 'white' : 'black' }}
-                className={style.navigationButton4}
-              >
-                Hva skjer etter søknadsfristen?
-              </a>
-              <a
-                href="#soksommerjobb"
-                style={{ color: navColor ? 'white' : 'black' }}
-                className={style.navigationButton5}
-              >
-                Søk sommerjobb
-              </a>
-            </div>
             <div className={style.underHeader}>
               {/* middlertidig link. usikker på hvilken vi skal bruke */}
               <p>

@@ -36,8 +36,16 @@
   /* paragraph */
   --graphik-font-family: 'Graphik Web';
   --paragraph-font-style: normal;
-  --paragraph-font-size: 18px;
-  --paragraph-line-height: 34px;
+  --paragraph-font-size: 20px;
+  --paragraph-line-height: 32px;
+}
+
+p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+  width: 100%;
 }
 
 /* Headings */
@@ -48,60 +56,6 @@
   font-size: var(--heading-font-size);
   line-height: var(--headig-line-height);
   margin-bottom: 2%;
-}
-
-/* Navgation */
-.navigationSlider {
-  padding-top: 0%;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  align-items: flex-end;
-  right: 2%;
-  bottom: 25%;
-  width: 250px;
-}
-
-.navigationButton1,
-.navigationButton2,
-.navigationButton3,
-.navigationButton4,
-.navigationButton5,
-.navigationButton6,
-.navigationButton1:hover,
-.navigationButton1:focus,
-.navigationButton2:hover,
-.navigationButton2:focus,
-.navigationButton3:hover,
-.navigationButton3:focus,
-.navigationButton4:hover,
-.navigationButton4:focus,
-.navigationButton5:hover,
-.navigationButton5:focus,
-.navigationButton6:hover,
-.navigationButton6:focus,
-.navigationButton1:link,
-.navigationButton2:link,
-.navigationButton3:link,
-.navigationButton4:link,
-.navigationButton5:link,
-.navigationButton6:link,
-.navigationButton1:visited,
-.navigationButton2:visited,
-.navigationButton3:visited,
-.navigationButton4:visited,
-.navigationButton5:visited,
-.navigationButton6:visited {
-  font-family: var(--recoleta-font-family);
-  font-style: var(--paragraph-font-style);
-  font-weight: 400;
-  font-size: var(--paragraph-font-size);
-  line-height: 23px;
-  color: white;
-  width: 90%;
-  padding: 5%;
-  text-align: right;
-  text-decoration: none;
 }
 
 /* Section1 */
@@ -152,14 +106,11 @@
 }
 
 .section2Text {
-  width: 50%;
+  width: 67%;
 }
 
 .officeMap2 {
   width: 100%;
-  position: relative;
-  top: 6rem;
-  margin-bottom: 20%;
 }
 
 /* Section 3 */
@@ -218,17 +169,52 @@
   display: flex;
   align-items: flex-start;
   justify-content: left;
-  gap: 20%;
+}
+
+.section6Div {
+  width: 100%;
+}
+
+.section6 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+  width: 70%;
+}
+
+.section6 p:nth-child(1),
+.section6 p:nth-child(2) {
+  width: 70%;
+}
+
+.section6Blob {
+  position: relative;
+  bottom: 200px;
+  z-index: -1;
+  right: 45%;
+  bottom: 840px;
 }
 
 /* Section 7 */
 .section7 {
-  background-color: #1a1837;
-  color: white;
+  background-color: #fff3f2;
+  color: #333;
 }
 
 .section7 p {
   width: 40%;
+}
+
+.section7 a {
+  color: #333;
+}
+
+.section7Blob {
+  z-index: 0;
+  position: relative;
+  bottom: 1150px;
+  left: 45%;
 }
 
 .contactMail {

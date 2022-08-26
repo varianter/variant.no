@@ -1,7 +1,8 @@
+import ApplyAsDesigner from 'src/summersplash2022/img/søkSomDesigner';
+import ApplyAsDeveloper from 'src/summersplash2022/img/søkSomUtviklerBlob';
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-import ApplyAsDesigner from '../img/sokSomDesigner';
-import ApplyAsDeveloper from '../img/sokSomUtvikler';
+import Section7Blob from '../img/section7Blob';
 const Apply = () => {
   const Marius = require('src/summersplash2022/img/Marius.png');
 
@@ -27,6 +28,7 @@ const Apply = () => {
         </p>
       </div>
       <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
+
       <div className={style.ApplyDiv}>
         <div className={style.ApplyAsDesignerDiv}>
           <div className={style.applyAsDesigner}>
@@ -42,6 +44,9 @@ const Apply = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className={style2.section7Blob}>
+        <Section7Blob />
       </div>
     </section>
   );
