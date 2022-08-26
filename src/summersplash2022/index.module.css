@@ -12,27 +12,6 @@
 /* Scroll */
 
 /* 900px*/
-.scrollContainer,
-.section1,
-.section2,
-.section3,
-.whyWorkAtVariant,
-.section5,
-.section6 {
-  height: 900px;
-}
-
-.section2 {
-  height: 1400px;
-}
-
-.section3 {
-  height: 2200px;
-}
-
-.section5 {
-  height: 1800px;
-}
 
 .scrollContainer {
   width: 100%;
@@ -150,6 +129,7 @@
 .section2 {
   width: 80%;
   color: white;
+  padding-bottom: 20%;
 }
 
 .blogpostLink {
@@ -334,6 +314,7 @@
 
 .section6 {
   background-color: #f4f1e7;
+  height: auto;
 }
 
 .section6Underline {
@@ -354,8 +335,15 @@
 }
 
 .ApplyDiv {
-  position: relative;
-  bottom: 60%;
+  margin-top: 10%;
+  margin-top: 5%;
+}
+
+.ApplyAsDesignerDiv,
+.ApplyAsDeveloperDiv {
+  width: 20%;
+  margin: 20px;
+  height: 200px;
 }
 
 .applyAsDesignerSVG:hover path:nth-child(2) {
@@ -686,15 +674,6 @@
 
 @media (max-width: 900px) {
   /* Scroll mobile*/
-  .scrollContainer,
-  .section1,
-  .section2,
-  .section3,
-  .whyWorkAtVariant,
-  .section5,
-  .section6 {
-    height: 850px;
-  }
 
   .section3 {
     overflow: hidden;
@@ -719,11 +698,6 @@
   }
 
   .timeLine {
-    position: static;
-  }
-
-  .ApplyAsDeveloperDiv,
-  .ApplyAsDesignerDiv {
     position: static;
   }
 
@@ -1633,5 +1607,12 @@
     align-items: flex-start;
     justify-content: left;
     gap: 20%;
+  }
+}
+
+@media (max-width: 1450px) {
+  .ApplyAsDeveloperDiv,
+  .ApplyAsDesignerDiv {
+    position: static;
   }
 }

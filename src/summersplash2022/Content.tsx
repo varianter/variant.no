@@ -393,14 +393,18 @@ const Content = () => {
                 alt="Bilde av Marius"
               />
             </div>
-            <div className={style.ApplyDiv}>
-              <div>
-                <a href="">
+            <div className={style.ApplyAsDesignerDiv}>
+              <div className={style.applyAsDesigner}>
+                <a href="/jobs">
                   <ApplyAsDesigner />
                 </a>
               </div>
-              <div>
-                <ApplyAsDeveloper />
+            </div>
+            <div className={style.ApplyAsDeveloperDiv}>
+              <div className={style.ApplyAsDeveloper}>
+                <a href="/jobs">
+                  <ApplyAsDeveloper />
+                </a>
               </div>
             </div>
           </section>
