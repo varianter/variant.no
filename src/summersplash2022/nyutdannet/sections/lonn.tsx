@@ -3,7 +3,7 @@ import { Calculator } from 'src/salary-calculator';
 
 const Payment = () => {
   return (
-    <section>
+    <section className={style.section4}>
       <div className={style.section4Flex}>
         <div className={style.section4Text}>
           <h3 className={style.heading}>Lønn</h3>

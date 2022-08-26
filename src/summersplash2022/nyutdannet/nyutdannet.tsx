@@ -5,17 +5,20 @@ import FirstYear from './sections/hvordanSerFørsteÅretUt';
 import WhyVariant from './sections/hvorforAkkurattVariant';
 import Payment from './sections/lonn';
 import Apply from './sections/søkJobb';
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 
 const Nyutdannet = () => {
   return (
     <>
-      <LandingPage />
-      <WhoAreWeSeeking />
-      <WhyVariant />
-      <Payment />
-      <FirstYear />
-      <AfterApplying />
-      <Apply />
+      <div className={style.scrollContainer}>
+        <LandingPage />
+        <WhoAreWeSeeking />
+        <WhyVariant />
+        <Payment />
+        <FirstYear />
+        <AfterApplying />
+        <Apply />
+      </div>
     </>
   );
 };

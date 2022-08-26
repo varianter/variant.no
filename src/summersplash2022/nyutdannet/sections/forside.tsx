@@ -91,11 +91,6 @@ const LandingPage = () => {
           />
         </span>
       </section>
-
-      <section className={style.section1}>
-        <a href="/sommerjobb"></a>
-        <div></div>
-      </section>
     </>
   );
 };

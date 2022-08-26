@@ -8,6 +8,20 @@
   padding: 5%;
   padding-left: 7%;
   margin-bottom: 0%;
+  scroll-snap-align: start;
+}
+
+/* SnapScroll */
+.scrollContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 /* global var */
@@ -150,6 +164,14 @@
 
 /* Section 3 */
 
+.readMoreArrowWhite {
+  width: 100%;
+}
+
+.arrowDiv {
+  width: 100%;
+}
+
 .timeLine2 {
   width: 100%;
 }
@@ -187,8 +209,16 @@
   font-size: 20px;
   line-height: 32px;
 
-  width: 21%;
+  width: 30%;
   margin-top: 2%;
+}
+
+/* Section 6 */
+.flexTimeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  gap: 20%;
 }
 
 /* Section 7 */
@@ -205,8 +235,27 @@
   color: white;
 }
 
-/* Breakpoint for Lønnskalkulator*/
+@media (max-width: 1400px) {
+  /* Section 6 */
+  .readMoreArrowWhite {
+    width: 100%;
+  }
+
+  .arrowDiv {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1120px) {
+  /* Section 6 */
+  .flexTimeline {
+    width: auto;
+    display: block;
+  }
+}
+
 @media (max-width: 1134px) {
+  /* Breakpoint for Lønnskalkulator*/
   .section4Flex {
     display: block;
   }
@@ -217,16 +266,24 @@
   .wrapper {
     width: 100%;
   }
-}
 
-/* Breakpoint for office map*/
-@media (max-width: 1134px) {
+  /* Breakpoint for office map*/
   .section2Flex {
     display: block;
   }
 
   .section2Text {
     width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .section1 {
+    height: 900px;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
   }
 }
 
@@ -250,6 +307,7 @@
     width: auto;
   }
 
+  /* Section 7 */
   .section7 p {
     width: 100%;
   }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ReadMoreArrow from 'src/summersplash2022/img/lesMerPil';
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import ReadMoreArrowWhite from '../img/lesMerPilHvit';
 import HandBooKPagesJob from '../utils/handBookPagesJob';
 
 const WhyVariant = () => {
@@ -87,7 +87,9 @@ const WhyVariant = () => {
           {whichButtonSelected ? (
             <HandBooKPagesJob selectedButton={whichButtonSelected} />
           ) : (
-            <ReadMoreArrow />
+            <div className={style2.arrowDiv}>
+              <ReadMoreArrowWhite />
+            </div>
           )}
         </div>
         <div className={style.section5HandbookLinkMobile}>

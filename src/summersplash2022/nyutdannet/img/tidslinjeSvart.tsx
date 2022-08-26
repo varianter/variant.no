@@ -1,6 +1,8 @@
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 const TimeLineBlack = () => {
   return (
     <svg
+      className={style.timeLineBlack}
       xmlns="http://www.w3.org/2000/svg"
       width="286"
       height="404"
