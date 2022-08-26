@@ -3,6 +3,7 @@
 .section2,
 .section4,
 .section5,
+.section6,
 .section7 {
   padding: 5%;
   padding-left: 7%;
@@ -94,6 +95,10 @@
 
 .section1 {
   background-color: #1a1837;
+  color: white;
+}
+
+.section1 a {
   color: white;
 }
 

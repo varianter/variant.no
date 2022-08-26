@@ -1,4 +1,5 @@
 import LandingPage from './sections/forside';
+import AfterApplying from './sections/hvaSkjerEtterSonaadsfristen';
 import WhoAreWeSeeking from './sections/hvemSokerVi';
 import FirstYear from './sections/hvordanSerFørsteÅretUt';
 import WhyVariant from './sections/hvorforAkkurattVariant';
@@ -13,6 +14,7 @@ const Nyutdannet = () => {
       <WhyVariant />
       <Payment />
       <FirstYear />
+      <AfterApplying />
       <Apply />
     </>
   );
