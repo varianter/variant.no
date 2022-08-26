@@ -21,6 +21,13 @@
   font-size: 1.5rem;
 }
 
+@media (max-width: 600px) {
+  .title {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+}
+
 .card__title__container {
   display: flex;
   justify-content: space-between;
