@@ -47,7 +47,7 @@
 .whyWorkAtVariant,
 .section5,
 .section6 {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 /* SVG Style*/
@@ -880,7 +880,7 @@
   }
 
   .mostImportantForYou {
-    font-family: 'Grafik Web';
+    font-family: 'Recoleta';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -1150,6 +1150,7 @@
     display: static;
     padding-bottom: 15%;
     position: relative;
+    overflow-wrap: break-word;
   }
   .summerstudent2 {
     padding-bottom: 15%;
@@ -1163,10 +1164,10 @@
     bottom: 0px;
     right: 15%;
   }
-
   .summerstudentName1 {
     position: relative;
-    left: 30%;
+    right: 10%;
+    padding-left: 10%;
   }
 
   .summerstudentName2 {
@@ -1187,9 +1188,11 @@
   }
 
   .summerstudent1Paragraph {
+    position: relative;
     padding-top: 12%;
     width: 100%;
-    /* Paragraph should be placed a bit to the left */
+    right: 18%;
+    padding-left: 15%;
   }
 
   .summerstudent2Paragraph {
@@ -1210,6 +1213,7 @@
     shape-outside: circle() padding-box;
     float: left;
     right: 15%;
+    position: relative;
   }
 
   .summerstudent2picture {
@@ -1573,6 +1577,14 @@
     font-weight: 400;
     font-size: 110%;
     line-height: 140%;
+  }
+
+  .handbookHeaderDeskotop {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200%;
+    line-height: 39px;
   }
 
   .handbookParagraphs {

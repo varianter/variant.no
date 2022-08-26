@@ -44,7 +44,8 @@ const Content = () => {
 
   return (
     <>
-      <div className={style.scrollContainer} id="scrollContainer">
+      {/* <div className={style.scrollContainer} id="scrollContainer"> */}
+      <div>
         <section className={style.section1} id="forside">
           <span className={style.searchNewVariants}>
             <h3 className={style.section1H3}>
