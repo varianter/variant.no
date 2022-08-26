@@ -235,6 +235,14 @@
   color: white;
 }
 
+.applyAsDeveloperSVG:hover path:nth-child(1) {
+  fill: rgb(255, 82, 150);
+}
+
+.applyAsDesignerSVG:hover path:nth-child(1) {
+  fill: rgb(3, 205, 186);
+}
+
 @media (max-width: 1400px) {
   /* Section 6 */
   .readMoreArrowWhite {

@@ -353,39 +353,16 @@
 }
 
 .ApplyDiv {
-  margin-top: 10%;
-  margin-top: 5%;
+  position: relative;
+  bottom: 60%;
 }
 
-.applyAsDesigner:hover {
-  display: none;
+.applyAsDesignerSVG:hover path:nth-child(2) {
+  fill: rgb(3, 205, 186);
 }
 
-.applyAsDesigner:hover ~ .applyAsDesignerBig {
-  display: block;
-}
-
-.applyAsDesignerBig {
-  display: none;
-}
-
-.ApplyAsDeveloper:hover {
-  display: none;
-}
-
-.ApplyAsDeveloper:hover ~ .ApplyAsDeveloperBig {
-  display: block;
-}
-
-.ApplyAsDeveloperBig {
-  display: none;
-}
-
-.ApplyAsDesignerDiv,
-.ApplyAsDeveloperDiv {
-  width: 20%;
-  margin: 20px;
-  height: 200px;
+.applyAsDeveloperSVG:hover path:nth-child(2) {
+  fill: rgb(255, 82, 150);
 }
 
 .ApplyAsDeveloperDiv {

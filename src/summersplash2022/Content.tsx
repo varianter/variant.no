@@ -5,9 +5,7 @@ import style from './index.module.css';
 import HandBooKPages from './utils/handBookPages';
 import TimeLine from './img/tidslinje';
 import ApplyAsDesigner from './img/søkSomDesigner';
-import ApplyAsDesignerBiggerBlob from './img/søkSomDesignerBigBlob';
 import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
-import ApplyAsDeveloperBiggerBlob from './img/søkeSomUtviklerBigBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
@@ -392,29 +390,13 @@ const Content = () => {
               />
             </div>
             <div className={style.ApplyDiv}>
-              <div className={style.ApplyAsDesignerDiv}>
-                <div className={style.applyAsDesigner}>
-                  <a href="/jobs">
-                    <ApplyAsDesigner />
-                  </a>
-                </div>
-                <div className={style.applyAsDesignerBig}>
-                  <a href="/jobs">
-                    <ApplyAsDesignerBiggerBlob />
-                  </a>
-                </div>
+              <div>
+                <a href="">
+                  <ApplyAsDesigner />
+                </a>
               </div>
-              <div className={style.ApplyAsDeveloperDiv}>
-                <div className={style.ApplyAsDeveloper}>
-                  <a href="/jobs">
-                    <ApplyAsDeveloper />
-                  </a>
-                </div>
-                <div className={style.ApplyAsDeveloperBig}>
-                  <a href="/jobs">
-                    <ApplyAsDeveloperBiggerBlob />
-                  </a>
-                </div>
+              <div>
+                <ApplyAsDeveloper />
               </div>
             </div>
           </section>

@@ -1,6 +1,8 @@
+import style from 'src/summersplash2022/index.module.css';
 const ApplyAsDeveloper = () => {
   return (
     <svg
+      className={style.applyAsDeveloperSVG}
       xmlns="http://www.w3.org/2000/svg"
       width="268"
       height="225"

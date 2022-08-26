@@ -1,6 +1,8 @@
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 const ApplyAsDesigner = () => {
   return (
     <svg
+      className={style.applyAsDesignerSVG}
       xmlns="http://www.w3.org/2000/svg"
       width="256"
       height="219"
