@@ -83,19 +83,19 @@ export default function Praha22() {
             <p>🚌 Buss fra flyplassen til hotellet.</p>
           </li>
           <li>
-            <p>13:10</p>
-            <p>🧳 Innsjekk på Century Old Town Hotel.</p>
-          </li>
-          <li>
             <p>13:30</p>
-            <p>🚋 Historisk trikketur til Smetana Q.</p>
+            <p>🧳 Dropper bagasjen av på Century Old Town Hotel.</p>
           </li>
           <li>
             <p>14:00</p>
+            <p>🚋 Historisk trikketur til Smetana Q med litt snacks.</p>
+          </li>
+          <li>
+            <p>14:30</p>
             <p>🎨 Variantdag!</p>
           </li>
           <li>
-            <p>15:00</p>
+            <p>15:30</p>
             <p>🥪 Lunsj!</p>
           </li>
           <li>
@@ -122,7 +122,7 @@ export default function Praha22() {
             <p>☕ Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:00</p>
+            <p>09:30</p>
             <p>💺 Buss til aktivitet</p>
           </li>
           <li>
