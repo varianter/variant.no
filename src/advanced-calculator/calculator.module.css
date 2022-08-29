@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .calculator {
   --grid-gap: 5rem;
   --ensure-next-content-in-view: calc(90vh - (var(--grid-gap) * 2));
@@ -59,6 +71,11 @@
 
 .form-label {
   font-size: calc((12 / 16) * 1rem);
+}
+
+.form-error {
+  font-size: calc((10 / 16) * 1rem);
+  transition: all 200ms;
 }
 
 .input-section {
@@ -251,7 +268,7 @@
 
 .range-input-wrapper {
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr 9ch;
   align-items: center;
   grid-gap: 0.5rem;
 }
