@@ -30,7 +30,8 @@ const CalculatorMain = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__main']}>{children}</div>;
 };
 
-const maxYear = getMaxYear();
+const MIN_YEAR = 1990;
+const MAX_YEAR = getMaxYear();
 
 const DEGREE: { [key: string]: string } = {
   bachelor: 'bachelor',
@@ -39,10 +40,10 @@ const DEGREE: { [key: string]: string } = {
 
 export default function Calculator() {
   const [selectedYear, setSelectedYear] = useState(2015);
+  const [selectedValidYear, setSelectedValidYear] = useState(2015);
   const [degree, setDegree] = useState('bachelor');
   const thisYear = new Date().getFullYear();
-  const year =
-    clampNumber(selectedYear, 1990, maxYear) + (degree === 'bachelor' ? 1 : 0);
+  const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
 
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
@@ -51,8 +52,7 @@ export default function Calculator() {
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience =
-    firstDayOfTheYear(maxYear).getFullYear() -
-    clampNumber(selectedYear, 1990, maxYear);
+    firstDayOfTheYear(MAX_YEAR).getFullYear() - selectedValidYear;
 
   const totalExperience =
     yearsOfExperience === 0
@@ -64,18 +64,13 @@ export default function Calculator() {
     setDegree(value);
   }
 
-  function clampNumber(num: number, min: number, max: number) {
-    if (num > max) {
-      return max;
-    }
-    if (num < min) {
-      return min;
-    }
-    return num;
+  function isValidYear(year: number) {
+    return MIN_YEAR <= year && year <= MAX_YEAR;
   }
 
   function onSelectedYearChange(value: number) {
     setSelectedYear(value);
+    if (isValidYear(value)) setSelectedValidYear(value);
   }
 
   return (
@@ -103,44 +98,6 @@ export default function Calculator() {
               : style['calculator-controls--mobileHidden'],
           )}
         >
-          <div className={style['calculator-phoneSummary']}>
-            {!mobileVisible && (
-              <motion.p
-                initial="collapsed"
-                animate="open"
-                exit="collapsed"
-                variants={{
-                  open: { opacity: 1, y: 0 },
-                  collapsed: { opacity: 0, y: 20 },
-                }}
-              >
-                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current + getAverageBonus()}
-                    formatter={formatCurrencyFromNumber}
-                  />{' '}
-                  kr
-                </strong>{' '}
-                +{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current * 0.07}
-                    formatter={formatCurrencyFromNumber}
-                  />
-                </strong>{' '}
-                i årlig pensjon.
-              </motion.p>
-            )}
-            <Button
-              onClick={() => setMobileVisible((b) => !b)}
-              aria-controls="controls-content"
-              aria-expanded={mobileVisible}
-            >
-              {mobileVisible ? 'Skjul' : 'Endre'}
-            </Button>
-          </div>
-
           {mobileVisible && (
             <motion.div
               id="controls-content"
@@ -205,11 +162,21 @@ export default function Calculator() {
                 <RangeSlider
                   name="År"
                   id="experience"
-                  min={1990}
-                  max={maxYear}
+                  min={MIN_YEAR}
+                  max={MAX_YEAR}
                   value={selectedYear}
                   onChange={onSelectedYearChange}
                 />
+                <span
+                  className={style['form-error']}
+                  style={
+                    isValidYear(selectedYear)
+                      ? { opacity: 0, height: 0 }
+                      : { opacity: 1, height: '1rem' }
+                  }
+                >
+                  Må være mellom {MIN_YEAR} og {MAX_YEAR}
+                </span>
               </label>
 
               <div className={style['calculator-controls__summary']}>
@@ -260,6 +227,43 @@ export default function Calculator() {
               </div>
             </motion.div>
           )}
+          <div className={style['calculator-phoneSummary']}>
+            {!mobileVisible && (
+              <motion.p
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  collapsed: { opacity: 0, y: 20 },
+                }}
+              >
+                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current + getAverageBonus()}
+                    formatter={formatCurrencyFromNumber}
+                  />{' '}
+                  kr
+                </strong>{' '}
+                +{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current * 0.07}
+                    formatter={formatCurrencyFromNumber}
+                  />
+                </strong>{' '}
+                i årlig pensjon.
+              </motion.p>
+            )}
+            <Button
+              onClick={() => setMobileVisible((b) => !b)}
+              aria-controls="controls-content"
+              aria-expanded={mobileVisible}
+            >
+              {mobileVisible ? 'Skjul' : 'Endre'}
+            </Button>
+          </div>
         </div>
       </AnimatePresence>
 
