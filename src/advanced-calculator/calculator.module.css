@@ -268,7 +268,7 @@ input[type='number'] {
 
 .range-input-wrapper {
   display: grid;
-  grid-template-columns: 1fr 9ch;
+  grid-template-columns: 1fr max-content;
   align-items: center;
   grid-gap: 0.5rem;
 }
