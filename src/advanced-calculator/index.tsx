@@ -49,9 +49,6 @@ export default function Calculator() {
 
   const { inView: headerInView, ref: headerRef } = useInView();
   useEffect(() => {
-    if (headerInView) {
-      setMobileVisible(true);
-    }
     if (!headerInView) {
       setMobileVisible(false);
     }
