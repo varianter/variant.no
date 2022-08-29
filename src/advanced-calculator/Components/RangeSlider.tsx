@@ -54,7 +54,10 @@ export default function RangeSlider({
         id={id}
         className={style.inputNumber}
         name={name}
-        type="number"
+        type="text"
+        inputMode="numeric"
+        size={String(max).length}
+        maxLength={String(max).length}
         min={min}
         max={max}
         value={value}
