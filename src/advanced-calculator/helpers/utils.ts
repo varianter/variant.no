@@ -1,4 +1,4 @@
-import { payscale } from "../config";
+import { payscale } from '../config';
 
 const data = payscale[2022];
 
@@ -14,10 +14,10 @@ export function getLastInArray<Type>(arr: Type[]): Type {
 
 export function calculateEstimatedSalary(
   graduationYear: number,
-  degree: Degree
+  degree: Degree,
 ): number {
-  const year = String(graduationYear + (degree === "bachelor" ? 1 : 0));
-  return parseInt((data as SalaryData)[year] ?? "0", 10);
+  const year = String(graduationYear + (degree === 'bachelor' ? 1 : 0));
+  return parseInt((data as SalaryData)[year] ?? '0', 10);
 }
 
 export function getMaxYear(): number {
@@ -26,8 +26,8 @@ export function getMaxYear(): number {
 }
 
 export const formatCurrencyFromNumber = (pay: number | undefined) => {
-  if (!pay) return "";
-  return new Intl.NumberFormat("nb-NO").format(Math.floor(pay));
+  if (!pay) return '';
+  return new Intl.NumberFormat('nb-NO').format(Math.floor(pay));
 };
 
-export type Degree = "masters" | "bachelor";
+export type Degree = 'masters' | 'bachelor';
