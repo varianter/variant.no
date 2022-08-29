@@ -71,7 +71,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
           </div>
           <div className={style['form-wrapper']}>
             <label htmlFor="compareSalary">
-              Gjeldende årslønn
+              Årslønn hos nåverende arbeidsgiver
               <RangeSlider
                 min={500000}
                 max={1200000}
