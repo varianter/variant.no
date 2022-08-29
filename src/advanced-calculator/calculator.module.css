@@ -211,8 +211,9 @@ input[type='number'] {
   aspect-ratio: 1/4;
 }
 
-.pension-graph__foreign-object {
-}
+/* 
+.pension-graph__foreign-object {} 
+*/
 
 .pension-graph__text-wrapper {
   line-height: 1;
