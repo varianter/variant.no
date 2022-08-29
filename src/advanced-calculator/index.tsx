@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
@@ -21,6 +21,7 @@ import style from './calculator.module.css';
 import { Button } from '@components/button';
 import { and } from 'src/utils/css';
 import { useMediaQuery } from 'src/utils/use-media-query';
+import { useInView } from 'react-intersection-observer';
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
@@ -45,6 +46,16 @@ export default function Calculator() {
   const thisYear = new Date().getFullYear();
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
+
+  const { inView: headerInView, ref: headerRef } = useInView();
+  useEffect(() => {
+    if (headerInView) {
+      setMobileVisible(true);
+    }
+    if (!headerInView) {
+      setMobileVisible(false);
+    }
+  }, [headerInView]);
 
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
 
@@ -76,7 +87,7 @@ export default function Calculator() {
   return (
     <div className={style['calculator']}>
       <div className={style['calculator-intro']}>
-        <h1 className={style['heading calculator__title']}>
+        <h1 className={style['heading calculator__title']} ref={headerRef}>
           {/* <TextSplitter>
               Hei du! La oss snakke litt om lønn (og andre betingelser)
             </TextSplitter> */}
@@ -98,44 +109,6 @@ export default function Calculator() {
               : style['calculator-controls--mobileHidden'],
           )}
         >
-          <div className={style['calculator-phoneSummary']}>
-            {!mobileVisible && (
-              <motion.p
-                initial="collapsed"
-                animate="open"
-                exit="collapsed"
-                variants={{
-                  open: { opacity: 1, y: 0 },
-                  collapsed: { opacity: 0, y: 20 },
-                }}
-              >
-                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current + getAverageBonus()}
-                    formatter={formatCurrencyFromNumber}
-                  />{' '}
-                  kr
-                </strong>{' '}
-                +{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current * 0.07}
-                    formatter={formatCurrencyFromNumber}
-                  />
-                </strong>{' '}
-                i årlig pensjon.
-              </motion.p>
-            )}
-            <Button
-              onClick={() => setMobileVisible((b) => !b)}
-              aria-controls="controls-content"
-              aria-expanded={mobileVisible}
-            >
-              {mobileVisible ? 'Skjul' : 'Endre'}
-            </Button>
-          </div>
-
           {mobileVisible && (
             <motion.div
               id="controls-content"
@@ -265,6 +238,43 @@ export default function Calculator() {
               </div>
             </motion.div>
           )}
+          <div className={style['calculator-phoneSummary']}>
+            {!mobileVisible && (
+              <motion.p
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  collapsed: { opacity: 0, y: 20 },
+                }}
+              >
+                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current + getAverageBonus()}
+                    formatter={formatCurrencyFromNumber}
+                  />{' '}
+                  kr
+                </strong>{' '}
+                +{' '}
+                <strong>
+                  <Counter
+                    num={payscale.current * 0.07}
+                    formatter={formatCurrencyFromNumber}
+                  />
+                </strong>{' '}
+                i årlig pensjon.
+              </motion.p>
+            )}
+            <Button
+              onClick={() => setMobileVisible((b) => !b)}
+              aria-controls="controls-content"
+              aria-expanded={mobileVisible}
+            >
+              {mobileVisible ? 'Skjul' : 'Endre'}
+            </Button>
+          </div>
         </div>
       </AnimatePresence>
 
