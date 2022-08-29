@@ -92,7 +92,7 @@ export default function Praha22() {
           </li>
           <li>
             <p>14:30</p>
-            <p>🎨 Variantdag!</p>
+            <p>🎨 Variantdag! (Frivillig for +1)</p>
           </li>
           <li>
             <p>15:30</p>
