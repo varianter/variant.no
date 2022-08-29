@@ -207,6 +207,7 @@ input[type='number'] {
 .pension-graph {
   /* height: 30rem; */
   /* width: 6rem; */
+  height: 100%;
   aspect-ratio: 1/4;
 }
 

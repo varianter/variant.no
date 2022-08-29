@@ -3,7 +3,7 @@ import { Group } from '@visx/group';
 import { ParentSize } from '@visx/responsive';
 import { scaleBand, scaleLinear } from '@visx/scale';
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Counter from '../Counter';
 import { formatCurrencyFromNumber } from '../helpers/utils';
 
@@ -31,6 +31,12 @@ type BarData = {
 };
 
 export function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 300);
+  }, []);
+
   const xMax = parentWidth;
   const yMax = parentHeight - verticalMargin;
 
@@ -57,7 +63,7 @@ export function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
     [yMax, data],
   );
 
-  return parentWidth < 10 ? null : (
+  return parentWidth < 10 || !visible ? null : (
     <svg
       width={parentWidth}
       height={parentHeight}
