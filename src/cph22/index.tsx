@@ -121,8 +121,8 @@ export default function Cph22() {
             </p>
           </li>
           <li>
-            <p>22:00</p>
-            <p>🇩🇰 En får ikke mer moro enn en lager selv</p>
+            <p>21:30</p>
+            <p>🚌 Privat buss til Kødbyen</p>
           </li>
         </ul>
       </section>
