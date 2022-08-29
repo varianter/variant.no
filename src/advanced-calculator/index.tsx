@@ -47,13 +47,6 @@ export default function Calculator() {
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
 
-  const { inView: headerInView, ref: headerRef } = useInView();
-  useEffect(() => {
-    if (!headerInView) {
-      setMobileVisible(false);
-    }
-  }, [headerInView]);
-
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
 
   const [mobileVisibleInternal, setMobileVisible] = useState(true);
@@ -84,7 +77,7 @@ export default function Calculator() {
   return (
     <div className={style['calculator']}>
       <div className={style['calculator-intro']}>
-        <h1 className={style['heading calculator__title']} ref={headerRef}>
+        <h1 className={style['heading calculator__title']}>
           {/* <TextSplitter>
               Hei du! La oss snakke litt om lønn (og andre betingelser)
             </TextSplitter> */}
