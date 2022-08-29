@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
@@ -21,7 +21,6 @@ import style from './calculator.module.css';
 import { Button } from '@components/button';
 import { and } from 'src/utils/css';
 import { useMediaQuery } from 'src/utils/use-media-query';
-import { useInView } from 'react-intersection-observer';
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
