@@ -74,6 +74,11 @@ p {
   padding-left: 10%;
 }
 
+.header {
+  height: 80px;
+  margin-bottom: 5%;
+}
+
 .section1 a {
   color: white;
 }

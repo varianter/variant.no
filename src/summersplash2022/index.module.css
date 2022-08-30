@@ -105,6 +105,10 @@
   padding-top: 0%;
 }
 
+.header {
+  height: 80px;
+}
+
 .section1H3 {
   font-family: 'Recoleta';
   font-style: normal;

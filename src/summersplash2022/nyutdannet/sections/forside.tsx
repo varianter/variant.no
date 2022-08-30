@@ -10,9 +10,9 @@ const LandingPage = () => {
   return (
     <>
       <section className={style.section1} id="jobForside">
-        <div className={style.header}>
+        <header className={style.header}>
           <Header white={true} />
-        </div>
+        </header>
         <span className={style.searchNewVariants}>
           <h3 className={style.heading}>
             Vi ser etter nye varianter! Hva ser du etter?

@@ -47,7 +47,7 @@ const Content = () => {
       <div className={style.scrollContainer} id="scrollContainer">
         <div>
           <section className={style.section1} id="forside">
-            <header>
+            <header className={style.header}>
               <Header white={false} />
             </header>
             <span className={style.searchNewVariants}>
