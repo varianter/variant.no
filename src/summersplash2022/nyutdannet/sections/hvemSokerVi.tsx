@@ -7,7 +7,7 @@ const WhoAreWeSeeking = () => {
       <div className={style.section2Flex}>
         <div className={style.section2Text}>
           <p>
-            Vi søker ___ nyutdannede designere og utviklere som engasjerer og
+            Vi søker 7 nyutdannede designere og utviklere som engasjerer og
             motiverer, med oppstart 1. august 2023. Stillingene er fordelt på
             våre kontorer i Trondheim, Oslo og Bergen. Det er ikke viktig hvilke
             verktøy eller språk du bruker. Det er derimot viktig at du bryr deg.

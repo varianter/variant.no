@@ -1,12 +1,11 @@
 /* Sections styling */
-.section1,
 .section2,
 .section4,
 .section5,
 .section6,
 .section7 {
-  padding: 5%;
-  padding-left: 7%;
+  padding: 10%;
+  padding-top: 5%;
   margin-bottom: 0%;
   scroll-snap-align: start;
 }
@@ -38,6 +37,13 @@
   --paragraph-font-style: normal;
   --paragraph-font-size: 20px;
   --paragraph-line-height: 32px;
+
+  /* Heading Mobile*/
+  --MobileHeading-font-family: 'Recoleta';
+  --MobileHeadingfont-style: normal;
+  --MobileHeadingfont-weight: 500;
+  --MobileHeadingfont-size: 24px;
+  --MobileHeadingline-height: 33px;
 }
 
 p {
@@ -64,6 +70,8 @@ p {
 .section1 {
   background-color: #1a1837;
   color: white;
+  scroll-snap-align: start;
+  padding-left: 7%;
 }
 
 .section1 a {
@@ -89,9 +97,18 @@ p {
 /* Section 1 image*/
 .imageBlob1 {
   position: relative;
-  left: 40%;
-  width: 50%;
-  bottom: 10rem;
+  left: 49%;
+  width: 40%;
+  bottom: 15rem;
+  z-index: 1;
+}
+
+.section1Blob svg {
+  position: relative;
+  bottom: 800px;
+  left: 48%;
+  z-index: 0;
+  width: auto;
 }
 
 /* Section 2 */
@@ -123,33 +140,32 @@ p {
   width: 100%;
 }
 
-.timeLine2 {
-  width: 100%;
+/* Section 4 */
+
+.section4 {
+  padding-top: 10%;
 }
 
-/* Section 4 */
 .wrapper {
   width: 40%;
   margin-bottom: 10%;
-  margin-top: 10%;
   margin-right: 2%;
 }
 
 .section4Flex {
   display: flex;
   flex-direction: row;
-  gap: 20%;
+  justify-content: center;
+  gap: 10%;
 }
 
 .section4Text {
-  width: 40%;
-  align-self: center;
-  margin-left: 7%;
+  width: 48%;
 }
 
 /* Section 5*/
 .section5 {
-  background-color: #5d0a2b;
+  background-color: #8b0f40;
   color: white;
 }
 
@@ -160,9 +176,40 @@ p {
   font-size: 20px;
   line-height: 32px;
 
-  width: 30%;
+  width: 50%;
   margin-top: 2%;
 }
+
+.graphicContainer {
+  position: relative;
+  bottom: 200px;
+  height: 1500px;
+}
+
+.section5Picture {
+  width: 40%;
+  z-index: 0;
+  position: relative;
+  right: 100px;
+  bottom: 450px;
+}
+
+.section5Blob {
+  width: 70%;
+}
+
+.section5PictureDiv {
+  position: relative;
+  bottom: 1270px;
+  left: 60%;
+}
+
+.timeLine2 {
+  width: 100%;
+  z-index: 3;
+}
+
+.timeLine2Mobile
 
 /* Section 6 */
 .flexTimeline {
@@ -229,6 +276,13 @@ p {
   fill: rgb(3, 205, 186);
 }
 
+@media (min-width: 1919px) {
+  /* Section 5 */
+  .section5 p {
+    width: 40%;
+  }
+}
+
 @media (max-width: 1400px) {
   /* Section 6 */
   .readMoreArrowWhite {
@@ -238,6 +292,16 @@ p {
   .arrowDiv {
     width: 100%;
   }
+
+  .timeLine2 {
+    display: none;
+  }
+
+  .timeLine2Mobile {
+    position: relative;
+    right: 370px;
+    top: 250px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -245,6 +309,10 @@ p {
   .flexTimeline {
     width: auto;
     display: block;
+  }
+
+  .section5PictureDiv {
+    bottom: 1100px;
   }
 }
 
@@ -259,6 +327,10 @@ p {
 
   .wrapper {
     width: 100%;
+  }
+
+  .section1Blob {
+    display: none;
   }
 
   /* Breakpoint for office map*/
@@ -281,28 +353,92 @@ p {
   }
 }
 
+@media (min-width: 1400px) {
+  .timeLine2Mobile {
+    display: none;
+  }
+}
+
 /* Mobile */
 @media (max-width: 500px) {
+  /* Mobile Heading */
+  .heading {
+    font-family: var(--MobileHeading-font-family);
+    font-style: var(--MobileHeadingfont-style);
+    font-weight: var(--MobileHeadingfont-weight);
+    font-size: var(--MobileHeadingfont-size);
+    line-height: var(--MobileHeadingline-height);
+  }
+
   /* Section 1*/
+
+  .section1 {
+    height: 1200px;
+  }
+
   .sommerjobbHeading {
     width: 100%;
   }
 
+  .section1 p,
+  .section1 h3:nth-child(4) {
+    display: none;
+  }
+
   .imageBlob1 {
-    position: static;
+    position: relative;
+    top: 300px;
+    left: 40px;
+    width: 100%;
+    height: auto;
+  }
+
+  .section1Blob {
+    display: block;
+    position: relative;
+    top: 700px;
+    right: 200px;
   }
 
   .fastjobbheading {
     width: fit-content;
   }
 
-  /* Section 5*/
+  /* Section 5 */
   .section5 p {
     width: auto;
+  }
+
+  .section5PictureDiv {
+    bottom: 1050px;
+    left: 120px;
+  }
+
+  .section5Picture {
+    width: 80%;
+    bottom: 400px;
+  }
+
+  .section5Blob {
+    width: 300px;
+  }
+
+  /* Section 6 */
+  .section6Div {
+    height: 1000px;
+  }
+
+  .section6 p:nth-child(1),
+  .section6 p:nth-child(2) {
+    width: 100%;
   }
 
   /* Section 7 */
   .section7 p {
     width: 100%;
+  }
+
+  .section7Blob {
+    display: none;
   }
 }

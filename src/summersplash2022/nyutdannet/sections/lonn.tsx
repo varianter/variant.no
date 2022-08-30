@@ -4,9 +4,9 @@ import { Calculator } from 'src/salary-calculator';
 const Payment = () => {
   return (
     <section className={style.section4}>
+      <h3 className={style.heading}>Lønn</h3>
       <div className={style.section4Flex}>
         <div className={style.section4Text}>
-          <h3 className={style.heading}>Lønn</h3>
           <p>
             Vi er sikre på at flinke folk i liten grad lar seg motivere av lønn
             alene, men god lønn er like fullt viktig for den frihet og

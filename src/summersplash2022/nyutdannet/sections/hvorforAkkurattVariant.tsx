@@ -51,21 +51,21 @@ const WhyVariant = () => {
             <button
               style={{ color: 'white' }}
               className={style.handbookButton3}
-              onClick={() => handleOnClick('Variantdag')}
+              onClick={() => handleOnClick('Arbeidet')}
             >
               Arbeidet
             </button>
             <button
               style={{ color: 'white' }}
               className={style.handbookButton2}
-              onClick={() => handleOnClick('Tillit og ansvar')}
+              onClick={() => handleOnClick('Det sosiale')}
             >
               Det sosiale{' '}
             </button>
             <button
               style={{ color: 'white' }}
               className={style.handbookButton4}
-              onClick={() => handleOnClick('Miljofyrtarn')}
+              onClick={() => handleOnClick('Goder')}
             >
               Goder{' '}
             </button>

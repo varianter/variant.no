@@ -10,6 +10,7 @@ import ReadMoreArrow from './img/lesMerPil';
 import SummerjobSelected from './img/sommerjobbSVGSelected';
 import Job from './img/fastjobbSVG';
 import Header from './components/header/header';
+import PinkBlob from './img/pinkBlob';
 
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
@@ -37,7 +38,7 @@ const Content = () => {
         <div>
           <section className={style.section1} id="forside">
             <header>
-              <Header />
+              <Header white={false} />
             </header>
             <span className={style.searchNewVariants}>
               <h3 className={style.section1H3}>
@@ -68,6 +69,7 @@ const Content = () => {
                 alt="To fra Variant"
               />
             </span>
+            <PinkBlob />
           </section>
           <div className={style.section2Color}>
             <section className={style.section2} id="hvagarsommerjobbenutpa">
@@ -102,8 +104,8 @@ const Content = () => {
                     nettsider. Timelønnen trenger du heller ikke å lure på, den
                     er på 271,83kr (eller 100
                     <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
-                    &#128526;). Under “Hvorfor akkurat Variant?” ned kan du lese
-                    mer om hva Variant står for og tilbyr.
+                    🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om
+                    hva Variant står for og tilbyr.
                   </p>
                 </div>
                 <Map />

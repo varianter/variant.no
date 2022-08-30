@@ -1,6 +1,8 @@
 import SummerJob from 'src/summersplash2022/img/SommerjobbSVG';
 import JobSelected from 'src/summersplash2022/img/fastjobbSVGSelected';
 import style from '../nyutdannet.module.css';
+import Section1Blob from '../img/section1Blob';
+import Header from 'src/summersplash2022/components/header/header';
 
 const LandingPage = () => {
   const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
@@ -8,6 +10,9 @@ const LandingPage = () => {
   return (
     <>
       <section className={style.section1} id="jobForside">
+        <div className={style.header}>
+          <Header white={true} />
+        </div>
         <span className={style.searchNewVariants}>
           <h3 className={style.heading}>
             Vi ser etter nye varianter! Hva ser du etter?
@@ -37,6 +42,9 @@ const LandingPage = () => {
             src={blobSection1}
             alt="To fra Variant"
           />
+          <div className={style.section1Blob}>
+            <Section1Blob />
+          </div>
         </span>
       </section>
     </>
