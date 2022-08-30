@@ -1,4 +1,4 @@
-import { Button } from '@components/button';
+import { ButtonLink } from '@components/button';
 import Head from 'next/head';
 import SayHi from 'src/index/say-hi';
 import Layout from 'src/layout';
@@ -27,10 +27,10 @@ const Diversity = () => {
       <header className={style.header}>
         <h2 className={style.header__title}>Mangfold</h2>
         <p>
-          Vi synes at mangfold er viktig.
-          <br /> Mangfold i teknologi betyr også kjønnsbalanse. <br />
-          Derfor samarbeider vi med de som jobber med dette. <br />
-          Det gir verdi og nytte for de, oss og deg.
+          Vi synes at mangfold er viktig! <br />
+          Vi samarbeider med de som aktivt jobber for dette. Mangfold skaper
+          inkluderende og fullgode løsninger, som gir verdi og nytte for
+          absolutt alle.
         </p>
       </header>
 
@@ -49,23 +49,22 @@ const Diversity = () => {
         <section className={style['project-category']}>
           <article id="ada" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h3>Ada</h3>
+              <h4>Ada</h4>
               <p>
-                Ada jobber for å bidra til kjønnsbalanse i teknologi- og
-                ingeniørfag for studenter. De har tett tilknytning til
-                næringslivet - deriblant oss.
+                Ada jobber for å øke kjønnsbalansen i teknologi- og ingeniørfag
+                for studenter. Dette er viktig for oss.
               </p>
               <p>
                 Formålet deres er å å øke trivselen og motivere jenter til å
                 fullføre studieløpet innenfor disse fagområdene.
               </p>
-              <p> Dette synes vi er skikkelig kult!</p>
               <p>
-                Derfor har vi et samarbeid med ADA hvor vi har en mentorrolle,
-                deltar på studentarrangementer og arrangerer eventer.
+                Dette synes vi er skikkelig kult! Derfor har vi et samarbeid med
+                ADA hvor vi har en mentorrolle, deltar på ulike aktiviteter og
+                holder arrangementer.
               </p>
             </section>
-            <img src="/images/diversity/tenk.png" alt="Placeholder image" />
+            <img src="/images/diversity/ada.png" alt="Placeholder image" />
           </article>
 
           <article className={style['project-article']}>
@@ -76,31 +75,22 @@ const Diversity = () => {
                 mangfolds(kampen/satsningen/arbeidet). Hun bidrar med kunnskap,
                 erfaring og sprer læringsglede.
               </p>
-              <q>Sitat Sarah</q>
             </section>
             <img src="/images/diversity/tenk.png" alt="Placeholder image" />
           </article>
 
           <article id="tenk" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h3>TENK Tech Camp</h3>
+              <h4>TENK Tech Camp</h4>
               <p>
-                TENK tech camp arrangeres hvert år for jenter på ungdomsskolen
-                og videregående.
+                TENK Tech Camp arrangeres hvert år for jenter på ungdomsskolen
+                og videregående. Campen går over to dager hvor jentene blant
+                annet programmerer, lager podcast og raketter.
               </p>
               <p>
-                Campen går over to dager hvor jentene får et innblikk i
-                teknologiverden, møter kvinnelige forbilder fra bransjen, får
-                veiledning og opplever læreglede.
-              </p>
-              <p>
-                Dette synes vi er spesielt viktig og en god mulighet for
-                kommende tech-generasjoner.
-              </p>
-              <p>
-                Vi har et samarbeid med TENK Tech Camp hvor Sarah er et av
-                forbildene, og bidrar med en veileder- og mentorrolle under
-                campen.
+                Vi trenger flere jenter som søker på teknologifagene. Derfor
+                støtter vi TENK med stor entusiasme. Vi deltar med veiledere og
+                mentorer for å skape læreglede i ungdomsårene.
               </p>
             </section>
             <img
@@ -111,25 +101,27 @@ const Diversity = () => {
         </section>
 
         <section className={style.contact}>
-          <h3>Samarbeid?</h3>
-          <h3>Kontakt?</h3>
+          <h4>Har du et initiativ vi kan samarbeide om?</h4>
           {/* TODO: Button should email someone (who?) */}
-          <Button>Ta kontakt</Button>
+          <div className={style['contact__button__wrapper']}>
+            <ButtonLink href="mailto:post@variant.no">Ta kontakt</ButtonLink>
+          </div>
         </section>
 
         <section className={style['project-category']}>
           <article id="oda" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h3>ODA-nettverket</h3>
+              <h4>ODA-nettverket</h4>
               <p>
-                ODA-nettverket jobber aktivt for å skape mangfold i tech. De har
-                spesielt fokus på kvinner i bransjen ved å motivere og inspirere
-                med events, foredrag, mentorprogrammer og gode forbilder.
+                ODA-nettverket jobber aktivt for å skape mangfold innen
+                teknologi. De jobber spesielt med kvinner i bransjen ved å
+                motivere og inspirere med arrangementer, foredrag,
+                mentorprogrammer og gode forbilder.
               </p>
-              <p>Nettopp derfor er vi partnere med ODA!</p>
               <p>
-                Vår rolle i samarbeidet med ODA er at vi stiller med mentorer,
-                kunnskap, lokaler og bidrar til å arrangere eventer.
+                Nettopp derfor er vi partnere med ODA! Vår rolle i samarbeidet
+                med ODA er at vi stiller med mentorer, kunnskap og bidrar med
+                arrangementer.
               </p>
             </section>
             <img
@@ -142,10 +134,10 @@ const Diversity = () => {
             <section className={style['project-article__text']}>
               <h4>Hils på Linn</h4>
               <p>
-                Linn er en av Variantene som er mentor hos ODA. Hun bidrar med
-                kunnskap, erfaring og spre læreglede.
+                Linn er en av variantene som er engasjert i ODA-nettverket. Hun
+                bidrar med kunnskap, erfaring og sprer læreglede som mentor og
+                frivillig.
               </p>
-              <q>Sitat fra Linn</q>
             </section>
             <img
               src="/images/diversity/linn_oda.png"
