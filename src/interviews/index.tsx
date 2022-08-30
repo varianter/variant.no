@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { getStaticProps } from 'pages/intervju/[interview]';
+import { getStaticProps } from 'pages/intervju/[project].tsx/[interview]';
 import { Interview } from './utils/interviewHandlers';
 import MarkdownIt from 'markdown-it';
 import { NextPage, InferGetStaticPropsType } from 'next';
