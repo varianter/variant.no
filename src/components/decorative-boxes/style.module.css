@@ -1,0 +1,26 @@
+.main-container {
+  padding: 2rem;
+  position: relative;
+  height: min-content;
+  width: min-content;
+}
+
+.decorative-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.25rem 0.5rem;
+  overflow-wrap: break-word;
+  font-size: 0.75rem;
+}
+
+.child-container {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
