@@ -230,13 +230,19 @@ p {
 
 .section6 p:nth-child(1),
 .section6 p:nth-child(2) {
+  position: relative;
   width: 70%;
+  z-index: 1;
+}
+
+.section6 p:nth-last-child(1) {
+  width: 600px;
 }
 
 .section6Blob {
   position: relative;
   bottom: 200px;
-  z-index: -1;
+  z-index: 0;
   right: 45%;
   bottom: 840px;
 }
@@ -311,6 +317,10 @@ p {
 
   .section5PictureDiv {
     bottom: 1100px;
+  }
+
+  .section6Div {
+    height: 1000px;
   }
 }
 
@@ -422,9 +432,6 @@ p {
   }
 
   /* Section 6 */
-  .section6Div {
-    height: 1000px;
-  }
 
   .section6 p:nth-child(1),
   .section6 p:nth-child(2) {

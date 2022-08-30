@@ -228,6 +228,7 @@
   width: 32%;
   margin-right: 10%;
   float: right;
+  z-index: 1;
 }
 
 .summerstudent3picture {
@@ -279,6 +280,13 @@
   padding-top: 2%;
 }
 
+.greenBlob {
+  position: relative;
+  bottom: 950px;
+  left: 67%;
+  width: 50%;
+}
+
 /* Section 5 styling */
 .section5 {
   background-color: #8b0f40;
@@ -309,6 +317,8 @@
 
 .Even {
   margin-top: 12%;
+  position: relative;
+  z-index: 1;
 }
 
 .flexTimeline {
@@ -1237,6 +1247,13 @@
     float: left;
     position: relative;
     bottom: 20%;
+  }
+
+  .greenBlob {
+    position: relative;
+    bottom: 75%;
+    left: 67%;
+    width: 50%;
   }
 
   /* Section 4 mobile*/

@@ -16,7 +16,7 @@ const Nyutdannet = () => {
         <WhyVariant />
         <Payment />
         <FirstYear />
-        <AfterApplying />
+        <AfterApplying red={false} />
         <Apply />
       </div>
     </>
