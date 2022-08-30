@@ -129,9 +129,9 @@
 
 .imageBlob1 {
   position: relative;
-  left: 40%;
+  top: 350px;
+  left: 1%;
   height: auto;
-  bottom: 200px;
   width: 40%;
   z-index: 1;
 }
@@ -142,6 +142,12 @@
   width: 50%;
   bottom: 170px;
   right: 60px;
+}
+
+.section1Blobs {
+  position: relative;
+  left: 50%;
+  bottom: 50%;
 }
 
 /* Section 2 styling*/
@@ -977,6 +983,10 @@
 
   .navigationSlider {
     max-width: 100%;
+  }
+
+  .section1Blobs {
+    position: static;
   }
 
   .navigationButton1,

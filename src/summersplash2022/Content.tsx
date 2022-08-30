@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Map from './img/map';
 import MapMobile from './img/mapMobile';
 import style from './index.module.css';
+import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import HandBooKPages from './utils/handBookPages';
 import TimeLine from './img/tidslinje';
 import ApplyAsDesigner from './img/søkSomDesigner';
@@ -72,14 +73,16 @@ const Content = () => {
               <p className={style.eller}>eller</p>
               <p className={style.scroll}>scroll deg nedover</p>
             </div>
-            <span>
+            <div className={style.section1Blobs}>
               <img
                 className={style.imageBlob1}
                 src={blobSection1}
                 alt="To fra Variant"
               />
-            </span>
-            <PinkBlob />
+              <div className={style.section1Blob}>
+                <PinkBlob />
+              </div>
+            </div>
           </section>
           <div className={style.section2Color}>
             <section className={style.section2} id="hvagarsommerjobbenutpa">
