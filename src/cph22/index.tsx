@@ -83,7 +83,7 @@ export default function Cph22() {
           </li>
           <li>
             <p>11:00</p>
-            <p>🚌 Privat buss til Kælderen</p>
+            <p>🚌 Privat buss til Kælderen, møtes av guide i ankomsthallen</p>
           </li>
           <li>
             <p>12:00</p>
@@ -131,17 +131,17 @@ export default function Cph22() {
         <h3 className="fancy">Lørdag</h3>
         <ul>
           <li>
-            <p>08:00 - 10:00</p>
+            <p>08:00 - 10:15</p>
             <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:25</p>
-            <p>🛥️ Privat kanalbåtcruise - vi møtes utenfor resepsjonen</p>
+            <p>10:15</p>
+            <p>🛥️ Privat kanalbåtcruise - vi møtes ved lobbybaren</p>
           </li>
           <li>
             <p>12:15</p>
             <p>
-              🍱 Lunsj på{' '}
+              🥪 Smørrebrød på{' '}
               <a href="https://www.nyhavnsfaergekro.dk/" target="_blank">
                 Nyhavns Færgekro
               </a>
@@ -171,7 +171,7 @@ export default function Cph22() {
         <h3 className="fancy">Søndag</h3>
         <ul>
           <li>
-            <p>08:00 - 10:00</p>
+            <p>08:00 - 11:00</p>
             <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
@@ -204,8 +204,14 @@ export default function Cph22() {
             </p>
           </li>
           <li>
-            <p>17:00</p>
-            <p>🚌 Vi hentes av privat buss ved Tivoli</p>
+            <p>16:45</p>
+            <p>
+              🚌 Privat buss fra{' '}
+              <a href="https://goo.gl/maps/CRdscgz8gHhH3RAGA" target="_blank">
+                Tivolis bussparkering i H.C. Andersens Boulevard
+              </a>{' '}
+              til flyplassen{' '}
+            </p>
           </li>
           <li>
             <p>17:45</p>
