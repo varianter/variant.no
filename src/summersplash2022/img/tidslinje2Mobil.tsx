@@ -11,6 +11,21 @@ const TimeLine2Mobile = () => {
       viewBox="0 0 720 1353"
       fill="none"
     >
+      <title>
+        August - Startskudd Alle nyutdannede samles til en oppstartsuke med
+        faglig og sosialt innhold. Oktober - Designverktøy/Rammeverk Utviklerne
+        jobber med HTML, CSS og JS, mens designerene går gjennom de vanligste
+        designverktøyene, som Figma og Illustrator. November - Tverrfaglig
+        samarbeid Samling med fokus på hvordan designere og utviklere best kan
+        samarbeide. Februar - Consulting for varianter Samling med fokus på
+        konsulentrollen og konsulentferdigheter. Mars - Designsprint/Sky
+        Designerne jobber med variants designsprint, og utviklerne jobber med
+        skyløsninger og utfordringer knyttet til dette. Mars - Designsprint/Sky
+        Designerne jobber med variants designsprint, og utviklerne jobber med
+        skyløsninger og utfordringer knyttet til dette. Mai - Konsulentøkonomi
+        De nyutdannede introduseres til konsulentøkonomi og økonomi i Variant.
+        Dyktig(ere) konsulent
+      </title>
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"

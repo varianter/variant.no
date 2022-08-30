@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import ReadMoreArrowWhite from '../img/lesMerPilHvit';
@@ -7,6 +7,11 @@ import HandBooKPagesJob from '../utils/handBookPagesJob';
 const WhyVariant = () => {
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [buttonClicked, setButtonClicked] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
+  };
 
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
@@ -15,6 +20,12 @@ const WhyVariant = () => {
 
     setWhichButtonSelected(buttonValue);
   };
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
+    window.addEventListener('resize', handleResize);
+  });
+
   return (
     <section
       className={style.whyWorkAtVariant}
@@ -42,32 +53,76 @@ const WhyVariant = () => {
 
           <div className={style.handbookGrid}>
             <button
-              style={{ color: 'white' }}
+              style={{
+                color: isMobile
+                  ? '#333333'
+                  : whichButtonSelected === 'Formal og verdier'
+                  ? '#333333'
+                  : 'white',
+                backgroundColor: isMobile
+                  ? '#68E9DD'
+                  : whichButtonSelected === 'Formal og verdier'
+                  ? '#68E9DD'
+                  : '#01574F',
+              }}
               className={style.handbookButton1}
               onClick={() => handleOnClick('Formal og verdier')}
             >
               Formål og verdier
             </button>
             <button
-              style={{ color: 'white' }}
+              style={{
+                color: isMobile
+                  ? '#333333'
+                  : whichButtonSelected === 'Arbeidet'
+                  ? '#333333'
+                  : 'white',
+                backgroundColor: isMobile
+                  ? '#F1EDDF'
+                  : whichButtonSelected === 'Arbeidet'
+                  ? '#F1EDDF'
+                  : '#01574F',
+              }}
               className={style.handbookButton3}
               onClick={() => handleOnClick('Arbeidet')}
             >
               Arbeidet
             </button>
             <button
-              style={{ color: 'white' }}
+              style={{
+                color: isMobile
+                  ? '#333333'
+                  : whichButtonSelected === 'Det sosiale'
+                  ? '#333333'
+                  : 'white',
+                backgroundColor: isMobile
+                  ? '#FFC4BC'
+                  : whichButtonSelected === 'Det sosiale'
+                  ? '#FFC4BC'
+                  : '#01574F',
+              }}
               className={style.handbookButton2}
               onClick={() => handleOnClick('Det sosiale')}
             >
               Det sosiale{' '}
             </button>
             <button
-              style={{ color: 'white' }}
+              style={{
+                color: isMobile
+                  ? '#333333'
+                  : whichButtonSelected === 'Goder'
+                  ? '#333333'
+                  : 'white',
+                backgroundColor: isMobile
+                  ? '#FAD2E2'
+                  : whichButtonSelected === 'Goder'
+                  ? '#FAD2E2'
+                  : '#01574F',
+              }}
               className={style.handbookButton4}
               onClick={() => handleOnClick('Goder')}
             >
-              Goder{' '}
+              Goder og ytelser
             </button>
           </div>
           <div className={style.section5HandbookLink}>

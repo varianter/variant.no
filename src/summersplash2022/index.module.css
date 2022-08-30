@@ -77,7 +77,6 @@
 
 .section6Paragraph,
 .section6Paragraph2,
-.section6Underline,
 .handbookRef,
 .section2Paragraph,
 .section5Paragraph {
@@ -326,10 +325,6 @@
 .section6 {
   background-color: #f4f1e7;
   height: auto;
-}
-
-.section6Underline {
-  text-decoration: underline;
 }
 
 .section6Paragraph {
@@ -1609,7 +1604,6 @@
 
   /* Section 5 & Section 6*/
   .section6Paragraph,
-  .section6Underline,
   .section6Paragraph2,
   .section5Paragraph,
   .section5HeadingH4 {

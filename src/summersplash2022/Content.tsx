@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Map from './img/map';
 import MapMobile from './img/mapMobile';
 import style from './index.module.css';
@@ -21,8 +21,13 @@ const Content = () => {
   const summerStudent3 = require('./img/Nora summerstudent.png');
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
 
   const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
+  };
 
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
@@ -31,6 +36,11 @@ const Content = () => {
 
     setWhichButtonSelected(buttonValue);
   };
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
+    window.addEventListener('resize', handleResize);
+  });
 
   return (
     <>
@@ -197,27 +207,70 @@ const Content = () => {
                     hva vi prøver å oppnå og hvorfor vi tenker som vi gjør.
                     Under kan du sjekke ut noen utvalgte temaer.
                   </p>
-
+                  {/* If mobile set background else check if pressed before set background */}
                   <div className={style.handbookGrid}>
                     <button
+                      style={{
+                        color: '#333333',
+                        backgroundColor: isMobile
+                          ? '#FAD2E2'
+                          : whichButtonSelected === 'Formal og verdier' &&
+                            !isMobile
+                          ? '#FAD2E2'
+                          : '#FFF3F2',
+                      }}
                       className={style.handbookButton1}
                       onClick={() => handleOnClick('Formal og verdier')}
                     >
                       Formål og verdier
                     </button>
                     <button
-                      className={style.handbookButton3}
-                      onClick={() => handleOnClick('Variantdag')}
-                    >
-                      Variantdag
-                    </button>
-                    <button
+                      style={{
+                        color: isMobile
+                          ? 'white'
+                          : whichButtonSelected === 'Tillit og ansvar' &&
+                            !isMobile
+                          ? 'white'
+                          : '#333333',
+                        backgroundColor: isMobile
+                          ? '#8B0F40'
+                          : whichButtonSelected === 'Tillit og ansvar' &&
+                            !isMobile
+                          ? '#8B0F40'
+                          : '#FFF3F2',
+                      }}
                       className={style.handbookButton2}
                       onClick={() => handleOnClick('Tillit og ansvar')}
                     >
                       Tillit og ansvar
                     </button>
                     <button
+                      style={{
+                        color: isMobile
+                          ? 'white'
+                          : whichButtonSelected === 'Variantdag' && !isMobile
+                          ? 'white'
+                          : '#333333',
+                        backgroundColor: isMobile
+                          ? '#423D89'
+                          : whichButtonSelected === 'Variantdag' && !isMobile
+                          ? '#423D89'
+                          : '#FFF3F2',
+                      }}
+                      className={style.handbookButton3}
+                      onClick={() => handleOnClick('Variantdag')}
+                    >
+                      Variantdag
+                    </button>
+                    <button
+                      style={{
+                        color: '#333333',
+                        backgroundColor: isMobile
+                          ? '#03DAC6'
+                          : whichButtonSelected === 'Miljofyrtarn' && !isMobile
+                          ? '#03DAC6'
+                          : '#FFF3F2',
+                      }}
                       className={style.handbookButton4}
                       onClick={() => handleOnClick('Miljofyrtarn')}
                     >
@@ -324,13 +377,15 @@ const Content = () => {
                 </p>
                 <div className={style.contactInfo}>
                   <div>
-                    <p className={style.section6Underline}>41637572</p>
+                    <p>
+                      <a href="tel:41637572">41637572</a>
+                    </p>
                   </div>
                   <div>
                     <p>|</p>
                   </div>
-                  <p className={style.section6Underline}>
-                    <a href="mailto: mk@variant.no">mk@variant.no</a>
+                  <p>
+                    <a href="mailto:mk@variant.no">mk@variant.no</a>
                   </p>
                 </div>
               </div>

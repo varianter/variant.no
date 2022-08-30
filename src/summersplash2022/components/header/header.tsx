@@ -7,7 +7,7 @@ const Header = (props: { white: boolean }) => {
     return (
       <div className={and(white.main__inner)}>
         <header className={white.header}>
-          <h1 className={white.header__logo}>
+          <div className={white.header__logo}>
             <Link href="/">
               <a>
                 <svg
@@ -60,7 +60,7 @@ const Header = (props: { white: boolean }) => {
                 </svg>
               </a>
             </Link>
-          </h1>
+          </div>
 
           <span hidden id="menu-label">
             Hovedmeny
@@ -110,7 +110,7 @@ const Header = (props: { white: boolean }) => {
     return (
       <div className={and(black.main__inner)}>
         <header className={black.header}>
-          <h1 className={black.header__logo}>
+          <div className={black.header__logo}>
             <Link href="/">
               <a>
                 <svg
@@ -163,7 +163,7 @@ const Header = (props: { white: boolean }) => {
                 </svg>
               </a>
             </Link>
-          </h1>
+          </div>
 
           <span hidden id="menu-label">
             Hovedmeny
