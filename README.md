@@ -1,6 +1,7 @@
 # Variant Homepage
 
 Current homepage of Variant.
+
 ## Building and running locally
 
 Install dependencies using `yarn`
@@ -33,8 +34,6 @@ BLOB_OVERRIDE=true
 AZURE_STORAGE_ACCOUNT_ACCESS_KEY=<ACCESS_KEY>
 AZURE_STORAGE_ACCOUNT_NAME=variantno
 ```
-
-
 
 ## Architecture and design decisions
 

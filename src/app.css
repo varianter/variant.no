@@ -137,3 +137,9 @@ a:visited {
 a:hover {
   color: var(--color-secondary2__shade2);
 }
+
+:root {
+  --input-wrapper-background: var(--color-secondary4__tint2);
+  --input-wrapper-border: var(--color-secondary4);
+  --input-label-color: var(--color-secondary4__shade4);
+}

@@ -70,7 +70,7 @@ export default function Cph22() {
 
         <ul>
           <li>
-            <p>06:30</p>
+            <p>06:00</p>
             <p>🧳 Innsjekk Værnes</p>
           </li>
           <li>
@@ -80,6 +80,10 @@ export default function Cph22() {
           <li>
             <p>09:05</p>
             <p>✈️ Fly til København - D8 3222</p>
+          </li>
+          <li>
+            <p>11:00</p>
+            <p>🚌 Privat buss til Kælderen, møtes av guide i ankomsthallen</p>
           </li>
           <li>
             <p>12:00</p>
@@ -93,21 +97,18 @@ export default function Cph22() {
           </li>
           <li>
             <p>13:00</p>
-            <p>
-              🎨 Variantdag! Reisefølger har fri, og kan sjekke ut København
-            </p>
+            <p>🎨 Variantdag! Følger har fri, og kan sjekke ut København</p>
           </li>
           <li>
             <p>17:00</p>
             <p>
-              🏢 Vi går til{' '}
+              🏃 Apostlenes hester eller metro til innsjekk på{' '}
               <a
                 href="https://guldsmedenhotels.com/axel-hotel-copenhagen-vesterbro/"
                 target="_blank"
               >
-                hotellet
+                Axel Guldsmeden
               </a>{' '}
-              og sjekker inn
             </p>
           </li>
           <li>
@@ -119,6 +120,10 @@ export default function Cph22() {
               </a>
             </p>
           </li>
+          <li>
+            <p>21:30</p>
+            <p>🚌 Privat buss til Kødbyen</p>
+          </li>
         </ul>
       </section>
 
@@ -126,20 +131,29 @@ export default function Cph22() {
         <h3 className="fancy">Lørdag</h3>
         <ul>
           <li>
-            <p>08:00 - 10:00</p>
+            <p>08:00 - 10:15</p>
             <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:00</p>
-            <p>🛥️ Privat kanalbåtcruise, vi møtes utenfor resepsjonen</p>
+            <p>10:15</p>
+            <p>🛥️ Privat kanalbåtcruise - vi møtes ved lobbybaren</p>
           </li>
           <li>
-            <p>12:00</p>
+            <p>12:15</p>
+            <p>
+              🥪 Smørrebrød på{' '}
+              <a href="https://www.nyhavnsfaergekro.dk/" target="_blank">
+                Nyhavns Færgekro
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>14:00</p>
             <p>🏙️ Byvandring i grupper</p>
           </li>
           <li>
-            <p>17:30</p>
-            <p>💺 Felles transport til Refshaleøen</p>
+            <p>17:25</p>
+            <p>💺 Felles transport til Reffen - vi møtes utenfor resepsjonen</p>
           </li>
           <li>
             <p>19:00 - 02:00</p>
@@ -157,21 +171,13 @@ export default function Cph22() {
         <h3 className="fancy">Søndag</h3>
         <ul>
           <li>
-            <p>08:00 - 10:00</p>
+            <p>08:00 - 11:00</p>
             <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
             <p>11:00</p>
-            <p>🔑 Utsjekk</p>
-          </li>
-          <li>
-            <p>11:00</p>
-            <p>🎢 Tivoli</p>
-          </li>
-          <li>
-            <p>14:30</p>
             <p>
-              🍱 Felles lunsj i Tivoli på{' '}
+              🔑 Utsjekk - bagasjeoppbevaring på{' '}
               <a
                 href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
                 target="_blank"
@@ -181,8 +187,31 @@ export default function Cph22() {
             </p>
           </li>
           <li>
-            <p>16:30</p>
-            <p>🚅 Felles avreise med tog til Kastrup</p>
+            <p>11:15</p>
+            <p>🎢 Tivoli</p>
+          </li>
+          <li>
+            <p>14:30</p>
+            <p>
+              🍱 Lunsj på{' '}
+              <a
+                href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
+                target="_blank"
+              >
+                Over Plænen
+              </a>{' '}
+              i Tivoli
+            </p>
+          </li>
+          <li>
+            <p>16:45</p>
+            <p>
+              🚌 Privat buss fra{' '}
+              <a href="https://goo.gl/maps/CRdscgz8gHhH3RAGA" target="_blank">
+                Tivolis bussparkering i H.C. Andersens Boulevard
+              </a>{' '}
+              til flyplassen{' '}
+            </p>
           </li>
           <li>
             <p>17:45</p>
@@ -211,7 +240,14 @@ export default function Cph22() {
             <p>
               Tlf: <a href="tel:+4533313266">+45 333 13 266</a>
             </p>
-            <p>Colbjørnsengade 14, 1652 København V</p>
+            <p>
+              <a
+                href="https://g.page/Axel-Guldsmeden-Hotel?share"
+                target="_blank"
+              >
+                Colbjørnsengade 14, 1652 København V
+              </a>
+            </p>
           </div>
 
           <div className={style.infoGroup}>

@@ -14,9 +14,10 @@ export default function RSSFeed({ items }: FeedProps) {
     <Layout>
       <div className={style.feed}>
         <div className={style.feed__head}>
-          <h2 className={and(style.feed__title, 'fancy')}>Våre ytringer</h2>
+          <h2 className={and(style.feed__title, 'fancy')}>Meninger og sånn</h2>
           <p>
-            Du har funnet vår feed! Her har vi samlet de siste vi gjort av{' '}
+            Du har funnet feeden vår! Her har vi samlet det siste vi har gjort
+            av{' '}
             <a href="https://blog.variant.no/" rel="external noopner">
               blogginnlegg
             </a>
