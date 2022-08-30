@@ -190,12 +190,12 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
           Goder
         </h3>
         <p className={style.handbookParagraphs}>
-          <strong>Lønn - </strong>God lønn sikrer den stabiliteten og friheten
+          <strong>God lønn - </strong>Dette sikrer den stabiliteten og friheten
           vi ønsker å gi. Sjekk ut{' '}
           <a href="/kalkulator" style={{ color: 'white' }}>
             lønnskalkulatoren
           </a>{' '}
-          vår eller skroll litt lenger ned for å lese mer om lønn.
+          vår eller scroll lenger ned for å lese mer om lønn
         </p>
         <p className={style.handbookParagraphs}>
           <strong>Gadgets - </strong>Hvert år har du 10 000 pluss moms (dvs.
@@ -206,10 +206,25 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
           .
         </p>
         <p className={style.handbookParagraphs}>
-          <strong>Trening, mobil og internett - </strong>
+          <strong>Trening - </strong>
           Variant dekker treningsutgifter opptil 500/mnd (dette kan være
           medlemskap på senter, treningsutstyr eller noe annet
           treningsrelatert).
+        </p>
+        <p className={style.handbookParagraphs}>
+          <strong>Fri telefoni (innenfor rimelighetens grenser).</strong>
+        </p>
+        <p className={style.handbookParagraphs}>
+          <strong>Bredbånd hjemme - </strong>Variant dekker bredbånd inntil 500
+          kr/mnd.{' '}
+        </p>
+        <p className={style.handbookParagraphs}>
+          <strong>Forsikring - </strong> Ut over vanlig yrkesskadeforsikringer
+          får du reiseforsikring for hele familien, gruppelivsforsikring,
+          behandlingsforsikring og dekning for annen ulykke enn yrkesskade.
+        </p>
+        <p className={style.handbookParagraphs}>
+          <strong>Utvidede rettigheter til egenmelding og sykepenger.</strong>
         </p>
       </div>
     );
