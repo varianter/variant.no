@@ -1,3 +1,4 @@
+import DecorativeBoxes from '@components/decorative-boxes';
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -17,7 +18,7 @@ const Home = ({
   feeds,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const cases = useMemo(() => {
-    return randomCases.map((caseItem) => (
+    return randomCases.map((caseItem, index) => (
       <article className={style.cases__case} key={caseItem.heading}>
         <div className={style.cases__caseContent}>
           <h4>{caseItem.heading}</h4>
@@ -30,11 +31,28 @@ const Home = ({
             <a title="Prosjektinfo">Les mer</a>
           </Link> */}
         </div>
-        <figure>
-          <div className={style.cases__decorationBox} />
-          <div className={style.cases__decorationBox} />
+        <DecorativeBoxes
+          box1Properties={{
+            color:
+              index % 3 === 0
+                ? '--color-secondary3'
+                : index % 3 === 1
+                ? '--color-secondary2__tint4'
+                : '--color-primary__tint3',
+            position: index % 2 === 1 ? 'top-right' : 'top-leftish',
+          }}
+          box2Properties={{
+            color:
+              index % 3 === 0
+                ? '--color-secondary1__tint4'
+                : index % 3 === 1
+                ? '--color-secondary3__tint2'
+                : '--color-secondary2__tint4',
+            position: index % 2 === 1 ? 'bottom-middle' : 'bottom-left',
+          }}
+        >
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
-        </figure>
+        </DecorativeBoxes>
       </article>
     ));
   }, [randomCases]);
