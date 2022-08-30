@@ -6,11 +6,13 @@ import { and } from 'src/utils/css';
 import style from './layout.module.css';
 
 import favicon from '@variant/profile/lib/logo/favicon.png';
+import { useMediaQuery } from 'src/utils/use-media-query';
 
 type LayoutProps = {
   title?: string;
   fullWidth?: boolean;
   crazy?: boolean;
+  zenMode?: boolean;
 };
 
 const Layout: React.FC<LayoutProps> = ({
@@ -18,6 +20,7 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
   crazy = false,
+  zenMode = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
@@ -28,9 +31,15 @@ const Layout: React.FC<LayoutProps> = ({
     closeRef,
   );
 
+  const mainClass = and(
+    style.main,
+    !zenMode ? style['main--overflow'] : undefined,
+    zenMode ? style['main--zenMode'] : undefined,
+  );
+
   return (
     <div
-      className={style.main}
+      className={mainClass}
       style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
     >
       <Head>
@@ -68,86 +77,90 @@ const Layout: React.FC<LayoutProps> = ({
             </Link>
           </h1>
 
-          <span hidden id="menu-label">
-            Hovedmeny
-          </span>
+          {!zenMode && (
+            <>
+              <span hidden id="menu-label">
+                Hovedmeny
+              </span>
 
-          <button
-            className={style.burgerButtonContainer}
-            ref={closeRef}
-            aria-labelledby="menu-label"
-            aria-expanded={isMenuVisible}
-            onClick={() => setMenuVisible(!isMenuVisible)}
-          >
-            <div
-              className={and(
-                style.bar1,
-                isMenuVisible ? style.bar1_change : '',
-              )}
-            />
-            <div
-              className={and(
-                style.bar2,
-                isMenuVisible ? style.bar2_change : '',
-              )}
-            />
-            <div
-              className={and(
-                style.bar3,
-                isMenuVisible ? style.bar3_change : '',
-              )}
-            />
-          </button>
+              <button
+                className={style.burgerButtonContainer}
+                ref={closeRef}
+                aria-labelledby="menu-label"
+                aria-expanded={isMenuVisible}
+                onClick={() => setMenuVisible(!isMenuVisible)}
+              >
+                <div
+                  className={and(
+                    style.bar1,
+                    isMenuVisible ? style.bar1_change : '',
+                  )}
+                />
+                <div
+                  className={and(
+                    style.bar2,
+                    isMenuVisible ? style.bar2_change : '',
+                  )}
+                />
+                <div
+                  className={and(
+                    style.bar3,
+                    isMenuVisible ? style.bar3_change : '',
+                  )}
+                />
+              </button>
 
-          <nav
-            className={and(
-              style.header__nav,
-              isMenuVisible ? '' : style.header__nav__hidden,
-            )}
-            aria-labelledby="menu-label"
-            aria-hidden={!isMenuVisible}
-            ref={modalRef}
-          >
-            <ul className={style.header__nav__ul} ref={navRef}>
-              <li>
-                <Link href="/jobs">
-                  <a tabIndex={tabIndex}>Bli en variant</a>
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="http://handbook.variant.no"
-                  rel="noopener"
-                  tabIndex={tabIndex}
-                >
-                  Håndbok
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://variant.blog"
-                  rel="noopener"
-                  tabIndex={tabIndex}
-                >
-                  Blogg
-                </a>
-              </li>
-              <li>
-                <Link href="/ansatte">
-                  <a tabIndex={tabIndex}>Alle varianter</a>
-                </Link>
-              </li>
-              <li id="dont_show">
-                <a
-                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                  rel="noopener"
-                  tabIndex={tabIndex}
-                >
-                  Si hallo!
-                </a>
-              </li>
-            </ul>
-          </nav>
+              <nav
+                className={and(
+                  style.header__nav,
+                  isMenuVisible ? '' : style.header__nav__hidden,
+                )}
+                aria-labelledby="menu-label"
+                aria-hidden={!isMenuVisible}
+                ref={modalRef}
+              >
+                <ul className={style.header__nav__ul} ref={navRef}>
+                  <li>
+                    <Link href="/jobs">
+                      <a tabIndex={tabIndex}>Bli en variant</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="http://handbook.variant.no"
+                      rel="noopener"
+                      tabIndex={tabIndex}
+                    >
+                      Håndbok
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://variant.blog"
+                      rel="noopener"
+                      tabIndex={tabIndex}
+                    >
+                      Blogg
+                    </a>
+                  </li>
+                  <li>
+                    <Link href="/ansatte">
+                      <a tabIndex={tabIndex}>Alle varianter</a>
+                    </Link>
+                  </li>
+                  <li id="dont_show">
+                    <a
+                      href="https://twitter.com/intent/tweet?screen_name=variant_as"
+                      rel="noopener"
+                      tabIndex={tabIndex}
+                    >
+                      Si hallo!
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </>
+          )}
         </header>
         <div>{children}</div>
       </div>
@@ -245,7 +258,7 @@ const Layout: React.FC<LayoutProps> = ({
               </a>{' '}
               i Trondheim, i våre egne lokaler i{' '}
               <a
-                href="https://www.google.com/maps/place/Tollbugata+24,+0157+Oslo,+Norway/@59.910812,10.7393748,17z/"
+                href="https://www.google.com/maps/place/Variant+Oslo/@59.910812,10.7393748,17z/data=!4m5!3m4!1s0x46416f4127442c2b:0xe0534eff4f975859!8m2!3d59.9108093!4d10.7415635"
                 rel="noopener"
                 target="_blank"
                 title="Kart til Variant Oslo"
@@ -312,7 +325,7 @@ export default Layout;
 function useTogglableBurgerMenu<
   T extends HTMLElement,
   U extends HTMLElement,
-  R extends HTMLElement
+  R extends HTMLElement,
 >(
   modalRef: React.RefObject<T>,
   ulRef: React.RefObject<U>,
@@ -407,48 +420,4 @@ function useTogglableBurgerMenu<
     setMenuVisible,
     tabIndex,
   };
-}
-
-function hasWindow() {
-  return typeof window !== 'undefined';
-}
-
-const useMediaQuery = (mediaQuery: string) => {
-  const [isMatched, setMatched] = useState(() => {
-    if (!hasWindow()) return false;
-    return Boolean(window.matchMedia(mediaQuery).matches);
-  });
-
-  useEffect(() => {
-    if (!hasWindow()) return;
-    const mediaQueryList = window.matchMedia(mediaQuery);
-    const documentChangeHandler = () =>
-      setMatched(Boolean(mediaQueryList.matches));
-    listenTo(mediaQueryList, documentChangeHandler);
-
-    documentChangeHandler();
-    return () => removeListener(mediaQueryList, documentChangeHandler);
-  }, [mediaQuery]);
-
-  return isMatched;
-};
-
-function listenTo(
-  matcher: MediaQueryList,
-  cb: (ev: MediaQueryListEvent) => void,
-) {
-  if ('addEventListener' in (matcher as any)) {
-    return matcher.addEventListener('change', cb);
-  }
-  return matcher.addListener(cb);
-}
-
-function removeListener(
-  matcher: MediaQueryList,
-  cb: (ev: MediaQueryListEvent) => void,
-) {
-  if ('removeEventListener' in (matcher as any)) {
-    return matcher.removeEventListener('change', cb);
-  }
-  return matcher.removeListener(cb);
 }

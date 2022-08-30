@@ -12,9 +12,9 @@ export default function Home() {
           <h1>Hallaien!</h1>
 
           <p>
-            Her har vi skrevet litt om våre tanker om å bygge Variant i Bergen. Nå
-            er vi spente på hva du tenker. Hva tror du er viktig for å lykkes?
-            Hvordan ønsker du å utvikle Bergen sammen med oss?
+            Her har vi skrevet litt om våre tanker om å bygge Variant i Bergen.
+            Nå er vi spente på hva du tenker. Hva tror du er viktig for å
+            lykkes? Hvordan ønsker du å utvikle Bergen sammen med oss?
           </p>
         </Content>
       </Wrapper>
@@ -45,10 +45,10 @@ export default function Home() {
             <p>
               Det er det vi ønsker du skal gjøre, – sammen med flere og sammen
               med oss. Vi har tillit til dine tanker og forslag til hvordan
-              selskapet mellom de syv fjell skal bygges og drives. Vi gir dere frihet som om
-              dere skulle startet for dere selv. Så gir vi dere trygghet for at
-              det dere ønsker å gjøre lykkes. Frihet og trygghet – vi kommer
-              tilbake til det.
+              selskapet mellom de syv fjell skal bygges og drives. Vi gir dere
+              frihet som om dere skulle startet for dere selv. Så gir vi dere
+              trygghet for at det dere ønsker å gjøre lykkes. Frihet og trygghet
+              – vi kommer tilbake til det.
             </p>
           </Block>
 
@@ -77,21 +77,22 @@ export default function Home() {
           <div className={styles.strong}>
             <p>
               Vi har latt tankene spinne. Vi har latt fantasien løpe fritt.
-              Hvordan tror vi at Variant Bergen kan bli? Sånn litt inn i framtida?
-              Dette er tanker som du og ditt team må være med å forbedre og
-              foredle. Så med alle forbehold, her er slik vi ser for oss at 2025{' '}
-              <i>kan</i> se ut.
+              Hvordan tror vi at Variant Bergen kan bli? Sånn litt inn i
+              framtida? Dette er tanker som du og ditt team må være med å
+              forbedre og foredle. Så med alle forbehold, her er slik vi ser for
+              oss at 2025 <i>kan</i> se ut.
             </p>
           </div>
 
           <div className={styles.em}>
             <p>
-              I løpet året flytter Variant Bergen inn et eget lokale på Strandgaten med utsikt mot Bryggen. 
-              Lokalene er store og attraktive, og er
-              optimalisert for samhandling. Store fellesarealer for å
-              gjennomføre Variantdager, kundeworkshops og lignende. Her er det
-              arbeidsplasser til en del, men en god andel jobber ute hos kunde.
-              Dette er lokaler med sjel og som man føler seg stolte av.
+              I løpet året flytter Variant Bergen inn et eget lokale på
+              Strandgaten med utsikt mot Bryggen. Lokalene er store og
+              attraktive, og er optimalisert for samhandling. Store
+              fellesarealer for å gjennomføre Variantdager, kundeworkshops og
+              lignende. Her er det arbeidsplasser til en del, men en god andel
+              jobber ute hos kunde. Dette er lokaler med sjel og som man føler
+              seg stolte av.
             </p>
 
             <p>
@@ -104,13 +105,14 @@ export default function Home() {
             </p>
 
             <p>
-              Under både lokale og nasjonale variantdager, bidrar bergensvarianter
-              med læreglede, faglige bidrag og innsats for å utvikle selskap og
-              konsern. Variantdagen i november arrangeres bare for Bergen. Her
-              gjennomføres 3 ulike faglige sesjoner parallelt. Et av dem er variant:skudd som
-              bidrar til å gjøre konsulenter av de 6 nyutdannede variantene som
-              startet i august. Hver måned publiserer bergensvarianter faglige
-              bloggposer i tillegg publiserer de en månedlig video med utviklerinnhold.
+              Under både lokale og nasjonale variantdager, bidrar
+              bergensvarianter med læreglede, faglige bidrag og innsats for å
+              utvikle selskap og konsern. Variantdagen i november arrangeres
+              bare for Bergen. Her gjennomføres 3 ulike faglige sesjoner
+              parallelt. Et av dem er variant:skudd som bidrar til å gjøre
+              konsulenter av de 6 nyutdannede variantene som startet i august.
+              Hver måned publiserer bergensvarianter faglige bloggposer i
+              tillegg publiserer de en månedlig video med utviklerinnhold.
             </p>
           </div>
         </Content>
@@ -164,9 +166,10 @@ export default function Home() {
                 Bergen støtter seg kraftig på konsernets rekrutteringskapasitet.
               </p>
               <p>
-                Allerede i september inviteres dere med på Varianttur med fadderen
-                Variant Trondheim. Da blir dere sammen med følge, samboer eller kone 
-                introdusert for oss, og vi og dere får sjansen til å bli godt kjent.
+                Allerede i september inviteres dere med på Varianttur med
+                fadderen Variant Trondheim. Da blir dere sammen med følge,
+                samboer eller kone introdusert for oss, og vi og dere får
+                sjansen til å bli godt kjent.
               </p>
               <p>
                 Det første halvåret selger vi oppdrag basert på CV-salg til
@@ -183,19 +186,18 @@ export default function Home() {
         <Content mode="right">
           <div className={styles.em}>
             <p>
-              Det første året gjennomføres Variantdager dels sammen med 
-              Oslo eller Trondheim og dels på egenhånd. Noen ganger reiser varianter mellom
-              byene, andre ganger benyttes video. 1. september 2023
+              Det første året gjennomføres Variantdager dels sammen med Oslo
+              eller Trondheim og dels på egenhånd. Noen ganger reiser varianter
+              mellom byene, andre ganger benyttes video. 1. september 2023
               feirer Bergen ettårsdagen med en Varianttur på egenhånd sammen med
               følge til Reykjavik.
             </p>
 
             <p>
               Den første tiden leier Variant et kontor i Spaces Vaskerelven.
-              Antallet rom og arbeidsplasser utvides etter hvert som vi
-              vokser. Konsernet stiller med struktur- og systemkapital.
-              Konsernets ledelse jobber tett på en coachende måte med Bergens
-              ledergruppe.
+              Antallet rom og arbeidsplasser utvides etter hvert som vi vokser.
+              Konsernet stiller med struktur- og systemkapital. Konsernets
+              ledelse jobber tett på en coachende måte med Bergens ledergruppe.
             </p>
           </div>
         </Content>
@@ -210,15 +212,15 @@ export default function Home() {
               Vi husker det så godt. Hvor givende det var å kunne forme
               selskapet slik vi mente det helst skulle gjøres. Noen ganger
               trådte vi feil og måtte justere kurs, men det var like fullt så
-              morsomt. Denne opplevelsen ønsker vi å gi deg og ditt team.
-              Og det er ikke først og fremst for at vi er så snille eller så
-              ivrig på å gi folk gode opplevelser, selv om vi er det også. Av
-              samme grunn som vi har tillit til at summen av enkeltpersoners
-              vurderinger overgår ledelsens så tror vi også at ved å gi
-              autonomi, frihet og tillit til de ulike selskapene i konsernet vil
-              selskapene som sum bli bedre enn hvis styrt fra en konsernledelse.
-              Vi er derfor ute etter ditt entreprenørskap og din gründerånd.
-              Dette skal være som å starte for deg selv, bare med trygghet.
+              morsomt. Denne opplevelsen ønsker vi å gi deg og ditt team. Og det
+              er ikke først og fremst for at vi er så snille eller så ivrig på å
+              gi folk gode opplevelser, selv om vi er det også. Av samme grunn
+              som vi har tillit til at summen av enkeltpersoners vurderinger
+              overgår ledelsens så tror vi også at ved å gi autonomi, frihet og
+              tillit til de ulike selskapene i konsernet vil selskapene som sum
+              bli bedre enn hvis styrt fra en konsernledelse. Vi er derfor ute
+              etter ditt entreprenørskap og din gründerånd. Dette skal være som
+              å starte for deg selv, bare med trygghet.
             </p>
           </Block>
         </Content>

@@ -20,12 +20,19 @@ const Home = ({
     return randomCases.map((caseItem) => (
       <article className={style.cases__case} key={caseItem.heading}>
         <div className={style.cases__caseContent}>
-          <h3>{caseItem.heading}</h3>
+          <h4>{caseItem.heading}</h4>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
+          {/* Link leading to project sub-pages is commented 
+          out for now, as the sub-pages are not ready yet. */}
+          {/* <Link href={'/'}>
+            <a title="Prosjektinfo">Les mer</a>
+          </Link> */}
         </div>
         <figure>
+          <div className={style.cases__decorationBox} />
+          <div className={style.cases__decorationBox} />
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
         </figure>
       </article>
@@ -82,45 +89,59 @@ const Home = ({
       </section>
 
       <section className={style.join}>
-        <h2>Bli en variant!</h2>
+        <h2 className={style.join_title}>Bli en Variant!</h2>
+
         <p>
           For å kunne lage gode løsninger trenger vi forskjellige mennesker med
-          forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer.
+          forskjellig perspektiv. Vi trenger flinke folk med engasjerte stemmer!
         </p>
 
-        <p>
-          <strong>Det betyr deg.</strong>
-        </p>
-        <ButtonNextLink href="/jobs">Bli en variant</ButtonNextLink>
+        <p>Kanskje det er deg?</p>
 
-        <p>
-          Vi har mange{' '}
-          <Link href="/ansatte">
-            <a title="Ansattoversikt">flotte kolleger</a>
-          </Link>
-          , et{' '}
-          <a
-            href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
-            rel="noopener"
-            target="_blank"
-            title="Kart til Varianthuset"
-          >
-            fint hus
-          </a>
-          ,{' '}
-          <a href="https://handbook.variant.no" title="Variant Håndbok">
-            gode (og åpne) vilkår
-          </a>{' '}
-          og{' '}
-          <Link href="/kalkulator">
-            <a title="Lønnskalkulator">god lønn</a>
-          </Link>
-          . Ikke minst har vi mange{' '}
-          <a href="#prosjekter" title="Prosjekteksempler">
-            spennende prosjekter
-          </a>
-          .
-        </p>
+        <div className={style.join_info}>
+          <div>
+            <p>
+              Vi holder til i superfine lokaler i Trondheim, Oslo og Bergen. I
+              tillegg har vi noen små, sjarmerende satelittkontor i Molde og
+              Harstad.
+            </p>
+            <p>
+              Der har vi en haug av{' '}
+              <Link href="/ansatte">
+                <a title="Ansattoversikt">flotte kolleger</a>
+              </Link>
+              ,{' '}
+              <a href="https://handbook.variant.no" title="Variant Håndbok">
+                gode (og selvfølgelig åpne) vilkår
+              </a>{' '}
+              og{' '}
+              <Link href="/kalkulator">
+                <a title="Lønnskalkulator">god lønn</a>
+              </Link>
+              . Ta gjerne en titt i{' '}
+              <a href="https://handbook.variant.no" title="Variant Håndbok">
+                håndboka
+              </a>{' '}
+              vår for mer informasjon om oss.
+            </p>
+
+            <p>
+              Ikke minst jobber vi med mange{' '}
+              <a href="#prosjekter" title="Prosjekteksempler">
+                spennende prosjekter
+              </a>
+              !
+            </p>
+            <ButtonNextLink className={style.join_button} href="/jobs">
+              Bli en variant
+            </ButtonNextLink>
+          </div>
+          <img
+            className={style.join_map}
+            src={require('./images/blob-map.svg')}
+            alt="Kart som viser hvor alle kontorene våre ligger"
+          />
+        </div>
       </section>
 
       <section className={style.services}>
@@ -183,14 +204,8 @@ const Home = ({
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
-          <p>Det siste fra oss i form av bloggposter, podcasts og video</p>
+          <p>Våre siste ytringer i form av blogginnlegg, podcasts og video.</p>
         </header>
-
-        <img
-          className={style.feed__image1}
-          role="none"
-          src={require('./images/blob-ytringer.svg')}
-        />
 
         <div className={style.feed__content}>
           <List items={feeds.blog} />
@@ -230,7 +245,12 @@ const Home = ({
       </section>
 
       <section className={style.cases}>
-        <h2 id="prosjekter">Noe av det vi gjør</h2>
+        <h2 id="prosjekter">Variantarbeid</h2>
+        <p>
+          Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
+          prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
+          mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
+        </p>
         {cases}
       </section>
     </Layout>
