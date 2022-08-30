@@ -5,7 +5,16 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
   if (selectedButton === 'Formal og verdier') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Formål og verdier</h3>
+        <h3
+          style={{
+            backgroundColor: '#FAD2E2',
+            maxWidth: 'fit-content',
+            padding: '3%',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Formål og verdier
+        </h3>
         <p className={style.handbookParagraphs}>
           Så, hvorfor Variant? Hvorfor er vi egentlig til? Vårt formål er å
           utvikle samfunnet vi lever i. Flinke personer som tenker nye tanker,
@@ -38,7 +47,17 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Tillit og ansvar') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Tillit og ansvar</h3>
+        <h3
+          style={{
+            backgroundColor: '#8B0F40',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: 'white',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Tillit og ansvar
+        </h3>
         <p className={style.handbookParagraphs}>
           Variant vil gi sine ansatte det beste, vi som jobber her forventes å
           gi det samme. Vi gir full tillit til hverandre fordi vi tror at alle
@@ -66,7 +85,17 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Variantdag') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Variantdag</h3>
+        <h3
+          style={{
+            backgroundColor: '#423D89',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: 'white',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Variantdag
+        </h3>
         <p className={style.handbookParagraphs}>
           Den første fredagen i hver måned (foruten januar og juli) har vi det
           vi kaller en variantdag. Dette er en “innedag”, der vi alle bruker
@@ -84,7 +113,16 @@ const HandBooKPages = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Miljofyrtarn') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Miljøfyrtårn</h3>
+        <h3
+          style={{
+            backgroundColor: '#03DAC6',
+            maxWidth: 'fit-content',
+            padding: '3%',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Miljøfyrtårn
+        </h3>
         <p className={style.handbookParagraphs}>
           Bærekraft for Variant innebærer mye. Det er likestilling i
           arbeidslivet, en bærekraftig arbeidsdag, som både er spennende,

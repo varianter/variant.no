@@ -5,7 +5,17 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
   if (selectedButton === 'Formal og verdier') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Formål og verdier</h3>
+        <h3
+          style={{
+            backgroundColor: '#68E9DD',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: '#333333',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Formål og verdier
+        </h3>
         <p className={style.handbookParagraphs}>
           Så, hvorfor Variant? Hvorfor er vi egentlig til? Vårt formål er å
           utvikle samfunnet vi lever i. Flinke personer som tenker nye tanker,
@@ -59,7 +69,17 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Arbeidet') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Arbeidet</h3>
+        <h3
+          style={{
+            backgroundColor: '#F1EDDF',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: '#333333',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Arbeidet
+        </h3>
         <p className={style.handbookParagraphs}>
           <strong>Fleksitid - </strong>En arbeidsdag er på 7,5 timer. Hvordan
           disse fordeles på en dag bestemmer du selv, gitt at ikke annet er
@@ -107,7 +127,17 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Det sosiale') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Det sosiale</h3>
+        <h3
+          style={{
+            backgroundColor: '#FFC4BC',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: '#333333',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Det sosiale
+        </h3>
         <p className={style.handbookParagraphs}>
           <strong>Variantdag - </strong>I tillegg til faglig påfyll er dette en
           god mulighet til å ha det hyggelig sammen.
@@ -148,7 +178,17 @@ const HandBooKPagesJob = ({ selectedButton }: WhichButtonPressed) => {
   } else if (selectedButton === 'Goder') {
     return (
       <div>
-        <h3 className={style.handbookHeaderDeskotop}>Goder</h3>
+        <h3
+          style={{
+            backgroundColor: '#FAD2E2',
+            maxWidth: 'fit-content',
+            padding: '3%',
+            color: '#333333',
+          }}
+          className={style.handbookHeaderDeskotop}
+        >
+          Goder
+        </h3>
         <p className={style.handbookParagraphs}>
           <strong>Lønn - </strong>God lønn sikrer den stabiliteten og friheten
           vi ønsker å gi. Sjekk ut{' '}

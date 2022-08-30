@@ -101,10 +101,12 @@ const Content = () => {
                   </p>
 
                   <p className={style.section2Paragraph}>
-                    I 2023 tilbyr vi sommerjobb i både Trondheim, Oslo og
-                    Bergen, til henholdsvis seks, fem og to studenter. Hvor du
-                    vil jobbe bestemmer du naturligvis selv. Sommerjobben varer
-                    i fire + to uker med tre uker ferie i mellomtiden.
+                    I 2023 tilbyr vi sommerjobb i både{' '}
+                    <strong>Trondheim</strong>, <strong>Oslo</strong> og{' '}
+                    <strong>Bergen</strong>, til henholdsvis seks, fem og to
+                    studenter. Hvor du vil jobbe bestemmer du naturligvis selv.
+                    Sommerjobben varer i fire + to uker med tre uker ferie i
+                    mellomtiden.
                   </p>
 
                   <p className={style.section2Paragraph}>
