@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import style from './style.module.css';
 type BoxProperties = {
   color: `--color-${DefaultColors}${ColorModifiers}` | HexColorAsString;
@@ -30,6 +31,35 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
   box1Properties,
   box2Properties,
 }) => {
+  const box1HorizontalDistance = useRef(
+    calculateDistanceToSide(
+      getNumericalBoxSize(boxSize),
+      box1Properties.position,
+      'left',
+    ),
+  );
+  const box1VerticalDistance = useRef(
+    calculateDistanceToSide(
+      getNumericalBoxSize(boxSize),
+      box1Properties.position,
+      'top',
+    ),
+  );
+  const box2HorizontalDistance = useRef(
+    calculateDistanceToSide(
+      getNumericalBoxSize(boxSize),
+      box2Properties.position,
+      'left',
+    ),
+  );
+  const box2VerticalDistance = useRef(
+    calculateDistanceToSide(
+      getNumericalBoxSize(boxSize),
+      box2Properties.position,
+      'top',
+    ),
+  );
+
   return (
     <div className={style['main-container']}>
       <div
@@ -37,18 +67,12 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
           backgroundColor: `var(${box1Properties.color})`,
-          left:
-            calculateDistanceToSide(
-              getNumericalBoxSize(boxSize),
-              box1Properties.position,
-              'left',
-            ) + '%',
-          top:
-            calculateDistanceToSide(
-              getNumericalBoxSize(boxSize),
-              box1Properties.position,
-              'top',
-            ) + '%',
+          left: box1HorizontalDistance.current + '%',
+          top: box1VerticalDistance.current + '%',
+          transform: `translate(
+            -${box1HorizontalDistance.current}%, 
+            -${box1VerticalDistance.current}%
+            )`,
         }}
       >
         {box1Properties.text ? box1Properties.text : ''}
@@ -58,18 +82,12 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
           backgroundColor: `var(${box2Properties.color})`,
-          left:
-            calculateDistanceToSide(
-              getNumericalBoxSize(boxSize),
-              box2Properties.position,
-              'left',
-            ) + '%',
-          top:
-            calculateDistanceToSide(
-              getNumericalBoxSize(boxSize),
-              box2Properties.position,
-              'top',
-            ) + '%',
+          left: box2HorizontalDistance.current + '%',
+          top: box2VerticalDistance.current + '%',
+          transform: `translate(
+            -${box2HorizontalDistance.current}%, 
+            -${box2VerticalDistance.current}%
+            )`,
         }}
       >
         {box2Properties.text ? box2Properties.text : ''}
@@ -97,15 +115,15 @@ function calculateDistanceToSide(
         return 0;
       case 'leftish':
       case 'topish':
-        return (100 - boxSize) * 0.25;
+        return 25;
       case 'middle':
-        return (100 - boxSize) * 0.5;
+        return 50;
       case 'rightish':
       case 'bottomish':
-        return (100 - boxSize) * 0.75;
+        return 75;
       case 'right':
       case 'bottom':
-        return 100 - boxSize;
+        return 100;
     }
   } else if (
     // object with exact numerical position has been used
@@ -126,11 +144,11 @@ function calculateDistanceToSide(
 function getNumericalBoxSize(boxSize: BoxSize): number {
   switch (boxSize) {
     case 'small':
-      return 50;
+      return 40;
     case 'medium':
-      return 60;
+      return 50;
     case 'large':
-      return 70;
+      return 60;
     default:
       return boxSize;
   }
