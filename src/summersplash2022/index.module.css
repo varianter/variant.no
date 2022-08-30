@@ -22,7 +22,7 @@
   z-index: 0;
   max-height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -201,6 +201,7 @@
 .section3 {
   background-color: #01574f;
   color: white;
+  height: 1400px;
 }
 
 .summerstudent1 {
