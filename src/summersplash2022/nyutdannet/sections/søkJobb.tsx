@@ -16,7 +16,9 @@ const Apply = () => {
       <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
       <div className={style.contactInfo}>
         <div>
-          <p className={style.section6Underline}>41637572</p>
+          <p className={style.section6Underline}>
+            <a href="tel:41637572">41637572</a>
+          </p>
         </div>
         <div>
           <p>|</p>
