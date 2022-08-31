@@ -22,15 +22,12 @@ const Content = () => {
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [isMobile, setIsMobile] = useState(false);
 
-  const [buttonClicked, setButtonClicked] = useState(false);
-
   const handleResize = () => {
     setIsMobile(window.matchMedia('(max-width: 900px)').matches);
   };
 
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
-      setButtonClicked(true);
     }
 
     setWhichButtonSelected(buttonValue);
