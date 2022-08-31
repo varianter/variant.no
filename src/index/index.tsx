@@ -61,7 +61,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   }, [randomCases]);
 
   return (
-    <Layout crazy>
+    <Layout crazy homepage>
       <Head>
         <meta
           property="og:description"
