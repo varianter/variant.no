@@ -71,6 +71,7 @@ p {
   font-size: 62px;
   line-height: 84px;
   width: 70%;
+  margin-bottom: 5%;
 }
 
 /* Section1 */
@@ -127,7 +128,7 @@ p {
 }
 
 .applyButtonPink {
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 /* Section 1 image*/
@@ -188,7 +189,7 @@ p {
 
 .section4 {
   padding-top: 10%;
-  height: 1100px;
+  height: 1200px;
 }
 
 .section4 p {

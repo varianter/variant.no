@@ -76,6 +76,8 @@
   font-size: 62px;
   line-height: 84px;
   width: 60%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   /* or 135% */
 }
 
@@ -164,7 +166,7 @@
   top: 350px;
   left: 1%;
   height: auto;
-  width: 40%;
+  width: 45%;
   z-index: 1;
 }
 
@@ -487,8 +489,8 @@
   width: 100%;
 }
 
-.handbookChildButton {
-  width: 50%;
+.handbookChildButton p {
+  width: 95%;
 }
 
 .whyWorkAtVariant {
