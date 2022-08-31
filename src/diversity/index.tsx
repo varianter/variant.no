@@ -3,7 +3,6 @@ import Head from 'next/head';
 import SayHi from 'src/index/say-hi';
 import Layout from 'src/layout';
 import style from './diversity.module.css';
-// TODO: Finalize content: Text, images, image alt text
 
 const Diversity = () => {
   return (
@@ -27,10 +26,10 @@ const Diversity = () => {
       <header className={style.header}>
         <h2 className={style.header__title}>Mangfold</h2>
         <p>
-          Vi synes at mangfold er viktig! <br />
-          Vi samarbeider med de som aktivt jobber for dette. Mangfold skaper
-          inkluderende og fullgode løsninger, som gir verdi og nytte for
-          absolutt alle.
+          Mangfold og perspektiv er viktig! <br />
+          Vi samarbeider med de som aktivt jobber for dette.
+          Mangfold skaper inkluderende og fullgode løsninger,
+          som gir verdi og nytte for absolutt alle. 
         </p>
       </header>
 
@@ -55,7 +54,7 @@ const Diversity = () => {
                 for studenter. Dette er viktig for oss.
               </p>
               <p>
-                Formålet deres er å å øke trivselen og motivere jenter til å
+                Formålet deres er å øke trivselen og motivere jenter til å
                 fullføre studieløpet innenfor disse fagområdene.
               </p>
               <p>
@@ -64,7 +63,7 @@ const Diversity = () => {
                 holder arrangementer.
               </p>
             </section>
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img src="/images/diversity/ada.png" alt="To personer står på en scene på Adas 25-årsjubileum" />
           </article>
 
           <article className={style['project-article']}>
