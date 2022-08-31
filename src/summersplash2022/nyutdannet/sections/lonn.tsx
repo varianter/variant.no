@@ -1,5 +1,5 @@
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-import { Calculator } from 'src/salary-calculator';
+import Calculator from '../utils/calculator';
 
 const Payment = () => {
   return (
@@ -27,7 +27,7 @@ const Payment = () => {
           </p>
         </div>
         <div className={style.wrapper}>
-          <Calculator year={2021} degree={'masters'} />
+          <Calculator />
         </div>
       </div>
     </section>
