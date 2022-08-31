@@ -7,8 +7,6 @@ import HandBooKPages from './utils/handBookPages';
 import ApplyAsDesigner from './img/søkSomDesigner';
 import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
 import ReadMoreArrow from './img/lesMerPil';
-import SummerjobSelected from './img/sommerjobbSVGSelected';
-import Job from './img/fastjobbSVG';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
