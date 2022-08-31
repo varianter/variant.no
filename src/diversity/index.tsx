@@ -24,7 +24,7 @@ const Diversity = () => {
       />
 
       <header className={style.header}>
-        <h2 className={style.header__title}>Mangfold</h2>
+        <h1 className={style.header__title}>Mangfold</h1>
         <p>
           Mangfold skaper inkluderende og fullgode løsninger, som gir verdi og
           nytte for absolutt alle. Vi i Variant samarbeider med de som aktivt
