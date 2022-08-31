@@ -79,31 +79,39 @@
 
 .main-content__quote {
   max-width: 32em;
-  margin: auto;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .main-content__quote__text {
-  margin: 2rem auto;
+  margin: 0 auto;
   position: relative;
-  font-family: Graphik Web, Arial, sans-serif;
   font-size: 1.5rem;
-  padding: 3rem;
+  padding: 1rem 3rem;
 }
 .main-content__quote__text:before,
 .main-content__quote__text:after {
   display: block;
   font-size: 5rem;
+  line-height: 1rem;
   font-family: 'Recoleta';
   position: absolute;
   color: var(--color-secondary1__shade2);
 }
 .main-content__quote__text:before {
-  left: 1rem;
-  top: 1.5rem;
+  left: 0.5rem;
+  top: 2.5rem;
   content: '\201C';
 }
 .main-content__quote__text:after {
   right: 1rem;
-  bottom: -2rem;
+  bottom: -1rem;
   content: '\201D';
+}
+
+.main-content__quote > a {
+  margin-top: 2rem;
+  /* Text decoration ++ */
 }

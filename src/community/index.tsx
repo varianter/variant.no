@@ -72,6 +72,14 @@ const Diversity = () => {
             mars om “ARM, Bicep, and beyond! 💪”. Jeg tilbød selvsagt å holde
             dette på Varianthuset, og vi gleder oss 🤩
           </blockquote>
+          <a
+            href={
+              'https://blog.variant.no/ny-azure-meetup-i-trondheim-med-f%C3%B8rste-m%C3%B8te-p%C3%A5-varianthuset-b44a64d917ee'
+            }
+            title="Ny Azure meetup i Trondheim med første møte på Varianthuset"
+          >
+            Les bloggposten
+          </a>
         </section>
 
         <article className={style['main-content__item']}>
