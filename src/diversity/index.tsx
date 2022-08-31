@@ -1,6 +1,5 @@
 import { ButtonLink } from '@components/button';
 import Head from 'next/head';
-import SayHi from 'src/index/say-hi';
 import Layout from 'src/layout';
 import style from './diversity.module.css';
 
@@ -17,11 +16,6 @@ const Diversity = () => {
           content="Vi i Variant samarbeider med de som aktivt jobber for å skape mangfold, fordi det gir verdi og nytte for absolutt alle.."
         />
       </Head>
-      <SayHi
-        className={style.sayHi}
-        href="https://twitter.com/intent/tweet?screen_name=variant_as"
-        rel="noopener"
-      />
 
       <header className={style.header}>
         <h2 className={style.header__title}>Mangfold</h2>
