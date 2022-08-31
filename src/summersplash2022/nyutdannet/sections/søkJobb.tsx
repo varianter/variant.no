@@ -32,14 +32,14 @@ const Apply = () => {
       <div className={style.ApplyDiv}>
         <div className={style.ApplyAsDesignerDiv}>
           <div className={style.applyAsDesigner}>
-            <a href="/jobs">
+            <a href="/jobs/nyutdannet-designer-2023">
               <ApplyAsDesigner />
             </a>
           </div>
         </div>
         <div className={style.ApplyAsDeveloperDiv}>
           <div className={style.ApplyAsDeveloper}>
-            <a href="/jobs">
+            <a href="/jobs/nyutdannet-utvikler-2023">
               <ApplyAsDeveloper />
             </a>
           </div>
