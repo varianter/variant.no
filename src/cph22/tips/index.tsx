@@ -99,7 +99,7 @@ export default function Tips({
 
             <ul>
               <li>Sykkeltur rundt i København, påmelding til Kristin</li>
-              <li>Hydrering i Kødbyen</li>
+              <li>Hydrering i Kødbyen, Tefre booker bord</li>
               <li>Avslapning i hotellets hage</li>
             </ul>
           </div>
