@@ -1,3 +1,4 @@
+import PageTitle from '@components/page-title';
 import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile/lib';
 import { InferGetStaticPropsType } from 'next';
@@ -13,6 +14,53 @@ import { and } from 'src/utils/css';
 import style from './employees.module.css';
 import { EmployeeItem } from './types';
 
+const getSoMeMetadata = (officeName?: Office) => {
+  let description;
+  switch (officeName) {
+    case 'oslo':
+      description =
+        'Oversikt over alle ansatte i Variant Oslo. Her finner du alle varianter i Oslo og hvordan du kan ta kontakt for spørsmål.';
+      break;
+    case 'trondheim':
+      description =
+        'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
+      break;
+    case 'bergen':
+      description =
+        'Oversikt over alle ansatte i Variant Bergen. Her finner du alle varianter i Bergen og hvordan du kan ta kontakt for spørsmål.';
+      break;
+    default:
+      description =
+        'Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål.';
+  }
+
+  return (
+    <Head>
+      <meta property="og:description" content={description} />
+      <meta name="description" content={description} />
+    </Head>
+  );
+};
+
+const getTitle = (officeName?: Office) => {
+  let title;
+  switch (officeName) {
+    case 'oslo':
+      title = 'Varianter i Oslo';
+      break;
+    case 'trondheim':
+      title = 'Varianter i Trondheim';
+      break;
+    case 'bergen':
+      title = 'Varianter i Bergen';
+      break;
+    default:
+      title = 'Alle varianter';
+  }
+
+  return title;
+};
+
 export default function Employees({
   employeeList,
   officeName,
@@ -26,43 +74,13 @@ export default function Employees({
 
   const indexToInsertLink = Math.floor((employeeList.length / 3) * 2);
 
-  const getSoMeMetadata = (officeName?: Office) => {
-    let description;
-    switch (officeName) {
-      case 'oslo':
-        description =
-          'Oversikt over alle ansatte i Variant Oslo. Her finner du alle varianter i Oslo og hvordan du kan ta kontakt for spørsmål.';
-        break;
-      case 'trondheim':
-        description =
-          'Oversikt over alle ansatte i Variant Trondheim. Her finner du alle varianter i Trondheim og hvordan du kan ta kontakt for spørsmål.';
-        break;
-      case 'bergen':
-        description =
-          'Oversikt over alle ansatte i Variant Bergen. Her finner du alle varianter i Bergen og hvordan du kan ta kontakt for spørsmål.';
-        break;
-      default:
-        description =
-          'Oversikt over alle ansatte i Variant. Her finner du alle varianter og hvordan du kan ta kontakt for spørsmål.';
-    }
-
-    return (
-      <Head>
-        <meta property="og:description" content={description} />
-        <meta name="description" content={description} />
-      </Head>
-    );
-  };
-
   return (
     <Layout fullWidth title="Alle varianter – Variant">
       {getSoMeMetadata(officeName)}
 
       <div className={style.employeesContainer}>
-        <header>
-          <h2 className={and(style.employees__header, 'fancy')}>
-            Vi i Variant
-          </h2>
+        <header className={style.employees__header}>
+          <PageTitle title={getTitle(officeName)} />
           <p className={style.employees__text}>
             Vi har i Variant en god gjeng erfarne og dyktige mennesker. Dette er
             faglige fyrtårn i byen og personer som virkelig ønsker å lære bort
@@ -122,7 +140,7 @@ export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
         src={imageUrl}
         loading="lazy"
       />
-      <h4 className={and(style.employee__name, 'fancy')}>{fullName}</h4>
+      <h2 className={and(style.employee__name, 'fancy')}>{fullName}</h2>
       <div className={style.employee__office}>{officeName}</div>
       <a
         href={`tel:+47${telephone.replace(/\s*/g, '')}`}
