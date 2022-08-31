@@ -6,7 +6,7 @@ const TimeLine2Mobile = () => {
       className={style.timeLine2Mobile}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="720"
+      width="700"
       height="1353"
       viewBox="0 0 720 1353"
       fill="none"

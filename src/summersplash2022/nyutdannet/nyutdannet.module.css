@@ -176,6 +176,11 @@ p {
   width: 100%;
 }
 
+.handbookRef,
+.handbookRef:visited {
+  color: white;
+}
+
 /* Section 4 */
 
 .section4 {
@@ -436,6 +441,7 @@ p {
     font-weight: var(--MobileHeadingfont-weight);
     font-size: var(--MobileHeadingfont-size);
     line-height: var(--MobileHeadingline-height);
+    margin-bottom: 10%;
   }
 
   /* Section 1*/

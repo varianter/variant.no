@@ -145,7 +145,7 @@ const WhyVariant = () => {
           <h3 className={style.mostImportantForYou}>
             Hva er viktigst for deg?
           </h3>
-          <a className={style.handbookRef} href="https://handbook.variant.no">
+          <a className={style2.handbookRef} href="https://handbook.variant.no">
             Sjekk ut hele håndboka vår her
           </a>
         </div>
