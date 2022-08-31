@@ -170,6 +170,9 @@ p {
 
 .readMoreArrowWhite {
   width: 100%;
+  position: relative;
+  top: 200px;
+  right: 50%;
 }
 
 .arrowDiv {
@@ -185,6 +188,7 @@ p {
 
 .section4 {
   padding-top: 10%;
+  height: 1100px;
 }
 
 .section4 p {
@@ -373,6 +377,10 @@ p {
   .flexTimeline {
     width: auto;
     display: block;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
   }
 
   .section5PictureDiv {

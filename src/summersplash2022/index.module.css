@@ -1309,4 +1309,7 @@
   .handbook {
     display: block;
   }
+  .readMoreArrow {
+    display: none;
+  }
 }
