@@ -10,9 +10,9 @@ import {
 import style from 'src/advanced-calculator/calculator.module.css';
 
 const Calculator = () => {
-  const [selectedYear, setSelectedYear] = useState(2021);
+  const [selectedYear, setSelectedYear] = useState(2023);
 
-  const [selectedValidYear, setSelectedValidYear] = useState(2021);
+  const [selectedValidYear, setSelectedValidYear] = useState(2023);
   const [degree, setDegree] = useState('bachelor');
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
@@ -115,7 +115,7 @@ const Calculator = () => {
                   name={'År'}
                   className={style.inputRange}
                   min={MIN_YEAR}
-                  max={MAX_YEAR}
+                  max={2023}
                   value={selectedYear}
                   step={1}
                   onChange={handleOnChange}
@@ -144,10 +144,17 @@ const Calculator = () => {
               style={
                 isValidYear(selectedYear)
                   ? { opacity: 0, height: 0 }
-                  : { opacity: 1, height: '1rem' }
+                  : {
+                      opacity: 1,
+                      height: '1rem',
+                      paddingTop: '5%',
+                      paddingBottom: '20%',
+                      backgroundColor: '#FFF3F2',
+                    }
               }
             >
-              Må være mellom {MIN_YEAR} og {MAX_YEAR}
+              Årslønnen for nyutdannede i 2023 oppdateres basert på Teknas
+              lønnsstatistikk for 2022, som tilgjengeliggjøres i november.{' '}
             </span>
           </label>
         </div>
