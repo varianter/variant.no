@@ -10,6 +10,7 @@ import { colors } from '@variant/profile';
 import { and } from 'src/utils/css';
 import JobListingItem from './list-item';
 import { OfficeSelector } from 'src/office-selector';
+import PageTitle from '@components/page-title';
 
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
@@ -47,7 +48,8 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <title>Variant - Ledige stillinger</title>
         </Head>
         <section className={style.omVariant}>
-          <h2 className={style.omVariant__title}>Hva står vi for?</h2>
+          <PageTitle title="Bli en variant" />
+
           <article className={style.omVariant__wrapper}>
             <div className={style.omVariant__blob}>
               <BaseBlob
@@ -90,9 +92,9 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           </article>
         </section>
         <section className={style.job__listing}>
-          <h3 className={and(style.withSubTitle, 'fancy')}>
+          <h2 className={and(style.withSubTitle, 'fancy')}>
             Ledige stillinger
-          </h3>
+          </h2>
 
           <OfficeSelector
             currentOffice={office}
