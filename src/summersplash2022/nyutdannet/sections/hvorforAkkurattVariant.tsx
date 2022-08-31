@@ -6,7 +6,6 @@ import HandBooKPagesJob from '../utils/handBookPagesJob';
 
 const WhyVariant = () => {
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
-  const [buttonClicked, setButtonClicked] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
@@ -15,7 +14,6 @@ const WhyVariant = () => {
 
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
-      setButtonClicked(true);
     }
 
     setWhichButtonSelected(buttonValue);
