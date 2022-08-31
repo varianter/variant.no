@@ -187,10 +187,24 @@ p {
   padding-top: 10%;
 }
 
+.section4 p {
+  position: relative;
+  z-index: 2;
+}
+
 .wrapper {
-  width: 40%;
+  width: 80%;
   margin-bottom: 10%;
   margin-right: 2%;
+  position: relative;
+  z-index: 1;
+}
+
+.pinkBlobSalarySVG {
+  position: relative;
+  z-index: 0;
+  bottom: 500px;
+  right: 100px;
 }
 
 .section4Flex {

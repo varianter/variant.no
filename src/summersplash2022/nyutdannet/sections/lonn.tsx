@@ -1,4 +1,5 @@
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import PinkBlob from '../img/pinkBlob';
 import Calculator from '../utils/calculator';
 
 const Payment = () => {
@@ -26,8 +27,13 @@ const Payment = () => {
             om lønn og andre goder i Variant.
           </p>
         </div>
-        <div className={style.wrapper}>
-          <Calculator />
+        <div className={style.calculator}>
+          <div className={style.wrapper}>
+            <Calculator />
+          </div>
+          <div>
+            <PinkBlob />
+          </div>
         </div>
       </div>
     </section>
