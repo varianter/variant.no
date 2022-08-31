@@ -85,9 +85,7 @@ const Content = () => {
           </section>
           <div className={style.section2Color}>
             <section className={style.section2} id="hvagarsommerjobbenutpa">
-              <h3 className={style.section2Heading}>
-                Hva går sommerjobben ut på?
-              </h3>
+              <h3 className={style.heading}>Hva går sommerjobben ut på?</h3>
               <div className={style.section2Flex}>
                 <div className={style.section2Text}>
                   <p className={style.section2Paragraph}>
@@ -132,9 +130,7 @@ const Content = () => {
           </div>
 
           <section className={style.section3} id="hvameneraretssommerstudenter">
-            <h3 className={style.section3Heading}>
-              Hva mener årets sommerstudenter?
-            </h3>
+            <h3 className={style.heading}>Hva mener årets sommerstudenter?</h3>
             <div className={style.summerstudent1}>
               <img
                 className={style.summerstudent1picture}
@@ -201,9 +197,7 @@ const Content = () => {
             >
               <div className={style.handbook}>
                 <div className={style.handbookChildButton}>
-                  <h3 className={style.section4Heading}>
-                    Hvorfor akkurat Variant?
-                  </h3>
+                  <h3 className={style.heading}>Hvorfor akkurat Variant?</h3>
                   <p className={style.positionTextLeft}>
                     Variant er en variant av et konsulentselskap som er raust,
                     åpent og læreglad. Disse verdiene ligger til grunn for
@@ -320,7 +314,7 @@ const Content = () => {
           </div>
 
           <section className={style.section6} id="soksommerjobb">
-            <h3 className={style.section6Heading}>Søk sommerjobb</h3>
+            <h3 className={style.heading}>Søk sommerjobb</h3>
             <div className={style.section6Flex}>
               <div className={style.section6Text}>
                 <p className={style.section6Paragraph}>

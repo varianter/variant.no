@@ -60,6 +60,15 @@
   margin-top: 1%;
 }
 
+.heading {
+  margin-bottom: 20px;
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
 .section2Heading,
 .section3Heading,
 .section4Heading,
@@ -406,124 +415,6 @@
   bottom: 200px;
 }
 
-/* Gammelt */
-
-.navigationSlider {
-  padding-top: 0%;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  align-items: flex-end;
-  left: 80%;
-  bottom: 25%;
-  width: 250px;
-}
-
-/* Button font */
-.navigationButton1,
-.navigationButton2,
-.navigationButton3,
-.navigationButton4,
-.navigationButton5,
-.navigationButton6 {
-  font-family: 'Graphik Web';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  color: white;
-  width: 90%;
-}
-
-.navigationButton1,
-.navigationButton2,
-.navigationButton3,
-.navigationButton4,
-.navigationButton5,
-.navigationButton6,
-.navigationButton1:hover,
-.navigationButton1:focus,
-.navigationButton2:hover,
-.navigationButton2:focus,
-.navigationButton3:hover,
-.navigationButton3:focus,
-.navigationButton4:hover,
-.navigationButton4:focus,
-.navigationButton5:hover,
-.navigationButton5:focus,
-.navigationButton6:hover,
-.navigationButton6:focus,
-.navigationButton1:link,
-.navigationButton2:link,
-.navigationButton3:link,
-.navigationButton4:link,
-.navigationButton5:link,
-.navigationButton6:link,
-.navigationButton1:visited,
-.navigationButton2:visited,
-.navigationButton3:visited,
-.navigationButton4:visited,
-.navigationButton5:visited,
-.navigationButton6:visited {
-  background: none;
-  border: none;
-  padding: 5%;
-  cursor: pointer;
-  margin-top: 5%;
-  text-align: right;
-  text-decoration: none;
-}
-
-.navigationButton1:hover,
-.navigationButton1:focus,
-.navigationButton1:visited {
-  background: #b91456;
-  color: white;
-}
-
-.navigationButton2:hover,
-.navigationButton2:focus {
-  background: #ffc4bc;
-}
-
-.navigationButton2:visited {
-  color: white;
-}
-
-.navigationButton3:hover,
-.navigationButton3:focus,
-.navigationButton3:visited {
-  background: #423d89;
-  color: white;
-}
-
-.navigationButton4:hover,
-.navigationButton4:focus {
-  background: #03dac6;
-}
-
-.navigationButton4:visited {
-  color: white;
-}
-
-.navigationButton5:hover,
-.navigationButton5:focus {
-  background: #9591ce;
-}
-
-.navigationButton5:visited {
-  color: white;
-}
-
-.navigationButton6:hover,
-.navigationButton6:focus {
-  background: #fad2e2;
-}
-
-.navigationButton6:visited {
-  color: white;
-}
-
 .positionTextLeft,
 .handbookParagraphs {
   padding-top: 1%;
@@ -709,6 +600,15 @@
 }
 
 @media (max-width: 900px) {
+  /* Heading Mobile */
+  .heading {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
   /* Scroll mobile*/
 
   .section3 {
@@ -761,10 +661,6 @@
     position: static;
   }
 
-  .navigationSlider {
-    position: static;
-  }
-
   .handbook {
     display: block;
   }
@@ -787,94 +683,6 @@
     flex-wrap: wrap;
     width: 100%;
     margin-top: 5%;
-  }
-
-  .handbookButton1,
-  .handbookButton2,
-  .handbookButton3,
-  .handbookButton4,
-  .handbookButton5,
-  .handbookButton1:focus,
-  .handbookButton2:focus,
-  .handbookButton3:focus,
-  .handbookButton4:focus,
-  .handbookButton5:focus,
-  .handbookButton1:hover,
-  .handbookButton2:hover,
-  .handbookButton3:hover,
-  .handbookButton4:hover,
-  .handbookButton5:hover {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    border: none;
-    margin: 1%;
-    padding: 5% 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
-  }
-
-  .handbookButton1,
-  .handbookButton1:focus,
-  .handbookButton1:hover {
-    background: #b91456;
-    color: white;
-  }
-
-  .handbookButton1:focus,
-  .handbookButton1:hover {
-    font-weight: bold;
-  }
-
-  .handbookButton2,
-  .handbookButton2:focus,
-  .handbookButton2:hover {
-    background: #ffc4bc;
-  }
-
-  .handbookButton2:focus,
-  .handbookButton2:hover {
-    font-weight: bold;
-  }
-
-  .handbookButton3,
-  .handbookButton3:focus,
-  .handbookButton3:hover {
-    background: #03dac6;
-  }
-
-  .handbookButton3:focus,
-  .handbookButton3:hover {
-    font-weight: bold;
-  }
-
-  .handbookButton4,
-  .handbookButton4:focus,
-  .handbookButton4:hover {
-    background: #423d89;
-    color: white;
-  }
-
-  .handbookButton4:focus,
-  .handbookButton4:hover {
-    font-weight: bold;
-  }
-
-  .handbookButton5,
-  .handbookButton5:focus,
-  .handbookButton5:hover {
-    background: #9591ce;
-    color: white;
-  }
-
-  .handbookButton5:focus,
-  .handbookButton5:hover {
-    font-weight: bold;
   }
 
   .handbookHeaderDeskotop {
@@ -971,15 +779,6 @@
     margin-top: 10%;
   }
 
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5,
-  .navigationButton6 {
-    text-shadow: none;
-  }
-
   /* Section 1 mobile*/
   .section1 {
     overflow: hidden;
@@ -996,21 +795,8 @@
     max-width: fit-content;
   }
 
-  .navigationSlider {
-    max-width: 100%;
-  }
-
   .section1Blobs {
     position: static;
-  }
-
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5,
-  .navigationButton6 {
-    width: auto;
   }
 
   .h4Section1 {
@@ -1025,75 +811,6 @@
   .søkHer,
   .eller,
   .scroll {
-    display: none;
-  }
-
-  .navigationSlider {
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5,
-  .navigationButton1:focus,
-  .navigationButton2:focus,
-  .navigationButton3:focus,
-  .navigationButton4:focus,
-  .navigationButton5:focus,
-  .navigationButton1:hover,
-  .navigationButton2:hover,
-  .navigationButton3:hover,
-  .navigationButton4:hover,
-  .navigationButton5:hover,
-  .navigationButton1:link,
-  .navigationButton2:link,
-  .navigationButton3:link,
-  .navigationButton4:link,
-  .navigationButton5:link {
-    font-size: 130%;
-    padding: 5%;
-    font-family: 'Graphik Web';
-    margin-top: 1%;
-    text-align: left;
-  }
-
-  .navigationButton1,
-  .navigationButton1:link {
-    color: white;
-    background-color: #b91456;
-  }
-
-  .navigationButton2,
-  .navigationButton2:link,
-  .navigationButton2:visited {
-    color: black;
-    background-color: #ffc4bc;
-  }
-
-  .navigationButton3,
-  .navigationButton3:link {
-    color: white;
-    background-color: #423d89;
-  }
-
-  .navigationButton4,
-  .navigationButton4:link,
-  .navigationButton4:visited {
-    color: black;
-    background-color: #03dac6;
-  }
-
-  .navigationButton5,
-  .navigationButton5:link,
-  .navigationButton5:visited {
-    color: black;
-    background-color: #9591ce;
-  }
-
-  .navigationButton6 {
     display: none;
   }
 
@@ -1120,7 +837,6 @@
     width: 90%;
   }
 
-  .navigationSlider,
   .h4Section1,
   .searchNewVariants {
     margin-right: 5%;
@@ -1138,12 +854,11 @@
   }
 
   .section2Heading {
-    font-family: 'Graphik Web';
+    font-family: 'Recoleta';
     font-style: normal;
-    font-weight: 400;
-    font-size: 130%;
-    line-height: 27px;
-    background-color: #b91456;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
     padding: 5%;
   }
 
@@ -1158,8 +873,6 @@
     font-weight: 400;
     font-size: 130%;
     line-height: 27px;
-    background-color: #ffc4bc;
-    color: black;
     padding: 5%;
   }
 
@@ -1365,135 +1078,6 @@
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-  }
-
-  /* Navigation button */
-  .navigationSlider {
-    padding-top: 0%;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    align-items: flex-end;
-    left: 75%;
-    bottom: 25%;
-    width: fit-content;
-  }
-
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5,
-  .navigationButton6 {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 120%;
-    line-height: 140%;
-    color: white;
-    /* text-shadow: 1px 1px black; */
-  }
-
-  .navigationButton1,
-  .navigationButton2,
-  .navigationButton3,
-  .navigationButton4,
-  .navigationButton5,
-  .navigationButton6,
-  .navigationButton1:hover,
-  .navigationButton2:hover,
-  .navigationButton3:hover,
-  .navigationButton4:hover,
-  .navigationButton5:hover,
-  .navigationButton6:hover,
-  .navigationButton1:focus,
-  .navigationButton2:focus,
-  .navigationButton3:focus,
-  .navigationButton4:focus,
-  .navigationButton5:focus,
-  .navigationButton6:focus,
-  .navigationButton1:link,
-  .navigationButton2:link,
-  .navigationButton3:link,
-  .navigationButton4:link,
-  .navigationButton5:link,
-  .navigationButton6:link,
-  .navigationButton1:visited,
-  .navigationButton2:visited,
-  .navigationButton3:visited,
-  .navigationButton4:visited,
-  .navigationButton5:visited,
-  .navigationButton6:visited {
-    width: fit-content;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: 2%;
-    text-align: right;
-  }
-
-  .navigationButton1:hover,
-  .navigationButton1:focus,
-  .navigationButton1:visited {
-    width: fit-content;
-    background: #b91456;
-    color: white;
-  }
-
-  .navigationButton2:hover,
-  .navigationButton2:focus {
-    width: fit-content;
-    background: #ffc4bc;
-  }
-
-  .navigationButton2:visited {
-    width: fit-content;
-    color: white;
-  }
-
-  .navigationButton2 {
-    width: 20px;
-  }
-
-  .navigationButton3:hover,
-  .navigationButton3:focus,
-  .navigationButton3:visited {
-    background: #423d89;
-    width: fit-content;
-    color: white;
-  }
-
-  .navigationButton4:hover,
-  .navigationButton4:focus {
-    background: #03dac6;
-    width: fit-content;
-  }
-
-  .navigationButton4:visited {
-    width: fit-content;
-    color: white;
-  }
-
-  .navigationButton5:hover,
-  .navigationButton5:focus {
-    width: fit-content;
-    background: #9591ce;
-  }
-
-  .navigationButton5:visited {
-    width: fit-content;
-    color: white;
-  }
-
-  .navigationButton6:hover,
-  .navigationButton6:focus {
-    width: fit-content;
-    background: #fad2e2;
-  }
-
-  .navigationButton6:visited {
-    width: fit-content;
-    color: white;
   }
 
   /* Headings */

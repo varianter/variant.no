@@ -11,9 +11,7 @@ const AfterApplying = (props: { red: boolean }) => {
   if (props.red) {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
-        <h3 className={style.section5Heading}>
-          Hva skjer etter søknadsfristen?
-        </h3>
+        <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
         <div className={style2.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
@@ -62,9 +60,7 @@ const AfterApplying = (props: { red: boolean }) => {
   } else {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
-        <h3 className={style.section5Heading}>
-          Hva skjer etter søknadsfristen?
-        </h3>
+        <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
         <div className={style2.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
