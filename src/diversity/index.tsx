@@ -6,15 +6,15 @@ import style from './diversity.module.css';
 
 const Diversity = () => {
   return (
-    <Layout>
+    <Layout title="Variant – Mangfold">
       <Head>
         <meta
           property="og:description"
-          content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
+          content="Vi i Variant samarbeider med de som aktivt jobber for å skape mangfold, fordi det gir verdi og nytte for absolutt alle."
         />
         <meta
           name="description"
-          content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
+          content="Vi i Variant samarbeider med de som aktivt jobber for å skape mangfold, fordi det gir verdi og nytte for absolutt alle.."
         />
       </Head>
       <SayHi
@@ -26,10 +26,9 @@ const Diversity = () => {
       <header className={style.header}>
         <h2 className={style.header__title}>Mangfold</h2>
         <p>
-          Mangfold og perspektiv er viktig! <br />
-          Vi samarbeider med de som aktivt jobber for dette.
-          Mangfold skaper inkluderende og fullgode løsninger,
-          som gir verdi og nytte for absolutt alle. 
+          Mangfold skaper inkluderende og fullgode løsninger, som gir verdi og
+          nytte for absolutt alle. Vi i Variant samarbeider med de som aktivt
+          jobber for dette, fordi vi mener at mangfold og perspektiv er viktig!
         </p>
       </header>
 
@@ -50,12 +49,15 @@ const Diversity = () => {
             <section className={style['project-article__text']}>
               <h4>Ada</h4>
               <p>
-                Ada jobber for å øke kjønnsbalansen i teknologi- og ingeniørfag
-                for studenter. Dette er viktig for oss.
+                Ada jobber for å øke kjønnsbalansen på ingeniør- og
+                teknologistudiene ved NTNU. Formålet deres er å motivere kvinner
+                til å fullføre studiene innenfor disse fagområdene.
               </p>
               <p>
-                Formålet deres er å øke trivselen og motivere jenter til å
-                fullføre studieløpet innenfor disse fagområdene.
+                Dette er kjempeviktig for oss og IT-bransjen generelt på grunn
+                av veldig lav kvinneandel i arbeidslivet. Dersom det
+                uteksamineres flere kvinner innen teknologi, vil dette gagne
+                både bransjen og samfunnet som helhet.
               </p>
               <p>
                 Dette synes vi er skikkelig kult! Derfor har vi et samarbeid med
@@ -63,33 +65,43 @@ const Diversity = () => {
                 holder arrangementer.
               </p>
             </section>
-            <img src="/images/diversity/ada.png" alt="To personer står på en scene på Adas 25-årsjubileum" />
+            <img
+              src="/images/diversity/ada.png"
+              alt="To personer står på en scene på Adas 25-årsjubileum"
+            />
           </article>
 
           <article className={style['project-article']}>
             <section className={style['project-article__text']}>
               <h4>Hils på Sarah</h4>
               <p>
-                Sarah er en av Variantene som er engasjert i
-                mangfolds(kampen/satsningen/arbeidet). Hun bidrar med kunnskap,
-                erfaring og sprer læringsglede.
+                Sarah er mangfoldsansvarlig i Variant og brenner for å få flere
+                jenter inn i teknologibransjen. Hun har jobbet i Kodeklubben og
+                Ada under studiene, vært involvert i kursing, studentarrangement
+                og rekruttering i arbeidslivet og er også aktiv i TENK.
               </p>
             </section>
-            <img src="/images/diversity/tenk.png" alt="Placeholder image" />
+            <img
+              src="/images/diversity/sarah.png"
+              alt="Sarah som hjelper noen jenter på TENK tech camp"
+            />
           </article>
 
           <article id="tenk" className={style['project-article']}>
             <section className={style['project-article__text']}>
               <h4>TENK Tech Camp</h4>
               <p>
-                TENK Tech Camp arrangeres hvert år for jenter på ungdomsskolen
-                og videregående. Campen går over to dager hvor jentene blant
-                annet programmerer, lager podcast og raketter.
+                TENK Tech Camp er en gratis teknologicamp for jenter i alderen
+                13-18 år. Formålet med campen er å motivere jenter til å velge
+                teknologiutdanning. På campen får jentene inspirasjon i form av
+                foredrag og workshops. Jentene får blant annet prøve seg på
+                webutvikling, sensorprogrammering og rakettbygging.
               </p>
               <p>
-                Vi trenger flere jenter som søker på teknologifagene. Derfor
-                støtter vi TENK med stor entusiasme. Vi deltar med veiledere og
-                mentorer for å skape læreglede i ungdomsårene.
+                Med stor entusiasme har vi i Variant vært med som veiledere og
+                mentorer i noen år nå. Vi har holdt workshop i webutvikling (med
+                HTML, CSS og JavaScript), musikk-koding (med SonicPi) og hvordan
+                lage sin egen Podcast.
               </p>
             </section>
             <img
@@ -101,7 +113,6 @@ const Diversity = () => {
 
         <section className={style.contact}>
           <h4>Har du et initiativ vi kan samarbeide om?</h4>
-          {/* TODO: Button should email someone (who?) */}
           <div className={style['contact__button__wrapper']}>
             <ButtonLink href="mailto:post@variant.no">Ta kontakt</ButtonLink>
           </div>
