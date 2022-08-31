@@ -33,11 +33,7 @@ const WhyVariant = () => {
       style={{
         backgroundColor: '#01574F',
         color: 'white',
-        height: buttonClicked
-          ? '1600px'
-          : '900px' || window.matchMedia('(min-width: 1550px)').matches
-          ? '1300px'
-          : '900px',
+        height: 'auto',
       }}
     >
       <div className={style.handbook}>
