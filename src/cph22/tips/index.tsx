@@ -101,6 +101,10 @@ export default function Tips({
               <li>Sykkeltur rundt i København, påmelding til Kristin</li>
               <li>Hydrering i Kødbyen, Tefre booker bord</li>
               <li>Avslapning i hotellets hage</li>
+              <li>
+                Se Liverpool-Everton på en pub klokka 13:30, gi et vink til
+                Kjetil
+              </li>
             </ul>
           </div>
 
