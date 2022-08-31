@@ -1,12 +1,3 @@
-.sayhi {
-  position: absolute;
-  top: 0;
-  right: -1px;
-  max-width: 20%;
-}
-.sayhi a div {
-  top: 28%;
-}
 .interview {
   margin: 2rem 0;
   display: grid;
@@ -144,9 +135,6 @@
 }
 
 @media (max-width: 840px) {
-  .sayhi {
-    display: none;
-  }
   .interview {
     display: flex;
     padding: 0 1rem;

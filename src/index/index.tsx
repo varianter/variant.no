@@ -11,7 +11,6 @@ import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
-import SayHi from './say-hi';
 
 const Home = ({
   randomEmployee,
@@ -67,11 +66,6 @@ const Home = ({
           content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
       </Head>
-      <SayHi
-        className={style.sayHi}
-        href="https://twitter.com/intent/tweet?screen_name=variant_as"
-        rel="noopener"
-      />
       <section className={style.omVariant}>
         <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
