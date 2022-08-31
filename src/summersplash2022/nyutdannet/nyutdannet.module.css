@@ -64,6 +64,15 @@ p {
   margin-bottom: 2%;
 }
 
+.bigHeading {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 84px;
+  width: 70%;
+}
+
 /* Section1 */
 /* Section1 fonts */
 
@@ -96,8 +105,29 @@ p {
   line-height: var(--paragraph-line-height);
 }
 
-.søkHer {
-  color: white;
+.applyButtonPink a,
+.applyButtonBlue a {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  padding: 1%;
+  text-decoration: none;
+}
+
+.applyButtonPink a {
+  background-color: #f076a6;
+  color: #333333;
+}
+
+.applyButtonBlue a {
+  background-color: #68e9dd;
+  color: #333333;
+}
+
+.applyButtonPink {
+  margin-bottom: 5%;
 }
 
 /* Section 1 image*/
@@ -359,6 +389,25 @@ p {
 }
 
 @media (max-width: 900px) {
+  .bigHeading {
+    width: 100%;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  .applyButtonPink a,
+  .applyButtonBlue a {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 50px;
+    padding: 3%;
+  }
+
   .section1 {
     height: 900px;
   }
@@ -393,11 +442,6 @@ p {
 
   .sommerjobbHeading {
     width: 100%;
-  }
-
-  .section1 p,
-  .section1 h3:nth-child(4) {
-    display: none;
   }
 
   .imageBlob1 {

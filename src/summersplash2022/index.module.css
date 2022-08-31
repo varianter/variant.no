@@ -69,6 +69,16 @@
   line-height: 39px;
 }
 
+.bigHeading {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 84px;
+  width: 60%;
+  /* or 135% */
+}
+
 .section2Heading,
 .section3Heading,
 .section4Heading,
@@ -607,6 +617,15 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 33px;
+  }
+
+  .bigHeading {
+    width: 100%;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 52px;
   }
 
   /* Scroll mobile*/

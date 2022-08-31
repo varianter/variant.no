@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Map from './img/map';
 import MapMobile from './img/mapMobile';
 import style from './index.module.css';
+import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import HandBooKPages from './utils/handBookPages';
 import ApplyAsDesigner from './img/søkSomDesigner';
 import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
@@ -51,26 +52,22 @@ const Content = () => {
               <Header white={false} />
             </header>
             <span className={style.searchNewVariants}>
-              <h3 className={style.section1H3}>
-                Vi ser etter nye varianter! Hva ser du etter?
+              <h3 className={style.bigHeading}>
+                Vi ser etter 14 sommervarianter i 2023!{' '}
               </h3>
-              <div>
-                <SummerjobSelected />
-              </div>
-              <a href="/nyutdannet">
-                <Job />
-              </a>
             </span>
             <br />
-            <div className={style.underHeader}>
-              {/* middlertidig link. usikker på hvilken vi skal bruke */}
+            <div className={style2.applyButtonPink}>
+              <p>Søk senest 3. oktober</p>
               <p>
-                <a className={style.søkHer} href="/jobs">
-                  Søk her innen 2. oktober
-                </a>
+                <a href="#sokSommerjobb">Søk sommerjobb</a>
               </p>
-              <p className={style.eller}>eller</p>
-              <p className={style.scroll}>scroll deg nedover</p>
+            </div>
+            <div className={style2.applyButtonBlue}>
+              <p>Ferdig utdannet i 2023?</p>
+              <p>
+                <a href="/nyutdannet">Jeg vil ha fast jobb</a>
+              </p>
             </div>
             <div className={style.section1Blobs}>
               <img
@@ -313,7 +310,7 @@ const Content = () => {
             <AfterApplying red={true} />
           </div>
 
-          <section className={style.section6} id="soksommerjobb">
+          <section className={style.section6} id="sokSommerjobb">
             <h3 className={style.heading}>Søk sommerjobb</h3>
             <div className={style.section6Flex}>
               <div className={style.section6Text}>

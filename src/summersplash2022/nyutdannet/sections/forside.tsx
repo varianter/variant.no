@@ -1,5 +1,3 @@
-import SummerJob from 'src/summersplash2022/img/SommerjobbSVG';
-import JobSelected from 'src/summersplash2022/img/fastjobbSVGSelected';
 import style from '../nyutdannet.module.css';
 import Section1Blob from '../img/section1Blob';
 import Header from 'src/summersplash2022/components/header/header';
@@ -14,27 +12,22 @@ const LandingPage = () => {
           <Header white={true} />
         </header>
         <span className={style.searchNewVariants}>
-          <h3 className={style.heading}>
-            Vi ser etter nye varianter! Hva ser du etter?
+          <h3 className={style.bigHeading}>
+            Vi ser etter 7 nyutdannede varianter i 2023!{' '}
           </h3>
-          <a href="/sommerjobb">
-            <SummerJob />
-          </a>
-          <div>
-            <JobSelected />
-          </div>
-          <h3 className={style.heading}>i 2023</h3>
         </span>
         <br />
-        <div className={style.underHeader}>
-          {/* middlertidig link. usikker på hvilken vi skal bruke */}
+        <div className={style.applyButtonPink}>
+          <p>Søk senest 3. oktober</p>
           <p>
-            <a className={style.søkHer} href="/jobs">
-              Søk her innen 2. oktober
-            </a>
+            <a href="#soksommerjobb">Søk fast jobb</a>
           </p>
-          <p className={style.eller}>eller</p>
-          <p>scroll deg nedover</p>
+        </div>
+        <div className={style.applyButtonBlue}>
+          <p>Fortsatt et par år igjen med studier?</p>
+          <p>
+            <a href="/sommerjobb">Jeg vil ha sommerjobb</a>
+          </p>
         </div>
         <span>
           <img
