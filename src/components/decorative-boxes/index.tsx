@@ -24,12 +24,12 @@ export interface DecorativeBoxesProps
   box2Properties: BoxProperties;
 }
 
-const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
+function DecorativeBoxes({
   children,
   boxSize = 'medium',
   box1Properties,
   box2Properties,
-}) => {
+}: DecorativeBoxesProps) {
   const box1HorizontalDistance = useRef(
     calculateDistanceToSide(
       getNumericalBoxSize(boxSize),
@@ -94,7 +94,7 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
       <div className={style['child-container']}>{children}</div>
     </div>
   );
-};
+}
 
 export default DecorativeBoxes;
 
