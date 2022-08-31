@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { AllColorNames, allColors } from '@variant/profile/lib/colors';
 import style from './style.module.css';
 type BoxProperties = {
@@ -30,33 +29,25 @@ function DecorativeBoxes({
   box1Properties,
   box2Properties,
 }: DecorativeBoxesProps) {
-  const box1HorizontalDistance = useRef(
-    calculateDistanceToSide(
-      getNumericalBoxSize(boxSize),
-      box1Properties.position,
-      'left',
-    ),
+  const box1HorizontalDistance = calculateDistanceToSide(
+    getNumericalBoxSize(boxSize),
+    box1Properties.position,
+    'left',
   );
-  const box1VerticalDistance = useRef(
-    calculateDistanceToSide(
-      getNumericalBoxSize(boxSize),
-      box1Properties.position,
-      'top',
-    ),
+  const box1VerticalDistance = calculateDistanceToSide(
+    getNumericalBoxSize(boxSize),
+    box1Properties.position,
+    'top',
   );
-  const box2HorizontalDistance = useRef(
-    calculateDistanceToSide(
-      getNumericalBoxSize(boxSize),
-      box2Properties.position,
-      'left',
-    ),
+  const box2HorizontalDistance = calculateDistanceToSide(
+    getNumericalBoxSize(boxSize),
+    box2Properties.position,
+    'left',
   );
-  const box2VerticalDistance = useRef(
-    calculateDistanceToSide(
-      getNumericalBoxSize(boxSize),
-      box2Properties.position,
-      'top',
-    ),
+  const box2VerticalDistance = calculateDistanceToSide(
+    getNumericalBoxSize(boxSize),
+    box2Properties.position,
+    'top',
   );
 
   return (
@@ -66,11 +57,11 @@ function DecorativeBoxes({
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
           backgroundColor: getColor(box1Properties.color),
-          left: box1HorizontalDistance.current + '%',
-          top: box1VerticalDistance.current + '%',
+          left: box1HorizontalDistance + '%',
+          top: box1VerticalDistance + '%',
           transform: `translate(
-            -${box1HorizontalDistance.current}%, 
-            -${box1VerticalDistance.current}%
+            -${box1HorizontalDistance}%,
+            -${box1VerticalDistance}%
             )`,
         }}
       >
@@ -81,11 +72,11 @@ function DecorativeBoxes({
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
           backgroundColor: getColor(box2Properties.color),
-          left: box2HorizontalDistance.current + '%',
-          top: box2VerticalDistance.current + '%',
+          left: box2HorizontalDistance + '%',
+          top: box2VerticalDistance + '%',
           transform: `translate(
-            -${box2HorizontalDistance.current}%, 
-            -${box2VerticalDistance.current}%
+            -${box2HorizontalDistance}%,
+            -${box2VerticalDistance}%
             )`,
         }}
       >
