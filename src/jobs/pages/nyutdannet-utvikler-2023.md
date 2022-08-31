@@ -8,8 +8,6 @@ meta_description: Vi ser etter læreglade utviklere til å starte i fast jobb ho
 meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-2_2023.png
 ---
 
-<br />
-
 ## Hvem søker vi?
 
 Vi søker nyutdannede utviklere som engasjerer og motiverer, med oppstart 1. august 2023 til våre kontorer i [Trondheim](https://handbook.variant.no/avdelinger/trondheim) og [Bergen](https://handbook.variant.no/avdelinger/bergen). Det er ikke viktig hvilke verktøy eller språk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om koden du skriver og bryr deg om kunden du leverer til.
