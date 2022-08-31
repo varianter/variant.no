@@ -483,7 +483,11 @@
   justify-content: left;
 }
 
-.handbookPages {
+.handbookPages p {
+  width: 100%;
+}
+
+.handbookChildButton {
   width: 50%;
 }
 
@@ -1298,5 +1302,11 @@
   .ApplyAsDeveloperDiv,
   .ApplyAsDesignerDiv {
     position: static;
+  }
+}
+
+@media (max-width: 1110px) {
+  .handbook {
+    display: block;
   }
 }
