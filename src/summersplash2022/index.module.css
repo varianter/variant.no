@@ -104,13 +104,22 @@
 .section6Paragraph,
 .section6Paragraph2,
 .handbookRef,
+.positionTextLeft,
 .section2Paragraph,
 .section5Paragraph {
   font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.whyWorkAtVariant p {
+  font-family: 'Graphik Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 /* Header */
@@ -178,7 +187,7 @@
   width: 100%;
   color: white;
   padding-bottom: 20%;
-  height: 1080px;
+  height: auto;
 }
 
 .blogpostLink {
@@ -196,11 +205,6 @@
 
 .section2Paragraph {
   width: 74%;
-  font-family: 'Graphik Web';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
 }
 
 .section2Text {
