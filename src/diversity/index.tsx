@@ -129,9 +129,9 @@ const Diversity = () => {
                 mentorprogrammer og gode forbilder.
               </p>
               <p>
-                Nettopp derfor er vi partnere med ODA! Vår rolle i samarbeidet
-                med ODA er at vi stiller med mentorer, kunnskap og bidrar med
-                arrangementer.
+                Vi samarbeider med ODA ved å stille med mentorer til ODAs
+                mentorprogram. Vi deltar på diverse arrangement og heier alt vi
+                kan på jobben ODA gjør med å fremme kvinner i tech!
               </p>
             </section>
             <img
