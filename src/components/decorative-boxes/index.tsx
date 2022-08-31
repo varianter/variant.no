@@ -1,7 +1,8 @@
 import { useRef } from 'react';
+import { AllColorNames, allColors } from '@variant/profile/lib/colors';
 import style from './style.module.css';
 type BoxProperties = {
-  color: `--color-${DefaultColors}${ColorModifiers}` | HexColorAsString;
+  color: keyof AllColorNames | HexColorAsString;
   position: `${VerticalPosition}-${HorizontalPosition}` | NumericPosition;
   text?: string | undefined;
 };
@@ -13,8 +14,6 @@ type NumericPosition = {
 type BoxSize = 'small' | 'medium' | 'large' | number;
 type VerticalPosition = 'top' | 'topish' | 'middle' | 'bottomish' | 'bottom';
 type HorizontalPosition = 'left' | 'leftish' | 'middle' | 'rightish' | 'right';
-type DefaultColors = 'primary' | `secondary${1 | 2 | 3 | 4}`;
-type ColorModifiers = '' | `__${'tint' | 'shade'}${1 | 2 | 3 | 4}`;
 type HexColorAsString = `#${string}`;
 
 export interface DecorativeBoxesProps
@@ -66,7 +65,7 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
         className={style['decorative-box']}
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
-          backgroundColor: `var(${box1Properties.color})`,
+          backgroundColor: getColor(box1Properties.color),
           left: box1HorizontalDistance.current + '%',
           top: box1VerticalDistance.current + '%',
           transform: `translate(
@@ -81,7 +80,7 @@ const DecorativeBoxes: React.FC<DecorativeBoxesProps> = ({
         className={style['decorative-box']}
         style={{
           width: getNumericalBoxSize(boxSize) + '%',
-          backgroundColor: `var(${box2Properties.color})`,
+          backgroundColor: getColor(box2Properties.color),
           left: box2HorizontalDistance.current + '%',
           top: box2VerticalDistance.current + '%',
           transform: `translate(
@@ -152,4 +151,17 @@ function getNumericalBoxSize(boxSize: BoxSize): number {
     default:
       return boxSize;
   }
+}
+
+function getColor(color: keyof AllColorNames | HexColorAsString): string {
+  if (isHexColor(color)) {
+    return color;
+  } else if (color in allColors) {
+    return allColors[color];
+  }
+  return '#000';
+}
+
+function isHexColor(color: string): color is HexColorAsString {
+  return /(^#[a-f\d]{6}$)/.test(color);
 }

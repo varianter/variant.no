@@ -1,6 +1,7 @@
 import DecorativeBoxes from '@components/decorative-boxes';
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
+import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
@@ -33,21 +34,18 @@ const Home = ({
         </div>
         <DecorativeBoxes
           box1Properties={{
+            // color pairs follow a pattern defined by decorativeBoxColorPairs
             color:
-              index % 3 === 0
-                ? '--color-secondary3'
-                : index % 3 === 1
-                ? '--color-secondary2__tint4'
-                : '--color-primary__tint3',
+              decorativeBoxColorPairs[
+                index % decorativeBoxColorPairs.length
+              ][0],
             position: index % 2 === 1 ? 'top-right' : 'top-leftish',
           }}
           box2Properties={{
             color:
-              index % 3 === 0
-                ? '--color-secondary1__tint4'
-                : index % 3 === 1
-                ? '--color-secondary3__tint2'
-                : '--color-secondary2__tint4',
+              decorativeBoxColorPairs[
+                index % decorativeBoxColorPairs.length
+              ][1],
             position: index % 2 === 1 ? 'bottom-middle' : 'bottom-left',
           }}
         >
