@@ -100,7 +100,7 @@ export default DecorativeBoxes;
 
 function calculateDistanceToSide(
   boxSize: number,
-  position: `${VerticalPosition}-${HorizontalPosition}` | NumericPosition,
+  position: BoxProperties['position'],
   distanceToCalculate: 'top' | 'left',
 ): number {
   if (typeof position === 'string') {
