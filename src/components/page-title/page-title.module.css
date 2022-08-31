@@ -1,5 +1,4 @@
 .title {
-  font-weight: bold;
   margin: 4.8rem 0;
   font-size: 4.8rem;
 
@@ -13,4 +12,8 @@
   background-clip: text;
   color: rgba(0, 0, 0, 0);
   background-position-x: 60%;
+}
+
+.title--bold {
+  font-weight: bold;
 }
