@@ -178,6 +178,7 @@
   width: 100%;
   color: white;
   padding-bottom: 20%;
+  height: 1080px;
 }
 
 .blogpostLink {
@@ -1037,6 +1038,10 @@
     margin: auto;
   }
 
+  .timeLine {
+    margin-top: 100px;
+  }
+
   /* Section 6 mobile */
 
   .section6Flex {
@@ -1077,6 +1082,10 @@
 
   .section1 {
     height: 1600px;
+  }
+
+  .section3 {
+    height: 1700px;
   }
 }
 

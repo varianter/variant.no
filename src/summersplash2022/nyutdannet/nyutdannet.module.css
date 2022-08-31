@@ -318,6 +318,10 @@ p {
 }
 
 @media (min-width: 1919px) {
+  .section2 {
+    height: 1100px;
+  }
+
   /* Section 5 */
   .section5 p {
     width: 40%;
