@@ -1,0 +1,109 @@
+.sayHi {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  max-width: 20%;
+}
+.sayHi a div {
+  top: 28%;
+}
+
+.header {
+  margin: 0 1rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  max-width: 40rem;
+}
+
+.header__title {
+  font-weight: 500;
+  margin: 4rem 0 2rem 0;
+  font-size: 4rem;
+
+  background: linear-gradient(
+    120deg,
+    var(--color-primary),
+    var(--color-secondary1),
+    var(--color-secondary2)
+  );
+  background-size: 130% 130%;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-position-x: 60%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h4 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.main-content__item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main-content__item img {
+  max-width: 40%;
+}
+
+@media (max-width: 500px) {
+  .main-content__item img {
+    max-width: 100%;
+  }
+}
+
+.main-content__item:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 500px) {
+  .main-content__item,
+  .main-content__item:nth-of-type(2n) {
+    /* nth-of-type-selector to increase specificity */
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+
+.main-content__item__text {
+  height: fit-content;
+}
+
+.main-content__quote {
+  max-width: 32em;
+  margin: auto;
+}
+
+.main-content__quote__text {
+  margin: 2rem auto;
+  position: relative;
+  font-family: Graphik Web, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+.main-content__quote__text:before,
+.main-content__quote__text:after {
+  display: block;
+  font-size: 5rem;
+  font-family: 'Recoleta';
+  position: absolute;
+  color: var(--color-secondary1__shade2);
+}
+.main-content__quote__text:before {
+  left: 1rem;
+  top: 1.5rem;
+  content: '\201C';
+}
+.main-content__quote__text:after {
+  right: 1rem;
+  bottom: -2rem;
+  content: '\201D';
+}
