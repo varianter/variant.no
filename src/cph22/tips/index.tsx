@@ -92,7 +92,27 @@ export default function Tips({
             />
           </div>
         </article>
+
+        <article className={style.reverseCategory}>
+          <div>
+            <h2>Avslapning 😌</h2>
+
+            <ul>
+              <li>Sykkeltur rundt i København, påmelding til Kristin</li>
+              <li>Hydrering i Kødbyen</li>
+              <li>Avslapning i hotellets hage</li>
+            </ul>
+          </div>
+
+          <div className={style.categoryImage}>
+            <img
+              src={require('./avslapning.png')}
+              alt="En fotograf på Nyhavna"
+            />
+          </div>
+        </article>
       </section>
+
       <article className={style.metro}>
         <h2>Psst!</h2>
         <p>
