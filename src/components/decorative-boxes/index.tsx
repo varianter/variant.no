@@ -163,5 +163,5 @@ function getColor(color: keyof AllColorNames | HexColorAsString): string {
 }
 
 function isHexColor(color: string): color is HexColorAsString {
-  return /(^#[a-f\d]{6}$)/.test(color);
+  return /(^#[a-f\d]{6}$)/.test(color.toLowerCase());
 }

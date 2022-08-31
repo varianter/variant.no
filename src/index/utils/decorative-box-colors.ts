@@ -1,6 +1,6 @@
 import { AllColorNames } from '@variant/profile/lib/colors';
 
-type colorName = keyof AllColorNames;
+type colorName = keyof AllColorNames | `#${string}`;
 export const decorativeBoxColorPairs: colorName[][] = [
   ['secondary3', 'secondary1__tint4'],
   ['secondary2__tint4', 'secondary3__tint1'],
