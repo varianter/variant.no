@@ -61,7 +61,7 @@ const Diversity = () => {
               </p>
               <p>
                 Dette synes vi er skikkelig kult! Derfor har vi et samarbeid med
-                ADA hvor vi har en mentorrolle, deltar på ulike aktiviteter og
+                Ada hvor vi har en mentorrolle, deltar på ulike aktiviteter og
                 holder arrangementer.
               </p>
             </section>
