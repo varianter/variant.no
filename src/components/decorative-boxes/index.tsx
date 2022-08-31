@@ -89,7 +89,7 @@ function DecorativeBoxes({
             )`,
         }}
       >
-        {box2Properties.text ? box2Properties.text : ''}
+        {box2Properties.text ?? ''}
       </div>
       <div className={style['child-container']}>{children}</div>
     </div>
