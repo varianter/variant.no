@@ -1,14 +1,13 @@
 ---
-meta_title: <Tittel mangler>
-meta_description: Intervju med Malin hos Statens vegvesen
-imageAltText: Malin hos Statens vegvesen
+meta_title: Prosjektstøtte på leveransestrøm
+meta_description: Intervju med Marthe hos Statens vegvesen
+imageAltText: Marthe hos Statens vegvesen
 project: Statens vegvesen
-projectSlug: svv
-variant: Malin
-variantEmail: mck@variant.no
-variantTitle: Prosjektleder, Trondheim
-location: Trondheim
-quote: ««Jeg håper og tror de har lært mer om prosjektledelse, bruk av designprinsipper og kanskje litt soft skills på ledelse generelt.»»
+variant: Marthe
+variantEmail: msd@variant.no
+variantTitle: Prosjektleder, Oslo
+location: Oslo
+quote: «Det å komme inn i en helt ny bransje samtidig som at det er en ny erfaring å jobbe som konsulent har i seg selv være en aha-opplevelse.»
 ---
 
 ## Prosjektstøtte på leveransestrøm

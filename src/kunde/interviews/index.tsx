@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
-import { getStaticProps } from 'pages/intervju/[project].tsx/[interview]';
-import { Interview } from './utils/interviewHandlers';
+import { Interview } from '../utils/customerUtils';
 import MarkdownIt from 'markdown-it';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Layout from 'src/layout';
 import style from './index.module.css';
 import Link from 'next/link';
+import { getStaticProps } from 'pages/kunde/[oppdrag]/[slug]';
 
 const createHtmlFromMetadata = (interview: Interview) => {
   let locationsHtml = '';
@@ -31,7 +31,7 @@ const createHtmlFromMetadata = (interview: Interview) => {
 };
 
 const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
-  React.memo(({ interview }) => {
+  React.memo(({ interview, oppdrag }) => {
     const innerHtml = useMemo(() => {
       const md = new MarkdownIt({
         linkify: true,
@@ -79,9 +79,7 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
         </Head>
 
         <nav className={style.nav}>
-          <Link href={`/prosjekter/${interview.projectSlug}`}>
-            {interview.project}
-          </Link>
+          <Link href={`/kunde/${oppdrag}`}>{interview.project}</Link>
           <span className={style.nav__arrow}>&gt;</span>
           <span className={style.nav__subject}>{interview.variant}</span>
         </nav>

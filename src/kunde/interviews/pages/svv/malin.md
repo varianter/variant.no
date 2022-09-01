@@ -3,7 +3,6 @@ meta_title: <Tittel mangler>
 meta_description: Intervju med Malin hos Statens vegvesen
 imageAltText: Malin hos Statens vegvesen
 project: Statens vegvesen
-projectSlug: svv
 variant: Malin
 variantEmail: mck@variant.no
 variantTitle: Prosjektleder, Trondheim

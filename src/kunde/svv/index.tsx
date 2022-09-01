@@ -1,23 +1,21 @@
 import React from 'react';
 import { getStaticProps } from 'pages/prosjekter/svv';
-import { Project } from '../../utils/projectHandlers';
 import { NextPage, InferGetStaticPropsType } from 'next';
 import Layout from 'src/layout';
 import style from './index.module.css';
-import SayHi from 'src/index/say-hi';
 import Link from 'next/link';
-import { Interview } from 'src/interviews/utils/interviewHandlers';
+import { Interview } from 'src/kunde/utils/customerUtils';
 
-const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
+const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ interviews }) => {
     return (
       <Layout title="Økt trafikksikkerhet og ...">
-        <SayHi
+        {/* <SayHi
           className={style.sayhi}
           href="/jobs"
           rel="noopener"
           text="Bli en variant!"
-        />
+        /> */}
         <section className={style.project}>
           <div className={style.project__introduction}>
             <h2>Statens Vegvesen</h2>
@@ -101,7 +99,7 @@ const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           <div>
             <h2 className={style.textCenter}>Variantenes egne ord</h2>
             <div className={style.project__interviews}>
-              {interviews.map((interview: Interview, idx) => {
+              {interviews?.map((interview: Interview, idx) => {
                 return (
                   <div key={idx} className={style.project__interview}>
                     <p className={style.textCenter}>
@@ -185,4 +183,4 @@ const Project: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
     );
   });
 
-export default Project;
+export default Svv;
