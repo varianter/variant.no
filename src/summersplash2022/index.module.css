@@ -135,7 +135,7 @@
 }
 
 .header {
-  /* height: 80px; */
+  height: 80px;
 }
 
 .section1H3 {
@@ -164,7 +164,7 @@
   position: relative;
   width: 45%;
   z-index: 1;
-  top: 700px;
+  top: 500px;
 }
 
 .pinkBlob {
@@ -671,6 +671,11 @@
     overflow: hidden;
   }
 
+  .søknadstips {
+    position: relative;
+    left: 0px;
+  }
+
   .section6 {
     height: 1100px;
   }
@@ -1079,10 +1084,6 @@
     margin-top: 100px;
   }
 
-  .section5Paragraph {
-    left: 50%;
-  }
-
   /* Section 6 mobile */
 
   .section6Flex {
@@ -1119,6 +1120,10 @@
   .pinkBlob {
     width: 700px;
     height: auto;
+  }
+
+  .imageBlob1 {
+    top: 700px;
   }
 
   .section1 {
