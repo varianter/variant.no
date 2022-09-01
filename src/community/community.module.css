@@ -39,7 +39,9 @@
   flex-direction: column;
 }
 
-.main-content h4 {
+.main-content h3 {
+  font-family: 'Recoleta';
+  font-weight: 500;
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
@@ -114,4 +116,40 @@
 .main-content__quote > a {
   margin-top: 2rem;
   /* Text decoration ++ */
+}
+
+.contact-section > h2 {
+  text-align: center;
+}
+
+.contact-section__card {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  margin: 3rem 5rem;
+}
+.contact-section__card:nth-of-type(2n) {
+  flex-direction: row;
+}
+
+.contact-section__card__image {
+  width: 30%;
+}
+
+.contact-section__card__info {
+  flex-grow: 1;
+}
+
+.contact-section__card__info__title {
+  font-family: 'Recoleta';
+}
+
+.contact-section__card__info__description {
+  margin: 1rem 0;
+}
+
+.contact-section__card__info__email,
+.contact-section__card__info__phone {
+  display: block;
+  text-decoration: none;
 }
