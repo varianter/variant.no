@@ -1,6 +1,8 @@
+import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 const Section7Blob = () => {
   return (
     <svg
+      className={style.section7Blob}
       xmlns="http://www.w3.org/2000/svg"
       width="606"
       height="556"

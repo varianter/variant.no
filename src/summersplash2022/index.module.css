@@ -135,7 +135,7 @@
 }
 
 .header {
-  height: 80px;
+  /* height: 80px; */
 }
 
 .section1H3 {
@@ -162,25 +162,23 @@
 
 .imageBlob1 {
   position: relative;
-  top: 350px;
-  left: 1%;
-  height: auto;
   width: 45%;
   z-index: 1;
+  top: 700px;
 }
 
 .pinkBlob {
   position: relative;
   z-index: 0;
-  width: 50%;
+  /* width: 50%;
   bottom: 170px;
-  right: 60px;
+  right: 60px; */
 }
 
 .section1Blobs {
   position: relative;
-  left: 50%;
-  bottom: 50%;
+  left: 55%;
+  bottom: 70%;
 }
 
 /* Section 2 styling*/
@@ -377,7 +375,7 @@
 
 .section6 {
   background-color: #f4f1e7;
-  height: auto;
+  height: 1200px;
 }
 
 .section6Paragraph {
@@ -428,7 +426,7 @@
   width: 35%;
   position: relative;
   left: 45%;
-  bottom: 200px;
+  bottom: 400px;
 }
 
 .positionTextLeft,
@@ -489,7 +487,7 @@
 }
 
 .handbookChildButton {
-  width: 50%;
+  width: 60%;
 }
 
 .handbookPages {
@@ -658,6 +656,10 @@
 
   .section3 {
     overflow: hidden;
+  }
+
+  .handbookChildButton {
+    width: auto;
   }
 
   .handbookChildButton p {

@@ -140,16 +140,17 @@ p {
   position: relative;
   left: 49%;
   width: 40%;
-  bottom: 15rem;
+  bottom: 410px;
   z-index: 1;
 }
 
-.section1Blob svg {
+.section1BlobSVG {
   position: relative;
-  bottom: 800px;
-  left: 48%;
+  bottom: 400px;
+  left: 10%;
   z-index: 0;
-  width: auto;
+  width: 40%;
+  height: auto;
 }
 
 /* Section 2 */
@@ -321,6 +322,7 @@ p {
 .section7 {
   background-color: #fff3f2;
   color: #333;
+  height: 1200px;
 }
 
 .section7 p {
@@ -342,12 +344,9 @@ p {
   color: white;
 }
 
-.applyAsDeveloperSVG:hover path:nth-child(1) {
-  fill: rgb(255, 82, 150);
-}
-
-.applyAsDesignerSVG:hover path:nth-child(1) {
-  fill: rgb(3, 205, 186);
+.section7Blob {
+  position: absolute;
+  top: 8500px;
 }
 
 @media (min-width: 1919px) {
@@ -501,6 +500,10 @@ p {
     height: auto;
   }
 
+  .section1BlobSVG {
+    display: none;
+  }
+
   .section1Blob {
     display: block;
     position: relative;
@@ -532,6 +535,9 @@ p {
   }
 
   /* Section 6 */
+  .section6 {
+    height: 1900px;
+  }
 
   .section6 p:nth-child(1),
   .section6 p:nth-child(2) {

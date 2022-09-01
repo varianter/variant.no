@@ -29,16 +29,14 @@ const LandingPage = () => {
             <a href="/sommerjobb">Jeg vil ha sommerjobb</a>
           </p>
         </div>
-        <span>
+        <div className={style.section1Blobs}>
           <img
             className={style.imageBlob1}
             src={blobSection1}
             alt="To fra Variant"
           />
-          <div className={style.section1Blob}>
-            <Section1Blob />
-          </div>
-        </span>
+          <Section1Blob />
+        </div>
       </section>
     </>
   );

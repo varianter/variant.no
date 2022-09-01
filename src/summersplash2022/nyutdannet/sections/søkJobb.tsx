@@ -29,25 +29,20 @@ const Apply = () => {
           </a>
         </p>
       </div>
-      <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
-
       <div className={style.ApplyDiv}>
-        <div className={style.ApplyAsDesignerDiv}>
-          <div className={style.applyAsDesigner}>
-            <a href="/jobs/nyutdannet-designer-2023">
-              <ApplyAsDesigner />
-            </a>
-          </div>
+        <div className={style2.applyButtonPink}>
+          <p>
+            <a href="">Søk som designer</a>
+          </p>
         </div>
-        <div className={style.ApplyAsDeveloperDiv}>
-          <div className={style.ApplyAsDeveloper}>
-            <a href="/jobs/nyutdannet-utvikler-2023">
-              <ApplyAsDeveloper />
-            </a>
-          </div>
+        <div className={style2.applyButtonBlue}>
+          <p>
+            <a href="">Søk som utvikler</a>
+          </p>
         </div>
       </div>
-      <div className={style2.section7Blob}>
+      <div>
+        <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
         <Section7Blob />
       </div>
     </section>
