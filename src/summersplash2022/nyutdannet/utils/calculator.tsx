@@ -166,7 +166,10 @@ const Calculator = () => {
             </span>
           </label>
         </div>
-        <div className={style['calculator-controls__label']}>
+        <div
+          style={{ marginTop: '5%' }}
+          className={style['calculator-controls__label']}
+        >
           Vi baserer lønn på erfaring
         </div>
         <div className={style['calculator-controls__value']}>
