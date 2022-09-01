@@ -564,6 +564,10 @@ p {
   }
 
   .section7Blob {
-    display: none;
+    width: 100%;
+    height: auto;
+    top: 9050px;
+    z-index: 0;
+    left: 0px;
   }
 }

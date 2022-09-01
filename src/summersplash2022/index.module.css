@@ -712,10 +712,6 @@
     width: 10px;
   }
 
-  .Marius {
-    position: static;
-  }
-
   .handbook {
     display: block;
   }
@@ -1109,6 +1105,8 @@
 
   .Marius {
     width: 100%;
+    top: 0px;
+    left: 0px;
   }
 
   .contactInfo {
