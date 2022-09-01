@@ -329,7 +329,7 @@ p {
 .section7 {
   background-color: #fff3f2;
   color: #333;
-  height: 1200px;
+  height: auto;
 }
 
 .imagePositionMobile {

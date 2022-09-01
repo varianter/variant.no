@@ -184,11 +184,14 @@ const Content = () => {
               className={style.whyWorkAtVariant}
               id="hvorforjobbeivariant"
               style={{
-                height: 'auto',
+                height: !isMobile ? 'auto' : '850px',
               }}
             >
               <div className={style.handbook}>
-                <div className={style.handbookChildButton}>
+                <div
+                  style={{ width: !isMobile ? '50%' : '100%' }}
+                  className={style.handbookChildButton}
+                >
                   <h3 className={style.heading}>Hvorfor akkurat Variant?</h3>
                   <p className={style.positionTextLeft}>
                     Variant er en variant av et konsulentselskap som er raust,

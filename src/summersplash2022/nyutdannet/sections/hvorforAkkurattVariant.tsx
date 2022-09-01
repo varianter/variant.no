@@ -31,7 +31,7 @@ const WhyVariant = () => {
       style={{
         backgroundColor: '#01574F',
         color: 'white',
-        height: 'auto',
+        height: whichButtonSelected === '' ? '1100px' : 'auto',
       }}
     >
       <div className={style.handbook}>

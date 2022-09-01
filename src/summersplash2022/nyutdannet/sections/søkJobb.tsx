@@ -6,7 +6,7 @@ const Apply = () => {
 
   return (
     <section className={style2.section7} id="soksommerjobb">
-      <h3 className={style2.heading}>Søk sommerjobb</h3>
+      <h3 className={style2.heading}>Søk fast jobb</h3>
       <p>
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
         spørsmål om sommerjobben eller Variant? Ta gjerne kontakt med meg.
@@ -29,23 +29,25 @@ const Apply = () => {
       </div>
       <div className={style2.imagePositionMobile}>
         <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
-        <Section7Blob />
       </div>
       <div className={style2.ApplyDiv}>
         <div className={style2.applyButtonPink}>
           <p>
-            <a href="/jobs/nyutdannet-designer-2023">Søk som designer</a>
+            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-designer-2023">
+              Søk som designer
+            </a>
           </p>
         </div>
         <div className={style2.applyButtonBlue}>
           <p>
-            <a href="/jobs/nyutdannet-utvikler-2023">Søk som utvikler</a>
+            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-utvikler-2023">
+              Søk som utvikler
+            </a>
           </p>
         </div>
       </div>
       <div className={style2.imagePositionDesktop}>
         <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
-        <Section7Blob />
       </div>
     </section>
   );
