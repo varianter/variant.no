@@ -653,8 +653,6 @@
     line-height: 23px;
   }
 
-  /* Scroll mobile*/
-
   .section3 {
     overflow: hidden;
   }
@@ -908,7 +906,7 @@
 
   /* Section 2 mobile*/
   .section2 {
-    height: 1700px;
+    height: 1300px;
     width: 100%;
   }
 
@@ -940,7 +938,7 @@
   }
 
   .section3 {
-    height: 1100px;
+    height: 1000px;
   }
 
   .summerstudent1 {

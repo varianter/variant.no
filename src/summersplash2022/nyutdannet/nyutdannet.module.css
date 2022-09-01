@@ -515,6 +515,12 @@ p {
     width: fit-content;
   }
 
+  .pinkBlobSalarySVG {
+    width: 800px;
+    right: 300px;
+    bottom: 400px;
+  }
+
   /* Section 5 */
   .section5 p {
     width: auto;

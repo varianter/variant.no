@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Counter from 'src/advanced-calculator/Counter';
 import { firstDayOfTheYear } from 'src/advanced-calculator/helpers/daysUntilNewSalary';
 import { getAverageBonus } from 'src/advanced-calculator/helpers/getHistoricBonus';
@@ -11,7 +11,6 @@ import style from 'src/advanced-calculator/calculator.module.css';
 
 const Calculator = () => {
   const [selectedYear, setSelectedYear] = useState(2021);
-
   const [selectedValidYear, setSelectedValidYear] = useState(2021);
   const [degree, setDegree] = useState('bachelor');
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
@@ -24,6 +23,8 @@ const Calculator = () => {
     bachelor: 'bachelor',
     master: 'master',
   };
+
+  const [isMobile, setIsMobile] = useState(false);
 
   const yearsOfExperience =
     firstDayOfTheYear(MAX_YEAR).getFullYear() - selectedValidYear;
@@ -52,13 +53,31 @@ const Calculator = () => {
     if (isValidYear(value)) setSelectedValidYear(value);
   }
 
+  const handleResize = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    if (window) {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        setIsMobile(true);
+      }
+      window.addEventListener('resize', handleResize);
+    }
+  }, []);
+
   return (
     <div
       style={{
         backgroundColor: '#FFDCD7',
         padding: '5%',
         borderRadius: '10px',
-        width: '80%',
+        width: isMobile ? '100%' : '80%',
+        marginTop: isMobile ? '10%' : 0,
       }}
       className={style['calculator-controls__summary']}
     >
