@@ -1086,7 +1086,7 @@
   /* Section 6 mobile */
 
   .section6Flex {
-    display: flex;
+    display: block;
     align-items: flex-start;
     order: 1;
     flex-direction: row-reverse;
@@ -1107,7 +1107,7 @@
   }
 
   .Marius {
-    width: 40%;
+    width: 100%;
   }
 
   .contactInfo {

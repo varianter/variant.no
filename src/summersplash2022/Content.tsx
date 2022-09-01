@@ -4,8 +4,6 @@ import MapMobile from './img/mapMobile';
 import style from './index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import HandBooKPages from './utils/handBookPages';
-import ApplyAsDesigner from './img/søkSomDesigner';
-import ApplyAsDeveloper from './img/søkSomUtviklerBlob';
 import ReadMoreArrow from './img/lesMerPil';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
@@ -327,25 +325,27 @@ const Content = () => {
                   </p>
                 </div>
               </div>
+              <div className={style.ApplyDiv}>
+                <div className={style2.applyButtonPink}>
+                  <p>
+                    <a href="/jobs/sommerjobb-designer-2023">
+                      Søk som designer
+                    </a>
+                  </p>
+                </div>
+                <div className={style2.applyButtonBlue}>
+                  <p>
+                    <a href="/jobs/sommerjobb-utvikler-2023">
+                      Søk som utvikler
+                    </a>
+                  </p>
+                </div>
+              </div>
               <img
                 className={style.Marius}
                 src={Marius}
                 alt="Bilde av Marius"
               />
-            </div>
-            <div className={style.ApplyAsDesignerDiv}>
-              <div className={style.applyAsDesigner}>
-                <a href="/jobs/sommerjobb-designer-2023">
-                  <ApplyAsDesigner />
-                </a>
-              </div>
-            </div>
-            <div className={style.ApplyAsDeveloperDiv}>
-              <div className={style.ApplyAsDeveloper}>
-                <a href="/jobs/sommerjobb-utvikler-2023">
-                  <ApplyAsDeveloper />
-                </a>
-              </div>
             </div>
           </section>
         </div>

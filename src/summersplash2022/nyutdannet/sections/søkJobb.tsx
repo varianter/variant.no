@@ -1,5 +1,3 @@
-import ApplyAsDesigner from 'src/summersplash2022/img/søkSomDesigner';
-import ApplyAsDeveloper from 'src/summersplash2022/img/søkSomUtviklerBlob';
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import Section7Blob from '../img/section7Blob';
@@ -32,12 +30,12 @@ const Apply = () => {
       <div className={style.ApplyDiv}>
         <div className={style2.applyButtonPink}>
           <p>
-            <a href="">Søk som designer</a>
+            <a href="/jobs/nyutdannet-designer-2023">Søk som designer</a>
           </p>
         </div>
         <div className={style2.applyButtonBlue}>
           <p>
-            <a href="">Søk som utvikler</a>
+            <a href="/jobs/nyutdannet-utvikler-2023">Søk som utvikler</a>
           </p>
         </div>
       </div>
