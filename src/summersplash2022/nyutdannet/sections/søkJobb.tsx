@@ -27,7 +27,7 @@ const Apply = () => {
           </a>
         </p>
       </div>
-      <div className={style.ApplyDiv}>
+      <div className={style2.ApplyDiv}>
         <div className={style2.applyButtonPink}>
           <p>
             <a href="/jobs/nyutdannet-designer-2023">Søk som designer</a>

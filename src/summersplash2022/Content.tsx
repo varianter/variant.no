@@ -329,7 +329,7 @@ const Content = () => {
                   </p>
                 </div>
               </div>
-              <div className={style.ApplyDiv}>
+              <div className={style2.ApplyDiv}>
                 <div className={style2.applyButtonPink}>
                   <p>
                     <a href="/jobs/sommerjobb-designer-2023">
