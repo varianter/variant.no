@@ -346,7 +346,7 @@ p {
 
 .section7Blob {
   position: absolute;
-  top: 8500px;
+  top: 8000px;
 }
 
 @media (min-width: 1919px) {
@@ -357,6 +357,10 @@ p {
   /* Section 5 */
   .section5 p {
     width: 40%;
+  }
+
+  .section7Blob {
+    top: 8500px;
   }
 }
 
