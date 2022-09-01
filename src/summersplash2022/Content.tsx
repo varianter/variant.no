@@ -184,7 +184,8 @@ const Content = () => {
               className={style.whyWorkAtVariant}
               id="hvorforjobbeivariant"
               style={{
-                height: !isMobile ? 'auto' : '850px',
+                height:
+                  whichButtonSelected === '' && isMobile ? '850px' : 'auto',
               }}
             >
               <div className={style.handbook}>
