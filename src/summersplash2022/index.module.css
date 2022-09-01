@@ -6,7 +6,6 @@
 .whyWorkAtVariant {
   padding: 10%;
   padding-top: 5%;
-
   margin-bottom: 0%;
 }
 
@@ -490,7 +489,7 @@
 }
 
 .handbookChildButton p {
-  width: 95%;
+  width: 50%;
 }
 
 .whyWorkAtVariant {
@@ -616,7 +615,7 @@
 
 .readMoreArrow {
   position: relative;
-  right: 370px;
+  right: 300px;
   top: 130px;
 }
 
@@ -639,10 +638,22 @@
     line-height: 52px;
   }
 
+  p,
+  .section2Paragraph,
+  .whyWorkAtVariant p,
+  .section6 p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
   /* Scroll mobile*/
 
   .section3 {
     overflow: hidden;
+  }
+
+  .handbookChildButton p {
+    width: auto;
   }
 
   .section5 {
@@ -806,7 +817,13 @@
 
   .timeLine {
     position: relative;
-    margin-top: 10%;
+    bottom: 400px;
+    margin-top: 0%;
+  }
+
+  .søknadstips {
+    position: relative;
+    bottom: 400px;
   }
 
   /* Section 1 mobile*/
@@ -1050,6 +1067,10 @@
 
   .timeLine {
     margin-top: 100px;
+  }
+
+  .section5Paragraph {
+    left: 50%;
   }
 
   /* Section 6 mobile */
