@@ -1,5 +1,7 @@
+import DecorativeBoxes from '@components/decorative-boxes';
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
+import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/index';
@@ -9,7 +11,6 @@ import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
-import SayHi from './say-hi';
 
 const Home = ({
   randomEmployee,
@@ -17,7 +18,7 @@ const Home = ({
   feeds,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const cases = useMemo(() => {
-    return randomCases.map((caseItem) => (
+    return randomCases.map((caseItem, index) => (
       <article className={style.cases__case} key={caseItem.heading}>
         <div className={style.cases__caseContent}>
           <h4>{caseItem.heading}</h4>
@@ -30,11 +31,25 @@ const Home = ({
             <a title="Prosjektinfo">Les mer</a>
           </Link> */}
         </div>
-        <figure>
-          <div className={style.cases__decorationBox} />
-          <div className={style.cases__decorationBox} />
+        <DecorativeBoxes
+          box1Properties={{
+            // color pairs follow a pattern defined by decorativeBoxColorPairs
+            color:
+              decorativeBoxColorPairs[
+                index % decorativeBoxColorPairs.length
+              ][0],
+            position: index % 2 === 1 ? 'top-right' : 'top-leftish',
+          }}
+          box2Properties={{
+            color:
+              decorativeBoxColorPairs[
+                index % decorativeBoxColorPairs.length
+              ][1],
+            position: index % 2 === 1 ? 'bottom-middle' : 'bottom-left',
+          }}
+        >
           <img src={caseItem.case_image} alt={caseItem.image_alt} />
-        </figure>
+        </DecorativeBoxes>
       </article>
     ));
   }, [randomCases]);
@@ -51,11 +66,6 @@ const Home = ({
           content="En variant av et konsulentselskap som er raust, åpent og læreglad. Vi bistår med utvikling, design, prosjektledelse, kursing og rådgiving."
         />
       </Head>
-      <SayHi
-        className={style.sayHi}
-        href="https://twitter.com/intent/tweet?screen_name=variant_as"
-        rel="noopener"
-      />
       <section className={style.omVariant}>
         <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
