@@ -72,32 +72,42 @@ const Calculator = () => {
               alignContent: 'center',
             }}
           >
-            <input
-              aria-labelledby="bachelorLabel"
-              className={style.inputRadio}
-              type="radio"
-              id="Bachelor"
-              name="education"
-              value="bachelor"
-              onChange={onDegreeChange}
-              defaultChecked
-            />
-            <label id="bachelorLabel" htmlFor="Bachelor">
-              Bachelor
-            </label>
+            <div
+              style={{ backgroundColor: '#FFDCD7' }}
+              className={style['radio-button-wrapper']}
+            >
+              <input
+                aria-labelledby="bachelorLabel"
+                className={style.inputRadio}
+                type="radio"
+                id="Bachelor"
+                name="education"
+                value="bachelor"
+                onChange={onDegreeChange}
+                defaultChecked
+              />
+              <label id="bachelorLabel" htmlFor="Bachelor">
+                Bachelor
+              </label>
+            </div>
 
-            <input
-              aria-labelledby="masterLabel"
-              className={style.inputRadio}
-              type="radio"
-              id="Master"
-              name="education"
-              value="master"
-              onChange={onDegreeChange}
-            />
-            <label id="masterLabel" htmlFor="Master">
-              Master
-            </label>
+            <div
+              style={{ backgroundColor: '#FFDCD7' }}
+              className={style['radio-button-wrapper']}
+            >
+              <input
+                aria-labelledby="masterLabel"
+                className={style.inputRadio}
+                type="radio"
+                id="Master"
+                name="education"
+                value="master"
+                onChange={onDegreeChange}
+              />
+              <label id="masterLabel" htmlFor="Master">
+                Master
+              </label>
+            </div>
           </div>
           <label htmlFor="experience" className={style['form-row']}>
             <div className={style['form-label']}>
