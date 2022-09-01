@@ -1,6 +1,5 @@
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-import Section7Blob from '../img/section7Blob';
 const Apply = () => {
   const Marius = require('src/summersplash2022/img/Marius.png');
 
