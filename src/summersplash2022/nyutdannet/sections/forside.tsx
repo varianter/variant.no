@@ -1,6 +1,7 @@
 import style from '../nyutdannet.module.css';
 import Section1Blob from '../img/section1Blob';
 import Header from 'src/summersplash2022/components/header/header';
+import MoreInfo from 'src/summersplash2022/img/merInfo';
 
 const LandingPage = () => {
   const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
@@ -36,6 +37,9 @@ const LandingPage = () => {
             alt="To fra Variant"
           />
           <Section1Blob />
+        </div>
+        <div className={style.moreInfoDiv}>
+          <MoreInfo white={true} />
         </div>
       </section>
     </>

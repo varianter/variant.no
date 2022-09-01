@@ -9,6 +9,7 @@ import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
 import AfterApplying from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
+import MoreInfo from './img/merInfo';
 
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
@@ -71,6 +72,9 @@ const Content = () => {
               <div className={style.section1Blob}>
                 <PinkBlob />
               </div>
+            </div>
+            <div className={style.moreInfoDiv}>
+              <MoreInfo white={false} />
             </div>
           </section>
           <div className={style.section2Color}>

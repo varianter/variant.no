@@ -181,6 +181,12 @@
   bottom: 70%;
 }
 
+.moreInfoDiv {
+  position: relative;
+  text-align: center;
+  bottom: 850px;
+}
+
 /* Section 2 styling*/
 .section2 {
   width: 100%;
@@ -898,6 +904,10 @@
   .searchNewVariants {
     margin-right: 5%;
     /* margin-left: 5%; */
+  }
+
+  .moreInfoDiv {
+    bottom: 700px;
   }
 
   /* Section 2 mobile*/

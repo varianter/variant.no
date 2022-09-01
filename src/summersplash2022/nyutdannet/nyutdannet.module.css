@@ -86,6 +86,7 @@ p {
   color: white;
   scroll-snap-align: start;
   padding-left: 10%;
+  padding-right: 10%;
   height: 1200px;
 }
 
@@ -138,7 +139,7 @@ p {
 /* Section 1 image*/
 .imageBlob1 {
   position: relative;
-  left: 49%;
+  left: 60%;
   width: 40%;
   bottom: 410px;
   z-index: 1;
@@ -147,10 +148,16 @@ p {
 .section1BlobSVG {
   position: relative;
   bottom: 400px;
-  left: 10%;
+  left: 20%;
   z-index: 0;
   width: 40%;
   height: auto;
+}
+
+.moreInfoDiv {
+  text-align: center;
+  position: relative;
+  bottom: 400px;
 }
 
 /* Section 2 */
@@ -350,6 +357,10 @@ p {
 }
 
 @media (min-width: 1919px) {
+  .moreInfoDiv {
+    bottom: 300px;
+  }
+
   .section2 {
     height: 1100px;
   }
@@ -523,6 +534,10 @@ p {
     width: 800px;
     right: 300px;
     bottom: 400px;
+  }
+
+  .moreInfoDiv {
+    bottom: 100px;
   }
 
   /* Section 5 */
