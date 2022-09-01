@@ -1,0 +1,605 @@
+/* Sections styling */
+.section2,
+.section4,
+.section5,
+.section6,
+.section7 {
+  padding: 10%;
+  padding-top: 5%;
+  margin-bottom: 0%;
+  scroll-snap-align: start;
+}
+
+/* SnapScroll */
+.scrollContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+/* global var */
+:root {
+  /* Heading */
+  --recoleta-font-family: 'Recoleta';
+  --heading-font-style: normal;
+  --heading-font-weight: 400;
+  --heading-font-size: 36px;
+  --headig-line-height: 53px;
+
+  /* paragraph */
+  --graphik-font-family: 'Graphik Web';
+  --paragraph-font-style: normal;
+  --paragraph-font-size: 20px;
+  --paragraph-line-height: 32px;
+
+  /* Heading Mobile*/
+  --MobileHeading-font-family: 'Recoleta';
+  --MobileHeadingfont-style: normal;
+  --MobileHeadingfont-weight: 500;
+  --MobileHeadingfont-size: 24px;
+  --MobileHeadingline-height: 33px;
+
+  /* paragraph mobile*/
+  --MobileParagraph-font-size: 16px;
+  --MobileParagraph--line-height: 23px;
+}
+
+p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+  width: 100%;
+}
+
+/* Headings */
+.heading {
+  font-family: var(--recoleta-font-family);
+  font-style: var(--heading-font-style);
+  font-weight: var(--heading-font-weight);
+  font-size: var(--heading-font-size);
+  line-height: var(--headig-line-height);
+  margin-bottom: 2%;
+}
+
+.bigHeading {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 84px;
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+/* Section1 */
+/* Section1 fonts */
+
+.section1 {
+  background-color: #1a1837;
+  color: white;
+  scroll-snap-align: start;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 1200px;
+}
+
+.header {
+  height: 80px;
+  margin-bottom: 5%;
+}
+
+.section1 a {
+  color: white;
+}
+
+.sommerjobbHeading {
+  width: auto;
+}
+
+/* Section1 Paragraph */
+.section1 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+}
+
+.applyButtonPink a,
+.applyButtonBlue a {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  padding: 1%;
+  text-decoration: none;
+}
+
+.applyButtonPink a {
+  background-color: #f076a6;
+  color: #333333;
+}
+
+.applyButtonBlue a {
+  background-color: #68e9dd;
+  color: #333333;
+}
+
+.applyButtonPink {
+  margin-bottom: 5%;
+}
+
+/* Section 1 image*/
+.imageBlob1 {
+  position: relative;
+  left: 60%;
+  width: 40%;
+  bottom: 410px;
+  z-index: 1;
+}
+
+.section1BlobSVG {
+  position: relative;
+  bottom: 400px;
+  left: 20%;
+  z-index: 0;
+  width: 40%;
+  height: auto;
+}
+
+.moreInfoDiv {
+  text-align: center;
+  position: relative;
+  bottom: 400px;
+}
+
+/* Section 2 */
+.section2 {
+  height: auto;
+  background-color: '#F4F1E7';
+}
+
+.section2Flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.section2Text {
+  width: 67%;
+}
+
+.officeMap2 {
+  width: 100%;
+}
+
+/* Section 3 */
+
+.readMoreArrowWhite {
+  width: 200%;
+  position: relative;
+  top: 200px;
+  right: 90%;
+}
+
+.arrowDiv {
+  width: 100%;
+}
+
+.handbookRef,
+.handbookRef:visited {
+  color: white;
+}
+
+/* Section 4 */
+
+.section4 {
+  padding-top: 10%;
+  height: 1200px;
+}
+
+.section4 p {
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper {
+  width: 80%;
+  margin-bottom: 10%;
+  margin-right: 2%;
+  position: relative;
+  z-index: 1;
+}
+
+.pinkBlobSalarySVG {
+  position: relative;
+  z-index: 0;
+  bottom: 500px;
+  right: 100px;
+}
+
+.section4Flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+}
+
+.section4Text {
+  width: 48%;
+}
+
+/* Section 5*/
+.section5 {
+  background-color: #8b0f40;
+  color: white;
+}
+
+.section5 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+
+  width: 50%;
+  margin-top: 2%;
+}
+
+.graphicContainer {
+  position: relative;
+  bottom: 200px;
+  height: 1500px;
+}
+
+.section5Picture {
+  width: 40%;
+  z-index: 0;
+  position: relative;
+  right: 100px;
+  bottom: 450px;
+}
+
+.section5Blob {
+  width: 70%;
+}
+
+.section5PictureDiv {
+  position: relative;
+  bottom: 1270px;
+  left: 60%;
+}
+
+.timeLine2 {
+  width: 100%;
+  z-index: 3;
+}
+
+/* Section 6 */
+.flexTimeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.section6Div {
+  width: 100%;
+  height: 1200px;
+}
+
+.section6 h3 {
+  position: relative;
+  z-index: 1;
+}
+
+.section6 p {
+  font-family: var(--graphik-font-family);
+  font-style: var(--paragraph-font-style);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+  width: 70%;
+}
+
+.section6 p:nth-child(1),
+.section6 p:nth-child(2) {
+  position: relative;
+  width: 70%;
+  z-index: 1;
+}
+
+.section6 p:nth-last-child(1) {
+  width: 600px;
+}
+
+.section6Blob {
+  position: relative;
+  bottom: 200px;
+  z-index: 0;
+  right: 45%;
+  bottom: 840px;
+}
+
+/* Section 7 */
+.section7 {
+  background-color: #fff3f2;
+  color: #333;
+  height: auto;
+}
+
+.imagePositionMobile {
+  display: none;
+}
+
+.section7 p {
+  width: 40%;
+}
+
+.section7 a {
+  color: #333;
+}
+
+.section7Blob {
+  z-index: 0;
+  position: relative;
+  bottom: 1150px;
+  left: 45%;
+}
+
+.contactMail {
+  color: white;
+}
+
+.section7Blob {
+  position: absolute;
+  top: 8000px;
+}
+
+.ApplyDiv {
+  margin-top: 5%;
+}
+
+@media (min-width: 1919px) {
+  .moreInfoDiv {
+    bottom: 300px;
+  }
+
+  .section2 {
+    height: 1100px;
+  }
+
+  /* Section 5 */
+  .section5 p {
+    width: 40%;
+  }
+
+  .section7Blob {
+    top: 8500px;
+  }
+}
+
+@media (max-width: 1400px) {
+  /* Section 6 */
+  .readMoreArrowWhite {
+    width: 100%;
+  }
+
+  .arrowDiv {
+    width: 100%;
+  }
+
+  .timeLine2 {
+    display: none;
+  }
+
+  .timeLine2Mobile {
+    position: relative;
+    right: 370px;
+    top: 250px;
+  }
+}
+
+@media (max-width: 1120px) {
+  /* Section 6 */
+  .flexTimeline {
+    width: auto;
+    display: block;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
+  }
+
+  .section5PictureDiv {
+    bottom: 1100px;
+  }
+
+  .section6Div {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 1134px) {
+  /* Breakpoint for Lønnskalkulator*/
+  .section4Flex {
+    display: block;
+  }
+  .section4Text {
+    width: auto;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .section1Blob {
+    display: none;
+  }
+
+  /* Breakpoint for office map*/
+  .section2Flex {
+    display: block;
+  }
+
+  .section2Text {
+    width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .bigHeading {
+    width: 100%;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  .applyButtonPink a,
+  .applyButtonBlue a {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 50px;
+    padding: 3%;
+  }
+
+  .section1 {
+    height: 900px;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .timeLine2Mobile {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  /* Mobile Heading */
+  .heading {
+    font-family: var(--MobileHeading-font-family);
+    font-style: var(--MobileHeadingfont-style);
+    font-weight: var(--MobileHeadingfont-weight);
+    font-size: var(--MobileHeadingfont-size);
+    line-height: var(--MobileHeadingline-height);
+    margin-bottom: 10%;
+  }
+
+  p,
+  .section1 p,
+  .section5 p,
+  .section6 p {
+    font-size: var(--Mobileparagraph-font-size);
+    line-height: var(--MobileParagraph--line-height);
+  }
+
+  /* Section 1*/
+
+  .section1 {
+    height: 1200px;
+  }
+
+  .sommerjobbHeading {
+    width: 100%;
+  }
+
+  .imageBlob1 {
+    position: relative;
+    top: 300px;
+    left: 40px;
+    width: 100%;
+    height: auto;
+  }
+
+  .section1BlobSVG {
+    display: none;
+  }
+
+  .section1Blob {
+    display: block;
+    position: relative;
+    top: 700px;
+    right: 200px;
+  }
+
+  .fastjobbheading {
+    width: fit-content;
+  }
+
+  .pinkBlobSalarySVG {
+    width: 800px;
+    right: 300px;
+    bottom: 400px;
+  }
+
+  .moreInfoDiv {
+    bottom: 100px;
+  }
+
+  /* Section 5 */
+  .section5 p {
+    width: auto;
+  }
+
+  .section5PictureDiv {
+    bottom: 1050px;
+    left: 120px;
+  }
+
+  .section5Picture {
+    width: 80%;
+    bottom: 400px;
+  }
+
+  .section5Blob {
+    width: 300px;
+  }
+
+  /* Section 6 */
+  .section6 {
+    height: 1900px;
+  }
+
+  .section6 p:nth-child(1),
+  .section6 p:nth-child(2) {
+    width: 100%;
+  }
+
+  .section6Blob {
+    bottom: 300px;
+  }
+
+  /* Section 7 */
+  .section7 p {
+    width: 100%;
+  }
+
+  .imagePositionMobile {
+    display: block;
+  }
+
+  .imagePositionDesktop {
+    display: none;
+  }
+
+  .section7Blob {
+    width: 100%;
+    height: auto;
+    top: 9050px;
+    z-index: 0;
+    left: 0px;
+  }
+}
