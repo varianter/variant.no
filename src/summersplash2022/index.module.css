@@ -488,8 +488,16 @@
   width: 100%;
 }
 
-.handbookChildButton p {
+.handbookChildButton {
   width: 50%;
+}
+
+.handbookPages {
+  width: 50%;
+}
+
+.handbookChildButton p {
+  width: 100%;
 }
 
 .whyWorkAtVariant {
