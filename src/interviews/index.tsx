@@ -7,7 +7,6 @@ import Head from 'next/head';
 import Layout from 'src/layout';
 import style from './index.module.css';
 import Link from 'next/link';
-import SayHi from 'src/index/say-hi';
 
 const createHtmlFromMetadata = (interview: Interview) => {
   let locationsHtml = '';
@@ -78,13 +77,6 @@ const Interview: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
             </>
           )}
         </Head>
-
-        <SayHi
-          className={style.sayhi}
-          href="/jobs"
-          rel="noopener"
-          text="Bli en variant!"
-        />
 
         <nav className={style.nav}>
           <Link href={`/prosjekter/${interview.projectSlug}`}>
