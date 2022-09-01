@@ -10,9 +10,9 @@ import {
 import style from 'src/advanced-calculator/calculator.module.css';
 
 const Calculator = () => {
-  const [selectedYear, setSelectedYear] = useState(2023);
+  const [selectedYear, setSelectedYear] = useState(2021);
 
-  const [selectedValidYear, setSelectedValidYear] = useState(2023);
+  const [selectedValidYear, setSelectedValidYear] = useState(2021);
   const [degree, setDegree] = useState('bachelor');
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
