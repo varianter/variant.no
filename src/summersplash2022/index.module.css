@@ -509,6 +509,10 @@
   padding-bottom: 10%;
 }
 
+.handbookGrid button {
+  margin: 1%;
+}
+
 .handbookChildButton {
   display: flex;
   text-align: left;
