@@ -234,13 +234,14 @@
 
 .summerstudent2 {
   display: flex;
-  position: static;
+  position: relative;
+  bottom: 100px;
 }
 
 .summerstudent3 {
   display: flex;
-  position: static;
-  bottom: 200%;
+  position: relative;
+  bottom: 100px;
 }
 
 .summerstudent1picture {
@@ -310,7 +311,7 @@
 
 .greenBlob {
   position: relative;
-  bottom: 950px;
+  bottom: 1150px;
   left: 67%;
   width: 50%;
 }
@@ -952,6 +953,7 @@
     padding-bottom: 15%;
     display: static;
     position: relative;
+    bottom: 0px;
   }
 
   .summerstudent3 {
