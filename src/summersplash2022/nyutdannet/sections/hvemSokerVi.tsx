@@ -1,6 +1,25 @@
+import { useEffect, useState } from 'react';
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import OfficeMap2 from '../img/kontorKart2';
 const WhoAreWeSeeking = () => {
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  const handleResize = () => {
+    if (window.matchMedia('(max-width: 500px)').matches) {
+      setIsDesktop(false);
+    } else {
+      setIsDesktop(true);
+    }
+  };
+
+  useEffect(() => {
+    if (window) {
+      if (window.matchMedia('(max-width: 500px)').matches) {
+        setIsDesktop(false);
+      }
+      window.addEventListener('resize', handleResize);
+    }
+  }, []);
   return (
     <section className={style.section2}>
       <h3 className={style.heading}>Hvem søker vi?</h3>
@@ -14,6 +33,8 @@ const WhoAreWeSeeking = () => {
             Bryr deg om koden du skriver, bryr deg om brukeren du lager noe for,
             og bryr deg om kunden du leverer til.
           </p>
+          {!isDesktop ? <OfficeMap2 /> : <></>}
+
           <p>
             Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av
             hverandre og de vi jobber med for å bli flinkere, modigere og
@@ -25,7 +46,7 @@ const WhoAreWeSeeking = () => {
             filosofien?
           </p>
         </div>
-        <OfficeMap2 />
+        {isDesktop ? <OfficeMap2 /> : <></>}
       </div>
     </section>
   );

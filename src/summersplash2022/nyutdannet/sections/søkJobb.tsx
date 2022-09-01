@@ -27,6 +27,10 @@ const Apply = () => {
           </a>
         </p>
       </div>
+      <div className={style2.imagePositionMobile}>
+        <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
+        <Section7Blob />
+      </div>
       <div className={style2.ApplyDiv}>
         <div className={style2.applyButtonPink}>
           <p>
@@ -39,7 +43,7 @@ const Apply = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div className={style2.imagePositionDesktop}>
         <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
         <Section7Blob />
       </div>

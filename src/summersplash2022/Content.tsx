@@ -102,7 +102,13 @@ const Content = () => {
                     Sommerjobben varer i fire + to uker med tre uker ferie i
                     mellomtiden.
                   </p>
-
+                  {isMobile ? (
+                    <div className={style.officeMapMobile}>
+                      <MapMobile />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <p className={style.section2Paragraph}>
                     I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
                     trenger å lure på hvordan kontrakten din vil se ut for
@@ -114,11 +120,7 @@ const Content = () => {
                     hva Variant står for og tilbyr.
                   </p>
                 </div>
-                <Map />
-              </div>
-
-              <div className={style.officeMapMobile}>
-                <MapMobile />
+                {!isMobile ? <Map /> : <></>}
               </div>
             </section>
           </div>
@@ -329,6 +331,13 @@ const Content = () => {
                   </p>
                 </div>
               </div>
+              <div className={style2.imagePositionMobile}>
+                <img
+                  className={style.Marius}
+                  src={Marius}
+                  alt="Bilde av Marius"
+                />
+              </div>
               <div className={style2.ApplyDiv}>
                 <div className={style2.applyButtonPink}>
                   <p>
@@ -345,11 +354,13 @@ const Content = () => {
                   </p>
                 </div>
               </div>
-              <img
-                className={style.Marius}
-                src={Marius}
-                alt="Bilde av Marius"
-              />
+              <div className={style2.imagePositionDesktop}>
+                <img
+                  className={style.Marius}
+                  src={Marius}
+                  alt="Bilde av Marius"
+                />
+              </div>
             </div>
           </section>
         </div>

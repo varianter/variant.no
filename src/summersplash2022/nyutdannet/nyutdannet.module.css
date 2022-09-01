@@ -332,6 +332,10 @@ p {
   height: 1200px;
 }
 
+.imagePositionMobile {
+  display: none;
+}
+
 .section7 p {
   width: 40%;
 }
@@ -581,6 +585,14 @@ p {
   /* Section 7 */
   .section7 p {
     width: 100%;
+  }
+
+  .imagePositionMobile {
+    display: block;
+  }
+
+  .imagePositionDesktop {
+    display: none;
   }
 
   .section7Blob {
