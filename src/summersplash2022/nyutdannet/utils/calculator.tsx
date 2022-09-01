@@ -146,10 +146,8 @@ const Calculator = () => {
                   ? { opacity: 0, height: 0 }
                   : {
                       opacity: 1,
-                      height: '1rem',
-                      paddingTop: '5%',
-                      paddingBottom: '20%',
                       backgroundColor: '#FFF3F2',
+                      padding: '5%',
                     }
               }
             >
