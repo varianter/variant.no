@@ -491,6 +491,7 @@ p {
   }
 
   p,
+  .section1 p,
   .section5 p,
   .section6 p {
     font-size: var(--Mobileparagraph-font-size);
