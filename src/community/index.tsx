@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Layout from 'src/layout';
 import style from './community.module.css';
 import DecorativeBoxes from '@components/decorative-boxes';
+import Link from 'next/link';
+
+const blobUrl = require('./contact-blob.svg');
 
 function Diversity() {
   return (
@@ -21,16 +24,18 @@ function Diversity() {
       <header className={style.header}>
         {/* Switch with title component once it has been merged in */}
         <h1 className={style.header__title}>Læreglede</h1>
-        <p>
-          Vi ønsker å legge tilrette for læreglede i fagmiljøene, uansett hvem
-          og hva.
-        </p>
-        <p>
-          Derfor stiller vi oss selv og ressursene våre til disposisjon for å
-          bistå communities i nær- og fjernmiljøet. Vårt mål er å bidra til en
-          åpen og varm bransje, der folk hjelper hverandre og legger tilrette
-          for felles læring.
-        </p>
+        <div className={style['text-container']}>
+          <p>
+            Vi ønsker å legge tilrette for læreglede i fagmiljøene, uansett hvem
+            og hva.
+          </p>
+          <p>
+            Derfor stiller vi oss selv og ressursene våre til disposisjon for å
+            bistå communities i nær- og fjernmiljøet. Vårt mål er å bidra til en
+            åpen og varm bransje, der folk hjelper hverandre og legger tilrette
+            for felles læring.
+          </p>
+        </div>
         <img
           src="images/community/lyttere-i-amfiet.png"
           alt="personer i amfiet på Varianthuset lytter til en presentasjon"
@@ -52,21 +57,37 @@ function Diversity() {
             <p>
               Åpen læreglede er viktig for oss i Variant. Derfor velger vi
               alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              bety litt forskjellige ting for de ulike kontorene, men felles for
+              alle er at de er åpne og tilgjengelige. Helt konkret betyr dette
+              blant annet at lokalet er i nærheten av kollektivtransport og
+              sykkelveier, og du kan bruke lokalet helt gratis. For mer
+              informasjon om lokalene våres:
             </p>
+            {/* Point at page for respective offices when ready */}
+            <Link href="/">
+              <a className={style['main-content__item__text__link--decorated']}>
+                Trondheim
+              </a>
+            </Link>
+            <Link href="/">
+              <a className={style['main-content__item__text__link--decorated']}>
+                Oslo
+              </a>
+            </Link>
+            <Link href="/">
+              <a className={style['main-content__item__text__link--decorated']}>
+                Bergen
+              </a>
+            </Link>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
-              color: 'secondary1__tint4',
+              position: 'top-rightish',
+              color: 'secondary3',
             }}
             box2Properties={{
-              position: 'bottom-right',
-              color: 'secondary3',
+              position: 'bottom-leftish',
+              color: 'secondary1__tint4',
             }}
           >
             <img src="/images/diversity/ada.png" alt="Placeholder image" />
@@ -84,6 +105,7 @@ function Diversity() {
               'https://blog.variant.no/ny-azure-meetup-i-trondheim-med-f%C3%B8rste-m%C3%B8te-p%C3%A5-varianthuset-b44a64d917ee'
             }
             title="Ny Azure meetup i Trondheim med første møte på Varianthuset"
+            className={style['main-content__quote__link--decorated']}
           >
             Les bloggposten
           </a>
@@ -93,13 +115,9 @@ function Diversity() {
           <section className={style['main-content__item__text']}>
             <h3>Streaming</h3>
             <p>
-              Åpen læreglede er viktig for oss i Variant. Derfor velger vi
-              alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              I våre lokaler har vi permanent riggede kabler for skjermer, lys
+              og lyd tilrettelagt for opptak. Dermed kan det arrangeres åpne
+              meetups eller andre arrangementer som kan streames.
             </p>
           </section>
           <DecorativeBoxes
@@ -147,12 +165,15 @@ function Diversity() {
         <article
           className={`${style['main-content__item']} ${style['main-content__contact']}`}
         >
-          <div className={style['main-content__contact__blob']}>
-            <p>
-              Noe vi kan bistå <u>deg</u> med? Ta kontakt!
-            </p>
-            <Arrow />
-          </div>
+          <a href="#contact">
+            <img src={blobUrl} />
+            <div className={style['main-content__contact__text']}>
+              <p>
+                Noe vi kan bistå <u>deg</u> med? Ta kontakt!
+              </p>
+              <Arrow />
+            </div>
+          </a>
         </article>
 
         <article className={style['main-content__item']}>
@@ -238,14 +259,16 @@ function Diversity() {
       </section>
 
       <section className={style['contact-section']}>
-        <h2>Ta Kontakt</h2>
+        <h2 className={style['contact-section__title']} id="contact">
+          Ta Kontakt
+        </h2>
         <div>Fancy tittel 😎</div>
         <img
           src="images/curved_arrow.svg"
           className={style['contact-section__decorative-arrow']}
           alt="Pil som peker på der det står Chief Community Officer"
         />
-        <p>
+        <p className={style['contact-section__subtitle']}>
           Våre CCO-er (Chief Community Officer) er alltid tilgjengelig for en
           uforpliktende prat om alt som har med faglig fellesskap i nær- og
           fjernmiljøet å gjøre.
@@ -259,7 +282,7 @@ function Diversity() {
           imagePath="images/mikael.png"
         />
         <ContactCard
-          city="Trondheim"
+          city="Oslo"
           name="Mikael"
           pronoun="m"
           email="mb@variant.no"
@@ -267,7 +290,7 @@ function Diversity() {
           imagePath="images/mikael.png"
         />
         <ContactCard
-          city="Trondheim"
+          city="Bergen"
           name="Mikael"
           pronoun="m"
           email="mb@variant.no"
