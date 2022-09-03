@@ -1,0 +1,126 @@
+.main {
+  position: relative;
+  overflow-x: hidden;
+  margin-top: 0px;
+}
+
+.main__inner {
+  max-width: 50rem;
+  margin: 0;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.main__innerFullWidth {
+  max-width: unset;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 7.4rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.header__logo svg {
+  display: block;
+  margin: 1.2rem;
+  height: 0.9rem;
+  margin-left: 0;
+}
+
+.header__nav {
+  flex: 1;
+}
+
+.header__nav__ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  transition: 0.4s;
+}
+
+.header__nav__ul li:last-child {
+  display: none;
+}
+
+/* Care color white*/
+.header__nav a {
+  display: block;
+  color: var(--color-standard__white--text);
+  text-decoration: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+.header__nav li:nth-child(2n) a {
+  background-position-x: right;
+}
+.header__nav a:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+.burgerButtonContainer {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.burgerButtonContainer:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(21, 156, 228, 0.4);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: relative;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: var(--color-secondary1);
+  margin: 0.29rem 0;
+  transition: 0.3s;
+}
+
+.bar1_change,
+.bar2_change,
+.bar3_change {
+  composes: bar1;
+}
+
+.bar1_change {
+  -webkit-transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+  transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+}
+.bar2_change {
+  opacity: 0;
+}
+.bar3_change {
+  -webkit-transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+  transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+}
+
+@media (max-width: 900px) {
+  .header__nav__ul {
+    display: none;
+  }
+}
