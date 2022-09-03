@@ -242,13 +242,17 @@ export default function Cph22() {
         <h3 className="fancy">Søndag</h3>
         <ul>
           <li>
-            <p>08:00 - 11:00</p>
+            <p>08:00 - 12:00</p>
             <p>🍱 Frokost på hotellet</p>
           </li>
           <li>
             <p>11:00</p>
+            <p>🎢 Tivoli åpner</p>
+          </li>
+          <li>
+            <p>12:00</p>
             <p>
-              🔑 Utsjekk - bagasjeoppbevaring på{' '}
+              🔑 Siste utsjekk - bagasjeoppbevaring på{' '}
               <a
                 href="https://www.tivoli.dk/da/haven-og-forlystelser/spillesteder/over-plaenen"
                 target="_blank"
@@ -256,10 +260,6 @@ export default function Cph22() {
                 Over Plænen
               </a>
             </p>
-          </li>
-          <li>
-            <p>11:15</p>
-            <p>🎢 Tivoli</p>
           </li>
           <li>
             <p>14:30</p>
