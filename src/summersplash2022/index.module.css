@@ -1142,204 +1142,96 @@
   }
 }
 
-@media (min-width: 2000px) {
-  /* 900px*/
-  .scrollContainer,
-  .section1,
-  .section2,
-  .section3,
-  .section5,
-  .whyWorkAtVariant,
-  .section6 {
-    height: auto;
-    scroll-behavior: smooth;
-  }
-
-  .scrollContainer {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-  }
-
-  /* Headings */
-  .section3Heading,
-  .section5Heading,
-  .section6Heading,
-  .section4Heading,
-  .mostImportantForYou {
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 200%;
-    line-height: 39px;
-  }
-
-  /* Section 1 */
-  .imageBlob1 {
-    position: relative;
-    left: 30%;
-    height: auto;
-    bottom: 220px;
-    width: 50%;
-  }
-
-  .newVariantsSVG {
-    width: 70%;
-    height: auto;
-  }
-
-  .søkHer,
-  .scroll {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 150%;
-    line-height: 34px;
-  }
-
-  .eller {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 150%;
-    line-height: 34px;
-  }
-
-  /* Section 2 styling*/
-  .section2 {
-    width: 80%;
-    color: white;
-  }
-
-  .section2Heading {
-    margin-bottom: 20px;
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 200%;
-    line-height: 59px;
-  }
-
-  .blogpostLink {
-    color: white;
-    text-decoration: underline;
-  }
-
-  .section2Color {
-    background-color: #1a1837;
-  }
-
-  .section2Paragraph {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    width: 50%;
-    font-size: 110%;
-    line-height: 140%;
-  }
-
-  .officeMap {
-    position: relative;
-    width: 70%;
-    height: fit-content;
-    display: flex;
-    right: 13%;
-    padding-top: 13%;
-  }
-
-  .officeMapMobile {
-    display: none;
-  }
-
-  /* Section 3 */
-  .summerstudent1Paragraph,
-  .summerstudent2Paragraph,
-  .summerstudent3Paragraph,
-  .summerstudentName,
-  .summerstudentName1,
-  .summerstudentName2 {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110%;
-    line-height: 140%;
-    position: relative;
-    height: fit-content;
-  }
-
-  .summerstudentName,
-  .summerstudentName1,
-  .summerstudentName2 {
-    font-family: 'Recoleta';
-  }
-
-  /* Section 4 */
-  .positionTextLeft {
-    padding-top: 1%;
-    width: 500px;
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110%;
-    line-height: 140%;
+@media (min-width: 2150px) {
+  .heading,
+  .handbookHeaderDeskotop {
+    font-size: 300%;
+    line-height: 200%;
   }
 
   .handbookHeaderDeskotop {
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 200%;
-    line-height: 39px;
+    padding: 0px;
   }
 
-  .handbookParagraphs {
-    width: 500px;
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110%;
-    line-height: 140%;
+  p,
+  .section2Paragraph,
+  .whyWorkAtVariant p,
+  .section6 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  /* Section 1 */
+  .section1 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .moreInfoDiv {
+    display: none;
+  }
+
+  .imageBlob1 {
+    position: relative;
+    top: 400px;
+    width: 40%;
+  }
+
+  .pinkBlob {
+    position: relative;
+    width: 40%;
+    bottom: 900px;
+  }
+
+  /* Section 2 */
+  .officeMapSVG {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Section 3 */
+
+  .section3 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .section3 {
+    height: 3000px;
+  }
+  .summerstudent1picture {
+    width: 20%;
+  }
+
+  .greenBlob {
+    width: 50%;
+    height: auto;
+    position: relative;
+    right: 300px;
+    bottom: 2500px;
+  }
+
+  /* Handbook */
+  .whyWorkAtVariant {
+    height: auto;
+  }
+
+  .mostImportantForYou,
+  .handbookRef {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .handbookGrid button {
+    font-size: 150%;
   }
 
   .readMoreArrow {
-    position: relative;
-    right: 20%;
-    top: 250px;
+    display: none;
   }
 
-  /* Section 5 & Section 6*/
-  .section6Paragraph,
-  .section6Paragraph2,
-  .section5Paragraph,
-  .section5HeadingH4 {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110%;
-    line-height: 140%;
-  }
-
-  .section5HeadingH4 {
-    font-weight: bold;
-  }
-
-  .søknadstips {
-    width: 100%;
-  }
-
-  .section5ParagraphLeft {
-    font-size: 110%;
-    line-height: 140%;
-  }
-
-  .section5Paragraph {
-    width: 60%;
-  }
-
-  .flexTimeline {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    gap: 20%;
+  .EvenPicture {
+    width: 50%;
   }
 }
 

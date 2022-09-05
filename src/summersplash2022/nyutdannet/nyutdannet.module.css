@@ -486,6 +486,115 @@ p {
   }
 }
 
+@media (min-width: 2050px) {
+  .heading {
+    font-size: 300%;
+  }
+
+  .moreInfoDiv {
+    display: none;
+  }
+
+  .section1 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .section1 {
+    height: 1400px;
+  }
+
+  .imageBlob1 {
+    position: relative;
+    bottom: 1000px;
+  }
+
+  .section1BlobSVG {
+    bottom: 1000px;
+  }
+
+  /* Section 2 */
+  .section2 {
+    height: auto;
+  }
+
+  .officeMap2 {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Section 4 */
+  .section4 {
+    height: auto;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
+  }
+
+  .section4Flex {
+    justify-content: left;
+  }
+
+  /* Section 5 */
+  .section5 {
+    height: 5000px;
+  }
+
+  .section5 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .section5Picture {
+    left: 400px;
+    bottom: 1300px;
+    bottom: 2800px;
+  }
+
+  .section5Blob {
+    position: relative;
+    left: 200px;
+    bottom: 800px;
+    width: 70%;
+    height: auto;
+  }
+
+  .timeLine2 {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Section 6 */
+  .section6 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .timeLineBlack {
+    width: 50%;
+    height: auto;
+  }
+
+  .timeLineWhite {
+    width: 50%;
+    height: auto;
+  }
+
+  .section6 p:nth-last-child(1) {
+    width: 100%;
+  }
+
+  .section6 h4 {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .secion7 p {
+    display: none;
+  }
+}
+
 /* Mobile */
 @media (max-width: 500px) {
   /* Mobile Heading */
