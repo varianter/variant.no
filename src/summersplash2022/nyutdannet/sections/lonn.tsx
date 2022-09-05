@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import PinkBlob from '../img/pinkBlob';
 import Calculator from '../utils/calculator';
@@ -21,10 +22,12 @@ const Payment = () => {
             antall års erfaring.
           </p>
           <p>
-            {' '}
-            I kalkulatoren til høyre kan du se hva du vil tjene ut ifra grad og
-            avgangsår. Du kan også ta en titt på denne siden om du vil vite mer
-            om lønn og andre goder i Variant.
+            I kalkulatoren til høyre kan du se hva du vil tjene som nyutdannet.
+            Du kan også ta en titt på{' '}
+            <Link href="/kalkulator">
+              <a>lønnskalkulatoren</a>
+            </Link>{' '}
+            om du vil vite mer om lønn og andre goder i Variant.
           </p>
         </div>
         <div className={style.calculator}>
