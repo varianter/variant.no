@@ -123,7 +123,7 @@ const Calculator = () => {
         </div>
         <div className={style['calculator-controls__value']}>
           <Counter
-            num={totalSalary * 0.07}
+            num={(totalSalary + getAverageBonus()) * 0.07}
             formatter={formatCurrencyFromNumber}
           />
         </div>
