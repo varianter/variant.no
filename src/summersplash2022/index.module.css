@@ -1173,13 +1173,18 @@
 
   .imageBlob1 {
     position: relative;
-    top: 400px;
+    top: 700px;
     width: 40%;
   }
 
   .pinkBlob {
     position: relative;
     width: 40%;
+    bottom: 0px;
+  }
+
+  .section1Blobs {
+    position: relative;
     bottom: 900px;
   }
 
@@ -1232,6 +1237,22 @@
 
   .EvenPicture {
     width: 50%;
+  }
+}
+
+@media (min-width: 2700px) {
+  .imageBlob1 {
+    position: relative;
+    bottom: 0px;
+  }
+
+  .pinkBlob {
+    position: relative;
+    bottom: 400px;
+  }
+
+  .section1Blobs {
+    bottom: 1300px;
   }
 }
 

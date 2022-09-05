@@ -35,7 +35,13 @@ const Content = () => {
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 900px)').matches);
     window.addEventListener('resize', handleResize);
-  });
+    if (
+      window.matchMedia('(min-width: 2000px)').matches &&
+      whichButtonSelected === ''
+    ) {
+      setWhichButtonSelected('Formal og verdier');
+    }
+  }, []);
 
   return (
     <>
@@ -51,18 +57,21 @@ const Content = () => {
               </h3>
             </span>
             <br />
-            <div className={style2.applyButtonPink}>
-              <p>Søk senest 2. oktober</p>
-              <p>
-                <a href="#sokSommerjobb">Søk sommerjobb</a>
-              </p>
+            <div className={style.ApplyDiv}>
+              <div className={style2.applyButtonPink}>
+                <p>Søk senest 2. oktober</p>
+                <p>
+                  <a href="#sokSommerjobb">Søk sommerjobb</a>
+                </p>
+              </div>
+              <div className={style2.applyButtonBlue}>
+                <p>Ferdig utdannet i 2023?</p>
+                <p>
+                  <a href="/nyutdannet">Jeg vil ha fast jobb</a>
+                </p>
+              </div>
             </div>
-            <div className={style2.applyButtonBlue}>
-              <p>Ferdig utdannet i 2023?</p>
-              <p>
-                <a href="/nyutdannet">Jeg vil ha fast jobb</a>
-              </p>
-            </div>
+
             <div className={style.section1Blobs}>
               <img
                 className={style.imageBlob1}
