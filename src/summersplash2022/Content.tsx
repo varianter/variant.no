@@ -52,7 +52,7 @@ const Content = () => {
             </span>
             <br />
             <div className={style2.applyButtonPink}>
-              <p>Søk senest 3. oktober</p>
+              <p>Søk senest 2. oktober</p>
               <p>
                 <a href="#sokSommerjobb">Søk sommerjobb</a>
               </p>

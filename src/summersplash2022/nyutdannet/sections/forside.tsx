@@ -19,7 +19,7 @@ const LandingPage = () => {
         </span>
         <br />
         <div className={style.applyButtonPink}>
-          <p>Søk senest 3. oktober</p>
+          <p>Søk senest 2. oktober</p>
           <p>
             <a href="#soksommerjobb">Søk fast jobb</a>
           </p>
