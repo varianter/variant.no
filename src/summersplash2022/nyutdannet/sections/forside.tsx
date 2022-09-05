@@ -4,6 +4,7 @@ import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 
 const LandingPage = () => {
+  //Blob1
   const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
 
   return (
