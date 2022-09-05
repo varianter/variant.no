@@ -154,12 +154,12 @@
 
 .main-content__contact {
   position: relative;
-  max-width: 50%;
+  padding: 2rem;
 }
 
 .main-content__contact a {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .main-content__contact img {
@@ -169,14 +169,34 @@
 
 .main-content__contact__text {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 40%;
+  transform: translateY(50%);
+  /* width does not take padding into consideration
+  (due to position: absolute?) So it is calculated manually */
+  width: calc(50% - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .main-content__contact__text {
+    width: calc(100% - 4rem);
+  }
+}
+
+.main-content__contact__text p {
+  color: var(--color-standard__white);
+  font-size: 1.3rem;
+}
+
+.main-content__contact__text__arrow {
+  margin-top: 0.5rem;
+  width: 40%;
+  max-width: 6rem;
 }
 
 .contact-section__card {

@@ -161,17 +161,17 @@ function Diversity() {
           </DecorativeBoxes>
         </article>
 
-        {/* kontaktblob */}
         <article
           className={`${style['main-content__item']} ${style['main-content__contact']}`}
         >
           <a href="#contact">
             <img src={blobUrl} />
             <div className={style['main-content__contact__text']}>
-              <p>
-                Noe vi kan bistå <u>deg</u> med? Ta kontakt!
-              </p>
-              <Arrow />
+              <p>Noe vi kan bistå deg med? Ta kontakt!</p>
+              <Arrow
+                color="standard__white"
+                className={style['main-content__contact__text__arrow']}
+              />
             </div>
           </a>
         </article>
