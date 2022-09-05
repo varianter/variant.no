@@ -1,7 +1,11 @@
 import Head from 'next/head';
+import { NextPage, InferGetStaticPropsType } from 'next';
+import { getStaticProps } from 'pages';
 import Content from './Content';
 
-const Summersplash2022 = () => {
+const Summersplash2022: NextPage<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = () => {
   return (
     <>
       <Head>
