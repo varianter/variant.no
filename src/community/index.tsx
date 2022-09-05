@@ -64,6 +64,7 @@ function Diversity() {
               informasjon om lokalene våres:
             </p>
             {/* Point at page for respective offices when ready */}
+            {/* TODO: Maybe comment out until pages are done? */}
             <Link href="/">
               <a className={style['main-content__item__text__link--decorated']}>
                 Trondheim
@@ -165,7 +166,7 @@ function Diversity() {
           className={`${style['main-content__item']} ${style['main-content__contact']}`}
         >
           <a href="#contact">
-            <img src={blobUrl} />
+            <img src={blobUrl} alt="" />
             <div className={style['main-content__contact__text']}>
               <p>Noe vi kan bistå deg med? Ta kontakt!</p>
               <Arrow
