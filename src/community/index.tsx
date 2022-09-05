@@ -91,6 +91,7 @@ function Diversity() {
               color: 'secondary1__tint4',
             }}
           >
+            {/* TODO: Replace with non-placeholder */}
             <img src="/images/diversity/ada.png" alt="Placeholder image" />
           </DecorativeBoxes>
         </article>
@@ -120,18 +121,28 @@ function Diversity() {
               og lyd tilrettelagt for opptak. Dermed kan det arrangeres åpne
               meetups eller andre arrangementer som kan streames.
             </p>
+            <a
+              href="https://www.youtube.com/channel/UCMBx54cKNj8i9R51IE4bfCg"
+              rel="noopener noreferrer"
+              className={style['main-content__item__text__link--decorated']}
+            >
+              Opptak fra tidligere arrangementer
+            </a>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
+              position: 'middle-left',
               color: 'secondary1__tint4',
             }}
             box2Properties={{
               position: 'bottom-right',
-              color: 'secondary3',
+              color: 'secondary2__tint4',
             }}
           >
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/community/videokamera.png"
+              alt="Videokamera som står på en stand og filmer en person"
+            />
           </DecorativeBoxes>
         </article>
 
@@ -139,26 +150,31 @@ function Diversity() {
           <section className={style['main-content__item__text']}>
             <h3>Podcast</h3>
             <p>
-              Åpen læreglede er viktig for oss i Variant. Derfor velger vi
-              alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              Vi har et helt eget, skikkelig kult podcastrom. Dette stiller vi
+              til disposisjon til andre som kan trenge et podcastrom.
             </p>
+            <a
+              href="https://variantsnakk.transistor.fm/episodes"
+              rel="noopener noreferrer"
+              className={style['main-content__item__text__link--decorated']}
+            >
+              Våre podcaster
+            </a>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
-              color: 'secondary1__tint4',
+              position: 'top-rightish',
+              color: 'secondary3__tint2',
             }}
             box2Properties={{
-              position: 'bottom-right',
-              color: 'secondary3',
+              position: 'bottom-leftish',
+              color: 'primary__tint3',
             }}
           >
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/community/podcast-simen.png"
+              alt="Simen som sitter foran en mikrofon og spiller inn podcast"
+            />
           </DecorativeBoxes>
         </article>
 
@@ -181,26 +197,28 @@ function Diversity() {
           <section className={style['main-content__item__text']}>
             <h3>Faglig påfyll</h3>
             <p>
-              Åpen læreglede er viktig for oss i Variant. Derfor velger vi
-              alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              Vi kan også bidra med faglig innhold hvis du er på utkikk etter
+              det. Vi kan også være en sparringspartner hvis du har innhold du
+              ønsker å utvikle. Mange varianter er gode foredragsholdere,
+              workshop-fasilitarorer og innleggsskrivere. Sjekk våre ansattsider
+              for å se hva ulike varianter har bidratt med tidligere, opptak av
+              tidligere foredrag eller bloggen vår for faglige innlegg.
             </p>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
-              color: 'secondary1__tint4',
+              position: 'top-middle',
+              color: 'secondary2__tint4',
             }}
             box2Properties={{
-              position: 'bottom-right',
-              color: 'secondary3',
+              position: 'bottom-left',
+              color: 'secondary3__tint1',
             }}
           >
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/community/jakob-presenterer.png"
+              alt="Jakob som gestikulerer til et lysbilde under en presentasjon"
+            />
           </DecorativeBoxes>
         </article>
 
@@ -208,26 +226,27 @@ function Diversity() {
           <section className={style['main-content__item__text']}>
             <h3>Organisering</h3>
             <p>
-              Åpen læreglede er viktig for oss i Variant. Derfor velger vi
-              alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              Vi i Variant kan hjelpe deg som arrangør med alt det praktiske
+              rundt et arrangement. Dette kan innbære mye forskjellig, men kan
+              for eksempel være å bestille mat, finne andre lokaler hvis vårt
+              ikke passer helt, eller planlegge ting og tang. Noe om fagkomitéen
+              (?)
             </p>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
-              color: 'secondary1__tint4',
+              position: 'middle-left',
+              color: 'secondary2__tint4',
             }}
             box2Properties={{
               position: 'bottom-right',
-              color: 'secondary3',
+              color: 'primary__tint3',
             }}
           >
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/community/hilde-ved-bord.png"
+              alt="Hilde som prater med noen personer rundt et bord"
+            />
           </DecorativeBoxes>
         </article>
 
@@ -235,23 +254,25 @@ function Diversity() {
           <section className={style['main-content__item__text']}>
             <h3>Spons</h3>
             <p>
-              Åpen læreglede er viktig for oss i Variant. Derfor velger vi
-              alltid (kontor)lokaler som legger til rette for dette. Dette kan
-              bety litt forskjellige ting for de ulike kontorene (i de ulike
-              byene), men felles for alle er at de er åpne og tilgjengelige.
-              Helt konkret betyr dette blant annet at lokalet er i nærheten av
-              kollektivtransport og sykkelveier, og du kan bruke lokalet helt
-              gratis. For mer informasjon om lokalene våres:
+              I tillegg til organisering kan vi bidra med pæng, hvis det skulle
+              være behov for det. Dette kan for eksempel dekke mat eller andre
+              utgifter en community vil møte på. Vi i Variant går også aktivt
+              inn som samarbeidspartnere for å støtte opp om mangfold i
+              tech-bransjen, som du kan lese mer om{' '}
+              <Link href={'/mangfold'}>
+                <a>her</a>
+              </Link>
+              .
             </p>
           </section>
           <DecorativeBoxes
             box1Properties={{
-              position: 'top-leftish',
+              position: 'top-middle',
               color: 'secondary1__tint4',
             }}
             box2Properties={{
               position: 'bottom-right',
-              color: 'secondary3',
+              color: 'secondary2__tint4',
             }}
           >
             <img src="/images/diversity/ada.png" alt="Placeholder image" />
@@ -263,12 +284,14 @@ function Diversity() {
         <h2 className={style['contact-section__title']} id="contact">
           Ta Kontakt
         </h2>
-        <div>Fancy tittel 😎</div>
-        <img
-          src="images/curved_arrow.svg"
-          className={style['contact-section__decorative-arrow']}
-          alt="Pil som peker på der det står Chief Community Officer"
-        />
+        <div className={style['contact-section__flavor-text']}>
+          <p>Fancy tittel 😎</p>
+          <img
+            src="images/curved_arrow.svg"
+            className={style['contact-section__flavor-text__arrow']}
+            alt="Pil som peker på der det står Chief Community Officer"
+          />
+        </div>
         <p className={style['contact-section__subtitle']}>
           Våre CCO-er (Chief Community Officer) er alltid tilgjengelig for en
           uforpliktende prat om alt som har med faglig fellesskap i nær- og
@@ -280,23 +303,23 @@ function Diversity() {
           pronoun="m"
           email="mb@variant.no"
           phone="979 81 877"
-          imagePath="images/mikael.png"
+          imagePath="images/community/mikael-300px.png"
         />
         <ContactCard
           city="Oslo"
-          name="Mikael"
+          name="Nikolai"
           pronoun="m"
-          email="mb@variant.no"
-          phone="979 81 877"
-          imagePath="images/mikael.png"
+          email="nikolai@variant.no"
+          phone="971 50 015"
+          imagePath="images/community/nikolai-300px.png"
         />
         <ContactCard
           city="Bergen"
-          name="Mikael"
+          name="Andreas"
           pronoun="m"
-          email="mb@variant.no"
-          phone="979 81 877"
-          imagePath="images/mikael.png"
+          email="andreas@variant.no"
+          phone="950 06 947"
+          imagePath="images/community/andreas-300px.png"
         />
       </section>
     </Layout>

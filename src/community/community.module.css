@@ -1,11 +1,13 @@
 .header {
-  margin: 8rem 0 12rem 0;
+  margin: 8rem 1rem 12rem 1rem;
   display: grid;
   grid-template:
     'title image' 8rem
     'description image'
     / 1fr 1fr;
 }
+
+/* TODO: Responsive header */
 
 .header__title {
   font-weight: 500;
@@ -40,6 +42,7 @@
 .main-content {
   display: flex;
   flex-direction: column;
+  margin: 0 1rem;
 }
 
 .main-content__title,
@@ -72,7 +75,7 @@
 }
 
 .main-content__item + .main-content__item {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 @media (max-width: 500px) {
@@ -101,16 +104,25 @@
   height: fit-content;
 }
 
-.main-content .main-content__quote__link--decorated,
+.main-content__quote__link--decorated,
 .main-content__item__text__link--decorated {
   font-weight: 500;
   text-underline-offset: 0.5rem;
   text-decoration-color: var(--color-primary);
 }
 
+.main-content__item__text__link--decorated {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
 .main-content__item__text__link--decorated
   + .main-content__item__text__link--decorated {
   margin-left: 1rem;
+}
+
+.main-content__quote__link--decorated {
+  margin-top: 2rem;
 }
 
 .main-content__quote {
@@ -145,11 +157,6 @@
   right: 1rem;
   bottom: -1rem;
   content: '\201D';
-}
-
-.main-content__quote > a {
-  margin-top: 2rem;
-  /* Text decoration ++ */
 }
 
 .main-content__contact {
@@ -199,18 +206,68 @@
   max-width: 6rem;
 }
 
+.contact-section {
+  margin: 12rem 1rem 0 1rem;
+}
+
+.contact-section__flavor-text {
+  font-family: 'Recoleta';
+  display: flex;
+  font-weight: 500;
+  margin: 0 0 1rem 0.5rem;
+}
+
+.contact-section__flavor-text__arrow {
+  transform: rotate(-120deg);
+  width: 2.5rem;
+  margin-left: 1.5rem;
+}
+
 .contact-section__card {
   display: flex;
   flex-direction: row-reverse;
   gap: 2rem;
   margin: 3rem 5rem;
 }
+
 .contact-section__card:nth-of-type(2n) {
   flex-direction: row;
 }
 
 .contact-section__card__image {
-  width: 30%;
+  max-width: 30%;
+}
+
+@media (max-width: 500px) {
+  .contact-section__title {
+    text-align: left;
+  }
+
+  .contact-section__flavor-text {
+    flex-direction: row-reverse;
+    margin-top: -1rem;
+  }
+
+  .contact-section__flavor-text__arrow {
+    transform: scalex(-1) rotate(-90deg);
+    margin: 1rem 0.5rem 0 0;
+  }
+
+  .contact-section__card,
+  .contact-section__card:nth-of-type(2n) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin: 3rem 1rem;
+    align-items: center;
+  }
+
+  .contact-section__card__info__title {
+    text-align: center;
+  }
+
+  .contact-section__card__image {
+    max-width: 60%;
+  }
 }
 
 .contact-section__card__info {
