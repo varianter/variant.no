@@ -1,56 +1,19 @@
 import { useEffect, useState } from 'react';
-import Counter from 'src/advanced-calculator/Counter';
-import { firstDayOfTheYear } from 'src/advanced-calculator/helpers/daysUntilNewSalary';
-import { getAverageBonus } from 'src/advanced-calculator/helpers/getHistoricBonus';
-import getPayscale from 'src/advanced-calculator/helpers/getPayscale';
-import {
-  formatCurrencyFromNumber,
-  getMaxYear,
-} from 'src/advanced-calculator/helpers/utils';
 import style from 'src/advanced-calculator/calculator.module.css';
+import { Degree, startSalery } from 'src/advanced-calculator/config';
+import Counter from 'src/advanced-calculator/Counter';
+import { getAverageBonus } from 'src/advanced-calculator/helpers/getHistoricBonus';
+import { formatCurrencyFromNumber } from 'src/advanced-calculator/helpers/utils';
 
 const Calculator = () => {
-  const [selectedYear, setSelectedYear] = useState(2021);
-  const [selectedValidYear, setSelectedValidYear] = useState(2021);
-  const [degree, setDegree] = useState('bachelor');
-  const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
-  const payscale = getPayscale(year);
-
-  const MIN_YEAR = 1990;
-  const MAX_YEAR = getMaxYear();
-
-  const DEGREE: { [key: string]: string } = {
-    bachelor: 'bachelor',
-    master: 'master',
-  };
+  const [degree, setDegree] = useState<Degree>('masters');
+  const totalSalary = startSalery[degree];
 
   const [isMobile, setIsMobile] = useState(false);
 
-  const yearsOfExperience =
-    firstDayOfTheYear(MAX_YEAR).getFullYear() - selectedValidYear;
-
-  const totalExperience =
-    yearsOfExperience === 0
-      ? `Nyutdannet ${DEGREE[degree]}`
-      : `${yearsOfExperience} år + ${DEGREE[degree]}`;
-
-  function isValidYear(year: number) {
-    return MIN_YEAR <= year && year <= MAX_YEAR;
-  }
-
   function onDegreeChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const value = event.target.value;
+    const value = event.target.value as Degree;
     setDegree(value);
-  }
-
-  function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const value = event.target.value;
-    if (value) onSelectedYearChange(parseInt(value, 10));
-  }
-
-  function onSelectedYearChange(value: number) {
-    setSelectedYear(value);
-    if (isValidYear(value)) setSelectedValidYear(value);
   }
 
   const handleResize = () => {
@@ -102,6 +65,7 @@ const Calculator = () => {
                 id="Bachelor"
                 name="education"
                 value="bachelor"
+                checked={degree == 'bachelor'}
                 onChange={onDegreeChange}
                 defaultChecked
               />
@@ -120,7 +84,8 @@ const Calculator = () => {
                 type="radio"
                 id="Master"
                 name="education"
-                value="master"
+                value="masters"
+                checked={degree == 'masters'}
                 onChange={onDegreeChange}
               />
               <label id="masterLabel" htmlFor="Master">
@@ -128,71 +93,6 @@ const Calculator = () => {
               </label>
             </div>
           </div>
-          <label htmlFor="experience" className={style['form-row']}>
-            <div className={style['form-label']}>
-              Når ble eller blir du ferdig med studiene?
-            </div>
-
-            <div className={style['range-input-wrapper']}>
-              <div
-                style={{ backgroundColor: '#FFDCD7' }}
-                className={style['range-input']}
-              >
-                <input
-                  aria-label={`range slider for ${'experience'} ${'År'}`}
-                  type="range"
-                  name={'År'}
-                  className={style.inputRange}
-                  min={MIN_YEAR}
-                  max={2023}
-                  value={selectedYear}
-                  step={1}
-                  onChange={handleOnChange}
-                  /* onBlur={handleOnBlur} */
-                  disabled={false}
-                />
-              </div>
-              <input
-                aria-label={`number input for ${'experience'} ${'År'}`}
-                id={'experience'}
-                className={style.inputNumber}
-                name={'År'}
-                type="number"
-                size={MAX_YEAR.toString().length}
-                maxLength={MAX_YEAR.toString().length}
-                min={MIN_YEAR}
-                max={MAX_YEAR}
-                value={selectedYear}
-                onChange={handleOnChange}
-                /* onBlur={handleOnBlur} */
-                disabled={false}
-              />
-            </div>
-            <span
-              className={style['form-error']}
-              style={
-                isValidYear(selectedYear)
-                  ? { opacity: 0, height: 0 }
-                  : {
-                      opacity: 1,
-                      backgroundColor: '#FFF3F2',
-                      padding: '5%',
-                    }
-              }
-            >
-              Årslønnen for nyutdannede i 2023 oppdateres basert på Teknas
-              lønnsstatistikk for 2022, som tilgjengeliggjøres i november.{' '}
-            </span>
-          </label>
-        </div>
-        <div
-          style={{ marginTop: '5%' }}
-          className={style['calculator-controls__label']}
-        >
-          Vi baserer lønn på erfaring
-        </div>
-        <div className={style['calculator-controls__value']}>
-          {totalExperience}
         </div>
       </div>
 
@@ -201,10 +101,7 @@ const Calculator = () => {
           Det vil gi en årslønn på
         </div>
         <div className={style['calculator-controls__value']}>
-          <Counter
-            num={payscale.current}
-            formatter={formatCurrencyFromNumber}
-          />
+          <Counter num={totalSalary} formatter={formatCurrencyFromNumber} />
         </div>
       </div>
 
@@ -214,7 +111,7 @@ const Calculator = () => {
         </div>
         <div className={style['calculator-controls__value']}>
           <Counter
-            num={payscale.current + getAverageBonus()}
+            num={totalSalary + getAverageBonus()}
             formatter={formatCurrencyFromNumber}
           />
         </div>
@@ -226,7 +123,7 @@ const Calculator = () => {
         </div>
         <div className={style['calculator-controls__value']}>
           <Counter
-            num={payscale.current * 0.07}
+            num={totalSalary * 0.07}
             formatter={formatCurrencyFromNumber}
           />
         </div>
