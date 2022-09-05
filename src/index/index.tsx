@@ -1,22 +1,25 @@
 import DecorativeBoxes from '@components/decorative-boxes';
-import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getStaticProps } from 'pages/index';
 import React, { useMemo } from 'react';
 import { BergenInfoBlock } from 'src/bergen';
 import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
+import { EmployeeItem } from 'src/employees/types';
+import { CaseJSON } from 'src/case/Case';
+import { HighlightedItemsLists } from 'src/rss/service';
 
-const Home = ({
-  randomEmployee,
-  randomCases,
-  feeds,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+export type HomeProps = {
+  randomEmployee: EmployeeItem;
+  randomCases: CaseJSON[];
+  feeds: HighlightedItemsLists;
+};
+
+const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem, index) => (
       <article className={style.cases__case} key={caseItem.heading}>
