@@ -382,6 +382,23 @@ p {
     top: 8500px;
   }
 }
+@media (max-width: 2500px) {
+  .imageBlob1 {
+    position: relative;
+    bottom: 400px;
+  }
+
+  .section1BlobSVG {
+    position: relative;
+    bottom: 300px;
+  }
+
+  .section1Blobs {
+    position: static;
+    bottom: 300px;
+    z-index: 1;
+  }
+}
 
 @media (max-width: 1400px) {
   /* Section 6 */
@@ -475,6 +492,19 @@ p {
     height: 900px;
   }
 
+  .section1Blobs {
+    position: static;
+  }
+
+  .imageBlob1 {
+    margin-top: 5%;
+    position: static;
+  }
+
+  .section1BlobSVG {
+    display: none;
+  }
+
   .readMoreArrowWhite {
     display: none;
   }
@@ -483,6 +513,140 @@ p {
 @media (min-width: 1400px) {
   .timeLine2Mobile {
     display: none;
+  }
+}
+
+@media (min-width: 2050px) {
+  .heading {
+    font-size: 300%;
+  }
+
+  .moreInfoDiv {
+    display: none;
+  }
+
+  .section1 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .section1 {
+    height: 1400px;
+  }
+
+  .imageBlob1 {
+    position: relative;
+    bottom: 1000px;
+  }
+
+  .section1BlobSVG {
+    bottom: 1000px;
+  }
+
+  /* Section 2 */
+  .section2 {
+    height: auto;
+  }
+
+  .section2 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .officeMap2 {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Section 4 */
+  .section4 {
+    height: auto;
+  }
+
+  .section4 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
+  }
+
+  .section4Flex {
+    justify-content: left;
+  }
+
+  /* Section 5 */
+  .section5 {
+    height: 5000px;
+  }
+
+  .section5 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .timeLine2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .section5PictureDiv {
+    display: none;
+  }
+
+  /* Section 6 */
+  .section6 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .timeLineBlack {
+    width: 50%;
+    height: auto;
+  }
+
+  .timeLineWhite {
+    width: 50%;
+    height: auto;
+  }
+
+  .section6 p:nth-last-child(1) {
+    width: 100%;
+  }
+
+  .section6 h4 {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .section7 p {
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  .ApplyDiv a {
+    font-size: 150%;
+  }
+}
+
+@media (min-width: 3500px) {
+  .section5Picture {
+    left: 400px;
+    bottom: 1300px;
+    bottom: 2800px;
+  }
+
+  .section5Blob {
+    position: relative;
+    left: 200px;
+    bottom: 800px;
+    width: 70%;
+    height: auto;
+  }
+
+  .section5PictureDiv {
+    display: block;
   }
 }
 

@@ -15,14 +15,19 @@ const WhyVariant = () => {
   const handleOnClick = (buttonValue: string) => {
     if (window.matchMedia('(max-width: 900px)').matches) {
     }
-
     setWhichButtonSelected(buttonValue);
   };
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 900px)').matches);
     window.addEventListener('resize', handleResize);
-  });
+    if (
+      window.matchMedia('(min-width: 2000px)').matches &&
+      whichButtonSelected === ''
+    ) {
+      setWhichButtonSelected('Formal og verdier');
+    }
+  }, []);
 
   return (
     <section
@@ -31,7 +36,7 @@ const WhyVariant = () => {
       style={{
         backgroundColor: '#01574F',
         color: 'white',
-        height: whichButtonSelected === '' ? '1100px' : 'auto',
+        height: whichButtonSelected === '' && isMobile ? '1100px' : 'auto',
       }}
     >
       <div className={style.handbook}>
