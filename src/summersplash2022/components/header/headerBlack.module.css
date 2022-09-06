@@ -8,6 +8,7 @@
 .main__inner {
   max-width: 50rem;
   margin: 0 auto;
+  margin-left: 0px;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
@@ -28,6 +29,7 @@
   display: block;
   margin: 1.2rem;
   height: 0.9rem;
+  margin-left: 0px;
 }
 
 .header__nav {
@@ -175,7 +177,6 @@
 
   .header__logo img {
     margin-top: 1.85rem;
-    margin-left: 1.3rem;
   }
 }
 
