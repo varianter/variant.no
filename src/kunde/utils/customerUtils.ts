@@ -26,7 +26,37 @@ export type AssignmentName = typeof assignments[number];
 export type AssignmentMetaData = {
   meta_title: string;
   meta_description: string;
+  meta_customer: string;
+  meta_lead: string;
+  meta_locations: Array<string>;
+  meta_projects: Array<Project>;
+  meta_contribution_digital_productdevelopment: string;
+  meta_contribution_data_driven: string;
+  meta_contribution_strategy: string;
+  meta_contribution_culture_first: string;
+  meta_quote: string;
 };
+
+type Project = {
+  project_image: ProjectImage;
+  project_title: string;
+  project_text: string;
+};
+
+type ProjectImage = {
+  image_src: string;
+  boxProperties1: BoxProps;
+  boxProperties2: BoxProps;
+};
+
+type BoxProps = {
+  color: string;
+  vertical: VerticalPosition;
+  horizontal: HorizontalPosition;
+};
+
+type VerticalPosition = 'top' | 'topish' | 'middle' | 'bottomish' | 'bottom';
+type HorizontalPosition = 'left' | 'leftish' | 'middle' | 'rightish' | 'right';
 
 export type Assignment = {
   name: AssignmentName;

@@ -9,7 +9,7 @@ import {
   Interview,
 } from 'src/kunde/utils/customerUtils';
 
-export { default } from 'src/kunde/svv';
+export { default } from 'src/kunde/assignments';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = assignments.map((assignment) => {

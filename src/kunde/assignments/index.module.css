@@ -30,6 +30,14 @@
   margin: 0 auto;
 }
 
+.subproject:nth-child(even) > figure {
+  order: 1;
+}
+
+.rendered__markdown__wrapper {
+  margin-bottom: 5rem;
+}
+
 .project__introduction__location {
   margin: 3.1rem 0 9rem 0;
 }
