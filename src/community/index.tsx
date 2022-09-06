@@ -62,7 +62,7 @@ function Community() {
               bety litt forskjellige ting for de ulike kontorene, men felles for
               alle er at de er åpne og tilgjengelige. Helt konkret betyr dette
               blant annet at lokalet er i nærheten av kollektivtransport og
-              sykkelveier, og du kan bruke lokalet helt gratis.
+              sykkelveier, og at du kan bruke lokalet helt gratis.
             </p>
             {/* TODO: Add the following text at the end of the <p> above: */}
             {/* For mer informasjon om lokalene våres: */}
@@ -120,8 +120,8 @@ function Community() {
           <section className={style['main-content__item__text']}>
             <h3>Streaming</h3>
             <p>
-              I våre lokaler har vi permanent riggede kabler for skjermer, lys
-              og lyd tilrettelagt for opptak. Dermed kan det arrangeres åpne
+              I noen av våre lokaler er det rigget opp kabler for lyd og film
+              for opptak av presentasjoner. Dermed kan det arrangeres åpne
               meetups eller andre arrangementer som kan streames.
             </p>
             <a
@@ -205,10 +205,25 @@ function Community() {
               Vi kan også bidra med faglig innhold hvis du er på utkikk etter
               det. Vi kan også være en sparringspartner hvis du har innhold du
               ønsker å utvikle. Mange varianter er gode foredragsholdere,
-              workshop-fasilitarorer og innleggsskrivere. Sjekk våre ansattsider
-              for å se hva ulike varianter har bidratt med tidligere, opptak av
-              tidligere foredrag eller bloggen vår for faglige innlegg.
+              workshop-fasilitarorer og innleggsskrivere. Sjekk ut{' '}
+              <a
+                href="https://www.youtube.com/channel/UCMBx54cKNj8i9R51IE4bfCg"
+                rel="noopener noreferrer"
+                title="Youtube - Variant"
+              >
+                opptak
+              </a>{' '}
+              av tidligere foredrag eller{' '}
+              <a
+                href="https://variantsnakk.transistor.fm/episodes"
+                rel="noopener noreferrer"
+                title="Blogg - Variant"
+              >
+                bloggen
+              </a>{' '}
+              vår for faglige innlegg.
             </p>
+            {/* TODO: Legg inn tekst og link om ansattesider når de er klare */}
           </section>
           <DecorativeBoxes
             box1Properties={{
@@ -234,8 +249,10 @@ function Community() {
               Vi i Variant kan hjelpe deg som arrangør med alt det praktiske
               rundt et arrangement. Dette kan innbære mye forskjellig, men kan
               for eksempel være å bestille mat, finne andre lokaler hvis vårt
-              ikke passer helt, eller planlegge ting og tang. Noe om fagkomitéen
-              (?)
+              ikke passer helt, eller planlegge ting og tang. Vi har god
+              erfaring med å arrangere faglig innhold da vi gjør det hver måned
+              via Variantdager. I Trondheim har vi en egen gruppe som jobber
+              aktivt med det i fagkom.
             </p>
           </section>
           <DecorativeBoxes
@@ -262,12 +279,11 @@ function Community() {
               I tillegg til organisering kan vi bidra med pæng, hvis det skulle
               være behov for det. Dette kan for eksempel dekke mat eller andre
               utgifter en community vil møte på. Vi i Variant går også aktivt
-              inn som samarbeidspartnere for å støtte opp om mangfold i
-              tech-bransjen, som du kan lese mer om{' '}
+              inn som samarbeidspartnere for å støtte opp om{' '}
               <Link href={'/mangfold'}>
-                <a title="Variant - Mangfold">her</a>
-              </Link>
-              .
+                <a title="Variant - Mangfold">mangfold</a>
+              </Link>{' '}
+              i tech-bransjen.
             </p>
           </section>
           <DecorativeBoxes
