@@ -48,9 +48,9 @@ const Content = () => {
       <div className={style.scrollContainer} id="scrollContainer">
         <div>
           <section className={style.section1} id="forside">
-            <header className={style.header}>
+            <div className={style.header}>
               <Header white={false} />
-            </header>
+            </div>
             <span className={style.searchNewVariants}>
               <h3 className={style.bigHeading}>
                 Vi ser etter 14 sommervarianter i 2023!{' '}

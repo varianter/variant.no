@@ -9,9 +9,9 @@ const LandingPage = () => {
   return (
     <>
       <section className={style.section1} id="jobForside">
-        <header className={style.header}>
+        <div className={style.header}>
           <Header white={true} />
-        </header>
+        </div>
         <span className={style.searchNewVariants}>
           <h3 className={style.bigHeading}>
             Vi ser etter 7 nyutdannede varianter i 2023!{' '}
