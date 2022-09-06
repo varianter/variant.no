@@ -8,7 +8,7 @@ const Apply = () => {
       <h3 className={style2.heading}>Søk fast jobb</h3>
       <p>
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
-        spørsmål om sommerjobben eller Variant? Ta gjerne kontakt med meg.
+        spørsmål om fastjobb eller Variant? Ta gjerne kontakt med meg.
       </p>
       <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
       <div className={style.contactInfo}>
