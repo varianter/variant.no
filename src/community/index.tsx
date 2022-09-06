@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const blobUrl = require('./contact-blob.svg');
 
-function Diversity() {
+function Community() {
   return (
     <Layout title="Variant – Tilrettelegging for læreglede i nærmiljøet">
       <Head>
@@ -33,6 +33,7 @@ function Diversity() {
             <a
               href="https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93"
               rel="noopener noreferrer"
+              title="Blogg - Åpen og delt kompetansebygging"
             >
               felles læring og kompetansebygging.
             </a>
@@ -107,7 +108,8 @@ function Diversity() {
             href={
               'https://blog.variant.no/ny-azure-meetup-i-trondheim-med-f%C3%B8rste-m%C3%B8te-p%C3%A5-varianthuset-b44a64d917ee'
             }
-            title="Ny Azure meetup i Trondheim med første møte på Varianthuset"
+            rel="noopener noreferrer"
+            title="Blogg - Ny Azure meetup i Trondheim med første møte på Varianthuset"
             className={style['main-content__quote__link--decorated']}
           >
             Les bloggposten
@@ -125,6 +127,7 @@ function Diversity() {
             <a
               href="https://www.youtube.com/channel/UCMBx54cKNj8i9R51IE4bfCg"
               rel="noopener noreferrer"
+              title="Youtube - Variant"
               className={style['main-content__item__text__link--decorated']}
             >
               Opptak fra tidligere arrangementer
@@ -157,6 +160,7 @@ function Diversity() {
             <a
               href="https://variantsnakk.transistor.fm/episodes"
               rel="noopener noreferrer"
+              title="transistor.fm - Variantsnakk"
               className={style['main-content__item__text__link--decorated']}
             >
               Våre podcaster
@@ -261,7 +265,7 @@ function Diversity() {
               inn som samarbeidspartnere for å støtte opp om mangfold i
               tech-bransjen, som du kan lese mer om{' '}
               <Link href={'/mangfold'}>
-                <a>her</a>
+                <a title="Variant - Mangfold">her</a>
               </Link>
               .
             </p>
@@ -276,7 +280,10 @@ function Diversity() {
               color: 'secondary2__tint4',
             }}
           >
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/community/ada.png"
+              alt="Personer som prater på scenen på et Ada-arrangement"
+            />
           </DecorativeBoxes>
         </article>
       </section>
@@ -285,31 +292,27 @@ function Diversity() {
         <h2 className={style['contact-section__title']} id="contact">
           Ta Kontakt
         </h2>
-        <div className={style['contact-section__flavor-text']}>
-          <p>Fancy tittel 😎</p>
-          <img
-            src="images/curved_arrow.svg"
-            className={style['contact-section__flavor-text__arrow']}
-            alt="Pil som peker på der det står Chief Community Officer"
-          />
-        </div>
         <p className={style['contact-section__subtitle']}>
-          Våre CCO-er (Chief Community Officer) er alltid tilgjengelig for en
-          uforpliktende prat om alt som har med faglig fellesskap i nær- og
-          fjernmiljøet å gjøre.
+          Vi har dedikerte varianter som jobber med comunities og åpen læreglede
+          i både Bergen, Trondheim og Oslo.
         </p>
         <ContactCard
           city="Trondheim"
           name="Mikael"
-          pronoun="m"
+          description="Dette er Mikael. Han er Chief Community Officer (CCO) i 
+          Variant Trondheim. Mikael er alltid tilgjengelig for en  prat om alt 
+          som har med faglig felleskap i nær- og fjernmiljøet å gjøre."
           email="mb@variant.no"
           phone="979 81 877"
           imagePath="images/community/mikael-300px.png"
+          hasFlavorText
         />
         <ContactCard
           city="Oslo"
           name="Nikolai"
-          pronoun="m"
+          description="Dette er Nikolai. I tillegg til å være CTO er han 
+          community-ansvarlig i Variant Oslo. Nikolai er alltid tilgjengelig for 
+          å hjelpe fagmiljøer i nær- og fjernmiljøet."
           email="nikolai@variant.no"
           phone="971 50 015"
           imagePath="images/community/nikolai-300px.png"
@@ -317,7 +320,9 @@ function Diversity() {
         <ContactCard
           city="Bergen"
           name="Andreas"
-          pronoun="m"
+          description="Dette er Andreas. Han jobber jobber aktivt med å spre 
+          læreglede i Bergen (og utenfor Bergen). Andreas er en tilgjengelig 
+          sparringspartner for communities som ønsker bistand. "
           email="andreas@variant.no"
           phone="950 06 947"
           imagePath="images/community/andreas-300px.png"
@@ -327,12 +332,12 @@ function Diversity() {
   );
 }
 
-export default Diversity;
+export default Community;
 
 interface ContactCardProps {
   city: string;
   name: string;
-  pronoun: 'm' | 'f';
+  description: string;
   email: string;
   phone: string;
   imagePath: string;
@@ -342,7 +347,7 @@ interface ContactCardProps {
 function ContactCard({
   city,
   name,
-  pronoun,
+  description,
   email,
   phone,
   imagePath,
@@ -352,10 +357,18 @@ function ContactCard({
     <article className={style['contact-section__card']}>
       <div className={style['contact-section__card__info']}>
         <h3 className={style['contact-section__card__info__title']}>{city}</h3>
-
+        {hasFlavorText && (
+          <div className={style['contact-section__flavor-text']}>
+            <p>Fancy tittel 😎</p>
+            <img
+              src="images/curved_arrow.svg"
+              className={style['contact-section__flavor-text__arrow']}
+              alt="Pil som peker på der det står Chief Community Officer"
+            />
+          </div>
+        )}
         <p className={style['contact-section__card__info__description']}>
-          Dette er {name}. {pronoun === 'm' ? 'Han' : 'Hun'} jobber med å spre
-          læreglede i {city}.
+          {description}
         </p>
         <a
           href={`mailto:${email}`}

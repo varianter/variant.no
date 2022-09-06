@@ -239,14 +239,15 @@
 .contact-section__flavor-text {
   font-family: 'Recoleta';
   display: flex;
+  flex-direction: row-reverse;
   font-weight: 500;
-  margin: 0 0 1rem 0.5rem;
+  margin: 0rem 0 -1.5rem 0;
 }
 
 .contact-section__flavor-text__arrow {
-  transform: rotate(-120deg);
+  transform: scalex(-1) rotate(-120deg);
+  margin-right: 1rem;
   width: 2.5rem;
-  margin-left: 1.5rem;
 }
 
 .contact-section__card {
@@ -268,16 +269,6 @@
 @media (max-width: 500px) {
   .contact-section__title {
     text-align: left;
-  }
-
-  .contact-section__flavor-text {
-    flex-direction: row-reverse;
-    margin-top: -1rem;
-  }
-
-  .contact-section__flavor-text__arrow {
-    transform: scalex(-1) rotate(-90deg);
-    margin: 1rem 0.5rem 0 0;
   }
 
   .contact-section__card,
