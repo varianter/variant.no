@@ -242,12 +242,12 @@
   display: flex;
   flex-direction: row-reverse;
   font-weight: 500;
-  margin: 0rem 0 -1.5rem 0;
+  margin: -4rem -2rem -1rem 0;
 }
 
 .contact-section__flavor-text__arrow {
-  transform: scalex(-1) rotate(-120deg);
-  margin-right: 1rem;
+  margin: 2.5rem -4rem 0 0;
+  transform: scaleX(1) rotate(-40deg);
   width: 2.5rem;
 }
 
@@ -286,6 +286,17 @@
 
   .contact-section__card__image {
     max-width: 60%;
+  }
+
+  .contact-section__flavor-text {
+    position: absolute;
+    right: 0.5rem;
+    margin: -4rem 0 0 0;
+  }
+
+  .contact-section__flavor-text__arrow {
+    margin: 2.5rem -4rem 0 0;
+    transform: rotate(-40deg);
   }
 }
 
