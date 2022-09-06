@@ -23,6 +23,10 @@
   scroll-behavior: smooth;
 }
 
+:global(.body-hidden) .scrollContainer {
+  overflow-y: hidden;
+}
+
 /* global var */
 :root {
   /* Heading */

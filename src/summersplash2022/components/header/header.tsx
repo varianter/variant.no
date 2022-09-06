@@ -262,9 +262,9 @@ function useTogglableBurgerMenu<
 
     // Avoid scrolling when menu is visible.
     if (isMenuVisible) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('body-hidden');
     } else {
-      document.body.style.overflow = 'initial';
+      document.body.classList.remove('body-hidden');
     }
   }, [isMenuVisible, isNotHamburgerMode]);
 
