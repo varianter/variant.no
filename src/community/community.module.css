@@ -5,9 +5,8 @@
     'title image' 8rem
     'description image'
     / 1fr 1fr;
+  grid-column-gap: 2rem;
 }
-
-/* TODO: Responsive header */
 
 .header__title {
   font-weight: 500;
@@ -23,6 +22,20 @@
   background-clip: text;
   color: rgba(0, 0, 0, 0);
   background-position-x: 60%;
+}
+
+@media (max-width: 500px) {
+  .header {
+    grid-template:
+      'title' 6rem
+      'description'
+      'image';
+    margin: 4rem 1rem 8rem 1rem;
+  }
+
+  .header__title {
+    font-size: 3.5rem;
+  }
 }
 
 .text-container {
@@ -78,12 +91,6 @@
   margin-top: 6rem;
 }
 
-@media (max-width: 500px) {
-  .main-content__item img {
-    max-width: 100%;
-  }
-}
-
 .main-content__item:nth-of-type(2n) .main-content__item__text {
   order: 1;
 }
@@ -91,12 +98,16 @@
 @media (max-width: 500px) {
   .main-content__item {
     grid-template-columns: auto;
-    gap: 2rem;
   }
 
+  .main-content__item img {
+    max-width: 100%;
+  }
+
+  .main-content__item .main-content__item__text,
   .main-content__item:nth-of-type(2n) .main-content__item__text {
     /* nth-of-type-selector to increase specificity */
-    order: 0;
+    order: 1;
   }
 }
 
@@ -133,6 +144,12 @@
   align-items: flex-end;
 }
 
+@media (max-width: 500px) {
+  .main-content__quote {
+    margin: 6rem auto;
+  }
+}
+
 .main-content__quote__text {
   margin: 0 auto;
   position: relative;
@@ -162,6 +179,10 @@
 .main-content__contact {
   position: relative;
   padding: 2rem;
+}
+
+.main-content__contact > a:hover {
+  opacity: 0.8;
 }
 
 .main-content__contact a {
@@ -201,13 +222,18 @@
 }
 
 .main-content__contact__text__arrow {
-  margin-top: 0.5rem;
   width: 40%;
   max-width: 6rem;
 }
 
 .contact-section {
   margin: 12rem 1rem 0 1rem;
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    margin-top: 8rem;
+  }
 }
 
 .contact-section__flavor-text {
@@ -236,6 +262,7 @@
 
 .contact-section__card__image {
   max-width: 30%;
+  object-fit: contain;
 }
 
 @media (max-width: 500px) {

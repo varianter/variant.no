@@ -26,14 +26,16 @@ function Diversity() {
         <h1 className={style.header__title}>Læreglede</h1>
         <div className={style['text-container']}>
           <p>
-            Vi ønsker å legge tilrette for læreglede i fagmiljøene, uansett hvem
-            og hva.
-          </p>
-          <p>
-            Derfor stiller vi oss selv og ressursene våre til disposisjon for å
-            bistå communities i nær- og fjernmiljøet. Vårt mål er å bidra til en
-            åpen og varm bransje, der folk hjelper hverandre og legger tilrette
-            for felles læring.
+            Vi ønsker å bidra til åpen læreglede der hvor vi finnes. Derfor
+            bistår vi communities i nær- og fjærnmiljøet med ulik type
+            læreglede. Vårt mål er å bidra til en åpen og varm bransje, der folk
+            hjelper hverandre og legger tilrette for{' '}
+            <a
+              href="https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93"
+              rel="noopener noreferrer"
+            >
+              felles læring og kompetansebygging.
+            </a>
           </p>
         </div>
         <img
@@ -63,9 +65,8 @@ function Diversity() {
               sykkelveier, og du kan bruke lokalet helt gratis. For mer
               informasjon om lokalene våres:
             </p>
-            {/* Point at page for respective offices when ready */}
-            {/* TODO: Maybe comment out until pages are done? */}
-            <Link href="/">
+            {/* TODO: Use once office subpages are ready */}
+            {/* <Link href="/">
               <a className={style['main-content__item__text__link--decorated']}>
                 Trondheim
               </a>
@@ -79,7 +80,7 @@ function Diversity() {
               <a className={style['main-content__item__text__link--decorated']}>
                 Bergen
               </a>
-            </Link>
+            </Link> */}
           </section>
           <DecorativeBoxes
             box1Properties={{
@@ -335,6 +336,7 @@ interface ContactCardProps {
   email: string;
   phone: string;
   imagePath: string;
+  hasFlavorText?: boolean;
 }
 
 function ContactCard({
@@ -344,11 +346,13 @@ function ContactCard({
   email,
   phone,
   imagePath,
+  hasFlavorText = false,
 }: ContactCardProps) {
   return (
     <article className={style['contact-section__card']}>
       <div className={style['contact-section__card__info']}>
         <h3 className={style['contact-section__card__info__title']}>{city}</h3>
+
         <p className={style['contact-section__card__info__description']}>
           Dette er {name}. {pronoun === 'm' ? 'Han' : 'Hun'} jobber med å spre
           læreglede i {city}.
