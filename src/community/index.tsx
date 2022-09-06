@@ -223,7 +223,7 @@ function Community() {
               </a>{' '}
               vår for faglige innlegg.
             </p>
-            {/* TODO: Legg inn tekst og link om ansattesider når de er klare */}
+            {/* TODO: add text about and link to /ansatte when it has been upgraded */}
           </section>
           <DecorativeBoxes
             box1Properties={{
@@ -375,7 +375,6 @@ function ContactCard({
         <h3 className={style['contact-section__card__info__title']}>{city}</h3>
         {hasFlavorText && (
           <div className={style['contact-section__flavor-text']}>
-            {/* TODO: Adjust placement once final layout has been decided */}
             <p>Fancy tittel 😎</p>
             <img
               src="images/curved_arrow.svg"
