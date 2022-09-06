@@ -28,7 +28,7 @@ const WhoAreWeSeeking = () => {
           <p>
             Vi søker 7 nyutdannede designere og utviklere som engasjerer og
             motiverer, med oppstart 1. august 2023. Stillingene er fordelt på
-            våre kontorer i Trondheim, Oslo og Bergen. Det er ikke viktig hvilke
+            våre kontorer i Trondheim og Bergen. Det er ikke viktig hvilke
             verktøy eller språk du bruker. Det er derimot viktig at du bryr deg.
             Bryr deg om koden du skriver, bryr deg om brukeren du lager noe for,
             og bryr deg om kunden du leverer til.

@@ -4,11 +4,11 @@ const Apply = () => {
   const Marius = require('src/summersplash2022/img/Marius.png');
 
   return (
-    <section className={style2.section7} id="soksommerjobb">
+    <section className={style2.section7} id="sokfastjobb">
       <h3 className={style2.heading}>Søk fast jobb</h3>
       <p>
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
-        spørsmål om sommerjobben eller Variant? Ta gjerne kontakt med meg.
+        spørsmål om fastjobb eller Variant? Ta gjerne kontakt med meg.
       </p>
       <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
       <div className={style.contactInfo}>

@@ -106,7 +106,7 @@ const Content = () => {
                   <p className={style.section2Paragraph}>
                     I 2023 tilbyr vi sommerjobb i både{' '}
                     <strong>Trondheim</strong>, <strong>Oslo</strong> og{' '}
-                    <strong>Bergen</strong>, til henholdsvis seks, fem og to
+                    <strong>Bergen</strong>, til henholdsvis seks, fem og tre
                     studenter. Hvor du vil jobbe bestemmer du naturligvis selv.
                     Sommerjobben varer i fire + to uker med tre uker ferie i
                     mellomtiden.

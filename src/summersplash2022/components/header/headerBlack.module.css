@@ -1,12 +1,14 @@
 .main {
   position: relative;
+}
+.main--overflow {
   overflow-x: hidden;
-  margin-top: 0px;
 }
 
 .main__inner {
   max-width: 50rem;
-  margin: 0;
+  margin: 0 auto;
+  margin-left: 0px;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
@@ -23,11 +25,11 @@
   margin: 0 auto;
 }
 
-.header__logo svg {
+.header__logo img {
   display: block;
   margin: 1.2rem;
   height: 0.9rem;
-  margin-left: 0;
+  margin-left: 0px;
 }
 
 .header__nav {
@@ -40,6 +42,7 @@
   justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
   transition: 0.4s;
 }
 
@@ -47,7 +50,6 @@
   display: none;
 }
 
-/* Care color white*/
 .header__nav a {
   display: block;
   color: var(--color-standard__white--text);
@@ -55,7 +57,6 @@
   padding: 1.2rem;
   font-size: 1rem;
   line-height: 1;
-  color: black;
 
   background: linear-gradient(
     to right,
@@ -119,8 +120,74 @@
   transform: rotate(45deg) translate(-0.35rem, -0.35rem);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
+  .header__nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateX(0%);
+    transition: transform 450ms ease-in-out,
+      background-color 300ms ease-in-out 300ms;
+    z-index: 99;
+  }
+
+  .header__nav__hidden {
+    transform: translateX(100%);
+    transition: transform 450ms ease-in-out, background-color 100ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   .header__nav__ul {
-    display: none;
+    width: 60%;
+    position: fixed;
+    right: 0rem;
+    height: 100%;
+    z-index: 100;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--color-secondary4__tint2);
+  }
+
+  .header__nav__ul li:last-child {
+    display: flex;
+  }
+
+  .header__nav__ul li a {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: Recoleta, serif;
+    color: var(--color-standard__black);
+  }
+
+  .header__nav__ul li:first-child {
+    margin-top: 3.5rem;
+  }
+
+  .header__nav__ul li {
+    margin-top: 0.5rem;
+  }
+
+  .burgerButtonContainer {
+    display: block;
+    z-index: 101;
+  }
+
+  .header__logo img {
+    margin-top: 1.85rem;
+  }
+}
+
+@keyframes backgroundPos {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
   }
 }

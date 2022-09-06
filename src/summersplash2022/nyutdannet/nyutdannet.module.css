@@ -468,6 +468,12 @@ p {
   }
 }
 
+@media (max-width: 1080px) {
+  .moreInfoDiv {
+    bottom: 100px;
+  }
+}
+
 @media (max-width: 900px) {
   .bigHeading {
     width: 100%;
@@ -707,10 +713,6 @@ p {
     width: 800px;
     right: 300px;
     bottom: 400px;
-  }
-
-  .moreInfoDiv {
-    bottom: 100px;
   }
 
   /* Section 5 */
