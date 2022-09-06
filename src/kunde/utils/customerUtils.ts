@@ -21,12 +21,21 @@ export type Interview = {
 } & InterviewMetadata;
 
 export const assignments = ['svv', 'sikt'] as const;
-export type Assignment = typeof assignments[number];
+export type AssignmentName = typeof assignments[number];
 
-const interviewsDirectory = path.join(
-  process.cwd(),
-  '/src/kunde/interviews/pages',
-);
+export type AssignmentMetaData = {
+  meta_title: string;
+  meta_description: string;
+};
+
+export type Assignment = {
+  name: AssignmentName;
+  content: string;
+} & AssignmentMetaData;
+
+const baseDirectory = path.join(process.cwd(), '/src/kunde/');
+const interviewsDirectory = path.join(baseDirectory, '/interviews/pages');
+const assignmentsDirectory = path.join(baseDirectory, '/assignments/pages');
 
 export const getInterviewFileNames = async () => {
   let files: string[] = [];
@@ -51,7 +60,7 @@ export const getInterviewFileNamesByAssigment = async (
 };
 
 export const getInterviewsByAssignment = async (
-  assignmentName: Assignment,
+  assignmentName: AssignmentName,
 ): Promise<Interview[]> => {
   const files = await getInterviewFileNamesByAssigment(assignmentName);
 
@@ -69,15 +78,15 @@ export const getInterviewsByAssignment = async (
     });
 };
 
-const getMatterFile = async (filename: string) => {
-  const file = await fs.readFile(path.join(interviewsDirectory, filename));
+const getMatterFile = async (directory: string, filename: string) => {
+  const file = await fs.readFile(path.join(directory, filename));
   return matter(file);
 };
 
 export const getInterviewObject = async (
   filename: string,
 ): Promise<Interview> => {
-  const matterFile = await getMatterFile(filename);
+  const matterFile = await getMatterFile(interviewsDirectory, filename);
   const matterData = matterFile.data as InterviewMetadata;
   return {
     ...matterData,
@@ -85,4 +94,19 @@ export const getInterviewObject = async (
     name: filename.replace('.md', ''),
     content: matterFile.content,
   } as Interview;
+};
+
+export const getAssignmentObject = async (
+  assignmentName: AssignmentName,
+): Promise<Assignment> => {
+  const matterFile = await getMatterFile(
+    assignmentsDirectory,
+    assignmentName + '.md',
+  );
+  const matterData = matterFile.data as AssignmentMetaData;
+  return {
+    ...matterData,
+    name: assignmentName,
+    content: matterFile.content,
+  };
 };

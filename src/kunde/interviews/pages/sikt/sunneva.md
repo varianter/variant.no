@@ -7,7 +7,7 @@ variant: Sunneva
 variantEmail: smc@variant.no
 variantTitle: Designer, Trondheim
 location: Trondheim
-quote: «buying gf 100k»
+quote: «Det er fortsatt mange som tror at design handler utelukkende om estetikk og grafikk, men gjennom å samarbeide med oss lærer de at design handler om bevissthet rundt prosesser, brukere og mål.»
 ---
 
 ## Sikt Designlab

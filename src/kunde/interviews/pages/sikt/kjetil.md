@@ -7,7 +7,7 @@ variant: Kjetil
 variantEmail: km@variant.no
 variantTitle: Utvikler, Trondheim
 location: Trondheim
-quote: «buying gf 100k»
+quote: «Det er veldig interessant å kunne fordype seg i andre yrker og domener på denne måten.»
 ---
 
 ## Tilgjengeliggjøring av vitenskapelige artikler

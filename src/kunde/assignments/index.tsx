@@ -8,9 +8,9 @@ import { getStaticProps } from 'pages/kunde/[oppdrag]';
 import DecorativeBoxes from '@components/decorative-boxes';
 
 const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
-  React.memo(({ interviews }) => {
+  React.memo(({ assignment, interviews }) => {
     return (
-      <Layout title="Økt trafikksikkerhet og ...">
+      <Layout title={assignment.meta_title}>
         {/* <SayHi
           className={style.sayhi}
           href="/jobs"

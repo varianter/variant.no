@@ -7,7 +7,7 @@ variant: Malin
 variantEmail: mck@variant.no
 variantTitle: Prosjektleder, Trondheim
 location: Trondheim
-quote: ««Jeg håper og tror de har lært mer om prosjektledelse, bruk av designprinsipper og kanskje litt soft skills på ledelse generelt.»»
+quote: «Jeg håper og tror de har lært mer om prosjektledelse, bruk av designprinsipper og kanskje litt soft skills på ledelse generelt.»
 ---
 
 ## Prosjektstøtte på leveransestrøm

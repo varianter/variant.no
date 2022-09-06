@@ -2,7 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { getContactsByEmails } from 'src/employees/utils/getEmployeesList';
 import {
   Assignment,
+  AssignmentName,
   assignments,
+  getAssignmentObject,
   getInterviewsByAssignment,
   Interview,
 } from 'src/kunde/utils/customerUtils';
@@ -22,10 +24,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<
   {
+    assignment: Assignment;
     interviews: Interview[];
   },
-  { oppdrag: Assignment }
+  { oppdrag: AssignmentName }
 > = async (context) => {
+  const assignment = await getAssignmentObject(context?.params!.oppdrag);
+
   const interviews = await getInterviewsByAssignment(context?.params!.oppdrag);
   for (let i = 0; i < interviews.length; i++) {
     const interview = interviews[i];
@@ -36,6 +41,7 @@ export const getStaticProps: GetStaticProps<
 
   return {
     props: {
+      assignment: assignment,
       interviews: interviews,
     },
     revalidate: 60 * 60,

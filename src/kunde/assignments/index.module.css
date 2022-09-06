@@ -21,7 +21,7 @@
 }
 
 .subproject > * {
-  max-width: 22rem;
+  max-width: 18rem;
   margin: auto auto;
 }
 .subproject > * > img {
