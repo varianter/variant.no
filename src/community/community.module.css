@@ -8,6 +8,7 @@
   grid-column-gap: 2rem;
 }
 
+/* remove once new header-component is in place */
 .header__title {
   font-weight: 500;
   font-size: 4.5rem;

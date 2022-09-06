@@ -46,12 +46,11 @@ function Community() {
       </header>
 
       <section className={style['main-content']}>
-        <h2 className={style['main-content__title']}>
-          Hva kan vi bistå deg med?
-        </h2>
+        <h2 className={style['main-content__title']}>Hva kan vi bistå med?</h2>
         <p className={style['main-content__subtitle']}>
-          Sitter du på et arrangement, men mangler noe for å klare å realisere
-          det? Kanskje vi kan hjelpe deg med dette!
+          Ønsker du å gjennomføre en meetup, workshop eller kurs, men mangler et
+          sted å være eller er usikker på hvordan? Eller drømmer du om å starte
+          en ny podcast om fag? Kanskje vi kan hjelpe deg!
         </p>
 
         <article className={style['main-content__item']}>
@@ -63,9 +62,10 @@ function Community() {
               bety litt forskjellige ting for de ulike kontorene, men felles for
               alle er at de er åpne og tilgjengelige. Helt konkret betyr dette
               blant annet at lokalet er i nærheten av kollektivtransport og
-              sykkelveier, og du kan bruke lokalet helt gratis. For mer
-              informasjon om lokalene våres:
+              sykkelveier, og du kan bruke lokalet helt gratis.
             </p>
+            {/* TODO: Add the following text at the end of the <p> above: */}
+            {/* For mer informasjon om lokalene våres: */}
             {/* TODO: Use once office subpages are ready */}
             {/* <Link href="/">
               <a className={style['main-content__item__text__link--decorated']}>
@@ -282,7 +282,7 @@ function Community() {
           >
             <img
               src="/images/community/ada.png"
-              alt="Personer som prater på scenen på et Ada-arrangement"
+              alt="To personer som prater på scenen på et Ada-arrangement"
             />
           </DecorativeBoxes>
         </article>
@@ -359,6 +359,7 @@ function ContactCard({
         <h3 className={style['contact-section__card__info__title']}>{city}</h3>
         {hasFlavorText && (
           <div className={style['contact-section__flavor-text']}>
+            {/* TODO: Adjust placement once final layout has been decided */}
             <p>Fancy tittel 😎</p>
             <img
               src="images/curved_arrow.svg"
