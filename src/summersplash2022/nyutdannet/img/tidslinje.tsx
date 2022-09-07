@@ -9,12 +9,9 @@ const TimeLine2 = () => {
       height="1594"
       viewBox="0 0 1168 1594"
       fill="none"
-      aria-labelledby="TimelineTitle TimelineDesc"
+      aria-labelledby="TimelineDesc"
       role="img"
     >
-      <title id="TimelineTitle">
-        Hvordan første året kommer til å se ut fra august til mai
-      </title>
       <desc id="TimelineDesc">
         {' '}
         August - Startskudd Alle nyutdannede samles til en oppstartsuke med

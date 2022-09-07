@@ -10,12 +10,9 @@ const TimeLine2Mobile = () => {
       height="1353"
       viewBox="0 0 720 1353"
       fill="none"
-      aria-labelledby="TimelineTitle TimelineDesc"
+      aria-labelledby="TimelineDesc"
       role="img"
     >
-      <title id="TimelineTitle">
-        Hvordan første året kommer til å se ut fra august til mai
-      </title>
       <desc id="TimelineDesc">
         {' '}
         August - Startskudd Alle nyutdannede samles til en oppstartsuke med
