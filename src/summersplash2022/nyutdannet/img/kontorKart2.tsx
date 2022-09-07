@@ -8,7 +8,13 @@ const OfficeMap2 = () => {
       height="644"
       viewBox="0 0 540 644"
       fill="none"
+      aria-labelledby="officeMapJob"
     >
+      <desc id="officeMapJob">
+        I bergen er det 1 ledig stilling som utvikler og 1 ledig stilling som
+        designer. I Trondheim er det 3 ledige stillinger som utvikler og 2 som
+        designer
+      </desc>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

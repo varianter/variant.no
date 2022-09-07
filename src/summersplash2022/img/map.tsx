@@ -9,7 +9,12 @@ const Map = () => {
       height="516"
       viewBox="0 0 540 516"
       fill="none"
+      aria-labelledby="officeMapSummerjob"
     >
+      <desc id="officeMapSummerjob">
+        I Trondheim er det 6 ledige sommerjobber. I Oslo er det 5 ledige
+        sommerjobber. I Bergen er det 3 ledige sommerjobber
+      </desc>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
