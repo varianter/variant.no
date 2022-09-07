@@ -87,7 +87,7 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                     </DecorativeBoxes>
                   </figure>
                   <div>
-                    <p className="lead">{project.project_title}</p>
+                    <h2 className="lead">{project.project_title}</h2>
                     <p>{project.project_text}</p>
                   </div>
                 </div>
@@ -136,30 +136,55 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
 
               <div className={style.contributionElements}>
                 <div>
-                  <p>
-                    <strong>Digital produktutvikling</strong>
-                  </p>
+                  {assignment.meta_contribution_digital_productdevelopment ===
+                  null ? (
+                    <></>
+                  ) : (
+                    <p>
+                      <img src="/images/bulletpoint.svg" alt="bulletpoint" />
+                      <strong>Digital produktutvikling</strong>
+                    </p>
+                  )}
                   <p>
                     {assignment.meta_contribution_digital_productdevelopment}
                   </p>
                 </div>
                 <div>
-                  <p>
-                    <strong>Datadrevet</strong>
-                  </p>
+                  {assignment.meta_contribution_data_driven === null ? (
+                    <></>
+                  ) : (
+                    <p>
+                      <img src="/images/bulletpoint.svg" alt="bulletpoint" />
+                      <strong>Datadrevet</strong>
+                    </p>
+                  )}
                   <p>{assignment.meta_contribution_data_driven}</p>
                 </div>
                 <div>
                   <p>
-                    <strong>Strategi</strong>
+                    {assignment.meta_contribution_strategy === null ? (
+                      <></>
+                    ) : (
+                      <p>
+                        <img src="/images/bulletpoint.svg" alt="bulletpoint" />
+                        <strong>Strategi</strong>
+                      </p>
+                    )}
                   </p>
                   <p>{assignment.meta_contribution_strategy}</p>
                 </div>
                 <div>
                   <p>
-                    <strong>Culture first</strong>
+                    {assignment.meta_contribution_culture_first === null ? (
+                      <></>
+                    ) : (
+                      <p>
+                        <img src="/images/bulletpoint.svg" alt="bulletpoint" />
+                        <strong>Culture first</strong>
+                      </p>
+                    )}
                   </p>
-                  <p>{assignment.meta_contribution_strategy}</p>
+                  <p>{assignment.meta_contribution_culture_first}</p>
                 </div>
               </div>
             </div>

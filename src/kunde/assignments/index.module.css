@@ -20,18 +20,32 @@
   margin-bottom: 5rem;
 }
 
-.subproject > * {
-  max-width: 18rem;
-  margin: auto auto;
+.subproject > p {
+  max-width: 25rem;
+  margin: auto 0;
 }
+
+.subproject > * > h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
 .subproject > * > img {
   width: 100%;
   display: block;
   margin: 0 auto;
+  display: none;
+}
+
+.subproject:nth-child(odd) > figure {
+  margin-left: 0;
+  margin-right: 5rem;
 }
 
 .subproject:nth-child(even) > figure {
   order: 1;
+  margin-left: 5rem;
+  margin-right: 0;
 }
 
 .rendered__markdown__wrapper {

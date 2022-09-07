@@ -9,9 +9,10 @@ meta_projects:
     {
       project_image:
         {
-          image_src: /images/prosjekt-svv-1.png,
-          boxProperties1: { color: FFC4BC, vertical: top, horizontal: middle },
-          boxProperties2: { color: B7B4DE, vertical: bottom, horizontal: left },
+          image_src: /images/prosjekt-sikt-1.png,
+          boxProperties1: { color: CDF8F4, vertical: top, horizontal: right },
+          boxProperties2:
+            { color: FFD0C9, vertical: bottom, horizontal: middle },
         },
       project_title: Designlaben,
       project_text: [
@@ -23,10 +24,9 @@ meta_projects:
     {
       project_image:
         {
-          image_src: /images/prosjekt-svv-2.png,
-          boxProperties1: { color: CDF8F4, vertical: top, horizontal: right },
-          boxProperties2:
-            { color: FFD0C9, vertical: bottom, horizontal: middle },
+          image_src: /images/prosjekt-sikt-2.png,
+          boxProperties1: { color: FFC4BC, vertical: top, horizontal: middle },
+          boxProperties2: { color: B7B4DE, vertical: bottom, horizontal: left },
         },
       project_title: Verdiskaping med offentlige data,
       project_text: [
@@ -37,38 +37,17 @@ meta_projects:
           Variant hjelper Sikt og kunnskapssektoren med å finne ut hvordan data kan tilgjengeliggjøres og gi verdi gjennom flere ulike initiativ,
         ],
     },
-    {
-      project_image:
-        {
-          image_src: /images/prosjekt-svv-2.png,
-          boxProperties1: { color: F5A4C4, vertical: top, horizontal: middle },
-          boxProperties2: { color: CDF8F4, vertical: bottom, horizontal: left },
-        },
-      project_title: Ledelse av digitaliseringsprogram,
-      project_text:
-        [
-          Tekst om SVV som kunde her. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. In congue malesuada erat,
-          vitae feugiat mi eleifend sed. In dictum,
-          quam ut consectetur bibendum,
-          neque libero eleifend orci,
-          eget tempor tortor quam ac massa. Donec non bibendum ligula. Duis vehicula turpis non arcu porttitor ullamcorper. Suspendisse potenti. Mauris imperdiet erat libero,
-          at bibendum erat hendrerit eget. Praesent laoreet eu tortor eget sodales. Aliquam vulputate sagittis consectetur. Vivamus gravida magna sed efficitur posuere. Praesent eget ipsum arcu.,
-        ],
-    },
   ]
-meta_contribution_digital_productdevelopment:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
+meta_contribution_digital_productdevelopment: Variant har bistått med kompetanse på design og frontendutvikling over flere år. I tillegg til å bidra med innovasjon og utvikling av nye løsninger, har det vært mye fokus på blant annet testing, universell utforming og flerspråklig støtte.
+
 meta_contribution_data_driven:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
-meta_contribution_strategy: Skriv noe om hva vi har bidratt med innenfor dette
+  Variant hjelper Sikt og kunnskapssektoren med å finne ut hvordan data kan tilgjengeliggjøres og gi verdi. Initiativene er en oppfordring til at sektoren blir mer datadrevet, og drar nytte av den dataen som produseres, både for å utvikle egne tjenester og forskning.
   tjenesteområdet.
 meta_contribution_culture_first:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
-meta_quote: Sikt Quoute. Lorem
+
+meta_contribution_strategy: Variant har over flere år bistått Sikt med strategisk utvikling, både på organisatorisk nivå og med utvikling av både selskapsstrategier og tjenestestrategier. Vi har implementert strategisk design som verktøy for å jobbe smidig og iterativt med strategi. Vi har innført og fasilitert metoder som utvikler strategi på en inkluderende måte. I dette arbeidet anvender vi egenutviklede modeller som forenkler og visualiserer strategier, med formål å bygge eierskap og motivasjon for alle ansatte.
+
+meta_quote:
 ---
 
 ##### Datadeling i Feide
