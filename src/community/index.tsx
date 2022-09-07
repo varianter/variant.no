@@ -64,9 +64,8 @@ function Community() {
               blant annet at lokalet er i nærheten av kollektivtransport og
               sykkelveier, og at du kan bruke lokalet helt gratis.
             </p>
-            {/* TODO: Add the following text at the end of the <p> above: */}
+            {/* TODO: Add the following text at the end of the <p> above, and make use of the links below */}
             {/* For mer informasjon om lokalene våres: */}
-            {/* TODO: Use once office subpages are ready */}
             {/* <Link href="/">
               <a className={style['main-content__item__text__link--decorated']}>
                 Trondheim
