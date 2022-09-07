@@ -1,5 +1,4 @@
 .main-container {
-  padding: 8%;
   position: relative;
   height: fit-content;
   max-height: 100%;
@@ -21,6 +20,7 @@
 }
 
 .child-container {
+  padding: 8%;
   display: grid;
   place-items: center;
 }

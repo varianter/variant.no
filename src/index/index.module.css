@@ -83,6 +83,10 @@
   font-size: 1.5rem;
 }
 
+.join {
+  margin: 0 1rem;
+}
+
 .join_title {
   text-align: center;
   margin: 2rem auto;
@@ -112,7 +116,6 @@
 
 @media (max-width: 500px) {
   .join {
-    margin: 0 1rem;
     text-align: center;
   }
   .join > p {
@@ -179,9 +182,9 @@
 }
 .cases__case {
   display: grid;
-  gap: 2rem 2rem;
+  gap: 2rem;
   padding: 2rem 0;
-  grid-template-columns: minmax(20rem, 2fr) minmax(23rem, 1fr);
+  grid-template-columns: minmax(15rem, 2fr) minmax(20rem, 1fr);
 }
 @media (max-width: 600px) {
   .cases__case {
@@ -213,7 +216,7 @@
   position: relative;
   z-index: 2;
 
-  margin: 8.25rem 0 4.25rem;
+  margin: 8.25rem 1rem 4.25rem;
 }
 
 .employees a {
