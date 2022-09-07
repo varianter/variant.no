@@ -30,7 +30,7 @@ const FirstYear = () => {
       <section className={style.section5}>
         <h3 className={style.heading}>Hvordan ser første året ut?</h3>
         <p>
-          For å bidra til personlig og faglig utvikling av nyutdanne
+          For å bidra til personlig og faglig utvikling av nyutdannede
           gjennomfører vi oppstartsprogrammet{' '}
           <a href="/handbook#utviklingsprogram" style={{ color: 'white' }}>
             variant:skudd

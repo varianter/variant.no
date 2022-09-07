@@ -77,7 +77,7 @@ const AfterApplying = (props: { red: boolean }) => {
               Variant. Du får tilgang til vår Slack, og mulighet til å delta på
               faglige og sosiale arrangementer. Dette inkluderer blant annet
               spill- og fagkvelder, nyttårskalas og variantdager, som er fine
-              muligheter til å bli bedre kjent før sommerjobben starter i juni.
+              muligheter til å bli bedre kjent før man starter.
             </p>
             <div className={style.Even}>
               <img src={Even} className={style.EvenPicture} alt="Even" />
