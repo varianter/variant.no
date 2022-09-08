@@ -93,7 +93,7 @@ function Community() {
             }}
           >
             <img
-              src="/images/diversity/publikum-klapper-i-amfiet.png"
+              src="/images/community/publikum-klapper-i-amfiet.png"
               alt="Seks personer sitter i amfiet og klapper"
             />
           </DecorativeBoxes>
