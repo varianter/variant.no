@@ -92,8 +92,10 @@ function Community() {
               color: 'secondary1__tint4',
             }}
           >
-            {/* TODO: Replace with non-placeholder */}
-            <img src="/images/diversity/ada.png" alt="Placeholder image" />
+            <img
+              src="/images/diversity/publikum-klapper-i-amfiet.png"
+              alt="Seks personer sitter i amfiet og klapper"
+            />
           </DecorativeBoxes>
         </article>
 
