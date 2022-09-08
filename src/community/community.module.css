@@ -1,5 +1,5 @@
 .header {
-  margin: 8rem 1rem 12rem 1rem;
+  margin: 8rem 1rem;
   display: grid;
   grid-template:
     'title image' 8rem
@@ -49,8 +49,15 @@
 
 .header img {
   grid-area: image;
-  width: 130%;
+  width: 180%;
+  max-width: 60vw;
   margin-top: 3rem;
+}
+@media (max-width: 500px) {
+  .header img {
+    width: 115%;
+    max-width: unset;
+  }
 }
 
 .main-content {
@@ -118,9 +125,7 @@
 
 .main-content__quote__link--decorated,
 .main-content__item__text__link--decorated {
-  font-weight: 500;
   text-underline-offset: 0.5rem;
-  text-decoration-color: var(--color-primary);
 }
 
 .main-content__item__text__link--decorated {

@@ -27,9 +27,10 @@ function Community() {
         <div className={style['text-container']}>
           <p>
             Vi ønsker å bidra til åpen læreglede der hvor vi finnes. Derfor
-            bistår vi communities i nær- og fjernmiljøer med ulike former for
-            læreglede. Vårt mål er å bidra til en åpen og varm bransje, der folk
-            hjelper hverandre og legger tilrette for{' '}
+            bistår vi communities og meetups i nær- og fjernmiljøer med blant
+            annet lokaler, utstyr, organisering og faglig sparring. Vårt mål er
+            å bidra til en åpen og varm bransje, der folk hjelper hverandre og
+            legger tilrette for{' '}
             <a
               href="https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93"
               rel="noopener noreferrer"
@@ -310,8 +311,8 @@ function Community() {
           Ta kontakt
         </h2>
         <p className={style['contact-section__subtitle']}>
-          Vi har dedikerte varianter som jobber med communities og åpen læreglede
-          i både Bergen, Trondheim og Oslo.
+          Vi har dedikerte varianter som jobber med communities og åpen
+          læreglede i både Bergen, Trondheim og Oslo.
         </p>
         <ContactCard
           city="Trondheim"
