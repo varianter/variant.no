@@ -68,14 +68,19 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           <div className={style.project__subprojects}>
             {assignment.meta_projects.map((project, idx) => {
               return (
-                <div key={idx} className={style.subproject}>
+                <div
+                  key={idx}
+                  className={
+                    assignment.meta_project_text_position_left
+                      ? style.subproject__left
+                      : style.subproject__right
+                  }
+                >
                   <figure className={style.imageContainer}>
                     <DecorativeBoxes
                       box1Properties={{
                         color: `#${project.project_image.boxProperties1.color}`,
                         position: `${project.project_image.boxProperties1.vertical}-${project.project_image.boxProperties1.horizontal}`,
-                        // color: `#${project.project_image.boxProperties1.color}`,
-                        // position: `${project.project_image.boxProperties1.vertical}-${project.project_image.boxProperties1.horizontal}`,
                       }}
                       box2Properties={{
                         color: `#${project.project_image.boxProperties2.color}`,

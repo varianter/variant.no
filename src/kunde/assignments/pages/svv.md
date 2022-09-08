@@ -7,6 +7,7 @@ meta_lead: Statens vegvesen har vært en viktig samarbeidspartner siden
   innom og jobbet i ulike prosjekter, og sammen med kunden levert
   løsninger som bidrar til at vi alle kan være tryggere på vegen.
 meta_locations: [Bergen, Oslo, Trondheim]
+meta_project_text_position_left: false
 meta_projects:
   [
     {

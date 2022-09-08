@@ -29,6 +29,7 @@ export type AssignmentMetaData = {
   meta_customer: string;
   meta_lead: string;
   meta_locations: Array<string>;
+  meta_project_text_position_left: boolean;
   meta_projects: Array<Project>;
   meta_contribution_digital_productdevelopment: string;
   meta_contribution_data_driven: string;
