@@ -227,9 +227,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           <div className={style.cases__caseContent}>
             <h4>Mangfold</h4>
             <p>
-              Variant engasjerer seg aktivt i mangfold. Dette betyr blant annet
-              at vi er opptatt av likelønn, at man skal kunne balansere
-              arbeidsliv og familieliv, og at vi skal kunne ha... something?
+              Mangfold skaper inkluderende og fullgode løsninger, som gir verdi
+              og nytte for absolutt alle. Vi i Variant samarbeider derfor med de
+              som aktivt jobber for dette.
             </p>
             <Link href={'/mangfold'}>
               <a title="Variant - Mangfold">
@@ -261,8 +261,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             <h4>Læreglede</h4>
             <p>
               Vi i Variant ønsker å bidra til et aktive og levende
-              læringsmiljøer. Vi stiller oss selv og ressursene våres til
-              disposisjon til commuties i nær- og fjernmiljøene.
+              læringsmiljøer. Derfor bistår vi communities i nær- og
+              fjernmiljøet med ulik type læreglede.
             </p>
             <Link href={'/community'}>
               <a title="Variant - Læreglede">Les mer om hva vi kan bistå med</a>

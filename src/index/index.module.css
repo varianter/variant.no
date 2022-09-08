@@ -175,6 +175,7 @@
 }
 .cases > p {
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 .cases article:nth-child(2n) {
   direction: rtl;
