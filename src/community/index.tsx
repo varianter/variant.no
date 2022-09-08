@@ -143,8 +143,8 @@ function Community() {
             }}
           >
             <img
-              src="/images/community/videokamera.png"
-              alt="Videokamera som står på en stand og filmer en person"
+              src="/images/community/christian-mikael-streaming.png"
+              alt="Christian og Mikael som livestreamer sittende bak hver sin laptop"
             />
           </DecorativeBoxes>
         </article>
@@ -265,8 +265,8 @@ function Community() {
             }}
           >
             <img
-              src="/images/community/hilde-ved-bord.png"
-              alt="Hilde som prater med noen personer rundt et bord"
+              src="/images/community/astrid-noterer.png"
+              alt="Astrid som noterer på en lapp mens hun sier noe og smiler"
             />
           </DecorativeBoxes>
         </article>
