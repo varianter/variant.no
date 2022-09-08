@@ -22,8 +22,11 @@ export type HomeProps = {
 const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem, index) => (
-      <article className={style.cases__case} key={caseItem.heading}>
-        <div className={style.cases__caseContent}>
+      <article
+        className={style['two-column-section__item']}
+        key={caseItem.heading}
+      >
+        <div className={style['two-column-section__item__content']}>
           <h4>{caseItem.heading}</h4>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
@@ -214,7 +217,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </article>
       </section>
 
-      <section className={style.cases}>
+      <section className={style['two-column-section']}>
         <h2>Ting vi brenner for</h2>
         <p>
           I Variant er vi opptatt av å utvikle og bidra i samfunnet og miljøene
@@ -223,9 +226,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           samfunn hvor mangfold og likestilling blir heiet frem.
         </p>
         <article
-          className={`${style.cases__case} ${style['cases__case--centered']}`}
+          className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
         >
-          <div className={style.cases__caseContent}>
+          <div className={style['two-column-section__item__content']}>
             <h4>Mangfold</h4>
             <p>
               Mangfold skaper inkluderende og fullgode løsninger, som gir verdi
@@ -254,9 +257,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </article>
 
         <article
-          className={`${style.cases__case} ${style['cases__case--centered']}`}
+          className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
         >
-          <div className={style.cases__caseContent}>
+          <div className={style['two-column-section__item__content']}>
             <h4>Læreglede</h4>
             <p>
               Vi i Variant ønsker å bidra til aktive og levende læringsmiljøer.
@@ -328,7 +331,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         )}
       </section>
 
-      <section className={style.cases}>
+      <section className={style['two-column-section']}>
         <h2 id="prosjekter">Variantarbeid</h2>
         <p>
           Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
