@@ -167,8 +167,7 @@
 }
 
 .cases {
-  margin-top: 8.25rem;
-  padding: 0 1rem;
+  margin: 8.25rem 1rem 0;
 }
 .cases h2 {
   text-align: center;
@@ -184,7 +183,10 @@
   display: grid;
   gap: 2rem;
   padding: 2rem 0;
-  grid-template-columns: minmax(15rem, 2fr) minmax(20rem, 1fr);
+  grid-template-columns: minmax(15rem, 1fr) minmax(20rem, 1fr);
+}
+.cases__case--centered {
+  align-items: center;
 }
 @media (max-width: 600px) {
   .cases__case {

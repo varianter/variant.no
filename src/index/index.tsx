@@ -214,6 +214,78 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </article>
       </section>
 
+      <section className={style.cases}>
+        <h2>Ting vi brenner for</h2>
+        <p>
+          Vårt formål er å utvikle samfunnet vi lever i. I tillegg til å være en
+          gjeng med flinke folk, ønsker vi å bidra til et mangfoldig og læreglad
+          samfunn.
+        </p>
+        <article
+          className={`${style.cases__case} ${style['cases__case--centered']}`}
+        >
+          <div className={style.cases__caseContent}>
+            <h4>Mangfold</h4>
+            <p>
+              Variant engasjerer seg aktivt i mangfold. Dette betyr blant annet
+              at vi er opptatt av likelønn, at man skal kunne balansere
+              arbeidsliv og familieliv, og at vi skal kunne ha... something?
+            </p>
+            <Link href={'/mangfold'}>
+              <a title="Variant - Mangfold">
+                Les mer om vårt engasjement i mangfold
+              </a>
+            </Link>
+          </div>
+          <DecorativeBoxes
+            box1Properties={{
+              color: 'secondary2__tint4',
+              position: 'top-rightish',
+            }}
+            box2Properties={{
+              color: 'secondary1__tint4',
+              position: 'bottom-leftish',
+            }}
+          >
+            <img
+              src="/images/tenk-sarah-marius.png"
+              alt="Sarah og Marius som hjelper til med podcastlaging på TENK tech camp"
+            />
+          </DecorativeBoxes>
+        </article>
+
+        <article
+          className={`${style.cases__case} ${style['cases__case--centered']}`}
+        >
+          <div className={style.cases__caseContent}>
+            <h4>Læreglede</h4>
+            <p>
+              Vi i Variant ønsker å bidra til et aktive og levende
+              læringsmiljøer. Vi stiller oss selv og ressursene våres til
+              disposisjon til commuties i nær- og fjernmiljøene.
+            </p>
+            <Link href={'/community'}>
+              <a title="Variant - Læreglede">Les mer om hva vi kan bistå med</a>
+            </Link>
+          </div>
+          <DecorativeBoxes
+            box1Properties={{
+              color: 'secondary3__tint1',
+              position: 'middle-left',
+            }}
+            box2Properties={{
+              color: 'secondary2__tint4',
+              position: 'bottom-right',
+            }}
+          >
+            <img
+              src="/images/lyttere-i-amfiet-500px.png"
+              alt="personer i amfiet på Varianthuset lytter til en presentasjon"
+            />
+          </DecorativeBoxes>
+        </article>
+      </section>
+
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
