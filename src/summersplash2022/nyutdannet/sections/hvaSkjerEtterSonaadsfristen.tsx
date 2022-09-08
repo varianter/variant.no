@@ -17,7 +17,7 @@ const AfterApplying = (props: { red: boolean }) => {
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
               unaturlig situasjon, og man blir ikke godt kjent med hverandre.
-              Etter at vi shar vurdert alle søknadene inviterer vi utvalgte
+              Etter at vi har vurdert alle søknadene inviterer vi utvalgte
               kandidater til en kaffeprat. Dette er en uformell samtale hvor
               målet er å bli bedre kjent med hverandre, med fokus på både det
               faglige og det personlige. Og nei – du er selvsagt ikke nødt til å
@@ -66,7 +66,7 @@ const AfterApplying = (props: { red: boolean }) => {
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
               unaturlig situasjon, og man blir ikke godt kjent med hverandre.
-              Etter at vi shar vurdert alle søknadene inviterer vi utvalgte
+              Etter at vi har vurdert alle søknadene inviterer vi utvalgte
               kandidater til en kaffeprat. Dette er en uformell samtale hvor
               målet er å bli bedre kjent med hverandre, med fokus på både det
               faglige og det personlige. Og nei – du er selvsagt ikke nødt til å
