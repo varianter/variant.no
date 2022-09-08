@@ -27,7 +27,7 @@ function Community() {
         <div className={style['text-container']}>
           <p>
             Vi ønsker å bidra til åpen læreglede der hvor vi finnes. Derfor
-            bistår vi communities i nær- og fjærnmiljøet med ulik type
+            bistår vi communities i nær- og fjernmiljøer med ulike former for
             læreglede. Vårt mål er å bidra til en åpen og varm bransje, der folk
             hjelper hverandre og legger tilrette for{' '}
             <a
@@ -307,10 +307,10 @@ function Community() {
 
       <section className={style['contact-section']}>
         <h2 className={style['contact-section__title']} id="contact">
-          Ta Kontakt
+          Ta kontakt
         </h2>
         <p className={style['contact-section__subtitle']}>
-          Vi har dedikerte varianter som jobber med comunities og åpen læreglede
+          Vi har dedikerte varianter som jobber med communities og åpen læreglede
           i både Bergen, Trondheim og Oslo.
         </p>
         <ContactCard
