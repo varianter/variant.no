@@ -108,7 +108,7 @@ const Diversity = () => {
         <section className={style.contact}>
           <h4>Har du et initiativ vi kan samarbeide om?</h4>
           <div className={style['contact__button__wrapper']}>
-            <ButtonLink href="mailto:post@variant.no">Ta kontakt</ButtonLink>
+            <ButtonLink href="mailto:post@variant.no">Send e-post</ButtonLink>
           </div>
         </section>
 

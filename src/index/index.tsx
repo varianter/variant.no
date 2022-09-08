@@ -217,9 +217,10 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
       <section className={style.cases}>
         <h2>Ting vi brenner for</h2>
         <p>
-          Vårt formål er å utvikle samfunnet vi lever i. I tillegg til å være en
-          gjeng med flinke folk, ønsker vi å bidra til et mangfoldig og læreglad
-          samfunn.
+          I Variant er vi opptatt av å utvikle og bidra i samfunnet og miljøene
+          rundt oss. Vår gjestfrihet er en selvfølge, og vi byr på både lokalene
+          og fagkompetansen vår, i tillegg til at vi ønsker å bidra til et
+          samfunn hvor mangfold og likestilling blir heiet frem.
         </p>
         <article
           className={`${style.cases__case} ${style['cases__case--centered']}`}
@@ -232,9 +233,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
               som aktivt jobber for dette.
             </p>
             <Link href={'/mangfold'}>
-              <a title="Variant - Mangfold">
-                Les mer om vårt engasjement i mangfold
-              </a>
+              <a title="Variant - Mangfold">Vårt engasjement i mangfold</a>
             </Link>
           </div>
           <DecorativeBoxes
@@ -260,12 +259,12 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           <div className={style.cases__caseContent}>
             <h4>Læreglede</h4>
             <p>
-              Vi i Variant ønsker å bidra til et aktive og levende
-              læringsmiljøer. Derfor bistår vi communities i nær- og
-              fjernmiljøet med ulik type læreglede.
+              Vi i Variant ønsker å bidra til aktive og levende læringsmiljøer.
+              Derfor bistår vi communities i nær- og fjernmiljøet med blant
+              annet lokaler, utstyr, organisering og faglig sparring.
             </p>
             <Link href={'/community'}>
-              <a title="Variant - Læreglede">Les mer om hva vi kan bistå med</a>
+              <a title="Variant - Læreglede">Hva vi kan bistå med</a>
             </Link>
           </div>
           <DecorativeBoxes
