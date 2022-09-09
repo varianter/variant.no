@@ -26,6 +26,16 @@ const createHtmlFromMetadata = () => {
 
 const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ assignment, interviews }) => {
+    const positionTextLeft = (left: boolean, idx: number) => {
+      if (left && idx % 2 == 0) {
+        return true;
+      } else if ((left && !(idx % 2 == 0)) || (!left && idx % 2 == 0)) {
+        return false;
+      } else {
+        return true;
+      }
+    };
+
     const innerHtml = useMemo(() => {
       const md = new MarkdownIt({
         linkify: true,
@@ -68,15 +78,18 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           <div className={style.project__subprojects}>
             {assignment.meta_projects.map((project, idx) => {
               return (
-                <div
-                  key={idx}
-                  className={
-                    assignment.meta_project_text_position_left
-                      ? style.subproject__left
-                      : style.subproject__right
-                  }
-                >
-                  <figure className={style.imageContainer}>
+                <div key={idx} className={style.subproject}>
+                  <figure
+                    style={
+                      positionTextLeft(
+                        assignment.meta_project_text_position_left,
+                        idx,
+                      )
+                        ? { order: 1, marginLeft: '5rem', marginRight: '0' }
+                        : { order: 0, marginLeft: 0, marginRight: '5rem' }
+                    }
+                    className={style.imageContainer}
+                  >
                     <DecorativeBoxes
                       box1Properties={{
                         color: `#${project.project_image.boxProperties1.color}`,

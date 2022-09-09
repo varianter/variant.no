@@ -14,53 +14,27 @@
 .project__introduction > h2 {
   margin: 1rem 0 2.2rem 0;
 }
-.subproject__left,
-.subproject__right {
+.subproject {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 5rem;
 }
 
-.subproject__left > p,
-.subproject__right > p {
+.subproject > p {
   max-width: 25rem;
   margin: auto 0;
 }
 
-.subproject__left > * > h2,
-.subproject__right > * > h2 {
+.subproject > * > h2 {
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-.subproject__left > * > img,
-.subproject__right > * > img {
+.subproject > * > img {
   width: 100%;
   display: block;
   margin: 0 auto;
   display: none;
-}
-
-.subproject__right:nth-child(odd) > figure {
-  margin-left: 0;
-  margin-right: 5rem;
-}
-
-.subproject__right:nth-child(even) > figure {
-  order: 1;
-  margin-left: 5rem;
-  margin-right: 0;
-}
-
-.subproject__left:nth-child(even) > figure {
-  margin-left: 0;
-  margin-right: 5rem;
-}
-
-.subproject__left:nth-child(odd) > figure {
-  order: 1;
-  margin-left: 5rem;
-  margin-right: 0;
 }
 
 .rendered__markdown__wrapper {
@@ -121,7 +95,7 @@
 .project__interview img {
   display: block;
   width: 75%;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .project__interview > p + p,
@@ -218,8 +192,7 @@ blockquote:after {
     padding: 0 1rem;
     margin-top: 4rem;
   }
-  .subproject__left,
-  .subproject__right {
+  .subproject {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -227,18 +200,15 @@ blockquote:after {
     gap: 3rem;
   }
 
-  .subproject__left:nth-of-type(2n) > div,
-  .subproject__right:nth-of-type(2n) > div {
+  .subproject:nth-of-type(2n) > div {
     order: 1;
   }
 
-  .subproject__left > *,
-  .subproject__right > * {
+  .subproject > * {
     max-width: 18rem;
     margin: auto auto;
   }
-  .subproject__left > * > img,
-  .subproject__right > * > img {
+  .subproject > * > img {
     width: 90%;
     display: block;
     margin: 0 auto;
