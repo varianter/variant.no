@@ -22,8 +22,11 @@ export type HomeProps = {
 const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem, index) => (
-      <article className={style.cases__case} key={caseItem.heading}>
-        <div className={style.cases__caseContent}>
+      <article
+        className={style['two-column-section__item']}
+        key={caseItem.heading}
+      >
+        <div className={style['two-column-section__item__content']}>
           <h4>{caseItem.heading}</h4>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
@@ -214,6 +217,77 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </article>
       </section>
 
+      <section className={style['two-column-section']}>
+        <h2>Ting vi brenner for</h2>
+        <p>
+          I Variant er vi opptatt av å utvikle og bidra i samfunnet og miljøene
+          rundt oss. Vår gjestfrihet er en selvfølge, og vi byr på både lokalene
+          og fagkompetansen vår, i tillegg til at vi ønsker å bidra til et
+          samfunn hvor mangfold og likestilling blir heiet frem.
+        </p>
+        <article
+          className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
+        >
+          <div className={style['two-column-section__item__content']}>
+            <h4>Mangfold</h4>
+            <p>
+              Mangfold skaper inkluderende og fullgode løsninger, som gir verdi
+              og nytte for absolutt alle. Vi i Variant samarbeider derfor med de
+              som aktivt jobber for dette.
+            </p>
+            <Link href={'/mangfold'}>
+              <a title="Variant - Mangfold">Vårt engasjement i mangfold</a>
+            </Link>
+          </div>
+          <DecorativeBoxes
+            box1Properties={{
+              color: 'secondary2__tint4',
+              position: 'top-rightish',
+            }}
+            box2Properties={{
+              color: 'secondary1__tint4',
+              position: 'bottom-leftish',
+            }}
+          >
+            <img
+              src="/images/tenk-sarah-marius.png"
+              alt="Sarah og Marius som hjelper til med podcastlaging på TENK tech camp"
+            />
+          </DecorativeBoxes>
+        </article>
+
+        <article
+          className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
+        >
+          <div className={style['two-column-section__item__content']}>
+            <h4>Læreglede</h4>
+            <p>
+              Vi i Variant ønsker å bidra til aktive og levende læringsmiljøer.
+              Derfor bistår vi communities i nær- og fjernmiljøet med blant
+              annet lokaler, utstyr, organisering og faglig sparring.
+            </p>
+            <Link href={'/community'}>
+              <a title="Variant - Læreglede">Hva vi kan bistå med</a>
+            </Link>
+          </div>
+          <DecorativeBoxes
+            box1Properties={{
+              color: 'secondary3__tint1',
+              position: 'middle-left',
+            }}
+            box2Properties={{
+              color: 'secondary2__tint4',
+              position: 'bottom-right',
+            }}
+          >
+            <img
+              src="/images/lyttere-i-amfiet-500px.png"
+              alt="personer i amfiet på Varianthuset lytter til en presentasjon"
+            />
+          </DecorativeBoxes>
+        </article>
+      </section>
+
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
@@ -257,7 +331,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         )}
       </section>
 
-      <section className={style.cases}>
+      <section className={style['two-column-section']}>
         <h2 id="prosjekter">Variantarbeid</h2>
         <p>
           Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
