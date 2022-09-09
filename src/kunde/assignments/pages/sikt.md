@@ -1,6 +1,6 @@
 ---
-meta_title: Økt trafikksikkerhet og ...
-meta_description: Statens og Variant
+meta_title: Verdiskaping med offentlige data og ...
+meta_description: Sikt og Variant
 meta_customer: Sikt
 meta_lead: Sikt har vært en langvarig strategisk samarbeidspartner med Variant. Vi har gjennom ulike initiativ over flere år jobbet med strategisk utvikling av nye tjenester og moderne teknologiplattformer, og vi har sammen jobbet med organisasjonsutvikling og kulturbygging for at Sikt skal være rigget for fremtidens behov.
 meta_locations: [Trondheim]

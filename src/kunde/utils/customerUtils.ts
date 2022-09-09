@@ -20,7 +20,7 @@ export type Interview = {
   content: string;
 } & InterviewMetadata;
 
-export const assignments = ['svv', 'sikt'] as const;
+export const assignments = ['svv', 'sikt', 'fram'] as const;
 export type AssignmentName = typeof assignments[number];
 
 export type AssignmentMetaData = {
