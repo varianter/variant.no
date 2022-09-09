@@ -1,0 +1,333 @@
+.header {
+  margin: 8rem 1rem;
+  display: grid;
+  grid-template:
+    'title image' 8rem
+    'description image'
+    / 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+/* remove once new header-component is in place */
+.header__title {
+  font-weight: 500;
+  font-size: 4.5rem;
+
+  background: linear-gradient(
+    120deg,
+    var(--color-primary),
+    var(--color-secondary1),
+    var(--color-secondary2)
+  );
+  background-size: 130% 130%;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  background-position-x: 60%;
+}
+
+@media (max-width: 500px) {
+  .header {
+    grid-template:
+      'title' 6rem
+      'description'
+      'image';
+    margin: 4rem 1rem 8rem 1rem;
+  }
+
+  .header__title {
+    font-size: 3.5rem;
+  }
+}
+
+.text-container {
+  grid-area: description;
+}
+
+.header p {
+  font-size: 1.3rem;
+}
+
+.header img {
+  grid-area: image;
+  width: 180%;
+  max-width: 60vw;
+  margin-top: 3rem;
+}
+@media (max-width: 500px) {
+  .header img {
+    width: 115%;
+    max-width: unset;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.main-content__title,
+.contact-section__title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.main-content__subtitle,
+.contact-section__subtitle {
+  font-size: 1.3rem;
+}
+
+.main-content__subtitle {
+  margin: 2.5rem 0 4rem 0;
+}
+
+.main-content h3 {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.main-content__item {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+}
+
+.main-content__item + .main-content__item {
+  margin-top: 6rem;
+}
+
+.main-content__item:nth-of-type(2n) .main-content__item__text {
+  order: 1;
+}
+
+.main-content__item > * {
+  width: calc(50% - 2rem);
+}
+
+.main-content__item > .main-content__item__text {
+  width: calc(50% + 2rem);
+}
+
+@media (max-width: 500px) {
+  .main-content__item {
+    flex-direction: column;
+  }
+
+  .main-content__item img {
+    max-width: 100%;
+  }
+
+  .main-content__item .main-content__item__text,
+  .main-content__item:nth-of-type(2n) .main-content__item__text {
+    /* nth-of-type-selector to increase specificity */
+    order: 1;
+  }
+
+  .main-content__item > *,
+  .main-content__item > .main-content__item__text {
+    width: 100%;
+  }
+}
+
+.main-content__quote__link--decorated,
+.main-content__item__text__link--decorated {
+  text-underline-offset: 0.5rem;
+}
+
+.main-content__item__text__link--decorated {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.main-content__item__text__link--decorated
+  + .main-content__item__text__link--decorated {
+  margin-left: 1rem;
+}
+
+.main-content__quote__link--decorated {
+  margin-top: 2rem;
+}
+
+.main-content__quote {
+  max-width: 32em;
+  margin: 8rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media (max-width: 500px) {
+  .main-content__quote {
+    margin: 6rem auto;
+  }
+}
+
+.main-content__quote__text {
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+}
+.main-content__quote__text:before,
+.main-content__quote__text:after {
+  display: block;
+  font-size: 5rem;
+  line-height: 1rem;
+  font-family: 'recoleta';
+  position: absolute;
+  color: var(--color-secondary1__shade2);
+}
+.main-content__quote__text:before {
+  left: 0.5rem;
+  top: 2.5rem;
+  content: '\201C';
+}
+.main-content__quote__text:after {
+  right: 1rem;
+  bottom: -1rem;
+  content: '\201D';
+}
+
+.main-content__contact {
+  position: relative;
+  padding: 2rem;
+}
+
+.main-content__contact > a:hover {
+  opacity: 0.8;
+}
+
+.main-content__contact a {
+  height: 100%;
+  max-width: 100%;
+}
+
+.main-content__contact img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content__contact__text {
+  position: absolute;
+  bottom: 40%;
+  transform: translateY(50%);
+  /* width does not take padding into consideration
+  (due to position: absolute?) So it is calculated manually */
+  width: calc(50% - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .main-content__contact__text {
+    width: calc(100% - 4rem);
+  }
+}
+
+.main-content__contact__text p {
+  color: var(--color-standard__white);
+  font-size: 1.2rem;
+}
+
+.main-content__contact__text__arrow {
+  width: 40%;
+  max-width: 6rem;
+}
+
+.contact-section {
+  margin: 12rem 1rem 0 1rem;
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    margin-top: 8rem;
+  }
+}
+
+.contact-section__flavor-text {
+  font-family: 'Recoleta';
+  display: flex;
+  flex-direction: row-reverse;
+  font-weight: 500;
+  margin: -4rem -2rem -1rem 0;
+}
+
+.contact-section__flavor-text__arrow {
+  margin: 2.5rem -4rem 0 0;
+  transform: scaleX(1) rotate(-40deg);
+  width: 2.5rem;
+}
+
+.contact-section__card {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  margin: 8rem 5rem;
+}
+
+.contact-section__card:nth-of-type(2n) {
+  flex-direction: row;
+}
+
+.contact-section__card__image {
+  max-width: 30%;
+  object-fit: contain;
+}
+
+@media (max-width: 500px) {
+  .contact-section__title {
+    text-align: left;
+  }
+
+  .contact-section__card,
+  .contact-section__card:nth-of-type(2n) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin: 3rem 1rem;
+    align-items: center;
+  }
+
+  .contact-section__card__info__title {
+    text-align: center;
+  }
+
+  .contact-section__card__image {
+    max-width: 60%;
+  }
+
+  .contact-section__flavor-text {
+    position: absolute;
+    right: 0.5rem;
+    margin: -4rem 0 0 0;
+  }
+
+  .contact-section__flavor-text__arrow {
+    margin: 2.5rem -4rem 0 0;
+    transform: rotate(-40deg);
+  }
+}
+
+.contact-section__card__info {
+  flex-grow: 1;
+}
+
+.contact-section__card__info__title {
+  font-family: 'Recoleta';
+}
+
+.contact-section__card__info__description {
+  margin: 1rem 0;
+}
+
+.contact-section__card__info__email,
+.contact-section__card__info__phone {
+  display: block;
+  text-decoration: none;
+}
