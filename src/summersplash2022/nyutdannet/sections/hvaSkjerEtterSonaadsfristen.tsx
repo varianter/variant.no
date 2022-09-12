@@ -72,6 +72,14 @@ const AfterApplying = (props: { red: boolean }) => {
               faglige og det personlige. Og nei – du er selvsagt ikke nødt til å
               drikke kaffe.
             </p>
+
+            <p className={style.section5ParagraphLeft}>
+              {' '}
+              Noen dager etter kaffepraten vil aktuelle kandidater inviteres til
+              en sammarbeidscase hvor man vil jobbe sammen med 2 andre
+              varianter. Man vil få oppgaven på forhånd, men man skal ikke gjøre
+              noen store forbredelser.
+            </p>
             <p className={style.section5ParagraphLeft}>
               Dersom du får jobbtilbud og takker ja, inkluderes du straks i
               Variant. Du får tilgang til vår Slack, og mulighet til å delta på

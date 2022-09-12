@@ -289,11 +289,11 @@ p {
 .flexTimeline {
   display: flex;
   align-items: flex-start;
-  justify-content: left;
+  gap: 2rem;
 }
 
 .section6Div {
-  width: 100%;
+  width: 48%;
   height: 1200px;
 }
 
@@ -307,13 +307,14 @@ p {
   font-style: var(--paragraph-font-style);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-line-height);
-  width: 70%;
+  width: 100%;
 }
 
 .section6 p:nth-child(1),
-.section6 p:nth-child(2) {
+.section6 p:nth-child(2),
+.section6 p:nth-child(3) {
   position: relative;
-  width: 70%;
+  width: 100%;
   z-index: 1;
 }
 
@@ -442,6 +443,25 @@ p {
 
   .section6Div {
     height: 1000px;
+    width: auto;
+  }
+
+  .section6 {
+    height: auto;
+  }
+
+  .section6 p:nth-child(1),
+  .section6 p:nth-child(2),
+  .section6 p:nth-child(3) {
+    width: 100%;
+  }
+
+  .timeLineBlack {
+    margin-top: 30rem;
+  }
+
+  .section6Blob {
+    bottom: 300px;
   }
 }
 
@@ -744,8 +764,13 @@ p {
   }
 
   .section6 p:nth-child(1),
-  .section6 p:nth-child(2) {
+  .section6 p:nth-child(2),
+  .section6 p:nth-child(3) {
     width: 100%;
+  }
+
+  .timeLineBlack {
+    margin-top: 7rem;
   }
 
   .section6Blob {
