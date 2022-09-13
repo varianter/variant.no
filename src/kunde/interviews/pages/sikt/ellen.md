@@ -10,7 +10,7 @@ location: Trondheim
 quote: «Jeg føler meg som en ansatt på lik linje med de som er ansatt hos Sikt, og det tror jeg også de merker.»
 ---
 
-## Tittel
+## Arbeid med designmodenhet
 
 ### For Ellen er arbeidsdagene som designer i Sikt sjeldent like. Gjennom å være involvert i Designlaben får hun jobbe med både design og prosjektledelse sammen med interne og eksterne designere, noe hun beskriver som å få det beste fra to verdener.
 
@@ -42,7 +42,9 @@ Jeg føler meg som en ansatt på lik linje med de som er ansatt hos Sikt, og det
 #### Hva tror du Sikt sitter igjen med etter at du har vært der?
 
 Jeg tror og håper at de jeg har jobbet med i Sikt har fått en litt større verktøykasse som de er tryggere på å bruke, og at de har blitt utfordret på å både tenke og jobbe på andre måter enn de ellers er vant til.
+
 Vi har vært såpass heldige å få være involvert i en stor del prosjekter og initiativ hos Sikt, noe som gjør at vi er blitt godt kjent med flere tjenesteområder, men også flere ulike ansatte. Jeg føler meg som en ansatt på lik linje med de som er ansatt hos Sikt, og det tror jeg også de merker.
+
 Vi bidrar i domenespesifikke diskusjoner, men tilfører samtidig et annerledes blikk på det enn de er vant til. Vi tør å stille de «dumme spørsmålene» som en utenforstående, samtidig som vi er deltakende i hele prosessen på samme måte som de andre ansatte. Å kunne bidra med de impulsene og det påfyllet vi får fra fagmiljøet i Variant tror jeg er helt avgjørende for jobben vi gjør i Sikt.
 
 #### Har du fått noe spesielt ansvar hos kunden?
