@@ -1,41 +1,20 @@
 .header {
-  margin: 8rem 1rem;
+  margin: 4rem 1rem;
   display: grid;
   grid-template:
-    'title image' 8rem
+    'title image' 12rem
     'description image'
     / 1fr 1fr;
   grid-column-gap: 2rem;
 }
 
-/* remove once new header-component is in place */
-.header__title {
-  font-weight: 500;
-  font-size: 4.5rem;
-
-  background: linear-gradient(
-    120deg,
-    var(--color-primary),
-    var(--color-secondary1),
-    var(--color-secondary2)
-  );
-  background-size: 130% 130%;
-  background-clip: text;
-  color: rgba(0, 0, 0, 0);
-  background-position-x: 60%;
-}
-
 @media (max-width: 500px) {
   .header {
     grid-template:
-      'title' 6rem
+      'title' 10rem
       'description'
       'image';
-    margin: 4rem 1rem 8rem 1rem;
-  }
-
-  .header__title {
-    font-size: 3.5rem;
+    margin: 0rem 1rem 8rem 1rem;
   }
 }
 
@@ -51,12 +30,13 @@
   grid-area: image;
   width: 180%;
   max-width: 60vw;
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 @media (max-width: 500px) {
   .header img {
     width: 115%;
     max-width: unset;
+    margin-top: 3rem;
   }
 }
 

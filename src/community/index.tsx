@@ -4,6 +4,7 @@ import Layout from 'src/layout';
 import style from './community.module.css';
 import DecorativeBoxes from '@components/decorative-boxes';
 import Link from 'next/link';
+import PageTitle from '@components/page-title';
 
 const blobUrl = require('./contact-blob.svg');
 
@@ -23,7 +24,7 @@ function Community() {
 
       <header className={style.header}>
         {/* Switch with title component once it has been merged in */}
-        <h1 className={style.header__title}>Læreglede</h1>
+        <PageTitle title="Læreglede" />
         <div className={style['text-container']}>
           <p>
             Vi ønsker å bidra til åpen læreglede der hvor vi finnes. Derfor

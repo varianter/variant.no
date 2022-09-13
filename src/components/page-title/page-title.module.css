@@ -15,6 +15,12 @@
   background-position-x: 60%;
 }
 
+@media (max-width: 500px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
 .title--jumbo {
   font-weight: bold;
   margin: 4.8rem 0;
