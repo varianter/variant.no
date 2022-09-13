@@ -74,7 +74,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         />
       </Head>
       <section className={style.omVariant}>
-        <PageTitle title="Raus, åpen og læreglad" bold element="h2" />
+        <PageTitle title="Raus, åpen og læreglad" jumbo element="h2" />
 
         <p className={style.omVariant__p1}>
           IT handler ikke om designskisser, linjer av kode eller infrastruktur,

@@ -1,3 +1,4 @@
+import PageTitle from '@components/page-title';
 import Head from 'next/head';
 import Layout from 'src/layout';
 import { and } from 'src/utils/css';
@@ -13,7 +14,7 @@ export default function Invitation() {
         <section className={style.omVariant}>
           <header>
             <p className={style.supertitle}>Velkommen til </p>
-            <h1 className={style.omVariant__title}>Vidsyn 22</h1>
+            <PageTitle title="Vidsyn 22" />
             <p className={style.subtitle}>Retrospektiv og perspektiv!</p>
           </header>
           <div>

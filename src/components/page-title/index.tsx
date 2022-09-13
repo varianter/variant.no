@@ -4,16 +4,16 @@ import style from './page-title.module.css';
 type PageTitleProps = {
   element?: 'h2' | 'h1';
   title: string;
-  bold?: boolean;
+  jumbo?: boolean;
 };
 export default function PageTitle({
   element = 'h1',
   title,
-  bold = false,
+  jumbo = false,
 }: PageTitleProps) {
   return React.createElement(
     element,
-    { className: and(style.title, bold ? style['title--bold'] : undefined) },
+    { className: and(style.title, jumbo ? style['title--jumbo'] : undefined) },
     [title],
   );
 }

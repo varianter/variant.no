@@ -1,6 +1,7 @@
 .title {
-  margin: 4.8rem 0;
-  font-size: 4.8rem;
+  font-weight: 500;
+  margin: 4rem 0 2rem;
+  font-size: 4rem;
 
   background: linear-gradient(
     120deg,
@@ -14,6 +15,8 @@
   background-position-x: 60%;
 }
 
-.title--bold {
+.title--jumbo {
   font-weight: bold;
+  margin: 4.8rem 0;
+  font-size: 4.8rem;
 }
