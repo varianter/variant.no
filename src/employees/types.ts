@@ -1,7 +1,7 @@
 export type ApiEmployee = {
   name: string;
   email: string;
-  telephone: string;
+  telephone: string | null;
   image: {
     url: string;
     thumb: {
@@ -24,7 +24,7 @@ export type EmployeeItem = {
   fullName: string;
   name: string;
   email: string;
-  telephone: string;
+  telephone: string | null;
   imageUrl: string;
   officeName: string;
 };

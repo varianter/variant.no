@@ -145,12 +145,14 @@ export const ContactTile: React.FC<{ contact: EmployeeItem }> = ({
         <a href={`mailto:${email}`} className={style.contact__type}>
           📬 {email}
         </a>
-        <a
-          href={`tel:+47${telephone.replace(/\s*/g, '')}`}
-          className={style.contact__type}
-        >
-          📞 {telephone}
-        </a>
+        {telephone && (
+          <a
+            href={`tel:+47${telephone.replace(/\s*/g, '')}`}
+            className={style.contact__type}
+          >
+            📞 {telephone}
+          </a>
+        )}
       </div>
     </div>
   );
