@@ -75,9 +75,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
       <section className={style.omVariant}>
         <h2 className={style.omVariant__title}>Raus, åpen og læreglad</h2>
         <p className={style.omVariant__p1}>
-          IT handler ikke om designskisser, linjer av kode eller infrastruktur,
-          men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
-          endringsvilje.
+          Digital tjenesteutvikling handler ikke om designskisser eller
+          kodelinjer, men om samskaping, empati og forståelse. Dermed bør
+          utvikling realiseres gjennom åpenhet, ærlighet og endringsvilje.
         </p>
 
         <img
