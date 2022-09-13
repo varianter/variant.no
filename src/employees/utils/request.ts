@@ -83,13 +83,7 @@ export async function requestEmployees(): Promise<ApiEmployee[] | undefined> {
       employee.roles.some((role) => role === 'countrymanager'),
   );
 
-  return employeeList.map(({ name, telephone, email, image, office_name }) => ({
-    name,
-    telephone,
-    email,
-    image,
-    office_name,
-  }));
+  return employeeList.map(toApiEmployee);
 }
 
 export async function requestByEmails(
@@ -103,4 +97,27 @@ export async function requestByEmails(
 
   const employee = employeeList.filter((e) => emails.includes(e.email));
   return employee;
+}
+
+function toApiEmployee(employee: EmployeeJSON): ApiEmployee {
+  const { name, telephone, email, image, office_name } = employee;
+
+  if (getFilteredIds().includes(employee.user_id)) {
+    return {
+      name,
+      telephone: null,
+      email,
+      image,
+      office_name,
+    };
+  }
+  return { name, telephone, email, image, office_name };
+}
+
+function getFilteredIds(): string[] {
+  try {
+    return JSON.parse(process.env.FILTER_USERS ?? '[]') ?? [];
+  } catch (e) {
+    return [];
+  }
 }

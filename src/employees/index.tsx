@@ -126,7 +126,7 @@ export default function Employees({
 }
 
 export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
-  employee: { fullName, name, telephone, imageUrl, officeName },
+  employee: { fullName, name, telephone, email, imageUrl, officeName },
 }) => {
   return (
     <div
@@ -142,12 +142,18 @@ export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
       />
       <h2 className={and(style.employee__name, 'fancy')}>{fullName}</h2>
       <div className={style.employee__office}>{officeName}</div>
-      <a
-        href={`tel:+47${telephone.replace(/\s*/g, '')}`}
-        className={style.employee__phone}
-      >
-        📞 {telephone}
-      </a>
+      {telephone ? (
+        <a
+          href={`tel:+47${telephone.replace(/\s*/g, '')}`}
+          className={style.employee__phone}
+        >
+          📞 {telephone}
+        </a>
+      ) : (
+        <a href={`mailto:${email}`} className={style.employee__phone}>
+          📧 {email}
+        </a>
+      )}
     </div>
   );
 };
