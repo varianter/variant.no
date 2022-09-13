@@ -1,4 +1,5 @@
 import { ButtonLink } from '@components/button';
+import PageTitle from '@components/page-title';
 import Head from 'next/head';
 import Layout from 'src/layout';
 import style from './diversity.module.css';
@@ -18,7 +19,7 @@ const Diversity = () => {
       </Head>
 
       <header className={style.header}>
-        <h2 className={style.header__title}>Mangfold</h2>
+        <PageTitle title="Mangfold" />
         <p>
           Mangfold skaper inkluderende og fullgode løsninger, som gir verdi og
           nytte for absolutt alle. Vi i Variant samarbeider med de som aktivt
@@ -41,7 +42,7 @@ const Diversity = () => {
         <section className={style['project-category']}>
           <article id="ada" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h4>Ada</h4>
+              <h2>Ada</h2>
               <p>
                 Ada jobber for å øke kjønnsbalansen på ingeniør- og
                 teknologistudiene ved NTNU. Formålet deres er å motivere kvinner
@@ -67,7 +68,7 @@ const Diversity = () => {
 
           <article className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h4>Hils på Sarah</h4>
+              <h2>Hils på Sarah</h2>
               <p>
                 Sarah er mangfoldsansvarlig i Variant og brenner for å få flere
                 jenter inn i teknologibransjen. Hun har jobbet i Kodeklubben og
@@ -83,7 +84,7 @@ const Diversity = () => {
 
           <article id="tenk" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h4>TENK Tech Camp</h4>
+              <h2>TENK Tech Camp</h2>
               <p>
                 TENK Tech Camp er en gratis teknologicamp for jenter i alderen
                 13-18 år. Formålet med campen er å motivere jenter til å velge
@@ -106,7 +107,7 @@ const Diversity = () => {
         </section>
 
         <section className={style.contact}>
-          <h4>Har du et initiativ vi kan samarbeide om?</h4>
+          <h2>Har du et initiativ vi kan samarbeide om?</h2>
           <div className={style['contact__button__wrapper']}>
             <ButtonLink href="mailto:post@variant.no">Send e-post</ButtonLink>
           </div>
@@ -115,7 +116,7 @@ const Diversity = () => {
         <section className={style['project-category']}>
           <article id="oda" className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h4>ODA-nettverket</h4>
+              <h2>ODA-nettverket</h2>
               <p>
                 ODA-nettverket jobber aktivt for å skape mangfold innen
                 teknologi. De jobber spesielt med kvinner i bransjen ved å
@@ -136,7 +137,7 @@ const Diversity = () => {
 
           <article className={style['project-article']}>
             <section className={style['project-article__text']}>
-              <h4>Hils på Linn</h4>
+              <h2>Hils på Linn</h2>
               <p>
                 Linn er en av variantene som er engasjert i ODA-nettverket. Hun
                 bidrar med kunnskap, erfaring og sprer læreglede som mentor og

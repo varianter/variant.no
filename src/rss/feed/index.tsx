@@ -1,8 +1,8 @@
+import PageTitle from '@components/page-title';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import { FeedInput } from 'src/rss/rss';
 import { chronologicalFeedList, MediaItem } from 'src/rss/service';
-import { and } from 'src/utils/css';
 import style from './feed.module.css';
 
 interface FeedProps {
@@ -14,7 +14,7 @@ export default function RSSFeed({ items }: FeedProps) {
     <Layout>
       <div className={style.feed}>
         <div className={style.feed__head}>
-          <h2 className={and(style.feed__title, 'fancy')}>Meninger og sånn</h2>
+          <PageTitle title="Meninger og sånn" />
           <p>
             Du har funnet feeden vår! Her har vi samlet det siste vi har gjort
             av{' '}

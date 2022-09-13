@@ -101,7 +101,7 @@ export const Calculator = (props: Props) => {
         </div>
 
         <fieldset className={style.contentContainer}>
-          <h2 className={style.title}>Lønnskalkulator</h2>
+          <h1 className={style.title}>Lønnskalkulator</h1>
 
           <p>
             Vil du vite hva du vil tjene hos oss? Svar på to enkle spørsmål:
@@ -112,9 +112,9 @@ export const Calculator = (props: Props) => {
             role="group"
             aria-labelledby="degree-title"
           >
-            <h3 className={style.question} id="degree-title">
+            <h2 className={style.question} id="degree-title">
               Hvilken grad har eller får du?
-            </h3>
+            </h2>
 
             <RadioButton
               changed={setDegree}
@@ -135,9 +135,9 @@ export const Calculator = (props: Props) => {
             />
           </div>
 
-          <h3 className={style.question}>
+          <h2 className={style.question}>
             Når ble eller blir du ferdig med graden?
-          </h3>
+          </h2>
           <div className={style.barSliderContainer}>
             <button
               onClick={decrementYear}
@@ -167,7 +167,7 @@ export const Calculator = (props: Props) => {
 
           <footer className={style.summary}>
             <div className={style.calculation}>
-              <h3 className={style.question}>Da blir lønnen din sånn:</h3>
+              <h2 className={style.question}>Da blir lønnen din sånn:</h2>
 
               <dl>
                 {!!props.addition && (
