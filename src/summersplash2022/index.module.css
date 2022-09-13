@@ -366,12 +366,15 @@
   justify-content: left;
 }
 
+.timeLine {
+  display: flex;
+  justify-content: center;
+}
+
 .søknadstips {
   margin-top: 20%;
   margin-top: 120px;
   margin-bottom: 30%;
-  position: relative;
-  right: 150px;
 }
 
 .section5Div1 {
@@ -1143,6 +1146,16 @@
 
   .section3 {
     height: 1700px;
+  }
+
+  .timeLine svg {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1930px) {
+  .timeLine svg {
+    width: 30%;
   }
 }
 
