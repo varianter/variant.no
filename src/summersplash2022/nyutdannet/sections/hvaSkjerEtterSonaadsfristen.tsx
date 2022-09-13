@@ -74,7 +74,6 @@ const AfterApplying = (props: { red: boolean }) => {
             </p>
 
             <p className={style.section5ParagraphLeft}>
-              {' '}
               Noen dager etter kaffepraten vil aktuelle kandidater inviteres til
               en sammarbeidscase hvor man vil jobbe sammen med 2 andre
               varianter. Man vil få oppgaven på forhånd, men man skal ikke gjøre

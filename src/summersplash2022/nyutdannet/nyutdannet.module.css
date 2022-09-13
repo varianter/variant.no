@@ -390,12 +390,12 @@ p {
 @media (max-width: 2500px) {
   .imageBlob1 {
     position: relative;
-    bottom: 400px;
+    top: -300px;
   }
 
   .section1BlobSVG {
     position: relative;
-    bottom: 300px;
+    top: -200px;
   }
 
   .section1Blobs {
@@ -632,7 +632,7 @@ p {
   }
 
   .timeLineBlack {
-    width: 50%;
+    width: auto;
     height: auto;
   }
 

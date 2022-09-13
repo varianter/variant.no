@@ -1147,6 +1147,16 @@
   .section3 {
     height: 1700px;
   }
+
+  .timeLine svg {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1930px) {
+  .timeLine svg {
+    width: 30%;
+  }
 }
 
 @media (min-width: 2150px) {
