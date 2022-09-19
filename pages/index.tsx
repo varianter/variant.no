@@ -1,1 +1,1 @@
-export { default } from 'src/summersplash2022/nyutdannet/nyutdannet';
+export { default } from 'src/summersplash2022/index';
