@@ -13,6 +13,7 @@ export type InterviewMetadata = {
   variantEmail: string;
   variantTitle: string;
   quote: string;
+  imageUrl: string;
 };
 
 export type Interview = {

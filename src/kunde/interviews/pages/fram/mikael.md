@@ -1,6 +1,7 @@
 ---
 meta_title: Bedre løsninger til kollektivreisende
 meta_description: Intervju med Mikael hos FRAM
+imageUrl: /images/customer/interviews/mikael.png
 imageAltText: Mikael hos FRAM
 project: FRAM
 variant: Mikael

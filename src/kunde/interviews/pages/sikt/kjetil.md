@@ -1,6 +1,7 @@
 ---
 meta_title: Tilgjengeliggjøring av vitenskapelige artikler
 meta_description: Intervju med Kjetil hos Sikt
+imageUrl: /images/customer/interviews/kjetil.png
 imageAltText: Kjetil hos Sikt
 project: Sikt
 variant: Kjetil

@@ -38,12 +38,12 @@ meta_projects:
         ],
     },
   ]
-meta_contribution_digital_productdevelopment: Tekst her
+meta_contribution_digital_productdevelopment: Variant bistår FRAM med å utvikle og tilpasse nye og kundeflater for reisende i Møre og Romsdal. Dette inkluderer ny mobilapp for reisesøk og billettering samt nettbutikk. I tillegg bistår vi kunden med integrasjon mellom gammel og ny plattform som gir reisende i fylket en sømløs opplevelse på trass av at  busser er utstyrt med enten nytt eller gammelt utstyr. Dette gir FRAM mulighet til en gradvis overgang og reduserer risikoen for at store kundegrupper ikke kan reise kollektivt i en overgangsperiode.
 
-meta_contribution_data_driven: Tekst her
-meta_contribution_culture_first: Tekst her
+meta_contribution_data_driven:
+meta_contribution_culture_first: Gjennom denne anskaffelsen går FRAM over fra å være en innkjøper av tekniske løsninger til å bli et IT-selskap som utvikler og forvalter egne løsninger for sine brukere. Variant bidrar til å bygge kompetanse og ikke minst kultur for hvordan man på best mulig måte tar fram IT-løsninger som faktisk kundene trenger. I tillegg til formelle roller som blant annet produktledelse, er nøkkelen for å lykkes med programvareutvikling faktisk at organisasjonen har en kultur for god og smidig utvikling. Variant bidrar til å bygge en slik kultur.
 
-meta_contribution_strategy: Tekst her
+meta_contribution_strategy:
 
 meta_quote: ''
 ---

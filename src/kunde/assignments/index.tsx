@@ -51,6 +51,19 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       };
     }, [assignment]);
 
+    const ourContributionIsEmpty = () => {
+      if (
+        assignment.meta_contribution_digital_productdevelopment === null &&
+        assignment.meta_contribution_data_driven === null &&
+        assignment.meta_contribution_digital_productdevelopment === null &&
+        assignment.meta_contribution_strategy === null
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
     return (
       <Layout title={assignment.meta_title}>
         {/* <SayHi
@@ -127,7 +140,10 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                       <strong>{interview.variant}</strong>
                     </p>
                     <p className={style.textCenter}>{interview.variantTitle}</p>
-                    <img src={interview.image} alt={interview.imageAltText} />
+                    <img
+                      src={interview.imageUrl}
+                      alt={interview.imageAltText}
+                    />
                     <p>{interview.quote}</p>
                     <Link href={interview.name}>
                       <a className={style.buttonLink}>
@@ -141,75 +157,100 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           </div>
 
           <div className={style.contribution}>
-            <h2 className={style.textCenter}>Vårt bidrag</h2>
+            {ourContributionIsEmpty() ? (
+              <></>
+            ) : (
+              <h2 className={style.textCenter}>Vårt bidrag</h2>
+            )}
             <div>
-              <div className={style.contributionElements}>
-                <p>
-                  En setning eller to for å oppsummere her. I høyremargen:
-                  Vinkle opp mot tjenesteområder, få frem helheten av det som
-                  leveres.
-                </p>
-                <img src="/images/tjenestefjell.png" alt="Tjenestefjell" />
-              </div>
-
               <div className={style.contributionElements}>
                 <div>
                   {assignment.meta_contribution_digital_productdevelopment ===
                   null ? (
                     <></>
                   ) : (
-                    <p>
-                      <img src="/images/bulletpoint.svg" alt="bulletpoint" />
-                      <strong>Digital produktutvikling</strong>
-                    </p>
+                    <div className={style.contributionElements__text}>
+                      <img
+                        src="/images/customer/digitalProduct.png"
+                        alt="Blob med datamaskin"
+                      />
+                      <div>
+                        <p>
+                          <strong>Digital produktutvikling</strong>
+                        </p>
+                        <p>
+                          {
+                            assignment.meta_contribution_digital_productdevelopment
+                          }
+                        </p>
+                      </div>
+                    </div>
                   )}
-                  <p>
-                    {assignment.meta_contribution_digital_productdevelopment}
-                  </p>
                 </div>
                 <div>
                   {assignment.meta_contribution_data_driven === null ? (
                     <></>
                   ) : (
-                    <p>
-                      <img src="/images/bulletpoint.svg" alt="bulletpoint" />
-                      <strong>Datadrevet</strong>
-                    </p>
+                    <div className={style.contributionElements__text}>
+                      <img
+                        src="/images/customer/dataProduct.png"
+                        alt="Blob med datamaskin"
+                      />
+                      <div>
+                        <p>
+                          <strong>Dataproduktutvikling</strong>
+                        </p>
+                        <p>{assignment.meta_contribution_data_driven}</p>
+                      </div>
+                    </div>
                   )}
-                  <p>{assignment.meta_contribution_data_driven}</p>
                 </div>
                 <div>
                   <p>
                     {assignment.meta_contribution_strategy === null ? (
                       <></>
                     ) : (
-                      <p>
-                        <img src="/images/bulletpoint.svg" alt="bulletpoint" />
-                        <strong>Strategi</strong>
-                      </p>
+                      <div className={style.contributionElements__text}>
+                        <img
+                          src="/images/customer/strategyDevelopment.png"
+                          alt="Blob med datamaskin"
+                        />
+                        <div>
+                          <p>
+                            <strong>Strategiutvikling</strong>
+                          </p>
+                          <p>{assignment.meta_contribution_strategy}</p>
+                        </div>
+                      </div>
                     )}
                   </p>
-                  <p>{assignment.meta_contribution_strategy}</p>
                 </div>
                 <div>
                   <p>
                     {assignment.meta_contribution_culture_first === null ? (
                       <></>
                     ) : (
-                      <p>
-                        <img src="/images/bulletpoint.svg" alt="bulletpoint" />
-                        <strong>Culture first</strong>
-                      </p>
+                      <div className={style.contributionElements__text}>
+                        <img
+                          src="/images/customer/culture.png"
+                          alt="Blob med datamaskin"
+                        />
+                        <div>
+                          <p>
+                            <strong>Kulturutvikling</strong>
+                          </p>
+                          <p>{assignment.meta_contribution_culture_first}</p>
+                        </div>
+                      </div>
                     )}
                   </p>
-                  <p>{assignment.meta_contribution_culture_first}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className={style.quote}>
+          {/* <div className={style.quote}>
             <blockquote>{assignment.meta_quote}</blockquote>
-          </div>
+          </div> */}
         </section>
       </Layout>
     );

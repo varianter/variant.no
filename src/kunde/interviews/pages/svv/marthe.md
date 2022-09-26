@@ -1,6 +1,7 @@
 ---
 meta_title: Prosjektstøtte på leveransestrøm
 meta_description: Intervju med Marthe hos Statens vegvesen
+imageUrl: /images/customer/interviews/marthe.png
 imageAltText: Marthe hos Statens vegvesen
 project: Statens vegvesen
 variant: Marthe

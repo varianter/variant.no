@@ -1,6 +1,7 @@
 ---
 meta_title: Veien til en friksjonsfri kollektivhverdag
 meta_description: Intervju med Odd Morten hos FRAM
+imageUrl: /images/customer/interviews/odd-morten.png
 imageAltText: Odd Morten hos FRAM
 project: FRAM
 variant: Odd Morten

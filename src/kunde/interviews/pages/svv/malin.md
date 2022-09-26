@@ -1,6 +1,7 @@
 ---
-meta_title: <Tittel mangler>
+meta_title: Lært Statens vegvesen å kjenne
 meta_description: Intervju med Malin hos Statens vegvesen
+imageUrl: /images/customer/interviews/malin.png
 imageAltText: Malin hos Statens vegvesen
 project: Statens vegvesen
 variant: Malin
@@ -10,38 +11,36 @@ location: Trondheim
 quote: «Jeg håper og tror de har lært mer om prosjektledelse, bruk av designprinsipper og kanskje litt soft skills på ledelse generelt.»
 ---
 
-## Prosjektstøtte på leveransestrøm
+## Lært Statens vegvesen å kjenne
 
-### Statens vegvesen ble Marthe Skaara Drabløs sitt første møte med konsulentlivet. Der har hun jobbet med prosjektstøtte, og fått erfart at det slettes ikke finnes et fasitsvar på det å være prosjektleder.
+### Malin har gjennom flere ulike prosjekter hos Statens vegvesen fått et godt innblikk i organisasjonen, og lært seg å kjenne den ordentlig. Som prosjektleder jobber hun tett med flere ulike roller og bistår vegvesenet i den digitale transformasjonen.
 
 variant_info_placeholder
 
-#### Hva går prosjektet du jobber med ut på?
+#### Hvilket prosjekt jobber du med?
 
-Prosjektet er organisert som en leveransestrøm og heter Videreutvikling av dataplattform. Kort fortalt går det ut på å forbedre ulike tekniske løsninger. Det er 12-15 underprosjekter som svarer til denne leveransestrømmen.
+Jeg har hatt flere ulike oppdrag i vegvesenet og slik fått stor tillit og anledning til å lære organisasjonen å kjenne. Nå jobber jeg i programledelsen for et digitaliseringsprogram kalt Digital drivkraft.
 
-#### Hva gjør du i din rolle?
+#### Hvem jobber du sammen med, og hvordan samarbeider dere?
 
-I prosjektet bidrar jeg inn som prosjektstøtte til prosjektleder som en stor leveransestrøm med tilhørende deltiltak. Jeg hjelper til med rådgivning på tiltak som bør igangsettes, tar nødvendig oppfølging, hjelper til og sørger for at prosjektet har den fremdriften kunden ønsker, og generelt sørger for at prosjektledelsen går etter planen.
-I det daglige jobber jeg med prosjektledelse. Kaller inn til møter og styrer de, forbereder samlinger og leder disse. Jeg hjelper til med å holde oversikt over status på de ulike deltiltakene, både med tanke på status for leveransen, og med tanke på budsjett og prognoser. Jeg bidrar inn med å tenke langsiktig, sørge for at leveransestrømmen starter på de riktige prosessene med tanke på kommende år, og at det er viktig å se leveransene opp mot overordnede strategier.
+I tillegg til flere gode kollegaer i Variant, samarbeider jeg med mange ulike roller i Statens vegvesen. Herunder divisjonsdirektør og avdelingsdirektør som er ansvarlige for programmet, samt flere i staben til avdelingen og i ulike seksjoner. I tillegg holder jeg dialog med flere andre enheter og initiativer i etaten. Det er veldig mye spennende som skjer i vegvesenet, og mye å holde oversikt over.
 
-#### Hvordan er samarbeidet?
+#### Hva gjør du som prosjektleder?
 
-Jeg jobber tett inn mot en koordineringsgruppe for prosjektet, der vi har regelmessige statusmøter, samt at jeg har fortløpende dialog med prosjektleder. I prosjektet jobber også en annen konsulent fra Variant. Dette er både lærerikt og hyggelig. Vi har et tett samarbeid, pusher hverandre og sparrer for å komme frem til de beste løsningene for kunden.
-
-#### Har du fått deg noen aha-opplevelser underveis?
-
-Det å komme inn i en helt ny bransje samtidig som at det er en ny erfaring å jobbe som konsulent har i seg selv vært en aha-opplevelse. Jeg var på forhånd spent på hva jeg kunne bidra med inn i et ukjent fagområde. Men arbeidslivet er fullt av hyggelige mennesker, og folk har forståelse for at også konsulenter er nye. Det ligger også masse verdi i at man kommer inn med friske øyne, en større verdi enn jeg på forhånd hadde tenkt.
+Jeg jobber med å forstå en helhetlig og sammenhengende verdikjede for dataflyt som gir verdi for alle som beveger seg på og jobber med veiene i Norge. Jeg ser denne verdikjeden i sammenheng med systemportefølje, organisasjon og metodikk. Og ikke minst, hvordan denne kan og skal forbedres iterativt og parallelt med vanlig drift, også kjent som «digital transformasjon». Det innebærer mye møtetid, mange powerpointer som skal lages, rapportering og generell prosjektledelse. På tvers av dette er det en analytisk og helhetlig tilnærming til en stor og kompleks problemstilling.
 
 <blockquote class="">
 Statens Vegvesen har vært en trygg og god start for en fersk konsulent. Det har vært verdifullt å se at min erfaring og kunnskap har blitt verdsatt og ønsket.
 </blockquote>
 
-#### Hva med egen lærdom?
+#### Har du fått deg noen aha-opplevelser underveis?
 
-Jeg har gjennom dette prosjektet lært at det ikke finnes en fasit på det å være prosjektleder. Og i tillegg at det er viktig å tilpasse seg kunden, men at man også må huske på at det kan være fint å ha en Variant inn som pusher igjennom på sin måte.
-Statens Vegvesen har vært en trygg og god start for en fersk konsulent. Det har vært verdifullt å se at min erfaring og kunnskap har blitt verdsatt og ønsket.
+Mange! For det meste handler det om hvor stor denne etaten er, og hvor mange mennesker som jobber for og med veg og vegtrafikk i Norge. Og ikke minst, hvor mye som foregår parallelt i en etat med flere tusen ansatte.
 
-#### Hva tror du Statens vegvesen sitter igjen med etter at du har vært der?
+#### Hvilken effekt tror du kunden har hatt av å ha Variant der?
 
-Jeg håper de tenker at arbeidshverdagen og prosjektet har gått litt mer sømløst med meg inne som konsulent.
+Jeg håper og tror at vi øker både kompetanse og kapasitet på en del områder som tradisjonelt sett ikke har vært del av kjernevirksomheten til etaten, men som fremover må være det.
+
+#### Hva har vært verdifullt for deg i dette prosjektet?
+
+Tillit og tålmodighet fra kunden, samt å ha sparringspartnere i Variant.

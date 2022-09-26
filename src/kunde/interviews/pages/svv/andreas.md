@@ -1,6 +1,7 @@
 ---
 meta_title: Verktøy for gjennomføring og oppfølging av Trafikksikkerhetsinspeksjoner
 meta_description: Intervju med Andreas hos Statens vegvesen
+imageUrl: /images/customer/interviews/andreas.png
 imageAltText: Andreas hos Statens vegvesen
 project: Statens vegvesen
 variant: Andreas

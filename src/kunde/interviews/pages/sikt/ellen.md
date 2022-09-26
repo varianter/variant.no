@@ -1,6 +1,7 @@
 ---
 meta_title: Tittel
 meta_description: Intervju med Ellen hos Sikt
+imageUrl: /images/customer/interviews/ellen.png
 imageAltText: Ellen hos Sikt
 project: Sikt
 variant: Ellen

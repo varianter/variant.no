@@ -1,6 +1,7 @@
 ---
 meta_title: Sikt Designlab
 meta_description: Intervju med Sunneva hos Sikt
+imageUrl: /images/customer/interviews/sunneva.png
 imageAltText: Sunneva hos Sikt
 project: Sikt
 variant: Sunneva

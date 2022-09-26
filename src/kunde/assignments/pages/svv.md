@@ -59,16 +59,12 @@ meta_projects:
     },
   ]
 meta_contribution_digital_productdevelopment:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
+
 meta_contribution_data_driven:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
-meta_contribution_strategy: Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
+
+meta_contribution_strategy:
 meta_contribution_culture_first:
-  Skriv noe om hva vi har bidratt med innenfor dette
-  tjenesteområdet.
+
 meta_quote: Statens Vegvesen har vært en trygg og god start for en fersk
   konsulent. Det har vært verdifullt å se at min erfaring og
   kunnskap har blitt verdsatt og ønsket.

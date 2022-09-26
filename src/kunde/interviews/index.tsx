@@ -19,7 +19,7 @@ const createHtmlFromMetadata = (interview: Interview) => {
     '<figure>' +
     '<div class="img__decorationBox"></div>' +
     '<div class="img__decorationBox"></div>' +
-    `<img src="${interview.image}" alt="${interview.imageAltText}"/>` +
+    `<img src="${interview.imageUrl}" alt="${interview.imageAltText}"/>` +
     '</figure>' +
     '</div>' +
     '<div>' +

@@ -1,6 +1,7 @@
 ---
 meta_title: Fra Elm til React
 meta_description: Intervju med Tore hos FRAM
+imageUrl: /images/customer/interviews/tore.png
 imageAltText: Tore hos FRAM
 project: FRAM
 variant: Tore
