@@ -112,6 +112,9 @@ function officeToDepartmentRegex(department: Office) {
       return /oslo/i;
     case 'trondheim':
       return /trondheim/i;
+    case 'stockholm':
+      return /stockholm/i;
+  
   }
 }
 

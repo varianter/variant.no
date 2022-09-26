@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './office.module.css';
 
-export const offices = ['trondheim', 'oslo', 'bergen'] as const;
+export const offices = ['trondheim', 'oslo', 'bergen', 'stockholm'] as const;
 export type Office = typeof offices[number];
 
 export function stringToDepartment(dep?: string): Office | undefined {
