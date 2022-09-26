@@ -41,20 +41,16 @@ meta_projects:
     {
       project_image:
         {
-          image_src: /images/prosjekt-svv-2.png,
+          image_src: /images/prosjekt-svv-3.png,
           boxProperties1: { color: F5A4C4, vertical: top, horizontal: middle },
           boxProperties2: { color: CDF8F4, vertical: bottom, horizontal: left },
         },
       project_title: Ledelse av digitaliseringsprogram,
       project_text:
         [
-          Tekst om SVV som kunde her. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. In congue malesuada erat,
-          vitae feugiat mi eleifend sed. In dictum,
-          quam ut consectetur bibendum,
-          neque libero eleifend orci,
-          eget tempor tortor quam ac massa. Donec non bibendum ligula. Duis vehicula turpis non arcu porttitor ullamcorper. Suspendisse potenti. Mauris imperdiet erat libero,
-          at bibendum erat hendrerit eget. Praesent laoreet eu tortor eget sodales. Aliquam vulputate sagittis consectetur. Vivamus gravida magna sed efficitur posuere. Praesent eget ipsum arcu.,
+          I Statens vegvesen har de blant annet systemer for dataflyten vedrørende både veiene i seg selv,
+          og trafikken som benytter de. De siste 10 årene har kundefokuset økt kraftig både i samfunnet forøvrig og i Statens vegvesen,
+          noe som er en av driverne bak digitaliseringsprogrammet som Variant er involvert i. Vi bistår kunden med å se på nye teknologiske muligheter og krav i en verden hvor kjøretøyet i større grad er både konsument og leverandør av data. Utviklingen i førerstøtte i bil er forventet å bidra vesentlig til blant annet vegvesenets nullvisjon for drepte og hardt skadde i trafikken. Programmet som vi i Variant er med på å lede rammer inn en rekke utviklingstiltak som skal sette vegvesenet i bedre stand til å levere den digitale veien.,
         ],
     },
   ]
