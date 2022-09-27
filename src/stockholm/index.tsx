@@ -13,7 +13,6 @@ import { EmployeeTile } from 'src/employees';
 
 const stockholmBlobUrl = require('./assets/stockholm.png');
 const timelineUrl = require('./assets/timeline.svg');
-const blobmapUrl = require('./assets/blobmap.svg');
 const mapUrl = require('../../public/illustrations/map-norway-sweeden.png');
 
 export function StockholmInfoBlock() {
