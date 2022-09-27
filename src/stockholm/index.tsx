@@ -16,7 +16,7 @@ const timelineUrl = require('./assets/timeline.svg');
 const blobmapUrl = require('./assets/blobmap.svg');
 const mapUrl = require('../../public/illustrations/map-norway-sweeden.png');
 
-export function BergenInfoBlock() {
+export function StockholmInfoBlock() {
   return (
     <div className={style.infoBlock}>
       <img
@@ -47,7 +47,7 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <Layout>
       <div>
         <Head>
-          <title>En ny Variant i Bergen</title>
+          <title>En ny Variant i Stockholm</title>
           <meta
             property="og:url"
             content={'https://www.variant.no/stockholm'}
@@ -55,22 +55,22 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           />
           <meta
             property="og:title"
-            content="En ny Variant i Bergen. Vi ønsker at du skal utvikle Bergen sammen med oss."
+            content="En ny variant i Stockholm. Vi vill att du ska utveckla Stockholm tillsammans med oss."
             key="og:title"
           />
           <meta
             property="og:description"
-            content="Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen sammen med oss. Å etablere neste generasjon selskapskultur hvor medarbeideres potensiale utnyttes til det fulle med tillit og transparens."
+            content="Vi har väntat länge på detta. Vi vill att du ska utveckla Stockholm tillsammans med oss. Att etablera nästa generations företagskultur där medarbetarnas potential utnyttjas till fullo med tillit och transparens."
             key="og:description"
           />
           <meta
             name="description"
-            content="Dette har vi ventet lenge på. Vi ønsker at du skal utvikle Bergen sammen med oss. Å etablere neste generasjon selskapskultur hvor medarbeideres potensiale utnyttes til det fulle med tillit og transparens."
+            content="Vi har väntat länge på detta. Vi vill att du ska utveckla Stockholm tillsammans med oss. Att etablera nästa generations företagskultur där medarbetarnas potential utnyttjas till fullo med tillit och transparens."
             key="description"
           />
           <meta
             property="og:image"
-            content="https://www.variant.no/images/bergen_meta.png"
+            content="https://www.variant.no/images/stockholm_meta.png"
             key="og:image"
           />
         </Head>
@@ -87,18 +87,18 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </header>
 
             <p className="lead">
-              I løpet av 2023 kommer et helt nytt konsulentselskap til Stockholm, 
-              med et helt nytt tanke- og verdisett.
-              Nå er vi klare for å finne CEO. Vil du være med å forme et
-              annerledes konsulentselskap?
+              Under 2023 kommer ett helt nytt konsultföretag till Stockholm,
+              med ett helt nytt tänkesätt och värdegrund.
+              Nu är vi redo att hitta en VD. Vill du vara med och forma ett 
+              annorlunda konsultföretag?
             </p>
             <p>
-              Les mer om oss og våre verdier i{' '}
+            Läs mer om oss och våran värder i{' '}
               <a
                 href="https://handbook.variant.no"
                 title="Håndboken til Variant"
               >
-                den åpne håndboken vår
+                vår öppna handbok.
               </a>
               .
             </p>
@@ -111,14 +111,14 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               style['content--map'],
             )}
           >
-            <h3 className="fancy">Så, hvorfor Stockholm?</h3>
+            <h3 className="fancy">Så varför Stockholm?</h3>
 
             <p className={and('lead', style.map__text__lead)}>
-              Vår visjon er å bring tillit, åpenhet og likeverd til europeisk næringsliv. Vi startet i 
-              Norge, og med med kontorer i Norges tre største byer, er Sverige og Stockholme det neste 
-              naturlige steg. I tillegg, Stockholm  har et spennende marked og
-              kunder, spennende fagmiljøer og studiesteder, og ikke minst
-              spennende folk.
+              Vår vision är att skapa förtroende, transparens och jämlikhet till europeiska 
+              företag. Vi började i Norge med kontor i Norges tre största städer. Sverige och 
+              Stockholm är nu nästa naturliga steg. Dessutom är Stockholm en spännande marknad 
+              med spännande kunder, spännande kompetensmiljöer och studieorter och inte minst 
+              spännande människor.
             </p>
 
     
@@ -126,23 +126,22 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <img
               className={style.mapImage}
               src={mapUrl}
-              alt="Kart over kontorer i Trondheim, Bergen og Oslo."
+              alt="Karta över kontor i Trondheim, Bergen, Oslo och Stockholm."
             />
 
             <p className={style.map__text__second}>
-              Vi har lærte mye fra oppstarten i Norge som vi ønsker å ta med oss
-              østover. Vi er opptatt av perspektiver og mangfold, og vi er sikre på at Stockholm 
-              vil bidra superpositivt inn i det som begynner å bli et stort
-              Variant-fellesskap.
+              Vi har lärt oss mycket av uppstarten i Norge som vi vill ta med oss ​​österut. 
+              Vi är måna om perspektiv och mångfald och vi är säkra på att Stockholm kommer att 
+              ge ett superpositivt bidrag till det som börjar bli en stor Variantgemenskap.
             </p>
 
             <p className={style.map__text__third}>
-              Om du ønsker å lese mer så kan du{' '}
+              Vill du veta mer kan du {' '}
               <a
-                href="https://blog.variant.no/hallaisen-bergen-d88c7b976ef4"
-                title="Hallaisen, Bergen!"
+                href="https://blog.variant.no/hej-stockholm-ebf1309eb32a"
+                title="hej, Stockholm!"
               >
-                lese Odd Mortens bloggpost om hvorfor vi drar til Bergen
+                läsa Odd Mortens bloggpost om varför vi åker till Stockholm
               </a>
               .
             </p>
@@ -155,12 +154,12 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               style['content--timeline'],
             )}
           >
-            <h4 className="fancy">Reisen har startet og vi har en plan...</h4>
+            <h4 className="fancy">Arbetet har börjat och vi har en plan...</h4>
 
             <img
               src={timelineUrl}
               className={style.timeline}
-              alt="Tidslinje som viser progresjon med 12 varianter i desember 2022."
+              alt="Tidslinje som visar progression med 10 varianter i januari 2024."
             />
 
             <BlobLink
@@ -171,9 +170,8 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             />
 
             <p className={style.timelineText}>
-              Vi vet hvor vi vil, og vi har så vidt kommet igang med Stockholmsarbeidet.  
-              Vi har samlet noen scenarioer som skaper et bilde
-              av hvor vi ønsker å være i 2026.
+              Vi vet vart vi vill, och vi har precis påbörjat Stockholmsarbetet. 
+              Vi har samlat några scenarier som skapar en bild av var vi vill vara 2026.
             </p>
           </div>
 
@@ -185,20 +183,20 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             )}
           >
             <h3 className="fancy">
-              Vi skal bygge et miljø med fokus på tverrfaglighet
+              Vi ska bygga en miljö med fokus på tvärvetenskap
             </h3>
 
         
             <img
               src={blobmapUrl}
               className={style.blobmap__image}
-              alt="Fordeling Oslo, Bergen og Trondheim. Hvor Trondheim er størst og Oslo er større enn Bergen."
+              alt="Distribution Oslo, Bergen och Trondheim. Där Trondheim är störst och Oslo är större än Bergen."
             />
           </div>
 
           {listings.length > 0 && (
             <div className={style.content}>
-              <h3 className="fancy">Høres det interessant ut?</h3>
+              <h3 className="fancy">Låter det intressant?</h3>
 
               {listings.map((item) => (
                 <JobListingItem
@@ -211,8 +209,7 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
           <div className={and(style.content, style['content--block'])}>
             <p className={and('lead', 'fancy', style.footerLine)}>
-              Er det noe du lurer på? Det enkleste er å ta en prat med oss hvis
-              du er nysgjerrig (det liker vi!)!
+              Är det något du undrar över? Det enklaste är att ta en pratstund med oss ​​om du är nyfiken (det gillar vi!)!
             </p>
           </div>
 
