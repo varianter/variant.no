@@ -11,7 +11,7 @@ import Arrow from 'src/components/arrow';
 import { and } from 'src/utils/css';
 import { EmployeeTile } from 'src/employees';
 
-const bergenBlobUrl = require('./assets/bergen.png');
+const stockholmBlobUrl = require('./assets/stockholm.png');
 const timelineUrl = require('./assets/timeline.svg');
 const blobmapUrl = require('./assets/blobmap.svg');
 const mapUrl = require('../../public/illustrations/map-norway-sweeden.png');
@@ -21,14 +21,14 @@ export function StockholmInfoBlock() {
     <div className={style.infoBlock}>
       <img
         className={style.infoBlock__blob}
-        src={bergenBlobUrl}
+        src={stockholmBlobUrl}
         alt="Bryggen i Bergen"
       />
 
       <h2 className={style.infoBlock__title}>
-        <Link href="/bergen">
+        <Link href="/stockholm">
           <a className={style.infoBlock__link}>
-            <span className={style.infoBlock__text}>Ny variant i Bergen</span>
+            <span className={style.infoBlock__text}>Ny variant i Stockholm</span>
             <Arrow className={style.infoBlock__arrow} color="standard__white" />
           </a>
         </Link>
@@ -77,8 +77,8 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <div className={style.wrapper}>
           <div className={style.content}>
             <img
-              className={style.bergenBlob}
-              src={bergenBlobUrl}
+              className={style.stockholmBlob}
+              src={stockholmBlobUrl}
               alt="Bryggen i Bergen"
             />
 
@@ -163,7 +163,7 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             />
 
             <BlobLink
-              text="Les våre Stockholms- scenarioer"
+              text="Läs våra Stockholms- scenarier"
               href="stockholm/vyer"
               size={220}
               className={style.timelineButton}
@@ -175,24 +175,6 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </p>
           </div>
 
-          <div
-            className={and(
-              style.content,
-              style['content--block'],
-              style['content--blobmap'],
-            )}
-          >
-            <h3 className="fancy">
-              Vi ska bygga en miljö med fokus på tvärvetenskap
-            </h3>
-
-        
-            <img
-              src={blobmapUrl}
-              className={style.blobmap__image}
-              alt="Distribution Oslo, Bergen och Trondheim. Där Trondheim är störst och Oslo är större än Bergen."
-            />
-          </div>
 
           {listings.length > 0 && (
             <div className={style.content}>

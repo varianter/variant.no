@@ -102,8 +102,8 @@
   display: block;
 }
 
-.bergenBlob {
-  shape-outside: url('./assets/bergen.png');
+.stockholmBlob {
+  shape-outside: url('./assets/stockholm.png');
   float: right;
   margin-top: 3rem;
   shape-margin: 2rem;
@@ -133,17 +133,14 @@
 .map__text__first,
 .map__text__second,
 .map__text__third {
-  width: 40%;
+  width: 30%;
 }
+
 .map__text__first {
   margin-top: 8rem;
 }
 .map__text__second {
   margin-top: 2rem;
-  align-self: flex-end;
-}
-.map__text__third {
-  align-self: flex-end;
 }
 .map__text__second,
 .map__text__third {
@@ -185,14 +182,10 @@
 }
 
 @media (max-width: 500px) {
-  .bergenBlob,
+  .stockholmBlob,
   .lufthavn {
     float: none;
     margin-bottom: 2rem;
-  }
-  .barcode {
-    float: none;
-    margin: 0 auto;
   }
 }
 
