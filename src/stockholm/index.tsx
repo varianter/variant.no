@@ -14,7 +14,7 @@ import { EmployeeTile } from 'src/employees';
 const bergenBlobUrl = require('./assets/bergen.png');
 const timelineUrl = require('./assets/timeline.svg');
 const blobmapUrl = require('./assets/blobmap.svg');
-const mapUrl = require('./assets/map.png');
+const mapUrl = require('../../public/illustrations/map-norway-sweeden.png');
 
 export function BergenInfoBlock() {
   return (
@@ -164,7 +164,7 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             />
 
             <BlobLink
-              text="Les våre Stockholmsscenarioer"
+              text="Les våre Stockholms- scenarioer"
               href="stockholm/vyer"
               size={220}
               className={style.timelineButton}
