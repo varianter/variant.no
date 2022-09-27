@@ -5,7 +5,7 @@ import BlobLink from 'src/components/blob-link';
 import JobListingItem from 'src/jobs/list-item';
 import Layout from 'src/layout';
 import style from './stockholm.module.css';
-import { getStaticProps } from 'pages/bergen';
+import { getStaticProps } from 'pages/stockholm';
 import Link from 'next/link';
 import Arrow from 'src/components/arrow';
 import { and } from 'src/utils/css';
