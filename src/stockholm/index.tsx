@@ -110,7 +110,7 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               style['content--map'],
             )}
           >
-            <h3 className="fancy">Så varför Stockholm?</h3>
+            <h3 className="fancy">Varför Stockholm?</h3>
 
             <p className={and('lead', style.map__text__lead)}>
               Vår vision är att skapa förtroende, transparens och jämlikhet till europeiska 
