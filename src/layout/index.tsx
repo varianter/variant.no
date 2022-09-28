@@ -164,6 +164,11 @@ const Layout: React.FC<LayoutProps> = ({
                       <a tabIndex={tabIndex}>Alle varianter</a>
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/kalkulator">
+                      <a tabIndex={tabIndex}>Lønnskalkulator</a>
+                    </Link>
+                  </li>
                   <li id="dont_show">
                     <a
                       href="https://twitter.com/intent/tweet?screen_name=variant_as"
