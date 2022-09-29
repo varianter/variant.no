@@ -121,24 +121,26 @@
 }
 .mapImage {
   top: 8rem;
-  left: 20%;
-  width: 80%;
+  left: 30%;
+  width: 70%;
   display: block;
   position: absolute;
 }
 .map__text__lead {
-  width: 60%;
+  width: 50%;
   margin-top: 2.5rem;
 }
-.map__text__first,
-.map__text__second,
-.map__text__third {
-  width: 30%;
+.map__text__first {
+  width: 50%;
 }
 
-.map__text__first {
-  margin-top: 8rem;
+.map__text__second {
+  width: 20%;
 }
+.map__text__third {
+  width: 50%;
+}
+
 .map__text__second {
   margin-top: 2rem;
 }

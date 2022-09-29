@@ -12,7 +12,7 @@ import { and } from 'src/utils/css';
 import { EmployeeTile } from 'src/employees';
 
 const stockholmBlobUrl = require('./assets/stockholm.png');
-const timelineUrl = require('./assets/timeline.svg');
+const timelineUrl = require('./assets/RoadmapStockholm.png');
 const mapUrl = require('../../public/illustrations/map-norway-sweeden.png');
 
 export function StockholmInfoBlock() {
@@ -115,11 +115,14 @@ const Stockholm: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <p className={and('lead', style.map__text__lead)}>
               Vår vision är att skapa förtroende, transparens och jämlikhet till europeiska 
               företag. Vi började i Norge med kontor i Norges tre största städer. Sverige och 
-              Stockholm är nu nästa naturliga steg. Dessutom är Stockholm en spännande marknad 
+              Stockholm är nu nästa naturliga steg.
+            </p>
+
+            <p className={and('first', style.map__text__first)}>
+              Dessutom är Stockholm en spännande marknad 
               med spännande kunder, spännande kompetensmiljöer och studieorter och inte minst 
               spännande människor.
             </p>
-
     
 
             <img
