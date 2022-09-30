@@ -1,6 +1,7 @@
 ---
 meta_title: Design av ekspertløsninger for bompengesektoren
 meta_description: Intervju med Caroline hos Statens vegvesen
+imageUrl: /images/customer/interviews/caroline.png
 imageAltText: Caroline hos Statens vegvesen
 project: Statens vegvesen
 variant: Caroline
