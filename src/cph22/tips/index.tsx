@@ -99,7 +99,7 @@ export default function Tips({
 
             <ul>
               <li>Sykkeltur rundt i København, påmelding til Kristin</li>
-              <li>Hydrering i Kødbyen, Tefre booker bord</li>
+              <li>Hydrering ved en liflig bar</li>
               <li>Avslapning i hotellets hage</li>
               <li>
                 Se Liverpool-Everton på en pub klokka 13:30, gi et vink til

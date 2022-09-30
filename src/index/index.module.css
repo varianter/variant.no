@@ -27,26 +27,6 @@
   }
 }
 
-.omVariant__title {
-  font-weight: bold;
-  margin: 4.8rem 0;
-  font-size: 4.8rem;
-
-  background: linear-gradient(
-    120deg,
-    var(--color-primary),
-    var(--color-secondary1),
-    var(--color-secondary2)
-  );
-  background-size: 130% 130%;
-  background-clip: text;
-  color: rgba(0, 0, 0, 0);
-  background-position-x: 60%;
-}
-.omVariant__title[data-no-animation='true'] {
-  animation: none;
-}
-
 .omVariant__p1 {
   margin: 2rem 3rem;
   font-size: 1.5rem;
@@ -83,6 +63,10 @@
   font-size: 1.5rem;
 }
 
+.join {
+  margin: 0 1rem;
+}
+
 .join_title {
   text-align: center;
   margin: 2rem auto;
@@ -112,7 +96,6 @@
 
 @media (max-width: 500px) {
   .join {
-    margin: 0 1rem;
     text-align: center;
   }
   .join > p {
@@ -163,42 +146,43 @@
   }
 }
 
-.cases {
-  margin-top: 8.25rem;
-  padding: 0 1rem;
+.two-column-section {
+  margin: 8.25rem 1rem 0;
 }
-.cases h2 {
+.two-column-section h2 {
   text-align: center;
   margin-bottom: 2.25rem;
 }
-.cases > p {
+.two-column-section > p {
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
-.cases article:nth-child(2n) {
+.two-column-section article:nth-child(2n) {
   direction: rtl;
 }
-.cases__case {
+.two-column-section__item {
   display: grid;
-  gap: 2rem 2rem;
+  gap: 2rem;
   padding: 2rem 0;
-  grid-template-columns: minmax(20rem, 2fr) minmax(23rem, 1fr);
+  grid-template-columns: minmax(15rem, 1fr) minmax(20rem, 1fr);
+}
+.two-column-section__item--centered {
+  align-items: center;
 }
 @media (max-width: 600px) {
-  .cases__case {
+  .two-column-section__item {
     grid-template-columns: 1fr;
   }
 }
-.cases__caseContent {
+.two-column-section__item__content {
   order: 1;
   direction: ltr;
 }
-.cases__caseContent h4 {
+.two-column-section__item__content h4 {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
 }
-.cases__caseContent a {
-  font-weight: 500;
-  text-decoration-color: var(--color-primary);
+.two-column-section__item__content a {
   text-underline-offset: 0.3rem;
   display: block;
   margin-top: 1.2rem;
@@ -213,7 +197,7 @@
   position: relative;
   z-index: 2;
 
-  margin: 8.25rem 0 4.25rem;
+  margin: 8.25rem 1rem 4.25rem;
 }
 
 .employees a {
@@ -258,6 +242,10 @@
 
 .employees__button {
   grid-area: button;
+}
+
+.customer {
+  margin-top: 5rem;
 }
 
 .customer__header h2 {

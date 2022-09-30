@@ -15,23 +15,6 @@
   margin-bottom: 1rem;
 }
 
-.jobArticle__title {
-  margin: 1.8rem 0;
-  padding-right: 3rem;
-  font-weight: bold;
-
-  background: linear-gradient(
-    to right,
-    var(--color-primary),
-    var(--color-secondary1),
-    var(--color-secondary2)
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
-  color: rgba(0, 0, 0, 0);
-}
-
 .button__bottom {
   grid-area: d;
   margin: 4rem 0 0;

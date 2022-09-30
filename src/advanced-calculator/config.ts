@@ -12,8 +12,15 @@ export type PayscaleSingleYear = {
   [experienceYear: string]: string;
 };
 
+export type Degree = 'masters' | 'bachelor';
+
 export type HistoricalPayscaleData = {
   [payscaleYear: string]: PayscaleSingleYear;
+};
+
+export const startSalery: Record<Degree, number> = {
+  bachelor: 560000,
+  masters: 590000,
 };
 
 export const payscale = {

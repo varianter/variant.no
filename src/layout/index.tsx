@@ -12,6 +12,7 @@ type LayoutProps = {
   title?: string;
   fullWidth?: boolean;
   crazy?: boolean;
+  homepage?: boolean;
   zenMode?: boolean;
 };
 
@@ -20,6 +21,7 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
   crazy = false,
+  homepage = false,
   zenMode = false,
 }) => {
   const modalRef = React.createRef<HTMLDivElement>();
@@ -69,13 +71,27 @@ const Layout: React.FC<LayoutProps> = ({
         )}
       >
         <header className={style.header}>
-          <h1 className={style.header__logo}>
-            <Link href="/">
-              <a>
-                <img src={require('./variant.svg')} alt="Variant" />
-              </a>
-            </Link>
-          </h1>
+          {homepage ? (
+            <h1 className={style.header__logo}>
+              <Link href="/">
+                <a>
+                  <img src={require('./variant.svg')} alt="Variant" />
+                </a>
+              </Link>
+            </h1>
+          ) : (
+            <div className={style.header__logo}>
+              <Link href="/">
+                <a>
+                  <img
+                    src={require('./variant.svg')}
+                    alt="Variant"
+                    aria-label="Variant startside"
+                  />
+                </a>
+              </Link>
+            </div>
+          )}
 
           {!zenMode && (
             <>
@@ -146,6 +162,11 @@ const Layout: React.FC<LayoutProps> = ({
                   <li>
                     <Link href="/ansatte">
                       <a tabIndex={tabIndex}>Alle varianter</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kalkulator">
+                      <a tabIndex={tabIndex}>Lønnskalkulator</a>
                     </Link>
                   </li>
                   <li id="dont_show">
@@ -274,8 +295,7 @@ const Layout: React.FC<LayoutProps> = ({
               >
                 Spaces Vaskerelven
               </a>{' '}
-              i Bergen. Kom innom for en kopp kaffe eller bare en hyggelig
-              prat.
+              i Bergen. Kom innom for en kopp kaffe eller bare en hyggelig prat.
             </p>
           </div>
         </div>
@@ -298,7 +318,8 @@ const Layout: React.FC<LayoutProps> = ({
             <address>
               <strong>Variant Oslo AS</strong>
               <br />
-              Tollbugata 24<br />
+              Tollbugata 24
+              <br />
               0157 Oslo
             </address>
           </div>

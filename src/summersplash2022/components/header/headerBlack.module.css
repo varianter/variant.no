@@ -1,0 +1,193 @@
+.main {
+  position: relative;
+}
+.main--overflow {
+  overflow-x: hidden;
+}
+
+.main__inner {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-left: 0px;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.main__innerFullWidth {
+  max-width: unset;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding-right: 7.4rem Commented out when adding temporary calculator url */
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.header__logo img {
+  display: block;
+  margin: 1.2rem;
+  height: 0.9rem;
+  margin-left: 0px;
+}
+
+.header__nav {
+  flex: 1;
+}
+
+.header__nav__ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.4s;
+}
+
+.header__nav__ul li:last-child {
+  display: none;
+}
+
+.header__nav a {
+  display: block;
+  color: var(--color-standard__white--text);
+  text-decoration: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
+
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+.header__nav li:nth-child(2n) a {
+  background-position-x: right;
+}
+.header__nav a:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+.burgerButtonContainer {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.burgerButtonContainer:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(21, 156, 228, 0.4);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: relative;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: var(--color-secondary1);
+  margin: 0.29rem 0;
+  transition: 0.3s;
+}
+
+.bar1_change,
+.bar2_change,
+.bar3_change {
+  composes: bar1;
+}
+
+.bar1_change {
+  -webkit-transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+  transform: rotate(-45deg) translate(-0.35rem, 0.35rem);
+}
+.bar2_change {
+  opacity: 0;
+}
+.bar3_change {
+  -webkit-transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+  transform: rotate(45deg) translate(-0.35rem, -0.35rem);
+}
+
+@media (max-width: 850px) {
+  .header__nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translateX(0%);
+    transition: transform 450ms ease-in-out,
+      background-color 300ms ease-in-out 300ms;
+    z-index: 99;
+  }
+
+  .header__nav__hidden {
+    transform: translateX(100%);
+    transition: transform 450ms ease-in-out, background-color 100ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .header__nav__ul {
+    width: 60%;
+    position: fixed;
+    right: 0rem;
+    height: 100%;
+    z-index: 100;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--color-secondary4__tint2);
+  }
+
+  .header__nav__ul li:last-child {
+    display: flex;
+  }
+
+  .header__nav__ul li a {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: Recoleta, serif;
+    color: var(--color-standard__black);
+  }
+
+  .header__nav__ul li:first-child {
+    margin-top: 3.5rem;
+  }
+
+  .header__nav__ul li {
+    margin-top: 0.5rem;
+  }
+
+  .burgerButtonContainer {
+    display: block;
+    z-index: 101;
+  }
+
+  .header__logo img {
+    margin-top: 1.85rem;
+  }
+}
+
+@keyframes backgroundPos {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}

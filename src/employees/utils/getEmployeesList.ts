@@ -78,12 +78,13 @@ function massageEmployee(employee: ApiEmployee) {
     fullName: employee.name,
     name: employee.name.split(' ')[0],
     email: employee.email,
-    telephone: (employee.telephone.startsWith('+47')
-      ? employee.telephone.slice(3)
-      : employee.telephone
-    )
-      .replace(/\s/g, '')
-      .replace(/(\d{3})(\d{2})/g, '$1 $2 '),
+    telephone:
+      (employee.telephone?.startsWith('+47')
+        ? employee.telephone?.slice(3)
+        : employee.telephone
+      )
+        ?.replace(/\s/g, '')
+        ?.replace(/(\d{2})(\d{2})(\d{2})(\d{2})/g, '$1 $2 $3 $4') ?? null,
     officeName: employee.office_name,
   };
 }
