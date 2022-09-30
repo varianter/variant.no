@@ -6,7 +6,7 @@ imageAltText: Odd Morten hos FRAM
 project: FRAM
 variant: Odd Morten
 variantEmail: oms@variant.no
-variantTitle: Utvikler, Trondheim
+variantTitle: Prosjektleder, Trondheim
 location: Trondheim
 quote: «På den andre siden er det fascinerende å se at helt forskjellige prosjekter innen helt forskjellige domener ofte har mange av de samme utfordringene.»
 ---

@@ -66,12 +66,6 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
 
     return (
       <Layout title={assignment.meta_title}>
-        {/* <SayHi
-          className={style.sayhi}
-          href="/jobs"
-          rel="noopener"
-          text="Bli en variant!"
-        /> */}
         <section className={style.project}>
           <div className={style.project__introduction}>
             <h2>{assignment.meta_customer}</h2>
@@ -248,9 +242,6 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
               </div>
             </div>
           </div>
-          {/* <div className={style.quote}>
-            <blockquote>{assignment.meta_quote}</blockquote>
-          </div> */}
         </section>
       </Layout>
     );
