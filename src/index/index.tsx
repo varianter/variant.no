@@ -211,6 +211,95 @@ const Home = ({
         </article>
       </section>
 
+      <section className={style.customer}>
+        <header className={style.customer__header}>
+          <h2>Variantarbeid</h2>
+          <p>
+            Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
+            prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
+            mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
+          </p>
+        </header>
+        <div className={style.customer__wrapper}>
+          <DecorativeBoxes
+            box1Properties={{
+              color: '#FFC4BC',
+              position: 'top-middle',
+            }}
+            box2Properties={{
+              color: '#B7B4DE',
+              position: 'bottom-left',
+            }}
+            boxSize={70}
+          >
+            <img src="images/prosjekt-svv-1.png" alt="case" />
+          </DecorativeBoxes>
+          <div>
+            <h3>Statens vegvesen</h3>
+            <p>
+              Hos Statens vegvesen har vi jobbet med ulike prosjekter som har
+              involvert både design, utvikling og prosjektledelse. Vi har jobbet
+              med flere spennende ting, som systemer for inspeksjon av tunneller
+              og gjennomføring og oppfølging av Trafikksikkerhetsinspeksjoner.
+            </p>
+            <a href="/kunde/svv">Les mer</a>
+          </div>
+        </div>
+        <div className={style.customer__wrapper}>
+          <DecorativeBoxes
+            box1Properties={{
+              color: '#CDF8F4',
+              position: 'top-right',
+            }}
+            box2Properties={{
+              color: '#FFD0C9',
+              position: 'bottom-middle',
+            }}
+            boxSize={70}
+          >
+            <img src="images/prosjekt-sikt-2.png" alt="case" />
+          </DecorativeBoxes>
+          <div>
+            <h3>Sikt</h3>
+            <p>
+              Variant har gjennom flere ulike initiativ bistått Sikt med
+              konseptutvikling, koding og strategisk design. Gjennom det har vi
+              vært med på å etablere Sikt sin egen designlab, skape verdi med
+              tilgjengeliggjøring av offentlige data, og legge til rette for
+              fremtidige læringsopplevelser.
+            </p>
+            <a href="/kunde/sikt">Les mer</a>
+          </div>
+        </div>
+        <div className={style.customer__wrapper}>
+          <DecorativeBoxes
+            box1Properties={{
+              color: '#F5A4C4',
+              position: 'top-middle',
+            }}
+            box2Properties={{
+              color: '#CDF8F4',
+              position: 'bottom-left',
+            }}
+            boxSize={70}
+          >
+            <img src="images/prosjekt-fram-3.png" alt="case" />
+          </DecorativeBoxes>
+          <div>
+            <h3>FRAM</h3>
+            <p>
+              Sammen med FRAM, merkevaren til kollektivtilbudet hos Møre og
+              Romsdal fylkeskommune, jobber vi med å modernisere kunde- og
+              brukerflatene deres. Gjennom bruk av blant annet NFC-teknologi og
+              en Entur-basert plattform bidrar vi med å sørge for at overgangen
+              fra gammel til ny teknologi skal oppleves som friksjonsfritt, samt
+              med å utvikle nettbutikk og en egen FRAM-app.
+            </p>
+            <a href="/kunde/fram">Les mer</a>
+          </div>
+        </div>
+      </section>
+
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
