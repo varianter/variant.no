@@ -13,6 +13,7 @@ import { EmployeeItem } from 'src/employees/types';
 import { CaseJSON } from 'src/case/Case';
 import { HighlightedItemsLists } from 'src/rss/service';
 import PageTitle from '@components/page-title';
+import { JobLandingpage } from 'src/summersplash2022';
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -103,7 +104,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
       </section>
 
       <section className={style.bergen}>
-        <BergenInfoBlock />
+        <JobLandingpage />
       </section>
 
       <section className={style.join}>
