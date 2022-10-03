@@ -4,7 +4,6 @@ import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useMemo } from 'react';
-import { BergenInfoBlock } from 'src/bergen';
 import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
