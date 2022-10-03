@@ -1,5 +1,9 @@
+import Arrow from '@components/arrow';
 import Head from 'next/head';
+import Link from 'next/link';
 import Content from './Content';
+import style from './landingpage.module.css';
+import img from './img/section1Blob.png';
 
 const favicon = require('@variant/profile/lib/logo/favicon.png');
 
@@ -46,5 +50,28 @@ const Summersplash2022 = () => {
     </>
   );
 };
+
+export function JobLandingpage() {
+  return (
+    <div className={style.infoBlock}>
+      <img
+        className={style.infoBlock__blob}
+        src={img}
+        alt="Varianter under felles variantdag"
+      />
+
+      <h2 className={style.infoBlock__title}>
+        <Link href="/nyutdannet">
+          <a className={style.infoBlock__link}>
+            <span className={style.infoBlock__text}>
+              Info om jobb for studenter
+            </span>
+            <Arrow className={style.infoBlock__arrow} color="standard__white" />
+          </a>
+        </Link>
+      </h2>
+    </div>
+  );
+}
 
 export default Summersplash2022;

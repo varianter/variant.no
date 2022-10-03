@@ -1,0 +1,29 @@
+.infoBlock {
+  display: flex;
+  gap: 2rem;
+}
+
+.infoBlock__text,
+.infoBlock__link {
+  color: white;
+  text-decoration-color: white;
+}
+
+.infoBlock__blob {
+  width: 60%;
+}
+
+@media (max-width: 650px) {
+  .infoBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoBlock__blob {
+    width: 100%;
+  }
+
+  .infoBlock__title {
+    margin-left: 6rem;
+  }
+}
