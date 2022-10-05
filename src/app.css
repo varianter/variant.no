@@ -1,3 +1,6 @@
+@import '~@variant/profile/lib/colors/index.module.css';
+@import '~@variant/profile/lib/typography/index.module.css';
+
 html {
   box-sizing: border-box;
 }
@@ -8,116 +11,6 @@ html {
 }
 body {
   margin: 0;
-}
-
-@import '~@variant/profile/lib/colors/index.module.css';
-@import '~@variant/profile/lib/typography/index.module.css';
-
-@import url('//hello.myfonts.net/count/3a95ac');
-/**
- * @license
- * MyFonts Webfont Build ID 3839404, 2019-11-20T13:52:19-0500
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed webfont(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: Recoleta-Regular by Latinotype
- * URL: https://www.myfonts.com/fonts/recoleta/latinotype/recoleta/regular/
- * 
- * Licensed pageviews: 10,000
- * /fonts/recoleta copyright: Copyright &#x00A9; 2018 by Jorge Cisterna. All rights reserved.
- * 
- * © 2019 MyFonts Inc
-*/
-
-@font-face {
-  /* Regular */
-  font-family: 'Recoleta';
-  src: url('/fonts/recoleta/3A95AC_6_0.eot');
-  src: url('/fonts/recoleta/3A95AC_6_0.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/recoleta/3A95AC_6_0.woff2') format('woff2'),
-    url('/fonts/recoleta/3A95AC_6_0.woff') format('woff'),
-    url('/fonts/recoleta/3A95AC_6_0.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-}
-
-@font-face {
-  /* Medium */
-  font-family: 'Recoleta';
-  src: url('/fonts/recoleta/3A95AC_3_0.eot');
-  src: url('/fonts/recoleta/3A95AC_3_0.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/recoleta/3A95AC_3_0.woff2') format('woff2'),
-    url('/fonts/recoleta/3A95AC_3_0.woff') format('woff'),
-    url('/fonts/recoleta/3A95AC_3_0.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-}
-
-/*
-*  This font software is the property of Commercial Type.
-*
-*  You may not modify the font software, use it on another website, or install it on a computer.
-*
-*  License information is available at http://commercialtype.com/eula
-*  For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
-*
-*  Copyright (C) 2020 Schwartzco Inc.
-*  License: 2002-YKRJPJ     
-*/
-
-@font-face {
-  font-family: 'Graphik Web';
-  src: url('/fonts/graphik/Graphik-MediumItalic-Web.woff2') format('woff2'),
-    url('/fonts/graphik/Graphik-MediumItalic-Web.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-stretch: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Graphik Web';
-  src: url('/fonts/graphik/Graphik-Medium-Web.woff2') format('woff2'),
-    url('/fonts/graphik/Graphik-Medium-Web.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Graphik Web';
-  src: url('/fonts/graphik/Graphik-RegularItalic-Web.woff2') format('woff2'),
-    url('/fonts/graphik/Graphik-RegularItalic-Web.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Graphik Web';
-  src: url('/fonts/graphik/Graphik-Regular-Web.woff2') format('woff2'),
-    url('/fonts/graphik/Graphik-Regular-Web.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Graphik Web';
-  src: url('/fonts/Graphik-LightItalic-Web.woff2') format('woff2'),
-    url('/fonts/Graphik-LightItalic-Web.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-  font-stretch: normal;
-  font-display: swap;
 }
 
 #root {
