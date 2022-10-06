@@ -49,6 +49,10 @@
   align-items: center;
 }
 
+.employee__cv__link:hover {
+  cursor: pointer;
+}
+
 .employee img {
   width: var(--image-width);
   height: var(--image-width);
@@ -102,20 +106,8 @@
   color: var(--color-standard__white--text);
   padding: 0.6rem 1.2rem;
   line-height: 1;
+}
 
-  background: linear-gradient(
-    to right,
-    var(--color-secondary1),
-    var(--color-primary__shade1),
-    var(--color-secondary2)
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
-}
-.employee__phone:hover {
-  color: rgba(0, 0, 0, 0);
-}
 @keyframes backgroundPos {
   0% {
     background-position: left;
@@ -134,16 +126,6 @@
   color: var(--color-standard__white--text);
   padding: 0.4rem 1.2rem;
   line-height: 1;
-
-  background: linear-gradient(
-    to right,
-    var(--color-secondary1),
-    var(--color-primary__shade1),
-    var(--color-secondary2)
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  transition: color 0.2s ease-in-out;
 }
 
 .employee__jobsLinkContainer {
@@ -190,4 +172,20 @@
     font-size: 1.6rem;
     line-height: 2rem;
   }
+}
+
+.fancy__text {
+  background: linear-gradient(
+    to right,
+    var(--color-secondary1),
+    var(--color-primary__shade1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+}
+
+.fancy__text:hover {
+  color: rgba(0, 0, 0, 0);
 }

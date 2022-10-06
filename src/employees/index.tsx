@@ -137,24 +137,28 @@ export const EmployeeTile = ({
   employee: { fullName, name, telephone, email, imageUrl, officeName },
 }: PropsWithChildren<{ employee: EmployeeItem }>) => {
   return (
-    <div
+  <div
       className={style.employee}
       style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
-    >
-      <Image
-        width={300}
-        height={300}
-        alt={`Bilde av ${name}`}
-        src={imageUrl}
-        blurDataURL={blurDataUrl}
-        placeholder="blur"
-      />
-      <h2 className={and(style.employee__name, 'fancy')}>{fullName}</h2>
+      >
+      <Link href={`/ansatte/cv/${fullName.toLocaleLowerCase()}`}>
+        <div className={and(style.employee__cv__link, style.fancy__text)}>
+            <Image
+              width={300}
+              height={300}
+              alt={`Bilde av ${name}`}
+              src={imageUrl}
+              blurDataURL={blurDataUrl}
+              placeholder="blur"
+              />
+            <h2 className={and(style.employee__name, 'fancy')}>{fullName}</h2>
+        </div>
+      </Link>
       <div className={style.employee__office}>{officeName}</div>
       {telephone ? (
         <a
           href={`tel:+47${telephone.replace(/\s*/g, '')}`}
-          className={style.employee__phone}
+          className={and(style.employee__phone, style.fancy__text)}
         >
           📞 {telephone}
         </a>
