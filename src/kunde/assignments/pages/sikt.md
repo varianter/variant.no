@@ -53,7 +53,7 @@ meta_quote:
 
 ##### Datadeling i Feide
 
-Feide er en innarbeidet og ledende tjeneste innen identifisering og autentisering av barn og unge i utdannings- og kunnskapssektoren i Norge. Variant hjelper Sikt med videreutviklingen av funksjonaliteten i tjenesten, og med å navigere i et nytt og fremmed landskap der det er store forskjeller i modenhet og forståelse for dette området.
+Feide er en innarbeidet og ledende tjeneste innen identifisering og autentisering av barn og unge i utdannings- og kunnskapssektoren i Norge. Variant hjelper Sikt med videreutviklingen av funksjonaliteten i tjenesten, og med å navigere i et nytt og fremmed landskap.
 
 ##### Datadrevet Sikt
 
