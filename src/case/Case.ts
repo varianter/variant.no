@@ -3,4 +3,5 @@ export type CaseJSON = {
   content: string;
   case_image: string;
   image_alt: string;
+  href: string;
 };

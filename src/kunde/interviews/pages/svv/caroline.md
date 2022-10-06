@@ -1,13 +1,14 @@
 ---
 meta_title: Design av ekspertløsninger for bompengesektoren
 meta_description: Intervju med Caroline hos Statens vegvesen
+imageUrl: /images/customer/interviews/caroline.png
 imageAltText: Caroline hos Statens vegvesen
 project: Statens vegvesen
 variant: Caroline
 variantEmail: cs@variant.no
+variantTitle: Designer, Oslo
 location: Oslo
-durationFrom: 01.2022
-durationTill:
+quote: «Til det daglige jobber jeg i stor grad med designarbeid. Det varierer hva jeg gjør til daglig, men over en periode er jeg innom intervjuer med brukere, behovskartlegging, skissering og prototyping, og brukertesting.»
 ---
 
 ## Design av ekspertløsninger for bompengesektoren

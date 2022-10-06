@@ -36,8 +36,10 @@
   line-height: 1.6;
 }
 .rendered__markdown__wrapper :global(.variant) {
-  padding: 3rem;
+  padding: 5rem;
+  padding-bottom: 10rem;
   margin-right: -5rem;
+  margin-left: 1rem;
   float: right;
   display: flex;
   flex-direction: column;
@@ -125,6 +127,10 @@
   content: '';
   display: block;
   padding-top: 100%;
+}
+
+.rendered__markdown__wrapper blockquote {
+  max-width: 40rem;
 }
 
 @media (max-width: 1200px) {

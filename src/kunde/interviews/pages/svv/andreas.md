@@ -1,13 +1,14 @@
 ---
 meta_title: Verktøy for gjennomføring og oppfølging av Trafikksikkerhetsinspeksjoner
 meta_description: Intervju med Andreas hos Statens vegvesen
+imageUrl: /images/customer/interviews/andreas.png
 imageAltText: Andreas hos Statens vegvesen
 project: Statens vegvesen
 variant: Andreas
 variantEmail: andreas@variant.no
+variantTitle: Designer, Bergen
 location: Bergen/remote
-durationFrom: 01.2022
-durationTill:
+quote: «Vi har fått bryne oss på utfordringer knyttet til deling av design-komponenter laget for ulike produkter, og hvordan man kan etablere delingsprosesser for designkomponenter og designsystem.»
 ---
 
 ## Verktøy for gjennomføring og oppfølging av Trafikksikkerhets- inspeksjoner

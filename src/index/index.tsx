@@ -32,11 +32,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
-          {/* Link leading to project sub-pages is commented 
-          out for now, as the sub-pages are not ready yet. */}
-          {/* <Link href={'/'}>
+          <Link href={caseItem.href}>
             <a title="Prosjektinfo">Les mer</a>
-          </Link> */}
+          </Link>
         </div>
         <DecorativeBoxes
           box1Properties={{
@@ -290,6 +288,16 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </article>
       </section>
 
+      <section className={style['two-column-section']}>
+        <h2 id="prosjekter">Variantarbeid</h2>
+        <p>
+          Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
+          prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
+          mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
+        </p>
+        {cases}
+      </section>
+
       <section className={style.feed}>
         <header className={style.feed__header}>
           <h2 id="feed">Meninger og sånn</h2>
@@ -331,16 +339,6 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         ) : (
           <ButtonNextLink href="/ansatte">Se alle varianter</ButtonNextLink>
         )}
-      </section>
-
-      <section className={style['two-column-section']}>
-        <h2 id="prosjekter">Variantarbeid</h2>
-        <p>
-          Vi gjør research, utvikler konsepter, skriver kodelinjer, leder
-          prosjekter og prosesser, og rådgir. Lista er lang, og vi bidrar med
-          mye. Les gjerne mer om noen av prosjektene vi har jobbet i!
-        </p>
-        {cases}
       </section>
     </Layout>
   );
