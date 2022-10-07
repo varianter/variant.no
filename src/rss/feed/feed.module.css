@@ -171,6 +171,7 @@
   align-content: center;
   border: none;
   transition: all 100ms ease;
+  cursor: pointer;
 }
 .player__button:active {
   transform: scale(0.8);
