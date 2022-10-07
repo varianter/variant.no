@@ -1,45 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
-function hasWindow() {
-  return typeof window !== 'undefined';
-}
+export const useMediaQuery = (query: string) => {
+  const [targetReached, setTargetReached] = useState(false);
 
-export const useMediaQuery = (mediaQuery: string) => {
-  const [isMatched, setMatched] = useState(() => {
-    if (!hasWindow()) return false;
-    return Boolean(window.matchMedia(mediaQuery).matches);
-  });
+  const updateTarget = useCallback((e: MediaQueryListEvent) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
 
   useEffect(() => {
-    if (!hasWindow()) return;
-    const mediaQueryList = window.matchMedia(mediaQuery);
-    const documentChangeHandler = () =>
-      setMatched(Boolean(mediaQueryList.matches));
-    listenTo(mediaQueryList, documentChangeHandler);
+    const media = window.matchMedia(query);
+    media.addEventListener('change', updateTarget);
 
-    documentChangeHandler();
-    return () => removeListener(mediaQueryList, documentChangeHandler);
-  }, [mediaQuery]);
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
 
-  return isMatched;
+    return () => media.removeEventListener('change', updateTarget);
+  }, [query, updateTarget]);
+
+  return targetReached;
 };
-
-function listenTo(
-  matcher: MediaQueryList,
-  cb: (ev: MediaQueryListEvent) => void,
-) {
-  if ('addEventListener' in (matcher as any)) {
-    return matcher.addEventListener('change', cb);
-  }
-  return matcher.addListener(cb);
-}
-
-function removeListener(
-  matcher: MediaQueryList,
-  cb: (ev: MediaQueryListEvent) => void,
-) {
-  if ('removeEventListener' in (matcher as any)) {
-    return matcher.removeEventListener('change', cb);
-  }
-  return matcher.removeListener(cb);
-}

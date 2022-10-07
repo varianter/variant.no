@@ -32,10 +32,13 @@ const Layout = ({
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
   const closeRef = React.createRef<HTMLButtonElement>();
-  const { isMenuVisible, setMenuVisible, tabIndex } = useTogglableBurgerMenu(
+  const isNotHamburgerMode =
+      useMediaQuery(`(min-width: 601px)`) ?? true;
+  const { isMenuVisible, setMenuVisible } = useTogglableBurgerMenu(
     modalRef,
     navRef,
     closeRef,
+      isNotHamburgerMode,
   );
 
   const mainClass = and(
@@ -43,6 +46,8 @@ const Layout = ({
     !zenMode ? style['main--overflow'] : undefined,
     zenMode ? style['main--zenMode'] : undefined,
   );
+
+  const LogoWrapper = homepage ? 'h1' : 'div';
 
   return (
     <div
@@ -76,27 +81,16 @@ const Layout = ({
         )}
       >
         <header className={style.header}>
-          {homepage ? (
-            <h1 className={style.header__logo}>
-              <Link href="/">
-                <a>
-                  <img src={require('./variant.svg')} alt="Variant" />
-                </a>
-              </Link>
-            </h1>
-          ) : (
-            <div className={style.header__logo}>
-              <Link href="/">
-                <a>
-                  <img
+          <LogoWrapper className={style.header__logo}>
+            <Link href="/">
+              <a aria-label="Variant startside" aria-current={homepage ? 'page' : undefined}>
+                <img
                     src={require('./variant.svg')}
                     alt="Variant"
-                    aria-label="Variant startside"
-                  />
-                </a>
-              </Link>
-            </div>
-          )}
+                />
+              </a>
+            </Link>
+          </LogoWrapper>
 
           {!zenMode && (
             <>
@@ -109,6 +103,7 @@ const Layout = ({
                 ref={closeRef}
                 aria-labelledby="menu-label"
                 aria-expanded={isMenuVisible}
+                aria-controls="menu-id"
                 onClick={() => setMenuVisible(!isMenuVisible)}
               >
                 <div
@@ -136,21 +131,21 @@ const Layout = ({
                   style.header__nav,
                   isMenuVisible ? '' : style.header__nav__hidden,
                 )}
+                id="menu-id"
                 aria-labelledby="menu-label"
-                aria-hidden={!isMenuVisible}
+                aria-hidden={isNotHamburgerMode ? undefined : !isMenuVisible}
                 ref={modalRef}
               >
-                <ul className={style.header__nav__ul} ref={navRef}>
+                <ul className={style.header__nav__ul} hidden={!isNotHamburgerMode && !isMenuVisible} ref={navRef}>
                   <li>
                     <Link href="/jobs">
-                      <a tabIndex={tabIndex}>Bli en variant</a>
+                      <a>Bli en variant</a>
                     </Link>
                   </li>
                   <li>
                     <a
                       href="http://handbook.variant.no"
                       rel="noopener"
-                      tabIndex={tabIndex}
                     >
                       Håndbok
                     </a>
@@ -159,26 +154,24 @@ const Layout = ({
                     <a
                       href="http://variant.blog"
                       rel="noopener"
-                      tabIndex={tabIndex}
                     >
                       Blogg
                     </a>
                   </li>
                   <li>
                     <Link href="/ansatte">
-                      <a tabIndex={tabIndex}>Alle varianter</a>
+                      <a>Alle varianter</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/kalkulator">
-                      <a tabIndex={tabIndex}>Lønnskalkulator</a>
+                      <a>Lønnskalkulator</a>
                     </Link>
                   </li>
                   <li id="dont_show">
                     <a
                       href="https://twitter.com/intent/tweet?screen_name=variant_as"
                       rel="noopener"
-                      tabIndex={tabIndex}
                     >
                       Si hallo!
                     </a>
@@ -356,16 +349,11 @@ function useTogglableBurgerMenu<
   modalRef: React.RefObject<T>,
   ulRef: React.RefObject<U>,
   closeButton: React.RefObject<R>,
-  breakpointMinWidth = '600px',
+  isNotHamburgerMode: boolean,
 ) {
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const [tabIndex, setTabIndex] = useState(0);
-  const isNotHamburgerMode =
-    useMediaQuery(`(min-width: ${breakpointMinWidth})`) ?? true;
 
   useEffect(() => {
-    setTabIndex(isMenuVisible || isNotHamburgerMode ? 0 : -1);
-
     // Avoid scrolling when menu is visible.
     if (isMenuVisible) {
       document.body.style.overflow = 'hidden';
@@ -444,6 +432,5 @@ function useTogglableBurgerMenu<
   return {
     isMenuVisible,
     setMenuVisible,
-    tabIndex,
   };
 }
