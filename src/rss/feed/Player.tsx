@@ -47,6 +47,7 @@ export default function AudioPlayer({
 }) {
   const audioElement = useRef<HTMLAudioElement>(null);
   const [currentState, setCurrentState] = useState<States>('INITIAL');
+  const [previousState, setPreviousState] = useState<States>('INITIAL');
   const [trackProgress, setTrackProgress] = useState(0);
 
   useEffect(() => {
@@ -73,10 +74,14 @@ export default function AudioPlayer({
 
   const buttonHandler = () => {
     setCurrentState(machine[currentState].next);
+    setPreviousState(machine[currentState].next);
   };
 
   const onScrub = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target as HTMLInputElement;
+    // INFO: This is needed to avoid flickering playback when scrubbing
+    // due to React firing onChange during change and not as native onChange
+    // when actually done with change
     setCurrentState('PAUSED');
 
     if (audioElement.current) {
@@ -86,8 +91,12 @@ export default function AudioPlayer({
   };
 
   const onScrubEnd = () => {
-    setCurrentState('PLAYING');
+    // INFO: Reset play/pause state when scrubbing are actually done
+    setCurrentState(previousState);
   };
+
+  const formattedPosition = formatDuration((duration / 100) * trackProgress);
+  const formattedDuration = formatDuration(duration);
 
   return (
     <div className={style.player}>
@@ -97,7 +106,7 @@ export default function AudioPlayer({
 
       <button
         onClick={buttonHandler}
-        aria-label="Play/Pause"
+        aria-label={currentState === 'PLAYING' ? "Pause" : "Play"}
         aria-pressed={currentState === 'PLAYING'}
         className={style.player__button}
         data-state={currentState}
@@ -109,13 +118,13 @@ export default function AudioPlayer({
       {withScrubber ? (
         <div className={style.player__scrubber}>
           <div className={style.player__duration}>
-            <span>{formatDuration((duration / 100) * trackProgress)}</span>
+            <span>{formattedPosition}</span>
             <span>/</span>
-            <span>{formatDuration(duration)}</span>
+            <span>{formattedDuration}</span>
           </div>
           <input
             type="range"
-            aria-label="Posisjon i lydsporet"
+            aria-label={`Posisjon i lydsporet ${formattedPosition} av ${formattedDuration}`}
             value={trackProgress}
             step="1"
             min="0"
