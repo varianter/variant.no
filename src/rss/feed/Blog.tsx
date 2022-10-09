@@ -6,7 +6,7 @@ import { truncateOnSpace } from './utils';
 
 export default function Blog({ item }: { item: BlogItem }) {
   return (
-    <div className={and(style.card, style['card--blog'])}>
+    <a className={and(style.card, style['card--blog'])} href={item.url} target="_blank">
       <div className={style.media}>
         {item.imageCoverUrl && (
           <BaseBlob
@@ -24,20 +24,14 @@ export default function Blog({ item }: { item: BlogItem }) {
         )}
       </div>
       <div className={style.text}>
-        <a
-          key={item.url}
-          className={style.link}
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={style.link}>
           <div className={style.card__title__container}>
             <h3 className={style.title}>{item.title} </h3>
             <span className={`${style.category} ${style['category--blog']}`}>
               Blogg
             </span>
           </div>
-        </a>
+        </div>
         <div className={style.published}>
           Skrevet av {item.creator}, {item.publishDate}
         </div>
@@ -45,15 +39,16 @@ export default function Blog({ item }: { item: BlogItem }) {
           {truncateOnSpace(item.description, 180)}
         </p>
         <div className={style.card__link}>
-          <a href={item.url}>Les artikkel</a>
+          Les artikkel
           <img
             src="/images/arrow.svg"
             alt="Pil mot høyre"
             loading="lazy"
             decoding="async"
+            aria-hidden
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 }

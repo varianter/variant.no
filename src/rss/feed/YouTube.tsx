@@ -6,7 +6,7 @@ import { truncateOnSpace } from './utils';
 
 export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
-    <div className={and(style.card, style['card--youtube'])}>
+    <a className={and(style.card, style['card--youtube'])} href={item.url} target="_blank">
       <figure className={style.media}>
         <BaseBlob
           height={200}
@@ -22,34 +22,29 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         />
       </figure>
       <div className={style.text}>
-        <a
-          key={item.url}
-          className={style.link}
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={style.link}>
           <div className={style.card__title__container}>
             <h3 className={style.title}>{item.title} </h3>
             <span className={`${style.category} ${style['category--video']}`}>
               Video
             </span>
           </div>
-        </a>
+        </div>
         <div className={style.published}>Publisert {item.publishDate}</div>
         <p className={style.summary}>
           {truncateOnSpace(item.description, 180)}
         </p>
         <div className={style.card__link}>
-          <a href={item.url}>Se video</a>
+          Se video
           <img
             src="/images/arrow.svg"
             alt="Pil mot høyre"
             loading="lazy"
             decoding="async"
+            aria-hidden
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 }
