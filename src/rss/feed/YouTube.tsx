@@ -16,6 +16,8 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
             src: '/logo-512.png',
             alt: '',
             className: style.cover,
+            loading: 'lazy',
+            decoding: 'async',
           }}
         />
       </figure>
@@ -40,7 +42,12 @@ export default function YouTube({ item }: { item: YoutubeVideoItem }) {
         </p>
         <div className={style.card__link}>
           <a href={item.url}>Se video</a>
-          <img src="/images/arrow.svg" alt="Pil mot høyre" />
+          <img
+            src="/images/arrow.svg"
+            alt="Pil mot høyre"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </div>

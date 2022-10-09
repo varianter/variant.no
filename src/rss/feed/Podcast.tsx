@@ -18,6 +18,8 @@ export default function Podcast({ item }: { item: PodcastItem }) {
             src: item.imageCoverUrl,
             alt: '',
             className: style.cover,
+            loading: 'lazy',
+            decoding: 'async',
           }}
         />
       </div>

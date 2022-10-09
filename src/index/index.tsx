@@ -54,7 +54,12 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             position: index % 2 === 1 ? 'bottom-middle' : 'bottom-left',
           }}
         >
-          <img src={caseItem.case_image} alt={caseItem.image_alt} />
+          <img
+              src={caseItem.case_image}
+              alt={caseItem.image_alt}
+              loading="lazy"
+              decoding="async"
+          />
         </DecorativeBoxes>
       </article>
     ));
@@ -85,12 +90,16 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           className={style.omVariant_image1}
           src={require('./images/om-variant-1.png')}
           alt="Bilde av Kristin som sitter i en sofa"
+          loading="lazy"
+          decoding="async"
         />
 
         <img
           className={style.omVariant_image2}
           src={require('./images/om-variant-2.png')}
           alt="Bilde av Tonje og Odd Morten som sitter forran gamle Digs"
+          loading="lazy"
+          decoding="async"
         />
 
         <div className={style.omVariant__us}>
@@ -157,6 +166,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             className={style.join_map}
             src={require('./images/blob-map.svg')}
             alt="Kart som viser hvor alle kontorene våre ligger"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
@@ -166,6 +177,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           className={style.services_image1}
           src={require('./images/bli-en-variant.png')}
           alt="Bilde av gladfisen Jacob"
+          loading="lazy"
+          decoding="async"
         />
 
         <article>
@@ -253,6 +266,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             <img
               src="/images/tenk-sarah-marius.png"
               alt="Sarah og Marius som hjelper til med podcastlaging på TENK tech camp"
+              loading="lazy"
+              decoding="async"
             />
           </DecorativeBoxes>
         </article>
@@ -284,6 +299,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             <img
               src="/images/lyttere-i-amfiet-500px.png"
               alt="personer i amfiet på Varianthuset lytter til en presentasjon"
+              loading="lazy"
+              decoding="async"
             />
           </DecorativeBoxes>
         </article>
@@ -328,6 +345,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
                 alt={`Bilde av ${randomEmployee.name}`}
                 src={randomEmployee.imageUrl}
                 loading="lazy"
+                decoding="async"
               />
             </div>
 

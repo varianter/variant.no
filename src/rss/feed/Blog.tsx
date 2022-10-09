@@ -17,6 +17,8 @@ export default function Blog({ item }: { item: BlogItem }) {
               src: item.imageCoverUrl,
               alt: '',
               className: style.cover,
+              loading: 'lazy',
+              decoding: 'async',
             }}
           />
         )}
@@ -44,7 +46,12 @@ export default function Blog({ item }: { item: BlogItem }) {
         </p>
         <div className={style.card__link}>
           <a href={item.url}>Les artikkel</a>
-          <img src="/images/arrow.svg" alt="Pil mot høyre" />
+          <img
+            src="/images/arrow.svg"
+            alt="Pil mot høyre"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </div>
