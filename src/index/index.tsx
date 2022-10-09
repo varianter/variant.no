@@ -366,11 +366,16 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
 function JobLandingpage() {
   return (
     <div className={style.infoBlock}>
-      <img
-        className={style.infoBlock__blob}
-        src={sommerjobbImg}
-        alt="Varianter under felles variantdag"
-      />
+      <div className={style.infoBlock__blob}>
+        <Image
+          src={sommerjobbImg}
+          alt="Varianter under felles variantdag"
+          width={774}
+          height={631}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
 
       <h2 className={style.infoBlock__title}>
         <Link href="/nyutdannet">

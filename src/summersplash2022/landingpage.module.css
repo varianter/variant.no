@@ -10,7 +10,8 @@
 }
 
 .infoBlock__blob {
-  width: 60%;
+  --info-block__blob-width: 60%;
+  min-width: var(--info-block__blob-width);
 }
 
 @media (max-width: 650px) {
@@ -20,7 +21,7 @@
   }
 
   .infoBlock__blob {
-    width: 100%;
+    --info-block__blob-width: 100%;
   }
 
   .infoBlock__title {
