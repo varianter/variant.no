@@ -220,7 +220,6 @@ const Layout = ({
                 <a
                   href="https://blog.variant.no/tagged/b%C3%A6rekraft"
                   rel="noopener"
-                  title="Les mer om Variants bærekraftsinitiativ"
                 >
                   Bærekraft
                 </a>
@@ -232,13 +231,13 @@ const Layout = ({
             <ul>
               <li>
                 Ring på{' '}
-                <a href="tel:+4792807375" title="Ring oss">
+                <a href="tel:+4792807375">
                   928 07 375
                 </a>
               </li>
               <li>
                 Mail på{' '}
-                <a href="mailto:post@variant.no" title="Send oss epost">
+                <a href="mailto:post@variant.no">
                   post@variant.no
                 </a>
               </li>
@@ -246,7 +245,8 @@ const Layout = ({
                 Tweet på{' '}
                 <a
                   href="https://twitter.com/variant_as"
-                  title="Følg oss på Twitter"
+                  aria-label="Twitter @variant_as"
+                  rel="noopener"
                 >
                   @variant_as
                 </a>
@@ -255,7 +255,8 @@ const Layout = ({
                 Se bilder på{' '}
                 <a
                   href="https://instagram.com/variant_as"
-                  title="Følg oss på Instagram"
+                  aria-label="Instagram @variant_as"
+                  rel="noopener"
                 >
                   @variant_as
                 </a>
@@ -271,7 +272,6 @@ const Layout = ({
                 href="https://www.google.com/maps/place/Varianthuset/@63.4328051,10.397323,17z/data=!3m1!4b1!4m5!3m4!1s0x466d312df4ea1347:0xf63e949e041942ee!8m2!3d63.4328051!4d10.3995117"
                 rel="noopener"
                 target="_blank"
-                title="Kart til Varianthuset i Trondheim"
               >
                 Thomas Angells gate 10
               </a>{' '}
@@ -280,7 +280,6 @@ const Layout = ({
                 href="https://www.google.com/maps/place/Variant+Oslo/@59.910812,10.7393748,17z/data=!4m5!3m4!1s0x46416f4127442c2b:0xe0534eff4f975859!8m2!3d59.9108093!4d10.7415635"
                 rel="noopener"
                 target="_blank"
-                title="Kart til Variant Oslo"
               >
                 Tollbugata 24
               </a>{' '}
@@ -289,7 +288,6 @@ const Layout = ({
                 href="https://g.page/Vaskerelven-39-5323"
                 rel="noopener"
                 target="_blank"
-                title="Kart til Variant Bergen"
               >
                 Spaces Vaskerelven
               </a>{' '}
