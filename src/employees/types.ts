@@ -1,3 +1,4 @@
+
 export type EmployeeItem = {
   fullName: string;
   name: string;
@@ -5,4 +6,6 @@ export type EmployeeItem = {
   telephone: string | null;
   imageUrl: string;
   officeName: string;
+  userId: string;
+  defaultCvId: string;
 };
