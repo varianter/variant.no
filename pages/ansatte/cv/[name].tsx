@@ -164,14 +164,14 @@ const convertToCv = (cvJson: EmployeeCvJson): EmployeeCv => {
         title: cvJson.title.no,
         email: cvJson.email,
         imageUrl: cvJson.image.thumb.url,
-        summary: parseSummary(cvJson),
+        summary: parseSummary(),
         qualifications: parseTechnologies(cvJson),
         projects: parseProjects(cvJson),
         publications: parsePublications(cvJson),
     };
 }
 
-const parseSummary = (cvJson: EmployeeCvJson): string => {
+const parseSummary = (): string => {
     return "Hva er dette, og hvordan fungerer den? " + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 }
 
