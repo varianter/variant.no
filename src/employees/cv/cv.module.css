@@ -40,7 +40,30 @@ h3 {
   line-height: 16px;
   padding: 4px 12px;
   border-radius: 24px;
-  background-color: white;
+}
+
+.qualifications section:nth-of-type(6n + 1) .qualification__tag {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.qualifications section:nth-of-type(6n + 2) .qualification__tag {
+  background-color: var(--color-primary__tint4);
+}
+
+.qualifications section:nth-of-type(6n + 3) .qualification__tag {
+  background-color: var(--color-secondary1__tint4);
+}
+
+.qualifications section:nth-of-type(6n + 4) .qualification__tag {
+  background-color: var(--color-secondary2__tint4);
+}
+
+.qualifications section:nth-of-type(6n + 5) .qualification__tag {
+  background-color: var(--color-secondary3__tint2);
+}
+
+.qualifications section:nth-of-type(6n + 6) .qualification__tag {
+  background-color: var(--color-secondary4__tint4);
 }
 
 .project {
