@@ -47,7 +47,7 @@ const fetchCv = async (userId: string, cvId: string): Promise<EmployeeCv> => {
 type EmployeeCvJson = {
     name: string,
     title: {
-        no: string
+        no?: string
     },
     email: string,
     image: {
@@ -59,7 +59,7 @@ type EmployeeCvJson = {
         {
             disabled: boolean,
             long_description: {
-                no: string,
+                no?: string,
             }
         }
     ],
@@ -68,13 +68,13 @@ type EmployeeCvJson = {
             order: number,
             disabled: boolean,
             category: {
-                no: string,
+                no?: string,
             }
             technology_skills: [
                 {
                     order: number,
                     tags: {
-                        no: string,
+                        no?: string,
                     }
                 }
             ]
@@ -86,10 +86,10 @@ type EmployeeCvJson = {
             disabled: boolean,
             starred: boolean,
             customer: {
-                no: string,
+                no?: string,
             },
             description: {
-                no: string,
+                no?: string,
             },
             month_from: string,
             month_to: string,
@@ -98,7 +98,7 @@ type EmployeeCvJson = {
             roles: [
                 {
                     name: {
-                        no: string,
+                        no?: string,
                     }
                 }
             ]
@@ -110,10 +110,10 @@ type EmployeeCvJson = {
             order: number,
             disabled: boolean,
             name: {
-                no: string,
+                no?: string,
             },
             long_description: {
-                no: string,
+                no?: string,
             },
             url: string,
         },
@@ -198,14 +198,23 @@ const parseProjects = (cvJson: EmployeeCvJson): Project[] => {
             starred: project.starred,
             customerName: project.customer?.no ?? '',
             description: project.description?.no ?? '',
-            month_from: project.month_from,
-            month_to: project.month_to,
+            month_from: getMonthName(project.month_from),
+            month_to: getMonthName(project.month_to),
             year_from: project.year_from,
             year_to: project.year_to,
             roles: project.roles
                 .filter(role => !!role.name)
                 .map(role => role.name?.no ?? ''),
         }))
+}
+
+const monthNames = ["januar", "februar", "mars", "april", "mai", "juni",
+  "juli", "august", "september", "oktober", "november", "desember"
+];
+
+const getMonthName = (monthNumber: string): string => {
+    const index = parseInt(monthNumber);
+    return index ? monthNames[index-1] : "";
 }
 
 const parsePublications = (cvJson: EmployeeCvJson): Publication[] => {

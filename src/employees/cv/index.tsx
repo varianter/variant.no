@@ -103,7 +103,7 @@ type ProjectProps = {
 }
 
 const Project = ({project}: ProjectProps) => {
-    const period = `${project.month_from}.${project.year_from} - ${project.month_to}.${project.year_to}`;
+    const period = `${project.month_from} ${project.year_from} - ${project.month_to} ${project.year_to}`;
     const roles = project.roles.map(role => <div className={styles.project__role} key={role}>{role}</div>)
     return (
         <section className={styles.project}>
