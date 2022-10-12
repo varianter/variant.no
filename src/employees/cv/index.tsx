@@ -7,7 +7,6 @@ import styles from './cv.module.css';
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const CV = ({employee, cv}: Props) => {
-
     return (
         <article className={styles.cv}>
             <Personalia employee={employee} cv={cv}/>

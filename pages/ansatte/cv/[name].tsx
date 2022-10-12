@@ -161,9 +161,9 @@ export type EmployeeCv = {
 const convertToCv = (cvJson: EmployeeCvJson): EmployeeCv => {
     return {
         name: cvJson.name,
-        title: cvJson.title.no,
+        title: cvJson.title?.no ?? '',
         email: cvJson.email,
-        imageUrl: cvJson.image.thumb.url,
+        imageUrl: cvJson.image?.thumb?.url ?? '',
         summary: parseSummary(),
         qualifications: parseTechnologies(cvJson),
         projects: parseProjects(cvJson),
@@ -182,9 +182,9 @@ const parseTechnologies = (cvJson: EmployeeCvJson): Qualifications[] => {
       .filter((technology) => technology.technology_skills.length > 0) // Ignore categories without entries
       .sort(sortByOrder)
       .map((technology) => ({
-        name: technology.category.no,
+        name: technology.category?.no ?? '',
         tags: technology.technology_skills.sort(sortByOrder).map((skill) => ({
-          name: skill.tags.no,
+          name: skill.tags?.no ?? '',
         })),
       }));
 }
@@ -192,30 +192,31 @@ const parseTechnologies = (cvJson: EmployeeCvJson): Qualifications[] => {
 const parseProjects = (cvJson: EmployeeCvJson): Project[] => {
     return cvJson.project_experiences
         .filter(project => !project.disabled)       // Ignore disabled projects
-        .filter(project => !!project.customer.no)   // Ignore projects without customer name
+        .filter(project => !!project.customer?.no ?? '')   // Ignore projects without customer name
         .sort(sortByOrder)
         .map(project => ({
             starred: project.starred,
-            customerName: project.customer.no,
-            description: project.description.no,
+            customerName: project.customer?.no ?? '',
+            description: project.description?.no ?? '',
             month_from: project.month_from,
             month_to: project.month_to,
             year_from: project.year_from,
             year_to: project.year_to,
             roles: project.roles
                 .filter(role => !!role.name)
-                .map(role => role.name.no),
+                .map(role => role.name?.no ?? ''),
         }))
 }
 
 const parsePublications = (cvJson: EmployeeCvJson): Publication[] => {
+    if(!cvJson.blogs) return [];
     return cvJson.blogs
         .filter(blog => !blog.disabled)
         .filter(blog => !!blog.name.no)
         .sort(sortByOrder)
         .map(blog => ({
-            name: blog.name.no,
-            description: blog.long_description.no,
+            name: blog.name?.no ?? '',
+            description: blog.long_description?.no ?? '',
             url: blog.url,
         }));
 }
