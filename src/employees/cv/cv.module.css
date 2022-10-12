@@ -18,6 +18,10 @@ h3 {
   display: block;
 }
 
+.personalia__summary {
+  white-space: pre-wrap;
+}
+
 .details {
   padding: 96px;
 }
@@ -54,6 +58,7 @@ h3 {
   column-gap: 24px;
   row-gap: 4px;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .project__period {

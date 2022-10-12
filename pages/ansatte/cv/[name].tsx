@@ -164,18 +164,23 @@ const convertToCv = (cvJson: EmployeeCvJson): EmployeeCv => {
         title: cvJson.title?.no ?? '',
         email: cvJson.email,
         imageUrl: cvJson.image?.thumb?.url ?? '',
-        summary: parseSummary(),
+        summary: parseSummary(cvJson),
         qualifications: parseTechnologies(cvJson),
         projects: parseProjects(cvJson),
         publications: parsePublications(cvJson),
     };
 }
 
-const parseSummary = (): string => {
-    return "Hva er dette, og hvordan fungerer den? " + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+const parseSummary = (cvJson: EmployeeCvJson): string => {
+    if(!cvJson.key_qualifications) return "";
+    return cvJson.key_qualifications
+        .filter(summary => !summary.disabled)
+        .map(summary => summary.long_description?.no ?? "")
+        .join("\n\n")
 }
 
 const parseTechnologies = (cvJson: EmployeeCvJson): Qualifications[] => {
+    if(!cvJson.technologies) return [];
     return cvJson.technologies
       .filter((technology) => !technology.disabled) // Ignore disabled categories
       .filter((technology) => !!technology.category.no) // Ignore categories with no name
@@ -190,6 +195,7 @@ const parseTechnologies = (cvJson: EmployeeCvJson): Qualifications[] => {
 }
 
 const parseProjects = (cvJson: EmployeeCvJson): Project[] => {
+    if(!cvJson.project_experiences) return [];
     return cvJson.project_experiences
         .filter(project => !project.disabled)       // Ignore disabled projects
         .filter(project => !!project.customer?.no ?? '')   // Ignore projects without customer name

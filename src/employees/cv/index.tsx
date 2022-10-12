@@ -39,7 +39,7 @@ const Personalia = ({ employee, cv }: PersonaliaProps) => {
         {cv.title} i {employee.officeName}
       </p>
       <a className={styles.personalia__email} href={`mailto:${employee.email}`}>📧 {employee.email}</a>
-      <p>{cv.summary}</p>
+      <p className={styles.personalia__summary}>{cv.summary}</p>
     </section>
   );
 };
