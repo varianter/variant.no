@@ -1,10 +1,10 @@
-import {InferGetStaticPropsType} from 'next';
+import {InferGetServerSidePropsType} from 'next';
 import Image from 'next/image';
-import {Qualifications as Qualification, EmployeeCv, getStaticProps, Project, Qualifications, Publication} from 'pages/ansatte/cv/[name]';
+import {Qualifications as Qualification, EmployeeCv, getServerSideProps, Project, Qualifications, Publication} from 'pages/ansatte/cv/[name]';
 import {EmployeeItem} from '../types';
 import styles from './cv.module.css';
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 const CV = ({employee, cv}: Props) => {
     return (
