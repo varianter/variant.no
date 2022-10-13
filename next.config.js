@@ -46,6 +46,16 @@ module.exports = withPlugins([withImages], {
       }
     }
 
+    config.module.rules.push({
+      test: /\.(woff(2)?|ttf|eot)/,
+      type: 'asset/resource',
+      generator: {
+        publicPath:
+          process.env.NODE_ENV === 'development' ? '_next/' : '../../',
+        filename: 'static/fonts/[name].[contenthash][ext]',
+      },
+    });
+
     return config;
   },
   async redirects() {
