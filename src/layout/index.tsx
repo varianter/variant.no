@@ -306,7 +306,7 @@ const Layout: React.FC<LayoutProps> = ({
             className={and(style.footer__item, style['footer__item--address'])}
           >
             <address>
-              <strong>Variant AS</strong>
+              <strong>Variant Trondheim AS</strong>
               <br />
               Thomas Angells gate 10 <br />
               7011 Trondheim
