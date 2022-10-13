@@ -1,5 +1,6 @@
 import {InferGetServerSidePropsType} from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import {Qualifications as Qualification, EmployeeCv, getServerSideProps, Project, Qualifications, Publication} from 'pages/ansatte/cv/[name]';
 import {EmployeeItem} from '../types';
 import styles from './cv.module.css';
@@ -27,6 +28,7 @@ type PersonaliaProps = {
 const Personalia = ({ employee, cv }: PersonaliaProps) => {
   return (
     <section className={styles.personalia}>
+      <Link  href={`/ansatte/`}><a className={styles.goto__employees__link}>Se alle ansatte</a></Link>
       <Image
         height={300}
         width={300}

@@ -10,7 +10,13 @@ h3 {
 
 .personalia {
   background-color: var(--color-secondary4__tint1);
-  padding: 96px;
+  padding: 48px 96px 96px;
+}
+
+.goto__employees__link {
+  padding-bottom: 72px;
+  margin-left: -48px;
+  display: block;
 }
 
 .personalia__email {
