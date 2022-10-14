@@ -320,3 +320,34 @@
   margin: 1rem auto;
   text-underline-offset: 0.5rem;
 }
+
+/* Summerjob splash */
+.infoBlock {
+  display: flex;
+  gap: 2rem;
+}
+
+.infoBlock__text,
+.infoBlock__link {
+  color: var(--color-standard__white);
+  text-decoration-color: var(--color-standard__white);
+}
+
+.infoBlock__blob {
+  width: 60%;
+}
+
+@media (max-width: 650px) {
+  .infoBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoBlock__blob {
+    width: 100%;
+  }
+
+  .infoBlock__title {
+    margin-left: 6rem;
+  }
+}

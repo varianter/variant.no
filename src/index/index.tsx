@@ -12,7 +12,8 @@ import { EmployeeItem } from 'src/employees/types';
 import { CaseJSON } from 'src/case/Case';
 import { HighlightedItemsLists } from 'src/rss/service';
 import PageTitle from '@components/page-title';
-import { JobLandingpage } from 'src/summersplash2022';
+import sommerjobbImg from './images/section1Blob.png';
+import Arrow from '@components/arrow';
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -343,5 +344,28 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
     </Layout>
   );
 };
+
+function JobLandingpage() {
+  return (
+    <div className={style.infoBlock}>
+      <img
+        className={style.infoBlock__blob}
+        src={sommerjobbImg}
+        alt="Varianter under felles variantdag"
+      />
+
+      <h2 className={style.infoBlock__title}>
+        <Link href="/nyutdannet">
+          <a className={style.infoBlock__link}>
+            <span className={style.infoBlock__text}>
+              Info om jobb for studenter
+            </span>
+            <Arrow className={style.infoBlock__arrow} color="standard__white" />
+          </a>
+        </Link>
+      </h2>
+    </div>
+  );
+}
 
 export default Home;
