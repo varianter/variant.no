@@ -1,9 +1,11 @@
 import {InferGetServerSidePropsType} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import {Qualifications as Qualification, EmployeeCv, getServerSideProps, Project, Qualifications, Publication} from 'pages/ansatte/cv/[name]';
+import {getServerSideProps} from 'pages/ansatte/cv/[name]';
 import {EmployeeItem} from '../types';
+import {Project, Publication, Qualification, Qualifications} from '../cv/utils/types';
 import styles from './cv.module.css';
+import { EmployeeCv } from './utils/types';
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
@@ -45,7 +47,7 @@ const Personalia = ({ employee, cv }: PersonaliaProps) => {
     </section>
   );
 };
-
+ 
 type QualificationsProps = {
     qualifications: Qualifications[];
 }
@@ -64,7 +66,7 @@ const Qualifications = ({qualifications}: QualificationsProps) => {
 }
 
 type QualificationProps = {
-    qualfication: Qualification,
+    qualfication: Qualifications,
 }
 
 const Qualification = ({qualfication: qualfication}: QualificationProps) => {
