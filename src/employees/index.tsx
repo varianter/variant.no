@@ -6,7 +6,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/ansatte';
-import React, { CSSProperties, useEffect, useState } from 'react';
+import React, {
+  CSSProperties,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from 'react';
 import Arrow from 'src/components/arrow';
 import Layout from 'src/layout';
 import { Office, OfficeSelector } from 'src/office-selector';
@@ -125,9 +130,9 @@ export default function Employees({
   );
 }
 
-export const EmployeeTile: React.FC<{ employee: EmployeeItem }> = ({
+export const EmployeeTile = ({
   employee: { fullName, name, telephone, email, imageUrl, officeName },
-}) => {
+}: PropsWithChildren<{ employee: EmployeeItem }>) => {
   return (
     <div
       className={style.employee}

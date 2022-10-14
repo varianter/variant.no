@@ -5,9 +5,9 @@ import { Degree, formatCurrency } from './utils';
 import style from './index.module.css';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import Slider from 'src/components/slider';
 import useCalculatorData from './use-calculator-data';
 import { and } from 'src/utils/css';
+import RangeSlider from 'src/advanced-calculator/Components/RangeSlider';
 
 type Props = {
   year: number;
@@ -147,13 +147,13 @@ export const Calculator = (props: Props) => {
             >
               👵
             </button>
-            <Slider
-              initial={selectedYear}
-              to={maxYear}
-              from={minYear}
-              onChange={setSelectedYear}
+            <RangeSlider
+              name="Utdanningsår"
+              id="experience"
+              min={minYear}
+              max={maxYear}
               value={selectedYear}
-              label={'Utdanningsår'}
+              onChange={setSelectedYear}
             />
             <button
               onClick={incrementYear}
