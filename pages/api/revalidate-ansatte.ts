@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { regenerateEmployees } from 'src/employees/utils/request';
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,7 +12,6 @@ export default async function handler(
   }
 
   try {
-    await regenerateEmployees();
     await res.revalidate('/ansatte');
     return res.json({ revalidated: true });
   } catch (err) {

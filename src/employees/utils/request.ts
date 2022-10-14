@@ -11,19 +11,6 @@ export async function requestEmployees(): Promise<EmployeeItem[] | undefined> {
   return (await request.json()).employees as EmployeeItem[];
 }
 
-export async function regenerateEmployees(): Promise<
-  EmployeeItem[] | undefined
-> {
-  const request = await fetch(`${BASE_URL}/employees/revalidate`, {
-    headers: [['Authorization', process.env.REVALIDATE_TOKEN ?? '']],
-  });
-
-  if (!request.ok) {
-    return undefined;
-  }
-  return (await request.json()).employees as EmployeeItem[];
-}
-
 export async function requestByEmails(
   emails: string[],
 ): Promise<EmployeeItem[]> {
