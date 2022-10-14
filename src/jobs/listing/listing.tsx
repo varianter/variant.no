@@ -1,16 +1,16 @@
-import React, { useMemo } from 'react';
+import React, { PropsWithChildren, useMemo } from 'react';
 
-import { NextPage, InferGetStaticPropsType } from 'next';
-import { getStaticProps } from 'pages/jobs/[listing]';
-import Layout from 'src/layout';
+import PageTitle from '@components/page-title';
+import MarkdownIt from 'markdown-it';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import MarkdownIt from 'markdown-it';
+import { getStaticProps } from 'pages/jobs/[listing]';
 import { ButtonLink } from 'src/components/button';
-import style from './listings.module.css';
-import { and } from 'src/utils/css';
 import { EmployeeItem } from 'src/employees/types';
-import PageTitle from '@components/page-title';
+import Layout from 'src/layout';
+import { and } from 'src/utils/css';
+import style from './listings.module.css';
 
 const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ listing }) => {
@@ -125,9 +125,9 @@ const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
     );
   });
 
-export const ContactTile: React.FC<{ contact: EmployeeItem }> = ({
+export const ContactTile = ({
   contact: { fullName, name, email, telephone, imageUrl },
-}) => {
+}: PropsWithChildren<{ contact: EmployeeItem }>) => {
   return (
     <div className={style.contact}>
       <div className={style.contact__img}>

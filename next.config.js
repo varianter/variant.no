@@ -1,4 +1,3 @@
-const withPlugins = require('next-compose-plugins');
 const withImages = require('next-images');
 
 const regexEqual = (x, y) => {
@@ -12,7 +11,7 @@ const regexEqual = (x, y) => {
   );
 };
 
-module.exports = withPlugins([withImages], {
+module.exports = withImages({
   images: {
     disableStaticImages: true,
     domains: [

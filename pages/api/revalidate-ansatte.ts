@@ -14,7 +14,7 @@ export default async function handler(
 
   try {
     await regenerateEmployees();
-    await res.unstable_revalidate('/ansatte');
+    await res.revalidate('/ansatte');
     return res.json({ revalidated: true });
   } catch (err) {
     console.error(err);

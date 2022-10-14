@@ -1,6 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import AnimatingBackground from 'src/background';
 import { and } from 'src/utils/css';
 import style from './layout.module.css';
@@ -8,22 +13,22 @@ import style from './layout.module.css';
 import favicon from '@variant/profile/lib/logo/favicon.png';
 import { useMediaQuery } from 'src/utils/use-media-query';
 
-type LayoutProps = {
+type LayoutProps = PropsWithChildren<{
   title?: string;
   fullWidth?: boolean;
   crazy?: boolean;
   homepage?: boolean;
   zenMode?: boolean;
-};
+}>;
 
-const Layout: React.FC<LayoutProps> = ({
+const Layout = ({
   children,
   title = 'Variant – En variant av et konsulentselskap',
   fullWidth = false,
   crazy = false,
   homepage = false,
   zenMode = false,
-}) => {
+}: LayoutProps) => {
   const modalRef = React.createRef<HTMLDivElement>();
   const navRef = React.createRef<HTMLUListElement>();
   const closeRef = React.createRef<HTMLButtonElement>();
