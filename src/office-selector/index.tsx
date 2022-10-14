@@ -23,11 +23,13 @@ export function FilterLink({
   return isSelected ? (
     <li className={style.office__navActive}>{linkName}</li>
   ) : (
-    <Link href={link} scroll={false}>
-      <a>
-        <li>{linkName}</li>
-      </a>
-    </Link>
+    <li>
+      <Link href={link} scroll={false}>
+        <a>
+          <li>{linkName}</li>
+        </a>
+      </Link>
+    </li>
   );
 }
 
