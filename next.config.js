@@ -22,6 +22,7 @@ module.exports = withPlugins([withImages], {
       'img.youtube.com', // this
       'cdn-images-1.medium.com', // aaaaand this
     ],
+    formats: ['image/avif', 'image/webp'],
   },
 
   webpack: (config) => {
