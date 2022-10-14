@@ -27,6 +27,7 @@
     "vitest": "^0.24.3"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^12.3.1",
     "@variant/components": "^2.0.11",
     "@variant/profile": "^3.0.1",
     "@visx/curve": "^2.1.0",
