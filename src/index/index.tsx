@@ -1,7 +1,7 @@
 import DecorativeBoxes from '@components/decorative-boxes';
 import Head from 'next/head';
 import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import React, { useMemo } from 'react';
 import { ButtonNextLink } from 'src/components/button';
@@ -55,10 +55,10 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           }}
         >
           <img
-              src={caseItem.case_image}
-              alt={caseItem.image_alt}
-              loading="lazy"
-              decoding="async"
+            src={caseItem.case_image}
+            alt={caseItem.image_alt}
+            loading="lazy"
+            decoding="async"
           />
         </DecorativeBoxes>
       </article>
@@ -86,17 +86,21 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           endringsvilje.
         </p>
 
-        <img
+        <Image
           className={style.omVariant_image1}
           src={require('./images/om-variant-1.png')}
+          width={476}
+          height={432}
           alt="Bilde av Kristin som sitter i en sofa"
           loading="lazy"
           decoding="async"
         />
 
-        <img
+        <Image
           className={style.omVariant_image2}
           src={require('./images/om-variant-2.png')}
+          width={960}
+          height={960}
           alt="Bilde av Tonje og Odd Morten som sitter forran gamle Digs"
           loading="lazy"
           decoding="async"
@@ -366,16 +370,15 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
 function JobLandingpage() {
   return (
     <div className={style.infoBlock}>
-      <div className={style.infoBlock__blob}>
-        <Image
-          src={sommerjobbImg}
-          alt="Varianter under felles variantdag"
-          width={774}
-          height={631}
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+      <Image
+        src={sommerjobbImg}
+        className={style.infoBlock__blob}
+        alt="Varianter under felles variantdag"
+        width={774}
+        height={631}
+        loading="lazy"
+        decoding="async"
+      />
 
       <h2 className={style.infoBlock__title}>
         <Link href="/nyutdannet">

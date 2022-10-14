@@ -3,7 +3,7 @@
 }
 @media (max-width: 640px) {
   .bergen {
-    margin: 4rem 0 15rem;
+    margin: 0rem 0 15rem;
   }
 }
 @media (max-width: 500px) {
@@ -35,12 +35,14 @@
 .omVariant_image1 {
   position: relative;
   max-width: 140%;
+  height: auto;
 }
 .omVariant_image2 {
   position: absolute;
   left: 25rem;
   top: 32rem;
   max-width: 140%;
+  height: auto;
 }
 @media (max-width: 500px) {
   .omVariant_image2 {
@@ -329,23 +331,21 @@
 
 .infoBlock__text,
 .infoBlock__link {
+  display: block;
   color: var(--color-standard__white);
   text-decoration-color: var(--color-standard__white);
 }
 
 .infoBlock__blob {
-  --info-block__blob-width: 60%;
-  min-width: var(--info-block__blob-width);
+  min-width: 360px;
+  max-width: 80%;
+  height: auto;
 }
 
 @media (max-width: 650px) {
   .infoBlock {
     flex-direction: column;
     align-items: center;
-  }
-
-  .infoBlock__blob {
-    --info-block__blob-width: 100%;
   }
 
   .infoBlock__title {
