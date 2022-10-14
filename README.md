@@ -20,19 +20,13 @@ Navigate to `http://localhost:3000`. Have fun!
 
 ## Configuration
 
-It should run without configuring any environment variables using mocked data and local storage of images. If you want to integrate with actual CV Partner for fetching employees and Blob Storage to cache/store CV photos you can set that by creating a `.env.local` file based on the [`.env.example` file](./env.example).
+Configure locally unsing a `.env.local` file based on the [`.env.example`](./.env.example) file.
+
+`REVALIDATE_TOKEN` for revalidating isn't needed for developing locally unless you want to test out revalidation. Revalidation is triggering new static site generation on the server side to reload static data. `REVALIDATE_TOKEN` should match that of [data-layer](https://github.com/varianter/data-layer).
 
 ```
-# Set if you want to integrate with CV Partner
-
-CV_PARTNER_API_SECRET=<API_KEY>
-
-# Activate Blob Storage mode:
-BLOB_OVERRIDE=true
-
-# Will require Blob Storage settings:
-AZURE_STORAGE_ACCOUNT_ACCESS_KEY=<ACCESS_KEY>
-AZURE_STORAGE_ACCOUNT_NAME=variantno
+# Secret token to use for revalidating/regenerating images
+REVALIDATE_TOKEN=<token>
 ```
 
 ## Architecture and design decisions
