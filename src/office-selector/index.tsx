@@ -25,9 +25,7 @@ export function FilterLink({
   ) : (
     <li>
       <Link href={link} scroll={false}>
-        <a>
-          <li>{linkName}</li>
-        </a>
+        <a>{linkName}</a>
       </Link>
     </li>
   );
