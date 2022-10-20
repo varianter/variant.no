@@ -1,11 +1,6 @@
-
-export type Qualification = {
-    name: string,
-}
-
 export type Qualifications = {
     name: string,
-    tags: Qualification[],
+    tags: string[],
 }
 
 export type Project = {

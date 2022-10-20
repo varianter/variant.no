@@ -141,7 +141,7 @@ export const EmployeeTile = ({
       className={style.employee}
       style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
       >
-      <Link href={`/ansatte/cv/${fullName.toLocaleLowerCase()}`}>
+      <Link href={`/ansatte/cv/${email.toLocaleLowerCase()}`}>
         <div className={and(style.employee__cv__link, style.fancy__text)}>
             <Image
               width={300}

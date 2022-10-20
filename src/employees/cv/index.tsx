@@ -1,13 +1,13 @@
-import {InferGetServerSidePropsType} from 'next';
+import {InferGetStaticPropsType} from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import {getServerSideProps} from 'pages/ansatte/cv/[name]';
+import {getStaticProps} from 'pages/ansatte/cv/[email]';
 import {EmployeeItem} from '../types';
-import {Project, Publication, Qualification, Qualifications} from '../cv/utils/types';
+import {Project, Publication, Qualifications} from './utils/types';
 import styles from './cv.module.css';
 import { EmployeeCv } from './utils/types';
 
-type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const CV = ({employee, cv}: Props) => {
     return (
@@ -71,7 +71,7 @@ type QualificationProps = {
 
 const Qualification = ({qualfication: qualfication}: QualificationProps) => {
     const tags = qualfication.tags.map(tag => 
-        <div className={styles.qualification__tag} key={tag.name}>{tag.name}</div>
+        <div className={styles.qualification__tag} key={tag}>{tag}</div>
     );
 
     return (
