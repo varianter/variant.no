@@ -14,6 +14,58 @@ const regexEqual = (x, y) => {
   );
 };
 
+const ContentSecurityPolicy = `
+  default-src 'self';
+  connect-src 'self' https://variant.innocraft.cloud/ https://g.nav.no/api/v1/;
+  script-src 'self' 'sha256-j6xN8x073Dhm+Ee4HKwIIRXsHIqI5aIRHC0pgnhVcJY=' https://variant.innocraft.cloud/ ${
+    process.env.NODE_ENV !== 'production' ? "'unsafe-eval'" : ''
+  };
+  style-src 'self' 'unsafe-inline' http://hello.myfonts.net/;
+  img-src 'self' data: https://medium.com/ https://cdn-images-1.medium.com/ https://images.transistor.fm/ https://i.ytimg.com/;
+  media-src 'self' https://media.transistor.fm/;
+  frame-src 'self' https://www.youtube-nocookie.com/;
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  object-src 'none';
+`;
+
+const securityHeaders = [
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'DENY',
+  },
+  {
+    key: 'Permissions-Policy',
+    value:
+      'accelerometer=(), autoplay=(), camera=(), display-capture=(), fullscreen=(), geolocation=(), gyroscope=(), microphone=(), payment=(), storage-access=(), web-share=(), xr-spatial-tracking=()',
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin',
+  },
+  {
+    key: 'Content-Security-Policy',
+    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+  },
+];
+
 module.exports = withBundleAnalyzer(
   withImages({
     images: {
@@ -70,6 +122,14 @@ module.exports = withBundleAnalyzer(
       });
 
       return config;
+    },
+    async headers() {
+      return [
+        {
+          source: '/:path*',
+          headers: securityHeaders,
+        },
+      ];
     },
     async redirects() {
       return [
