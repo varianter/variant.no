@@ -114,7 +114,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           ))}
         </section>
         <section className={style.omVariant}>
-          <h2>Variantdag - November 2019 </h2>
+          <h2>Variantdag - November 2019</h2>
           <p>
             Første fredag hver måned har vi variantdag. I november 2019 lagde vi
             en liten film som viser litt av hva variantdager går ut på!
@@ -127,6 +127,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               src="https://www.youtube-nocookie.com/embed/goRgDptKt-A"
               allowFullScreen={true}
               frameBorder="0"
+              aria-label="Video Variantdag, November 2019"
             ></iframe>
           </div>
         </section>
