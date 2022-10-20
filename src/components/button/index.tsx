@@ -50,10 +50,10 @@ export function ButtonNextLink({
   className = '',
   children,
   ...props
-}: ButtonProps & LinkType) {
+}: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
   return (
     <Link {...props}>
-      <a className={and(style.buttonLink, className)}>{children}</a>
+      <a className={and(style.buttonLink, className)} aria-label={props["aria-label"]}>{children}</a>
     </Link>
   );
 }
