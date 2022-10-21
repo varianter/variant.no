@@ -13,9 +13,9 @@ const LandingPage = () => {
           <Header white={true} />
         </div>
         <span className={style.searchNewVariants}>
-          <h3 className={style.bigHeading}>
-            Vi ser etter 7 nyutdannede varianter i 2023!{' '}
-          </h3>
+          <h1 className={style.bigHeading}>
+            Vi ser etter 7 nyutdannede varianter i 2023!
+          </h1>
         </span>
         <br />
         <div className={style.applyButtonPink}>

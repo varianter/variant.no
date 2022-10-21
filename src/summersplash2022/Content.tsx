@@ -52,9 +52,9 @@ const Content = () => {
               <Header white={false} />
             </div>
             <span className={style.searchNewVariants}>
-              <h3 className={style.bigHeading}>
-                Vi ser etter 14 sommervarianter i 2023!{' '}
-              </h3>
+              <h1 className={style.bigHeading}>
+                Vi ser etter 14 sommervarianter i 2023!
+              </h1>
             </span>
             <br />
             <div className={style.ApplyDiv}>
@@ -88,7 +88,7 @@ const Content = () => {
           </section>
           <div className={style.section2Color}>
             <section className={style.section2} id="hvagarsommerjobbenutpa">
-              <h3 className={style.heading}>Hva går sommerjobben ut på?</h3>
+              <h2 className={style.heading}>Hva går sommerjobben ut på?</h2>
               <div className={style.section2Flex}>
                 <div className={style.section2Text}>
                   <p className={style.section2Paragraph}>
@@ -135,7 +135,7 @@ const Content = () => {
           </div>
 
           <section className={style.section3} id="hvameneraretssommerstudenter">
-            <h3 className={style.heading}>Hva mener årets sommerstudenter?</h3>
+            <h2 className={style.heading}>Hva mener årets sommerstudenter?</h2>
             <div className={style.summerstudent1}>
               <img
                 className={style.summerstudent1picture}
@@ -202,7 +202,7 @@ const Content = () => {
                   style={{ width: !isMobile ? '50%' : '100%' }}
                   className={style.handbookChildButton}
                 >
-                  <h3 className={style.heading}>Hvorfor akkurat Variant?</h3>
+                  <h2 className={style.heading}>Hvorfor akkurat Variant?</h2>
                   <p className={style.positionTextLeft}>
                     Variant er en variant av et konsulentselskap som er raust,
                     åpent og læreglad. Disse verdiene ligger til grunn for
@@ -282,9 +282,9 @@ const Content = () => {
                     </button>
                   </div>
                   <div className={style.section5HandbookLink}>
-                    <h3 className={style.mostImportantForYou}>
+                    <h2 className={style.mostImportantForYou}>
                       Hva er viktigst for deg?
-                    </h3>
+                    </h2>
                     <a
                       className={style.handbookRef}
                       href="https://handbook.variant.no"
@@ -301,9 +301,9 @@ const Content = () => {
                   )}
                 </div>
                 <div className={style.section5HandbookLinkMobile}>
-                  <h3 className={style.mostImportantForYou}>
+                  <h2 className={style.mostImportantForYou}>
                     Hva er viktigst for deg?
-                  </h3>
+                  </h2>
                   <a
                     className={style.handbookRef}
                     href="https://handbook.variant.no"
@@ -319,7 +319,7 @@ const Content = () => {
           </div>
 
           <section className={style.section6} id="sokSommerjobb">
-            <h3 className={style.heading}>Søk sommerjobb</h3>
+            <h2 className={style.heading}>Søk sommerjobb</h2>
             <div className={style.section6Flex}>
               <div className={style.section6Text}>
                 <p className={style.section6Paragraph}>

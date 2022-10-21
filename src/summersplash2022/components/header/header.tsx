@@ -30,13 +30,16 @@ const Header = (props: { white: boolean }) => {
         )}
       >
         <header className={style.header}>
-          <h1 className={style.header__logo}>
+          <div className={style.header__logo}>
             <Link href="/">
-              <a>
-                <img src={require('src/layout/whiteVariant.svg')} alt="" />
+              <a aria-label="Variant startside">
+                <img
+                  src={require('src/layout/whiteVariant.svg')}
+                  alt="Variant"
+                />
               </a>
             </Link>
-          </h1>
+          </div>
 
           {!zenMode && (
             <>
