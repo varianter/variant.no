@@ -53,3 +53,13 @@ a:hover {
 * + .var-heading--4 {
   margin-top: 3rem;
 }
+
+.var-heading--5 {
+  line-height: 1.3;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+* + .var-heading--5 {
+  margin-top: 2rem;
+}
