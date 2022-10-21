@@ -78,6 +78,11 @@ input[type='number'] {
   transition: all 200ms;
 }
 
+.form__fieldset {
+  border: 0 none;
+  padding: 0;
+}
+
 .input-section {
   display: grid;
   grid-template-columns: max-content 1fr;

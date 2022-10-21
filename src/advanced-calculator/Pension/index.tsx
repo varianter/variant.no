@@ -70,44 +70,52 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
             </p>
           </div>
           <div className={style['form-wrapper']}>
-            <label htmlFor="compareSalary">
-              Årslønn hos nåverende arbeidsgiver
+            <fieldset className={style['form__fieldset']}>
+              <legend>
+                Årslønn hos nåverende arbeidsgiver
+              </legend>
               <RangeSlider
                 min={500000}
                 max={1200000}
                 value={compareSalary}
                 step={10000}
                 id={'compareSalary'}
-                name="Sammenlign pensjon, årslønn"
+                name="Nåverende årslønn"
                 onChange={handleOnCompareSalaryChange}
               />
-            </label>
-            <label htmlFor="comparePension">
-              Pensjon, i prosent (mellom 0 til 7.1G)
+            </fieldset>
+
+            <fieldset className={style['form__fieldset']}>
+              <legend>
+                Pensjon, i prosent (mellom 0 til 7.1G)
+              </legend>
               <RangeSlider
                 min={2}
                 max={7}
                 value={comparePensionPercentage.below7G}
                 step={1}
-                id={'comparePension'}
-                name="Sammenlign pensjon, prosent"
+                id={'comparePensionBelow7G'}
+                name="Nåverende pensjon"
                 onChange={handleOnCompareBelow7GPensionChange}
               />
-            </label>
+            </fieldset>
 
-            <label htmlFor="comparePension">
-              Pensjon, i prosent (over 7.1G)
+            <fieldset className={style['form__fieldset']}>
+              <legend>
+                Pensjon, i prosent (over 7.1G)
+              </legend>
               <RangeSlider
                 min={2}
                 max={25}
                 value={comparePensionPercentage.above7G}
                 step={1}
-                id={'comparePension'}
-                name="Sammenlign pensjon, prosent"
+                id={'comparePensionAbove7G'}
+                name="Nåverende pensjon"
                 onChange={handleOnCompareAbove7GPensionChange}
                 disabled={compareSalary < SEVEN_POINT_ONE_G}
               />
-            </label>
+            </fieldset>
+
             <a href="https://www.finansportalen.no/pensjon/hva-er-innskuddspensjon/">
               Hva er inskuddspensjon?
             </a>
