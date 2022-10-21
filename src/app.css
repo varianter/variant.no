@@ -44,6 +44,18 @@ a:hover {
   font-family: 'Recoleta', serif;
   margin: 0;
 }
+
+.var-heading--2 {
+  line-height: 1.2;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 3.4rem;
+}
+
+* + .var-heading--2 {
+  margin-top: 3.4rem;
+}
+
 .var-heading--4 {
   font-size: 1.5rem;
   font-weight: 500;

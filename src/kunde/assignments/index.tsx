@@ -68,7 +68,7 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       <Layout title={assignment.meta_title}>
         <section className={style.project}>
           <div className={style.project__introduction}>
-            <h2>{assignment.meta_customer}</h2>
+            <h1 className="var-heading var-heading--2">{assignment.meta_customer}</h1>
             <p className="lead">{assignment.meta_lead}</p>
             <div className={style.project__introduction__location}>
               <p>
