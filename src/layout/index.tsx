@@ -38,7 +38,7 @@ const Layout = ({
     modalRef,
     navRef,
     closeRef,
-      isNotHamburgerMode,
+    isNotHamburgerMode,
   );
 
   const mainClass = and(

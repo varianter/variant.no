@@ -5,7 +5,7 @@ const Apply = () => {
 
   return (
     <section className={style2.section7} id="sokfastjobb">
-      <h3 className={style2.heading}>Søk fast jobb</h3>
+      <h2 className={style2.heading}>Søk fast jobb</h2>
       <p>
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
         spørsmål om fastjobb eller Variant? Ta gjerne kontakt med meg.

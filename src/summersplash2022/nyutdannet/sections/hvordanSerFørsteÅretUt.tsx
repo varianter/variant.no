@@ -28,7 +28,7 @@ const FirstYear = () => {
   return (
     <>
       <section className={style.section5}>
-        <h3 className={style.heading}>Hvordan ser første året ut?</h3>
+        <h2 className={style.heading}>Hvordan ser første året ut?</h2>
         <p>
           For å bidra til personlig og faglig utvikling av nyutdannede
           gjennomfører vi oppstartsprogrammet{' '}

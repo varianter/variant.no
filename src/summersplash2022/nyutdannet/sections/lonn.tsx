@@ -6,7 +6,7 @@ import Calculator from '../utils/calculator';
 const Payment = () => {
   return (
     <section className={style.section4}>
-      <h3 className={style.heading}>Lønn</h3>
+      <h2 className={style.heading}>Lønn</h2>
       <div className={style.section4Flex}>
         <div className={style.section4Text}>
           <p>

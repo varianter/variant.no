@@ -22,7 +22,7 @@ const WhoAreWeSeeking = () => {
   }, []);
   return (
     <section className={style.section2}>
-      <h3 className={style.heading}>Hvem søker vi?</h3>
+      <h2 className={style.heading}>Hvem søker vi?</h2>
       <div className={style.section2Flex}>
         <div className={style.section2Text}>
           <p>

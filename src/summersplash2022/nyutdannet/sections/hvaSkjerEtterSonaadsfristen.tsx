@@ -11,7 +11,7 @@ const AfterApplying = (props: { red: boolean }) => {
   if (props.red) {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
-        <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
+        <h2 className={style.heading}>Hva skjer etter søknadsfristen?</h2>
         <div className={style2.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>

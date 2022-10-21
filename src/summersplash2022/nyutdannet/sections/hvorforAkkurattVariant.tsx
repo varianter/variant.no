@@ -41,7 +41,7 @@ const WhyVariant = () => {
     >
       <div className={style.handbook}>
         <div className={style.handbookChildButton}>
-          <h3 className={style2.heading}>Hvorfor akkurat Variant?</h3>
+          <h2 className={style2.heading}>Hvorfor akkurat Variant?</h2>
           <p className={style.positionTextLeft}>
             Variant er en variant av et konsulentselskap som er raust, åpent og
             læreglad. Disse verdiene ligger til grunn for hvordan vi møter
