@@ -36,9 +36,9 @@ export default function RangeSlider({
     <div className={style['range-input-wrapper']}>
       <div className={style['range-input']}>
         <input
-          aria-label={`range slider for ${id} ${name}`}
+          aria-label={name}
           type="range"
-          name={name}
+          name={id}
           className={style.inputRange}
           min={min}
           max={max}
@@ -50,10 +50,10 @@ export default function RangeSlider({
         />
       </div>
       <input
-        aria-label={`number input for ${id} ${name}`}
+        aria-label={name}
         id={id}
         className={style.inputNumber}
-        name={name}
+        name={id}
         type="number"
         size={max.toString().length}
         maxLength={max.toString().length}
