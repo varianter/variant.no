@@ -437,7 +437,7 @@ export default function Calculator() {
             </ul>
           </InView>
           <InView>
-            <h5>Familie</h5>
+            <h4 className="var-heading var-heading--5">Familie</h4>
             <ul>
               <li>
                 Full lønn under permisjon. NAV dekker opp til{' '}
@@ -478,7 +478,7 @@ export default function Calculator() {
             </ul>
           </InView>
           <InView>
-            <h5>Fag og sosialt</h5>
+            <h4 className="var-heading var-heading--5">Fag og sosialt</h4>
 
             <ul>
               <li>

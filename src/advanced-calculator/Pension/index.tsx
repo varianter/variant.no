@@ -51,7 +51,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
       <div className={style.pension}>
         <div className={style.pension__controls}>
           <div className={style.pension__info}>
-            <h4>Vi kan sammenlignes</h4>
+            <h3 className="var-heading var-heading--4">Vi kan sammenlignes</h3>
             <p>
               Pensjon er ikke alltid enkelt å tenke over, særlig ikke i starten.
               Men det er en viktig ting å tenke på, særlig for unge som i mindre
