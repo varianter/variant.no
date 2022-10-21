@@ -67,7 +67,6 @@ const Calculator = () => {
                 value="bachelor"
                 checked={degree == 'bachelor'}
                 onChange={onDegreeChange}
-                defaultChecked
               />
               <label id="bachelorLabel" htmlFor="Bachelor">
                 Bachelor
