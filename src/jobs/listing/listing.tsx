@@ -141,7 +141,7 @@ export const ContactTile = ({
       </div>
 
       <div className={style.contact__content}>
-        <h4 className={and(style.contact__name, 'fancy')}>{fullName}</h4>
+        <h3 className={and(style.contact__name, 'fancy var-heading var-heading--4')}>{fullName}</h3>
         <a href={`mailto:${email}`} className={style.contact__type}>
           📬 {email}
         </a>
