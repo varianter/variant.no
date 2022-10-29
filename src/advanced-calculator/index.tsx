@@ -9,6 +9,8 @@ import SalaryGraph from './Graphs/SalaryGraph';
 import {
   daysUntilSalaryRaise,
   firstDayOfTheYear,
+  gradDateOfTheYear,
+  calculateYearsSince
 } from './helpers/daysUntilNewSalary';
 import { getAverageBonus, getHistoricBonus } from './helpers/getHistoricBonus';
 import getPayscale from './helpers/getPayscale';
@@ -52,8 +54,8 @@ export default function Calculator() {
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience =
-    firstDayOfTheYear(MAX_YEAR).getFullYear() - selectedValidYear;
-
+    calculateYearsSince(gradDateOfTheYear(selectedValidYear));
+    
   const totalExperience =
     yearsOfExperience === 0
       ? `Nyutdannet ${DEGREE[degree]}`
