@@ -1,0 +1,21 @@
+.newyearParty {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding-top: 5rem;
+}
+
+.newyearParty__table {
+  width: 100%;
+}
+
+.newyearParty__table p {
+  margin: 0;
+}
+
+.newyearParty__table_row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  margin-bottom: 0.8rem;
+}
