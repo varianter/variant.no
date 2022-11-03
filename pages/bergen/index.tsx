@@ -9,6 +9,8 @@ export const getStaticProps = async () => {
     const employees = await getContactsByEmails([
       'marie@variant.no',
       'andreas@variant.no',
+      'tlh@variant.no',
+      'vif@variant.no',
     ]);
 
     return {
