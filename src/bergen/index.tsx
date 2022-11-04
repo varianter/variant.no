@@ -41,8 +41,6 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
   employees,
 }) => {
-  const [firstEmployee, secondEmployee] = employees;
-
   return (
     <Layout>
       <div>
@@ -249,8 +247,9 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               style['content--employees'],
             )}
           >
-            {firstEmployee && <EmployeeTile employee={firstEmployee} />}
-            {secondEmployee && <EmployeeTile employee={secondEmployee} />}
+            {employees.map((employee) => (
+              <EmployeeTile key={employee.email} employee={employee} />
+            ))}
           </div>
         </div>
       </div>

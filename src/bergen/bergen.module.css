@@ -183,6 +183,8 @@
 .content--employees {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  --image-width: 300px;
 }
 
 @media (max-width: 500px) {
@@ -194,6 +196,14 @@
   .barcode {
     float: none;
     margin: 0 auto;
+  }
+}
+
+/* Override manually. Not ideal solution but quick and dirty
+hack to avoid having to rewrite how employee tiles work for now.... */
+@media (min-width: 500px) {
+  .content--employees > :nth-child(2n) {
+    margin-top: 4rem;
   }
 }
 
@@ -231,22 +241,6 @@
   }
   .employees__layout {
     justify-content: center;
-  }
-}
-@media (min-width: 760px) and (max-width: 1100px) {
-  .employees__layout {
-    --columns: 2;
-  }
-  .employee:nth-child(2n + 2) {
-    margin-top: calc(8rem - var(--randomOffset) * 2rem);
-  }
-}
-@media (min-width: 1100px) {
-  .employees__layout {
-    --columns: 3;
-  }
-  .employee:nth-child(3n + 2) {
-    margin-top: calc(8rem - var(--randomOffset) * 2rem);
   }
 }
 
