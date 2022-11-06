@@ -2,6 +2,17 @@ export function firstDayOfTheYear(year: number): Date {
   return new Date(year, 0, 1, 0, 0); // 01.01
 }
 
+export function gradDateOfTheYear(year: number): Date {
+  return new Date(year, 5, 30, 0, 0); // 30. jul
+}
+
+export function calculateYearsSince(calcDate: Date) :number {  
+  let diffInMs = Date.now() - calcDate.getTime();
+  let diffInDate = new Date(diffInMs); // miliseconds from epoch
+  return Math.abs(diffInDate.getUTCFullYear() - 1970);
+}
+
+
 export function daysBetweenDates(startDate: Date, endDate: Date) {
   const dayInMs = 1000 * 60 * 60 * 24;
 

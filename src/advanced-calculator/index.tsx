@@ -8,7 +8,8 @@ import BonusGraph from './Graphs/BonusGraph';
 import SalaryGraph from './Graphs/SalaryGraph';
 import {
   daysUntilSalaryRaise,
-  firstDayOfTheYear,
+  calculateYearsSince,
+  gradDateOfTheYear
 } from './helpers/daysUntilNewSalary';
 import { getAverageBonus, getHistoricBonus } from './helpers/getHistoricBonus';
 import getPayscale from './helpers/getPayscale';
@@ -52,7 +53,8 @@ export default function Calculator() {
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience =
-    firstDayOfTheYear(MAX_YEAR).getFullYear() - selectedValidYear;
+    calculateYearsSince(gradDateOfTheYear(selectedValidYear));
+
 
   const totalExperience =
     yearsOfExperience === 0
