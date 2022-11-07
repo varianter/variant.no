@@ -22,22 +22,22 @@ export const animation1 = () => {
   });
   tl.add({
     targets: '#blob',
-    width: 300,
-    height: 333,
+    width: 30,
+    height: 33,
+    scale: 10,
     easing: 'linear',
     duration: 200,
   });
   tl.add({
     targets: '#blob',
-    width: 300,
-    height: 333,
     easing: 'linear',
     duration: 500,
   });
   tl.add({
     targets: '#blob',
     opacity: 0,
-    translateY: 10,
+    translateY: 5,
+    easing: 'linear',
     duration: 1000,
   });
 };
@@ -65,22 +65,22 @@ export const animation2 = () => {
   });
   tl.add({
     targets: '#blob1',
-    width: 300,
-    height: 333,
+    width: 30,
+    height: 33,
+    scale: 10,
     easing: 'linear',
     duration: 200,
   });
   tl.add({
     targets: '#blob1',
-    width: 300,
-    height: 333,
     easing: 'linear',
     duration: 500,
   });
   tl.add({
     targets: '#blob1',
     opacity: 0,
-    translateY: 10,
+    translateY: 5,
+    easing: 'linear',
     duration: 1000,
   });
 };

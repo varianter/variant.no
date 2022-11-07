@@ -6,7 +6,7 @@
 
 .firework__position {
   position: relative;
-  right: 200px;
+  right: 20rem;
 }
 
 .firework2 {
@@ -17,11 +17,5 @@
 
 .firework2__position {
   position: relative;
-  left: 500px;
-}
-
-.blob1 {
-  position: relative;
-  right: 200px;
-  top: 100px;
+  left: 40rem;
 }

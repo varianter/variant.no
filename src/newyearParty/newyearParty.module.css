@@ -19,6 +19,10 @@ p {
   color: white;
 }
 
+.newyearParty__invitation__overHeader {
+  font-family: 'Recoleta';
+}
+
 .newyearParty__invitation__underHeader {
   display: flex;
   justify-content: space-between;
@@ -27,6 +31,7 @@ p {
 
 .newyearParty__invitation__underHeader p {
   margin-top: 0;
+  font-family: 'Recoleta';
 }
 
 .newyearParty__invitation__table {
@@ -34,14 +39,13 @@ p {
 }
 
 .newyearParty__invitation__table p {
-  margin: 0;
+  margin-block: 0.8rem;
 }
 
 .newyearParty__invitation__table_row {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid white;
-  margin-bottom: 0.8rem;
 }
 
 .newyearParty__invitation__button {

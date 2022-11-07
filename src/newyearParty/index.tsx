@@ -2,12 +2,14 @@ import DanceFloor from './img/danceFloor/danceFloor';
 import Firework from './img/firework/firework';
 import Firework2 from './img/firework/firework2';
 import Gradient from './img/gradient/gradient';
-import style from './newyearParty.module.css';
+import style from './newYearParty.module.css';
 const NewyearParty = () => {
   return (
     <div className={style.newyearParty}>
       <div className={style.newyearParty__invitation}>
-        <p>Variant Oslo inviterer til</p>
+        <p className={style.newyearParty__invitation__overHeader}>
+          Variant Oslo inviterer til
+        </p>
         <h1>Nyttårsfest</h1>
         <div className={style.newyearParty__invitation__underHeader}>
           <p>Mesh Youngstorget</p>
