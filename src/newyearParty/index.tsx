@@ -3,7 +3,7 @@ import Firework from './img/firework/firework';
 import Firework2 from './img/firework/firework2';
 import Gradient from './img/gradient/gradient';
 import style from './newYearParty.module.css';
-const NewyearParty = () => {
+const NewYearParty = () => {
   return (
     <div className={style.newyearParty}>
       <div className={style.newyearParty__invitation}>
@@ -45,4 +45,4 @@ const NewyearParty = () => {
   );
 };
 
-export default NewyearParty;
+export default NewYearParty;

@@ -1,1 +1,1 @@
-export { default } from 'src/newyearParty';
+export { default } from 'src/newYearParty';
