@@ -1,52 +1,53 @@
 import { useEffect } from 'react';
-import { animation1 } from './animations/animation1';
+import { animation2 } from './animations/animation1';
 
 import style from './firework.module.css';
 
 const fireworkAnimation = () => {
-  animation1();
+  animation2();
 };
 
-const Firework = () => {
+const Firework2 = () => {
   useEffect(() => {
     fireworkAnimation();
   });
 
   return (
-    <div className={style.firework}>
-      <div className={style.firework__position}>
+    <div className={style.firework2}>
+      <div className={style.firework2__position}>
         <svg
           style={{ display: 'none' }}
-          id="path"
+          id="path1"
           xmlns="http://www.w3.org/2000/svg"
-          width="66"
-          height="557"
-          viewBox="0 0 66 557"
+          width="100"
+          height="558"
+          viewBox="0 0 100 558"
           fill="none"
         >
           <path
-            d="M9.19425 556.5C-18.4057 358.5 34.6943 103.333 64.6943 0.5"
+            d="M87.0467 557C129.837 359 47.5117 103.833 1 1"
             stroke="black"
             stroke-linecap="round"
           />
         </svg>
         <svg
-          id="blob"
+          id="blob1"
+          className={style.blob1}
           xmlns="http://www.w3.org/2000/svg"
           width="0"
           height="0"
-          viewBox="0 0 301 333"
+          viewBox="0 0 299 286"
           fill="none"
         >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M139.363 332.846C88.3307 335.632 43.6177 300.167 16.0525 259.594C-8.29911 223.75 0.503975 180.581 7.33288 138.509C15.2385 89.8027 10.2604 27.8013 57.1974 6.1029C104.231 -15.6404 153.374 25.8792 199.195 49.8132C240.012 71.1334 289.043 89.599 299.223 132.522C309.373 175.315 273.941 211.999 245.976 247.043C216.423 284.076 188.447 330.167 139.363 332.846Z"
-            fill="#E61A6B"
+            d="M75.339 89.5979C105.292 57.413 120.317 -2.54605 164.132 1.09306C208.033 4.7393 214.195 65.6716 237.483 103.065C260.553 140.108 309.444 171.344 296.025 212.869C282.536 254.614 226.164 256.408 184.008 268.551C146.432 279.374 107.814 294.64 72.8382 277.154C34.0565 257.766 -0.00986521 220.198 0.568202 176.844C1.10544 136.551 47.8865 119.096 75.339 89.5979Z"
+            fill="#03DAC6"
           />
         </svg>
         <svg
-          id="firework"
+          id="firework1"
           xmlns="http://www.w3.org/2000/svg"
           width="43"
           height="3"
@@ -58,7 +59,7 @@ const Firework = () => {
             y1="1.5"
             x2="43"
             y2="1.5"
-            stroke="#E61A6B"
+            stroke="#03DAC6"
             stroke-width="3"
           />
         </svg>
@@ -67,4 +68,4 @@ const Firework = () => {
   );
 };
 
-export default Firework;
+export default Firework2;

@@ -19,6 +19,16 @@ p {
   color: white;
 }
 
+.newyearParty__invitation__underHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5.313rem;
+}
+
+.newyearParty__invitation__underHeader p {
+  margin-top: 0;
+}
+
 .newyearParty__invitation__table {
   width: 100%;
 }
@@ -32,6 +42,17 @@ p {
   justify-content: space-between;
   border-bottom: 1px solid white;
   margin-bottom: 0.8rem;
+}
+
+.newyearParty__invitation__button {
+  width: 100%;
+  border: none;
+  background-color: #9af0e8;
+  height: 2.75rem;
+}
+
+.newyearParty__invitation__button:hover {
+  background-color: #68e9dd;
 }
 
 @media (min-width: 2000px) {

@@ -8,3 +8,20 @@
   position: relative;
   right: 200px;
 }
+
+.firework2 {
+  position: absolute;
+  bottom: 200px;
+  z-index: -1;
+}
+
+.firework2__position {
+  position: relative;
+  left: 500px;
+}
+
+.blob1 {
+  position: relative;
+  right: 200px;
+  top: 100px;
+}
