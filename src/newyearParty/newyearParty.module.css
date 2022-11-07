@@ -48,6 +48,10 @@ p {
   border-bottom: 1px solid white;
 }
 
+.newyearParty__invitation__table_row:nth-last-child(2) {
+  border-bottom: none;
+}
+
 .newyearParty__invitation__button {
   width: 100%;
   border: none;
