@@ -1,6 +1,6 @@
 import { fireworkAnimation } from 'src/newyearParty/animation/fireworkAnimation';
 
-const FireWork = (props: { color?: string }) => {
+const FireWork = () => {
   return (
     <svg
       onClick={() => fireworkAnimation(Math.random() * 16, Math.random() * 600)}

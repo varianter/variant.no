@@ -1,5 +1,4 @@
 import DanceFloor from './img/danceFloor/danceFloor';
-import FireWork from './img/firework/firework';
 import Gradient from './img/gradient/gradient';
 import style from './newyearParty.module.css';
 const NewyearParty = () => {
