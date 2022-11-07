@@ -1,21 +1,47 @@
 .newyearParty {
+  background-color: black;
+  overflow: hidden;
+  height: auto;
+}
+
+.newyearParty__invitation {
+  position: relative;
   display: block;
   margin: auto;
   width: fit-content;
   padding-top: 5rem;
+  margin-bottom: 0rem;
+  z-index: 2;
 }
 
-.newyearParty__table {
+.newyearParty__invitation > h1,
+p {
+  color: white;
+}
+
+.newyearParty__invitation__table {
   width: 100%;
 }
 
-.newyearParty__table p {
+.newyearParty__invitation__table p {
   margin: 0;
 }
 
-.newyearParty__table_row {
+.newyearParty__invitation__table_row {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid white;
   margin-bottom: 0.8rem;
+}
+
+@media (min-width: 2000px) {
+  .newyearParty {
+    height: 2160px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .newyearParty {
+    height: auto;
+  }
 }

@@ -1,0 +1,8 @@
+.gradient {
+  position: relative;
+  top: 200px;
+  z-index: 1;
+  margin-top: -8rem;
+  width: 100%;
+  height: auto;
+}
