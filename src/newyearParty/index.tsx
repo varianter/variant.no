@@ -1,4 +1,5 @@
 import DanceFloor from './img/danceFloor/danceFloor';
+import FireWork from './img/firework/firework';
 import Gradient from './img/gradient/gradient';
 import style from './newyearParty.module.css';
 const NewyearParty = () => {
@@ -33,7 +34,7 @@ const NewyearParty = () => {
             <p>DJ</p>
           </div>
         </div>
-        {/* <FireWork /> */}
+        <FireWork fillColor={'#E61A6B'} />
       </div>
       <Gradient />
       <DanceFloor />
