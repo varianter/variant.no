@@ -127,6 +127,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               src="https://www.youtube-nocookie.com/embed/goRgDptKt-A"
               allowFullScreen={true}
               frameBorder="0"
+              title="Video Variantdag, November 2019"
               aria-label="Video Variantdag, November 2019"
             ></iframe>
           </div>

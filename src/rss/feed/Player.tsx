@@ -100,6 +100,7 @@ export default function AudioPlayer({
 
   return (
     <div className={style.player}>
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <audio preload="none" ref={audioElement}>
         <source src={url} />
       </audio>

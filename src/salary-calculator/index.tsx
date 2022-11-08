@@ -143,7 +143,6 @@ export const Calculator = (props: Props) => {
               onClick={decrementYear}
               className={style.iconButton}
               aria-label="Øke antall år siden ferdig skolegang"
-              role="img"
             >
               👵
             </button>
@@ -159,7 +158,6 @@ export const Calculator = (props: Props) => {
               onClick={incrementYear}
               className={style.iconButton}
               aria-label="Senke antall år siden ferdig skolegang"
-              role="img"
             >
               👶
             </button>
