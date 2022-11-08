@@ -22,6 +22,7 @@ import style from './calculator.module.css';
 import { Button } from '@components/button';
 import { and } from 'src/utils/css';
 import { useMediaQuery } from 'src/utils/use-media-query';
+import {Heading4} from "@components/heading";
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
@@ -437,7 +438,7 @@ export default function Calculator() {
             </ul>
           </InView>
           <InView>
-            <h4 className="var-heading var-heading--5">Familie</h4>
+            <Heading4 styleLevel="5">Familie</Heading4>
             <ul>
               <li>
                 Full lønn under permisjon. NAV dekker opp til{' '}
@@ -478,8 +479,7 @@ export default function Calculator() {
             </ul>
           </InView>
           <InView>
-            <h4 className="var-heading var-heading--5">Fag og sosialt</h4>
-
+            <Heading4 styleLevel="5">Fag og sosialt</Heading4>
             <ul>
               <li>
                 En konferanse, kurs eller tilsvarende i året. Så mange du vil om

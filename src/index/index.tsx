@@ -14,6 +14,7 @@ import { HighlightedItemsLists } from 'src/rss/service';
 import PageTitle from '@components/page-title';
 import sommerjobbImg from './images/section1Blob.png';
 import Arrow from '@components/arrow';
+import {Heading3} from "@components/heading";
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -29,7 +30,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         key={caseItem.heading}
       >
         <div className={style['two-column-section__item__content']}>
-          <h3 className="var-heading var-heading--4">{caseItem.heading}</h3>
+          <Heading3 styleLevel="4">{caseItem.heading}</Heading3>
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
@@ -247,7 +248,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
         >
           <div className={style['two-column-section__item__content']}>
-            <h3 className="var-heading var-heading--4">Mangfold</h3>
+            <Heading3 styleLevel="4">Mangfold</Heading3>
             <p>
               Mangfold skaper inkluderende og fullgode løsninger, som gir verdi
               og nytte for absolutt alle. Vi i Variant samarbeider derfor med de
@@ -280,7 +281,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           className={`${style['two-column-section__item']} ${style['two-column-section__item--centered']}`}
         >
           <div className={style['two-column-section__item__content']}>
-            <h3 className="var-heading var-heading--4">Læreglede</h3>
+            <Heading3 styleLevel="4">Læreglede</Heading3>
             <p>
               Vi i Variant ønsker å bidra til aktive og levende læringsmiljøer.
               Derfor bistår vi communities i nær- og fjernmiljøet med blant

@@ -9,8 +9,8 @@ import { getStaticProps } from 'pages/jobs/[listing]';
 import { ButtonLink } from 'src/components/button';
 import { EmployeeItem } from 'src/employees/types';
 import Layout from 'src/layout';
-import { and } from 'src/utils/css';
 import style from './listings.module.css';
+import {Heading3} from "@components/heading";
 
 const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ listing }) => {
@@ -141,7 +141,7 @@ export const ContactTile = ({
       </div>
 
       <div className={style.contact__content}>
-        <h3 className={and(style.contact__name, 'fancy var-heading var-heading--4')}>{fullName}</h3>
+        <Heading3 styleLevel="4" className={style.contact__name}>{fullName}</Heading3>
         <a href={`mailto:${email}`} className={style.contact__type}>
           📬 {email}
         </a>

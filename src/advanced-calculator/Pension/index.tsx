@@ -5,6 +5,7 @@ import RangeSlider from '../Components/RangeSlider';
 import { useState } from 'react';
 
 import style from '../calculator.module.css';
+import {Heading3} from "@components/heading";
 
 const SEVEN_POINT_ONE_G = ONE_G * 7.1;
 // const TWELVE_G = ONE_G * 12;
@@ -51,7 +52,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
       <div className={style.pension}>
         <div className={style.pension__controls}>
           <div className={style.pension__info}>
-            <h3 className="var-heading var-heading--4">Vi kan sammenlignes</h3>
+            <Heading3 styleLevel="4">Vi kan sammenlignes</Heading3>
             <p>
               Pensjon er ikke alltid enkelt å tenke over, særlig ikke i starten.
               Men det er en viktig ting å tenke på, særlig for unge som i mindre
