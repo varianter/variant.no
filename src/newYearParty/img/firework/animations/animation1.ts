@@ -8,7 +8,6 @@ export const animation1 = () => {
 
   tl.add({
     targets: '#firework',
-
     translateX: path('x'),
     translateY: path('y'),
     rotate: path('angle'),
@@ -50,7 +49,6 @@ export const animation2 = () => {
 
   tl.add({
     targets: '#firework1',
-
     translateX: path('x'),
     translateY: path('y'),
     rotate: path('angle'),

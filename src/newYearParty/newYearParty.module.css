@@ -34,6 +34,12 @@ p {
   font-family: 'Recoleta';
 }
 
+.newyearParty__invitation_ingress {
+  max-width: fit-content;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .newyearParty__invitation__table {
   width: 100%;
 }

@@ -18,6 +18,8 @@ const DanceFloor = () => {
       anime({
         targets: '#t' + index,
         fill: colors[Math.floor(Math.random() * colors.length)],
+        easing: 'linear',
+        duration: 200,
       });
     }
   };
