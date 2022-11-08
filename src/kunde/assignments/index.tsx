@@ -7,6 +7,7 @@ import { Interview } from 'src/kunde/utils/customerUtils';
 import { getStaticProps } from 'pages/kunde/[oppdrag]';
 import DecorativeBoxes from '@components/decorative-boxes';
 import MarkdownIt from 'markdown-it';
+import {Heading1} from "@components/heading";
 
 const createHtmlFromMetadata = () => {
   let html =
@@ -68,7 +69,7 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       <Layout title={assignment.meta_title}>
         <section className={style.project}>
           <div className={style.project__introduction}>
-            <h1 className="var-heading var-heading--2">{assignment.meta_customer}</h1>
+            <Heading1 styleLevel="2">{assignment.meta_customer}</Heading1>
             <p className="lead">{assignment.meta_lead}</p>
             <div className={style.project__introduction__location}>
               <p>
