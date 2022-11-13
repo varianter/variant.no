@@ -17,7 +17,7 @@ Variant er et konsulentselskap av og for mennesker med stor læreglede, som styr
 ## Hvem ser vi etter?
 
 Vi ser etter deg som har en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at vi alle har verdi- og tankesett som harmonerer med disse.
-Som prosjektleder får du ansvar for å lede team og fagpersoner, for å drive prosesser og for å utøve og påvirke den faglige utviklingen i oppdraget ditt. Hos oss vil du jobbe med ulike arbeidsoppgaver ut fra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får. Det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. På samme måte vil du gjerne ofte være i en posisjon til å se nye muligheter hos kunden.
+Som prosjektleder får du ansvar for å lede team og fagpersoner, for å drive prosesser og for å utøve og påvirke den faglige utviklingen i oppdraget ditt. Hos oss vil du jobbe med ulike arbeidsoppgaver ut fra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får. Det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. Rollen din i prosjekt setter deg også ofte i en posisjon hvor du kan se og identifisere nye mulighetsromhos kundene våre.
 
 Du kan gjerne være teknolog, designer eller økonom, og vi stiller ingen absolutte krav til din formelle bakgrunn. Det viktigste er din erfaring og kompetanse, og dine ønsker for egen utvikling. 
 
