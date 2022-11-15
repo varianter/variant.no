@@ -41,6 +41,7 @@ p {
 .newyearParty__invitation_ingress_paragraph {
   max-width: fit-content;
   margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .newyearParty__invitation__table {
