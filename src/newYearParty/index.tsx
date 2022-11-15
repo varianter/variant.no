@@ -15,16 +15,21 @@ const NewYearParty = () => {
           <p>Mesh Youngstorget</p>
           <p>27. Januar</p>
         </div>
-        <p className={style.newyearParty__invitation_ingress}>
-          Hei alle varianter, venner, familie, kollegaer og alle andre
-          interesserte! I Variant er vi er bygd på åpenhet, raushet og
-          læreglede. Dette er aldri noe vi bare skal si, men noe vi skal leve
-          opp til. Så i den anledning ønsker vi i Variant Oslo å invitere dere
-          alle på et storstilt nyttårskalas med underholdning, mat, drikke,
-          spill, musikk og moro i ekte Variant-ånd. Arrangementet er gratis, men
-          alle gjester må løse billett på Hoopla. Velkommen skal du være, vi
-          gleder oss til å treffe deg!
-        </p>
+        <div className={style.newyearParty__invitation_ingress}>
+          <p className={style.newyearParty__invitation_ingress_paragraph}>
+            Hei alle varianter, kollegaer, venner, familie og andre
+            interesserte!
+          </p>
+          <p className={style.newyearParty__invitation_ingress_paragraph}>
+            Variant er bygd på åpenhet, raushet og læreglede. Derfor ønsker vi i
+            Variant Oslo å invitere dere alle til et storstilt nyttårskalas med
+            underholdning, mat, drikke, musikk og moro i ekte Variant-ånd.
+          </p>
+          <p className={style.newyearParty__invitation_ingress_paragraph}>
+            Arrangementet er gratis, men alle gjester må løse billett på Hoopla.
+            Vi gleder oss til å treffe deg!
+          </p>
+        </div>
         <div className={style.newyearParty__invitation__table}>
           <div className={style.newyearParty__invitation__table_row}>
             <p>18.00</p>
