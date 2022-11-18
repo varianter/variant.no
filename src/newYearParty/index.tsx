@@ -36,10 +36,11 @@ const NewYearParty = () => {
           <p className={style.newyearParty__invitation__table_text}>PASHA</p>
           <p className={style.newyearParty__invitation__table_text}>SPILL</p>
           <p className={style.newyearParty__invitation__table_text}>ØL!</p>
-
-          <button className={style.newyearParty__invitation__button}>
-            Hold av billett
-          </button>
+          <form action="https://variant.hoopla.no/sales/event/2685940696">
+            <button className={style.newyearParty__invitation__button}>
+              Hold av billett
+            </button>
+          </form>
         </div>
         <Firework />
         <Firework2 />

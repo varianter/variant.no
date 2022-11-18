@@ -65,6 +65,7 @@ p {
 
 .newyearParty__invitation__button:hover {
   background-color: #68e9dd;
+  cursor: pointer;
 }
 
 @media (min-width: 2000px) {
