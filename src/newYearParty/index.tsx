@@ -33,7 +33,13 @@ const NewYearParty = () => {
         <div className={style.newyearParty__invitation__table}>
           <p className={style.newyearParty__invitation__table_text}>PIZZA</p>
           <p className={style.newyearParty__invitation__table_text}>DJ</p>
-          <p className={style.newyearParty__invitation__table_text}>PASHA</p>
+          <a
+            href="https://www.youtube.com/watch?v=gO6Sp3NkL2Y"
+            style={{ cursor: 'pointer' }}
+            className={style.newyearParty__invitation__table_text}
+          >
+            PASHA
+          </a>
           <p className={style.newyearParty__invitation__table_text}>SPILL</p>
           <p className={style.newyearParty__invitation__table_text}>ØL!</p>
           <form action="https://variant.hoopla.no/sales/event/2685940696">
