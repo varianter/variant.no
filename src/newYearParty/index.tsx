@@ -31,22 +31,12 @@ const NewYearParty = () => {
           </p>
         </div>
         <div className={style.newyearParty__invitation__table}>
-          <div className={style.newyearParty__invitation__table_row}>
-            <p>18.00</p>
-            <p>DØRENE ÅPNER</p>
-          </div>
-          <div className={style.newyearParty__invitation__table_row}>
-            <p>19.00</p>
-            <p>UNDERHOLDNING</p>
-          </div>
-          <div className={style.newyearParty__invitation__table_row}>
-            <p>20.00</p>
-            <p>UNDERHOLDNING</p>
-          </div>
-          <div className={style.newyearParty__invitation__table_row}>
-            <p>22.00-02.00</p>
-            <p>DJ</p>
-          </div>
+          <p className={style.newyearParty__invitation__table_text}>PIZZA</p>
+          <p className={style.newyearParty__invitation__table_text}>DJ</p>
+          <p className={style.newyearParty__invitation__table_text}>PASHA</p>
+          <p className={style.newyearParty__invitation__table_text}>SPILL</p>
+          <p className={style.newyearParty__invitation__table_text}>ØL!</p>
+
           <button className={style.newyearParty__invitation__button}>
             Hold av billett
           </button>

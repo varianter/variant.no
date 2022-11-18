@@ -26,7 +26,7 @@ p {
 .newyearParty__invitation__underHeader {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5.313rem;
+  margin-bottom: 3.313rem;
 }
 
 .newyearParty__invitation__underHeader p {
@@ -48,21 +48,15 @@ p {
   width: 100%;
 }
 
-.newyearParty__invitation__table p {
-  margin-block: 0.8rem;
-}
-
-.newyearParty__invitation__table_row {
+.newyearParty__invitation__table_text {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid white;
-}
-
-.newyearParty__invitation__table_row:nth-last-child(2) {
-  border-bottom: none;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0;
 }
 
 .newyearParty__invitation__button {
+  margin-top: 1rem;
   width: 100%;
   border: none;
   background-color: #9af0e8;
