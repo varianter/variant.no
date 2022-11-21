@@ -1,13 +1,9 @@
-.header {
-  position: relative;
-}
-
 .header__text {
-  position: absolute;
-  bottom: 7rem;
-  z-index: 1;
-
-  padding-inline: 5rem;
+  background-position-y: bottom;
+  background-size: cover;
+  padding-top: 5rem;
+  padding: 5rem;
+  height: 20rem;
 }
 
 .header__text > * {
@@ -16,9 +12,4 @@
 
 .header__text a {
   color: white;
-}
-
-.headerBackground {
-  width: 100%;
-  height: auto;
 }

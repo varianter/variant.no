@@ -1,5 +1,6 @@
 .tjenesteomrade {
   background-color: #5d0a2b;
+  padding-bottom: 20rem;
 }
 
 .tjenesteomrade > * {
@@ -10,5 +11,5 @@
   display: flex;
   flex-direction: column;
   padding-inline: 6rem;
-  gap: 10rem;
+  gap: 4rem;
 }
