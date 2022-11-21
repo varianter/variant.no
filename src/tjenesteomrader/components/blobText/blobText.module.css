@@ -1,0 +1,15 @@
+.blobText {
+}
+
+.blobText svg {
+  position: absolute;
+  z-index: 0;
+}
+
+.blobText__text {
+  position: relative;
+  left: 3rem;
+  top: 3rem;
+  font-size: 1.875rem;
+  z-index: 1;
+}

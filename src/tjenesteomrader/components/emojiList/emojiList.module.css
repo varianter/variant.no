@@ -1,0 +1,21 @@
+.emojiList {
+  height: fit-content;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.emojiList > * {
+  margin: 0;
+}
+
+.emojiList__emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.emojiList__text {
+  font-size: 1.25rem;
+}

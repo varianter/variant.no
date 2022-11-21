@@ -1,0 +1,14 @@
+.tjenesteomrade {
+  background-color: #5d0a2b;
+}
+
+.tjenesteomrade > * {
+  color: white;
+}
+
+.tjenesteomrade__columns {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 6rem;
+  gap: 10rem;
+}

@@ -1,0 +1,10 @@
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.twoColumns > * {
+  margin: 0;
+}
