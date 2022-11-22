@@ -6,9 +6,8 @@
 
 .newyearParty__invitation {
   position: relative;
-  display: block;
   margin: auto;
-  width: fit-content;
+  width: min-content;
   padding-top: 5rem;
   margin-bottom: 0rem;
   z-index: 2;
