@@ -1,6 +1,5 @@
 import Blob from '../../images/blobs/blobs';
 import style from './blobText.module.css';
-import test from '../../images/blobs/blob1.svg';
 
 const BlobText = (props: {
   color: string;

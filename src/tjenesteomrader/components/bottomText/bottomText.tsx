@@ -1,5 +1,4 @@
 import style from './bottomText.module.css';
-import divider from '../../images/divider.svg';
 import Footer from 'src/tjenesteomrader/images/footer/footer';
 import Divider from 'src/tjenesteomrader/images/divider/divider';
 const BottomText = () => {

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import style from './entrance.module.css';
 
 const Entrance = (props: {
