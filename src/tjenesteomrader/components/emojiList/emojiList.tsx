@@ -5,7 +5,14 @@ const EmojiList = (props: {
   reversed: boolean;
 }) => {
   return (
-    <div className={style.emojiList}>
+    <div
+      className={style.emojiList}
+      style={
+        props.reversed
+          ? { justifyContent: 'flex-end' }
+          : { justifyContent: 'space-between' }
+      }
+    >
       <p
         style={props.reversed ? { order: 1 } : { order: -1 }}
         className={style.emojiList__emoji}

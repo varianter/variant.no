@@ -10,6 +10,7 @@
 
 .blobText:nth-child(odd) .blobText__textbox {
   background-position: right 0 bottom 4rem;
+  text-align: end;
 }
 
 .blobText__text {
