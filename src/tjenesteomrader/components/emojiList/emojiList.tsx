@@ -10,7 +10,7 @@ const EmojiList = (props: {
       style={
         props.reversed
           ? { justifyContent: 'flex-end' }
-          : { justifyContent: 'space-between' }
+          : { justifyContent: 'flex-start' }
       }
     >
       <p

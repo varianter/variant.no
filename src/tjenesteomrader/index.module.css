@@ -12,4 +12,23 @@
   flex-direction: column;
   padding-inline: 6rem;
   gap: 4rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .tjenesteomrade__columns {
+    padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .tjenesteomrade__columns {
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  .tjenesteomrade__columns {
+    padding-inline: 15rem;
+  }
 }

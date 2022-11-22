@@ -3,9 +3,17 @@
   z-index: 0;
 }
 
+.blobText {
+  position: relative;
+  overflow: hidden;
+}
+
 .blobText__textbox {
   min-height: 25rem;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .blobText:nth-child(odd) .blobText__textbox {
@@ -14,8 +22,40 @@
 }
 
 .blobText__text {
-  padding-top: 2rem;
   position: relative;
   font-size: 1.875rem;
   z-index: 1;
+}
+
+.blobText__blob {
+  position: absolute;
+}
+
+.blobText:nth-child(odd) .blobText__blob {
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .blobText__textbox,
+  .blobText:nth-child(odd) .blobText__textbox {
+    text-align: center;
+    background-position: center bottom 2rem;
+  }
+
+  .blobText {
+    order: -1;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .blobText__text {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .blobText__blob {
+    top: 4rem;
+  }
 }

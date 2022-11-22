@@ -7,7 +7,9 @@ const HeaderBackground = (props: {
   return (
     <div className={style.header}>
       <div
-        style={{ backgroundImage: `url(${svg})` }}
+        style={{
+          backgroundImage: `url(${svg})`,
+        }}
         className={style.header__text}
       >
         <a href="">Tjenesteområder /</a>

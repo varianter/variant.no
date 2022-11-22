@@ -25,3 +25,15 @@
 .bottomText__content_bigText {
   font-size: 1.875rem;
 }
+
+@media (max-width: 900px) {
+  .bottomText__content_wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 481px) {
+  .bottomText__content {
+    padding-inline: 3rem;
+  }
+}

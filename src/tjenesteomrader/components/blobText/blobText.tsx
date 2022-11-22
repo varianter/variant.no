@@ -9,11 +9,13 @@ const BlobText = (props: {
 }) => {
   return (
     <div className={style.blobText}>
-      {/* <Blob BlobPathNr={props.blobNr} color={props.color} /> */}
+      <div className={style.blobText__blob}>
+        <Blob BlobPathNr={props.blobNr} color={props.color} />
+      </div>
       <div
-        style={{
-          backgroundImage: `url(${test})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${test})`,
+        // }}
         className={style.blobText__textbox}
       >
         {props.text.map((paragraph) => {

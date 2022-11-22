@@ -13,3 +13,14 @@
 .header__text a {
   color: white;
 }
+
+@media (max-width: 750px) {
+  .header__text {
+    padding-top: 5rem;
+    padding-inline: 3rem;
+  }
+
+  .header__text h2 {
+    font-size: 1.875rem;
+  }
+}

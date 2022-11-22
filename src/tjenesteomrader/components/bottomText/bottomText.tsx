@@ -5,11 +5,11 @@ import Divider from 'src/tjenesteomrader/images/divider/divider';
 const BottomText = () => {
   return (
     <div className={style.bottomText}>
-      <div className={style.bottomText__content}>
-        <div className={style.bottomText__content_divider}>
-          <Divider />
-        </div>
+      <div className={style.bottomText__content_divider}>
+        <Divider />
+      </div>
 
+      <div className={style.bottomText__content}>
         <p className={style.bottomText__content_bigText}>
           Digital tjeneste- og produktutvikling er et fleksibelt rammeverk for
           utvikling av nye og eksisterende digitale produkter. Rammeverket

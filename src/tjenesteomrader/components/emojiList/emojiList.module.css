@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  justify-content: space-between;
 }
 
 .emojiList > * {
@@ -20,4 +19,14 @@
 .emojiList__text {
   vertical-align: middle;
   font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .emojiList {
+    flex-direction: column;
+  }
+  .emojiList__text {
+    text-align: center;
+    order: 2;
+  }
 }
