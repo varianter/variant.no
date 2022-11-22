@@ -2,7 +2,8 @@ import DanceFloor from './img/danceFloor/danceFloor';
 import Firework from './img/firework/firework';
 import Firework2 from './img/firework/firework2';
 import Gradient from './img/gradient/gradient';
-import style from './newYearParty.module.css';
+import style from './nyttarskalas.module.css';
+
 const NewYearParty = () => {
   return (
     <div className={style.newyearParty}>
