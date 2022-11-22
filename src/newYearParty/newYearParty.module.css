@@ -66,6 +66,7 @@ p {
   border: none;
   background-color: #9af0e8;
   height: 2.75rem;
+  color: black;
 }
 
 .newyearParty__invitation__button:hover {
@@ -82,5 +83,15 @@ p {
 @media (max-width: 1100px) {
   .newyearParty {
     height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .newyearParty__invitation h1 {
+    font-size: 3.75rem;
+  }
+
+  .newyearParty__invitation {
+    padding-top: 2rem;
   }
 }
