@@ -1,0 +1,21 @@
+.firework {
+  position: absolute;
+  bottom: 200px;
+  z-index: -1;
+}
+
+.firework__position {
+  position: relative;
+  right: 20rem;
+}
+
+.firework2 {
+  position: absolute;
+  bottom: 200px;
+  z-index: -1;
+}
+
+.firework2__position {
+  position: relative;
+  left: 40rem;
+}
