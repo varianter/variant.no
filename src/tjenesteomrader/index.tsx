@@ -29,7 +29,7 @@ const Tjenesteområder = () => {
         />
         <Entrance
           blobPath={serviceBlob}
-          ServiceName={'Strategiutvikling'}
+          ServiceName={'Strategi'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
@@ -38,7 +38,7 @@ const Tjenesteområder = () => {
         />
         <Entrance
           blobPath={datadrevet}
-          ServiceName={'Datadrevet produkt- og tjenesteutvikling'}
+          ServiceName={'Datadrevet'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
@@ -47,7 +47,7 @@ const Tjenesteområder = () => {
         />
         <Entrance
           blobPath={kultur}
-          ServiceName={'Culture first'}
+          ServiceName={'Kultur'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
