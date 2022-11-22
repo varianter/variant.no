@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { animation2 } from './animations/animation1';
+import { animation2 } from './animations';
 
 import style from './firework.module.css';
 
@@ -27,7 +27,7 @@ const Firework2 = () => {
           <path
             d="M87.0467 557C129.837 359 47.5117 103.833 1 1"
             stroke="black"
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </svg>
         <svg
@@ -40,8 +40,8 @@ const Firework2 = () => {
           fill="none"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M75.339 89.5979C105.292 57.413 120.317 -2.54605 164.132 1.09306C208.033 4.7393 214.195 65.6716 237.483 103.065C260.553 140.108 309.444 171.344 296.025 212.869C282.536 254.614 226.164 256.408 184.008 268.551C146.432 279.374 107.814 294.64 72.8382 277.154C34.0565 257.766 -0.00986521 220.198 0.568202 176.844C1.10544 136.551 47.8865 119.096 75.339 89.5979Z"
             fill="#03DAC6"
           />
@@ -60,7 +60,7 @@ const Firework2 = () => {
             x2="43"
             y2="1.5"
             stroke="#03DAC6"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </svg>
       </div>
