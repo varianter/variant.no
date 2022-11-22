@@ -1,0 +1,99 @@
+.serviceArea__top {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.serviceArea__top h3 {
+  align-self: flex-end;
+  font-size: 2.375rem;
+}
+
+.serviceArea__bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-left: auto;
+  width: 44.063rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceArea__bottom p {
+  margin-top: 1.5rem;
+}
+
+.serviceArea__bottom button {
+  padding-inline: 1rem;
+  height: calc(+2rem);
+  border: none;
+  border-radius: 4rem;
+}
+
+/* Styling for Even child */
+.serviceArea:nth-child(even) .serviceArea__top {
+  justify-content: flex-end;
+}
+
+.serviceArea:nth-child(even) h3 {
+  text-align: end;
+}
+
+.serviceArea:nth-child(even) img {
+  text-align: end;
+  order: 1;
+}
+
+.serviceArea:nth-child(even) .serviceArea__bottom p {
+  text-align: end;
+}
+
+.serviceArea:nth-child(even) .serviceArea__bottom button {
+  float: right;
+}
+
+@media (max-width: 800px) {
+  .serviceArea__bottom {
+  }
+}
+
+@media (max-width: 550px) {
+  .serviceArea__top {
+    flex-direction: column;
+  }
+
+  .serviceArea__top h3 {
+    align-self: flex-start;
+  }
+
+  .serviceArea__bottom {
+    width: 100%;
+  }
+
+  .serviceArea__top img {
+    display: block;
+    margin: auto;
+    margin-left: 0;
+  }
+
+  .serviceArea:nth-child(even) .serviceArea__top {
+    justify-content: flex-start;
+  }
+
+  .serviceArea:nth-child(even) .serviceArea__top h3 {
+    width: 100%;
+  }
+
+  .serviceArea:nth-child(even) img {
+    text-align: start;
+    order: 0;
+  }
+
+  .serviceArea:nth-child(even) .serviceArea__bottom p {
+    text-align: start;
+  }
+
+  .serviceArea:nth-child(even) .serviceArea__bottom button {
+    float: left;
+  }
+}

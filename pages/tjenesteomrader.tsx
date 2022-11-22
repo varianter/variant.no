@@ -1,1 +1,1 @@
-export { default } from '../src/tjenesteomrader/index';
+export { default } from 'src/tjenesteomrader/index';

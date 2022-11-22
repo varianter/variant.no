@@ -1,108 +1,62 @@
-import EmojiList from './components/emojiList/emojiList';
-import HeaderBackground from './images/headerBackground/headerBackground';
+import Layout from 'src/layout';
 
-import style from './index.module.css';
-import TwoRows from './components/twoRows/twoRows';
-import BlobText from './components/blobText/blobText';
-import BottomText from './components/bottomText/bottomText';
+import digitalTjenesteBlob from './images/indexBlobs/digitalTjeneste.svg';
+import serviceBlob from './images/indexBlobs/strategi.svg';
+import datadrevet from './images/indexBlobs/datadrevet.svg';
+import kultur from './images/indexBlobs/kultur.svg';
+import Entrance from './components/entrance/entrance';
 
-const Tjenesteomrade = () => {
+const Tjenesteområder = () => {
   return (
-    <div>
-      <div className={style.tjenesteomrade}>
-        <HeaderBackground
-          headerColor={'#2F0516'}
-          headerText={'Digital tjeneste- og produktutvikling'}
+    <Layout>
+      <div>
+        <h2 style={{ marginBottom: '2.125rem' }}>Våre tjenesteområder</h2>
+        <p style={{ marginBottom: '2.125rem' }}>
+          Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
+          volutpat nisi, volutpat diam tincidunt viverra. Sagittis, sapien porta
+          non imperdiet aliquam, eu nec. Enim vel at diam massa tortor blandit
+          et commodo risus. Faucibus lacus metus eget eu eget convallis
+          pharetra.
+        </p>
+        <Entrance
+          blobPath={digitalTjenesteBlob}
+          ServiceName={'Digital tjeneste-og produktutvikling'}
+          serviceText={
+            'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          }
+          buttonColor={'#FFFFFF'}
+          buttonBgColor={'#E61A6B'}
         />
-
-        <div className={style.tjenesteomrade__columns}>
-          <TwoRows>
-            <BlobText
-              color={'#8B0F40'}
-              text={['“Ja, det var en kjempegod idé, det lager vi!”']}
-              blobNr={0}
-            />
-            <EmojiList
-              emoji={'💡'}
-              listItem={
-                'Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake...'
-              }
-              reversed={false}
-            />
-          </TwoRows>
-          <TwoRows>
-            <EmojiList
-              emoji={'🎯'}
-              listItem={
-                'Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?'
-              }
-              reversed={true}
-            />
-            <BlobText
-              color={'#8B0F40'}
-              text={[
-                'Hvem er målgruppen?',
-                'Hvilke ulike bruker-grupper finnes innenfor målgruppen din?',
-                'Hva er det du vil hjelpe brukeren med?',
-                'Hva skjer når du hjelper brukeren med dette',
-                'Hvilket utfall eller verdi oppnås, og hvem oppnår den?',
-              ]}
-              blobNr={1}
-            />
-          </TwoRows>
-          <TwoRows>
-            <BlobText
-              color={'#8B0F40'}
-              text={[
-                'Hvorfor er det viktig å realisere akkurat denne idéen?',
-                'Hva skjer om du ikke gjør det?',
-                'Kom deg ut!',
-              ]}
-              blobNr={2}
-            />
-          </TwoRows>
-          <TwoRows>
-            <div>
-              <EmojiList
-                emoji={'🧑‍💻'}
-                listItem={'Funksjonelle skisser & prototyper'}
-                reversed={true}
-              />
-              <EmojiList
-                emoji={'🤓'}
-                listItem={'Tekniske eksperimenter'}
-                reversed={true}
-              />
-            </div>
-            <BlobText
-              color={'#8B0F40'}
-              text={[
-                'Involvering i idéfasen',
-                'Skissere løsning for å få feedback',
-                ' Få ut en MVP til noen som er villig til å bruke den i hverdagen',
-              ]}
-              blobNr={3}
-            />
-          </TwoRows>
-          <TwoRows>
-            <BlobText
-              color={'#8B0F40'}
-              text={['Måle og lære gjennom innsikt og data']}
-              blobNr={4}
-            />
-            <EmojiList
-              emoji={'🧑‍🔬'}
-              listItem={
-                'Den viktigste læringen skjer når løsningen brukes som en naturlig del av hverdagen'
-              }
-              reversed={false}
-            />
-          </TwoRows>
-        </div>
+        <Entrance
+          blobPath={serviceBlob}
+          ServiceName={'Strategiutvikling'}
+          serviceText={
+            'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          }
+          buttonColor={'#333333'}
+          buttonBgColor={'#03DAC6'}
+        />
+        <Entrance
+          blobPath={datadrevet}
+          ServiceName={'Datadrevet produkt- og tjenesteutvikling'}
+          serviceText={
+            'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          }
+          buttonColor={'#FFFFFF'}
+          buttonBgColor={'#423D89'}
+        />
+        <Entrance
+          blobPath={kultur}
+          ServiceName={'Culture first'}
+          serviceText={
+            'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          }
+          buttonColor={'#333333'}
+          buttonBgColor={'#FFC4BC'}
+        />
       </div>
-      <BottomText />
-    </div>
+    </Layout>
   );
 };
 
-export default Tjenesteomrade;
+export default Tjenesteområder;
