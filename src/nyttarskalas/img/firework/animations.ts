@@ -17,7 +17,8 @@ export const animation1 = () => {
     targets: '#firework',
     width: 0,
     height: 0,
-    duration: 200,
+    duration: 50,
+    easing: 'linear',
   });
   tl.add({
     targets: '#blob',
@@ -59,7 +60,8 @@ export const animation2 = () => {
     targets: '#firework1',
     width: 0,
     height: 0,
-    duration: 200,
+    duration: 50,
+    easing: 'linear',
   });
   tl.add({
     targets: '#blob1',
