@@ -12,16 +12,6 @@
   font-size: 1.875rem;
 }
 
-.bottomText__content_divider {
-  position: relative;
-  bottom: 5rem;
-}
-
-.bottomText__content_divider img {
-  width: 100%;
-  height: auto;
-}
-
 .bottomText__content_bigText {
   font-size: 1.875rem;
 }
