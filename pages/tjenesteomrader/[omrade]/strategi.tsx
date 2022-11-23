@@ -1,1 +1,1 @@
-export { default } from 'src/tjenesteomrader/strategi';
+export { default } from 'src/tjenesteomrader/areas/strategi';

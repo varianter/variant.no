@@ -1,6 +1,6 @@
 import Divider from 'src/tjenesteomrader/images/divider/divider';
 import Footer from 'src/tjenesteomrader/images/footer/footer';
-import style from '../../shared/bottomText.module.css';
+import style from 'src/tjenesteomrader/shared/bottomText.module.css';
 
 const BottomText = (props: { footerColor: string }) => {
   return (

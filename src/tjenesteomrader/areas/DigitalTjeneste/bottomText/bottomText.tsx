@@ -1,4 +1,4 @@
-import style from '../../shared/bottomText.module.css';
+import style from 'src/tjenesteomrader/shared/bottomText.module.css';
 import Footer from 'src/tjenesteomrader/images/footer/footer';
 import Divider from 'src/tjenesteomrader/images/divider/divider';
 const BottomText = (props: { footerColor: string }) => {

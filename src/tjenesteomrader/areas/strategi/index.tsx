@@ -1,9 +1,9 @@
-import BlobText from '../components/blobText/blobText';
+import BlobText from '../../components/blobText/blobText';
 
-import EmojiList from '../components/emojiList/emojiList';
-import TwoRows from '../components/twoRows/twoRows';
-import HeaderBackground from '../images/headerBackground/headerBackground';
-import style from '../shared/index.module.css';
+import EmojiList from '../../components/emojiList/emojiList';
+import TwoRows from '../../components/twoRows/twoRows';
+import HeaderBackground from '../../images/headerBackground/headerBackground';
+import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
 
 const Strategi = () => {

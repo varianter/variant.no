@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.threeRows {
+  display: flex;
+}
+
 @media (max-width: 1000px) {
   .tjenesteomrade__columns {
     padding-inline: 3rem;

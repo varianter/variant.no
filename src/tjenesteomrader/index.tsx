@@ -46,7 +46,7 @@ const Tjenesteområder = () => {
           }
           buttonColor={'#FFFFFF'}
           buttonBgColor={'#423D89'}
-          urlPath={''}
+          urlPath={'datadrevet'}
         />
         <Entrance
           blobPath={kultur}
