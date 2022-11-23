@@ -12,7 +12,7 @@ const HeaderBackground = (props: {
         }}
         className={style.header__text}
       >
-        <a href="">Tjenesteområder /</a>
+        <a href="../">Tjenesteområder /</a>
         <h2>{props.headerText}</h2>
       </div>
       {/* <svg
