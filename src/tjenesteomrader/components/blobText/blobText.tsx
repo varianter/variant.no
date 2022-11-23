@@ -11,12 +11,7 @@ const BlobText = (props: {
       <div className={style.blobText__blob}>
         <Blob BlobPathNr={props.blobNr} color={props.color} />
       </div>
-      <div
-        // style={{
-        //   backgroundImage: `url(${test})`,
-        // }}
-        className={style.blobText__textbox}
-      >
+      <div className={style.blobText__textbox}>
         {props.text.map((paragraph) => {
           return <p className={style.blobText__text}>{paragraph}</p>;
         })}
