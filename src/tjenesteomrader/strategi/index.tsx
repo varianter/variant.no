@@ -93,7 +93,7 @@ const Strategi = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText />
+      <BottomText footerColor={'#0D0C1B'} />
     </div>
   );
 };

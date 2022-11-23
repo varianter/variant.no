@@ -1,7 +1,7 @@
 import style from './bottomText.module.css';
 import Footer from 'src/tjenesteomrader/images/footer/footer';
 import Divider from 'src/tjenesteomrader/images/divider/divider';
-const BottomText = () => {
+const BottomText = (props: { footerColor: string }) => {
   return (
     <div className={style.bottomText}>
       <div className={style.bottomText__content_divider}>
@@ -115,7 +115,7 @@ const BottomText = () => {
           </ul>
         </div>
       </div>
-      <Footer color={'#2F0516'} />
+      <Footer color={props.footerColor} />
     </div>
   );
 };

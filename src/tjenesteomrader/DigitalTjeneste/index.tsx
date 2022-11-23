@@ -100,7 +100,7 @@ const Tjenesteomrade = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText />
+      <BottomText footerColor={'#2F0516'} />
     </div>
   );
 };
