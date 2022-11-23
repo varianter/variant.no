@@ -3,7 +3,7 @@ import style from './entrance.module.css';
 
 const Entrance = (props: {
   blobPath: string;
-  ServiceName: string;
+  serviceName: string;
   serviceText: string;
   buttonColor: string;
   buttonBgColor: string;
@@ -13,14 +13,11 @@ const Entrance = (props: {
     <div className={style.serviceArea}>
       <div className={style.serviceArea__top}>
         <img src={props.blobPath} alt="Digital tjeneste blob" />
-        <h3>{props.ServiceName}</h3>
+        <h3>{props.serviceName}</h3>
       </div>
       {}
       <div className={style.serviceArea__bottom}>
-        <p>
-          Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
-          volutpat nisi, volutpat diam tincidunt viverra.
-        </p>
+        <p>{props.serviceText}</p>
         <Link href={`tjenesteomrader/omrader/${props.urlPath}`}>
           <a
             style={{
@@ -28,7 +25,7 @@ const Entrance = (props: {
               color: props.buttonColor,
             }}
           >
-            Les mer om {props.ServiceName}
+            Les mer om {props.serviceName}
           </a>
         </Link>
       </div>
