@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import style from './entrance.module.css';
 
 const Entrance = (props: {
@@ -20,16 +21,16 @@ const Entrance = (props: {
           Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
           volutpat nisi, volutpat diam tincidunt viverra.
         </p>
-        <form action={`tjenesteomrader/omrader/${props.urlPath}`}>
-          <button
+        <Link href={`tjenesteomrader/omrader/${props.urlPath}`}>
+          <a
             style={{
               backgroundColor: props.buttonBgColor,
               color: props.buttonColor,
             }}
           >
             Les mer om {props.ServiceName}
-          </button>
-        </form>
+          </a>
+        </Link>
       </div>
     </div>
   );
