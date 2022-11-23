@@ -20,7 +20,7 @@ const Tjenesteomrader = () => {
         </p>
         <Entrance
           blobPath={digitalTjenesteBlob}
-          ServiceName={'Digital tjeneste-og produktutvikling'}
+          serviceName={'Digital tjeneste-og produktutvikling'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
@@ -30,7 +30,7 @@ const Tjenesteomrader = () => {
         />
         <Entrance
           blobPath={serviceBlob}
-          ServiceName={'Strategi'}
+          serviceName={'Strategi'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
@@ -40,7 +40,7 @@ const Tjenesteomrader = () => {
         />
         <Entrance
           blobPath={datadrevet}
-          ServiceName={'Datadrevet'}
+          serviceName={'Datadrevet'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
@@ -50,7 +50,7 @@ const Tjenesteomrader = () => {
         />
         <Entrance
           blobPath={kultur}
-          ServiceName={'Kultur'}
+          serviceName={'Kultur'}
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
