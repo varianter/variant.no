@@ -1,17 +1,17 @@
 import Layout from 'src/layout';
-
+import style from './index.module.css';
 import digitalTjenesteBlob from './images/indexBlobs/digitalTjeneste.svg';
 import serviceBlob from './images/indexBlobs/strategi.svg';
 import datadrevet from './images/indexBlobs/datadrevet.svg';
 import kultur from './images/indexBlobs/kultur.svg';
 import Entrance from './components/entrance/entrance';
 
-const Tjenesteområder = () => {
+const Tjenesteomrader = () => {
   return (
     <Layout>
-      <div>
-        <h2 style={{ marginBottom: '2.125rem' }}>Våre tjenesteområder</h2>
-        <p style={{ marginBottom: '2.125rem' }}>
+      <div className={style.tjenesteomrader}>
+        <h2>Våre tjenesteområder</h2>
+        <p>
           Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
           volutpat nisi, volutpat diam tincidunt viverra. Sagittis, sapien porta
           non imperdiet aliquam, eu nec. Enim vel at diam massa tortor blandit
@@ -63,4 +63,4 @@ const Tjenesteområder = () => {
   );
 };
 
-export default Tjenesteområder;
+export default Tjenesteomrader;

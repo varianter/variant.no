@@ -1,0 +1,5 @@
+.tjenesteomrader {
+  display: flex;
+  flex-direction: column;
+  gap: 2.125rem;
+}
