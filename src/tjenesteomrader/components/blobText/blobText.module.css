@@ -44,7 +44,13 @@
 
   .blobText {
     order: -1;
-    padding-bottom: 3rem;
+  }
+  .blobText__blob {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24rem;
   }
 }
 
