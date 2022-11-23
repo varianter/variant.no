@@ -5,7 +5,7 @@ const TwoRows: React.FunctionComponent<Props> = (
   prop2: Props,
 ) => {
   return (
-    <div className={style.twoColumns}>
+    <div className={style.twoRows}>
       {prop1.children}
       {prop2.children}
     </div>

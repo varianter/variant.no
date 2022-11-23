@@ -1,22 +1,22 @@
-.twoColumns {
+.twoRows {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
   align-items: center;
 }
 
-.twoColumns > * {
+.twoRows > * {
   margin: 0;
 }
 
 @media (max-width: 1025px) {
-  .twoColumns {
+  .twoRows {
     gap: 3rem;
   }
 }
 
 @media (max-width: 900px) {
-  .twoColumns {
+  .twoRows {
     display: flex;
     flex-direction: column;
   }
