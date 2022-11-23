@@ -4,7 +4,7 @@ import HeaderBackground from '../images/headerBackground/headerBackground';
 import style from '../shared/index.module.css';
 import TwoRows from '../components/twoRows/twoRows';
 import BlobText from '../components/blobText/blobText';
-import BottomText from '../components/bottomText/bottomText';
+import BottomText from './bottomText/bottomText';
 
 const Tjenesteomrade = () => {
   return (
