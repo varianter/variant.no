@@ -24,6 +24,7 @@
 @media (max-width: 900px) {
   .emojiList {
     flex-direction: column;
+    padding-inline: 1.5rem;
   }
   .emojiList__text {
     text-align: center;
