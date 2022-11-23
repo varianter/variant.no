@@ -26,6 +26,7 @@ const Tjenesteområder = () => {
           }
           buttonColor={'#FFFFFF'}
           buttonBgColor={'#E61A6B'}
+          urlPath={'digitalTjeneste'}
         />
         <Entrance
           blobPath={serviceBlob}
@@ -35,6 +36,7 @@ const Tjenesteområder = () => {
           }
           buttonColor={'#333333'}
           buttonBgColor={'#03DAC6'}
+          urlPath={'strategi'}
         />
         <Entrance
           blobPath={datadrevet}
@@ -44,6 +46,7 @@ const Tjenesteområder = () => {
           }
           buttonColor={'#FFFFFF'}
           buttonBgColor={'#423D89'}
+          urlPath={''}
         />
         <Entrance
           blobPath={kultur}
@@ -53,6 +56,7 @@ const Tjenesteområder = () => {
           }
           buttonColor={'#333333'}
           buttonBgColor={'#FFC4BC'}
+          urlPath={''}
         />
       </div>
     </Layout>

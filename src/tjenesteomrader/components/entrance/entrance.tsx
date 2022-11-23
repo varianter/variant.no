@@ -6,6 +6,7 @@ const Entrance = (props: {
   serviceText: string;
   buttonColor: string;
   buttonBgColor: string;
+  urlPath: string;
 }) => {
   return (
     <div className={style.serviceArea}>
@@ -13,12 +14,13 @@ const Entrance = (props: {
         <img src={props.blobPath} alt="Digital tjeneste blob" />
         <h3>{props.ServiceName}</h3>
       </div>
+      {}
       <div className={style.serviceArea__bottom}>
         <p>
           Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
           volutpat nisi, volutpat diam tincidunt viverra.
         </p>
-        <form action="/digitalTjeneste">
+        <form action={`tjenesteomrader/omrader/${props.urlPath}`}>
           <button
             style={{
               backgroundColor: props.buttonBgColor,
