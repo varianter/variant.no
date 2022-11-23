@@ -15,7 +15,7 @@ const BottomText = () => {
           beskriver en generisk prosess som kan tilpasses virksomheten,
           prosessen og produktets livssyklus. Rammeverket har noen klare
           prinsipper som vi mener er avgjørende for å lykkes med å utvikle
-          produkter som skaper verdi – for virksomheten din, kundene dine og
+          produkter som skaper verdi for virksomheten din, kundene dine og
           brukerne av produktet. Prinsippene gjelder for alle digitale tjenester
           og produkter, også det vi omtaler som dataprodukter.
         </p>

@@ -1,5 +1,13 @@
+.bottomText {
+  display: flex;
+  flex-direction: column;
+}
+
 .bottomText__content {
   padding-inline: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .bottomText__content_wrapper {
@@ -7,9 +15,10 @@
 }
 
 .bottomText__content h4 {
-  font-family: 'Graphik web';
+  font-family: 'Graphik';
   font-weight: 500;
-  font-size: 1.875rem;
+  font-size: 1.875em;
+  margin: 0;
 }
 
 .bottomText__content_bigText {
@@ -25,5 +34,20 @@
 @media (max-width: 481px) {
   .bottomText__content {
     padding-inline: 3rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .bottomText {
+    align-items: center;
+  }
+
+  .bottomText__content_divider {
+    align-self: baseline;
+    width: 100%;
+  }
+
+  .bottomText__content_bigText {
+    width: 48rem;
   }
 }

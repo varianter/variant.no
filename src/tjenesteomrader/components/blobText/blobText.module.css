@@ -44,6 +44,7 @@
 
   .blobText {
     order: -1;
+    padding-bottom: 3rem;
   }
   .blobText__blob {
     left: 0;

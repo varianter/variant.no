@@ -29,6 +29,7 @@
 
 @media (min-width: 2000px) {
   .tjenesteomrade__columns {
-    padding-inline: 15rem;
+    max-width: 48rem;
+    margin: auto;
   }
 }
