@@ -10,7 +10,7 @@ const Strategi = () => {
     <div>
       <div style={{ color: 'white', backgroundColor: '#1A1837' }}>
         <HeaderBackground
-          headerColor={'#282552'}
+          headerColor={'#0D0C1B'}
           headerText={'Strategi-utvikling'}
         />
 
