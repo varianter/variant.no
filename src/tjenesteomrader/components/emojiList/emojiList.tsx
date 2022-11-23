@@ -19,7 +19,12 @@ const EmojiList = (props: {
       >
         {props.emoji}
       </p>
-      <p className={style.emojiList__text}>{props.listItem}</p>
+      <p
+        className={style.emojiList__text}
+        style={props.reversed ? { textAlign: 'right' } : { textAlign: 'left' }}
+      >
+        {props.listItem}
+      </p>
     </div>
   );
 };
