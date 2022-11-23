@@ -15,6 +15,13 @@
   overflow: hidden;
 }
 
+.downArrow {
+  width: 8rem;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 .threeRows {
   display: flex;
 }

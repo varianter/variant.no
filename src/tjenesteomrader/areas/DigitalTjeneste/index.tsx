@@ -1,12 +1,19 @@
 import EmojiList from '../../components/emojiList/emojiList';
 import HeaderBackground from '../../images/headerBackground/headerBackground';
-
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import TwoRows from '../../components/twoRows/twoRows';
 import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
+import { useMediaQuery } from 'react-responsive';
+
+//arrows
+import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
+import down2 from 'src/tjenesteomrader/images/arrows/down2.svg';
+import down3 from 'src/tjenesteomrader/images/arrows/down3.svg';
+import down4 from 'src/tjenesteomrader/images/arrows/down4.svg';
 
 const Tjenesteomrade = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   return (
     <div>
       <title>Digital tjeneste og produktutvikling</title>
@@ -31,6 +38,11 @@ const Tjenesteomrade = () => {
               reversed={false}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down1} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <EmojiList
               emoji={'🎯'}
@@ -51,6 +63,11 @@ const Tjenesteomrade = () => {
               blobNr={1}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down2} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <BlobText
               color={'#8B0F40'}
@@ -62,6 +79,11 @@ const Tjenesteomrade = () => {
               blobNr={2}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down3} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <div>
               <EmojiList
@@ -85,6 +107,11 @@ const Tjenesteomrade = () => {
               blobNr={3}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down4} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <BlobText
               color={'#8B0F40'}

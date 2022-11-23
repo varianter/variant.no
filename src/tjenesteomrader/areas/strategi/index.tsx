@@ -1,12 +1,20 @@
 import BlobText from '../../components/blobText/blobText';
-
 import EmojiList from '../../components/emojiList/emojiList';
 import TwoRows from '../../components/twoRows/twoRows';
 import HeaderBackground from '../../images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
+import { useMediaQuery } from 'react-responsive';
+
+// Down arrows
+import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
+import down2 from 'src/tjenesteomrader/images/arrows/down2.svg';
+import down3 from 'src/tjenesteomrader/images/arrows/down3.svg';
+import down4 from 'src/tjenesteomrader/images/arrows/down4.svg';
 
 const Strategi = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+
   return (
     <div>
       <title>Strategi</title>
@@ -43,6 +51,11 @@ const Strategi = () => {
               />
             </div>
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down1} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <div></div>
             <BlobText
@@ -53,6 +66,11 @@ const Strategi = () => {
               blobNr={1}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down2} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <BlobText
               color={'#282552'}
@@ -67,6 +85,11 @@ const Strategi = () => {
               reversed={false}
             />
           </TwoRows>
+          {isMobile ? (
+            <img className={style.downArrow} src={down3} alt="down arrow 1" />
+          ) : (
+            <></>
+          )}
           <TwoRows>
             <div>
               <EmojiList emoji={'❤️'} listItem={'kundeverdi'} reversed={true} />
@@ -75,6 +98,15 @@ const Strategi = () => {
                 listItem={'og forretningsverdi'}
                 reversed={true}
               />
+              {isMobile ? (
+                <img
+                  className={style.downArrow}
+                  src={down4}
+                  alt="down arrow 1"
+                />
+              ) : (
+                <></>
+              )}
             </div>
             <BlobText
               color={'#282552'}
