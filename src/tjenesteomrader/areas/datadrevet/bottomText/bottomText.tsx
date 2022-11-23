@@ -30,7 +30,7 @@ const BottomText = (props: { footerColor: string }) => {
 
         <div className={style.bottomText__content_wrapper}>
           <p>
-            I Variant kaller vi denne prosessen for
+            I Variant kaller vi denne prosessen for{' '}
             <strong>[Dataproduktutvikling]</strong>
           </p>
         </div>
