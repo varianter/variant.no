@@ -6,11 +6,15 @@ import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
 import { useMediaQuery } from 'react-responsive';
 
-//arrows
+// Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
 import down2 from 'src/tjenesteomrader/images/arrows/down2.svg';
 import down3 from 'src/tjenesteomrader/images/arrows/down3.svg';
 import down4 from 'src/tjenesteomrader/images/arrows/down4.svg';
+import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
+import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
+import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
+import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 const Tjenesteomrade = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
@@ -41,7 +45,11 @@ const Tjenesteomrade = () => {
           {isMobile ? (
             <img className={style.downArrow} src={down1} alt="down arrow 1" />
           ) : (
-            <></>
+            <img
+              className={style.sideArrowRight}
+              src={right1}
+              alt="down arrow 1"
+            />
           )}
           <TwoRows>
             <EmojiList
@@ -66,7 +74,11 @@ const Tjenesteomrade = () => {
           {isMobile ? (
             <img className={style.downArrow} src={down2} alt="down arrow 1" />
           ) : (
-            <></>
+            <img
+              className={style.sideArrowRight}
+              src={left1}
+              alt="down arrow 1"
+            />
           )}
           <TwoRows>
             <BlobText
@@ -82,7 +94,11 @@ const Tjenesteomrade = () => {
           {isMobile ? (
             <img className={style.downArrow} src={down3} alt="down arrow 1" />
           ) : (
-            <></>
+            <img
+              className={style.sideArrowRight}
+              src={right2}
+              alt="down arrow 1"
+            />
           )}
           <TwoRows>
             <div>
@@ -110,7 +126,11 @@ const Tjenesteomrade = () => {
           {isMobile ? (
             <img className={style.downArrow} src={down4} alt="down arrow 1" />
           ) : (
-            <></>
+            <img
+              className={style.sideArrowRight}
+              src={left2}
+              alt="down arrow 1"
+            />
           )}
           <TwoRows>
             <BlobText
