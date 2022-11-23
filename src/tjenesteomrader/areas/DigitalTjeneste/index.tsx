@@ -9,6 +9,7 @@ import BottomText from './bottomText/bottomText';
 const Tjenesteomrade = () => {
   return (
     <div>
+      <title>Digital tjeneste og produktutvikling</title>
       <div className={style.tjenesteomrade}>
         <HeaderBackground
           headerColor={'#2F0516'}

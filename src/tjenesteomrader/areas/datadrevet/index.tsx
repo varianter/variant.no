@@ -9,6 +9,7 @@ import BottomText from './bottomText/bottomText';
 const Datadrevet = () => {
   return (
     <div>
+      <title>Datadrevet</title>
       <div style={{ color: 'white', backgroundColor: '#01574F' }}>
         <HeaderBackground
           headerColor={'#012C28'}

@@ -9,6 +9,7 @@ import BottomText from './bottomText/bottomText';
 const Strategi = () => {
   return (
     <div>
+      <title>Strategi</title>
       <div style={{ color: 'white', backgroundColor: '#1A1837' }}>
         <HeaderBackground
           headerColor={'#0D0C1B'}
