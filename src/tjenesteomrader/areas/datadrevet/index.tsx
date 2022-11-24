@@ -15,13 +15,17 @@ import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
+import { useEffect } from 'react';
 
 const Datadrevet = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
 
+  useEffect(() => {
+    document.title = 'Datadrevet';
+  }, []);
+
   return (
     <div>
-      <title>Datadrevet</title>
       <div style={{ color: 'white', backgroundColor: '#01574F' }}>
         <HeaderBackground
           headerColor={'#012C28'}

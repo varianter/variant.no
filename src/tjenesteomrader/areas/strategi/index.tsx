@@ -15,9 +15,14 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
+import { useEffect } from 'react';
 
 const Strategi = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+
+  useEffect(() => {
+    document.title = 'Strategi';
+  }, []);
 
   return (
     <div>
