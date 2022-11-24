@@ -5,12 +5,12 @@
 
 .blobText {
   position: relative;
-  overflow: hidden;
 }
 
 .blobText__textbox {
   min-height: 25rem;
   background-repeat: no-repeat;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
