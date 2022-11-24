@@ -25,12 +25,15 @@
   font-size: 1.875rem;
 }
 
+@media (max-width: 1250px) {
+  .bottomText__content_wrapper {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1000px) {
   .bottomText__content {
     padding-inline: 6rem;
-  }
-  .bottomText__content_wrapper {
-    width: 100%;
   }
 }
 
