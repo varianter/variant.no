@@ -53,7 +53,7 @@ const Datadrevet = () => {
               threeBlobs={true}
             />
           </div>
-          <img className={style.downArrow} src={down1} alt="donw 1 arrow" />
+          <img className={style.downArrow} src={down1} alt="down 1 arrow" />
           <TwoRows>
             <div>
               <EmojiList
@@ -84,17 +84,9 @@ const Datadrevet = () => {
             />
           </TwoRows>
           {isMobile ? (
-            <img
-              className={style.sideArrowRight}
-              src={down2}
-              alt="left arrow 1"
-            />
+            <img className={style.sideArrow} src={down2} alt="down arrow 2" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={left1}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={left1} alt="left arrow 1" />
           )}
           <TwoRows>
             <BlobText
@@ -121,17 +113,9 @@ const Datadrevet = () => {
             </div>
           </TwoRows>
           {isMobile ? (
-            <img
-              className={style.sideArrowRight}
-              src={down3}
-              alt="left arrow 1"
-            />
+            <img className={style.sideArrow} src={down3} alt="down arrow 3" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={right1}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={right1} alt="right arrow 1" />
           )}
           <TwoRows>
             <div>
@@ -149,17 +133,9 @@ const Datadrevet = () => {
             <BlobText color={'#028377'} text={['Kartlegging']} blobNr={3} />
           </TwoRows>
           {isMobile ? (
-            <img
-              className={style.sideArrowRight}
-              src={down4}
-              alt="left arrow 1"
-            />
+            <img className={style.sideArrow} src={down4} alt="down arrow 4" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={left2}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={left2} alt="left arrow 2" />
           )}
           <TwoRows>
             <BlobText

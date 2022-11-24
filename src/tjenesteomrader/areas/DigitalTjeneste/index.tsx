@@ -51,11 +51,7 @@ const Tjenesteomrade = () => {
           {isMobile ? (
             <img className={style.downArrow} src={down1} alt="down arrow 1" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={right1}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={right1} alt="right arrow 1" />
           )}
           <TwoRows>
             <EmojiList
@@ -78,13 +74,9 @@ const Tjenesteomrade = () => {
             />
           </TwoRows>
           {isMobile ? (
-            <img className={style.downArrow} src={down2} alt="down arrow 1" />
+            <img className={style.downArrow} src={down2} alt="down arrow 2" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={left1}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={left1} alt="left arrow 1" />
           )}
           <TwoRows>
             <BlobText
@@ -98,13 +90,9 @@ const Tjenesteomrade = () => {
             />
           </TwoRows>
           {isMobile ? (
-            <img className={style.downArrow} src={down3} alt="down arrow 1" />
+            <img className={style.downArrow} src={down3} alt="down arrow 3" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={right2}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={right2} alt="right arrow 1" />
           )}
           <TwoRows>
             <div>
@@ -130,13 +118,9 @@ const Tjenesteomrade = () => {
             />
           </TwoRows>
           {isMobile ? (
-            <img className={style.downArrow} src={down4} alt="down arrow 1" />
+            <img className={style.downArrow} src={down4} alt="down arrow 4" />
           ) : (
-            <img
-              className={style.sideArrowRight}
-              src={left2}
-              alt="down arrow 1"
-            />
+            <img className={style.sideArrow} src={left2} alt="left arrow 2" />
           )}
           <TwoRows>
             <BlobText
