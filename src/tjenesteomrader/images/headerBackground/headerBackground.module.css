@@ -14,9 +14,9 @@
   color: white;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 500px) {
   .header__text {
-    padding-top: 5rem;
+    padding-top: 11rem;
     padding-inline: 3rem;
   }
 
