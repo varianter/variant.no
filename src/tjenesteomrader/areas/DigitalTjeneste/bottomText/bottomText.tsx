@@ -10,17 +10,18 @@ const BottomText = (props: { footerColor: string }) => {
 
       <div className={style.bottomText__content}>
         <p className={style.bottomText__content_bigText}>
-          Digital tjeneste- og produktutvikling er et fleksibelt rammeverk for
-          utvikling av nye og eksisterende digitale produkter. Rammeverket
-          beskriver en generisk prosess som kan tilpasses virksomheten,
-          prosessen og produktets livssyklus. Rammeverket har noen klare
-          prinsipper som vi mener er avgjørende for å lykkes med å utvikle
-          produkter som skaper verdi for virksomheten din, kundene dine og
-          brukerne av produktet. Prinsippene gjelder for alle digitale tjenester
-          og produkter, også det vi omtaler som dataprodukter.
+          Vår variant av digital tjeneste- og produktutvikling er læreglade og
+          rause fagpersoner og et pragmatisk og fleksibelt rammeverk for design
+          og utvikling. Vi brenner for utvikling av nye og eksisterende digitale
+          produkter, og for å finne den beste prosessen for å gjøre det på ut
+          fra forutsetningene som finnes i virksomheten, for kundene og brukerne
+          av produktet, og for produktet i seg selv.
         </p>
         <div className={style.bottomText__content_wrapper}>
-          <h4>Prinsippene</h4>
+          <p>
+            Vi er glade i følgende prinsipper når vi designer og utviklere
+            digitale produkter og tjenester:{' '}
+          </p>
           <ul className={style.bottomText__content_list}>
             <li>
               Vi som jobber med produkter er verdiskapere, problemløsere,
@@ -30,42 +31,48 @@ const BottomText = (props: { footerColor: string }) => {
             </li>
 
             <li>
-              Get out of the building, innsikt skapes ikke på et kontor eller
-              møterom. Du må treffe brukerne i naturlige omgivelser slik at du
-              også kjenner de ekte problemene på kroppen. Gjennom innsikt og
-              utforsking, kreative prosesser og utprøving tester vi løsninger
-              underveis i utviklingsprosessen. Vi jobber tverrfaglig og alltid
-              med brukeren i sentrum.
+              Innsikt skapes ikke på et kontor eller møterom. Vi vil treffe
+              brukerne i naturlige omgivelser slik at vi kjenner de ekte
+              problemene på kroppen. Gjennom innsikt og utforsking, kreative
+              prosesser og utprøving tester vi løsninger underveis i
+              utviklingsprosessen. Vi jobber tverrfaglig og alltid med brukeren
+              i sentrum.
             </li>
             <li>
               Vær bevisst på hva som skjer når du løser dette problemet, både
               for den som bruker produktet og for den som lager det. Hvilken
               verdi eller gevinst skapes av at du løser problemet? Er utfallet i
               tråd med visjonen og strategien til virksomheten din? Vil
-              investeringen gi avkastning? Hjelper det brukeren med å realisere
-              sine ambisjoner?
+              investeringen du gjør i å utvikle produktet eller tjenesten gi
+              avkastning? Hjelper det brukeren med å nå sine mål eller løse
+              floker i hverdagen?
             </li>
             <li>
               Involvering gjennom hele prosessen – både de som skal bruke
-              produktet og de som skal lage det
+              produktet og de som skal lage det. Vi involverer organisasjonen
+              rundt gjennom åpenhet og læredeling.
             </li>
             <li>
               Raske iterasjoner, feedback og læring gjennom bruk av funksjonelle
-              prototyper og proof of concepts
+              prototyper og tekniske <i>proof of concepts</i>
             </li>
             <li>
-              MVP må være stor nok til å brukes, men så liten at det ikke koster
-              for mye å forkaste eller pivotere. NB! MVP er ikke et begrep på en
-              hel løsning eller første versjon, men på neste inkrement av
-              løsningen.
+              Så streber vi etter å utvikle den enkleste brukbare og verdifulle
+              iterasjonen av produktet vårt (dette kalles for en MVP), slik at
+              det ikke koster for mye å forkaste eller pivotere når vi lærer
+              mer. NB! MVP er ikke et begrep på en hel løsning eller første
+              versjon, men på et inkrement av løsningen.
             </li>
             <li>
-              Samle innsikt og data fra starten av, gjennom kontinuerlig dialog
-              med brukeren og måling av bruk av produktet
+              Samle data fra starten av, gjennom kontinuerlig dialog med
+              brukeren og måling av bruk av produktet. Bruk den delen av
+              organisasjonen som har aller mest dialog med kunden eller
+              brukerne, som for eksempel salg eller kundeservice, som
+              støttespillere.
             </li>
             <li>
               Apropos mål, sett konkrete mål for logiske perioder og styr
-              utelukkende på dem. Vider det seg at målene er feil, pivoter også
+              utelukkende på dem. Viser det seg at målene er feil, pivoter også
               de. Målene må henge sammen med visjonen og de overordnede målene
               for virksomheten slik at produktet eller tjenesten din henger
               sammen i det økosystemet av produkter og tjenester som
@@ -75,15 +82,16 @@ const BottomText = (props: { footerColor: string }) => {
               Show & tell – vis fram innsikt, idéer og løsninger gjennom hele
               prosessen. Dette skaper eierskap og engasjement også utenfor
               teamet, og skaper rom for å få tilbakemeldinger og se
-              avhengigheter
+              avhengigheter produkter har
             </li>
           </ul>
-          <h4>Forutsetninger:</h4>
+          <p>
+            Vi har erfart at det er noen sentrale forutsetninger som må være på
+            plass om man skal lykkes med utvikling av digitale produkter og
+            tjenester:
+          </p>
           <ul className={style.bottomText__content_list}>
-            <li>
-              Du kommer ikke dit du vil uten forankring og tillit hos ledelsen
-              og andre beslutningstakere
-            </li>
+            <li>Forankring og tillit hos ledelsen</li>
             <li>
               Frihet og fred til å eksperimentere (det vi også kjenner som
               selvbestemmelse og autonomi)
@@ -100,7 +108,15 @@ const BottomText = (props: { footerColor: string }) => {
               utviklingsløpet, men som bruker løsningen likevel
             </li>
           </ul>
-          <p className={style.bottomText__content_bigText}>
+          <p>
+            Digital tjeneste- og produktutvikling er tett koblet sammen med
+            strategi og kultur. Prinsippene gjelder for alle digitale tjenester
+            og produkter, også datadrevet produkt- og tjenesteutvikling. De
+            gjelder også for det vi kan kalle legacy systemer, eller der hvor
+            det finnes eksisterende systemer som skal moderniseres, integreres
+            eller kanskje erstattes med andre produkter eller tjenester.{' '}
+          </p>
+          <p>
             Vi kan bidra med hele produktteam eller dedikerte roller til
             produktteam som allerede finnes, som for eksempel:
           </p>
@@ -111,6 +127,47 @@ const BottomText = (props: { footerColor: string }) => {
             <li>Utviklere og designere til team</li>
             <li>
               Støttespillere, som for eksempel agile coach og scrum master
+            </li>
+          </ul>
+          <p>
+            Ikke bare er vi en gjeng flinke konsulenter med bred erfaring og
+            kompetanse, vi har vært ute en vinterdag før og vi er modige, rause
+            og læreglade. Eller folkelige, som noen ville ha kalt det. Vi tror
+            sterkt på at å jobbe som en integrert del av virksomheten er
+            avgjørende for å lykkes, enten om vi deltar som medlemmer i
+            eksisterende team eller om vi representerer et produktteam. Vi tror
+            det bidrar til å skape noe mer enn produktet eller tjenesten vi
+            utvikler, vi skal tross alt utvikle og bidra i samfunnet og miljøene
+            rundt oss.
+          </p>
+          <p className={style.bottomText__content_bigText}>
+            Ting vi er skikkelig gode på er:
+          </p>
+          <ul>
+            <li>
+              Innsikt, i form av intervjuer og observasjon, tjeneste- og
+              brukerreiser og dataanalyse
+            </li>
+            <li>Konseptutvikling, prototyping og testing</li>
+            <li>Design for digitale flater</li>
+            <li>Systemutvikling, fullstack</li>
+            <li>Sikkerhet og personvern</li>
+            <li>Test og kvalitet</li>
+          </ul>
+          <p className={style.bottomText__content_bigText}>
+            Andre ting du trenger for å utvikle gode digitale produkter og
+            tjenester er:
+          </p>
+          <ul>
+            <li>En retning og en plan. Vi kan bidra med Strategiutvikling</li>
+            <li>
+              Flinke folk som er dyktige på sine fagområder, som alltid vil lære
+              mer og som er rause med sin kompetanse. Vi kan også bidra med
+              Datadrevet produkt- og tjenesteutvikling
+            </li>
+            <li>
+              En kultur som er preget av tillit, trygghet og åpenhet. Vi kan
+              bidra med Kulturutvikling.
             </li>
           </ul>
         </div>
