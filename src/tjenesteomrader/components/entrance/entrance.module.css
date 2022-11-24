@@ -15,11 +15,12 @@
   flex-direction: column;
   gap: 1.5rem;
   margin-left: auto;
-  width: 44.063rem;
+  width: 42.063rem;
 }
 
 .serviceArea__bottom p {
   margin-top: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .serviceArea__bottom a {
