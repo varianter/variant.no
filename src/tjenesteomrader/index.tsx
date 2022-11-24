@@ -6,6 +6,8 @@ import datadrevet from './images/indexBlobs/datadrevet.svg';
 import kultur from './images/indexBlobs/kultur.svg';
 import Entrance from './components/entrance/entrance';
 
+import { colorPairs } from '@variant/profile/lib/colors';
+
 const Tjenesteomrader = () => {
   return (
     <Layout>
@@ -24,8 +26,8 @@ const Tjenesteomrader = () => {
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
-          buttonColor={'#FFFFFF'}
-          buttonBgColor={'#E61A6B'}
+          buttonColor={colorPairs.primary.default.text}
+          buttonBgColor={colorPairs.primary.default.bg}
           urlPath={'digitalTjeneste'}
         />
         <Entrance
@@ -34,8 +36,8 @@ const Tjenesteomrader = () => {
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
-          buttonColor={'#333333'}
-          buttonBgColor={'#03DAC6'}
+          buttonColor={colorPairs.secondary2.default.text}
+          buttonBgColor={colorPairs.secondary2.default.bg}
           urlPath={'strategi'}
         />
         <Entrance
@@ -44,8 +46,8 @@ const Tjenesteomrader = () => {
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
-          buttonColor={'#FFFFFF'}
-          buttonBgColor={'#423D89'}
+          buttonColor={colorPairs.secondary1.default.text}
+          buttonBgColor={colorPairs.secondary1.default.bg}
           urlPath={'datadrevet'}
         />
         <Entrance
@@ -54,8 +56,8 @@ const Tjenesteomrader = () => {
           serviceText={
             'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
           }
-          buttonColor={'#333333'}
-          buttonBgColor={'#FFC4BC'}
+          buttonColor={colorPairs.secondary3.default.text}
+          buttonBgColor={colorPairs.secondary3.default.bg}
           urlPath={'kultur'}
         />
       </div>
