@@ -59,18 +59,23 @@ p {
   margin: 0;
 }
 
-.newyearParty__invitation__button {
+.newyearParty__invitation_link {
   margin-top: 1rem;
   width: 100%;
   border: none;
   background-color: #9af0e8;
-  height: 2.75rem;
-  color: black;
 }
 
-.newyearParty__invitation__button:hover {
+.newyearParty__invitation_link:hover {
   background-color: #68e9dd;
   cursor: pointer;
+}
+
+.newyearParty__invitation_link a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding-block: 0.5rem;
 }
 
 @media (min-width: 2000px) {

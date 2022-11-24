@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import DanceFloor from './img/danceFloor/danceFloor';
 import Firework from './img/firework/firework';
 import Firework2 from './img/firework/firework2';
@@ -42,11 +43,11 @@ const NewYearParty = () => {
           </a>
           <p className={style.newyearParty__invitation__table_text}>SPILL</p>
           <p className={style.newyearParty__invitation__table_text}>ØL!</p>
-          <form action="https://variant.hoopla.no/sales/event/2685940696?promo=variantfest">
-            <button className={style.newyearParty__invitation__button}>
-              Hold av billett
-            </button>
-          </form>
+          <div className={style.newyearParty__invitation_link}>
+            <Link href="https://variant.hoopla.no/sales/event/2685940696?promo=variantfest">
+              <a>Hold av billett</a>
+            </Link>
+          </div>
         </div>
         <Firework />
         <Firework2 />
