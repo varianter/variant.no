@@ -24,7 +24,11 @@ const BlobText = (props: {
         {props.text.map((paragraph) => {
           return (
             <p
-              style={props.threeBlobs && !isMobile ? { maxWidth: '20rem' } : {}}
+              style={
+                props.threeBlobs && !isMobile
+                  ? { maxWidth: '20rem', textAlign: 'center' }
+                  : {}
+              }
               className={style.blobText__text}
             >
               {paragraph}

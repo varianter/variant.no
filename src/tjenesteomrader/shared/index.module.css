@@ -38,6 +38,12 @@
   justify-content: center;
 }
 
+@media (max-width: 1700px) {
+  .threeRows {
+    gap: 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .tjenesteomrade__columns {
     padding-inline: 3rem;

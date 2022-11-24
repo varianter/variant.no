@@ -38,6 +38,9 @@
   .bottomText__content {
     padding-inline: 3rem;
   }
+  .bottomText__content_bigText {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 2000px) {
