@@ -34,11 +34,19 @@
 
 .threeRows {
   display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 @media (max-width: 1000px) {
   .tjenesteomrade__columns {
     padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .threeRows {
+    flex-direction: column;
   }
 }
 

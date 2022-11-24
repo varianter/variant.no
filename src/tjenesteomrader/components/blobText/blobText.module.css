@@ -42,6 +42,9 @@
     background-position: center bottom 2rem;
   }
 
+  .blobText__textbox {
+    min-width: 25rem;
+  }
   .blobText {
     order: -1;
     padding-bottom: 3rem;

@@ -25,7 +25,7 @@
   font-size: 1.875rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .bottomText__content {
     padding-inline: 6rem;
   }
