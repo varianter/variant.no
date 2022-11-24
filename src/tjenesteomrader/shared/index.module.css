@@ -38,6 +38,10 @@
   justify-content: center;
 }
 
+.threeRows > * {
+  max-width: 25rem;
+}
+
 @media (max-width: 1700px) {
   .threeRows {
     gap: 0;
@@ -53,6 +57,9 @@
 @media (max-width: 900px) {
   .threeRows {
     flex-direction: column;
+  }
+  .threeRows > * {
+    max-width: none;
   }
 }
 

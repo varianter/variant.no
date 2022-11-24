@@ -9,6 +9,7 @@ const BlobText = (props: {
   threeBlobs?: boolean;
 }) => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+  console.log(isMobile);
 
   return (
     <div className={style.blobText}>
@@ -24,11 +25,7 @@ const BlobText = (props: {
         {props.text.map((paragraph) => {
           return (
             <p
-              style={
-                props.threeBlobs && !isMobile
-                  ? { maxWidth: '20rem', textAlign: 'center' }
-                  : {}
-              }
+              style={props.threeBlobs ? { textAlign: 'center' } : {}}
               className={style.blobText__text}
             >
               {paragraph}
