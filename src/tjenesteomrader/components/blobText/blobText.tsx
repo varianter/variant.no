@@ -1,6 +1,5 @@
 import Blob from '../../images/blobs/blobs';
 import style from './blobText.module.css';
-import { useMediaQuery } from 'react-responsive';
 
 const BlobText = (props: {
   color: string;
@@ -8,9 +7,6 @@ const BlobText = (props: {
   blobNr: number;
   threeBlobs?: boolean;
 }) => {
-  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
-  console.log(isMobile);
-
   return (
     <div className={style.blobText}>
       <div className={style.blobText__blob}>
@@ -22,9 +18,10 @@ const BlobText = (props: {
         }
         className={style.blobText__textbox}
       >
-        {props.text.map((paragraph) => {
+        {props.text.map((paragraph, i) => {
           return (
             <p
+              key={i}
               style={props.threeBlobs ? { textAlign: 'center' } : {}}
               className={style.blobText__text}
             >

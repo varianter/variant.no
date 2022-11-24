@@ -18,8 +18,8 @@ const Blob = (props: { BlobPathNr: number; color: string }) => {
       fill="none"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d={paths[props.BlobPathNr]}
         fill={props.color}
       />
