@@ -10,7 +10,6 @@ import down2 from 'src/tjenesteomrader/images/arrows/down2.svg';
 import down3 from 'src/tjenesteomrader/images/arrows/down3.svg';
 import down4 from 'src/tjenesteomrader/images/arrows/down4.svg';
 import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
-import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
