@@ -7,12 +7,13 @@ import kultur from './images/indexBlobs/kultur.svg';
 import Entrance from './components/entrance/entrance';
 
 import { colorPairs } from '@variant/profile/lib/colors';
+import { Heading2 } from '@components/heading';
 
 const Tjenesteomrader = () => {
   return (
     <Layout>
       <div className={style.tjenesteomrader}>
-        <h2>Våre tjenesteområder</h2>
+        <Heading2>Våre tjenesteområder</Heading2>
         <p>
           Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
           volutpat nisi, volutpat diam tincidunt viverra. Sagittis, sapien porta
