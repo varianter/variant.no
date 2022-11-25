@@ -64,22 +64,22 @@ const Datadrevet = () => {
               <EmojiList
                 emoji={'💡'}
                 listItem={'Etablere metadatakatalog/metadataløsning'}
-                reversed={true}
+                inverted={true}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Etablere API-katalog'}
-                reversed={true}
+                inverted={true}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Tilgjengelig-gjøring via API'}
-                reversed={true}
+                inverted={true}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Valg av teknologi'}
-                reversed={true}
+                inverted={true}
               />
             </div>
             <BlobText
@@ -102,17 +102,17 @@ const Datadrevet = () => {
               <EmojiList
                 emoji={'💡'}
                 listItem={'Kartlegge kvalitet og planlegge'}
-                reversed={false}
+                inverted={false}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Definere ansvarlige'}
-                reversed={false}
+                inverted={false}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Identifisere datakilder'}
-                reversed={false}
+                inverted={false}
               />
             </div>
           </TwoRows>
@@ -125,12 +125,12 @@ const Datadrevet = () => {
               <EmojiList
                 emoji={'💡'}
                 listItem={'Forankring: Top down og bottom up'}
-                reversed={true}
+                inverted={true}
               />
               <EmojiList
                 emoji={'💡'}
                 listItem={'Kommunisere målbilde og prosess'}
-                reversed={true}
+                inverted={true}
               />
             </div>
             <BlobText color={blobColor} text={['Kartlegging']} blobNr={3} />

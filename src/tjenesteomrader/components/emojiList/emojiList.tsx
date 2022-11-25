@@ -3,7 +3,7 @@ import style from './emojiList.module.css';
 const EmojiList = (props: {
   emoji: string;
   listItem: string;
-  reversed: boolean;
+  inverted: boolean;
 }) => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
@@ -11,13 +11,13 @@ const EmojiList = (props: {
     <div
       className={style.emojiList}
       style={
-        props.reversed && !isMobile
+        props.inverted && !isMobile
           ? { justifyContent: 'flex-end' }
           : { justifyContent: 'flex-start' }
       }
     >
       <p
-        style={props.reversed && !isMobile ? { order: 1 } : { order: -1 }}
+        style={props.inverted && !isMobile ? { order: 1 } : { order: -1 }}
         className={style.emojiList__emoji}
       >
         {props.emoji}
@@ -25,7 +25,7 @@ const EmojiList = (props: {
       <p
         className={style.emojiList__text}
         style={
-          props.reversed && !isMobile
+          props.inverted && !isMobile
             ? { textAlign: 'right' }
             : isMobile
             ? { textAlign: 'center' }

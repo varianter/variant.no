@@ -49,17 +49,17 @@ const Strategi = () => {
               <EmojiList
                 emoji={'🛣'}
                 listItem={'retningsvalg og beslutninger'}
-                reversed={false}
+                inverted={false}
               />
               <EmojiList
                 emoji={'📈'}
                 listItem={'forretnings- og leveranseplaner'}
-                reversed={false}
+                inverted={false}
               />
               <EmojiList
                 emoji={'🤝'}
                 listItem={' ansettelser eller organisasjons-endringer'}
-                reversed={false}
+                inverted={false}
               />
             </div>
           </TwoRows>
@@ -92,7 +92,7 @@ const Strategi = () => {
             <EmojiList
               emoji={'🏔'}
               listItem={'et felles overordnet målbilde'}
-              reversed={false}
+              inverted={false}
             />
           </TwoRows>
 
@@ -101,11 +101,11 @@ const Strategi = () => {
 
           <TwoRows>
             <div>
-              <EmojiList emoji={'❤️'} listItem={'kundeverdi'} reversed={true} />
+              <EmojiList emoji={'❤️'} listItem={'kundeverdi'} inverted={true} />
               <EmojiList
                 emoji={'💰'}
                 listItem={'og forretningsverdi'}
-                reversed={true}
+                inverted={true}
               />
             </div>
 

@@ -41,7 +41,7 @@ const Tjenesteomrade = () => {
             <EmojiList
               emoji={'💡'}
               listItem="Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake..."
-              reversed={false}
+              inverted={false}
             />
           </TwoRows>
 
@@ -52,7 +52,7 @@ const Tjenesteomrade = () => {
             <EmojiList
               emoji={'🎯'}
               listItem="Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?"
-              reversed={true}
+              inverted={true}
             />
             <BlobText
               color={blobColor}
@@ -90,12 +90,12 @@ const Tjenesteomrade = () => {
               <EmojiList
                 emoji={'🧑‍💻'}
                 listItem={'Funksjonelle skisser & prototyper'}
-                reversed={true}
+                inverted={true}
               />
               <EmojiList
                 emoji={'🤓'}
                 listItem={'Tekniske eksperimenter'}
-                reversed={true}
+                inverted={true}
               />
             </div>
             <BlobText
@@ -123,7 +123,7 @@ const Tjenesteomrade = () => {
               listItem={
                 'Den viktigste læringen skjer når løsningen brukes som en naturlig del av hverdagen'
               }
-              reversed={false}
+              inverted={false}
             />
           </TwoRows>
         </div>
