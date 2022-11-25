@@ -5,6 +5,7 @@ import HeaderBackground from '../../images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
 import { useMediaQuery } from 'react-responsive';
+import Head from 'next/head';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -15,18 +16,15 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
-import { useEffect } from 'react';
 
 const Strategi = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
-
-  useEffect(() => {
-    document.title = 'Strategi';
-  }, []);
-
   return (
     <div>
-      <title>Strategi</title>
+      <Head>
+        <title>Strategi</title>
+      </Head>
+
       <div style={{ color: 'white', backgroundColor: '#1A1837' }}>
         <HeaderBackground
           headerColor={'#0D0C1B'}

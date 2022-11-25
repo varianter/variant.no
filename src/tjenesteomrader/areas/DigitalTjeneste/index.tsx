@@ -5,6 +5,7 @@ import TwoRows from '../../components/twoRows/twoRows';
 import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
 import { useMediaQuery } from 'react-responsive';
+import Head from 'next/head';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -15,18 +16,15 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
-import { useEffect } from 'react';
 
 const Tjenesteomrade = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
-
-  useEffect(() => {
-    document.title = 'Digital tjeneste';
-  }, []);
-
   return (
     <div>
-      <title>Digital tjeneste og produktutvikling</title>
+      <Head>
+        <title>Digital tjeneste og produktutvikling</title>
+      </Head>
+
       <div className={style.tjenesteomrade}>
         <HeaderBackground
           headerColor={'#2F0516'}
