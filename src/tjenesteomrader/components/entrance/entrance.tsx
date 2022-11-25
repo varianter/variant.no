@@ -12,7 +12,7 @@ const Entrance = (props: {
   return (
     <div className={style.serviceArea}>
       <div className={style.serviceArea__top}>
-        <img src={props.blobPath} alt="Digital tjeneste blob" />
+        <img src={props.blobPath} role="none" />
         <h3>{props.serviceName}</h3>
       </div>
       {}
