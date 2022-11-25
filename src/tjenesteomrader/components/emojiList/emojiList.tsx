@@ -1,38 +1,32 @@
-import { useMediaQuery } from 'react-responsive';
+import { and } from 'src/utils/css';
 import style from './emojiList.module.css';
 const EmojiList = (props: {
   listItems: Array<[string, string]>;
   inverted: boolean;
 }) => {
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-
   return (
     <div>
       {props.listItems.map((listItem) => {
         return (
           <div
-            className={style.emojiList}
-            style={
-              props.inverted && !isMobile
-                ? { justifyContent: 'flex-end' }
-                : { justifyContent: 'flex-start' }
-            }
+            className={and(
+              style.emojiList,
+              props.inverted ? style.emojiList__inverted : '',
+            )}
           >
             <p
-              style={props.inverted && !isMobile ? { order: 1 } : { order: -1 }}
-              className={style.emojiList__emoji}
+              className={and(
+                style.emojiList__emoji,
+                props.inverted ? style.emojiList__emoji__inverted : ' ',
+              )}
             >
               {listItem[0]}
             </p>
             <p
-              className={style.emojiList__text}
-              style={
-                props.inverted && !isMobile
-                  ? { textAlign: 'right' }
-                  : isMobile
-                  ? { textAlign: 'center' }
-                  : { textAlign: 'start' }
-              }
+              className={and(
+                style.emojiList__text,
+                props.inverted ? style.emojiList__text__inverted : '',
+              )}
             >
               {listItem[1]}
             </p>
