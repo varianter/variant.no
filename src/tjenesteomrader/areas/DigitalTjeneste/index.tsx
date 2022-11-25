@@ -6,6 +6,7 @@ import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
 import { useMediaQuery } from 'react-responsive';
 import Head from 'next/head';
+import { allColors } from '@variant/profile/lib/colors';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -19,6 +20,7 @@ import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 const Tjenesteomrade = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+  const blobColor = allColors.primary__shade2;
   return (
     <div>
       <Head>
@@ -27,22 +29,20 @@ const Tjenesteomrade = () => {
 
       <div className={style.tjenesteomrade}>
         <HeaderBackground
-          headerColor={'#2F0516'}
-          headerText={'Digital tjeneste- og produktutvikling'}
+          headerColor={allColors.primary__shade4}
+          headerText="Digital tjeneste- og produktutvikling"
         />
 
         <div className={style.tjenesteomrade__columns}>
           <TwoRows>
             <BlobText
-              color={'#8B0F40'}
+              color={blobColor}
               text={['“Ja, det var en kjempegod idé, det lager vi!”']}
               blobNr={0}
             />
             <EmojiList
               emoji={'💡'}
-              listItem={
-                'Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake...'
-              }
+              listItem="Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake..."
               reversed={false}
             />
           </TwoRows>
@@ -54,13 +54,11 @@ const Tjenesteomrade = () => {
           <TwoRows>
             <EmojiList
               emoji={'🎯'}
-              listItem={
-                'Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?'
-              }
+              listItem="Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?"
               reversed={true}
             />
             <BlobText
-              color={'#8B0F40'}
+              color={blobColor}
               text={[
                 'Hvem er målgruppen?',
                 'Hvilke ulike bruker-grupper finnes innenfor målgruppen din?',
@@ -78,7 +76,7 @@ const Tjenesteomrade = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#8B0F40'}
+              color={blobColor}
               text={[
                 'Hvorfor er det viktig å realisere akkurat denne idéen?',
                 'Hva skjer om du ikke gjør det?',
@@ -106,7 +104,7 @@ const Tjenesteomrade = () => {
               />
             </div>
             <BlobText
-              color={'#8B0F40'}
+              color={blobColor}
               text={[
                 'Involvering i idéfasen',
                 'Skissere løsning for å få feedback',
@@ -122,7 +120,7 @@ const Tjenesteomrade = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#8B0F40'}
+              color={blobColor}
               text={['Måle og lære gjennom innsikt og data']}
               blobNr={4}
             />
@@ -136,7 +134,7 @@ const Tjenesteomrade = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={'#2F0516'} />
+      <BottomText footerColor={allColors.primary__shade4} />
     </div>
   );
 };

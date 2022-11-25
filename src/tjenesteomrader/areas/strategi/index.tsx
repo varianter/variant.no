@@ -16,25 +16,32 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
+import { allColors } from '@variant/profile/lib/colors';
 
 const Strategi = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+  const blobColor = allColors.secondary1__shade2;
   return (
     <div>
       <Head>
         <title>Strategi</title>
       </Head>
 
-      <div style={{ color: 'white', backgroundColor: '#1A1837' }}>
+      <div
+        style={{
+          color: allColors.standard__white,
+          backgroundColor: allColors.secondary1__shade3,
+        }}
+      >
         <HeaderBackground
-          headerColor={'#0D0C1B'}
-          headerText={'Strategi-utvikling'}
+          headerColor={allColors.secondary1__shade4}
+          headerText="Strategi-utvikling"
         />
 
         <div className={style.tjenesteomrade__columns}>
           <TwoRows>
             <BlobText
-              color={'#282552'}
+              color={blobColor}
               text={[
                 'Først tenker du at det er selvsagt. At mer eller mindre dagligdagse sysler, slik som ',
               ]}
@@ -66,7 +73,7 @@ const Strategi = () => {
           <TwoRows>
             <div></div>
             <BlobText
-              color={'#282552'}
+              color={blobColor}
               text={[
                 '…ikke er tilfeldige eller personavhengige – men velbegrunnede, samkjørte og strategisk forankrete aktiviteter.',
               ]}
@@ -80,7 +87,7 @@ const Strategi = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#282552'}
+              color={blobColor}
               text={[
                 'Du tar det for gitt at hele organisasjonen på tvers av team og miljøer jobber mot…',
               ]}
@@ -108,7 +115,7 @@ const Strategi = () => {
             </div>
 
             <BlobText
-              color={'#282552'}
+              color={blobColor}
               text={[
                 '…og at de flinke folkene løser oppgaver som realiserer både…',
               ]}
@@ -122,7 +129,7 @@ const Strategi = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#282552'}
+              color={blobColor}
               text={[
                 '…samtidig med at den fjelltoppen som er peilet ut som mål, kommer stadig nærmere…',
               ]}
@@ -131,7 +138,7 @@ const Strategi = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={'#0D0C1B'} />
+      <BottomText footerColor={allColors.secondary1__shade4} />
     </div>
   );
 };

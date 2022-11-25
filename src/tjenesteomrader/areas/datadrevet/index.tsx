@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
 import Head from 'next/head';
+import { allColors } from '@variant/profile/lib/colors';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -18,34 +19,40 @@ import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 const Datadrevet = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+  const blobColor = allColors.secondary2__shade2;
   return (
     <div>
       <Head>
         <title>Datadrevet produkt- og tjenesteutvikling</title>
       </Head>
 
-      <div style={{ color: 'white', backgroundColor: '#01574F' }}>
+      <div
+        style={{
+          color: allColors.standard__white,
+          backgroundColor: allColors.secondary2__shade3,
+        }}
+      >
         <HeaderBackground
-          headerColor={'#012C28'}
-          headerText={'Datadrevet produkt- og tjenesteutvikling'}
+          headerColor={allColors.secondary2__shade4}
+          headerText="Datadrevet produkt- og tjenesteutvikling"
         />
 
         <div className={style.tjenesteomrade__columns}>
           <div className={style.threeRows}>
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={['Kunnskap til å ta bedre beslutninger']}
               blobNr={0}
               threeBlobs={true}
             />
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={['Utvikling av helt nye produkter og tjenester']}
               blobNr={1}
               threeBlobs={true}
             />
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={['Ny funksjonalitet i eksisterende produkter']}
               blobNr={2}
               threeBlobs={true}
@@ -76,7 +83,7 @@ const Datadrevet = () => {
               />
             </div>
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={['Tekniske kapabiliteter']}
               blobNr={1}
             />
@@ -88,7 +95,7 @@ const Datadrevet = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={[' «Orden i eget hus»']}
               blobNr={2}
             />
@@ -128,7 +135,7 @@ const Datadrevet = () => {
                 reversed={true}
               />
             </div>
-            <BlobText color={'#028377'} text={['Kartlegging']} blobNr={3} />
+            <BlobText color={blobColor} text={['Kartlegging']} blobNr={3} />
           </TwoRows>
           {isMobile ? (
             <img className={style.sideArrow} src={down4} alt="down arrow 4" />
@@ -137,14 +144,14 @@ const Datadrevet = () => {
           )}
           <TwoRows>
             <BlobText
-              color={'#028377'}
+              color={blobColor}
               text={['Forankring av ambisjoner og mål']}
               blobNr={4}
             />
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={'#012C28'} />
+      <BottomText footerColor={allColors.secondary2__shade4} />
     </div>
   );
 };
