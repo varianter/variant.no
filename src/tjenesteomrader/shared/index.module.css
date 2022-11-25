@@ -15,11 +15,15 @@
   overflow: hidden;
 }
 
-.downArrow {
+.downArrow,
+.specialArrow {
   width: 8rem;
   height: auto;
-  display: block;
   margin: auto;
+}
+
+.downArrow {
+  display: none;
 }
 
 .sideArrow {
@@ -60,6 +64,14 @@
   }
   .threeRows > * {
     max-width: none;
+  }
+
+  .sideArrow {
+    display: none;
+  }
+
+  .downArrow {
+    display: block;
   }
 }
 

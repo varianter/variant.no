@@ -4,7 +4,6 @@ import style from 'src/tjenesteomrader/shared/index.module.css';
 import TwoRows from '../../components/twoRows/twoRows';
 import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
-import { useMediaQuery } from 'react-responsive';
 import Head from 'next/head';
 import { allColors } from '@variant/profile/lib/colors';
 
@@ -19,7 +18,6 @@ import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 const Tjenesteomrade = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const blobColor = allColors.primary__shade2;
   return (
     <div>
@@ -46,11 +44,10 @@ const Tjenesteomrade = () => {
               reversed={false}
             />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.downArrow} src={down1} alt="down arrow 1" />
-          ) : (
-            <img className={style.sideArrow} src={right1} alt="right arrow 1" />
-          )}
+
+          <img className={style.downArrow} src={down1} alt="down arrow 1" />
+          <img className={style.sideArrow} src={right1} alt="right arrow 1" />
+
           <TwoRows>
             <EmojiList
               emoji={'🎯'}
@@ -69,11 +66,10 @@ const Tjenesteomrade = () => {
               blobNr={1}
             />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.downArrow} src={down2} alt="down arrow 2" />
-          ) : (
-            <img className={style.sideArrow} src={left1} alt="left arrow 1" />
-          )}
+
+          <img className={style.downArrow} src={down2} alt="down arrow 2" />
+          <img className={style.sideArrow} src={left1} alt="left arrow 1" />
+
           <TwoRows>
             <BlobText
               color={blobColor}
@@ -85,11 +81,10 @@ const Tjenesteomrade = () => {
               blobNr={2}
             />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.downArrow} src={down3} alt="down arrow 3" />
-          ) : (
-            <img className={style.sideArrow} src={right2} alt="right arrow 1" />
-          )}
+
+          <img className={style.downArrow} src={down3} alt="down arrow 3" />
+          <img className={style.sideArrow} src={right2} alt="right arrow 1" />
+
           <TwoRows>
             <div>
               <EmojiList
@@ -113,11 +108,10 @@ const Tjenesteomrade = () => {
               blobNr={3}
             />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.downArrow} src={down4} alt="down arrow 4" />
-          ) : (
-            <img className={style.sideArrow} src={left2} alt="left arrow 2" />
-          )}
+
+          <img className={style.downArrow} src={down4} alt="down arrow 4" />
+          <img className={style.sideArrow} src={left2} alt="left arrow 2" />
+
           <TwoRows>
             <BlobText
               color={blobColor}

@@ -2,7 +2,6 @@ import BlobText from 'src/tjenesteomrader/components/blobText/blobText';
 import EmojiList from 'src/tjenesteomrader/components/emojiList/emojiList';
 import TwoRows from 'src/tjenesteomrader/components/twoRows/twoRows';
 import HeaderBackground from 'src/tjenesteomrader/images/headerBackground/headerBackground';
-import { useMediaQuery } from 'react-responsive';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import BottomText from './bottomText/bottomText';
 import Head from 'next/head';
@@ -18,7 +17,6 @@ import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
 const Datadrevet = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const blobColor = allColors.secondary2__shade2;
   return (
     <div>
@@ -58,7 +56,9 @@ const Datadrevet = () => {
               threeBlobs={true}
             />
           </div>
-          <img className={style.downArrow} src={down1} alt="down 1 arrow" />
+
+          <img className={style.specialArrow} src={down1} alt="down 1 arrow" />
+
           <TwoRows>
             <div>
               <EmojiList
@@ -88,11 +88,10 @@ const Datadrevet = () => {
               blobNr={1}
             />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.sideArrow} src={down2} alt="down arrow 2" />
-          ) : (
-            <img className={style.sideArrow} src={left1} alt="left arrow 1" />
-          )}
+
+          <img className={style.downArrow} src={down2} alt="down arrow 2" />
+          <img className={style.sideArrow} src={left1} alt="left arrow 1" />
+
           <TwoRows>
             <BlobText
               color={blobColor}
@@ -117,11 +116,10 @@ const Datadrevet = () => {
               />
             </div>
           </TwoRows>
-          {isMobile ? (
-            <img className={style.sideArrow} src={down3} alt="down arrow 3" />
-          ) : (
-            <img className={style.sideArrow} src={right1} alt="right arrow 1" />
-          )}
+
+          <img className={style.downArrow} src={down3} alt="down arrow 3" />
+          <img className={style.sideArrow} src={right1} alt="right arrow 1" />
+
           <TwoRows>
             <div>
               <EmojiList
@@ -137,11 +135,10 @@ const Datadrevet = () => {
             </div>
             <BlobText color={blobColor} text={['Kartlegging']} blobNr={3} />
           </TwoRows>
-          {isMobile ? (
-            <img className={style.sideArrow} src={down4} alt="down arrow 4" />
-          ) : (
-            <img className={style.sideArrow} src={left2} alt="left arrow 2" />
-          )}
+
+          <img className={style.downArrow} src={down4} alt="down arrow 4" />
+          <img className={style.sideArrow} src={left2} alt="left arrow 2" />
+
           <TwoRows>
             <BlobText
               color={blobColor}
