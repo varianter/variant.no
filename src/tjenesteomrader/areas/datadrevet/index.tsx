@@ -60,28 +60,16 @@ const Datadrevet = () => {
           <img className={style.specialArrow} src={down1} alt="down 1 arrow" />
 
           <TwoRows>
-            <div>
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Etablere metadatakatalog/metadataløsning'}
-                inverted={true}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Etablere API-katalog'}
-                inverted={true}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Tilgjengelig-gjøring via API'}
-                inverted={true}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Valg av teknologi'}
-                inverted={true}
-              />
-            </div>
+            <EmojiList
+              listItems={[
+                ['💡', 'Etablere metadatakatalog/metadataløsning'],
+                ['💡', 'Etablere API-katalog'],
+                ['💡', 'Tilgjengelig-gjøring via API'],
+                ['💡', 'Valg av teknologi'],
+              ]}
+              inverted={true}
+            />
+
             <BlobText
               color={blobColor}
               text={['Tekniske kapabiliteter']}
@@ -98,41 +86,27 @@ const Datadrevet = () => {
               text={[' «Orden i eget hus»']}
               blobNr={2}
             />
-            <div>
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Kartlegge kvalitet og planlegge'}
-                inverted={false}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Definere ansvarlige'}
-                inverted={false}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Identifisere datakilder'}
-                inverted={false}
-              />
-            </div>
+            <EmojiList
+              listItems={[
+                ['💡', 'Kartlegge kvalitet og planlegge'],
+                ['💡', 'Definere ansvarlige'],
+                ['💡', 'Identifisere datakilder'],
+              ]}
+              inverted={false}
+            />
           </TwoRows>
 
           <img className={style.downArrow} src={down3} alt="down arrow 3" />
           <img className={style.sideArrow} src={right1} alt="right arrow 1" />
 
           <TwoRows>
-            <div>
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Forankring: Top down og bottom up'}
-                inverted={true}
-              />
-              <EmojiList
-                emoji={'💡'}
-                listItem={'Kommunisere målbilde og prosess'}
-                inverted={true}
-              />
-            </div>
+            <EmojiList
+              listItems={[
+                ['💡', 'Forankring: Top down og bottom up'],
+                ['💡', 'Kommunisere målbilde og prosess'],
+              ]}
+              inverted={true}
+            />
             <BlobText color={blobColor} text={['Kartlegging']} blobNr={3} />
           </TwoRows>
 

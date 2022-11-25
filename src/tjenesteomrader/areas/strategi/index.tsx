@@ -45,23 +45,15 @@ const Strategi = () => {
               ]}
               blobNr={0}
             />
-            <div>
-              <EmojiList
-                emoji={'🛣'}
-                listItem={'retningsvalg og beslutninger'}
-                inverted={false}
-              />
-              <EmojiList
-                emoji={'📈'}
-                listItem={'forretnings- og leveranseplaner'}
-                inverted={false}
-              />
-              <EmojiList
-                emoji={'🤝'}
-                listItem={' ansettelser eller organisasjons-endringer'}
-                inverted={false}
-              />
-            </div>
+
+            <EmojiList
+              listItems={[
+                ['🛣', 'retningsvalg og beslutninger'],
+                ['📈', 'forretnings- og leveranseplaner'],
+                ['🤝', 'ansettelser eller organisasjons-endringer'],
+              ]}
+              inverted={false}
+            />
           </TwoRows>
 
           <img className={style.downArrow} src={down1} alt="down arrow 1" />
@@ -90,8 +82,7 @@ const Strategi = () => {
               blobNr={2}
             />
             <EmojiList
-              emoji={'🏔'}
-              listItem={'et felles overordnet målbilde'}
+              listItems={[['🏔', 'et felles overordnet målbilde']]}
               inverted={false}
             />
           </TwoRows>
@@ -100,14 +91,13 @@ const Strategi = () => {
           <img className={style.sideArrow} src={right2} alt="right arrow 2" />
 
           <TwoRows>
-            <div>
-              <EmojiList emoji={'❤️'} listItem={'kundeverdi'} inverted={true} />
-              <EmojiList
-                emoji={'💰'}
-                listItem={'og forretningsverdi'}
-                inverted={true}
-              />
-            </div>
+            <EmojiList
+              listItems={[
+                ['❤️', 'kundeverdi'],
+                ['💰', 'og forretningsverdi'],
+              ]}
+              inverted={true}
+            />
 
             <BlobText
               color={blobColor}

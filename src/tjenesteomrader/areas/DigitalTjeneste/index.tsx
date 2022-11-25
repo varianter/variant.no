@@ -39,8 +39,12 @@ const Tjenesteomrade = () => {
               blobNr={0}
             />
             <EmojiList
-              emoji={'💡'}
-              listItem="Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake..."
+              listItems={[
+                [
+                  '💡',
+                  'Ok, nå har du et klart bilde av hvordan løsningen skal være. La oss likevel ta et steg tilbake...',
+                ],
+              ]}
               inverted={false}
             />
           </TwoRows>
@@ -50,8 +54,12 @@ const Tjenesteomrade = () => {
 
           <TwoRows>
             <EmojiList
-              emoji={'🎯'}
-              listItem="Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?"
+              listItems={[
+                [
+                  '🎯',
+                  'Her er du inne på visjonen og misjonen til virksomheten, de overordnede målene og strategien for å nå de. Er det riktig å løse problemet basert på den konteksten de gir?',
+                ],
+              ]}
               inverted={true}
             />
             <BlobText
@@ -86,18 +94,13 @@ const Tjenesteomrade = () => {
           <img className={style.sideArrow} src={right2} alt="right arrow 1" />
 
           <TwoRows>
-            <div>
-              <EmojiList
-                emoji={'🧑‍💻'}
-                listItem={'Funksjonelle skisser & prototyper'}
-                inverted={true}
-              />
-              <EmojiList
-                emoji={'🤓'}
-                listItem={'Tekniske eksperimenter'}
-                inverted={true}
-              />
-            </div>
+            <EmojiList
+              listItems={[
+                ['🧑‍💻', 'Funksjonelle skisser & prototyper'],
+                ['🤓', 'Tekniske eksperimenter'],
+              ]}
+              inverted={true}
+            />
             <BlobText
               color={blobColor}
               text={[
@@ -119,10 +122,12 @@ const Tjenesteomrade = () => {
               blobNr={4}
             />
             <EmojiList
-              emoji={'🧑‍🔬'}
-              listItem={
-                'Den viktigste læringen skjer når løsningen brukes som en naturlig del av hverdagen'
-              }
+              listItems={[
+                [
+                  '🧑‍🔬',
+                  'Den viktigste læringen skjer når løsningen brukes som en naturlig del av hverdagen',
+                ],
+              ]}
               inverted={false}
             />
           </TwoRows>
