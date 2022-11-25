@@ -25,32 +25,28 @@ const Tjenesteomrader = () => {
           blobPath={digitalTjenesteBlob}
           serviceName="Digital tjeneste-og produktutvikling"
           serviceText="Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra."
-          buttonColor={colorPairs.primary.default.text}
-          buttonBgColor={colorPairs.primary.default.bg}
+          colorPair={colorPairs.primary}
           urlPath="digitalTjeneste"
         />
         <Entrance
           blobPath={serviceBlob}
           serviceName="Strategi"
           serviceText="Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra."
-          buttonColor={colorPairs.secondary2.default.text}
-          buttonBgColor={colorPairs.secondary2.default.bg}
+          colorPair={colorPairs.secondary2}
           urlPath="strategi"
         />
         <Entrance
           blobPath={datadrevet}
           serviceName="Datadrevet"
           serviceText="Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra."
-          buttonColor={colorPairs.secondary1.default.text}
-          buttonBgColor={colorPairs.secondary1.default.bg}
+          colorPair={colorPairs.secondary1}
           urlPath="datadrevet"
         />
         <Entrance
           blobPath={kultur}
           serviceName="Kultur"
           serviceText="Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra."
-          buttonColor={colorPairs.secondary3.default.text}
-          buttonBgColor={colorPairs.secondary3.default.bg}
+          colorPair={colorPairs.secondary3}
           urlPath="kultur"
         />
       </div>

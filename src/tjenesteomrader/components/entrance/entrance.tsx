@@ -1,3 +1,4 @@
+import { ColorSet } from '@variant/profile/lib/colors';
 import Link from 'next/link';
 import style from './entrance.module.css';
 
@@ -5,8 +6,7 @@ const Entrance = (props: {
   blobPath: string;
   serviceName: string;
   serviceText: string;
-  buttonColor: string;
-  buttonBgColor: string;
+  colorPair: ColorSet;
   urlPath: string;
 }) => {
   return (
@@ -21,8 +21,8 @@ const Entrance = (props: {
         <Link href={`tjenesteomrader/omrader/${props.urlPath}`}>
           <a
             style={{
-              backgroundColor: props.buttonBgColor,
-              color: props.buttonColor,
+              backgroundColor: props.colorPair.default.bg,
+              color: props.colorPair.default.text,
             }}
           >
             Les mer om {props.serviceName}
