@@ -21,7 +21,7 @@ const Entrance = (props: {
           Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
           volutpat nisi, volutpat diam tincidunt viverra.
         </p>
-        <Link href={`tjenesteomrader/omrader/${props.urlPath}`}>
+        <Link href={`tjenesteomrade/${props.urlPath}`}>
           <a
             style={{
               backgroundColor: props.buttonBgColor,

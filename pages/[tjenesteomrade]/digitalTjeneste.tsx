@@ -1,1 +1,1 @@
-export { default } from '../../../src/tjenesteomrader/areas/DigitalTjeneste/index';
+export { default } from 'src/tjenesteomrader/areas/DigitalTjeneste/index';
