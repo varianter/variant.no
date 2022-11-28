@@ -23,26 +23,19 @@ const NewYearParty = () => {
           </p>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
             Variant er bygd på åpenhet, raushet og læreglede. Derfor ønsker vi i
-            Variant Oslo å invitere dere alle til et storstilt nyttårskalas med
-            underholdning, mat, drikke, musikk og moro i ekte Variant-ånd.
+            Variant Oslo å invitere dere alle til et storstilt nyttårskalas med{' '}
+            <b>
+              underholdning fra rapperen Pasha, DJ, nydelig mat fra Hells
+              Kitchen, drikke, musikk og moro
+            </b>{' '}
+            i ekte Variant-ånd.
           </p>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
-            Arrangementet er gratis, men alle gjester må løse billett på Hoopla.
-            Vi gleder oss til å treffe deg!
+            Arrangementet er gratis, men alle gjester må løse billett gjennom
+            Hoopla. Vi gleder oss til å treffe deg!
           </p>
         </div>
         <div className={style.newyearParty__invitation__table}>
-          <p className={style.newyearParty__invitation__table_text}>PIZZA</p>
-          <p className={style.newyearParty__invitation__table_text}>DJ</p>
-          <a
-            href="https://www.youtube.com/watch?v=gO6Sp3NkL2Y"
-            style={{ cursor: 'pointer' }}
-            className={style.newyearParty__invitation__table_text}
-          >
-            PASHA
-          </a>
-          <p className={style.newyearParty__invitation__table_text}>SPILL</p>
-          <p className={style.newyearParty__invitation__table_text}>ØL!</p>
           <div className={style.newyearParty__invitation_link}>
             <Link href="https://variant.hoopla.no/sales/event/2685940696?promo=variantfest">
               <a>Hold av billett</a>
