@@ -14,7 +14,8 @@ import { HighlightedItemsLists } from 'src/rss/service';
 import PageTitle from '@components/page-title';
 import sommerjobbImg from './images/section1Blob.png';
 import Arrow from '@components/arrow';
-import {Heading3} from "@components/heading";
+import { Heading3 } from '@components/heading';
+import Tjenesteomrader from 'src/tjenesteomrader';
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -185,55 +186,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           loading="lazy"
           decoding="async"
         />
-
-        <article>
-          <h3>Design</h3>
-
-          <p>
-            Et begrep som betyr mye og som kan utgjøre like mye for et produkt
-            eller prosjekt. Om det er brukeropplevelse-, grafisk- eller
-            tjeneste-design, vil vi kunne bidra.
-          </p>
-        </article>
-
-        <article>
-          <h3>Utvikling</h3>
-
-          <p>
-            Enten du trenger en eller flere utviklere kan vi hjelpe med
-            engasjerte og kunnskapsrike mennesker. Vi leverer assistanse til
-            skysetting, utvikling av nye systemer og produkter og ekspertise på
-            tradisjonell systemutvikling. Ta kontakt for å høre mer om hvordan
-            vi kan hjelpe.
-          </p>
-        </article>
-
-        <article>
-          <h3>Prosjektledelse</h3>
-
-          <p>
-            Prosjektledelse handler om å legge sammen brikkene i riktig
-            rekkefølge og skape et bra resultat. Det blir ikke likt hver gang,
-            og det er det som er så spennende. Prosjektledelse er å bidra til et
-            engasjerende og fruktbart samarbeid i et tverrfaglig team, og til å
-            skape fremdrift i riktig retning. Prosjektledelse er læreglede i
-            praksis, og vi deler raust vår erfaring og våre perspektiv i dine
-            prosjekter.
-          </p>
-        </article>
-
-        <article>
-          <h3>Kursing og rådgivning</h3>
-
-          <p>
-            Utvikling er et felt i konstant endring, og det kan kreve mye å
-            følge med på det som skjer. Men det trenger ikke være slik.
-            Erfaringer er også noe som kan overføres og deles. Vi bistår med å
-            gjøre grupper, enkeltpersoner og prosjekt mer oppdatert, mer
-            effektive og flinkere. Vi tilbyr både ferdige kursopplegg og
-            presentasjoner samt skreddersydde opplegg for din organisasjon.
-          </p>
-        </article>
+      </section>
+      <section>
+        <Tjenesteomrader />
       </section>
 
       <section className={style['two-column-section']}>
