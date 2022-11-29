@@ -11,38 +11,43 @@ const BottomText = (props: { footerColor: string }) => {
 
       <div className={style.bottomText__content}>
         <p className={style.bottomText__content_bigText}>
-          Som bidragsytere innenfor digital tjenesteutvikling ser vi ofte at
-          virkeligheten ikke er slik. Mange står i svært komplekse og krevende
-          transformasjons- og endringsprosesser hvor folk har nok med å få egen
-          kalender, leveranser, forpliktelser og ressurser til å gå opp.
+          Som virksomme fagfolk i et mangfold av bransjer, ser vi at
+          virkeligheten ofte ikke er slik. Mange står i komplekse og krevende
+          transformasjons- og endringsprosesser, hvor det er krevende nok å
+          ivareta egne folk, forpliktelser og leveranser. I mangel på kapasitet
+          eller evne til å se hvordan interne og eksterne innsatsfaktorer
+          samvirker, blir risikoen stor for at hindringer skapes der muligheter
+          kunne oppstått.
         </p>
 
         <div className={style.bottomText__content_wrapper}>
           <p>
-            Med manglende kapasitet og evne til å se hvordan både interne og
-            eksterne innsatsfaktorer samvirker på organisasjonsnivå, er risikoen
-            stor for at det bygges barrierer der synergier kunne oppstått.
+            Strategiutvikling tilbyr et strukturert rammeverk for helhetlige
+            målbilder og valg som alle forstår og evner å navigere etter.
+            Strategiutvikling er en prosess hvor flinke folk med en rett miks av
+            faglig, kulturelt og strategisk fokus integreres i hverdagen til
+            organisasjonen. Derfra utvikles retning, enhet og struktur: Ut fra
+            eksisterende rammebetingelser og kultur på den ene siden, og
+            realistiske fremtidsscenarier på den andre.
           </p>
         </div>
 
         <div className={style.bottomText__content_wrapper}>
           <p>
-            <strong>Strategiutvikling</strong> tilbyr et sosialt og strukturelt
-            rammeverk for helhetlige målbilder og valg som alle involverte
-            parter forstår og evner å navigere etter. Strategiutvikling er
-            kompetanse som integreres i den operasjonelle hverdagen til
-            organisasjonen. Derfra utvikles retning og struktur på bakgrunn av
-            eksisterende rammebetingelser, forutsetninger og kultur men også ut
-            fra realistiske fremtidsscenarier og nye muligheter.
+            <strong>Strategiutvikling</strong> hjelper til med å sette fokus og
+            behandle helheten i det komplekse systemet vi jobber i og med . Når
+            virksomheten forstås som et system, kan den optimaliseres gjennom
+            strategier som ikke forblir liggende på styrerommet, men som blir
+            levendegjort og etterlevd i kulturen.
           </p>
         </div>
 
         <div className={style.bottomText__content_wrapper}>
           <p>
-            Strategiutvikling hjelper til å sette fokus, kartlegge og behandle
-            helheten i det komplekse systemet vi jobber innenfor. Da kan det
-            forstås, optimaliseres og skape mer verdi for alle involverte
-            aktører.
+            I Variant har vi “strategiagenter” innenfor prosjektledelse, design
+            og utvikling. Vi kan bidra på ulike nivå med rådgivning, analyse og
+            metodikk som samler folk og gjør det enklere å foreta bærekraftige
+            veivalg for produkter, tjenester og forretning.
           </p>
         </div>
 
