@@ -55,7 +55,7 @@ const Tjenesteomrader = () => {
         }
         buttonColor={'#333333'}
         buttonBgColor={'#FFC4BC'}
-        urlPath={''}
+        urlPath={'/kultur'}
       />
     </div>
   );
