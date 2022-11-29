@@ -50,15 +50,6 @@ const BottomText = (props: { footerColor: string }) => {
             veivalg for produkter, tjenester og forretning.
           </p>
         </div>
-
-        <div className={style.bottomText__content_wrapper}>
-          <p>
-            I Variant har vi strategiagenter innenfor både prosjektledelse,
-            design og utvikling som kan bidra på ulike nivå med rådgivning,
-            analyse og metodikk som samler folk og gjør det enklere å foreta
-            bærekraftige forretningsvalg.
-          </p>
-        </div>
       </div>
       <Footer color={props.footerColor} />
     </div>
