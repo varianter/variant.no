@@ -352,3 +352,9 @@
     margin-left: 6rem;
   }
 }
+
+.tjenesteomrader {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
