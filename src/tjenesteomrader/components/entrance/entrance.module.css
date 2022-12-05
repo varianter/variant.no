@@ -56,6 +56,12 @@
   margin-left: auto;
 }
 
+@media (max-width: 700px) {
+  .serviceArea__bottom {
+    width: 100%;
+  }
+}
+
 @media (max-width: 550px) {
   .serviceArea {
     padding: 1.5rem;
@@ -63,6 +69,7 @@
 
   .serviceArea__top {
     flex-direction: column;
+    gap: 0;
   }
 
   .serviceArea__top h3 {
@@ -86,6 +93,11 @@
   .serviceArea:nth-child(even) .serviceArea__top h3 {
     width: 100%;
     text-align: start;
+  }
+
+  .serviceArea__top img {
+    width: 10rem;
+    height: auto;
   }
 
   .serviceArea:nth-child(even) img {
