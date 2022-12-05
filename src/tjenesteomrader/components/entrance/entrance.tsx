@@ -15,12 +15,8 @@ const Entrance = (props: {
         <img src={props.blobPath} alt={props.ServiceName + ' blob'} />
         <h3>{props.ServiceName}</h3>
       </div>
-      {}
       <div className={style.serviceArea__bottom}>
-        <p>
-          Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus
-          volutpat nisi, volutpat diam tincidunt viverra.
-        </p>
+        <p>{props.serviceText}</p>
         <Link href={`tjenesteomrade/${props.urlPath}`}>
           <a
             style={{
