@@ -23,7 +23,7 @@ const Tjenesteomrader = () => {
         blobPath={digitalTjenesteBlob}
         ServiceName={'Digital tjeneste og produktutvikling'}
         serviceText={
-          'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          'Utvikling av digitale produkter og tjenester er kjernen i Variants leveranser. Med oss på laget får du tilgang til vår beste praksis og erfaringer rundt hvordan man lykkes med dette.'
         }
         colorPair={colorPairs.primary}
         urlPath={'digitalTjeneste'}
