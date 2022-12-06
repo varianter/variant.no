@@ -8,6 +8,7 @@ const Entrance = (props: {
   serviceText: string;
   colorPair: ColorSet;
   urlPath: string;
+  hideButton?: boolean;
 }) => {
   return (
     <div className={style.serviceArea}>
@@ -17,16 +18,20 @@ const Entrance = (props: {
       </div>
       <div className={style.serviceArea__bottom}>
         <p>{props.serviceText}</p>
-        <Link href={`tjenesteomrade/${props.urlPath}`}>
-          <a
-            style={{
-              backgroundColor: props.colorPair.default.bg,
-              color: props.colorPair.default.text,
-            }}
-          >
-            Les mer om {props.ServiceName}
-          </a>
-        </Link>
+        {!props.hideButton ? (
+          <Link href={`tjenesteomrade/${props.urlPath}`}>
+            <a
+              style={{
+                backgroundColor: props.colorPair.default.bg,
+                color: props.colorPair.default.text,
+              }}
+            >
+              Les mer om {props.ServiceName}
+            </a>
+          </Link>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
