@@ -120,7 +120,7 @@ const BottomText = (props: { footerColor: string }) => {
             Vi kan bidra med hele produktteam eller dedikerte roller til
             produktteam som allerede finnes, som for eksempel:
           </p>
-          <ul>
+          <ul className={style.bottomText__content_list}>
             <li>Produktledelse</li>
             <li>Tech lead eller arkitekt</li>
             <li>Design lead</li>
@@ -143,7 +143,7 @@ const BottomText = (props: { footerColor: string }) => {
           <p className={style.bottomText__content_bigText}>
             Ting vi er skikkelig gode på er:
           </p>
-          <ul>
+          <ul className={style.bottomText__content_list}>
             <li>
               Innsikt, i form av intervjuer og observasjon, tjeneste- og
               brukerreiser og dataanalyse
@@ -158,7 +158,7 @@ const BottomText = (props: { footerColor: string }) => {
             Andre ting du trenger for å utvikle gode digitale produkter og
             tjenester er:
           </p>
-          <ul>
+          <ul className={style.bottomText__content_list}>
             <li>En retning og en plan. Vi kan bidra med Strategiutvikling</li>
             <li>
               Flinke folk som er dyktige på sine fagområder, som alltid vil lære

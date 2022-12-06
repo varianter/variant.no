@@ -25,6 +25,10 @@
   font-size: 1.875rem;
 }
 
+.bottomText__content_list {
+  padding: 1rem;
+}
+
 @media (max-width: 1250px) {
   .bottomText__content_wrapper {
     width: 100%;
@@ -39,7 +43,7 @@
 
 @media (max-width: 481px) {
   .bottomText__content {
-    padding-inline: 3rem;
+    padding-inline: 2rem;
   }
   .bottomText__content_bigText {
     font-size: 1.25rem;
