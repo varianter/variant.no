@@ -12,7 +12,7 @@ const Tjenesteomrader = () => {
       <h2 id="tjenesteomrader" className={style.join_title}>
         Våre tjenesteområder
       </h2>
-      <p>
+      <p className={style.tjenesteomrader__ingress}>
         I Variant ønsker vi å bidra til størst mulig forandring til det bedre
         for kundene våre, for folk og for samfunnet. Derfor har vi rigget oss
         helhetlig for å kode, designe, lede og rådgi innenfor fire definerte
