@@ -22,7 +22,7 @@ const Tjenesteomrade = () => {
   return (
     <div>
       <Head>
-        <title>Digital tjeneste og produktutvikling</title>
+        <title>Digital tjeneste- og produktutvikling</title>
       </Head>
 
       <div className={style.tjenesteomrade}>

@@ -21,7 +21,7 @@ const Tjenesteomrader = () => {
       </p>
       <Entrance
         blobPath={digitalTjenesteBlob}
-        ServiceName={'Digital tjeneste og produktutvikling'}
+        ServiceName={'Digital tjeneste- og produktutvikling'}
         serviceText={
           'Utvikling av digitale produkter og tjenester er kjernen i Variants leveranser. Med oss på laget får du tilgang til vår beste praksis og erfaringer rundt hvordan man lykkes med dette.'
         }
