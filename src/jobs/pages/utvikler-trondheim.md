@@ -47,10 +47,9 @@ Så vil vi gjerne jobbe mer med:
 Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig, og for tiden bistår vi blant annet disse:
 
 - AKVA group
-- Ren Røros
-- Statens Vegvesen
-- Arbeidstilsynet
-- Uninett
+- Helsedirektoratet
+- SpareBank1 SMN
+- Volue
 
 Akkurat nå hjelper vi noen av våre kunder med blant annet:
 
