@@ -22,7 +22,7 @@ const Entrance = (props: {
         {!props.hideButton && (
           <ButtonNextLink
             colorPair={props.colorPair}
-            href={`tjenesteomrader/${props.urlPath}`}
+            href={`tjenesteomrade/${props.urlPath}`}
           >
             Les mer om {props.ServiceName}
           </ButtonNextLink>
