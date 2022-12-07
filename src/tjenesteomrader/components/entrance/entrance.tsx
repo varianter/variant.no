@@ -1,4 +1,5 @@
 import { ButtonNextLink } from '@components/button';
+import { Heading3 } from '@components/heading';
 import { ColorSet } from '@variant/profile/lib/colors';
 import style from './entrance.module.css';
 
@@ -14,7 +15,7 @@ const Entrance = (props: {
     <div className={style.serviceArea}>
       <div className={style.serviceArea__top}>
         <img src={props.blobPath} alt={props.ServiceName + ' blob'} />
-        <h3>{props.ServiceName}</h3>
+        <Heading3 styleLevel="2">{props.ServiceName}</Heading3>
       </div>
       <div className={style.serviceArea__bottom}>
         <p>{props.serviceText}</p>
