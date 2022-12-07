@@ -10,7 +10,7 @@ import { ButtonLink } from 'src/components/button';
 import { EmployeeItem } from 'src/employees/types';
 import Layout from 'src/layout';
 import style from './listings.module.css';
-import {Heading3} from "@components/heading";
+import { Heading3 } from '@components/heading';
 
 const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
   React.memo(({ listing }) => {
@@ -87,7 +87,6 @@ const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
           <div className={style.button__bottom}>
             <ButtonLink
               href={listing.careers_apply_url ?? 'https://jobs.variant.no/'}
-              mode="primary"
             >
               Søk på stillingen
             </ButtonLink>
@@ -141,7 +140,9 @@ export const ContactTile = ({
       </div>
 
       <div className={style.contact__content}>
-        <Heading3 styleLevel="4" className={style.contact__name}>{fullName}</Heading3>
+        <Heading3 styleLevel="4" className={style.contact__name}>
+          {fullName}
+        </Heading3>
         <a href={`mailto:${email}`} className={style.contact__type}>
           📬 {email}
         </a>
