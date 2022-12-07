@@ -5,11 +5,13 @@ import style from './headerBackground.module.css';
 type HeaderBackgroundProps = {
   headerColor: string;
   headerText: string;
+  onVisibleChange?(visible: boolean): void;
 };
 
 const HeaderBackground = ({
   headerColor,
   headerText,
+  onVisibleChange,
 }: HeaderBackgroundProps) => {
   const SVG = `
     <svg
@@ -32,7 +34,7 @@ const HeaderBackground = ({
         className={style.header__menu}
         style={{ backgroundColor: headerColor }}
       >
-        <PageHeader whiteMode />
+        <PageHeader whiteMode onVisibleChange={onVisibleChange} />
       </div>
 
       <div

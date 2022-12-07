@@ -1,3 +1,7 @@
+.main {
+  overflow-x: hidden;
+}
+
 .tjenesteomrade {
   background-color: #5d0a2b;
   padding-bottom: 20rem;
