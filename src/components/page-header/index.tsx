@@ -11,13 +11,15 @@ import { useMediaQuery } from 'src/utils/use-media-query';
 import style from './page-header.module.css';
 
 export type PageHeaderProps = PropsWithChildren<{
-  homepage: boolean;
-  zenMode: boolean;
-  onVisibleChange(visible: boolean): void;
+  homepage?: boolean;
+  zenMode?: boolean;
+  onVisibleChange?(visible: boolean): void;
+  whiteMode?: boolean;
 }>;
 export default function PageHeader({
-  homepage,
-  zenMode,
+  homepage = false,
+  zenMode = false,
+  whiteMode = false,
   onVisibleChange,
 }: PageHeaderProps) {
   const modalRef = React.createRef<HTMLDivElement>();
@@ -33,7 +35,7 @@ export default function PageHeader({
 
   const internalOnChangeVisible = () => {
     const newVisible = !isMenuVisible;
-    onVisibleChange(newVisible);
+    onVisibleChange?.(newVisible);
     setMenuVisible(newVisible);
   };
 
@@ -47,7 +49,10 @@ export default function PageHeader({
             aria-label="Variant startside"
             aria-current={homepage ? 'page' : undefined}
           >
-            <img src={require('./variant.svg')} alt="Variant" />
+            <img
+              src={require(whiteMode ? './whiteVariant.svg' : './variant.svg')}
+              alt="Variant"
+            />
           </a>
         </Link>
       </LogoWrapper>
@@ -69,18 +74,21 @@ export default function PageHeader({
             <div
               className={and(
                 style.bar1,
+                !whiteMode ? '' : style['bar1--whiteMode'],
                 isMenuVisible ? style.bar1_change : '',
               )}
             />
             <div
               className={and(
                 style.bar2,
+                !whiteMode ? '' : style['bar2--whiteMode'],
                 isMenuVisible ? style.bar2_change : '',
               )}
             />
             <div
               className={and(
                 style.bar3,
+                !whiteMode ? '' : style['bar3--whiteMode'],
                 isMenuVisible ? style.bar3_change : '',
               )}
             />
@@ -89,6 +97,7 @@ export default function PageHeader({
           <nav
             className={and(
               style.header__nav,
+              !whiteMode ? '' : style['header__nav--whiteMode'],
               isMenuVisible ? '' : style.header__nav__hidden,
             )}
             id="menu-id"

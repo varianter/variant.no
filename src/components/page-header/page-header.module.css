@@ -48,6 +48,9 @@
   background-clip: text;
   transition: color 0.2s ease-in-out;
 }
+.header__nav--whiteMode a {
+  color: var(--color-standard__black--text);
+}
 .header__nav li:nth-child(2n) a {
   background-position-x: right;
 }
@@ -81,11 +84,21 @@
   margin: 0.29rem 0;
   transition: 0.3s;
 }
+.bar1--whiteMode,
+.bar2--whiteMode,
+.bar3--whiteMode {
+  background-color: var(--color-standard__white);
+}
 
 .bar1_change,
 .bar2_change,
 .bar3_change {
   composes: bar1;
+}
+.bar1--whiteMode.bar1_change,
+.bar2--whiteMode.bar2_change,
+.bar3--whiteMode.bar3_change {
+  background-color: var(--color-standard__black);
 }
 
 .bar1_change {
