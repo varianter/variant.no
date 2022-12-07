@@ -24,7 +24,7 @@ const Entrance = (props: {
             colorPair={props.colorPair}
             href={`tjenesteomrade/${props.urlPath}`}
           >
-            Les mer om {props.ServiceName}
+            {props.ServiceName}
           </ButtonNextLink>
         )}
       </div>
