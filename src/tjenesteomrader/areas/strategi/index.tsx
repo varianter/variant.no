@@ -33,7 +33,7 @@ const Strategi = () => {
       >
         <HeaderBackground
           headerColor={allColors.secondary1__shade4}
-          headerText="Strategi-utvikling"
+          headerText="Strategi"
         />
 
         <div className={style.tjenesteomrade__columns}>

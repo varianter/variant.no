@@ -21,7 +21,7 @@ const Datadriv = () => {
   return (
     <div>
       <Head>
-        <title>Datadrevet produkt- og tjenesteutvikling</title>
+        <title>Datadriv</title>
       </Head>
 
       <div
@@ -32,7 +32,7 @@ const Datadriv = () => {
       >
         <HeaderBackground
           headerColor={allColors.secondary2__shade4}
-          headerText="Datadrevet produkt- og tjenesteutvikling"
+          headerText="Datadriv"
         />
 
         <div className={style.tjenesteomrade__columns}>
