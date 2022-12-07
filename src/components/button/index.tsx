@@ -1,12 +1,11 @@
 import { ColorSet } from '@variant/profile/lib/colors';
 import Link, { LinkProps } from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { and } from 'src/utils/css';
 
 import style from './button.module.css';
 
 type ButtonProps = React.PropsWithChildren<{
-  mode?: 'primary';
   className?: string;
   colorPair?: ColorSet;
 }>;
@@ -16,13 +15,13 @@ type EType = React.DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-export function Button({
-  mode = 'primary',
-  children,
-  ...props
-}: ButtonProps & EType) {
+export function Button({ children, colorPair, ...props }: ButtonProps & EType) {
   return (
-    <button {...props} className={style.button}>
+    <button
+      {...props}
+      style={colorPairToCssCustomProps(colorPair)}
+      className={style.button}
+    >
       {children}
     </button>
   );
@@ -34,12 +33,16 @@ type AType = React.DetailedHTMLProps<
 >;
 
 export function ButtonLink({
-  mode = 'primary',
   children,
+  colorPair,
   ...props
 }: ButtonProps & AType) {
   return (
-    <a {...props} className={style.buttonLink}>
+    <a
+      {...props}
+      style={colorPairToCssCustomProps(colorPair)}
+      className={style.buttonLink}
+    >
       {children}
     </a>
   );
@@ -48,33 +51,15 @@ export function ButtonLink({
 type LinkType = React.PropsWithChildren<LinkProps>;
 
 export function ButtonNextLink({
-  mode = 'primary',
   className = '',
   children,
+  colorPair,
   ...props
 }: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <Link {...props}>
       <a
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        style={
-          !isHovered
-            ? {
-                backgroundColor: props.colorPair?.default.bg,
-                color: props.colorPair?.default.text,
-                transition:
-                  'background-color 250ms ease-out, color 250ms ease-out',
-              }
-            : {
-                backgroundColor: props.colorPair?.tint![0].bg,
-                color: props.colorPair?.tint![0].text,
-                transition:
-                  'background-color 250ms ease-in, color 250ms ease-in',
-              }
-        }
+        style={colorPairToCssCustomProps(colorPair)}
         className={and(style.buttonLink, className)}
         aria-label={props['aria-label']}
       >
@@ -82,4 +67,14 @@ export function ButtonNextLink({
       </a>
     </Link>
   );
+}
+
+function colorPairToCssCustomProps(colorPair: ColorSet | undefined) {
+  if (!colorPair) return {};
+
+  return {
+    '--bg': colorPair.default.bg,
+    '--color': colorPair.default.text,
+    '--hover': colorPair.tint?.[0]?.bg ?? colorPair.default.bg,
+  } as React.CSSProperties;
 }

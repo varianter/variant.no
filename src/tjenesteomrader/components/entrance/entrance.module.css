@@ -6,46 +6,36 @@
 
 .serviceArea__top h3 {
   align-self: flex-end;
-  font-size: 2.375rem;
 }
 
 .serviceArea__bottom {
-  position: relative;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-left: auto;
-  width: 44.063rem;
-  margin-bottom: 1.5rem;
+  align-items: flex-start;
 }
 
 .serviceArea__bottom p {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
-
-.serviceArea__bottom a {
-  padding-inline: 1rem;
-  width: fit-content;
-  padding-block: 0.25rem;
-  border: none;
-  border-radius: 4rem;
-  text-decoration: none;
-  font-weight: 500;
+.serviceArea {
+  max-width: 38rem;
 }
-
-.serviceArea__bottom__button {
-  margin: 0;
+.serviceArea__top img {
+  width: 100%;
+  max-width: 8rem;
 }
 
 /* Styling for Even child */
+.serviceArea:nth-child(even) {
+  align-self: flex-end;
+}
 .serviceArea:nth-child(even) .serviceArea__top {
   justify-content: flex-end;
 }
-
 .serviceArea:nth-child(even) h3 {
   text-align: end;
 }
-
 .serviceArea:nth-child(even) img {
   text-align: end;
   order: 1;

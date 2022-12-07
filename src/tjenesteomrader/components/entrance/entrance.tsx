@@ -12,26 +12,23 @@ const Entrance = (props: {
   hideButton?: boolean;
 }) => {
   return (
-    <div className={style.serviceArea}>
-      <div className={style.serviceArea__top}>
+    <article className={style.serviceArea}>
+      <header className={style.serviceArea__top}>
         <img src={props.blobPath} alt={props.ServiceName + ' blob'} />
-        <Heading3 styleLevel="2">{props.ServiceName}</Heading3>
-      </div>
+        <Heading3 styleLevel="4">{props.ServiceName}</Heading3>
+      </header>
       <div className={style.serviceArea__bottom}>
         <p>{props.serviceText}</p>
-        {!props.hideButton ? (
+        {!props.hideButton && (
           <ButtonNextLink
-            className={style.serviceArea__bottom__button}
             colorPair={props.colorPair}
             href={`tjenesteomrader/${props.urlPath}`}
           >
             Les mer om {props.ServiceName}
           </ButtonNextLink>
-        ) : (
-          <></>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
