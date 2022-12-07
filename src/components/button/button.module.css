@@ -4,7 +4,7 @@
   background: var(--bg, var(--color-secondary1));
   text-align: center;
   font-size: 1rem;
-  color: var(--text, var(--color-secondary1--text));
+  color: var(--color, var(--color-secondary1--text));
   border-radius: 0.5rem;
   font-weight: 500;
   transition: background-color 250ms ease-out, scale 100ms ease-out;
@@ -15,7 +15,7 @@
 }
 .button:hover {
   background-color: var(--hover, var(--color-secondary1__tint1));
-  color: var(--text, var(--color-secondary1__tint1--text));
+  color: var(--color, var(--color-secondary1__tint1--text));
 }
 .button:active {
   scale: 0.99;
