@@ -16,8 +16,8 @@ const Tjenesteomrader = () => {
         I Variant ønsker vi å bidra til størst mulig forandring til det bedre
         for kundene våre, for folk og for samfunnet. Derfor har vi rigget oss
         helhetlig for å kode, designe, lede og rådgi innenfor fire definerte
-        kjerneområder som ofte spiller på lag. Sjekk ut hva vi legger i Digitale
-        tjenester, Datadriv, Strategi og Kultur. 👇🏻
+        kjerneområder som ofte spiller på lag. Sjekk ut hva vi legger i Digital
+        tjeneste- og produktutvikling , Datadriv, Strategi og Kultur. 👇🏻
       </p>
       <Entrance
         blobPath={digitalTjenesteBlob}
@@ -39,12 +39,12 @@ const Tjenesteomrader = () => {
       />
       <Entrance
         blobPath={datadrevet}
-        ServiceName={'Datadrevet'}
+        ServiceName={'Datadriv'}
         serviceText={
           'Ved å bli en datadrevet virksomhet muliggjøres bedre virksomhetsstyring og nye måter å innovere på. Les mer om Variants tilnærming til det å bli en datadrevet organisasjon'
         }
         colorPair={colorPairs.secondary2}
-        urlPath={'datadrevet'}
+        urlPath={'datadriv'}
       />
       <Entrance
         blobPath={kultur}

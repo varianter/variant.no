@@ -16,7 +16,7 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 
-const Datadrevet = () => {
+const Datadriv = () => {
   const blobColor = allColors.secondary2__shade2;
   return (
     <div>
@@ -127,4 +127,4 @@ const Datadrevet = () => {
   );
 };
 
-export default Datadrevet;
+export default Datadriv;
