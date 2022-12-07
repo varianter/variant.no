@@ -14,12 +14,12 @@ const NewYearParty = () => {
         <h1>Nyttårskalas</h1>
         <div className={style.newyearParty__invitation__underHeader}>
           <p>Dokkhuset</p>
-          <p>27. Januar</p>
+          <p>27. januar - 19:00</p>
         </div>
         <div className={style.newyearParty__invitation_ingress}>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
-            Hei alle varianter, kollegaer, venner, familie og andre
-            interesserte!
+            Heisann varianter, venner, designbransje, teknologibransje og
+            familie!
           </p>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
             Variant er bygd på åpenhet, raushet og læreglede. Derfor ønsker vi i
@@ -28,7 +28,8 @@ const NewYearParty = () => {
           </p>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
             Arrangementet er gratis, men alle gjester må løse billett på Hoopla.
-            Vi gleder oss til å treffe deg!
+            Promokode for å hente ut billetter får du av en Variant eller i
+            invitasjonen du mottok. Vi gleder oss til å treffe deg!
           </p>
         </div>
         <div className={style.newyearParty__invitation__table}>
