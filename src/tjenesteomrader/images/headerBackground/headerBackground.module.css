@@ -15,11 +15,11 @@
 
 @media (max-width: 500px) {
   .header__text {
-    padding-top: 11rem;
+    padding-top: 8rem;
     padding-inline: 3rem;
   }
 
-  .header__text h2 {
+  .header__text h1 {
     font-size: 1.875rem;
   }
 }
