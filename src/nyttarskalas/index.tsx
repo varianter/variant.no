@@ -36,7 +36,7 @@ const NewYearParty = () => {
           <a
             href="https://open.spotify.com/artist/3uNewvKV92Pd23nXcv1l0z?si=yvgVQvSyT_yYzWusN0Oo4Q"
             target="_blank"
-            rel="no-referrer"
+            rel="noopener noreferrer"
             style={{ cursor: 'pointer' }}
             className={style.newyearParty__invitation__table_text}
           >
@@ -45,7 +45,7 @@ const NewYearParty = () => {
           <a
             href="https://open.spotify.com/artist/3GbYOxp3xc7O9lpuJQRi9K?si=0yJ4AILDTVKmA6jHUYQsJw"
             target="_blank"
-            rel="no-referrer"
+            rel="noopener noreferrer"
             style={{ cursor: 'pointer' }}
             className={style.newyearParty__invitation__table_text}
           >
@@ -54,11 +54,13 @@ const NewYearParty = () => {
           <p className={style.newyearParty__invitation__table_text}>DJ</p>
           <p className={style.newyearParty__invitation__table_text}>SPILL</p>
           <p className={style.newyearParty__invitation__table_text}>ØL!</p>
-          <form action="https://variant.hoopla.no/sales/event/4022543008">
-            <button className={style.newyearParty__invitation__button}>
-              Hold av billett
-            </button>
-          </form>
+          <a
+            href="https://variant.hoopla.no/sales/event/4022543008"
+            className={style.newyearParty__invitation__button}
+            rel="noopener noreferrer"
+          >
+            Hold av billett
+          </a>
         </div>
         <Firework />
         <Firework2 />
