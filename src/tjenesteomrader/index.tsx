@@ -50,7 +50,7 @@ const Tjenesteomrader = () => {
         blobPath={kultur}
         ServiceName={'Kultur'}
         serviceText={
-          'Risus, nulla dolor consequat ut ultrices. Egestas eget vitae, tellus volutpat nisi, volutpat diam tincidunt viverra.'
+          'Etablering og forvaltning av egne team for digital tjenesteutvikling krever målrettet fokus og kunnskap innen kulturbygging. Våre konsulenter jobber for en bærekraftig og sunn utviklingskultur med utgangspunkt i fagene - fra team til topp'
         }
         colorPair={colorPairs.secondary3}
         urlPath={'/kultur'}
