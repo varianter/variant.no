@@ -10,6 +10,9 @@
   align-items: center;
   max-width: 44rem;
 }
+.tjenesteomrader__ingress {
+  font-size: 1.2rem;
+}
 
 @media (max-width: 700px) {
   .tjenesteomrader__ingress {
