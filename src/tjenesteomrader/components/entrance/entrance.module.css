@@ -33,6 +33,10 @@
   font-weight: 500;
 }
 
+.serviceArea__bottom__button {
+  margin: 0;
+}
+
 /* Styling for Even child */
 .serviceArea:nth-child(even) .serviceArea__top {
   justify-content: flex-end;

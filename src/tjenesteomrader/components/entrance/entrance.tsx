@@ -1,5 +1,5 @@
+import { ButtonNextLink } from '@components/button';
 import { ColorSet } from '@variant/profile/lib/colors';
-import Link from 'next/link';
 import style from './entrance.module.css';
 
 const Entrance = (props: {
@@ -19,16 +19,13 @@ const Entrance = (props: {
       <div className={style.serviceArea__bottom}>
         <p>{props.serviceText}</p>
         {!props.hideButton ? (
-          <Link href={`tjenesteomrade/${props.urlPath}`}>
-            <a
-              style={{
-                backgroundColor: props.colorPair.default.bg,
-                color: props.colorPair.default.text,
-              }}
-            >
-              Les mer om {props.ServiceName}
-            </a>
-          </Link>
+          <ButtonNextLink
+            className={style.serviceArea__bottom__button}
+            colorPair={props.colorPair}
+            href={`tjenesteomrader/${props.urlPath}`}
+          >
+            Les mer om {props.ServiceName}
+          </ButtonNextLink>
         ) : (
           <></>
         )}
