@@ -26,7 +26,7 @@ const HeaderBackground = (props: {
         }}
         className={style.header__text}
       >
-        <a href="../#tjenesteomrader">Tjenesteområder /</a>
+        <a href="/#tjenesteomrader">Tjenesteområder /</a>
         <h2>{props.headerText}</h2>
       </div>
     </div>
