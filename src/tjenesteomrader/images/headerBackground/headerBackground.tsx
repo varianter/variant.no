@@ -43,7 +43,7 @@ const HeaderBackground = ({
         }}
         className={style.header__text}
       >
-        <a href="/#tjenesteomrader">Tjenesteområder /</a>
+        <a href="/tjenesteomrader">Tjenesteområder /</a>
         <Heading1 styleLevel="2" className={style.header__heading}>
           {headerText}
         </Heading1>

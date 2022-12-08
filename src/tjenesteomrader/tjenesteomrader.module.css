@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+.wrapper {
+  padding-block: 5rem;
+}
+
 @media (max-width: 700px) {
   .tjenesteomrader__ingress {
     text-align: center;

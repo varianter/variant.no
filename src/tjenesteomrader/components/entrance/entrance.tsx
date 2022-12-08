@@ -31,7 +31,7 @@ const Entrance = ({
         {!hideButton && (
           <ButtonNextLink
             colorPair={colorPair}
-            href={`tjenesteomrade/${urlPath}`}
+            href={`tjenesteomrader/${urlPath}`}
           >
             {ServiceName}
           </ButtonNextLink>
