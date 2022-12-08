@@ -92,8 +92,6 @@
 
 .join_button {
   margin-top: 2rem;
-  border-radius: 4rem;
-  padding: 0.5rem 1rem;
 }
 
 @media (max-width: 500px) {

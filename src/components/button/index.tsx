@@ -1,3 +1,4 @@
+import { ColorSet } from '@variant/profile/lib/colors';
 import Link, { LinkProps } from 'next/link';
 import React from 'react';
 import { and } from 'src/utils/css';
@@ -5,8 +6,8 @@ import { and } from 'src/utils/css';
 import style from './button.module.css';
 
 type ButtonProps = React.PropsWithChildren<{
-  mode?: 'primary';
   className?: string;
+  colorPair?: ColorSet;
 }>;
 
 type EType = React.DetailedHTMLProps<
@@ -14,13 +15,13 @@ type EType = React.DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-export function Button({
-  mode = 'primary',
-  children,
-  ...props
-}: ButtonProps & EType) {
+export function Button({ children, colorPair, ...props }: ButtonProps & EType) {
   return (
-    <button {...props} className={style.button}>
+    <button
+      {...props}
+      style={colorPairToCssCustomProps(colorPair)}
+      className={style.button}
+    >
       {children}
     </button>
   );
@@ -32,12 +33,16 @@ type AType = React.DetailedHTMLProps<
 >;
 
 export function ButtonLink({
-  mode = 'primary',
   children,
+  colorPair,
   ...props
 }: ButtonProps & AType) {
   return (
-    <a {...props} className={style.buttonLink}>
+    <a
+      {...props}
+      style={colorPairToCssCustomProps(colorPair)}
+      className={style.buttonLink}
+    >
       {children}
     </a>
   );
@@ -46,14 +51,30 @@ export function ButtonLink({
 type LinkType = React.PropsWithChildren<LinkProps>;
 
 export function ButtonNextLink({
-  mode = 'primary',
   className = '',
   children,
+  colorPair,
   ...props
 }: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
   return (
     <Link {...props}>
-      <a className={and(style.buttonLink, className)} aria-label={props["aria-label"]}>{children}</a>
+      <a
+        style={colorPairToCssCustomProps(colorPair)}
+        className={and(style.buttonLink, className)}
+        aria-label={props['aria-label']}
+      >
+        {children}
+      </a>
     </Link>
   );
+}
+
+function colorPairToCssCustomProps(colorPair: ColorSet | undefined) {
+  if (!colorPair) return {};
+
+  return {
+    '--bg': colorPair.default.bg,
+    '--color': colorPair.default.text,
+    '--hover': colorPair.tint?.[0]?.bg ?? colorPair.default.bg,
+  } as React.CSSProperties;
 }

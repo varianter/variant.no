@@ -1,0 +1,23 @@
+.twoRows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.twoRows > * {
+  margin: 0;
+}
+
+@media (max-width: 1025px) {
+  .twoRows {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .twoRows {
+    display: flex;
+    flex-direction: column;
+  }
+}

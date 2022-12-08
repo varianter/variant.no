@@ -1,0 +1,93 @@
+.main {
+  overflow-x: hidden;
+}
+
+.tjenesteomrade {
+  background-color: #5d0a2b;
+  padding-bottom: 20rem;
+}
+
+.tjenesteomrade > * {
+  color: white;
+}
+
+.tjenesteomrade__columns {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 6rem;
+  /* gap: 4rem; */
+  overflow: hidden;
+}
+
+.downArrow,
+.specialArrow {
+  width: 8rem;
+  height: auto;
+  margin: auto;
+}
+
+.downArrow {
+  display: none;
+}
+
+.sideArrow {
+  width: 6rem;
+  height: auto;
+  display: block;
+  margin: auto;
+  position: relative;
+
+  bottom: 2rem;
+}
+
+.threeRows {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.threeRows > * {
+  max-width: 25rem;
+}
+
+@media (max-width: 1700px) {
+  .threeRows {
+    gap: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .tjenesteomrade__columns {
+    padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .threeRows {
+    flex-direction: column;
+  }
+  .threeRows > * {
+    max-width: none;
+  }
+
+  .sideArrow {
+    display: none;
+  }
+
+  .downArrow {
+    display: block;
+  }
+}
+
+@media (max-width: 470px) {
+  .tjenesteomrade__columns {
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  .tjenesteomrade__columns {
+    max-width: 70rem;
+    margin: auto;
+  }
+}

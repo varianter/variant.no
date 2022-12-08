@@ -1,0 +1,25 @@
+.header__text {
+  background-position-y: bottom;
+  padding: 5rem;
+  background-size: cover;
+  height: 20rem;
+}
+
+.header__heading {
+  margin: 0;
+}
+
+.header__text a {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .header__text {
+    padding-top: 8rem;
+    padding-inline: 3rem;
+  }
+
+  .header__text h1 {
+    font-size: 1.875rem;
+  }
+}

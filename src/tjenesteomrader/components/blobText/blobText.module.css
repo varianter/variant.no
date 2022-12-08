@@ -1,0 +1,71 @@
+.blobText svg {
+  position: relative;
+  z-index: 0;
+}
+
+.blobText {
+  position: relative;
+}
+
+.blobText__textbox {
+  min-height: 25rem;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blobText:nth-child(odd) .blobText__textbox {
+  background-position: right 0 bottom 4rem;
+  text-align: end;
+}
+
+.blobText__text {
+  position: relative;
+  font-size: 1.875rem;
+  z-index: 1;
+}
+
+.blobText__blob {
+  position: absolute;
+}
+
+.blobText:nth-child(odd) .blobText__blob {
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  .blobText__textbox,
+  .blobText:nth-child(odd) .blobText__textbox {
+    text-align: center;
+    background-position: center bottom 2rem;
+  }
+
+  .blobText__textbox {
+    min-width: 25rem;
+  }
+  .blobText {
+    order: -1;
+    padding-bottom: 3rem;
+  }
+  .blobText__blob {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .blobText__text {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .blobText__blob {
+    top: 4rem;
+  }
+}

@@ -1,0 +1,57 @@
+.emojiList {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.emojiList > * {
+  margin: 0;
+}
+
+.emojiList__inverted {
+  justify-content: flex-end;
+}
+
+.emojiList__emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.emojiList__emoji__inverted {
+  order: 1;
+}
+
+.emojiList__text {
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+
+.emojiList__text__inverted {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .emojiList {
+    flex-direction: column;
+    padding-inline: 1.5rem;
+  }
+  .emojiList__text {
+    text-align: center;
+    order: 2;
+  }
+
+  .emojiList__inverted {
+    justify-content: flex-end;
+  }
+
+  .emojiList__emoji__inverted {
+    order: -1;
+  }
+
+  .emojiList__text__inverted {
+    text-align: center;
+  }
+}
