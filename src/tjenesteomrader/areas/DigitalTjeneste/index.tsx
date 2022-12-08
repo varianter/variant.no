@@ -16,11 +16,17 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
+import { useState } from 'react';
 
 const Tjenesteomrade = () => {
   const blobColor = allColors.primary__shade2;
+  const [isMenuVisible, setMenuVisible] = useState(false);
+
   return (
-    <div>
+    <div
+      className={style.main}
+      style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
+    >
       <Head>
         <title>Digital tjeneste- og produktutvikling</title>
       </Head>
@@ -29,6 +35,7 @@ const Tjenesteomrade = () => {
         <HeaderBackground
           headerColor={allColors.primary__shade4}
           headerText="Digital tjeneste- og produktutvikling"
+          onVisibleChange={setMenuVisible}
         />
 
         <div className={style.tjenesteomrade__columns}>

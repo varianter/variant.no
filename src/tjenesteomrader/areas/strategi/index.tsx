@@ -16,11 +16,17 @@ import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import right2 from 'src/tjenesteomrader/images/arrows/right2.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
+import { useState } from 'react';
 
 const Strategi = () => {
   const blobColor = allColors.secondary1__shade2;
+  const [isMenuVisible, setMenuVisible] = useState(false);
+
   return (
-    <div>
+    <div
+      className={style.main}
+      style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
+    >
       <Head>
         <title>Strategi</title>
       </Head>
@@ -34,6 +40,7 @@ const Strategi = () => {
         <HeaderBackground
           headerColor={allColors.secondary1__shade4}
           headerText="Strategi"
+          onVisibleChange={setMenuVisible}
         />
 
         <div className={style.tjenesteomrade__columns}>

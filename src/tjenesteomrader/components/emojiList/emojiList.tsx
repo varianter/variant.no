@@ -6,9 +6,10 @@ const EmojiList = (props: {
 }) => {
   return (
     <div>
-      {props.listItems.map((listItem) => {
+      {props.listItems.map((listItem, i) => {
         return (
           <div
+            key={i}
             className={and(
               style.emojiList,
               props.inverted ? style.emojiList__inverted : '',

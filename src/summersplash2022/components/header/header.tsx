@@ -12,8 +12,7 @@ const Header = (props: { white: boolean }) => {
   const navRef = React.createRef<HTMLUListElement>();
   const closeRef = React.createRef<HTMLButtonElement>();
 
-  const isNotHamburgerMode =
-    useMediaQuery(`(min-width: 851px)`) ?? true;
+  const isNotHamburgerMode = useMediaQuery(`(min-width: 851px)`) ?? true;
   const { isMenuVisible, setMenuVisible } = useTogglableBurgerMenu(
     modalRef,
     navRef,
@@ -33,10 +32,7 @@ const Header = (props: { white: boolean }) => {
           <div className={style.header__logo}>
             <Link href="/">
               <a aria-label="Variant startside">
-                <img
-                  src={require('src/layout/whiteVariant.svg')}
-                  alt="Variant"
-                />
+                <img src={require('./whiteVariant.svg')} alt="Variant" />
               </a>
             </Link>
           </div>
@@ -96,25 +92,23 @@ const Header = (props: { white: boolean }) => {
                 aria-hidden={isNotHamburgerMode ? undefined : !isMenuVisible}
                 ref={modalRef}
               >
-                <ul className={whiteStyling.header__nav__ul} hidden={!isNotHamburgerMode && !isMenuVisible} ref={navRef}>
+                <ul
+                  className={whiteStyling.header__nav__ul}
+                  hidden={!isNotHamburgerMode && !isMenuVisible}
+                  ref={navRef}
+                >
                   <li>
                     <Link href="/jobs">
                       <a>Bli en variant</a>
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="http://handbook.variant.no"
-                      rel="noopener"
-                    >
+                    <a href="http://handbook.variant.no" rel="noopener">
                       Håndbok
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="http://variant.blog"
-                      rel="noopener"
-                    >
+                    <a href="http://variant.blog" rel="noopener">
                       Blogg
                     </a>
                   </li>
@@ -156,10 +150,7 @@ const Header = (props: { white: boolean }) => {
           <div className={style.header__logo}>
             <Link href="/">
               <a aria-label="Variant startside">
-                <img
-                  src={require('src/layout/variant.svg')}
-                  alt="Variant"
-                />
+                <img src={require('./variant.svg')} alt="Variant" />
               </a>
             </Link>
           </div>
@@ -208,25 +199,23 @@ const Header = (props: { white: boolean }) => {
                 aria-hidden={isNotHamburgerMode ? undefined : !isMenuVisible}
                 ref={modalRef}
               >
-                <ul className={style.header__nav__ul} hidden={!isNotHamburgerMode && !isMenuVisible} ref={navRef}>
+                <ul
+                  className={style.header__nav__ul}
+                  hidden={!isNotHamburgerMode && !isMenuVisible}
+                  ref={navRef}
+                >
                   <li>
                     <Link href="/jobs">
                       <a>Bli en variant</a>
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="http://handbook.variant.no"
-                      rel="noopener"
-                    >
+                    <a href="http://handbook.variant.no" rel="noopener">
                       Håndbok
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="http://variant.blog"
-                      rel="noopener"
-                    >
+                    <a href="http://variant.blog" rel="noopener">
                       Blogg
                     </a>
                   </li>

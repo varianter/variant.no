@@ -15,11 +15,17 @@ import down4 from 'src/tjenesteomrader/images/arrows/down4.svg';
 import right1 from 'src/tjenesteomrader/images/arrows/right1.svg';
 import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
+import { useState } from 'react';
 
 const Datadriv = () => {
   const blobColor = allColors.secondary2__shade2;
+  const [isMenuVisible, setMenuVisible] = useState(false);
+
   return (
-    <div>
+    <div
+      className={style.main}
+      style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
+    >
       <Head>
         <title>Datadriv</title>
       </Head>
@@ -33,6 +39,7 @@ const Datadriv = () => {
         <HeaderBackground
           headerColor={allColors.secondary2__shade4}
           headerText="Datadriv"
+          onVisibleChange={setMenuVisible}
         />
 
         <div className={style.tjenesteomrade__columns}>
