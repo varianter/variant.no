@@ -3,28 +3,37 @@ import { Heading3 } from '@components/heading';
 import { ColorSet } from '@variant/profile/lib/colors';
 import style from './entrance.module.css';
 
-const Entrance = (props: {
+type EntranceProps = {
   blobPath: string;
   ServiceName: string;
   serviceText: string;
   colorPair: ColorSet;
   urlPath: string;
   hideButton?: boolean;
-}) => {
+};
+
+const Entrance = ({
+  blobPath,
+  ServiceName,
+  serviceText,
+  colorPair,
+  urlPath,
+  hideButton,
+}: EntranceProps) => {
   return (
     <article className={style.serviceArea}>
       <header className={style.serviceArea__top}>
-        <img src={props.blobPath} alt={props.ServiceName + ' blob'} />
-        <Heading3 styleLevel="4">{props.ServiceName}</Heading3>
+        <img src={blobPath} alt={ServiceName + ' blob'} />
+        <Heading3 styleLevel="4">{ServiceName}</Heading3>
       </header>
       <div className={style.serviceArea__bottom}>
-        <p>{props.serviceText}</p>
-        {!props.hideButton && (
+        <p>{serviceText}</p>
+        {!hideButton && (
           <ButtonNextLink
-            colorPair={props.colorPair}
-            href={`tjenesteomrade/${props.urlPath}`}
+            colorPair={colorPair}
+            href={`tjenesteomrade/${urlPath}`}
           >
-            {props.ServiceName}
+            {ServiceName}
           </ButtonNextLink>
         )}
       </div>
