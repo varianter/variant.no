@@ -8,7 +8,8 @@ type HeadingLevels = '1' | '2' | '3' | '4' | '5' /* | '6'*/;
 type HeadingProps = React.PropsWithChildren<{
   styleLevel?: HeadingLevels;
   className?: string;
-}>;
+}> &
+  JSX.IntrinsicElements['h1'];
 
 const Heading = ({
   children,

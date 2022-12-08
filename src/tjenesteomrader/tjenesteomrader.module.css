@@ -14,6 +14,10 @@
   font-size: 1.2rem;
 }
 
+.title {
+  text-align: center;
+}
+
 @media (max-width: 700px) {
   .tjenesteomrader__ingress {
     text-align: center;
@@ -21,7 +25,7 @@
 }
 
 @media (max-width: 400px) {
-  .tjenesteomrader .join_title {
+  .title {
     font-size: 3rem;
   }
 }

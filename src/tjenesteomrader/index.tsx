@@ -6,13 +6,14 @@ import Entrance from './components/entrance/entrance';
 import { colorPairs } from '@variant/profile/lib/colors';
 
 import style from './tjenesteomrader.module.css';
+import { Heading2 } from '@components/heading';
 
 const Tjenesteomrader = () => {
   return (
     <section className={style.tjenesteomrader}>
-      <h2 id="tjenesteomrader" className={style.join_title}>
+      <Heading2 id="tjenesteomrader" className={style.title}>
         Våre tjenesteområder
-      </h2>
+      </Heading2>
       <p className={style.tjenesteomrader__ingress}>
         I Variant ønsker vi å bidra til størst mulig forandring til det bedre
         for kundene våre, for folk og for samfunnet. Derfor har vi rigget oss

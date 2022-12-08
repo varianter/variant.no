@@ -6,6 +6,7 @@
 
 .serviceArea__top h3 {
   align-self: flex-end;
+  max-width: 20rem;
 }
 
 .serviceArea__bottom {
