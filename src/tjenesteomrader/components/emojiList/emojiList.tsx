@@ -1,24 +1,27 @@
 import { and } from 'src/utils/css';
 import style from './emojiList.module.css';
-const EmojiList = (props: {
+
+type EmojiListProps = {
   listItems: Array<[string, string]>;
   inverted: boolean;
-}) => {
+};
+
+const EmojiList = ({ listItems, inverted }: EmojiListProps) => {
   return (
     <div>
-      {props.listItems.map((listItem, i) => {
+      {listItems.map((listItem, i) => {
         return (
           <div
             key={i}
             className={and(
               style.emojiList,
-              props.inverted ? style.emojiList__inverted : '',
+              inverted ? style.emojiList__inverted : '',
             )}
           >
             <p
               className={and(
                 style.emojiList__emoji,
-                props.inverted ? style.emojiList__emoji__inverted : ' ',
+                inverted ? style.emojiList__emoji__inverted : ' ',
               )}
             >
               {listItem[0]}
@@ -26,7 +29,7 @@ const EmojiList = (props: {
             <p
               className={and(
                 style.emojiList__text,
-                props.inverted ? style.emojiList__text__inverted : '',
+                inverted ? style.emojiList__text__inverted : '',
               )}
             >
               {listItem[1]}
