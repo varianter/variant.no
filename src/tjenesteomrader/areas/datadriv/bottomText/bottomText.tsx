@@ -45,8 +45,11 @@ const BottomText = (props: { footerColor: string }) => {
 
         <div className={style.bottomText__content_wrapper}>
           <p>
-            Som bidragsytere innenfor digital produkt- og tjenesteutvikling har
-            vi erfaring og kunnskap som er nyttig når en organisasjon skal
+            Som bidragsytere innenfor{' '}
+            <a href="./digitalTjeneste">
+              digital produkt- og tjenesteutvikling
+            </a>{' '}
+            har vi erfaring og kunnskap som er nyttig når en organisasjon skal
             gjennom denne forvandlingen; fra å forstå og modne organisasjon,
             kartlegge nåsituasjon, legge til rette og fasilitere for valg av
             teknologi som muliggjør tilgjengeliggjøring av data til å lede
