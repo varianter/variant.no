@@ -109,10 +109,11 @@ const BottomText = (props: { footerColor: string }) => {
             </li>
           </ul>
           <p>
-            Digital tjeneste- og produktutvikling er tett koblet sammen med
-            strategi og kultur. Prinsippene gjelder for alle digitale tjenester
-            og produkter, også datadrevet produkt- og tjenesteutvikling. De
-            gjelder også for det vi kan kalle legacy systemer, eller der hvor
+            Digital tjeneste- og produktutvikling er tett koblet sammen med{' '}
+            <a href="./strategi">strategi</a> og kultur. Prinsippene gjelder for
+            alle digitale tjenester og produkter, også{' '}
+            <a href="./datadriv">datadrevet</a> produkt- og tjenesteutvikling.
+            De gjelder også for det vi kan kalle legacy systemer, eller der hvor
             det finnes eksisterende systemer som skal moderniseres, integreres
             eller kanskje erstattes med andre produkter eller tjenester.{' '}
           </p>
@@ -159,11 +160,14 @@ const BottomText = (props: { footerColor: string }) => {
             tjenester er:
           </p>
           <ul className={style.bottomText__content_list}>
-            <li>En retning og en plan. Vi kan bidra med Strategiutvikling</li>
+            <li>
+              En retning og en plan. Vi kan bidra med{' '}
+              <a href="./strategi">Strategiutvikling</a>
+            </li>
             <li>
               Flinke folk som er dyktige på sine fagområder, som alltid vil lære
-              mer og som er rause med sin kompetanse. Vi kan også bidra med
-              Datadrevet produkt- og tjenesteutvikling
+              mer og som er rause med sin kompetanse. Vi kan også bidra med{' '}
+              <a href="./datadriv">Datadrevet</a> produkt- og tjenesteutvikling
             </li>
             <li>
               En kultur som er preget av tillit, trygghet og åpenhet. Vi kan
