@@ -60,6 +60,7 @@
   padding: 2rem;
   display: grid;
   grid-template: 'a b' 1fr / 1fr auto;
+  align-items: center;
 }
 @media (max-width: 500px) {
   .job__listing__container {
