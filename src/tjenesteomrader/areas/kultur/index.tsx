@@ -1,7 +1,10 @@
+import { allColors } from '@variant/profile/lib/colors';
+import BottomText from './bottomText/bottomText';
+
 const Kultur = () => {
   return (
     <div>
-      <h1>Kommer snart :)</h1>
+      <BottomText footerColor={allColors.secondary3__shade4} />
     </div>
   );
 };
