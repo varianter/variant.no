@@ -10,25 +10,20 @@ const BottomText = (props: { footerColor: string }) => {
       </div>
 
       <div className={style.bottomText__content}>
-        <p className={style.bottomText__content_bigText}></p>
-
-        <div className={style.bottomText__content_wrapper}>
-          <p>
-            Skyhøye markedskrav til kvalitet og omstillingsevne for digitale
-            tjenestetilbydere, gjør at stadig flere organisasjoner ønsker å
-            bygge egne utviklingsmiljø. Vi opplever imidlertid at mange ikke
-            evner å gjøre det på en måte som skaper nødvendig fagutvikling og
-            ledelse. Samtidig forblir dette ofte en «blind spot» for ledelse
-            under omstilling. Beste praksiser og teknologi ta organisasjonen et
-            viktig steg på veien mot bærekraftig utvikling av programvare.
-            Likevel tilsier all vår erfaring at det å virkelig skape og forvalte
-            gode produkter over tid forutsetter det vi kaller en
-            utviklingskultur. For å oppnå dette må vi jobbe bevisst med kultur
-            med utgangspunkt i fagene – fra team til topp. Variant kan bidra på
-            flere måter, og i hovedsak gjennom to dimensjoner:
-          </p>
-        </div>
-
+        <p className={style.bottomText__content_bigText}>
+          Skyhøye markedskrav til kvalitet og omstillingsevne for digitale
+          tjenestetilbydere, gjør at stadig flere organisasjoner ønsker å bygge
+          egne utviklingsmiljø. Vi opplever imidlertid at mange ikke evner å
+          gjøre det på en måte som skaper nødvendig fagutvikling og ledelse.
+          Samtidig forblir dette ofte en «blind spot» for ledelse under
+          omstilling. Beste praksiser og teknologi ta organisasjonen et viktig
+          steg på veien mot bærekraftig utvikling av programvare. Likevel
+          tilsier all vår erfaring at det å virkelig skape og forvalte gode
+          produkter over tid forutsetter det vi kaller en utviklingskultur. For
+          å oppnå dette må vi jobbe bevisst med kultur med utgangspunkt i fagene
+          – fra team til topp. Variant kan bidra på flere måter, og i hovedsak
+          gjennom to dimensjoner:
+        </p>
         <div className={style.bottomText__content_wrapper}>
           <p>
             Vi har erfarne konsulenter som bryr seg om hvorfor jobben skal

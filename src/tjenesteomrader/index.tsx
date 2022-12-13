@@ -58,7 +58,6 @@ const Tjenesteomrader = () => {
           }
           colorPair={colorPairs.secondary3}
           urlPath={'/kultur'}
-          hideButton={true}
         />
       </div>
     </section>
