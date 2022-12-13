@@ -10,6 +10,20 @@
   gap: 3rem;
 }
 
+.bottomText__content p:nth-child(1) {
+  font-size: 1.875rem;
+}
+
+@media (max-width: 500px) {
+  .bottomText__content p:nth-child(1) {
+    font-size: 1.25rem;
+  }
+}
+
+.bottomText__content p li p {
+  font-size: 1.25rem;
+}
+
 .bottomText__content_wrapper {
   width: 48rem;
 }
