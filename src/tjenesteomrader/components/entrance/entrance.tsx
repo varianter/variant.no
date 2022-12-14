@@ -9,7 +9,6 @@ type EntranceProps = {
   serviceText: string;
   colorPair: ColorSet;
   urlPath: string;
-  hideButton?: boolean;
 };
 
 const Entrance = ({
@@ -18,7 +17,6 @@ const Entrance = ({
   serviceText,
   colorPair,
   urlPath,
-  hideButton,
 }: EntranceProps) => {
   return (
     <article className={style.serviceArea}>
@@ -28,14 +26,12 @@ const Entrance = ({
       </header>
       <div className={style.serviceArea__bottom}>
         <p>{serviceText}</p>
-        {!hideButton && (
-          <ButtonNextLink
-            colorPair={colorPair}
-            href={`tjenesteomrader/${urlPath}`}
-          >
-            {ServiceName}
-          </ButtonNextLink>
-        )}
+        <ButtonNextLink
+          colorPair={colorPair}
+          href={`tjenesteomrader/${urlPath}`}
+        >
+          {ServiceName}
+        </ButtonNextLink>
       </div>
     </article>
   );
