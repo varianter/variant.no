@@ -6,7 +6,7 @@ import {
   TjenesteomradeProps,
 } from 'src/tjenesteomrader/utils/tjenesteomradeTypes';
 
-export { default } from 'src/tjenesteomrader/abc';
+export { default } from 'src/tjenesteomrader/areas';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = tjenesteomradePath.map((omrade) => ({
@@ -23,7 +23,6 @@ export const getStaticProps: GetStaticProps<TjenesteomradeProp> = async (
     name: 'a',
     color: '#ffff',
   };
-  console.log(context?.params!.omrade);
   let markdown = metadata;
   if (context?.params!.omrade != undefined) {
     const filePath = context?.params!.omrade.toString();

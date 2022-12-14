@@ -3,6 +3,8 @@ name: strategi
 color: 0d0c1b
 ---
 
+<div class="bigText">
+
 Som virksomme fagfolk i et mangfold av bransjer, ser vi at
 virkeligheten ofte ikke er slik. Mange står i komplekse og krevende
 transformasjons- og endringsprosesser, hvor det er krevende nok å
@@ -11,6 +13,9 @@ eller evne til å se hvordan interne og eksterne innsatsfaktorer
 samvirker, blir risikoen stor for at hindringer skapes der muligheter
 kunne oppstått.
 
+</div>
+
+<div class="wrapper">
 Strategiutvikling tilbyr et strukturert rammeverk for helhetlige
 målbilder og valg som alle forstår og evner å navigere etter.
 Strategiutvikling er en prosess hvor flinke folk med en rett miks av
@@ -29,3 +34,5 @@ I Variant har vi “strategiagenter” innenfor prosjektledelse, design
 og utvikling. Vi kan bidra på ulike nivå med rådgivning, analyse og
 metodikk som samler folk og gjør det enklere å foreta bærekraftige
 veivalg for produkter, tjenester og forretning.
+
+</div>
