@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps<TjenesteomradeProp> = async (
   const metadata: TjenesteomradeProps = {
     fileContents: 'a',
     name: 'a',
-    color: '#ffff',
+    color: 'ffff',
   };
   let markdown = metadata;
   if (context?.params!.omrade != undefined) {

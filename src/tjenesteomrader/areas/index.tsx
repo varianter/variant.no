@@ -1,12 +1,12 @@
 import markdownit from 'markdown-it/lib';
 import { InferGetStaticPropsType } from 'next';
 import { getStaticProps } from 'pages/tjenesteomrader/[omrade]';
-import Strategi from './strategi';
 import style from 'src/tjenesteomrader/shared/bottomText.module.css';
 import Divider from '../images/divider/divider';
 import Footer from '../images/footer/footer';
-import Datadriv from './datadriv';
 import DigitalTjeneste from './DigitalTjeneste';
+import Strategi from './strategi';
+import Datadriv from './datadriv';
 import Kultur from './kultur';
 
 const Areas = ({ prop }: InferGetStaticPropsType<typeof getStaticProps>) => {
