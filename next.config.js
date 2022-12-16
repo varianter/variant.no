@@ -79,6 +79,11 @@ module.exports = withBundleAnalyzer(
           destination: '/jobs',
           permanent: true,
         },
+        {
+          source: '/nyttarskalas',
+          destination: '/nyttarskalas-trondheim',
+          permanent: true,
+        },
       ];
     },
   }),
