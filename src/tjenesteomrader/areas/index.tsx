@@ -1,6 +1,3 @@
-import markdownit from 'markdown-it/lib';
-import { InferGetStaticPropsType } from 'next';
-import { getStaticProps } from 'pages/tjenesteomrader/[omrade]';
 import style from 'src/tjenesteomrader/shared/bottomText.module.css';
 import Divider from '../images/divider/divider';
 import Footer from '../images/footer/footer';
@@ -8,20 +5,22 @@ import DigitalTjeneste from './DigitalTjeneste';
 import Strategi from './strategi';
 import Datadriv from './datadriv';
 import Kultur from './kultur';
+import {
+  tjenesteomradePath,
+  TjenesteomradeProps,
+} from '../utils/tjenesteomradeTypes';
 
-const Areas = ({ prop }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const md = markdownit({ linkify: true, html: true, typographer: true });
-  const html = md.render(prop.fileContents);
+const Areas = (prop: TjenesteomradeProps) => {
   return (
     <div>
-      {whichPage(prop.name)}
+      <SubPage page={prop.name} />
       <div className={style.bottomText__content_divider}>
         <Divider />
       </div>
       <div className={style.bottomText}>
         <div
           className={style.bottomText__content}
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: prop.fileContents }}
         />
       </div>
       <Footer color={`#${prop.color}`} />
@@ -31,10 +30,13 @@ const Areas = ({ prop }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export default Areas;
 
-function whichPage(page: string) {
+type SubPageProps = typeof tjenesteomradePath[number];
+
+const SubPage = (props: { page: SubPageProps }) => {
+  const page = props.page;
   if (page === 'strategi') return <Strategi />;
   if (page === 'datadriv') return <Datadriv />;
   if (page === 'digitalTjeneste') return <DigitalTjeneste />;
   if (page === 'kultur') return <Kultur />;
-  return <></>;
-}
+  return null;
+};

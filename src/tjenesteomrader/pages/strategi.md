@@ -16,6 +16,7 @@ kunne oppstått.
 </div>
 
 <div class="wrapper">
+
 Strategiutvikling tilbyr et strukturert rammeverk for helhetlige
 målbilder og valg som alle forstår og evner å navigere etter.
 Strategiutvikling er en prosess hvor flinke folk med en rett miks av

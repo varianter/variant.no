@@ -5,15 +5,11 @@ export const tjenesteomradePath = [
   'kultur',
 ] as const;
 
-export type TjenesteomradeProp = {
-  prop: TjenesteomradeProps;
-};
-
 export type TjenesteomradeProps = {
   fileContents: string;
 } & TjenesteomradeMetadata;
 
 export type TjenesteomradeMetadata = {
-  name: string;
+  name: typeof tjenesteomradePath[number];
   color: string;
 };

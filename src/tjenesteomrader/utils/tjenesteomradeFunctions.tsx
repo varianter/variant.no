@@ -4,6 +4,7 @@ import {
   TjenesteomradeProps,
 } from './tjenesteomradeTypes';
 import * as fs from 'fs';
+import markdownit from 'markdown-it/lib';
 
 export const getMatterFile = async (filename: string) => {
   const file = await fs.readFileSync(
@@ -18,8 +19,10 @@ export const getMarkdownObject = async (
 ): Promise<TjenesteomradeProps> => {
   const matterFile = await getMatterFile(name);
   const matterData = matterFile.data as TjenesteomradeMetadata;
+  const md = markdownit({ linkify: true, html: true, typographer: true });
+  const html = md.render(matterFile.content);
   return {
     ...matterData,
-    fileContents: matterFile.content,
+    fileContents: html,
   };
 };
