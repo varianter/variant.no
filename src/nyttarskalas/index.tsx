@@ -11,7 +11,7 @@ const NewYearParty = () => {
         <p className={style.newyearParty__invitation__overHeader}>
           Variant Trondheim inviterer til
         </p>
-        <h1>Nyttårskalas</h1>
+        <h1>Nyttårskalas i Trondheim</h1>
         <div className={style.newyearParty__invitation__underHeader}>
           <p>Dokkhuset</p>
           <p>27. januar - 19:00</p>
