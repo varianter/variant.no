@@ -14,15 +14,16 @@ Variant er et selskap av og for mennesker med stor læreglede, som styrer sin eg
 
 ## Hvem ser vi etter?
 
+<div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
+
 Vi ser nå primært etter deg som har 4 eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter – En som tar med seg positive (eller negative) historien og erfaringer som vi kan lære av. Hvilken teknologier du har jobbet med er ikke så viktig. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen blir utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvilke hverandre videre.
 
-<div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
 Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
 
 **_For tiden jobber vi mye med_** 
 - JavaScript (i alle mulige former, som f.eks React og Node.js), 
-- HTML og CSS, 
+- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327),, 
 - Docker og Kubernetes, 
 - C#, .NET Core, 
 - Skyplattformer (Azure, AWS, Vercel og Heroku), 
@@ -35,10 +36,7 @@ Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur 
 - React Native og 
 - Open source-arbeid. 
 
-**_Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig, og for tiden bistår vi blant annet disse: _** 
-- Statens Vegvesen 
-- Sparebanken Vest 
-- NAV læringsliv 
+Du vil jobbe i spennende prosjekter ute hos våre kunder. Dette er store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og også mindre oppstartbedrifter innen Helsesektoren, for å nevne noen. 
 
 ## Hva får du hos oss?
 Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr.  
@@ -52,12 +50,13 @@ Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 **_Alle våre vilkår ligger åpent_**
-- Gode og rettferdige betingelser 
-- God lønn som er åpen for alle 
-- Innsikt og påvirkning i alt som skjer 
-- Vokse faglig og hjelpe andre vokse 
+- [Gode og rettferdige betingelser](https://handbook.variant.no/#betingelser)
+- [God lønn som er åpen for alle](https://www.variant.no/kalkulator)
+- [Innsikt og påvirkning](https://blog.variant.no/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
+- [Vokse faglig og hjelpe andre vokse](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 
-Vi har en håndbok for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre goder og ytelser") 
+Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre goder og ytelser")
+ 
 
 ## Hvem er Variant
 
@@ -65,17 +64,16 @@ Vi har en håndbok for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre god
 
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk. 
 
-Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts, noen lager kodevideoer, noen underviser på NTNU og flere-enn-du-tror leder ymse meetups i Norge. I tillegg samles vi hver måned til det vi kaller en variantdag; vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes. 
+Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
-Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn: 
-- Åpen og delt kompetansebygging 
-- Tillitsbasert ledelse: del 1, del 2 
-- Om lønn 
-- På tide med bedre jobbintervjuer 
+Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
+- [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
+- Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
+- [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
+- [På tide med bedre jobbintervjuer](https://blog.variant.no/paa-tide-med-bedre-jobbintervjuer-e59f6789a134)
 
-Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på https://github.com/varianter. 
+Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på [https://github.com/varianter](https://github.com/varianter).
 
-PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt kjent, for begge parter. Sjekk ut hva du kan forvente her. 
 
 ## Kontakt
 
