@@ -47,7 +47,6 @@ Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
 
 **_Eierskap_** 
-- Ettersom du kommer inn i etableringsfasen til selskapet ønsker vi å tilby deg muligheten, om du ønsker, til å kjøpe 1% av Variant Bergen
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 **_Alle våre vilkår ligger åpent_**
