@@ -22,7 +22,7 @@ Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue
 
 Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvikle hverandre videre.
 
-Hos oss ønsker vi at du bidrar til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
+Hos oss ønsker vi at du bidrar til å sette retning for Variant, og å forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
 
 **_For tiden jobber vi mye med_** 
 - JavaScript (i alle mulige former, som f.eks React og Node.js), 
