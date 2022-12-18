@@ -20,7 +20,7 @@ Vi ser nå primært etter deg som har 4 eller flere års arbeidserfaring med utv
 
 Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen blir utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvilke hverandre videre.
 
-Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
+Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
 
 **_For tiden jobber vi mye med_** 
 - JavaScript (i alle mulige former, som f.eks React og Node.js), 
