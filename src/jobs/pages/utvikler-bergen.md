@@ -76,6 +76,10 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på [https://github.com/varianter](https://github.com/varianter).
 
+Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at alle skal trives, få plass og like og gode betingelser. Variant at det skal komme husholdet til gode. Vi ønsker ikke overtid, men sunne arbeidforhold. Vi betaler internett hjemme og legger til rette for trening (om du velger å dra på studio eller oppgradere hjemmetreningen, er opp til deg). 
+
+Det betyr også at vi ser spesielt etter oppdrag hvor vi kan bidra til å rette fokus mot en jordklode som skal funke for de som kommer etter oss, og vi jobber med hvordan vi selv kan gjøre et minst mulig avtrykk på kloden vår.
+
 
 ## Kontakt
 Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Thomas (teknologisjef i Bergen) eller Andreas (designsjef i Bergen) riktige personer å ta en prat med. 
