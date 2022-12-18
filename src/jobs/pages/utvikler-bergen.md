@@ -36,7 +36,7 @@ Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur 
 - React Native og 
 - Open source-arbeid. 
 
-Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig, men består for tiden blandt annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og også mindre oppstartbedrifter innen Helsesektoren. 
+Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen. 
 
 ## Hva får du hos oss?
 Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr.  
