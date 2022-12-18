@@ -1,7 +1,7 @@
 ---
 title: Prosjektleder i Bergen
 h1_title: En variant av en prosjektleder
-slug: prosjektleder-i-bergen
+slug: prosjektleder-som-vil-bygge-variant-bergen
 contact_emails: andreas@variant.no
 meta_title: Vil du være med oss å bygge Variant Bergen?
 meta_description: Vi ser etter en dyktig prosjektleder som vil være med å bygge Variant Bergen!
