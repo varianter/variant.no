@@ -14,7 +14,7 @@ Variant er et selskap av og for mennesker med stor læreglede, som styrer sin eg
 
 ## Hvem ser vi etter?
 
-Vi ser nå primært etter deg som har 4 eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter – En som tar med seg positive (eller negative) historien og erfaringer som vi kan lære av. Hvilken teknologier du har jobbet med er ikke så viktig. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen skaper vi et miljø av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av og utvilke hverandre.
+Vi ser nå primært etter deg som har 4 eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter – En som tar med seg positive (eller negative) historien og erfaringer som vi kan lære av. Hvilken teknologier du har jobbet med er ikke så viktig. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje du har hode i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen blir utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvilke hverandre videre.
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
@@ -79,4 +79,4 @@ PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om stillingen? Vi tar gjerne en uforpliktet prat når som helst. Ikke vær redd for å ta kontakt med Andreas (designer i Bergen) eller Marie (daglig leder i Bergen).
+Har du spørsmål eller ønsker å snakke med oss om stillingen? Vi tar gjerne en uforpliktet prat når som helst. Ikke vær redd for å ta kontakt med Thomas (teknologisjef i Bergen) eller Andreas (designsjef i Bergen).
