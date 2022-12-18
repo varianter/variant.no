@@ -16,7 +16,7 @@ Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverda
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-Vi ser etter deg som har fire eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære videre av. 
+Vi ser etter deg som har fire eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av. 
 
 Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? 
 
