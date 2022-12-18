@@ -1,7 +1,7 @@
 ---
 title: Erfaren utvikler som vil være med å forme et åpent, raust og læreglad konsulentselskap i Bergen
 h1_title: Erfaren utvikler som vil være med å forme Variant Bergen
-slug: erfaren-utvikler-som-vil-vre-med-a-forme-variant-bergen
+slug: erfaren-utvikler-i-variant-bergen
 contact_emails: tlh@variant.no, andreas@variant.no
 meta_title: Er du en erfaren utvikler som vil være med å forme et åpent, raust og læreglad konsulentselskap i Bergen?
 meta_description: Vi ser etter en erfaren utvikler som vil være med å forme et selskap av og for mennesker med stor læreglede, som styrer sin egen hverdag og som er rause med hverandre. Er dette deg? 
