@@ -4,13 +4,13 @@ h1_title: Erfaren utvikler som vil være med og forme Variant Bergen
 slug: erfaren-utvikler-i-variant-bergen
 contact_emails: tlh@variant.no, andreas@variant.no
 meta_title: Er du en erfaren utvikler som vil være med og forme et åpent, raust og læreglad konsulentselskap i Bergen?
-meta_description: Vi ser etter en erfaren utvikler som vil være med å forme et selskap av og for mennesker med stor læreglede, som styrer sin egen hverdag og som er rause med hverandre. Er dette deg? 
+meta_description: Vi ser etter en erfaren utvikler som vil være med og forme et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre. Er dette deg? 
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
 Kort fortalt så ser vi ser etter en erfaren utvikler som vil være med og forme et åpent, raust og læreglad konsulentselskap i Bergen. Det er det vi inviterer deg med på - sammen med oss. 
 
-Variant er et selskap av og for mennesker med stor læreglede, som styrer sin egen hverdag og som er rause med hverandre. I Variant gir vi alle muligheten til å påvirke sin egen arbeidplass. Vi gir god lønn og rettferdige vilkår, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. 
+Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre. I Variant ønsker vi at alle skal bidra til å forme sin egen arbeidplass og hverdag. Vi gir god lønn og rettferdige vilkår, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. 
 
 ## Hvem ser vi etter?
 
@@ -18,9 +18,11 @@ Variant er et selskap av og for mennesker med stor læreglede, som styrer sin eg
 
 Vi ser etter deg som har fire eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg positive (eller negative) historier og erfaringer som vi kan lære av. 
 
-Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvilke hverandre videre.
+Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? 
 
-Hos oss vil du få muligheten til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
+Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikler og en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvikle hverandre videre.
+
+Hos oss ønsker vi at du bidrar til å sette retning og forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
 
 **_For tiden jobber vi mye med_** 
 - JavaScript (i alle mulige former, som f.eks React og Node.js), 
