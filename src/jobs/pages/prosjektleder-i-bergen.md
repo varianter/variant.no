@@ -1,6 +1,6 @@
 ---
 title: Rådgiver eller prosjektleder til nytt konsulentselskap i Bergen
-h1_title: En variant av en prosjektleder
+h1_title: Rådgiver eller prosjektleder til nytt konsulentselskap i Bergen
 slug: prosjektleder-radgiver-som-vil-bygge-variant-bergen
 contact_emails: marie@variant.no
 meta_title: Vil du være med oss å bygge opp Variant Bergen?
