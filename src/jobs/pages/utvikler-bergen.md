@@ -25,19 +25,19 @@ Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikle
 Hos oss ønsker vi at du bidrar til å sette retning for Variant, og å forme fagmiljø og kultur sammen med resten av variantene i Bergen. Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget. 
 
 **_For tiden jobber vi mye med_** 
-- JavaScript (i alle mulige former, som f.eks React og Node.js), 
-- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327),, 
-- Docker og Kubernetes, 
-- C#, .NET Core, 
-- Skyplattformer (Azure, AWS, Vercel og Heroku), 
-- og ikke minst: empati, utviklerkultur og samarbeid. 
+- JavaScript (i alle mulige former, som f.eks React og Node.js)
+- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
+- Docker og Kubernetes
+- C#, .NET
+- Skyplattformer (GCP, Azure, AWS, Vercel og Heroku)
+- og ikke minst: empati, utviklerkultur og samarbeid
 
 **_Og vi vil gjerne jobbe mer med_** 
-- Three.JS og WebGL, 
-- Design Systems, 
-- F#, OCaml eller ReasonML, 
-- React Native og 
-- Open source-arbeid. 
+- Three.JS og WebGL
+- Design Systems
+- F#, OCaml eller ReasonML
+- React Native
+- Open source-arbeid
 
 Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen. 
 
