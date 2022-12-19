@@ -45,7 +45,7 @@ Du vil også bli viktig i å utvikle Variant Bergen videre som selskap. Du vil j
 
 Vi ønsker å være åpne i alt vi gjør, og derfor vil vi også være forutsigbare med tanke på hva vi tilbyr: 
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 872 482 og din årlige pensjon 61 073 (7%)](/kalkulator?year=2013&degree=masters).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2013, vil din startlønn være 872 482 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 61 073 kroner](/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil, sammen med alle ansatte i Variant Bergen, dele 30 % av overskuddet som en resultatbonus hvert kvartal  
 - 1% eierskap i Variant Bergen fra start.
 - Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
