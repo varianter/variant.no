@@ -16,7 +16,7 @@ Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverda
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-Vi ser etter deg som har fire eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av. 
+Vi ser etter deg som har fem eller flere års arbeidserfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av. 
 
 Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? 
 
@@ -49,6 +49,7 @@ Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tank
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus.
 
 **_Eierskap_** 
+- Som en viktig person i etableringsfasen til bergenskontoret ønsker vi å gi deg muligheten, om du ønsker, til å kjøpe 1% av Variant Bergen AS ved oppstart.
 - Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 **_Alle våre vilkår ligger åpent_**
