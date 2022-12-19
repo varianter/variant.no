@@ -10,8 +10,10 @@ meta_image: https://www.variant.no/images/plbergen.jpg
 
 ![Varianter snakker strategi](/images/strategisk-ellen-hilde.png)
 
+Vi ser nå etter en erfaren prosjektleder/ rådgiver som vil være med og forme et åpent, raust og læreglad konsulentselskap i Bergen. Det er det vi inviterer deg med på - sammen med oss.
 
-Variant er et konsulentselskap av og for mennesker med stor læreglede. Vi eier vårt eget selskap, og vi styrer vår egen hverdag - enten det er i oppdrag hos kundene våre, fra hjemmekontor eller fra kontoret vårt. Til felles har vi at vi elsker utfordringer hvor strategi-, prosjekt-, design- og teknologikompetanse finner sammen og tar plass i kundenes kultur. Vi opplever at vår helhetlige tilnærming tilfører ekstra verdi og engasjement for kundene våre. 
+Variant er et konsulentselskap av og for mennesker med stor læreglede. Vi eier vårt eget selskap, og vi styrer vår egen hverdag - enten det er i oppdrag hos kundene våre, fra hjemmekontor eller fra kontoret vårt. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament.
+
 
 ## Hvem ser vi etter?
 
