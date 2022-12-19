@@ -5,7 +5,7 @@ slug: prosjektleder-radgiver-som-vil-bygge-variant-bergen
 contact_emails: marie@variant.no
 meta_title: Vil du være med oss å bygge opp Variant Bergen?
 meta_description: Vi ser etter en dyktig rådgiver eller prosjektleder som vil være med å bygge Variant Bergen!
-meta_image: https://www.variant.no/images/prosjektleder-bergen-meta.jpg
+meta_image: https://www.variant.no/images/plbergen.jpg
 ---
 
 ![Varianter snakker strategi](/images/strategisk-ellen-hilde.png)
