@@ -10,7 +10,7 @@ meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 
 Kort fortalt så ser vi ser etter en erfaren utvikler som vil være med og forme et åpent, raust og læreglad konsulentselskap i Bergen. Det er det vi inviterer deg med på - sammen med oss. 
 
-Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre. I Variant ønsker vi at alle skal bidra til å forme sin egen arbeidplass og hverdag. Vi gir god lønn og rettferdige vilkår, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. 
+Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre. I Variant ønsker vi at alle skal bidra til å forme sin egen arbeidplass og hverdag. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. 
 
 ## Hvem ser vi etter?
 
