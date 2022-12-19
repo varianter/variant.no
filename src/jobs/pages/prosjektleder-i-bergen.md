@@ -1,7 +1,7 @@
 ---
 title: Prosjektleder / rådgivertil nytt konsulentselskap i Bergen
 h1_title: Prosjektleder / rådgiver som vil være med og forme Variant Bergen
-slug: prosjektleder-radgiver-som-vil-bygge-variant-bergen
+slug: prosjektleder-radgiver-i-variant-bergen
 contact_emails: marie@variant.no
 meta_title: Vil du være med oss å bygge opp Variant Bergen?
 meta_description: Vi ser etter en dyktig rådgiver eller prosjektleder som vil være med å bygge Variant Bergen!
