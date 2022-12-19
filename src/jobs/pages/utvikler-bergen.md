@@ -45,7 +45,7 @@ Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blan
 Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tanke på de ulike insentivene vi tilbyr.  
 
 **_Lønn og bonus_** 
-- Lønn. Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2015, vil din startlønn være 818 282 og din årlige pensjonsparing 57 279 (7%)](https://www.variant.no/kalkulator?year=2013&degree=masters).
+- Variant justerer lønn likt for alle basert på Teknas lønsstatistikk.  Eksempelvis ved en [mastergrad fra 2015, vil din startlønn være 818 282 kroner. Din årlige pensjonsparing (på 7%) kommer i tillegg, og vil utgjøre 57 279 kroner](https://www.variant.no/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus.
 
 **_Eierskap_** 
