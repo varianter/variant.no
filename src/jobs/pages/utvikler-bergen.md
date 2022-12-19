@@ -42,17 +42,17 @@ Hos oss ønsker vi at du bidrar til å sette retning for Variant, og å forme fa
 Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen. 
 
 ## Hva får du hos oss?
-Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr.  
+Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tanke på de ulike insentivene vi tilbyr.  
 
 **_Lønn og bonus_** 
-- Lønn. Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2015, vil din startlønn være 818 282 og din årlige pesnjon 57 279 (7%)](https://www.variant.no/kalkulator?year=2013&degree=masters).
-- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
+- Lønn. Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2015, vil din startlønn være 818 282 og din årlige pensjon 57 279 (7%)](https://www.variant.no/kalkulator?year=2013&degree=masters).
+- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus.
 
 **_Eierskap_** 
-- Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
+- Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 **_Alle våre vilkår ligger åpent_**
-- [Gode og rettferdige betingelser](https://handbook.variant.no/#betingelser)
+- [Gode og rettferdige betingelser](https://handbook.variant.no/#Selve-livet)
 - [God lønn som er åpen for alle](https://www.variant.no/kalkulator)
 - [Innsikt og påvirkning](https://blog.variant.no/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
 - [Vokse faglig og hjelpe andre vokse](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
@@ -76,9 +76,7 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavtaler. Onboarding står på tur etter det. Se mer på [https://github.com/varianter](https://github.com/varianter).
 
-Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at alle skal trives, få plass og like og gode betingelser. Variant at det skal komme husholdet til gode. Vi ønsker ikke overtid, men sunne arbeidforhold. Vi betaler internett hjemme og legger til rette for trening (om du velger å dra på studio eller oppgradere hjemmetreningen, er opp til deg). 
-
-Det betyr også at vi ser spesielt etter oppdrag hvor vi kan bidra til å rette fokus mot en jordklode som skal funke for de som kommer etter oss, og vi jobber med hvordan vi selv kan gjøre et minst mulig avtrykk på kloden vår.
+Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at alle skal trives, få plass og like og gode betingelser. Vi ønsker ikke overtid, men sunne arbeidforhold. Vi betaler internett hjemme og legger til rette for trening (om du velger å dra på studio eller oppgradere hjemmetreningen, er opp til deg). Det betyr også at vi ser spesielt etter oppdrag hvor vi kan bidra til å rette fokus mot en jordklode som skal funke for de som kommer etter oss, og hvor vi kan utgjøre en positiv påvirkning på samfunnet. 
 
 
 ## Kontakt
