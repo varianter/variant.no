@@ -84,6 +84,11 @@ module.exports = withBundleAnalyzer(
           destination: '/nyttarskalas-trondheim',
           permanent: true,
         },
+        {
+          source: '/nyttarsfest',
+          destination: '/nyttarsfest-oslo',
+          permanent: true,
+        },
       ];
     },
   }),
