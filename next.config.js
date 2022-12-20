@@ -80,6 +80,11 @@ module.exports = withBundleAnalyzer(
           permanent: true,
         },
         {
+          source: '/nyttarskalas',
+          destination: '/nyttarskalas-trondheim',
+          permanent: true,
+        },
+        {
           source: '/nyttarsfest',
           destination: '/nyttarsfest-oslo',
           permanent: true,
