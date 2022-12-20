@@ -1,6 +1,6 @@
 ---
-title: Prosjektleder/ rådgivertil nytt konsulentselskap i Bergen
-h1_title: Prosjektleder/ rådgiver som vil være med og forme Variant Bergen
+title: Prosjektleder/rådgiver til nytt konsulentselskap i Bergen
+h1_title: Prosjektleder/rådgiver som vil være med og forme Variant Bergen
 slug: prosjektleder-radgiver-i-variant-bergen
 contact_emails: marie@variant.no
 meta_title: Vil du være med oss å bygge opp Variant Bergen?
@@ -10,16 +10,15 @@ meta_image: https://www.variant.no/images/plbergen.jpg
 
 ![Varianter snakker strategi](/images/strategisk-ellen-hilde.png)
 
-Vi ser nå etter en erfaren prosjektleder/ rådgiver som vil være med og forme et åpent, raust og læreglad konsulentselskap i Bergen. Det er det vi inviterer deg med på - sammen med oss.
 
-Variant er et konsulentselskap av og for mennesker med stor læreglede. Vi eier vårt eget selskap, og vi styrer vår egen hverdag - enten det er i oppdrag hos kundene våre, fra hjemmekontor eller fra kontoret vårt. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament.
+Variant er et konsulentselskap av og for mennesker med stor læreglede. Vi eier vårt eget selskap, og vi styrer vår egen hverdag - enten det er i oppdrag hos kundene våre eller fra kontoret vårt. Nå ser vi etter en erfaren rådgiver eller prosjektleder som vil være med og forme et åpent og annerledes konsulentselskap.
 
 
 ## Hvem ser vi etter?
 
-Vi ser først og fremst etter deg som ønsker å være med og forme et annerledes konsulentselskap. Vi har nylig startet opp i Bergen, og vi er allerede 10 dyktige ansatte. Du vil få en nøkkelrolle i å utvikle selskapet videre, og til det tror vi at du trenger både entusiasme, nysgjerrighet og en positiv innstilling.  
+Vi har nylig startet opp i Bergen, og vi er allerede ti dyktige ansatte. Du vil få en nøkkelrolle i å utvikle selskapet videre, og til det tror vi at du trenger både entusiasme, nysgjerrighet og en positiv innstilling.  
 
-Vi stiller ingen absolutte krav til din formelle bakgrunn, men ser etter deg som har erfaring fra større digitaliserings-, teknologi- eller IT-prosjekter. Vi håper at du har erfaring med konsulentbransjen, og vi er sikre på at du forstår medmennesker og hva som skal til for å inspirere og lede andre.  
+Vi stiller ingen absolutte krav til din formelle bakgrunn, men ser etter deg som har erfaring fra større digitaliserings- eller IT-prosjekter. Vi håper at du har erfaring med konsulentbransjen, og vi er sikre på at du forstår medmennesker og hva som skal til for å inspirere og lede andre.  
 
 Kanskje du har bakgrunn innen våre ekspertområder teknologi eller design, eller som produkteier, prosessleder eller prosjektleder? Eller kanskje du har hatt mer fokus på team, organisasjon og ledelse? Er du rådgiver innenfor strategi og digitalisering? Oppgavene dine spenner ofte bredt, og du har kanskje erfaring fra både innsiktsarbeid, konseptutvikling og gevinstrealisering? 
 
@@ -35,7 +34,7 @@ Vi ser etter deg som kan ta ansvar for å lede team og fagpersoner, for å drive
 
 Du vil også bli viktig i å utvikle Variant Bergen videre som selskap. Du vil jobbe tett med resten av Variant Bergen, både ved å sette retning og ved å delta i operasjonelle oppgaver – på lik linje med oss andre. Vi håper at du vil ta eierskap i selskapet og prosessene våre – det er derfor vi også tilbyr deg å bli medeier i Variant Bergen. 
 
-**_Prosjekter_** - Du vil jobbe i og lede spennende prosjekter ute hos våre kunder. Dette er store viktige aktører i norsk nærings- og samfunnsliv, som NAV, Miljødirektoratet, Statens vegvesen, Ruter og Sparebanken Vest for å nevne noen. Vi er noenlunde likt representert i offentlig og privat sektor. 
+**_Prosjekter_** - Du vil jobbe i og lede spennende prosjekter ute hos våre kunder. Dette er store, viktige aktører i norsk nærings- og samfunnsliv, som NAV, Miljødirektoratet, Statens vegvesen, Ruter og Sparebanken Vest - for å nevne noen. Vi er noenlunde likt representert i offentlig og privat sektor. 
 
 **_Læreglede_** - For at vi skal lykkes i å etablere en læreglad kultur er vi helt avhengig av at alle tar ansvar for smittsom faglig utvikling, og ønsket om å lære. 
 
@@ -43,24 +42,24 @@ Du vil også bli viktig i å utvikle Variant Bergen videre som selskap. Du vil j
 
 ## Lønn og kompensasjoner
 
-Vi ønsker å være åpne i alt vi gjør, og derfor vil vi også være forutsigbare med tanke på hva vi tilbyr: 
+Vi ønsker å være åpne i alt vi gjør, og derfor er vi også forutsigbare med tanke på hva vi tilbyr: 
 
 - Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2013, vil din startlønn være 872 482 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 61 073 kroner](/kalkulator?year=2013&degree=masters).
 - Bonus. Du vil, sammen med alle ansatte i Variant Bergen, dele 30 % av overskuddet som en resultatbonus hvert kvartal  
 - 1% eierskap i Variant Bergen fra start.
-- Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
-- Vi har også fem uker ferie + alltid fri i romjulen, gode ordninger for pensjon og en rekke fordeler som dekket utgifter til trening, gadgetbudsjett, telefon/bredbånd etc. 
+- Gjennom medeierskapsprogrammet [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant
+- Vi har også fem uker ferie + alltid fri i romjulen, og en rekke fordeler som dekket utgifter til trening, gadgetbudsjett, telefon/bredbånd etc. 
 
-Du finner all info om oss i vår Håndbok, åpen for alle den også 😊 https://handbook.variant.no/
+Du finner all info om oss i vår håndbok, åpen for alle den også... 😊 https://handbook.variant.no/
 
 ## Om Variant
 
 ![Workshop med Post-its](/images/strategisk-tonje-hilde-vikas.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Vi mener at hverdagen blir mer spennende av å ha et fellesskap som engasjeres av faglig og personlig utvikling. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk. 
 
-Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
+For oss er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at alle skal lære på den måten de ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
-Variant ble startet i 2018 og er 100 % eiet av de ansatte. Per desember 2022 er vi nærmere 80 ansatte i Norge – fordelt på våre kontorer i Oslo, Trondheim og Bergen. I Bergen har vi kontor på Spaces i Vaskerelven. 
+Variant ble startet i 2018 og er 100 % eiet av de ansatte. Per desember 2022 er vi nærmere 80 ansatte i Norge – fordelt på våre kontorer i Oslo, Trondheim og Bergen. I Bergen er vi 10 ansatte, og vi har kontor på Spaces i Vaskerelven. 
 
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
