@@ -13,11 +13,11 @@ const Kultur = () => {
       style={isMenuVisible ? { position: 'fixed' } : { position: 'relative' }}
     >
       <HeaderBackground
-        headerColor={allColors.secondary3__shade2}
+        headerColor={allColors.primary__tint2}
         headerText={'Kultur'}
         onVisibleChange={setMenuVisible}
       />
-      <BottomText footerColor={allColors.secondary3__shade2} />
+      <BottomText footerColor={allColors.primary__tint2} />
     </div>
   );
 };
