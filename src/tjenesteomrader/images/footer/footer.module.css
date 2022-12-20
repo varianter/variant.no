@@ -1,4 +1,6 @@
 .footer {
   width: 100%;
   height: auto;
+  position: relative;
+  bottom: -2rem;
 }

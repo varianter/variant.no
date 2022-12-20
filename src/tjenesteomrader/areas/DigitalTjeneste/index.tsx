@@ -3,7 +3,6 @@ import HeaderBackground from '../../images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import TwoRows from '../../components/twoRows/twoRows';
 import BlobText from '../../components/blobText/blobText';
-import BottomText from './bottomText/bottomText';
 import Head from 'next/head';
 import { allColors } from '@variant/profile/lib/colors';
 
@@ -18,7 +17,7 @@ import left1 from 'src/tjenesteomrader/images/arrows/left1.svg';
 import left2 from 'src/tjenesteomrader/images/arrows/left2.svg';
 import { useState } from 'react';
 
-const Tjenesteomrade = () => {
+const DigitalTjeneste = () => {
   const blobColor = allColors.primary__shade2;
   const [isMenuVisible, setMenuVisible] = useState(false);
 
@@ -140,9 +139,8 @@ const Tjenesteomrade = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={allColors.primary__shade4} />
     </div>
   );
 };
 
-export default Tjenesteomrade;
+export default DigitalTjeneste;
