@@ -5,7 +5,7 @@ import TwoRows from '../../components/twoRows/twoRows';
 import BlobText from '../../components/blobText/blobText';
 import BottomText from './bottomText/bottomText';
 import Head from 'next/head';
-import { allColors } from '@variant/profile/lib/colors';
+import { allColors, colorPairs } from '@variant/profile/lib/colors';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -21,6 +21,7 @@ import { useState } from 'react';
 const Tjenesteomrade = () => {
   const blobColor = allColors.primary__shade2;
   const [isMenuVisible, setMenuVisible] = useState(false);
+  const color = colorPairs.primary.shade![3];
 
   return (
     <div
@@ -33,7 +34,7 @@ const Tjenesteomrade = () => {
 
       <div className={style.tjenesteomrade}>
         <HeaderBackground
-          headerColor={allColors.primary__shade4}
+          colorPair={color}
           headerText="Digital tjeneste- og produktutvikling"
           onVisibleChange={setMenuVisible}
         />
