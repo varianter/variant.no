@@ -1,4 +1,4 @@
-import { ColorSet } from '@variant/profile/lib/colors';
+import { ColorPair, ColorSet } from '@variant/profile/lib/colors';
 import Link, { LinkProps } from 'next/link';
 import React from 'react';
 import { and } from 'src/utils/css';
@@ -8,6 +8,7 @@ import style from './button.module.css';
 type ButtonProps = React.PropsWithChildren<{
   className?: string;
   colorPair?: ColorSet;
+  tint?: ColorPair;
 }>;
 
 type EType = React.DetailedHTMLProps<
@@ -54,12 +55,13 @@ export function ButtonNextLink({
   className = '',
   children,
   colorPair,
+  tint,
   ...props
 }: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
   return (
     <Link {...props}>
       <a
-        style={colorPairToCssCustomProps(colorPair)}
+        style={colorPairToCssCustomProps(colorPair, tint)}
         className={and(style.buttonLink, className)}
         aria-label={props['aria-label']}
       >
@@ -69,9 +71,19 @@ export function ButtonNextLink({
   );
 }
 
-function colorPairToCssCustomProps(colorPair: ColorSet | undefined) {
+function colorPairToCssCustomProps(
+  colorPair: ColorSet | undefined,
+  tint?: ColorPair | undefined,
+) {
   if (!colorPair) return {};
 
+  if (tint) {
+    return {
+      '--bg': tint.bg,
+      '--color': tint.text,
+      '--hover': colorPair.tint?.[0]?.bg ?? tint.bg,
+    } as React.CSSProperties;
+  }
   return {
     '--bg': colorPair.default.bg,
     '--color': colorPair.default.text,
