@@ -1,6 +1,6 @@
 import { ButtonNextLink } from '@components/button';
 import { Heading3 } from '@components/heading';
-import { ColorSet } from '@variant/profile/lib/colors';
+import { ColorPair, ColorSet } from '@variant/profile/lib/colors';
 import style from './entrance.module.css';
 
 type EntranceProps = {
@@ -8,6 +8,7 @@ type EntranceProps = {
   ServiceName: string;
   serviceText: string;
   colorPair: ColorSet;
+  tint?: ColorPair;
   urlPath: string;
 };
 
@@ -16,6 +17,7 @@ const Entrance = ({
   ServiceName,
   serviceText,
   colorPair,
+  tint,
   urlPath,
 }: EntranceProps) => {
   return (
@@ -28,6 +30,7 @@ const Entrance = ({
         <p>{serviceText}</p>
         <ButtonNextLink
           colorPair={colorPair}
+          tint={tint}
           href={`tjenesteomrader/${urlPath}`}
         >
           {ServiceName}
