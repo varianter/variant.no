@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Kultur = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const color = colorPairs.primary.tint![1];
+  const color = colorPairs.primary.tint![3];
 
   return (
     <div
@@ -19,7 +19,7 @@ const Kultur = () => {
         whiteMode={false}
         onVisibleChange={setMenuVisible}
       />
-      <BottomText footerColor={allColors.primary__tint2} />
+      <BottomText footerColor={allColors.primary__tint3} />
     </div>
   );
 };
