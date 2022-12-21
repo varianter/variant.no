@@ -16,6 +16,7 @@ const Kultur = () => {
       <HeaderBackground
         headerText={'Kultur'}
         colorPair={color}
+        whiteMode={false}
         onVisibleChange={setMenuVisible}
       />
       <BottomText footerColor={allColors.primary__tint2} />
