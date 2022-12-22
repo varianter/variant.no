@@ -3,7 +3,7 @@ import serviceBlob from './images/indexBlobs/strategi.svg';
 import datadrevet from './images/indexBlobs/datadrevet.svg';
 import kultur from './images/indexBlobs/kultur.svg';
 import Entrance from './components/entrance/entrance';
-import { colorPairs, ColorVariations } from '@variant/profile/lib/colors';
+import { colorPairs } from '@variant/profile/lib/colors';
 
 import style from './tjenesteomrader.module.css';
 import { Heading2 } from '@components/heading';
