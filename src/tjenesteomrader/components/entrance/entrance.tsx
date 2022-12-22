@@ -1,6 +1,6 @@
-import { ButtonNextLink } from '@components/button';
+import { ButtonNextLink, ColorVariations } from '@components/button';
 import { Heading3 } from '@components/heading';
-import { ColorSet, ColorVariations } from '@variant/profile/lib/colors';
+import { ColorSet } from '@variant/profile/lib/colors';
 import style from './entrance.module.css';
 
 type EntranceProps = {

@@ -1,4 +1,4 @@
-import { ColorSet, ColorVariations } from '@variant/profile/lib/colors';
+import { ColorSeries, ColorSet } from '@variant/profile/lib/colors';
 import Link, { LinkProps } from 'next/link';
 import React from 'react';
 import { and } from 'src/utils/css';
@@ -50,6 +50,11 @@ export function ButtonLink({
 }
 
 type LinkType = React.PropsWithChildren<LinkProps>;
+
+export type ColorVariations = {
+  series: ColorSeries;
+  colorLevel: number;
+};
 
 export function ButtonNextLink({
   className = '',
