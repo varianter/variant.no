@@ -1,4 +1,4 @@
-import { ColorSeries, ColorSet } from '@variant/profile/lib/colors';
+import { ColorSet, ColorVariations } from '@variant/profile/lib/colors';
 import Link, { LinkProps } from 'next/link';
 import React from 'react';
 import { and } from 'src/utils/css';
@@ -8,8 +8,7 @@ import style from './button.module.css';
 type ButtonProps = React.PropsWithChildren<{
   className?: string;
   colorPair?: ColorSet;
-  tint?: ColorSeries;
-  tintLevel?: number;
+  colorVariation?: ColorVariations;
 }>;
 
 type EType = React.DetailedHTMLProps<
@@ -56,14 +55,13 @@ export function ButtonNextLink({
   className = '',
   children,
   colorPair,
-  tint,
-  tintLevel,
+  colorVariation,
   ...props
 }: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
   return (
     <Link {...props}>
       <a
-        style={colorPairToCssCustomProps(colorPair, tint, tintLevel)}
+        style={colorPairToCssCustomProps(colorPair, colorVariation)}
         className={and(style.buttonLink, className)}
         aria-label={props['aria-label']}
       >
@@ -75,18 +73,19 @@ export function ButtonNextLink({
 
 function colorPairToCssCustomProps(
   colorPair: ColorSet | undefined,
-  tint?: ColorSeries | undefined,
-  tintLevel?: number,
+  colorVariation?: ColorVariations | undefined,
 ) {
   if (!colorPair) return {};
 
-  if (tint && tintLevel && tintLevel < tint.length) {
+  if (colorVariation && colorVariation.colorLevel < 4) {
     let hoverTintNumber = 1;
-    tintLevel == 3 ?? (hoverTintNumber = -1);
+    colorVariation.colorLevel >= 3 ? (hoverTintNumber = -1) : hoverTintNumber;
     return {
-      '--bg': tint[tintLevel].bg,
-      '--color': tint[tintLevel].text,
-      '--hover': tint[tintLevel + hoverTintNumber].bg ?? tint[tintLevel].bg,
+      '--bg': colorVariation.series[colorVariation.colorLevel].bg,
+      '--color': colorVariation.series[colorVariation.colorLevel].text,
+      '--hover':
+        colorVariation.series[colorVariation.colorLevel + hoverTintNumber].bg ??
+        colorVariation.series[colorVariation.colorLevel].bg,
     } as React.CSSProperties;
   }
 

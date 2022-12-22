@@ -3,7 +3,7 @@ import serviceBlob from './images/indexBlobs/strategi.svg';
 import datadrevet from './images/indexBlobs/datadrevet.svg';
 import kultur from './images/indexBlobs/kultur.svg';
 import Entrance from './components/entrance/entrance';
-import { colorPairs } from '@variant/profile/lib/colors';
+import { colorPairs, ColorVariations } from '@variant/profile/lib/colors';
 
 import style from './tjenesteomrader.module.css';
 import { Heading2 } from '@components/heading';
@@ -57,8 +57,7 @@ const Tjenesteomrader = () => {
             'Etablering og forvaltning av egne team for digital tjenesteutvikling krever målrettet fokus og kunnskap innen kulturbygging. Våre konsulenter jobber for en bærekraftig og sunn utviklingskultur med utgangspunkt i fagene - fra team til topp'
           }
           colorPair={colorPairs.primary}
-          tint={colorPairs.primary.tint}
-          tintLevel={2}
+          colorVariation={{ series: colorPairs.primary.tint!, colorLevel: 2 }}
           urlPath={'/kultur'}
         />
       </div>
