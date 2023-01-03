@@ -3,7 +3,6 @@ import EmojiList from 'src/tjenesteomrader/components/emojiList/emojiList';
 import TwoRows from 'src/tjenesteomrader/components/twoRows/twoRows';
 import HeaderBackground from 'src/tjenesteomrader/images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
-import BottomText from './bottomText/bottomText';
 import Head from 'next/head';
 import { allColors, colorPairs } from '@variant/profile/lib/colors';
 
@@ -129,7 +128,6 @@ const Datadriv = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={allColors.secondary2__shade4} />
     </div>
   );
 };

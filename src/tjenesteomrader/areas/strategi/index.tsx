@@ -3,7 +3,6 @@ import EmojiList from '../../components/emojiList/emojiList';
 import TwoRows from '../../components/twoRows/twoRows';
 import HeaderBackground from '../../images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
-import BottomText from './bottomText/bottomText';
 import { allColors, colorPairs } from '@variant/profile/lib/colors';
 import Head from 'next/head';
 
@@ -130,7 +129,6 @@ const Strategi = () => {
           </TwoRows>
         </div>
       </div>
-      <BottomText footerColor={allColors.secondary1__shade4} />
     </div>
   );
 };
