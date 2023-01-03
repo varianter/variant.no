@@ -16,10 +16,8 @@ meta_projects:
         },
       project_title: Trygg overgang,
       project_text:
-        [
-          I en periode på nesten to år vil det finnes både gammelt og nytt utstyr på bussene. Ett av våre prosjekter handler om å sikre at reiseprodukter kjøpt på ny plattform vil fungere på gammel og vice versa. Dette er et spennede prosjekt som involverer både NFC-teknologi,
-          APP-utvikling og god gammeldags integrasjonsarbeid.,
-        ],
+        'I en periode på nesten to år vil det finnes både gammelt og nytt utstyr på bussene. Ett av våre prosjekter handler om å sikre at reiseprodukter kjøpt på ny plattform vil fungere på gammel og vice versa. Dette er et spennede prosjekt som involverer både NFC-teknologi,
+        APP-utvikling og godt gammeldags integrasjonsarbeid.',
     },
     {
       project_image:
@@ -31,11 +29,9 @@ meta_projects:
         },
       project_title: App og nettbutikk,
       project_text:
-        [
-          FRAM skal benytte en Entur-basert plattform for blant annet billettering,
-          turplanlegging og sannuidsvisning. Men oppå der skal det lages egen nettbutikk og FRAM-app tilpasset Møre og Romsdal. Dette gjøres i samarbeid med flere andre fylkeskommuner,
-          blant annet Trøndelag.,
-        ],
+        'FRAM skal benytte en Entur-basert plattform for blant annet billettering,
+        turplanlegging og sanntidsvisning. Men oppå der skal det lages egen nettbutikk og FRAM-app tilpasset Møre og Romsdal. Dette gjøres i samarbeid med flere andre fylkeskommuner,
+        blant annet Trøndelag.',
     },
   ]
 meta_contribution_digital_productdevelopment: Variant bistår FRAM med å utvikle og tilpasse nye og kundeflater for reisende i Møre og Romsdal. Dette inkluderer ny mobilapp for reisesøk og billettering samt nettbutikk. I tillegg bistår vi kunden med integrasjon mellom gammel og ny plattform som gir reisende i fylket en sømløs opplevelse på trass av at  busser er utstyrt med enten nytt eller gammelt utstyr. Dette gir FRAM mulighet til en gradvis overgang og reduserer risikoen for at store kundegrupper ikke kan reise kollektivt i en overgangsperiode.
