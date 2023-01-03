@@ -1,4 +1,4 @@
-import { allColors, colorPairs } from '@variant/profile/lib/colors';
+import { colorPairs } from '@variant/profile/lib/colors';
 import HeaderBackground from 'src/tjenesteomrader/images/headerBackground/headerBackground';
 import BottomText from './bottomText/bottomText';
 import style from 'src/tjenesteomrader/shared/index.module.css';
@@ -19,7 +19,7 @@ const Kultur = () => {
         whiteMode={false}
         onVisibleChange={setMenuVisible}
       />
-      <BottomText footerColor={allColors.primary__tint3} />
+      <BottomText footerColor={color.bg} />
     </div>
   );
 };
