@@ -16,11 +16,11 @@ meta_projects:
             { color: FFD0C9, vertical: bottom, horizontal: middle },
         },
       project_title: Designlaben,
-      project_text: [
-          Variant har sammen med Sikt utviklet Designlaben som innoverer og utvikler nye tjenester for fremtidens studenter og forskere. Designlaben er Sikts innovasjonssatsing hvor brukeren står i sentrum,
-          og består av et team av oss innleide og ansatte som bruker designmetodikk til å løse komplekse utfordringer.
-          Sikt og hele kunnskapssektoren er i stor endring. Spørsmål som hvordan studenter lærer best og hvordan undervisning bør foregå er noe som Sikt og sektoren må finne ut av. Det stilles økt krav til innsikt i brukerens hverdag. Det er også økt behov for innovasjon og nye tjenestetilbud for å møte fremtidens undervisnings- og forskningssituasjon. For å løse dette er det viktig at det interne maskineriet fungerer godt. Designlaben utvikler interne og eksterne arbeidsprosesser og tjenester for å sikre både fornøyde ansatte og kunder.,
-        ],
+      project_text:
+        'Variant har sammen med Sikt utviklet Designlaben som innoverer og utvikler nye tjenester for fremtidens studenter og forskere. Designlaben er Sikts innovasjonssatsing hvor brukeren står i sentrum,
+        og består av et team av oss innleide og ansatte som bruker designmetodikk til å løse komplekse utfordringer.
+
+        Sikt og hele kunnskapssektoren er i stor endring. Spørsmål som hvordan studenter lærer best og hvordan undervisning bør foregå er noe som Sikt og sektoren må finne ut av. Det stilles økt krav til innsikt i brukerens hverdag. Det er også økt behov for innovasjon og nye tjenestetilbud for å møte fremtidens undervisnings- og forskningssituasjon. For å løse dette er det viktig at det interne maskineriet fungerer godt. Designlaben utvikler interne og eksterne arbeidsprosesser og tjenester for å sikre både fornøyde ansatte og kunder.',
     },
     {
       project_image:
@@ -30,13 +30,10 @@ meta_projects:
           boxProperties2: { color: B7B4DE, vertical: bottom, horizontal: left },
         },
       project_title: Verdiskaping med offentlige data,
-      project_text: [
-          De siste årene har Norges ledelse etterlyst økt verdiskaping med offentlige data som ressurs. Regjeringen vil at Norge skal utnytte mulighetene som ligger i data til økt verdiskaping,
-          flere nye arbeidsplasser i hele landet,
-          og en effektiv offentlig sektor (Meld. St. 22 (2020–2021)). Som svar på dette har Kunnskapsdepartementet,
-          alle underliggende direktorat og aktører i sektoren pekt på Sikt som en viktig tilrettelegger for at dette skal skje.
-          Variant hjelper Sikt og kunnskapssektoren med å finne ut hvordan data kan tilgjengeliggjøres og gi verdi gjennom flere ulike initiativ.,
-        ],
+      project_text:
+        'De siste årene har Norges ledelse etterlyst økt verdiskaping med offentlige data som ressurs. Regjeringen vil at Norge skal utnytte mulighetene som ligger i data til økt verdiskaping,
+        flere nye arbeidsplasser i hele landet, og en effektiv offentlig sektor (Meld. St. 22 (2020–2021)). Som svar på dette har Kunnskapsdepartementet, alle underliggende direktorat og aktører i sektoren pekt på Sikt som en viktig tilrettelegger for at dette skal skje.
+        Variant hjelper Sikt og kunnskapssektoren med å finne ut hvordan data kan tilgjengeliggjøres og gi verdi gjennom flere ulike initiativ.',
     },
   ]
 meta_contribution_digital_productdevelopment: Variant har bistått med kompetanse på design og utvikling over flere år. I tillegg til å bidra med innovasjon og utvikling av nye løsninger, har det vært mye fokus på blant annet testing, universell utforming og flerspråklig støtte.

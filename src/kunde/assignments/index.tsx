@@ -7,7 +7,7 @@ import { Interview } from 'src/kunde/utils/customerUtils';
 import { getStaticProps } from 'pages/kunde/[oppdrag]';
 import DecorativeBoxes from '@components/decorative-boxes';
 import MarkdownIt from 'markdown-it';
-import {Heading1} from "@components/heading";
+import { Heading1 } from '@components/heading';
 
 const createHtmlFromMetadata = () => {
   let html =
@@ -201,24 +201,22 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                   )}
                 </div>
                 <div>
-                  <p>
-                    {assignment.meta_contribution_strategy === null ? (
-                      <></>
-                    ) : (
-                      <div className={style.contributionElements__text}>
-                        <img
-                          src="/images/customer/strategyDevelopment.png"
-                          alt="Blob med datamaskin"
-                        />
-                        <div>
-                          <p>
-                            <strong>Strategiutvikling</strong>
-                          </p>
-                          <p>{assignment.meta_contribution_strategy}</p>
-                        </div>
+                  {assignment.meta_contribution_strategy === null ? (
+                    <></>
+                  ) : (
+                    <div className={style.contributionElements__text}>
+                      <img
+                        src="/images/customer/strategyDevelopment.png"
+                        alt="Blob med datamaskin"
+                      />
+                      <div>
+                        <p>
+                          <strong>Strategiutvikling</strong>
+                        </p>
+                        <p>{assignment.meta_contribution_strategy}</p>
                       </div>
-                    )}
-                  </p>
+                    </div>
+                  )}
                 </div>
                 <div>
                   <p>
