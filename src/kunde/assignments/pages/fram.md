@@ -30,7 +30,7 @@ meta_projects:
       project_title: App og nettbutikk,
       project_text:
         'FRAM skal benytte en Entur-basert plattform for blant annet billettering,
-        turplanlegging og sannuidsvisning. Men oppå der skal det lages egen nettbutikk og FRAM-app tilpasset Møre og Romsdal. Dette gjøres i samarbeid med flere andre fylkeskommuner,
+        turplanlegging og sanntidsvisning. Men oppå der skal det lages egen nettbutikk og FRAM-app tilpasset Møre og Romsdal. Dette gjøres i samarbeid med flere andre fylkeskommuner,
         blant annet Trøndelag.',
     },
   ]
