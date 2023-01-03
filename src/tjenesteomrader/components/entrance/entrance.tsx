@@ -1,4 +1,4 @@
-import { ButtonNextLink } from '@components/button';
+import { ButtonNextLink, ColorVariations } from '@components/button';
 import { Heading3 } from '@components/heading';
 import { ColorSet } from '@variant/profile/lib/colors';
 import style from './entrance.module.css';
@@ -9,7 +9,7 @@ type EntranceProps = {
   serviceText: string;
   colorPair: ColorSet;
   urlPath: string;
-  hideButton?: boolean;
+  colorVariation?: ColorVariations;
 };
 
 const Entrance = ({
@@ -17,8 +17,8 @@ const Entrance = ({
   ServiceName,
   serviceText,
   colorPair,
+  colorVariation,
   urlPath,
-  hideButton,
 }: EntranceProps) => {
   return (
     <article className={style.serviceArea}>
@@ -28,14 +28,13 @@ const Entrance = ({
       </header>
       <div className={style.serviceArea__bottom}>
         <p>{serviceText}</p>
-        {!hideButton && (
-          <ButtonNextLink
-            colorPair={colorPair}
-            href={`tjenesteomrader/${urlPath}`}
-          >
-            {ServiceName}
-          </ButtonNextLink>
-        )}
+        <ButtonNextLink
+          colorPair={colorPair}
+          colorVariation={colorVariation}
+          href={`tjenesteomrader/${urlPath}`}
+        >
+          {ServiceName}
+        </ButtonNextLink>
       </div>
     </article>
   );

@@ -4,7 +4,7 @@ import TwoRows from 'src/tjenesteomrader/components/twoRows/twoRows';
 import HeaderBackground from 'src/tjenesteomrader/images/headerBackground/headerBackground';
 import style from 'src/tjenesteomrader/shared/index.module.css';
 import Head from 'next/head';
-import { allColors } from '@variant/profile/lib/colors';
+import { allColors, colorPairs } from '@variant/profile/lib/colors';
 
 // Arrows
 import down1 from 'src/tjenesteomrader/images/arrows/down1.svg';
@@ -19,7 +19,7 @@ import { useState } from 'react';
 const Datadriv = () => {
   const blobColor = allColors.secondary2__shade2;
   const [isMenuVisible, setMenuVisible] = useState(false);
-
+  const color = colorPairs.secondary2.shade![3];
   return (
     <div
       className={style.main}
@@ -36,7 +36,7 @@ const Datadriv = () => {
         }}
       >
         <HeaderBackground
-          headerColor={allColors.secondary2__shade4}
+          colorPair={color}
           headerText="Datadriv"
           onVisibleChange={setMenuVisible}
         />

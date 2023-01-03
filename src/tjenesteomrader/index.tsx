@@ -56,9 +56,9 @@ const Tjenesteomrader = () => {
           serviceText={
             'Etablering og forvaltning av egne team for digital tjenesteutvikling krever målrettet fokus og kunnskap innen kulturbygging. Våre konsulenter jobber for en bærekraftig og sunn utviklingskultur med utgangspunkt i fagene - fra team til topp'
           }
-          colorPair={colorPairs.secondary3}
+          colorPair={colorPairs.primary}
+          colorVariation={{ series: colorPairs.primary.tint!, colorLevel: 2 }}
           urlPath={'/kultur'}
-          hideButton={true}
         />
       </div>
     </section>
