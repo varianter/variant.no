@@ -17,7 +17,7 @@ meta_projects:
       project_title: Trygg overgang,
       project_text:
         'I en periode på nesten to år vil det finnes både gammelt og nytt utstyr på bussene. Ett av våre prosjekter handler om å sikre at reiseprodukter kjøpt på ny plattform vil fungere på gammel og vice versa. Dette er et spennede prosjekt som involverer både NFC-teknologi,
-        APP-utvikling og god gammeldags integrasjonsarbeid.',
+        APP-utvikling og godt gammeldags integrasjonsarbeid.',
     },
     {
       project_image:
