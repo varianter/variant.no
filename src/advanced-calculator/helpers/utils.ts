@@ -1,6 +1,6 @@
 import { payscale } from '../config';
 
-const data = payscale[2022];
+const data = payscale['2023'];
 
 export type SalaryData = { [year: string]: string };
 
