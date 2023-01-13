@@ -9,7 +9,7 @@ import SalaryGraph from './Graphs/SalaryGraph';
 import {
   daysUntilSalaryRaise,
   calculateYearsSince,
-  gradDateOfTheYear
+  gradDateOfTheYear,
 } from './helpers/daysUntilNewSalary';
 import { getAverageBonus, getHistoricBonus } from './helpers/getHistoricBonus';
 import getPayscale from './helpers/getPayscale';
@@ -22,7 +22,7 @@ import style from './calculator.module.css';
 import { Button } from '@components/button';
 import { and } from 'src/utils/css';
 import { useMediaQuery } from 'src/utils/use-media-query';
-import {Heading4} from "@components/heading";
+import { Heading4 } from '@components/heading';
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
@@ -53,9 +53,9 @@ export default function Calculator() {
   const [mobileVisibleInternal, setMobileVisible] = useState(true);
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
-  const yearsOfExperience =
-    calculateYearsSince(gradDateOfTheYear(selectedValidYear));
-
+  const yearsOfExperience = calculateYearsSince(
+    gradDateOfTheYear(selectedValidYear),
+  );
 
   const totalExperience =
     yearsOfExperience === 0
@@ -333,7 +333,12 @@ export default function Calculator() {
               </p>
               <p>
                 Grafen her viser en indikasjon på lønnsvekst i Variant gitt en
-                erfaring av {totalExperience}.
+                erfaring av {totalExperience}. Fra i fjor ville du fått en{' '}
+                <strong>
+                  økning på {formatCurrencyFromNumber(payscale.diffSinceLast)}{' '}
+                  kr
+                </strong>
+                .
               </p>
             </div>
           </InView>
