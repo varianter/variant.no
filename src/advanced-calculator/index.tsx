@@ -333,12 +333,17 @@ export default function Calculator() {
               </p>
               <p>
                 Grafen her viser en indikasjon på lønnsvekst i Variant gitt en
-                erfaring av {totalExperience}. Fra i fjor ville du fått en{' '}
-                <strong>
-                  økning på {formatCurrencyFromNumber(payscale.diffSinceLast)}{' '}
-                  kr
-                </strong>
-                .
+                erfaring av {totalExperience}.{' '}
+                {payscale.diffSinceLast && (
+                  <>
+                    Fra i fjor ville du fått en{' '}
+                    <strong>
+                      økning på{' '}
+                      {formatCurrencyFromNumber(payscale.diffSinceLast)} kr
+                    </strong>
+                    .
+                  </>
+                )}
               </p>
             </div>
           </InView>

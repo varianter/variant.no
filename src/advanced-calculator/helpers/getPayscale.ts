@@ -13,7 +13,7 @@ export type PayscaleEntry = {
 
 export type Payscale = {
   current: number;
-  diffSinceLast: number;
+  diffSinceLast?: number;
   historic: PayscaleEntry[];
   prognosis: PayscaleEntry[];
 };
@@ -54,9 +54,9 @@ export default function getPayscale(selectedYear: number): Payscale {
   const latestPayscale = payscale[latestYearInPayscaleArray];
   const payForSelectedYear = parseInt(latestPayscale[selectedYear], 10);
 
-  const historic = availablePayscaleYears.map(
-    getHistoricPayscale(selectedYear),
-  );
+  const historic = availablePayscaleYears
+    .map(getHistoricPayscale(selectedYear))
+    .filter((i) => !Number.isNaN(i.pay));
 
   const prognosis = createPrognosisPayscale(
     selectedYear,
@@ -65,10 +65,12 @@ export default function getPayscale(selectedYear: number): Payscale {
     2,
   );
 
+  const prev = historic[historic.length - 2];
+
   return {
     current: payForSelectedYear,
     historic,
-    diffSinceLast: payForSelectedYear - historic[historic.length - 2].pay,
+    diffSinceLast: prev ? payForSelectedYear - prev.pay : undefined,
     prognosis,
   };
 }
