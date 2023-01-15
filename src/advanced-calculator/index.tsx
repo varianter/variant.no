@@ -58,7 +58,7 @@ export default function Calculator() {
   );
 
   const totalExperience =
-    yearsOfExperience === 0
+    yearsOfExperience < 0
       ? `Nyutdannet ${DEGREE[degree]}`
       : `${yearsOfExperience} år + ${DEGREE[degree]}`;
 
