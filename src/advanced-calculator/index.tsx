@@ -58,7 +58,7 @@ export default function Calculator() {
   );
 
   const totalExperience =
-    yearsOfExperience === 0
+    yearsOfExperience < 0
       ? `Nyutdannet ${DEGREE[degree]}`
       : `${yearsOfExperience} år + ${DEGREE[degree]}`;
 
@@ -333,12 +333,17 @@ export default function Calculator() {
               </p>
               <p>
                 Grafen her viser en indikasjon på lønnsvekst i Variant gitt en
-                erfaring av {totalExperience}. Fra i fjor ville du fått en{' '}
-                <strong>
-                  økning på {formatCurrencyFromNumber(payscale.diffSinceLast)}{' '}
-                  kr
-                </strong>
-                .
+                erfaring av {totalExperience}.{' '}
+                {payscale.diffSinceLast && (
+                  <>
+                    Fra i fjor ville du fått en{' '}
+                    <strong>
+                      økning på{' '}
+                      {formatCurrencyFromNumber(payscale.diffSinceLast)} kr
+                    </strong>
+                    .
+                  </>
+                )}
               </p>
             </div>
           </InView>
