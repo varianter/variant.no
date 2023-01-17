@@ -28,8 +28,9 @@ const NewYearParty = () => {
           </p>
           <p className={style.newyearParty__invitation_ingress_paragraph}>
             Arrangementet er gratis, men alle gjester må løse billett på Hoopla.
-            Promokode for å hente ut billetter får du av en Variant eller i
-            invitasjonen du mottok. Vi gleder oss til å treffe deg!
+            Promokode for å hente ut billetter får du av en Variant, eller du
+            kan sende oss en e-post på kalas-trondheim@variant.no. Vi gleder oss
+            til å treffe deg!
           </p>
         </div>
         <div className={style.newyearParty__invitation__table}>
