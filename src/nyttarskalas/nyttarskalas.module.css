@@ -47,6 +47,10 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.newyearParty__invitation_ingress_paragraph > a {
+  color: white;
+}
+
 .newyearParty__invitation__table {
   width: 100%;
   display: flex;
