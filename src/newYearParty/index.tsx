@@ -25,7 +25,7 @@ const NewYearParty = () => {
             Variant er bygd på åpenhet, raushet og læreglede. Derfor ønsker vi i
             Variant Oslo å invitere dere alle til et storstilt nyttårskalas med{' '}
             <b>
-              underholdning fra rapperen Pasha, DJ, nydelig mat fra Hells
+              underholdning fra en hemmelig artist, DJ, nydelig mat fra Hells
               Kitchen, drikke, musikk og moro
             </b>{' '}
             i ekte Variant-ånd.
