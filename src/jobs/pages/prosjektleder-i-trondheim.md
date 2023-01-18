@@ -1,7 +1,7 @@
 ---
 title: Prosjektleder i Trondheim
 h1_title: Prosjektleder i Trondheim
-slug: prosjektleder-i-trondheim
+slug: prosjektleder-i-trondheim-trondheim
 contact_emails: mk@variant.no
 meta_title: Vi ønsker oss flere prosjektledere til Variant Trondheim
 meta_description: Vi ser etter en prosjektleder som ønsker å bidra inn i Trondheims mest spennende fagmiljø for prosjektledere
