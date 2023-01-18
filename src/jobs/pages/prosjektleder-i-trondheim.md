@@ -16,7 +16,7 @@ Variant er et konsulentselskap av og for mennesker med stor læreglede. Vi eier 
 
 ## Hvem ser vi etter?
 
-Vi ser først og fremst etter deg som ønsker å være med og bidra inn i et stadig voksende fagmiljø for prosjektledere. Selv om Variant Trondheim har eksistert i over 4 år og vi allerede har blitt nesten 50 dyktig ansatte, er det ingen tvil om at det er plass til fler som ønsker å utvikle selskapet med entusiasme, nysgjerrighet og en positiv innstilling.
+Vi ser først og fremst etter deg som ønsker å være med og bidra inn i et stadig voksende fagmiljø for prosjektledere. Selv om Variant Trondheim har eksistert i over 4 år og vi allerede har blitt snart 50 dyktig ansatte, er det ingen tvil om at det er plass til fler som ønsker å utvikle selskapet med entusiasme, nysgjerrighet og en positiv innstilling.
 
 Vi stiller ingen absolutte krav til din formelle bakgrunn, men ser etter deg som har erfaring fra større digitaliserings-, teknologi- eller IT-prosjekter. Vi håper at du har erfaring med konsulentbransjen, og vi er sikre på at du forstår medmennesker og hva som skal til for å inspirere og lede andre.
 
@@ -44,7 +44,7 @@ Du vil også bli viktig i å utvikle Variant Trondheim videre som selskap. Du vi
 
 Vi ønsker å være åpne i alt vi gjør, og derfor vil vi også være forutsigbare med tanke på hva vi tilbyr:
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2013, vil din startlønn være 954 593 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 66 821 kroner](/kalkulator?year=2013&degree=masters).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2017, vil din startlønn være 838 449 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 58 691 kroner](/kalkulator?year=2017&degree=masters).
 - Bonus. Du vil, sammen med alle ansatte i Variant Trondheim, dele 30 % av overskuddet som en resultatbonus hvert kvartal
 - Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 - Vi har også fem uker ferie + alltid fri i romjulen, gode ordninger for pensjon og en rekke fordeler som dekket utgifter til trening, gadgetbudsjett, telefon/bredbånd etc.
