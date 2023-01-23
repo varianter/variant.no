@@ -72,4 +72,4 @@ Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår CEO Marie Stoltz på marie@variant.no eller på telefon 99 12 54 33.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår CEO Marie Stoltz på marie@variant.no eller på telefon 99 21 54 33.
