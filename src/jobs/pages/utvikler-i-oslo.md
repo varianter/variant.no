@@ -44,9 +44,10 @@ Vi tror at et åpent fagmiljø vil styrke oss som selskap, samtidig som det beri
 
 Vi tilstreber åpenhet i alt vårt arbeid. Derfor forsøker vi å være forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 808 168](/kalkulator?year=2013&degree=masters).
-- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 871 000](/kalkulator?year=2013&degree=masters).
+- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus. Ansatte som er i foreldrepermisjon eller som er sykemeldte får også full bonus. Gjennomsnittlig bonus per år har siden 2019 vært på 71 079.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
+- Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut [Andre goder og ytelser](https://handbook.variant.no/#andre-goder-og-ytelser))
 
 ## Om Variant
 
