@@ -44,7 +44,7 @@ Du vil også bli viktig i å utvikle Variant Trondheim videre som selskap. Du vi
 
 Vi ønsker å være åpne i alt vi gjør, og derfor vil vi også være forutsigbare med tanke på hva vi tilbyr:
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2017, vil din startlønn være 838 449 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 58 691 kroner](/kalkulator?year=2017&degree=masters).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk og øvre kvartil. Eksempelvis ved en [mastergrad fra 2017, vil din startlønn være 838 449 kroner. Din årlige pensjonssparing (på 7%) kommer i tillegg, og vil være på 58 691 kroner](/kalkulator?year=2017&degree=master).
 - Bonus. Du vil, sammen med alle ansatte i Variant Trondheim, dele 30 % av overskuddet som en resultatbonus hvert kvartal
 - Gjennom medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 - Vi har også fem uker ferie + alltid fri i romjulen, gode ordninger for pensjon og en rekke fordeler som dekket utgifter til trening, gadgetbudsjett, telefon/bredbånd etc.
