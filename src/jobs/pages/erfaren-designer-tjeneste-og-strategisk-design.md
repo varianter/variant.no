@@ -2,7 +2,7 @@
 title: Erfaren designer - Tjeneste- og strategisk design
 h1_title: Erfaren designer - Tjeneste- og strategisk design
 slug: erfaren-designer-tjeneste-og-strategisk-design
-contact_emails: te@variant.no, mk@variant.no
+contact_emails: te@variant.no, th@variant.no
 meta_title: Vi søker erfaren designer innen tjeneste- og strategisk design!
 meta_description: Vi ser etter en dyktig og erfaren designer innen tjeneste- og strategisk design!
 meta_image: https://www.variant.no/images/erfaren_designer_tjeneste_og_strategisk_design.jpg

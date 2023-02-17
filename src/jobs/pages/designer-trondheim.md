@@ -2,7 +2,7 @@
 title: Designer
 h1_title: Designer
 slug: designer-trondheim
-contact_emails: mk@variant.no
+contact_emails: th@variant.no
 ---
 
 ![Mikael, Marius og Ellen på taket](/work_images/crimson_blob.svg)

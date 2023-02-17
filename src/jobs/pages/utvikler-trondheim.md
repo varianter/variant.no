@@ -2,7 +2,7 @@
 title: Utvikler
 h1_title: Utvikler
 slug: utvikler-trondheim
-contact_emails: mk@variant.no
+contact_emails: th@variant.no
 ---
 
 ## Kort om stillingen

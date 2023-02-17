@@ -2,7 +2,7 @@
 title: Erfaren designer - UX/UI
 h1_title: Erfaren designer - UX/UI
 slug: erfaren-designer-uxui
-contact_emails: te@variant.no, mk@variant.no
+contact_emails: te@variant.no, th@variant.no
 meta_title: Vi søker erfaren designer innen UX/UI!
 meta_description: Vi ser etter en dyktig og erfaren designer innen UX/UI!
 meta_image: https://www.variant.no/images/erfaren_uxui_designer_meta.png
