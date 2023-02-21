@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
-import { Degree, ONE_G, SalaryCalculatorProps } from './config';
+import { ONE_G, SalaryCalculatorProps } from './config';
 import Counter from './Counter';
 import BonusGraph from './Graphs/BonusGraph';
 import SalaryGraph from './Graphs/SalaryGraph';
