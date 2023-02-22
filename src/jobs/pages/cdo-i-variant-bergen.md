@@ -36,7 +36,7 @@ Vi er tilhengere av at våre ledere forstår behovene til både egne konsulent-k
 
 Vi ønsker å være så åpen som mulig i alt vårt arbeid, det gjelder også med tanke på de ulike insentivene våre. Vi tilbyr både fastlønn og bonus, et ledertillegg, utbytte fra aksjeandel og verdistigning i eierandel:
 
-- Lønn. [Variant justerer lønn basert på teknas lønsstatistikk](/kalkulator). For ledere kommer også et tillegg for å gjøre lederlønningene konkurransedyktige. Dette ledertillegget vil være 150 000. [Med en mastergrad fra 2008, vil din startlønn være 1 151 610](/kalkulator?year=2008&degree=master&addition=150000).
+- Lønn. [Les mer om lederlønn i Variant](https://handbook.variant.no/#Ledere)
 - Bonus. Du vil, i likhet med alle ansatte, få en flat resultatbonus per kvartal. Bonusen utgjør 30 prosent av overskuddet.
 - Vår nye Chief Design Officer tilbys å kjøpe 10 prosent av aksjene i Variant Bergen AS. Dette vil medføre et årlig utbetalt utbytte. Variant benytter aktiv utbyttepolitikk, og det er å forvente betydelige utbetalinger hvert år.
 - Selskapets verdi vil øke med antall ansatte. Ved tidlig inntreden vil hver aksje ha en lav verdi, og denne stiger raskt i verdi etter hvert som antallet ansatte øker. Vi har en modell for fornuftig vekst og et realistisk mål om å bygge et fagmiljø med 30 dyktige fagpersoner på 3 år.
