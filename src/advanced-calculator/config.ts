@@ -23,6 +23,11 @@ export const startSalery: Record<Degree, number> = {
   masters: 590000,
 };
 
+export type SalaryCalculatorProps = {
+  year: number;
+  degree: string;
+};
+
 export const payscale = {
   '2020': {
     '1990': '1280500',

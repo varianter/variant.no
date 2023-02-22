@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
-import { ONE_G } from './config';
+import { ONE_G, SalaryCalculatorProps } from './config';
 import Counter from './Counter';
 import BonusGraph from './Graphs/BonusGraph';
 import SalaryGraph from './Graphs/SalaryGraph';
@@ -40,10 +40,10 @@ const DEGREE: { [key: string]: string } = {
   master: 'master',
 };
 
-export default function Calculator() {
-  const [selectedYear, setSelectedYear] = useState(2015);
-  const [selectedValidYear, setSelectedValidYear] = useState(2015);
-  const [degree, setDegree] = useState('bachelor');
+export default function Calculator(props: SalaryCalculatorProps) {
+  const [selectedYear, setSelectedYear] = useState(props.year);
+  const [selectedValidYear, setSelectedValidYear] = useState(props.year);
+  const [degree, setDegree] = useState(props.degree);
   const thisYear = new Date().getFullYear();
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
@@ -75,7 +75,6 @@ export default function Calculator() {
     setSelectedYear(value);
     if (isValidYear(value)) setSelectedValidYear(value);
   }
-
   return (
     <div className={style['calculator']}>
       <div className={style['calculator-intro']}>
@@ -133,8 +132,8 @@ export default function Calculator() {
                       id="Bachelor"
                       name="education"
                       value="bachelor"
+                      checked={degree === 'bachelor'}
                       onChange={onDegreeChange}
-                      defaultChecked
                     />
                     <label id="bachelorLabel" htmlFor="Bachelor">
                       Bachelor
@@ -149,6 +148,7 @@ export default function Calculator() {
                       id="Master"
                       name="education"
                       value="master"
+                      checked={degree === 'master'}
                       onChange={onDegreeChange}
                     />
                     <label id="masterLabel" htmlFor="Master">

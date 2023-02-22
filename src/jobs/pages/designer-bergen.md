@@ -52,7 +52,7 @@ Vi ønsker å skape et miljø av designere med ulik bakgrunn, fagprofil og styrk
 
 Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbar med tanke på de ulike insentivene vi tilbyr. Totalt består dette av fastlønn og bonus:
 
-- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 872 482](https://www.variant.no/kalkulator?year=2013&degree=masters).
+- Lønn. Variant justerer lønn basert på Teknas lønsstatistikk. Dette betyr at hvis du eksempelvis har en [mastergrad fra 2013, vil din startlønn være 954 593](https://www.variant.no/kalkulator?year=2013&degree=master).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet pr kvartal som en resultatbonus.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
