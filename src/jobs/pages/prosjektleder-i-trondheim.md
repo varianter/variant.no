@@ -71,4 +71,4 @@ Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Marius Krakeli på mk@variant.no eller på telefon 41 63 75 72.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Tormod Haugene på th@variant.no eller på telefon 98 48 44 46.

@@ -90,4 +90,4 @@ Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavta
 
 ## Kontakt
 
-Uansett hvilken utviklerprofil du assosierer deg med eller teknologi du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår utvikler Marius Krakeli er rett person å spørre.
+Uansett hvilken utviklerprofil du assosierer deg med eller teknologi du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår utvikler Tormod Haugene er rett person å spørre.

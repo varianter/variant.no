@@ -70,4 +70,4 @@ Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavta
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår skysjef og utvikler Mikkel om det vi skriver her. Hvis du har spørsmål om vår faglige tilnærming, eller filosofi rundt rekruttering, må du gjerne plinge på vår utvikler og rekrutteringsansvarlig Marius.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår skysjef og utvikler Mikkel om det vi skriver her. Hvis du har spørsmål om vår faglige tilnærming, eller filosofi rundt rekruttering, må du gjerne plinge på vår utvikler og rekrutteringsansvarlig Tormod.

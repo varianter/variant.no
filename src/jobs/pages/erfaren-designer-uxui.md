@@ -68,4 +68,4 @@ Ble du nysgjerrig på Variant, men befinner deg mer i det strategiske hjørnet n
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår designsjef i Variant Tonje Evanger eller rekrutteringsansvarlig Marius Krakeli.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår designsjef i Variant Tonje Evanger eller rekrutteringsansvarlig Tormod Haugene.

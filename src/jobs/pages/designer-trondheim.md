@@ -70,4 +70,4 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 
 ## Kontakt
 
-Uansett hvilken designprofil du assosierer deg med eller arbeidsmåte du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår rekrutteringsansvarlig Marius Krakeli er rett person å spørre.
+Uansett hvilken designprofil du assosierer deg med eller arbeidsmåte du liker, oppfordrer vi deg til å søke. Spørsmål eller kommentarer? Vår rekrutteringsansvarlig Tormod Haugene er rett person å spørre.
