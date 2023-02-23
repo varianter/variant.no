@@ -20,6 +20,7 @@ export async function requestByEmails(
     return [];
   }
 
-  const employee = employeeList.filter((e) => emails.includes(e.email));
-  return employee;
+  return emails
+    .map((email) => employeeList.find((e) => e.email == email))
+    .filter(Boolean) as EmployeeItem[];
 }
