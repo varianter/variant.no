@@ -69,7 +69,7 @@ Som du kanskje skjønner, er det egentlig ingen begrensning på hva man kan bidr
 
 Vi ser skikkelig frem til å høre fra deg. Spør om du vil høre enda mer. Vi er snakkesalige og åpne for å ta en uforpliktet prat når som helst.
 
-Vi håper jo egentlig det ikke er noe å tenke på, send søknad i dag så hører du fra oss snarlig. PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt kjent, for begge parter. Sjekk ut hva du kan forvente [her](https://handbook.variant.no/#ansettelse-og-jobbintervju).
+Vi håper jo egentlig det ikke er noe å tenke på, send søknad i dag så hører du fra oss snarlig. PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt kjent, for begge parter. Sjekk ut hva du kan forvente [her](https://handbook.variant.no/prosesser-ansatt#Ansettelse-og-jobbintervju).
 
 Ble du nysgjerrig på Variant, men befinner deg mer i det grafiske hjørnet når det kommer til design? No worries, [vi har plass til deg også vi!](https://www.variant.no/jobs/erfaren-designer-uxui)
 
