@@ -85,7 +85,7 @@ Hvis du ikke er varm i ørene enda, og ønsker å lese enda mer om filosofien og
 - Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
 
-PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt kjent, for begge parter. Sjekk ut hva du kan forvente [her](https://handbook.variant.no/#ansettelse-og-jobbintervju).
+PS: vi har faktisk en veldig hyggelig søknadsprosess, designet for å bli godt kjent, for begge parter. Sjekk ut hva du kan forvente [her](https://handbook.variant.no/prosesser-ansatt#Ansettelse-og-jobbintervju).
 
 ## Kontakt
 
