@@ -11,6 +11,10 @@ export const getStaticProps = async () => {
       'andreas@variant.no',
       'tlh@variant.no',
       'vif@variant.no',
+      'haakon@variant.no',
+      'sh@variant.no',
+      'hss@variant.no',
+      'iki@variant.no',
     ]);
 
     return {

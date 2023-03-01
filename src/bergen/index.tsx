@@ -86,14 +86,8 @@ const Bergen: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
             <p className="lead">
               På kort tid har vi sikret oss de aller første ansatte (hipp
-              hurra!), vi har fått kontorer hos{' '}
-              <a
-                href="https://www.spacesworks.com/bergen/vaskerelven/"
-                rel="external nofollow"
-              >
-                Spaces i Vaskerelven
-              </a>{' '}
-              og nå er vi klare for flere folk. Vil du være med å forme et
+              hurra!), vi har fått kontorer i kontorfellesskapet i Vaskerelven
+              39, og nå er vi klare for flere folk. Vil du være med å forme et
               annerledes konsulentselskap?
             </p>
             <p>

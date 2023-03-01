@@ -59,7 +59,7 @@ Variant er menneskene som jobber her. Vi har kommet sammen for å være med å s
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
-Variant ble startet i 2018 og er 100 % eiet av de ansatte. Per desember 2022 er vi nærmere 80 ansatte i Norge – fordelt på våre kontorer i Oslo, Trondheim og Bergen. I Bergen har vi kontor på Spaces i Vaskerelven.
+Variant ble startet i 2018 og er 100 % eiet av de ansatte. Per desember 2022 er vi nærmere 80 ansatte i Norge – fordelt på våre kontorer i Oslo, Trondheim og Bergen. I Bergen har vi kontor i Vaskerelven 39.
 
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
 
