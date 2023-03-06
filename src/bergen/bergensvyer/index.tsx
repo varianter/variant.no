@@ -194,7 +194,7 @@ export default function Home() {
             </p>
 
             <p>
-              Den første tiden leier Variant et kontor i Spaces Vaskerelven.
+              Den første tiden leier Variant et kontor i Vaskerelven 39.
               Antallet rom og arbeidsplasser utvides etter hvert som vi vokser.
               Konsernet stiller med struktur- og systemkapital. Konsernets
               ledelse jobber tett på en coachende måte med Bergens ledergruppe.

@@ -164,13 +164,13 @@ const Layout = ({
               >
                 Tollbugata 24
               </a>{' '}
-              i Oslo og på{' '}
+              i Oslo og i{' '}
               <a
                 href="https://g.page/Vaskerelven-39-5323"
                 rel="noopener"
                 target="_blank"
               >
-                Spaces Vaskerelven
+                Vaskerelven 39
               </a>{' '}
               i Bergen. Kom innom for en kopp kaffe eller bare en hyggelig prat.
             </p>
@@ -206,7 +206,6 @@ const Layout = ({
             <address>
               <strong>Variant Bergen AS</strong>
               <br />
-              C/O Spaces Vaskerelven <br />
               Vaskerelven 39
               <br />
               5014 Bergen
