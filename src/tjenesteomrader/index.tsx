@@ -58,7 +58,7 @@ const Tjenesteomrader = () => {
           }
           colorPair={colorPairs.primary}
           colorVariation={{ series: colorPairs.primary.tint!, colorLevel: 2 }}
-          urlPath={'/kultur'}
+          urlPath={'kultur'}
         />
       </div>
     </section>
