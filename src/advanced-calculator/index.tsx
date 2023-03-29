@@ -206,7 +206,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
 
                 <div className={style['calculator-controls__row']}>
                   <div className={style['calculator-controls__label']}>
-                    Årslønn + gjenomsnittlig bonus
+                    Årslønn + gjennomsnittlig bonus
                   </div>
                   <div className={style['calculator-controls__value']}>
                     <Counter
