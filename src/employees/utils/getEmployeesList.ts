@@ -1,6 +1,7 @@
 import { Office } from 'src/office-selector';
 import { EmployeeItem } from '../types';
 import { requestByEmails, requestEmployees } from './request';
+import { offices } from 'src/office-selector';
 
 export const getEmployeesList = async (): Promise<EmployeeItem[] | false> => {
   const employees = await requestEmployees();
@@ -10,7 +11,9 @@ export const getEmployeesList = async (): Promise<EmployeeItem[] | false> => {
   }
 
   // Make images
-  return employees;
+  return employees.filter((employee) =>
+    offices.includes(employee.officeName.toLowerCase() as Office),
+  );
 };
 
 export const getEmployeesByOffice = async (
