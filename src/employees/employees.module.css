@@ -33,8 +33,9 @@
   --total-margin: calc(var(--column-margin) * 2 * var(--columns));
   --total-images-width: calc(var(--image-width) * var(--columns));
 
-  max-width: calc(var(--total-images-width) + var(--total-margin));
+  max-width: calc(var(--total-images-width) + var(--total-margin) + 5rem);
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding-top: 4rem;
   padding-bottom: 10rem;
