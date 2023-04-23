@@ -1,6 +1,6 @@
 import { EmployeeItem } from 'src/employees/types';
 
-const BASE_URL = 'https://cv-partner-layer.vercel.app/api';
+const BASE_URL = 'https://chewie-webapp-ld2ijhpvmb34c.azurewebsites.net';
 
 export async function requestEmployees(): Promise<EmployeeItem[] | undefined> {
   const request = await fetch(`${BASE_URL}/employees`);
