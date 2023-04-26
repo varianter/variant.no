@@ -15,6 +15,9 @@
 }
 
 .accordianButton {
+  width: 100%;
+  color: var(--color-standard__white);
+  border: none;
   background: rgba(115, 110, 190, 0.5);
   border-radius: 20px;
 }
