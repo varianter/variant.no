@@ -1,0 +1,13 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact_left p {
+  font-family: 'Recoleta', serif;
+  font-weight: 500;
+}
