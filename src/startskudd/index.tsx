@@ -25,7 +25,7 @@ const Startskudd = () => {
           </Flexbox>
           <Meny>
             <MenyButton text="Praktisk info" emoji='📌'/>
-            <MenyButton text="kontakt" emoji='💬'/>
+            <MenyButton text="Kontakt" emoji='💬'/>
             <MenyButton text="Mandag" emoji='🐳'/>
             <MenyButton text="Tirsdag" emoji='🐥'/>
             <MenyButton text="Onsdag" emoji='🐽'/>
