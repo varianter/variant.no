@@ -1,0 +1,11 @@
+.label__button {
+  color: var(--color-standard__black);
+  border-radius: 1rem;
+  background-color: var(--color-primary__tint4);
+  padding: 0.4rem 0.75rem;
+  width: fit-content;
+}
+
+.label__button a {
+  text-decoration: none;
+}
