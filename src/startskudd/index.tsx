@@ -1,6 +1,7 @@
 import React from 'react'
 import AccordianButton from './components/buttons/accordianButton';
 import { MenyButton } from './components/buttons/meny';
+import { Contact } from './components/contact/contact';
 import { Flexbox } from './components/flexBox/flexbox';
 import { Label } from './components/label/label';
 import Meny from './components/meny/meny';
@@ -17,10 +18,11 @@ const Startskudd = () => {
           <p id="Velkommen" className={style.startskudd__content_ingress}>❤️  Velkommen til</p>
           <h1 className={style.startskudd__h1}>Startskudd!!!</h1>  
           <p>Vi gleder oss så masse at du er med på laget! Nedenfor finner du svar på nesten alt du kunne lure på             , fra praktisk info til program og kontaktpersoner.</p>
+
           <Flexbox>
             <h2 id="Meny" className={style.startskudd__h2}>🍽 Meny</h2>
             <Label>Meny</Label>
-          </Flexbox> 
+          </Flexbox>
           <Meny>
             <MenyButton text="Praktisk info" emoji='📌'/>
             <MenyButton text="kontakt" emoji='💬'/>
@@ -30,11 +32,24 @@ const Startskudd = () => {
             <MenyButton text="Torsdag" emoji='🦧'/>
             <MenyButton text="Fredag" emoji='🦦'/>
           </Meny>
+
           <Flexbox>
             <h2 id="Praktisk info" className={style.startskudd__h2}>📌 Praktisk info</h2>
             <Label>Praktisk info</Label>
           </Flexbox>
+
           <AccordianButton title="Lunsj" text="Lunsj"/>
+          <AccordianButton title="start/sluttid" text="start/sluttid"/>
+          <AccordianButton title="Lønn" text="Lønn"/>
+          <AccordianButton title="Kunde" text="Kunde"/>
+
+          <Flexbox>
+            <h2 id="Kontakt" className={style.startskudd__h2}>💬 Kontakt</h2>
+            <Label>Kontakt</Label>
+          </Flexbox>
+          <Contact firstName="Max" surname="Mustermann" email="mm@variant.no" phoneNumber="+47 XXX XXX XX"/> 
+          <Contact firstName="Max" surname="Mustermann" email="mm@variant.no" phoneNumber="+47 XXX XXX XX"/> 
+          <Contact firstName="Max" surname="Mustermann" email="mm@variant.no" phoneNumber="+47 XXX XXX XX"/> 
         </div>
       </WhiteText>
     </div>
