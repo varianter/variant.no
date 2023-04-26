@@ -9,3 +9,9 @@
 .label__button a {
   text-decoration: none;
 }
+
+@media (min-width: 1000px) {
+  .label__button {
+    display: none;
+  }
+}
