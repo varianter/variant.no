@@ -15,6 +15,11 @@
   padding-top: 1rem;
 }
 
+.startskudd__wrapper {
+  display: flex;
+  height: 100vh;
+}
+
 .startskudd_right {
   display: flex;
   justify-content: flex-end;
@@ -56,10 +61,17 @@
 
   .startskudd__content {
     flex-direction: row;
+    flex-grow: 1;
     gap: 7rem;
   }
 
   .startskudd__section1 {
-    min-width: 657px;
+    min-width: 41rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .startskudd__wrapper {
+    align-items: center;
   }
 }

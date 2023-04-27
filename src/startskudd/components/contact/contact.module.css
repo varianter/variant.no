@@ -1,7 +1,7 @@
 .contact {
   display: flex;
-  justify-content: space-between;
-  width: 295px;
+  gap: 3rem;
+  width: fit-content;
 }
 
 .contact p {
