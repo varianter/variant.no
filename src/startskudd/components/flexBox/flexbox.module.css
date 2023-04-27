@@ -5,3 +5,10 @@
 
   margin-top: 4.25rem;
 }
+
+@media (min-width: 1000px) {
+  .flexbox {
+    margin-top: 0;
+    min-width: 483px;
+  }
+}

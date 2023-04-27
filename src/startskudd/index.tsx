@@ -15,9 +15,10 @@ const Startskudd = () => {
       <WhiteText>
         <nav className={style.startskudd__backButton}>
           <LinkButton href="/">👈 til variant.no</LinkButton>
+          <LinkButton href={''}>Scroll 👉</LinkButton>
         </nav>
         <div className={style.startskudd__content}>
-          <section id="Velkommen">
+          <section id="Velkommen" className={style.startskudd__section1}>
             <div className={style.startskudd_right}>
               <Label>Velkommen</Label>
             </div>

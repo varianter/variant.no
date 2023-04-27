@@ -1,6 +1,7 @@
 .contact {
   display: flex;
   justify-content: space-between;
+  width: 295px;
 }
 
 .contact p {

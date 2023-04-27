@@ -48,12 +48,21 @@
     );
   }
 
+  .startskudd__backButton {
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+
   .startskudd__content {
     flex-direction: row;
     gap: 7rem;
   }
 
+  .startskudd__section1 {
+    min-width: 657px;
+  }
+
   .startskudd__content > section {
-    min-width: 18.5rem;
+    /* min-width: 18.5rem; */
   }
 }
