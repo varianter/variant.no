@@ -16,8 +16,7 @@
 }
 
 .startskudd__wrapper {
-  display: flex;
-  height: 100vh;
+  display: block;
 }
 
 .startskudd_right {
@@ -57,6 +56,11 @@
   .startskudd__backButton {
     justify-content: space-between;
     padding-inline: 1rem;
+  }
+
+  .startskudd__wrapper {
+    display: flex;
+    height: 100vh;
   }
 
   .startskudd__content {
