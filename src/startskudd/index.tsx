@@ -8,10 +8,14 @@ import Meny from './components/meny/meny';
 import { WhiteText } from './components/whiteText';
 import style from './startskudd.module.css';
 import TimeSchedule from './components/timeSchedule/timeSchedule';
+import LinkButton from './components/buttons/linkButton';
 const Startskudd = () => {
   return (
     <div className={style.startskudd}>
       <WhiteText>
+        <nav className={style.startskudd__backButton}>
+          <LinkButton href="/">👈 til variant.no</LinkButton>
+        </nav>
         <div className={style.startskudd__content}>
           <section id="Velkommen">
             <div className={style.startskudd_right}>

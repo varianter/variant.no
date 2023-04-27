@@ -9,6 +9,12 @@
   );
 }
 
+.startskudd__backButton {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
 .startskudd_right {
   display: flex;
   justify-content: flex-end;

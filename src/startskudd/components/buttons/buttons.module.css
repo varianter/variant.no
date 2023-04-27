@@ -32,3 +32,10 @@
   padding: 1rem;
   margin: 0;
 }
+
+.linkButton_background {
+  background-color: var(--color-secondary1__shade4);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+}
