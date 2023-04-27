@@ -22,6 +22,7 @@
 
 .startskudd__h1 {
   font-size: 2.8125rem;
+  margin-bottom: 2rem;
 }
 
 .startskudd__content {
@@ -60,9 +61,5 @@
 
   .startskudd__section1 {
     min-width: 657px;
-  }
-
-  .startskudd__content > section {
-    /* min-width: 18.5rem; */
   }
 }
