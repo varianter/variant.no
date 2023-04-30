@@ -20,6 +20,7 @@ module.exports = withBundleAnalyzer(
       disableStaticImages: true,
       domains: [
         'variantno.blob.core.windows.net',
+        'chewiesald2ijhpvmb34c.blob.core.windows.net',
         'podcast.variant.no', // Need this to get the images for the RSS feed
         'images.transistor.fm', // this
         'img.youtube.com', // this
