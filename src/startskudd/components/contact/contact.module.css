@@ -12,3 +12,9 @@
   font-family: 'Recoleta', serif;
   font-weight: 500;
 }
+
+@media (min-width: 1000px) {
+  .contact {
+    width: 17rem;
+  }
+}

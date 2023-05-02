@@ -61,7 +61,7 @@ const Startskudd = () => {
               <AccordianButton title="Kunde" text="Kunde" />
             </section>
 
-            <section id="Kontakt" className={style.test}>
+            <section id="Kontakt">
               <Flexbox>
                 <h2 className={style.startskudd__h2}>💬 Kontakt</h2>
                 <Label>Kontakt</Label>

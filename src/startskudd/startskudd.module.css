@@ -65,7 +65,6 @@
 
   .startskudd__content {
     flex-direction: row;
-    flex-grow: 1;
     gap: 7rem;
   }
 
