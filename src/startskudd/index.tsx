@@ -28,9 +28,16 @@ const Startskudd = () => {
               </p>
               <h1 className={style.startskudd__h1}>Startskudd!!!</h1>
               <p>
-                Vi gleder oss så masse at du er med på laget! Nedenfor finner du
-                svar på nesten alt du kunne lure på , fra praktisk info til
-                program og kontaktpersoner.
+                Startskudd er vårt skreddersydde onboardingsløp for deg som er
+                nyutdannet og eller ny i Variant. Målet er ganske enkelt å gi
+                deg den aller beste starten på arbeidslivet!
+              </p>
+              <p>
+                Gjennom en uke med faglig og sosialt opplegg skal vi sørge for å
+                gi deg trygghet i rollen som konsulent, introduksjon til
+                Variants fagdisipliner og verdier, og ikke minst en
+                helhetsforståelse rundt prosjektarbeid. Så skal vi selvfølgelig
+                også bygge relasjoner på tvers av byer og ansiennitet!
               </p>
             </section>
 
