@@ -1,0 +1,11 @@
+.clock {
+  background-color: var(--color-secondary1);
+
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.clock > * {
+  margin-top: 0;
+}

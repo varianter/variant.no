@@ -9,10 +9,12 @@ import { WhiteText } from './components/whiteText';
 import style from './startskudd.module.css';
 import TimeSchedule from './components/timeSchedule/timeSchedule';
 import LinkButton from './components/buttons/linkButton';
+import Clock from './components/clock/clock';
 const Startskudd = () => {
   return (
     <div className={style.startskudd}>
       <WhiteText>
+        <Clock />
         <nav className={style.startskudd__backButton}>
           <LinkButton href="/">👈 til variant.no</LinkButton>
           <LinkButton href={''}>Scroll 👉</LinkButton>
