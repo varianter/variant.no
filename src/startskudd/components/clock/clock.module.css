@@ -1,5 +1,7 @@
 .clock {
+  position: relative;
   background-color: var(--color-secondary1);
+  padding-block: 1rem;
 
   display: flex;
   gap: 2rem;
