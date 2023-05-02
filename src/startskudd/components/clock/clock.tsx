@@ -33,10 +33,25 @@ const Clock = () => {
 
   return (
     <div className={style.clock}>
-      <p>{timeUntilStartskudd.days} dager</p>
-      <p>{timeUntilStartskudd.hours} timer</p>
-      <p>{timeUntilStartskudd.minutes} minutter</p>
-      <p>{timeUntilStartskudd.seconds} sekunder</p>
+      <div className={style.clock__time}>
+        <div>
+          <p>{timeUntilStartskudd.days}</p>
+          <p>dager</p>
+        </div>
+        <div>
+          <p>{timeUntilStartskudd.hours}</p>
+          <p>timer</p>
+        </div>
+        <div>
+          <p>{timeUntilStartskudd.minutes}</p>
+          <p>minutter</p>
+        </div>
+        <div>
+          <p>{timeUntilStartskudd.seconds}</p>
+          <p>sekunder</p>
+        </div>
+      </div>
+      <p>igjen!</p>
     </div>
   );
 };
