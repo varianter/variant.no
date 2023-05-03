@@ -81,7 +81,7 @@ const Startskudd = () => {
                 </div>
                 <div>
                   <p>Retur:</p>
-                  <p>Fredag, 1. august</p>
+                  <p>Fredag, 11. august</p>
                 </div>
               </div>
               <p className={style.startskudd__info_p}>
@@ -125,7 +125,7 @@ const Startskudd = () => {
 
             <section id="Mandag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🐳 Mandag 08.08.</h2>
+                <h2 className={style.startskudd__h2}>🐳 Mandag 07.08.</h2>
                 <Label>Mandag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
@@ -147,7 +147,7 @@ const Startskudd = () => {
 
             <section id="Tirsdag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🐥 Tirsdag 09.08.</h2>
+                <h2 className={style.startskudd__h2}>🐥 Tirsdag 08.08.</h2>
                 <Label>Tirsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
@@ -171,7 +171,7 @@ const Startskudd = () => {
 
             <section id="Onsdag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🐽 Onsdag 10.08.</h2>
+                <h2 className={style.startskudd__h2}>🐽 Onsdag 09.08.</h2>
                 <Label>Onsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
@@ -195,7 +195,7 @@ const Startskudd = () => {
 
             <section id="Torsdag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🦧 Torsdag 11.08.</h2>
+                <h2 className={style.startskudd__h2}>🦧 Torsdag 10.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
@@ -213,7 +213,7 @@ const Startskudd = () => {
 
             <section id="Fredag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🦦 Fredag 12.08.</h2>
+                <h2 className={style.startskudd__h2}>🦦 Fredag 11.08.</h2>
                 <Label>Fredag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
