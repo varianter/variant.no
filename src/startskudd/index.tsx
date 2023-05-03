@@ -129,24 +129,19 @@ const Startskudd = () => {
                 <Label>Mandag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
+              <TimeSchedule time={'08:00 - 09:00'} activity={'Velkommen'} />
               <TimeSchedule
-                time={'08:00 - 09:00'}
-                activity={
-                  'Keynote v/ Even: Tverrfaglig arbeid/kommunikasjon/presentasjon'
-                }
+                time={'09:00 - 11:30'}
+                activity={'Caseintroduksjon'}
               />
-              <TimeSchedule time={'09:00 - 11:30'} activity={'Casearbeid'} />
               <TimeSchedule time={'11:30 - 12:30'} activity={'Lunsj'} />
               <TimeSchedule time={'12:30 - 16:00'} activity={'Casearbeid'} />
               <TimeSchedule time={'16:00 - 17:00'} activity={'Pause'} />
               <TimeSchedule
-                time={'17:00 - 18:00'}
-                activity={'Vidsyn v/ Tonje'}
+                time={'17:00 - 19:00'}
+                activity={'Intro til positiv psykologi'}
               />
-              <TimeSchedule
-                time={'18:00 - 21:00'}
-                activity={'Felles middag & sosial happening'}
-              />
+              <TimeSchedule time={'19:00'} activity={'Felles middag'} />
             </section>
 
             <section id="Tirsdag">
