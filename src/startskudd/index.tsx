@@ -88,7 +88,12 @@ const Startskudd = () => {
                 Vi trenger også å vite noen ting om deg, ang matallergier osv!
                 Vennligst fyll ut denne:
               </p>
-              <LinkButton fullWidth={true} href={''}>
+              <LinkButton
+                fullWidth={true}
+                href={
+                  'https://forms.office.com/Pages/ResponsePage.aspx?id=d9AWD4K9bEq0mFJ0EjkgX75Jwo80giZKktRwRxJohvJURUVWNUxOUFhOSFE0WDJYNFhUMUE0NFBTVy4u'
+                }
+              >
                 Spørreundersøkelse ➡️
               </LinkButton>
             </section>
