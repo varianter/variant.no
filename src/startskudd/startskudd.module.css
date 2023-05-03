@@ -62,8 +62,8 @@
   .startskudd__content {
     flex-direction: row;
     gap: 7rem;
-    padding-top: 9rem;
-    margin-top: -6rem;
+    padding-top: 11rem;
+    margin-top: -10rem;
     background: linear-gradient(
       112.87deg,
       var(--color-primary) 0%,
