@@ -38,6 +38,16 @@
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 3rem;
+  transition: 0.4s all;
+}
+
+.linkButton_background:hover {
+  cursor: pointer;
+  background-color: var(--color-secondary1__tint1);
+}
+
+.linkButton_background:active {
+  scale: 0.9;
 }
 
 @media (min-width: 1000px) {
