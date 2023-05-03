@@ -5,12 +5,22 @@ import style from './buttons.module.css';
 type LinkButtonProps = {
   href: string;
   children: React.ReactNode;
+  fullWidth?: boolean;
 };
 
-const LinkButton = ({ href, children }: LinkButtonProps) => {
+const LinkButton = ({ href, children, fullWidth }: LinkButtonProps) => {
   return (
     <Link className={style.linkButton} href={href}>
-      <div className={style.linkButton_background}>{children}</div>
+      <div
+        style={
+          fullWidth
+            ? { width: '100%', textAlign: 'center' }
+            : { width: 'fit-content' }
+        }
+        className={style.linkButton_background}
+      >
+        {children}
+      </div>
     </Link>
   );
 };

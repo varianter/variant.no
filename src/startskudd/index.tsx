@@ -56,6 +56,7 @@ const Startskudd = () => {
                 <MenyButton text="Onsdag" emoji="🐽" />
                 <MenyButton text="Torsdag" emoji="🦧" />
                 <MenyButton text="Fredag" emoji="🦦" />
+                <MenyButton text="Startskudd 22" emoji="🖼️" />
               </Meny>
             </section>
 
@@ -64,10 +65,33 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>📌 Praktisk info</h2>
                 <Label>Praktisk info</Label>
               </Flexbox>
-              <AccordianButton title="Lunsj" text="Lunsj" />
-              <AccordianButton title="start/sluttid" text="start/sluttid" />
-              <AccordianButton title="Lønn" text="Lønn" />
-              <AccordianButton title="Kunde" text="Kunde" />
+              <div className={style.startskudd__info}>
+                <div>
+                  <p>Start:</p>
+                  <p>Lørdag, 5. august</p>
+                </div>
+                <div>
+                  <p>Sted:</p>
+                  <p>Trondheim</p>
+                </div>
+                <div>
+                  <p>Avreise:</p>
+                  <p>
+                    Søndag, 6. august – felles avreise til Bjerkeløkkja i Oppdal
+                  </p>
+                </div>
+                <div>
+                  <p>Retur:</p>
+                  <p>Fredag, 1. august</p>
+                </div>
+              </div>
+              <p className={style.startskudd__info_p}>
+                Vi trenger også å vite noen ting om deg, ang matallergier osv!
+                Vennligst fyll ut denne:
+              </p>
+              <LinkButton fullWidth={true} href={''}>
+                Spørreundersøkelse ➡️
+              </LinkButton>
             </section>
 
             <section id="Kontakt">

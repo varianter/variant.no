@@ -40,6 +40,36 @@
   font-size: 1.25rem;
 }
 
+.startskudd__info {
+  width: 20rem;
+  margin-bottom: 6rem;
+}
+
+.startskudd__info > p {
+  display: none;
+}
+
+.startskudd__info > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.startskudd__info > div p {
+  margin: 0;
+}
+
+.startskudd__info > div p:nth-child(1) {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+}
+
+.startskudd__info_p {
+  margin-bottom: 1.25rem;
+}
+
 @media (min-width: 1000px) {
   .startskudd {
     width: 100%;
