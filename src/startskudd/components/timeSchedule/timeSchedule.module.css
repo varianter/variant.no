@@ -1,6 +1,8 @@
 .timeSchedule {
-  display: flex;
-  justify-content: space-between;
+  width: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
 }
 
 .timeSchedule p {
@@ -8,15 +10,7 @@
   word-wrap: break-word;
 }
 
-.timeSchedule_left {
-  width: 50%;
-}
-
 .timeSchedule_left p {
   font-family: 'Recoleta', serif;
   font-weight: 500;
-}
-
-.timeSchedule_right {
-  width: 50%;
 }
