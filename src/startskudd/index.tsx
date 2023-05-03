@@ -1,5 +1,4 @@
 import React from 'react';
-import AccordianButton from './components/buttons/accordianButton';
 import { MenyButton } from './components/buttons/meny';
 import { Contact } from './components/contact/contact';
 import { Flexbox } from './components/flexBox/flexbox';
