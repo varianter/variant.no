@@ -7,6 +7,11 @@
   padding-bottom: 1rem;
   border-radius: 20px;
   align-items: center;
+  transition: 0.4s all;
+}
+
+.menyButton:hover {
+  background: var(--color-secondary1__tint2);
 }
 
 .menyButton__emoji {
