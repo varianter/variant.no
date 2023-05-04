@@ -1,11 +1,30 @@
 import style from './carousel.module.css';
-import image1 from './images/DSC09238.jpg';
-import image2 from './images/DSC09322.jpg';
-import image3 from './images/DSC09358.jpg';
+import image1 from './images/20220807-235420-Bjerkelokkja-Trondelag-2022.jpg';
+import image2 from './images/20220808-163026-Bjerkelokkja-Trondelag-2022.jpg';
+import image3 from './images/20220808-205047-Trondelag-Norway-2022.jpg';
+import image4 from './images/20220809-053527-Trondelag-Norway-2022.jpg';
+import image5 from './images/20220809-065100-People-Trondelag-2022.jpg';
+import image6 from './images/20220809-190121-Trondelag-Norway-2022.jpg';
+import image7 from './images/20220810-184029-Bjerkelokkja-Trondelag-2022.jpg';
+import image8 from './images/20220811-185923-Trondelag-Norway-2022.jpg';
+import image9 from './images/20220811-222048-Bjerkelokkja-Trondelag-2022.jpg';
+import image10 from './images/20220812-115433-Trym-Morten-And-Jon-Trondelag-2022.jpg';
+
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const imagesSrc: string[] = [image1, image2, image3];
+const imagesSrc: string[] = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+];
 
 const Carousel = () => {
   const [imageIndex, setImageIdex] = useState(0);
