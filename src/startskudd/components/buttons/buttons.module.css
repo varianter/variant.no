@@ -19,25 +19,6 @@
   align-self: center;
 }
 
-.accordianButton {
-  width: 100%;
-  color: var(--color-standard__white);
-  border: none;
-  background: rgba(115, 110, 190, 0.5);
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
-
-.accordianButton p:nth-child(1) {
-  text-align: center;
-}
-
-.accordianButton p:nth-child(2) {
-  text-align: start;
-  padding: 1rem;
-  margin: 0;
-}
-
 .linkButton_background {
   background-color: var(--color-secondary1__shade4);
   width: fit-content;
