@@ -36,8 +36,6 @@ const Carousel = () => {
             return (
               <motion.div
                 className={style.motion_div}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
                 animate={{ x: `-${imageIndex * 100}%` }}
                 transition={{ ease: 'linear' }}
               >

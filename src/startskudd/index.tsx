@@ -163,23 +163,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐽 Onsdag 09.08.</h2>
                 <Label>Onsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
-              <TimeSchedule
-                time={'08:00 - 09:00'}
-                activity={'Hva betyr "design"?'}
-              />
-              <TimeSchedule time={'09:00 - 11:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'11:30 - 12:30'} activity={'Lunsj'} />
-              <TimeSchedule time={'12:30 - 16:00'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00 - 17:00'} activity={'Pause'} />
-              <TimeSchedule
-                time={'17:00 - 18:00'}
-                activity={'Consulting light'}
-              />
-              <TimeSchedule
-                time={'19:00'}
-                activity={'Felles middag på Bjerkeløkkja'}
-              />
+              <TimeSchedule time={'TBA'} activity={''} />
             </section>
 
             <section id="Torsdag">
@@ -187,17 +171,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦧 Torsdag 10.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
-              <TimeSchedule
-                time={'08:00 - 09:00'}
-                activity={'Tverrfaglig samarbeid'}
-              />
-              <TimeSchedule time={'09:00 - 11:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'11:30 - 12:30'} activity={'Lunsj'} />
-              <TimeSchedule time={'12:30 - 16:00'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00 - 17:00'} activity={'Pause'} />
-              <TimeSchedule time={'17:00 - 19:00'} activity={'Vidsyn'} />
-              <TimeSchedule time={'19:00'} activity={'Ølkurs og pizza'} />
+              <TimeSchedule time={'TBA'} activity={''} />
             </section>
 
             <section id="Fredag">
@@ -205,17 +179,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦦 Fredag 11.08.</h2>
                 <Label>Fredag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:00 - 08:00'} activity={'Frokost'} />
-
-              <TimeSchedule time={'08:00 - 10:00'} activity={'Casearbeid'} />
-              <TimeSchedule
-                time={'10:00 - 12:00'}
-                activity={'Case-presentasjon'}
-              />
-              <TimeSchedule
-                time={'12:00'}
-                activity={'Felles lunsj og avsluttning'}
-              />
+              <TimeSchedule time={'TBA'} activity={''} />
             </section>
 
             <section id="Startskudd 22">
