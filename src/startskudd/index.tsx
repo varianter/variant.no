@@ -51,6 +51,8 @@ const Startskudd = () => {
               <Meny>
                 <MenyButton text="Praktisk info" emoji="📌" />
                 <MenyButton text="Kontakt" emoji="💬" />
+                <MenyButton text="Lørdag" emoji="🐧" />
+                <MenyButton text="Søndag" emoji="🐨" />
                 <MenyButton text="Mandag" emoji="🐳" />
                 <MenyButton text="Tirsdag" emoji="🐥" />
                 <MenyButton text="Onsdag" emoji="🐽" />
@@ -122,6 +124,22 @@ const Startskudd = () => {
                 email="mm@variant.no"
                 phoneNumber="+47 XXX XXX XX"
               />
+            </section>
+
+            <section id="Lørdag">
+              <Flexbox>
+                <h2 className={style.startskudd__h2}>🐧 Lørdag 05.08.</h2>
+                <Label>Lørdag</Label>
+              </Flexbox>
+              <TimeSchedule time={'TBA'} activity={''} />
+            </section>
+
+            <section id="Søndag">
+              <Flexbox>
+                <h2 className={style.startskudd__h2}>🐨 Søndag 06.08.</h2>
+                <Label>Søndag</Label>
+              </Flexbox>
+              <TimeSchedule time={'TBA'} activity={''} />
             </section>
 
             <section id="Mandag">
