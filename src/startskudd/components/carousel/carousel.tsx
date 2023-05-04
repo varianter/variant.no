@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import style from './carousel.module.css';
 import image1 from './images/DSC09238.jpg';
 import image2 from './images/DSC09322.jpg';
