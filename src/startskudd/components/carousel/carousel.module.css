@@ -32,6 +32,15 @@
   background: var(--color-secondary1__shade1);
   color: var(--color-standard__white);
   padding: 0.5rem 1rem;
+  transition: 0.4s all;
+}
+
+.buttons button:hover {
+  background-color: var(--color-secondary1__tint1);
+}
+
+.buttons button:active {
+  scale: 0.9;
 }
 
 @media (min-width: 1000px) {
