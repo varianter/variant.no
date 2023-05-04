@@ -1,7 +1,8 @@
 .contact {
-  display: flex;
-  gap: 3rem;
-  width: fit-content;
+  width: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
 }
 
 .contact p {
@@ -11,10 +12,4 @@
 .contact_left p {
   font-family: 'Recoleta', serif;
   font-weight: 500;
-}
-
-@media (min-width: 1000px) {
-  .contact {
-    width: 17rem;
-  }
 }

@@ -107,22 +107,22 @@ const Startskudd = () => {
                 <Label>Kontakt</Label>
               </Flexbox>
               <Contact
-                firstName="Max"
-                surname="Mustermann"
-                email="mm@variant.no"
-                phoneNumber="+47 XXX XXX XX"
+                firstName="Andreas"
+                surname="A. Hartveit"
+                email="andreas@variant.no"
+                phoneNumber="+47 950 06 947"
               />
               <Contact
-                firstName="Max"
-                surname="Mustermann"
-                email="mm@variant.no"
-                phoneNumber="+47 XXX XXX XX"
+                firstName="Morten"
+                surname="Nordseth"
+                email="mn@variant.no"
+                phoneNumber="+47 958 49 813"
               />
               <Contact
-                firstName="Max"
-                surname="Mustermann"
-                email="mm@variant.no"
-                phoneNumber="+47 XXX XXX XX"
+                firstName="Jenni"
+                surname="Yang"
+                email="jy@variant.no"
+                phoneNumber="+47 414 91 391"
               />
             </section>
 
