@@ -17,7 +17,7 @@ const Startskudd = () => {
         <Clock />
         <nav className={style.startskudd__backButton}>
           <LinkButton href="/">👈 til variant.no</LinkButton>
-          <LinkButton href={''}>Scroll 👉</LinkButton>
+          <p>Scroll 👉</p>
         </nav>
         <div className={style.startskudd__wrapper}>
           <div className={style.startskudd__content}>

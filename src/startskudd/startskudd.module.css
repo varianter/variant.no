@@ -15,6 +15,13 @@
   padding-top: 1rem;
 }
 
+.startskudd__backButton > p {
+  background: rgba(26, 24, 55, 0.3);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  display: none;
+}
+
 .startskudd__wrapper {
   display: block;
 }
@@ -82,6 +89,10 @@
     justify-content: space-between;
     padding-inline: 1rem;
     position: relative;
+  }
+
+  .startskudd__backButton > p {
+    display: block;
   }
 
   .startskudd__wrapper {
