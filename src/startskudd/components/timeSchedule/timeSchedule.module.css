@@ -1,0 +1,16 @@
+.timeSchedule {
+  width: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.timeSchedule p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.timeSchedule_left p {
+  font-family: 'Recoleta', serif;
+  font-weight: 500;
+}

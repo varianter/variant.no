@@ -1,0 +1,20 @@
+.contact {
+  display: flex;
+  gap: 3rem;
+  width: fit-content;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact_left p {
+  font-family: 'Recoleta', serif;
+  font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    width: 17rem;
+  }
+}
