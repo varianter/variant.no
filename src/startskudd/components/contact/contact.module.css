@@ -1,7 +1,8 @@
 .contact {
-  display: flex;
-  gap: 3rem;
-  width: fit-content;
+  min-width: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
 }
 
 .contact p {
