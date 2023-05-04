@@ -9,6 +9,7 @@ import style from './startskudd.module.css';
 import TimeSchedule from './components/timeSchedule/timeSchedule';
 import LinkButton from './components/buttons/linkButton';
 import Clock from './components/clock/clock';
+import Carousel from './components/carousel/carousel';
 const Startskudd = () => {
   return (
     <div className={style.startskudd}>
@@ -197,6 +198,23 @@ const Startskudd = () => {
                 time={'12:00'}
                 activity={'Felles lunsj og avsluttning'}
               />
+            </section>
+
+            <section id="Startskudd 22">
+              <Flexbox>
+                <h2 className={style.startskudd__h2}>🖼️ Startskudd 22</h2>
+                <Label>Startskudd 22</Label>
+              </Flexbox>
+              <p>Enda nysgjerrig? Les hvordan Startskudd var i fjor!</p>
+              <LinkButton
+                fullWidth={true}
+                href={
+                  'https://blog.variant.no/klar-ferdig-g%C3%A5-startskudd-2022-c2af1f8faad'
+                }
+              >
+                Les bloggpost 👩‍💻
+              </LinkButton>
+              <Carousel />
             </section>
           </div>
         </div>
