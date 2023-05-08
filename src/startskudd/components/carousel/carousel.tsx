@@ -52,11 +52,15 @@ const Carousel = () => {
         </div>
       </AnimatePresence>
       <div className={style.buttons}>
-        {imageIndex > 0 && (
+        {imageIndex > 0 ? (
           <button onClick={() => setImageIdex(imageIndex - 1)}>Tilbake</button>
+        ) : (
+          <div></div>
         )}
-        {imageIndex < imagesSrc.length - 1 && (
+        {imageIndex < imagesSrc.length - 1 ? (
           <button onClick={() => setImageIdex(imageIndex + 1)}>Neste</button>
+        ) : (
+          <div></div>
         )}
       </div>
     </div>
