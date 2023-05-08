@@ -10,7 +10,12 @@ type LinkButtonProps = {
 
 const LinkButton = ({ href, children, fullWidth }: LinkButtonProps) => {
   return (
-    <Link className={style.linkButton} href={href}>
+    <Link
+      target="_blank"
+      rel="noopener noreferrer"
+      className={style.linkButton}
+      href={href}
+    >
       <div
         style={
           fullWidth
