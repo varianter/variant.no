@@ -10,9 +10,15 @@ import TimeSchedule from './components/timeSchedule/timeSchedule';
 import LinkButton from './components/buttons/linkButton';
 import Clock from './components/clock/clock';
 import Carousel from './components/carousel/carousel';
+import Head from 'next/head';
+import favicon from '@variant/profile/lib/logo/favicon.png';
 const Startskudd = () => {
   return (
     <div className={style.startskudd}>
+      <Head>
+        <title>Startskudd</title>
+        <link rel="icon" href={favicon} />
+      </Head>
       <WhiteText>
         <Clock />
         <nav className={style.startskudd__backButton}>
