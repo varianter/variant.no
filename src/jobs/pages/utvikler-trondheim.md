@@ -25,6 +25,7 @@ For tiden jobber vi mye med:
 
 - JavaScript (i alle mulige former, som f.eks React og Node.js)
 - [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
+- React og React Native
 - Docker og Kubernetes
 - C# og .NET
 - Skyplattformer som Azure, AWS, Vercel og Heroku
@@ -35,7 +36,6 @@ Så vil vi gjerne jobbe mer med:
 - Three.JS og WebGL
 - Design Systems
 - F#, OCaml eller ReasonML
-- React Native
 - Open source-arbeid
 
 <div class="right margin">
