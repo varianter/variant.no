@@ -23,20 +23,20 @@ Hos oss vil du jobbe med ulike arbeidsoppgaver ut i fra egne ønsker om bransje 
 
 For tiden jobber vi mye med:
 
-- JavaScript (i alle mulige former, som f.eks React og Node.js),
-- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327),
-- Docker og Kubernetes,
-- C#, .NET Core,
-- Skyplattformer (Azure, AWS, Vercel og Heroku),
-- og ikke minst: empati, utviklerkultur og samarbeid.
+- JavaScript (i alle mulige former, som f.eks React og Node.js)
+- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
+- React og React Native
+- Docker og Kubernetes
+- C# og .NET
+- Skyplattformer som Azure, AWS, Vercel og Heroku
+- og ikke minst: empati, utviklerkultur og samarbeid
 
 Så vil vi gjerne jobbe mer med:
 
-- Three.JS og WebGL,
-- Design Systems,
-- F#, OCaml eller ReasonML,
-- React Native og
-- Open source-arbeid.
+- Three.JS og WebGL
+- Design Systems
+- F#, OCaml eller ReasonML
+- Open source-arbeid
 
 <div class="right margin">
 
@@ -53,10 +53,10 @@ Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig, og for tiden b
 
 Akkurat nå hjelper vi noen av våre kunder med blant annet:
 
-- Massiv omveltning til skyplattformer,
-- Nyutvikling av web-applikasjoner,
-- Å lage en utviklerportal for enklere API-selvtjeneste og
-- Analyse av viktige ytelsesforbedringer i tjenestearkitekturer.
+- Massiv omveltning til skyplattformer
+- Nyutvikling av web-applikasjoner
+- Å lage en utviklerportal for enklere API-selvtjeneste
+- Analyse av viktige ytelsesforbedringer i tjenestearkitekturer
 
 ## Hos oss får du:
 
