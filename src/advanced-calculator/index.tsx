@@ -432,7 +432,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
           <InView>
             <ul>
               <li>
-                Gadgetbudsjett på <strong>10 000 kr</strong> i året.
+                Gadgetbudsjett på <strong>11 000 kr</strong> i året.
               </li>
               <li>Dekt telefonabonnement.</li>
               <li>
