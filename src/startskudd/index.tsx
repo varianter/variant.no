@@ -143,7 +143,9 @@ const Startskudd = () => {
               />
               <TimeSchedule
                 time={'08:00'}
-                activity={'Fly DY742 fra Gardermoen til Værnes'}
+                activity={
+                  'Fly DY742 fra Gardermoen til Værnes. For de som ønsker dekker vi selvsagt sovekupé på nattoget i stedet for fly'
+                }
               />
               <TimeSchedule
                 time={'11:00'}
@@ -170,7 +172,7 @@ const Startskudd = () => {
               />
               <TimeSchedule
                 time={'12:00'}
-                activity={'Escape Room på Varianthuset!'}
+                activity={'Escape Room på Varianthuset'}
               />
               <TimeSchedule time={'13:00'} activity={'Byvandring?'} />
               <TimeSchedule time={'15:30'} activity={'Middag'} />
