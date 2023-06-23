@@ -76,7 +76,7 @@ const Startskudd = () => {
               <div className={style.startskudd__info}>
                 <div>
                   <p>Start:</p>
-                  <p>Lørdag, 5. august</p>
+                  <p>Lørdag, 5. august, 11:00</p>
                 </div>
                 <div>
                   <p>Sted:</p>
@@ -168,7 +168,7 @@ const Startskudd = () => {
               <TimeSchedule time={'15:30'} activity={'Middag'} />
               <TimeSchedule
                 time={'17:50'}
-                activity={'Buss fra Trondheim S til Oppdal'}
+                activity={'Vy Buss fra Trondheim S til Oppdal'}
               />
               <TimeSchedule time={'20:00'} activity={'Innsjekk Bjerkeløkkja'} />
             </section>
@@ -211,6 +211,18 @@ const Startskudd = () => {
                 <Label>Fredag</Label>
               </Flexbox>
               <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule
+                time={'12:05'}
+                activity={'Tog fra Oppdal til Oslo'}
+              />
+              <TimeSchedule
+                time={'12:10'}
+                activity={'Vy Buss fra Oppdal til Trondheim S'}
+              />
+              <TimeSchedule
+                time={'17:45'}
+                activity={'Fly DY624 fra Gardermoen til Flesland'}
+              />
             </section>
 
             <section id="Startskudd 22">
