@@ -138,6 +138,14 @@ const Startskudd = () => {
                 <Label>Lørdag</Label>
               </Flexbox>
               <TimeSchedule
+                time={'07:40'}
+                activity={'Fly WF627 fra Flesland til Værnes'}
+              />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Fly DY742 fra Gardermoen til Værnes'}
+              />
+              <TimeSchedule
                 time={'11:00'}
                 activity={'Brunch og velkomst på Varianthuset i Trondheim'}
               />
