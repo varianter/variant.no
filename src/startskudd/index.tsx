@@ -125,10 +125,10 @@ const Startskudd = () => {
                 phoneNumber="+47 958 49 813"
               />
               <Contact
-                firstName="Jenni"
-                surname="Yang"
-                email="jy@variant.no"
-                phoneNumber="+47 414 91 391"
+                firstName="Tore Stensaker"
+                surname="Tefre"
+                email="tst@variant.no"
+                phoneNumber="+47 957 04 576"
               />
             </section>
 
@@ -137,7 +137,17 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐧 Lørdag 05.08.</h2>
                 <Label>Lørdag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule
+                time={'11:00'}
+                activity={'Brunch og velkomst på Varianthuset i Trondheim'}
+              />
+              <TimeSchedule time={'13:00'} activity={'Sosial aktivitet'} />
+              <TimeSchedule
+                time={'15:00'}
+                activity={'Innsjekk på hotell og avslapping'}
+              />
+              <TimeSchedule time={'TBA'} activity={'Middag'} />
+              <TimeSchedule time={'TBA'} activity={'Noe gøy etter middag!'} />
             </section>
 
             <section id="Søndag">
@@ -145,7 +155,19 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐨 Søndag 06.08.</h2>
                 <Label>Søndag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'09:30'} activity={'Frokost'} />
+              <TimeSchedule
+                time={'11:30'}
+                activity={'Utsjekk og flytting til Varianthuset'}
+              />
+              <TimeSchedule
+                time={'12:00'}
+                activity={'Escape Room på Varianthuset!'}
+              />
+              <TimeSchedule time={'13:00'} activity={'Byvandring?'} />
+              <TimeSchedule time={'15:30'} activity={'Middag'} />
+              <TimeSchedule time={'17:50'} activity={'Buss til Oppdal'} />
+              <TimeSchedule time={'20:00'} activity={'Innsjekk Bjerkeløkkja'} />
             </section>
 
             <section id="Mandag">
