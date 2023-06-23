@@ -166,7 +166,10 @@ const Startskudd = () => {
               />
               <TimeSchedule time={'13:00'} activity={'Byvandring?'} />
               <TimeSchedule time={'15:30'} activity={'Middag'} />
-              <TimeSchedule time={'17:50'} activity={'Buss til Oppdal'} />
+              <TimeSchedule
+                time={'17:50'}
+                activity={'Buss fra Trondheim S til Oppdal'}
+              />
               <TimeSchedule time={'20:00'} activity={'Innsjekk Bjerkeløkkja'} />
             </section>
 
