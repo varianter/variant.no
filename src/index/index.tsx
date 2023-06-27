@@ -1,3 +1,4 @@
+/*
 import DecorativeBoxes from '@components/decorative-boxes';
 import Head from 'next/head';
 import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
@@ -8,14 +9,17 @@ import { ButtonNextLink } from 'src/components/button';
 import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
-import { EmployeeItem } from 'src/employees/types';
-import { CaseJSON } from 'src/case/Case';
-import { HighlightedItemsLists } from 'src/rss/service';
 import PageTitle from '@components/page-title';
 import sommerjobbImg from './images/section1Blob.png';
 import Arrow from '@components/arrow';
 import { Heading3 } from '@components/heading';
 import Tjenesteomrader from 'src/tjenesteomrader';
+*/
+import Summersplash2022 from 'src/summersplash2022';
+import { EmployeeItem } from 'src/employees/types';
+import { CaseJSON } from 'src/case/Case';
+import { HighlightedItemsLists } from 'src/rss/service';
+
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -23,6 +27,7 @@ export type HomeProps = {
   feeds: HighlightedItemsLists;
 };
 
+/*
 const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   const cases = useMemo(() => {
     return randomCases.map((caseItem, index) => (
@@ -348,6 +353,5 @@ function JobLandingpage() {
       </h2>
     </div>
   );
-}
-
-export default Home;
+*/
+export default Summersplash2022; //Toggle back to Home later
