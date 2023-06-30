@@ -139,12 +139,12 @@ const Startskudd = () => {
               </Flexbox>
               <TimeSchedule
                 time={'07:40'}
-                activity={'Fly WF627 fra Flesland til Værnes'}
+                activity={'Bergen: Fly WF627 til Værnes'}
               />
               <TimeSchedule
                 time={'08:00'}
                 activity={
-                  'Fly DY742 fra Gardermoen til Værnes. For de som ønsker dekker vi selvsagt sovekupé på nattoget i stedet for fly'
+                  'Oslo: Fly DY742 til Værnes. For de som ønsker dekker vi selvsagt sovekupé på nattoget i stedet for fly'
                 }
               />
               <TimeSchedule
@@ -188,7 +188,18 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐳 Mandag 07.08.</h2>
                 <Label>Mandag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'12:30'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'16:00'} activity={'Fritid'} />
+              <TimeSchedule time={'19:00'} activity={'3-retters middag'} />
             </section>
 
             <section id="Tirsdag">
@@ -196,7 +207,21 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐥 Tirsdag 08.08.</h2>
                 <Label>Tirsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'12:30'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'15:00'} activity={'Fjelltur ⛰️'} />
+              <TimeSchedule
+                time={''}
+                activity={'Grilling (hvis været tillater det)'}
+              />
             </section>
 
             <section id="Onsdag">
@@ -204,7 +229,18 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐽 Onsdag 09.08.</h2>
                 <Label>Onsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'12:30'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'16:00'} activity={'Fritid'} />
+              <TimeSchedule time={'19:00'} activity={'Middag'} />
             </section>
 
             <section id="Torsdag">
@@ -212,7 +248,18 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦧 Torsdag 10.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'12:30'}
+                activity={'Casearbeid og presentasjon'}
+              />
+              <TimeSchedule time={'16:00'} activity={'Vi lager middag'} />
+              <TimeSchedule time={'18:00'} activity={'Quizløype'} />
             </section>
 
             <section id="Fredag">
@@ -220,18 +267,24 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦦 Fredag 11.08.</h2>
                 <Label>Fredag</Label>
               </Flexbox>
-              <TimeSchedule time={'TBA'} activity={''} />
+              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'08:00'} activity={'Pakking og utsjekk'} />
               <TimeSchedule
-                time={'12:05'}
-                activity={'Tog fra Oppdal til Oslo'}
+                time={'09:30'}
+                activity={'Presentasjon for kunde'}
               />
               <TimeSchedule
-                time={'12:10'}
-                activity={'Vy Buss fra Oppdal til Trondheim S'}
+                time={'13:00'}
+                activity={'Bergen: tog til Trondheim'}
               />
               <TimeSchedule
-                time={'17:45'}
-                activity={'Fly DY624 fra Gardermoen til Flesland'}
+                time={'13:00'}
+                activity={'Oslo og Trondheim: Lunsj'}
+              />
+              <TimeSchedule time={'15:06'} activity={'Oslo: SJ Tog til Oslo'} />
+              <TimeSchedule
+                time={'15:10'}
+                activity={'Trondheim: Vy Buss til Trondheim'}
               />
             </section>
 
