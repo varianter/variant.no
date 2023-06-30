@@ -191,7 +191,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐳 Mandag 07.08.</h2>
                 <Label>Mandag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule
                 time={'08:00'}
                 activity={'Casearbeid og presentasjon'}
@@ -201,7 +201,8 @@ const Startskudd = () => {
                 time={'12:30'}
                 activity={'Casearbeid og presentasjon'}
               />
-              <TimeSchedule time={'16:00'} activity={'Fritid'} />
+              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
+              <TimeSchedule time={'17:00'} activity={'Fritid'} />
               <TimeSchedule time={'19:00'} activity={'3-retters middag'} />
             </section>
 
@@ -210,7 +211,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐥 Tirsdag 08.08.</h2>
                 <Label>Tirsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule
                 time={'08:00'}
                 activity={'Casearbeid og presentasjon'}
@@ -220,7 +221,9 @@ const Startskudd = () => {
                 time={'12:30'}
                 activity={'Casearbeid og presentasjon'}
               />
-              <TimeSchedule time={'15:00'} activity={'Fjelltur ⛰️'} />
+              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
+              <TimeSchedule time={'17:00'} activity={'Fritid'} />
+              <TimeSchedule time={'18:00'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
                 time={''}
                 activity={'Grilling (hvis været tillater det)'}
@@ -232,7 +235,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐽 Onsdag 09.08.</h2>
                 <Label>Onsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule
                 time={'08:00'}
                 activity={'Casearbeid og presentasjon'}
@@ -242,7 +245,8 @@ const Startskudd = () => {
                 time={'12:30'}
                 activity={'Casearbeid og presentasjon'}
               />
-              <TimeSchedule time={'16:00'} activity={'Fritid'} />
+              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
+              <TimeSchedule time={'17:00'} activity={'Fritid'} />
               <TimeSchedule time={'19:00'} activity={'Middag'} />
             </section>
 
@@ -251,7 +255,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦧 Torsdag 10.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule
                 time={'08:00'}
                 activity={'Casearbeid og presentasjon'}
@@ -261,7 +265,8 @@ const Startskudd = () => {
                 time={'12:30'}
                 activity={'Casearbeid og presentasjon'}
               />
-              <TimeSchedule time={'16:00'} activity={'Vi lager middag'} />
+              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
+              <TimeSchedule time={'17:00'} activity={'Vi lager middag'} />
               <TimeSchedule time={'18:00'} activity={'Quizløype'} />
             </section>
 
@@ -270,7 +275,7 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦦 Fredag 11.08.</h2>
                 <Label>Fredag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:30'} activity={'Frokost'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule time={'08:00'} activity={'Pakking og utsjekk'} />
               <TimeSchedule
                 time={'09:30'}
