@@ -151,7 +151,10 @@ const Startskudd = () => {
                 time={'11:00'}
                 activity={'Brunch og velkomst på Varianthuset i Trondheim'}
               />
-              <TimeSchedule time={'13:00'} activity={'Sosial aktivitet'} />
+              <TimeSchedule
+                time={'13:00'}
+                activity={'Escape Room på Varianthuset'}
+              />
               <TimeSchedule
                 time={'15:00'}
                 activity={'Innsjekk på Comfort Hotel Trondheim'}
@@ -172,9 +175,9 @@ const Startskudd = () => {
               />
               <TimeSchedule
                 time={'12:00'}
-                activity={'Escape Room på Varianthuset'}
+                activity={'Sosial aktivitet på Varianthuset'}
               />
-              <TimeSchedule time={'13:00'} activity={'Byvandring?'} />
+              <TimeSchedule time={'14:00'} activity={'Byvandring?'} />
               <TimeSchedule time={'15:30'} activity={'Middag'} />
               <TimeSchedule
                 time={'17:50'}
