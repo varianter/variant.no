@@ -154,7 +154,7 @@ const Startskudd = () => {
               <TimeSchedule time={'13:00'} activity={'Sosial aktivitet'} />
               <TimeSchedule
                 time={'15:00'}
-                activity={'Innsjekk på hotell og avslapping'}
+                activity={'Innsjekk på Comfort Hotel Trondheim'}
               />
               <TimeSchedule time={'TBA'} activity={'Middag'} />
               <TimeSchedule time={'TBA'} activity={'Noe gøy etter middag!'} />
