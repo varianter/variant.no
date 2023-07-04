@@ -1,12 +1,21 @@
-import TimeLine from 'src/summersplash2022/img/tidslinje';
 import style from 'src/summersplash2022/index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import DarkRedBlob from '../img/mørkerødBlob';
 import Section6Blob from '../img/section6Blob';
-import TimeLineBlack from '../img/tidslinjeSvart';
 
-const AfterApplying = (props: { red: boolean }) => {
+export enum ApplyType {
+  GRADUATE,
+  SUMMER,
+}
+
+const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
   const Even = require('src/summersplash2022/img/Even.png');
+  let TimeLine;
+  if (props.applyType === ApplyType.GRADUATE) {
+    TimeLine = require('../img/graduate timeline.svg');
+  } else {
+    TimeLine = require('../../img/timeline.svg');
+  }
 
   if (props.red) {
     return (
@@ -39,7 +48,13 @@ const AfterApplying = (props: { red: boolean }) => {
           </div>
           <div className={style.section5Div2}>
             <div className={style.timeLine}>
-              <TimeLine />
+              <img
+                src={TimeLine}
+                alt="Søknadsfrist: 1.oktober, Kaffeprat: 4.-5.oktober, tilbud om sommerjobb: 6.oktober
+              sosiale og faglige arrangementer: november-juni, første arbeidsperiode: 10.juni - 5.juli (4 uker), ferie
+              8.juli - 26 juli (3 uker), andre arbeidsperiode : 29.juli - 9.august (2 uker)   "
+                style={{ zIndex: 1 }}
+              />
             </div>
 
             <div className={style.søknadstips}>
@@ -86,16 +101,13 @@ const AfterApplying = (props: { red: boolean }) => {
               spill- og fagkvelder, nyttårskalas og variantdager, som er fine
               muligheter til å bli bedre kjent før man starter.
             </p>
-            <div className={style.Even}>
-              <img src={Even} className={style.EvenPicture} alt="Even" />
-            </div>
             <div className={style2.section6Blob}>
               <Section6Blob />
             </div>
           </div>
           <div className={style.section5Div2}>
             <div className={style.timeLine}>
-              <TimeLineBlack />
+              <img src={TimeLine} alt="tidslinje" style={{ zIndex: 1, marginTop:'50px'}} />
             </div>
 
             <div className={style.søknadstips}>

@@ -32,14 +32,14 @@ const Apply = () => {
       <div className={style2.ApplyDiv}>
         <div className={style2.applyButtonPink}>
           <p>
-            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-designer-2023">
+            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-designer-2024">
               Søk som designer
             </a>
           </p>
         </div>
         <div className={style2.applyButtonBlue}>
           <p>
-            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-utvikler-2023">
+            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-utvikler-2024">
               Søk som utvikler
             </a>
           </p>

@@ -638,7 +638,7 @@
   top: 130px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 720px) {
   /* Heading Mobile */
   .heading {
     font-family: 'Recoleta';
@@ -1286,5 +1286,11 @@
   }
   .readMoreArrow {
     display: none;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 720px) {
+  .EvenPicture {
+    width: 35%;
   }
 }

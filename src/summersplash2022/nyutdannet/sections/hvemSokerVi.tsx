@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-import OfficeMap2 from '../img/kontorKart2';
 const WhoAreWeSeeking = () => {
   const [isDesktop, setIsDesktop] = useState(true);
+  const graduateNorwayMap = require('../img/graduate norway map.svg')
 
   const handleResize = () => {
     if (window.matchMedia('(max-width: 500px)').matches) {
@@ -26,14 +26,15 @@ const WhoAreWeSeeking = () => {
       <div className={style.section2Flex}>
         <div className={style.section2Text}>
           <p>
-            Vi søker 7 nyutdannede designere og utviklere som engasjerer og
-            motiverer, med oppstart 1. august 2023. Stillingene er fordelt på
-            våre kontorer i Trondheim og Bergen. Det er ikke viktig hvilke
+            Vi søker 17 nyutdannede designere og utviklere som engasjerer og
+            motiverer, med oppstart 1. august 2024. Stillingene er fordelt på
+            våre kontorer i Trondheim, Oslo og Bergen. Det er ikke viktig hvilke
             verktøy eller språk du bruker. Det er derimot viktig at du bryr deg.
             Bryr deg om koden du skriver, bryr deg om brukeren du lager noe for,
             og bryr deg om kunden du leverer til.
           </p>
-          {!isDesktop ? <OfficeMap2 /> : <></>}
+          {!isDesktop ? <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
+          4 designere, Oslo : 3 utviklere 3 designere ' width='100%' /> : <></>}
 
           <p>
             Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av
@@ -46,7 +47,8 @@ const WhoAreWeSeeking = () => {
             filosofien?
           </p>
         </div>
-        {isDesktop ? <OfficeMap2 /> : <></>}
+        {isDesktop ? <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
+          4 designere, Oslo : 3 utviklere 3 designere '/> : <></>}
       </div>
     </section>
   );

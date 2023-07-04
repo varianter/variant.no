@@ -14,12 +14,12 @@ const LandingPage = () => {
         </div>
         <span className={style.searchNewVariants}>
           <h1 className={style.bigHeading}>
-            Vi ser etter 7 nyutdannede varianter i 2023!
+            Vi ser etter 17 nyutdannede varianter i 2023!
           </h1>
         </span>
         <br />
         <div className={style.applyButtonPink}>
-          <p>Søk senest 2. oktober</p>
+          <p>Søk senest 1. oktober</p>
           <p>
             <a href="#sokfastjobb">Søk fast jobb</a>
           </p>

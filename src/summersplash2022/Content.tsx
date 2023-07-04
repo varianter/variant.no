@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Map from './img/map';
-import MapMobile from './img/mapMobile';
 import style from './index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import HandBooKPages from './utils/handBookPages';
@@ -8,7 +6,7 @@ import ReadMoreArrow from './img/lesMerPil';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
-import AfterApplying from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
+import AfterApplying, { ApplyType } from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
 import MoreInfo from './img/merInfo';
 
 const Content = () => {
@@ -17,6 +15,9 @@ const Content = () => {
   const summerStudent1 = require('./img/Vilde summerstudent.png');
   const summerStudent2 = require('./img/Olepetter summerstudent.png');
   const summerStudent3 = require('./img/Nora summerstudent.png');
+  const norwayMap = require('./img/norway summer job.svg') 
+  // bildefiler finnes på  https://www.figma.com/file/9130OrLEkCHn15Cq4BvPRP/Skisser?type=design&node-id=908-163&mode=design&t=Bg1HGOBmQhOpszRV-4
+
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [isMobile, setIsMobile] = useState(false);
@@ -53,19 +54,19 @@ const Content = () => {
             </div>
             <span className={style.searchNewVariants}>
               <h1 className={style.bigHeading}>
-                Vi ser etter 14 sommervarianter i 2023!
+                Vi ser etter 23 sommervarianter i 2024!
               </h1>
             </span>
             <br />
             <div className={style.ApplyDiv}>
               <div className={style2.applyButtonPink}>
-                <p>Søk senest 2. oktober</p>
+                <p>Søk senest 1. oktober</p>
                 <p>
                   <a href="#sokSommerjobb">Søk sommerjobb</a>
                 </p>
               </div>
               <div className={style2.applyButtonBlue}>
-                <p>Ferdig utdannet i 2023?</p>
+                <p>Ferdig utdannet i 2024?</p>
                 <p>
                   <a href="/nyutdannet">Jeg vil ha fast jobb</a>
                 </p>
@@ -104,22 +105,22 @@ const Content = () => {
                   </p>
 
                   <p className={style.section2Paragraph}>
-                    I 2023 tilbyr vi sommerjobb i både{' '}
+                    I 2024 tilbyr vi sommerjobb i både{' '}
                     <strong>Trondheim</strong>, <strong>Oslo</strong> og{' '}
-                    <strong>Bergen</strong>, til henholdsvis seks, fem og tre
+                    <strong>Bergen</strong>, til henholdsvis ti, ti og tre
                     studenter. Hvor du vil jobbe bestemmer du naturligvis selv.
                     Sommerjobben varer i fire + to uker med tre uker ferie i
                     mellomtiden.
                   </p>
                   {isMobile ? (
                     <div className={style.officeMapMobile}>
-                      <MapMobile />
+                      <img src={norwayMap} alt="vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"  width='100%'/>
                     </div>
                   ) : (
                     <></>
                   )}
                   <p className={style.section2Paragraph}>
-                    I Variant liker vi åpnenhet. Det betyr at du selvsagt ikke
+                    I Variant liker vi åpenhet. Det betyr at du selvsagt ikke
                     trenger å lure på hvordan kontrakten din vil se ut for
                     sommeren, den ligger nemlig åpent og tilgjengelig på våre
                     nettsider. Timelønnen trenger du heller ikke å lure på, den
@@ -129,7 +130,7 @@ const Content = () => {
                     hva Variant står for og tilbyr.
                   </p>
                 </div>
-                {!isMobile ? <Map /> : <></>}
+                {!isMobile ? <img src={norwayMap} alt="vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen" /> : <></>}
               </div>
             </section>
           </div>
@@ -315,7 +316,7 @@ const Content = () => {
             </section>
           </div>
           <div style={{ backgroundColor: '#8B0F40', color: 'white' }}>
-            <AfterApplying red={true} />
+            <AfterApplying red={true} applyType={ApplyType.SUMMER} />
           </div>
 
           <section className={style.section6} id="sokSommerjobb">
@@ -354,14 +355,14 @@ const Content = () => {
               <div className={style2.ApplyDiv}>
                 <div className={style2.applyButtonPink}>
                   <p>
-                    <a href="/jobs/sommerjobb-designer-2023">
+                    <a href="/jobs/sommerjobb-designer-2024">
                       Søk som designer
                     </a>
                   </p>
                 </div>
                 <div className={style2.applyButtonBlue}>
                   <p>
-                    <a href="/jobs/sommerjobb-utvikler-2023">
+                    <a href="/jobs/sommerjobb-utvikler-2024">
                       Søk som utvikler
                     </a>
                   </p>
