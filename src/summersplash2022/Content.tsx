@@ -329,7 +329,7 @@ const Content = () => {
                   kontakt med meg.
                 </p>
                 <p className={style.section6Paragraph2}>
-                  - Marius Krakeli, Utvikler og rekrutteringsansvarlig
+                  - Marius Krakeli, Chief Recruitment Officer
                 </p>
                 <div className={style.contactInfo}>
                   <div>

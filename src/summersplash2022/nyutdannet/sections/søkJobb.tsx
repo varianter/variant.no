@@ -10,7 +10,7 @@ const Apply = () => {
         Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
         spørsmål om fastjobb eller Variant? Ta gjerne kontakt med meg.
       </p>
-      <p>- Marius Krakeli, Utvikler og rekrutteringsansvarlig</p>
+      <p>- Marius Krakeli, Chief Recruitment Officer</p>
       <div className={style.contactInfo}>
         <div>
           <p className={style.section6Underline}>
