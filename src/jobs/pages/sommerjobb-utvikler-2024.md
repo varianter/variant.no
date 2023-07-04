@@ -18,7 +18,7 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 
 </div>
 
-I 2023 tilbyr vi sommerjobb i hele tre(!) byer: I Trondheim søker vi 5 utviklere. I Oslo 5, og i vårt nyeste kontor i Bergen ser vi etter 2.
+I 2024 tilbyr vi sommerjobb i hele tre(!) byer: 5 i Trondheim, 5 i Oslo og 2 i vårt nyeste kontor i Bergen.
 Vi har tro på at både kunder og sluttbrukere får det beste resultatet når vi jobber i tverrfaglige team. Derfor rekrutterer vi også designere parallelt. Sammen vil dere jobbe på et av våre spennende oppdrag for kundene våre. Selvfølgelig med god støtte, oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
 Som sommerstudent hos oss får du et godt team med deg hos en givende kunde. Vi får bidra til å gjøre hverdagen smooth for reelle brukere, og vi prøver alltid finne prosjekter som i tillegg til å være lærerike, kan være med på å gjøre verden mer bærekraftig. I 2023 satt vi blant andre hos Energi AI og jobbet på et AI verktøy for grønnvasking. Hos Over Easy jobbet vi med et planleggingsverktøy for plassering av solcellemoduler. Vi jobbet med et innovasjonsverktøy for scanning av fisk hos AKVA Group og ga bistand til kontroll over batterier som skal til den maritime industrien, hos Corvus Energy. 🌱⚡♻️
