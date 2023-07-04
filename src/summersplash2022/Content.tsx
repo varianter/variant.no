@@ -6,18 +6,19 @@ import ReadMoreArrow from './img/lesMerPil';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
-import AfterApplying, { ApplyType } from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
+import AfterApplying, {
+  ApplyType,
+} from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
 import MoreInfo from './img/merInfo';
 
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
   const Marius = require('./img/Marius.png');
-  const summerStudent1 = require('./img/Vilde summerstudent.png');
-  const summerStudent2 = require('./img/Olepetter summerstudent.png');
-  const summerStudent3 = require('./img/Nora summerstudent.png');
-  const norwayMap = require('./img/norway summer job.svg') 
+  const summerStudent1 = require('./img/emma.svg');
+  const summerStudent2 = require('./img/mathias.svg');
+  const summerStudent3 = require('./img/swarny.svg');
+  const norwayMap = require('./img/norway summer job.svg');
   // bildefiler finnes på  https://www.figma.com/file/9130OrLEkCHn15Cq4BvPRP/Skisser?type=design&node-id=908-163&mode=design&t=Bg1HGOBmQhOpszRV-4
-
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [isMobile, setIsMobile] = useState(false);
@@ -100,7 +101,7 @@ const Content = () => {
                     et av de spennende kundeprosjektene vi har. Underveis får du
                     god oppfølging og tilrettelegging fra erfarne konsulenter
                     som ønsker at du lykkes. Sjekk ut{' '}
-                    <a className={style.blogpostLink}>bloggen vår</a> for å lese
+                    <a href='https://blog.variant.no/' className={style.blogpostLink}>bloggen vår</a> for å lese
                     mer om hva årets sommerstudenter jobbet med.
                   </p>
 
@@ -114,7 +115,11 @@ const Content = () => {
                   </p>
                   {isMobile ? (
                     <div className={style.officeMapMobile}>
-                      <img src={norwayMap} alt="vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"  width='100%'/>
+                      <img
+                        src={norwayMap}
+                        alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen!"
+                        width="100%"
+                      />
                     </div>
                   ) : (
                     <></>
@@ -130,7 +135,14 @@ const Content = () => {
                     hva Variant står for og tilbyr.
                   </p>
                 </div>
-                {!isMobile ? <img src={norwayMap} alt="vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen" /> : <></>}
+                {!isMobile ? (
+                  <img
+                    src={norwayMap}
+                    alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"
+                  />
+                ) : (
+                  <></>
+                )}
               </div>
             </section>
           </div>
@@ -145,12 +157,13 @@ const Content = () => {
               />
               <div>
                 <p className={style.summerstudent1Paragraph}>
-                  “Jeg følte man ble en del av firmaet selv om det «bare» var en
-                  sommerjobb. [...] Utrolig hyggelige kollegaer som ønsker å
-                  hjelpe der man kan og løfte hverandre frem. [...] Teamet hos
-                  kunden stilte gjerne til rådgivning uansett hva.”
+                  “Jeg er utrolig glad for å få være en del av variantgjengen i
+                  sommer! Det er gøy å se hvordan kjerneverdier som åpenhet og
+                  læreglede virkelig praktiseres i arbeidshverdagen, ikke bare
+                  på papiret. Det gjør at jeg føler meg veldig inkludert og
+                  lærer masse, samtidig som vi har det mye moro!”
                 </p>
-                <p className={style.summerstudentName1}>-Vilde</p>
+                <p className={style.summerstudentName1}>-Emma</p>
               </div>
             </div>
 
@@ -162,13 +175,15 @@ const Content = () => {
                   alt=""
                 ></img>
                 <p className={style.summerstudent2Paragraph}>
-                  “Det har vært fantastisk å være en nevø i variantfamilien
-                  gjennom sommeren! Fagkvelder, felles lunsj, sosialt opplegg,
-                  alt som skal til for en bonding opplevelse var der. [...]
-                  Store ord om kjerneverdier kan fremstå som grunn
-                  markedsføring. I Variant synes de når man kommer på jobb!”
+                  “Sommeren i Variant ga meg en smakebit av hva det vil si å
+                  være konsulent. Med ekte kunder og reelle behov lærte jeg
+                  masse og fikk vist frem ferdighetene mine. Gjennom sosiale
+                  arrangementer og pulserende Slack-kanaler følte jeg meg
+                  inkludert allerede før dag én. Jevnlige sparringer ga faglig
+                  påfyll og støtte til teamet, og folkene her er rett og slett
+                  herlige 🤗”
                 </p>
-                <p className={style.summerstudentName2}>-Ole Petter</p>
+                <p className={style.summerstudentName2}>-Mathias</p>
               </div>
             </div>
 
@@ -180,10 +195,14 @@ const Content = () => {
               ></img>
               <div>
                 <p className={style.summerstudent3Paragraph}>
-                  “Det har vært helt fantastisk å være en del av Variant i
-                  sommer. For en bra, varm og inkluderende gjeng!”
+                  “Sommeren hos Variant har vært helt fantastisk. Vi fikk jobbe
+                  med et megakult og aktuelt prosjekt med god oppfølging, både
+                  fra Variant og kunden. Selv om Variant er et konsulentselskap,
+                  har de et godt sosialt miljø hvor alle er inkluderende, ivrige
+                  og åpne. Jeg er superfornøyd med at
+                  jeg søkte sommerjobb hos Variant!!”
                 </p>
-                <p className={style.summerstudentName}>-Nora</p>
+                <p className={style.summerstudentName}>-Swarny</p>
               </div>
             </div>
             <GreenBlob />

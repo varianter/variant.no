@@ -71,6 +71,9 @@ p {
   line-height: var(--headig-line-height);
   margin-bottom: 2%;
 }
+.calculator_radio-button-wrapper {
+  border: none;
+}
 
 .bigHeading {
   font-family: 'Recoleta';
@@ -220,6 +223,13 @@ p {
   position: relative;
   z-index: 1;
 }
+.wrapper
+  [class*='calculator-controls']
+  [class*='form-row']
+  div
+  [class*='radio-button-wrapper'] {
+  border: none;
+}
 
 .pinkBlobSalarySVG {
   position: relative;
@@ -260,6 +270,7 @@ p {
   position: relative;
   bottom: 200px;
   height: 1500px;
+  pointer-events: none;
 }
 
 .section5Picture {
@@ -295,6 +306,7 @@ p {
 .section6Div {
   width: 48%;
   height: 1200px;
+  z-index: 1;
 }
 
 .section6 h3 {
@@ -324,10 +336,10 @@ p {
 
 .section6Blob {
   position: relative;
-  bottom: 200px;
-  z-index: 0;
+  z-index: -2;
   right: 45%;
-  bottom: 840px;
+  transform: scale(0.5);
+  bottom: 33%;
 }
 
 /* Section 7 */

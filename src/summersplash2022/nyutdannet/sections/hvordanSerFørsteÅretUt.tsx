@@ -32,7 +32,7 @@ const FirstYear = () => {
         <p>
           For å bidra til personlig og faglig utvikling av nyutdannede
           gjennomfører vi oppstartsprogrammet{' '}
-          <a href="/handbook#utviklingsprogram" style={{ color: 'white' }}>
+          <a href="https://handbook.variant.no/#Utviklingsprogram" style={{ color: 'white' }}>
             variant:skudd
           </a>
           . Programmet gjennomføres i løpet av det første året den nyutdannede
