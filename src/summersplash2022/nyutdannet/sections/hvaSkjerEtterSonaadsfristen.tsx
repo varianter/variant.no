@@ -60,8 +60,8 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
             <div className={style.søknadstips}>
               <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
               <p className={style.section5Paragraph}>
-                Vi setter pris på en søknad med CV, søknadsbrev og
-                karakterutskrift. Det viktigste for oss er å få et helhetlig
+                Vi setter pris på en søknad med CV, søknadsbrev,
+                karakterutskrift og gjerne også portifolio og/eller GitHub profil. Det viktigste for oss er å få et helhetlig
                 bilde. Både av deg som person, din eksisterende kompetanse og
                 dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i
                 Variant? Vi trenger mennesker som bryr seg om å skape en bedre

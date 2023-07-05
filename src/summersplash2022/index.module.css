@@ -183,6 +183,7 @@
   position: relative;
   left: 55%;
   bottom: 70%;
+  pointer-events: none;
 }
 
 .moreInfoDiv {
@@ -234,24 +235,27 @@
 .section3 {
   background-color: #01574f;
   color: white;
-  height: 1400px;
+  height: 1600px;
 }
 
 .summerstudent1 {
   display: flex;
   position: static;
+  margin-top: 4em;
 }
 
 .summerstudent2 {
   display: flex;
   position: relative;
   bottom: 100px;
+  margin-top: 4em;
 }
 
 .summerstudent3 {
   display: flex;
   position: relative;
   bottom: 100px;
+  margin-top: 3em;
 }
 
 .summerstudent1picture {
@@ -275,6 +279,7 @@
   width: 37%;
   height: 37%;
   bottom: 150px;
+  padding-right: 2em;
 }
 
 .summerstudent1Paragraph,
@@ -307,6 +312,7 @@
   margin-left: 10%;
   width: 40%;
   text-align: right;
+  margin-bottom: 8%;
 }
 
 .summerstudentName2 {
@@ -338,7 +344,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  border: none;
+  position: relative;
 }
 
 .section5Paragraph {
@@ -357,7 +363,7 @@
 .Even {
   margin-top: 12%;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .flexTimeline {
@@ -383,6 +389,7 @@
 
 .section5Div2 {
   width: 100%;
+  padding-top: 10%;
 }
 
 /* Section 6 styling*/
@@ -395,6 +402,9 @@
 .section6Paragraph {
   width: 40%;
   margin-top: 20px;
+}
+.wrapper .radio-button-wrapper {
+  border: none;
 }
 
 .contactInfo {
@@ -509,6 +519,7 @@
 
 .whyWorkAtVariant {
   background-color: #fff3f2;
+  height: 1000px;
 }
 
 .handbookGrid {
@@ -685,6 +696,7 @@
   .søknadstips {
     position: relative;
     left: 0px;
+    right: 5px;
   }
 
   .section6 {
@@ -716,9 +728,6 @@
     display: none;
   }
 
-  .søknadstips {
-    position: static;
-  }
   .imageBlob1 {
     position: static;
     width: 10px;
@@ -844,7 +853,6 @@
   }
 
   .søknadstips {
-    position: relative;
     bottom: 400px;
   }
 
@@ -950,7 +958,7 @@
   }
 
   .section3 {
-    height: 1000px;
+    height: 1400px;
   }
 
   .summerstudent1 {
@@ -1020,7 +1028,7 @@
     height: auto;
     shape-outside: circle() padding-box;
     float: left;
-    right: 15%;
+    right: 20%;
     position: relative;
   }
 
@@ -1030,7 +1038,6 @@
     shape-outside: circle() padding-box;
     height: auto;
     margin: 0px;
-    margin-right: -20%;
   }
 
   .summerstudent3picture {
@@ -1050,7 +1057,6 @@
 
   /* Section 4 mobile*/
   .whyWorkAtVariant {
-    height: 1600px;
   }
 
   .section4Heading {
