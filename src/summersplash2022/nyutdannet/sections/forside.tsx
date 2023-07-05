@@ -14,7 +14,7 @@ const LandingPage = () => {
         </div>
         <span className={style.searchNewVariants}>
           <h1 className={style.bigHeading}>
-            Vi ser etter 17 nyutdannede varianter i 2023!
+            Vi ser etter 17 nyutdannede varianter i 2024!
           </h1>
         </span>
         <br />
