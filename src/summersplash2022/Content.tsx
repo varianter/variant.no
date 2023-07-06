@@ -22,9 +22,11 @@ const Content = () => {
 
   const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [isMobile, setIsMobile] = useState(false);
+  const [isPad, setIsPad] = useState(false);
 
   const handleResize = () => {
-    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
+    setIsMobile(window.matchMedia('(max-width: 700px)').matches);
+    setIsPad(window.matchMedia('(min-width: 701px) and (max-width: 1200px)').matches);
   };
 
   const handleOnClick = (buttonValue: string) => {
@@ -93,6 +95,17 @@ const Content = () => {
               <h2 className={style.heading}>Hva går sommerjobben ut på?</h2>
               <div className={style.section2Flex}>
                 <div className={style.section2Text}>
+                {isPad ? (
+                    <div className={style.officeMapMobile}>
+                      <img
+                        src={norwayMap}
+                        alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen!"
+                        width="100%"
+                      />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <p className={style.section2Paragraph}>
                     En sommerjobb i Variant er en fin mulighet til å anvende det
                     du har lært på skolen i praksis. Det forventes ikke at du er
@@ -135,7 +148,7 @@ const Content = () => {
                     hva Variant står for og tilbyr.
                   </p>
                 </div>
-                {!isMobile ? (
+                {!isMobile && !isPad ? (
                   <img
                     src={norwayMap}
                     alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"

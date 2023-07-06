@@ -300,12 +300,11 @@ p {
 .flexTimeline {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .section6Div {
   width: 48%;
-  height: 1200px;
   z-index: 1;
 }
 
@@ -454,7 +453,6 @@ p {
   }
 
   .section6Div {
-    height: 1000px;
     width: auto;
   }
 

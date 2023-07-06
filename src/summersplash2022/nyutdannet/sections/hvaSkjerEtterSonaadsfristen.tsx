@@ -21,7 +21,6 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
         <h2 className={style.heading}>Hva skjer etter søknadsfristen?</h2>
-        <div className={style2.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
@@ -46,37 +45,34 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
               <DarkRedBlob />
             </div>
           </div>
-          <div className={style.section5Div2}>
-            <div className={style.timeLine}>
-              <img
-                src={TimeLine}
-                alt="Søknadsfrist: 1.oktober, Kaffeprat: 4.-5.oktober, tilbud om sommerjobb: 6.oktober
+          
+          <div className={style.timeLine}>
+            <img
+              src={TimeLine}
+              alt="Søknadsfrist: 1.oktober, Kaffeprat: 4.-5.oktober, tilbud om sommerjobb: 6.oktober
               sosiale og faglige arrangementer: november-juni, første arbeidsperiode: 10.juni - 5.juli (4 uker), ferie
               8.juli - 26 juli (3 uker), andre arbeidsperiode : 29.juli - 9.august (2 uker)   "
-                style={{ zIndex: 1 }}
-              />
-            </div>
-
-            <div className={style.søknadstips}>
-              <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
-              <p className={style.section5Paragraph}>
-                Vi setter pris på en søknad med CV, søknadsbrev,
-                karakterutskrift og gjerne også portifolio og/eller GitHub profil. Det viktigste for oss er å få et helhetlig
-                bilde. Både av deg som person, din eksisterende kompetanse og
-                dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i
-                Variant? Vi trenger mennesker som bryr seg om å skape en bedre
-                hverdag. Er det deg?
-              </p>
-            </div>
+              style={{ zIndex: 1 }}
+            />
           </div>
-        </div>
+
+          <div className={style.søknadstips}>
+            <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
+            <p className={style.section5Paragraph}>
+              Vi setter pris på en søknad med CV, søknadsbrev, karakterutskrift
+              og gjerne også portifolio og/eller GitHub profil. Det viktigste
+              for oss er å få et helhetlig bilde. Både av deg som person, din
+              eksisterende kompetanse og dine ambisjoner. Så hvem er du og
+              hvorfor søker du sommerjobb i Variant? Vi trenger mennesker som
+              bryr seg om å skape en bedre hverdag. Er det deg?
+            </p>
+          </div>
       </section>
     );
   } else {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
         <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
-        <div className={style2.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
@@ -101,16 +97,16 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
               spill- og fagkvelder, nyttårskalas og variantdager, som er fine
               muligheter til å bli bedre kjent før man starter.
             </p>
-            <div className={style2.section6Blob}>
-              <Section6Blob />
-            </div>
           </div>
-          <div className={style.section5Div2}>
-            <div className={style.timeLine}>
-              <img src={TimeLine} alt="tidslinje" style={{ zIndex: 1, marginTop:'50px'}} />
+            <div>
+              <img
+                src={TimeLine}
+                alt="tidslinje"
+                style={{ zIndex: 1, marginTop: '50px' }}
+              />
             </div>
 
-            <div className={style.søknadstips}>
+            <div>
               <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
               <p className={style.section5Paragraph}>
                 Vi setter pris på en søknad med CV, søknadsbrev og
@@ -120,8 +116,9 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
                 Variant? Vi trenger mennesker som bryr seg om å skape en bedre
                 hverdag. Er det deg?
               </p>
-            </div>
-          </div>
+        </div>
+        <div className={style2.section6Blob}>
+          <Section6Blob />
         </div>
       </section>
     );

@@ -81,6 +81,8 @@
   width: 60%;
   margin-top: 5%;
   margin-bottom: 5%;
+  position: relative;
+  z-index: 2;
   /* or 135% */
 }
 
@@ -214,20 +216,20 @@
 }
 
 .section2Paragraph {
-  width: 74%;
-}
-
-.section2Text {
-  width: 60%;
+  width: 100%;
 }
 
 .section2Flex {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .officeMapMobile {
-  display: none;
+  display: block;
+  position: static;
+  margin: 0;
+  width: 100%;
 }
 
 /* Section 3 styling */
@@ -375,12 +377,6 @@
 .timeLine {
   display: flex;
   justify-content: center;
-}
-
-.søknadstips {
-  margin-top: 20%;
-  margin-top: 120px;
-  margin-bottom: 30%;
 }
 
 .section5Div1 {
@@ -721,7 +717,6 @@
     position: static;
     margin: 0;
     width: 100%;
-    /* bottom: 50px; */
   }
 
   .officeMapSVG {
@@ -848,12 +843,12 @@
 
   .timeLine {
     position: relative;
-    bottom: 400px;
+    bottom: 1000px;
     margin-top: 0%;
   }
 
   .søknadstips {
-    bottom: 400px;
+    margin-top: -900px;
   }
 
   /* Section 1 mobile*/
@@ -993,7 +988,7 @@
   .summerstudent1Paragraph,
   .summerstudent2Paragraph,
   .summerstudent3Paragraph {
-    position: static;
+    position: relative;
     width: 80%;
     height: fit-content;
     font-family: 'Graphik Web';
@@ -1001,6 +996,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    z-index: 2;
   }
 
   .summerstudent1Paragraph {
@@ -1295,8 +1291,18 @@
   }
 }
 
-@media (max-width: 900px) and (min-width: 720px) {
+@media (max-width: 1100px) and (min-width: 720px) {
   .EvenPicture {
     width: 35%;
+  }
+  .timeLine {
+    position: relative;
+    bottom: 900px;
+  }
+  .søknadstips {
+    margin-top: -900px;
+  }
+  .Marius {
+    left: 60%;
   }
 }
