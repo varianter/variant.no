@@ -26,7 +26,9 @@ const Content = () => {
 
   const handleResize = () => {
     setIsMobile(window.matchMedia('(max-width: 700px)').matches);
-    setIsPad(window.matchMedia('(min-width: 701px) and (max-width: 1200px)').matches);
+    setIsPad(
+      window.matchMedia('(min-width: 701px) and (max-width: 1200px)').matches,
+    );
   };
 
   const handleOnClick = (buttonValue: string) => {
@@ -45,6 +47,7 @@ const Content = () => {
     ) {
       setWhichButtonSelected('Formal og verdier');
     }
+    handleOnClick('Formal og verdier');
   }, []);
 
   return (
@@ -95,7 +98,7 @@ const Content = () => {
               <h2 className={style.heading}>Hva går sommerjobben ut på?</h2>
               <div className={style.section2Flex}>
                 <div className={style.section2Text}>
-                {isPad ? (
+                  {isPad ? (
                     <div className={style.officeMapMobile}>
                       <img
                         src={norwayMap}
@@ -114,8 +117,13 @@ const Content = () => {
                     et av de spennende kundeprosjektene vi har. Underveis får du
                     god oppfølging og tilrettelegging fra erfarne konsulenter
                     som ønsker at du lykkes. Sjekk ut{' '}
-                    <a href='https://blog.variant.no/' className={style.blogpostLink}>bloggen vår</a> for å lese
-                    mer om hva årets sommerstudenter jobbet med.
+                    <a
+                      href="https://blog.variant.no/"
+                      className={style.blogpostLink}
+                    >
+                      bloggen vår
+                    </a>{' '}
+                    for å lese mer om hva årets sommerstudenter jobbet med.
                   </p>
 
                   <p className={style.section2Paragraph}>
@@ -212,8 +220,8 @@ const Content = () => {
                   med et megakult og aktuelt prosjekt med god oppfølging, både
                   fra Variant og kunden. Selv om Variant er et konsulentselskap,
                   har de et godt sosialt miljø hvor alle er inkluderende, ivrige
-                  og åpne. Jeg er superfornøyd med at
-                  jeg søkte sommerjobb hos Variant!!”
+                  og åpne. Jeg er superfornøyd med at jeg søkte sommerjobb hos
+                  Variant!!”
                 </p>
                 <p className={style.summerstudentName}>-Swarny</p>
               </div>

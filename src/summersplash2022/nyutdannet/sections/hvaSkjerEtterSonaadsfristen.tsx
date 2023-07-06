@@ -21,6 +21,7 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
         <h2 className={style.heading}>Hva skjer etter søknadsfristen?</h2>
+        <div className={style.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
@@ -45,7 +46,7 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
               <DarkRedBlob />
             </div>
           </div>
-          
+
           <div className={style.timeLine}>
             <img
               src={TimeLine}
@@ -55,24 +56,25 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
               style={{ zIndex: 1 }}
             />
           </div>
-
-          <div className={style.søknadstips}>
-            <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
-            <p className={style.section5Paragraph}>
-              Vi setter pris på en søknad med CV, søknadsbrev, karakterutskrift
-              og gjerne også portifolio og/eller GitHub profil. Det viktigste
-              for oss er å få et helhetlig bilde. Både av deg som person, din
-              eksisterende kompetanse og dine ambisjoner. Så hvem er du og
-              hvorfor søker du sommerjobb i Variant? Vi trenger mennesker som
-              bryr seg om å skape en bedre hverdag. Er det deg?
-            </p>
-          </div>
+        </div>
+        <div className={style.søknadstips}>
+          <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
+          <p className={style.section5Paragraph}>
+            Vi setter pris på en søknad med CV, søknadsbrev, karakterutskrift og
+            gjerne også portifolio og/eller GitHub profil. Det viktigste for oss
+            er å få et helhetlig bilde. Både av deg som person, din eksisterende
+            kompetanse og dine ambisjoner. Så hvem er du og hvorfor søker du
+            sommerjobb i Variant? Vi trenger mennesker som bryr seg om å skape
+            en bedre hverdag. Er det deg?
+          </p>
+        </div>
       </section>
     );
   } else {
     return (
       <section className={style2.section6} id="hvaskjerettersoknadsfristen">
         <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
+        <div className={style.flexTimeline}>
           <div className={style2.section6Div}>
             <p className={style.section5ParagraphLeft}>
               Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
@@ -98,24 +100,24 @@ const AfterApplying = (props: { red: boolean; applyType: ApplyType }) => {
               muligheter til å bli bedre kjent før man starter.
             </p>
           </div>
-            <div>
-              <img
-                src={TimeLine}
-                alt="tidslinje"
-                style={{ zIndex: 1, marginTop: '50px' }}
-              />
-            </div>
+          <div className="timelineBlack">
+            <img
+              src={TimeLine}
+              alt="tidslinje"
+              style={{ zIndex: 1, marginTop: '50px' }}
+            />
+          </div>
+        </div>
 
-            <div>
-              <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
-              <p className={style.section5Paragraph}>
-                Vi setter pris på en søknad med CV, søknadsbrev og
-                karakterutskrift. Det viktigste for oss er å få et helhetlig
-                bilde. Både av deg som person, din eksisterende kompetanse og
-                dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i
-                Variant? Vi trenger mennesker som bryr seg om å skape en bedre
-                hverdag. Er det deg?
-              </p>
+        <div>
+          <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
+          <p className={style.section5Paragraph}>
+            Vi setter pris på en søknad med CV, søknadsbrev og karakterutskrift.
+            Det viktigste for oss er å få et helhetlig bilde. Både av deg som
+            person, din eksisterende kompetanse og dine ambisjoner. Så hvem er
+            du og hvorfor søker du sommerjobb i Variant? Vi trenger mennesker
+            som bryr seg om å skape en bedre hverdag. Er det deg?
+          </p>
         </div>
         <div className={style2.section6Blob}>
           <Section6Blob />

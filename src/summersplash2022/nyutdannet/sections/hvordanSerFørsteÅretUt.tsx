@@ -18,9 +18,6 @@ const FirstYear = () => {
 
   useEffect(() => {
     if (window) {
-      if (window.matchMedia('(max-width: 1400px)').matches) {
-        setIsDesktop(false);
-      }
       window.addEventListener('resize', handleResize);
     }
   }, []);

@@ -370,8 +370,10 @@
 
 .flexTimeline {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: left;
+  gap: 1em;
 }
 
 .timeLine {
@@ -386,6 +388,14 @@
 .section5Div2 {
   width: 100%;
   padding-top: 10%;
+}
+
+.søknadstips {
+  position: relative;
+  left: 0px;
+  right: 5px;
+  bottom: 850px;
+  z-index: 1;
 }
 
 /* Section 6 styling*/
@@ -515,7 +525,6 @@
 
 .whyWorkAtVariant {
   background-color: #fff3f2;
-  height: 1000px;
 }
 
 .handbookGrid {
@@ -558,6 +567,7 @@
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .handbookButton2 {
@@ -583,6 +593,7 @@
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .handbookButton3 {
@@ -608,6 +619,7 @@
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .handbookButton4 {
@@ -633,6 +645,7 @@
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 .section5HandbookLinkMobile {
@@ -687,12 +700,6 @@
   .section5 {
     height: 2400px;
     overflow: hidden;
-  }
-
-  .søknadstips {
-    position: relative;
-    left: 0px;
-    right: 5px;
   }
 
   .section6 {
@@ -792,7 +799,7 @@
   }
 
   .flexTimeline {
-    display: block;
+    flex-direction: column;
   }
 
   .section5ParagraphLeft {
@@ -843,12 +850,13 @@
 
   .timeLine {
     position: relative;
-    bottom: 1000px;
+    bottom: 800px;
     margin-top: 0%;
   }
 
   .søknadstips {
-    margin-top: -900px;
+    margin-top: 50px;
+    padding-bottom: 50px;
   }
 
   /* Section 1 mobile*/
@@ -1299,10 +1307,10 @@
     position: relative;
     bottom: 900px;
   }
-  .søknadstips {
-    margin-top: -900px;
-  }
   .Marius {
     left: 60%;
+  }
+  .flexTimeline {
+    display: block;
   }
 }

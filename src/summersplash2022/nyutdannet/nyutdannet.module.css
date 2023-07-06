@@ -299,8 +299,9 @@ p {
 /* Section 6 */
 .flexTimeline {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 50px;
 }
 
 .section6Div {
@@ -338,7 +339,13 @@ p {
   z-index: -2;
   right: 45%;
   transform: scale(0.5);
-  bottom: 33%;
+  bottom: 600px;
+}
+.section6 {
+  height: 2200px;
+}
+.timeLineBlack {
+  margin-left: 100px;
 }
 
 /* Section 7 */
@@ -441,7 +448,7 @@ p {
   /* Section 6 */
   .flexTimeline {
     width: auto;
-    display: block;
+    flex-direction: row;
   }
 
   .readMoreArrowWhite {
@@ -453,11 +460,7 @@ p {
   }
 
   .section6Div {
-    width: auto;
-  }
-
-  .section6 {
-    height: auto;
+    width: 100%;
   }
 
   .section6 p:nth-child(1),
@@ -770,7 +773,7 @@ p {
 
   /* Section 6 */
   .section6 {
-    height: 1900px;
+    height: 2000px;
   }
 
   .section6 p:nth-child(1),
