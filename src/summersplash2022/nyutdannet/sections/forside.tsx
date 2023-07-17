@@ -31,12 +31,14 @@ const LandingPage = () => {
           </p>
         </div>
         <div className={style.section1Blobs}>
-          <img
-            className={style.imageBlob1}
-            src={blobSection1}
-            alt="To fra Variant"
-          />
-          <Section1Blob />
+          <div className={style.section1BlobsWrapper}>
+            <img
+              className={style.imageBlob1}
+              src={blobSection1}
+              alt="To fra Variant"
+            />
+            <Section1Blob />
+          </div>
         </div>
         <div className={style.moreInfoDiv}>
           <MoreInfo white={true} />

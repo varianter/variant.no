@@ -94,7 +94,7 @@ p {
   scroll-snap-align: start;
   padding-left: 10%;
   padding-right: 10%;
-  height: 1200px;
+  height: 100vh;
 }
 
 .header {
@@ -530,10 +530,6 @@ p {
     padding: 3%;
   }
 
-  .section1 {
-    height: 900px;
-  }
-
   .section1Blobs {
     position: static;
   }
@@ -541,10 +537,6 @@ p {
   .imageBlob1 {
     margin-top: 5%;
     position: static;
-  }
-
-  .section1BlobSVG {
-    display: none;
   }
 
   .readMoreArrowWhite {
@@ -692,6 +684,47 @@ p {
   }
 }
 
+@media (max-width: 850px) {
+  /* Section 1 */
+
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    min-height: 100vh;
+  }
+
+  .section1Blobs {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+    bottom: 0;
+    margin: 5% 0;
+  }
+
+  .section1BlobsWrapper {
+    margin: auto 0;
+    position: relative;
+  }
+
+  .moreInfoDiv {
+    display: none;
+  }
+
+  .imageBlob1 {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .section1BlobSVG {
+    top: 0;
+    left: 0;
+    width: 80%;
+  }
+}
+
 /* Mobile */
 @media (max-width: 500px) {
   /* Mobile Heading */
@@ -714,26 +747,9 @@ p {
 
   /* Section 1*/
 
-  .section1 {
-    height: 1200px;
-  }
-
   .sommerjobbHeading {
     width: 100%;
   }
-
-  .imageBlob1 {
-    position: relative;
-    top: 300px;
-    left: 40px;
-    width: 100%;
-    height: auto;
-  }
-
-  .section1BlobSVG {
-    display: none;
-  }
-
   .section1Blob {
     display: block;
     position: relative;
