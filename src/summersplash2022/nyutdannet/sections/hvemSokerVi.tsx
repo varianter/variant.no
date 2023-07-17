@@ -1,25 +1,7 @@
-import { useEffect, useState } from 'react';
 import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+
 const WhoAreWeSeeking = () => {
-  const [isDesktop, setIsDesktop] = useState(true);
   const graduateNorwayMap = require('../img/graduate norway map.svg')
-
-  const handleResize = () => {
-    if (window.matchMedia('(max-width: 500px)').matches) {
-      setIsDesktop(false);
-    } else {
-      setIsDesktop(true);
-    }
-  };
-
-  useEffect(() => {
-    if (window) {
-      if (window.matchMedia('(max-width: 500px)').matches) {
-        setIsDesktop(false);
-      }
-      window.addEventListener('resize', handleResize);
-    }
-  }, []);
   return (
     <section className={style.section2}>
       <h2 className={style.heading}>Hvem søker vi?</h2>
@@ -33,9 +15,7 @@ const WhoAreWeSeeking = () => {
             Bryr deg om koden du skriver, bryr deg om brukeren du lager noe for,
             og bryr deg om kunden du leverer til.
           </p>
-          {!isDesktop ? <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
-          4 designere, Oslo : 3 utviklere 3 designere ' width='100%' /> : <></>}
-
+    
           <p>
             Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av
             hverandre og de vi jobber med for å bli flinkere, modigere og
@@ -47,8 +27,10 @@ const WhoAreWeSeeking = () => {
             filosofien?
           </p>
         </div>
-        {isDesktop ? <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
-          4 designere, Oslo : 3 utviklere 3 designere '/> : <></>}
+        <div className={style.section2ImageWrapper}>
+          <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
+            4 designere, Oslo : 3 utviklere 3 designere' className={style.section2Image}/>
+        </div>          
       </div>
     </section>
   );

@@ -182,8 +182,8 @@ p {
   width: 67%;
 }
 
-.officeMap2 {
-  width: 100%;
+.section2Image {
+  margin-left: 3rem;
 }
 
 /* Section 3 */
@@ -381,24 +381,26 @@ p {
   margin-top: 5%;
 }
 
-@media (min-width: 1919px) {
-  .moreInfoDiv {
-    bottom: 300px;
+@media (min-width: 3500px) {
+  .section5Picture {
+    left: 400px;
+    bottom: 1300px;
+    bottom: 2800px;
   }
 
-  .section2 {
-    height: 1100px;
+  .section5Blob {
+    position: relative;
+    left: 200px;
+    bottom: 800px;
+    width: 70%;
+    height: auto;
   }
 
-  /* Section 5 */
-  .section5 p {
-    width: 40%;
-  }
-
-  .section7Blob {
-    top: 8500px;
+  .section5PictureDiv {
+    display: block;
   }
 }
+
 @media (max-width: 2500px) {
   .imageBlob1 {
     position: relative;
@@ -415,138 +417,10 @@ p {
     bottom: 300px;
     z-index: 1;
   }
-}
 
-@media (max-width: 1400px) {
-  /* Section 6 */
-  .readMoreArrowWhite {
-    width: 100%;
-  }
-
-  .arrowDiv {
-    width: 100%;
-  }
-
-  .timeLine2 {
-    display: none;
-  }
-
-  .timeLine2Mobile {
-    position: relative;
-    right: 370px;
-    top: 250px;
-  }
-}
-
-@media (max-width: 1120px) {
-  /* Section 6 */
-  .flexTimeline {
-    width: auto;
-    display: block;
-  }
-
-  .readMoreArrowWhite {
-    display: none;
-  }
-
-  .section5PictureDiv {
-    bottom: 1100px;
-  }
-
-  .section6Div {
-    height: 1000px;
-    width: auto;
-  }
-
-  .section6 {
-    height: auto;
-  }
-
-  .section6 p:nth-child(1),
-  .section6 p:nth-child(2),
-  .section6 p:nth-child(3) {
-    width: 100%;
-  }
-
-  .timeLineBlack {
-    margin-top: 30rem;
-  }
-
-  .section6Blob {
-    bottom: 300px;
-  }
-}
-
-@media (max-width: 1134px) {
-  /* Breakpoint for Lønnskalkulator*/
-  .section4Flex {
-    display: block;
-  }
-  .section4Text {
-    width: auto;
-  }
-
-  .wrapper {
-    width: 100%;
-  }
-
-  .section1Blob {
-    display: none;
-  }
-
-  /* Breakpoint for office map*/
-  .section2Flex {
-    display: block;
-  }
-
+  /* Section 2 */
   .section2Text {
-    width: auto;
-  }
-}
-
-@media (max-width: 1080px) {
-  .moreInfoDiv {
-    bottom: 100px;
-  }
-}
-
-@media (max-width: 900px) {
-  .bigHeading {
-    width: 100%;
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 52px;
-  }
-
-  .applyButtonPink a,
-  .applyButtonBlue a {
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 50px;
-    padding: 3%;
-  }
-
-  .section1Blobs {
-    position: static;
-  }
-
-  .imageBlob1 {
-    margin-top: 5%;
-    position: static;
-  }
-
-  .readMoreArrowWhite {
-    display: none;
-  }
-}
-
-@media (min-width: 1400px) {
-  .timeLine2Mobile {
-    display: none;
+    width: 50%;
   }
 }
 
@@ -585,11 +459,6 @@ p {
   .section2 p {
     font-size: 150%;
     line-height: 150%;
-  }
-
-  .officeMap2 {
-    width: 50%;
-    height: auto;
   }
 
   /* Section 4 */
@@ -664,23 +533,164 @@ p {
   }
 }
 
-@media (min-width: 3500px) {
-  .section5Picture {
-    left: 400px;
-    bottom: 1300px;
-    bottom: 2800px;
+@media (min-width: 1919px) {
+  .moreInfoDiv {
+    bottom: 300px;
   }
 
-  .section5Blob {
+  .section2 {
+    height: 1100px;
+  }
+
+  /* Section 5 */
+  .section5 p {
+    width: 40%;
+  }
+
+  .section7Blob {
+    top: 8500px;
+  }
+}
+
+@media (max-width: 1400px) {
+  /* Section 6 */
+  .readMoreArrowWhite {
+    width: 100%;
+  }
+
+  .arrowDiv {
+    width: 100%;
+  }
+
+  .timeLine2 {
+    display: none;
+  }
+
+  .timeLine2Mobile {
     position: relative;
-    left: 200px;
-    bottom: 800px;
-    width: 70%;
-    height: auto;
+    right: 370px;
+    top: 250px;
+  }
+
+  .timeLine2Mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1134px) {
+  /* Breakpoint for Lønnskalkulator*/
+  .section4Flex {
+    display: block;
+  }
+  .section4Text {
+    width: auto;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .section1Blob {
+    display: none;
+  }
+
+  /* Breakpoint for office map*/
+  .section2Flex {
+    display: block;
+  }
+
+  .section2Text {
+    width: auto;
+  }
+
+  .section2ImageWrapper {
+    margin: 3rem auto;
+    width: max-content;
+  }
+
+  .section2Image {
+    width: 100%;
+    max-width: min(600px, 80vw);
+    margin: 0;
+  }
+}
+
+@media (max-width: 1120px) {
+  /* Section 6 */
+  .flexTimeline {
+    width: auto;
+    display: block;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
   }
 
   .section5PictureDiv {
-    display: block;
+    bottom: 1100px;
+  }
+
+  .section6Div {
+    height: 1000px;
+    width: auto;
+  }
+
+  .section6 {
+    height: auto;
+  }
+
+  .section6 p:nth-child(1),
+  .section6 p:nth-child(2),
+  .section6 p:nth-child(3) {
+    width: 100%;
+  }
+
+  .timeLineBlack {
+    margin-top: 30rem;
+  }
+
+  .section6Blob {
+    bottom: 300px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .moreInfoDiv {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bigHeading {
+    width: 100%;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  .applyButtonPink a,
+  .applyButtonBlue a {
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 50px;
+    padding: 3%;
+  }
+
+  .section1Blobs {
+    position: static;
+  }
+
+  .imageBlob1 {
+    margin-top: 5%;
+    position: static;
+  }
+
+  .readMoreArrowWhite {
+    display: none;
   }
 }
 
