@@ -84,6 +84,7 @@
   /* or 135% */
 }
 
+/* Just use h2? */
 .section2Heading,
 .section3Heading,
 .section4Heading,
@@ -119,12 +120,14 @@
   line-height: 32px;
 }
 
-.whyWorkAtVariant p {
-  font-family: 'Graphik Web';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+.sectionLightPeach {
+  background-color: var(--variant-peach-3);
+  color: var(--variant-black);
+}
+
+.sectionDarkBlue {
+  background-color: var(--variant-blue-7);
+  color: white;
 }
 
 /* Header */
@@ -225,7 +228,6 @@
   display: flex;
   flex-direction: row;
 }
-
 .officeMapMobile {
   display: none;
 }
@@ -330,6 +332,12 @@
   bottom: 1150px;
   left: 67%;
   width: 50%;
+}
+
+.handbookHeaderDesktop {
+  max-width: fit-content;
+  padding: 3%;
+  color: #333333;
 }
 
 /* Section 5 styling */
@@ -451,16 +459,11 @@
 .positionTextLeft,
 .handbookParagraphs {
   padding-top: 1%;
-  width: 500px;
   font-family: 'Graphik Web';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-}
-
-.handbookParagraphs {
-  width: 68%;
 }
 
 .section5Heading {
@@ -491,157 +494,77 @@
 }
 
 .mostImportantForYou {
-  padding-top: 10%;
+  margin: 2rem 0;
+}
+
+.readMoreArrowDiv {
+  display: flex;
+  align-items: center;
+}
+
+/* Why work at Variant */
+.sectionDarkBlue,
+.sectionDarkBlue button,
+.sectionDarkBlue a {
+  background-color: #01574f;
+  color: white;
+}
+
+.sectionLightPeach,
+.sectionLightPeach button,
+.sectionLightPeach a {
+  background-color: #fff3f2;
+  color: var(--variant-black);
+}
+
+.whyWorkAtVariant p {
+  font-family: 'Graphik Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .handbook {
   display: flex;
-  align-items: flex-start;
-  gap: 5%;
-  justify-content: left;
+  gap: 2rem 4rem;
+  flex-wrap: wrap;
 }
 
-.handbookPages p {
-  width: 100%;
-}
-
+.handbookPages,
 .handbookChildButton {
-  width: 60%;
-}
-
-.handbookPages {
-  width: 50%;
-}
-
-.handbookChildButton p {
-  width: 100%;
-}
-
-.whyWorkAtVariant {
-  background-color: #fff3f2;
-  height: 1000px;
+  width: calc(50% - 2rem);
 }
 
 .handbookGrid {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .handbookGrid button {
   margin-right: 2%;
-}
-
-.handbookChildButton {
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10%;
-}
-
-.handbookButton1 {
-  color: #333333;
-  background: none;
   border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
+  margin: 1rem 0;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
-  display: grid;
+  text-decoration: underline;
+  padding: 0;
 }
 
-.handbookButton1:hover,
-.handbookButton1:focus {
-  color: #333333;
-  background: #03dac6;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
+.handbookGrid button:hover,
+.handbookGrid button:focus,
+.handbookGrid button.active {
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.handbookButton2 {
-  color: #333333;
-  background: none;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-  display: grid;
-}
-
-.handbookButton2:hover,
-.handbookButton2:focus {
-  color: #333333;
-  background: #9591ce;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.handbookButton3 {
-  color: #333333;
-  background: none;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-  display: grid;
-}
-
-.handbookButton3:hover,
-.handbookButton3:focus {
-  color: #333333;
-  background: #b91456;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.handbookButton4 {
-  color: #333333;
-  background: none;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-  max-width: fit-content;
-  display: grid;
-}
-
-.handbookButton4:hover,
-.handbookButton4:focus {
-  color: #333333;
-  background: #ffc4bc;
-  border: none;
-  margin-top: 4%;
-  padding: 3% 3%;
-  text-align: left;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.section5HandbookLinkMobile {
+/* .section5HandbookLinkMobile {
   display: none;
-}
+} */
 
 .readMoreArrow {
   position: relative;
@@ -745,29 +668,12 @@
     display: block;
   }
 
-  .readMoreArrow {
-    display: none;
-  }
-
-  .handbookGrid {
-    display: flex;
-    flex-direction: wrap;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 5%;
-  }
-
-  .handbookHeaderDeskotop {
-    display: none;
-  }
-
   .mostImportantForYou {
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 39px;
-    padding-bottom: 5%;
   }
 
   .section5HandbookLink {
@@ -1056,9 +962,6 @@
   }
 
   /* Section 4 mobile*/
-  .whyWorkAtVariant {
-  }
-
   .section4Heading {
     font-family: 'Graphik Web';
     font-style: normal;
@@ -1240,10 +1143,6 @@
   }
 
   /* Handbook */
-  .whyWorkAtVariant {
-    height: auto;
-  }
-
   .mostImportantForYou,
   .handbookRef {
     font-size: 150%;
@@ -1252,10 +1151,6 @@
 
   .handbookGrid button {
     font-size: 150%;
-  }
-
-  .readMoreArrow {
-    display: none;
   }
 
   .EvenPicture {
@@ -1286,12 +1181,23 @@
   }
 }
 
+/* Tablet */
 @media (max-width: 1110px) {
   .handbook {
-    display: block;
+    flex-direction: column;
   }
-  .readMoreArrow {
-    display: none;
+
+  .handbookChildButton,
+  .handbookPages {
+    width: 100%;
+  }
+
+  .handbookGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0 1rem;
   }
 }
 
@@ -1299,4 +1205,37 @@
   .EvenPicture {
     width: 35%;
   }
+}
+
+@media (max-width: 500px) {
+  .handbookGrid button {
+    min-width: calc(50% - 1rem);
+  }
+}
+
+/* Button colors */
+
+:root {
+  --variant-black: #333333;
+  --variant-gray: #c4cad0;
+  --variant-dark-gray: #332726;
+  --variant-blue: #423d89;
+  --variant-blue-2: #35316e;
+  --variant-blue-3: #736ebe;
+  --variant-blue-4: #b7b4de;
+  --variant-blue-5: #68e9dd;
+  --variant-blue-6: #282552;
+  --variant-blue-7: #01574f;
+  --variant-pink: #e61a6b;
+  --variant-pink-2: #f076a6;
+  --variant-pink-3: #8b0f40;
+  --variant-pink-4: #fad2ed;
+  --variant-pink-5: #b91456;
+  --variant-peach: #ffc4bc;
+  --variant-peach-2: #ffdcd7;
+  --variant-peach-3: #fff3f2;
+  --variant-teal: #03dac6;
+  --variant-teal-2: #9af0e8;
+  --variant-beige: #ede8d7;
+  --variant-beige-1: #f1eddf;
 }

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from './index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-import HandBooKPages from './utils/handBookPages';
-import ReadMoreArrow from './img/lesMerPil';
+import { HandbookPage } from './utils/handBookPages';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
@@ -10,6 +9,7 @@ import AfterApplying, {
   ApplyType,
 } from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
 import MoreInfo from './img/merInfo';
+import WhyVariant from './nyutdannet/sections/hvorforAkkurattVariant';
 
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
@@ -20,29 +20,15 @@ const Content = () => {
   const norwayMap = require('./img/norway summer job.svg');
   // bildefiler finnes på  https://www.figma.com/file/9130OrLEkCHn15Cq4BvPRP/Skisser?type=design&node-id=908-163&mode=design&t=Bg1HGOBmQhOpszRV-4
 
-  const [whichButtonSelected, setWhichButtonSelected] = useState('');
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.matchMedia('(max-width: 900px)').matches);
   };
 
-  const handleOnClick = (buttonValue: string) => {
-    if (window.matchMedia('(max-width: 900px)').matches) {
-    }
-
-    setWhichButtonSelected(buttonValue);
-  };
-
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 900px)').matches);
     window.addEventListener('resize', handleResize);
-    if (
-      window.matchMedia('(min-width: 2000px)').matches &&
-      whichButtonSelected === ''
-    ) {
-      setWhichButtonSelected('Formal og verdier');
-    }
   }, []);
 
   return (
@@ -208,132 +194,10 @@ const Content = () => {
             <GreenBlob />
           </section>
 
-          <div className={style.section4Color}>
-            <section
-              className={style.whyWorkAtVariant}
-              id="hvorforjobbeivariant"
-              style={{
-                height:
-                  whichButtonSelected === '' && isMobile ? '850px' : 'auto',
-              }}
-            >
-              <div className={style.handbook}>
-                <div
-                  style={{ width: !isMobile ? '50%' : '100%' }}
-                  className={style.handbookChildButton}
-                >
-                  <h2 className={style.heading}>Hvorfor akkurat Variant?</h2>
-                  <p className={style.positionTextLeft}>
-                    Variant er en variant av et konsulentselskap som er raust,
-                    åpent og læreglad. Disse verdiene ligger til grunn for
-                    hvordan vi møter hverandre, våre kunder og alle andre. I
-                    håndboken vår kan du lese om hvordan ting gjøres i Variant,
-                    hva vi prøver å oppnå og hvorfor vi tenker som vi gjør.
-                    Under kan du sjekke ut noen utvalgte temaer.
-                  </p>
-                  {/* If mobile set background else check if pressed before set background */}
-                  <div className={style.handbookGrid}>
-                    <button
-                      style={{
-                        color: '#333333',
-                        backgroundColor: isMobile
-                          ? '#FAD2E2'
-                          : whichButtonSelected === 'Formal og verdier' &&
-                            !isMobile
-                          ? '#FAD2E2'
-                          : '#FFF3F2',
-                      }}
-                      className={style.handbookButton1}
-                      onClick={() => handleOnClick('Formal og verdier')}
-                    >
-                      Formål og verdier
-                    </button>
-                    <button
-                      style={{
-                        color: isMobile
-                          ? 'white'
-                          : whichButtonSelected === 'Tillit og ansvar' &&
-                            !isMobile
-                          ? 'white'
-                          : '#333333',
-                        backgroundColor: isMobile
-                          ? '#8B0F40'
-                          : whichButtonSelected === 'Tillit og ansvar' &&
-                            !isMobile
-                          ? '#8B0F40'
-                          : '#FFF3F2',
-                      }}
-                      className={style.handbookButton2}
-                      onClick={() => handleOnClick('Tillit og ansvar')}
-                    >
-                      Tillit og ansvar
-                    </button>
-                    <button
-                      style={{
-                        color: isMobile
-                          ? 'white'
-                          : whichButtonSelected === 'Variantdag' && !isMobile
-                          ? 'white'
-                          : '#333333',
-                        backgroundColor: isMobile
-                          ? '#423D89'
-                          : whichButtonSelected === 'Variantdag' && !isMobile
-                          ? '#423D89'
-                          : '#FFF3F2',
-                      }}
-                      className={style.handbookButton3}
-                      onClick={() => handleOnClick('Variantdag')}
-                    >
-                      Variantdag
-                    </button>
-                    <button
-                      style={{
-                        color: '#333333',
-                        backgroundColor: isMobile
-                          ? '#03DAC6'
-                          : whichButtonSelected === 'Miljofyrtarn' && !isMobile
-                          ? '#03DAC6'
-                          : '#FFF3F2',
-                      }}
-                      className={style.handbookButton4}
-                      onClick={() => handleOnClick('Miljofyrtarn')}
-                    >
-                      Miljøfyrtårn
-                    </button>
-                  </div>
-                  <div className={style.section5HandbookLink}>
-                    <h2 className={style.mostImportantForYou}>
-                      Hva er viktigst for deg?
-                    </h2>
-                    <a
-                      className={style.handbookRef}
-                      href="https://handbook.variant.no"
-                    >
-                      Sjekk ut hele håndboka vår her
-                    </a>
-                  </div>
-                </div>
-                <div className={style.handbookPages}>
-                  {whichButtonSelected ? (
-                    <HandBooKPages selectedButton={whichButtonSelected} />
-                  ) : (
-                    <ReadMoreArrow />
-                  )}
-                </div>
-                <div className={style.section5HandbookLinkMobile}>
-                  <h2 className={style.mostImportantForYou}>
-                    Hva er viktigst for deg?
-                  </h2>
-                  <a
-                    className={style.handbookRef}
-                    href="https://handbook.variant.no"
-                  >
-                    Sjekk ut hele håndboka vår her
-                  </a>
-                </div>
-              </div>
-            </section>
+          <div className={style.sectionLightPeach}>
+            <WhyVariant pages={[HandbookPage.INTENTIONS_AND_VALUES, HandbookPage.TRUST_AND_RESPONSIBILITY, HandbookPage.VARIANTDAY, HandbookPage.ENVIRONMENT_LIGHTHOUSE]} />
           </div>
+
           <div style={{ backgroundColor: '#8B0F40', color: 'white' }}>
             <AfterApplying red={true} applyType={ApplyType.SUMMER} />
           </div>

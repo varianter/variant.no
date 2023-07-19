@@ -189,10 +189,8 @@ p {
 /* Section 3 */
 
 .readMoreArrowWhite {
-  width: 200%;
-  position: relative;
-  top: 200px;
-  right: 90%;
+  position: absolute;
+  left: 35%;
 }
 
 .arrowDiv {
@@ -471,10 +469,6 @@ p {
     line-height: 150%;
   }
 
-  .readMoreArrowWhite {
-    display: none;
-  }
-
   .section4Flex {
     justify-content: left;
   }
@@ -554,14 +548,6 @@ p {
 
 @media (max-width: 1400px) {
   /* Section 6 */
-  .readMoreArrowWhite {
-    width: 100%;
-  }
-
-  .arrowDiv {
-    width: 100%;
-  }
-
   .timeLine2 {
     display: none;
   }
@@ -623,7 +609,7 @@ p {
   }
 
   .readMoreArrowWhite {
-    display: none;
+    width: 35%;
   }
 
   .section5PictureDiv {
@@ -687,10 +673,6 @@ p {
   .imageBlob1 {
     margin-top: 5%;
     position: static;
-  }
-
-  .readMoreArrowWhite {
-    display: none;
   }
 }
 

@@ -5,9 +5,10 @@ import FirstYear from './sections/hvordanSerFørsteÅretUt';
 import WhyVariant from './sections/hvorforAkkurattVariant';
 import Payment from './sections/lonn';
 import Apply from './sections/søkJobb';
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import Head from 'next/head';
 import favicon from '@variant/profile/lib/logo/favicon.png';
+import { HandbookPage } from '../utils/handBookPages';
+import style from 'src/summersplash2022/index.module.css';
 
 const Nyutdannet = () => {
   return (
@@ -40,7 +41,9 @@ const Nyutdannet = () => {
       <div className={style.scrollContainer}>
         <LandingPage />
         <WhoAreWeSeeking />
-        <WhyVariant />
+        <div className={style.sectionDarkBlue}>
+          <WhyVariant pages={[HandbookPage.INTENTIONS_AND_VALUES, HandbookPage.WORK, HandbookPage.SOCIAL, HandbookPage.PERKS]} />
+        </div>
         <Payment />
         <FirstYear />
         <AfterApplying red={false} applyType={ApplyType.GRADUATE} />

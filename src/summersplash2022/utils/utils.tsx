@@ -1,7 +1,3 @@
-export interface WhichButtonPressed {
-  selectedButton: string;
-}
-
 export const changeNavbarColor = (
   setNavColor: Function,
   setIsMobile: Function,
