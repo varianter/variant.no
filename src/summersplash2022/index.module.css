@@ -111,7 +111,6 @@
 .section6Paragraph2,
 .handbookRef,
 .positionTextLeft,
-.section2Paragraph,
 .section5Paragraph {
   font-family: 'Graphik Web';
   font-style: normal;
@@ -128,6 +127,30 @@
 .sectionDarkBlue {
   background-color: var(--variant-blue-7);
   color: white;
+}
+
+.sectionDarkBlue,
+.sectionDarkBlue button,
+.sectionDarkBlue a {
+  background-color: var(--variant-blue-7);
+  color: white;
+}
+
+.sectionLightPeach,
+.sectionLightPeach button,
+.sectionLightPeach a {
+  background-color: #fff3f2;
+  color: var(--variant-black);
+}
+
+.sectionDarkTeal {
+  background-color: var(--variant-teal-3);
+  color: white;
+}
+
+.sectionLightBeigh {
+  background-color: var(--variant-beige-3);
+  color: var(--variant-black);
 }
 
 /* Header */
@@ -196,11 +219,11 @@
 }
 
 /* Section 2 styling*/
+/* TODO: Rename to aboutTheJobOrEmployee */
 .section2 {
-  width: 100%;
-  color: white;
   padding-bottom: 20%;
-  height: auto;
+  height: max-content;
+  min-height: 100vh;
 }
 
 .blogpostLink {
@@ -208,28 +231,72 @@
   text-decoration: underline;
 }
 
-.section2Color {
-  background-color: #1a1837;
-}
-
-.section2Div2 {
-  margin-top: 20%;
-}
-
-.section2Paragraph {
-  width: 74%;
-}
-
-.section2Text {
-  width: 60%;
-}
-
 .section2Flex {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0 4rem;
+  width: 100%;
 }
-.officeMapMobile {
-  display: none;
+
+.section2TextAboveImage {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: flex;
+  height: max-content;
+}
+
+div.section2TextAboveImage {
+  display: flex;
+  flex-direction: column;
+}
+
+.section2TextBelowImage {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  height: max-content;
+  margin-top: 1rem;
+}
+
+.section2ImageWrapper {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+  height: -webkit-max-content;
+  height: max-content;
+  margin: auto 0;
+}
+
+.section2Image {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 1500px) {
+  .section2Image {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .section2Flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section2TextBelowImage {
+    order: 3;
+  }
+
+  .section2ImageWrapper {
+    order: 2;
+    margin: 3rem auto;
+    max-width: 500px;
+  }
+
+  .section2Image {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 /* Section 3 styling */
@@ -503,20 +570,6 @@
 }
 
 /* Why work at Variant */
-.sectionDarkBlue,
-.sectionDarkBlue button,
-.sectionDarkBlue a {
-  background-color: #01574f;
-  color: white;
-}
-
-.sectionLightPeach,
-.sectionLightPeach button,
-.sectionLightPeach a {
-  background-color: #fff3f2;
-  color: var(--variant-black);
-}
-
 .whyWorkAtVariant p {
   font-family: 'Graphik Web';
   font-style: normal;
@@ -592,7 +645,6 @@
   }
 
   p,
-  .section2Paragraph,
   .whyWorkAtVariant p,
   .section6 p {
     font-size: 16px;
@@ -849,10 +901,6 @@
     padding: 5%;
   }
 
-  .section2Paragraph {
-    width: 100%;
-  }
-
   /* Section 3 mobile*/
   .section3Heading {
     font-family: 'Graphik Web';
@@ -1069,6 +1117,10 @@
 }
 
 @media (min-width: 2150px) {
+  .section2Image {
+    max-width: 700px;
+  }
+
   .heading,
   .handbookHeaderDeskotop {
     font-size: 300%;
@@ -1080,7 +1132,6 @@
   }
 
   p,
-  .section2Paragraph,
   .whyWorkAtVariant p,
   .section6 p {
     font-size: 150%;
@@ -1225,7 +1276,7 @@
   --variant-blue-4: #b7b4de;
   --variant-blue-5: #68e9dd;
   --variant-blue-6: #282552;
-  --variant-blue-7: #01574f;
+  --variant-blue-7: #1a1837;
   --variant-pink: #e61a6b;
   --variant-pink-2: #f076a6;
   --variant-pink-3: #8b0f40;
@@ -1236,6 +1287,8 @@
   --variant-peach-3: #fff3f2;
   --variant-teal: #03dac6;
   --variant-teal-2: #9af0e8;
+  --variant-teal-3: #01574f;
   --variant-beige: #ede8d7;
   --variant-beige-1: #f1eddf;
+  --variant-beige-3: #f4f1e7;
 }

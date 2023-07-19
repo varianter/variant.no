@@ -40,8 +40,10 @@ const Nyutdannet = () => {
 
       <div className={style.scrollContainer}>
         <LandingPage />
-        <WhoAreWeSeeking />
-        <div className={style.sectionDarkBlue}>
+        <div className={style.sectionLightBeige}>
+          <WhoAreWeSeeking />
+        </div>
+        <div className={style.sectionDarkTeal}>
           <WhyVariant pages={[HandbookPage.INTENTIONS_AND_VALUES, HandbookPage.WORK, HandbookPage.SOCIAL, HandbookPage.PERKS]} />
         </div>
         <Payment />

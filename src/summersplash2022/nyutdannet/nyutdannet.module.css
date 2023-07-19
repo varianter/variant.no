@@ -167,25 +167,6 @@ p {
   bottom: 400px;
 }
 
-/* Section 2 */
-.section2 {
-  height: auto;
-  background-color: '#F4F1E7';
-}
-
-.section2Flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.section2Text {
-  width: 67%;
-}
-
-.section2Image {
-  margin-left: 3rem;
-}
-
 /* Section 3 */
 
 .readMoreArrowWhite {
@@ -195,11 +176,6 @@ p {
 
 .arrowDiv {
   width: 100%;
-}
-
-.handbookRef,
-.handbookRef:visited {
-  color: white;
 }
 
 /* Section 4 */
@@ -415,11 +391,6 @@ p {
     bottom: 300px;
     z-index: 1;
   }
-
-  /* Section 2 */
-  .section2Text {
-    width: 50%;
-  }
 }
 
 @media (min-width: 2050px) {
@@ -447,16 +418,6 @@ p {
 
   .section1BlobSVG {
     bottom: 1000px;
-  }
-
-  /* Section 2 */
-  .section2 {
-    height: auto;
-  }
-
-  .section2 p {
-    font-size: 150%;
-    line-height: 150%;
   }
 
   /* Section 4 */
@@ -532,10 +493,6 @@ p {
     bottom: 300px;
   }
 
-  .section2 {
-    height: 1100px;
-  }
-
   /* Section 5 */
   .section5 p {
     width: 40%;
@@ -578,26 +535,6 @@ p {
 
   .section1Blob {
     display: none;
-  }
-
-  /* Breakpoint for office map*/
-  .section2Flex {
-    display: block;
-  }
-
-  .section2Text {
-    width: auto;
-  }
-
-  .section2ImageWrapper {
-    margin: 3rem auto;
-    width: max-content;
-  }
-
-  .section2Image {
-    width: 100%;
-    max-width: min(600px, 80vw);
-    margin: 0;
   }
 }
 

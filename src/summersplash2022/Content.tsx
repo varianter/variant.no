@@ -74,12 +74,12 @@ const Content = () => {
               <MoreInfo white={false} />
             </div>
           </section>
-          <div className={style.section2Color}>
+          <div className={style.sectionDarkBlue}>
             <section className={style.section2} id="hvagarsommerjobbenutpa">
               <h2 className={style.heading}>Hva går sommerjobben ut på?</h2>
               <div className={style.section2Flex}>
-                <div className={style.section2Text}>
-                  <p className={style.section2Paragraph}>
+                <div className={style.section2TextAboveImage}>
+                  <p>
                     En sommerjobb i Variant er en fin mulighet til å anvende det
                     du har lært på skolen i praksis. Det forventes ikke at du er
                     utlært, men at du ønsker å lære mer. I et tverrfaglig team
@@ -91,7 +91,7 @@ const Content = () => {
                     mer om hva årets sommerstudenter jobbet med.
                   </p>
 
-                  <p className={style.section2Paragraph}>
+                  <p>
                     I 2024 tilbyr vi sommerjobb i både{' '}
                     <strong>Trondheim</strong>, <strong>Oslo</strong> og{' '}
                     <strong>Bergen</strong>, til henholdsvis ti, ti og tre
@@ -99,36 +99,24 @@ const Content = () => {
                     Sommerjobben varer i fire + to uker med tre uker ferie i
                     mellomtiden.
                   </p>
-                  {isMobile ? (
-                    <div className={style.officeMapMobile}>
-                      <img
-                        src={norwayMap}
-                        alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen!"
-                        width="100%"
-                      />
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-                  <p className={style.section2Paragraph}>
-                    I Variant liker vi åpenhet. Det betyr at du selvsagt ikke
-                    trenger å lure på hvordan kontrakten din vil se ut for
-                    sommeren, den ligger nemlig åpent og tilgjengelig på våre
-                    nettsider. Timelønnen trenger du heller ikke å lure på, den
-                    er på 271,83kr (eller 100
-                    <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
-                    🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om
-                    hva Variant står for og tilbyr.
-                  </p>
                 </div>
-                {!isMobile ? (
+                <p className={style.section2TextBelowImage}>
+                  I Variant liker vi åpenhet. Det betyr at du selvsagt ikke
+                  trenger å lure på hvordan kontrakten din vil se ut for
+                  sommeren, den ligger nemlig åpent og tilgjengelig på våre
+                  nettsider. Timelønnen trenger du heller ikke å lure på, den
+                  er på 271,83kr (eller 100
+                  <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
+                  🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om
+                  hva Variant står for og tilbyr.
+                </p>
+                <div className={style.section2ImageWrapper}>
                   <img
                     src={norwayMap}
                     alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"
+                    className={style.section2Image}
                   />
-                ) : (
-                  <></>
-                )}
+                </div>
               </div>
             </section>
           </div>

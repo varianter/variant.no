@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import style from 'src/summersplash2022/index.module.css';
 
 const WhoAreWeSeeking = () => {
   const graduateNorwayMap = require('../img/graduate norway map.svg')
@@ -6,8 +6,7 @@ const WhoAreWeSeeking = () => {
     <section className={style.section2}>
       <h2 className={style.heading}>Hvem søker vi?</h2>
       <div className={style.section2Flex}>
-        <div className={style.section2Text}>
-          <p>
+          <p className={style.section2TextAboveImage}>
             Vi søker 17 nyutdannede designere og utviklere som engasjerer og
             motiverer, med oppstart 1. august 2024. Stillingene er fordelt på
             våre kontorer i Trondheim, Oslo og Bergen. Det er ikke viktig hvilke
@@ -16,7 +15,7 @@ const WhoAreWeSeeking = () => {
             og bryr deg om kunden du leverer til.
           </p>
     
-          <p>
+          <p className={style.section2TextBelowImage}>
             Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av
             hverandre og de vi jobber med for å bli flinkere, modigere og
             rausere. Vi elsker utfordringer hvor design- og teknologikompetanse
@@ -26,11 +25,10 @@ const WhoAreWeSeeking = () => {
             ansatte, der læreglede står i sentrum. Deler du også denne
             filosofien?
           </p>
-        </div>
         <div className={style.section2ImageWrapper}>
           <img src={graduateNorwayMap} alt='Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
             4 designere, Oslo : 3 utviklere 3 designere' className={style.section2Image}/>
-        </div>          
+        </div>
       </div>
     </section>
   );
