@@ -1,35 +1,56 @@
-import React, { useEffect, useState } from 'react';
 import style from './index.module.css';
 import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 import { HandbookPage } from './utils/handBookPages';
 import Header from './components/header/header';
 import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
+import GreenBlob2 from './nyutdannet/img/greenBlob2';
+import GreenBlob3 from './nyutdannet/img/greenBlob3';
+
 import AfterApplying, {
   ApplyType,
 } from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
 import MoreInfo from './img/merInfo';
 import WhyVariant from './nyutdannet/sections/hvorforAkkurattVariant';
 
+const summerstudentsQuotes = [
+  {
+    name: "Emma",
+    quote: `“Jeg er utrolig glad for å få være en del av variantgjengen i
+    sommer! Det er gøy å se hvordan kjerneverdier som åpenhet og
+    læreglede virkelig praktiseres i arbeidshverdagen, ikke bare
+    på papiret. Det gjør at jeg føler meg veldig inkludert og
+    lærer masse, samtidig som vi har det mye moro!\”`,
+    picture: require('./img/emma.svg')
+  },
+  {
+    name: "Mathias",
+    quote: `“Sommeren i Variant ga meg en smakebit av hva det vil si å
+    være konsulent. Med ekte kunder og reelle behov lærte jeg
+    masse og fikk vist frem ferdighetene mine. Gjennom sosiale
+    arrangementer og pulserende Slack-kanaler følte jeg meg
+    inkludert allerede før dag én. Jevnlige sparringer ga faglig
+    påfyll og støtte til teamet, og folkene her er rett og slett
+    herlige 🤗”`,
+    picture: require('./img/mathias.svg')
+  },
+  {
+    name: "Swarny",
+    quote: `“Sommeren hos Variant har vært helt fantastisk. Vi fikk jobbe
+    med et megakult og aktuelt prosjekt med god oppfølging, både
+    fra Variant og kunden. Selv om Variant er et konsulentselskap,
+    har de et godt sosialt miljø hvor alle er inkluderende, ivrige
+    og åpne. Jeg er superfornøyd med at
+    jeg søkte sommerjobb hos Variant!!”`,
+    picture: require('./img/swarny.svg')
+  }
+]
+
 const Content = () => {
   const blobSection1 = require('./img/section1Blob.png');
   const Marius = require('./img/Marius.png');
-  const summerStudent1 = require('./img/emma.svg');
-  const summerStudent2 = require('./img/mathias.svg');
-  const summerStudent3 = require('./img/swarny.svg');
   const norwayMap = require('./img/norway summer job.svg');
   // bildefiler finnes på  https://www.figma.com/file/9130OrLEkCHn15Cq4BvPRP/Skisser?type=design&node-id=908-163&mode=design&t=Bg1HGOBmQhOpszRV-4
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleResize = () => {
-    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
-  };
-
-  useEffect(() => {
-    setIsMobile(window.matchMedia('(max-width: 900px)').matches);
-    window.addEventListener('resize', handleResize);
-  }, []);
 
   return (
     <>
@@ -123,63 +144,21 @@ const Content = () => {
 
           <section className={style.section3} id="hvameneraretssommerstudenter">
             <h2 className={style.heading}>Hva mener årets sommerstudenter?</h2>
-            <div className={style.summerstudent1}>
-              <img
-                className={style.summerstudent1picture}
-                src={summerStudent1}
-                alt=""
-              />
-              <div>
-                <p className={style.summerstudent1Paragraph}>
-                  “Jeg er utrolig glad for å få være en del av variantgjengen i
-                  sommer! Det er gøy å se hvordan kjerneverdier som åpenhet og
-                  læreglede virkelig praktiseres i arbeidshverdagen, ikke bare
-                  på papiret. Det gjør at jeg føler meg veldig inkludert og
-                  lærer masse, samtidig som vi har det mye moro!”
-                </p>
-                <p className={style.summerstudentName1}>-Emma</p>
+            {summerstudentsQuotes.map((student) => (
+              <div className={style.summerstudent}>
+                <img src={student.picture} alt={`Bilde av ${student.name}`} className={style.summerstudentPicture} />
+                <div>
+                  <p className={style.summerstudentQuote}>
+                    {student.quote}
+                  </p>
+                  <p className={style.summerstudentName}>-{student.name}</p>
+                </div>
               </div>
-            </div>
-
-            <div className={style.summerstudent2}>
-              <div>
-                <img
-                  className={style.summerstudent2picture}
-                  src={summerStudent2}
-                  alt=""
-                ></img>
-                <p className={style.summerstudent2Paragraph}>
-                  “Sommeren i Variant ga meg en smakebit av hva det vil si å
-                  være konsulent. Med ekte kunder og reelle behov lærte jeg
-                  masse og fikk vist frem ferdighetene mine. Gjennom sosiale
-                  arrangementer og pulserende Slack-kanaler følte jeg meg
-                  inkludert allerede før dag én. Jevnlige sparringer ga faglig
-                  påfyll og støtte til teamet, og folkene her er rett og slett
-                  herlige 🤗”
-                </p>
-                <p className={style.summerstudentName2}>-Mathias</p>
-              </div>
-            </div>
-
-            <div className={style.summerstudent3}>
-              <img
-                className={style.summerstudent3picture}
-                src={summerStudent3}
-                alt="summerstudent 3"
-              ></img>
-              <div>
-                <p className={style.summerstudent3Paragraph}>
-                  “Sommeren hos Variant har vært helt fantastisk. Vi fikk jobbe
-                  med et megakult og aktuelt prosjekt med god oppfølging, både
-                  fra Variant og kunden. Selv om Variant er et konsulentselskap,
-                  har de et godt sosialt miljø hvor alle er inkluderende, ivrige
-                  og åpne. Jeg er superfornøyd med at
-                  jeg søkte sommerjobb hos Variant!!”
-                </p>
-                <p className={style.summerstudentName}>-Swarny</p>
-              </div>
-            </div>
+            ))}
+      
             <GreenBlob />
+            <GreenBlob2 />
+            <GreenBlob3 />
           </section>
 
           <div className={style.sectionLightPeach}>

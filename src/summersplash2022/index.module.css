@@ -143,7 +143,9 @@
   color: var(--variant-black);
 }
 
-.sectionDarkTeal {
+.sectionDarkTeal,
+.sectionDarkTeal button,
+.sectionDarkTeal a {
   background-color: var(--variant-teal-3);
   color: white;
 }
@@ -304,60 +306,45 @@ div.section2TextAboveImage {
 .section3 {
   background-color: #01574f;
   color: white;
-  height: 1600px;
+  position: relative;
+  overflow: hidden;
 }
 
-.summerstudent1 {
+.summerstudent {
   display: flex;
-  position: static;
-  margin-top: 4em;
+  flex-direction: row;
+  z-index: 10;
+  width: 70%;
+  margin: 6rem 0;
+  margin-top: 0;
 }
 
-.summerstudent2 {
-  display: flex;
-  position: relative;
-  bottom: 100px;
-  margin-top: 4em;
+.summerstudent:nth-of-type(even) {
+  flex-direction: row-reverse;
+  margin-left: 12em;
 }
 
-.summerstudent3 {
-  display: flex;
-  position: relative;
-  bottom: 100px;
-  margin-top: 3em;
+.summerstudent:last-of-type {
+  margin-bottom: 0;
 }
 
-.summerstudent1picture {
-  position: relative;
-  margin-top: 5%;
-  margin-left: 7%;
-  width: 30%;
-  height: 30%;
+.summerstudentPicture {
+  width: 288.35px;
+  height: 288.35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.summerstudent2picture {
-  position: relative;
-  width: 32%;
-  margin-right: 10%;
-  float: right;
-  z-index: 1;
+.summerstudent:nth-of-type(odd) .summerstudentPicture {
+  margin-right: 4rem;
 }
 
-.summerstudent3picture {
-  position: relative;
-  width: 37%;
-  height: 37%;
-  bottom: 150px;
-  padding-right: 2em;
+.summerstudent:nth-of-type(even) .summerstudentPicture {
+  margin-left: 4rem;
 }
 
-.summerstudent1Paragraph,
-.summerstudent2Paragraph,
-.summerstudent3Paragraph,
-.summerstudentName,
-.summerstudentName1,
-.summerstudentName2 {
-  font-family: 'Graphik Web';
+.summerstudentQuote,
+.summerstudentName {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -365,40 +352,118 @@ div.section2TextAboveImage {
   position: relative;
 }
 
-.summerstudentName,
-.summerstudentName1,
-.summerstudentName2 {
+.summerstudentQuote {
+  font-family: 'Graphik Web';
+}
+
+.summerstudentName {
   font-family: 'Recoleta';
 }
 
-.summerstudent1Paragraph {
-  width: 50%;
-  padding-top: 15%;
+.summerstudent div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.summerstudent2Paragraph {
-  padding-top: 8%;
-  margin-left: 10%;
-  width: 40%;
-  text-align: right;
-  margin-bottom: 8%;
-}
-
-.summerstudentName2 {
-  width: 50%;
-  text-align: right;
-}
-
-.summerstudent3Paragraph {
-  width: 50%;
-  padding-top: 2%;
+.summerstudent,
+.summerstudentPicture,
+.summerstudentQuote,
+.summerstudentName {
+  z-index: 10;
 }
 
 .greenBlob {
-  position: relative;
-  bottom: 1150px;
-  left: 67%;
-  width: 50%;
+  right: 0;
+  height: 1100px;
+  width: 700px;
+  position: absolute;
+  top: 0rem;
+}
+
+.greenBlob2 {
+  left: 0;
+  height: 1100px;
+  width: 300px;
+  position: absolute;
+  top: 45%;
+}
+
+.greenBlob3 {
+  right: 0;
+  height: 1100px;
+  width: 700px;
+  position: absolute;
+  top: 70rem;
+  display: none;
+}
+
+@media (max-width: 1500px) {
+  .greenBlob {
+    right: -19%;
+  }
+
+  .summerstudent {
+    width: 100%;
+  }
+
+  .summerstudent:nth-of-type(even) {
+    margin-left: 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .greenBlob {
+    right: -20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .summerstudent,
+  .summerstudent:nth-of-type(even) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .summerstudent:nth-of-type(even) .summerstudentPicture,
+  .summerstudent:nth-of-type(odd) .summerstudentPicture {
+    margin: 0 auto;
+  }
+
+  .greenBlob {
+    height: 600px;
+    top: 3rem;
+  }
+
+  .greenBlob2 {
+    top: 21%;
+    width: 250px;
+  }
+
+  .greenBlob3 {
+    display: block;
+    top: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .summerstudentPicture {
+    width: 90%;
+  }
+
+  .greenBlob {
+    right: -44%;
+  }
+
+  .greenBlob2 {
+    left: -12%;
+  }
+
+  .greenBlob3 {
+    right: -32%;
+  }
 }
 
 .handbookHeaderDesktop {
@@ -651,10 +716,6 @@ div.section2TextAboveImage {
     line-height: 23px;
   }
 
-  .section3 {
-    overflow: hidden;
-  }
-
   .handbookChildButton {
     width: auto;
   }
@@ -748,10 +809,6 @@ div.section2TextAboveImage {
   .newVariantsSVG {
     width: 100%;
     height: auto;
-  }
-
-  .summerstudent1 {
-    display: block;
   }
 
   .flexTimeline {
@@ -911,104 +968,6 @@ div.section2TextAboveImage {
     padding: 5%;
   }
 
-  .section3 {
-    height: 1400px;
-  }
-
-  .summerstudent1 {
-    display: static;
-    padding-bottom: 15%;
-    position: relative;
-    overflow-wrap: break-word;
-  }
-  .summerstudent2 {
-    padding-bottom: 15%;
-    display: static;
-    position: relative;
-    bottom: 0px;
-  }
-
-  .summerstudent3 {
-    display: flex;
-    position: relative;
-    bottom: 0px;
-    right: 15%;
-  }
-  .summerstudentName1 {
-    position: relative;
-    right: 10%;
-    padding-left: 10%;
-  }
-
-  .summerstudentName2 {
-    text-align: left;
-  }
-
-  .summerstudent1Paragraph,
-  .summerstudent2Paragraph,
-  .summerstudent3Paragraph {
-    position: static;
-    width: 80%;
-    height: fit-content;
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .summerstudent1Paragraph {
-    position: relative;
-    padding-top: 12%;
-    width: 100%;
-    right: 18%;
-    padding-left: 15%;
-  }
-
-  .summerstudent2Paragraph {
-    text-align: left;
-    padding-top: 5%;
-    margin: 0;
-    width: 100%;
-  }
-
-  .summerstudent3Paragraph {
-    padding-top: 16%;
-    width: 100%;
-  }
-
-  .summerstudent1picture {
-    width: 60%;
-    height: auto;
-    shape-outside: circle() padding-box;
-    float: left;
-    right: 20%;
-    position: relative;
-  }
-
-  .summerstudent2picture {
-    width: 60%;
-    float: right;
-    shape-outside: circle() padding-box;
-    height: auto;
-    margin: 0px;
-  }
-
-  .summerstudent3picture {
-    width: 60%;
-    /* height: 40%; */
-    float: left;
-    position: relative;
-    bottom: 20%;
-  }
-
-  .greenBlob {
-    position: relative;
-    bottom: 75%;
-    left: 67%;
-    width: 50%;
-  }
-
   /* Section 4 mobile*/
   .section4Heading {
     font-family: 'Graphik Web';
@@ -1101,10 +1060,6 @@ div.section2TextAboveImage {
     height: 1600px;
   }
 
-  .section3 {
-    height: 1700px;
-  }
-
   .timeLine svg {
     width: 50%;
   }
@@ -1176,21 +1131,6 @@ div.section2TextAboveImage {
   .section3 p {
     font-size: 150%;
     line-height: 150%;
-  }
-
-  .section3 {
-    height: 3000px;
-  }
-  .summerstudent1picture {
-    width: 20%;
-  }
-
-  .greenBlob {
-    width: 50%;
-    height: auto;
-    position: relative;
-    right: 300px;
-    bottom: 2500px;
   }
 
   /* Handbook */
