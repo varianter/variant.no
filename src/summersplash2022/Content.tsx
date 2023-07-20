@@ -165,8 +165,8 @@ const Content = () => {
             <WhyVariant pages={[HandbookPage.INTENTIONS_AND_VALUES, HandbookPage.TRUST_AND_RESPONSIBILITY, HandbookPage.VARIANTDAY, HandbookPage.ENVIRONMENT_LIGHTHOUSE]} />
           </div>
 
-          <div style={{ backgroundColor: '#8B0F40', color: 'white' }}>
-            <AfterApplying red={true} applyType={ApplyType.SUMMER} />
+          <div className={style.sectionDarkPink}>
+            <AfterApplying applyType={ApplyType.SUMMER} />
           </div>
 
           <section className={style.section6} id="sokSommerjobb">

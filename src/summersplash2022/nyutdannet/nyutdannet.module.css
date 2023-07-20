@@ -270,52 +270,6 @@ p {
   z-index: 3;
 }
 
-/* Section 6 */
-.flexTimeline {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.section6Div {
-  width: 48%;
-  height: 1200px;
-  z-index: 1;
-}
-
-.section6 h3 {
-  position: relative;
-  z-index: 1;
-}
-
-.section6 p {
-  font-family: var(--graphik-font-family);
-  font-style: var(--paragraph-font-style);
-  font-size: var(--paragraph-font-size);
-  line-height: var(--paragraph-line-height);
-  width: 100%;
-}
-
-.section6 p:nth-child(1),
-.section6 p:nth-child(2),
-.section6 p:nth-child(3) {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.section6 p:nth-last-child(1) {
-  width: 600px;
-}
-
-.section6Blob {
-  position: relative;
-  z-index: -2;
-  right: 45%;
-  transform: scale(0.5);
-  bottom: 33%;
-}
-
 /* Section 7 */
 .section7 {
   background-color: #fff3f2;
@@ -453,31 +407,6 @@ p {
     display: none;
   }
 
-  /* Section 6 */
-  .section6 p {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
-  .timeLineBlack {
-    width: auto;
-    height: auto;
-  }
-
-  .timeLineWhite {
-    width: 50%;
-    height: auto;
-  }
-
-  .section6 p:nth-last-child(1) {
-    width: 100%;
-  }
-
-  .section6 h4 {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
   .section7 p {
     font-size: 150%;
     line-height: 150%;
@@ -551,29 +480,6 @@ p {
 
   .section5PictureDiv {
     bottom: 1100px;
-  }
-
-  .section6Div {
-    height: 1000px;
-    width: auto;
-  }
-
-  .section6 {
-    height: auto;
-  }
-
-  .section6 p:nth-child(1),
-  .section6 p:nth-child(2),
-  .section6 p:nth-child(3) {
-    width: 100%;
-  }
-
-  .timeLineBlack {
-    margin-top: 30rem;
-  }
-
-  .section6Blob {
-    bottom: 300px;
   }
 }
 
@@ -713,25 +619,6 @@ p {
 
   .section5Blob {
     width: 300px;
-  }
-
-  /* Section 6 */
-  .section6 {
-    height: 1900px;
-  }
-
-  .section6 p:nth-child(1),
-  .section6 p:nth-child(2),
-  .section6 p:nth-child(3) {
-    width: 100%;
-  }
-
-  .timeLineBlack {
-    margin-top: 7rem;
-  }
-
-  .section6Blob {
-    bottom: 300px;
   }
 
   /* Section 7 */

@@ -150,9 +150,18 @@
   color: white;
 }
 
-.sectionLightBeigh {
+.sectionLightBeige,
+.sectionLightBeige button,
+.sectionLightBeige a {
   background-color: var(--variant-beige-3);
   color: var(--variant-black);
+}
+
+.sectionDarkPink,
+.sectionDarkPink button,
+.sectionDarkPink a {
+  background-color: var(--variant-pink-3);
+  color: white;
 }
 
 /* Header */
@@ -533,16 +542,180 @@ div.section2TextAboveImage {
 }
 
 /* Section 6 styling*/
+/* After application deadline */
 
 .section6 {
-  background-color: #f4f1e7;
-  height: 1200px;
+  overflow: hidden;
 }
 
-.section6Paragraph {
-  width: 40%;
-  margin-top: 20px;
+.section6Flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 4rem;
 }
+
+.section6About {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.section6Even {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  position: relative;
+}
+
+.EvenPicture {
+  z-index: 10;
+  position: inherit;
+}
+
+.section6Timeline {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  margin: 0 auto;
+}
+
+.section6ApplicationTips {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  position: relative;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.section6About,
+.section6ApplicationTips h4,
+.section6ApplicationTips p {
+  z-index: 10;
+  position: relative;
+}
+
+.section6Blob {
+  position: absolute;
+  z-index: 1;
+  transform: rotate(250deg);
+  top: -3rem;
+  left: 1rem;
+}
+
+.section6Blob svg {
+  width: 100%;
+  height: 100%;
+}
+
+.section6PictureBlob {
+  position: absolute;
+  z-index: 1;
+  top: -25%;
+  transform: rotate(55deg);
+  left: -32rem;
+}
+
+@media (max-width: 2050px) {
+  .section6Blob {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .EvenPicture {
+    width: 80%;
+  }
+
+  .sectionLightBeige .section6ApplicationTips {
+    margin-top: -6rem;
+  }
+
+  .section6Blob {
+    width: 120%;
+    left: -3rem;
+  }
+}
+
+@media (max-width: 1110px) {
+  .section6Flex {
+    grid-gap: 4rem 0;
+  }
+
+  .section6About {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .section6Even {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    margin-top: -1rem;
+    margin-left: -3rem;
+  }
+
+  .EvenPicture {
+    width: 70%;
+    margin-top: 4rem;
+  }
+
+  .section6PictureBlob {
+    display: none;
+  }
+
+  .section6Timeline {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionLightBeige .section6ApplicationTips,
+  .section6ApplicationTips {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    margin-top: 6rem;
+  }
+
+  .section6Blob {
+    left: -5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .section6Flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section6About {
+    order: 1;
+  }
+
+  .section6Even {
+    order: 3;
+    margin: auto;
+  }
+
+  .EvenPicture {
+    display: flex;
+    margin: auto;
+  }
+
+  .section6Timeline {
+    order: 2;
+  }
+
+  .section6ApplicationTips {
+    order: 4;
+    margin: auto;
+  }
+
+  .section6Blob {
+    display: none;
+  }
+}
+
 .wrapper .radio-button-wrapper {
   border: none;
 }
@@ -735,10 +908,6 @@ div.section2TextAboveImage {
     right: 5px;
   }
 
-  .section6 {
-    height: 1100px;
-  }
-
   /* Position to static */
   .imageBlob1 {
     position: static;
@@ -836,16 +1005,6 @@ div.section2TextAboveImage {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-  }
-
-  .section6Paragraph {
-    width: 100%;
-    margin-top: 20px;
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
   }
 
   .section5Paragraph {
@@ -1000,50 +1159,6 @@ div.section2TextAboveImage {
   .section5Color {
     background: black;
   }
-
-  .EvenPicture {
-    position: relative;
-    width: 70%;
-    display: flex;
-    margin: auto;
-  }
-
-  .timeLine {
-    margin-top: 100px;
-  }
-
-  /* Section 6 mobile */
-
-  .section6Flex {
-    display: block;
-    align-items: flex-start;
-    order: 1;
-    flex-direction: row-reverse;
-  }
-  .section6Heading {
-    font-family: 'Graphik Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 130%;
-    line-height: 27px;
-    background-color: #b7b4de;
-    padding: 5%;
-    margin-bottom: 10%;
-  }
-
-  .section6Text {
-    width: 80%;
-  }
-
-  .Marius {
-    width: 100%;
-    top: 0px;
-    left: 0px;
-  }
-
-  .contactInfo {
-    gap: 3px;
-  }
 }
 
 @media (min-width: 1919px) {
@@ -1084,13 +1199,6 @@ div.section2TextAboveImage {
 
   .handbookHeaderDeskotop {
     padding: 0px;
-  }
-
-  p,
-  .whyWorkAtVariant p,
-  .section6 p {
-    font-size: 150%;
-    line-height: 150%;
   }
 
   /* Section 1 */
@@ -1143,10 +1251,6 @@ div.section2TextAboveImage {
   .handbookGrid button {
     font-size: 150%;
   }
-
-  .EvenPicture {
-    width: 50%;
-  }
 }
 
 @media (min-width: 2700px) {
@@ -1189,12 +1293,6 @@ div.section2TextAboveImage {
     flex-wrap: wrap;
     width: 100%;
     gap: 0 1rem;
-  }
-}
-
-@media (max-width: 900px) and (min-width: 720px) {
-  .EvenPicture {
-    width: 35%;
   }
 }
 

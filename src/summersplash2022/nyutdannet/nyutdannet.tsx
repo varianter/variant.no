@@ -48,7 +48,9 @@ const Nyutdannet = () => {
         </div>
         <Payment />
         <FirstYear />
-        <AfterApplying red={false} applyType={ApplyType.GRADUATE} />
+        <div className={style.sectionLightBeige}>
+          <AfterApplying applyType={ApplyType.GRADUATE} />
+        </div>
         <Apply />
       </div>
     </>
