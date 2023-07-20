@@ -182,21 +182,32 @@ p {
 
 .section4 {
   padding-top: 10%;
-  height: 1200px;
+  min-height: 100vh;
 }
 
-.section4 p {
+.section4Text,
+.section44Calculator {
+  width: calc(50% - 2rem);
+}
+
+.section4Calculator {
   position: relative;
-  z-index: 2;
+  max-width: 28rem;
 }
 
-.wrapper {
+.calculatorWrapper {
   width: 80%;
-  margin-bottom: 10%;
-  margin-right: 2%;
+  max-width: 23rem;
+  margin: 0 4rem;
   position: relative;
   z-index: 1;
 }
+
+.pinkBlobWrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
 .wrapper
   [class*='calculator-controls']
   [class*='form-row']
@@ -205,22 +216,36 @@ p {
   border: none;
 }
 
+.pinkBlobWrapper {
+  position: absolute;
+  top: -2rem;
+  left: 1rem;
+  width: 90%;
+}
+
 .pinkBlobSalarySVG {
-  position: relative;
   z-index: 0;
-  bottom: 500px;
-  right: 100px;
 }
 
 .section4Flex {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 10%;
+  gap: 4rem;
 }
 
-.section4Text {
-  width: 48%;
+@media (max-width: 1110px) {
+  .section4Flex {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .section4Text,
+  .section4Calculator {
+    width: 100%;
+  }
+
+  .section4Calculator {
+    margin: auto;
+  }
 }
 
 /* Section 5*/
@@ -373,21 +398,6 @@ p {
   .section1BlobSVG {
     bottom: 1000px;
   }
-
-  /* Section 4 */
-  .section4 {
-    height: auto;
-  }
-
-  .section4 p {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
-  .section4Flex {
-    justify-content: left;
-  }
-
   /* Section 5 */
   .section5 {
     height: 5000px;
@@ -451,16 +461,6 @@ p {
 
 @media (max-width: 1134px) {
   /* Breakpoint for Lønnskalkulator*/
-  .section4Flex {
-    display: block;
-  }
-  .section4Text {
-    width: auto;
-  }
-
-  .wrapper {
-    width: 100%;
-  }
 
   .section1Blob {
     display: none;

@@ -39,7 +39,7 @@ const Calculator = () => {
         backgroundColor: '#FFDCD7',
         padding: '5%',
         borderRadius: '10px',
-        width: isMobile ? '100%' : '80%',
+        width: 'min-content',
         marginTop: isMobile ? '10%' : 0,
       }}
       className={style['calculator-controls__summary']}

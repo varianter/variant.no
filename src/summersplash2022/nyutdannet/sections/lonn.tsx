@@ -30,11 +30,11 @@ const Payment = () => {
             om du vil vite mer om lønn og andre goder i Variant.
           </p>
         </div>
-        <div className={style.calculator}>
-          <div className={style.wrapper}>
+        <div className={style.section4Calculator}>
+          <div className={style.calculatorWrapper}>
             <Calculator />
           </div>
-          <div>
+          <div className={style.pinkBlobWrapper}>
             <PinkBlob />
           </div>
         </div>
