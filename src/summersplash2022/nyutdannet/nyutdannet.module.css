@@ -3,12 +3,10 @@
 .section4,
 .section5,
 .section6,
-.section7 {
-  padding: 10%;
-  padding-top: 5%;
-  margin-bottom: 0%;
+.applySection {
   scroll-snap-align: start;
   padding: 4rem;
+  min-height: calc(100vh - 8rem);
 }
 
 /* SnapScroll */
@@ -117,31 +115,6 @@ p {
   font-style: var(--paragraph-font-style);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-line-height);
-}
-
-.applyButtonPink a,
-.applyButtonBlue a {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 50px;
-  padding: 1%;
-  text-decoration: none;
-}
-
-.applyButtonPink a {
-  background-color: #f076a6;
-  color: #333333;
-}
-
-.applyButtonBlue a {
-  background-color: #68e9dd;
-  color: #333333;
-}
-
-.applyButtonPink {
-  margin-bottom: 5%;
 }
 
 /* Section 1 image*/
@@ -352,45 +325,6 @@ p {
   }
 }
 
-/* Section 7 */
-.section7 {
-  background-color: #fff3f2;
-  color: #333;
-  height: auto;
-}
-
-.imagePositionMobile {
-  display: none;
-}
-
-.section7 p {
-  width: 40%;
-}
-
-.section7 a {
-  color: #333;
-}
-
-.section7Blob {
-  z-index: 0;
-  position: relative;
-  bottom: 1150px;
-  left: 45%;
-}
-
-.contactMail {
-  color: white;
-}
-
-.section7Blob {
-  position: absolute;
-  top: 8000px;
-}
-
-.ApplyDiv {
-  margin-top: 5%;
-}
-
 @media (min-width: 3500px) {
   .section5Picture {
     left: 400px;
@@ -455,24 +389,11 @@ p {
   .section1BlobSVG {
     bottom: 1000px;
   }
-
-  .section7 p {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
-  .ApplyDiv a {
-    font-size: 150%;
-  }
 }
 
 @media (min-width: 1919px) {
   .moreInfoDiv {
     bottom: 300px;
-  }
-
-  .section7Blob {
-    top: 8500px;
   }
 }
 
@@ -527,16 +448,6 @@ p {
     font-weight: 400;
     font-size: 38px;
     line-height: 52px;
-  }
-
-  .applyButtonPink a,
-  .applyButtonBlue a {
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 50px;
-    padding: 3%;
   }
 
   .section1Blobs {
@@ -630,26 +541,5 @@ p {
     width: 800px;
     right: 300px;
     bottom: 400px;
-  }
-
-  /* Section 7 */
-  .section7 p {
-    width: 100%;
-  }
-
-  .imagePositionMobile {
-    display: block;
-  }
-
-  .imagePositionDesktop {
-    display: none;
-  }
-
-  .section7Blob {
-    width: 100%;
-    height: auto;
-    top: 9050px;
-    z-index: 0;
-    left: 0px;
   }
 }

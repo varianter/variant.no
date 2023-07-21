@@ -6,6 +6,7 @@ import PinkBlob from './img/pinkBlob';
 import GreenBlob from './nyutdannet/img/greenBlob';
 import GreenBlob2 from './nyutdannet/img/greenBlob2';
 import GreenBlob3 from './nyutdannet/img/greenBlob3';
+import Apply from './nyutdannet/sections/søkJobb';
 
 import AfterApplying, {
   ApplyType,
@@ -169,64 +170,7 @@ const Content = () => {
             <AfterApplying applyType={ApplyType.SUMMER} />
           </div>
 
-          <section className={style.section6} id="sokSommerjobb">
-            <h2 className={style.heading}>Søk sommerjobb</h2>
-            <div className={style.section6Flex}>
-              <div className={style.section6Text}>
-                <p className={style.section6Paragraph}>
-                  Vi håper du søker, og vi ser frem til å bli bedre kjent med
-                  deg. Har du spørsmål om sommerjobben eller Variant? Ta gjerne
-                  kontakt med meg.
-                </p>
-                <p className={style.section6Paragraph2}>
-                  - Marius Krakeli, Chief Recruitment Officer
-                </p>
-                <div className={style.contactInfo}>
-                  <div>
-                    <p>
-                      <a href="tel:41637572">41637572</a>
-                    </p>
-                  </div>
-                  <div>
-                    <p>|</p>
-                  </div>
-                  <p>
-                    <a href="mailto:mk@variant.no">mk@variant.no</a>
-                  </p>
-                </div>
-              </div>
-              <div className={style2.imagePositionMobile}>
-                <img
-                  className={style.Marius}
-                  src={Marius}
-                  alt="Bilde av Marius"
-                />
-              </div>
-              <div className={style2.ApplyDiv}>
-                <div className={style2.applyButtonPink}>
-                  <p>
-                    <a href="/jobs/sommerjobb-designer-2024">
-                      Søk som designer
-                    </a>
-                  </p>
-                </div>
-                <div className={style2.applyButtonBlue}>
-                  <p>
-                    <a href="/jobs/sommerjobb-utvikler-2024">
-                      Søk som utvikler
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className={style2.imagePositionDesktop}>
-                <img
-                  className={style.Marius}
-                  src={Marius}
-                  alt="Bilde av Marius"
-                />
-              </div>
-            </div>
-          </section>
+          <Apply applyType={ApplyType.SUMMER} />
         </div>
       </div>
     </>

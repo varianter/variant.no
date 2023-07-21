@@ -1,53 +1,45 @@
 import style from 'src/summersplash2022/index.module.css';
-import style2 from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-const Apply = () => {
+import { ApplyType } from './hvaSkjerEtterSonaadsfristen';
+
+const Apply = ({applyType}: {applyType: ApplyType}) => {
   const Marius = require('src/summersplash2022/img/Marius.png');
+  const isApplyGraduate = applyType == ApplyType.GRADUATE;
 
   return (
-    <section className={style2.section7} id="sokfastjobb">
-      <h2 className={style2.heading}>Søk fast jobb</h2>
-      <p>
-        Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
-        spørsmål om fastjobb eller Variant? Ta gjerne kontakt med meg.
-      </p>
-      <p>- Marius Krakeli, Chief Recruitment Officer</p>
-      <div className={style.contactInfo}>
-        <div>
-          <p className={style.section6Underline}>
-            <a href="tel:41637572">41637572</a>
+    <section className={style.applySection} id="sokfastjobb">
+      <h2 className={style.heading}>Søk {isApplyGraduate ? "fast jobb" : "sommerjobb"}</h2>
+      <div className={style.applySectionFlex}>
+        <div className={style.applySectionText}>
+          <p>
+            Vi håper du søker, og vi ser frem til å bli bedre kjent med deg. Har du
+            spørsmål om {isApplyGraduate ? "fast jobb" : "sommerjobben"} eller Variant? Ta gjerne kontakt med meg.
           </p>
+          <p>- Marius Krakeli, Chief Recruitment Officer</p>
+          <div className={style.contactInfo}>
+            <p className={style.section6Underline}>
+              <a href="tel:41637572">41637572</a>
+            </p>
+            <p>|</p>
+            <p className={style.section6Underline}>
+              <a href="mailto: mk@variant.no">
+                mk@variant.no
+              </a>
+            </p>  
+          </div>
         </div>
-        <div>
-          <p>|</p>
-        </div>
-        <p className={style.section6Underline}>
-          <a className={style2.contactMail} href="mailto: mk@variant.no">
-            mk@variant.no
+        <div className={style.applySectionApplyDiv}>
+          <a className={style.applyButtonPink} href={isApplyGraduate ? "/jobs/nyutdannet-designer-2024" : "/jobs/sommerjobb-designer-2024"}>
+            Søk som designer
           </a>
-        </p>
-      </div>
-      <div className={style2.imagePositionMobile}>
-        <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
-      </div>
-      <div className={style2.ApplyDiv}>
-        <div className={style2.applyButtonPink}>
-          <p>
-            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-designer-2024">
-              Søk som designer
-            </a>
-          </p>
+          <a className={style.applyButtonBlue} href={isApplyGraduate ? "/jobs/nyutdannet-utvikler-2024" : "/jobs/sommerjobb-utvikler-2024"}>
+            Søk som utvikler
+          </a>
         </div>
-        <div className={style2.applyButtonBlue}>
-          <p>
-            <a style={{ padding: '2%' }} href="/jobs/nyutdannet-utvikler-2024">
-              Søk som utvikler
-            </a>
-          </p>
+
+        <div className={style.applySectionPicture}>
+          <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
         </div>
-      </div>
-      <div className={style2.imagePositionDesktop}>
-        <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
-      </div>
+      </div> 
     </section>
   );
 };

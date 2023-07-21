@@ -1,12 +1,14 @@
 /* Felles styling*/
+.section1,
 .section2,
 .section3,
 .section5,
 .section6,
-.whyWorkAtVariant {
-  padding: 10%;
-  padding-top: 5%;
-  margin-bottom: 0%;
+.whyWorkAtVariant,
+.applySection {
+  scroll-snap-align: start;
+  padding: 4rem 8rem;
+  min-height: calc(100vh - 8rem);
 }
 
 /* Scroll */
@@ -167,12 +169,8 @@
 /* Header */
 
 /* Section 1 styling*/
-
 .section1 {
-  height: 1200px;
-  background-color: #f4f1e7;
-  padding: 10%;
-  padding-top: 0%;
+  padding-top: 0;
 }
 
 .header {
@@ -227,6 +225,16 @@
   position: relative;
   text-align: center;
   bottom: 850px;
+}
+
+.landingpageSectionApplyDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.landingpageSectionApplyDiv p + div {
+  margin-top: 1rem;
 }
 
 /* Section 2 styling*/
@@ -725,7 +733,12 @@ div.section2TextAboveImage {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 20px;
+  gap: 1rem;
+}
+
+.contactInfo > p {
+  width: min-content;
+  margin-top: 0;
 }
 
 .ApplyAsDesignerDiv,
@@ -755,10 +768,16 @@ div.section2TextAboveImage {
 }
 .Marius {
   z-index: 1;
-  width: 35%;
-  position: relative;
-  left: 45%;
-  bottom: 400px;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 40%;
+}
+
+@media (max-width: 1300px) {
+  .Marius {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .positionTextLeft,
@@ -861,6 +880,144 @@ div.section2TextAboveImage {
   position: relative;
   right: 300px;
   top: 130px;
+}
+
+/* Apply section */
+.applySection {
+  background-color: var(--variant-peach-3);
+  color: #333;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.applySection > h2 {
+  width: 100%;
+}
+
+.applySectionFlex {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 2rem;
+}
+
+.applySectionText {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  max-width: 800px;
+}
+
+.applySectionPicture {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+  display: flex;
+  align-items: end;
+}
+
+.applySectionApplyDiv {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.applySectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.applySectionApplyDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.applySectionText > p {
+  max-width: 38rem;
+}
+
+a.applyButtonPink,
+a.applyButtonBlue {
+  font-family: 'Recoleta';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  padding: 1rem;
+  text-decoration: none;
+  width: max-content;
+  color: var(--variant-black);
+}
+
+a.applyButtonBlue {
+  background-color: var(--variant-blue-5);
+}
+
+a.applyButtonPink {
+  background-color: var(--variant-pink-2);
+}
+
+@media (max-width: 900px) {
+  .applyButtonPink,
+  .applyButtonBlue {
+    font-size: 24px;
+  }
+}
+
+.applySectionPicture {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1300px) {
+  .applySectionFlex {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .applySectionText {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+  }
+
+  .applySectionPicture {
+    align-items: flex-end;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  .applySectionApplyDiv {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .applySectionFlex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .applySectionText {
+    order: 1;
+  }
+
+  .applySectionPicture {
+    order: 2;
+  }
+
+  .applySectionApplyDiv {
+    order: 3;
+  }
+
+  .applySectionPicture,
+  .applySectionText {
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1031,10 +1188,6 @@ div.section2TextAboveImage {
   }
 
   /* Section 1 mobile*/
-  .section1 {
-    overflow: hidden;
-    height: 1200px;
-  }
 
   .summerjobSelected {
     width: 100%;
@@ -1169,10 +1322,6 @@ div.section2TextAboveImage {
 
   .imageBlob1 {
     top: 700px;
-  }
-
-  .section1 {
-    height: 1600px;
   }
 
   .timeLine svg {

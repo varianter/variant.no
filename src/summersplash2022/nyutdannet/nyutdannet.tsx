@@ -39,7 +39,9 @@ const Nyutdannet = () => {
       </Head>
 
       <div className={style.scrollContainer}>
-        <LandingPage />
+        <div className={style.sectionDarkBlue}>
+          <LandingPage applyType={ApplyType.GRADUATE} />
+        </div>
         <div className={style.sectionLightBeige}>
           <WhoAreWeSeeking />
         </div>
@@ -51,7 +53,8 @@ const Nyutdannet = () => {
         <div className={style.sectionLightBeige}>
           <AfterApplying applyType={ApplyType.GRADUATE} />
         </div>
-        <Apply />
+        
+        <Apply applyType={ApplyType.GRADUATE} />
       </div>
     </>
   );
