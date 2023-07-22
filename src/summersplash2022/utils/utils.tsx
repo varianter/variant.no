@@ -1,3 +1,8 @@
+export enum ApplyType {
+  GRADUATE,
+  SUMMER,
+}
+
 export const changeNavbarColor = (
   setNavColor: Function,
   setIsMobile: Function,
@@ -12,7 +17,6 @@ export const changeNavbarColor = (
     if (scrollContainer) {
       scrollContainer.addEventListener('scroll', () => {
         setOffset(scrollContainer.scrollTop);
-        // console.log(offset);
       });
       if (offset < 899) {
         setNavColor(false);

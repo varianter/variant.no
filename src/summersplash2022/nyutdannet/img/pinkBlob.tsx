@@ -1,8 +1,6 @@
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
 const PinkBlob = () => {
   return (
     <svg
-      className={style.pinkBlobSalarySVG}
       xmlns="http://www.w3.org/2000/svg"
       width="540"
       height="519"

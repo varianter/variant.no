@@ -74,73 +74,6 @@ p {
   border: none;
 }
 
-.bigHeading {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 62px;
-  line-height: 84px;
-  width: 70%;
-  margin-bottom: 5%;
-}
-
-/* Section1 */
-/* Section1 fonts */
-
-.section1 {
-  background-color: #1a1837;
-  color: white;
-  scroll-snap-align: start;
-  padding-left: 10%;
-  padding-right: 10%;
-  height: 100vh;
-}
-
-.header {
-  height: 80px;
-  margin-bottom: 5%;
-}
-
-.section1 a {
-  color: white;
-}
-
-.sommerjobbHeading {
-  width: auto;
-}
-
-/* Section1 Paragraph */
-.section1 p {
-  font-family: var(--graphik-font-family);
-  font-style: var(--paragraph-font-style);
-  font-size: var(--paragraph-font-size);
-  line-height: var(--paragraph-line-height);
-}
-
-/* Section 1 image*/
-.imageBlob1 {
-  position: relative;
-  left: 60%;
-  width: 40%;
-  bottom: 410px;
-  z-index: 1;
-}
-
-.section1BlobSVG {
-  position: relative;
-  bottom: 400px;
-  left: 20%;
-  z-index: 0;
-  width: 40%;
-  height: auto;
-}
-
-.moreInfoDiv {
-  text-align: center;
-  position: relative;
-  bottom: 400px;
-}
-
 /* Section 3 */
 
 .readMoreArrowWhite {
@@ -345,55 +278,9 @@ p {
   }
 }
 
-@media (max-width: 2500px) {
-  .imageBlob1 {
-    position: relative;
-    top: -300px;
-  }
-
-  .section1BlobSVG {
-    position: relative;
-    top: -200px;
-  }
-
-  .section1Blobs {
-    position: static;
-    bottom: 300px;
-    z-index: 1;
-  }
-}
-
 @media (min-width: 2050px) {
   .heading {
     font-size: 300%;
-  }
-
-  .moreInfoDiv {
-    display: none;
-  }
-
-  .section1 p {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
-  .section1 {
-    height: 1400px;
-  }
-
-  .imageBlob1 {
-    position: relative;
-    bottom: 1000px;
-  }
-
-  .section1BlobSVG {
-    bottom: 1000px;
-  }
-}
-
-@media (min-width: 1919px) {
-  .moreInfoDiv {
-    bottom: 300px;
   }
 }
 
@@ -414,14 +301,6 @@ p {
   }
 }
 
-@media (max-width: 1134px) {
-  /* Breakpoint for Lønnskalkulator*/
-
-  .section1Blob {
-    display: none;
-  }
-}
-
 @media (max-width: 1120px) {
   /* Section 6 */
   .flexTimeline {
@@ -431,73 +310,6 @@ p {
 
   .readMoreArrowWhite {
     width: 35%;
-  }
-}
-
-@media (max-width: 1080px) {
-  .moreInfoDiv {
-    bottom: 100px;
-  }
-}
-
-@media (max-width: 900px) {
-  .bigHeading {
-    width: 100%;
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 52px;
-  }
-
-  .section1Blobs {
-    position: static;
-  }
-
-  .imageBlob1 {
-    margin-top: 5%;
-    position: static;
-  }
-}
-
-@media (max-width: 850px) {
-  /* Section 1 */
-
-  .section1 {
-    display: flex;
-    flex-direction: column;
-    height: min-content;
-    min-height: 100vh;
-  }
-
-  .section1Blobs {
-    display: flex;
-    flex: 1 1 auto;
-    position: relative;
-    bottom: 0;
-    margin: 5% 0;
-  }
-
-  .section1BlobsWrapper {
-    margin: auto 0;
-    position: relative;
-  }
-
-  .moreInfoDiv {
-    display: none;
-  }
-
-  .imageBlob1 {
-    width: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .section1BlobSVG {
-    top: 0;
-    left: 0;
-    width: 80%;
   }
 }
 
@@ -514,7 +326,6 @@ p {
   }
 
   p,
-  .section1 p,
   .section5 p,
   .section6 p {
     font-size: var(--Mobileparagraph-font-size);
@@ -525,12 +336,6 @@ p {
 
   .sommerjobbHeading {
     width: 100%;
-  }
-  .section1Blob {
-    display: block;
-    position: relative;
-    top: 700px;
-    right: 200px;
   }
 
   .fastjobbheading {
