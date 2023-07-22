@@ -1,8 +1,6 @@
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
-const Section1Blob = () => {
+const BlueBlob = () => {
   return (
     <svg
-      className={style.section1BlobSVG}
       xmlns="http://www.w3.org/2000/svg"
       width="540"
       height="573"
@@ -19,4 +17,4 @@ const Section1Blob = () => {
   );
 };
 
-export default Section1Blob;
+export default BlueBlob;

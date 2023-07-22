@@ -1,28 +1,26 @@
 import style from 'src/summersplash2022/index.module.css';
-import Section1Blob from '../img/section1Blob';
+import BlueBlob from '../img/blueBlob';
+import PinkBlob from '../img/pinkBlob';
 import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
-import PinkBlob from '../img/pinkBlob';
 
 const LandingPage = ({ applyType }: { applyType: ApplyType }) => {
-  const blobSection1 = require('src/summersplash2022/img/section1Blob.png');
+  const image = require('src/summersplash2022/img/section1Blob.png');
   const isApplyGraduate: boolean = applyType == ApplyType.GRADUATE;
 
   return (
     <>
-      <section className={style.section1} id="forside">
-        <div className={style.header}>
-          <Header white={isApplyGraduate ? true : false} />
-        </div>
-        <h1 className={style.bigHeading}>
+      <section className={style.landingpageSection} id="forside">
+        <Header white={isApplyGraduate ? true : false} />
+        <h1>
           Vi ser etter
           <span className={style.textGradient}>
             {isApplyGraduate ? ' 17 nyutdannede ' : ' 23 sommervarianter '}
           </span>
           i 2024!
         </h1>
-        <div className={style.section1Flex}>
+        <div className={style.landingpageSectionFlex}>
           <div className={style.landingpageSectionApplyDiv}>
             <div>
               <p>Søk senest 1. oktober</p>
@@ -51,15 +49,14 @@ const LandingPage = ({ applyType }: { applyType: ApplyType }) => {
               </div>
             </div>
           </div>
-          <div className={style.section1Blobs}>
-            <div className={style.section1BlobsWrapper}>
+          <div className={style.landingpageSectionImgDiv}>
+            <div className={style.landingpageSectionImgBlobWrapper}>
               <img
-                className={style.imageBlob1}
-                src={blobSection1}
+                className={style.landingpageSectionImg}
+                src={image}
                 alt="To fra Variant"
               />
-              {isApplyGraduate && <Section1Blob />}
-              {!isApplyGraduate && <PinkBlob />}
+              {isApplyGraduate ? <BlueBlob /> : <PinkBlob />}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import style from 'src/summersplash2022/index.module.css';
 import DarkRedBlob from '../img/mørkerødBlob';
-import Section6Blob from '../img/section6Blob';
+import DarkBeigeBlob from '../img/darkBeigeBlob';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
 
 const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
@@ -20,10 +20,13 @@ const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
   const isApplyGraduate: boolean = applyType == ApplyType.GRADUATE;
 
   return (
-    <section className={style.section6} id="hvaskjerettersoknadsfristen">
-      <h3 className={style.heading}>Hva skjer etter søknadsfristen?</h3>
-      <div className={style.section6Flex}>
-        <div className={style.section6About}>
+    <section
+      className={style.afterApplyingSection}
+      id="hvaskjerettersoknadsfristen"
+    >
+      <h3>Hva skjer etter søknadsfristen?</h3>
+      <div className={style.afterApplyingSectionFlex}>
+        <div className={style.afterApplyingSectionAbout}>
           <p>
             Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
             unaturlig situasjon, og man blir ikke godt kjent med hverandre.
@@ -51,24 +54,20 @@ const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
           </p>
         </div>
 
-        <div className={style.section6Even}>
+        <div className={style.afterApplyingSectionImgDiv}>
           <img src={Even} className={style.EvenPicture} alt="Even" />
-          <div className={style.section6PictureBlob}>
-            {isApplyGraduate && <Section6Blob />}
+          <div className={style.afterApplyingSectionImgBlob}>
+            {isApplyGraduate && <DarkBeigeBlob />}
             {!isApplyGraduate && <DarkRedBlob />}
           </div>
         </div>
 
-        <div className={style.section6Timeline}>
+        <div className={style.afterApplyingSectionTimeline}>
           <img src={timelineImage} alt={timelineDescription} />
         </div>
 
-        <div className={style.section6ApplicationTips}>
-          <div className={style.section6Blob}>
-            {isApplyGraduate && <Section6Blob />}
-            {!isApplyGraduate && <DarkRedBlob />}
-          </div>
-          <h4 className={style.section5HeadingH4}>Søknadstips:</h4>
+        <div className={style.afterApplyingSectionApplicationTips}>
+          <h4>Søknadstips:</h4>
           <p>
             Vi setter pris på en søknad med CV, søknadsbrev og karakterutskrift.
             Det viktigste for oss er å få et helhetlig bilde. Både av deg som
@@ -77,6 +76,10 @@ const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
             Variant? Vi trenger mennesker som bryr seg om å skape en bedre
             hverdag. Er det deg?
           </p>
+          <div className={style.afterApplyingSectionTextBlob}>
+            {isApplyGraduate && <DarkBeigeBlob />}
+            {!isApplyGraduate && <DarkRedBlob />}
+          </div>
         </div>
       </div>
     </section>

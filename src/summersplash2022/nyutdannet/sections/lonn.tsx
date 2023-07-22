@@ -1,21 +1,20 @@
 import Link from 'next/link';
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import style from 'src/summersplash2022/index.module.css';
 import PinkBlob from '../img/pinkBlob';
 import Calculator from '../utils/calculator';
 
 const Payment = () => {
   return (
-    <section className={style.section4}>
+    <section className={style.salarySection}>
       <h2 className={style.heading}>Lønn</h2>
-      <div className={style.section4Flex}>
-        <div className={style.section4Text}>
+      <div className={style.salarySectionFlex}>
+        <div className={style.salarySectionText}>
           <p>
             Vi er sikre på at flinke folk i liten grad lar seg motivere av lønn
             alene, men god lønn er like fullt viktig for den frihet og
             stabilitet vi ønsker å gi.
           </p>
           <p>
-            {' '}
             Lønnen vår bestemmes utelukkende av en utjevnet kurve for øvre
             kvartil av Teknas lønnsstatistikk. Lønnsøkninger tas ikke
             individuelt – det går automatisk. Din lønn baseres rett og slett på
@@ -23,14 +22,14 @@ const Payment = () => {
           </p>
           <p>
             I kalkulatoren til høyre kan du se hva du vil tjene som nyutdannet.
-            Du kan også ta en titt på{' '}
+            Du kan også ta en titt på
             <Link href="/kalkulator">
-              <a>lønnskalkulatoren</a>
-            </Link>{' '}
+              <a> lønnskalkulatoren </a>
+            </Link>
             om du vil vite mer om lønn og andre goder i Variant.
           </p>
         </div>
-        <div className={style.section4Calculator}>
+        <div className={style.salarySectionCalculator}>
           <div className={style.calculatorWrapper}>
             <Calculator />
           </div>

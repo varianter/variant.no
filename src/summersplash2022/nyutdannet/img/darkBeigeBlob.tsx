@@ -1,4 +1,4 @@
-const Section6Blob = () => {
+const DarkBeigeBlob = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ const Section6Blob = () => {
   );
 };
 
-export default Section6Blob;
+export default DarkBeigeBlob;

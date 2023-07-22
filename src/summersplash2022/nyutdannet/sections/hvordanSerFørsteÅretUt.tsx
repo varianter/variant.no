@@ -1,5 +1,5 @@
-import style from '../nyutdannet.module.css';
-import Section5Blob from '../img/section5Blob';
+import style from 'src/summersplash2022/index.module.css';
+import DarkPinkBlob from '../img/darkPinkBlob';
 import TimelineNarrow from 'src/summersplash2022/img/tidslinjeNarrow';
 import TimelineWide from 'src/summersplash2022/img/tidslinjeWide';
 import { useEffect, useState } from 'react';
@@ -9,15 +9,16 @@ const FirstYear = () => {
   const [showWideTimeline, setShowWideTimeline] = useState(true);
 
   const checkIfNarrowOrWideTimeline = () => {
-    if (window.matchMedia('(max-width: 1310px) and (min-width: 801px)').matches) {
+    if (
+      window.matchMedia('(max-width: 1310px) and (min-width: 801px)').matches
+    ) {
       setShowWideTimeline(true);
     } else {
       setShowWideTimeline(false);
     }
-  }
+  };
 
   const handleResize = () => {
-    console.log("Handle resize")
     checkIfNarrowOrWideTimeline();
   };
 
@@ -30,41 +31,36 @@ const FirstYear = () => {
 
   return (
     <>
-      <section className={style.section5}>
-        <h2 className={style.heading}>Hvordan ser første året ut?</h2>
-        <div className={style.section5Flex}>
-          <div className={style.section5Text}>
+      <section className={`${style.firstYearSection} ${style.sectionDarkPink}`}>
+        <h2>Hvordan ser første året ut?</h2>
+        <div className={style.firstYearSectionFlex}>
+          <div className={style.firstYearSectionText}>
             <p>
               For å bidra til personlig og faglig utvikling av nyutdannede
               gjennomfører vi oppstartsprogrammet{' '}
-              <a href="https://handbook.variant.no/#Utviklingsprogram" style={{ color: 'white' }}>
+              <a href="https://handbook.variant.no/#Utviklingsprogram">
                 variant:skudd
               </a>
-              . Programmet gjennomføres i løpet av det første året den nyutdannede
-              jobber i Variant.{' '}
+              . Programmet gjennomføres i løpet av det første året den
+              nyutdannede jobber i Variant.
             </p>
-            <div className={style.section5PictureDiv}>
-              <div className={style.section5PictureWrap}>
-
-              <div className={style.section5BlobWrapper}>
-                <Section5Blob />
+            <div className={style.firstYearSectionImgDiv}>
+              <div className={style.firstYearSectionImgWrap}>
+                <div className={style.firstYearSectionBlobWrapper}>
+                  <DarkPinkBlob />
+                </div>
+                <img
+                  className={style.firstYearSectionImg}
+                  src={mountain}
+                  alt="Fjelltur på Oppdal"
+                />
               </div>
-              <img
-                className={style.section5Picture}
-                src={mountain}
-                alt="Mountaint trip in Oppdal"
-              />
-              </div>
+            </div>
           </div>
-        </div>
-        <div className={style.graphicContainer}>
-          { showWideTimeline && (
-            <TimelineWide />
-          )}
-          {!showWideTimeline && (
-            <TimelineNarrow />
-          )}
-        </div>
+          <div className={style.firstYearSectionTimelineDiv}>
+            {showWideTimeline && <TimelineWide />}
+            {!showWideTimeline && <TimelineNarrow />}
+          </div>
         </div>
       </section>
     </>

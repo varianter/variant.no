@@ -1,8 +1,6 @@
 import style from './index.module.css';
 import { HandbookPage } from './utils/handBookPages';
 import GreenBlob from './nyutdannet/img/greenBlob';
-import GreenBlob2 from './nyutdannet/img/greenBlob2';
-import GreenBlob3 from './nyutdannet/img/greenBlob3';
 import Apply from './nyutdannet/sections/søkJobb';
 import { ApplyType } from './utils/utils';
 import AfterApplying from './nyutdannet/sections/hvaSkjerEtterSonaadsfristen';
@@ -54,10 +52,13 @@ const Content = () => {
             <LandingPage applyType={ApplyType.SUMMER} />
           </div>
           <div className={style.sectionDarkBlue}>
-            <section className={style.section2} id="hvagarsommerjobbenutpa">
-              <h2 className={style.heading}>Hva går sommerjobben ut på?</h2>
-              <div className={style.section2Flex}>
-                <div className={style.section2TextAboveImage}>
+            <section
+              className={style.aboutTheJobOrEmployeeSection}
+              id="hvagarsommerjobbenutpa"
+            >
+              <h2>Hva går sommerjobben ut på?</h2>
+              <div className={style.aboutTheJobOrEmployeeSectionFlex}>
+                <div className={style.aboutTheJobOrEmployeeSectionTextAboveImg}>
                   <p>
                     En sommerjobb i Variant er en fin mulighet til å anvende det
                     du har lært på skolen i praksis. Det forventes ikke at du er
@@ -66,13 +67,8 @@ const Content = () => {
                     et av de spennende kundeprosjektene vi har. Underveis får du
                     god oppfølging og tilrettelegging fra erfarne konsulenter
                     som ønsker at du lykkes. Sjekk ut{' '}
-                    <a
-                      href="https://blog.variant.no/"
-                      className={style.blogpostLink}
-                    >
-                      bloggen vår
-                    </a>{' '}
-                    for å lese mer om hva årets sommerstudenter jobbet med.
+                    <a href="https://blog.variant.no/">bloggen vår</a> for å
+                    lese mer om hva årets sommerstudenter jobbet med.
                   </p>
 
                   <p>
@@ -84,7 +80,7 @@ const Content = () => {
                     mellomtiden.
                   </p>
                 </div>
-                <p className={style.section2TextBelowImage}>
+                <p className={style.aboutTheJobOrEmployeeSectionTextBelowImg}>
                   I Variant liker vi åpenhet. Det betyr at du selvsagt ikke
                   trenger å lure på hvordan kontrakten din vil se ut for
                   sommeren, den ligger nemlig åpent og tilgjengelig på våre
@@ -94,19 +90,22 @@ const Content = () => {
                   🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om
                   hva Variant står for og tilbyr.
                 </p>
-                <div className={style.section2ImageWrapper}>
+                <div className={style.aboutTheJobOrEmployeeSectionImgWrapper}>
                   <img
                     src={norwayMap}
                     alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"
-                    className={style.section2Image}
+                    className={style.aboutTheJobOrEmployeeSectionImg}
                   />
                 </div>
               </div>
             </section>
           </div>
 
-          <section className={style.section3} id="hvameneraretssommerstudenter">
-            <h2 className={style.heading}>Hva mener årets sommerstudenter?</h2>
+          <section
+            className={`${style.summerstudentQuotesSection} ${style.sectionDarkTeal}`}
+            id="hvameneraretssommerstudenter"
+          >
+            <h2>Hva mener årets sommerstudenter?</h2>
             {summerstudentsQuotes.map((student) => (
               <div className={style.summerstudent}>
                 <img
@@ -121,9 +120,15 @@ const Content = () => {
               </div>
             ))}
 
-            <GreenBlob />
-            <GreenBlob2 />
-            <GreenBlob3 />
+            <GreenBlob
+              className={style.summerStudentQuotesSectionGreenBlobTop}
+            />
+            <GreenBlob
+              className={style.summerStudentQuotesSectionGreenBlobMiddle}
+            />
+            <GreenBlob
+              className={style.summerStudentQuotesSectionGreenBlobBottom}
+            />
           </section>
 
           <div className={style.sectionLightPeach}>
