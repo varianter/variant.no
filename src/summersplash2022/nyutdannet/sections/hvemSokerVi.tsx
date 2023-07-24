@@ -1,9 +1,9 @@
 import style from 'src/summersplash2022/index.module.css';
 
-const WhoAreWeSeeking = () => {
+const WhoAreWeSeeking = ({ className }: { className: string }) => {
   const graduateNorwayMap = require('../img/graduate norway map.svg');
   return (
-    <section className={style.aboutTheJobOrEmployeeSection}>
+    <section className={`${style.aboutTheJobOrEmployeeSection} ${className}`}>
       <h2>Hvem søker vi?</h2>
       <div className={style.aboutTheJobOrEmployeeSectionFlex}>
         <p className={style.aboutTheJobOrEmployeeSectionTextAboveImg}>

@@ -5,13 +5,22 @@ import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
 
-const LandingPage = ({ applyType }: { applyType: ApplyType }) => {
+const LandingPage = ({
+  applyType,
+  className,
+}: {
+  applyType: ApplyType;
+  className: string;
+}) => {
   const image = require('src/summersplash2022/img/section1Blob.png');
   const isApplyGraduate: boolean = applyType == ApplyType.GRADUATE;
 
   return (
     <>
-      <section className={style.landingpageSection} id="forside">
+      <section
+        className={`${style.landingpageSection} ${className}`}
+        id="forside"
+      >
         <Header white={isApplyGraduate ? true : false} />
         <h1>
           Vi ser etter

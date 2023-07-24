@@ -5,11 +5,20 @@ import HandBookPages, {
   pageTitle,
 } from 'src/summersplash2022/utils/handBookPages';
 
-const WhyVariant = ({ pages }: { pages: HandbookPage[] }) => {
+const WhyVariant = ({
+  pages,
+  className,
+}: {
+  pages: HandbookPage[];
+  className: string;
+}) => {
   const [whichButtonSelected, setWhichButtonSelected] = useState(pages[0]);
 
   return (
-    <section className={style.whyVariantSection} id="hvorforjobbeivariant">
+    <section
+      className={`${style.whyVariantSection} ${className}`}
+      id="hvorforjobbeivariant"
+    >
       <div className={style.whyVariantSectionFlex}>
         <div className={style.whyVariantSectionTopicsDiv}>
           <h2>Hvorfor akkurat Variant?</h2>
@@ -33,16 +42,16 @@ const WhyVariant = ({ pages }: { pages: HandbookPage[] }) => {
             ))}
           </div>
         </div>
-        <div className={style.whyVariantSectionSelectedTopic}>
-          <HandBookPages selectedPage={whichButtonSelected} />
-        </div>
-        <div>
+        <div className={style.whyVariantSectionMostImportantForYou}>
           <h3 className={style.mostImportantForYou}>
             Hva er viktigst for deg?
           </h3>
           <a href="https://handbook.variant.no">
             Sjekk ut Variants håndbok her
           </a>
+        </div>
+        <div className={style.whyVariantSectionSelectedTopic}>
+          <HandBookPages selectedPage={whichButtonSelected} />
         </div>
       </div>
     </section>

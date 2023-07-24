@@ -40,27 +40,26 @@ const Nyutdannet = () => {
       </Head>
 
       <div className={style.scrollContainer}>
-        <div className={style.sectionDarkBlue}>
-          <LandingPage applyType={ApplyType.GRADUATE} />
-        </div>
-        <div className={style.sectionLightBeige}>
-          <WhoAreWeSeeking />
-        </div>
-        <div className={style.sectionDarkTeal}>
-          <WhyVariant
-            pages={[
-              HandbookPage.INTENTIONS_AND_VALUES,
-              HandbookPage.WORK,
-              HandbookPage.SOCIAL,
-              HandbookPage.PERKS,
-            ]}
-          />
-        </div>
+        <LandingPage
+          applyType={ApplyType.GRADUATE}
+          className={style.sectionDarkBlue}
+        />
+        <WhoAreWeSeeking className={style.sectionLightBeige} />
+        <WhyVariant
+          pages={[
+            HandbookPage.INTENTIONS_AND_VALUES,
+            HandbookPage.WORK,
+            HandbookPage.SOCIAL,
+            HandbookPage.PERKS,
+          ]}
+          className={style.sectionDarkTeal}
+        />
         <Payment />
         <FirstYear />
-        <div className={style.sectionLightBeige}>
-          <AfterApplying applyType={ApplyType.GRADUATE} />
-        </div>
+        <AfterApplying
+          applyType={ApplyType.GRADUATE}
+          className={style.sectionLightBeige}
+        />
 
         <Apply applyType={ApplyType.GRADUATE} />
       </div>

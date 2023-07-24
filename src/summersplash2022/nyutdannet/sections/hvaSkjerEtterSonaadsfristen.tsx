@@ -3,7 +3,13 @@ import DarkRedBlob from '../img/mørkerødBlob';
 import DarkBeigeBlob from '../img/darkBeigeBlob';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
 
-const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
+const AfterApplying = ({
+  applyType,
+  className,
+}: {
+  applyType: ApplyType;
+  className: string;
+}) => {
   const Even = require('src/summersplash2022/img/Even.png');
   const timelineImage =
     applyType === ApplyType.GRADUATE
@@ -21,7 +27,7 @@ const AfterApplying = ({ applyType }: { applyType: ApplyType }) => {
 
   return (
     <section
-      className={style.afterApplyingSection}
+      className={`${style.afterApplyingSection} ${className}`}
       id="hvaskjerettersoknadsfristen"
     >
       <h3>Hva skjer etter søknadsfristen?</h3>

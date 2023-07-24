@@ -1,60 +1,23 @@
 /* global var */
 :root {
-  /* Heading */
   --recoleta-font-family: 'Recoleta';
-  --heading-font-style: normal;
-  --heading-font-weight: 400;
-  --heading-font-size: 36px;
-  --headig-line-height: 53px;
-
-  /* paragraph */
   --graphik-font-family: 'Graphik Web';
-  --paragraph-font-style: normal;
-  --paragraph-font-size: 20px;
-  --paragraph-line-height: 32px;
-
-  /* Heading Mobile*/
-  --MobileHeading-font-family: 'Recoleta';
-  --MobileHeadingfont-style: normal;
-  --MobileHeadingfont-weight: 500;
-  --MobileHeadingfont-size: 24px;
-  --MobileHeadingline-height: 33px;
-
-  /* paragraph mobile*/
-  --MobileParagraph-font-size: 16px;
-  --MobileParagraph--line-height: 23px;
 
   /* Colors */
   --variant-black: #333333;
-  --variant-gray: #c4cad0;
-  --variant-dark-gray: #332726;
-  --variant-blue: #423d89;
-  --variant-blue-2: #35316e;
-  --variant-blue-3: #736ebe;
-  --variant-blue-4: #b7b4de;
-  --variant-blue-5: #68e9dd;
-  --variant-blue-6: #282552;
-  --variant-blue-7: #1a1837;
-  --variant-pink: #e61a6b;
-  --variant-pink-2: #f076a6;
-  --variant-pink-3: #8b0f40;
-  --variant-pink-4: #fad2ed;
-  --variant-pink-5: #b91456;
-  --variant-peach: #ffc4bc;
-  --variant-peach-2: #ffdcd7;
-  --variant-peach-3: #fff3f2;
-  --variant-teal: #03dac6;
-  --variant-teal-2: #9af0e8;
-  --variant-teal-3: #01574f;
-  --variant-beige: #ede8d7;
-  --variant-beige-1: #f1eddf;
-  --variant-beige-3: #f4f1e7;
+  --variant-light-blue: #68e9dd;
+  --variant-dark-blue: #1a1837;
+  --variant-light-pink: #f076a6;
+  --variant-dark-pink: #8b0f40;
+  --variant-peach: #fff3f2;
+  --variant-teal: #01574f;
+  --variant-beige: #f4f1e7;
 }
 
 /* Felles styling*/
 section {
   scroll-snap-align: start;
-  padding: 4rem 8rem;
+  padding: 5rem 10rem;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -76,83 +39,42 @@ section {
   overflow-y: hidden;
 }
 
-p {
-  font-family: var(--graphik-font-family);
-  font-style: var(--paragraph-font-style);
-  font-size: var(--paragraph-font-size);
-  line-height: var(--paragraph-line-height);
-  width: 100%;
-}
-
-/* Headings */
+/* Headings and fonts */
 h1 {
-  font-family: var(--recoleta-font-family);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 7rem;
   width: 100%;
-  max-width: 1800px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  max-width: 55rem;
   background: linear-gradient(to right, #e61a6b, #534dac, #02ae9e);
   background-size: 100% 100%;
   background-clip: text;
-  /* or 135% */
 }
 
 h2 {
-  margin-bottom: 20px;
-  font-family: var(--recoleta-font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 h3 {
-  font-family: var(--recoleta-font-family);
-  font-style: var(--heading-font-style);
-  font-weight: var(--heading-font-weight);
-  font-size: var(--heading-font-size);
-  line-height: var(--headig-line-height);
-  margin-bottom: 2%;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
 }
 
-@media (max-width: 720px) {
-  /* Heading Mobile */
-  h3 {
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 33px;
+@media (max-width: 1300px) {
+  section {
+    padding: 3.4rem 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 3rem;
   }
 
   h1 {
-    width: 100%;
-    font-family: 'Recoleta';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 52px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 500px) {
-  /* Mobile Heading */
-  .heading {
-    font-family: var(--MobileHeading-font-family);
-    font-style: var(--MobileHeadingfont-style);
-    font-weight: var(--MobileHeadingfont-weight);
-    font-size: var(--MobileHeadingfont-size);
-    line-height: var(--MobileHeadingline-height);
-    margin-bottom: 10%;
+    font-size: 2.8rem;
   }
 
   p {
-    font-size: var(--Mobileparagraph-font-size);
-    line-height: var(--MobileParagraph--line-height);
+    font-size: 1.2rem;
   }
 }
 
@@ -169,35 +91,35 @@ h3 {
 .sectionDarkBlue,
 .sectionDarkBlue button,
 .sectionDarkBlue a {
-  background-color: var(--variant-blue-7);
+  background-color: var(--variant-dark-blue);
   color: white;
 }
 
 .sectionLightPeach,
 .sectionLightPeach button,
 .sectionLightPeach a {
-  background-color: var(--variant-peach-3);
+  background-color: var(--variant-peach);
   color: var(--variant-black);
 }
 
 .sectionDarkTeal,
 .sectionDarkTeal button,
 .sectionDarkTeal a {
-  background-color: var(--variant-teal-3);
+  background-color: var(--variant-teal);
   color: white;
 }
 
 .sectionLightBeige,
 .sectionLightBeige button,
 .sectionLightBeige a {
-  background-color: var(--variant-beige-3);
+  background-color: var(--variant-beige);
   color: var(--variant-black);
 }
 
 .sectionDarkPink,
 .sectionDarkPink button,
 .sectionDarkPink a {
-  background-color: var(--variant-pink-3);
+  background-color: var(--variant-dark-pink);
   color: white;
 }
 
@@ -206,7 +128,7 @@ h3 {
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  gap: 5rem;
 }
 
 .landingpageSectionFlex {
@@ -266,10 +188,6 @@ h3 {
 }
 
 @media (max-width: 1300px) {
-  h1 {
-    font-size: 4rem;
-  }
-
   .landingpageSectionFlex {
     flex-direction: column;
   }
@@ -281,7 +199,7 @@ h3 {
 
   .landingpageSectionImgDiv {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
   }
 
@@ -308,18 +226,11 @@ h3 {
 }
 
 /* About the job or employee styling */
-.aboutTheJobOrEmployeeSection {
-  padding-bottom: 20%;
-  height: max-content;
-  min-height: 100vh;
-}
-
 .aboutTheJobOrEmployeeSectionFlex {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   grid-gap: 0 4rem;
-  width: 100%;
 }
 
 .aboutTheJobOrEmployeeSectionTextAboveImg {
@@ -327,21 +238,17 @@ h3 {
   grid-row: 1 / span 1;
   display: flex;
   flex-direction: column;
-  height: max-content;
 }
 
 .aboutTheJobOrEmployeeSectionTextBelowImg {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-  height: max-content;
   margin-top: 1rem;
 }
 
 .aboutTheJobOrEmployeeSectionImgWrapper {
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
-  height: -webkit-max-content;
-  height: max-content;
   margin: auto 0;
 }
 
@@ -378,8 +285,7 @@ h3 {
   }
 }
 
-/* Section 3 styling */
-
+/* Summer student quotes styling */
 .summerstudentQuotesSection {
   position: relative;
 }
@@ -395,7 +301,7 @@ h3 {
 
 .summerstudent:nth-of-type(even) {
   flex-direction: row-reverse;
-  margin-left: 12em;
+  margin-left: 12rem;
 }
 
 .summerstudent:last-of-type {
@@ -419,19 +325,15 @@ h3 {
 
 .summerstudentQuote,
 .summerstudentName {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
   position: relative;
 }
 
 .summerstudentQuote {
-  font-family: 'Graphik Web';
+  font-family: var(--graphik-font-family);
 }
 
 .summerstudentName {
-  font-family: 'Recoleta';
+  font-family: var(--recoleta-font-family);
 }
 
 .summerstudent div {
@@ -463,10 +365,7 @@ h3 {
 }
 
 .summerStudentQuotesSectionGreenBlobBottom {
-  right: 0;
-  width: 700px;
   position: absolute;
-  top: 70rem;
   display: none;
   transform: rotate(205deg);
 }
@@ -600,32 +499,7 @@ h3 {
   justify-content: center;
 }
 
-.timelineNarrow {
-  height: 100%;
-  width: 100%;
-  max-height: 86vh;
-}
-
-.timelineNarrow,
-.timelineWide {
-  width: 100%;
-}
-
 @media (min-width: 3500px) {
-  .firstYearSectionImg {
-    left: 400px;
-    bottom: 1300px;
-    bottom: 2800px;
-  }
-
-  .firstYearSectionBlob {
-    position: relative;
-    left: 200px;
-    bottom: 800px;
-    width: 70%;
-    height: auto;
-  }
-
   .firstYearSectionImgDiv {
     display: block;
   }
@@ -649,12 +523,6 @@ h3 {
 
   .firstYearSectionImgDiv {
     display: none;
-  }
-}
-
-@media (max-width: 800px) {
-  .timelineNarrow {
-    height: 100%;
   }
 }
 
@@ -822,25 +690,34 @@ h3 {
 
 /* Why Variant styling */
 .whyVariantSectionFlex {
-  display: flex;
-  gap: 2rem 4rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0 4rem;
 }
 
-.whyVariantSectionSelectedTopic,
 .whyVariantSectionTopicsDiv {
-  width: calc(50% - 2rem);
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.whyVariantSectionSelectedTopic {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.whyVariantSectionMostImportantForYou {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 
 .whyVariantSectionButtons {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   margin: 2rem 0;
 }
 
 .whyVariantSectionButtons button {
-  margin-right: 2%;
   border: none;
   margin: 1rem 0;
   text-align: left;
@@ -859,33 +736,30 @@ h3 {
 }
 
 .mostImportantForYou {
-  margin: 2rem 0;
+  margin: 1.8rem 0;
+  font-size: 1.5rem;
+  font-family: var(--recoleta-font-family);
+  font-weight: 500;
 }
 
-@media (max-width: 720px) {
-}
-
-@media (min-width: 2150px) {
-  /* whyVariantFlex*/
-  .mostImportantForYou,
-  .handbookRef {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
-  .whyVariantSectionButtons button {
-    font-size: 150%;
-  }
-}
 /* Tablet */
 @media (max-width: 1110px) {
-  .whyVariantFlex {
+  .whyVariantSectionFlex {
+    display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
 
-  .whyVariantSectionTopicsDiv,
+  .whyVariantSectionTopicsDiv {
+    order: 1;
+  }
+
   .whyVariantSectionSelectedTopic {
-    width: 100%;
+    order: 2;
+  }
+
+  .whyVariantSectionMostImportantForYou {
+    order: 3;
   }
 
   .whyVariantSectionButtons {
@@ -894,27 +768,36 @@ h3 {
     flex-wrap: wrap;
     width: 100%;
     gap: 0 1rem;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 500px) {
+  .whyVariantSectionFlex {
+    gap: 1rem;
+  }
+
+  .whyVariantSectionButtons {
+    margin-bottom: 0;
+    gap: 1rem;
+  }
+
   .whyVariantSectionButtons button {
-    min-width: calc(50% - 1rem);
+    margin: 0;
+  }
+
+  .mostImportantForYou {
+    margin-bottom: 0;
+    font-weight: 400;
   }
 }
 
 /* Apply section */
 .applySection {
-  background-color: var(--variant-peach-3);
-  color: #333;
-  min-height: 100vh;
-  height: 100%;
+  background-color: var(--variant-peach);
+  color: var(--variant-black);
   display: flex;
   flex-direction: column;
-}
-
-.applySection > h2 {
-  width: 100%;
 }
 
 .applySectionFlex {
@@ -929,12 +812,10 @@ h3 {
   grid-row: 1 / span 1;
   display: flex;
   flex-direction: column;
-  height: max-content;
   max-width: 800px;
 }
 
 .contactInfo {
-  margin-top: 2%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -950,7 +831,7 @@ h3 {
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .applySectionApplyDiv {
@@ -974,25 +855,9 @@ h3 {
   max-width: 38rem;
 }
 
-a.applyButtonPink,
-a.applyButtonBlue {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 50px;
-  padding: 1rem;
-  text-decoration: none;
-  width: max-content;
-  color: var(--variant-black);
-}
-
-a.applyButtonBlue {
-  background-color: var(--variant-blue-5);
-}
-
-a.applyButtonPink {
-  background-color: var(--variant-pink-2);
+.applySectionPicture {
+  display: flex;
+  align-items: center;
 }
 
 .Marius {
@@ -1002,16 +867,30 @@ a.applyButtonPink {
   margin-top: 40%;
 }
 
-@media (max-width: 900px) {
-  .applyButtonPink,
-  .applyButtonBlue {
-    font-size: 24px;
-  }
+a.applyButtonPink,
+a.applyButtonBlue {
+  font-family: var(--recoleta-font-family);
+  font-size: 1.6rem;
+  line-height: 32px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  width: max-content;
+  color: var(--variant-black);
 }
 
-.applySectionPicture {
-  display: flex;
-  align-items: center;
+a.applyButtonBlue {
+  background-color: var(--variant-light-blue);
+}
+
+a.applyButtonPink {
+  background-color: var(--variant-light-pink);
+}
+
+@media (max-width: 900px) {
+  a.applyButtonPink,
+  a.applyButtonBlue {
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -1096,11 +975,7 @@ a.applyButtonPink {
   height: 100%;
 }
 
-.wrapper
-  [class*='calculator-controls']
-  [class*='form-row']
-  div
-  [class*='radio-button-wrapper'] {
+.calculatorWrapper div {
   border: none;
 }
 
@@ -1109,10 +984,6 @@ a.applyButtonPink {
   top: -2rem;
   left: 1rem;
   width: 90%;
-}
-
-.calculator_radio-button-wrapper {
-  border: none;
 }
 
 @media (max-width: 1110px) {
