@@ -138,47 +138,50 @@ h3 {
   flex-grow: 1;
 }
 
-.landingpageSectionApplyDiv {
+.landingpageSectiondisplay {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  min-width: 420px;
+  min-width: max-content;
+}
+
+.landingpageSectiondisplay div {
   width: max-content;
 }
 
-.landingpageSectionApplyDiv p + div {
+.landingpageSectiondisplay p + div {
   margin-top: 1rem;
 }
 
 .landingpageSectionImgDiv {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
 
 .landingpageSectionImgBlobWrapper {
-  position: absolute;
-  max-width: 800px;
-  bottom: auto;
-  right: 0;
-  width: 100%;
+  position: relative;
+  bottom: 4rem;
+  right: 4rem;
 }
 
 .landingpageSectionImg {
-  width: 90%;
+  max-width: min(50vw, 700px);
+  max-height: 50vh;
   z-index: 10;
   position: relative;
+  padding: 3.5rem;
 }
 
 .landingpageSectionImgBlobWrapper svg {
   position: absolute;
-  right: 0%;
-  height: 120%;
-  width: 120%;
+  height: 100%;
+  width: 100%;
   z-index: 1;
-  bottom: -10%;
+  left: 0;
 }
 
 .moreInfoDiv {
@@ -192,36 +195,47 @@ h3 {
     flex-direction: column;
   }
 
-  .landingpageSectionApplyDiv,
-  .landingpageSectionImgDiv {
+  .landingpageSectiondisplay {
     width: 100%;
-  }
-
-  .landingpageSectionImgDiv {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-  .landingpageSectionImg {
-    max-width: 700px;
   }
 
   .landingpageSectionImgBlobWrapper {
-    width: max-content;
+    bottom: 0;
+    right: 0;
   }
 }
 
 @media (max-width: 1000px) {
   .landingpageSectionImgDiv {
     justify-content: center;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 850px) {
-  .landingpageSectionImgBlobWrapper {
-    width: 130%;
-    right: auto;
+  .landingpageSection {
+    gap: 3rem;
+  }
+
+  .landingpageSectionFlex {
+    gap: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .landingpageSectionImgDiv {
+    position: relative;
+  }
+
+  .landingpageSectionImg {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 400px), (max-height: 410px) {
+  .landingpageSectionImgDiv {
+    display: none;
   }
 }
 
@@ -834,7 +848,7 @@ h3 {
   align-items: flex-end;
 }
 
-.applySectionApplyDiv {
+.applySectiondisplay {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
 }
@@ -845,7 +859,7 @@ h3 {
   gap: 1rem;
 }
 
-.applySectionApplyDiv {
+.applySectiondisplay {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -886,13 +900,6 @@ a.applyButtonPink {
   background-color: var(--variant-light-pink);
 }
 
-@media (max-width: 900px) {
-  a.applyButtonPink,
-  a.applyButtonBlue {
-    padding: 0 1rem;
-  }
-}
-
 @media (max-width: 1300px) {
   .applySectionFlex {
     grid-template-columns: repeat(3, auto);
@@ -910,7 +917,7 @@ a.applyButtonPink {
     grid-row: 2 / span 1;
   }
 
-  .applySectionApplyDiv {
+  .applySectiondisplay {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
   }
@@ -935,7 +942,7 @@ a.applyButtonPink {
     order: 2;
   }
 
-  .applySectionApplyDiv {
+  .applySectiondisplay {
     order: 3;
   }
 
