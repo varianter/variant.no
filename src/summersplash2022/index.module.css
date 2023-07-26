@@ -5,13 +5,15 @@
 
   /* Colors */
   --variant-black: #333333;
-  --variant-light-blue: #68e9dd;
+  --variant-blue-light-4: #b7b4de;
+  --variant-teal-light-2: #68e9dd;
+  --variant-blue: #423d89;
   --variant-dark-blue: #1a1837;
-  --variant-light-pink: #f076a6;
-  --variant-dark-pink: #8b0f40;
+  --variant-pink-light-2: #f076a6;
+  --variant-pink-dark-2: #8b0f40;
   --variant-peach: #fff3f2;
-  --variant-teal: #01574f;
-  --variant-beige: #f4f1e7;
+  --variant-teal-dark-3: #01574f;
+  --variant-beige-light-2: #f4f1e7;
 }
 
 /* Felles styling*/
@@ -42,10 +44,11 @@ section {
 /* Headings and fonts */
 h1 {
   width: 100%;
-  max-width: 55rem;
+  max-width: 44rem;
   background: linear-gradient(to right, #e61a6b, #534dac, #02ae9e);
   background-size: 100% 100%;
   background-clip: text;
+  font-size: 5.4rem;
 }
 
 h2 {
@@ -105,21 +108,21 @@ h3 {
 .sectionDarkTeal,
 .sectionDarkTeal button,
 .sectionDarkTeal a {
-  background-color: var(--variant-teal);
+  background-color: var(--variant-teal-dark-3);
   color: white;
 }
 
 .sectionLightBeige,
 .sectionLightBeige button,
 .sectionLightBeige a {
-  background-color: var(--variant-beige);
+  background-color: var(--variant-beige-light-2);
   color: var(--variant-black);
 }
 
 .sectionDarkPink,
 .sectionDarkPink button,
 .sectionDarkPink a {
-  background-color: var(--variant-dark-pink);
+  background-color: var(--variant-pink-dark-2);
   color: white;
 }
 
@@ -128,60 +131,112 @@ h3 {
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.landingpageSectionTogglePageDiv {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  height: 10rem;
+}
+
+.landingpageSectionTogglePage {
+  border: 2px solid;
+  border-radius: 2rem;
+  display: flex;
+  width: max-content;
+  margin: auto;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.landingpageSectionTogglePage a {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sectionLightBeige .landingpageSectionTogglePage {
+  border-color: var(--variant-blue);
+  color: var(--variant-blue);
+}
+.sectionDarkBlue .landingpageSectionTogglePage {
+  border-color: var(--variant-blue-light-4);
+  color: var(--variant-blue-light-4);
+}
+
+.sectionLightBeige .landingpageSectionTogglePage a.active {
+  background-color: var(--variant-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.sectionDarkBlue .landingpageSectionTogglePage a.active {
+  background-color: var(--variant-blue-light-4);
+  color: #1a1837;
+}
+
+.graduateToggleArrow {
+  grid-column: 3 / span 1;
+  display: flex;
+  align-self: flex-end;
+}
+
+.summerjobToggleArrow {
+  grid-column: 1 / span 1;
+  display: flex;
+  justify-self: flex-end;
+  margin-top: -2rem;
+  align-self: center;
 }
 
 .landingpageSectionFlex {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 0;
   flex-grow: 1;
 }
 
-.landingpageSectiondisplay {
+.landingpageSectionFlex h1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.landingpageSectionApplyDiv {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  min-width: max-content;
-}
-
-.landingpageSectiondisplay div {
-  width: max-content;
-}
-
-.landingpageSectiondisplay p + div {
-  margin-top: 1rem;
+  align-items: flex-end;
+  margin-bottom: 6rem;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 
 .landingpageSectionImgDiv {
-  position: absolute;
-  right: 0rem;
-  bottom: 0rem;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   flex-grow: 1;
+  margin-right: -8rem;
+  margin-bottom: -3rem;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
 }
 
-.landingpageSectionImgBlobWrapper {
-  position: relative;
-  bottom: 4rem;
-  right: 4rem;
-}
-
-.landingpageSectionImg {
-  max-width: min(50vw, 700px);
-  max-height: 50vh;
-  z-index: 10;
-  position: relative;
-  padding: 3.5rem;
-}
-
-.landingpageSectionImgBlobWrapper svg {
-  position: absolute;
-  height: 100%;
+.landingpageImgWithBlob {
+  height: min-content;
+  max-width: 34rem;
   width: 100%;
-  z-index: 1;
-  left: 0;
+  max-height: 75vh;
+}
+
+.applyLink {
+  text-decoration: underline;
+  text-decoration-color: #ed6fa0;
+  text-underline-offset: 0.8rem;
+  font-size: 1.8rem;
 }
 
 .moreInfoDiv {
@@ -190,24 +245,32 @@ h3 {
   bottom: 2rem;
 }
 
+@media (max-width: 1900px) {
+  .landingpageImgWithBlob {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 1700px) {
+  .landingpageSectionFlex h1 {
+    grid-column: 1 / span 2;
+  }
+
+  .landingpageSectionImgDiv {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+}
+
 @media (max-width: 1300px) {
-  .landingpageSectionFlex {
-    flex-direction: column;
-  }
-
-  .landingpageSectiondisplay {
-    width: 100%;
-  }
-
-  .landingpageSectionImgBlobWrapper {
-    bottom: 0;
-    right: 0;
+  .landingpageSectionImgDiv {
+    margin-right: -2rem;
+    margin-bottom: 0rem;
   }
 }
 
 @media (max-width: 1000px) {
   .landingpageSectionImgDiv {
-    justify-content: center;
     margin-bottom: 2rem;
   }
 }
@@ -217,19 +280,35 @@ h3 {
     gap: 3rem;
   }
 
+  .landingpageSectionTogglePageDiv {
+    height: 6rem;
+  }
+
   .landingpageSectionFlex {
     gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
-}
 
-@media (max-width: 800px) {
+  .graduateToggleArrow,
+  .summerjobToggleArrow {
+    display: none;
+  }
+
+  .landingpageSectionApplyDiv {
+    order: 3;
+  }
+
   .landingpageSectionImgDiv {
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    order: 2;
   }
 
-  .landingpageSectionImg {
-    max-width: 100%;
-    padding: 2rem;
+  .landingpageImgWithBlob {
+    height: min-content;
   }
 }
 
@@ -710,7 +789,7 @@ h3 {
 .whyVariantSectionFlex {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   gap: 0 4rem;
 }
 
@@ -816,9 +895,10 @@ h3 {
 
 .applySectionFlex {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
+  flex-grow: 1;
 }
 
 .applySectionText {
@@ -844,11 +924,9 @@ h3 {
 .applySectionPicture {
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
-  display: flex;
-  align-items: flex-end;
 }
 
-.applySectiondisplay {
+.applySectionApplyDiv {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
 }
@@ -859,26 +937,27 @@ h3 {
   gap: 1rem;
 }
 
-.applySectiondisplay {
+.applySectionApplyDiv {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-self: center;
 }
 
 .applySectionText > p {
   max-width: 38rem;
 }
 
-.applySectionPicture {
-  display: flex;
-  align-items: center;
+.applySectionApplyDiv p {
+  font-family: var(--recoleta-font-family);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
-.Marius {
-  z-index: 1;
+.applyImgWithBlob {
+  height: min-content;
   width: 100%;
-  max-width: 700px;
-  margin-top: 40%;
+  max-width: 30rem;
 }
 
 a.applyButtonPink,
@@ -892,20 +971,21 @@ a.applyButtonBlue {
   color: var(--variant-black);
   display: block;
   margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 
 a.applyButtonBlue {
-  background-color: var(--variant-light-blue);
+  background-color: var(--variant-teal-light-2);
 }
 
 a.applyButtonPink {
-  background-color: var(--variant-light-pink);
+  background-color: var(--variant-pink-light-2);
 }
 
 @media (max-width: 1300px) {
   .applySectionFlex {
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: min-content 1fr;
   }
 
   .applySectionText {
@@ -914,19 +994,13 @@ a.applyButtonPink {
   }
 
   .applySectionPicture {
-    align-items: flex-end;
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
   }
 
-  .applySectiondisplay {
+  .applySectionApplyDiv {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-  }
-
-  .Marius {
-    width: 80%;
-    margin: 0 auto;
   }
 }
 
@@ -942,15 +1016,17 @@ a.applyButtonPink {
 
   .applySectionPicture {
     order: 2;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
   }
 
-  .applySectiondisplay {
+  .applySectionApplyDiv {
     order: 3;
   }
 
-  .applySectionPicture,
-  .applySectionText {
-    width: 100%;
+  .applyImgWithBlob {
+    width: 80%;
   }
 }
 

@@ -1,9 +1,12 @@
 import style from 'src/summersplash2022/index.module.css';
-import BlueBlob from '../img/blueBlob';
-import PinkBlob from '../img/pinkBlob';
+
 import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
+import ArrowDown from 'src/summersplash2022/img/arrowDown';
+import GraduateToggleArrow from '../img/graduateToggleArrow';
+import SummerjobToggleArrow from 'src/summersplash2022/img/summerjobToggleArrow';
+import LandingPageImgWithBlob from 'src/summersplash2022/img/landingpageImgWithBlob';
 
 const LandingPage = ({
   applyType,
@@ -12,7 +15,6 @@ const LandingPage = ({
   applyType: ApplyType;
   className: string;
 }) => {
-  const image = require('src/summersplash2022/img/section1Blob.png');
   const isApplyGraduate: boolean = applyType == ApplyType.GRADUATE;
 
   return (
@@ -22,51 +24,46 @@ const LandingPage = ({
         id="forside"
       >
         <Header white={isApplyGraduate ? true : false} />
-        <h1>
-          Vi ser etter
-          <span className={style.textGradient}>
-            {isApplyGraduate ? ' 17 nyutdannede ' : ' 23 sommervarianter '}
-          </span>
-          i 2024!
-        </h1>
+        <div className={style.landingpageSectionTogglePageDiv}>
+          <div className={style.landingpageSectionTogglePage}>
+            <a
+              href="/sommerjobb"
+              className={!isApplyGraduate ? style.active : ''}
+            >
+              Sommerjobb
+            </a>
+            <a
+              href="/nyutdannet"
+              className={isApplyGraduate ? style.active : ''}
+            >
+              Nyutdannet
+            </a>
+          </div>
+          {isApplyGraduate ? <SummerjobToggleArrow /> : <GraduateToggleArrow />}
+        </div>
         <div className={style.landingpageSectionFlex}>
+          <h1>
+            Vi ser etter
+            <span className={style.textGradient}>
+              {isApplyGraduate ? ' 17 nyutdannede ' : ' 23 sommervarianter '}
+            </span>
+            i 2024!
+          </h1>
           <div className={style.landingpageSectionApplyDiv}>
             <div>
-              <p>Søk senest 1. oktober</p>
               <div>
                 <a
-                  className={style.applyButtonPink}
+                  className={style.applyLink}
                   href={isApplyGraduate ? '#sokfastjobb' : '#sokSommerjobb'}
                 >
-                  Søk {isApplyGraduate ? 'fast jobb' : 'sommerjobb'}
-                </a>
-              </div>
-            </div>
-            <div>
-              <p>
-                {isApplyGraduate
-                  ? 'Fortsatt et par år igjen med studier?'
-                  : 'Ferdig utdannet i 2024?'}
-              </p>
-              <div>
-                <a
-                  className={style.applyButtonBlue}
-                  href={isApplyGraduate ? '/sommerjobb' : '/nyutdannet'}
-                >
-                  Jeg vil ha {isApplyGraduate ? 'sommerjobb' : 'fast jobb'}
+                  Søk {isApplyGraduate ? 'fast stilling' : 'sommerjobb'}{' '}
+                  <ArrowDown color={isApplyGraduate ? 'white' : '#333333'} />
                 </a>
               </div>
             </div>
           </div>
           <div className={style.landingpageSectionImgDiv}>
-            <div className={style.landingpageSectionImgBlobWrapper}>
-              <img
-                className={style.landingpageSectionImg}
-                src={image}
-                alt="To fra Variant"
-              />
-              {isApplyGraduate ? <BlueBlob /> : <PinkBlob />}
-            </div>
+            <LandingPageImgWithBlob />
           </div>
         </div>
 

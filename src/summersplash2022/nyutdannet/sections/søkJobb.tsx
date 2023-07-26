@@ -1,8 +1,8 @@
 import style from 'src/summersplash2022/index.module.css';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
+import ApplyImgWithBlob from 'src/summersplash2022/img/applyImgWithBlob';
 
 const Apply = ({ applyType }: { applyType: ApplyType }) => {
-  const Marius = require('src/summersplash2022/img/Marius.png');
   const isApplyGraduate = applyType == ApplyType.GRADUATE;
 
   return (
@@ -29,6 +29,7 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
           </div>
         </div>
         <div className={style.applySectionApplyDiv}>
+          <p>Søk {isApplyGraduate ? 'fast jobb' : 'sommerjobb'}:</p>
           <a
             className={style.applyButtonPink}
             href={
@@ -52,7 +53,7 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
         </div>
 
         <div className={style.applySectionPicture}>
-          <img className={style.Marius} src={Marius} alt="Bilde av Marius" />
+          <ApplyImgWithBlob color={isApplyGraduate ? '#028377' : '#EDE8D7'} />
         </div>
       </div>
     </section>
