@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/nyutdannet/nyutdannet.module.css';
+import style from 'src/summersplash2022/sections/forside.module.css';
 const MoreInfo = (props: { white: boolean }) => {
   if (props.white) {
     return (

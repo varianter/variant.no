@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/index.module.css';
+import style from '../sections/søkJobb.module.css';
 
 const ApplyImgWithBlob = ({ color }: { color: string }) => {
   return (
@@ -9,7 +9,7 @@ const ApplyImgWithBlob = ({ color }: { color: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className={style.applyImgWithBlob}
+      className={style.imgWithBlob}
     >
       <path
         d="M0.311042 320.682C-6.49875 393.377 100.266 418.132 148.171 473.226C187.3 518.228 196.446 592.499 253.086 611.396C310.404 630.519 372.109 597.839 422.787 564.846C467.134 535.974 486.027 485.851 514.425 441.253C548.714 387.405 605.512 342.761 604.793 279.011C603.982 207.115 570.419 132.142 510.49 92.3222C451.315 53.0026 371.839 57.8024 303.94 79.1057C246.169 97.2313 221.328 160.222 173.962 197.908C116.768 243.413 7.11514 248.048 0.311042 320.682Z"

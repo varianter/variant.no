@@ -1,5 +1,4 @@
-import style from 'src/summersplash2022/index.module.css';
-
+import style from './forside.module.css';
 import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
@@ -19,29 +18,31 @@ const LandingPage = ({
 
   return (
     <>
-      <section
-        className={`${style.landingpageSection} ${className}`}
-        id="forside"
-      >
+      <section className={`${style.section} ${className}`} id="forside">
         <Header white={isApplyGraduate ? true : false} />
-        <div className={style.landingpageSectionTogglePageDiv}>
-          <div className={style.landingpageSectionTogglePage}>
+        <div className={style.togglePageDiv}>
+          <div
+            className={`${style.togglePage} ${
+              isApplyGraduate ? style.togglePageLightBlue : style.togglePageBlue
+            }
+            `}
+          >
             <a
               href="/sommerjobb"
-              className={!isApplyGraduate ? style.active : ''}
+              className={!isApplyGraduate ? style.toggleActiveBlue : ''}
             >
               Sommerjobb
             </a>
             <a
               href="/nyutdannet"
-              className={isApplyGraduate ? style.active : ''}
+              className={isApplyGraduate ? style.toggleActiveLightBlue : ''}
             >
               Nyutdannet
             </a>
           </div>
           {isApplyGraduate ? <SummerjobToggleArrow /> : <GraduateToggleArrow />}
         </div>
-        <div className={style.landingpageSectionFlex}>
+        <div className={style.flex}>
           <h1>
             Vi ser etter
             <span className={style.textGradient}>
@@ -49,7 +50,7 @@ const LandingPage = ({
             </span>
             i 2024!
           </h1>
-          <div className={style.landingpageSectionApplyDiv}>
+          <div className={style.applyDiv}>
             <div>
               <div>
                 <a
@@ -62,7 +63,7 @@ const LandingPage = ({
               </div>
             </div>
           </div>
-          <div className={style.landingpageSectionImgDiv}>
+          <div className={style.imgDiv}>
             <LandingPageImgWithBlob />
           </div>
         </div>

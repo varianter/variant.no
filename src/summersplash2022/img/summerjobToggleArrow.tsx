@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/index.module.css';
+import style from 'src/summersplash2022/sections/forside.module.css';
 
 const SummerjobToggleArrow = () => {
   return (

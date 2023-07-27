@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from 'src/summersplash2022/index.module.css';
+import style from './hvorforAkkuratVariant.module.css';
 import HandBookPages, {
   HandbookPage,
   pageTitle,
@@ -16,11 +16,11 @@ const WhyVariant = ({
 
   return (
     <section
-      className={`${style.whyVariantSection} ${className}`}
+      className={`${style.section} ${className}`}
       id="hvorforjobbeivariant"
     >
-      <div className={style.whyVariantSectionFlex}>
-        <div className={style.whyVariantSectionTopicsDiv}>
+      <div className={style.flex}>
+        <div className={style.topicsDiv}>
           <h2>Hvorfor akkurat Variant?</h2>
           <p>
             Variant er en variant av et konsulentselskap som er raust, åpent og
@@ -30,7 +30,7 @@ const WhyVariant = ({
             tenker som vi gjør. Under kan du sjekke ut noen utvalgte temaer.
           </p>
 
-          <div className={style.whyVariantSectionButtons}>
+          <div className={style.buttons}>
             {pages.map((page: HandbookPage) => (
               <button
                 className={whichButtonSelected === page ? style.active : ''}
@@ -42,7 +42,7 @@ const WhyVariant = ({
             ))}
           </div>
         </div>
-        <div className={style.whyVariantSectionMostImportantForYou}>
+        <div className={style.mostImportantForYouDiv}>
           <h3 className={style.mostImportantForYou}>
             Hva er viktigst for deg?
           </h3>
@@ -50,7 +50,7 @@ const WhyVariant = ({
             Sjekk ut Variants håndbok her
           </a>
         </div>
-        <div className={style.whyVariantSectionSelectedTopic}>
+        <div className={style.selectedTopic}>
           <HandBookPages selectedPage={whichButtonSelected} />
         </div>
       </div>

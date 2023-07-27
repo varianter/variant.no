@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/index.module.css';
+import style from '../sections/forside.module.css';
 
 const LandingPageImgWithBlob = () => {
   return (
@@ -9,7 +9,7 @@ const LandingPageImgWithBlob = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className={style.landingpageImgWithBlob}
+      className={style.imgWithBlob}
     >
       <path
         fill-rule="evenodd"

@@ -1,12 +1,12 @@
-import style from 'src/summersplash2022/index.module.css';
+import style from './hvemSokerVi.module.css';
 
 const WhoAreWeSeeking = ({ className }: { className: string }) => {
   const graduateNorwayMap = require('../img/graduate norway map.svg');
   return (
-    <section className={`${style.aboutTheJobOrEmployeeSection} ${className}`}>
+    <section className={`${style.section} ${className}`}>
       <h2>Hvem søker vi?</h2>
-      <div className={style.aboutTheJobOrEmployeeSectionFlex}>
-        <p className={style.aboutTheJobOrEmployeeSectionTextAboveImg}>
+      <div className={style.flex}>
+        <p className={style.textAboveImg}>
           Vi søker 17 nyutdannede designere og utviklere som engasjerer og
           motiverer, med oppstart 1. august 2024. Stillingene er fordelt på våre
           kontorer i Trondheim, Oslo og Bergen. Det er ikke viktig hvilke
@@ -15,7 +15,7 @@ const WhoAreWeSeeking = ({ className }: { className: string }) => {
           og bryr deg om kunden du leverer til.
         </p>
 
-        <p className={style.aboutTheJobOrEmployeeSectionTextBelowImg}>
+        <p className={style.textBelowImg}>
           Gjennom både strukturert og impulsiv kunnskapsutveksling lærer vi av
           hverandre og de vi jobber med for å bli flinkere, modigere og rausere.
           Vi elsker utfordringer hvor design- og teknologikompetanse finner
@@ -24,12 +24,12 @@ const WhoAreWeSeeking = ({ className }: { className: string }) => {
           tilfører ekstra verdi. Variant er et selskap av og for de ansatte, der
           læreglede står i sentrum. Deler du også denne filosofien?
         </p>
-        <div className={style.aboutTheJobOrEmployeeSectionImgWrapper}>
+        <div className={style.imgWrapper}>
           <img
             src={graduateNorwayMap}
             alt="Bergen: 2 utviklere, 1 designer, Trondheim : 4 utviklere
             4 designere, Oslo : 3 utviklere 3 designere"
-            className={style.aboutTheJobOrEmployeeSectionImg}
+            className={style.img}
           />
         </div>
       </div>

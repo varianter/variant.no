@@ -1,4 +1,4 @@
-import style from 'src/summersplash2022/index.module.css';
+import style from './hvaSkjerEtterSoknadsfristen.module.css';
 import DarkRedBlob from '../img/mørkerødBlob';
 import DarkBeigeBlob from '../img/darkBeigeBlob';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
@@ -14,7 +14,7 @@ const AfterApplying = ({
   const timelineImage =
     applyType === ApplyType.GRADUATE
       ? require('../img/graduate timeline.svg')
-      : require('../../img/timeline.svg');
+      : require('../img/timeline.svg');
 
   const timelineDescription =
     applyType == ApplyType.GRADUATE
@@ -27,12 +27,12 @@ const AfterApplying = ({
 
   return (
     <section
-      className={`${style.afterApplyingSection} ${className}`}
+      className={`${style.section} ${className}`}
       id="hvaskjerettersoknadsfristen"
     >
       <h3>Hva skjer etter søknadsfristen?</h3>
-      <div className={style.afterApplyingSectionFlex}>
-        <div className={style.afterApplyingSectionAbout}>
+      <div className={style.flex}>
+        <div className={style.about}>
           <p>
             Vi liker ikke tradisjonelle intervjuer. De plasserer søker i en
             unaturlig situasjon, og man blir ikke godt kjent med hverandre.
@@ -60,19 +60,19 @@ const AfterApplying = ({
           </p>
         </div>
 
-        <div className={style.afterApplyingSectionImgDiv}>
+        <div className={style.imgDiv}>
           <img src={Even} className={style.EvenPicture} alt="Even" />
-          <div className={style.afterApplyingSectionImgBlob}>
+          <div className={style.imgBlob}>
             {isApplyGraduate && <DarkBeigeBlob />}
             {!isApplyGraduate && <DarkRedBlob />}
           </div>
         </div>
 
-        <div className={style.afterApplyingSectionTimeline}>
+        <div className={style.timeline}>
           <img src={timelineImage} alt={timelineDescription} />
         </div>
 
-        <div className={style.afterApplyingSectionApplicationTips}>
+        <div className={style.applicationTips}>
           <h4>Søknadstips:</h4>
           <p>
             Vi setter pris på en søknad med CV, søknadsbrev og karakterutskrift.
@@ -82,7 +82,7 @@ const AfterApplying = ({
             Variant? Vi trenger mennesker som bryr seg om å skape en bedre
             hverdag. Er det deg?
           </p>
-          <div className={style.afterApplyingSectionTextBlob}>
+          <div className={style.textBlob}>
             {isApplyGraduate && <DarkBeigeBlob />}
             {!isApplyGraduate && <DarkRedBlob />}
           </div>

@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import style from 'src/summersplash2022/index.module.css';
+import style from './lonn.module.css';
 import PinkBlob from '../img/pinkBlob';
 import Calculator from '../utils/calculator';
 
 const Payment = () => {
   return (
-    <section className={style.salarySection}>
-      <h2 className={style.heading}>Lønn</h2>
-      <div className={style.salarySectionFlex}>
-        <div className={style.salarySectionText}>
+    <section className={style.section}>
+      <h2>Lønn</h2>
+      <div className={style.flex}>
+        <div className={style.text}>
           <p>
             Vi er sikre på at flinke folk i liten grad lar seg motivere av lønn
             alene, men god lønn er like fullt viktig for den frihet og
@@ -29,7 +29,7 @@ const Payment = () => {
             om du vil vite mer om lønn og andre goder i Variant.
           </p>
         </div>
-        <div className={style.salarySectionCalculator}>
+        <div className={style.calculator}>
           <div className={style.calculatorWrapper}>
             <Calculator />
           </div>

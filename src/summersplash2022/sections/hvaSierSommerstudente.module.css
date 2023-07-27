@@ -1,0 +1,161 @@
+.section {
+  position: relative;
+}
+
+.summerstudent {
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+  width: 70%;
+  margin: 6rem 0;
+  margin-top: 0;
+}
+
+.summerstudent:nth-of-type(even) {
+  flex-direction: row-reverse;
+  margin-left: 12rem;
+}
+
+.summerstudent:last-of-type {
+  margin-bottom: 0;
+}
+
+.img {
+  width: 288.35px;
+  height: 288.35px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.summerstudent:nth-of-type(odd) .img {
+  margin-right: 4rem;
+}
+
+.summerstudent:nth-of-type(even) .img {
+  margin-left: 4rem;
+}
+
+.quote,
+.name {
+  position: relative;
+}
+
+.quote {
+  font-family: var(--graphik-font-family);
+}
+
+.name {
+  font-family: var(--recoleta-font-family);
+}
+
+.summerstudent div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summerstudent,
+.img,
+.quote,
+.name {
+  z-index: 10;
+}
+
+.greenBlobTop {
+  right: -12%;
+  width: 700px;
+  position: absolute;
+  top: 0rem;
+}
+
+.greenBlobMiddle {
+  left: -14rem;
+  width: 740px;
+  position: absolute;
+  bottom: -16%;
+  transform: rotate(205deg);
+}
+
+.greenBlobBottom {
+  position: absolute;
+  display: none;
+  transform: rotate(205deg);
+}
+
+@media (max-width: 1500px) {
+  .greenBlobTop {
+    right: -19%;
+  }
+
+  .summerstudent {
+    width: 100%;
+  }
+
+  .summerstudent:nth-of-type(even) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .greenBlobTop {
+    width: 70%;
+    right: -35%;
+  }
+
+  .greenBlobMiddle {
+    left: -25rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .summerstudent,
+  .summerstudent:nth-of-type(even) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .summerstudent:nth-of-type(even) .img,
+  .summerstudent:nth-of-type(odd) .img {
+    margin: 0 auto;
+  }
+
+  .greenBlobTop {
+    top: 7%;
+  }
+
+  .greenBlobMiddle,
+  .greenBlobBottom {
+    width: 60%;
+  }
+
+  .greenBlobMiddle {
+    left: -22%;
+    bottom: 28%;
+  }
+
+  .greenBlobBottom {
+    display: block;
+    bottom: -10%;
+    top: auto;
+    right: -5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .img {
+    width: 90%;
+  }
+
+  .greenBlobTop {
+    right: -44%;
+  }
+
+  .greenBlobMiddle {
+    left: -12%;
+  }
+
+  .greenBlobBottom {
+    right: -32%;
+  }
+}

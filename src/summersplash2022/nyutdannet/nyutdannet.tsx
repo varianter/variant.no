@@ -1,10 +1,10 @@
-import LandingPage from './sections/forside';
-import AfterApplying from './sections/hvaSkjerEtterSonaadsfristen';
-import WhoAreWeSeeking from './sections/hvemSokerVi';
-import FirstYear from './sections/hvordanSerFørsteÅretUt';
-import WhyVariant from './sections/hvorforAkkurattVariant';
-import Payment from './sections/lonn';
-import Apply from './sections/søkJobb';
+import LandingPage from '../sections/forside';
+import AfterApplying from '../sections/hvaSkjerEtterSonaadsfristen';
+import WhoAreWeSeeking from '../sections/hvemSokerVi';
+import FirstYear from '../sections/hvordanSerFørsteÅretUt';
+import WhyVariant from '../sections/hvorforAkkurattVariant';
+import Payment from '../sections/lonn';
+import Apply from '../sections/søkJobb';
 import Head from 'next/head';
 import favicon from '@variant/profile/lib/logo/favicon.png';
 import { HandbookPage } from '../utils/handBookPages';
