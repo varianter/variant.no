@@ -37,7 +37,8 @@ const Calculator = () => {
     <div
       style={{
         backgroundColor: '#FFDCD7',
-        padding: '5%',
+        padding: '1rem',
+        paddingRight: '2rem',
         borderRadius: '10px',
         width: 'min-content',
         marginTop: isMobile ? '10%' : 0,

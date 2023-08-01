@@ -33,8 +33,7 @@
 
 .pinkBlobWrapper {
   position: absolute;
-  top: -2rem;
-  left: 1rem;
+  top: -4rem;
   width: 90%;
 }
 
@@ -55,6 +54,6 @@
 
 @media (max-width: 900px) {
   .pinkBlobWrapper {
-    top: 0;
+    top: -2rem;
   }
 }
