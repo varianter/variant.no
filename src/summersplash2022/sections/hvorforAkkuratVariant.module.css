@@ -33,8 +33,25 @@
   cursor: pointer;
   white-space: nowrap;
   max-width: fit-content;
-  text-decoration: underline;
-  padding: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--color-standard__black);
+}
+
+.buttons button:nth-of-type(1) {
+  background-color: var(--color-secondary3);
+}
+
+.buttons button:nth-of-type(2) {
+  background-color: var(--color-secondary2__tint3);
+}
+
+.buttons button:nth-of-type(3) {
+  background-color: var(--color-primary__tint3);
+}
+
+.buttons button:nth-of-type(4) {
+  background-color: var(--color-secondary1__tint3);
 }
 
 .buttons button:hover,
