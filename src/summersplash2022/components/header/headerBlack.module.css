@@ -9,8 +9,6 @@
   max-width: 50rem;
   margin: 0 auto;
   margin-left: 0px;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
 }
 
 .main__innerFullWidth {
