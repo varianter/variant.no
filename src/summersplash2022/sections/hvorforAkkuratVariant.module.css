@@ -51,6 +51,10 @@
   font-weight: 500;
 }
 
+.handbookPage p {
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 1110px) {
   .flex {
     display: flex;

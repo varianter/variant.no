@@ -18,11 +18,21 @@
   position: relative;
 }
 
+.imgDivSummerjob {
+  margin-top: -10rem;
+}
+
 .imgBlob {
   position: absolute;
-  top: -25%;
+  top: -3rem;
   transform: rotate(55deg);
-  left: -32rem;
+  left: -11rem;
+  max-width: 31rem;
+}
+
+.imgBlob svg {
+  width: 100%;
+  height: auto;
 }
 
 .timeline {
@@ -73,11 +83,6 @@
   .sectionLightBeige .applicationTips {
     margin-top: -6rem;
   }
-
-  .textBlob {
-    width: 120%;
-    left: -3rem;
-  }
 }
 
 @media (max-width: 1110px) {
@@ -119,10 +124,6 @@
     grid-row: 3 / span 1;
     margin-top: 6rem;
   }
-
-  .textBlob {
-    left: -5rem;
-  }
 }
 
 @media (max-width: 800px) {
@@ -152,9 +153,5 @@
   .applicationTips {
     order: 4;
     margin: auto;
-  }
-
-  .textBlob {
-    display: none;
   }
 }

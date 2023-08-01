@@ -1,3 +1,5 @@
+import style from 'src/summersplash2022/sections/hvorforAkkuratVariant.module.css';
+
 export enum HandbookPage {
   INTENTIONS_AND_VALUES,
   WORK,
@@ -34,7 +36,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
   switch (selectedPage) {
     case HandbookPage.INTENTIONS_AND_VALUES:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Formål og verdier</h3>
           <p>
             Så, hvorfor Variant? Hvorfor er vi egentlig til? Vårt formål er å
@@ -67,7 +69,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
       );
     case HandbookPage.TRUST_AND_RESPONSIBILITY:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Tillit og ansvar</h3>
           <p>
             Variant vil gi sine ansatte det beste, vi som jobber her forventes å
@@ -95,7 +97,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
       );
     case HandbookPage.VARIANTDAY:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Variantdag</h3>
           <p>
             Den første fredagen i hver måned (foruten januar og juli) har vi det
@@ -113,7 +115,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
       );
     case HandbookPage.ENVIRONMENT_LIGHTHOUSE:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Miljøfyrtårn</h3>
           <p>
             Bærekraft for Variant innebærer mye. Det er likestilling i
@@ -130,7 +132,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
       );
     case HandbookPage.WORK:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Arbeidet</h3>
           <p>
             <strong>Fleksitid - </strong>En arbeidsdag er på 7,5 timer. Hvordan
@@ -171,7 +173,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
       );
     case HandbookPage.SOCIAL:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Det sosiale</h3>
           <p>
             <strong>Variantdag - </strong>I tillegg til faglig påfyll er dette
@@ -214,7 +216,7 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
 
     case HandbookPage.PERKS:
       return (
-        <div>
+        <div className={style.handbookPage}>
           <h3>Goder</h3>
           <p>
             <strong>God lønn - </strong>Dette sikrer den stabiliteten og
@@ -223,12 +225,8 @@ const HandBookPages = ({ selectedPage }: { selectedPage: HandbookPage }) => {
             ned for å lese mer om lønn
           </p>
           <p>
-            <strong>Gadgets - </strong>Hvert år har du 10 000 pluss moms (dvs.
-            12500 i praksis) til å kjøpe gadgets.{' '}
-            <a href="/gadgetusage/trondheim">
-              Trykk her for å se hva andre har kjøpt
-            </a>
-            .
+            <strong>Gadgets - </strong>Hvert år har du 11 000 pluss moms (dvs.
+            13 750 i praksis) til å kjøpe gadgets.
           </p>
           <p>
             <strong>Trening - </strong>

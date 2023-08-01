@@ -30,7 +30,7 @@ const AfterApplying = ({
       className={`${style.section} ${className}`}
       id="hvaskjerettersoknadsfristen"
     >
-      <h3>Hva skjer etter søknadsfristen?</h3>
+      <h2>Hva skjer etter søknadsfristen?</h2>
       <div className={style.flex}>
         <div className={style.about}>
           <p>
@@ -60,7 +60,11 @@ const AfterApplying = ({
           </p>
         </div>
 
-        <div className={style.imgDiv}>
+        <div
+          className={`${style.imgDiv} ${
+            isApplyGraduate ? '' : style.imgDivSummerjob
+          }`}
+        >
           <img src={Even} className={style.EvenPicture} alt="Even" />
           <div className={style.imgBlob}>
             {isApplyGraduate && <DarkBeigeBlob />}

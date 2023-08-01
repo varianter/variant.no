@@ -1,6 +1,4 @@
 .section {
-  background-color: var(--variant-peach);
-  color: var(--variant-black);
   display: flex;
   flex-direction: column;
 }
@@ -26,6 +24,7 @@
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contactInfo > p {
@@ -36,6 +35,10 @@
 .picture {
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10rem;
 }
 
 .applyDiv {
@@ -46,7 +49,6 @@
 .text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .applyDiv {
@@ -60,16 +62,14 @@
 }
 
 .applyDiv p {
-  font-family: var(--recoleta-font-family);
   font-size: 1.2rem;
-  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .imgWithBlob {
   height: min-content;
   width: 100%;
-  max-width: 30rem;
+  max-width: 50rem;
 }
 
 a.buttonPink,
@@ -80,18 +80,31 @@ a.buttonBlue {
   padding: 0.5rem 1rem;
   text-decoration: none;
   width: max-content;
-  color: var(--variant-black);
+  color: var(--color-standard__black);
   display: block;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
 
 a.buttonBlue {
-  background-color: var(--variant-teal-light-2);
+  background-color: var(--color-secondary2__tint2);
 }
 
 a.buttonPink {
-  background-color: var(--variant-pink-light-2);
+  background-color: var(--color-primary__tint2);
+}
+
+a.buttonBlue:visited,
+a.buttonPink:visited {
+  color: var(--color-standard__black);
+}
+
+.variantLogo {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+.variantLogo img {
+  height: 1.4rem;
 }
 
 @media (max-width: 1300px) {
@@ -131,13 +144,26 @@ a.buttonPink {
     margin: 1rem 0;
     display: flex;
     justify-content: center;
+    margin-top: 0;
   }
 
   .applyDiv {
     order: 3;
+    gap: 2rem;
+  }
+
+  .applyDiv p {
+    display: none;
   }
 
   .imgWithBlob {
     width: 80%;
+  }
+
+  .variantLogo {
+    order: 4;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
   }
 }

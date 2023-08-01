@@ -49,7 +49,8 @@
 }
 
 .timelineDiv svg {
-  height: max-content;
+  height: 80vh;
+  width: auto;
 }
 
 @media (min-width: 3500px) {
@@ -72,6 +73,10 @@
   .text,
   .timelineDiv {
     width: 100%;
+  }
+
+  .timelineDiv svg {
+    height: min-content;
   }
 
   .img {

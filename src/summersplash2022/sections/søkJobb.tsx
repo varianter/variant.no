@@ -1,12 +1,23 @@
 import style from './søkJobb.module.css';
+import sharedStyle from '../index.module.css';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
 import ApplyImgWithBlob from 'src/summersplash2022/img/applyImgWithBlob';
 
 const Apply = ({ applyType }: { applyType: ApplyType }) => {
   const isApplyGraduate = applyType == ApplyType.GRADUATE;
+  const variantImg = require(isApplyGraduate
+    ? 'src/components/page-header/whiteVariant.svg'
+    : 'src/components/page-header/variant.svg');
 
   return (
-    <section className={style.section} id="sokfastjobb">
+    <section
+      className={`${style.section} ${
+        isApplyGraduate
+          ? sharedStyle.sectionDarkTeal
+          : sharedStyle.sectionLightPeach
+      }`}
+      id="sokfastjobb"
+    >
       <h2 className={style.heading}>
         Søk {isApplyGraduate ? 'fast jobb' : 'sommerjobb'}
       </h2>
@@ -52,8 +63,12 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
           </a>
         </div>
 
+        <div className={style.variantLogo}>
+          <img src={variantImg} alt="Variant" />
+        </div>
+
         <div className={style.picture}>
-          <ApplyImgWithBlob color={isApplyGraduate ? '#028377' : '#EDE8D7'} />
+          <ApplyImgWithBlob color={isApplyGraduate ? '#028377' : '#FAD2E2'} />
         </div>
       </div>
     </section>

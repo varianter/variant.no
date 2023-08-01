@@ -1,7 +1,7 @@
 .flex {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 0 4rem;
 }
 
@@ -22,11 +22,14 @@
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
   margin: auto 0;
+  display: flex;
+  align-items: center;
 }
 
 .img {
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
+  max-height: 70vh;
 }
 
 @media (max-width: 1500px) {
@@ -49,6 +52,7 @@
     order: 2;
     margin: 3rem auto;
     max-width: 500px;
+    height: min-content;
   }
 
   .img {

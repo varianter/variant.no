@@ -2,18 +2,6 @@
 :root {
   --recoleta-font-family: 'Recoleta';
   --graphik-font-family: 'Graphik Web';
-
-  /* Colors */
-  --variant-black: #333333;
-  --variant-blue-light-4: #b7b4de;
-  --variant-teal-light-2: #68e9dd;
-  --variant-blue: #423d89;
-  --variant-dark-blue: #1a1837;
-  --variant-pink-light-2: #f076a6;
-  --variant-pink-dark-2: #8b0f40;
-  --variant-peach: #fff3f2;
-  --variant-teal-dark-3: #01574f;
-  --variant-beige-light-2: #f4f1e7;
 }
 
 /* Felles styling*/
@@ -45,7 +33,12 @@ section {
 h1 {
   width: 100%;
   max-width: 44rem;
-  background: linear-gradient(to right, #e61a6b, #534dac, #02ae9e);
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary1__tint1),
+    var(--color-secondary2__shade1)
+  );
   background-size: 100% 100%;
   background-clip: text;
   font-size: 5.4rem;
@@ -80,41 +73,46 @@ h3 {
     font-size: 1.2rem;
   }
 }
-
-/* Text */
-
 /* Color schemas for sections */
 .sectionDarkBlue,
 .sectionDarkBlue button,
 .sectionDarkBlue a {
-  background-color: var(--variant-dark-blue);
-  color: white;
+  background-color: var(--color-secondary1__shade3);
+  color: var(--color-standard__white);
 }
 
 .sectionLightPeach,
 .sectionLightPeach button,
 .sectionLightPeach a {
-  background-color: var(--variant-peach);
-  color: var(--variant-black);
+  background-color: var(--color-secondary3__tint4);
+  color: var(--color-standard__black);
+}
+
+.sectionLightPeach a:visited {
+  color: var(--color-primary__shade1);
 }
 
 .sectionDarkTeal,
 .sectionDarkTeal button,
 .sectionDarkTeal a {
-  background-color: var(--variant-teal-dark-3);
-  color: white;
+  background-color: var(--color-secondary2__shade3);
+  color: var(--color-standard__white);
+}
+
+.sectionDarkTeal a:visited {
+  color: var(--color-secondary2);
 }
 
 .sectionLightBeige,
 .sectionLightBeige button,
 .sectionLightBeige a {
-  background-color: var(--variant-beige-light-2);
-  color: var(--variant-black);
+  background-color: var(--color-secondary4__tint2);
+  color: var(--color-standard__black);
 }
 
 .sectionDarkPink,
 .sectionDarkPink button,
 .sectionDarkPink a {
-  background-color: var(--variant-pink-dark-2);
-  color: white;
+  background-color: var(--color-primary__shade2);
+  color: var(--color-standard__white);
 }
