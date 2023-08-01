@@ -1,3 +1,5 @@
+@import '~@variant/profile/lib/colors/index.module.css';
+
 .section {
   padding-top: 0;
   display: flex;
@@ -31,24 +33,32 @@
 }
 
 .togglePage.togglePageBlue {
-  border-color: var(--variant-blue);
-  color: var(--variant-blue);
+  border-color: var(--color-secondary1);
+  color: var(--color-secondary1);
+}
+
+.togglePage.togglePageBlue a {
+  color: var(--color-secondary1);
 }
 
 .togglePage.togglePageLightBlue {
-  border-color: var(--variant-blue-light-4);
-  color: var(--variant-blue-light-4);
+  border-color: var(--color-secondary1__tint4);
+  color: var(--color-secondary1__tint4);
 }
 
-.togglePage .toggleActiveBlue {
-  background-color: var(--variant-blue);
-  color: white;
+.togglePage.togglePageLightBlue a {
+  color: var(--color-secondary1__tint4);
+}
+
+.togglePage a.toggleActiveBlue {
+  background-color: var(--color-secondary1);
+  color: var(--color-standard__white);
   font-weight: 600;
 }
 
-.togglePage .toggleActiveLightBlue {
-  background-color: var(--variant-blue-light-4);
-  color: #1a1837;
+.togglePage a.toggleActiveLightBlue {
+  background-color: var(--color-secondary1__tint4);
+  color: var(--color-standard__black);
 }
 
 .graduateToggleArrow {
