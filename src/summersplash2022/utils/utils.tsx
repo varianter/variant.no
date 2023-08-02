@@ -1,5 +1,6 @@
-export interface WhichButtonPressed {
-  selectedButton: string;
+export enum ApplyType {
+  GRADUATE,
+  SUMMER,
 }
 
 export const changeNavbarColor = (
@@ -16,7 +17,6 @@ export const changeNavbarColor = (
     if (scrollContainer) {
       scrollContainer.addEventListener('scroll', () => {
         setOffset(scrollContainer.scrollTop);
-        // console.log(offset);
       });
       if (offset < 899) {
         setNavColor(false);

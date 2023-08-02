@@ -30,16 +30,6 @@ const Summersplash2022 = () => {
           key="og:image"
         />
       </Head>
-
-      {/* 
-      <section>
-        <Link href="/sommerjobb">
-          <a>sommerjobb</a>
-        </Link>
-        <Link href="/nyutdannet">
-          <a>nyutdannet</a>
-        </Link>
-      </section> */}
       <>
         <Content />
       </>

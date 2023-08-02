@@ -1,0 +1,157 @@
+.flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 4rem;
+}
+
+.about {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDiv {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  position: relative;
+}
+
+.imgDivSummerjob {
+  margin-top: -10rem;
+}
+
+.imgBlob {
+  position: absolute;
+  top: -3rem;
+  transform: rotate(55deg);
+  left: -11rem;
+  max-width: 31rem;
+}
+
+.imgBlob svg {
+  width: 100%;
+  height: auto;
+}
+
+.timeline {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  margin: 0 auto;
+}
+
+.applicationTips {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  position: relative;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.about,
+.applicationTips h4,
+.applicationTips p,
+.EvenPicture {
+  z-index: 10;
+  position: relative;
+}
+
+.textBlob {
+  position: absolute;
+  transform: rotate(250deg);
+  top: -3rem;
+  left: 1rem;
+}
+
+.textBlob svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 2050px) {
+  .textBlob {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .EvenPicture {
+    width: 80%;
+  }
+
+  .sectionLightBeige .applicationTips {
+    margin-top: -6rem;
+  }
+}
+
+@media (max-width: 1110px) {
+  .flex {
+    grid-gap: 4rem 0;
+  }
+
+  .about {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .imgDiv {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    margin-top: -1rem;
+    margin-left: -3rem;
+  }
+
+  .EvenPicture {
+    width: 70%;
+    margin-top: 4rem;
+  }
+
+  .imgBlob {
+    display: none;
+  }
+
+  .timeline {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionLightBeige .applicationTips,
+  .applicationTips {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    order: 1;
+  }
+
+  .imgDiv {
+    order: 3;
+    margin: auto;
+  }
+
+  .EvenPicture {
+    display: flex;
+    margin: auto;
+  }
+
+  .timeline {
+    order: 2;
+  }
+
+  .applicationTips {
+    order: 4;
+    margin: auto;
+  }
+}
