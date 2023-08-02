@@ -16,7 +16,7 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
           ? sharedStyle.sectionDarkTeal
           : sharedStyle.sectionLightPeach
       }`}
-      id="sokfastjobb"
+      id="sokjobb"
     >
       <h2 className={style.heading}>
         Søk {isApplyGraduate ? 'fast jobb' : 'sommerjobb'}

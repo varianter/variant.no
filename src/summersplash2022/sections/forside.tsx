@@ -53,10 +53,7 @@ const LandingPage = ({
           <div className={style.applyDiv}>
             <div>
               <div>
-                <a
-                  className={style.applyLink}
-                  href={isApplyGraduate ? '#sokfastjobb' : '#sokSommerjobb'}
-                >
+                <a className={style.applyLink} href={'#sokjobb'}>
                   Søk {isApplyGraduate ? 'fast stilling' : 'sommerjobb'}{' '}
                   <ArrowDown color={isApplyGraduate ? 'white' : '#333333'} />
                 </a>
