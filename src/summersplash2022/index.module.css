@@ -93,7 +93,6 @@ h3 {
 }
 
 .sectionDarkTeal,
-.sectionDarkTeal button,
 .sectionDarkTeal a {
   background-color: var(--color-secondary2__shade3);
   color: var(--color-standard__white);
