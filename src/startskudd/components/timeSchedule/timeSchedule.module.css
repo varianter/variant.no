@@ -1,7 +1,7 @@
 .timeSchedule {
-  width: 20rem;
+  width: 40vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 6fr;
   margin-bottom: 1rem;
 }
 

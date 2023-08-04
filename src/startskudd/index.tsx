@@ -85,7 +85,9 @@ const Startskudd = () => {
                 <div>
                   <p>Avreise:</p>
                   <p>
-                    Søndag, 6. august – felles avreise til Bjerkeløkkja i Oppdal
+                    Søndag, 6. august – felles avreise til Bjerkeløkkja i
+                    Oppdal. Bussen går fra Trondheim sentralstasjon klokken
+                    17:50.
                   </p>
                 </div>
                 <div>
@@ -112,6 +114,18 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>💬 Kontakt</h2>
                 <Label>Kontakt</Label>
               </Flexbox>
+              <Contact
+                firstName="Malin"
+                surname="Karlsen"
+                email="mck@variant.no"
+                phoneNumber="+47 958 03 427"
+              />
+              <Contact
+                firstName="Maciek"
+                surname="Adamczyk"
+                email="ma@variant.no"
+                phoneNumber="+47 469 40 887"
+              />
               <Contact
                 firstName="Andreas"
                 surname="A. Hartveit"
@@ -143,9 +157,8 @@ const Startskudd = () => {
               />
               <TimeSchedule
                 time={'08:00'}
-                activity={
-                  'Oslo: Fly DY742 til Værnes. For de som ønsker dekker vi selvsagt sovekupé på nattoget i stedet for fly'
-                }
+                activity={'Oslo: Fly DY742 til Værnes'}
+                activityDescription="For de som ønsker dekker vi selvsagt sovekupé på nattoget i stedet for fly"
               />
               <TimeSchedule
                 time={'11:00'}
@@ -159,8 +172,10 @@ const Startskudd = () => {
                 time={'15:00'}
                 activity={'Innsjekk på Comfort Hotel Trondheim'}
               />
-              <TimeSchedule time={'TBA'} activity={'Middag'} />
-              <TimeSchedule time={'TBA'} activity={'Noe gøy etter middag!'} />
+              <TimeSchedule
+                time={'19:00'}
+                activity={'Bryggerifestival og middag'}
+              />
             </section>
 
             <section id="Søndag">
@@ -192,11 +207,28 @@ const Startskudd = () => {
                 <Label>Mandag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
-              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Velkommen og Intro til RÅ v/Linn'}
+              />
+              <TimeSchedule
+                time={'09:00'}
+                activity={'Introduksjon til caset v/FRAM'}
+                activityDescription="Vi møter ukens kunde via Teams og får presentert caset som vi skal jobbe med hele uka"
+              />
+              <TimeSchedule time={'11:30'} activity={'Lunsj på Bjerkeløkkja'} />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
-              <TimeSchedule time={'17:00'} activity={'Fritid'} />
+              <TimeSchedule
+                time={'16:00'}
+                activity={'Intro til positiv psykologi v/Linn'}
+                activityDescription="Hvorfor er det viktig med styrkebasert tilnærming og fokus på mental helse? Hvordan kan vi aktivt jobbe med egen mentale helse, og hvordan gjør vi det i Variant? Og hva er egentlig positiv psykologi, kun å tenke positivt?"
+              />
+              <TimeSchedule
+                time={'17:00'}
+                activity={'Velkommen til Variant v/Odd Morten'}
+                activityDescription="Konserndirektøren har ordet"
+              />
+              <TimeSchedule time={'18:00'} activity={'Fritid'} />
               <TimeSchedule time={'19:00'} activity={'3-retters middag'} />
             </section>
 
@@ -206,44 +238,89 @@ const Startskudd = () => {
                 <Label>Tirsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
-              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
-              <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
-              <TimeSchedule time={'17:00'} activity={'Fritid'} />
-              <TimeSchedule time={'18:00'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
-                time={''}
-                activity={'Grilling (hvis været tillater det)'}
+                time={'08:00'}
+                activity={'Smidig tjenesteutvikling v/Nikolai'}
+                activityDescription="Som konsulent møter du mange forskjellige prosesser, kulturer, filosofier og metodikker. Heldigvis gir Nikolai i denne presentasjonen en introduksjon til smidig tjenesteutvikling slik at du forstår buzzwords som smidig, kanban, DevOps og kontinuerlige leveranser."
+              />
+              <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
+              <TimeSchedule
+                time={'11:30'}
+                activity={'Lunsj: Selvhushold på hovedhuset'}
+              />
+              <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
+              <TimeSchedule
+                time={'16:00'}
+                activity={'Verdier i Variant v/Mikael'}
+                activityDescription="Verdier står dypt blant mange ansatte i Variant og ofte det første folk ser om oss. Det er også ofte det som trekkes frem som den viktigste grunnen til at folk sier de ønsker å jobbe her. Men hva ligger egentlig bak verdiene? Og hvordan påvirker det deg i hverdagen? Denne presentasjonen vil gå fra filosofisk til konkret med mye refleksjon rundt hva som gjør Variant til Variant."
+              />
+              <TimeSchedule time={'17:15'} activity={'Fjelltur ⛰️'} />
+              <TimeSchedule
+                time={'19:30'}
+                activity={
+                  'Middag, grilling på hovedhuset hvis været tillater det'
+                }
               />
             </section>
 
             <section id="Onsdag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🐽 Onsdag 09.08.</h2>
+                <h2 className={style.startskudd__h2}>🦧 Onsdag 09.08.</h2>
                 <Label>Onsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
-              <TimeSchedule time={'11:30'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Hva betyr “design”? v/Andreas'}
+                activityDescription="Folk flest vil nok tenke på fysiske objekter, men for oss Varianter er aktiviteten «designe» vel så relevant som sluttproduktet. Hva driver vi egentlig med når vi «designer»?"
+              />
+              <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
+              <TimeSchedule
+                time={'11:30'}
+                activity={'Lunsj: Selvhushold på hovedhuset'}
+              />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
-              <TimeSchedule time={'17:00'} activity={'Fritid'} />
-              <TimeSchedule time={'19:00'} activity={'Middag'} />
+              <TimeSchedule
+                time={'16:00'}
+                activity={'Consulting light v/Anders'}
+                activityDescription="Konsulenter: Hva er det vi gjør egentlig? En lett intro til konsulentlivet og noen do’s og  dont’s som ny konsulent."
+              />
+              <TimeSchedule
+                time={'17:00'}
+                activity={'Aktivitetsløype på Bjerkeløkkja'}
+              />
+              <TimeSchedule
+                time={'19:00'}
+                activity={'Middag: vi bestiller 🍕'}
+              />
             </section>
 
             <section id="Torsdag">
               <Flexbox>
-                <h2 className={style.startskudd__h2}>🦧 Torsdag 10.08.</h2>
+                <h2 className={style.startskudd__h2}>🐽 Torsdag 10.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity="Hva innebærer tverrfaglig samarbeid? v/Kristin"
+                activityDescription={
+                  'Vi har alle hørt ordet tverrfaglig til det kjedsommelige, men vet vi egentlig hva tverrfaglig samarbeid innebærer? Holder det ikke at vi har litt design og utvikling da? Vi vil se på hva et tverrfaglig team er og hvordan man best mulig kan samarbeide med andre disipliner.'
+                }
+              />
+              <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule time={'11:30'} activity={'Lunsj'} />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
               <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
-              <TimeSchedule time={'17:00'} activity={'Pizza'} />
-              <TimeSchedule time={'18:00'} activity={'Sosial aktivitet TBA'} />
+              <TimeSchedule
+                time={'17:00'}
+                activity={'Vidsyn v/Tonje'}
+                activityDescription="En fortelling om hvordan vi ser både smalsynt og vidsynt for å sikre at Variant alltid er relevant for oss selv og kundene våre. Tonje skal si litt om hva hun legger i utviklingen av Variant og vise eksempler på strategiske endringer vi har tatt. Forhåpentligvis vil dere se de foregående temaene koblet sammen i en helhet."
+              />
+              <TimeSchedule
+                time={'19:00'}
+                activity={'Middag: Dagens på Bjerkeløkkja'}
+              />
             </section>
 
             <section id="Fredag">
@@ -255,16 +332,18 @@ const Startskudd = () => {
               <TimeSchedule time={'08:00'} activity={'Pakking og utsjekk'} />
               <TimeSchedule
                 time={'09:30'}
-                activity={'Presentasjon for kunde'}
+                activity={'Presentasjon av casearbeidet for kunde'}
+              />
+              <TimeSchedule
+                time={'12:30'}
+                activity={'Lunsj'}
+                activityDescription="Bergen får take-away, Oslo og Trondheim spiser sammen"
               />
               <TimeSchedule
                 time={'13:00'}
                 activity={'Bergen: tog til Trondheim'}
               />
-              <TimeSchedule
-                time={'13:00'}
-                activity={'Oslo og Trondheim: Lunsj'}
-              />
+
               <TimeSchedule time={'15:06'} activity={'Oslo: SJ Tog til Oslo'} />
               <TimeSchedule
                 time={'15:10'}
