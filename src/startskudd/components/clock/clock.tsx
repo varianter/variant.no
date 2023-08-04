@@ -7,7 +7,7 @@ const Clock = () => {
   );
 
   function calculateTime(): ClockObject {
-    const startskuddDate = new Date('August 5, 2023');
+    const startskuddDate = new Date('2023-08-05T11:00:00.00+02:00');
     const timeNow = new Date();
     const diffMs = startskuddDate.getTime() - timeNow.getTime();
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
@@ -17,6 +17,7 @@ const Clock = () => {
     const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
     const diffSecs = Math.floor((diffMs % (1000 * 60)) / 1000);
     return {
+      milliseconds: diffMs,
       days: diffDays,
       hours: diffHrs,
       minutes: diffMins,
@@ -33,25 +34,29 @@ const Clock = () => {
 
   return (
     <div className={style.clock}>
-      <div className={style.clock__time}>
-        <div>
-          <p>{timeUntilStartskudd.days}</p>
-          <p>dager</p>
+      {timeUntilStartskudd.milliseconds <= 0 ? (
+        <h3>Startskudd har startet! (og er helt RÅtt! 🎉)</h3>
+      ) : (
+        <div className={style.clock__time}>
+          <div>
+            <p>{timeUntilStartskudd.days}</p>
+            <p>dager</p>
+          </div>
+          <div>
+            <p>{timeUntilStartskudd.hours}</p>
+            <p>timer</p>
+          </div>
+          <div>
+            <p>{timeUntilStartskudd.minutes}</p>
+            <p>minutter</p>
+          </div>
+          <div>
+            <p>{timeUntilStartskudd.seconds}</p>
+            <p>sekunder</p>
+          </div>
         </div>
-        <div>
-          <p>{timeUntilStartskudd.hours}</p>
-          <p>timer</p>
-        </div>
-        <div>
-          <p>{timeUntilStartskudd.minutes}</p>
-          <p>minutter</p>
-        </div>
-        <div>
-          <p>{timeUntilStartskudd.seconds}</p>
-          <p>sekunder</p>
-        </div>
-      </div>
-      <p>igjen!</p>
+      )}
+      {timeUntilStartskudd.milliseconds > 0 ?? <p>igjen!</p>}
     </div>
   );
 };
@@ -59,6 +64,7 @@ const Clock = () => {
 export default Clock;
 
 type ClockObject = {
+  milliseconds: number;
   days: number;
   hours: number;
   minutes: number;

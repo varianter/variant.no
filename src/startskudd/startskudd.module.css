@@ -80,7 +80,7 @@
 @media (min-width: 1000px) {
   .startskudd {
     width: 100%;
-    height: 100vh;
+    height: 120%;
     overflow: scroll;
     background: none;
   }
