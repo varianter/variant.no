@@ -14,3 +14,12 @@
   font-family: 'Recoleta', serif;
   font-weight: 500;
 }
+
+@media (orientation: portrait) {
+  .timeSchedule {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 1rem;
+  }
+}
