@@ -317,7 +317,7 @@ const Startskudd = () => {
               <TimeSchedule time={'17:00'} activity={'Mellomåltid: Wrap'} />
               <TimeSchedule time={'17:15'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
-                time={''}
+                time={'19:30'}
                 activity={'Middag: Vi griller hvis været tillater det 🍢'}
               />
             </section>
