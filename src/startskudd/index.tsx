@@ -254,12 +254,10 @@ const Startskudd = () => {
                 activity={'Verdier i Variant v/Mikael'}
                 activityDescription="Verdier står dypt blant mange ansatte i Variant og ofte det første folk ser om oss. Det er også ofte det som trekkes frem som den viktigste grunnen til at folk sier de ønsker å jobbe her. Men hva ligger egentlig bak verdiene? Og hvordan påvirker det deg i hverdagen? Denne presentasjonen vil gå fra filosofisk til konkret med mye refleksjon rundt hva som gjør Variant til Variant."
               />
-              <TimeSchedule time={'17:15'} activity={'Fjelltur ⛰️'} />
+              <TimeSchedule time={'17:00'} activity={'Fritid'} />
               <TimeSchedule
-                time={'19:30'}
-                activity={
-                  'Middag, grilling på hovedhuset hvis været tillater det'
-                }
+                time={'19:00'}
+                activity={'Middag: Dagens på Bjerkeløkkja'}
               />
             </section>
 
@@ -311,15 +309,16 @@ const Startskudd = () => {
               <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule time={'11:30'} activity={'Lunsj'} />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:00'} activity={'Variant-talks'} />
               <TimeSchedule
-                time={'17:00'}
+                time={'16:00'}
                 activity={'Vidsyn v/Tonje'}
                 activityDescription="En fortelling om hvordan vi ser både smalsynt og vidsynt for å sikre at Variant alltid er relevant for oss selv og kundene våre. Tonje skal si litt om hva hun legger i utviklingen av Variant og vise eksempler på strategiske endringer vi har tatt. Forhåpentligvis vil dere se de foregående temaene koblet sammen i en helhet."
               />
+              <TimeSchedule time={'17:00'} activity={'Mellomåltid: Wrap'} />
+              <TimeSchedule time={'17:15'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
-                time={'19:00'}
-                activity={'Middag: Dagens på Bjerkeløkkja'}
+                time={'19:30'}
+                activity={'Middag: Vi griller hvis været tillater det 🍢'}
               />
             </section>
 
