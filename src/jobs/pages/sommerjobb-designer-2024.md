@@ -1,11 +1,11 @@
 ---
 title: Sommerjobb designer 2024
 h1_title: Sommerjobb for designstudenter i 2024
-slug: sommerjobb-designer-2024
+slug: sommerjobb-designer-2024-1
 contact_emails: mk@variant.no
 meta_title: Vi søker designstudenter til sommerjobb hos Variant!
 meta_description: Vi ser etter læreglade designere til å ha sommerjobb hos oss i 2024.
-meta_image: https://www.variant.no/images/sommerjobb_designer_2023_meta.png
+meta_image: https://www.variant.no/images/sommerjobb_designer_2024_meta.png
 ---
 
 ## Hva går sommerjobben ut på?

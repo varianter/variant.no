@@ -5,7 +5,7 @@ slug: sommerjobb-utvikler-2024
 contact_emails: mk@variant.no
 meta_title: Vi søker utviklerstudenter til sommerjobb hos Variant!
 meta_description: Vi ser etter læreglade utviklere til å ha sommerjobb hos oss i 2024.
-meta_image: https://www.variant.no/images/sommerjobb_utvikler_2023_meta.png
+meta_image: https://www.variant.no/images/sommerjobb_utvikler_2024_meta.png
 ---
 
 ## Hva går sommerjobben ut på?
