@@ -52,7 +52,7 @@ export default function Berlin23() {
         <ul>
           <li>
             <p>05:30</p>
-            <p>🧳 Innsjekk Oslo Lufthavn Gardermoen</p>
+            <p>🧳 Innsjekk Gardermoen</p>
           </li>
           <li>
             <p>07:30</p>
@@ -84,7 +84,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>18:55</p>
-            <p>🚶 Felles avgang fra hotellet til middag</p>
+            <p>🚶 Felles avgang fra hotellet</p>
           </li>
           <li>
             <p>19:00</p>
@@ -96,7 +96,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>00:10</p>
-            <p>💃 Uteliv i Berlin for de som ønsker</p>
+            <p>💃 Uteliv for de som ønsker</p>
           </li>
         </ul>
       </section>
@@ -126,7 +126,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>18:30</p>
-            <p>🚶 Vi  går sammen fra hotellet til middag</p>
+            <p>🚶 Vi  går sammen fra hotellet</p>
           </li>
           <li>
             <p>19:00</p>
@@ -134,7 +134,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>21:00</p>
-            <p>🍺 Får vel smake på no godt øl da</p>
+            <p>🍺 Får vel smake på no godt øl da?</p>
           </li>
           <li>
             <p>23:00</p>
