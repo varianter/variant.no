@@ -64,11 +64,11 @@ export default function Berlin23() {
           </li>
           <li>
             <p>10:30</p>
-            <p>🥪 Lunsjstopp på Bloom</p>
+            <p>🥪 Lunsjstopp på <a href="https://www.bloomberlin.de/work/bloombistro">Bloom</a></p>
           </li>
           <li>
             <p>11:30</p>
-            <p>🚌 Buss til Hotel Odenberger</p>
+            <p>🚌 Buss til <a href="https://www.hotel-oderberger.berlin/">Hotel Oderberger</a></p>
           </li>
           <li>
             <p>12:00</p>
@@ -76,7 +76,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>12:30</p>
-            <p>🎨 Variantdag på Haus of Poesi!</p>
+            <p>🎨 Variantdag på <a href="https://www.haus-fuer-poesie.org/en/literaturwerkstatt-berlin/home/">Haus für Poesie!</a></p>
           </li>
           <li>
             <p>17:30</p>
@@ -88,11 +88,11 @@ export default function Berlin23() {
           </li>
           <li>
             <p>19:00</p>
-            <p>🍽️ Middag på Pratergarten</p>
+            <p>🍽️ Middag på <a href="https://www.pratergarten.de/">PRATERGARTEN</a></p>
           </li>
           <li>
             <p>22:00</p>
-            <p>🍺 Tester noen tyske bjørnunger</p>
+            <p>🍺 Tester noen tyske <a href="https://www.google.com/search?q=AWESOME+GERMAN+BEER">bjørnunger</a></p>
           </li>
           <li>
             <p>00:10</p>
@@ -106,7 +106,7 @@ export default function Berlin23() {
         <ul>
           <li>
             <p>07:00</p>
-            <p>☕  Frokost på hotellet</p>
+            <p>☕  <a href="https://en.wikipedia.org/wiki/Breakfast">Frokost</a> på hotellet</p>
           </li>
           <li>
             <p>10:30</p>
@@ -118,7 +118,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>13:00</p>
-            <p>🍕 Lunsj på Brewdog Berlin Mitte</p>
+            <p>🍕 Lunsj på <a href="https://www.brewdog.com/uk/brewdog-berlin-mitte">Brewdog Berlin Mitte</a></p>
           </li>
           <li>
             <p>15:00</p>
@@ -130,7 +130,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>19:00</p>
-            <p>🍽️ Middag på Nolle Restaurant</p>
+            <p>🍽️ Middag på <a href="https://www.restaurant-nolle.de/en/">Nolle Restaurant</a></p>
           </li>
           <li>
             <p>21:00</p>
@@ -161,11 +161,7 @@ export default function Berlin23() {
           </li>
           <li>
             <p>13:15</p>
-            <p>🚌 Buss fra Hotel Odenberger til flyplassen</p>
-          </li>
-          <li>
-            <p>13:15</p>
-            <p>🚌 Buss fra Hotel Odenberger til flyplassen</p>
+            <p>🚌 Buss fra Hotel Oderberger til flyplassen</p>
           </li>
           <li>
             <p>14:15</p>
