@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import style from './varianttur.module.css';
 
-export default function Praha22() {
+export default function Berlin23() {
   const currentDate = new Date();
   const formattedCurrentDate = currentDate
     .getDate()
@@ -12,8 +12,8 @@ export default function Praha22() {
     );
 
   let currentProgramDay = 'fredag';
-  if (formattedCurrentDate === '392022') currentProgramDay = 'lordag';
-  else if (formattedCurrentDate === '492022') currentProgramDay = 'sondag';
+  if (formattedCurrentDate === '2682023') currentProgramDay = 'lordag';
+  else if (formattedCurrentDate === '2782023') currentProgramDay = 'sondag';
 
   return (
     <div className={style.container}>
@@ -25,8 +25,8 @@ export default function Praha22() {
         <div className={style.firstPageLeft}>
           <header className={style.header}>
             <p>Varianttur</p>
-            <h1>Praha</h1>
-            <h2>2. - 4. september</h2>
+            <h1>Berlin 🌭</h1>
+            <h2>25. - 27. august</h2>
           </header>
 
           <nav className={style.toProgram}>
@@ -38,9 +38,9 @@ export default function Praha22() {
 
         <img
           className={style.imageMaxWidth}
-          src={require('./53805773710535.png')}
+          src={require('./berlinblob.png')}
           role="none"
-          alt="Bridges in Prague, Czechia. Source: https://pixabay.com/en/bridges-prague-czechia-water-city-3337124/"
+          alt="Berlin."
         />
 
         <div className={style.bouncingArrow} />
@@ -51,47 +51,52 @@ export default function Praha22() {
 
         <ul>
           <li>
-            <p>08:10</p>
+            <p>05:30</p>
             <p>🧳 Innsjekk Oslo Lufthavn Gardermoen</p>
           </li>
           <li>
-            <p>10:10</p>
-            <p>✈️ Fly til Praha - DY1502</p>
+            <p>07:30</p>
+            <p>✈️ Fly til Berlin - DY1102</p>
           </li>
           <li>
-            <p>12:50</p>
-            <p>🚌 Buss fra flyplassen til hotellet.</p>
+            <p>10:00</p>
+            <p>🚌 Buss fra flyplassen</p>
           </li>
           <li>
-            <p>13:10</p>
-            <p>🧳 Innsjekk på Century Old Town Hotel.</p>
+            <p>10:30</p>
+            <p>🥪 Lunsjstopp på Bloom</p>
           </li>
           <li>
-            <p>13:30</p>
-            <p>🚋 Historisk trikketur til Smetana Q.</p>
+            <p>11:30</p>
+            <p>🚌 Buss til Hotel Odenberger</p>
           </li>
           <li>
-            <p>14:00 - 19:00</p>
-            <p>🎨 Variantdag!</p>
+            <p>12:00</p>
+            <p>🧳 Innsjekk på hotellet</p>
           </li>
           <li>
-            <p>15:00</p>
-            <p>🥪 Lunsj!</p>
+            <p>12:30</p>
+            <p>🎨 Variantdag på Haus of Poesi!</p>
+          </li>
+          <li>
+            <p>17:30</p>
+            <p>🤙 Fritid!</p>
+          </li>
+          <li>
+            <p>18:55</p>
+            <p>🚶 Felles avgang fra hotellet til middag</p>
           </li>
           <li>
             <p>19:00</p>
-            <p>🚶‍♀️🚶Går tilbake til hotellet og gjør oss klar for middag.</p>
+            <p>🍽️ Middag på Pratergarten</p>
           </li>
           <li>
-            <p>20:30</p>
-            <p>🍽️ Uformell middag på Cerveny Jelen.</p>
+            <p>22:00</p>
+            <p>🍺 Tester noen tyske bjørnunger</p>
           </li>
           <li>
-            <p>23:00</p>
-            <p>
-              🍹 Vi tar noe godt i glasset på Nebe Celnice, 3 min fra hotellet,
-              på egen regning for de som ønsker.
-            </p>
+            <p>00:10</p>
+            <p>💃 Uteliv i Berlin for de som ønsker</p>
           </li>
         </ul>
       </section>
@@ -101,56 +106,74 @@ export default function Praha22() {
         <ul>
           <li>
             <p>07:00</p>
-            <p>☕ Frokost på hotellet</p>
+            <p>☕  Frokost på hotellet</p>
           </li>
           <li>
-            <p>10:00</p>
-            <p>💺 Buss til aktivitet</p>
+            <p>10:30</p>
+            <p>🚶 Vi  går til aktivitet</p>
           </li>
           <li>
-            <p>10:15</p>
-            <p>🚣‍♂️ Dragebåter!</p>
+            <p>11:00</p>
+            <p>🖼️ Grafittiworkshop!</p>
           </li>
           <li>
             <p>13:00</p>
-            <p>🥗 Brunch på Mlynec</p>
+            <p>🍕 Lunsj på Brewdog Berlin Mitte</p>
           </li>
           <li>
-            <p>15:00 - 19:00</p>
-            <p>🪁 Egentid. Forslag til aktiviteter vil gis på forhånd.</p>
+            <p>15:00</p>
+            <p>🪁 Egentid</p>
           </li>
           <li>
-            <p>19:15 - 22:30</p>
-            <p>🍱 Vi går fra hotellet for en litt finere middag på V ZÁTISI!</p>
+            <p>18:30</p>
+            <p>🚶 Vi  går sammen fra hotellet til middag</p>
           </li>
           <li>
-            <p>22:30</p>
-            <p>
-              🥂 Vi tar noe godt i glasset på Hangar, 10 min fra hotellet, på
-              egen regning for de som ønsker.
-            </p>
+            <p>19:00</p>
+            <p>🍽️ Middag på Nolle Restaurant</p>
+          </li>
+          <li>
+            <p>21:00</p>
+            <p>🍺 Får vel smake på no godt øl da</p>
+          </li>
+          <li>
+            <p>23:00</p>
+            <p>💃 Uteliv for de som ønsker det</p>
           </li>
         </ul>
+
       </section>
 
       <section className={style.agenda} id="sondag">
         <h3 className="fancy">Søndag</h3>
         <ul>
           <li>
-            <p>07:00</p>
-            <p>☕ Frokost på hotellet og utsjekk</p>
+            <p>08:00</p>
+            <p>☕ Frokost på hotellet</p>
           </li>
           <li>
-            <p>08:20</p>
-            <p>🚌 Felles avreise med buss til flyplassen</p>
+            <p>11:00</p>
+            <p>🧳 Utsjekk</p>
           </li>
           <li>
-            <p>08:40</p>
-            <p>🧳 Innsjekk Praha Lufthavn</p>
+            <p>11:00 - 13:05</p>
+            <p>🛝 Egentid</p>
           </li>
           <li>
-            <p>10:40</p>
-            <p>✈️ Fly til Oslo - DY 1503</p>
+            <p>13:15</p>
+            <p>🚌 Buss fra Hotel Odenberger til flyplassen</p>
+          </li>
+          <li>
+            <p>13:15</p>
+            <p>🚌 Buss fra Hotel Odenberger til flyplassen</p>
+          </li>
+          <li>
+            <p>14:15</p>
+            <p>🧳 Utsjekk på Berlin Lufthavn</p>
+          </li>
+          <li>
+            <p>17:05</p>
+            <p>✈️ Fly til Oslo - DY1107</p>
           </li>
         </ul>
       </section>
@@ -161,17 +184,25 @@ export default function Praha22() {
 
           <div className={style.infoGroup}>
             <h3>
-              <a href="https://goo.gl/maps/XqUNBeGbBcrJ7dxB8" target="_blank">
-                Hotel Century Old Town
+              <a href="https://goo.gl/maps/49FC6j3AisYLmEgJ6" target="_blank">
+                Hotel Oderberger
               </a>
             </h3>
             <p>
-              Tlf: <a href="tel:+420221800800">+420-221-800-800</a>
+              Tlf: <a href="tel:004930780089760">+49 30 780 089 760</a>
             </p>
-            <p>Na Poříčí 7, 110 00 Petrská čtvrť, Czechia</p>
+            <p>Oderberger Str. 57, 10435 Berlin</p>
           </div>
 
           <div className={style.infoGroup}>
+            <h3>Lurer du på noe i forkant av turen?</h3>
+            <div className={style.infoGroupContact}>
+              <p>Ta kontakt med @soskom-oslo på Slack</p><br/>
+              <p>Eller send melding til Sondre</p>
+              <p>
+                <a href="tel:+4745447385">+47 454 47 385</a>
+              </p>
+            </div>
             <h3>Lurer du på noe underveis?</h3>
 
             <div className={style.infoGroupContact}>
@@ -191,9 +222,9 @@ export default function Praha22() {
 
         <img
           className={style.imageMaxWidth}
-          src={require('./14392913869474.png')}
+          src={require('./poolblob.png')}
           role="none"
-          alt="CENTURY OLD TOWN"
+          alt="HOTEL ODERBERGER"
         />
       </section>
 

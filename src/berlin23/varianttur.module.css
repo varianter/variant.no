@@ -80,6 +80,11 @@
   width: 100%;
 }
 
+.imageMiddle {
+  position: relative;
+  transform: translateX(-10%);
+}
+
 .toTop {
   composes: fullheightSection;
   /* height: auto; */
@@ -121,7 +126,8 @@
 .introPage,
 .agenda {
   composes: fullheightSection;
-  padding: 10rem;
+  padding-left: 5rem;
+  padding-top: 1rem;
 }
 
 .introPage h1 {
@@ -152,7 +158,7 @@
   white-space: nowrap;
 }
 .agenda p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-top: 0;
 }
 
@@ -230,7 +236,9 @@
     gap: 0.5rem 1.5rem;
     margin-top: 2rem;
   }
-
+  .imageMiddle {
+    display: none;
+  }
   .firstPage {
     grid-template-columns: 1fr;
   }
