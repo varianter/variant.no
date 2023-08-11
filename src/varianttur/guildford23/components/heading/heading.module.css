@@ -1,0 +1,53 @@
+.headingContainer {
+  position: relative;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+.blobInfoContainer {
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+}
+
+.blobInfo {
+  position: relative;
+  width: 10rem;
+}
+
+.blobName {
+  position: absolute;
+  top: -3rem;
+  font-family: 'Recoleta';
+}
+
+.arrow {
+  transform: rotate(28.561deg);
+}
+
+.blobContainer {
+  position: absolute;
+  top: 8rem;
+  left: 4rem;
+}
+
+.heading {
+  position: absolute;
+  z-index: 10;
+  top: 11rem;
+  left: 8rem;
+}
+
+.supHeading {
+  color: var(--color-primary);
+  font-size: 1.875rem;
+}
+
+.mainHeading {
+  font-size: 6.25rem;
+}
+
+.subHeading {
+  font-size: 2.5rem;
+  margin-top: 1.875rem;
+}

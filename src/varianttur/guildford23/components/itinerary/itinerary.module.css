@@ -1,0 +1,44 @@
+.oddDay {
+  background-color: var(--color-secondary4);
+  padding-left: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.evenDay {
+  background-color: var(--color-secondary4__tint2);
+  padding-left: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.dayHeading {
+  font-size: 2.813rem;
+  margin-bottom: 5rem;
+}
+
+.list {
+  margin: 0 auto;
+  list-style-type: none;
+  padding-left: 0;
+  border-left: solid var(--color-primary);
+  margin-left: 20rem;
+}
+
+li {
+  padding-bottom: 2rem;
+}
+
+time {
+  display: inline-block;
+  width: 8rem;
+  margin-left: -8rem;
+}
+
+.list span::before {
+  content: url('./itinirary-blob.svg');
+  color: var(--color-primary);
+  display: inline-block;
+  margin-left: -1rem;
+  margin-top: -0.5rem;
+}

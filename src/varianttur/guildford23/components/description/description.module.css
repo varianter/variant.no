@@ -1,0 +1,16 @@
+.descriptionContainer {
+  background-color: var(--color-secondary4__tint2);
+  padding-left: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 12rem;
+}
+
+.importantText {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.descriptionFooter {
+  font-style: italic;
+  margin-top: 7rem;
+}

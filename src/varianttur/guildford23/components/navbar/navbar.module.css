@@ -1,0 +1,18 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 8rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.25;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  font-weight: 500;
+  color: black;
+}

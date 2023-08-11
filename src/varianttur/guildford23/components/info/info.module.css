@@ -1,0 +1,60 @@
+.infoContainer {
+  background-color: var(--color-secondary4__tint2);
+  padding-left: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  width: 100%;
+}
+
+.textContainer {
+  width: 20rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 40rem;
+}
+
+.hotelImage {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+}
+
+.restaurantImage {
+  position: absolute;
+  top: 15rem;
+  left: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.phone {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.addressContainer {
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.addressLine {
+  margin-top: 0;
+  margin-left: 0.5rem;
+}
+
+.foodContainer {
+  margin-bottom: 5rem;
+}
+
+.contactPerson {
+  display: flex;
+  justify-content: space-between;
+}
