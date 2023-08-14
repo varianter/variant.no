@@ -1,10 +1,14 @@
 import style from './info.module.css';
+import HotelBlob from './hotelBlob';
+import FoodBlob from './foodBlob';
 
 const Info = () => {
   return (
     <div id="info" className={style.infoContainer}>
-      <div className={style.textContainer}>
-        <h2>Det praktiske</h2>
+      <div className={style.hotelBlobContainer}>
+        <HotelBlob />
+      </div>
+      <div className={style.hotelTextContainer}>
         <h3>Harbour Hotel Guildford</h3>
         <p className={style.phone}>☎️ +????</p>
         <div className={style.addressContainer}>
@@ -14,10 +18,6 @@ const Info = () => {
             <p className={style.addressLine}>Guildford GU1 3DA,</p>
             <p className={style.addressLine}>Storbritannia</p>
           </div>
-        </div>
-        <div className={style.foodContainer}>
-          <h3>Allergier og matpreferanser</h3>
-          <p>Har du allergier eller matpreferanser og vil være helt sikker på at det er tatt hensyn til? Dobbeltsjekk heller med oss enn å lure, det gjør det bedre både for deg og oss!</p>
         </div>
         <div>
           <h3>Lurer du på noe underveis?</h3>
@@ -35,11 +35,18 @@ const Info = () => {
           </div>
         </div>
       </div>
+      <div className={style.foodBlobContainer}>
+        <FoodBlob />
+      </div>
+      <div className={style.foodTextContainer}>
+        <h3>Allergier og matpreferanser</h3>
+        <p>Har du allergier eller matpreferanser og vil være helt sikker på at det er tatt hensyn til? Dobbeltsjekk heller med oss enn å lure, det gjør det bedre både for deg og oss!</p>
+      </div>
       <div className={style.imageContainer}>
-        <div className={style.hotelImage}>
+        <div className={style.hotelImageContainer}>
           <img src='/images/varianttur/hotel.png' />
         </div>
-        <div className={style.restaurantImage}>
+        <div className={style.restaurantImageContainer}>
           <img src='/images/varianttur/restaurant.png' />
         </div>
       </div>

@@ -1,31 +1,48 @@
 .infoContainer {
-  background-color: var(--color-secondary4__tint2);
-  padding-left: 8rem;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  background-color: var(--color-primary__shade2);
   display: flex;
   width: 100%;
-}
-
-.textContainer {
-  width: 20rem;
-}
-
-.imageContainer {
+  padding: 4rem 8rem 12rem;
   position: relative;
-  width: 40rem;
+  height: 80rem;
 }
 
-.hotelImage {
+.hotelBlobContainer {
+  position: absolute;
+  top: 7rem;
+  left: 0;
+}
+
+.hotelTextContainer {
+  position: absolute;
+  z-index: 10;
+  top: 10rem;
+}
+
+.foodBlobContainer {
+  position: absolute;
+  bottom: -5rem;
+  right: 0;
+}
+
+.foodTextContainer {
+  position: absolute;
+  z-index: 10;
+  right: 3rem;
+  bottom: 10rem;
+  width: 30%;
+}
+
+.hotelImageContainer {
   position: absolute;
   top: 3rem;
   right: 0;
 }
 
-.restaurantImage {
+.restaurantImageContainer {
   position: absolute;
   top: 15rem;
-  left: 0;
+  right: 15rem;
 }
 
 h3 {
@@ -48,10 +65,6 @@ h3 {
 .addressLine {
   margin-top: 0;
   margin-left: 0.5rem;
-}
-
-.foodContainer {
-  margin-bottom: 5rem;
 }
 
 .contactPerson {

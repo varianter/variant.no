@@ -3,6 +3,7 @@ import Hero from './components/hero/hero';
 import Description from './components/description/description';
 import Itinerary from './components/itinerary/itinerary';
 import Info from './components/info/info';
+import Footer from './components/footer/footer';
 
 export default function Guildford23() {
   return (
@@ -11,6 +12,7 @@ export default function Guildford23() {
       <Description />
       <Itinerary />
       <Info />
+      <Footer />
     </div>
   )
 };

@@ -1,15 +1,27 @@
 .oddDay {
-  background-color: var(--color-secondary4);
-  padding-left: 8rem;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  background-color: var(--color-primary__shade2);
+  padding: 4rem 8rem 12rem;
+  position: relative;
+  height: 60rem;
 }
 
 .evenDay {
-  background-color: var(--color-secondary4__tint2);
-  padding-left: 8rem;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  background-color: var(--color-primary__shade1);
+  padding: 4rem 8rem 12rem;
+  position: relative;
+  height: 60rem;
+}
+
+.backgroundBlobContainer {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.textContainer {
+  position: absolute;
+  z-index: 10;
 }
 
 .dayHeading {
@@ -18,27 +30,42 @@
 }
 
 .list {
-  margin: 0 auto;
   list-style-type: none;
   padding-left: 0;
-  border-left: solid var(--color-primary);
-  margin-left: 20rem;
+  margin-left: 30rem;
 }
 
 li {
-  padding-bottom: 2rem;
+  display: flex;
 }
 
 time {
   display: inline-block;
   width: 8rem;
   margin-left: -8rem;
+  margin-top: -1rem;
 }
 
-.list span::before {
+.borderedListItem {
+  border-left: solid var(--color-standard__white);
+  padding-bottom: 2rem;
+}
+
+.listItemTitle {
+  font-size: 1.25rem;
+  line-height: 160%;
+  margin-top: -1rem;
+}
+
+.listItemInfo {
+  font-size: 0.813rem;
+  line-height: 0.938rem;
+  margin-left: 1rem;
+  margin-top: 0;
+  width: 21rem;
+}
+
+.list .listItemTitle::before {
   content: url('./itinirary-blob.svg');
-  color: var(--color-primary);
-  display: inline-block;
-  margin-left: -1rem;
-  margin-top: -0.5rem;
+  margin-left: -0.875rem;
 }

@@ -1,7 +1,26 @@
 .heroContainer {
-  background-color: var(--color-secondary4);
+  background-color: var(--color-primary__shade1);
   width: 100%;
   height: 50rem;
   display: flex;
+}
+
+.contentContainer {
+  display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.blobContainer {
+  position: absolute;
+}
+
+.iconContainer {
+  position: absolute;
+  top: 8rem;
+  left: 3rem;
 }

@@ -1,6 +1,6 @@
 import style from './heading.module.css';
-import Arrow from './arrow';
-import Reisefeberblob from './reisefeberblob';
+import CurvedArrow from './curvedArrow';
+import TravelBlob from './travelBlob';
 
 const Heading = () => {
   return (
@@ -9,12 +9,12 @@ const Heading = () => {
         <div className={style.blobInfo}>
           <span className={style.blobName}>Reisefeber-blob</span>
           <div className={style.arrow}>
-            <Arrow />
+            <CurvedArrow />
           </div>
         </div>
       </div>
       <div className={style.blobContainer}>
-        <Reisefeberblob />
+        <TravelBlob />
       </div>
       <div className={style.heading}>
         <span className={style.supHeading}>Varianttur 2023</span>

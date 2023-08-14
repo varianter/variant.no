@@ -1,8 +1,13 @@
 .descriptionContainer {
-  background-color: var(--color-secondary4__tint2);
-  padding-left: 8rem;
-  padding-top: 4rem;
-  padding-bottom: 12rem;
+  background-color: var(--color-primary__shade2);
+  padding: 4rem 8rem 12rem;
+  position: relative;
+  height: 60rem;
+}
+
+.textContainer {
+  position: absolute;
+  z-index: 10;
 }
 
 .importantText {
@@ -11,6 +16,28 @@
 }
 
 .descriptionFooter {
-  font-style: italic;
   margin-top: 7rem;
+}
+
+.descriptionFooterText {
+  font-style: italic;
+}
+
+.backgroundBlobContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageBlobContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.imageContainer {
+  position: absolute;
+  bottom: 3rem;
+  right: 1rem;
 }
