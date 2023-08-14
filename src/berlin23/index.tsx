@@ -52,7 +52,7 @@ export default function Berlin23() {
         <ul>
           <li>
             <p>05:30</p>
-            <p>🧳 Innsjekk Gardermoen</p>
+            <p>🧳 Innsjekk Gardermoen (stenger 06:45)</p>
           </li>
           <li>
             <p>07:30</p>
@@ -192,10 +192,10 @@ export default function Berlin23() {
 
           <div className={style.infoGroup}>
             <h3>Lurer du på noe i forkant av turen?</h3>
-            <div className={style.infoGroupContact}>
-              <p>Ta kontakt med @soskom-oslo på Slack</p><br/>
-              <p>Eller send melding til Sondre</p>
-              <p>
+            <div>
+              <p>Ta kontakt med @soskom-oslo på Slack</p>
+              <p className={style.infoGroupContact}>
+                <span>Eller send melding til Sondre</span>
                 <a href="tel:+4745447385">+47 454 47 385</a>
               </p>
             </div>
