@@ -14,7 +14,7 @@ const HelsinkiTips: NextPage = () => {
     <Container style={{ padding: '3rem' }}>
       <Link href="/helsinki23">
         <a style={{ display: 'flex', gap: '1rem' }}>
-          <Image src={arrowLeft} width={24} height={28} alt="arrow pointing left" />
+          <Image src={arrowLeft} width={24} height={28} alt="pil venste" />
           Tilbake
         </a>
       </Link>

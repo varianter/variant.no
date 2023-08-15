@@ -28,7 +28,7 @@ export default function Tip({ tip, reversed }: { tip: Tip, reversed?: boolean })
       <div>
         <h2>{tip.title}</h2>
         <ul>
-          {tip.suggestions.map((suggestion, i) => <li key={i}><a href={suggestion.link} target='_blank'>{suggestion.title} <Image src={externalLink} height={24} width={24} alt="external link" /></a></li>)}
+          {tip.suggestions.map((suggestion, i) => <li key={i}><a href={suggestion.link} target='_blank'>{suggestion.title} <Image src={externalLink} height={24} width={24} alt="ekstern lenke" /></a></li>)}
         </ul>
       </div>
     </div>

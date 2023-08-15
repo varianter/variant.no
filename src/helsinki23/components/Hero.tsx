@@ -11,10 +11,10 @@ export default function Hero() {
       <div className={styles.left}>
         <div className={styles.arrow}>
           <span>Jippi-blob</span>
-          <img src={arrow} alt="arrow" />
+          <img src={arrow} alt="pil til blobben" />
         </div>
         <div className={styles.blob}>
-          <img src={blob} alt="blob" />
+          <img src={blob} alt="blobben" />
         </div>
         <div className={styles.text}>
           <p>Varianttur</p>

@@ -24,7 +24,7 @@ const Helsinki23: NextPage = () => {
     <div className={styles.navigation}>
       <a href="#Days">
         <span>Ta meg til programmet</span>
-        <Image src={arrowDown} height={24} width={24} />
+        <Image src={arrowDown} height={24} width={24} alt="pil ned" />
       </a>
     </div>
     <section id="Description">
@@ -54,7 +54,7 @@ const Helsinki23: NextPage = () => {
           <li><time>09:00</time> Faglig bolk</li>
           <li><time>12:00</time> Lunsj</li>
           <li><time>13:00</time> Felles aktiviteter</li>
-          <li><time>15:00</time> <Link href={'/helsinki23/tips'}><a>Valgfrie aktiviteter<Image src={arrowRight} width={45} height={46} /></a></Link></li>
+          <li><time>15:00</time> <Link href={'/helsinki23/tips'}><a>Valgfrie aktiviteter<Image src={arrowRight} width={45} height={46} alt="pil høyre" /></a></Link></li>
           <li><time>18:30</time> Felles avgang for middag</li>
           <li><time>19:00</time> Middag</li>
           <li><time>22:00</time> Gøygøygøy</li>
@@ -86,7 +86,7 @@ const Helsinki23: NextPage = () => {
       <div className={styles.navigation}>
         <a href="#hero">
           <span>Ta meg til toppen</span>
-          <Image src={arrowUp} height={24} width={24} />
+          <Image src={arrowUp} height={24} width={24} alt="pil opp" />
         </a>
       </div>
     </Container>
