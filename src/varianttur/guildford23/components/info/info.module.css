@@ -7,16 +7,24 @@
   height: 80rem;
 }
 
+.navbarContainer {
+  position: absolute;
+  top: 5rem;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .hotelBlobContainer {
   position: absolute;
-  top: 7rem;
+  top: 10rem;
   left: 0;
 }
 
 .hotelTextContainer {
   position: absolute;
   z-index: 10;
-  top: 10rem;
+  top: 13rem;
 }
 
 .foodBlobContainer {
@@ -35,13 +43,13 @@
 
 .hotelImageContainer {
   position: absolute;
-  top: 3rem;
-  right: 0;
+  top: 8rem;
+  right: 3rem;
 }
 
 .restaurantImageContainer {
   position: absolute;
-  top: 15rem;
+  top: 20rem;
   right: 15rem;
 }
 

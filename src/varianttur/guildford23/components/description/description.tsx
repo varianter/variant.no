@@ -28,7 +28,7 @@ const Description = () => {
         <ImageBlob />
       </div>  
       <div className={style.imageContainer}>
-        <img src='/images/varianttur/street.png' />
+        <img src='/images/varianttur/street.png' alt='Street' />
       </div>  
     </div>
   );

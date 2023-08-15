@@ -1,10 +1,14 @@
 import style from './info.module.css';
 import HotelBlob from './hotelBlob';
 import FoodBlob from './foodBlob';
+import Navbar, { NavItem } from './../navbar/navbar';
 
 const Info = () => {
   return (
     <div id="info" className={style.infoContainer}>
+      <div className={style.navbarContainer}>
+        <Navbar selectedNavItem={NavItem.INFO} />
+      </div>
       <div className={style.hotelBlobContainer}>
         <HotelBlob />
       </div>
@@ -44,10 +48,10 @@ const Info = () => {
       </div>
       <div className={style.imageContainer}>
         <div className={style.hotelImageContainer}>
-          <img src='/images/varianttur/hotel.png' />
+          <img src='/images/varianttur/hotel.png' alt='Hotel' />
         </div>
         <div className={style.restaurantImageContainer}>
-          <img src='/images/varianttur/restaurant.png' />
+          <img src='/images/varianttur/restaurant.png' alt='Restaurant' />
         </div>
       </div>
     </div>

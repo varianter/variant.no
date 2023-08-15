@@ -2,6 +2,7 @@ import FridayBlob from './fridayBlob';
 import style from './itinerary.module.css';
 import SaturdayBlob from './saturdayBlob';
 import SundayBlob from './sundayBlob';
+import Navbar, { NavItem } from './../navbar/navbar';
 
 const Itinerary = () => {
   return (
@@ -11,7 +12,7 @@ const Itinerary = () => {
           <FridayBlob />
         </div>
         <div className={style.textContainer}>
-          <h2 className={style.dayHeading}>Fredag</h2>
+          <Navbar selectedNavItem={NavItem.FRIDAY} />
           <ol className={style.list}>
             <li>
               <time>10:00</time>
@@ -59,7 +60,7 @@ const Itinerary = () => {
               <time>19:00</time>
               <div>
                 <p className={style.listItemTitle}>Festmiddag & fest 🍴 💃🏼 🕺🏽</p>
-                <p className={style.listItemInfo}>I hotellrestauranten, Long bar and grill</p>
+                <p className={style.listItemInfo}>I hotellrestauranten, <a href='https://www.harbourhotels.co.uk/guildford/eat-and-drink/the-long-bar' target='_blank' className={style.externalLink}>Long bar and grill</a></p>
               </div>
             </li>
           </ol>
@@ -70,7 +71,7 @@ const Itinerary = () => {
           <SaturdayBlob />
         </div>
         <div className={style.textContainer}>
-          <h2 className={style.dayHeading}>Lørdag</h2>
+        <Navbar selectedNavItem={NavItem.SATURDAY} />
           <ol className={style.list}>
             <li>
               <time>07:30-11:00</time>
@@ -104,7 +105,7 @@ const Itinerary = () => {
               <time>19:30</time>
               <div className={style.borderedListItem}>
                 <p className={style.listItemTitle}>Middag 🍴</p>
-                <p className={style.listItemInfo}>Red Lion</p>
+                <p className={style.listItemInfo}><a href='https://www.redlionshamleygreen.com/dine/' target='_blank' className={style.externalLink}>Red Lion</a></p>
               </div>
             </li>
             <li>
@@ -122,7 +123,7 @@ const Itinerary = () => {
           <SundayBlob />
         </div>
         <div className={style.textContainer}>
-          <h2 className={style.dayHeading}>Søndag</h2>
+        <Navbar selectedNavItem={NavItem.SUNDAY} />
           <ol className={style.list}>
             <li>
               <time>07:30-11:00</time>

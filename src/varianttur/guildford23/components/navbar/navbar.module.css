@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-left: 8rem;
+  margin-bottom: 5rem;
 }
 
 a {
@@ -10,6 +11,7 @@ a {
   color: var(--color-standard__white) !important;
 }
 
+.selected,
 a:hover {
   text-decoration: underline;
   text-decoration-color: var(--color-standard__white);

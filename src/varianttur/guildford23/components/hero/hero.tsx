@@ -15,7 +15,7 @@ const Hero = () => {
           <HeroBlob />
         </div>
         <div className={style.iconContainer}>
-          <img src='/images/varianttur/happy-traveller.png' />
+          <img src='/images/varianttur/happy-traveller.png' alt='Happy traveller' />
         </div>
       </div>
     </div>
