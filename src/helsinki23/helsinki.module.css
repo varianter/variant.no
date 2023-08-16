@@ -69,7 +69,6 @@
 
 .description {
   margin-top: 8rem;
-  padding: 0 1.5rem;
 }
 
 .practical {
@@ -84,11 +83,6 @@
 
 .practical img {
   width: 70%;
-}
-
-.block {
-  background-color: rgb(83 77 172);
-  padding: 4rem;
 }
 
 @media (min-width: 640px) {

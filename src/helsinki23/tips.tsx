@@ -10,10 +10,10 @@ import arrowLeft from './images/arrow-left.svg';
 import tips from './tips.json';
 
 const HelsinkiTips: NextPage = () => {
-  return <div className={styles.tur}>
-    <Container style={{ padding: '3rem' }}>
+  return <div className={styles.tur} style={{paddingTop: '3rem'}}>
+    <Container>
       <Link href="/helsinki23">
-        <a style={{ display: 'flex', gap: '1rem' }}>
+        <a style={{ display: 'flex', gap: '1rem', lineHeight: '28px' }}>
           <Image src={arrowLeft} width={24} height={28} alt="pil venste" />
           Tilbake
         </a>

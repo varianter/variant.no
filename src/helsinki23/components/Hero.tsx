@@ -22,7 +22,7 @@ export default function Hero() {
           <h2>1.-3. september</h2>
         </div>
       </div>
-      <img src={helsinkiHero} alt="helsinki" style={{ "margin": "0 auto" }} />
+      <img src={helsinkiHero} alt="helsinki" style={{ margin: "0 auto", maxWidth: '100%', zIndex: 10 }} />
     </Container>
   </section>;
 }

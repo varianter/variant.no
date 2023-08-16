@@ -46,6 +46,13 @@
   gap: 20px;
 }
 
+@media (max-width: 1023px) {
+  .tip ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .tip {
     flex-direction: row;

@@ -49,3 +49,15 @@
     border-radius: 1.5rem;
   }
 }
+
+@media (max-width: 767px) {
+  .day > h2 {
+    padding-left: 1rem;
+  }
+
+  .day ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0 0;
+  }
+}

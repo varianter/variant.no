@@ -82,7 +82,7 @@ const Helsinki23: NextPage = () => {
         <img src={helsinkiHotel} alt="hotel" />
       </Container>
     </section>
-    <Container className={styles.block}>
+    <Container style={{paddingTop: '0.5rem', paddingBottom: '2rem', backgroundColor: 'rgb(83 77 172)'}}>
       <div className={styles.navigation}>
         <a href="#hero">
           <span>Ta meg til toppen</span>

@@ -1,7 +1,6 @@
 .container {
   display: flex;
   position: relative;
-  padding: 0 1.5rem;
   margin-top: 8rem;
   flex-direction: column;
 }
@@ -34,10 +33,11 @@
 
 .arrow {
   position: absolute;
-  left: 0rem;
-  top: -5rem;
-  width: 33.333333%;
+  left: 1rem;
+  top: -3rem;
+  width: 100px;
   font-family: 'Recoleta';
+  z-index: 5;
 }
 
 .arrow > span {
@@ -46,7 +46,7 @@
 }
 
 .arrow > img {
-  width: 33.33333%;
+  width: 60px;
   transform: rotate(45deg);
 }
 
