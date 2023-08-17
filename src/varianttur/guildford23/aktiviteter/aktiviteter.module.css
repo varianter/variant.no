@@ -1,0 +1,4 @@
+.container {
+  background-color: var(--color-primary__shade1);
+  color: var(--color-standard__white);
+}

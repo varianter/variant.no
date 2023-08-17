@@ -1,6 +1,6 @@
 .descriptionContainer {
   background-color: var(--color-primary__shade2);
-  padding: 4rem 8rem 12rem;
+  padding: 7rem 15rem 12rem;
   position: relative;
   height: 60rem;
 }
@@ -8,6 +8,10 @@
 .textContainer {
   position: absolute;
   z-index: 10;
+}
+
+.descriptionText {
+  width: 45%;
 }
 
 .importantText {
@@ -33,11 +37,11 @@
 .imageBlobContainer {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 3rem;
 }
 
 .imageContainer {
   position: absolute;
   bottom: 3rem;
-  right: 1rem;
+  right: 5rem;
 }

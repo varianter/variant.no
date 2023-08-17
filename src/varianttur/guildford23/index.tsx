@@ -14,5 +14,5 @@ export default function Guildford23() {
       <Info />
       <Footer />
     </div>
-  )
+  );
 };

@@ -1,34 +1,38 @@
-.day {
-  padding: 4rem 8rem 12rem;
-  position: relative;
-  height: 60rem;
+.dayContainer {
+  padding: 4rem 8rem 0;
 }
 
-.oddDay {
-  composes: day;
+.navbarContainer {
+  margin: 0 auto 7rem;
+  width: 50%;
+}
+
+.evenDayContainer {
+  composes: dayContainer;
+  background-color: var(--color-primary__shade1);
+}
+
+.oddDayContainer {
+  composes: dayContainer;
   background-color: var(--color-primary__shade2);
 }
 
-.evenDay {
-  composes: day;
-  background-color: var(--color-primary__shade1);
+.day {
+  position: relative;
+  height: 40rem;
 }
 
 .backgroundBlobContainer {
   position: absolute;
-  top: 25%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%);
 }
 
 .textContainer {
   position: absolute;
   z-index: 10;
-}
-
-.dayHeading {
-  font-size: 2.813rem;
-  margin-bottom: 5rem;
+  top: 2rem;
 }
 
 .list {
@@ -53,14 +57,18 @@ time {
   padding-bottom: 2rem;
 }
 
+.unborderedListItem {
+  margin-left: 0.2rem;
+}
+
 .listItemTitle {
   font-size: 1.25rem;
   line-height: 160%;
-  margin-top: -1rem;
+  margin-top: -0.8rem;
 }
 
 .list .listItemTitle::before {
-  content: url('./itinirary-blob.svg');
+  content: url('./itinerary-blob.svg');
   margin-left: -0.875rem;
 }
 
@@ -73,8 +81,7 @@ time {
   display: flex;
 }
 
-.externalLink {
+.link {
   font-size: 0.813rem;
-  margin-left: 0.2rem;
   text-decoration: underline;
 }

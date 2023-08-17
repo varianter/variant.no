@@ -8,7 +8,9 @@ const Hero = () => {
     <div id='hero' className={style.heroContainer}>
       <div className={style.contentContainer}>
         <Heading />
-        <Navbar />
+        <div className={style.navbarContainer}>
+          <Navbar />
+        </div>
       </div>
       <div className={style.imageContainer}>
         <div className={style.blobContainer}>

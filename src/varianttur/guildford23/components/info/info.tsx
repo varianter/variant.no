@@ -14,7 +14,6 @@ const Info = () => {
       </div>
       <div className={style.hotelTextContainer}>
         <h3>Harbour Hotel Guildford</h3>
-        <p className={style.phone}>☎️ +????</p>
         <div className={style.addressContainer}>
           <span>📍</span>
           <div>

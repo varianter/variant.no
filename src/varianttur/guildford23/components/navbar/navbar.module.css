@@ -1,8 +1,6 @@
-.navbarContainer {
+.navbar {
   display: flex;
   justify-content: space-between;
-  margin-left: 8rem;
-  margin-bottom: 5rem;
 }
 
 a {

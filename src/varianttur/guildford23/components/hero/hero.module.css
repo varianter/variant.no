@@ -11,8 +11,13 @@
   width: 50%;
 }
 
+.navbarContainer {
+  margin-left: 8rem;
+}
+
 .imageContainer {
   position: relative;
+  width: 50%;
 }
 
 .blobContainer {
