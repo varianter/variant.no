@@ -1,0 +1,85 @@
+.tip {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+  flex-direction: column-reverse;
+  gap: 3rem;
+}
+
+.tip:last-child {
+  padding-bottom: 12rem;
+}
+
+.tip h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.tip ul {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.tip ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.tip > div {
+  width: 100%;
+  padding: 4rem;
+  border-radius: 1.5rem;
+  background-color: rgb(53 49 110);
+  display: flex;
+  justify-content: left;
+}
+
+.tip > img {
+  max-width: 100%;
+}
+
+.tip li > a {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1023px) {
+  .tip ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tip {
+    flex-direction: row;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .tip > div {
+    width: 80%;
+  }
+
+  .reversed > div {
+    justify-content: right;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+  }
+
+  .tip > img {
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+  }
+
+  .tip.reversed > img {
+    left: 0;
+    right: auto;
+  }
+}
