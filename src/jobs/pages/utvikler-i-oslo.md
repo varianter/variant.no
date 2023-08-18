@@ -10,7 +10,7 @@ meta_image: https://www.variant.no/images/erfaren_utvikler_meta.png
 
 ## Vi søker etter deg som vil være med å bygge Variant Oslo!
 
-![Varianter på en takterrasse](/images/utvikler-takterrasse.png)
+![Varianter på tur i Praha](/images/oslo-praha-blob.png)
 
 Vi ser etter en erfaren utvikler som vil være med og forme et åpent, raust og læreglad konsulentselskap i Oslo.
 Det er det vi inviterer deg med på, _- sammen med oss._
@@ -67,7 +67,7 @@ Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure p�
 
 ## Om Variant
 
-![Christian, Jacob og Maciek hos Variant](/images/utvikler-jacob.png)
+![Variant Oslo på tur i Hemsedal](/images/oslo-hemsedal-blob.png)
 Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes. I Oslo har også de ulike avdelingene sine egne <em>og noen kalde</em>. Eksempelvis <em>Kode og noen kalde</em>
