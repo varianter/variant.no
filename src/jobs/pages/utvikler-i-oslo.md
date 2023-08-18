@@ -16,11 +16,11 @@ Vi ser etter en erfaren utvikler som vil være med og forme et åpent, raust og 
 Det er det vi inviterer deg med på, _- sammen med oss._
 
 Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre.
-Variant ønsker vi at alle skal bidra til å forme sin egen arbeidplass og hverdag. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
+I Variant ønsker vi at alle skal bidra til å forme sin egen arbeidplass og hverdag. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
 
 ## Hvem ser vi etter?
 
-Vi ser etter deg som har erfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av.
+Vi ser etter deg som har flere års erfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av.
 
 Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer?
 
@@ -30,28 +30,29 @@ Det aller viktigste for oss er at du har et ønske om å være en dyktig utvikle
 
 Vi ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Dette er en person som skal være med å forme kultur og fagmiljø sammen med resten av gjengen i Oslo. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at du har verdi- og tankesett som harmonerer med disse.
 
-Du bør være noen som holder seg oppdatert innen utvikling. Men samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+Du bør være noen som holder seg oppdatert innen utvikling. Samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
 
 **_For tiden jobber vi mye med_**
 
-- JavaScript (i alle mulige former, som f.eks React og Node.js)
+- JavaScript (i alle mulige former, som f.eks React, Vue og Node.js)
 - [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
 - Docker og Kubernetes
 - C#, .NET, Java og Kotlin
 - Skyplattformer (Azure, AWS, GCP, Vercel og Heroku)
 - og ikke minst: empati, utviklerkultur og samarbeid
 
-**_Hvem jobber vi med?_** - Du vil jobbe i spennende prosjekter ute hos våre kunder - både små og store. Disse er viktige aktører i norsk nærings- og samfunnsliv, som Statens egvesen, Ruter, NRK, Sparebank 1, Aion, Aidn eller Miljødirektoratet for å nevne noen.
+**_Hvem jobber vi med?_** - Du vil jobbe i spennende prosjekter ute hos våre kunder - både små og store. Disse er viktige aktører i norsk nærings- og samfunnsliv, som Statens Vegvesen, Ruter, NRK, Energi.ai, Sparebank 1, Forsvaret eller Miljødirektoratet for å nevne noen.
 
 **_Mulighet til å påvirke_** - Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle kan være med å påvirke arbeidshverdagen og selskapet. Vi vil høre dine meninger og tanker.
 
 ## Hva får du hos oss?
 
+Variant er folka og folka er variant. Hos oss får du et utforskende fagmiljø hvor det sosiale står sentralt. Vi er ikke bare kollegaer, men gode venner som støtter og utfordrer hverandre.
 Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tanke på de ulike insentivene vi tilbyr.
 
 **_Lønn og bonus_**
 
-- Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Eksempelvis ved en [mastergrad fra 2016, vil din startlønn være 871 000 kroner. Din årlige pensjonsparing (på 7%) kommer i tillegg, og vil være på 60 970 kroner](https://www.variant.no/kalkulator?year=2015&degree=master).
+- Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Eksempelvis ved en [mastergrad fra 2017, vil din fastlønn være 838 449 kroner. Sammen med gjennomsnittlig bonus ville årslønn + bonus ligge på 909 528. Din årlige pensjonsparing (på 7%) kommer i tillegg, og vil være på 58 691 kroner. ](https://www.variant.no/kalkulator?year=2017&degree=master).
 - Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus. Ansatte som er i foreldrepermisjon eller som er sykemeldte får også full bonus. Gjennomsnittlig bonus per år har siden 2019 vært på 71 079.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
@@ -67,7 +68,7 @@ Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure p�
 ## Om Variant
 
 ![Christian, Jacob og Maciek hos Variant](/images/utvikler-jacob.png)
-Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodell vår er enkel: Vi tilbyr flinke folk.
+Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
 
 Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes. I Oslo har også de ulike avdelingene sine egne <em>og noen kalde</em>. Eksempelvis <em>Kode og noen kalde</em>
 der vi jevnlig møtes for å utforske nye teknologier, vise frem noe fra prosjekt eller "mobprogrammere" med noe godt å drikke og spise 🔥
@@ -84,4 +85,4 @@ Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Even (rekrutteringsansvarlig i Oslo) eller Nikolai (teknologisjef i Oslo) riktige personer å ta en prat med.
+Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Even (Leder for vekst i Oslo) eller Nikolai (teknologisjef i Oslo) riktige personer å ta en prat med.
