@@ -64,11 +64,19 @@ export default function Berlin23() {
           </li>
           <li>
             <p>10:30</p>
-            <p>🥪 Lunsjstopp på <a href="https://www.bloomberlin.de/work/bloombistro">Bloom</a></p>
+            <p>
+              🥪 Lunsjstopp på{' '}
+              <a href="https://www.bloomberlin.de/work/bloombistro">Bloom</a>
+            </p>
           </li>
           <li>
             <p>11:30</p>
-            <p>🚌 Buss til <a href="https://www.hotel-oderberger.berlin/">Hotel Oderberger</a></p>
+            <p>
+              🚌 Buss til{' '}
+              <a href="https://www.hotel-oderberger.berlin/">
+                Hotel Oderberger
+              </a>
+            </p>
           </li>
           <li>
             <p>12:00</p>
@@ -76,7 +84,16 @@ export default function Berlin23() {
           </li>
           <li>
             <p>12:30</p>
-            <p>🎨 Variantdag på <a href="https://www.haus-fuer-poesie.org/en/literaturwerkstatt-berlin/home/">Haus für Poesie!</a></p>
+            <p>
+              🎨{' '}
+              <a href="https://variantdag.vercel.app/oslo/berlin-23">
+                Variantdag
+              </a>{' '}
+              på{' '}
+              <a href="https://www.haus-fuer-poesie.org/en/literaturwerkstatt-berlin/home/">
+                Haus für Poesie!
+              </a>
+            </p>
           </li>
           <li>
             <p>17:30</p>
@@ -88,11 +105,19 @@ export default function Berlin23() {
           </li>
           <li>
             <p>19:00</p>
-            <p>🍽️ Middag på <a href="https://www.pratergarten.de/">PRATERGARTEN</a></p>
+            <p>
+              🍽️ Middag på{' '}
+              <a href="https://www.pratergarten.de/">PRATERGARTEN</a>
+            </p>
           </li>
           <li>
             <p>22:00</p>
-            <p>🍺 Tester noen tyske <a href="https://www.google.com/search?q=AWESOME+GERMAN+BEER">bjørnunger</a></p>
+            <p>
+              🍺 Tester noen tyske{' '}
+              <a href="https://www.google.com/search?q=AWESOME+GERMAN+BEER">
+                bjørnunger
+              </a>
+            </p>
           </li>
           <li>
             <p>00:10</p>
@@ -106,11 +131,14 @@ export default function Berlin23() {
         <ul>
           <li>
             <p>07:00</p>
-            <p>☕  <a href="https://en.wikipedia.org/wiki/Breakfast">Frokost</a> på hotellet</p>
+            <p>
+              ☕ <a href="https://en.wikipedia.org/wiki/Breakfast">Frokost</a>{' '}
+              på hotellet
+            </p>
           </li>
           <li>
             <p>10:30</p>
-            <p>🚶 Vi  går til aktivitet</p>
+            <p>🚶 Vi går til aktivitet</p>
           </li>
           <li>
             <p>11:00</p>
@@ -118,7 +146,12 @@ export default function Berlin23() {
           </li>
           <li>
             <p>13:00</p>
-            <p>🍕 Lunsj på <a href="https://www.brewdog.com/uk/brewdog-berlin-mitte">Brewdog Berlin Mitte</a></p>
+            <p>
+              🍕 Lunsj på{' '}
+              <a href="https://www.brewdog.com/uk/brewdog-berlin-mitte">
+                Brewdog Berlin Mitte
+              </a>
+            </p>
           </li>
           <li>
             <p>15:00</p>
@@ -126,11 +159,14 @@ export default function Berlin23() {
           </li>
           <li>
             <p>18:30</p>
-            <p>🚶 Vi  går sammen fra hotellet</p>
+            <p>🚶 Vi går sammen fra hotellet</p>
           </li>
           <li>
             <p>19:00</p>
-            <p>🍽️ Middag på <a href="https://www.restaurant-nolle.de/en/">Nolle Restaurant</a></p>
+            <p>
+              🍽️ Middag på{' '}
+              <a href="https://www.restaurant-nolle.de/en/">Nolle Restaurant</a>
+            </p>
           </li>
           <li>
             <p>21:00</p>
@@ -141,7 +177,6 @@ export default function Berlin23() {
             <p>💃 Uteliv for de som ønsker det</p>
           </li>
         </ul>
-
       </section>
 
       <section className={style.agenda} id="sondag">
