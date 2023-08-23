@@ -1,10 +1,10 @@
-import style from './footer.module.css';
 import Arrow from './arrow';
+import style from './footer.module.css';
 
-const Footer = () => {
+const Footer = ({ topHref, isPrimary }: { topHref: string, isPrimary: boolean }) => {
   return (
-    <div className={style.footerContainer}>
-      <a href='#hero'>
+    <div className={isPrimary? style.primaryFooterContainer : style.secondaryFooterContainer}>
+      <a href={topHref}>
         <span>
             Ta meg til toppen
         </span>

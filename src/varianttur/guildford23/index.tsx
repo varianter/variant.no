@@ -12,7 +12,7 @@ export default function Guildford23() {
       <Description />
       <Itinerary />
       <Info />
-      <Footer />
+      <Footer topHref='#hero' isPrimary />
     </div>
   );
 };

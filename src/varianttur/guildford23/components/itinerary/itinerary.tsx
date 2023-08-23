@@ -3,7 +3,7 @@ import style from './itinerary.module.css';
 import SaturdayBlob from './saturdayBlob';
 import SundayBlob from './sundayBlob';
 import Navbar, { NavItem } from './../navbar/navbar';
-import LinkIcon from './linkIcon';
+import LinkIcon from '../common/linkIcon';
 
 const Itinerary = () => {
   return (
@@ -22,14 +22,20 @@ const Itinerary = () => {
                 <time>10:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Oppmøte Værnes 🧳</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
+                  <p className={style.listItemInfo}>Vi møter opp på Værnes i god tid. Husk at vi skal på utenlandssiden og gjennom passkontrollen. Husk pass og adapter med tre stikk.</p>
                 </div>
               </li>
               <li>
                 <time>11:55</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Flyet går✈️</p>
-                  <p className={style.listItemInfo}>Flybilletter</p>
+                  <p className={style.listItemInfo}>Norwegian DY745</p>
+                  <p className={style.listItemInfo}>Flybilletter får Varianter på mail til seg og følge.</p>
+                  <p className={style.listItemInfo}>Seter blir tildelt ved innsjekk. Vi kan ikke garantere at dere får seter ved siden av hverandre, men det er helt okei å bytte med noen.</p>
+                  <p className={style.listItemInfo}>Inkludert:</p>
+                  <p className={style.listItemInfo}>1 x 23 kg innsjekket bagasje</p>
+                  <p className={style.listItemInfo}>1 x håndbagasje (bagasjehylle)</p>
+                  <p className={style.listItemInfo}>1x håndbagasje (under setet)</p>
                 </div>
               </li>
               <li>
@@ -43,14 +49,13 @@ const Itinerary = () => {
                 <time>15:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Ankomst hotellet 🏨</p>
-                  <p className={style.listItemInfo}>Vi legger fra oss bagasjen og tar med oss en sandwich</p>
+                  <p className={style.listItemInfo}>Når vi ankommer hotellet sjekker Linda oss inn. Vi tar oss en grab and go sandwich. Varianter går til møterom for Variantdag. Følger er velkomne til å bli med på Variantdag, men har i utgangspunktet fritid.</p>
                 </div>
               </li>
               <li>
                 <time>15:00-17:30</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Variantdag 🚀</p>
-                  <p className={style.listItemInfo}>Faglig opplegg for Varianter, følgene har mulighet til å bli bedre kjent, eller bare gjøre som de vil</p>
                 </div>
               </li>
               <li>
@@ -85,7 +90,6 @@ const Itinerary = () => {
                 <time>07:30-11:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Frokost på hotellet 🍳</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
                 </div>
               </li>
               <li>
@@ -106,7 +110,6 @@ const Itinerary = () => {
                 <time>19:15</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Buss til middag 🚍</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
                 </div>
               </li>
               <li>
@@ -141,35 +144,38 @@ const Itinerary = () => {
                 <time>07:30-11:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Frokost på hotellet 🍳</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
                 </div>
               </li>
               <li>
                 <time>11:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Utsjekk 🧳</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
+                  <p className={style.listItemInfo}>Felles utsjekk</p>
                 </div>
               </li>
               <li>
                 <time>12:00</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Buss til Heathrow 🚍</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
                 </div>
               </li>
               <li>
                 <time>15:35-18:50</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Fly Heathrow - Oslo ✈️</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
+                  <p className={style.listItemInfo}>SAS, SK806</p>
+                  <p className={style.listItemInfo}>Inkludert:</p>
+                  <p className={style.listItemInfo}>1 x 23kg innsjekket bagasje</p>
+                  <p className={style.listItemInfo}>1 x håndbagasje (bagasjehylle)</p>
+                  <p className={style.listItemInfo}>1x håndbagasje (under setet)</p>
                 </div>
               </li>
               <li>
                 <time>21:00-21:55</time>
                 <div className={style.unborderedListItem}>
                   <p className={style.listItemTitle}>Fly Oslo - Værnes ✈️</p>
-                  <p className={style.listItemInfo}>*TEKST*</p>
+                  <p className={style.listItemInfo}>SAS, SK380</p>
+                  <p className={style.listItemInfo}>I Oslo må vi gjennom passkontrollen og gjennom ny sikkerhetskontroll</p>
                 </div>
               </li>
             </ol>

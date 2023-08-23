@@ -6,8 +6,8 @@
 
 .blobInfoContainer {
   position: absolute;
-  top: 5rem;
-  left: 3rem;
+  top: 10rem;
+  left: 5rem;
 }
 
 .blobInfo {
@@ -27,15 +27,15 @@
 
 .blobContainer {
   position: absolute;
-  top: 8rem;
-  left: 4rem;
+  top: 12rem;
+  left: 7rem;
 }
 
 .heading {
   position: absolute;
   z-index: 10;
-  top: 11rem;
-  left: 8rem;
+  top: 13rem;
+  left: 10rem;
 }
 
 .supHeading {

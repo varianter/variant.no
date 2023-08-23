@@ -2,3 +2,76 @@
   background-color: var(--color-primary__shade1);
   color: var(--color-standard__white);
 }
+
+.topContainer {
+  position: relative;
+}
+
+.blobContainer {
+  position: absolute;
+}
+
+a {
+  color: white !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.backLink {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  top: 3rem;
+  left: 10rem;
+}
+
+.headerContainer {
+  position: absolute;
+  z-index: 10;
+  top: 10rem;
+  left: 10rem;
+}
+
+.tipContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.reverseTipContainer {
+  composes: tipContainer;
+  flex-direction: row-reverse;
+}
+
+.tipText {
+  width: 25%;
+}
+
+.tipLink {
+  justify-content: flex-start;
+}
+
+.tipLink svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .topContainer {
+    height: 15rem;
+    margin-bottom: 5rem;
+    margin-left: 7rem;
+  }
+
+  .headerContainer {
+    width: 20rem;
+  }
+
+  .tipContainer {
+    padding: 3rem;
+  }
+}

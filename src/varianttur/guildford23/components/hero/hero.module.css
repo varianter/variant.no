@@ -12,7 +12,7 @@
 }
 
 .navbarContainer {
-  margin-left: 8rem;
+  margin-left: 0;
 }
 
 .imageContainer {
@@ -22,10 +22,17 @@
 
 .blobContainer {
   position: absolute;
+  right: 0;
 }
 
 .iconContainer {
   position: absolute;
   top: 8rem;
-  left: 3rem;
+  left: 5rem;
+}
+
+@media (min-width: 768px) {
+  .navbarContainer {
+    margin-left: 10rem;
+  }
 }

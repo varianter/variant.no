@@ -1,7 +1,16 @@
 .footerContainer {
-  background-color: var(--color-primary__shade1);
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.primaryFooterContainer {
+  composes: footerContainer;
+  background-color: var(--color-primary__shade1);
+}
+
+.secondaryFooterContainer {
+  composes: footerContainer;
+  background-color: var(--color-primary__shade2);
 }
 
 a {

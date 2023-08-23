@@ -1,56 +1,42 @@
 .infoContainer {
+  padding: 4rem 4rem 12rem;
+}
+
+.info {
   background-color: var(--color-primary__shade2);
   display: flex;
-  width: 100%;
-  padding: 4rem 8rem 12rem;
   position: relative;
-  height: 80rem;
 }
 
 .navbarContainer {
-  position: absolute;
-  top: 5rem;
-  width: 50%;
-  left: 50%;
-  transform: translate(-50%);
+  margin: 0 auto 7rem;
+  width: 100%;
 }
 
 .hotelBlobContainer {
   position: absolute;
-  top: 10rem;
-  left: 0;
 }
 
 .hotelTextContainer {
   position: absolute;
   z-index: 10;
-  top: 15rem;
 }
 
 .foodBlobContainer {
   position: absolute;
-  bottom: -5rem;
-  right: 0;
 }
 
 .foodTextContainer {
   position: absolute;
   z-index: 10;
-  right: 3rem;
-  bottom: 10rem;
-  width: 30%;
 }
 
 .hotelImageContainer {
   position: absolute;
-  top: 8rem;
-  right: 3rem;
 }
 
 .restaurantImageContainer {
   position: absolute;
-  top: 20rem;
-  right: 15rem;
 }
 
 h3 {
@@ -73,4 +59,50 @@ h3 {
 .contactPerson {
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .infoContainer {
+    padding: 4rem 0 12rem;
+  }
+
+  .info {
+    width: 100%;
+    height: 80rem;
+  }
+
+  .navbarContainer {
+    width: 50%;
+  }
+
+  .hotelBlobContainer {
+    top: 10rem;
+    left: 2rem;
+  }
+
+  .hotelTextContainer {
+    top: 15rem;
+    left: 8rem;
+  }
+
+  .foodBlobContainer {
+    right: 1rem;
+    bottom: 0;
+  }
+
+  .foodTextContainer {
+    right: 3rem;
+    bottom: 10rem;
+    width: 30%;
+  }
+
+  .hotelImageContainer {
+    top: 8rem;
+    right: 3rem;
+  }
+
+  .restaurantImageContainer {
+    top: 20rem;
+    right: 17rem;
+  }
 }
