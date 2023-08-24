@@ -31,7 +31,7 @@ const Description = () => {
           <ImageBlob />
         </div>  
         <div className={style.imageContainer}>
-          <img src='/images/varianttur/street.png' alt='Street' />
+          <img src='/images/varianttur/street.png' alt='Street' className={style.image} />
         </div>  
       </div>
     </div>

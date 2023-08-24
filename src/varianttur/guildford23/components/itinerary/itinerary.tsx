@@ -69,7 +69,8 @@ const Itinerary = () => {
                 <time>19:00</time>
                 <div className={style.unborderedListItem}>
                   <p className={style.listItemTitle}>Festmiddag & fest 🍴 💃🏼 🕺🏽</p>
-                  <p className={style.listItemInfo}>I hotellrestauranten, <a href='https://www.harbourhotels.co.uk/guildford/eat-and-drink/the-long-bar' target='_blank' className={style.link}>Long bar and grill</a></p>
+                  <p className={style.listItemInfo}>I hotellrestauranten</p>
+                  <p className={style.listItemInfo}><a href='https://www.harbourhotels.co.uk/guildford/eat-and-drink/the-long-bar' target='_blank' className={style.link}>Long bar and grill</a></p>
                 </div>
               </li>
             </ol>

@@ -1,10 +1,11 @@
 .dayContainer {
-  padding: 4rem 4rem 0;
+  padding: 4rem 0 0;
 }
 
 .navbarContainer {
-  margin: 0 auto 7rem;
+  margin: 0 auto 3rem;
   width: 100%;
+  padding: 0 2rem;
 }
 
 .evenDayContainer {
@@ -19,7 +20,7 @@
 
 .day {
   position: relative;
-  height: 50rem;
+  height: 60rem;
 }
 
 .backgroundBlobContainer {
@@ -27,6 +28,7 @@
   top: 0;
   left: 50%;
   transform: translate(-50%);
+  width: 80%;
 }
 
 .textContainer {
@@ -62,7 +64,7 @@ time {
 }
 
 .listItemTitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 160%;
   margin-top: -0.8rem;
 }
@@ -78,7 +80,7 @@ time {
   line-height: 0.938rem;
   margin-left: 2rem;
   margin-top: 0;
-  width: 21rem;
+  width: 12rem;
   display: flex;
 }
 
@@ -92,11 +94,24 @@ time {
     padding: 4rem 8rem 0;
   }
 
+  .day {
+    height: 50rem;
+  }
+
   .navbarContainer {
-    width: 50%;
+    width: 70%;
+    margin-bottom: 7rem;
   }
 
   .list {
     margin-left: 30rem;
+  }
+
+  .listItemTitle {
+    font-size: 1.25rem;
+  }
+
+  .listItemInfo {
+    width: 21rem;
   }
 }

@@ -1,11 +1,11 @@
 .descriptionContainer {
   background-color: var(--color-primary__shade2);
-  padding: 7rem 4rem 12rem;
+  padding: 7rem 2rem 8rem;
 }
 
 .description {
   position: relative;
-  height: 60rem;
+  height: 80rem;
 }
 
 .textContainer {
@@ -32,29 +32,47 @@
 
 .backgroundBlobContainer {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
+  width: 100%;
 }
 
 .imageBlobContainer {
   position: absolute;
   bottom: 0;
-  right: 3rem;
+  max-width: 28.188rem;
 }
 
 .imageContainer {
   position: absolute;
-  bottom: 3rem;
-  right: 5rem;
+  bottom: 0;
+}
+
+.image {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .descriptionContainer {
-    padding: 7rem 15rem 12rem;
+    padding: 7rem 8rem 12rem;
+  }
+
+  .description {
+    height: 60rem;
   }
 
   .descriptionText {
-    width: 45%;
+    width: 100%;
+  }
+
+  .imageBlobContainer {
+    right: 0;
+    min-width: 28.188rem;
+  }
+
+  .imageContainer {
+    bottom: 3rem;
+    right: 2rem;
   }
 }

@@ -52,10 +52,10 @@ const Info = () => {
         </div>
         <div className={style.imageContainer}>
           <div className={style.hotelImageContainer}>
-            <img src='/images/varianttur/hotel.png' alt='Hotel' />
+            <img src='/images/varianttur/hotel.png' alt='Hotel' className={style.image} />
           </div>
           <div className={style.restaurantImageContainer}>
-            <img src='/images/varianttur/restaurant.png' alt='Restaurant' />
+            <img src='/images/varianttur/restaurant.png' alt='Restaurant' className={style.image} />
           </div>
         </div>
       </div>

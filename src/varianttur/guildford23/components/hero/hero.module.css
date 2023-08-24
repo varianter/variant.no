@@ -1,18 +1,14 @@
 .heroContainer {
   background-color: var(--color-primary__shade1);
   width: 100%;
-  height: 50rem;
-  display: flex;
-}
-
-.contentContainer {
+  height: 40rem;
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
-.navbarContainer {
-  margin-left: 0;
+.heroContent {
+  width: 100%;
+  display: flex;
 }
 
 .imageContainer {
@@ -22,17 +18,59 @@
 
 .blobContainer {
   position: absolute;
+  top: 10rem;
   right: 0;
+}
+
+.blob {
+  content: url('./heroBlobMobile.svg');
 }
 
 .iconContainer {
   position: absolute;
-  top: 8rem;
-  left: 5rem;
+  top: 18rem;
+  right: 0;
+}
+
+.image {
+  width: 7.125rem;
+}
+
+.navbarContainer {
+  margin-left: 0;
+  width: 100%;
+  padding: 2rem;
 }
 
 @media (min-width: 768px) {
+  .heroContainer {
+    height: 50rem;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+
+  .iconContainer {
+    top: 8rem;
+    left: 5rem;
+  }
+
+  .blobContainer {
+    width: 100%;
+    top: 0;
+  }
+
+  .blob {
+    content: url('./heroBlob.svg');
+  }
+
+  .image {
+    width: 75%;
+  }
+
   .navbarContainer {
-    margin-left: 10rem;
+    margin-left: 8rem;
+    width: 50%;
   }
 }

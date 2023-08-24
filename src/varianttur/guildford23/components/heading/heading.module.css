@@ -1,24 +1,23 @@
 .headingContainer {
   position: relative;
   height: 30rem;
-  margin-bottom: 2rem;
+  width: 50%;
 }
 
 .blobInfoContainer {
   position: absolute;
-  top: 10rem;
-  left: 5rem;
+  top: 7rem;
+  left: 2rem;
 }
 
 .blobInfo {
   position: relative;
-  width: 10rem;
 }
 
 .blobName {
   position: absolute;
-  top: -3rem;
   font-family: 'Recoleta';
+  top: -5rem;
 }
 
 .arrow {
@@ -28,14 +27,14 @@
 .blobContainer {
   position: absolute;
   top: 12rem;
-  left: 7rem;
+  left: 2rem;
 }
 
 .heading {
   position: absolute;
   z-index: 10;
-  top: 13rem;
-  left: 10rem;
+  top: 10rem;
+  left: 7rem;
 }
 
 .supHeading {
@@ -43,10 +42,51 @@
 }
 
 .mainHeading {
-  font-size: 6.25rem;
+  font-size: 3.125rem;
 }
 
 .subHeading {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-top: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .headingContainer {
+    margin-bottom: 2rem;
+  }
+
+  .blobInfoContainer {
+    top: 10rem;
+    left: 3rem;
+  }
+
+  .blobInfo {
+    width: 10rem;
+  }
+
+  .blobName {
+    top: -3rem;
+  }
+
+  .blobContainer {
+    top: 12rem;
+    left: 7rem;
+  }
+
+  .heading {
+    top: 13rem;
+    left: 8rem;
+  }
+
+  .supHeading {
+    font-size: 1.188rem;
+  }
+
+  .mainHeading {
+    font-size: 6.25rem;
+  }
+
+  .subHeading {
+    font-size: 2.5rem;
+  }
 }
