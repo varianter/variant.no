@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  position: relative;
+  margin-top: 8rem;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.text {
+  z-index: 10;
+  width: 100%;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: left;
+}
+
+.text > h1 {
+  font-size: 5rem;
+}
+
+.text > h2 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+}
+
+.arrow {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  width: 100px;
+  font-family: 'Recoleta';
+  z-index: 5;
+}
+
+.arrow > span {
+  position: absolute;
+  top: -2.5rem;
+}
+
+.arrow > img {
+  width: 60px;
+  transform: rotate(45deg);
+}
+
+.blob {
+  position: absolute;
+  left: 0.5rem;
+  top: -2.5rem;
+  z-index: auto;
+  width: 33.333333%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .arrow {
+    top: 3.5rem;
+    left: -3rem;
+    width: 20%;
+  }
+
+  .arrow > span {
+    top: -2rem;
+  }
+
+  .arrow > img {
+    transform: rotate(0);
+  }
+
+  .blob {
+    left: -2rem;
+    top: 5rem;
+    width: 50%;
+  }
+}
