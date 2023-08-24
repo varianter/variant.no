@@ -21,7 +21,8 @@ meta_projects:
       project_text: 'I Norge har vi over 1100 tunneler som krever forvaltning og
         vedlikehold. Sammen med Statens vegvesen har vi utviklet
         løsninger som effektiviserer arbeidsprosessene rundt
-        inspeksjon og sikkerhetsgodkjenning av tunneler i henhold til',
+        inspeksjon og sikkerhetsgodkjenning av tunneler i henhold til
+        gjeldende lov og regelverk.',
     },
     {
       project_image:
