@@ -1,16 +1,16 @@
 ---
-title: Nyutdannet designer 2024
-h1_title: Nyutdannet designer 2024
+title: Nyutdannet designer i Trondheim 2024
+h1_title: Nyutdannet designer i Trondheim 2024
 slug: nyutdannet-designer-2024
 contact_emails: mk@variant.no
-meta_title: Vi søker designstudenter til fast jobb i Variant!
+meta_title: Vi søker designstudenter til fast jobb i Variant Trondheim!
 meta_description: Vi ser etter læreglade designere til å starte i fast jobb hos oss i 2024.
 meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo_2024.png
 ---
 
 ## Hvem søker vi?
 
-Vi søker nyutdannede designere som engasjerer og motiverer, med oppstart 1. august 2024 til våre kontor i [Trondheim](https://handbook.variant.no/avdelinger/trondheim), [Oslo](https://handbook.variant.no/avdelinger/oslo) og [Bergen](https://handbook.variant.no/avdelinger/bergen). Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
+Vi søker nyutdannede designere som engasjerer og motiverer, med oppstart 1. august 2024 til vårt kontor i [Trondheim](https://handbook.variant.no/avdelinger/trondheim). Det er ikke viktig hvilke verktøy eller metodikk du bruker. Det er langt viktigere at du bryr deg. Bryr deg om brukeren du designer noe for og bryr deg om kunden du leverer til.
 
 <div class="right">
 
