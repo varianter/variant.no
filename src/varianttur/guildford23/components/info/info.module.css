@@ -75,6 +75,12 @@ h3 {
 }
 
 @media (min-width: 768px) {
+  .contactPerson {
+    margin: 0 10rem;
+  }
+}
+
+@media (min-width: 900px) {
   .infoContainer {
     padding: 4rem 0 12rem;
   }

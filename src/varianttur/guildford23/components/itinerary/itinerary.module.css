@@ -114,8 +114,8 @@ time {
 }
 
 @media (min-width: 768px) {
-  .dayContainer {
-    padding: 4rem 8rem 0;
+  .list {
+    margin-left: 18rem;
   }
 
   .fridayContainer,
@@ -123,7 +123,9 @@ time {
   .sundayContainer {
     height: 70rem;
   }
+}
 
+@media (min-width: 900px) {
   .navbarContainer {
     width: 70%;
     margin-bottom: 7rem;

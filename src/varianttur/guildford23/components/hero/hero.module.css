@@ -43,6 +43,12 @@
 }
 
 @media (min-width: 768px) {
+  .iconContainer {
+    top: 15rem;
+  }
+}
+
+@media (min-width: 900px) {
   .heroContainer {
     height: 50rem;
   }

@@ -56,12 +56,22 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  .descriptionContainer {
-    padding: 7rem 8rem 12rem;
-  }
-
   .description {
     height: 60rem;
+  }
+
+  .textContainer {
+    padding: 10rem;
+  }
+
+  h2 {
+    font-size: 2.183rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .descriptionContainer {
+    padding: 7rem 8rem 12rem;
   }
 
   .descriptionText {
