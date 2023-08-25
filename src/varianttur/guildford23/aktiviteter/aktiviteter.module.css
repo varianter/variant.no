@@ -1,0 +1,116 @@
+.container {
+  background-color: var(--color-primary__shade1);
+  color: var(--color-standard__white);
+}
+
+.topContainer {
+  position: relative;
+  height: 15rem;
+}
+
+.blobContainer {
+  position: absolute;
+}
+
+a {
+  color: white !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.backLink {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  top: 3rem;
+  left: 3rem;
+}
+
+.headerContainer {
+  position: absolute;
+  z-index: 10;
+  top: 5rem;
+  left: 3rem;
+}
+
+.activityContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 3rem 2rem;
+}
+
+.reverseActivityContainer {
+  composes: activityContainer;
+}
+
+.activityLink {
+  justify-content: flex-start;
+}
+
+.activityLink svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.activityImage {
+  width: 100%;
+}
+
+.activityInfo {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.activityText {
+  margin: 0;
+}
+
+.emphasizedActivityText {
+  margin: 0;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .topContainer {
+    height: 20rem;
+    margin-left: 7rem;
+  }
+
+  .backLink {
+    top: 3rem;
+    left: 8rem;
+  }
+
+  .headerContainer {
+    width: 20rem;
+    top: 8rem;
+    left: 8rem;
+  }
+
+  .blobContainer {
+    width: 50%;
+  }
+
+  .activityContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem;
+  }
+
+  .reverseActivityContainer {
+    flex-direction: row-reverse;
+  }
+
+  .activityImage {
+    width: 30%;
+  }
+
+  .activityInfo {
+    width: 50%;
+  }
+}

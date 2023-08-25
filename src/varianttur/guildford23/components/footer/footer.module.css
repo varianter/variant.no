@@ -1,0 +1,24 @@
+.footerContainer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.primaryFooterContainer {
+  composes: footerContainer;
+  background-color: var(--color-primary__shade1);
+}
+
+.secondaryFooterContainer {
+  composes: footerContainer;
+  background-color: var(--color-primary__shade2);
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowContainer {
+  margin-left: 1rem;
+}

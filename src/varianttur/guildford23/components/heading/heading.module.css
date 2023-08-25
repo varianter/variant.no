@@ -1,0 +1,93 @@
+.headingContainer {
+  position: relative;
+  height: 30rem;
+  width: 50%;
+}
+
+.blobInfoContainer {
+  position: absolute;
+  top: 7rem;
+  left: 2rem;
+}
+
+.blobInfo {
+  position: relative;
+}
+
+.blobName {
+  position: absolute;
+  font-family: 'Recoleta';
+  top: -3rem;
+  width: max-content;
+}
+
+.arrow {
+  transform: rotate(28.561deg);
+}
+
+.blobContainer {
+  position: absolute;
+  top: 12rem;
+  left: 2rem;
+}
+
+.heading {
+  position: absolute;
+  z-index: 10;
+  top: 10rem;
+  left: 7rem;
+}
+
+.supHeading {
+  font-size: 1.875rem;
+}
+
+.mainHeading {
+  font-size: 3.125rem;
+}
+
+.subHeading {
+  font-size: 1.5rem;
+  margin-top: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .headingContainer {
+    margin-bottom: 2rem;
+  }
+
+  .blobInfoContainer {
+    top: 10rem;
+    left: 3rem;
+  }
+
+  .blobInfo {
+    width: 10rem;
+  }
+
+  .blobName {
+    top: -3rem;
+  }
+
+  .blobContainer {
+    top: 12rem;
+    left: 7rem;
+  }
+
+  .heading {
+    top: 13rem;
+    left: 8rem;
+  }
+
+  .supHeading {
+    font-size: 1.188rem;
+  }
+
+  .mainHeading {
+    font-size: 6.25rem;
+  }
+
+  .subHeading {
+    font-size: 2.5rem;
+  }
+}
