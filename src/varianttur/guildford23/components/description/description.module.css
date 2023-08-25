@@ -1,16 +1,23 @@
 .descriptionContainer {
   background-color: var(--color-primary__shade2);
-  padding: 7rem 2rem 8rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
 }
 
 .description {
   position: relative;
-  height: 80rem;
+  height: 30rem;
 }
 
 .textContainer {
   position: absolute;
   z-index: 10;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .descriptionText {
@@ -23,7 +30,7 @@
 }
 
 .descriptionFooter {
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 
 .descriptionFooterText {
@@ -32,21 +39,16 @@
 
 .backgroundBlobContainer {
   position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -25%);
+  content: url('./backgroundBlobMobile.svg');
   width: 100%;
 }
 
 .imageBlobContainer {
-  position: absolute;
-  bottom: 0;
-  max-width: 28.188rem;
+  display: none;
 }
 
 .imageContainer {
-  position: absolute;
-  bottom: 0;
+  display: none;
 }
 
 .image {
@@ -66,12 +68,25 @@
     width: 100%;
   }
 
+  .descriptionFooter {
+    margin-top: 7rem;
+  }
+
+  .backgroundBlobContainer {
+    content: url('./backgroundBlob.svg');
+  }
+
   .imageBlobContainer {
+    display: block;
+    position: absolute;
     right: 0;
+    bottom: 0;
     min-width: 28.188rem;
   }
 
   .imageContainer {
+    display: block;
+    position: absolute;
     bottom: 3rem;
     right: 2rem;
   }

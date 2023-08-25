@@ -1,6 +1,4 @@
 import style from './info.module.css';
-import HotelBlob from './hotelBlob';
-import FoodBlob from './foodBlob';
 import Navbar, { NavItem } from './../navbar/navbar';
 
 const Info = () => {
@@ -11,7 +9,6 @@ const Info = () => {
           <Navbar selectedNavItem={NavItem.INFO} />
         </div>
         <div className={style.hotelBlobContainer}>
-          <HotelBlob />
         </div>
         <div className={style.hotelTextContainer}>
           <h3>Harbour Hotel Guildford</h3>
@@ -44,7 +41,6 @@ const Info = () => {
           </div>
         </div>
         <div className={style.foodBlobContainer}>
-          <FoodBlob />
         </div>
         <div className={style.foodTextContainer}>
           <h3>Allergier og matpreferanser</h3>

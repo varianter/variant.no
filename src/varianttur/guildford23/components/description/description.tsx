@@ -1,4 +1,3 @@
-import BackgroundBlob from './backgroundBlob';
 import style from './description.module.css';
 import ImageBlob from './imageBlob';
 
@@ -7,7 +6,6 @@ const Description = () => {
     <div className={style.descriptionContainer}>
       <div className={style.description}>
         <div className={style.backgroundBlobContainer}>
-          <BackgroundBlob />
         </div>
         <div className={style.textContainer}>
           <h2>Stop being so apple handsome,<br /> this is going to be jolly good!</h2>

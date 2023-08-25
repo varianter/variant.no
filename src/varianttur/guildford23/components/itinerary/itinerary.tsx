@@ -1,7 +1,4 @@
-import FridayBlob from './fridayBlob';
 import style from './itinerary.module.css';
-import SaturdayBlob from './saturdayBlob';
-import SundayBlob from './sundayBlob';
 import Navbar, { NavItem } from './../navbar/navbar';
 import LinkIcon from '../common/linkIcon';
 
@@ -12,9 +9,10 @@ const Itinerary = () => {
         <div className={style.navbarContainer}>
           <Navbar selectedNavItem={NavItem.FRIDAY} />
         </div>
-        <div className={style.day}>
-          <div className={style.backgroundBlobContainer}>
-            <FridayBlob />
+        <div className={style.fridayContainer}>
+          <div className={style.fridayBlobTopContainer}>
+          </div>
+          <div className={style.fridayBlobBottomContainer}>
           </div>
           <div className={style.textContainer}>
             <ol className={style.list}>
@@ -81,9 +79,8 @@ const Itinerary = () => {
         <div className={style.navbarContainer}>
           <Navbar selectedNavItem={NavItem.SATURDAY} />
         </div>
-        <div className={style.day}>
-          <div className={style.backgroundBlobContainer}>
-            <SaturdayBlob />
+        <div className={style.saturdayContainer}>
+          <div className={style.saturdayBlobContainer}>
           </div>
           <div className={style.textContainer}>
             <ol className={style.list}>
@@ -121,7 +118,7 @@ const Itinerary = () => {
                 </div>
               </li>
               <li>
-                <time>23:30</time>
+                <time>22:30</time>
                 <div className={style.unborderedListItem}>
                   <p className={style.listItemTitle}>Buss tilbake til hotellet 🚍</p>
                   <p className={style.listItemInfo}>For natteranglere er det mulighet for å fortsette i hotellbaren eller dra ut på noen av byens nattklubber</p>
@@ -135,9 +132,8 @@ const Itinerary = () => {
         <div className={style.navbarContainer}>
           <Navbar selectedNavItem={NavItem.SUNDAY} />
         </div>
-        <div className={style.day}>
-          <div className={style.backgroundBlobContainer}>
-            <SundayBlob />
+        <div className={style.sundayContainer}>
+          <div className={style.sundayBlobContainer}>
           </div>
           <div className={style.textContainer}>
             <ol className={style.list}>
