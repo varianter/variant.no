@@ -5,7 +5,7 @@ import { TipModel } from './tips';
 const Tip = ({tip, imageFirst} : {tip: TipModel, imageFirst: boolean}) => {
   return (
     <div className={imageFirst ? style.tipContainer : style.reverseTipContainer}>
-      <img src={tip.imageUrl} alt={tip.title} />
+      <img src={tip.imageUrl} alt={tip.title} className={style.tipImage} />
       <div className={style.tipText}>
         <a href={tip.link} className={style.tipLink} target='_blank'>
           <h3>{tip.title}</h3>

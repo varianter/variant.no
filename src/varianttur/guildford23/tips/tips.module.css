@@ -5,6 +5,7 @@
 
 .topContainer {
   position: relative;
+  height: 12rem;
 }
 
 .blobContainer {
@@ -24,30 +25,30 @@ a:hover {
   display: flex;
   position: absolute;
   z-index: 10;
-  top: 3rem;
-  left: 10rem;
+  top: 2rem;
+  left: 2rem;
 }
 
 .headerContainer {
   position: absolute;
   z-index: 10;
-  top: 10rem;
-  left: 10rem;
+  top: 4rem;
+  left: 2rem;
 }
 
 .tipContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  padding: 3rem 2rem;
 }
 
 .reverseTipContainer {
   composes: tipContainer;
-  flex-direction: row-reverse;
 }
 
 .tipText {
-  width: 25%;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .tipLink {
@@ -60,6 +61,10 @@ a:hover {
   margin-left: 1rem;
 }
 
+.tipImage {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .topContainer {
     height: 15rem;
@@ -67,11 +72,35 @@ a:hover {
     margin-left: 7rem;
   }
 
+  .backLink {
+    left: 8rem;
+  }
+
   .headerContainer {
-    width: 20rem;
+    top: 8rem;
+    left: 8rem;
+  }
+
+  .blobContainer {
+    width: 50%;
   }
 
   .tipContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     padding: 3rem;
+  }
+
+  .reverseTipContainer {
+    flex-direction: row-reverse;
+  }
+
+  .tipImage {
+    width: 50%;
+  }
+
+  .tipText {
+    width: 30%;
   }
 }

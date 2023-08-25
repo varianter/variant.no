@@ -105,7 +105,7 @@ const Itinerary = () => {
                 </div>
               </li>
               <li>
-                <time>19:15</time>
+                <time>18:50</time>
                 <div className={style.borderedListItem}>
                   <p className={style.listItemTitle}>Buss til middag 🚍</p>
                 </div>
