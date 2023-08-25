@@ -32,12 +32,10 @@ export default function PageHeader({
     closeRef,
     isNotHamburgerMode,
   );
-
-  const internalOnChangeVisible = () => {
-    const newVisible = !isMenuVisible;
-    onVisibleChange?.(newVisible);
-    setMenuVisible(newVisible);
-  };
+  
+  useEffect(() => {
+    onVisibleChange?.(isMenuVisible);
+  }, [isMenuVisible, onVisibleChange]);
 
   const LogoWrapper = homepage ? 'h1' : 'div';
 
@@ -69,7 +67,7 @@ export default function PageHeader({
             aria-labelledby="menu-label"
             aria-expanded={isMenuVisible}
             aria-controls="menu-id"
-            onClick={() => internalOnChangeVisible()}
+            onClick={() => setMenuVisible(!isMenuVisible)}
           >
             <div
               className={and(
