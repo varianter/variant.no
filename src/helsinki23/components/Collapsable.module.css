@@ -46,7 +46,7 @@
 
 .content h3 {
   color: #fff;
-  font-family: 'Graphik';
+  font-family: 'Graphik' !important;
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
