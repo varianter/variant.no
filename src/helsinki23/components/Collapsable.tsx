@@ -18,7 +18,7 @@ const Collapsable: React.FC<{ title: string, children: ReactNode }> = ({ title, 
       <span>{title.slice(0, split)} {split !== -1 && <span className={styles.hidden}>{title.slice(split + 1)}</span>}</span>
       <img src={collapseIcon} alt={isOpen ? "close" : "open"} />
     </div>
-    <div className={styles.content}>
+    <div className={styles.content} style={{opacity: isOpen ? '1' : '0', transition: 'all 0.2s'}}>
       {children}
     </div>
   </div>
