@@ -36,7 +36,7 @@ const HelsinkiPraktisk: NextPage<{ userAgent: string }> = ({ userAgent }) => {
               <h3>Tog/Metro/Buss app</h3>
               <p>
                 Å reise rundt i Helsinki er ganske så greit med kollektivtransport.
-                For å komme oss fra flyplass til sentrum tar vi tog og metro, og da kan man kjøpe billett enten på stasjonen, eller via appen <a href={isAndroid ? androidLink : iosLink} target="_blank">HSL</a>.
+                For å komme oss fra flyplass til sentrum tar vi tog og metro, og da kan man kjøpe billett enten på stasjonen, eller via appen <a tabIndex={-1} href={isAndroid ? androidLink : iosLink} target="_blank">HSL</a>.
                 Appen fungerer på lik måte som skyss, at billetten gjelder for en viss tid og man kan bytte til buss og metro på samme billett.
                 Så appen kan være grei å ha for hele turen. Kan være lurt å legge inn kortdetaljer allerede :)
               </p>

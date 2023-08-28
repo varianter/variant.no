@@ -10,7 +10,11 @@ const Collapsable: React.FC<{ title: string, children: ReactNode }> = ({ title, 
   const split = title.indexOf(' ');
 
   return <div className={`${styles.collapsable} ${isOpen ? styles.open : styles.closed}`}>
-    <div className={styles.header} onClick={() => setIsOpen((s) => !s)}>
+    <div tabIndex={0} className={styles.header} role='button' onClick={() => setIsOpen((s) => !s)} onKeyDown={(e) => {
+      if (e.key == "Enter") {
+        setIsOpen((s) => !s)
+      }
+    }}>
       <span>{title.slice(0, split)} {split !== -1 && <span className={styles.hidden}>{title.slice(split + 1)}</span>}</span>
       <img src={collapseIcon} alt={isOpen ? "close" : "open"} />
     </div>
