@@ -10,6 +10,7 @@ import Container from './components/Container';
 import helsinkiHotel from './images/helsinki-hotel.png';
 import arrowDown from './images/arrow-down.svg';
 import arrowRight from './images/arrow-right.svg';
+import arrowRightCurved from './images/arrow-right-curved.svg';
 import arrowUp from './images/arrow-up.svg';
 
 import styles from './helsinki.module.css';
@@ -27,6 +28,12 @@ const Helsinki23: NextPage = () => {
           <span>Ta meg til programmet</span>
           <Image src={arrowDown} height={24} width={24} alt="pil ned" />
         </a>
+        <Link href="/helsinki23/praktisk">
+          <a>
+            <span>Ta meg til siden med alt jeg lurer på</span>
+            <Image src={arrowRight} height={24} width={24} alt="pil høyre" />
+          </a>
+        </Link>
       </div>
       <section id="Description">
         <Container className={styles.description}>
@@ -73,21 +80,21 @@ const Helsinki23: NextPage = () => {
         <Day title="Lørdag">
           <ul>
             <li>
-              <time>09:00</time> Frokost 😴
+              <time>08:00</time> Frokost 😴
             </li>
             <li>
-              <time>11:00</time> Felles aktivitet 🤫
+              <time>9:45</time> Avgang fra hotellet
             </li>
             <li>
-              <time>12:00</time> Lunsj 🥙
+              <time>10:30</time> Felles aktivitet 🤫
             </li>
             <li>
-              <time>13:00</time>{' '}
+              <time>12:00</time>{' '}
               <Link href={'/helsinki23/tips'}>
                 <a>
                   Valgfrie aktiviteter
                   <Image
-                    src={arrowRight}
+                    src={arrowRightCurved}
                     width={45}
                     height={46}
                     alt="pil høyre"
@@ -96,7 +103,7 @@ const Helsinki23: NextPage = () => {
               </Link>
             </li>
             <li>
-              <time>18:30</time> Felles avgang til forfriskninger 🍾
+              <time>19:30</time> Felles avgang til forfriskninger 🍾
             </li>
             <li>
               <time>21:00</time> Middag 🤤

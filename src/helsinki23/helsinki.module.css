@@ -25,7 +25,7 @@
   max-width: 50rem;
   font-size: 16px;
   margin-top: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .tur li {
@@ -46,12 +46,13 @@
 }
 
 .navigation {
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 3rem;
   width: 100%;
   display: flex;
   justify-content: center;
+
+  flex-direction: column-reverse;
+  gap: 20px;
 }
 
 .navigation > a > span {
@@ -59,7 +60,6 @@
 }
 
 .navigation > a {
-  margin: 0 auto;
   font-size: 16px;
   line-height: 24px;
   font-family: 'Graphik Web';
@@ -96,5 +96,10 @@
 
   .practical p {
     font-size: 0.9rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 90px;
   }
 }
