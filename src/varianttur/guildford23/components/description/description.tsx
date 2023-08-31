@@ -1,5 +1,6 @@
 import style from './description.module.css';
 import ImageBlob from './imageBlob';
+import LinkIcon from '../common/linkIcon';
 
 const Description = () => {
   return (
@@ -16,6 +17,10 @@ const Description = () => {
             <p>
               Det blir litt faglig opplegg 🤓, vi skal spise digg mat 🍴, og dra ut på livlige, typisk engelske aktiviteter 🏰 🎢 🍷 🍸🌆. Vi har prøvd å ha noe for alle og enhver, både med mat og utflukter – håper det faller i smak. Det er også lagt inn tid på lørdagen til å ha litt frilek 🛝, forslag til påfunn finner du under praktisk info.
             </p>
+            <a href='/varianttur/guildford23/bliKjent' className={style.getToKnowLink}>
+              <p className={style.getToKnowText}>Bli kjent med folkene!</p>
+              <LinkIcon />
+            </a>
             <p className={style.descriptionFooter}>
               <span className={style.descriptionFooterText}>(“Og hva skjer med båtturen da?” tenker du,</span> 
               <br/>
