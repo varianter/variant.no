@@ -6,7 +6,7 @@
 
 .description {
   position: relative;
-  height: 30rem;
+  height: 35rem;
 }
 
 .textContainer {
@@ -27,6 +27,17 @@ h2 {
 .importantText {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.getToKnowLink {
+  justify-content: flex-start;
+  margin-top: 3rem;
+}
+
+.getToKnowText {
+  margin-right: 1rem;
+  font-family: 'Recoleta';
+  font-size: 1.5rem;
 }
 
 .descriptionFooter {
@@ -79,7 +90,7 @@ h2 {
   }
 
   .descriptionFooter {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 
   .backgroundBlobContainer {
