@@ -656,16 +656,6 @@ const getToKnowResultsRaw: GetToKnowRaw[] = [
     consent: ["nettside", "some"],
   },
   {
-    ID: 62,
-    email: "thj@variant.no",
-    variant: "Truls Henrik Jakobsen",
-    name: "Solan Berg",
-    q1: "Studerer kunsthistorie, filosofi, og kunturminneforvaltning.",
-    q3: "Har spilt fiolin siden jeg var 4 og har spilt orgel i Notre Dame før den brente ned!",
-    image: "/images/varianttur/bliKjent/Solan.png",
-    consent: ["nettside", "some"],
-  },
-  {
     ID: 63,
     email: "cb@variant.no",
     variant: "Christian Brevik",
