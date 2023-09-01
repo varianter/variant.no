@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
 import style from 'src/advanced-calculator/calculator.module.css';
-import { Degree, startSalery } from 'src/advanced-calculator/config';
+import { Degree } from 'src/advanced-calculator/config';
 import Counter from 'src/advanced-calculator/Counter';
 import { getAverageBonus } from 'src/advanced-calculator/helpers/getHistoricBonus';
 import { formatCurrencyFromNumber } from 'src/advanced-calculator/helpers/utils';
 
 const Calculator = () => {
   const [degree, setDegree] = useState<Degree>('masters');
+  const startSalery: Record<Degree, number> = {
+    bachelor: 580000,
+    masters: 600000,
+  };
   const totalSalary = startSalery[degree];
 
   const [isMobile, setIsMobile] = useState(false);
