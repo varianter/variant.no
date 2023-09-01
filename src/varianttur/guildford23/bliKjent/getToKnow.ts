@@ -198,7 +198,7 @@ const getToKnowResultsRaw: GetToKnowRaw[] = [
     email: "hr@variant.no",
     variant: "Hilde Osmo Reindal",
     name: "Hilde Reindal",
-    q1: "Går tur med hunden vår Oswald som er en pensjonist født i ung kropp. Vi har som regel en snittfart på 2 km/t. :snegleemoji:",
+    q1: "Går tur med hunden vår Oswald som er en pensjonist født i ung kropp. Vi har som regel en snittfart på 2 km/t. 🐌",
     q2: "Dette har vi snakket om Lotta-Linn. Jeg tror samtlige har vært standard grønn postkasse, utenom den jeg har nå som er gråhvit. ",
     q3: "Har vært medlem av en jenteklan i CS da jeg gikk på videregående. Snakker med meg selv når jeg sover. Liker ikke norges nasjonalrett: taco.",
     image: "/images/varianttur/bliKjent/Hilde_Peter.png",
@@ -265,7 +265,7 @@ const getToKnowResultsRaw: GetToKnowRaw[] = [
     name: "Malin C. Karlsen",
     q1: "Jobber, tar vare på unger, går kanskje en tur i Bymarka",
     q2: "Aner ikke! Men den vi har nå er hvit",
-    q3: "Jeg samler på strikkeinspirasjon og uferdige strikkeprosjekter :innocent:",
+    q3: "Jeg samler på strikkeinspirasjon og uferdige strikkeprosjekter 😇",
     image: "/images/varianttur/bliKjent/Malin.png",
     consent: ["nettside", "some"],
   },
@@ -774,6 +774,18 @@ const getToKnowResultsRaw: GetToKnowRaw[] = [
     q3: "Hobby: sjakk, sykkel og musikk.",
     image: "/images/varianttur/bliKjent/Runar.png"
   },
+  {
+    ID: 76,
+    variant: "Malin C. Karlsen",
+    name: "Frode",
+    image: "/images/varianttur/bliKjent/Frode.png",
+  },
+  {
+    ID: 77,
+    variant: "Dora Oline Eriksrud",
+    name: "Espen Buanes",
+    image: "/images/varianttur/bliKjent/Espen B (følge til Dora Oline).png"
+  }
 ];
 
 export type GetToKnow = {
