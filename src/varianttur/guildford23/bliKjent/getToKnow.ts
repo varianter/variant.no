@@ -759,13 +759,19 @@ const getToKnowResultsRaw: GetToKnowRaw[] = [
   {
     ID: 74,
     variant: "Johannes Røsvik",
-    name: "Johannes",
+    name: "Johannes Røsvik",
+    q1: "Jeg jobber hardt med å få en av de mange halvferdige prosjektene mine til å kvalifsere som en fullverdig hobby, slik at jeg har et enkelt svar på denne type spørsmål 🤔",
+    q2: "Seks, hvis hylla jeg hadde på folkehøyskolen teller. 2 x Grønn og 3 x Hvit, mens hylla var i tre.",
+    q3: "En av mine halvferdige prosjekter er en radiobenk fra 60-tallet som jeg prøver å få liv i 📻",
     image: "/images/varianttur/bliKjent/Johannes.png"
   },
   {
     ID: 75,
     variant: "Johannes Røsvik",
-    name: "Runar",
+    name: "Runar Hillestad",
+    q1: "Jobb, youtube, sjakk",
+    q2: "9 - Hvit, grønn, rød, grå som jeg husker",
+    q3: "Hobby: sjakk, sykkel og musikk.",
     image: "/images/varianttur/bliKjent/Runar.png"
   },
 ];
