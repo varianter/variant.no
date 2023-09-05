@@ -51,6 +51,14 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
           >
             Søk som designer
           </a>
+          {!isApplyGraduate && (
+            <a
+              className={style.buttonBlue}
+              href="/jobs/sommerjobb-utvikler-2024"
+            >
+              Søk som utvikler
+            </a>
+          )}
         </div>
 
         <div className={style.variantLogo}>
