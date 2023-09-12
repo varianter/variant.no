@@ -7,20 +7,23 @@ const WhoAreWeSeeking = ({ className }: { className: string }) => {
       <h2>Hvem søker vi?</h2>
       <div className={style.flex}>
         <p className={style.textAboveImg}>
-          Vi søker 3 nyutdannede designere som engasjerer og motiverer, med
-          oppstart 1. august 2024 i Trondheim. Det er ikke viktig hvilke verktøy
-          du bruker. Det er derimot viktig at du bryr deg. Bryr deg om brukeren
-          du lager noe for, og bryr deg om kunden du leverer til.
+          Vi søker 3 nyutdannede designere og 1 nyutdannet utvikler som
+          engasjerer og motiverer, med oppstart 1. august 2024. Stillingene er
+          fordelt på våre kontorer i Trondheim og Bergen, med 3 designere i
+          Trondheim og 1 utvikler i Bergen. Det er ikke viktig hvilke verktøy
+          eller språk du bruker. Det er derimot viktig at du bryr deg. Bryr deg
+          om koden du skriver, bryr deg om brukeren du lager noe for, og bryr
+          deg om kunden du leverer til.
         </p>
         <p>
-          "Ansetter dere bare 3 nyutdannede", tenker du kanskje? En del av vår
+          "Ansetter dere bare 4 nyutdannede", tenker du kanskje? En del av vår
           rekrutteringsstrategi har i lengre tid vært å ansette dyktige
           studenter til sommerjobb og gi noen av disse tilbud om fast jobb. I
           Oslo hadde vi som mål å ansette 6 nyutdannede og det målet har vi nådd
           ved at alle årets sommerjobbere takket ja til tilbud. Bergen hadde mål
-          om å ansette 2 og nådde sitt mål på tilsvarende måte. For Trondheims
-          del har vi ansatt det vi har kapasitet til av utviklere, men har
-          fortsatt plass til 3 designere.
+          om å ansette 2 og har allerede ansatt en av sommerdesignerne sine. For
+          Trondheims del har vi ansatt det vi har kapasitet til av utviklere,
+          men har fortsatt plass til 3 designere.
         </p>
 
         <p className={style.textBelowImg}>
