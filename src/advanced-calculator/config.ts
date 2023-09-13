@@ -6,6 +6,7 @@ export const historicBonus: HistoricBonus[] = [
   [2019, 85358],
   [2020, 56673],
   [2021, 71206],
+  [2022, 46609],
 ];
 
 export type PayscaleSingleYear = {
