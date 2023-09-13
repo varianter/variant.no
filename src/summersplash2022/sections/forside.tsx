@@ -46,9 +46,7 @@ const LandingPage = ({
           <h1>
             Vi ser etter
             <span className={style.textGradient}>
-              {isApplyGraduate
-                ? ' 3 nyutdannede designere '
-                : ' 23 sommervarianter '}
+              {isApplyGraduate ? ' 4 nyutdannede ' : ' 23 sommervarianter '}
             </span>
             i 2024!
           </h1>
