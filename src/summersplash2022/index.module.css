@@ -115,3 +115,10 @@ h3 {
   background-color: var(--color-primary__shade2);
   color: var(--color-standard__white);
 }
+
+.tempQr {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
