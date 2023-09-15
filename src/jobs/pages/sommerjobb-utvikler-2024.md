@@ -29,7 +29,7 @@ Variant er en variant av et konsulentselskap som er [raust, åpent og læreglad]
 
 Sommerjobben varer i fire + to uker med tre uker ferie i mellom, og vil gi god innsikt i hva det vil si å jobbe i konsulentbransjen og hvordan hverdagen i Variant er. Du kommer til å lære masse nyttig, samtidig som du har det gøy sammen med oss andre varianter. Vi er opptatt av at sommerjobben skal ha en god dose av både sosialt og faglig påfyll.
 
-I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 271.83 kr (eller 100e) for hver time, slik at du havner rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
+I Variant har alle innsyn i alt - selv som sommerstudent. Derfor trenger du selvsagt ikke å lure på hvordan [kontrakten din](https://avtaler.variant.no/avtaler/norge/arbeidsavtaler/ansettelse-sommerjobb.html) vil se ut for sommeren. Lønna trenger du heller ikke å lure på. Du får 271.83 kr (eller 100e) for hver time, slik at du havner rett under fribeløpet! Dersom du har lyst til å lese mer om hva Variant står for kan du sjekke ut vår egen [håndbok](https://handbook.variant.no/).
 
 <div class="left">
 
