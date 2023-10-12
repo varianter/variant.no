@@ -59,7 +59,7 @@ Dersom du får jobbtilbud og takker ja, inkluderes du straks i Variant. Du får 
 ## Søknadsfrist
 
 <p>
-1.oktober 2023
+Søknader behandles fortløpende.
 </p>
 
 ## Har du spørsmål?
