@@ -2,7 +2,7 @@
 title: Nyutdannet utvikler i Bergen 2024
 h1_title: Nyutdannet utvikler i Bergen 2024
 slug: nyutdannet-utvikler-2024
-contact_emails: mk@variant.no
+contact_emails: th@variant.no
 meta_title: Vi søker utviklerstudenter til fast jobb i Variant Bergen!
 meta_description: Vi ser etter læreglade utviklere til å starte i fast jobb hos oss i 2024.
 meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo-2_2024.png
