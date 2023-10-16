@@ -2,7 +2,7 @@
 title: Nyutdannet designer i Trondheim 2024
 h1_title: Nyutdannet designer i Trondheim 2024
 slug: nyutdannet-designer-2024
-contact_emails: mk@variant.no
+contact_emails: th@variant.no
 meta_title: Vi søker designstudenter til fast jobb i Variant Trondheim!
 meta_description: Vi ser etter læreglade designere til å starte i fast jobb hos oss i 2024.
 meta_image: https://www.variant.no/work_images/nyutdannet-meta-promo_2024.png
