@@ -100,6 +100,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
               : style['calculator-controls--mobileHidden'],
           )}
         >
+          <div className={style['calculator-content-wrapper']}>
           {mobileVisible && (
             <motion.div
               id="controls-content"
@@ -266,6 +267,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
             >
               {mobileVisible ? 'Skjul' : 'Endre'}
             </Button>
+          </div>
           </div>
         </div>
       </AnimatePresence>
