@@ -5,7 +5,7 @@ slug: utvikler-i-oslo
 contact_emails: even@variant.no, nikolai@variant.no
 meta_title: Erfaren utvikler i Variant Oslo
 meta_description: Vil du være med oss å bygge Variant Oslo?
-meta_image: https://www.variant.no/images/erfaren_utvikler_meta.png
+meta_image: https://www.variant.no/images/erfaren_utvikler_meta.jpg
 ---
 
 ## Vi søker etter deg som vil være med å bygge Variant Oslo!
