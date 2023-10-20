@@ -96,6 +96,11 @@ const Layout = ({
                 </a>
               </li>
               <li>
+                <a href="https://www.variant.dev" rel="noopener">
+                  Læreglede
+                </a>
+              </li>
+              <li>
                 <Link href="/kalkulator">
                   <a>Lønnskalkulator</a>
                 </Link>

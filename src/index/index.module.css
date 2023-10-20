@@ -182,7 +182,7 @@
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
 }
-.two-column-section__item__content a {
+.two-column-section__item__content a:not(.inlineLink) {
   text-underline-offset: 0.3rem;
   display: block;
   margin-top: 1.2rem;

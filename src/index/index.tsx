@@ -17,7 +17,6 @@ import { EmployeeItem } from 'src/employees/types';
 import { CaseJSON } from 'src/case/Case';
 import { HighlightedItemsLists } from 'src/rss/service';
 
-
 export type HomeProps = {
   randomEmployee: EmployeeItem;
   randomCases: CaseJSON[];
@@ -239,8 +238,15 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           <div className={style['two-column-section__item__content']}>
             <Heading3 styleLevel="4">Læreglede</Heading3>
             <p>
-              Vi i Variant ønsker å bidra til aktive og levende læringsmiljøer.
-              Derfor bistår vi communities i nær- og fjernmiljøet med blant
+              Vi i Variant ønsker å bidra til{' '}
+              <a
+                href="https://www.variant.dev"
+                rel="external noopner"
+                className={`${style['inlineLink']}`}
+              >
+                aktive og levende læringsmiljøer
+              </a>
+              . Derfor bistår vi communities i nær- og fjernmiljøet med blant
               annet lokaler, utstyr, organisering og faglig sparring.
             </p>
             <Link href={'/community'}>
