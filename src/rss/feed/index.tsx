@@ -36,6 +36,14 @@ export default function RSSFeed({ items }: FeedProps) {
               videoer
             </a>
           </p>
+
+          <p>
+            Vi har også en egen løsning med{' '}
+            <a href="https://www.variant.dev" rel="external noopner">
+              samlet innhold fra forskjellige steder
+            </a>{' '}
+            som vi anbefaler deg å sjekke ut!
+          </p>
         </div>
         <List items={items} />
       </div>
