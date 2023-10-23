@@ -45,8 +45,8 @@ Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetans
 
 ## Hva får du hos oss?
 
-I Variant har vi to lønnsmodeller, konsulentmodellen som er basert på Tekna sin lønnsstatistikk. Her kan du sjekke ut hva det betyr for deg:  
-Vi har også lønnsmodell for ledere som er en del av ledelsen i selskapet. Denne stillingen er tiltenkt en rolle i ledergruppen i selskapetI prosessen med oss er vi spent på hvordan akkurat du vil overbevise oss....  
+I Variant har vi to lønnsmodeller, konsulentmodellen som er basert på Tekna sin lønnsstatistikk, her kan du sjekke ut hva det betyr for deg: [Åpen lønnskalkulator](https://www.variant.no/kalkulator)
+Vi har også lønnsmodell for ledere som er en del av ledelsen i selskapet. Denne stillingen er tiltenkt en rolle i ledergruppen i selskapet. I prosessen med oss er vi spent på hvordan akkurat du vil overbevise oss....  
 Hva ledere i Variant tjener ligger også åpent tilgjengelig [her](https://handbook.variant.no/#Ledere).
 
 **_Goder_**
