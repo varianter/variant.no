@@ -8,25 +8,25 @@ meta_description: Vi ser etter en salgsleder/forretningsutvikler som vil være m
 meta_image: https://www.variant.no/images/oslo_salgsleder_meta.png
 ---
 
-## Vi søker etter deg som vil være med å bygge Variant Oslo!
+## Har du lyst til å bygge kundeforhold i et åpent raust og læreglad konsulentselskap?
 
 ![Varianter på tur i Praha](/images/oslo-praha-blob.png)
 
-_Vi ser etter en salgsleder/forretningsutvikler som vil være med å videreutvikle et åpent, raust og læreglad konsulentselskap i Oslo. Det er det vi inviterer deg med på, – sammen med oss._
-
-Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverdag og som er rause med hverandre. I Variant ønsker vi at alle skal bidra til å forme sin egen arbeidsplass og hverdag. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament. Til felles har vi at vi elsker utfordringer hvor design- og teknologikompetanse finner sammen og tar plass i kundens kultur.
+_Vi ser etter en salgsleder, eller forretningsutvikler om du vil, som skal være med å videreutvikle et åpent, raust og læreglad konsulentselskap i Oslo._
 
 ## Hva vil vi at du skal bidra til?
 
-Variant Oslo er et selskap som har god vekst i antall ansatte, med en diversifisert kundeportefølje med store aktører innen offentlig og privat næringsliv. Et fellestrekk for alle våre kunder er at de ønsker å utgjøre en positiv forskjell i samfunnet. Noen få av oss jobber hos samme kunder, men en klar ambisjon fremover er at flere skal jobbe hos samme kunde for å få større påvirkningskraft. Vi ønsker å bygge enkelte kundeforhold til å bli mer strategiske partnerskap der vi utvikler hverandre. Vi må bli enda bedre på å ivareta eksisterende kunder for å kunne skape mer. En av Variants bærebjelker er vår rekrutteringsstrategi som innebærer at vi ansetter dyktige og læretørste studenter som skal ut i arbeidslivet, og det krever også at vi bygger tettere kundeforhold med utvalgte kunder som deler vår tro på viktigheten av å satse på nyutdannede. For å klare dette trenger vi mer kapasitet, og mer spisset kompetanse på salg enn det vi besitter per i dag.
+Du vil jobbe tett med ledergruppen og salgsdirektør i konsernet og påvirke selskapets videre vekst. Du blir en del av et større salgsapparat, som også gjør at du vil samarbeide med alle Variant sine selskap i Norge og Sverige.  Du vil få utvikle deg videre i salg, men også på andre aspekter med å lede et konsulentselskap som strategisk selskapsutvikling og personalledelse.
 
-Du vil jobbe tett med ledergruppen og salgsdirektør i konsernet, og dette er en rolle hvor du får muligheten til å påvirke selskapets videre vekst. Du blir en del av et større salgsapparat, som også gjør at du vil samarbeide med alle Variant sine selskap i Norge og Sverige.
+Variant Oslo er et selskap som har god vekst i antall ansatte, med en diversifisert kundeportefølje med store aktører innen offentlig og privat næringsliv. Et fellestrekk for alle våre kunder er at de ønsker å utgjøre en positiv forskjell i samfunnet. Noen få av oss jobber hos samme kunder, men en klar ambisjon fremover er at flere skal jobbe hos samme kunde for å få større påvirkningskraft. Vi ønsker å bygge enkelte kundeforhold til å bli mer strategiske partnerskap der vi utvikler hverandre. Vi må bli enda bedre på å ivareta eksisterende kunder for å kunne skape mer. En av Variants bærebjelker er vår rekrutteringsstrategi som innebærer at vi ansetter dyktige og læreglade studenter som skal ut i arbeidslivet, og det krever også at vi bygger tettere kundeforhold med utvalgte kunder som deler vår tro på viktigheten av å satse på nyutdannede. For å klare dette trenger vi mer kapasitet, og mer spisset kompetanse på salg enn det vi besitter per i dag.
+
 
 <div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
 ## Hvem ser vi etter?
 
 Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetanse innen minst ett av våre tjenesteområder; digital produkt- og tjenesteutvikling, datadriv, kultur eller strategi. Du har jobbet med salg tidligere, og gjerne i konsulentbransjen. Du må være en person som ser og evner å skape muligheter hos kunder og i markedet vi opererer i. Du kommer til å jobbe deler av tiden din selv ute hos kunde, og resten av tiden med å utvikle kundeporteføljen vår.
+
 
 **_Som salgs- og forretningsutvikler i Variant får du ansvar for_**
 
@@ -45,9 +45,9 @@ Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetans
 
 ## Hva får du hos oss?
 
-I Variant har vi to lønnsmodeller, konsulentmodellen som er basert på Tekna sin lønnsstatistikk, her kan du sjekke ut hva det betyr for deg: [Åpen lønnskalkulator](https://www.variant.no/kalkulator)
-Vi har også lønnsmodell for ledere som er en del av ledelsen i selskapet. Denne stillingen er tiltenkt en rolle i ledergruppen i selskapet. I prosessen med oss er vi spent på hvordan akkurat du vil overbevise oss....  
-Hva ledere i Variant tjener ligger også åpent tilgjengelig [her](https://handbook.variant.no/#Ledere).
+I Variant har vi to lønnsmodeller. Konsulentmodellen er en [åpen lønnskalkulator](https://www.variant.no/kalkulator) som er basert på Tekna sin lønnsstatistikk. Lederstillinger i Variant lønnes etter en egen lønnsmodell som ligger åpent tilgjengelig [her](https://handbook.variant.no/#Ledere).
+
+Det er mulighet for at denne stillingen kan bli en del av ledergruppen i selskapet. Dette finner vi ut av sammen med deg.
 
 **_Goder_**
 
