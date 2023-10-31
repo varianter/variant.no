@@ -8,7 +8,7 @@ meta_description: Vi ser etter en salgsleder/forretningsutvikler som vil være m
 meta_image: https://www.variant.no/images/oslo_salgsleder_meta.png
 ---
 
-## har du lyst til å bygge kundeforhold i et åpent raust og læreglad konsulentselskap?
+## Har du lyst til å bygge kundeforhold i et åpent raust og læreglad konsulentselskap?
 
 ![Varianter på tur i Praha](/images/oslo-praha-blob.png)
 
