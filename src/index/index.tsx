@@ -83,9 +83,9 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         <PageTitle title="Raus, åpen og læreglad" jumbo element="h2" />
 
         <p className={style.omVariant__p1}>
-          IT handler ikke om designskisser, linjer av kode eller infrastruktur,
-          men om samarbeid og forståelse. IT bør være åpenhet, ærlighet og
-          endringsvilje.
+          Tjenesteutvikling handler ikke om designskisser, linjer av kode eller
+          infrastruktur, men om samarbeid og forståelse. Det bør være åpenhet,
+          ærlighet og endringsvilje.
         </p>
 
         <Image
