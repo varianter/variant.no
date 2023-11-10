@@ -326,30 +326,4 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   );
 };
 
-function JobLandingpage() {
-  return (
-    <div className={style.infoBlock}>
-      <Image
-        src={sommerjobbImg}
-        className={style.infoBlock__blob}
-        alt="Varianter under felles variantdag"
-        width={774}
-        height={631}
-        loading="lazy"
-        decoding="async"
-      />
-
-      <h2 className={style.infoBlock__title}>
-        <Link href="/nyutdannet">
-          <a className={style.infoBlock__link}>
-            <span className={style.infoBlock__text}>
-              Info om jobb for studenter
-            </span>
-            <Arrow className={style.infoBlock__arrow} color="standard__white" />
-          </a>
-        </Link>
-      </h2>
-    </div>
-  );
-}
 export default Home;
