@@ -9,8 +9,6 @@ import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
 import PageTitle from '@components/page-title';
-import sommerjobbImg from './images/section1Blob.png';
-import Arrow from '@components/arrow';
 import { Heading3 } from '@components/heading';
 import Tjenesteomrader from 'src/tjenesteomrader';
 import { EmployeeItem } from 'src/employees/types';
