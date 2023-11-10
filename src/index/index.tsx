@@ -68,7 +68,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   }, [randomCases]);
 
   return (
-    <Layout crazy homepage>
+    <Layout homepage>
       <Head>
         <meta
           property="og:description"
@@ -114,10 +114,6 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             En variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
-      </section>
-
-      <section className={style.bergen}>
-        <JobLandingpage />
       </section>
 
       <section className={style.join}>
