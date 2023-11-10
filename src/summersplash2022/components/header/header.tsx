@@ -98,8 +98,8 @@ const Header = (props: { white: boolean }) => {
                   ref={navRef}
                 >
                   <li>
-                    <Link href="/jobs">
-                      <a>Bli en variant</a>
+                    <Link href="/tjenesteomrader">
+                      <a>Tjenester</a>
                     </Link>
                   </li>
                   <li>
@@ -121,14 +121,6 @@ const Header = (props: { white: boolean }) => {
                     <Link href="/kalkulator">
                       <a>Lønnskalkulator</a>
                     </Link>
-                  </li>
-                  <li id="dont_show">
-                    <a
-                      href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                      rel="noopener"
-                    >
-                      Si hallo!
-                    </a>
                   </li>
                 </ul>
               </nav>
@@ -205,8 +197,8 @@ const Header = (props: { white: boolean }) => {
                   ref={navRef}
                 >
                   <li>
-                    <Link href="/jobs">
-                      <a>Bli en variant</a>
+                    <Link href="/tjenesteomrader">
+                      <a>Tjenester</a>
                     </Link>
                   </li>
                   <li>
@@ -228,14 +220,6 @@ const Header = (props: { white: boolean }) => {
                     <Link href="/kalkulator">
                       <a>Lønnskalkulator</a>
                     </Link>
-                  </li>
-                  <li id="dont_show">
-                    <a
-                      href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                      rel="noopener"
-                    >
-                      Si hallo!
-                    </a>
                   </li>
                 </ul>
               </nav>
