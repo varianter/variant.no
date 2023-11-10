@@ -86,7 +86,7 @@ const Layout = ({
                 <a href="https://handbook.variant.no">Håndbok</a>
               </li>
               <li>
-                <a href="http://variant.blog" rel="noopener">
+                <a href="http://blog.variant.no" rel="noopener">
                   Blogg
                 </a>
               </li>

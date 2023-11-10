@@ -9,8 +9,6 @@ import Layout from 'src/layout';
 import List from 'src/rss/feed/List';
 import style from './index.module.css';
 import PageTitle from '@components/page-title';
-import sommerjobbImg from './images/section1Blob.png';
-import Arrow from '@components/arrow';
 import { Heading3 } from '@components/heading';
 import Tjenesteomrader from 'src/tjenesteomrader';
 import { EmployeeItem } from 'src/employees/types';
@@ -68,7 +66,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   }, [randomCases]);
 
   return (
-    <Layout crazy homepage>
+    <Layout homepage>
       <Head>
         <meta
           property="og:description"
@@ -114,10 +112,6 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             En variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
-      </section>
-
-      <section className={style.bergen}>
-        <JobLandingpage />
       </section>
 
       <section className={style.join}>
@@ -330,30 +324,4 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
   );
 };
 
-function JobLandingpage() {
-  return (
-    <div className={style.infoBlock}>
-      <Image
-        src={sommerjobbImg}
-        className={style.infoBlock__blob}
-        alt="Varianter under felles variantdag"
-        width={774}
-        height={631}
-        loading="lazy"
-        decoding="async"
-      />
-
-      <h2 className={style.infoBlock__title}>
-        <Link href="/nyutdannet">
-          <a className={style.infoBlock__link}>
-            <span className={style.infoBlock__text}>
-              Info om jobb for studenter
-            </span>
-            <Arrow className={style.infoBlock__arrow} color="standard__white" />
-          </a>
-        </Link>
-      </h2>
-    </div>
-  );
-}
 export default Home;

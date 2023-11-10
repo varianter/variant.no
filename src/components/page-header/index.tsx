@@ -32,7 +32,7 @@ export default function PageHeader({
     closeRef,
     isNotHamburgerMode,
   );
-  
+
   useEffect(() => {
     onVisibleChange?.(isMenuVisible);
   }, [isMenuVisible, onVisibleChange]);
@@ -109,8 +109,8 @@ export default function PageHeader({
               ref={navRef}
             >
               <li>
-                <Link href="/jobs">
-                  <a>Bli en variant</a>
+                <Link href="/tjenesteomrader">
+                  <a>Tjenester</a>
                 </Link>
               </li>
               <li>
@@ -119,7 +119,7 @@ export default function PageHeader({
                 </a>
               </li>
               <li>
-                <a href="http://variant.blog" rel="noopener">
+                <a href="http://blog.variant.no" rel="noopener">
                   Blogg
                 </a>
               </li>
@@ -132,14 +132,6 @@ export default function PageHeader({
                 <Link href="/kalkulator">
                   <a>Lønnskalkulator</a>
                 </Link>
-              </li>
-              <li id="dont_show">
-                <a
-                  href="https://twitter.com/intent/tweet?screen_name=variant_as"
-                  rel="noopener"
-                >
-                  Si hallo!
-                </a>
               </li>
             </ul>
           </nav>
