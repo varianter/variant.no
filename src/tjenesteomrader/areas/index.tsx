@@ -2,13 +2,14 @@ import style from 'src/tjenesteomrader/shared/bottomText.module.css';
 import Divider from '../images/divider/divider';
 import Footer from '../images/footer/footer';
 import DigitalTjeneste from './DigitalTjeneste';
-import Strategi from './strategi';
+import Strategi, { StrategyExtras } from './strategi';
 import Datadriv from './datadriv';
 import Kultur from './kultur';
 import {
   tjenesteomradePath,
   TjenesteomradeProps,
 } from '../utils/tjenesteomradeTypes';
+import { and } from 'src/utils/css';
 
 const Areas = (prop: TjenesteomradeProps) => {
   return (
@@ -22,6 +23,17 @@ const Areas = (prop: TjenesteomradeProps) => {
           className={style.bottomText__content}
           dangerouslySetInnerHTML={{ __html: prop.fileContents }}
         />
+
+        {prop.name == 'strategi' && (
+          <div
+            className={and(
+              style.bottomText__content,
+              style['bottomText__content--large'],
+            )}
+          >
+            <StrategyExtras />
+          </div>
+        )}
       </div>
       <Footer color={`#${prop.color}`} />
     </div>

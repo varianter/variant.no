@@ -40,6 +40,18 @@
   bottom: 2rem;
 }
 
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.downloadIcon {
+  display: inline-block;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
 .threeRows {
   display: flex;
   gap: 1rem;
