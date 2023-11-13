@@ -147,7 +147,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
 
         <p>
           Variant arrangerer meetups med faglig program og mingling med andre
-          strateger. Meld deg pä nettverket ved à sende mail til
+          strateger. Meld deg på nettverket ved å sende mail til
           strategiansvarlig{' '}
           <a href="mailto:mos@variant.no">Magnus Sather (mos@variant.no)</a>
         </p>
@@ -170,7 +170,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
           Mange virksomheter sliter med jobbe helhetlig og strategisk med
           verdiskaping og kulturbygging. Variant har dette som ekspertisefelt,
           og tilbyr Strategi-sprint som en lavterskel starthielp. Ta kontakt med
-          oss om dette heres interessant ut for deg og din virksomhet.
+          oss om dette høres interessant ut for deg og din virksomhet.
         </p>
         <div className={style.buttonRow}>
           <ButtonLink href="mailto:mos@variant.no">Send forespørsel</ButtonLink>
