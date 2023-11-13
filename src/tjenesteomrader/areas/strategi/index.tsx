@@ -149,7 +149,9 @@ export function StrategyExtras({}: StrategyExtrasProps) {
           Variant arrangerer meetups med faglig program og mingling med andre
           strateger. Meld deg på nettverket ved å sende mail til
           strategiansvarlig{' '}
-          <a href="mailto:mos@variant.no">Magnus Sather (mos@variant.no)</a>
+          <a href="mailto:mos@variant.no">
+            Magnus Olderø Sæther (mos@variant.no)
+          </a>
         </p>
 
         <p>
