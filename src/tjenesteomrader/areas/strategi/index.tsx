@@ -171,7 +171,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
         <p>
           Mange virksomheter sliter med jobbe helhetlig og strategisk med
           verdiskaping og kulturbygging. Variant har dette som ekspertisefelt,
-          og tilbyr Strategi-sprint som en lavterskel starthielp. Ta kontakt med
+          og tilbyr Strategi-sprint som en lavterskel starthjelp. Ta kontakt med
           oss om dette høres interessant ut for deg og din virksomhet.
         </p>
         <div className={style.buttonRow}>
