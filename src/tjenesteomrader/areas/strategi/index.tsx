@@ -143,7 +143,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
   return (
     <ThreeColumn>
       <div>
-        <h3 className="fancy">Strategi-nettverk</h3>
+        <h3 className="fancy">Strateginettverk</h3>
 
         <p>
           Variant arrangerer meetups med faglig program og mingling med andre
@@ -166,7 +166,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
       </div>
 
       <div>
-        <h3 className="fancy">Strategi-sprint</h3>
+        <h3 className="fancy">Strategisprint</h3>
 
         <p>
           Mange virksomheter sliter med jobbe helhetlig og strategisk med
@@ -180,7 +180,7 @@ export function StrategyExtras({}: StrategyExtrasProps) {
       </div>
 
       <div>
-        <h3 className="fancy">Design-ressurser</h3>
+        <h3 className="fancy">Designressurser</h3>
 
         <p>
           I strategisk arbeid er det få verktøy som kobler strategiske
