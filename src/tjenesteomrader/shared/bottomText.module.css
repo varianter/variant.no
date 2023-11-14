@@ -10,6 +10,11 @@
   gap: 3rem;
 }
 
+.bottomText__content--large {
+  padding-inline: 6rem;
+  margin: 7rem 0;
+}
+
 .bottomText__content :global(.bigText) p {
   font-size: 1.875rem;
 }
