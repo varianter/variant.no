@@ -143,7 +143,9 @@ export function StrategyExtras({}: StrategyExtrasProps) {
   return (
     <ThreeColumn>
       <div>
-        <h3 className="fancy">Strateginettverk</h3>
+        <h3 className="fancy" id="strateginettverk">
+          Strateginettverk
+        </h3>
 
         <p>
           Variant arrangerer meetups med faglig program og mingling med andre
