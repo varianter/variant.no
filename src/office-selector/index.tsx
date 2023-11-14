@@ -2,7 +2,7 @@ import Link from 'next/link';
 import style from './office.module.css';
 
 export const offices = ['trondheim', 'oslo', 'bergen'] as const;
-export type Office = typeof offices[number];
+export type Office = (typeof offices)[number];
 
 export function stringToDepartment(dep?: string): Office | undefined {
   // Check if we have valid office, if not we can just return undefined.
@@ -25,7 +25,7 @@ export function FilterLink({
   ) : (
     <li>
       <Link href={link} scroll={false}>
-        <a>{linkName}</a>
+        {linkName}
       </Link>
     </li>
   );

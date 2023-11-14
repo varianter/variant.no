@@ -64,14 +64,13 @@ export function ButtonNextLink({
   ...props
 }: ButtonProps & LinkType & Pick<AType, 'aria-label'>) {
   return (
-    <Link {...props}>
-      <a
-        style={colorPairToCssCustomProps(colorPair, colorVariation)}
-        className={and(style.buttonLink, className)}
-        aria-label={props['aria-label']}
-      >
-        {children}
-      </a>
+    <Link
+      {...props}
+      style={colorPairToCssCustomProps(colorPair, colorVariation)}
+      className={and(style.buttonLink, className)}
+      aria-label={props['aria-label']}
+    >
+      {children}
     </Link>
   );
 }

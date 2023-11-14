@@ -30,10 +30,8 @@ const Header = (props: { white: boolean }) => {
       >
         <header className={style.header}>
           <div className={style.header__logo}>
-            <Link href="/">
-              <a aria-label="Variant startside">
-                <img src={require('./whiteVariant.svg')} alt="Variant" />
-              </a>
+            <Link href="/" aria-label="Variant startside">
+              <img src={require('./whiteVariant.svg')} alt="Variant" />
             </Link>
           </div>
 
@@ -98,9 +96,7 @@ const Header = (props: { white: boolean }) => {
                   ref={navRef}
                 >
                   <li>
-                    <Link href="/tjenesteomrader">
-                      <a>Tjenester</a>
-                    </Link>
+                    <Link href="/tjenesteomrader">Tjenester</Link>
                   </li>
                   <li>
                     <a href="http://handbook.variant.no" rel="noopener">
@@ -113,14 +109,10 @@ const Header = (props: { white: boolean }) => {
                     </a>
                   </li>
                   <li>
-                    <Link href="/ansatte">
-                      <a>Alle varianter</a>
-                    </Link>
+                    <Link href="/ansatte">Alle varianter</Link>
                   </li>
                   <li>
-                    <Link href="/kalkulator">
-                      <a>Lønnskalkulator</a>
-                    </Link>
+                    <Link href="/kalkulator">Lønnskalkulator</Link>
                   </li>
                 </ul>
               </nav>
@@ -197,9 +189,7 @@ const Header = (props: { white: boolean }) => {
                   ref={navRef}
                 >
                   <li>
-                    <Link href="/tjenesteomrader">
-                      <a>Tjenester</a>
-                    </Link>
+                    <Link href="/tjenesteomrader">Tjenester</Link>
                   </li>
                   <li>
                     <a href="http://handbook.variant.no" rel="noopener">
@@ -212,14 +202,10 @@ const Header = (props: { white: boolean }) => {
                     </a>
                   </li>
                   <li>
-                    <Link href="/ansatte">
-                      <a>Alle varianter</a>
-                    </Link>
+                    <Link href="/ansatte">Alle varianter</Link>
                   </li>
                   <li>
-                    <Link href="/kalkulator">
-                      <a>Lønnskalkulator</a>
-                    </Link>
+                    <Link href="/kalkulator">Lønnskalkulator</Link>
                   </li>
                 </ul>
               </nav>

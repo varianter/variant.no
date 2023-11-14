@@ -283,8 +283,8 @@ function Community() {
               være behov for det. Dette kan for eksempel dekke mat eller andre
               utgifter en community vil møte på. Vi i Variant går også aktivt
               inn som samarbeidspartnere for å støtte opp om{' '}
-              <Link href={'/mangfold'}>
-                <a title="Variant - Mangfold">mangfold</a>
+              <Link href={'/mangfold'} title="Variant - Mangfold">
+                mangfold
               </Link>{' '}
               i tech-bransjen.
             </p>

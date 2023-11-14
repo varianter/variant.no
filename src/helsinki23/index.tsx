@@ -29,10 +29,8 @@ const Helsinki23: NextPage = () => {
           <Image src={arrowDown} height={24} width={24} alt="pil ned" />
         </a>
         <Link href="/helsinki23/praktisk">
-          <a>
-            <span>Ta meg til siden med alt jeg lurer på</span>
-            <Image src={arrowRight} height={24} width={24} alt="pil høyre" />
-          </a>
+          <span>Ta meg til siden med alt jeg lurer på</span>
+          <Image src={arrowRight} height={24} width={24} alt="pil høyre" />
         </Link>
       </div>
       <section id="Description">
@@ -91,15 +89,13 @@ const Helsinki23: NextPage = () => {
             <li>
               <time>12:00</time>{' '}
               <Link href={'/helsinki23/tips'}>
-                <a>
-                  Valgfrie aktiviteter
-                  <Image
-                    src={arrowRightCurved}
-                    width={45}
-                    height={46}
-                    alt="pil høyre"
-                  />
-                </a>
+                Valgfrie aktiviteter
+                <Image
+                  src={arrowRightCurved}
+                  width={45}
+                  height={46}
+                  alt="pil høyre"
+                />
               </Link>
             </li>
             <li>

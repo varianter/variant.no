@@ -18,13 +18,16 @@ module.exports = withBundleAnalyzer(
   withImages({
     images: {
       disableStaticImages: true,
-      domains: [
-        'variantno.blob.core.windows.net',
-        'chewiesald2ijhpvmb34c.blob.core.windows.net',
-        'podcast.variant.no', // Need this to get the images for the RSS feed
-        'images.transistor.fm', // this
-        'img.youtube.com', // this
-        'cdn-images-1.medium.com', // aaaaand this
+      remotePatterns: [
+        { protocol: 'https', hostname: 'variantno.blob.core.windows.net' },
+        {
+          protocol: 'https',
+          hostname: 'chewiesald2ijhpvmb34c.blob.core.windows.net',
+        },
+        { protocol: 'https', hostname: 'podcast.variant.no' }, // Need this to get the images for the RSS feed
+        { protocol: 'https', hostname: 'images.transistor.fm' }, // this
+        { protocol: 'https', hostname: 'img.youtube.com' }, // this
+        { protocol: 'https', hostname: 'cdn-images-1.medium.com' }, // aaaaand this
       ],
       formats: ['image/avif', 'image/webp'],
     },
