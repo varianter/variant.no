@@ -7,6 +7,7 @@ import WhyVariant from './sections/hvorforAkkurattVariant';
 import LandingPage from './sections/forside';
 import omJobbenStyle from './sections/hvemSokerVi.module.css';
 import SummerstudentsQuotes from './sections/hvaSierSommerstudentene';
+import qr2023 from './img/qr2023.png';
 
 const Content = () => {
   const norwayMap = require('./img/norway summer job.svg');
@@ -14,6 +15,13 @@ const Content = () => {
   return (
     <>
       <div className={style.scrollContainer} id="scrollContainer">
+        <img
+          src={qr2023}
+          height={240}
+          width={240}
+          alt="QR-kode til denne siden"
+          className={style.tempQr}
+        />
         <LandingPage
           applyType={ApplyType.SUMMER}
           className={style.sectionLightBeige}
