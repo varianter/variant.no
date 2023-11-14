@@ -42,16 +42,15 @@ export default function PageHeader({
   return (
     <header className={style.header}>
       <LogoWrapper className={style.header__logo}>
-        <Link href="/">
-          <a
-            aria-label="Variant startside"
-            aria-current={homepage ? 'page' : undefined}
-          >
-            <img
-              src={require(whiteMode ? './whiteVariant.svg' : './variant.svg')}
-              alt="Variant"
-            />
-          </a>
+        <Link
+          href="/"
+          aria-label="Variant startside"
+          aria-current={homepage ? 'page' : undefined}
+        >
+          <img
+            src={require(whiteMode ? './whiteVariant.svg' : './variant.svg')}
+            alt="Variant"
+          />
         </Link>
       </LogoWrapper>
 
@@ -109,9 +108,7 @@ export default function PageHeader({
               ref={navRef}
             >
               <li>
-                <Link href="/tjenesteomrader">
-                  <a>Tjenester</a>
-                </Link>
+                <Link href="/tjenesteomrader">Tjenester</Link>
               </li>
               <li>
                 <a href="http://handbook.variant.no" rel="noopener">
@@ -124,14 +121,10 @@ export default function PageHeader({
                 </a>
               </li>
               <li>
-                <Link href="/ansatte">
-                  <a>Alle varianter</a>
-                </Link>
+                <Link href="/ansatte">Alle varianter</Link>
               </li>
               <li>
-                <Link href="/kalkulator">
-                  <a>Lønnskalkulator</a>
-                </Link>
+                <Link href="/kalkulator">Lønnskalkulator</Link>
               </li>
             </ul>
           </nav>

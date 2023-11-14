@@ -51,7 +51,7 @@ export default function AudioPlayer({
   const [trackProgress, setTrackProgress] = useState(0);
 
   useEffect(() => {
-    let intervalTimer: NodeJS.Timer | null = null;
+    let intervalTimer: NodeJS.Timeout | null = null;
     if (currentState === 'PLAYING') {
       audioElement.current?.play();
 

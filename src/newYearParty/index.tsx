@@ -38,7 +38,7 @@ const NewYearParty = () => {
         <div className={style.newyearParty__invitation__table}>
           <div className={style.newyearParty__invitation_link}>
             <Link href="https://variant.hoopla.no/sales/event/2685940696?promo=variantfest">
-              <a>Hold av billett</a>
+              Hold av billett
             </Link>
           </div>
         </div>

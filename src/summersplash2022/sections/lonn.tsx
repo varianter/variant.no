@@ -23,9 +23,7 @@ const Payment = () => {
           <p>
             I kalkulatoren til høyre kan du se hva du vil tjene som nyutdannet.
             Du kan også ta en titt på
-            <Link href="/kalkulator">
-              <a> lønnskalkulatoren </a>
-            </Link>
+            <Link href="/kalkulator">lønnskalkulatoren</Link>
             om du vil vite mer om lønn og andre goder i Variant.
           </p>
         </div>

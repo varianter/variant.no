@@ -1,7 +1,7 @@
 import DecorativeBoxes from '@components/decorative-boxes';
 import Head from 'next/head';
 import { decorativeBoxColorPairs } from './utils/decorative-box-colors';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useMemo } from 'react';
 import { ButtonNextLink } from 'src/components/button';
@@ -33,8 +33,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
-          <Link href={caseItem.href}>
-            <a title="Prosjektinfo">Les mer</a>
+          <Link href={caseItem.href} title="Prosjektinfo">
+            Les mer
           </Link>
         </div>
         <DecorativeBoxes
@@ -133,16 +133,16 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             </p>
             <p>
               Der har vi en haug av{' '}
-              <Link href="/ansatte">
-                <a title="Ansattoversikt">flotte kolleger</a>
+              <Link href="/ansatte" title="Ansattoversikt">
+                flotte kolleger
               </Link>
               ,{' '}
               <a href="https://handbook.variant.no" title="Variant Håndbok">
                 gode (og selvfølgelig åpne) vilkår
               </a>{' '}
               og{' '}
-              <Link href="/kalkulator">
-                <a title="Lønnskalkulator">god lønn</a>
+              <Link href="/kalkulator" title="Lønnskalkulator">
+                god lønn
               </Link>
               . Ta gjerne en titt i{' '}
               <a href="https://handbook.variant.no" title="Variant Håndbok">
@@ -203,8 +203,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
               og nytte for absolutt alle. Vi i Variant samarbeider derfor med de
               som aktivt jobber for dette.
             </p>
-            <Link href={'/mangfold'}>
-              <a title="Variant - Mangfold">Vårt engasjement i mangfold</a>
+            <Link href={'/mangfold'} title="Variant - Mangfold">
+              Vårt engasjement i mangfold
             </Link>
           </div>
           <DecorativeBoxes
@@ -243,8 +243,8 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
               . Derfor bistår vi communities i nær- og fjernmiljøet med blant
               annet lokaler, utstyr, organisering og faglig sparring.
             </p>
-            <Link href={'/community'}>
-              <a title="Variant - Læreglede">Hva vi kan bistå med</a>
+            <Link href={'/community'} title="Variant - Læreglede">
+              Hva vi kan bistå med
             </Link>
           </div>
           <DecorativeBoxes
@@ -290,9 +290,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
         </div>
 
         <div className={style.feed__readMore}>
-          <Link href="/feed">
-            <a>Se mer innhold</a>
-          </Link>
+          <Link href="/feed">Se mer innhold</Link>
         </div>
       </section>
 

@@ -78,9 +78,7 @@ const Layout = ({
             <h2>Utforsk</h2>
             <ul>
               <li>
-                <Link href="/jobs">
-                  <a>Ledige stillinger</a>
-                </Link>
+                <Link href="/jobs">Ledige stillinger</Link>
               </li>
               <li>
                 <a href="https://handbook.variant.no">Håndbok</a>
@@ -101,9 +99,7 @@ const Layout = ({
                 </a>
               </li>
               <li>
-                <Link href="/kalkulator">
-                  <a>Lønnskalkulator</a>
-                </Link>
+                <Link href="/kalkulator">Lønnskalkulator</Link>
               </li>
               <li>
                 <a href="https://styleguide.variant.no">Styleguide</a>

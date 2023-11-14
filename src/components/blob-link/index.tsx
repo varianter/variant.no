@@ -23,18 +23,16 @@ export default function BlobLink({
   background = colors.colorPairs.secondary1.default.bg,
 }: BlobLinkProps) {
   return (
-    <Link href={href}>
-      <a className={and(style.blobLink, className)}>
-        <BaseBlob
-          width={size}
-          height={size}
-          randomness={2}
-          extraPoints={6}
-          color={background}
-        />
-        <span>{text}</span>
-        <Arrow className={style.blobLinkArrow} />
-      </a>
+    <Link href={href} className={and(style.blobLink, className)}>
+      <BaseBlob
+        width={size}
+        height={size}
+        randomness={2}
+        extraPoints={6}
+        color={background}
+      />
+      <span>{text}</span>
+      <Arrow className={style.blobLinkArrow} />
     </Link>
   );
 }

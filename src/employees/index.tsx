@@ -3,7 +3,7 @@ import { BaseBlob } from '@variant/components/lib/blob';
 import { colors } from '@variant/profile/lib';
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getStaticProps } from 'pages/ansatte';
 import React, {
@@ -153,10 +153,7 @@ export const EmployeeTile = ({
       <h2 className={and(style.employee__name, 'fancy')}>{name}</h2>
       <div className={style.employee__office}>{officeName}</div>
       {telephone ? (
-        <a
-          href={`tel:${telephone}`}
-          className={style.employee__phone}
-        >
+        <a href={`tel:${telephone}`} className={style.employee__phone}>
           📞 {formatTelephone(telephone)}
         </a>
       ) : (
@@ -174,18 +171,16 @@ function JobsLink({ text }: { text: string }) {
       className={style.employee__jobsLinkContainer}
       style={{ '--randomOffset': getRandomOffset() } as CSSProperties}
     >
-      <Link href="/jobs">
-        <a className={style.employee__jobsLink}>
-          <BaseBlob
-            width={300}
-            height={300}
-            randomness={2}
-            extraPoints={6}
-            color={colors.colorPairs.secondary1.default.bg}
-          />
-          <p>{text}</p>
-          <Arrow className={style.employee__jobsLinkArrow} />
-        </a>
+      <Link href="/jobs" className={style.employee__jobsLink}>
+        <BaseBlob
+          width={300}
+          height={300}
+          randomness={2}
+          extraPoints={6}
+          color={colors.colorPairs.secondary1.default.bg}
+        />
+        <p>{text}</p>
+        <Arrow className={style.employee__jobsLinkArrow} />
       </Link>
     </div>
   );

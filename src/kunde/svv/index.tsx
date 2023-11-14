@@ -139,10 +139,8 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                     <p className={style.textCenter}>{interview.variantTitle}</p>
                     <img src={interview.image} alt={interview.imageAltText} />
                     <p>{interview.quote}</p>
-                    <Link href={interview.name}>
-                      <a className={style.buttonLink}>
-                        <strong>Les mer</strong>
-                      </a>
+                    <Link href={interview.name} className={style.buttonLink}>
+                      <strong>Les mer</strong>
                     </Link>
                   </div>
                 );
