@@ -158,7 +158,8 @@ export function StrategyExtras({}: StrategyExtrasProps) {
 
         <p>
           <strong>
-            Neste meetup: 12. januar kl. 18. Hvor: Varianthuset i Trondheim
+            Neste meetup: 12. januar 2024, kl. 18. Hvor: Varianthuset i
+            Trondheim
           </strong>
         </p>
 
