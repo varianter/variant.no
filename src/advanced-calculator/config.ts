@@ -1,5 +1,3 @@
-export const ONE_G = 111477;
-
 export type HistoricBonus = [year: number, bonus: number];
 
 export const historicBonus: HistoricBonus[] = [

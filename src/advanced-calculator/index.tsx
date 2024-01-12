@@ -1,8 +1,8 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
-import { ONE_G, SalaryCalculatorProps } from './config';
+import { SalaryCalculatorProps } from './config';
 import Counter from './Counter';
 import BonusGraph from './Graphs/BonusGraph';
 import SalaryGraph from './Graphs/SalaryGraph';
@@ -43,14 +43,25 @@ const DEGREE: { [key: string]: string } = {
 export default function Calculator(props: SalaryCalculatorProps) {
   const [selectedYear, setSelectedYear] = useState(props.year);
   const [selectedValidYear, setSelectedValidYear] = useState(props.year);
+  const [grunnbelop, setGrunnbelop] = useState(118620);
   const [degree, setDegree] = useState(props.degree);
   const thisYear = new Date().getFullYear();
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
-
+  
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
 
   const [mobileVisibleInternal, setMobileVisible] = useState(true);
+
+  useEffect(() => {
+    const getGrunnbelop = async () => {
+      const res = await fetch('https://g.nav.no/api/v1/grunnbeloep');
+      const json = await res.json();
+      setGrunnbelop(json['grunnbeloep'])
+    }
+    getGrunnbelop();
+  },[]);
+
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
   const yearsOfExperience = calculateYearsSince(
@@ -454,7 +465,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
             <ul>
               <li>
                 Full lønn under permisjon. NAV dekker opp til{' '}
-                <span>{formatCurrencyFromNumber(ONE_G * 6)}</span> (6G). Variant
+                <span>{formatCurrencyFromNumber(grunnbelop * 6)}</span> (6G). Variant
                 tar seg av resten.
               </li>
               <li>
