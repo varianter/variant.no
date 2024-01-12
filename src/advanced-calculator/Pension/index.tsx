@@ -1,26 +1,29 @@
-import { ONE_G } from '../config';
-
 import PensionGraph from '../Graphs/PensionGraph';
 import RangeSlider from '../Components/RangeSlider';
 import { useState } from 'react';
 
 import style from '../calculator.module.css';
-import {Heading3} from "@components/heading";
+import { Heading3 } from '@components/heading';
 
-const SEVEN_POINT_ONE_G = ONE_G * 7.1;
-// const TWELVE_G = ONE_G * 12;
-
-const differenceWhenGreaterThan7G = (salary: number) => {
-  const difference = Math.floor(salary - SEVEN_POINT_ONE_G);
-  return Math.sign(difference) > 0 ? difference : 0;
-};
-
-export default function Pension({ yearlySalary }: { yearlySalary: number }) {
+export default function Pension({
+  yearlySalary,
+  oneG,
+}: {
+  yearlySalary: number;
+  oneG: number;
+}) {
   const [compareSalary, setCompareSalary] = useState(500000);
   const [comparePensionPercentage, setComparePensionChange] = useState({
     below7G: 5,
     above7G: 5,
   });
+
+  const sevenG = oneG * 7.1;
+
+  function differenceWhenGreaterThan7G(salary: number) {
+    const difference = Math.floor(salary - sevenG);
+    return Math.sign(difference) > 0 ? difference : 0;
+  }
 
   function handleOnCompareSalaryChange(value: number) {
     setCompareSalary(value);
@@ -72,9 +75,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
           </div>
           <div className={style['form-wrapper']}>
             <fieldset className={style['form__fieldset']}>
-              <legend>
-                Årslønn hos nåverende arbeidsgiver
-              </legend>
+              <legend>Årslønn hos nåverende arbeidsgiver</legend>
               <RangeSlider
                 min={500000}
                 max={1200000}
@@ -87,9 +88,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
             </fieldset>
 
             <fieldset className={style['form__fieldset']}>
-              <legend>
-                Pensjon, i prosent (mellom 0 til 7.1G)
-              </legend>
+              <legend>Pensjon, i prosent (mellom 0 til 7.1G)</legend>
               <RangeSlider
                 min={2}
                 max={7}
@@ -102,9 +101,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
             </fieldset>
 
             <fieldset className={style['form__fieldset']}>
-              <legend>
-                Pensjon, i prosent (over 7.1G)
-              </legend>
+              <legend>Pensjon, i prosent (over 7.1G)</legend>
               <RangeSlider
                 min={2}
                 max={25}
@@ -113,7 +110,7 @@ export default function Pension({ yearlySalary }: { yearlySalary: number }) {
                 id={'comparePensionAbove7G'}
                 name="Nåverende pensjon"
                 onChange={handleOnCompareAbove7GPensionChange}
-                disabled={compareSalary < SEVEN_POINT_ONE_G}
+                disabled={compareSalary < sevenG}
               />
             </fieldset>
 

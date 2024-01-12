@@ -1,28 +1,29 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ReactNode, useState } from 'react';
 import InView from './Components/InView';
 import RangeSlider from './Components/RangeSlider';
 import { TextSplitter } from './Components/TextSplitter';
-import { SalaryCalculatorProps } from './config';
 import Counter from './Counter';
 import BonusGraph from './Graphs/BonusGraph';
 import SalaryGraph from './Graphs/SalaryGraph';
+import Pension from './Pension';
+import { SalaryCalculatorProps } from './config';
 import {
-  daysUntilSalaryRaise,
   calculateYearsSince,
+  daysUntilSalaryRaise,
   gradDateOfTheYear,
 } from './helpers/daysUntilNewSalary';
 import { getAverageBonus, getHistoricBonus } from './helpers/getHistoricBonus';
 import getPayscale from './helpers/getPayscale';
 import { numberOfWorkingDaysInChristmas } from './helpers/paidHolidaysOff';
 import { formatCurrencyFromNumber, getMaxYear } from './helpers/utils';
-import Pension from './Pension';
-import { motion, AnimatePresence } from 'framer-motion';
 
-import style from './calculator.module.css';
 import { Button } from '@components/button';
+import { Heading4 } from '@components/heading';
 import { and } from 'src/utils/css';
 import { useMediaQuery } from 'src/utils/use-media-query';
-import { Heading4 } from '@components/heading';
+import style from './calculator.module.css';
+import { useOneG } from './use-g';
 
 const CalculatorSection = ({ children }: { children: ReactNode }) => {
   return <div className={style['calculator__section']}>{children}</div>;
@@ -43,24 +44,16 @@ const DEGREE: { [key: string]: string } = {
 export default function Calculator(props: SalaryCalculatorProps) {
   const [selectedYear, setSelectedYear] = useState(props.year);
   const [selectedValidYear, setSelectedValidYear] = useState(props.year);
-  const [grunnbelop, setGrunnbelop] = useState(118620);
   const [degree, setDegree] = useState(props.degree);
   const thisYear = new Date().getFullYear();
   const year = selectedValidYear + (degree === 'bachelor' ? 1 : 0);
   const payscale = getPayscale(year);
-  
+
   const isOverrideVisibleControls = useMediaQuery(`(min-width: 900px)`) ?? true;
 
   const [mobileVisibleInternal, setMobileVisible] = useState(true);
 
-  useEffect(() => {
-    const getGrunnbelop = async () => {
-      const res = await fetch('https://g.nav.no/api/v1/grunnbeloep');
-      const json = await res.json();
-      setGrunnbelop(json['grunnbeloep'])
-    }
-    getGrunnbelop();
-  },[]);
+  const oneG = useOneG();
 
   const mobileVisible = isOverrideVisibleControls || mobileVisibleInternal;
 
@@ -112,173 +105,173 @@ export default function Calculator(props: SalaryCalculatorProps) {
           )}
         >
           <div className={style['calculator-content-wrapper']}>
-          {mobileVisible && (
-            <motion.div
-              id="controls-content"
-              role="region"
-              className={style['calculator-content']}
-              initial="collapsed"
-              animate="open"
-              exit="collapsed"
-              variants={{
-                open: { opacity: 1, height: 'auto' },
-                collapsed: { opacity: 0, height: 0 },
-              }}
-            >
-              <div className={style['form-row']}>
-                <div className={style['form-label']}>
-                  Hva slags utdanning har du?
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    gap: '1rem',
-                    alignContent: 'center',
-                  }}
-                >
-                  <div className={style['radio-button-wrapper']}>
-                    <input
-                      aria-labelledby="bachelorLabel"
-                      className={style.inputRadio}
-                      type="radio"
-                      id="Bachelor"
-                      name="education"
-                      value="bachelor"
-                      checked={degree === 'bachelor'}
-                      onChange={onDegreeChange}
-                    />
-                    <label id="bachelorLabel" htmlFor="Bachelor">
-                      Bachelor
-                    </label>
-                  </div>
-
-                  <div className={style['radio-button-wrapper']}>
-                    <input
-                      aria-labelledby="masterLabel"
-                      className={style.inputRadio}
-                      type="radio"
-                      id="Master"
-                      name="education"
-                      value="master"
-                      checked={degree === 'master'}
-                      onChange={onDegreeChange}
-                    />
-                    <label id="masterLabel" htmlFor="Master">
-                      Master
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <label htmlFor="experience" className={style['form-row']}>
-                <div className={style['form-label']}>
-                  Når ble eller blir du ferdig med studiene?
-                </div>
-
-                <RangeSlider
-                  name="År"
-                  id="experience"
-                  min={MIN_YEAR}
-                  max={MAX_YEAR}
-                  value={selectedYear}
-                  onChange={onSelectedYearChange}
-                />
-                <span
-                  className={style['form-error']}
-                  style={
-                    isValidYear(selectedYear)
-                      ? { opacity: 0, height: 0 }
-                      : { opacity: 1, height: '1rem' }
-                  }
-                >
-                  Må være mellom {MIN_YEAR} og {MAX_YEAR}
-                </span>
-              </label>
-
-              <div className={style['calculator-controls__summary']}>
-                <div className={style['calculator-controls__row']}>
-                  <div className={style['calculator-controls__label']}>
-                    Vi baserer lønn på erfaring
-                  </div>
-                  <div className={style['calculator-controls__value']}>
-                    {totalExperience}
-                  </div>
-                </div>
-
-                <div className={style['calculator-controls__row']}>
-                  <div className={style['calculator-controls__label']}>
-                    Det vil gi en årslønn på
-                  </div>
-                  <div className={style['calculator-controls__value']}>
-                    <Counter
-                      num={payscale.current}
-                      formatter={formatCurrencyFromNumber}
-                    />
-                  </div>
-                </div>
-
-                <div className={style['calculator-controls__row']}>
-                  <div className={style['calculator-controls__label']}>
-                    Årslønn + gjennomsnittlig bonus
-                  </div>
-                  <div className={style['calculator-controls__value']}>
-                    <Counter
-                      num={payscale.current + getAverageBonus()}
-                      formatter={formatCurrencyFromNumber}
-                    />
-                  </div>
-                </div>
-
-                <div className={style['calculator-controls__row']}>
-                  <div className={style['calculator-controls__label']}>
-                    Årlig pensjon, 7%
-                  </div>
-                  <div className={style['calculator-controls__value']}>
-                    <Counter
-                      num={payscale.current * 0.07}
-                      formatter={formatCurrencyFromNumber}
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-          <div className={style['calculator-phoneSummary']}>
-            {!mobileVisible && (
-              <motion.p
+            {mobileVisible && (
+              <motion.div
+                id="controls-content"
+                role="region"
+                className={style['calculator-content']}
                 initial="collapsed"
                 animate="open"
                 exit="collapsed"
                 variants={{
-                  open: { opacity: 1, y: 0 },
-                  collapsed: { opacity: 0, y: 20 },
+                  open: { opacity: 1, height: 'auto' },
+                  collapsed: { opacity: 0, height: 0 },
                 }}
               >
-                {totalExperience} gir årslønn og snitt bonus på totalt{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current + getAverageBonus()}
-                    formatter={formatCurrencyFromNumber}
-                  />{' '}
-                  kr
-                </strong>{' '}
-                +{' '}
-                <strong>
-                  <Counter
-                    num={payscale.current * 0.07}
-                    formatter={formatCurrencyFromNumber}
+                <div className={style['form-row']}>
+                  <div className={style['form-label']}>
+                    Hva slags utdanning har du?
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: '1rem',
+                      alignContent: 'center',
+                    }}
+                  >
+                    <div className={style['radio-button-wrapper']}>
+                      <input
+                        aria-labelledby="bachelorLabel"
+                        className={style.inputRadio}
+                        type="radio"
+                        id="Bachelor"
+                        name="education"
+                        value="bachelor"
+                        checked={degree === 'bachelor'}
+                        onChange={onDegreeChange}
+                      />
+                      <label id="bachelorLabel" htmlFor="Bachelor">
+                        Bachelor
+                      </label>
+                    </div>
+
+                    <div className={style['radio-button-wrapper']}>
+                      <input
+                        aria-labelledby="masterLabel"
+                        className={style.inputRadio}
+                        type="radio"
+                        id="Master"
+                        name="education"
+                        value="master"
+                        checked={degree === 'master'}
+                        onChange={onDegreeChange}
+                      />
+                      <label id="masterLabel" htmlFor="Master">
+                        Master
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <label htmlFor="experience" className={style['form-row']}>
+                  <div className={style['form-label']}>
+                    Når ble eller blir du ferdig med studiene?
+                  </div>
+
+                  <RangeSlider
+                    name="År"
+                    id="experience"
+                    min={MIN_YEAR}
+                    max={MAX_YEAR}
+                    value={selectedYear}
+                    onChange={onSelectedYearChange}
                   />
-                </strong>{' '}
-                i årlig pensjon.
-              </motion.p>
+                  <span
+                    className={style['form-error']}
+                    style={
+                      isValidYear(selectedYear)
+                        ? { opacity: 0, height: 0 }
+                        : { opacity: 1, height: '1rem' }
+                    }
+                  >
+                    Må være mellom {MIN_YEAR} og {MAX_YEAR}
+                  </span>
+                </label>
+
+                <div className={style['calculator-controls__summary']}>
+                  <div className={style['calculator-controls__row']}>
+                    <div className={style['calculator-controls__label']}>
+                      Vi baserer lønn på erfaring
+                    </div>
+                    <div className={style['calculator-controls__value']}>
+                      {totalExperience}
+                    </div>
+                  </div>
+
+                  <div className={style['calculator-controls__row']}>
+                    <div className={style['calculator-controls__label']}>
+                      Det vil gi en årslønn på
+                    </div>
+                    <div className={style['calculator-controls__value']}>
+                      <Counter
+                        num={payscale.current}
+                        formatter={formatCurrencyFromNumber}
+                      />
+                    </div>
+                  </div>
+
+                  <div className={style['calculator-controls__row']}>
+                    <div className={style['calculator-controls__label']}>
+                      Årslønn + gjennomsnittlig bonus
+                    </div>
+                    <div className={style['calculator-controls__value']}>
+                      <Counter
+                        num={payscale.current + getAverageBonus()}
+                        formatter={formatCurrencyFromNumber}
+                      />
+                    </div>
+                  </div>
+
+                  <div className={style['calculator-controls__row']}>
+                    <div className={style['calculator-controls__label']}>
+                      Årlig pensjon, 7%
+                    </div>
+                    <div className={style['calculator-controls__value']}>
+                      <Counter
+                        num={payscale.current * 0.07}
+                        formatter={formatCurrencyFromNumber}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             )}
-            <Button
-              onClick={() => setMobileVisible((b) => !b)}
-              aria-controls="controls-content"
-              aria-expanded={mobileVisible}
-            >
-              {mobileVisible ? 'Skjul' : 'Endre'}
-            </Button>
-          </div>
+            <div className={style['calculator-phoneSummary']}>
+              {!mobileVisible && (
+                <motion.p
+                  initial="collapsed"
+                  animate="open"
+                  exit="collapsed"
+                  variants={{
+                    open: { opacity: 1, y: 0 },
+                    collapsed: { opacity: 0, y: 20 },
+                  }}
+                >
+                  {totalExperience} gir årslønn og snitt bonus på totalt{' '}
+                  <strong>
+                    <Counter
+                      num={payscale.current + getAverageBonus()}
+                      formatter={formatCurrencyFromNumber}
+                    />{' '}
+                    kr
+                  </strong>{' '}
+                  +{' '}
+                  <strong>
+                    <Counter
+                      num={payscale.current * 0.07}
+                      formatter={formatCurrencyFromNumber}
+                    />
+                  </strong>{' '}
+                  i årlig pensjon.
+                </motion.p>
+              )}
+              <Button
+                onClick={() => setMobileVisible((b) => !b)}
+                aria-controls="controls-content"
+                aria-expanded={mobileVisible}
+              >
+                {mobileVisible ? 'Skjul' : 'Endre'}
+              </Button>
+            </div>
           </div>
         </div>
       </AnimatePresence>
@@ -325,7 +318,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
               </p>
             </div>
 
-            <Pension yearlySalary={payscale.current} />
+            <Pension yearlySalary={payscale.current} oneG={oneG} />
           </InView>
         </CalculatorMain>
       </CalculatorSection>
@@ -465,7 +458,7 @@ export default function Calculator(props: SalaryCalculatorProps) {
             <ul>
               <li>
                 Full lønn under permisjon. NAV dekker opp til{' '}
-                <span>{formatCurrencyFromNumber(grunnbelop * 6)}</span> (6G). Variant
+                <span>{formatCurrencyFromNumber(oneG * 6)}</span> (6G). Variant
                 tar seg av resten.
               </li>
               <li>
