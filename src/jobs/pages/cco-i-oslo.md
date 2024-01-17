@@ -26,7 +26,7 @@ Vi er et selskap med solid økonomi, men som alle andre opplever vi krevende mar
 
 ## Hvem ser vi etter?
 
-Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetanse innen minst ett av våre tjenesteområder; digital produkt- og tjenesteutvikling, datadriv, kultur eller strategi. Du har jobbet med salg tidligere, og gjerne i konsulentbransjen. Du må være en person som ser og evner å skape muligheter hos kunder og i markedet vi opererer i. Du kommer til å jobbe deler av tiden din selv ute hos kunde i fakturerbart oppdrag, og resten av tiden med å utvikle kundeporteføljen vår og salgskompetansen i selskapet.
+Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetanse innen digital produkt- og tjenesteutvikling som for eksempel prosjektleder, designer, utvikler eller rådgiver. Du har jobbet med salg tidligere, og gjerne i konsulentbransjen. Du må være en person som ser og evner å skape muligheter hos kunder og i markedet vi opererer i. Du kommer til å jobbe deler av tiden din selv ute hos kunde i fakturerbart oppdrag, og resten av tiden med å utvikle kundeporteføljen vår og salgskompetansen i selskapet.
 
 **_Som salgs- og forretningsutvikler i Variant får du ansvar for_**
 
