@@ -1,7 +1,7 @@
 ---
-title: Salgs- og forretningsutvikler i Oslo
-h1_title: Salgs- og forretningsutvikler i Oslo
-slug: salgsleder-i-oslo
+title: CCO - Chief commercial officer
+h1_title: CCO - Chief commercial officer
+slug: cco-i-oslo
 contact_emails: linn@variant.no, even@variant.no
 meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en salgsleder/forretningsutvikler som vil være med å videreutvikle et åpent, raust og læreglad konsulentselskap i Oslo!
@@ -16,15 +16,17 @@ _Vi ser etter en salgsleder, eller forretningsutvikler om du vil, som skal være
 
 ## Hva vil vi at du skal bidra til?
 
-Du vil jobbe tett med ledergruppen og salgsdirektør i konsernet og påvirke selskapets videre vekst. Du blir en del av et større salgsapparat, som også gjør at du vil samarbeide med alle Variant sine selskap i Norge og Sverige. Du vil få utvikle deg videre i salg, men også på andre aspekter med å lede et konsulentselskap som strategisk selskapsutvikling og personalledelse.
+Du vil bli en del av ledergruppen og også jobbe tett med salgsdirektør i Variant Norge for å påvirke selskapets videre vekst. Du blir en del av et større salgsapparat, som også gjør at du vil samarbeide med alle Variant sine selskap i Norge og Sverige. Du vil få utvikle deg videre i salg, men også på andre aspekter med å lede et konsulentselskap som strategisk selskapsutvikling og personalledelse.
 
-Variant Oslo er et selskap som har god vekst i antall ansatte, med en diversifisert kundeportefølje med store aktører innen offentlig og privat næringsliv. Et fellestrekk for alle våre kunder er at de ønsker å utgjøre en positiv forskjell i samfunnet. Noen få av oss jobber hos samme kunder, men en klar ambisjon fremover er at flere skal jobbe hos samme kunde for å få større påvirkningskraft. Vi ønsker å bygge enkelte kundeforhold til å bli mer strategiske partnerskap der vi utvikler hverandre. Vi må bli enda bedre på å ivareta eksisterende kunder for å kunne skape mer. En av Variants bærebjelker er vår rekrutteringsstrategi som innebærer at vi ansetter dyktige og læreglade studenter som skal ut i arbeidslivet, og det krever også at vi bygger tettere kundeforhold med utvalgte kunder som deler vår tro på viktigheten av å satse på nyutdannede. For å klare dette trenger vi mer kapasitet, og mer spisset kompetanse på salg enn det vi besitter per i dag.
+Variant Oslo er et selskap som har god vekst i antall ansatte, med en diversifisert kundeportefølje med store aktører innen offentlig og privat næringsliv. Et fellestrekk for alle våre kunder er at de ønsker å utgjøre en positiv forskjell i samfunnet. Noen få av oss jobber hos samme kunder, men en klar ambisjon fremover er at flere skal jobbe hos samme kunde for å få større påvirkningskraft. Vi ønsker å bygge enkelte kundeforhold til å bli mer strategiske partnerskap der vi utvikler hverandre. Vi må bli enda bedre på å ivareta eksisterende kunder for å kunne skape mer. For å klare dette trenger vi mer kapasitet, og mer spisset kompetanse på salg enn det vi besitter per i dag.
+
+Vi er et selskap med solid økonomi, men som alle andre opplever vi krevende markedsforhold. Det innebærer at vi nå har noen av våre kolleger permittert fra deres stillinger. Den personen vi søker å ansette nå skal være en del av løsningen, og bidra til videreutviklingen av Variant sammen med ledergruppen og alle andre varianter.
 
 <div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
 ## Hvem ser vi etter?
 
-Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetanse innen minst ett av våre tjenesteområder; digital produkt- og tjenesteutvikling, datadriv, kultur eller strategi. Du har jobbet med salg tidligere, og gjerne i konsulentbransjen. Du må være en person som ser og evner å skape muligheter hos kunder og i markedet vi opererer i. Du kommer til å jobbe deler av tiden din selv ute hos kunde, og resten av tiden med å utvikle kundeporteføljen vår.
+Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetanse innen digital produkt- og tjenesteutvikling som for eksempel prosjektleder, designer, utvikler eller rådgiver. Du har jobbet med salg tidligere, og gjerne i konsulentbransjen. Du må være en person som ser og evner å skape muligheter hos kunder og i markedet vi opererer i. Du kommer til å jobbe deler av tiden din selv ute hos kunde i fakturerbart oppdrag, og resten av tiden med å utvikle kundeporteføljen vår og salgskompetansen i selskapet.
 
 **_Som salgs- og forretningsutvikler i Variant får du ansvar for_**
 
@@ -32,6 +34,7 @@ Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetans
 - Salg av konsulenter til kunder
 - Bidra i tilbud- og anbudsskriving, jobbe fram avtaler og kontrakter: innhente informasjon, skrive, utforme og sørge at vi leverer gode tilbud som svarer på det kunden trenger og kommuniserer hva slags verdi vi kan levere
 - Ha ansvar for din egen portefølje; følge opp egne kunder, ha kundemøter, ta kontakt med nye kunder og gå aktivt ut for å lete etter små og store oppdrag
+- Sørge for kompetanseheving innen salg hos andre konsulenter
 
 **_Dette hadde også vært fint_**
 
@@ -44,9 +47,7 @@ Vi ser etter en dyktig salgsleder/forretningsutvikler som også har fagkompetans
 
 ## Hva får du hos oss?
 
-I Variant har vi to lønnsmodeller. Konsulentmodellen er en [åpen lønnskalkulator](https://www.variant.no/kalkulator) som er basert på Tekna sin lønnsstatistikk. Lederstillinger i Variant lønnes etter en egen lønnsmodell som ligger åpent tilgjengelig [her](https://handbook.variant.no/#Ledere).
-
-Det er mulighet for at denne stillingen kan bli en del av ledergruppen i selskapet. Dette finner vi ut av sammen med deg.
+I Variant har vi to lønnsmodeller. Konsulentmodellen er en [åpen lønnskalkulator](https://www.variant.no/kalkulator) som er basert på Tekna sin lønnsstatistikk. Denne stillingen vil bli en del av ledergruppen og lederstillinger i Variant lønnes etter en egen lønnsmodell som ligger åpent tilgjengelig [her](https://handbook.variant.no/#Ledere).
 
 **_Goder_**
 
@@ -69,6 +70,7 @@ Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsi
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
+- [Lønnsoppgjøret 2024](https://blog.variant.no/l%C3%B8nnsoppgj%C3%B8ret-2024-6afd7c92abfd)
 
 ## Kontakt
 
