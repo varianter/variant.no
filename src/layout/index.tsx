@@ -134,6 +134,16 @@ const Layout = ({
                 </a>
               </li>
               <li>
+                Linkedin på{' '}
+                <a
+                  href="https://www.linkedin.com/company/variant-as"
+                  aria-label="Linkedin variant-as"
+                  rel="noopener"
+                >
+                  variant-as
+                </a>
+              </li>
+              <li>
                 Se bilder på{' '}
                 <a
                   href="https://instagram.com/variant_as"
