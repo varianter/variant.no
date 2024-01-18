@@ -1,11 +1,11 @@
 ---
-title: CCO - Chief commercial officer
-h1_title: CCO - Chief commercial officer
+title: CCO - Chief Commercial Officer
+h1_title: CCO - Chief Commercial Officer
 slug: cco-i-oslo
 contact_emails: linn@variant.no, even@variant.no
 meta_title: Vil du være med oss å bygge Variant Oslo?
 meta_description: Vi ser etter en salgsleder/forretningsutvikler som vil være med å videreutvikle et åpent, raust og læreglad konsulentselskap i Oslo!
-meta_image: https://www.variant.no/images/oslo_salgsleder_meta.png
+meta_image: https://www.variant.no/images/cco_oslo_meta.png
 ---
 
 ## Har du lyst til å bygge kundeforhold i et åpent raust og læreglad konsulentselskap?
