@@ -28,6 +28,7 @@ export const getListing = async (
     ...metadata,
     name: fileName.replace('.md', ''),
     content: matterFile.content,
+    isPublished: metadata?.status === 'published',
   } as Listing;
 };
 
@@ -45,6 +46,7 @@ export type Listing = {
   id: number;
   name: string;
   content: string;
+  isPublished: boolean;
 } & ListingMetadata &
   Offer;
 export async function getFileListingData(

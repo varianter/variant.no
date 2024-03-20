@@ -28,13 +28,6 @@ export const getStaticProps: GetStaticProps<
   const fileName = `${context?.params?.listing}.md`;
   const listing = await getListing(fileName);
 
-  if (!listing.isPublished) {
-    return {
-      notFound: true,
-    };
-  }
-
-
   const contactEmails = listing.contact_emails?.split(',').map((e) => e.trim());
   let contacts: EmployeeItem[] = [];
   if (contactEmails?.length) {
