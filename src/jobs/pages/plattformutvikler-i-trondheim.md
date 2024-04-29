@@ -46,6 +46,7 @@ Selv om dette ble en lang liste er det viktigst at du har utviklerbakgrunn, er g
 
 ## Hos oss får du:
 
+- [Verktøyene og støtten du trenger for å utvikle deg videre som fagekspert og konsulent](https://handbook.variant.no/prosesser-raa#RA)
 - [Gode og rettferdige betingelser](https://handbook.variant.no/#Lonn)
 - [God lønn som er åpen for alle](https://www.variant.no/kalkulator)
 - [Innsikt og påvirkning](https://blog.variant.no/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
