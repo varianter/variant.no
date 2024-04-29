@@ -24,16 +24,15 @@ Hvis du brenner for plattformutvikling er dette stillingen for deg. I en vanlig 
 Vi ønsker at du:
 
 - Har erfaring som utvikler, helst på senior nivå
-- Har god erfaring med Kubernetes, Kustomize og Helm
-- Er sterk på DevOps og GitOps
-- Er sterk på CI/CD pipelines, spesifikt på Github Actions og workflows
+- Har god erfaring med Kubernetes, og Kustomize eller Helm
+- Har erfaring med DevOps og GitOps.
+- Er sterk på CI/CD pipelines, om det er Github Actions eller Azure DevOps
 - Har erfaring med C# og .NET
-- Har god erfaring med sky og god kunnskap om Azure og alle ressurser/tjenester der generelt
-- Har kunnskap om monitorering - OpenTelemetry, Tracing, Metrics, Grafana, Prometheus
-- Har erfaring med EventGrid eller tilsvarende og generelt event-drevet arkitektur
-- Kan noe om Infrastructure as Code / Terraform
-- Kan andre teknologier i bruk som krever en del kompetanse. F.eks.: PostgreSQL, PostGIS, Memgraph
-- Tar proaktiv og kostnadsbevisst valg av tjenester
+- Har god erfaring med sky. Bonus om det er Azure og bred kunnskap til tjenestene der.
+- Bonus med erfaring rundt event-drevet arkitektur på Azure
+- Har jobbet med monitorering, tracing og metrics. Eksempelvis OpenTelemetry, Grafana og Prometheus
+- Kan noe Infrastructure as Code / Terraform
+- Tar proaktiv og kostnadsbevisst valg av skytjenester
 - Og ikke minst: Bryr deg om empati, utviklerkultur og samarbeid
 
 Selv om dette ble en lang liste er det viktigst at du har utviklerbakgrunn, er god på Kubernetes, pipelines o.l og brenner for å hjelpe team å levere fort og trygt.
