@@ -32,6 +32,11 @@ module.exports = withBundleAnalyzer(
       formats: ['image/avif', 'image/webp'],
     },
 
+    experimental: {
+      workerThreads: false,
+      cpus: 1,
+    },
+
     webpack: (config) => {
       // Allows for non-pure CSS Modules in Nextjs.
       // Overrides css loader config setting modules mode to local
