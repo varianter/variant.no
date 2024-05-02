@@ -52,8 +52,8 @@ Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tank
 
 **_Lønn og bonus_**
 
-- Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Eksempelvis ved en [mastergrad fra 2017, vil din fastlønn være 838 449 kroner. Sammen med gjennomsnittlig bonus ville årslønn + bonus ligge på 909 528. Din årlige pensjonsparing (på 7%) kommer i tillegg, og vil være på 58 691 kroner. ](https://www.variant.no/kalkulator?year=2017&degree=master).
-- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus. Ansatte som er i foreldrepermisjon eller som er sykemeldte får også full bonus. Gjennomsnittlig bonus per år har siden 2019 vært på 71 079.
+- Variant justerer lønn likt for alle basert på Teknas lønsstatistikk. Eksempelvis ved en [mastergrad fra 2017, vil din fastlønn + gjennomsnittlig bonus ligge på <strong>981 847</strong> kroner](https://www.variant.no/kalkulator?year=2017&degree=master). Din årlige pensjonsparing (på 7%) kommer i tillegg, og vil være på 64 182 kroner.
+- Bonus. Du vil sammen med alle ansatte dele 30% av overskuddet per kvartal som en resultatbonus. Ansatte som er i foreldrepermisjon eller som er sykemeldte får også full bonus. Gjennomsnittlig bonus per år har siden 2019 vært på 64 961.
 - Gjennom Medeierskapsprogrammet i Variant [tilbys alle ansatte å kjøpe aksjer](https://blog.variant.no/invitasjon-til-%C3%A5-kj%C3%B8pe-aksjer-i-variant-as-27a29a307cb2) i Variant. Første april hvert år selger selskapet aksjer i selskapet til alle ansatte.
 
 **_Alle våre vilkår ligger åpent_**
