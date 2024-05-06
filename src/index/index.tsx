@@ -297,16 +297,18 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
       <section className={style.employees}>
         {randomEmployee ? (
           <div className={style.employees__random}>
-            <div className={style.employees__random__image}>
-              <Image
-                width={300}
-                height={300}
-                alt={`Bilde av ${randomEmployee.name}`}
-                src={randomEmployee.imageUrl}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+            {randomEmployee.imageUrl && (
+              <div className={style.employees__random__image}>
+                <Image
+                  width={300}
+                  height={300}
+                  alt={`Bilde av ${randomEmployee.name}`}
+                  src={randomEmployee.imageUrl}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            )}
 
             <p>Dette er {randomEmployee.name}. En av oss som jobber her.</p>
 

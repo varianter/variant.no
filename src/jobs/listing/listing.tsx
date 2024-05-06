@@ -128,6 +128,10 @@ const Listing: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
 export const ContactTile = ({
   contact: { name, email, telephone, imageUrl },
 }: PropsWithChildren<{ contact: EmployeeItem }>) => {
+  if (!imageUrl) {
+    return null;
+  }
+
   return (
     <div className={style.contact}>
       <div className={style.contact__img}>
@@ -148,10 +152,7 @@ export const ContactTile = ({
           📬 {email}
         </a>
         {telephone && (
-          <a
-            href={`tel:${telephone}`}
-            className={style.contact__type}
-          >
+          <a href={`tel:${telephone}`} className={style.contact__type}>
             📞 {formatTelephone(telephone)}
           </a>
         )}

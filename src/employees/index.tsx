@@ -137,6 +137,10 @@ const blurDataUrl =
 export const EmployeeTile = ({
   employee: { name, telephone, email, imageUrl, officeName },
 }: PropsWithChildren<{ employee: EmployeeItem }>) => {
+  if (!imageUrl) {
+    return null;
+  }
+
   return (
     <div
       className={style.employee}
