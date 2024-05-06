@@ -20,7 +20,7 @@ import style from './employees.module.css';
 import { EmployeeItem } from './types';
 import { formatTelephone } from '../utils/phone';
 
-const getSoMeMetadata = (officeName?: Office) => {
+const SomeMetadata = ({ officeName }: { officeName?: Office }) => {
   let description;
   switch (officeName) {
     case 'oslo':
@@ -82,7 +82,7 @@ export default function Employees({
 
   return (
     <Layout fullWidth title="Alle varianter – Variant">
-      {getSoMeMetadata(officeName)}
+      <SomeMetadata officeName={officeName} />
 
       <div className={style.employeesContainer}>
         <header className={style.employees__header}>
