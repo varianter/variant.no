@@ -115,7 +115,7 @@ export default function Pension({
             </fieldset>
 
             <a href="https://www.finansportalen.no/pensjon/hva-er-innskuddspensjon/">
-              Hva er inskuddspensjon?
+              Hva er innskuddspensjon?
             </a>
           </div>
         </div>
