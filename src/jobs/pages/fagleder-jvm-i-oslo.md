@@ -23,12 +23,12 @@ Du vil gå inn i et team med andre fagledere og CTOs for å ta del i den strateg
 
 Noe av ansvarsområder til Fagledere er:
 
-- Eierskap av fagprofilen
-- Leder faggrupper
-- Skape identitet og fellesskap om fag
+- Eierskap av fagområde
+- Være faglig leder og mentor av andre JVM-interesserte mennesker
+- Skape identitet og fellesskap om fag og JVM
 - Bidra som fageksperter i salg
 - Sette strategisk retning for Variant
-- Representere Variant eksternt
+- Representere Variant eksternt på meetups, konferanser, podcaster, og hva enn du mener er viktig.
 
 Fagsyn er vår årlige strategisk samling for fagledelsen. En naturlig del av samlingen er å revidere fagprofiler i henhold til nye strategiske satsninger, markedsbehov og generelle forventninger fra bransjen. Her deltar CTO-er, CDO-er og fagledere.
 
