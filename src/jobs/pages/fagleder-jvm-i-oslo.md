@@ -10,11 +10,11 @@ meta_image: https://www.variant.no/images/erfaren_utvikler_meta.jpg
 
 ## Fagleder JVM/Java/Kotlin
 
-Vi skal bygge et fagmiljø rundt JVMen og ser etter deg med erfaringen og engasjementen for å ta rollen som fagleder på nasjonalt nivå i Variant.
+Vi styrker fagmiljøet vårt rundt JVM-en og ser etter deg med erfaring og engasjement til å lede arbeidet med å gjøre hele Variant i Norge til et sterkt og synlig fagmiljø.
 
-## Vi tror du
+## Du har
 
-- Har over 5 års erfaring med utvikling av digtiale tjenester eller produkter
+- Over 5 års erfaring med utvikling av digtiale tjenester eller produkter
 - Er backendutvikler og har jobbet med språk som Java eller Kotlin
 - Har jobbet med rammeverk som Spring, skytjenester som AWS og GCP og hendelsesbasert arkitektur med for eksempel Kafka
 - Er engasjert i faget og ønsker å dele dette engasjementet med dyktige kolleger rundt deg
