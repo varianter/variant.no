@@ -11,7 +11,8 @@ meta_image: https://www.variant.no/images/fagleder-jvm-i-oslo.png
 ## Fagleder JVM/Java/Kotlin
 
 Vi styrker fagmiljøet vårt rundt JVM-en og ser etter deg med erfaring og engasjement til å lede arbeidet med å gjøre hele Variant i Norge til et sterkt og synlig fagmiljø.
-Fagledere i Variant blir valgt inn i en gitt periode og det er ingen hindringer for å bli valgt inn flere perioder på rad. Ingen har denne rollen idag og vi ønsker derfor å rekruttere noen rett inn i den for pågående periode.
+
+Fagledere i Variant blir valgt inn i en gitt periode og man kan stille i flere perioder på rad. Ingen har denne rollen idag og vi ser derfor etter deg som kan komme rett inn og sette sitt preg på Variant.
 
 ## Du har
 
