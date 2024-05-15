@@ -1,6 +1,6 @@
 ---
-title: Fagleder JVM/Java i Oslo
-h1_title: Fagleder JVM/Java i Oslo
+title: Fagleder JVM/Java/Kotlin i Oslo
+h1_title: Fagleder JVM/Java/Kotlin i Oslo
 slug: fagleder-jvm-i-oslo
 contact_emails: even@variant.no, nikolai@variant.no
 meta_title: Fagleder JVM/Java i Variant Oslo
