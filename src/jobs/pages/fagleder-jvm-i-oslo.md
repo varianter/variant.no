@@ -5,7 +5,7 @@ slug: fagleder-jvm-i-oslo
 contact_emails: even@variant.no, nikolai@variant.no
 meta_title: Fagleder JVM/Java i Variant Oslo
 meta_description: Fagleder for JVM/Java/Kotlin
-meta_image: https://www.variant.no/images/erfaren_utvikler_meta.jpg
+meta_image: https://www.variant.no/images/fagleder-jvm-i-oslo.png
 ---
 
 ## Fagleder JVM/Java/Kotlin
