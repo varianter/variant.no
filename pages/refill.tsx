@@ -116,7 +116,7 @@ export default function Refill() {
 type ProgramItemProps = {
   speaker: {
     name: string;
-    src: string;
+    src?: string;
   };
   title: string;
 };
@@ -129,12 +129,14 @@ function ProgramItem({ speaker, title }: ProgramItemProps) {
   );
 }
 
-function Speaker({ name }: { name: string; src: string }) {
+function Speaker({ name, src }: ProgramItemProps['speaker']) {
   return (
     <footer className={style.speaker}>
-      {/* <div className={style.avatarContainer}>
-        <Image src={src} alt={name} height={50} width={50} />
-      </div> */}
+      {src && (
+        <div className={style.avatarContainer}>
+          <Image src={src} alt={name} height={50} width={50} />
+        </div>
+      )}
       <h4>{name}</h4>
     </footer>
   );
