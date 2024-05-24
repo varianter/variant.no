@@ -10,12 +10,14 @@ const dev: ProgramItemProps[] = [
   {
     speaker: {
       name: 'Jakob Endrestad Kielland',
+      src: '/refill/people/jakob.jpg',
     },
     title: 'Hvordan bygge latterlig kule nettsider med View Transitions API',
   },
   {
     speaker: {
       name: 'Truls Henrik Jakobsen',
+      src: '/refill/people/truls-henrik.jpg',
     },
     title: 'Skjema-endringer med lave skuldre: Bakover­kompatible APIer',
   },
