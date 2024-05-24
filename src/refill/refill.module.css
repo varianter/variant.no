@@ -92,45 +92,61 @@
   padding: 0;
   color: #fff;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   justify-content: space-between;
   padding: 2rem;
   gap: 2rem;
+}
+
+.programItem::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+
   background: url('/refill/bg.jpg') 0 0 no-repeat;
   background-size: 650%;
 
-  filter: grayscale(95%) brightness(1.1);
+  filter: grayscale(95%) brightness(1.2);
   transition: filter 0.15s ease-in-out;
 }
 
-.programItem:nth-child(1) {
+.programItem:nth-child(1)::before {
   background-position: 0 0;
 }
-.programItem:nth-child(2) {
+.programItem:nth-child(2)::before {
   background-position: 20% 0;
 }
-.programItem:nth-child(3) {
+.programItem:nth-child(3)::before {
   background-position: 25% 10%;
 }
-.programItem:nth-child(4) {
+.programItem:nth-child(4)::before {
   background-position: 50% 0;
 }
-.programItem:nth-child(5) {
+.programItem:nth-child(5)::before {
   background-position: 75% 0;
 }
-.programItem:nth-child(6) {
+.programItem:nth-child(6)::before {
   background-position: 40% 20%;
 }
 
-.programItem:hover {
+.programItem:hover::before {
   filter: grayscale(0%) brightness(1);
 }
 
 .speaker {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   align-items: center;
 }
 .speaker h4 {
@@ -148,11 +164,13 @@
   overflow: hidden;
   border-radius: 50%;
 
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 .avatarContainer img {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 .calendarContainer {
