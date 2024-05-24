@@ -4,34 +4,38 @@ import style from 'src/refill/refill.module.css';
 
 const dev: ProgramItemProps[] = [
   {
-    speaker: { name: 'Jacob Berglund', src: '/refill/kari.png' },
+    speaker: { name: 'Jacob Berglund', src: '/refill/people/jacob.jpg' },
     title: 'Det var en gång en request, en response och ett par headers',
   },
   {
-    speaker: { name: 'Jakob Endrestad Kielland', src: '/refill/kari.png' },
+    speaker: {
+      name: 'Jakob Endrestad Kielland',
+    },
     title: 'Hvordan bygge latterlig kule nettsider med View Transitions API',
   },
   {
     speaker: {
       name: 'Truls Henrik Jakobsen',
-      src: '/refill/kari.png',
     },
     title: 'Skjema-endringer med lave skuldre: Bakover­kompatible APIer',
   },
   {
-    speaker: { name: 'Christian Brevik', src: '/refill/kari.png' },
+    speaker: { name: 'Christian Brevik', src: '/refill/people/christian.jpg' },
     title: 'TestContainers er kulere enn ChatGPT',
   },
   {
-    speaker: { name: 'Thomas Hansen', src: '/refill/kari.png' },
+    speaker: { name: 'Thomas Hansen', src: '/refill/people/thomas.jpg' },
     title: 'Erfaringer med prosessarbeid',
   },
   {
-    speaker: { name: 'Anders Njøs Slinde', src: '/refill/kari.png' },
+    speaker: {
+      name: 'Anders Njøs Slinde',
+      src: '/refill/people/anders-njos.jpg',
+    },
     title: 'Plattform sa du? Ja det må vi selvfølgelig ha. Eller?',
   },
   {
-    speaker: { name: 'Mikael Brevik', src: '/refill/kari.png' },
+    speaker: { name: 'Mikael Brevik', src: '/refill/people/mikael.jpg' },
     title: 'RAG-arkitektur avmystifisert',
   },
 ];
@@ -39,20 +43,26 @@ const design: ProgramItemProps[] = [
   {
     speaker: {
       name: 'Jonas Lillevold',
-      src: '/refill/kari.png',
+      src: '/refill/people/jonas.jpg',
     },
     title: 'UX Metrics - Hva, hvorfor og hvordan?',
   },
   {
-    speaker: { name: 'Andreas Sætersdal Hartveit', src: '/refill/kari.png' },
+    speaker: {
+      name: 'Andreas Sætersdal Hartveit',
+      src: '/refill/people/andreas.jpg',
+    },
     title: 'En skikkelig nerdete preik om typografi',
   },
   {
-    speaker: { name: 'Simen Strøm Braaten', src: '/refill/kari.png' },
+    speaker: { name: 'Simen Strøm Braaten', src: '/refill/people/simen.jpg' },
     title: 'Fra å være en god designer til å bli en dårlig utvikler',
   },
   {
-    speaker: { name: 'Andreas Sætersdal Hartveit', src: '/refill/kari.png' },
+    speaker: {
+      name: 'Andreas Sætersdal Hartveit',
+      src: '/refill/people/andreas.jpg',
+    },
     title: 'Mitt voksende produkt / MVP arket',
   },
 ];
