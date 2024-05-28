@@ -175,6 +175,8 @@
 
 .calendarContainer {
   padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
 }
 .calendarContainer a {
   display: inline-flex;
