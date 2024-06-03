@@ -5,13 +5,13 @@ import { and } from 'src/utils/css';
 
 import style from './button.module.css';
 
-type ButtonProps = React.PropsWithChildren<{
+export type ButtonProps = React.PropsWithChildren<{
   className?: string;
   colorPair?: ColorSet;
   colorVariation?: ColorVariations;
 }>;
 
-type EType = React.DetailedHTMLProps<
+export type EType = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;

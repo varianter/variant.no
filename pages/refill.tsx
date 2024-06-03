@@ -1,6 +1,8 @@
 import RefillLayout from 'src/refill/layout';
 import Image from 'next/image';
 import style from 'src/refill/refill.module.css';
+import { TabButton, TabContainer, TabList, TabPanel } from 'src/refill/tabbar';
+import { useState } from 'react';
 
 const dev: ProgramItemProps[] = [
   {
@@ -70,6 +72,8 @@ const design: ProgramItemProps[] = [
 ];
 
 export default function Refill() {
+  const [panel, setPanel] = useState<'design' | 'dev'>('design');
+
   return (
     <RefillLayout>
       <div className={style.header}>
@@ -107,6 +111,62 @@ export default function Refill() {
       </div>
 
       <div className={style.programSection}>
+        <h2>Se stream</h2>
+        <TabContainer>
+          <TabList label="Velg stream">
+            <TabButton
+              onClick={(e) => {
+                e.preventDefault();
+                setPanel('design');
+              }}
+              id={`tab-design`}
+              title={`Velg design`}
+              controlsId={`panel-design`}
+              selected={panel === 'design'}
+            >
+              Design
+            </TabButton>
+            <TabButton
+              onClick={(e) => {
+                e.preventDefault();
+                setPanel('dev');
+              }}
+              id={`tab-dev`}
+              title={`Velg utvikling`}
+              controlsId={`panel-dev`}
+              selected={panel === 'dev'}
+            >
+              Utvikling
+            </TabButton>
+          </TabList>
+
+          <div>
+            <TabPanel
+              labelledBy={`tab-design`}
+              isVisible={panel === 'design'}
+              id={`panel-design`}
+            >
+              <EmbedYouTube
+                src="https://www.youtube-nocookie.com/embed/dSpal6Q2MFU?si=V9c_pRj8ykFYLQN9"
+                title="Refill Stream: Designtrack"
+              />
+            </TabPanel>
+
+            <TabPanel
+              labelledBy={`tab-dev`}
+              isVisible={panel === 'dev'}
+              id={`panel-dev`}
+            >
+              <EmbedYouTube
+                src="https://www.youtube-nocookie.com/embed/RDupUN7zRoM?si=7pK7b1fP5DqW8FXb"
+                title="Refill Stream: Utviklingstrack"
+              />
+            </TabPanel>
+          </div>
+        </TabContainer>
+      </div>
+
+      <div className={style.programSection}>
         <h2>Track: Utvikling</h2>
 
         <ul className={style.programSectionGrid}>
@@ -126,6 +186,27 @@ export default function Refill() {
         </ul>
       </div>
     </RefillLayout>
+  );
+}
+
+type YoutubeEmbedProps = {
+  title: string;
+  src: string;
+};
+function EmbedYouTube({ title, src }: YoutubeEmbedProps) {
+  return (
+    <div className={style.ytVideo}>
+      <iframe
+        width="560"
+        height="315"
+        frameBorder={0}
+        src={src}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    </div>
   );
 }
 

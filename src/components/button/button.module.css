@@ -7,7 +7,9 @@
   color: var(--color, var(--color-secondary1--text));
   border-radius: 0.5rem;
   font-weight: 500;
-  transition: background-color 250ms ease-out, scale 100ms ease-out;
+  transition:
+    background-color 250ms ease-out,
+    scale 100ms ease-out;
   display: inline-block;
 
   border-radius: 4rem;
@@ -24,4 +26,9 @@
 .buttonLink {
   composes: button;
   text-decoration: none;
+}
+
+.button[aria-selected='true'] {
+  background-color: var(--color-secondary1__shade3);
+  color: var(--color-secondary1__shade3--text);
 }
