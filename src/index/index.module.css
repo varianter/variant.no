@@ -323,15 +323,29 @@
 
 /* Summerjob splash */
 .infoBlock {
+  align-items: center;
   display: flex;
   gap: 2rem;
+  padding: 1rem;
 }
 
+.infoBlock__imageContainer img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.infoBlock__title {
+  margin-top: 0rem;
+}
+.infoBlock__content {
+  max-width: 30rem;
+}
 .infoBlock__text,
 .infoBlock__link {
   display: block;
-  color: var(--color-standard__white);
-  text-decoration-color: var(--color-standard__white);
+  color: var(--color-standard__black);
+  text-decoration-color: var(--color-standard__black);
 }
 
 .infoBlock__blob {
@@ -344,9 +358,5 @@
   .infoBlock {
     flex-direction: column;
     align-items: center;
-  }
-
-  .infoBlock__title {
-    margin-left: 6rem;
   }
 }

@@ -14,6 +14,7 @@ import Tjenesteomrader from 'src/tjenesteomrader';
 import { EmployeeItem } from 'src/employees/types';
 import { CaseJSON } from 'src/case/Case';
 import { HighlightedItemsLists } from 'src/rss/service';
+import Arrow from '@components/arrow';
 
 export type HomeProps = {
   randomEmployee: EmployeeItem;
@@ -112,6 +113,10 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
             En variant av et konsulentselskap som er raust, åpent og læreglad.
           </p>
         </div>
+      </section>
+
+      <section className={style.bergen}>
+        <RefillLink />
       </section>
 
       <section className={style.join}>
@@ -323,5 +328,38 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
     </Layout>
   );
 };
+
+function RefillLink() {
+  return (
+    <div className={style.infoBlock}>
+      <div className={style.infoBlock__imageContainer}>
+        <Image
+          src={'/refill/header.png'}
+          alt={'Refill'}
+          width={300}
+          height={300}
+        />
+      </div>
+      <div className={style.infoBlock__content}>
+        <h2 className={style.infoBlock__title}>
+          <Link href="/refill" className={style.infoBlock__link}>
+            <span className={style.infoBlock__text}>Refill stream</span>
+            <Arrow className={style.infoBlock__arrow} color="standard__black" />
+          </Link>
+        </h2>
+
+        <p>
+          Vi inviterer til første iterasjon av Refill-konferansen. En
+          tverrfaglig konferanse fylt til randen med læreglede.
+        </p>
+
+        <p>
+          Konferansen streames fredag 7. juni klokken 14:00 i to parallelle
+          tracks: utvikling og design.
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default Home;
