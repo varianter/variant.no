@@ -343,20 +343,18 @@ function RefillLink() {
       <div className={style.infoBlock__content}>
         <h2 className={style.infoBlock__title}>
           <Link href="/refill" className={style.infoBlock__link}>
-            <span className={style.infoBlock__text}>Refill stream</span>
+            <span className={style.infoBlock__text}>Se opptak av Refill</span>
             <Arrow className={style.infoBlock__arrow} color="standard__black" />
           </Link>
         </h2>
 
         <p>
-          Vi inviterer til første iterasjon av Refill-konferansen. En
-          tverrfaglig konferanse fylt til randen med læreglede.
+          7. juni kjørte vi vår første iterasjon av Refill-konferansen. En
+          tverrfaglig konferanse fylt til randen med læreglede som var streamet
+          åpent for alle.
         </p>
 
-        <p>
-          Konferansen streames fredag 7. juni klokken 14:00 i to parallelle
-          tracks: utvikling og design.
-        </p>
+        <p>Nå er alle 11 foredrag er nå tilgjengelig på opptak.</p>
       </div>
     </div>
   );

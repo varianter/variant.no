@@ -101,6 +101,20 @@
   padding: 2rem;
   gap: 2rem;
 }
+.programItem a {
+  flex: 1;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  gap: 2rem;
+}
+.programItem a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 
 .programItem::before {
   position: absolute;
