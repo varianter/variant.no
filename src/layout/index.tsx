@@ -89,6 +89,11 @@ const Layout = ({
                 </a>
               </li>
               <li>
+                <a href="https://www.youtube.com/@variant-no" rel="noopener">
+                  YouTube
+                </a>
+              </li>
+              <li>
                 <a href="https://github.com/varianter" rel="noopener">
                   Open Source
                 </a>
