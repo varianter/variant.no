@@ -89,9 +89,7 @@ const Layout = ({
                 </a>
               </li>
               <li>
-                <a href="https://github.com/varianter" rel="noopener">
-                  Open Source
-                </a>
+                <Link href="/refill">Refill</Link>
               </li>
               <li>
                 <a href="https://www.variant.dev" rel="noopener">
@@ -155,6 +153,16 @@ const Layout = ({
                   rel="noopener"
                 >
                   @variant_as
+                </a>
+              </li>
+              <li>
+                Open Source på{' '}
+                <a
+                  href="https://github.com/varianter"
+                  aria-label="Github @varianter"
+                  rel="noopener"
+                >
+                  @varianter
                 </a>
               </li>
             </ul>
