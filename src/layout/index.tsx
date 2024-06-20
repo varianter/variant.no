@@ -89,11 +89,6 @@ const Layout = ({
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@variant-no" rel="noopener">
-                  YouTube
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/varianter" rel="noopener">
                   Open Source
                 </a>
@@ -128,24 +123,28 @@ const Layout = ({
               <li>
                 Mail på <a href="mailto:post@variant.no">post@variant.no</a>
               </li>
+            </ul>
+
+            <h2>Mer fra oss</h2>
+            <ul>
               <li>
-                Tweet på{' '}
-                <a
-                  href="https://twitter.com/variant_as"
-                  aria-label="Twitter @variant_as"
-                  rel="noopener"
-                >
-                  @variant_as
-                </a>
-              </li>
-              <li>
-                Linkedin på{' '}
+                Følg Linkedin på{' '}
                 <a
                   href="https://www.linkedin.com/company/variant-as"
                   aria-label="Linkedin variant-as"
                   rel="noopener"
                 >
                   variant-as
+                </a>
+              </li>
+              <li>
+                Se videoer på{' '}
+                <a
+                  href="https://www.youtube.com/@variant-no"
+                  aria-label="Youtube @variant-no"
+                  rel="noopener"
+                >
+                  @variant-no
                 </a>
               </li>
               <li>
