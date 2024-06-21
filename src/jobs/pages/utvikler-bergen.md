@@ -8,7 +8,11 @@ meta_description: Vi ser etter en erfaren utvikler som vil være med og forme et
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
-Vi hjelper kundene våre å utvikle samfunnskritiske produkter og tjenester, samtidig som vi jobber med oss selv for å finne ut hvordan morgendagens arbeidsplass og fagmiljø bør fungere. 
+Vi hjelper kundene våre å utvikle samfunnskritiske produkter og tjenester, samtidig som vi jobber med oss selv for å finne ut hvordan morgendagens arbeidsplass og fagmiljø bør være. 
+
+Hva legger vi i utvikler?
+
+Hva legger vi i konsulent?
 
 Konsulent er kult
 
