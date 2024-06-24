@@ -8,20 +8,22 @@ meta_description: Vi ser etter en erfaren utvikler som vil være med og forme et
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
-På tide med noe nytt? Hvorfor ikke noe helt annerledes? Vi i Variant Bergen leter nå etter en ny kollega og denne gangen er dette en utvikler med 3-8 års erfaring.
+På tide med noe nytt? Hvorfor ikke noe helt annerledes? Vi i Variant Bergen er nettop dette, et annerledes konsulentselskap, og vi leter nå etter en ny kollega. 
 
-Variant Bergen er et selskap av og for læreglade mennesker som ønsker å dele sin kompetanse i rollen som konsulent. I det daglige hjelper vi kundene våre med å utvikle virksomhetskritiske produkter og tjenester, samtidig som vi itererer på og utvikler oss selv for å utfordre hvordan morgendagens arbeidsplass og fagmiljø skal se ut. Vi ønsker at alle skal bidra til å forme sin egen arbeidplass og for å oppnå dette har vi designet selskapet med transparens og åpenhet som et fundament — Jepp, det betyr at all informasjon, alle tall og alle dokumenter er åpne for alle ansatte. Så når vi nå ser etter vår nye kollega håper vi å finne en som ønsker å være med og forme et åpent, raust og læreglad konsulentselskap i Bergen – sammen med oss.
+Variant Bergen er et selskap av og for læreglade mennesker som ønsker å bruke sin kompetanse i rollen som konsulent. I det daglige jobber vi ute hos kundene våre hvor vi utvikler virksomhetskritiske produkter og tjenester. Samtidig ser vi innover, og itererer og utvikler oss selv for å utfordre hvordan morgendagens arbeidsplass og fagmiljø skal se ut. Vi ønsker at alle skal bidra til å forme sin egen arbeidplass og for å oppnå dette har vi designet selskapet med transparens og åpenhet som et fundament — Jepp, det betyr at all informasjon, alle tall og alle dokumenter er åpne for alle ansatte. Så når vi nå ser etter vår nye kollega håper vi å finne en som ønsker å være med og forme et åpent, raust og læreglad konsulentselskap i Bergen – sammen med oss.
 
 
 ## Hvem ser vi etter?
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-Vi ser etter deg som har 3-8 år erfaring med utvikling av digtiale tjenester eller produkter, og som liker å gi teknologiske råd. En som tar med seg spennende historier og erfaringer som vi og kundene våre kan lære av. Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen.
+Vi ser etter deg som har 3-8 år arbeidserfaring med utvikling av digtiale tjenester eller produkter. Vi leter etter en utvikler som blir engasjert av å gi teknologiske råd, men som også ønsker å realisere de store tekniske tankene. Din tidligere erfaring gjør at du tar med deg spennende historier og erfaringer som både vi og kundene våre kan lære av. 
 
-Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget.
+Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget vårt.
 
-Det aller viktigste for oss er at du har et ønske om å bli en dyktig utvikler og en raus kollega som hjelper andre med å utvikle seg selv. Vi i Variant er samlet av vårt ønske om å utvikle oss som fagpersoner, konsulenter og mennesker, og er avhengig av at alle ansatte bidrar inn mot vårt yrende fagmiljø. 
+Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen. Våre type oppdrag krever at vi blir godt kjent med organisasjon og domenet vi jobber med. Derfor vil du typisk jobbe ute i kundens lokaler, hvor det blir enklere og integrere oss i deres organisasjon, og samarbeide med dem om å bygge de virkelig gode løsningene. 
+
+Det aller viktigste for oss når vi nå leter etter en ny kollega er at hen har et ønske om å bli en dyktig utvikler og en raus medkollega som gir av seg selv. Vi i Variant er samlet av vårt ønske om å utvikle oss som fagpersoner, konsulenter og mennesker, og ha det skikkelig gøy på veien. For å lykkes med dette er vi avhengig av at alle ansatte bidrar inn mot vårt fantastiske læringsmiljø, gjerne på hver sin måte, for å opprettholde delingskulturen og ivareta miljøet med høy psykologisk trygghet. 
 
 
 **_For tiden jobber vi mye med_**
@@ -32,14 +34,7 @@ Det aller viktigste for oss er at du har et ønske om å bli en dyktig utvikler 
 - C#, .NET
 - Skyplattformer (GCP, Azure, AWS, Vercel og Heroku)
 - og ikke minst: empati, utviklerkultur og samarbeid
-
-**_Og vi vil gjerne jobbe mer med_**
-
-- Three.JS og WebGL
-- Design Systems
-- F#, OCaml eller ReasonML
-- React Native
-- Open source-arbeid
+- og ikke minst 2: Open source-arbeid
 
 ## Hva får du hos oss?
 
@@ -74,16 +69,11 @@ Vi tilstreber åpenhet i alt vårt arbeid. Dette gjør oss forutsigbare med tank
 
 ![Varianter på en takterasse](/images/design-takterasse.png)
 
-Variant er menneskene som jobber her. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Forretningsmodellen vår er enkel: Vi tilbyr flinke folk.
+Variant er summen av menneskene som jobber her. I Bergen er vi allerede 13 ansatte (7 utviklere, 5 designere og én strateg / prosjektleder), alle med sine unike personligheter og interesser. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Vi ønsker å være konsulenter fordi det lar oss bruke faget vårt på en rekke spennende domener og situasjoner. Rollen gir oss utfordringer, og ja det er utfordrende å være konsulent, som igjen gir oss driv og mening. Vi som ønsker å jobbe på denne måten opplever nettopp dette som givende. Og ja dette gjelder faktisk alle, inkludert daglig leder som også jobber ute hos kunde.  
 
-Vi er folk som ønsker å være konsulenter. Ja, alle inklidert daglig daglig jobber ute hos kunde.  
-
-I Bergen er vi allerede 13 ansatte 7 utviklere, 5 designere og én strateg / prosjektleder. 
-
-Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
+Forretningsmodellen vår er enkel: Vi tilbyr flinke folk. Da er det helt selvsagt at vi må investere i kunnskap. Læreglede kommer i mange fasonger og vi prøver å tilrettelegge for at vi som varianter skal lære på den måten vi ønsker. Noen av oss driver podcasts ([her](http://bartjs.io/tag/podcast-episode/) og [her](https://kortslutning.fun/)), noen lager [kodevideoer](https://youtube.com/kodesnutt), noen underviser på NTNU og flere-enn-du-tror leder ymse meet-ups rundt om i landet. I tillegg samles vi hver måned til det vi [kaller en variantdag](https://blog.variant.no/tagged/variantdag); vår egen innedag for faglig påfyll. Og, ikke minst, for å møtes.
 
 Konseptet og filosofien som er beskrevet over har vi behandlet i detalj, foråsidetsånn:
-
 - [Åpen og delt kompetansebygging](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 - Tillitsbasert ledelse: [del 1](https://blog.variant.no/tillitsbasert-ledelse-del-1-hva-og-hvorfor-86f6aa485cf9), [del 2](https://blog.variant.no/tillitsbasert-ledelse-del-2-sette-retning-449452fcc6a6)
 - [Om lønn](https://blog.variant.no/bonusutbetaling-og-l%C3%B8nnsjusteringer-c6d340f0a6d)
