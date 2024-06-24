@@ -8,9 +8,9 @@ meta_description: Vi ser etter en erfaren utvikler som vil være med og forme et
 meta_image: https://www.variant.no/images/erfaren_utvikler_meta_bergen.jpg
 ---
 
-På tide med noe nytt? Hvorfor ikke noe helt annerledes? Vi i Variant Bergen leter nå etter vår neste kollega. 
+Ønsker du en ny arbeidshverdag? Hvorfor ikke noe helt annerledes? Vi i Variant Bergen leter nå etter vår neste kollega. 
 
-Variant Bergen er et selskap av og for læreglade mennesker som ønsker å bruke sin kompetanse i rollen som konsulent. I det daglige jobber vi ute hos kundene våre hvor vi utvikler virksomhetskritiske produkter og tjenester. Samtidig ser vi innover, og itererer og utvikler oss selv for å utfordre hvordan morgendagens arbeidsplass og fagmiljø skal se ut. Vi ønsker at alle skal bidra til å forme sin egen arbeidplass og for å oppnå dette har vi designet selskapet med transparens og åpenhet som et fundament — Jepp, det betyr at all informasjon, alle tall og alle dokumenter er åpne for alle ansatte. Så når vi nå ser etter vår nye kollega håper vi å finne en som ønsker å være med og forme et åpent, raust og læreglad konsulentselskap i Bergen – sammen med oss.
+Variant Bergen er et selskap av og for læreglade mennesker som ønsker å bruke sin kompetanse i rollen som konsulent. I det daglige jobber vi hos kundene våre hvor vi utvikler virksomhetskritiske produkter og tjenester. Samtidig ser vi innover, og utfordrer oss selv rundt hvordan morgendagens arbeidsplass og fagmiljø skal se ut. Vi ønsker at alle ansatte skal bidra til å forme Variant og for å oppnå dette har vi bygget selskapet med transparens og åpenhet som et fundament — Jepp, det betyr at alle tall, dokumenter og informasjon er tilgjengelig for alle ansatte. Så når vi nå ser etter vår nye kollega håper vi å finne en som ønsker å være med og forme et åpent, raust og læreglad konsulentselskap i Bergen – sammen med oss.
 
 
 ## Hvem ser vi etter?
