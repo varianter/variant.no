@@ -17,7 +17,7 @@ Variant Bergen er et selskap av og for læreglade mennesker som ønsker å dele 
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/design-konsentrert.png"/></div>
 
-Vi ser etter deg som har 3-8 år erfaring med utvikling av digtiale tjenester eller produkter, og som liker å gi teknologiske råd. En som tar med seg spennende historier og erfaringer som vi og kundene våre kan lære av.
+Vi ser etter deg som har 3-8 år erfaring med utvikling av digtiale tjenester eller produkter, og som liker å gi teknologiske råd. En som tar med seg spennende historier og erfaringer som vi og kundene våre kan lære av. Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen.
 
 Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer? Du vil også jobbe med ulike arbeidsoppgaver og kunder ut ifra egne ønsker om bransje og teknologi. Vi vet ikke nøyaktig hvilke oppdrag vi får, det er faktisk slik at din kompetanse og dine ønsker ofte styrer det neste oppdraget.
 
@@ -40,8 +40,6 @@ Det aller viktigste for oss er at du har et ønske om å bli en dyktig utvikler 
 - F#, OCaml eller ReasonML
 - React Native
 - Open source-arbeid
-
-Du vil jobbe ute hos våre kunder. Kundelisten endrer seg stadig og består blant annet av store viktige aktører innen norsk nærings- og samfunnsliv som Statens Vegvesen og Sparebanken Vest, og mindre oppstartbedrifter innen Helse eller energisektoren for å nevne noen.
 
 ## Hva får du hos oss?
 
