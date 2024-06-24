@@ -86,26 +86,3 @@ Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at 
 ## Kontakt
 
 Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Thomas (teknologisjef i Bergen) eller Andreas (designsjef i Bergen) riktige personer å ta en prat med.
-
-
-
-
- som samles i sitt ønske om å bli dyktige fagpersoner og jobbe som konsulent i 
-
-Hva legger vi i utvikler?
-
-Hva legger vi i konsulent?
-
-Konsulent er kult
-
-Konsulent er ikke for alle
-
-Konsulent er utfordrende
-
-Konsulent er givende
-
-Vi leter etter deg som ønsker å bruke din teknologikompetanse i rollen som konsulent. 
-
-Vi er en gruppe mennesker som har tatt en bevisst valg om å være konsulenter
-
-Vi leter etter en erfaren utvikler som ønsker å ta del i et voksende tverrfaglig miljø. En som setter faget sitt høy og ønsker å bruke sin kompetanse til å løse virksomhetskritiske utfordringer sammen med kundene våre. 
