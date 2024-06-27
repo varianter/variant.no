@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import style from './clock.module.css';
 
 const Clock = () => {
-  const [timeUntilStartskudd, setTimeUntilStartskudd] = useState<ClockObject>(
-    calculateTime(),
-  );
+  const [timeUntilStartskudd, setTimeUntilStartskudd] =
+    useState<ClockObject>(calculateTime());
 
   function calculateTime(): ClockObject {
-    const startskuddDate = new Date('2023-08-05T11:00:00.00+02:00');
+    const startskuddDate = new Date('2024-08-04T13:00:00.00+02:00');
     const timeNow = new Date();
     const diffMs = startskuddDate.getTime() - timeNow.getTime();
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
