@@ -77,6 +77,10 @@
   margin-bottom: 1.25rem;
 }
 
+.startskudd a {
+  text-decoration: none;
+}
+
 @media (min-width: 1000px) {
   .startskudd {
     width: 100%;
