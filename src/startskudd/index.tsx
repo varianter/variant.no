@@ -57,6 +57,7 @@ const Startskudd = () => {
               <Meny>
                 <MenyButton text="Praktisk info" emoji="📌" />
                 <MenyButton text="Kontakt" emoji="💬" />
+                <MenyButton text="Fredag" emoji="🐧" />
                 <MenyButton text="Søndag" emoji="🐨" />
                 <MenyButton text="Mandag" emoji="🐳" />
                 <MenyButton text="Tirsdag" emoji="🐥" />
@@ -74,14 +75,14 @@ const Startskudd = () => {
               <div className={style.startskudd__info}>
                 <div>
                   <p>Start:</p>
-                  <p>Søndag, 4. august, 17:00</p>
+                  <p>Fredag, 2. august, 09:00</p>
                 </div>
                 <div>
                   <p>Sted:</p>
-                  <p>Oppdal</p>
+                  <p>Trondheim, Teams og Oppdal</p>
                 </div>
                 <div>
-                  <p>Avreise:</p>
+                  <p>Avreise Oppdal:</p>
                   <p>Søndag, 4. august</p>
                 </div>
                 <div>
@@ -123,6 +124,32 @@ const Startskudd = () => {
                 surname="Nordseth"
                 email="mn@variant.no"
                 phoneNumber="+47 958 49 813"
+              />
+            </section>
+
+            <section id="Fredag">
+              <Flexbox>
+                <h2 className={style.startskudd__h2}>🐧 Fredag 02.08.</h2>
+                <Label>Fredag</Label>
+              </Flexbox>
+              <TimeSchedule time={'09:00'} activity={'Bli-kjent runde'} />
+              <TimeSchedule
+                time={'10:00'}
+                activity={'Velkommen til Variant v/Odd Morten'}
+              />
+              <TimeSchedule time={'10:30'} activity={'Intro til RÅ v/Tonje'} />
+              <TimeSchedule time={'11:15'} activity={'Lunsj'} />
+              <TimeSchedule
+                time={'12:00'}
+                activity={'Intro til design v/Stina Sofie'}
+              />
+              <TimeSchedule
+                time={'13:00'}
+                activity={'Intro til utvikling v/Morten'}
+              />
+              <TimeSchedule
+                time={'14:00'}
+                activity={'Kunsten å bygge team i full storm v/Hilde og Jakob'}
               />
             </section>
 
