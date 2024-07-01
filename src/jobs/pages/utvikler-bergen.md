@@ -1,7 +1,7 @@
 ---
 title: Utvikler med glimt i øyet
 h1_title: Erfaren utvikler som vil være med å videreutvikle Variant Bergen
-slug: erfaren-utvikler-i-variant-bergen
+slug: utvikler-i-bergen
 contact_emails: tlh@variant.no, marie@variant.no
 meta_title: Er du en utvikler med spennende erfaringer og et glimt i øyet? 
 meta_description: Vi ser etter en erfaren utvikler som vil være med å videreutvikle Variant med oss!
