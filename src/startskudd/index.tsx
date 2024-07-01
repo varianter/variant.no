@@ -74,7 +74,7 @@ const Startskudd = () => {
               <div className={style.startskudd__info}>
                 <div>
                   <p>Start:</p>
-                  <p>Søndag, 4. august, 13:00</p>
+                  <p>Søndag, 4. august, 17:00</p>
                 </div>
                 <div>
                   <p>Sted:</p>
@@ -82,11 +82,7 @@ const Startskudd = () => {
                 </div>
                 <div>
                   <p>Avreise:</p>
-                  <p>
-                    Søndag, 4. august – felles avreise til Bjerkeløkkja i
-                    Oppdal. Bussen går fra Trondheim sentralstasjon klokken
-                    17:50.
-                  </p>
+                  <p>Søndag, 4. august</p>
                 </div>
                 <div>
                   <p>Retur:</p>
@@ -135,21 +131,11 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🐨 Søndag 04.08.</h2>
                 <Label>Søndag</Label>
               </Flexbox>
+              <TimeSchedule time={'17:00'} activity={'Innsjekk Bjerkeløkkja'} />
               <TimeSchedule
-                time={'13:15'}
-                activity={'Alle er ankommet Oppdal'}
+                time={'19:00'}
+                activity={'Middag: Dagens 3-retter på Bjerkeløkkja'}
               />
-              <TimeSchedule time={'13:15'} activity={'Felles lunsj i Oppdal'} />
-              <TimeSchedule
-                time={'14:00'}
-                activity={'Sosial aktivitet i Oppdal'}
-              />
-              <TimeSchedule
-                time={'17:00'}
-                activity={'Middag og transport til Bjerkeløkkja'}
-              />
-              <TimeSchedule time={'19:00'} activity={'Innsjekk Bjerkeløkkja'} />
-              <TimeSchedule time={'20:00'} activity={'Sosialt'} />
             </section>
 
             <section id="Mandag">
@@ -160,20 +146,14 @@ const Startskudd = () => {
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
               <TimeSchedule
                 time={'08:00'}
-                activity={'Intro til positiv psykologi v/Linn'}
-                activityDescription="Hvorfor er det viktig med styrkebasert tilnærming og fokus på mental helse? Hvordan kan vi aktivt jobbe med egen mentale helse, og hvordan gjør vi det i Variant? Og hva er egentlig positiv psykologi, kun å tenke positivt?"
-              />
-              <TimeSchedule
-                time={'09:00'}
                 activity={'Introduksjon til caset'}
                 activityDescription="Vi møter ukens kunde og får presentert caset som vi skal jobbe med hele uka"
               />
               <TimeSchedule time={'11:30'} activity={'Lunsj på Bjerkeløkkja'} />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'17:00'} activity={'Fritid'} />
               <TimeSchedule
-                time={'19:00'}
-                activity={'Middag på Bjerkeløkkja'}
+                time={'17:00'}
+                activity={'Middag: Selvhushold på mellomseterstuggu'}
               />
             </section>
 
@@ -186,7 +166,6 @@ const Startskudd = () => {
               <TimeSchedule
                 time={'08:00'}
                 activity={'Hvordan være en Variant-konsulent v/Mikael'}
-                activityDescription="TBA"
               />
               <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule
@@ -196,11 +175,11 @@ const Startskudd = () => {
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'17:00'}
-                activity={'Middag: vi bestiller 🍕'}
+                activity={'Aktivitetsløype på Bjerkeløkkja'}
               />
               <TimeSchedule
-                time={'18:00'}
-                activity={'Aktivitetsløype på Bjerkeløkkja'}
+                time={'19:00'}
+                activity={'Middag: Selvhushold på mellomseterstuggu'}
               />
             </section>
 
@@ -210,16 +189,21 @@ const Startskudd = () => {
                 <Label>Onsdag</Label>
               </Flexbox>
               <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
+              <TimeSchedule
+                time={'08:00'}
+                activity={'Intro til positiv psykologi v/Linn'}
+                activityDescription="Hvorfor er det viktig med styrkebasert tilnærming og fokus på mental helse? Hvordan kan vi aktivt jobbe med egen mentale helse, og hvordan gjør vi det i Variant? Og hva er egentlig positiv psykologi, kun å tenke positivt?"
+              />
+              <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'11:30'}
                 activity={'Lunsj: Selvhushold på mellomseterstuggu'}
               />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
-              <TimeSchedule time={'16:30'} activity={'Mellomåltid: Wrap'} />
+              <TimeSchedule time={'16:00'} activity={'Mellommåltid'} />
               <TimeSchedule time={'17:00'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
-                time={'19:30'}
+                time={'20:00'}
                 activity={'Middag: Vi griller hvis været tillater det 🍢'}
               />
             </section>
@@ -229,8 +213,8 @@ const Startskudd = () => {
                 <h2 className={style.startskudd__h2}>🦦 Torsdag 08.08.</h2>
                 <Label>Torsdag</Label>
               </Flexbox>
-              <TimeSchedule time={'07:00'} activity={'Frokost'} />
-              <TimeSchedule time={'08:00'} activity={'Pakking og utsjekk'} />
+              <TimeSchedule time={'07:00'} activity={'Frokost og utsjekk'} />
+              <TimeSchedule time={'08:00'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'10:00'}
                 activity={'Presentasjon av casearbeidet for kunde'}
