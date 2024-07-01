@@ -134,7 +134,8 @@ const Startskudd = () => {
               <TimeSchedule time={'17:00'} activity={'Innsjekk Bjerkeløkkja'} />
               <TimeSchedule
                 time={'19:00'}
-                activity={'Middag: Dagens 3-retter på Bjerkeløkkja'}
+                activity={'Middag'}
+                activityDescription="Dagens 3-retter på Bjerkeløkkja"
               />
             </section>
 
@@ -153,7 +154,8 @@ const Startskudd = () => {
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'17:00'}
-                activity={'Middag: Selvhushold på mellomseterstuggu'}
+                activity={'Middag'}
+                activityDescription="Selvhushold på mellomseterstuggu"
               />
             </section>
 
@@ -170,7 +172,8 @@ const Startskudd = () => {
               <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'11:30'}
-                activity={'Lunsj: Selvhushold på mellomseterstuggu'}
+                activity={'Lunsj'}
+                activityDescription="Selvhushold på mellomseterstuggu"
               />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
               <TimeSchedule
@@ -179,7 +182,8 @@ const Startskudd = () => {
               />
               <TimeSchedule
                 time={'19:00'}
-                activity={'Middag: Selvhushold på mellomseterstuggu'}
+                activity={'Middag'}
+                activityDescription="Selvhushold på mellomseterstuggu"
               />
             </section>
 
@@ -197,14 +201,16 @@ const Startskudd = () => {
               <TimeSchedule time={'09:00'} activity={'Casearbeid'} />
               <TimeSchedule
                 time={'11:30'}
-                activity={'Lunsj: Selvhushold på mellomseterstuggu'}
+                activity={'Lunsj'}
+                activityDescription="Selvhushold på mellomseterstuggu"
               />
               <TimeSchedule time={'12:30'} activity={'Casearbeid'} />
               <TimeSchedule time={'16:00'} activity={'Mellommåltid'} />
               <TimeSchedule time={'17:00'} activity={'Fjelltur ⛰️'} />
               <TimeSchedule
                 time={'20:00'}
-                activity={'Middag: Vi griller hvis været tillater det 🍢'}
+                activity={'Middag'}
+                activityDescription="Vi griller hvis været tillater det 🍢"
               />
             </section>
 
