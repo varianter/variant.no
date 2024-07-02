@@ -30,7 +30,7 @@ Vi tilbyr raushet, rettferdige vilkår, god lønn, samt mulighet til å jobbe p�
 - Bonus med erfaring rundt event-drevet arkitektur på Azure
 - Har jobbet med monitorering, tracing og metrics. Eksempelvis OpenTelemetry, Grafana og Prometheus
 - Kan noe Infrastructure as Code / Terraform
-- Tar proaktive og kostnadsbevisst valg av skytjenester
+- Tar proaktive og kostnadsbevisste valg av skytjenester
 - Og ikke minst: Bryr deg om empati, utviklerkultur og samarbeid
 
 Selv om dette ble en lang liste er det viktigst at du har utviklerbakgrunn, er god på Kubernetes, pipelines o.l og brenner for å hjelpe team å levere fort og trygt.
