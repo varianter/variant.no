@@ -17,22 +17,20 @@ Variant er et selskap av og for mennesker med stor læreglede, som styrer sin eg
 
 Vi tilbyr raushet, rettferdige vilkår, god lønn, samt mulighet til å jobbe på noen skikkelig kule oppdrag sammen med engasjerte kolleger. Vi tar åpenhet til nye høyder og Variant er designet med transparens som et fundament.
 
-## Våre forventninger
+## Du har
 
-Hvis du brenner for plattformutvikling er dette stillingen for deg. I en vanlig konsulenthverdag vet vi ikke nøyaktig hvilke oppdrag vi får, men for akkurat denne stillingen har vi allerede en kunde som venter på ditt bidrag.
-
-Vi ønsker at du:
-
-- Har erfaring som utvikler, helst på senior nivå
-- Har god erfaring med Kubernetes, og Kustomize eller Helm
-- Har erfaring med DevOps og GitOps.
+- Minst 5 års erfaring som utvikler
+- God erfaring med Kubernetes, og Kustomize eller Helm
 - Er sterk på CI/CD pipelines, om det er Github Actions eller Azure DevOps
-- Har erfaring med C# og .NET
-- Har god erfaring med sky. Bonus om det er Azure og bred kunnskap til tjenestene der.
+- Erfaring med C# og .NET
+
+## Det er også fint om du
+
+- Har god erfaring med sky. Bonus med Azure erfaring og tjenestene der.
 - Bonus med erfaring rundt event-drevet arkitektur på Azure
 - Har jobbet med monitorering, tracing og metrics. Eksempelvis OpenTelemetry, Grafana og Prometheus
 - Kan noe Infrastructure as Code / Terraform
-- Tar proaktiv og kostnadsbevisst valg av skytjenester
+- Tar proaktive og kostnadsbevisst valg av skytjenester
 - Og ikke minst: Bryr deg om empati, utviklerkultur og samarbeid
 
 Selv om dette ble en lang liste er det viktigst at du har utviklerbakgrunn, er god på Kubernetes, pipelines o.l og brenner for å hjelpe team å levere fort og trygt.
