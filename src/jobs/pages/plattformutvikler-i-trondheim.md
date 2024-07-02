@@ -27,7 +27,7 @@ Vi tilbyr raushet, rettferdige vilkår, god lønn, samt mulighet til å jobbe p�
 ## Det er også fint om du
 
 - Har god erfaring med sky. Bonus med Azure erfaring og tjenestene der.
-- Bonus med erfaring rundt event-drevet arkitektur på Azure
+- Har erfaring rundt event-drevet arkitektur på Azure
 - Har jobbet med monitorering, tracing og metrics. Eksempelvis OpenTelemetry, Grafana og Prometheus
 - Kan noe Infrastructure as Code / Terraform
 - Tar proaktive og kostnadsbevisste valg av skytjenester
