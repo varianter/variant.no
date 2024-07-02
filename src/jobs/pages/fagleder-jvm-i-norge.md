@@ -1,18 +1,29 @@
 ---
-title: Fagleder JVM/Java/Kotlin i Oslo
-h1_title: Fagleder JVM/Java/Kotlin i Oslo
-slug: fagleder-jvm-i-oslo
-contact_emails: even@variant.no, nikolai@variant.no
-meta_title: Fagleder JVM/Java/Kotlin i Variant Oslo
+title: Fagleder JVM/Java/Kotlin i Norge
+h1_title: Fagleder JVM/Java/Kotlin i Norge
+slug: fagleder-jvm-i-norge
+contact_emails: even@variant.no, mk@variant.no
+meta_title: Fagleder JVM/Java/Kotlin
 meta_description: Fagleder for JVM/Java/Kotlin
-meta_image: https://www.variant.no/images/fagleder-jvm-i-oslo.png
+meta_image: https://www.variant.no/images/fagleder-jvm-i-norge.png
 ---
 
 ## Fagleder JVM/Java/Kotlin
 
 Vi styrker fagmiljøet vårt rundt JVM-en og ser etter deg med erfaring og engasjement til å lede arbeidet med å gjøre hele Variant i Norge til et sterkt og synlig fagmiljø.
 
-Fagledere i Variant blir valgt inn i en gitt periode og man kan stille i flere perioder på rad. Ingen har denne rollen idag og vi ser derfor etter deg som kan komme rett inn og sette sitt preg på Variant.
+Fagledere i Variant blir valgt inn i en gitt periode og ingen har denne rollen idag og vi ser derfor etter deg som kan komme inn og sette ditt preg på Variant.
+
+## Hvem ser vi etter?
+
+Fagledere er noe av det viktigste vi har i Variant. De har ansvar for å videreutvikle fagområdet sitt innenfor Variant, og utfordre det gjeldende. De skal kjempe for at sitt fagområde er relevant og at vi som selskap er i forkant av generell utvikling.
+
+Vi ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at du har verdi- og tankesett som harmonerer med disse.
+
+- Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før.
+- Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
+
+<div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
 
 ## Du har
 
@@ -21,7 +32,7 @@ Fagledere i Variant blir valgt inn i en gitt periode og man kan stille i flere p
 - Har jobbet med rammeverk som Spring, skytjenester som AWS og GCP og hendelsesbasert arkitektur med for eksempel Kafka
 - Er engasjert i faget og ønsker å dele dette engasjementet med dyktige kolleger rundt deg
 
-Du vil gå inn i et team med andre fagledere og CTOs for å ta del i den strategiske fagutviklingen i Variant. Fagledelse bedriver du på siden av å være konsulent ute i et spennende teknologioppdrag som Ruter (TET), SIKT, SVV, SB1, Fremtind, Miljødirektoratet samt mindre private kunder. ![Varianter på tur i Praha](/images/oslo-praha-blob.png)
+Du vil gå inn i et team med andre fagledere og CTOs for å ta del i den strategiske fagutviklingen i Variant. Fagledelse bedriver du på siden av å være konsulent ute i et spennende teknologioppdrag som Ruter (TET), NRK, SIKT, Statens vegvesen, Sparebank1, FHI, Schibsted, Miljødirektoratet samt mindre private kunder. ![Varianter på tur i Praha](/images/oslo-praha-blob.png)
 
 Noe av ansvarsområder til Fagledere er:
 
@@ -37,26 +48,17 @@ Fagsyn er vår årlige strategisk samling for fagledelsen. En naturlig del av sa
 Her kan du lese mer om hva det vil si å være fagleder i Variant og vårt kompetanseutviklingsprogram RÅ:
 [Variant håndbok - Fagledere](https://handbook.variant.no/prosesser-raa#Fagledere)
 
-## Hvem ser vi etter?
-
-Fagledere er noe av det viktigste vi har i Variant. De har ansvar for å videreutvikle fagområdet sitt innenfor Variant, og utfordre det gjeldende. De skal kjempe for at sitt fagområde er relevant og at vi som selskap er i forkant av generell utvikling.
-
-Vi ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at du har verdi- og tankesett som harmonerer med disse.
-
-- Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før.
-- Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
-
-<div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/images/utvikler-sarah.png"/></div>
-
 ## Hos oss får du:
 
 - [Verktøyene og støtten du trenger for å utvikle deg videre som fagekspert og konsulent](https://handbook.variant.no/prosesser-raa#RA)
-- [Gode og rettferdige betingelser](https://handbook.variant.no/#Lonn)
-- [God lønn som er åpen for alle](https://www.variant.no/kalkulator)
+- [Gode og rettferdige betingelser](https://handbook.variant.no/#Lonn) - likelønn og automatisk regulering
+- [God lønn som er åpen for alle](https://www.variant.no/kalkulator) - ingen lønnssamtaler
+- [Eierskap] alle ansatte får mulighet til å kjøpe aksjer i Variant
+- [Bonus] 30% av overskuddet deles blant alle ansatte
 - [Innsikt og påvirkning](https://blog.variant.no/bli-en-bedre-variant-7e1926bdcfba#e27f) i alt som skjer
 - [Vokse faglig og hjelpe andre vokse](https://blog.variant.no/aapen-og-delt-kompetansebygging-c229771eee93)
 
-Vi har en [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre goder og ytelser")
+Vi har en åpen [håndbok](https://handbook.variant.no/) for hva du enn måtte lure på. (Pro tip: sjekk ut "Andre goder og ytelser")
 
 ## Om Variant
 
@@ -76,4 +78,4 @@ Nylig har vi også valgt å open-source både ansettelsesavtaler og oppdragsavta
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Even (Leder for vekst i Oslo) eller Nikolai (teknologisjef i Oslo) riktige personer å ta en prat med.
+Har du spørsmål eller ønsker å snakke med oss om stillingen? Da er Even (Leder for vekst i Oslo) eller Marius (Chief People Officer) riktige personer å snakke med.
