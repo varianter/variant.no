@@ -8,27 +8,23 @@ meta_description: Vi ser etter en dyktig og erfaren tjenestedesigner som kan væ
 meta_image: https://www.variant.no/images/erfaren_designer_tjeneste_og_strategisk_design.jpg
 ---
 
-## Fagleder Tjenestedesign
+## Fagleder / Senior Tjenestedesigner
 
 ![Varianter på en takterasse](/images/strategisk-ellen-hilde.png)
 
-Vi leter nå etter en faglig sterk og engasjert senior tjenestedesigner som kan fylle rollen som fagleder for tjenestedesign i Variant.
+Vi leter nå etter en faglig sterk og engasjert senior tjenestedesigner som kan fylle rollen som [fagleder](https://handbook.variant.no/prosesser-raa#Fagledere) for tjenestedesign i Variant.
 
 Fagledere i Variant blir valgt inn for en gitt periode, og ingen har denne rollen idag. Vi ser derfor etter deg som kan komme sette ditt preg på Variant.
 
 ## Hvem ser vi etter?
 
-Du er en erfaren tjenestedesigner som kan være med å bygge kompetanseområdet fremover. Du vil være en faglig mentor og spydspiss for disiplinen internt og eksternt.
+Du er en erfaren tjenestedesigner som vil være med å bygge kompetanseområdet og være en faglig mentor og spydspiss for disiplinen internt og eksternt. Her er noen kjennetegn på at du kan være rett person for oppgaven:
 
 - Du må ha arbeidserfaring som designer, minst 5 år eller mer.
-- Du må ha erfaring med å lede designprosesser og/eller gi råd når det kommer til bruk effektiv bruk av design i et prosjekt eller i en virksomhet.
+- Du er en trygg fagperson med en stor verktøykasse, som vet hvilke verktøy du kan bruke i ulike situasjoner
 - Du er godt kjent med ulike designdisipliner, og hvilken rolle de spiller i utviklingen av tjenester og produkter.
-- Du bør ha kjennskap eller forståelse for hvordan et tverrfaglig produktteam, bestående av teknologer, designere og produktledere jobber sammen for å realisere gode produkter og tjenester.
-- Du er en trygg designrådgiver, som vet å ta hensyn til både brukernes og oppdragsgivernes interesser.
-- Du er uredd og vet når og hvordan ulike designdisipliner kan skape verdi, og evner å kommunisere dette for omgivelsene dine.
-- Du er faglig ambisiøs, glad i å dele av din kunnskap og har lyst til å bygge fagmiljø i Variant og designmodenhet hos kundene våre.
-- Du er visuelt sterk og evner å bruke visualisering som verktøy for kommunikasjon og for å skape felles forståelse av noe.
-- Som fagleder for tjenestedesign ønsker vi at du kan bidra både i salg av tjenestedesign mot kunder og i å bygge et sterkt tjenestedesign-miljø i Variant fremover.
+- Du må ha erfaring med å lede designprosesser og gi råd når det kommer til bruk effektiv bruk av design i et prosjekt eller i en virksomhet, og vet å ta hensyn til både brukernes og oppdragsgivernes interesser.
+- Du er faglig ambisiøs, glad i å dele av din kunnskap og har lyst til å bygge et sterkt fagmiljø i Variant og selge tjenestedesign og bygge designmodenhet hos kundene våre.
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/strategisk-ellen.png"/></div>
 
