@@ -5,6 +5,7 @@ slug: erfaren-backend-utvikler-i-trondheim
 contact_emails: ewa@variant.no, te@variant.no
 meta_title: Erfaren backendutvikler
 meta_description: Vi ser etter en dyktig og erfaren tjenestedesigner som kan være fagleder i Norge!
+meta_image: https://www.variant.no/images/erfaren_backendutvikler_trondheim_meta.png
 ---
 
 ## Vi søker etter deg som vil være med å bygge Variant Trondheim!
