@@ -16,6 +16,8 @@ Vi leter nå etter en faglig sterk og engasjert senior tjenestedesigner som kan 
 
 Fagledere i Variant blir valgt inn for en gitt periode, og ingen har denne rollen idag. Vi ser derfor etter deg som kan komme sette ditt preg på Variant.
 
+ASDF
+
 ## Hvem ser vi etter?
 
 Du er en erfaren tjenestedesigner som vil være med å bygge kompetanseområdet og være en faglig mentor og spydspiss for disiplinen internt og eksternt. Her er noen kjennetegn på at du kan være rett person for oppgaven:
