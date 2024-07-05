@@ -42,11 +42,9 @@ Vi er store nok til å vinne gode prosjekter, men likevel små nok til at alle k
 
 Variant er summen av menneskene som jobber her. Vi er over 100 ansatte fordelt på kontorer i Trondheim, Oslo, Bergen, Stockholm, Gøteborg og Linkøping, alle med sine unike personligheter og interesser. Vi har kommet sammen for å være med å skape et konsept og en filosofi vi selv tror på og har ambisiøse planer rundt vekst og utvikling av selskapet i tiden framover.
 
-Forretningsmodellen vår er enkel: Vi tilbyr flinke folk. Da er det selvsagt at vi må investere i kunnskap. Hverdagen blir mer spennende av å ha et fellesskap som engasjeres av utvikling og hvordan det påvirker hverdagen. Vi har trua på at det du synes er gøy og spennende, er det du skal bruke mest tid på. Styrkebasert tilnærming kaller vi det, som vår eminente kollega Linn, i Oslo, så flott forklarer i denne bloggposten.
-
 Vi ønsker å være konsulenter fordi det lar oss bruke faget vårt i en rekke spennende domener og problemstillinger. Dette gjelder alle – inkludert daglige ledere – som også er i oppdrag ute hos kunden. Konsulentrollen gir oss krevende, men spennende utfordringer som igjen skaper driv, mening og mestring og mulighet til å ta med oss gode Variant-verdier og påvirke positivt hos kundene.
 
-Det er forskjellig hvilke goder den enkelte verdsetter mest, så vi anbefaler at du leser vår håndbok for å få det fulle bildet. Under har vi dratt fram det vi tror du kanskje kan være mest opptatt av nå:
+Det er forskjellig hvilke goder den enkelte verdsetter mest, så vi anbefaler at du leser vår [håndbok](https://handbook.variant.no/) for å få det fulle bildet. Under har vi dratt fram det vi tror du kanskje kan være mest opptatt av nå:
 
 ## Lønn, bonus & eierskap
 
