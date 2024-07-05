@@ -23,7 +23,7 @@ Du er en erfaren tjenestedesigner som vil være med å bygge kompetanseområdet 
 - Du må ha arbeidserfaring som designer, minst 5 år eller mer.
 - Du er en trygg fagperson med en stor verktøykasse, som vet hvilke verktøy du kan bruke i ulike situasjoner
 - Du er godt kjent med ulike designdisipliner, og hvilken rolle de spiller i utviklingen av tjenester og produkter.
-- Du må ha erfaring med å lede designprosesser og gi råd når det kommer til bruk effektiv bruk av design i et prosjekt eller i en virksomhet, og vet å ta hensyn til både brukernes og oppdragsgivernes interesser.
+- Du må ha erfaring med å lede designprosesser, kan gi råd når det kommer til hvordan man bør bruke design i et prosjekt eller i en virksomhet og vet å ta hensyn til både brukernes og oppdragsgivernes interesser.
 - Du er faglig ambisiøs, glad i å dele av din kunnskap og har lyst til å bygge et sterkt fagmiljø i Variant og selge tjenestedesign og bygge designmodenhet hos kundene våre.
 
 <div class="left blob1"><img alt="Konsentrerte Varianter" src="/images/strategisk-ellen.png"/></div>
@@ -40,20 +40,20 @@ Det er forskjellig hvilke goder den enkelte verdsetter mest, så vi anbefaler at
 
 <div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/work_images/morten_jobber_paa_mac.png"/></div>
 
-## Lønn, bonus & eierskap
+### Lønn, bonus & eierskap
 
-- Vi har gode lønns- og pensjonsordninger. Se hvilken lønn du vil få i dag og hva du kan forvente frem i tid i vår lønnskalkulator. Ingen flere lønnsforhandlinger!
+- Vi har gode lønns- og pensjonsordninger. Se hvilken lønn du vil få i dag og hva du kan forvente frem i tid i vår [lønnskalkulator](https://www.variant.no/kalkulator). Ingen flere lønnsforhandlinger!
 - Du vil, sammen med alle ansatte, dele 30 % av overskuddet per kvartal som en resultatbonus. Gjør vi det bra som gruppe, feirer vi som gruppe!
 - Gjennom medeierskapsprogrammet kan du kjøpe aksjer i Variant.
 
-## Fag og kompetansebygging
+### Fag og kompetansebygging
 
 - Første fredag hver måned er det fagdag i arbeidstiden
 - Du blir med i utviklingsprogrammet vårt RÅ, og du kan bli med i én av våre 11 faggrupper
 - Du får bli med på vår åpne og tverrfaglige konferanse Refill. I tillegg sender vi deg gjerne på et kurs eller en ekstern konferanse en gang i året — Vi mener det er viktig å søke eksterne impulser og lære av de beste
 - Vi drar sammen på lokale meetups og arrangerer fagkvelder for oss selv og andre «hjemme hos oss» på Variant-kontoret
 
-## Andre goder og ytelser
+### Andre goder og ytelser
 
 - Full lønn under foreldrepermisjon, selv om lønnen skulle overstige det NAV betaler, to uker betalt permisjon for partner etter fødsel og to dager til barnehagetilvenning
 - Gadget-budsjett på 12.000 kr. pluss mva. per år
