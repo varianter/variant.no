@@ -10,6 +10,6 @@ export type TjenesteomradeProps = {
 } & TjenesteomradeMetadata;
 
 export type TjenesteomradeMetadata = {
-  name: typeof tjenesteomradePath[number];
+  name: (typeof tjenesteomradePath)[number];
   color: string;
 };

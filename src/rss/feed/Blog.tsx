@@ -6,7 +6,11 @@ import { truncateOnSpace } from './utils';
 
 export default function Blog({ item }: { item: BlogItem }) {
   return (
-    <a className={and(style.card, style['card--blog'])} href={item.url} target="_blank">
+    <a
+      className={and(style.card, style['card--blog'])}
+      href={item.url}
+      target="_blank"
+    >
       <div className={style.media}>
         {item.imageCoverUrl && (
           <BaseBlob

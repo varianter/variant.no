@@ -42,7 +42,7 @@ const Areas = (prop: TjenesteomradeProps) => {
 
 export default Areas;
 
-type SubPageProps = typeof tjenesteomradePath[number];
+type SubPageProps = (typeof tjenesteomradePath)[number];
 
 const SubPage = (props: { page: SubPageProps }) => {
   const page = props.page;

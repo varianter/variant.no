@@ -126,14 +126,17 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     transform: translateX(0%);
-    transition: transform 450ms ease-in-out,
+    transition:
+      transform 450ms ease-in-out,
       background-color 300ms ease-in-out 300ms;
     z-index: 99;
   }
 
   .header__nav__hidden {
     transform: translateX(100%);
-    transition: transform 450ms ease-in-out, background-color 100ms ease-in-out;
+    transition:
+      transform 450ms ease-in-out,
+      background-color 100ms ease-in-out;
     background-color: rgba(0, 0, 0, 0);
   }
 

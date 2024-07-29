@@ -125,7 +125,10 @@ blockquote {
   max-width: 600px;
   margin: 4rem auto;
   position: relative;
-  font-family: Graphik Web, Arial, sans-serif;
+  font-family:
+    Graphik Web,
+    Arial,
+    sans-serif;
   font-size: 1.6rem;
   line-height: 2.5rem;
   padding: 3rem;
