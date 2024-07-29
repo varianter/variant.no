@@ -113,7 +113,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               key={`${item.name}_${item.title}_${item.location}`}
             />
           ))}
-          <OpenApplicationListingItem/>
+          <OpenApplicationListingItem />
         </section>
         <section className={style.omVariant}>
           <h2>Variantdag - November 2019</h2>

@@ -34,7 +34,6 @@ export const getStaticProps: GetStaticProps<
     };
   }
 
-
   const contactEmails = listing.contact_emails?.split(',').map((e) => e.trim());
   let contacts: EmployeeItem[] = [];
   if (contactEmails?.length) {

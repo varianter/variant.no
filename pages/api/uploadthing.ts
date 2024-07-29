@@ -1,6 +1,6 @@
-import { createRouteHandler } from "uploadthing/next-legacy";
+import { createRouteHandler } from 'uploadthing/next-legacy';
 
-import { uploadRouter } from "../../src/server/uploadthing";
+import { uploadRouter } from '../../src/server/uploadthing';
 
 const handler = createRouteHandler({
   router: uploadRouter,

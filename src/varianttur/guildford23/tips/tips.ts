@@ -1,9 +1,9 @@
 export interface TipModel {
   title: string;
   link: string;
-  info: string; 
+  info: string;
   imageUrl: string;
-};
+}
 
 export const tips: TipModel[] = [
   {

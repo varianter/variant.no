@@ -1,1 +1,1 @@
-export {default} from 'src/hemsedal24/upload'
+export { default } from 'src/hemsedal24/upload';

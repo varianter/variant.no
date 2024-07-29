@@ -132,7 +132,7 @@ function mapFeedToPodcast(item: PodcastFeedItem): PodcastItem {
       url: item.enclosure?.url || '',
     },
     description: item.itunes?.summary || '',
-    duration: item.itunes?.duration? parseInt(item.itunes.duration) : 0,
+    duration: item.itunes?.duration ? parseInt(item.itunes.duration) : 0,
   };
 }
 

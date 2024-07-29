@@ -13,7 +13,6 @@ export default function Upload() {
           <span>Til hjemmeside</span>
         </Link>
         <Link className={styles.tilbake} href="/hemsedal24/bilder">
-        
           <img src={arrowLeft} width={24} height={28} alt="pil venste" />
           <span>Tilbake til bilder</span>
         </Link>
@@ -33,9 +32,11 @@ export default function Upload() {
           onUploadError={(error: Error) => {
             alert(`En feil har skjedd. Feilmelding: ${error.message}`);
           }}
-          content={{allowedContent() {
-            return 'Bilder opp til 16MB, maks 20 om gangen'
-          }}}
+          content={{
+            allowedContent() {
+              return 'Bilder opp til 16MB, maks 20 om gangen';
+            },
+          }}
         />
       </div>
     </div>

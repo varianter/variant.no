@@ -109,10 +109,14 @@
   padding: 0.7em;
   background: white;
   width: 15rem;
-  box-shadow: 0 0 4vmin rgba(0, 0, 0, 0.3), 0 0 0.5vmin rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 4vmin rgba(0, 0, 0, 0.3),
+    0 0 0.5vmin rgba(0, 0, 0, 0.5);
   font-size: 0.7rem;
   font-family: 'Recoleta-Medium';
-  transition: box-shadow 0.2s ease, filter 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
 }
 .rendered__markdown__wrapper :global(.polaroid) img {
   float: none;

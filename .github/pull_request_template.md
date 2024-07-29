@@ -8,7 +8,7 @@ Please provide a brief summary of the changes you’ve made. Explain the purpose
 
 If applicable, please include screenshots or a short video showcasing the changes you have made.
 
-*Insert images or videos here.*
+_Insert images or videos here._
 
 ---
 

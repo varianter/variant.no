@@ -1,1 +1,1 @@
-export { default } from 'src/hemsedal24/tingogtang'
+export { default } from 'src/hemsedal24/tingogtang';

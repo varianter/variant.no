@@ -1,9 +1,9 @@
 export interface ActivityModel {
   title: string;
   link: string;
-  info: string[]; 
+  info: string[];
   imageUrl: string;
-};
+}
 
 export const activities: ActivityModel[] = [
   {
@@ -13,7 +13,7 @@ export const activities: ActivityModel[] = [
       'Oppmøte i lobbyen kl 10:20',
       'Tour kl 11:30 - 13:00',
       'Lunsj, The prince of Wales kl 13:15',
-      'Buss tilbake kl 14:30', 
+      'Buss tilbake kl 14:30',
     ],
     imageUrl: '/images/varianttur/hampton.png',
   },
@@ -34,7 +34,7 @@ export const activities: ActivityModel[] = [
       'Oppmøte i lobbyen kl 10:20',
       'Tour kl 11:15',
       'Lunsj, Mandiras kitchen kl',
-      'Buss tilbake kl 13:30'
+      'Buss tilbake kl 13:30',
     ],
     imageUrl: '/images/varianttur/gin.png',
   },
