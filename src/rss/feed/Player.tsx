@@ -107,7 +107,7 @@ export default function AudioPlayer({
 
       <button
         onClick={buttonHandler}
-        aria-label={currentState === 'PLAYING' ? "Pause" : "Play"}
+        aria-label={currentState === 'PLAYING' ? 'Pause' : 'Play'}
         aria-pressed={currentState === 'PLAYING'}
         className={style.player__button}
         data-state={currentState}

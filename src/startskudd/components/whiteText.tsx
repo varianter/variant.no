@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 type WhiteTextProps = {
-    children: React.ReactNode
-  }
+  children: React.ReactNode;
+};
 
-export const WhiteText = ({children}: WhiteTextProps) => {
-  return (
-    <div style={{color: "white"}}>
-      {children} 
-    </div>
-  )
-}
+export const WhiteText = ({ children }: WhiteTextProps) => {
+  return <div style={{ color: 'white' }}>{children}</div>;
+};

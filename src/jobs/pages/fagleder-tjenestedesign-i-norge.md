@@ -41,17 +41,20 @@ Det er forskjellig hvilke goder den enkelte verdsetter mest, så vi anbefaler at
 <div class="right"><img alt="Sarah hos Variant holder et foredrag" src="/work_images/morten_jobber_paa_mac.png"/></div>
 
 **Lønn, bonus & eierskap**
+
 - Vi har gode lønns- og pensjonsordninger. Se hvilken lønn du vil få i dag og hva du kan forvente frem i tid i vår [lønnskalkulator](https://www.variant.no/kalkulator). Ingen flere lønnsforhandlinger!
 - Du vil, sammen med alle ansatte, dele 30 % av overskuddet per kvartal som en resultatbonus. Gjør vi det bra som gruppe, feirer vi som gruppe!
 - Gjennom medeierskapsprogrammet kan du kjøpe aksjer i Variant.
 
 **Fag og kompetansebygging**
+
 - Første fredag hver måned er det fagdag i arbeidstiden
 - Du blir med i utviklingsprogrammet vårt RÅ, og du kan bli med i én av våre 11 faggrupper
 - Du får bli med på vår åpne og tverrfaglige konferanse Refill. I tillegg sender vi deg gjerne på et kurs eller en ekstern konferanse en gang i året — Vi mener det er viktig å søke eksterne impulser og lære av de beste
 - Vi drar sammen på lokale meetups og arrangerer fagkvelder for oss selv og andre «hjemme hos oss» på Variant-kontoret
 
 **Andre goder og ytelser**
+
 - Full lønn under foreldrepermisjon, selv om lønnen skulle overstige det NAV betaler, to uker betalt permisjon for partner etter fødsel og to dager til barnehagetilvenning
 - Gadget-budsjett på 12.000 kr. pluss mva. per år
 - Fri telefoni, støtte til bredbånd og trening, og mye annet knask som du kan lese om i håndboken vår

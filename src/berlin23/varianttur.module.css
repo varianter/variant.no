@@ -199,7 +199,9 @@
   border-right: var(--thickness) solid var(--color);
   border-bottom: var(--thickness) solid var(--color);
   transform: rotate(45deg);
-  animation: bounce 3.5s infinite, fadeIn 1s 1 forwards;
+  animation:
+    bounce 3.5s infinite,
+    fadeIn 1s 1 forwards;
   animation-delay: 3s;
   opacity: 0;
   display: none;

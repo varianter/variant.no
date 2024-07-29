@@ -1,14 +1,19 @@
-import React from 'react'
-import style from "./contact.module.css"
+import React from 'react';
+import style from './contact.module.css';
 
 type ContactProps = {
-    firstName: string;
-    surname: string;
-    email: string;
-    phoneNumber: string;
-  }
+  firstName: string;
+  surname: string;
+  email: string;
+  phoneNumber: string;
+};
 
-export const Contact = ({firstName, surname, email,phoneNumber}: ContactProps) => {
+export const Contact = ({
+  firstName,
+  surname,
+  email,
+  phoneNumber,
+}: ContactProps) => {
   return (
     <div className={style.contact}>
       <div className={style.contact_left}>
@@ -20,5 +25,5 @@ export const Contact = ({firstName, surname, email,phoneNumber}: ContactProps) =
         <p>{phoneNumber}</p>
       </div>
     </div>
-  )
-}
+  );
+};

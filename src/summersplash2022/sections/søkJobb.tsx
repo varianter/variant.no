@@ -5,9 +5,11 @@ import ApplyImgWithBlob from 'src/summersplash2022/img/applyImgWithBlob';
 
 const Apply = ({ applyType }: { applyType: ApplyType }) => {
   const isApplyGraduate = applyType == ApplyType.GRADUATE;
-  const variantImg = require(isApplyGraduate
-    ? 'src/components/page-header/whiteVariant.svg'
-    : 'src/components/page-header/variant.svg');
+  const variantImg = require(
+    isApplyGraduate
+      ? 'src/components/page-header/whiteVariant.svg'
+      : 'src/components/page-header/variant.svg',
+  );
 
   return (
     <section

@@ -34,7 +34,8 @@
 .calculatorContainer {
   position: relative;
   background: var(--color-secondary4);
-  box-shadow: 10px 10px 30px var(--color-secondary4__shade1),
+  box-shadow:
+    10px 10px 30px var(--color-secondary4__shade1),
     -10px -10px 30px var(--color-secondary4__tint4);
   border-radius: 2rem;
   padding: 1rem;
