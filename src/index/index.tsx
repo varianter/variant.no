@@ -34,7 +34,7 @@ const Home = ({ randomEmployee, randomCases, feeds }: HomeProps) => {
           {caseItem.content.split(/\n\s*\n/gm).map((e, i) => (
             <p key={i}>{e}</p>
           ))}
-          <Link href={caseItem.href} title="Prosjektinfo">
+          <Link href={caseItem.href} aria-label={`${caseItem.heading} mer prosjektinformasjon`}>
             Les mer
           </Link>
         </div>
