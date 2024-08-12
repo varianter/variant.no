@@ -1,0 +1,35 @@
+.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  align-self: stretch;
+
+  @media (min-width: 640px) {
+    gap: 2rem;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 9rem;
+  }
+}
+
+.image {
+  flex: 1;
+  width: -webkit-fill-available;
+  max-width: 240px;
+
+  @media (min-width: 640px) {
+    max-width: 240px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 400px;
+  }
+}
+
+.body {
+  flex: 2;
+}

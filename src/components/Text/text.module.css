@@ -1,0 +1,105 @@
+.display,
+.h1,
+.h2,
+.h3,
+.bodySuperLarge {
+  color: var(--primary-black);
+  font-family: var(--font-darkerGrotesque);
+}
+
+.bodyLarge,
+.body,
+.small,
+.caption,
+.list {
+  color: var(--primary-black);
+  font-family: var(--font-figtree);
+  line-height: 140%;
+}
+
+.display {
+  font-size: 3.75rem;
+  line-height: 100%;
+  font-weight: 500;
+
+  @media (min-width: 1024px) {
+    font-size: 5.25rem;
+    line-height: normal;
+  }
+}
+
+.h1 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 110%;
+
+  @media (min-width: 1024px) {
+    font-size: 4.25rem;
+  }
+}
+
+.h2 {
+  font-size: 2.5625rem;
+  font-weight: 500;
+  line-height: 110%;
+
+  @media (min-width: 1024px) {
+    font-size: 3.375;
+    line-height: 120%;
+  }
+}
+
+.h3 {
+  font-size: 2.125rem;
+  font-weight: 600;
+
+  @media (min-width: 1024px) {
+    font-size: 2.25rem;
+  }
+}
+
+.bodySuperLarge {
+  font-size: 2.125rem;
+  font-weight: 500;
+
+  @media (min-width: 1024px) {
+    font-size: 2.625rem;
+  }
+}
+
+.bodyLarge {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.875rem;
+  }
+}
+
+.body {
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
+}
+
+.small {
+  font-size: 1rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
+}
+
+.caption {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-green-dark);
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,91 @@
+.shared {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  composes: shared;
+  padding: 5rem 2rem;
+  background-color: var(--primary-white);
+
+  @media (min-width: 1024px) {
+    padding: 7.5rem 15rem;
+  }
+}
+
+.logoSalad {
+  composes: shared;
+  max-width: 75rem;
+  gap: 1.5rem;
+
+  @media (min-width: 1024px) {
+    gap: 7.5rem;
+    width: 100%;
+  }
+}
+
+.logoList {
+  composes: shared;
+  gap: 1.5rem;
+
+  @media (min-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.logoWrapper {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 40rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  & > li {
+    width: 4.5rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 0.45rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    object-fit: contain;
+  }
+
+  @media (min-width: 640px) {
+    gap: 0.75rem;
+
+    & > li {
+      width: 5rem;
+      height: 2.5rem;
+      background-color: white;
+      border-radius: 0.45rem;
+      overflow: hidden;
+      padding: 0.5rem;
+      object-fit: contain;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    gap: 1rem;
+    max-width: 53rem;
+
+    & > li {
+      width: 7rem;
+      height: 3.5rem;
+      background-color: white;
+      border-radius: 0.45rem;
+      overflow: hidden;
+      padding: 0.5rem;
+      object-fit: contain;
+    }
+  }
+}

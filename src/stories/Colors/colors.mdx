@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { ColorBox } from "./ColorBox.tsx";
+import Styles from "./colors.module.css";
+
+<Meta title="Design System/Colors" />
+
+# Colors
+
+## Primary Colors
+
+<div className={Styles.colorGrid}>
+  <ColorBox name="Primary White Bright" color="--primary-white-bright" />
+  <ColorBox name="Primary White" color="--primary-white" />
+  <ColorBox name="Primary Black" color="--primary-black" />
+  <ColorBox name="Primary Pink Light" color="--primary-pink-light" />
+  <ColorBox name="Primary Pink Dark" color="--primary-pink-dark" />
+  <ColorBox name="Primary Green Dark" color="--primary-green-dark" />
+  <ColorBox name="Primary Green Light" color="--primary-green-light" />
+</div>
+
+## Secondary Colors
+
+<div className={Styles.colorGrid}>
+  <ColorBox name="Secondary Yellow 1" color="--secondary-yellow1" />
+  <ColorBox name="Secondary Green 2" color="--secondary-green2" />
+  <ColorBox name="Secondary Green 3" color="--secondary-green3" />
+  <ColorBox name="Secondary Gradient Pink" color="--secondary-gradient-pink" />
+  <ColorBox
+    name="Secondary Gradient Green"
+    color="--secondary-gradient-green"
+  />
+  <ColorBox name="Secondary Off white 1" color="--secondary-off-white1" />
+  <ColorBox name="Secondary Off white 2" color="--secondary-off-white2" />
+  <ColorBox name="Secondary Green dark 2" color="--secondary-green-dark2" />
+</div>

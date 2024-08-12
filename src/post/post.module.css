@@ -1,0 +1,38 @@
+.post {
+  background: var(--primary-white, #faf8f5);
+}
+
+.body {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+
+  padding: 5rem 2rem 1.5rem 2rem;
+
+  @media (min-width: 640px) {
+    padding: 2.5rem 3rem 1.5rem 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 5rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+.section {
+  margin-bottom: 5rem; /* Space between sections */
+}
+
+.heading {
+  margin-bottom: 1.5rem; /* Space between heading and paragraphs */
+}
+
+.paragraph {
+  margin-bottom: 1.5rem; /* Space between paragraphs */
+}

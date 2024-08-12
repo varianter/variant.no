@@ -1,0 +1,26 @@
+.skipLink {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: center;
+  align-items: center;
+  gap: var(--borderRadius-borderRadius-s, 0.5rem);
+  align-self: stretch;
+  background: var(--primary-green-dark, #206a6f);
+
+  text-decoration: none;
+  color: var(--primary-white, #faf8f5);
+  font-family: var(--font-figtree);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  &:focus:focus {
+    top: 0;
+    position: relative;
+  }
+}

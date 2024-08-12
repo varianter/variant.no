@@ -1,0 +1,112 @@
+<svg id="elbpcMBeN6f1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 1000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <style>
+    <![CDATA[
+    #eX6o1Pzr7kA3_to {animation: eX6o1Pzr7kA3_to__to 3000ms linear infinite}@keyframes eX6o1Pzr7kA3_to__to { 0% {offset-distance: 0%} 42.1% {offset-distance: 42.110652%} 74.3% {offset-distance: 74.284951%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA4_to {animation: eX6o1Pzr7kA4_to__to 7000ms linear infinite}@keyframes eX6o1Pzr7kA4_to__to { 0% {offset-distance: 0%} 27.5% {offset-distance: 27.8975%} 64% {offset-distance: 56.988829%} 99.6% {offset-distance: 100%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA5_to {animation: eX6o1Pzr7kA5_to__to 4000ms linear infinite}@keyframes eX6o1Pzr7kA5_to__to { 0% {offset-distance: 0%} 14.65% {offset-distance: 15.871471%} 43.8% {offset-distance: 47.19908%} 73.5% {offset-distance: 77.012031%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA6_to {animation: eX6o1Pzr7kA6_to__to 4000ms linear infinite}@keyframes eX6o1Pzr7kA6_to__to { 0% {offset-distance: 0%} 43.8% {offset-distance: 40.177264%} 73.5% {offset-distance: 67.84325%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA7_to {animation: eX6o1Pzr7kA7_to__to 3000ms linear infinite}@keyframes eX6o1Pzr7kA7_to__to { 0% {offset-distance: 0%} 23.5% {offset-distance: 32.051413%} 43.8% {offset-distance: 59.560957%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA8_to {animation: eX6o1Pzr7kA8_to__to 1500ms linear infinite}@keyframes eX6o1Pzr7kA8_to__to { 0% {offset-distance: 0%} 68.65% {offset-distance: 48.085336%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA9_to {animation: eX6o1Pzr7kA9_to__to 4500ms linear infinite}@keyframes eX6o1Pzr7kA9_to__to { 0% {offset-distance: 0%} 12.2% {offset-distance: 42.769197%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA10_to {animation: eX6o1Pzr7kA10_to__to 4500ms linear infinite}@keyframes eX6o1Pzr7kA10_to__to { 0% {offset-distance: 0%} 17.4% {offset-distance: 46.977978%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA11_to {animation: eX6o1Pzr7kA11_to__to 2500ms linear infinite}@keyframes eX6o1Pzr7kA11_to__to { 0% {offset-distance: 0%} 49.8% {offset-distance: 50.279466%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA12_to {animation: eX6o1Pzr7kA12_to__to 3500ms linear infinite}@keyframes eX6o1Pzr7kA12_to__to { 0% {offset-distance: 0%} 49.8% {offset-distance: 49.814373%} 100% {offset-distance: 100%}} 
+    #eX6o1Pzr7kA13_to {animation: eX6o1Pzr7kA13_to__to 6000ms linear infinite}@keyframes eX6o1Pzr7kA13_to__to { 0% {offset-distance: 0%} 49.8% {offset-distance: 20.696217%} 65.5% {offset-distance: 54.631179%} 100% {offset-distance: 100%}}
+    #e3Ag2XYODQC2_to {animation: e3Ag2XYODQC2_to__to 6500ms linear infinite normal forwards}@keyframes e3Ag2XYODQC2_to__to { 0% {offset-distance: 0%} 4.85% {offset-distance: 0%} 42.1% {offset-distance: 39.70092%} 74.3% {offset-distance: 70.641088%} 100% {offset-distance: 100%}}
+
+    ]]>
+  </style>
+<defs>
+  <filter id="blur-filter" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="100" />
+  </filter>
+  <linearGradient id="eX6o1Pzr7kA3-fill" x1="0.286762" y1="0.937043" x2="0.861722" y2="0.160346" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA3-fill-0" offset="0%" stop-color="#3aa68e" />
+    <stop id="eX6o1Pzr7kA3-fill-1" offset="100%" stop-color="#98c592" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA4-fill" x1="0.286762" y1="0.937043" x2="0.861722" y2="0.160346" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA4-fill-0" offset="0%" stop-color="#dfcb60" />
+    <stop id="eX6o1Pzr7kA4-fill-1" offset="100%" stop-color="#b1e7db" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA5-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA5-fill-0" offset="0%" stop-color="#deffcc" />
+    <stop id="eX6o1Pzr7kA5-fill-1" offset="100%" stop-color="#55877c" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA6-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA6-fill-0" offset="0%" stop-color="#79b05e" />
+    <stop id="eX6o1Pzr7kA6-fill-1" offset="100%" stop-color="#3aa66b" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA7-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA7-fill-0" offset="0%" stop-color="#b1e7db" />
+    <stop id="eX6o1Pzr7kA7-fill-1" offset="100%" stop-color="#55877c" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA8-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA8-fill-0" offset="0%" stop-color="#c7eeb4" />
+    <stop id="eX6o1Pzr7kA8-fill-1" offset="100%" stop-color="#55877c" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA9-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA9-fill-0" offset="0%" stop-color="#3aa68e" />
+    <stop id="eX6o1Pzr7kA9-fill-1" offset="100%" stop-color="#55877c" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA10-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA10-fill-0" offset="0%" stop-color="#c7eeb4" />
+    <stop id="eX6o1Pzr7kA10-fill-1" offset="100%" stop-color="#55877c" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA11-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA11-fill-0" offset="0%" stop-color="#dfcb60" />
+    <stop id="eX6o1Pzr7kA11-fill-1" offset="100%" stop-color="#359e88" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA12-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA12-fill-0" offset="0%" stop-color="#c7eeb4" />
+    <stop id="eX6o1Pzr7kA12-fill-1" offset="100%" stop-color="#93c6bb" />
+  </linearGradient>
+  <linearGradient id="eX6o1Pzr7kA13-fill" x1="0" y1="0.5" x2="1" y2="0.5" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="eX6o1Pzr7kA13-fill-0" offset="0%" stop-color="#c7eeb4" />
+    <stop id="eX6o1Pzr7kA13-fill-1" offset="100%" stop-color="#93c6bb" />
+  </linearGradient>
+  <linearGradient id="e3Ag2XYODQC2-fill" x1="0.286762" y1="0.937043" x2="0.861722" y2="0.160346" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+    <stop id="e3Ag2XYODQC2-fill-0" offset="0%" stop-color="#3aa68e"/>
+    <stop id="e3Ag2XYODQC2-fill-1" offset="100%" stop-color="#98c592"/>
+  </linearGradient>
+</defs>
+  <g filter="url(#blur-filter)">
+<rect width="1983.886941" height="946.909954" rx="0" ry="0" transform="matrix(1.040768 0 0 1.127618-40.43955-60.579161)" fill="#fff" stroke-width="0" />
+<g id="eX6o1Pzr7kA3_to" style="offset-path:path('M1651.695878,808.435673C1442.956196,593.689499,1540.934592,255.599243,1716.375779,267.476497C1891.816966,279.353752,2000,500,1945.695429,652.856298C1885.27404,822.930193,1831.035602,896.635535,1651.695878,808.435673');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="scale(1.796933,1.796933) translate(0,100)" opacity="0.65" fill="url(#eX6o1Pzr7kA3-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA4_to" style="offset-path:path('M231.5052,330.37739C419.798813,297.179401,352.271495,483.744352,231.5052,566.662864C110.738905,649.581376,125.814997,861.788226,302.959091,815.4184C480.103185,769.048574,28.457667,366.176638,231.5052,330.37739');offset-rotate:auto">
+  <ellipse rx="200" ry="200" transform="scale(1.157526,1.157526) translate(0,100)" opacity="0.65" fill="url(#eX6o1Pzr7kA4-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA5_to" style="offset-path:path('M979.602585,330.3774C979.602585,231.724046,925.887006,160.265453,830.622348,128.151871C667.263,73.081881,417.715436,137.90547,387.931674,309.16211C340.786583,580.246394,581.226554,550.530999,722.661831,550.530999C864.097108,550.530999,979.602585,514.243262,979.602585,330.3774');offset-rotate:auto">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(2.012626,1.891924) translate(23.285724,-8.153557)" opacity="0.55" fill="url(#eX6o1Pzr7kA5-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA6_to" style="offset-path:path('M1659.807466,260.643718C1636.234921,8.417471,1370.599122,109.008285,1331.902442,280.217095C1293.205762,451.425905,1303.537864,538.194092,1444.97315,538.194092C1586.408424,538.194092,1663.576489,444.509576,1663.576489,260.643721');offset-rotate:auto">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(1.893689,1.893689) translate(-29.130904,-113.265473)" opacity="0.65" fill="url(#eX6o1Pzr7kA6-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA7_to" style="offset-path:path('M2046.675763,664.534284C2062.330394,592.437669,2034.232372,345.960336,2001.70674,254.659025C1957.46751,153.864768,1761.170023,289.197756,1737.736374,392.877126C1699.039694,564.085947,2000.000001,817.150008,2046.675762,664.534284');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(1.483852,1.48385) translate(24.473277,-11.974904)" opacity="0.65" fill="url(#eX6o1Pzr7kA7-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA8_to" style="offset-path:path('M110.857699,76.313721C0,18.512147,7.059,314.738234,44.466815,385.78999C139.271867,479.044963,199.301698,165.879879,110.857703,76.31372');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(1.483852,1.48385) translate(24.473277,-11.974904)" opacity="0.3" fill="url(#eX6o1Pzr7kA8-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA9_to" style="offset-path:path('M135.276191,890.596528C102.967651,873.750748,56.256249,1012.692625,51.320927,1046.424355C6.692345,1112.05143,223.720186,980.162688,135.276191,890.596528');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(1.483852,1.48385) translate(24.473277,-11.974904)" opacity="0.45" fill="url(#eX6o1Pzr7kA9-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA10_to" style="offset-path:path('M1177.115761,817.284805C1189.496163,654.270554,1055.562727,489.005066,908.123399,545.279622C750.178022,623.716024,1164.19435,953.832872,1177.115761,817.284804');offset-rotate:auto">
+  <ellipse rx="200" ry="200" transform="rotate(-63.92728) scale(1.940975,1.940971) translate(0.718835,3.137018)" opacity="0.55" fill="url(#eX6o1Pzr7kA10-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA11_to" style="offset-path:path('M1309.796714,577.932799C1313.392517,674.231391,882.955145,610.890702,875.883381,530.744044C868.811617,450.597386,1310.532137,500,1310.532137,577.932799');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="scale(4.672017,4.67202) translate(-17.828601,20.611768)" opacity="0.4" fill="url(#eX6o1Pzr7kA11-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA12_to" style="offset-path:path('M737.47193,577.932799C757.421735,667.823991,1372.363528,676.300222,1372.363528,557.994369C1372.363528,439.688516,717.522125,488.041607,737.47193,577.932799');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="scale(4.672017,4.67202) translate(0,10.606364)" opacity="0.3" fill="url(#eX6o1Pzr7kA12-fill)" stroke-width="0" />
+</g>
+<g id="eX6o1Pzr7kA13_to" style="offset-path:path('M1234.390682,438.882448C1218.477981,517.285147,1223.415935,459.871118,1293.214366,571.540315C1374.09693,637.293627,1477.038376,584.575695,1491.744297,500.000002C1515.451014,379.854041,1289.53789,342.620558,1234.390682,432.837885');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="scale(6.13356,4.026491) translate(-27.931424,13.360113)" opacity="0.35" fill="url(#eX6o1Pzr7kA13-fill)" stroke-width="0" />
+</g>
+<g id="e3Ag2XYODQC2_to" style="offset-path:path('M1303.324707,748.851013C1183.597646,528.794744,1213.601433,319.761209,1371.586395,315.860345C1538.921878,311.728604,1620.082761,435.698908,1565.77819,588.555206C1505.356801,758.629101,1379.254163,861.845781,1303.324707,748.851013');offset-rotate:0deg">
+  <ellipse rx="200" ry="200" transform="scale(1.796933,1.796933) translate(0,100)" opacity="0.5" fill="url(#e3Ag2XYODQC2-fill)" stroke-width="0"/>
+</g>
+</g>
+
+</svg>

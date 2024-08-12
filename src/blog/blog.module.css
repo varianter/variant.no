@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  background-color: var(--primary-white-bright);
+}
+
+.body {
+  width: -webkit-fill-available;
+}
+
+.loading {
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.loaded {
+  opacity: 1;
+  transition: opacity 100ms ease-in-out;
+}

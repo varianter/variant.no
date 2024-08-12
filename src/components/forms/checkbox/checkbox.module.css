@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  width: -webkit-fill-available;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid var(--primary-black);
+  border-radius: 0.25rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6.5px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.input:checked + .checkbox {
+  background-color: var(--primary-green-dark);
+  border-color: var(--primary-green-dark);
+}
+
+.input:checked + .checkbox::after {
+  display: block;
+}
+
+/* Focus Styles */
+.input:focus + .checkbox {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.label {
+  color: var(--primary-black);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-red-error);
+  &::before {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    background-color: var(--primary-red-error);
+    -webkit-mask: url("/alert-circle.svg") no-repeat 50% 50%;
+  }
+
+  @media (min-height: 1024px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

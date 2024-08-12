@@ -1,0 +1,31 @@
+.shared {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  background: var(--secondary-yellow1);
+}
+
+.secondary {
+  background: var(--primary-white-bright);
+}
+
+.callout {
+  composes: shared;
+  width: -webkit-fill-available;
+  max-width: 75rem;
+  gap: 3rem;
+
+  padding: 5rem 2rem;
+
+  @media (min-width: 640px) {
+    padding: 5rem 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 7.5rem;
+  }
+}
