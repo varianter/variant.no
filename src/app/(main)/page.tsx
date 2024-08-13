@@ -6,6 +6,7 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
+import { MissingData } from 'src/components/missingData/MissingData';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
@@ -34,7 +35,7 @@ const Home = async () => {
   );
 
   if (!landingId) {
-    return <NewTemplatePlaceholder />;
+    return <MissingData description={"Landing page id"} />
   }
 
   const initialLandingPage = await loadQuery<PageBuilder>(
@@ -44,7 +45,11 @@ const Home = async () => {
   );
 
   if (!initialLandingPage) {
-    throw new Error("Page not found");
+    return <MissingData description={`Page for id '${landingId}'`} />
+  }
+
+  if (!initialLandingPage.data.sections) {
+    return <MissingData description={`Sections for landing page`} />
   }
 
   return initialLandingPage.data.sections.map((section, index) => {

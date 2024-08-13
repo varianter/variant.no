@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: inline-flex;
+    align-self: center;
+    flex-direction: column;
+    margin: calc(72px + 2rem) auto 0;
+    padding: 2.5rem;
+    background: #FFEBEE;
+    border: 0.25rem solid #F44336;
+    border-radius: 8px;
+    gap: 1.5rem;
+}
