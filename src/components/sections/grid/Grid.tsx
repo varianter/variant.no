@@ -4,10 +4,8 @@ import { GridSection } from "studio/lib/payloads/pages";
 import styles from "./grid.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { PortableText } from "@portabletext/react";
-
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="small">{children}</Text>,
-};
+import { PortableTextBlock } from "src/components/richText/RichText";
+import { IImage } from "studio/lib/payloads/media";
 
 const Grid = ({ grid }: { grid: GridSection }) => {
   return (
@@ -18,21 +16,7 @@ const Grid = ({ grid }: { grid: GridSection }) => {
         </Text>
         <ul aria-labelledby="grid-title" className={styles.list}>
           {grid.items.map((item) => {
-            const renderImage = useConvertSanityImageToNextImage(item.image);
-            return (
-              <li className={styles.listItem} key={item._key}>
-                {renderImage && (
-                  <div className={styles.image}>{renderImage}</div>
-                )}
-                <Text>{item.basicTitle}</Text>
-                {item.richText && (
-                  <PortableText
-                    value={item.richText}
-                    components={myPortableTextComponents}
-                  />
-                )}
-              </li>
-            );
+            return <Element item={item} key={item._key} />;
           })}
         </ul>
       </div>
@@ -41,3 +25,33 @@ const Grid = ({ grid }: { grid: GridSection }) => {
 };
 
 export default Grid;
+
+const Element = ({
+  item,
+}: {
+  item: {
+    _key: string;
+    _type: string;
+    basicTitle: string;
+    richText?: PortableTextBlock[];
+    image: IImage;
+  };
+}) => {
+  const renderImage = useConvertSanityImageToNextImage(item.image);
+  return (
+    <li className={styles.listItem}>
+      {renderImage && <div className={styles.image}>{renderImage}</div>}
+      <Text>{item.basicTitle}</Text>
+      {item.richText && (
+        <PortableText
+          value={item.richText}
+          components={myPortableTextComponents}
+        />
+      )}
+    </li>
+  );
+};
+
+const myPortableTextComponents = {
+  block: ({ children }: any) => <Text type="small">{children}</Text>,
+};

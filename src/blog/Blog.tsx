@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import useTabs from "src/utils/hooks/useTabs";
 import { BlogPage, Post } from "studio/lib/payloads/pages";
 import styles from "./blog.module.css";
@@ -36,14 +36,22 @@ export const Blog = ({ blog, initialPosts, slug }: BlogProps) => {
     ...filteredCategories,
   ];
 
-  const { posts, postsCount, fetchPosts } = useFetchPosts({
+  const {
+    posts,
+    postsCount,
+    fetchPosts: originalFetchPosts,
+  } = useFetchPosts({
     initialPosts,
     selectedTabIndex,
     categories,
   });
 
+  const fetchPosts = useCallback(() => {
+    originalFetchPosts({ reset: true });
+  }, [originalFetchPosts]);
+
   const handleLoadMore = () => {
-    fetchPosts({ reset: false });
+    originalFetchPosts({ reset: false });
   };
 
   const readMoreTitle =
@@ -52,11 +60,11 @@ export const Blog = ({ blog, initialPosts, slug }: BlogProps) => {
       : `More ${categories[selectedTabIndex]?.name} ${blog.allPostsLabel}`;
 
   useEffect(() => {
-    fetchPosts({ reset: true });
-  }, [selectedTabIndex]);
+    fetchPosts();
+  }, [selectedTabIndex, fetchPosts]);
 
   if (!initialPosts || posts.error) {
-    return <ErrorNews onTryAgain={() => fetchPosts({ reset: true })} />;
+    return <ErrorNews onTryAgain={fetchPosts} />;
   }
 
   return (

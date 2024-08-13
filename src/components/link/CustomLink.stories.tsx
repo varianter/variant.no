@@ -48,14 +48,14 @@ export const Link: Story = {
   },
 };
 
-export const headerLink: Story = {
+export const HeaderLink: Story = {
   args: {
     type: "headerLink",
     link: mockLink,
   },
 };
 
-export const footerLink: Story = {
+export const FooterLink: Story = {
   args: {
     type: "footerLink",
     link: mockLink,

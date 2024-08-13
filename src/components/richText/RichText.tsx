@@ -37,6 +37,11 @@ const formatId = (children: any): string => {
     .replace(/[^\w-]+/g, "");
 };
 
+const SanityImage = ({ value }: { value: PortableTextBlock }) => {
+  const ImageElement = useConvertSanityImageToNextImage(value);
+  return <div className={styles.image}>{ImageElement}</div>;
+};
+
 const myPortableTextComponents = {
   block: {
     h2: ({ children }: any) => (
@@ -69,10 +74,7 @@ const myPortableTextComponents = {
     ),
   },
   types: {
-    image: ({ value }: { value: PortableTextBlock }) => {
-      const imageElement = useConvertSanityImageToNextImage(value);
-      return <div className={styles.image}>{imageElement}</div>;
-    },
+    image: SanityImage,
   },
 };
 

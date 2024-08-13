@@ -67,7 +67,7 @@ export const useFetchPosts = ({
         }));
       }
     },
-    [selectedTabIndex]
+    [selectedTabIndex, categories, posts.data.length]
   );
 
   return { posts, postsCount, fetchPosts };

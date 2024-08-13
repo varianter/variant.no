@@ -16,11 +16,11 @@ const sizeClassMap: { [key in ButtonSize]: string } = {
 
 const BackButton = ({ size = "small" }: IButton) => {
   const isStorybook = typeof window !== "undefined" && !!window.STORYBOOK_ENV;
-  const router = isStorybook ? null : useRouter();
+  const router = useRouter();
   const className = `${styles.button} ${sizeClassMap[size]} ${styles.back}`;
 
   const handleClick = () => {
-    if (router) {
+    if (!isStorybook && router) {
       router.back();
     }
   };

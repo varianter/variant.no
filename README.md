@@ -34,7 +34,6 @@ To get started with Sankitty, follow these steps:
    ```
    NEXT_PUBLIC_SANITY_PROJECT_ID=<Your Sanity Project ID>
    NEXT_PUBLIC_SANITY_DATASET=<Your Sanity Dataset>
-   NEXT_PUBLIC_SANITY_READ_TOKEN=<Your Sanity Read Token>
    SANITY_API_READ_TOKEN=<Your Sanity API Read Token>
    NEXT_PUBLIC_SANITY_API_DEVELOPER_TOKEN=<Your Sanity Developer Token>
 

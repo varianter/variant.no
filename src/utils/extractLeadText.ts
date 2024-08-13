@@ -1,5 +1,3 @@
-// import { PortableTextBlock } from "src/components/richText/RichText";
-
 type Children = {
   text: string;
 };
