@@ -17,10 +17,8 @@ If applicable, please include screenshots or a short video showcasing the change
 Please ensure that you’ve completed the following checkpoints before submitting your pull request:
 
 - [ ] **Documentation**: Relevant documentation has been added or updated (if applicable).
-  - If not applicable, explain why:
 - [ ] **Testing**: Have you tested your changes thoroughly?
   - Please list the types of tests you've run (unit, integration, manual, etc.):
-  - UU and Storybook tests have been passed?
 
 ---
 
