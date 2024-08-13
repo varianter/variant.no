@@ -8,7 +8,7 @@
     display: inline-flex;
     align-self: center;
     flex-direction: column;
-    margin: calc(72px + 2rem) auto 0;
+    margin: calc(2rem + 72px) auto 0; /* TODO: remove extra pixels when .main -72px is handled */
     padding: 2.5rem;
     background: #FFEBEE;
     border: 0.25rem solid #F44336;
