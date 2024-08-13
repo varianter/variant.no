@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 
 export const NAV_QUERY = groq`
-  *[_type == "navigationManager"]{
+  *[_type == "navigationManager" && _id == "navigationManager"][0]{
     "main": main[] {
       ...,
       linkType == "internal" => {
@@ -35,9 +35,9 @@ export const NAV_QUERY = groq`
         }
       }
     }
-  }[1]
+  }
 `;
 
 export const LANDING_QUERY = groq`
-  *[_type == "navigationManager"][1].setLanding._ref
+  *[_type == "navigationManager" && _id == "navigationManager"][0].setLanding._ref
 `;
