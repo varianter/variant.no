@@ -39,5 +39,5 @@ export const NAV_QUERY = groq`
 `;
 
 export const LANDING_QUERY = groq`
-  *[_type == "navigationManager"][1].setLanding._ref
+  *[_type == "navigationManager" && _id == "navigationManager"][0].setLanding._ref
 `;
