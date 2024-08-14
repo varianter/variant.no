@@ -27,18 +27,3 @@
     border: 2px solid var(--primary-red-error);
     background: var(--primary-white, #faf8f5);
 }
-
-.buttonWrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-}
-
-.missingContentDescription {
-    font-family: monospace;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    background: var(--primary-white);
-    border-radius: 8px;
-    padding: 0.75rem;
-}

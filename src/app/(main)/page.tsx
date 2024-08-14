@@ -6,7 +6,8 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { MissingContentErrorMessage } from 'src/components/errorMessage/ErrorMessage';
+
+import { MissingContentErrorMessage } from '../../components/missingContentErrorMessage/MissingContentErrorMessage';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
