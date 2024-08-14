@@ -17,7 +17,7 @@ const studioLink = {
 export const MissingData = ({ description }: { description: string }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={`${styles.container}`}>
+      <div className={`${styles.content}`}>
         <Text type={"h3"}>Missing Content</Text>
         <Text type={"small"}>Navigate to Sanity Studio to add the following:</Text>
         <p className={styles.description}>{description}</p>

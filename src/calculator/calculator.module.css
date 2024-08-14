@@ -1,4 +1,4 @@
-.container {
+.content {
     margin-top: calc(5rem + 72px); /* TODO: remove extra pixels when .main -72px is handled */
     width: 100%;
     display: flex;
