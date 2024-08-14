@@ -14,6 +14,16 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMetadataFromSeo(seo);
 }
 
+// TODO: Replace with an actual component, this is just a placeholder.
+const NewTemplatePlaceholder = () => (
+  <div>
+    <h1>Welcome to Your New Site Setup!</h1>
+    <p>
+      {` It looks like you haven't set up your landing page yet. Let's get started!`}
+    </p>
+  </div>
+);
+
 const Home = async () => {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
@@ -24,7 +34,7 @@ const Home = async () => {
   );
 
   if (!landingId) {
-    throw new Error("Landing page ID not found");
+    return <NewTemplatePlaceholder />;
   }
 
   const initialLandingPage = await loadQuery<PageBuilder>(
