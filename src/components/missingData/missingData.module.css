@@ -10,7 +10,7 @@
     flex-direction: column;
     margin: calc(2rem + 72px) auto 0; /* TODO: remove extra pixels when .main -72px is handled */
     padding: 2.5rem;
-    background: #FFEBEE;
+    background: var(--primary-red-error-light);
     border: 0.25rem solid var(--primary-red-error);
     border-radius: 8px;
     gap: 1.5rem;
