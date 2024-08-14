@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    padding: 5rem 2rem;
+    align-items: center;
+    align-self: stretch;
+    @media (min-width: 640px) {
+        padding: 5rem 3rem;
+        justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 7.5rem;
+    }
+}
+
+.error {
+    width: -webkit-fill-available;
+    max-width: 88rem;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+
+    border-radius: 1rem;
+    border: 2px solid var(--primary-red-error);
+    background: var(--primary-white, #faf8f5);
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.missingContentDescription {
+    font-family: monospace;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    background: var(--primary-white);
+    border-radius: 8px;
+    padding: 0.75rem;
+}
