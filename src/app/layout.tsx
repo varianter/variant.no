@@ -4,9 +4,8 @@ import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
 import { SiteSettings } from "studio/lib/payloads/siteSettings";
 import { SITESETTINGS_QUERY } from "studio/lib/queries/siteSettings";
 import { Metadata } from "next";
-import { urlFor } from "studio/lib/image";
 import { loadQuery } from "studio/lib/store";
-import "src/styles/global.css";   
+import "src/styles/global.css";
 import { generateMetadataFromSeo } from "src/utils/seo";
 
 const darkerGrotesque = Darker_Grotesque({
@@ -20,7 +19,7 @@ const figtree = Figtree({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  // Root metadata might only rely on site settings
+  // TODO: Root metadata should only rely on seo from site settings
   return generateMetadataFromSeo(null);
 }
 
@@ -29,22 +28,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let siteSettings;
+  let siteLang;
 
   try {
     const { data } = await loadQuery<SiteSettings>(SITESETTINGS_QUERY);
-    siteSettings = data;
+    siteLang = data.siteMetadata?.defaultLanguage;
   } catch (error) {
     console.error("Error loading site settings:", error);
-    siteSettings = null;
+    siteLang = "en";
   }
-
-  if (!siteSettings) {
-    console.error("Site settings are undefined");
-    siteSettings = { siteMetadata: { defaultLanguage: "en" } }; // Provide default fallback
-  }
-
-  const siteLang = siteSettings?.siteMetadata?.defaultLanguage || "en";
 
   return (
     <html lang={siteLang}>

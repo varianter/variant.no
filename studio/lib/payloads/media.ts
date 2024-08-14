@@ -18,7 +18,7 @@ interface ICrop {
 export interface IImage {
   _key?: string;
   _type?: string;
-  imageSrc?: SanityImageSource;
+  asset?: SanityImageSource; // image from Sanity
   src?: { src: string }; // Mock URL for Storybook
   alt?: string;
   crop?: ICrop;

@@ -1,20 +1,28 @@
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { LANDING_QUERY } from "studio/lib/queries/navigation";
 import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
-import { PageBuilder, SEO } from "studio/lib/payloads/pages";
+import { PageBuilder } from "studio/lib/payloads/pages";
 import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
   const seo = await fetchSeoData(SEO_PAGE_QUERY, { id: landingId });
 
   return generateMetadataFromSeo(seo);
 }
+
+// TODO: Replace with an actual component, this is just a placeholder.
+const NewTemplatePlaceholder = () => (
+  <div>
+    <h1>Welcome to Your New Site Setup!</h1>
+    <p>
+      {` It looks like you haven't set up your landing page yet. Let's get started!`}
+    </p>
+  </div>
+);
 
 const Home = async () => {
   const { perspective, isDraftMode } = getDraftModeInfo();
@@ -26,7 +34,7 @@ const Home = async () => {
   );
 
   if (!landingId) {
-    throw new Error("Landing page ID not found");
+    return <NewTemplatePlaceholder />;
   }
 
   const initialLandingPage = await loadQuery<PageBuilder>(

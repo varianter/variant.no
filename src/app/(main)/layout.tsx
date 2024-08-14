@@ -29,15 +29,25 @@ export default async function Layout({
     ]);
 
   const hasNavigationData = Boolean(
-    initialNav.data.main ||
-      initialNav.data.sidebar ||
-      initialNav.data.footer ||
-      siteSettings.data?.brandAssets
+    siteSettings.data &&
+      initialNav.data &&
+      (initialNav.data.main ||
+        initialNav.data.sidebar ||
+        initialNav.data.footer ||
+        siteSettings.data?.brandAssets)
   );
+
+  if (!hasNavigationData) {
+    return (
+      <main id="main" tabIndex={-1}>
+        {children}
+      </main>
+    );
+  }
   return (
     <>
       <SkipToMain />
-      {hasNavigationData && isDraftMode ? (
+      {isDraftMode ? (
         <HeaderPreview
           initialNav={initialNav}
           initialSiteSetting={siteSettings}
@@ -48,7 +58,7 @@ export default async function Layout({
       <main id="main" tabIndex={-1}>
         {children}
       </main>
-      {hasNavigationData && isDraftMode ? (
+      {isDraftMode ? (
         <FooterPreview
           initialNav={initialNav}
           initialSiteSetting={siteSettings}
