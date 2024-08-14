@@ -1,5 +1,5 @@
 .content {
-    margin-top: calc(10rem + 72px); /* TODO: remove extra pixels when .main -72px is handled */
+    margin-top: 10rem;
     width: 100%;
     display: flex;
     flex-direction: column;
