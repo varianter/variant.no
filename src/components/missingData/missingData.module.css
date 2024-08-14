@@ -11,7 +11,16 @@
     margin: calc(2rem + 72px) auto 0; /* TODO: remove extra pixels when .main -72px is handled */
     padding: 2.5rem;
     background: #FFEBEE;
-    border: 0.25rem solid #F44336;
+    border: 0.25rem solid var(--primary-red-error);
     border-radius: 8px;
     gap: 1.5rem;
+}
+
+.description {
+    font-family: monospace;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    background: var(--primary-white);
+    border-radius: 8px;
+    padding: 0.75rem;
 }

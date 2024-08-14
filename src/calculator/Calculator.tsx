@@ -1,11 +1,11 @@
 import styles from './calculator.module.css';
-import textStyles from 'src/components/text/text.module.css';
+import Text from 'src/components/text/Text';
 
 export const Calculator = () => {
   return (
     <div className={styles.container}>
-      <p className={textStyles.body}>🤖 Beep boop, I&apos;m a calculator</p>
-      <p className={textStyles.small}>1 + 1 = {1 + 1}</p>
+      <Text>🤖 Beep boop, I&apos;m a calculator</Text>
+      <Text type={"small"}>1 + 1 = {1 + 1}</Text>
     </div>
   );
 };
