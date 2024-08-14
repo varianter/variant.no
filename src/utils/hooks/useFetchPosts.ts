@@ -67,8 +67,18 @@ export const useFetchPosts = ({
         }));
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [selectedTabIndex]
   );
 
   return { posts, postsCount, fetchPosts };
 };
+
+/*
+  The ESLint rule `react-hooks/exhaustive-deps` is disabled for this `useCallback` 
+  hook because `fetchPosts` should only be triggered by changes to `selectedTabIndex`.
+  Although `categories` and `posts.data.length` are used within the callback, 
+  they are managed and updated internally within the callback itself and do not need 
+  to be part of the dependency array. Including them would cause unnecessary re-fetches 
+  whenever they change, which is not desired.
+*/

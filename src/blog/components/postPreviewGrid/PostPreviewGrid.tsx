@@ -33,8 +33,9 @@ const PostPreviewGrid = ({
   useEffect(() => {
     if (posts.length > prevPostCount) {
       const firstNewPostIndex = prevPostCount;
-      if (postRefs.current[firstNewPostIndex]) {
-        postRefs.current[firstNewPostIndex].focus();
+      const postElement = postRefs?.current[firstNewPostIndex];
+      if (postElement) {
+        postElement.focus();
       }
       setPrevPostCount(posts.length);
     }

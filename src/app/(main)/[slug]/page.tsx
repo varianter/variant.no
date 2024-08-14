@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
@@ -22,10 +22,7 @@ type Props = {
   };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = await fetchSeoData(SEO_SLUG_QUERY, { slug: params.slug });
 
   return generateMetadataFromSeo(seo);
