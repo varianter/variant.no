@@ -27,3 +27,9 @@
     border: 2px solid var(--primary-red-error);
     background: var(--primary-white, #faf8f5);
 }
+
+.buttonWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}

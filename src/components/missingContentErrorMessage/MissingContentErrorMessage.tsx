@@ -15,10 +15,9 @@ const studioLink = {
 };
 export const MissingContentErrorMessage = ({ description }: { description: string }) => {
   return (
-    <ErrorMessage title={'Missing Content'}>
+    <ErrorMessage title={'Missing Content'} link={studioLink}>
       <Text type={'small'}>Navigate to Sanity Studio to add the following:</Text>
       <p className={styles.description}>{description}</p>
-      <LinkButton link={studioLink} />
     </ErrorMessage>
   );
 };

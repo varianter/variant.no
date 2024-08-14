@@ -8,7 +8,7 @@ import BlogHero from "./components/hero/BlogHero";
 import PostPreview from "src/blog/components/postPreview/PostPreview";
 import PostPreviewGrid from "./components/postPreviewGrid/PostPreviewGrid";
 import LoadingNews from "./components/loadingNews/LoadingNews";
-import { ErrorNews } from 'src/components/errorMessage/ErrorMessage';
+import { ErrorNews } from 'src/components/errorNews/ErrorNews';
 
 interface BlogProps {
   blog: BlogPage;
