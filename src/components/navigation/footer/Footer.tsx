@@ -40,7 +40,7 @@ const Footer = ({
       </nav>
       <ul className={styles.credits}>
         <li key="credit-legal-key-1">
-          <Text className={styles.whiteColor}>© 2024 Energi.ai</Text>
+          <Text className={styles.whiteColor}>© 2024 Variant AS</Text>
         </li>
         {legalData?.map((legal) => {
           const path = `legal/${legal.slug.current}`;
