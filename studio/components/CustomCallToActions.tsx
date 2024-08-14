@@ -19,7 +19,7 @@ const CustomCallToActions = (props: CustomCallToActionsProps) => {
   useEffect(() => {
     const checkIfCurrentPageIsLandingPage = async () => {
       const navigationManager = await client.fetch(
-        `*[_type == "navigationManager"][1]{
+        `*[_type == "navigationManager" && _id == "navigationManager"][0]{
         setLanding
       }`
       );
