@@ -1,0 +1,90 @@
+section {
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: center;
+  margin-left: -13%;
+}
+
+.text > h1 {
+  font-size: 200%;
+  font-weight: 450;
+}
+
+.text > h2 {
+  display: flex;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  margin-top: 0;
+  justify-content: center;
+}
+
+.blob {
+  margin-left: -45%;
+  margin-top: 50%;
+  z-index: auto;
+  min-width: 65%;
+}
+
+.hemsedalhero1 {
+  margin-left: -15%;
+  margin-top: -8%;
+  max-width: 50%;
+  margin-right: -5%;
+}
+
+.hemsedalhero2 {
+  max-width: 30%;
+  margin-top: -9%;
+  margin-right: 0;
+  margin-left: -10%;
+}
+
+.blobandtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  .hemsedalhero2 {
+    max-width: 0%;
+  }
+  .hemsedalhero1 {
+    max-width: 90%;
+    margin: -13% -20% -30% -40%;
+  }
+
+  .blobandtext {
+    margin: 10% -10% 0 0;
+  }
+
+  .blob {
+    margin: 0 0 0 -30%;
+    min-width: 40%;
+  }
+  .text > h1 {
+    font-size: 150%;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .text {
+    margin: 0 0 0 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,45 @@
+.tur {
+  background: #ede8d7;
+  color: var(--color-standard__black);
+  margin: 0;
+  padding: 0;
+  font-family: 'Graphik Web';
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.tur h1,
+.tur h2,
+.tur h3 {
+  font-family: 'Recoleta';
+}
+
+.tur h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.tur p {
+  max-width: 50rem;
+  font-size: 16px;
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+.tur li {
+  margin-bottom: 2rem;
+}
+
+.tur time {
+  display: inline-block;
+  width: 4rem;
+  margin-right: 3rem;
+}
+
+.tur a {
+  all: unset;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
