@@ -1,8 +1,7 @@
 import styles from "./Hero.module.css";
 import {isMobile} from 'react-device-detect';
-import arrow from "../images/curved-arrow.svg";
-import s from "../images/s.svg"
-import Image from 'next/image';
+//import arrow from "../images/curved-arrow.svg";
+
 import blob from "../images/blob.svg";
 import retreatmobile from "../images/retreatmobile.svg"
 import retreat from "../images/Retreatclub-fyri-solbaddar.svg"
