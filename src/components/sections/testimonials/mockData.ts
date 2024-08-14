@@ -168,4 +168,5 @@ export const testimonialsMockData: TestimonialsSection = {
       ],
     },
   ],
+  imagesAsCircles: false,
 };

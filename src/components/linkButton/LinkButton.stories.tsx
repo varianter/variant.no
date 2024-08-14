@@ -15,10 +15,10 @@ const meta: Meta<typeof LinkButton> = {
     },
   },
   argTypes: {
-    size: {
+    isSmall: {
       control: {
         type: "select",
-        options: ["large", "small"],
+        options: ["true", "false"],
       },
     },
     type: {
@@ -38,13 +38,13 @@ type Story = StoryObj<typeof LinkButton>;
 
 export const PrimaryLarge: Story = {
   args: {
-    size: "large",
+    isSmall: false,
     type: "primary",
     link: {
       _key: "key",
       _type: "link",
       linkTitle: "Primary Large Button",
-      internalLink: "/about",
+      url: "/about",
       linkType: LinkType.Internal,
     },
   },
@@ -52,13 +52,13 @@ export const PrimaryLarge: Story = {
 
 export const PrimarySmall: Story = {
   args: {
-    size: "small",
+    isSmall: true,
     type: "primary",
     link: {
       _key: "key",
       _type: "link",
       linkTitle: "Primary Small Button",
-      internalLink: "/about",
+      url: "/about",
       linkType: LinkType.Internal,
     },
   },
@@ -66,13 +66,13 @@ export const PrimarySmall: Story = {
 
 export const SecondaryLarge: Story = {
   args: {
-    size: "large",
+    isSmall: false,
     type: "secondary",
     link: {
       _key: "key",
       _type: "link",
       linkTitle: "Secondary Large Button",
-      internalLink: "/about",
+      url: "/about",
       linkType: LinkType.Internal,
     },
   },
@@ -80,13 +80,13 @@ export const SecondaryLarge: Story = {
 
 export const SecondarySmall: Story = {
   args: {
-    size: "small",
+    isSmall: true,
     type: "secondary",
     link: {
       _key: "key",
       _type: "link",
       linkTitle: "Secondary Small Button",
-      internalLink: "/about",
+      url: "/about",
       linkType: LinkType.Internal,
     },
   },

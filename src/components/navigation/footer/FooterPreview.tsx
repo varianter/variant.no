@@ -31,7 +31,7 @@ export default function FooterPreview({
     initialSiteSetting
   );
   const newSoMedata = useInitialData(SOMEPROFILES_QUERY, initialSoMe);
-
+  // TODO: add legal preview
   return (
     newNav &&
     newSiteSettings &&
@@ -40,6 +40,7 @@ export default function FooterPreview({
         navigationData={newNav}
         assetsData={newSiteSettings.brandAssets}
         soMeData={newSoMedata}
+        legalData={[]}
       />
     )
   );

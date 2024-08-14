@@ -49,7 +49,7 @@ export const calloutMockData = {
     _type: "value",
     linkTitle: "About Energi.ai",
     linkType: LinkType.Internal,
-    internalLink: "about",
+    url: "about",
   },
   richText: RichTextMock,
 };

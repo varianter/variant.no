@@ -1,5 +1,5 @@
 import { loadQuery } from "@sanity/react-loader";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import PostPage from "src/post/PostPage";
 import PostPagePreview from "src/post/PostPagePreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
@@ -19,10 +19,7 @@ type Props = {
   };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = await fetchPostSeoData(SEO_POST_SLUG_QUERY, { id: params.id });
   return generateMetadataFromSeo(seo);
 }
