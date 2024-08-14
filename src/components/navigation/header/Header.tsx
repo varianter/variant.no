@@ -26,7 +26,7 @@ export const Header = ({ data, assets }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const renderedLogo = useConvertSanityImageToNextImage(assets?.primaryLogo);
+  const renderedLogo = useConvertSanityImageToNextImage(assets?.primaryLogo, {width: "auto"});
   const sidebarData = data.sidebar || data.main;
 
   const links = filterLinks(data.main, linkID);
@@ -66,12 +66,12 @@ export const Header = ({ data, assets }: IHeader) => {
 
   return (
     <FocusOn
-      enabled={isOpen}
+      enabled={false}
       onClickOutside={toggleMenu}
       onEscapeKey={toggleMenu}
-      className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
+      className={`${styles.focusOn} ${isOpen ? styles.isOpen : ''}`}
     >
-      <header className={`${isScrolled && !isOpen && styles.scrolled}`}>
+      <header className={`${(isScrolled && !isOpen) ? styles.scrolled : ''}`}>
         <nav aria-label="Main menu">
           <div className={styles.wrapper}>
             {assets?.primaryLogo && (

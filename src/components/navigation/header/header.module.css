@@ -1,18 +1,22 @@
 .focusOn {
+  display: flex;
   position: sticky;
   top: 0;
   overflow: hidden;
   z-index: 9999;
 
   & > header {
-    height: -webkit-fill-available;
+    display: flex;
+    flex-grow: 1;
     padding: 1rem 2.5rem;
     transition: background-color 0.4s ease;
     position: sticky;
     top: 0;
 
     & > nav {
-      height: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
   }
 }
@@ -37,6 +41,7 @@
 .logo {
   display: flex;
   height: 1.25rem;
+  width: 0;
 
   /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1200px) {
@@ -48,7 +53,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .listMobile {
@@ -103,7 +108,7 @@
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 
-  height: -webkit-fill-available;
+  flex-grow: 1;
 
   /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1024px) {
