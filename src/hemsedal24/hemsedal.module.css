@@ -42,4 +42,67 @@
   color: #fff;
   cursor: pointer;
   font-weight: 500;
+  z-index: 10;
+}
+
+.navigation {
+  color: var(--color-standard__black);
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  align-items: baseline;
+}
+
+.navigation span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.navigation img {
+  vertical-align: middle;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bigblobs {
+  min-width: 100%;
+  z-index: auto;
+  margin-top: -10%;
+}
+
+.secondbigblobs {
+  margin-bottom: -30%;
+  min-width: 100%;
+  z-index: auto;
+  margin-top: -10%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-snap-type: none;
+}
+
+.bop {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -10%;
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 20%;
+  min-height: 50%;
+}
+
+.program h3 {
+  display: flex;
+  justify-content: center;
 }
