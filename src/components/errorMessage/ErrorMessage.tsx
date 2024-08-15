@@ -1,17 +1,16 @@
 import Text from 'src/components/text/Text';
-import { ReactNode } from 'react';
 import styles from './errorMessage.module.css';
 import Button from '../buttons/Button';
 import LinkButton from '../linkButton/LinkButton';
 import { ILink } from '../../../studio/lib/payloads/navigation';
 
 
-export const ErrorMessage = ({ title, link, onTryAgain, children }: { title: string, link: ILink, onTryAgain?: () => void, children: ReactNode }) => {
+export const ErrorMessage = ({ title, description, link, onTryAgain }: { title: string, description: string, link: ILink, onTryAgain?: () => void }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.error}>
         <Text type="h3">Error - {title}</Text>
-        {children}
+        <Text>{description}</Text>
         <div className={styles.buttonWrapper}>
           {onTryAgain && (
             <Button type="secondary" onClick={onTryAgain}>

@@ -1,7 +1,4 @@
 import { LinkType } from '../../../studio/lib/payloads/navigation';
-import Text from '../text/Text';
-import styles from './missingContentErrorMessage.module.css';
-import LinkButton from '../linkButton/LinkButton';
 import { ErrorMessage } from '../errorMessage/ErrorMessage';
 
 const studioLink = {
@@ -15,9 +12,10 @@ const studioLink = {
 };
 export const MissingContentErrorMessage = ({ description }: { description: string }) => {
   return (
-    <ErrorMessage title={'Missing Content'} link={studioLink}>
-      <Text type={'small'}>Navigate to Sanity Studio to add the following:</Text>
-      <p className={styles.description}>{description}</p>
-    </ErrorMessage>
+    <ErrorMessage
+      title={'Missing Content'}
+      description={`Navigate to Sanity Studio to add the following: ${description}`}
+      link={studioLink}
+    />
   );
 };
