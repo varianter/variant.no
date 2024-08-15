@@ -7,3 +7,9 @@
     gap: 2rem;
     min-height: 400px;
 }
+
+.yearInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}

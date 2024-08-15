@@ -15,6 +15,8 @@ interface InputFieldProps {
   value: string;
   onChange: (name: string, value: string) => void;
   required?: boolean;
+  min?: number;
+  max?: number;
 }
 
 const InputField = ({
@@ -29,6 +31,8 @@ const InputField = ({
   value,
   onChange,
   required,
+  min,
+  max,
 }: InputFieldProps) => {
   if (type == "email") {
     autoCapitalize = "off";
@@ -62,6 +66,8 @@ const InputField = ({
         onChange={handleChange}
         aria-describedby={hintID}
         aria-required={required}
+        min={min}
+        max={max}
       />
       {error && (
         <span>
