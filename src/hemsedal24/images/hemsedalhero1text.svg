@@ -1,6 +1,6 @@
 <svg width="576" height="706" viewBox="0 0 576 706" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_6_216" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="-150" y="13" width="639" height="564">
-          <path fillRule="evenodd" clip-rule="evenodd" d="M245.59 554.511C325.873 525.61 433.797 500.181 468 422C504.925 337.597 491.761 229.963 433.395 147.463C375.029 64.9638 331.319 53.3798 246 32.5001C163.095 12.2113 23.0859 -1.21896 -48 45.9989C-116.615 91.5753 -134.289 181.121 -145.755 262.707C-155.598 332.747 -145.605 404.028 -106.61 463.045C-69.834 518.703 -9.20012 550.315 55.3587 567.081C119.306 583.688 183.435 576.886 245.59 554.511Z" fill="#35E1D1"/>
+          <path fillRule="evenodd" clipRule="evenodd" d="M245.59 554.511C325.873 525.61 433.797 500.181 468 422C504.925 337.597 491.761 229.963 433.395 147.463C375.029 64.9638 331.319 53.3798 246 32.5001C163.095 12.2113 23.0859 -1.21896 -48 45.9989C-116.615 91.5753 -134.289 181.121 -145.755 262.707C-155.598 332.747 -145.605 404.028 -106.61 463.045C-69.834 518.703 -9.20012 550.315 55.3587 567.081C119.306 583.688 183.435 576.886 245.59 554.511Z" fill="#35E1D1"/>
         </mask>
         <g mask="url(#mask0_6_216)">
           <rect x="-355.036" y="-8.02734" width="952.557" height="635.038" fill="url(#pattern0_6_216)"/>
@@ -15,10 +15,9 @@
 
     </defs>
     
-    <text fill="black" font-size="24" font-family="Arial">
+    <text fill="black" fontSize="24" fontFamily="Arial">
       <textPath startOffset="10" textLength="400" xlinkHref="#textCurve" >
         <tspan dy="-11" >Variant på tuuuur!</tspan>
       </textPath>
     </text>    
         </svg>
-  );
