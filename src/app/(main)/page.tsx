@@ -6,8 +6,18 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
+import { ErrorMessage } from '../../components/errorMessage/ErrorMessage';
+import { LinkType } from '../../../studio/lib/payloads/navigation';
 
-import { MissingContentErrorMessage } from '../../components/missingContentErrorMessage/MissingContentErrorMessage';
+const studioLink = {
+  _key: 'go-to-sanity-studio',
+  _type: 'link',
+  linkTitle: 'Go to Studio',
+  linkType: LinkType.Internal,
+  internalLink: {
+    _ref: 'studio',
+  },
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
@@ -36,7 +46,13 @@ const Home = async () => {
   );
 
   if (!landingId) {
-    return <MissingContentErrorMessage description={"Landing page id"} />
+    return (
+      <ErrorMessage
+        title={'Missing Content'}
+        description={`Navigate to Sanity Studio to add the following: landing page id`}
+        link={studioLink}
+      />
+    )
   }
 
   const initialLandingPage = await loadQuery<PageBuilder>(
@@ -46,11 +62,23 @@ const Home = async () => {
   );
 
   if (!initialLandingPage) {
-    return <MissingContentErrorMessage description={`Page for id '${landingId}'`} />
+    return (
+      <ErrorMessage
+        title={'Missing Content'}
+        description={`Navigate to Sanity Studio to add the following: page for id '${landingId}'`}
+        link={studioLink}
+      />
+    )
   }
 
   if (!initialLandingPage.data.sections) {
-    return <MissingContentErrorMessage description={`Sections for landing page`} />
+    return (
+      <ErrorMessage
+        title={'Missing Content'}
+        description={`Navigate to Sanity Studio to add the following: sections for landing page`}
+        link={studioLink}
+      />
+    )
   }
 
   return initialLandingPage.data.sections.map((section, index) => {
