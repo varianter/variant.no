@@ -5,13 +5,13 @@ import Container from "./Container";
 
 export default function Day({ title, children, background = false }: { title: string, children: ReactNode, background?: boolean }) {
   return <section>
-    <Container className={`${styles.day} ${background && styles.with_background}`}>
+    <div className={`${styles.day} ${background && styles.with_background}`}>
       <h2>
         {title}
       </h2>
       <div>
         {children}
       </div>
-    </Container>
+    </div>
   </section>;
 }

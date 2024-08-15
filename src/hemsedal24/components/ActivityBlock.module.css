@@ -1,0 +1,37 @@
+.block {
+  display: flex;
+  max-width: 74%;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 7%;
+}
+
+.textportion {
+  flex-direction: column;
+  display: flex;
+  width: 58%;
+}
+.textportion h2 {
+  font-weight: 500;
+  padding-bottom: 2%;
+}
+.picture {
+  display: flex;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+p {
+  font-size: 100%;
+}
+
+.textportion a {
+  all: unset;
+  text-underline-offset: 2px !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-decoration-color: #e61a6b !important;
+  cursor: pointer;
+  color: #e61a6b;
+}

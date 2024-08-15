@@ -9,6 +9,7 @@ import bigblobs from './images/Frame88.svg'
 import Link from 'next/link';
 import bop from './images/bop.svg'
 import secondbigblobs from './images/secondbigblobs.svg'
+import Layout from 'src/layout';
 
 const Hemsedal24: NextPage = () => {
     return (
@@ -22,7 +23,7 @@ const Hemsedal24: NextPage = () => {
         <a href="#program">
           <span>Programmet for turen</span>
           <img src={arrowDown} height={24} width={24} alt="pil ned" /></a>
-        <Link href="/helsinki23/praktisk" className={styles.navigation}>
+        <Link href="/hemsedal24/tingogtang" className={styles.navigation}>
           <span>Ting du kanskje lurer på</span>
           <img src={arrowRight} height={24} width={24} alt="pil høyre" />
         </Link>
@@ -114,8 +115,8 @@ const Hemsedal24: NextPage = () => {
           </ul>
         </Day>
       </div>
-      <div className={styles.secondbigblobs}><img src={secondbigblobs} alt="big blobs"/></div>
-      <a href="#hero"><div className={styles.bop}><img src={bop} alt="big blobs"/></div></a>
+       <div className={styles.secondbigblobs}><img src={secondbigblobs} alt="big blobs"/></div>
+       <a href="#hero"><div className={styles.bop}><img src={bop} alt="big blobs"/></div></a>
         </div>
         
     );

@@ -12,7 +12,7 @@ import Container from "./Container";
 
 export default function Hero() {
   return <section id="hero">
-    <Container className={styles.container}>
+    <div className={styles.container}>
 
     
     <img src={isMobile ? retreatmobile : retreat} alt="hemsedalbilde" className={styles.hemsedalhero1}/>
@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
         </div>
         <img src={hemsedalHero2} alt="hemsedalbilde" className={styles.hemsedalhero2}/>
-    </Container>
+    </div>
   </section>;
 }
 

@@ -5,7 +5,7 @@
   padding: 0;
   font-family: 'Graphik Web';
   min-height: 100vh;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .tur h1,
@@ -18,13 +18,6 @@
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.tur p {
-  max-width: 50rem;
-  font-size: 16px;
-  margin-top: 1.5rem;
-  font-weight: 400;
 }
 
 .tur li {
@@ -84,18 +77,9 @@ html {
   margin-top: -10%;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  scroll-snap-type: none;
-}
-
 .bop {
   display: flex;
   justify-content: center;
-  margin-bottom: -10%;
   max-width: 100%;
   overflow: hidden;
   min-width: 20%;
@@ -105,4 +89,36 @@ html {
 .program h3 {
   display: flex;
   justify-content: center;
+}
+
+.font-color {
+  color: var(--color-standard__black);
+}
+.tingogtangheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.tingogtangbody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tt_textbox {
+  flex-direction: column;
+  max-width: 60%;
+}
+
+.tt_textbox span {
+  display: inline-block;
+  font-size: 110%;
+}
+
+.snokimg {
+  margin-right: -7%;
+  margin-top: -5%;
+  min-width: 45%;
 }
