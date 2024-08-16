@@ -34,6 +34,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
         value={value}
         checked={checked}
         disabled={disabled}
+        aria-disabled={disabled ? "true" : "false"}
         defaultChecked={defaultChecked}
         onChange={onChange}
       /> 
