@@ -51,6 +51,10 @@
   align-items: flex-start;
 }
 
+.title {
+  text-align: center;
+}
+
 .description {
   margin: auto;
   align-self: stretch;
@@ -59,7 +63,7 @@
 .cta {
   margin: 0;
   padding: 0;
-  width: -webkit-fill-available;
+  width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -75,7 +79,7 @@
 
   & > li {
     @media (max-width: 640px) {
-      width: -webkit-fill-available;
+      width: 100%;
     }
   }
 }

@@ -19,7 +19,9 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
     >
       {isLanding ? (
         <div className={styles.secondary}>
-          <Text type="display">{hero.basicTitle}</Text>
+          <Text type="display" className={styles.title}>
+            {hero.basicTitle}
+          </Text>
           {hero.description && (
             <div className={styles.description}>
               <Text type="bodyLarge">{hero.description}</Text>
