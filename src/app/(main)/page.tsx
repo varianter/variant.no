@@ -41,7 +41,7 @@ const Home = async () => {
     { perspective }
   );
 
-  if (landingId) {
+  if (!landingId) {
     return (
       <CustomErrorMessage
         title="Landing Page Has Not Been Set"
