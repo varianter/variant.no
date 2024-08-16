@@ -6,6 +6,8 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
+import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
+import { LinkType } from "studio/lib/payloads/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
@@ -14,15 +16,21 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMetadataFromSeo(seo);
 }
 
-// TODO: Replace with an actual component, this is just a placeholder.
-const NewTemplatePlaceholder = () => (
-  <div>
-    <h1>Welcome to Your New Site Setup!</h1>
-    <p>
-      {` It looks like you haven't set up your landing page yet. Let's get started!`}
-    </p>
-  </div>
-);
+const navigationManagerLink = {
+  _key: "go-to-navMag",
+  _type: "link",
+  linkTitle: "Go to Navigation Manager",
+  linkType: LinkType.Internal,
+  internalLink: { _ref: "studio/structure/navigationManager" },
+};
+
+const pagesLink = {
+  _key: "go-to-pages",
+  _type: "link",
+  linkTitle: "Go to Pages Manager",
+  linkType: LinkType.Internal,
+  internalLink: { _ref: "studio/structure/pages" },
+};
 
 const Home = async () => {
   const { perspective, isDraftMode } = getDraftModeInfo();
@@ -33,8 +41,14 @@ const Home = async () => {
     { perspective }
   );
 
-  if (!landingId) {
-    return <NewTemplatePlaceholder />;
+  if (landingId) {
+    return (
+      <CustomErrorMessage
+        title="Landing PageHas Not Been Set"
+        body="It looks like there's no page set as your landing page in the Studio. Head over to the Studio to select a landing page and guide visitors to the right place!"
+        link={navigationManagerLink}
+      />
+    );
   }
 
   const initialLandingPage = await loadQuery<PageBuilder>(
@@ -43,8 +57,14 @@ const Home = async () => {
     { perspective }
   );
 
-  if (!initialLandingPage) {
-    throw new Error("Page not found");
+  if (!initialLandingPage.data) {
+    return (
+      <CustomErrorMessage
+        title="Landing Page is Missing Content"
+        body={`Your landing page is set, but it looks like there’s no content yet. Visit the Studio to start adding content and make your landing page come to life!`}
+        link={pagesLink}
+      />
+    );
   }
 
   return initialLandingPage.data.sections.map((section, index) => {

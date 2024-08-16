@@ -1,5 +1,5 @@
 .button {
-  width: -webkit-fill-available;
+  width: 100%;
   max-width: 360px;
   cursor: pointer;
   display: inline-flex;
@@ -10,12 +10,14 @@
   border: none;
   font-family: var(--font-figtree);
   text-decoration: none;
-  text-wrap: nowrap;
 
   padding: 0.5rem 1.25rem;
   font-size: 1.25rem;
   font-weight: 400;
 
+  @media (min-width: 640px) {
+    text-wrap: nowrap;
+  }
 
   @media (min-width: 1024px) {
     font-size: 1.5rem;
@@ -35,7 +37,6 @@
 }
 
 .small {
-
   @media (min-width: 1024px) {
     font-size: 1.25rem;
     padding: 0.375rem 1.25rem;

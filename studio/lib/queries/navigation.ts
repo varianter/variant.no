@@ -35,9 +35,9 @@ export const NAV_QUERY = groq`
         }
       }
     }
-  }[1]
+  }
 `;
 
 export const LANDING_QUERY = groq`
-  *[_type == "navigationManager"][1].setLanding._ref
+  *[_type == "navigationManager"][0].setLanding._ref
 `;
