@@ -25,7 +25,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   onChange,
 }) => {
   return (
-    <div
+    <div aria-label={label}
       className={`${styles.main}`}
     >   
     <input
