@@ -44,7 +44,7 @@ const Home = async () => {
   if (landingId) {
     return (
       <CustomErrorMessage
-        title="Landing PageHas Not Been Set"
+        title="Landing Page Has Not Been Set"
         body="It looks like there's no page set as your landing page in the Studio. Head over to the Studio to select a landing page and guide visitors to the right place!"
         link={navigationManagerLink}
       />
