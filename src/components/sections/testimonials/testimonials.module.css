@@ -80,7 +80,7 @@
   z-index: 1;
   position: relative;
   display: flex;
-  padding: 0.5rem;
+  padding: 0.25rem;
   background-color: var(--primary-white);
   color: var(--primary-black);
   font-family: var(--font-darkerGrotesque);
@@ -94,7 +94,9 @@
   transition:
     color 100ms,
     background-color 100ms;
-
+  @media (min-width: 640px) {
+    padding: 0.5rem;
+  }
   @media (min-width: 1024px) {
     width: 100%;
   }
@@ -161,6 +163,7 @@
 
   &:after {
     background-color: var(--primary-black);
+    left: 50%;
     transition:
       left 100ms,
       right 100ms,
@@ -171,14 +174,12 @@
 
   @media (max-width: 1024px) {
     &:after {
-      left: 5.37306rem;
       bottom: -0.31638rem;
     }
   }
 
   @media (min-width: 1024px) {
     &:after {
-      right: -0.43763rem;
       bottom: 40%;
     }
   }
@@ -207,8 +208,10 @@
 }
 
 .image {
-  height: 4rem;
-  width: 9.625rem;
+  width: 7rem;
+  height: 3rem;
+  flex-shrink: 0;
+
   border-radius: 0.625rem;
   overflow: hidden;
 }
@@ -264,7 +267,6 @@
   visibility: hidden;
   transition: opacity 100ms ease-in-out height 100ms ease-in-out;
 
-  /* Ensure it aligns at the left */
   @media (min-width: 1024px) {
     padding-inline: 0;
   }
