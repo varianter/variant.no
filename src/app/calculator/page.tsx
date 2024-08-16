@@ -1,8 +1,7 @@
-"use client";
+"use client"; 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { RadioButtonGroup } from 'src/components/buttons/RadioButton/RadioButtonGroup';
-
 
 const options = [
     { id: 'radio-one', label: 'Bachelor', disabled: false },
@@ -10,18 +9,22 @@ const options = [
     { id: 'radio-three', label: 'PhD', disabled: false }
 ];
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-};
-
 const Page: React.FC = () => {
+    const [selectedValue, setSelectedValue] = useState<string>(options[0].label);
+
+    const handleValueChange = (name: string, value: string) => {
+        setSelectedValue(value);
+        console.log(`Name: ${name}, Value: ${value}`);
+    };
+
     return (
         <div>
             <RadioButtonGroup
                 label="Radio Button Group"
                 id="radio-group"
                 options={options}
-                onChange={handleChange}
+                selectedValue={selectedValue}
+                onValueChange={handleValueChange}
             />
         </div>
     );
