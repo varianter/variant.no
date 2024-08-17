@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Select } from "@sanity/ui";
 import { useClient, set, StringInputProps, PatchEvent } from "sanity";
+import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 interface Category {
   _key: string;
@@ -8,8 +9,6 @@ interface Category {
 }
 
 interface CategorySelectorProps extends StringInputProps {}
-
-// TODO: use fetchWithToken()
 
 const CategorySelector = React.forwardRef<
   HTMLSelectElement,
@@ -21,9 +20,10 @@ const CategorySelector = React.forwardRef<
 
   useEffect(() => {
     async function fetchCategories() {
-      const result = await client.fetch<Category[]>(
+      const result = await fetchWithToken<Category[]>(
         `*[_type == "blog"][0].categories`
       );
+
       setCategories(result || []);
     }
     fetchCategories();

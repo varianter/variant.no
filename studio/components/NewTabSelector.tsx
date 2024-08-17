@@ -7,8 +7,6 @@ interface NewTabSelectorProps {
   onChange: (event: PatchEvent) => void;
 }
 
-// TODO: use fetchWithToken()
-
 const NewTabSelector = ({ value = false, onChange }: NewTabSelectorProps) => {
   const handleClick = (newValue: boolean) => {
     onChange(PatchEvent.from(set(newValue)));

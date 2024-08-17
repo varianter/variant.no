@@ -14,8 +14,6 @@ const linkTypes = [
   { title: "Phone number", value: "phone", icon: "📞" },
 ];
 
-// TODO: use fetchWithToken()
-
 const LinkTypeSelector: React.FC<LinkTypeSelectorProps> = ({
   value,
   onChange,
