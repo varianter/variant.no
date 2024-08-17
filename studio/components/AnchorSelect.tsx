@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PatchEvent, set, unset, useFormValue } from "sanity";
-import { Select, Card, Button, Stack } from "@sanity/ui";
+import { Select, Button, Stack } from "@sanity/ui";
 import { client } from "../lib/client";
 
 interface AnchorSelectProps {
@@ -28,6 +28,8 @@ function fromCamelCase(value?: string) {
       return match.toUpperCase();
     }); // Capitalize the first letter
 }
+
+// TODO: use fetchWithToken()
 
 const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
   const [listItems, setListItems] = useState<AnchorItem[]>([]);

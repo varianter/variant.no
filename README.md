@@ -77,16 +77,16 @@ This project includes a customized Sanity Studio desk structure to enhance conte
 
 ## Managing Content
 
-## Site Settings
+### Site Settings
 
 The `Site Settings` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
 
-### Social Media Profiles
+#### Social Media Profiles
 
 - **Adding Social Media Links**: Editors can manage social media links under the `Social Media Profiles` menu. This allows visitors to connect with the website on various social platforms.
 - **Supported Platforms**: The 9 supported platforms include Facebook, Instagram, and LinkedIn, but more can be added to `SoMePlatforms` if needed.
 
-### Navigation Management
+#### Navigation Management
 
 - **Setting the Landing Page**: The `Navigation Manager` allows editors to set the landing page for the site, which is crucial for determining the primary page visitors see upon arrival.
 - **Adding Menu Items**: Within the `Navigation Manager`, editors can add items to various pre-defined menus:
@@ -94,32 +94,73 @@ The `Site Settings` menu allows you to configure global settings for your site, 
   - **Footer Menu**: Add items to the footer menu, which consists of different sections. Each section can contain either social media links, custom links, text, or images (e.g., logos).
   - **Sidebar Menu**: Add links to the sidebar menu, which will appear on smaller screens to aid mobile navigation.
 
-### Pages
+#### Pages
 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
-- **Page Details**: Each page can be customized with structured content that includes text, images, and other multimedia elements.
-
-#### Page Builder
-
-The pageBuilder schema allows content editors to create pages by combining various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
+- **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
 
 ## Development Workflow
 
 To maintain consistency and efficiency, follow these steps when working on the project:
 
 1. Branching Strategy: Follow your team’s branching convention, such as feature/ or fix/ branches, to keep the git history clean and organized.
+
 2. Adding New UI with Content:
+   - Define the Sanity schema for new content types.
+   - Implement the corresponding interface and payload structure in src/lib/payloads.
+   - Fetch the necessary data and create the UI component.
+   - Document and test the UI component in Storybook, using mock data for isolated development.
 
-- Define the Sanity schema for new content types.
-- Implement the corresponding interface and payload structure in src/lib/payloads.
-- Fetch the necessary data and create the UI component.
-- Document and test the UI component in Storybook, using mock data for isolated development.
+### Using `fetchWithToken` for Custom Components in Sanity
 
-Troubleshooting
+When building custom components in Sanity Studio that need to fetch data, it's important to use the `fetchWithToken` utility to ensure that your API tokens remain secure.
+
+**Why Use `fetchWithToken`?**
+
+`fetchWithToken` allows you to securely fetch data from Sanity without exposing sensitive API tokens in client-side code. This is crucial when developing custom input components or other features within Sanity Studio that need to interact with Sanity's content APIs.
+
+**Implementation Example:**
+
+```typescript
+import React, { useEffect, useState } from "react";
+import { fetchWithToken } from "studio/lib/fetchWithToken";
+
+const MyCustomComponent: React.FC = () => {
+  const [data, setData] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const query = '*[_type == "myType"]'; // Replace with your GROQ query
+        const result = await fetchWithToken<any>(query);
+        setData(result);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        setError(err.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return <div>{JSON.stringify(data)}</div>; // Render your component's UI
+};
+
+export default MyCustomComponent;
+```
+
+By using fetchWithToken, you ensure that all data fetching happens securely, with the server-side API route handling the sensitive token.
+
+### Troubleshooting
 
 - Sanity Preview: While the Sanity preview functionality is not fully optimized, it currently meets the essential requirements.
 
-Testing and Deployment
+### Testing and Deployment
 
 - Storybook Accessibility Testing: Storybook is set up with accessibility (a11y) testing tools, but you’ll need to add tests to each story manually.
 - CI/CD Pipeline: A CI/CD pipeline is not yet configured. Setting up a pipeline would enhance the development process by automating tests, builds, and deployments.

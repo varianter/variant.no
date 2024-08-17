@@ -14,6 +14,8 @@ export const SoMePlatforms: { [key: string]: string } = {
   tikTok: "Tiktok",
 };
 
+// TODO: use fetchWithToken()
+
 const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
   value = {},
   onChange,

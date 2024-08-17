@@ -9,6 +9,8 @@ interface Category {
 
 interface CategorySelectorProps extends StringInputProps {}
 
+// TODO: use fetchWithToken()
+
 const CategorySelector = React.forwardRef<
   HTMLSelectElement,
   CategorySelectorProps

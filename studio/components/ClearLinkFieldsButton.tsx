@@ -7,6 +7,8 @@ interface ClearLinkFieldsButtonProps {
   path: Array<string | { _key: string }>;
 }
 
+// TODO: use fetchWithToken()
+
 const ClearLinkFieldsButton = ({ path }: ClearLinkFieldsButtonProps) => {
   const documentId = useFormValue(["_id"]) as string;
 

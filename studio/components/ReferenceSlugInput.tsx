@@ -28,6 +28,8 @@ interface ReferenceSlugInputProps {
   };
 }
 
+// TODO: use fetchWithToken()
+
 const ReferenceSlugInput: React.FC<ReferenceSlugInputProps> = (props) => {
   const { value, readOnly, schemaType, onChange, elementProps, document } =
     props;
