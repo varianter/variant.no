@@ -39,7 +39,7 @@ const CustomErrorMessage = ({
   link,
 }: CustomErrorMessageProps) => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} role="alert" aria-live="assertive">
       <div className={styles.error}>
         <Text type="h3">{title}</Text>
         <Text>{body}</Text>
