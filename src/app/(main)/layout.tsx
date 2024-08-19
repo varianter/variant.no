@@ -13,6 +13,7 @@ import { getDraftModeInfo } from "src/utils/draftmode";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
 import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import styles from "./layout.module.css";
 
 export default async function Layout({
   children,
