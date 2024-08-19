@@ -8,6 +8,11 @@ interface IOption {
     disabled: boolean;
 }
 
+interface RenderOptionsProps {
+    options: IOption[];
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 interface RadioButtonGroupProps {
     id: string;
     label: string;
@@ -15,11 +20,30 @@ interface RadioButtonGroupProps {
     selectedValue: string;
     onValueChange: (name: string, value: string) => void;
 }
+
+export const RenderOptions: React.FC<RenderOptionsProps> = ({ options, onChange }) => {
+    return (
+        <>
+            {options.map(({ id, label, disabled }, index) => (
+                <RadioButton
+                    key={id}
+                    id={id}
+                    label={label}
+                    name="radio"
+                    disabled={disabled}
+                    value={label}
+                    defaultChecked={index === 0}
+                    onChange={onChange}
+                />
+            ))}
+        </>
+    );
+};
+
 export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
     id,
     label, 
     options,
-    selectedValue, 
     onValueChange
 }) => {
 
@@ -31,19 +55,7 @@ export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
         <fieldset className={styles.fieldset} id={id}>
             <legend className={styles.legend}>{label}</legend>
             <div className={styles.wrapper}> 
-            {options.map(({ id, label, disabled }, index) => (
-                <RadioButton
-                    key={id}
-                    id={id}
-                    label={label}
-                    name="radio"
-                    disabled={disabled}
-                    value={label}
-                    checked={selectedValue === label}
-                    defaultChecked={index === 0}
-                    onChange={handleChange}
-                />
-            ))}
+                <RenderOptions options={options} onChange={handleChange} />
             </div> 
         </fieldset>  
     );

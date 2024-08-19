@@ -12,9 +12,8 @@ const options = [
 const Page: React.FC = () => {
     const [selectedValue, setSelectedValue] = useState<string>(options[0].label);
 
-    const handleValueChange = (name: string, value: string) => {
+    const handleValueChange = (value: string) => {
         setSelectedValue(value);
-        console.log(`Name: ${name}, Value: ${value}`);
     };
 
     return (
