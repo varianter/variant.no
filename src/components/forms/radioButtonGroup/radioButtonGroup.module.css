@@ -1,9 +1,9 @@
-.main {
-    display: flex;
-    gap: 1rem; 
-    align-items: center;
-  }
-  
+.container {
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+}
+
   .label {
     font-size: 1rem;
     color: var(--dark-purple);
@@ -49,12 +49,6 @@
   .input[disabled]{
     cursor: not-allowed;
     border-color: grey;
-  }
-
-  .legend {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--primary-green-dark);
   }
   
   .fieldset{
