@@ -4,4 +4,4 @@ export const SITESETTINGS_QUERY = groq`*[_type == "siteSettings"]{
     brandAssets,
     siteMetadata,
     legalPages,
-}`;
+}[0]`;

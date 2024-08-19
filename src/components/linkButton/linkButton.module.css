@@ -1,5 +1,7 @@
 .button {
-  width: 100%;
+  @media (max-width: 640px) {
+    width: 100%;
+  }
   max-width: 360px;
   cursor: pointer;
   display: inline-flex;

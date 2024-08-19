@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 
 export const NAV_QUERY = groq`
-  *[_type == "navigationManager"]{
+  *[_type == "navigationManager"][0]{
     "main": main[] {
       ...,
       linkType == "internal" => {
