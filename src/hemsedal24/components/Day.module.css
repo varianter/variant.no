@@ -16,6 +16,12 @@
   align-items: center;
 }
 
+.day time {
+  display: inline-block;
+  width: 4rem;
+  margin-right: 1rem;
+}
+
 .day ul {
   list-style: none;
   font-size: 110%;
@@ -24,9 +30,19 @@
 }
 
 .day ul > li {
-  line-height: 46px;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  display: flex; /* Use flexbox to align time and text */
+  align-items: flex-start; /* Align items at the top */
+  margin-bottom: 2rem;
+}
+
+.day ul > li time {
+  flex-shrink: 0; /* Prevent the time element from shrinking */
+  margin-right: 15px; /* Adds space between time and text */ /* Set consistent height for the time element */
+}
+
+.day ul > li span {
+  /* Set a comfortable line height for the text */
+  display: inline-block; /* Ensure proper block-level behavior */
 }
 
 .day a {
@@ -41,8 +57,6 @@
 }
 
 @media (min-width: 1024px) {
-  .with_background {
-  }
 }
 
 @media (max-width: 767px) {
@@ -54,5 +68,46 @@
     list-style: none;
     padding-left: 1rem;
     margin: 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .day {
+    padding: 1rem;
+    margin-top: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .day > h2 {
+    font-family: Graphik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .with_background {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding: 3rem 1rem 2rem 1rem;
+  }
+  .day ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0 0;
+  }
+
+  .day a {
+    padding-left: 10rem;
+    all: unset;
+    text-underline-offset: 8px !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-decoration-color: #03dac6 !important;
+    display: inline-flex !important;
+    gap: 10px !important;
+    cursor: pointer;
   }
 }

@@ -15,11 +15,10 @@ section {
   line-height: 2.5rem;
   justify-content: center;
   margin-left: -20%;
-
 }
 
 .text > h1 {
-  font-size: 200%;
+  font-size: 5vw;
   font-weight: 450;
 }
 
@@ -59,31 +58,43 @@ section {
   justify-content: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .hemsedalhero2 {
     max-width: 0%;
   }
   .hemsedalhero1 {
-    max-width: 90%;
-    margin: -13% -20% -30% -40%;
+    max-width: 150%;
+    margin: -23% -20% -30% -70%;
   }
 
   .blobandtext {
-    margin: 10% -10% 0 0;
+    justify-content: flex-end;
   }
 
   .blob {
-    margin: 0 0 0 -30%;
-    min-width: 40%;
+    width: 15rem;
+    height: 15.4rem;
+    flex-shrink: 0;
+    margin: 0 -15% 0 -48%;
   }
   .text > h1 {
-    font-size: 150%;
+    font-size: 4.25rem;
     font-weight: 400;
-    margin: 0;
+    line-height: 5.1rem;
+  }
+  .text > h2 {
+    display: block;
+    text-align: right;
+    font-family: Recoleta;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1rem; /* 195% */
   }
 
   .text {
-    margin: 0 0 0 0;
+    display: flex;
+    align-content: center;
   }
   .container {
     flex-direction: column;
