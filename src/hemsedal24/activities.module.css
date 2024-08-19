@@ -1,0 +1,118 @@
+.header {
+  margin: 10% 0 10% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.header h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.header span {
+  display: flex;
+  justify-content: center;
+  margin-right: 5%;
+}
+
+.navigation span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.navigation img {
+  vertical-align: middle;
+}
+
+.tur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ede8d7;
+  color: var(--color-standard__black);
+  margin: 0;
+  padding: 5% 20% 0 20%;
+  font-family: 'Graphik Web';
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.tur h1,
+.tur h2,
+.tur h3 {
+  font-family: 'Recoleta';
+}
+
+.tur h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.blob {
+  z-index: auto;
+  min-width: 35%;
+  position: absolute;
+  top: 0;
+  margin: 0 0 0 30%;
+}
+
+.title {
+  z-index: 10;
+}
+
+.bop {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  z-index: 10;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+@media (max-width: 500px) {
+  .blob {
+    min-width: 90%;
+    top: 0;
+    margin: -10% 0 0 20%;
+  }
+
+  .tur {
+    padding: 10% 10% 0 10%;
+  }
+
+  .header h3 {
+    justify-content: flex-start;
+  }
+  .header span {
+    margin: 0;
+    color: var(--Secondary-4-D4, #2f2e2b);
+    font-family: Graphik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 200% */
+  }
+
+  .title h3 {
+    color: var(--Secondary-4-D4, #2f2e2b);
+    font-family: Recoleta;
+    font-size: 1.775rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4375rem; /* 130% */
+  }
+  .header {
+    margin-bottom: 25%;
+  }
+
+  .bop {
+    width: 50%;
+  }
+}

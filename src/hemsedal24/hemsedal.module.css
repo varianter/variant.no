@@ -1,3 +1,18 @@
+.backgroundContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background__item {
+  position: relative;
+  width: 60rem;
+  height: 60rem;
+}
+
 .tur {
   background: #ede8d7;
   color: var(--color-standard__black);
@@ -18,16 +33,6 @@
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.tur li {
-  margin-bottom: 2rem;
-}
-
-.tur time {
-  display: inline-block;
-  width: 4rem;
-  margin-right: 3rem;
 }
 
 .tur a {
@@ -64,26 +69,103 @@ html {
   scroll-behavior: smooth;
 }
 
+.bigblobsss {
+  composes: background__item;
+  top: 70rem;
+  left: calc(50% - 26rem);
+  width: 80rem;
+}
+
 .bigblobs {
-  min-width: 100%;
-  z-index: auto;
-  margin-top: -10%;
+  composes: background__item;
+  width: 100%;
+  margin-bottom: 15rem;
+  margin-top: -6rem;
+}
+
+.bigblobtekst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  z-index: 10;
+  margin-left: 30%;
+  transform: translateY(-300%);
+}
+
+.overlay {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5%;
+  padding: 5rem 12% 0 12%;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+}
+
+.latter {
+  min-width: 40%;
+  margin-left: 4rem;
 }
 
 .secondbigblobs {
-  margin-bottom: -30%;
-  min-width: 100%;
+  min-width: 100vh;
   z-index: auto;
-  margin-top: -10%;
+  bottom: 0;
 }
 
-.bop {
+.secondbigblobs2 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.secondbigblobs2 img {
+  position: relative;
+  display: block;
+}
+
+.resortbottom {
+  min-width: 25%;
+  margin-top: -6%;
+  margin-left: 10%;
+}
+
+.bunninfo {
+  background: var(--Secondary-4-L2, #f4f1e7);
+  width: 100%;
   display: flex;
   justify-content: center;
-  max-width: 100%;
-  overflow: hidden;
-  min-width: 20%;
-  min-height: 50%;
+  align-items: center;
+  margin: 0;
+  margin-top: -1%;
+  padding: 3rem 10% 10% 10%;
+}
+.bunninfo h2 {
+  margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.bop {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.bop img {
+  /* Or another appropriate value */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .program h3 {
@@ -117,8 +199,107 @@ html {
   font-size: 110%;
 }
 
+.ttheadertittel {
+  margin-left: -10%;
+  z-index: 10;
+}
+
 .snokimg {
   margin-right: -7%;
   margin-top: -5%;
   min-width: 45%;
+}
+
+@media (max-width: 500px) {
+  .ttheadertittel {
+    min-width: 100%;
+    margin-left: -5.5rem;
+  }
+  .tingogtangheader h3 {
+    font-size: 1.675rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4375rem; /* 130% */
+    text-wrap: wrap;
+  }
+  .tingogtangheader {
+    margin-top: 10%;
+  }
+
+  .tingogtangbody {
+    margin-top: 5%;
+    flex-direction: column;
+  }
+  .tt_textbox {
+    max-width: 100%;
+    font-size: 0.8rem;
+    font-style: normal;
+    line-height: 2rem;
+  }
+
+  .snokimg {
+    min-width: 220%;
+    margin-top: -20%;
+  }
+
+  .navigation {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+  }
+
+  .navigation > a {
+    margin-bottom: 1.5rem;
+  }
+
+  .program h3 {
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .program h2 {
+    font-family: Graphik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem; /* 160% */
+  }
+
+  .bigblobs {
+    min-width: 230%;
+    min-height: 100%;
+    margin: -40% 0 110% 50%;
+    transform: translateX(-30%);
+  }
+
+  .secondbigblobs {
+    margin-bottom: -40%;
+  }
+
+  .bunninfo {
+    flex-direction: column;
+    margin-top: -2%;
+  }
+
+  .resortbottom {
+    margin-top: 3rem;
+    min-width: 100%;
+  }
+  .bop {
+    width: 38%;
+  }
+  .bop img {
+    min-width: 100%;
+  }
+
+  .overlay {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .latter {
+    min-width: 100%;
+    margin: 20% 0 20% 0;
+  }
 }

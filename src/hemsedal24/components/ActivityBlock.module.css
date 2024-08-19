@@ -1,6 +1,6 @@
 .block {
   display: flex;
-  max-width: 74%;
+  max-width: 100%;
   align-items: center;
   margin: auto;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 .textportion {
   flex-direction: column;
   display: flex;
-  width: 58%;
+  width: 57%;
 }
 .textportion h2 {
   font-weight: 500;
@@ -18,8 +18,8 @@
 }
 .picture {
   display: flex;
-  margin-left: -10%;
-  margin-right: -10%;
+  min-width: 40%;
+  margin-right: -5%;
 }
 
 p {
@@ -34,4 +34,27 @@ p {
   text-decoration-color: #e61a6b !important;
   cursor: pointer;
   color: #e61a6b;
+}
+
+@media (max-width: 500px) {
+  .block {
+    flex-direction: column;
+  }
+  .textportion {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    color: var(--Secondary-4-D4, #2f2e2b);
+    font-family: Graphik;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 200% */
+  }
+  .picture {
+    min-width: 100%;
+    margin: -2% 0 10% 0;
+  }
 }

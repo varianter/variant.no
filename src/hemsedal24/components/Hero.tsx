@@ -1,5 +1,4 @@
 import styles from "./Hero.module.css";
-import {isMobile} from 'react-device-detect';
 //import arrow from "../images/curved-arrow.svg";
 
 import blob from "../images/blob.svg";
@@ -10,12 +9,11 @@ import Container from "./Container";
 
 
 
-export default function Hero() {
+export default function Hero({mobile}: {mobile:boolean}) {
   return <section id="hero">
     <div className={styles.container}>
-
     
-    <img src={isMobile ? retreatmobile : retreat} alt="hemsedalbilde" className={styles.hemsedalhero1}/>
+    <img src={mobile ? retreatmobile : retreat} alt="hemsedalbilde" className={styles.hemsedalhero1}/>
         <div className={styles.blobandtext}>
         <div className={styles.text}>
           <h1>Hemsedal</h1>
