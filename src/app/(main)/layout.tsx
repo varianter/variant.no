@@ -40,7 +40,7 @@ export default async function Layout({
 
   if (!hasNavigationData) {
     return (
-      <main id="main" tabIndex={-1}>
+      <main id="main" tabIndex={-1} className={styles.offsetForStickyHeader}>
         {children}
       </main>
     );
