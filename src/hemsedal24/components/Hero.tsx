@@ -5,7 +5,6 @@ import blob from "../images/blob.svg";
 import retreatmobile from "../images/retreatmobile.svg"
 import retreat from "../images/Retreatclub-fyri-solbaddar.svg"
 import hemsedalHero2 from "../images/hemsedalhero2.svg"
-import Container from "./Container";
 
 
 

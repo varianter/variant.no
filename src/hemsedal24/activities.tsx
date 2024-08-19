@@ -3,7 +3,6 @@ import { NextPage } from "next";
 import Link from "next/link";
 import arrowleft from "./images/arrow-left.svg"
 import styles from "./activities.module.css"
-import Container from "./components/Container";
 import blob from "./images/activityblob.svg"
 import bop from "./images/bop.svg"
 import ActivityBlock from "./components/ActivityBlock";

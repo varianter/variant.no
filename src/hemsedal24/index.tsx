@@ -7,7 +7,6 @@ import Hero from './components/Hero'
 import Day from './components/Day'
 import Link from 'next/link';
 import bop from './images/bop.svg'
-import secondbigblobs from './images/secondbigblobs.svg'
 import topblub from './images/top_blub.svg'
 import mobiletopblub from './images/top-blub-mobil.svg'
 import bottomblub from './images/bottom_blub.svg'

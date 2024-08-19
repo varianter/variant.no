@@ -7,7 +7,6 @@ import blob from "./images/tingogtangblob.svg"
 import snok from "./images/snok.svg"
 import { useState, useEffect } from "react";
 import bop from './images/bop.svg'
-import Layout from "./layout";
 const TingogTang: NextPage = () => {
     const [mobile, setMobile] = useState(false);
 
