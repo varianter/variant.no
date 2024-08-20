@@ -116,7 +116,7 @@ const Hemsedal24: NextPage = () => {
   <Link className={styles.underlined} href={'/hemsedal24/aktiviteter'}>
   Hundekjøring / Via Ferrata klatring / Stisykling med Hemsedal Rides
   </Link>
-</span><Link href={'/hemsedal24/aktiviteter'}><img style={{marginTop:"6px", marginLeft:"8px"}} src={arrowrightpink}/></Link>
+</span><Link href={'/hemsedal24/aktiviteter'}><img style={{marginTop:"6px", marginLeft:"8px"}} src={arrowrightpink} alt="arrow"/></Link>
 </li>
 <li>
 <time>16:15 - 19:15</time> <span>Pool Club (inne- og utebasseng + badstue) </span>
