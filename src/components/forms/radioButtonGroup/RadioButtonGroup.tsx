@@ -81,7 +81,7 @@ export const RadioButtonGroup = ({
     );
 };
 
-const RenderOptions: React.FC<RenderOptionsProps> = ({ options, onChange }) => {
+const RenderOptions  = ({ options, onChange }: RenderOptionsProps) => {
     return (
         <>
             {options.map(({ id, label, disabled }, index) => (
