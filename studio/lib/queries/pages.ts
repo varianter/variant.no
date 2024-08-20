@@ -51,6 +51,10 @@ export const BLOG_PAGE_QUERY = groq`
   *[_type == "blog" && slug.current == $slug][0]
 `;
 
+export const SALARY_AND_BENEFITS_PAGE_QUERY = groq`
+  *[_type == "salaryAndBenefits" && slug.current == $slug][0]
+`;
+
 export const POSTS_QUERY = groq`
   *[_type == "blogPosts" && date < now()] | order(date desc)[0..11]
 `;

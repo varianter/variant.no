@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "src/components/richText/RichText";
-import { Slug } from "./pages";
+import { Slug } from "./global";
 
 export interface LegalDocument {
   _key: string;

@@ -1,11 +1,7 @@
 import { PortableTextBlock } from "src/components/richText/RichText";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
-
-export interface Slug {
-  _type: string;
-  current: string;
-}
+import { Slug } from "./global";
 
 export type ThemeType = "primary" | "secondary";
 
