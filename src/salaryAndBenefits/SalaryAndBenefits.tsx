@@ -6,7 +6,7 @@ interface SalaryAndBenefitsProps {
   salaryAndBenefits: SalaryAndBenefitsPayload
 }
 
-export default function SalaryAndBenefits({salaryAndBenefits}: SalaryAndBenefitsProps) {
+const SalaryAndBenefits = ({salaryAndBenefits}: SalaryAndBenefitsProps) => {
   return (
     <section className={styles.wrapper}>
       <Text type={"bodySuperLarge"}>💰❤️</Text>
@@ -14,3 +14,5 @@ export default function SalaryAndBenefits({salaryAndBenefits}: SalaryAndBenefits
     </section>
   )
 }
+
+export default SalaryAndBenefits;
