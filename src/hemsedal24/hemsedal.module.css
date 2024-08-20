@@ -29,17 +29,15 @@
   font-family: 'Recoleta';
 }
 
-.tur h2 {
+.bunninfo h2 {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.tur a {
+.navigation a {
   all: unset;
-  color: #fff;
   cursor: pointer;
-  font-weight: 500;
   z-index: 10;
 }
 
@@ -50,8 +48,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 10%;
-  align-items: baseline;
 }
 
 .navigation span {
@@ -65,8 +61,14 @@
   vertical-align: middle;
 }
 
+.navigation a {
+  margin-left: 6rem;
+  margin-right: 4rem;
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: #ede8d7;
 }
 
 .bigblobsss {
@@ -168,9 +170,58 @@ html {
   height: auto; /* Maintain aspect ratio */
 }
 
-.program h3 {
+.program {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.program h3 {
+  font-size: 3rem;
+}
+
+.programbold {
+  font-weight: 600;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: var(--Primary-Default, #e61a6b);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.summaryText {
+  margin-right: 8px; /* Adjust spacing as needed */
+}
+
+.disclosureArrow {
+  display: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url('./images/arrow-downpink.svg'); /* Default to the down arrow */
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+
+/* Change the arrow image when the details are open */
+details[open] .disclosureArrow {
+  background-image: url('./images/arrow-uppink.svg');
+}
+
+.pl_9 {
+  margin-left: 9rem;
 }
 
 .font-color {
@@ -247,10 +298,13 @@ html {
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    font-size: 1.25rem;
   }
 
   .navigation > a {
     margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .program h3 {
@@ -267,6 +321,11 @@ html {
     line-height: 2rem; /* 160% */
   }
 
+  .pl_9 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
   .bigblobs {
     min-width: 230%;
     min-height: 100%;
@@ -301,5 +360,11 @@ html {
   .latter {
     min-width: 100%;
     margin: 20% 0 20% 0;
+  }
+
+  .disclosureArrow {
+  }
+  .summaryText {
+    width: 13rem;
   }
 }
