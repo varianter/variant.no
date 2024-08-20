@@ -80,7 +80,7 @@
   z-index: 1;
   position: relative;
   display: flex;
-  padding: 0.25rem;
+  padding: 0.5rem;
   background-color: var(--primary-white);
   color: var(--primary-black);
   font-family: var(--font-darkerGrotesque);
@@ -94,9 +94,6 @@
   transition:
     color 100ms,
     background-color 100ms;
-  @media (min-width: 640px) {
-    padding: 0.5rem;
-  }
   @media (min-width: 1024px) {
     width: 100%;
   }
