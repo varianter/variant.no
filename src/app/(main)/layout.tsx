@@ -13,6 +13,7 @@ import { getDraftModeInfo } from "src/utils/draftmode";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
 import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import styles from "./layout.module.css";
 
 const hasValidData = (data: any) => data && Object.keys(data).length > 0;
 
@@ -42,7 +43,7 @@ export default async function Layout({
 
   if (!hasMenuData) {
     return (
-      <main id="main" tabIndex={-1}>
+      <main id="main" tabIndex={-1} className={styles.offsetForStickyHeader}>
         {children}
       </main>
     );

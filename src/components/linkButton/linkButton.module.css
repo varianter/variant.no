@@ -1,11 +1,13 @@
 .button {
   @media (max-width: 640px) {
     width: 100%;
+    box-sizing: border-box;
   }
   max-width: 360px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  align-self: stretch;
   justify-content: space-between;
   gap: 0.6rem;
   border-radius: 1.5625rem;
@@ -20,7 +22,6 @@
   @media (min-width: 640px) {
     text-wrap: nowrap;
   }
-
   @media (min-width: 1024px) {
     font-size: 1.5rem;
     padding: 0.5rem 1.5rem;
