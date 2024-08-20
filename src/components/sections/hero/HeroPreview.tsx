@@ -1,6 +1,6 @@
 "use client";
 
-import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
+import { useQuery } from "@sanity/react-loader";
 import { Hero } from "./Hero";
 import { PageBuilder, HeroSection } from "studio/lib/payloads/pages";
 import { PAGE_QUERY } from "studio/lib/queries/pages";

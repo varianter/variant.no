@@ -3,45 +3,76 @@ import {
   ArrayOfObjectsInput,
   ArrayOfObjectsInputProps,
   ArraySchemaType,
+  LoadingBlock,
   useFormValue,
 } from "sanity";
-import { client } from "studio/lib/client";
+import { Text, Card } from "@sanity/ui";
+import { fetchWithToken } from "studio/lib/fetchWithToken";
+import { LANDING_QUERY } from "studio/lib/queries/navigation";
 
 type CustomCallToActionsProps = ArrayOfObjectsInputProps<
   { _key: string },
   ArraySchemaType<unknown>
 >;
 
-const CustomCallToActions = (props: CustomCallToActionsProps) => {
+const CustomCallToActions: React.FC<CustomCallToActionsProps> = (props) => {
   const [isLandingPage, setIsLandingPage] = useState(false);
+  const [landingPageId, setLandingPageId] = useState<String | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   const documentId = useFormValue(["_id"]) as string;
 
   useEffect(() => {
-    const checkIfCurrentPageIsLandingPage = async () => {
-      const navigationManager = await client.fetch(
-        `*[_type == "navigationManager"][1]{
-        setLanding
-      }`
-      );
-
-      const currentPageId = documentId?.startsWith("drafts.")
-        ? documentId.split("drafts.")[1]
-        : documentId;
-
-      if (navigationManager.setLanding?._ref === currentPageId) {
-        setIsLandingPage(true);
-      } else {
-        setIsLandingPage(false);
+    const fetchLandingId = async () => {
+      try {
+        setLoading(true);
+        const landingId = await fetchWithToken<string>(LANDING_QUERY);
+        setLandingPageId(landingId);
+      } catch (error) {
+        console.error("Failed to fetch navigation manager", error);
+        setError((error as Error).message);
+      } finally {
+        setLoading(false);
       }
     };
 
-    checkIfCurrentPageIsLandingPage();
-  }, [documentId]);
+    fetchLandingId();
+  }, []);
 
-  if (!isLandingPage) {
-    return null;
+  useEffect(() => {
+    if (!landingPageId) return;
+
+    const currentPageId = documentId?.startsWith("drafts.")
+      ? documentId.split("drafts.")[1]
+      : documentId;
+
+    const isLanding = landingPageId === currentPageId;
+
+    setIsLandingPage(isLanding);
+  }, [documentId, landingPageId]);
+
+  if (loading) {
+    return <LoadingBlock />;
   }
 
+  if (error) {
+    return (
+      <Card padding={[3, 3, 4]} radius={2} shadow={1} tone="critical">
+        <Text align="center">Error: {error}</Text>
+      </Card>
+    );
+  }
+
+  if (!isLandingPage) {
+    return (
+      <Card padding={[3, 3, 4]} radius={2} shadow={1} tone="primary">
+        <Text align="center">
+          This feature is only available for landing pages
+        </Text>
+      </Card>
+    );
+  }
   return <ArrayOfObjectsInput {...props} />;
 };
 
