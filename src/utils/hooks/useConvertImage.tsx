@@ -12,9 +12,7 @@ const MockImage = ({ image }: { image: IImage }) => {
     <Image
       alt={image?.alt || ""}
       src={image.src.src}
-      width={0}
-      height={0}
-      style={{ height: "100%", width: "100%", objectFit: "cover" }}
+      style={{ objectFit: "cover", width: "100%", height: "100%" }}
     />
   );
 };
@@ -31,11 +29,15 @@ const SanityImage = ({ image }: { image: IImage }) => {
     <Image
       alt={image?.alt || ""}
       {...sanityImageSrc}
+      width={sanityImageSrc.width}
+      height={sanityImageSrc.height}
       style={{
-        height: "100%",
-        width: "100%",
         objectFit: "cover",
         objectPosition,
+        maxWidth: "100%",
+        maxHeight: "100%",
+        height: "auto",
+        width: "auto",
       }}
     />
   );
