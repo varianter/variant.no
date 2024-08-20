@@ -11,11 +11,11 @@ const SalaryAndBenefits = ({salaryAndBenefits}: SalaryAndBenefitsProps) => {
   return (
     <div className={styles.wrapper}>
       <Text type={"h1"}>{salaryAndBenefits.basicTitle}</Text>
-      <section className={styles.benefits}>
+      <div className={styles.benefits}>
         {salaryAndBenefits.benefits.map((benefit) => (
           <Benefit key={benefit._key} benefit={benefit} />
         ))}
-      </section>
+      </div>
     </div>
   )
 }
