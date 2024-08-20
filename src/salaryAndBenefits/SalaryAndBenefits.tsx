@@ -10,7 +10,7 @@ interface SalaryAndBenefitsProps {
 const SalaryAndBenefits = ({salaryAndBenefits}: SalaryAndBenefitsProps) => {
   return (
     <div className={styles.wrapper}>
-      <Text type={"h1"}>{salaryAndBenefits.basicTitle}</Text>
+      <Text type="h1">{salaryAndBenefits.basicTitle}</Text>
       <div className={styles.benefits}>
         {salaryAndBenefits.benefits.map((benefit) => (
           <Benefit key={benefit._key} benefit={benefit} />

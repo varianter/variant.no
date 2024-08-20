@@ -11,7 +11,7 @@ interface BenefitProps {
 export default function Benefit({benefit}: BenefitProps) {
   return (
     <div className={styles.wrapper}>
-      <Text type={"h2"}>{benefit.basicTitle}</Text>
+      <Text type="h2">{benefit.basicTitle}</Text>
       <RichText value={benefit.richText} />
     </div>
   )
