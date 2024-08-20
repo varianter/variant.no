@@ -8,7 +8,9 @@ import BlogHero from "./components/hero/BlogHero";
 import PostPreview from "src/blog/components/postPreview/PostPreview";
 import PostPreviewGrid from "./components/postPreviewGrid/PostPreviewGrid";
 import LoadingNews from "./components/loadingNews/LoadingNews";
-import ErrorNews from "./components/errorNews/ErrorNews";
+import CustomErrorMessage, {
+  homeLink,
+} from "./components/customErrorMessage/CustomErrorMessage";
 
 interface BlogProps {
   blog: BlogPage;
@@ -64,7 +66,17 @@ export const Blog = ({ blog, initialPosts, slug }: BlogProps) => {
   }, [selectedTabIndex, fetchPosts]);
 
   if (!initialPosts || posts.error) {
-    return <ErrorNews onTryAgain={fetchPosts} />;
+    return (
+      <CustomErrorMessage
+        title={`Error - Can’t fetch news`}
+        body={`Struggling to fetch stories, and we don't know why. Please be patient and try to refresh the page.`}
+        link={homeLink}
+        button={{
+          label: "Try Again",
+          onClick: fetchPosts,
+        }}
+      />
+    );
   }
 
   return (

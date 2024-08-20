@@ -11,6 +11,8 @@ import blog from "./schemas/documents/blog";
 import posts from "./schemas/documents/post";
 import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/legalDocuments";
+import benefit from './schemas/documents/benefit';
+import salaryAndBenefits from './schemas/documents/salaryAndBenefits';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -26,5 +28,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     posts,
     categories,
     legalDocument,
+    salaryAndBenefits,
+    benefit
   ],
 };

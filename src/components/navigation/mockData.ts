@@ -110,8 +110,25 @@ export const mockNavigation: Navigation = {
   ],
 };
 
-// Mock Logo Data
-export const mockLogo: BrandAssets = {
+export const mockSiteSettings = {
+  siteMetadata: {
+    siteName: "Varaint",
+    defaultLanguage: "en",
+  },
+  brandAssets: {
+    primaryLogo: {
+      src: primaryLogoFile,
+      alt: "Primary Logo",
+    },
+    secondaryLogo: {
+      src: secondaryLogoFile,
+      alt: "Secondary Logo",
+    },
+    favicon: {},
+  },
+};
+
+export const mockLogo = {
   primaryLogo: {
     src: primaryLogoFile,
     alt: "Primary Logo",

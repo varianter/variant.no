@@ -38,7 +38,7 @@ export default function FooterPreview({
     newSoMedata && (
       <Footer
         navigationData={newNav}
-        assetsData={newSiteSettings.brandAssets}
+        siteSettings={newSiteSettings}
         soMeData={newSoMedata}
         legalData={[]}
       />

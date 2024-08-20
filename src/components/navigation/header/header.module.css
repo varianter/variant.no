@@ -5,15 +5,10 @@
   z-index: 9999;
 
   & > header {
-    height: -webkit-fill-available;
     padding: 1rem 2.5rem;
     transition: background-color 0.4s ease;
     position: sticky;
     top: 0;
-
-    & > nav {
-      height: -webkit-fill-available;
-    }
   }
 }
 
@@ -22,9 +17,26 @@
 }
 
 .isOpen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: 1024px) {
-    height: 100vh;
     background: var(--secondary-yellow1);
+
+    & > header {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2.5rem;
+
+      & > nav {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
   }
 }
 
@@ -35,10 +47,12 @@
 }
 
 .logo {
+  overflow: hidden;
+  width: auto;
   display: flex;
+  max-width: 100%;
   height: 1.25rem;
 
-  /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1200px) {
     flex: 1;
   }
@@ -48,7 +62,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .listMobile {
@@ -66,7 +80,6 @@
   composes: list;
   display: none;
 
-  /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: row;
@@ -81,7 +94,6 @@
   gap: 2rem;
   justify-content: center;
 
-  /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1200px) {
     gap: 3rem;
   }
@@ -95,6 +107,8 @@
 }
 
 .mobileMenu {
+  flex: 1;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -103,9 +117,6 @@
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 
-  height: -webkit-fill-available;
-
-  /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1024px) {
     display: none;
   }
@@ -120,7 +131,6 @@
   background-color: transparent;
   border: none;
 
-  /* Breakpoint: --breakpoint-lg */
   @media (min-width: 1024px) {
     display: none;
   }

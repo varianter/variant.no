@@ -13,6 +13,9 @@ import { getDraftModeInfo } from "src/utils/draftmode";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
 import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import styles from "./layout.module.css";
+
+const hasValidData = (data: any) => data && Object.keys(data).length > 0;
 
 export default async function Layout({
   children,
@@ -20,7 +23,8 @@ export default async function Layout({
   children: React.ReactNode;
 }>) {
   const { perspective, isDraftMode } = getDraftModeInfo();
-  const [initialNav, siteSettings, initialSoMe, initialLegal] =
+
+  const [initialNav, initialSiteSettings, initialSoMe, initialLegal] =
     await Promise.all([
       loadQuery<Navigation>(NAV_QUERY, {}, { perspective }),
       loadQuery<SiteSettings>(SITESETTINGS_QUERY, {}, { perspective }),
@@ -28,47 +32,51 @@ export default async function Layout({
       loadQuery<LegalDocument[]>(LEGAL_DOCUMENTS_QUERY, {}, { perspective }),
     ]);
 
-  const hasNavigationData = Boolean(
-    siteSettings.data &&
-      initialNav.data &&
-      (initialNav.data.main ||
-        initialNav.data.sidebar ||
-        initialNav.data.footer ||
-        siteSettings.data?.brandAssets)
-  );
+  const hasNavData = hasValidData(initialNav.data);
+  const hasSiteSettingsData = hasValidData(initialSiteSettings.data);
 
-  if (!hasNavigationData) {
+  const hasHeaderData =
+    hasNavData && (initialNav.data.main || initialNav.data.sidebar);
+
+  const hasFooterData = hasNavData && initialNav.data.footer;
+  const hasMenuData = hasSiteSettingsData && (hasHeaderData || hasFooterData);
+
+  if (!hasMenuData) {
     return (
-      <main id="main" tabIndex={-1}>
+      <main id="main" tabIndex={-1} className={styles.offsetForStickyHeader}>
         {children}
       </main>
     );
   }
+
   return (
     <>
       <SkipToMain />
-      {isDraftMode ? (
+      {hasHeaderData && isDraftMode ? (
         <HeaderPreview
           initialNav={initialNav}
-          initialSiteSetting={siteSettings}
+          initialSiteSetting={initialSiteSettings}
         />
       ) : (
-        <Header data={initialNav.data} assets={siteSettings.data.brandAssets} />
+        <Header
+          data={initialNav.data}
+          assets={initialSiteSettings.data?.brandAssets}
+        />
       )}
       <main id="main" tabIndex={-1}>
         {children}
       </main>
-      {isDraftMode ? (
+      {hasFooterData && isDraftMode ? (
         <FooterPreview
           initialNav={initialNav}
-          initialSiteSetting={siteSettings}
+          initialSiteSetting={initialSiteSettings}
           initialSoMe={initialSoMe}
         />
       ) : (
         <Footer
           navigationData={initialNav.data}
           legalData={initialLegal.data}
-          assetsData={siteSettings.data.brandAssets}
+          siteSettings={initialSiteSettings.data}
           soMeData={initialSoMe.data}
         />
       )}

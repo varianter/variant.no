@@ -5,7 +5,7 @@ import BlogPreview from "src/blog/BlogPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { BlogPage, PageBuilder, Post, SEO } from "studio/lib/payloads/pages";
+import { BlogPage, PageBuilder, Post } from "studio/lib/payloads/pages";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -37,7 +37,7 @@ async function Page({ params }: Props) {
     loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
   ]);
 
-  if (!initialPage && !initialBlogPage.data) {
+  if (!initialPage.data && !initialBlogPage.data) {
     console.log(`Page ${slug} not found`);
     // TODO: add error snackbar
     redirect("/");
@@ -71,7 +71,7 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialBlogPage && !initialBlogPage.data) {
+  if (initialBlogPage.data && !initialBlogPage.data) {
     return (
       <>
         {initialPage.data?.sections?.map((section, index) => (
