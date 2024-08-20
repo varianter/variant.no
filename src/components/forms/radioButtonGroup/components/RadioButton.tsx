@@ -13,7 +13,16 @@ interface RadioButtonProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const RadioButton: React.FC<RadioButtonProps> = ({
+export const RadioButton = ({
+  id,
+  name,
+  value,
+  label,
+  checked,
+  disabled,
+  defaultChecked,
+  onChange,
+ }: RadioButtonProps
   id,
   name,
   value,
