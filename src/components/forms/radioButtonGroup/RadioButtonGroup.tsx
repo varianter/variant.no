@@ -92,7 +92,7 @@ const RenderOptions: React.FC<RenderOptionsProps> = ({ options, onChange }) => {
                     name="radio"
                     disabled={disabled}
                     value={label}
-                    defaultChecked={index === 0}
+                    defaultChecked={currentValue}
                     onChange={onChange}
                 />
             ))}
