@@ -23,15 +23,7 @@ export const RadioButton = ({
   defaultChecked,
   onChange,
  }: RadioButtonProps
-  id,
-  name,
-  value,
-  label,
-  checked,
-  disabled,
-  defaultChecked,
-  onChange,
-}) => {
+  ) => {
   return (
     <> 
       <label
