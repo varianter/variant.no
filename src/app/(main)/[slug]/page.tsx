@@ -16,6 +16,7 @@ import {
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
 import { loadQuery } from "studio/lib/store";
+import SalaryAndBenefitsPreview from "src/salaryAndBenefits/SalaryAndBenefitsPreview";
 
 export const dynamic = "force-dynamic";
 
@@ -93,10 +94,11 @@ async function Page({ params }: Props) {
   }
 
   if (initialSalaryAndBenefitsPage.data) {
-    // TODO: add draft preview
-    return (
+    return isDraftMode ? (
+      <SalaryAndBenefitsPreview initialSalaryAndBenefits={initialSalaryAndBenefitsPage} />
+    ) : (
       <SalaryAndBenefits salaryAndBenefits={initialSalaryAndBenefitsPage.data} />
-    )
+    );
   }
 
   return null;
