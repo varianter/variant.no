@@ -55,7 +55,12 @@ interface RadioButtonGroupProps {
  *   as part of a cohesive group, enabling proper radio button functionality.
  */
 
-export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
+export const RadioButtonGroup = ({
+    id,
+    label, 
+    options,
+    onValueChange}: 
+    RadioButtonGroupProps)
     id,
     label, 
     options,
