@@ -128,6 +128,18 @@ export const mockSiteSettings = {
   },
 };
 
+export const mockLogo = {
+  primaryLogo: {
+    src: primaryLogoFile,
+    alt: "Primary Logo",
+  },
+  secondaryLogo: {
+    src: secondaryLogoFile,
+    alt: "Secondary Logo",
+  },
+  favicon: {},
+};
+
 // Mock Social Media Profiles
 export const mockSocialMediaProfiles: SocialMediaProfiles = {
   _id: "profile123",
