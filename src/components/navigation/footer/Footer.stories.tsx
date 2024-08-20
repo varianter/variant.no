@@ -1,6 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Footer from "./Footer";
-import { mockNavigation, mockLogo, mockSocialMediaProfiles } from "../mockData";
+import {
+  mockNavigation,
+  mockSocialMediaProfiles,
+  mockSiteSettings,
+} from "../mockData";
 
 const meta: Meta<typeof Footer> = {
   title: "Components/Navigation/Footer",
@@ -21,7 +25,7 @@ type Story = StoryObj<typeof Footer>;
 export const Default: Story = {
   args: {
     navigationData: mockNavigation,
-    assetsData: mockLogo,
+    siteSettings: mockSiteSettings,
     soMeData: mockSocialMediaProfiles,
   },
 };

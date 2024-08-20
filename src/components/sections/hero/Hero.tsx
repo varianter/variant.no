@@ -28,7 +28,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
             </div>
           )}
           <ul className={styles.cta}>
-            {hero.callToActions.map((cta: ILink, index) => (
+            {hero.callToActions?.map((cta: ILink, index) => (
               <li key={cta._key}>
                 <LinkButton
                   link={cta}

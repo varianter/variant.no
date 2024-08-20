@@ -1,7 +1,7 @@
 "use client";
 
 import { ILink, LinkType, Navigation } from "studio/lib/payloads/navigation";
-import { BrandAssets } from "studio/lib/payloads/siteSettings";
+import { SiteSettings } from "studio/lib/payloads/siteSettings";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import styles from "./footer.module.css";
 import CustomLink from "../../link/CustomLink";
@@ -16,20 +16,22 @@ import { LegalDocument } from "studio/lib/payloads/legalDocuments";
 
 export interface IFooter {
   navigationData: Navigation;
-  assetsData: BrandAssets;
+  siteSettings: SiteSettings;
   soMeData: SocialMediaProfiles;
   legalData: LegalDocument[];
 }
 
 const Footer = ({
   navigationData,
-  assetsData,
+  siteSettings,
   soMeData,
   legalData,
 }: IFooter) => {
   const renderedLogo = useConvertSanityImageToNextImage(
-    assetsData?.secondaryLogo
+    siteSettings.brandAssets?.secondaryLogo
   );
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
@@ -40,7 +42,9 @@ const Footer = ({
       </nav>
       <ul className={styles.credits}>
         <li key="credit-legal-key-1">
-          <Text className={styles.whiteColor}>© 2024 Energi.ai</Text>
+          <Text className={styles.whiteColor}>
+            {`© ${currentYear} ${siteSettings.siteMetadata?.siteName}`}
+          </Text>
         </li>
         {legalData?.map((legal) => {
           const path = `legal/${legal.slug.current}`;
