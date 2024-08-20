@@ -52,11 +52,6 @@
   margin-right: 15px; /* Adds space between time and text */ /* Set consistent height for the time element */
 }
 
-.day ul > li span {
-  /* Set a comfortable line height for the text */
-  display: inline-block; /* Ensure proper block-level behavior */
-}
-
 .day ul > li p {
   margin-top: 1rem;
 }
@@ -93,7 +88,6 @@ a {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
-    color: var(--Primary-Default);
     line-height: 2rem;
     padding-bottom: 2rem;
   }
@@ -106,10 +100,10 @@ a {
   .day ul {
     list-style: none;
     padding-left: 1rem;
-    width: 95%;
+    width: 93%;
   }
 
   .day time {
-    width: 8rem;
+    width: 4rem;
   }
 }

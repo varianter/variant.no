@@ -86,8 +86,9 @@ const Hemsedal24: NextPage = () => {
     </li>
     <li>
       <time>14:00 - 16:00</time> 
-      <details><summary><span className={`${styles.underlined} ${styles.summaryText}`}><span className={styles.programbold}>For følge:</span>&nbsp;
-        <span>Pool Club/treningssenter/fritid</span></span><div><div className={styles.disclosureArrow}></div></div></summary>
+      <details><summary><span className={`${styles.underlined} ${styles.summaryText}`}><span className={`${styles.programbold} ${styles.underlined} `}>For følge:</span>&nbsp;
+        <span className={styles.underlined}>Pool Club/treningssenter/fritid</span></span><div><div className={styles.disclosureArrow}></div></div></summary>
+       
        <p>Dere kan benytte dere av treningssenter og Pool Club som består av innendørs- og utendørsbassenger,
          og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club 
          (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå 
@@ -108,11 +109,11 @@ const Hemsedal24: NextPage = () => {
       <Day title="Lørdag" background>
   <ul>
   <li>
-<time>07:30 - 09:00</time> <span>Frokost 🥐 🍳</span>
+<time>07:30 - 09:00</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
 </li>
 <li>
 <time>09:30</time>       <span className={styles.underlined}>
-  <Link href={'/hemsedal24/aktiviteter'}>
+  <Link className={styles.underlined} href={'/hemsedal24/aktiviteter'}>
   Hundekjøring / Via Ferrata klatring / Stisykling med Hemsedal Rides
   </Link>
 </span><Link href={'/hemsedal24/aktiviteter'}><img style={{marginTop:"6px", marginLeft:"8px"}} src={arrowrightpink}/></Link>
@@ -132,7 +133,7 @@ const Hemsedal24: NextPage = () => {
 <Day title="Søndag">
   <ul>
     <li>
-    <time>07:30 - 09:00</time> <span>Frokost 🥐 🍳</span>
+    <time>07:30 - 09:00</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
     </li>
     <li>
       <time>09:30 - 10:00</time> <span>Avreise fra hotellet, vi blir hentet med buss og kjørt til togstasjonen</span>
