@@ -6,7 +6,7 @@ import textStyles from "src/components/text/text.module.css";
 interface IOption {
   id: string;
   label: string;
-  disabled: boolean; 
+  disabled: boolean;
   currentChecked: boolean;
 }
 
@@ -19,7 +19,7 @@ interface RadioButtonGroupProps {
   id: string;
   label: string;
   options: IOption[];
-  onValueChange: (name: string, value: string) => void;
+  onValueChange: (option: IOption) => void;
 }
 
 /**
@@ -63,7 +63,10 @@ export const RadioButtonGroup = ({
   onValueChange,
 }: RadioButtonGroupProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onValueChange(e.target.name, e.target.value);
+    const selectedOption = options.find((option) => option.id === e.target.id);
+    if (selectedOption) {
+      onValueChange(selectedOption);
+    }
   };
 
   return (
@@ -79,7 +82,7 @@ export const RadioButtonGroup = ({
 const RenderOptions = ({ options, onChange }: RenderOptionsProps) => {
   return (
     <>
-      {options.map(({ id, label, disabled, currentChecked }, index) => (
+      {options.map(({ id, label, disabled, currentChecked }) => (
         <RadioButton
           key={id}
           id={id}

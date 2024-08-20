@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    gap: 1rem; 
+    align-items: center;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: var(--dark-purple);
+  }
+
+  .disabledLabel {
+    color: gray;
+    cursor: not-allowed;
+  }
+
+  .input {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: all 0.1s ease-in-out;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+  }
+  
+  .input:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px; 
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-green-dark); 
+  }
+
+  .input:hover {
+    background-color: var(--primary-green-light);
+    outline: 2px solid var(--primary-green-light); ;
+  }
+
+  .input:focus {
+    outline: 2px solid var(--primary-green-light);
+  }
+
+  .input[disabled]{
+    cursor: not-allowed;
+    border-color: grey;
+  }

@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from 'src/components/forms/radioButtonGroup/radioButtonGroup.module.css';
+import React from "react";
+import styles from "src/components/forms/radioButtonGroup/components/radioButton.module.css";
 import textStyles from "src/components/text/text.module.css";
 
 interface RadioButtonProps {
@@ -22,14 +22,12 @@ export const RadioButton = ({
   disabled,
   defaultChecked,
   onChange,
- }: RadioButtonProps
-  ) => {
+}: RadioButtonProps) => {
   return (
-    <> 
-      <label
-        htmlFor={id}
-        className={`${styles.container} ${textStyles.caption} ${disabled ? styles.disabledLabel : styles.label}`}
-      >
+    <label
+      htmlFor={id}
+      className={`${styles.container} ${textStyles.caption} ${disabled ? styles.disabledLabel : styles.label}`}
+    >
       <input
         className={styles.input}
         type="radio"
@@ -38,13 +36,12 @@ export const RadioButton = ({
         value={value}
         checked={checked}
         disabled={disabled}
-        aria-disabled={disabled ? 'true' : 'false'}
+        aria-disabled={disabled ? "true" : "false"}
         defaultChecked={defaultChecked}
         onChange={onChange}
       />
-     
-        {label}
-      </label>
-    </>
+
+      {label}
+    </label>
   );
 };
