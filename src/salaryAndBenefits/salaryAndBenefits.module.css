@@ -1,7 +1,13 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 10rem 5rem;
+    gap: 5rem;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 1000px;
 }

@@ -1,7 +1,7 @@
 import { PortableTextBlock } from 'src/components/richText/RichText';
 import { Slug } from './global';
 
-interface Benefit {
+export interface Benefit {
   _type: string;
   _key: string;
   basicTitle: string;
