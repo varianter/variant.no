@@ -1,0 +1,19 @@
+<svg width="24" height="24" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#F5F5F5"/>
+<g id="Desktop">
+<path d="M-1325 -3329C-1325 -3330.1 -1324.1 -3331 -1323 -3331H6599C6600.1 -3331 6601 -3330.1 6601 -3329V4048C6601 4049.1 6600.1 4050 6599 4050H-1323C-1324.1 4050 -1325 4049.1 -1325 4048V-3329Z" fill="white"/>
+<path d="M-1323 -3330H6599V-3332H-1323V-3330ZM6600 -3329V4048H6602V-3329H6600ZM6599 4049H-1323V4051H6599V4049ZM-1324 4048V-3329H-1326V4048H-1324ZM-1323 4049C-1323.55 4049 -1324 4048.55 -1324 4048H-1326C-1326 4049.66 -1324.66 4051 -1323 4051V4049ZM6600 4048C6600 4048.55 6599.55 4049 6599 4049V4051C6600.66 4051 6602 4049.66 6602 4048H6600ZM6599 -3330C6599.55 -3330 6600 -3329.55 6600 -3329H6602C6602 -3330.66 6600.66 -3332 6599 -3332V-3330ZM-1323 -3332C-1324.66 -3332 -1326 -3330.66 -1326 -3329H-1324C-1324 -3329.55 -1323.55 -3330 -1323 -3330V-3332Z" fill="black" fill-opacity="0.1"/>
+<g id="Landing" clip-path="url(#clip0_0_1)">
+<rect width="1512" height="5528" transform="translate(-791 -2634)" fill="#EDE8D7"/>
+<g id="arrow-down">
+<path id="Vector" d="M12 5L12 19" stroke="#EB4889" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M19 12L12 19L5 12" stroke="#EB4889" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1512" height="5528" fill="white" transform="translate(-791 -2634)"/>
+</clipPath>
+</defs>
+</svg>

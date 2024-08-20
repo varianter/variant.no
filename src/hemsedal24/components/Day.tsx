@@ -8,7 +8,7 @@ export default function Day({ title, children, background = false }: { title: st
       <h2>
         {title}
       </h2>
-      <div>
+      <div className={styles.timetable}>
         {children}
       </div>
     </div>

@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import arrowDown from './images/arrow-down.svg';
 import arrowRight from './images/arrow-right.svg';
+import arrowrightpink from './images/arrow-rightpink.svg'
 import Hero from './components/Hero'
 import Day from './components/Day'
 import Link from 'next/link';
@@ -16,8 +17,6 @@ import mobilepagebottomblub from "./images/mobilepagebottomblob.svg"
 import resortbottom from './images/resortbottom.svg'
 import { useState, useEffect } from 'react';
 import latter from './images/latter.svg'
-
-
 
 
 
@@ -36,6 +35,7 @@ const Hemsedal24: NextPage = () => {
     }, []);
     return (
         <div className={styles.tur}>
+            <meta name="theme-color" content="#EDE8D7"/>
             <Head>
                 <title>Hemsedal</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
@@ -63,91 +63,85 @@ const Hemsedal24: NextPage = () => {
       </div>
       <div style={{display:'relative', marginBottom:"10%"}}><img style={{display:"absolute"}} src={mobile ? mobilebottomblub : bottomblub} alt="big blobs"/>  </div> 
       <div id="program" className={styles.program}>
-      <h3>Program</h3>
+      <div className={styles.pl_9}><h3>Program</h3></div>
       <Day title="Fredag">
   <ul>
     <li>
-      <time>09:55</time> <span>Oppmøte på Flesland</span>
+      <time>07:45</time> <span>Oppmøte på Bergen togstasjon</span>
     </li>
     <li>
-      <time>11:55</time> <span>Flyet går</span>
+      <time>08:08</time> <span>Toget går! 🚂</span>
     </li>
     <li>
-      <time>15:10</time> <span>Lander i Helsinki</span>
+      <time>12:00</time> <span>Buss til hotellet</span>
     </li>
     <li>
-      <time>16:00</time> <span>Tog til sentrum</span>
+      <time>12:45</time> <span>Ankomst på Fýri Resort (check-in kl 15:00)</span>
     </li>
     <li>
-      <time>17:00</time> <span>Innsjekk og faglig bolk på hotellet</span>
+      <time>13:00 - 14:00</time> <span>Lunsj på hotellet</span>
     </li>
     <li>
-      <time>21:00</time> <span>Middag</span>
+      <time>14:00 - 17:00</time> <span><span className={styles.programbold}>For varianter:</span>&nbsp;<span> Workshop med Marie, vi får servert snacks og drikke</span></span>
     </li>
     <li>
-      <time>23:30</time> <span>🍻 eller 😴</span>
+      <time>14:00 - 16:00</time> 
+      <details><summary><span className={`${styles.underlined} ${styles.summaryText}`}><span className={styles.programbold}>For følge:</span>&nbsp;
+        <span>Pool Club/treningssenter/fritid</span></span><div><div className={styles.disclosureArrow}></div></div></summary>
+       <p>Dere kan benytte dere av treningssenter og Pool Club som består av innendørs- og utendørsbassenger,
+         og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club 
+         (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå 
+         inn og ut så mye de vil i denne tidsperioden (gjelder kun denne dagen).​ Snacks og drikke 
+         kan settes av på romnummer og betales ved utsjekk på søndagen.</p></details>
+       
+    </li>
+    <li><time>17:00 - 17:55</time><span>Chill eller gjør hva dere vil🤸🏼</span></li>
+    <li>
+      <time>18:00</time> <span>Middag </span>
+    </li>
+    <li>
+      <time>20:00</time> <span>ubestemt</span>
     </li>
   </ul>
 </Day>
 
-<Day title="Lørdag" background>
+      <Day title="Lørdag" background>
   <ul>
-    <li>
-      <time>08:00</time> <span>Frokost 😴</span>
-    </li>
-    <li>
-      <time>09:45</time> <span>Avgang fra hotellet</span>
-    </li>
-    <li>
-      <time>10:30</time> <span>Felles aktivitet 🤫</span>
-    </li>
-    <li>
-      <time>12:00</time>
-      <span>
-        <Link href={'/hemsedal24/aktiviteter'}>
-          Valgfrie aktiviteter
-        </Link>
-      </span>
-    </li>
-    <li>
-      <time>19:30</time> <span>Felles avgang til forfriskninger 🍾</span>
-    </li>
-    <li>
-      <time>21:00</time> <span>Middag 🤤</span>
-    </li>
-    <li>
-      <time>00:00</time> <span>Gøygøygøy 🕺</span>
-    </li>
+  <li>
+<time>07:30 - 09:00</time> <span>Frokost 🥐 🍳</span>
+</li>
+<li>
+<time>09:30</time>       <span className={styles.underlined}>
+  <Link href={'/hemsedal24/aktiviteter'}>
+  Hundekjøring / Via Ferrata klatring / Stisykling med Hemsedal Rides
+  </Link>
+</span><Link href={'/hemsedal24/aktiviteter'}><img style={{marginTop:"6px", marginLeft:"8px"}} src={arrowrightpink}/></Link>
+</li>
+<li>
+<time>16:15 - 19:15</time> <span>Pool Club (inne- og utebasseng + badstue) </span>
+</li>
+<li>
+<time>18:00</time> <span>Middag</span>
+</li>
+<li>
+<time>20:00</time> <span>ubestemt</span>
+</li>
   </ul>
 </Day>
 
 <Day title="Søndag">
   <ul>
     <li>
-      <time>08:00</time> <span>Frokost 😴</span>
+    <time>07:30 - 09:00</time> <span>Frokost 🥐 🍳</span>
     </li>
     <li>
-      <time>09:45</time> <span>Avgang fra hotellet</span>
+      <time>09:30 - 10:00</time> <span>Avreise fra hotellet, vi blir hentet med buss og kjørt til togstasjonen</span>
     </li>
     <li>
-      <time>10:30</time> <span>Felles aktivitet 🤫</span>
+      <time>11:16</time> <span>Toget går! 🚂</span>
     </li>
     <li>
-      <time>12:00</time>
-      <span>
-        <Link href={'/helsinki23/tips'}>
-          Valgfrie aktiviteter
-        </Link>
-      </span>
-    </li>
-    <li>
-      <time>19:30</time> <span>Felles avgang til forfriskninger 🍾</span>
-    </li>
-    <li>
-      <time>21:00</time> <span>Middag 🤤</span>
-    </li>
-    <li>
-      <time>00:00</time> <span>Gøygøygøy 🕺</span>
+      <time>15:00</time> <span>Tilbake i Bergen</span>
     </li>
   </ul>
 </Day>

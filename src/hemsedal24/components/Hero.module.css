@@ -5,6 +5,7 @@ section {
   justify-content: space-between;
   flex-direction: row;
   width: 100vw;
+  height: 30rem;
 }
 
 .text {
@@ -32,24 +33,43 @@ section {
 }
 
 .blob {
+  display: flex;
   margin-left: -45%;
   margin-top: 50%;
   z-index: auto;
   min-width: 65%;
+  position: relative;
 }
 
+.blobimg {
+  position: absolute;
+  max-width: 100%;
+}
+
+.img1 {
+  display: flex;
+  min-width: 45%;
+  position: relative;
+  justify-content: flex-start;
+}
 .hemsedalhero1 {
-  margin-left: -15%;
-  margin-top: -8%;
-  max-width: 50%;
-  margin-right: -5%;
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  margin: -5.5rem 0 0 -12rem;
+}
+
+.img2 {
+  display: flex;
+  min-width: 40%;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .hemsedalhero2 {
-  max-width: 30%;
-  margin-top: -9%;
-  margin-right: 0;
-  margin-left: -10%;
+  position: absolute;
+  max-width: 60%;
+  margin: -1rem 3rem 0 0;
 }
 
 .blobandtext {
@@ -59,16 +79,21 @@ section {
 }
 
 @media (max-width: 500px) {
+  .container {
+    height: 50rem;
+  }
   .hemsedalhero2 {
     max-width: 0%;
   }
+  .img1 {
+    height: 30rem;
+  }
   .hemsedalhero1 {
-    max-width: 150%;
-    margin: -23% -20% -30% -70%;
+    max-width: 160%;
+    margin: -7rem -20% -30% -70%;
   }
 
   .blobandtext {
-    justify-content: flex-end;
   }
 
   .blob {
@@ -77,6 +102,7 @@ section {
     flex-shrink: 0;
     margin: 0 -15% 0 -48%;
   }
+
   .text > h1 {
     font-size: 4.25rem;
     font-weight: 400;
@@ -95,6 +121,7 @@ section {
   .text {
     display: flex;
     align-content: center;
+    padding-left: 12rem;
   }
   .container {
     flex-direction: column;

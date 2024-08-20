@@ -1,8 +1,8 @@
 .day {
-  padding: 7rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  padding: 6rem 13rem 5rem 9rem;
 }
 
 .with_background {
@@ -10,16 +10,24 @@
 }
 
 .day > h2 {
-  font-weight: 550;
-  font-size: 140%;
-  line-height: 2.25rem;
-  align-items: center;
+  color: var(--Primary-Default, #e61a6b);
+
+  /* Heading 4 / Regular */
+  font-family: Recoleta;
+  font-size: 1.675rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.4375rem; /* 130% */
 }
 
 .day time {
   display: inline-block;
-  width: 4rem;
+  width: 12rem;
   margin-right: 1rem;
+}
+
+.timetable {
+  width: 100%;
 }
 
 .day ul {
@@ -27,12 +35,16 @@
   font-size: 110%;
   font-weight: 400;
   font-family: 'Graphik Web';
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
 }
 
 .day ul > li {
   display: flex; /* Use flexbox to align time and text */
   align-items: flex-start; /* Align items at the top */
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .day ul > li time {
@@ -45,18 +57,8 @@
   display: inline-block; /* Ensure proper block-level behavior */
 }
 
-.day a {
-  all: unset;
-  text-underline-offset: 8px !important;
-  text-decoration: underline !important;
-  text-decoration-thickness: 2px !important;
-  text-decoration-color: #03dac6 !important;
-  display: inline-flex !important;
-  gap: 10px !important;
-  cursor: pointer;
-}
-
-@media (min-width: 1024px) {
+.day ul > li p {
+  margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -70,13 +72,20 @@
     margin: 0 0;
   }
 }
+a {
+  text-decoration-line: none;
+}
 
 @media (max-width: 500px) {
   .day {
     padding: 1rem;
     margin-top: 2.5rem;
-    flex-direction: column;
     align-items: flex-start;
+  }
+
+  .day li {
+    display: flex;
+    flex-direction: row;
   }
 
   .day > h2 {
@@ -84,6 +93,7 @@
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
+    color: var(--Primary-Default);
     line-height: 2rem;
     padding-bottom: 2rem;
   }
@@ -96,18 +106,10 @@
   .day ul {
     list-style: none;
     padding-left: 1rem;
-    margin: 0 0;
+    width: 95%;
   }
 
-  .day a {
-    padding-left: 10rem;
-    all: unset;
-    text-underline-offset: 8px !important;
-    text-decoration: underline !important;
-    text-decoration-thickness: 2px !important;
-    text-decoration-color: #03dac6 !important;
-    display: inline-flex !important;
-    gap: 10px !important;
-    cursor: pointer;
+  .day time {
+    width: 8rem;
   }
 }
