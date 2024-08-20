@@ -35,6 +35,9 @@ html {
   --breakpoint-mobile: 767px;
   --breakpoint-tablet: 640px;
   --breakpoint-large: 1024px;
+
+  /* max widths */
+  --max-content-width: 1200px;
 }
 
 :focus {
