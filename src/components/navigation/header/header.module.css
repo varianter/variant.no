@@ -47,6 +47,7 @@
 }
 
 .logo {
+  overflow: hidden;
   width: auto;
   display: flex;
   max-width: 100%;
