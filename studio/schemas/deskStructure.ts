@@ -8,11 +8,13 @@ import {
   ControlsIcon,
   ProjectsIcon,
   ComposeIcon,
+  HeartIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { siteSettingsID } from "./documents/siteSettings";
 import { postId } from "./documents/post";
 import { legalDocumentID } from "./documents/legalDocuments";
+import { salaryAndBenefitsId } from './documents/salaryAndBenefits';
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -69,5 +71,14 @@ export default (S: StructureBuilder) =>
                 .icon(ComposeIcon)
                 .child(S.documentTypeList(postId).title("Posts")),
             ])
+        ),
+      S.listItem()
+        .title("Salary and Benefits")
+        .icon(HeartIcon)
+        .child(
+          S.document()
+            .schemaType(salaryAndBenefitsId)
+            .documentId(salaryAndBenefitsId)
+            .title("Salary and Benefits")
         ),
     ]);

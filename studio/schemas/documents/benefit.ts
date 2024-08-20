@@ -14,9 +14,14 @@ const benefit = defineType({
   preview: {
     select: {
       title: title.name,
-      subtitle: "Benefit"
-    }
-  }
+    },
+    prepare({ title }) {
+      return {
+        title,
+        subtitle: "Benefit",
+      };
+    },
+  },
 })
 
 export default benefit;
