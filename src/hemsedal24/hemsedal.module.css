@@ -39,6 +39,16 @@
   all: unset;
   cursor: pointer;
   z-index: 10;
+  margin-left: 6rem;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+
+.tilbake {
+  all: unset;
+  text-decoration: none;
+  justify-content: flex-start;
+  display: flex;
 }
 
 .navigation {
@@ -59,11 +69,6 @@
 
 .navigation img {
   vertical-align: middle;
-}
-
-.navigation a {
-  margin-left: 6rem;
-  margin-right: 4rem;
 }
 
 html {
@@ -366,5 +371,9 @@ details[open] .disclosureArrow {
   }
   .summaryText {
     width: 13rem;
+  }
+
+  .tingogtangheader {
+    margin-top: 0;
   }
 }

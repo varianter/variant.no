@@ -1,0 +1,71 @@
+.uploadDropZone {
+  margin: 3rem auto;
+  width: 20%;
+}
+.uploadDropZone svg {
+  cursor: pointer;
+}
+
+/* applied to container */
+.customButton {
+  background-color: none;
+}
+
+/* applied to button */
+.customButton > *[data-ut-element='button'] {
+  width: 50%;
+  height: 50%;
+  font-size: 1rem;
+  color: transparent;
+  border-radius: 6.25rem;
+  background-color: transparent;
+  content: url('./images/Knapp.svg');
+}
+
+.customButton > *[data-ut-element='button']:hover {
+  content: url('./images/knapp2.svg');
+}
+/* applied to button when uploading */
+.customButton > *[data-ut-element='button'][data-state='readying'] {
+  background-color: rgb(245 164 196);
+  color: rgb(0 0 0 / 0.5);
+  cursor: not-allowed;
+}
+
+/* applied to the button when uploading */
+.customButton > *[data-ut-element='button'][data-state='uploading'] {
+  background-color: rgb(245 164 196);
+  color: rgb(0 0 0 / 0.5);
+  cursor: not-allowed;
+}
+
+/* applied to the upload indicator when uploading */
+.customButton > *[data-ut-element='button'][data-state='uploading']::after {
+  background-color: rgb(245 164 196);
+}
+
+.customButton > *[data-ut-element='allowed-content'] {
+  display: none;
+}
+
+.embla {
+  overflow: hidden;
+  width: 90%;
+  height: 15rem;
+  margin: 3rem auto;
+}
+.embla__container {
+  display: flex;
+  cursor: grab;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  max-width: 30%;
+  user-select: none;
+}
+
+@media (max-width: 500px) {
+  .embla__slide {
+    max-width: 70%;
+  }
+}

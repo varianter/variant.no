@@ -23,13 +23,13 @@ const TingogTang: NextPage = () => {
     return (
         <div className={styles.tur} style={{ paddingTop: '3rem' }}>
             <Container id="ting">
-                <Link 
-                className={styles.navigation}
-                href="/hemsedal24"
-                style={{display:'flex', gap: '1rem', lineHeight: '28px'}}>
+                {mobile ? <></>:<Link 
+                className={`${styles.navigation} ${styles.tilbake}`}
+                style={{display:'flex', gap: '1rem', lineHeight: '28px', justifyContent:"flex-start"}}
+                href="/hemsedal24">
                     <img src={arrowLeft} width={24} height={28} alt="pil venste" />
                     <span>Tilbake</span>
-                </Link>
+                </Link>}
                 <div className={styles.tingogtangheader}>
                 <div style={{zIndex:"auto", minWidth: `${mobile ? '40%' : '15%'}`, marginLeft:`${mobile ? '-9%' : '0'}`}}><img src={blob} alt="blob"/></div>
                 <div className={styles.ttheadertittel}><h3>Ting og tang du kanskje lurer på</h3></div>

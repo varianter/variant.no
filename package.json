@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.0.2",
+    "@uploadthing/react": "^6.7.2",
     "@variant/components": "^2.0.11",
     "@variant/profile": "^3.0.1",
     "@visx/curve": "^3.3.0",
@@ -39,6 +40,8 @@
     "animejs": "^3.2.1",
     "d3-array": "^3.2.4",
     "date-fns": "^2.30.0",
+    "embla-carousel-autoplay": "^8.2.0",
+    "embla-carousel-react": "^8.2.0",
     "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.2",
@@ -50,7 +53,8 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
     "react-slider": "^2.0.6",
-    "rss-parser": "^3.13.0"
+    "rss-parser": "^3.13.0",
+    "uploadthing": "^6.13.2"
   },
   "scripts": {
     "dev": "next dev",
