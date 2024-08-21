@@ -1,0 +1,9 @@
+   .fieldset{
+    border: 0 none; 
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
