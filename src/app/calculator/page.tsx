@@ -1,8 +1,6 @@
-import SalaryAndBenefits from 'src/salaryAndBenefits/SalaryAndBenefits';
-
 const Page = () => {
     return (
-       <SalaryAndBenefits />
+        <p> Salary and Benefits </p>
     );
 };
 
