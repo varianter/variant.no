@@ -4,6 +4,7 @@ import { BlogPage, Post } from "studio/lib/payloads/pages";
 import { POST_SLUG_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import PostPage from "./PostPage";
+import { checkDraftDataIfDevelopment } from '../utils/draftmode';
 
 interface PostPagePreviewProps {
   initialPost: QueryResponseInitial<Post>;
@@ -26,6 +27,7 @@ export default function PostPagePreview({
     { initial: initialPost }
   );
 
+  checkDraftDataIfDevelopment(newData);
   const post = newData || initialPost.data;
 
   return (
