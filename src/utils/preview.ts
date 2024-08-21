@@ -1,4 +1,4 @@
-export function validateDraftDataInDevelopment(data: unknown) {
+export function validateDraftDataInDevelopment(data: unknown): void {
   if (process.env.NODE_ENV === "development") {
     if (typeof data !== "object" || data === null) {
       console.error(
