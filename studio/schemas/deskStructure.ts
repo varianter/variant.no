@@ -77,8 +77,8 @@ export default (S: StructureBuilder) =>
         .icon(HeartIcon)
         .child(
           S.document()
-            .schemaType(salaryAndBenefitsId._root)
-            .documentId(salaryAndBenefitsId._root)
+            .schemaType(salaryAndBenefitsId)
+            .documentId(salaryAndBenefitsId)
             .title("Salary and Benefits"),
         ),
     ]);

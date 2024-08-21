@@ -4,13 +4,10 @@ import seo from "../objects/seo";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 
-export const salaryAndBenefitsId = {
-  _root: "salaryAndBenefits",
-  showSalaryCalculator: "showSalaryCalculator",
-};
+export const salaryAndBenefitsId = "salaryAndBenefits";
 
 const salaryAndBenefits = defineType({
-  name: salaryAndBenefitsId._root,
+  name: salaryAndBenefitsId,
   type: "document",
   title: "Salary and Benefits",
   fields: [
@@ -18,7 +15,7 @@ const salaryAndBenefits = defineType({
     pageSlug,
     seo,
     defineField({
-      name: salaryAndBenefitsId.showSalaryCalculator,
+      name: "showSalaryCalculator",
       title: "Show Salary Calculator",
       description: "Should the salary calculator be visible on the page?",
       type: "boolean",
