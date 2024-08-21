@@ -46,5 +46,7 @@ export const uploadRouter = {
     }),
 } satisfies FileRouter;
 
-
+export const utapi = new UTApi({
+    apiKey: ""
+})
 export type OurFileRouter = typeof uploadRouter;
