@@ -14,7 +14,7 @@ import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { siteSettingsID } from "./documents/siteSettings";
 import { postId } from "./documents/post";
 import { legalDocumentID } from "./documents/legalDocuments";
-import { salaryAndBenefitsId } from './documents/salaryAndBenefits';
+import { salaryAndBenefitsId } from "./documents/salaryAndBenefits";
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -27,7 +27,7 @@ export default (S: StructureBuilder) =>
           S.document()
             .schemaType(siteSettingsID)
             .documentId(siteSettingsID)
-            .title("Site Settings")
+            .title("Site Settings"),
         ),
       S.listItem()
         .title("Legal Documents")
@@ -44,7 +44,7 @@ export default (S: StructureBuilder) =>
           S.document()
             .schemaType("navigationManager")
             .documentId("navigationManager")
-            .title("Navigation Manager")
+            .title("Navigation Manager"),
         ),
       S.listItem()
         .title("Pages")
@@ -64,13 +64,13 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(blogId)
                     .documentId(blogId)
-                    .title("Blog Overview & Settings")
+                    .title("Blog Overview & Settings"),
                 ),
               S.listItem()
                 .title("Posts")
                 .icon(ComposeIcon)
                 .child(S.documentTypeList(postId).title("Posts")),
-            ])
+            ]),
         ),
       S.listItem()
         .title("Salary and Benefits")
@@ -79,6 +79,6 @@ export default (S: StructureBuilder) =>
           S.document()
             .schemaType(salaryAndBenefitsId)
             .documentId(salaryAndBenefitsId)
-            .title("Salary and Benefits")
+            .title("Salary and Benefits"),
         ),
     ]);
