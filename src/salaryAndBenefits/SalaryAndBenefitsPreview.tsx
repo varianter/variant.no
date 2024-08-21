@@ -5,7 +5,7 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
 import { SALARY_AND_BENEFITS_PAGE_QUERY } from "studio/lib/queries/pages";
 
-import { checkPreviewDataIfDevelopment } from "../utils/preview";
+import { validateDraftDataInDevelopment } from "../utils/preview";
 
 interface SalaryAndBenefitsPreviewProps {
   initialSalaryAndBenefits: QueryResponseInitial<SalaryAndBenefitsPage>;
@@ -20,7 +20,7 @@ const SalaryAndBenefitsPreview = ({
     { initial: initialSalaryAndBenefits },
   );
 
-  checkPreviewDataIfDevelopment(newData);
+  validateDraftDataInDevelopment(newData);
   const pageData = newData || initialSalaryAndBenefits.data;
 
   return (

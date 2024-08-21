@@ -5,7 +5,7 @@ import { BLOG_PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import { Blog } from "./Blog";
 
-import { checkPreviewDataIfDevelopment } from "../utils/preview";
+import { validateDraftDataInDevelopment } from "../utils/preview";
 
 interface BlogPreviewProps {
   initialBlog: QueryResponseInitial<BlogPage>;
@@ -24,7 +24,7 @@ export default function BlogPreview({
     { initial: initialBlog },
   );
 
-  checkPreviewDataIfDevelopment(newData);
+  validateDraftDataInDevelopment(newData);
   const overview = newData || initialBlog.data;
 
   return (
