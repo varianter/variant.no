@@ -4,7 +4,9 @@ import { richText, title } from "../fields/text";
 export const benefitId = "benefit";
 export const benefitTypeId = "benefitType";
 
+const BENEFIT_TYPE_NONE_VALUE = "none";
 const BENEFIT_TYPES = [
+  { title: "None", value: BENEFIT_TYPE_NONE_VALUE },
   { title: "Gadgets", value: "gadgets" },
   { title: "Bonus", value: "bonus" },
   { title: "Pension", value: "pension" },
@@ -16,11 +18,13 @@ const benefitType = defineField({
   type: "string",
   title: "Benefit Type",
   description:
-    "Choose the type of benefit, or leave blank for generic benefits. Some benefit types include visual graphs that will be displayed together with the text.",
+    "Choose the type of benefit (use None for generic benefits). Some benefit types include visual graphs that will be displayed together with the text.",
   options: {
     list: BENEFIT_TYPES,
-    layout: "dropdown",
+    layout: BENEFIT_TYPES.length > 5 ? "dropdown" : "radio",
   },
+  initialValue: BENEFIT_TYPE_NONE_VALUE,
+  validation: (Rule) => Rule.required(),
 });
 
 const benefit = defineType({
