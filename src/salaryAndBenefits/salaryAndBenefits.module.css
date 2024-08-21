@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 5rem;
+    gap: 5rem;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: var(--max-content-width-medium);
+}

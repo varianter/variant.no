@@ -14,7 +14,6 @@
 }
 
 .error {
-  width: -webkit-fill-available;
   max-width: 88rem;
   display: flex;
   padding: 3rem;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { PatchEvent, set, unset, useFormValue } from "sanity";
-import { Select, Card, Button, Stack } from "@sanity/ui";
-import { client } from "../lib/client";
+import { Select, Button, Stack } from "@sanity/ui";
+import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 interface AnchorSelectProps {
   value?: string;
@@ -15,7 +15,7 @@ interface AnchorItem {
   basicTitle?: string;
   value: string;
   _type?: string;
-  _key: string;
+  _key?: string;
 }
 
 function fromCamelCase(value?: string) {
@@ -45,7 +45,9 @@ const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
     }
 
     try {
-      const response = await client.fetch("*[_id == $id][0]{sections}", {
+      const response = await fetchWithToken<{
+        sections: AnchorItem[];
+      }>("*[_id == $id][0]{sections[]{_key, basicTitle}}", {
         id: internalLinkRef,
       });
 
@@ -54,7 +56,7 @@ const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
           const title = section.basicTitle || fromCamelCase(section._type);
           return {
             basicTitle: title,
-            value: `#${section._key}`, // TODO, configure right #value
+            value: `#${section._key}`,
           };
         }
       );

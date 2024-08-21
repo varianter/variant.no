@@ -4,7 +4,13 @@
   align-items: center;
   gap: 0.5rem;
   align-self: stretch;
-  width: -webkit-fill-available;
+  width: 100%;
+  color: var(--primary-black);
+
+  /* to keep checkbox 20x20 we'll make sure portable text takes 2/3 width */
+  & > p {
+    flex: 2;
+  }
 }
 
 .input {
@@ -16,8 +22,8 @@
 }
 
 .checkbox {
-  height: 20px;
   width: 20px;
+  height: 20px;
   background-color: #fff;
   border: 2px solid var(--primary-black);
   border-radius: 0.25rem;
@@ -52,10 +58,6 @@
 .input:focus + .checkbox {
   outline: 2px solid var(--focus-color);
   outline-offset: 2px;
-}
-
-.label {
-  color: var(--primary-black);
 }
 
 .error {

@@ -1,5 +1,11 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 :root {
@@ -29,6 +35,11 @@ html {
   --breakpoint-mobile: 767px;
   --breakpoint-tablet: 640px;
   --breakpoint-large: 1024px;
+
+  /* max widths */
+  --max-content-width-large: 1400px;
+  --max-content-width-medium: 1200px;
+  --max-content-width-small: 1000px;
 }
 
 :focus {
