@@ -39,6 +39,7 @@ export const RadioButton = ({
         aria-disabled={disabled ? "true" : "false"}
         defaultChecked={defaultChecked}
         onChange={onChange}
+        aria-label={label}
       />
 
       {label}
