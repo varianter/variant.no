@@ -38,9 +38,12 @@ const benefit = defineType({
       type: benefitType.name,
     },
     prepare({ title, type }) {
+      const subtitle =
+        BENEFIT_TYPES.find((o) => o.value === type)?.title ??
+        "Unknown benefit type";
       return {
         title,
-        subtitle: `Benefit${type ? ` / ${BENEFIT_TYPES.find((o) => o.value === type)?.title ?? "Unknown benefit type"}` : ""}`,
+        subtitle,
       };
     },
   },
