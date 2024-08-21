@@ -6,6 +6,7 @@ import { PageBuilder, ArticleSection } from "studio/lib/payloads/pages";
 import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import { PreviewProps } from "src/types/preview";
+import { validateDraftDataInDevelopment } from "../../../utils/preview";
 
 export default function ArticlePreview({
   initialData,
@@ -14,18 +15,15 @@ export default function ArticlePreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
-  const articleSection = newData
-    ? (newData.sections.find(
-        (section, index) =>
-          section._type === "article" && index === sectionIndex
-      ) as ArticleSection)
-    : (initialData.data.sections.find(
-        (section, index) =>
-          section._type === "article" && index === sectionIndex
-      ) as ArticleSection);
+  validateDraftDataInDevelopment(newData);
+  const pageData = newData || initialData.data;
+
+  const articleSection = pageData.sections.find(
+    (section, index) => section._type === "article" && index === sectionIndex,
+  ) as ArticleSection;
 
   return (
     <Suspense>
