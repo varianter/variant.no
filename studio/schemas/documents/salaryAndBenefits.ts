@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import { pageTitleSlug } from "../schemaTypes/slug";
+import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
@@ -12,7 +12,7 @@ const salaryAndBenefits = defineType({
   title: "Salary and Benefits",
   fields: [
     title,
-    pageTitleSlug,
+    titleSlug,
     seo,
     defineField({
       name: "showSalaryCalculator",

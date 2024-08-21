@@ -55,6 +55,6 @@ function createSlugField(source: string) {
 }
 
 const pageSlug = createSlugField("page");
-const pageTitleSlug = createSlugField("basicTitle");
+const titleSlug = createSlugField("basicTitle");
 
-export { pageSlug, pageTitleSlug };
+export { pageSlug, titleSlug };
