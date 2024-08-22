@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
-import SalaryAndBenefits from 'src/salaryAndBenefits/SalaryAndBenefits';
+import SalaryAndBenefits from "src/salaryAndBenefits/SalaryAndBenefits";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { BlogPage, PageBuilder, Post } from "studio/lib/payloads/pages";
-import { SalaryAndBenefits as SalaryAndBenefitsPayload } from 'studio/lib/payloads/salaryAndBenefits';
+import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -36,13 +36,22 @@ async function Page({ params }: Props) {
   const { slug } = params;
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const [initialPage, initialBlogPage, initialSalaryAndBenefitsPage] = await Promise.all([
-    loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
-    loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
-    loadQuery<SalaryAndBenefitsPayload>(SALARY_AND_BENEFITS_PAGE_QUERY, { slug }, { perspective }),
-  ]);
+  const [initialPage, initialBlogPage, initialSalaryAndBenefitsPage] =
+    await Promise.all([
+      loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
+      loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
+      loadQuery<SalaryAndBenefitsPage>(
+        SALARY_AND_BENEFITS_PAGE_QUERY,
+        { slug },
+        { perspective },
+      ),
+    ]);
 
-  if (!initialPage.data && !initialBlogPage.data && !initialSalaryAndBenefitsPage.data) {
+  if (
+    !initialPage.data &&
+    !initialBlogPage.data &&
+    !initialSalaryAndBenefitsPage.data
+  ) {
     console.log(`Page ${slug} not found`);
     // TODO: add error snackbar
     redirect("/");
@@ -53,7 +62,7 @@ async function Page({ params }: Props) {
     const initialPosts = await loadQuery<Post[]>(
       POSTS_QUERY,
       { slug },
-      { perspective }
+      { perspective },
     );
 
     if (!initialPosts) {
@@ -95,9 +104,13 @@ async function Page({ params }: Props) {
 
   if (initialSalaryAndBenefitsPage.data) {
     return isDraftMode ? (
-      <SalaryAndBenefitsPreview initialSalaryAndBenefits={initialSalaryAndBenefitsPage} />
+      <SalaryAndBenefitsPreview
+        initialSalaryAndBenefits={initialSalaryAndBenefitsPage}
+      />
     ) : (
-      <SalaryAndBenefits salaryAndBenefits={initialSalaryAndBenefitsPage.data} />
+      <SalaryAndBenefits
+        salaryAndBenefits={initialSalaryAndBenefitsPage.data}
+      />
     );
   }
 

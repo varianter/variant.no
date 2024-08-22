@@ -1,10 +1,10 @@
 import styles from "./salaryAndBenefits.module.css";
 import Text from "src/components/text/Text";
-import { SalaryAndBenefits as SalaryAndBenefitsPayload } from "studio/lib/payloads/salaryAndBenefits";
+import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
 import { RichText } from "src/components/richText/RichText";
 
 interface SalaryAndBenefitsProps {
-  salaryAndBenefits: SalaryAndBenefitsPayload;
+  salaryAndBenefits: SalaryAndBenefitsPage;
 }
 
 const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
