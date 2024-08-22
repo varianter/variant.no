@@ -75,13 +75,13 @@ html {
 
 .blob {
   z-index: auto;
-  min-width: 35%;
+  max-width: 75%;
   position: relative;
 }
 .blob img {
   position: absolute;
-  top: -7rem;
-  right: -10rem;
+  top: -9rem;
+  right: -20rem;
 }
 
 .title {
