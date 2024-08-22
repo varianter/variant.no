@@ -32,14 +32,14 @@ const Activities: NextPage = () => {
                 <img src={arrowleft} width={24} height={28} alt="pil venste" />
                 <span>Tilbake</span>
             </Link> }
-            <div style={{display:"relative"}} className={styles.blob}><img src={blob} alt="blob"/></div>
+            <div className={styles.blob}><img src={blob} alt="blob"/></div>
             <div className={styles.header}>
             <div className={styles.title}><h3>Aktivitetene på lørdag</h3></div>  
-            <span>
+            <p>
             Lørdag! Aktiviteter! Sykle på fjellet, klatre i fjellveggen eller kose med hunder, 
             det er mye forskjellig som skjer på lørdag. Her har vi derfor samlet litt informasjon om 
             de forskjellige aktivitetene her slik at man er forberedt på hva lørdagsaktivitetene vil bringe ⛰️🌞 
-            </span></div>
+            </p></div>
             <ActivityBlock title="Stisykling med Hemsedal Rides 🚲⛰️"
             text="Mellom kl 10:00 – 16:00 kan dere ta stolheisen Lodge Express opp fjellet til stiene i Hemsedal Skisenter⛰️ Heisen ligger en kort sykkeltur fra hotellet. Her kan dere sykle ned og ta heisen opp igjen så mange ganger dere vil for å teste ut de ulike stiene. Disse stiene passer for både nybegynnere og adrenalin junkiesene blant oss💥 Sykkel og hjelm får dere låne av hotellet!"
             link ="https://hemsedal.com/sykling/hemsedal-rides"
