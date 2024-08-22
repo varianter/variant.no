@@ -17,6 +17,9 @@
   justify-content: center;
   margin-right: 5%;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .tilbake {
   color: var(--color-standard__black);
@@ -73,9 +76,12 @@
 .blob {
   z-index: auto;
   min-width: 35%;
+  position: relative;
+}
+.blob img {
   position: absolute;
-  top: 0;
-  margin: 0 0 0 30%;
+  top: -7rem;
+  right: -10rem;
 }
 
 .title {

@@ -49,7 +49,7 @@ p {
     margin: 0;
     color: var(--Secondary-4-D4, #2f2e2b);
     font-family: 'Graphik Web';
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2rem; /* 200% */

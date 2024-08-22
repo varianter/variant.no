@@ -1,13 +1,18 @@
 section {
 }
 .container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  position: relative;
   width: 100vw;
   height: 30rem;
 }
 
+.blobandtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .text {
   display: flex;
   flex-direction: column;
@@ -15,7 +20,7 @@ section {
   font-size: 2.25rem;
   line-height: 2.5rem;
   justify-content: center;
-  margin-left: -20%;
+  position: relative;
 }
 
 .text > h1 {
@@ -32,50 +37,25 @@ section {
   justify-content: center;
 }
 
-.blob {
-  display: flex;
-  margin-left: -45%;
-  margin-top: 50%;
-  z-index: auto;
-  min-width: 65%;
-  position: relative;
-}
-
 .blobimg {
   position: absolute;
-  max-width: 100%;
+  max-width: 70%;
+  right: -5rem;
+  z-index: -1;
 }
 
-.img1 {
-  display: flex;
-  min-width: 45%;
-  position: relative;
-  justify-content: flex-start;
-}
 .hemsedalhero1 {
   position: absolute;
-  max-width: 100%;
+  max-width: 50%;
   left: 0;
-  margin: -5.5rem 0 0 -12rem;
-}
-
-.img2 {
-  display: flex;
-  min-width: 40%;
-  position: relative;
-  justify-content: flex-end;
+  top: -4rem;
 }
 
 .hemsedalhero2 {
   position: absolute;
-  max-width: 60%;
-  margin: -1rem 3rem 0 0;
-}
-
-.blobandtext {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  max-width: 20%;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 500px) {
@@ -85,26 +65,23 @@ section {
   .hemsedalhero2 {
     max-width: 0%;
   }
-  .img1 {
-    height: 30rem;
-  }
   .hemsedalhero1 {
     max-width: 160%;
-    margin: -7rem -20% -30% -70%;
+    left: 0;
+    top: 0;
+  }
+  .blobimg {
+    top: 0;
+    transform: translateY(-25%);
+    max-width: 86%;
   }
 
   .blobandtext {
-  }
-
-  .blob {
-    width: 15rem;
-    height: 15.4rem;
-    flex-shrink: 0;
-    margin: 0 -15% 0 -48%;
+    align-items: flex-end;
   }
 
   .text > h1 {
-    font-size: 4.25rem;
+    font-size: 5rem;
     font-weight: 400;
     line-height: 5.1rem;
   }
@@ -119,9 +96,8 @@ section {
   }
 
   .text {
-    display: flex;
-    align-content: center;
-    padding-left: 12rem;
+    margin-top: 25rem;
+    padding-right: 1rem;
   }
   .container {
     flex-direction: column;
