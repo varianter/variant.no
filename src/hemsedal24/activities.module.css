@@ -109,7 +109,7 @@
   .header span {
     margin: 0;
     color: var(--Secondary-4-D4, #2f2e2b);
-    font-family: Graphik;
+    font-family: 'Graphik Web';
     font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
@@ -118,7 +118,7 @@
 
   .title h3 {
     color: var(--Secondary-4-D4, #2f2e2b);
-    font-family: Recoleta;
+    font-family: 'Recoleta';
     font-size: 1.775rem;
     font-style: normal;
     font-weight: 400;

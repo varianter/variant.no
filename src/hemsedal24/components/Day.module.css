@@ -13,7 +13,7 @@
   color: var(--Primary-Default, #e61a6b);
 
   /* Heading 4 / Regular */
-  font-family: Recoleta;
+  font-family: 'Recoleta';
   font-size: 1.675rem;
   font-style: normal;
   font-weight: 500;
@@ -84,7 +84,7 @@ a {
   }
 
   .day > h2 {
-    font-family: Graphik;
+    font-family: 'Graphik Web';
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
