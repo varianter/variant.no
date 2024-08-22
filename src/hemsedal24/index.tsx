@@ -17,7 +17,6 @@ import mobilepagebottomblub from "./images/mobilepagebottomblob.svg"
 import resortbottom from './images/resortbottom.svg'
 import { useState, useEffect } from 'react';
 import latter from './images/latter.svg'
-import "@uploadthing/react/styles.css";
 
 
 
