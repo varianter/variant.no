@@ -46,6 +46,7 @@
     "next-images": "^1.8.5",
     "node-html-parser": "^6.1.11",
     "react": "^18.2.0",
+    "react-archer": "^4.4.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",

@@ -32,6 +32,7 @@ const Activities: NextPage = () => {
                 <img src={arrowleft} width={24} height={28} alt="pil venste" />
                 <span>Tilbake</span>
             </Link> }
+            <script src="leader-line.min.js"></script>
             <div className={styles.blob}><img src={blob} alt="blob"/></div>
             <div className={styles.header}>
             <div className={styles.title}><h3>Aktivitetene på lørdag</h3></div>  
