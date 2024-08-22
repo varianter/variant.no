@@ -54,8 +54,8 @@ const Hemsedal24: NextPage = () => {
         <div style={{background:'var(--Secondary-4-L2, #F4F1E7)', width:'100%'}} className={styles.overlay}>
         <div>
         <h4>Hemsedal!!</h4>
-        <p>Johooooooo!!! Eller chooo-choooo som toget til Hemsedal... 
-            ikke kommer til å si siden det er elektrisk, men vi kan late som🤝 
+        <p>Johooooooo!!! Eller chooo-choooo som toget til Hemsedal...  
+            <span className={styles.italic}> ikke</span> kommer til å si siden det er elektrisk, men vi kan late som🤝 
             Uansett! Årets Varianttur tar oss med opp på fjellet, 
             og her blir det hygge, kos, god mat og gøye aktiviteter💥</p>
         <p>Under finner du programmet for turen. </p></div>
@@ -89,7 +89,7 @@ const Hemsedal24: NextPage = () => {
       <details><summary><span className={`${styles.underlined} ${styles.summaryText}`}><span className={`${styles.programbold} ${styles.underlined} `}>For følge:</span>&nbsp;
         <span className={styles.underlined}>Pool Club/treningssenter/fritid</span></span><div><div className={styles.disclosureArrow}></div></div></summary>
        
-       <p>Mens variantene har workshop kan dere benytte dere av treningssenteret eller Pool Club som består av innendørs- og utendørsbassenger, og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå inn og ut så mye de vil i denne tidsperioden (gjelder kun denne dagen).​ Eller så kan dere slappe av, gå en tur, utforske hotellet eller ta en blund😌 Helt opp til dere! Snacks og drikke kan settes av på romnummer og betales ved utsjekk på søndagen. .</p></details>
+       <p>Mens variantene har workshop kan dere benytte dere av treningssenteret eller Pool Club som består av innendørs- og utendørsbassenger, og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå inn og ut så mye de vil i denne tidsperioden (gjelder kun denne dagen).​ Eller så kan dere slappe av, gå en tur, utforske hotellet eller ta en blund😌 Helt opp til dere! Snacks og drikke kan settes av på romnummer og betales ved utsjekk på søndagen.</p></details>
        
     </li>
     <li><time>17:00 - 17:55</time><span>Chill eller gjør hva dere vil🤸🏼</span></li>
@@ -97,7 +97,7 @@ const Hemsedal24: NextPage = () => {
       <time>18:00</time> <span>Middag </span>
     </li>
     <li>
-      <time>20:00</time> <span className={styles.italic}>ubestemt</span>
+      <time>20:00</time> <span>Sosialt og chill og hygge 🍻🌟</span>
     </li>
   </ul>
 </Day>
@@ -105,7 +105,7 @@ const Hemsedal24: NextPage = () => {
       <Day title="Lørdag" background>
   <ul>
   <li>
-<time>07:30 - 09:00</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
+<time>07:30</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
 </li>
 <li>
 <time>09:30</time>       <span className={styles.underlined}>
@@ -121,7 +121,7 @@ const Hemsedal24: NextPage = () => {
 <time>18:00</time> <span>Middag</span>
 </li>
 <li>
-<time>20:00</time> <span className={styles.italic}>ubestemt</span>
+<time>20:00</time> <span>Sosialt og chill og hygge 🍻🌟</span>
 </li>
   </ul>
 </Day>
@@ -129,7 +129,7 @@ const Hemsedal24: NextPage = () => {
 <Day title="Søndag">
   <ul>
     <li>
-    <time>07:30 - 09:00</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
+    <time>07:30</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
     </li>
     <li>
       <time>09:30 - 10:00</time> <span>Avreise fra hotellet, vi blir hentet med buss og kjørt til togstasjonen</span>
