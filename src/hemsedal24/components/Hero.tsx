@@ -1,5 +1,4 @@
 import styles from "./Hero.module.css";
-//import arrow from "../images/curved-arrow.svg";
 
 import blob from "../images/blob.svg";
 import retreatmobile from "../images/retreatmobile.svg"
