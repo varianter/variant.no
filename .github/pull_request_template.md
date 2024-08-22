@@ -6,7 +6,7 @@ Please provide a brief summary of the changes you’ve made. Explain the purpose
 
 ## Visual Overview (Image/Video)
 
-If applicable, please include screenshots or a short video showcasing the changes you’ve made.
+If applicable, please include screenshots or a short video showcasing the changes you have made.
 
 *Insert images or videos here.*
 
