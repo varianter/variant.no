@@ -1,11 +1,8 @@
 import styles from "./Hero.module.css";
-
 import blob from "../images/blob.svg";
 import retreatmobile from "../images/retreatmobile.svg"
 import retreat from "../images/Retreatclub-fyri-solbaddar.svg"
 import hemsedalHero2 from "../images/hemsedalhero2.svg"
-
-
 
 export default function Hero({mobile}: {mobile:boolean}) {
   return <section id="hero">
