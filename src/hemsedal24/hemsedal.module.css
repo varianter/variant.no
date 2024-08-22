@@ -35,6 +35,31 @@
   line-height: 2rem;
 }
 
+.tilbake {
+  color: var(--color-standard__black);
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.tilbake span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.tilbake img {
+  vertical-align: middle;
+}
+
+.tilbake a {
+  margin-left: 6rem;
+  margin-right: 4rem;
+}
+
 .navigation a {
   all: unset;
   cursor: pointer;
@@ -42,13 +67,6 @@
   margin-left: 6rem;
   margin-right: 4rem;
   text-decoration: none;
-}
-
-.tilbake {
-  all: unset;
-  text-decoration: none;
-  justify-content: flex-start;
-  display: flex;
 }
 
 .navigation {
@@ -154,6 +172,9 @@ html {
 .bunninfo h2 {
   margin-bottom: 1.5rem;
 }
+.bunninfotekst {
+  width: 25%;
+}
 
 .bold {
   font-size: 1rem;
@@ -189,6 +210,9 @@ html {
   font-weight: 600;
 }
 
+.italic {
+  font-style: italic;
+}
 .underlined {
   text-decoration: underline;
   text-decoration-color: var(--Primary-Default, #e61a6b);
@@ -226,78 +250,15 @@ details[open] .disclosureArrow {
 }
 
 .pl_9 {
+  margin-bottom: -3%;
   margin-left: 9rem;
 }
 
 .font-color {
   color: var(--color-standard__black);
 }
-.tingogtangheader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
-}
-
-.tingogtangbody {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tt_textbox {
-  flex-direction: column;
-  max-width: 60%;
-}
-
-.tt_textbox span {
-  display: inline-block;
-  font-size: 110%;
-}
-
-.ttheadertittel {
-  margin-left: -10%;
-  z-index: 10;
-}
-
-.snokimg {
-  margin-right: -7%;
-  margin-top: -5%;
-  min-width: 45%;
-}
 
 @media (max-width: 500px) {
-  .ttheadertittel {
-    min-width: 100%;
-    margin-left: -5.5rem;
-  }
-  .tingogtangheader h3 {
-    font-size: 1.675rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.4375rem; /* 130% */
-    text-wrap: wrap;
-  }
-  .tingogtangheader {
-    margin-top: 10%;
-  }
-
-  .tingogtangbody {
-    margin-top: 5%;
-    flex-direction: column;
-  }
-  .tt_textbox {
-    max-width: 100%;
-    font-size: 0.8rem;
-    font-style: normal;
-    line-height: 2rem;
-  }
-
-  .snokimg {
-    min-width: 220%;
-    margin-top: -20%;
-  }
-
   .navigation {
     flex-direction: column;
     justify-content: center;
@@ -328,8 +289,8 @@ details[open] .disclosureArrow {
 
   .pl_9 {
     margin: 0;
+    margin-left: 2rem;
     display: flex;
-    justify-content: center;
   }
   .bigblobs {
     min-width: 230%;
@@ -345,6 +306,10 @@ details[open] .disclosureArrow {
   .bunninfo {
     flex-direction: column;
     margin-top: -2%;
+  }
+
+  .bunninfotekst {
+    min-width: 100%;
   }
 
   .resortbottom {
