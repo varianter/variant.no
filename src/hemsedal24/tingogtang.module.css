@@ -1,0 +1,241 @@
+.tur {
+  background: #ede8d7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Graphik Web';
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.tur h1,
+.tur h2,
+.tur h3 {
+  font-family: 'Recoleta';
+}
+
+.tilbake {
+  color: var(--color-standard__black);
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.tilbake span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.tilbake img {
+  vertical-align: middle;
+}
+
+.tilbake a {
+  margin-left: 6rem;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+.tingogtangheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.tingogtangbody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tt_textbox {
+  flex-direction: column;
+  max-width: 60%;
+}
+
+.tt_textbox span {
+  display: inline-block;
+  font-size: 110%;
+}
+
+.ttheadertittel {
+  margin-left: -10%;
+  z-index: 10;
+}
+
+.snokimg {
+  margin-right: -7%;
+  margin-top: -5%;
+  min-width: 45%;
+}
+
+h4 {
+  font-weight: 450;
+}
+
+.omHotellet a,
+.pakkeliste a {
+  all: unset;
+  text-underline-offset: 2px !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-decoration-color: #e61a6b !important;
+  cursor: pointer;
+  color: #e61a6b;
+}
+
+.pakkeliste {
+  margin: 5rem 2rem 0rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pakkeliste img {
+  width: 100%;
+}
+.squiggly {
+  padding-top: 3rem;
+}
+.arrowtoblob {
+  gap: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10rem;
+  margin-left: -3%;
+  margin-top: 3rem;
+}
+
+.aktivitetsblob img {
+  margin: -13rem;
+}
+.aktivitetstekst {
+}
+.aktivitetene {
+  margin: 5rem 2rem 0rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bop {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.bop img {
+  /* Or another appropriate value */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 500px) {
+  p {
+    line-height: 2rem;
+  }
+  .ttheadertittel {
+    min-width: 100%;
+    margin-left: -7.5rem;
+  }
+  .tingogtangheader h3 {
+    font-size: 1.675rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4375rem; /* 130% */
+    text-wrap: wrap;
+  }
+  .tingogtangheader {
+    margin-top: 10%;
+  }
+
+  .tingogtangbody {
+    margin-top: 5%;
+    flex-direction: column;
+  }
+  .tt_textbox {
+    max-width: 100%;
+    font-size: 0.8rem;
+    font-style: normal;
+    line-height: 2rem;
+  }
+
+  .snokimg {
+    min-width: 220%;
+    margin-left: -14%;
+    margin-top: -20%;
+    margin-bottom: -30%;
+  }
+  .pakkeliste {
+    margin: 5rem 4.5rem 0 0;
+    flex-direction: column;
+    margin-top: 7rem;
+  }
+  .koseimg {
+    position: relative;
+    top: -8rem;
+    right: -40%;
+  }
+  .pakkeliste img {
+    width: 15rem;
+    position: absolute;
+  }
+  .aktivitetene {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 5rem 0rem 0rem 0;
+  }
+  .aktivitetstekst {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .aktivitetene a {
+    width: 70%;
+    display: flex;
+  }
+  .mobilearrowblob {
+    display: flex;
+    min-width: 100%;
+    margin-left: -12%;
+    margin-bottom: -10%;
+    margin-top: -9%;
+  }
+
+  .arrowtoblob {
+    margin-top: 3rem;
+    margin-right: 3rem;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .squiggly {
+    padding-top: 0;
+    margin-top: -12rem;
+    margin-left: -5rem;
+  }
+  .utsiktsblob {
+    display: flex;
+    justify-content: center;
+    margin: -9rem 0 -5rem 0;
+    min-width: 100%;
+  }
+  .utsiktsblob img {
+    min-width: 150%;
+  }
+  .bop {
+    width: 60%;
+  }
+  .bop img {
+    min-width: 100%;
+  }
+}

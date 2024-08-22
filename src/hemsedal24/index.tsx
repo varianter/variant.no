@@ -58,7 +58,7 @@ const Hemsedal24: NextPage = () => {
             ikke kommer til å si siden det er elektrisk, men vi kan late som🤝 
             Uansett! Årets Varianttur tar oss med opp på fjellet, 
             og her blir det hygge, kos, god mat og gøye aktiviteter💥</p>
-        <p>Under finner du programmet for turen, blabla mer her </p></div>
+        <p>Under finner du programmet for turen. </p></div>
         <div className={styles.latter}><img src={latter} alt="koser seg"/></div>
       </div>
       <div style={{display:'relative', marginBottom:"10%"}}><img style={{display:"absolute"}} src={mobile ? mobilebottomblub : bottomblub} alt="big blobs"/>  </div> 
@@ -67,7 +67,7 @@ const Hemsedal24: NextPage = () => {
       <Day title="Fredag">
   <ul>
     <li>
-      <time>07:45</time> <span>Oppmøte på Bergen togstasjon</span>
+      <time>07:45</time> <span>Oppmøte på Togstasjonen</span>
     </li>
     <li>
       <time>08:08</time> <span>Toget går! 🚂</span>
@@ -89,11 +89,7 @@ const Hemsedal24: NextPage = () => {
       <details><summary><span className={`${styles.underlined} ${styles.summaryText}`}><span className={`${styles.programbold} ${styles.underlined} `}>For følge:</span>&nbsp;
         <span className={styles.underlined}>Pool Club/treningssenter/fritid</span></span><div><div className={styles.disclosureArrow}></div></div></summary>
        
-       <p>Dere kan benytte dere av treningssenter og Pool Club som består av innendørs- og utendørsbassenger,
-         og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club 
-         (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå 
-         inn og ut så mye de vil i denne tidsperioden (gjelder kun denne dagen).​ Snacks og drikke 
-         kan settes av på romnummer og betales ved utsjekk på søndagen.</p></details>
+       <p>Mens variantene har workshop kan dere benytte dere av treningssenteret eller Pool Club som består av innendørs- og utendørsbassenger, og badstue ute. Gå til resepsjonen etter lunsj og få bånd for å kunne gå i Pool Club (Variant betaler). Da har dere fri tilgang til bassenget fram til kl 16:00 og kan gå inn og ut så mye de vil i denne tidsperioden (gjelder kun denne dagen).​ Eller så kan dere slappe av, gå en tur, utforske hotellet eller ta en blund😌 Helt opp til dere! Snacks og drikke kan settes av på romnummer og betales ved utsjekk på søndagen. .</p></details>
        
     </li>
     <li><time>17:00 - 17:55</time><span>Chill eller gjør hva dere vil🤸🏼</span></li>
@@ -101,7 +97,7 @@ const Hemsedal24: NextPage = () => {
       <time>18:00</time> <span>Middag </span>
     </li>
     <li>
-      <time>20:00</time> <span>ubestemt</span>
+      <time>20:00</time> <span className={styles.italic}>ubestemt</span>
     </li>
   </ul>
 </Day>
@@ -125,7 +121,7 @@ const Hemsedal24: NextPage = () => {
 <time>18:00</time> <span>Middag</span>
 </li>
 <li>
-<time>20:00</time> <span>ubestemt</span>
+<time>20:00</time> <span className={styles.italic}>ubestemt</span>
 </li>
   </ul>
 </Day>
@@ -151,14 +147,14 @@ const Hemsedal24: NextPage = () => {
       <div style={{display:'relative'}}><img style={{display:"absolute"}} src={mobile ? mobilepagebottomblub : pagebottomblub} alt="big blobs"/>  </div> 
       <div style={{background: 'var(--Secondary-4-L2, #F4F1E7)'}}>
       <div className={styles.bunninfo}>
-        <div>
+        <div className={styles.bunninfotekst}>
             <h2>Det praktiske</h2>
             <p className={styles.bold}>Fýri Resort</p>
             <p>Tlf: 31 00 15 60</p>
             <p>Totteskogen 55, 3560 Hemsedal</p>
             <br />
             <p className={styles.bold}>Spørsmål underveis?</p>
-            <p>Soskom tlf: 999 999 999</p>
+            <p>Anita har nok svaret, ring eller send melding til <a href="tel:+4791916747">919 16 747</a> 🌟</p>
         </div>
         <div className={styles.resortbottom}><img src={resortbottom} alt="resortbilde"/></div>
        </div>
