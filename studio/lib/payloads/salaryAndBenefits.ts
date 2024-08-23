@@ -18,4 +18,5 @@ export interface SalaryAndBenefitsPage {
   page: string;
   slug: Slug;
   benefits: Benefit[];
+  showSalaryCalculator: boolean;
 }

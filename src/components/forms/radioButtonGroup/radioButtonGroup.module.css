@@ -1,9 +1,10 @@
 .fieldset {
-  border: 0 none;
+    border: 0 none;
+    padding: 0;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
