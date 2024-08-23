@@ -79,7 +79,7 @@ const TingogTang: NextPage = () => {
         </div>
         <div className={styles.pakkeliste}>
           <div className={styles.koseimg}>
-            <img src={kosevors} alt="strandsenger" />
+            <img src={kosevors} alt="strandsenger"/>
           </div>
           <div>
             <h4>Husk å ta med:</h4>
@@ -124,15 +124,10 @@ const TingogTang: NextPage = () => {
             </div>
           )}
         </div>
-        {mobile ? (
+        
           <div className={styles.utsiktsblob}>
-            <img src={utsiktmobil} alt="utsiktsblob" />
+            <img src={mobile ? utsiktmobil :utsiktpc} alt="utsiktsblob" />
           </div>
-        ) : (
-          <div className={styles.utsiktsblob}>
-            <img src={utsiktpc} alt="utsiktsblob" />
-          </div>
-        )}
         <a href="#ting">
           <div className={styles.bop}>
             <img src={bop} alt="big blobs" />
