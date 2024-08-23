@@ -12,12 +12,17 @@
 .tur h3 {
   font-family: 'Recoleta';
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .tilbake {
   color: var(--color-standard__black);
-  margin-top: 3rem;
-  width: 100%;
+  margin-top: 1rem;
+  width: 30%;
+  z-index: 1;
   display: flex;
+  gap: 5%;
   flex-direction: row;
   justify-content: flex-start;
   text-decoration: none;
@@ -44,6 +49,15 @@
   justify-content: center;
   align-items: center;
   margin-top: 5%;
+  text-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.blobstyle {
+  position: absolute;
+  left: -50px;
+  z-index: -1;
+  min-width: 30%;
 }
 
 .tingogtangbody {
@@ -63,8 +77,9 @@
 }
 
 .ttheadertittel {
-  margin-left: -10%;
   z-index: 10;
+
+  position: relative;
 }
 
 .snokimg {
@@ -99,6 +114,9 @@ h4 {
 .pakkeliste img {
   width: 100%;
 }
+.utsiktsblob {
+  margin-top: -2rem;
+}
 .squiggly {
   padding-top: 3rem;
 }
@@ -110,6 +128,7 @@ h4 {
   height: 10rem;
   margin-left: -3%;
   margin-top: 3rem;
+  z-index: 1;
 }
 
 .aktivitetsblob img {
@@ -140,12 +159,30 @@ h4 {
 }
 
 @media (max-width: 500px) {
+  .blobstyle {
+    left: -50px;
+    min-width: 40%;
+  }
+  .tilbake {
+    margin: 0;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .tilbake img {
+    width: 20%;
+    vertical-align: middle;
+  }
   p {
     line-height: 2rem;
+    font-size: 1rem;
   }
+
   .ttheadertittel {
     min-width: 100%;
-    margin-left: -7.5rem;
+    z-index: 1;
+  }
+  .ttheadertittel h3 {
+    z-index: 1;
   }
   .tingogtangheader h3 {
     font-size: 1.675rem;
@@ -155,7 +192,9 @@ h4 {
     text-wrap: wrap;
   }
   .tingogtangheader {
+    z-index: 1;
     margin-top: 10%;
+    margin-bottom: 5rem;
   }
 
   .tingogtangbody {
@@ -164,7 +203,7 @@ h4 {
   }
   .tt_textbox {
     max-width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-style: normal;
     line-height: 2rem;
   }
@@ -191,7 +230,7 @@ h4 {
   }
   .aktivitetene {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-around;
     margin: 5rem 0rem 0rem 0;
   }
@@ -207,14 +246,11 @@ h4 {
   .mobilearrowblob {
     display: flex;
     min-width: 100%;
-    margin-left: -12%;
-    margin-bottom: -10%;
-    margin-top: -9%;
+    margin-top: -1rem;
   }
 
   .arrowtoblob {
     margin-top: 3rem;
-    margin-right: 3rem;
     flex-direction: row-reverse;
     align-items: center;
   }
@@ -224,9 +260,10 @@ h4 {
     margin-left: -5rem;
   }
   .utsiktsblob {
+    z-index: -1;
     display: flex;
     justify-content: center;
-    margin: -9rem 0 -5rem 0;
+    margin: 5rem 0 5rem 0;
     min-width: 100%;
   }
   .utsiktsblob img {
