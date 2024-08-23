@@ -5,8 +5,6 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
 import { SALARY_AND_BENEFITS_PAGE_QUERY } from "studio/lib/queries/pages";
 
-import { validateDraftDataInDevelopment } from "../utils/preview";
-
 interface SalaryAndBenefitsPreviewProps {
   initialSalaryAndBenefits: QueryResponseInitial<SalaryAndBenefitsPage>;
 }
@@ -14,18 +12,15 @@ interface SalaryAndBenefitsPreviewProps {
 const SalaryAndBenefitsPreview = ({
   initialSalaryAndBenefits,
 }: SalaryAndBenefitsPreviewProps) => {
-  const { data: newData } = useQuery<SalaryAndBenefitsPage>(
+  const { data } = useQuery<SalaryAndBenefitsPage>(
     SALARY_AND_BENEFITS_PAGE_QUERY,
     { slug: initialSalaryAndBenefits.data.slug.current },
     { initial: initialSalaryAndBenefits },
   );
 
-  validateDraftDataInDevelopment(newData);
-  const pageData = newData || initialSalaryAndBenefits.data;
-
   return (
     <Suspense>
-      <SalaryAndBenefits salaryAndBenefits={pageData} />
+      <SalaryAndBenefits salaryAndBenefits={data} />
     </Suspense>
   );
 };

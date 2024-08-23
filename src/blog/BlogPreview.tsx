@@ -5,8 +5,6 @@ import { BLOG_PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import { Blog } from "./Blog";
 
-import { validateDraftDataInDevelopment } from "../utils/preview";
-
 interface BlogPreviewProps {
   initialBlog: QueryResponseInitial<BlogPage>;
   initialPosts: Post[];
@@ -18,18 +16,15 @@ export default function BlogPreview({
   initialPosts,
   slug,
 }: BlogPreviewProps) {
-  const { data: newData } = useQuery<BlogPage | null>(
+  const { data } = useQuery<BlogPage>(
     BLOG_PAGE_QUERY,
     { slug: slug, id: initialBlog.data._id },
     { initial: initialBlog },
   );
 
-  validateDraftDataInDevelopment(newData);
-  const overview = newData || initialBlog.data;
-
   return (
     <Suspense>
-      <Blog blog={overview} initialPosts={initialPosts} slug={slug} />
+      <Blog blog={data} initialPosts={initialPosts} slug={slug} />
     </Suspense>
   );
 }

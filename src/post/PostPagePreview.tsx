@@ -5,8 +5,6 @@ import { POST_SLUG_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import PostPage from "./PostPage";
 
-import { validateDraftDataInDevelopment } from "../utils/preview";
-
 interface PostPagePreviewProps {
   initialPost: QueryResponseInitial<Post>;
   id: string;
@@ -22,18 +20,15 @@ export default function PostPagePreview({
   posts,
   blog,
 }: PostPagePreviewProps) {
-  const { data: newData } = useQuery<Post | null>(
+  const { data } = useQuery<Post>(
     POST_SLUG_QUERY,
     { id },
     { initial: initialPost },
   );
 
-  validateDraftDataInDevelopment(newData);
-  const post = newData || initialPost.data;
-
   return (
     <Suspense>
-      <PostPage post={post} slug={slug} posts={posts} blog={blog} />
+      <PostPage post={data} slug={slug} posts={posts} blog={blog} />
     </Suspense>
   );
 }
