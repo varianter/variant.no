@@ -8,7 +8,7 @@
 
 @-moz-document url-prefix() {
   p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 .bold {
@@ -164,8 +164,9 @@ html {
   }
 
   .bop {
-    width: 50%;
+    width: 192px;
   }
+
   p {
     font-size: 1.2rem;
   }

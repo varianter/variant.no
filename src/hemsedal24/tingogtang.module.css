@@ -6,7 +6,12 @@
   min-height: 100vh;
   overflow: hidden;
 }
-
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  span,
+  p {
+    font-size: 1rem;
+  }
+}
 .tur h1,
 .tur h2,
 .tur h3 {
@@ -73,7 +78,7 @@ html {
 
 .tt_textbox span {
   display: inline-block;
-  font-size: 110%;
+  font-size: 1rem;
 }
 
 .ttheadertittel {
@@ -273,9 +278,6 @@ h4 {
     width: 100%;
   }
   .bop {
-    width: 60%;
-  }
-  .bop img {
-    min-width: 100%;
+    width: 192px;
   }
 }
