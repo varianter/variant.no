@@ -9,29 +9,16 @@ import ActivityBlock from "./components/ActivityBlock";
 import hund from "./images/hund.svg"
 import sykling from "./images/sykling.svg"
 import via from "./images/viaferrata.svg"
-import { useEffect, useState} from "react";
 const Activities: NextPage = () => {
-    const [mobile, setMobile] = useState(false);
-
-    useEffect(() => {
-        const handleWindowSizeChange = () => {
-            setMobile(window.innerWidth <= 500);
-        };
-
-        handleWindowSizeChange(); // Set initial value after component mounts
-        window.addEventListener('resize', handleWindowSizeChange);
-
-        return () => window.removeEventListener('resize', handleWindowSizeChange);
-    }, []);
     return (
         <div  id="top" className={styles.tur}>
-                        {mobile ?<></> : <Link 
+            <meta name="theme-color" content="#EDE8D7"/>
+                        <Link 
             className={styles.tilbake}
-            href="/hemsedal24"
-            style={{display:'flex', gap: '1rem', lineHeight: '28px', marginLeft:"-20%"}}>
+            href="/hemsedal24">
                 <img src={arrowleft} width={24} height={28} alt="pil venste" />
                 <span>Tilbake</span>
-            </Link> }       
+            </Link>    
             <div className={styles.blob}><img src={blob} alt="blob"/></div>
             <div className={styles.header}>
             <div className={styles.title}><h3>Aktivitetene på lørdag</h3></div>  
