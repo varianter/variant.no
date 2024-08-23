@@ -111,9 +111,13 @@ h4 {
   justify-content: space-between;
 }
 
-.pakkeliste img {
-  width: 100%;
+.koseimg {
+  width: 50%;
 }
+.koseimg img {
+  width: 90%;
+}
+
 .utsiktsblob {
   margin-top: -2rem;
 }
@@ -148,7 +152,7 @@ h4 {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  width: 20%;
+  width: 25rem;
   z-index: 10;
   margin: 0 auto;
 }
@@ -215,19 +219,19 @@ h4 {
     margin-bottom: -30%;
   }
   .pakkeliste {
-    margin: 5rem 4.5rem 0 0;
     flex-direction: column;
-    margin-top: 7rem;
   }
   .koseimg {
+    width: 80%;
     position: relative;
-    top: -8rem;
-    right: -40%;
+    top: -7rem;
+    right: -70%;
   }
-  .pakkeliste img {
-    width: 15rem;
+  .koseimg img {
+    width: 100%;
     position: absolute;
   }
+
   .aktivitetene {
     flex-direction: column;
     align-items: flex-start;
@@ -260,14 +264,13 @@ h4 {
     margin-left: -5rem;
   }
   .utsiktsblob {
-    z-index: -1;
-    display: flex;
-    justify-content: center;
     margin: 5rem 0 5rem 0;
-    min-width: 100%;
+    width: 160%;
+    position: relative;
+    left: -6rem;
   }
   .utsiktsblob img {
-    min-width: 150%;
+    width: 100%;
   }
   .bop {
     width: 60%;

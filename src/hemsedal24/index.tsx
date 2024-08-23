@@ -58,7 +58,7 @@ const Hemsedal24: NextPage = () => {
             <span className={styles.italic}> ikke</span> kommer til å si siden det er elektrisk, men vi kan late som🤝 
             Uansett! Årets Varianttur tar oss med opp på fjellet, 
             og her blir det hygge, kos, god mat og gøye aktiviteter💥</p>
-        <p>Under finner du programmet for turen. </p></div>
+        <p>Og bilder!! Det er gøy å dele litt bilder underveis på turen, så vi skal ha vår egen lille fotobank her på denne nettsiden. Den kommer i løpet av uken, så stay tuned! 📸 </p></div>
         <div className={styles.latter}><img src={latter} alt="koser seg"/></div>
       </div>
       <div style={{display:'relative', marginBottom:"10%"}}><img style={{display:"absolute"}} src={mobile ? mobilebottomblub : bottomblub} alt="big blobs"/>  </div> 

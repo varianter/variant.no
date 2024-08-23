@@ -6,6 +6,14 @@
   z-index: 1;
 }
 
+@-moz-document url-prefix() {
+  p {
+    font-size: 1.25rem;
+  }
+}
+.bold {
+  font-weight: 500;
+}
 .header h3 {
   display: flex;
   justify-content: center;
@@ -77,28 +85,30 @@ html {
 
 .blob {
   z-index: auto;
-  max-width: 75%;
   position: relative;
 }
 .blob img {
   position: absolute;
-  z-index: auto;
-  top: -9rem;
-  right: -20rem;
+  width: 70%;
+  top: -13rem;
+  right: -10rem;
 }
 
 .title {
   z-index: 10;
 }
-
 .bop {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  width: 20%;
+  width: 25rem;
   z-index: 10;
   margin: 0 auto;
-  margin-top: 10%;
+}
+
+.bop img {
+  /* Or another appropriate value */
+  height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 500px) {
