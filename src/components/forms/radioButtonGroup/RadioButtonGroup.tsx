@@ -3,11 +3,11 @@ import styles from "src/components/forms/radioButtonGroup/radioButtonGroup.modul
 import { RadioButton } from "./components/RadioButton";
 import textStyles from "src/components/text/text.module.css";
 
-interface IOption {
+export interface IOption {
   id: string;
   label: string;
-  disabled: boolean;
-  currentChecked: boolean;
+  disabled?: boolean;
+  currentSelected: boolean;
 }
 
 interface RenderOptionsProps {
@@ -41,8 +41,8 @@ interface RadioButtonGroupProps {
  *
  * ```
  * const options = [
- *   { id: 'radio1', label: 'Option 1', value: '1', currentChecked: false },
- *   { id: 'radio2', label: 'Option 2', value: '2', currentChecked: true },
+ *   { id: 'radio1', label: 'Option 1', value: '1', currentSelected: false },
+ *   { id: 'radio2', label: 'Option 2', value: '2', currentSelected: true },
  * ];
  *
  * <RadioButtonGroup
@@ -82,7 +82,7 @@ export const RadioButtonGroup = ({
 const RenderOptions = ({ options, onChange }: RenderOptionsProps) => {
   return (
     <>
-      {options.map(({ id, label, disabled, currentChecked }) => (
+      {options.map(({ id, label, disabled, currentSelected }) => (
         <RadioButton
           key={id}
           id={id}
@@ -90,7 +90,7 @@ const RenderOptions = ({ options, onChange }: RenderOptionsProps) => {
           name="radio"
           disabled={disabled}
           value={label}
-          defaultChecked={currentChecked}
+          defaultChecked={currentSelected}
           onChange={onChange}
         />
       ))}
