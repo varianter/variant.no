@@ -10,7 +10,7 @@ import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
 
 function useInitialData<T>(
   query: string,
-  initialData: QueryResponseInitial<T>
+  initialData: QueryResponseInitial<T>,
 ): T | null {
   const { data } = useQuery<T | null>(query, {}, { initial: initialData });
   return data;
@@ -28,7 +28,7 @@ export default function FooterPreview({
   const newNav = useInitialData(NAV_QUERY, initialNav);
   const newSiteSettings = useInitialData(
     SITESETTINGS_QUERY,
-    initialSiteSetting
+    initialSiteSetting,
   );
   const newSoMedata = useInitialData(SOMEPROFILES_QUERY, initialSoMe);
   // TODO: add legal preview

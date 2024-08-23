@@ -14,17 +14,17 @@ export default function LogoSaladPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const logoSaladSection = newData
     ? (newData.sections.find(
         (section, index) =>
-          section._type === "logoSalad" && index === sectionIndex
+          section._type === "logoSalad" && index === sectionIndex,
       ) as LogoSaladSection)
     : (initialData.data.sections.find(
         (section, index) =>
-          section._type === "logoSalad" && index === sectionIndex
+          section._type === "logoSalad" && index === sectionIndex,
       ) as LogoSaladSection);
 
   return (

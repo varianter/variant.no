@@ -32,7 +32,7 @@ export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {
                     <li key={logo._key}>
                       <RenderLogo asset={logo} />
                     </li>
-                  )
+                  ),
               )}
             </ul>
           )}

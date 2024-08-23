@@ -22,7 +22,7 @@ async function Page({ params }: Props) {
   const initialDocument = await loadQuery<LegalDocument>(
     LEGAL_DOCUMENT_SLUG_QUERY,
     { slug: id },
-    { perspective }
+    { perspective },
   );
 
   if (!initialDocument) {

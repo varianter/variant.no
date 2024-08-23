@@ -12,7 +12,7 @@ export default function LegalPreview({
   const { data: newDoc } = useQuery<LegalDocument | null>(
     NAV_QUERY,
     {},
-    { initial: initialDocument }
+    { initial: initialDocument },
   );
 
   return newDoc && <Legal document={newDoc} />;

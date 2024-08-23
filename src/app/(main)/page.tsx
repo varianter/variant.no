@@ -38,7 +38,7 @@ const Home = async () => {
   const { data: landingId } = await loadQuery<string>(
     LANDING_QUERY,
     {},
-    { perspective }
+    { perspective },
   );
 
   if (!landingId) {
@@ -54,7 +54,7 @@ const Home = async () => {
   const initialLandingPage = await loadQuery<PageBuilder>(
     PAGE_QUERY,
     { id: landingId },
-    { perspective }
+    { perspective },
   );
 
   if (!initialLandingPage.data) {

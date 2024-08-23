@@ -14,17 +14,17 @@ export default function CalloutPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const calloutSection = newData
     ? (newData.sections.find(
         (section, index) =>
-          section._type === "callout" && index === sectionIndex
+          section._type === "callout" && index === sectionIndex,
       ) as CalloutSection)
     : (initialData.data.sections.find(
         (section, index) =>
-          section._type === "callout" && index === sectionIndex
+          section._type === "callout" && index === sectionIndex,
       ) as CalloutSection);
 
   return (

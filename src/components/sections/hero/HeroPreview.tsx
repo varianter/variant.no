@@ -19,15 +19,15 @@ export default function HeroPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const heroSection = newData
     ? (newData.sections.find(
-        (section, index) => section._type === "hero" && index === sectionIndex
+        (section, index) => section._type === "hero" && index === sectionIndex,
       ) as HeroSection)
     : (initialData.data.sections.find(
-        (section, index) => section._type === "hero" && index === sectionIndex
+        (section, index) => section._type === "hero" && index === sectionIndex,
       ) as HeroSection);
 
   return (

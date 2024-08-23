@@ -12,7 +12,7 @@ interface ArticleProps {
 
 const Article = ({ article }: ArticleProps) => {
   const renderedImage = useConvertSanityImageToNextImage(
-    article?.imageExtended
+    article?.imageExtended,
   );
 
   return (

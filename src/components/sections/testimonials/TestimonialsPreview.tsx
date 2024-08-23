@@ -14,17 +14,17 @@ export default function TestimonialsPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const testimonialsSection = newData
     ? (newData.sections.find(
         (section, index) =>
-          section._type === "testimonials" && index === sectionIndex
+          section._type === "testimonials" && index === sectionIndex,
       ) as TestimonialsSection)
     : (initialData.data.sections.find(
         (section, index) =>
-          section._type === "testimonials" && index === sectionIndex
+          section._type === "testimonials" && index === sectionIndex,
       ) as TestimonialsSection);
 
   return (

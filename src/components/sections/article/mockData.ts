@@ -45,7 +45,7 @@ const commonLink = {
 const createArticleSection = (
   imageAlignment: ImageAlignment,
   includeLink: boolean,
-  tag?: string
+  tag?: string,
 ): ArticleSection => ({
   _key: "286f87152fce",
   _type: "article",
@@ -65,16 +65,16 @@ const createArticleSection = (
 export const extendedArticleLargeLeftMock = createArticleSection(
   ImageAlignment.Left,
   true,
-  "Measure"
+  "Measure",
 );
 export const extendedArticleLargeRightMock = createArticleSection(
   ImageAlignment.Right,
   true,
-  "Measure"
+  "Measure",
 );
 
 export const articleLeftMock = createArticleSection(ImageAlignment.Left, false);
 export const articleRightMock = createArticleSection(
   ImageAlignment.Right,
-  false
+  false,
 );

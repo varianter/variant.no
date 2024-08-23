@@ -30,7 +30,7 @@ type SiteSettings = {
 
 export async function fetchSeoData(
   query: string,
-  variables?: any
+  variables?: any,
 ): Promise<SeoData | null> {
   try {
     const { data } = await loadQuery<SeoData>(query, variables);
@@ -43,7 +43,7 @@ export async function fetchSeoData(
 
 export async function fetchPostSeoData(
   query: string,
-  variables?: any
+  variables?: any,
 ): Promise<SeoData | null> {
   try {
     const { data } = await loadQuery<PostSeoData>(query, variables);
@@ -76,7 +76,7 @@ export async function fetchSiteSettings(): Promise<SiteSettings | null> {
 }
 
 export async function generateMetadataFromSeo(
-  seo: SeoData | null
+  seo: SeoData | null,
 ): Promise<Metadata> {
   const siteSettings = await fetchSiteSettings();
 
@@ -90,7 +90,7 @@ export async function generateMetadataFromSeo(
   const faviconUrl = favicon ? urlFor(favicon).url() : "";
 
   const icons = [faviconUrl ? { rel: "icon", url: faviconUrl } : null].filter(
-    (icon): icon is NonNullable<typeof icon> => icon !== null
+    (icon): icon is NonNullable<typeof icon> => icon !== null,
   );
 
   return {

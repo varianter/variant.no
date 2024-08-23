@@ -13,7 +13,7 @@ interface FetchResult {
 export const fetchCategorizedPosts = async (
   category: string | null,
   start = 0,
-  end = 11
+  end = 11,
 ): Promise<FetchResult> => {
   try {
     const data = await client.fetch(CATEGORIZED_POSTS_QUERY, {
@@ -29,7 +29,7 @@ export const fetchCategorizedPosts = async (
 };
 
 export const fetchPostCount = async (
-  category?: string | null
+  category?: string | null,
 ): Promise<number> => {
   try {
     const count = await client.fetch(COUNT_POSTS_QUERY, { category });

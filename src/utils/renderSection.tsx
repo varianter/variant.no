@@ -44,7 +44,7 @@ const renderHeroSection = (
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
-  isLandingPage: boolean
+  isLandingPage: boolean,
 ) => {
   return isDraftMode ? (
     <HeroPreview
@@ -61,7 +61,7 @@ const renderLogoSaladSection = (
   section: LogoSaladSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <LogoSaladPreview initialData={initialData} sectionIndex={sectionIndex} />
@@ -74,7 +74,7 @@ const renderArticleSection = (
   section: ArticleSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <ArticlePreview initialData={initialData} sectionIndex={sectionIndex} />
@@ -87,7 +87,7 @@ const renderCalloutSection = (
   section: CalloutSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <CalloutPreview initialData={initialData} sectionIndex={sectionIndex} />
@@ -100,7 +100,7 @@ const renderCallToActionSection = (
   section: CallToActionSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <CallToActionPreview
@@ -116,7 +116,7 @@ const renderTestimonialsSection = (
   section: TestimonialsSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <TestimonialsPreview
@@ -132,7 +132,7 @@ const renderImageSection = (
   section: ImageSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <ImageSectionComponentPreview
@@ -148,7 +148,7 @@ const renderGridSection = (
   section: GridSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? (
     <GridPreview initialData={initialData} sectionIndex={sectionIndex} />
@@ -161,7 +161,7 @@ const renderContactFormSection = (
   section: ContactFormSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>
+  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? <div></div> : <ContactForm data={section} />;
 };
@@ -180,63 +180,63 @@ const SectionRenderer = ({
         sectionIndex,
         isDraftMode,
         initialData,
-        isLandingPage
+        isLandingPage,
       );
     case "logoSalad":
       return renderLogoSaladSection(
         section as LogoSaladSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "article":
       return renderArticleSection(
         section as ArticleSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "callout":
       return renderCalloutSection(
         section as CalloutSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "ctaSection":
       return renderCallToActionSection(
         section as CallToActionSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "testimonials":
       return renderTestimonialsSection(
         section as TestimonialsSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "imageSection":
       return renderImageSection(
         section as ImageSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "grid":
       return renderGridSection(
         section as GridSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     case "contactForm":
       return renderContactFormSection(
         section as ContactFormSection,
         sectionIndex,
         isDraftMode,
-        initialData
+        initialData,
       );
     default:
       return null;

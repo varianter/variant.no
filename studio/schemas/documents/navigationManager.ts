@@ -40,7 +40,7 @@ const navigationManager = defineType({
         Rule.custom((links) => {
           if (!Array.isArray(links)) return true;
           const ctaCount = links.filter(
-            (link) => link._type === callToActionFieldID
+            (link) => link._type === callToActionFieldID,
           ).length;
           return ctaCount <= 2 || "You can only have two Call to Action links";
         }),

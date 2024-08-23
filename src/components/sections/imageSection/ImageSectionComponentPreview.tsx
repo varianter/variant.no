@@ -17,17 +17,17 @@ export default function ImageSectionComponentPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const testimonialsSection = newData
     ? (newData.sections.find(
         (section, index) =>
-          section._type === "imageSection" && index === sectionIndex
+          section._type === "imageSection" && index === sectionIndex,
       ) as ImageSection)
     : (initialData.data.sections.find(
         (section, index) =>
-          section._type === "imageSection" && index === sectionIndex
+          section._type === "imageSection" && index === sectionIndex,
       ) as ImageSection);
 
   return (

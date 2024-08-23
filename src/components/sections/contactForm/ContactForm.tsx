@@ -35,7 +35,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ data }) => {
 
   const handleChange = (
     name: keyof ContactData | "privacyPolicy",
-    value: string | boolean
+    value: string | boolean,
   ) => {
     if (name === "privacyPolicy" && typeof value === "boolean") {
       setIsChecked(value);

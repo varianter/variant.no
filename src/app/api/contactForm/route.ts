@@ -47,7 +47,7 @@ export async function POST(req: Request) {
       {
         error: "Form was not sent due to a technical error. Please try again.",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

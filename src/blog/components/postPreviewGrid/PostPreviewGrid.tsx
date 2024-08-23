@@ -27,7 +27,7 @@ const PostPreviewGrid = ({
     (index: number) => (el: HTMLAnchorElement | null) => {
       postRefs.current[index] = el;
     },
-    []
+    [],
   );
 
   useEffect(() => {

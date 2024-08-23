@@ -16,12 +16,12 @@ export default function HeaderPreview({
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
     {},
-    { initial: initialNav }
+    { initial: initialNav },
   );
   const { data: newSiteSettings } = useQuery<SiteSettings | null>(
     SITESETTINGS_QUERY,
     {},
-    { initial: initialSiteSetting }
+    { initial: initialSiteSetting },
   );
 
   return (

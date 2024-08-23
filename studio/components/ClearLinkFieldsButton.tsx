@@ -11,13 +11,13 @@ const ClearLinkFieldsButton = ({ path }: ClearLinkFieldsButtonProps) => {
   const documentId = useFormValue(["_id"]) as string;
 
   const isObjectWithKey = (
-    item: string | { _key: string }
+    item: string | { _key: string },
   ): item is { _key: string } => {
     return typeof item === "object" && "_key" in item;
   };
 
   const constructFieldPath = (
-    path: Array<string | { _key: string }>
+    path: Array<string | { _key: string }>,
   ): string => {
     if (!isObjectWithKey(path[1])) return "";
 
