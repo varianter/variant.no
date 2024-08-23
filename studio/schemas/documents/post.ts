@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { format, parseISO } from "date-fns";
-import { blogSlug } from "../schemaTypes/slug";
+import { titleSlug } from "../schemaTypes/slug";
 import { richText, title } from "../fields/text";
 import CategorySelector from "studio/components/CategorySelect";
 import image from "../fields/media";
@@ -13,7 +13,7 @@ const posts = defineType({
   title: "Posts",
   fields: [
     title,
-    blogSlug,
+    titleSlug,
     defineField({
       name: "date",
       title: "Publish Date",
