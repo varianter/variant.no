@@ -6,35 +6,9 @@
   z-index: 1;
 }
 
-.pcarrow {
-  position: relative;
-}
-.pcarrow img {
-  position: absolute;
-  left: -9rem;
-  top: -40.5rem;
-}
-
 @-moz-document url-prefix() {
   p {
     font-size: 1.25rem;
-  }
-  .pcarrow img {
-    top: -38rem;
-  }
-  @media (max-width: 400px) {
-    .mobilearrow img {
-      position: absolute;
-      right: -12.6%;
-      top: -99.5rem;
-    }
-  }
-  @media (max-width: 400px) {
-    .mobilearrow img {
-      position: absolute;
-      right: -12.6%;
-      top: -102.5rem;
-    }
   }
 }
 .bold {
@@ -138,14 +112,6 @@ html {
 }
 
 @media (max-width: 500px) {
-  .mobilearrow {
-    position: relative;
-  }
-  .mobilearrow img {
-    position: absolute;
-    right: -12.6%;
-    top: -102.5rem;
-  }
   .blob {
     min-width: 40%;
     top: 0;
@@ -202,14 +168,5 @@ html {
   }
   p {
     font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 400px) and (max-height: 812px) {
-  .mobilearrow img {
-    height: 130vh;
-    position: absolute;
-    right: -15.6%;
-    top: -99.5rem;
   }
 }
