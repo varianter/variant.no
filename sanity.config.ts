@@ -27,7 +27,7 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     presentationTool({
       previewUrl: {
-        draftMode: {
+        previewMode: {
           enable: "/api/draft",
         },
       },
