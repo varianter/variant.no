@@ -23,9 +23,11 @@ html {
 
 .tilbake {
   color: var(--color-standard__black);
-  margin-top: 3rem;
-  width: 100%;
+  margin-top: 1rem;
+  width: 30%;
+  z-index: 1;
   display: flex;
+  gap: 5%;
   flex-direction: row;
   justify-content: flex-start;
   text-decoration: none;
@@ -80,6 +82,7 @@ html {
 }
 .blob img {
   position: absolute;
+  z-index: auto;
   top: -9rem;
   right: -20rem;
 }
@@ -100,11 +103,27 @@ html {
 
 @media (max-width: 500px) {
   .blob {
-    min-width: 90%;
+    min-width: 40%;
     top: 0;
     margin: -10% 0 0 20%;
   }
+  .blob {
+    width: 20%;
+  }
 
+  .tilbake {
+    margin: 0;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  .tilbake img {
+    width: 20%;
+    vertical-align: middle;
+  }
+
+  element {
+    margin-left: 0;
+  }
   .tur {
     padding: 10% 10% 0 10%;
   }
@@ -136,5 +155,8 @@ html {
 
   .bop {
     width: 50%;
+  }
+  p {
+    font-size: 1.2rem;
   }
 }
