@@ -140,7 +140,7 @@ html {
 }
 
 .overlay p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .overlay h4 {
@@ -332,11 +332,9 @@ details[open] .disclosureArrow {
     margin-top: 3rem;
     min-width: 100%;
   }
+
   .bop {
-    width: 38%;
-  }
-  .bop img {
-    min-width: 100%;
+    width: 192px;
   }
 
   .overlay {

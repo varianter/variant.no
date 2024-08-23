@@ -46,19 +46,19 @@ const TingogTang: NextPage = () => {
         </div>
         <div className={styles.tingogtangbody}>
           <div className={styles.tt_textbox}>
-            <span style={{ fontWeight: 600 }}>
+            <p style={{ fontWeight: 600 }}>
               Noe du lurer på om turen? Du finner litt praktisk info her!🌟
-            </span>
-            <span style={{ fontStyle: 'italic' }}>
+            </p>
+            <p style={{ fontStyle: 'italic' }}>
               (Ikke hos takterrasse-naboen... Marie, Thomas og Andreas har
               allerede sjekket)
-            </span>
+            </p>
             <br />
             <br />
-            <span>
+            <p>
               Dersom det er noe annet du lurer så er det bare å huke tak i sin
               nærmeste Variant og spørre🤝
-            </span>
+            </p>
           </div>
           <div className={styles.snokimg}>
             <img src={snok} alt="folk som snoker" />
