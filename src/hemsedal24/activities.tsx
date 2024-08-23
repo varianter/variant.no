@@ -9,20 +9,7 @@ import ActivityBlock from "./components/ActivityBlock";
 import hund from "./images/hund.svg"
 import sykling from "./images/sykling.svg"
 import via from "./images/viaferrata.svg"
-import { useEffect, useState} from "react";
 const Activities: NextPage = () => {
-    const [mobile, setMobile] = useState(false);
-
-    useEffect(() => {
-        const handleWindowSizeChange = () => {
-            setMobile(window.innerWidth <= 500);
-        };
-
-        handleWindowSizeChange(); // Set initial value after component mounts
-        window.addEventListener('resize', handleWindowSizeChange);
-
-        return () => window.removeEventListener('resize', handleWindowSizeChange);
-    }, []);
     return (
         <div  id="top" className={styles.tur}>
             <meta name="theme-color" content="#EDE8D7"/>
