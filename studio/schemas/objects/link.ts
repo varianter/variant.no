@@ -58,7 +58,11 @@ export const link = defineField({
       title: "Internal Link",
       description: "Select the page you want to link to",
       type: "reference",
-      to: [{ type: lazyPageBuilderID() }, { type: lazyBlogID() }, { type: lazySalaryAndBenefitsID() }],
+      to: [
+        { type: lazyPageBuilderID() },
+        { type: lazyBlogID() },
+        { type: lazySalaryAndBenefitsID() },
+      ],
       validation: (Rule: any) =>
         Rule.custom((value: any, context: any) => {
           const parent = context.parent as Parent;

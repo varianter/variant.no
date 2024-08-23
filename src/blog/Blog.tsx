@@ -22,11 +22,11 @@ export const Blog = ({ blog, initialPosts, slug }: BlogProps) => {
   const { tabListRef, selectedTabIndex } = useTabs();
 
   const postCategories = new Set(
-    initialPosts.map((post) => post.category).filter((category) => category)
+    initialPosts.map((post) => post.category).filter((category) => category),
   );
 
   const filteredCategories = blog?.categories.filter((category) =>
-    postCategories.has(category.name)
+    postCategories.has(category.name),
   );
 
   const categories = [

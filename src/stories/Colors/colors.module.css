@@ -1,27 +1,27 @@
 .colorGrid {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .colorBox {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    align-items: end;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: end;
 
-    p {
-        margin: 0;
-        padding: 0;
-    }
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
-    &>div {
-        width: 300px;
-    }
+  & > div {
+    width: 300px;
+  }
 }
 
 .color {
-    flex: 2;
-    height: 100px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
+  flex: 2;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
 }

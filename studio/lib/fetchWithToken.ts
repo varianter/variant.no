@@ -20,7 +20,7 @@
  */
 export const fetchWithToken = async <T>(
   query: string,
-  params?: Record<string, any>
+  params?: Record<string, any>,
 ): Promise<T> => {
   const response = await fetch("/api/fetchData", {
     method: "POST",

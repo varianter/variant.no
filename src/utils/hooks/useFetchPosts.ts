@@ -46,7 +46,7 @@ export const useFetchPosts = ({
         const { data, error } = await fetchCategorizedPosts(
           category,
           start,
-          end
+          end,
         );
         const count = await fetchPostCount(category);
 
@@ -68,7 +68,7 @@ export const useFetchPosts = ({
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedTabIndex]
+    [selectedTabIndex],
   );
 
   return { posts, postsCount, fetchPosts };

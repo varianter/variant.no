@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     console.error("Error fetching data:", error);
     return NextResponse.json(
       { error: "Failed to fetch data" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -7,7 +7,7 @@ export interface Link {
 export const isFieldVisible = (
   link: Link,
   linkTypeField: string,
-  expectedType: string
+  expectedType: string,
 ): boolean => {
   return link[linkTypeField] === expectedType;
 };

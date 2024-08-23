@@ -50,7 +50,7 @@ const useTabs = () => {
 
       // Show the selected panel
       const controlledPanel = tabGroup.querySelector(
-        `#${targetTab.getAttribute("aria-controls")}`
+        `#${targetTab.getAttribute("aria-controls")}`,
       );
       controlledPanel?.removeAttribute("aria-hidden");
     };

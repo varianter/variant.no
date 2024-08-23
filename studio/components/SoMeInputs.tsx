@@ -32,7 +32,7 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
     setPlatform(detectedPlatform);
     if (onChange) {
       onChange(
-        PatchEvent.from([set({ ...value, url, platform: detectedPlatform })])
+        PatchEvent.from([set({ ...value, url, platform: detectedPlatform })]),
       );
     }
   }, [url, onChange]);
@@ -43,13 +43,13 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
   };
 
   const handlePlatformChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
+    event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const newPlatform = event.target.value;
     setPlatform(newPlatform);
     if (onChange) {
       onChange(
-        PatchEvent.from([set({ ...value, url, platform: newPlatform })])
+        PatchEvent.from([set({ ...value, url, platform: newPlatform })]),
       );
     }
   };

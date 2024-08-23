@@ -58,7 +58,7 @@ const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
             basicTitle: title,
             value: `#${section._key}`,
           };
-        }
+        },
       );
 
       setListItems(formattedResponseToListItems);

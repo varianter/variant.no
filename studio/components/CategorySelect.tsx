@@ -21,7 +21,7 @@ const CategorySelector = React.forwardRef<
   useEffect(() => {
     async function fetchCategories() {
       const result = await fetchWithToken<Category[]>(
-        `*[_type == "blog"][0].categories`
+        `*[_type == "blog"][0].categories`,
       );
 
       setCategories(result || []);

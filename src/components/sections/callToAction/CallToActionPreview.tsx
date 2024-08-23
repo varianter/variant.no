@@ -14,17 +14,17 @@ export default function CallToActionPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const callToActionSection = newData
     ? (newData.sections.find(
         (section, index) =>
-          section._type === "ctaSection" && index === sectionIndex
+          section._type === "ctaSection" && index === sectionIndex,
       ) as CallToActionSection)
     : (initialData.data.sections.find(
         (section, index) =>
-          section._type === "ctaSection" && index === sectionIndex
+          section._type === "ctaSection" && index === sectionIndex,
       ) as CallToActionSection);
 
   return (

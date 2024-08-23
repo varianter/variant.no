@@ -4,14 +4,6 @@
     "plugin:storybook/recommended",
     "plugin:storybook/recommended"
   ],
-  "plugins": [
-    "prettier",
-    "simple-import-sort",
-    "eslint-plugin-import"
-  ],
-  "ignorePatterns": [
-    "dist",
-    "node_modules",
-    ".sanity"
-  ]
+  "plugins": ["prettier", "simple-import-sort", "eslint-plugin-import"],
+  "ignorePatterns": ["dist", "node_modules", ".sanity"]
 }

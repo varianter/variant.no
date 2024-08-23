@@ -28,7 +28,7 @@ const Footer = ({
   legalData,
 }: IFooter) => {
   const renderedLogo = useConvertSanityImageToNextImage(
-    siteSettings.brandAssets?.secondaryLogo
+    siteSettings.brandAssets?.secondaryLogo,
   );
 
   const currentYear = new Date().getFullYear();
@@ -78,7 +78,7 @@ const renderLinks = (data: Navigation) => {
         <li key={link._key}>
           <CustomLink link={link} type="footerLink" />
         </li>
-      ))
+      )),
     )
   );
 };
@@ -92,14 +92,14 @@ const renderSoMe = (data: Navigation, soMeData: SocialMediaProfiles) => {
         <li key={link._key}>
           <SoMeLink link={link} />
         </li>
-      ))
+      )),
     )
   );
 };
 
 const filterSectionsByType = (
   data: Navigation,
-  type: "content" | "socialMedia"
+  type: "content" | "socialMedia",
 ) => data.footer?.filter((section) => section.sectionType === type);
 
 const renderList = (children: ReactNode) => (

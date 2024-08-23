@@ -111,7 +111,7 @@ export const Header = ({ data, assets }: IHeader) => {
 export const renderPageLinks = (
   links: ILink[],
   isMobile: boolean,
-  pathname: string
+  pathname: string,
 ) => (
   <ul className={isMobile ? styles.listMobile : styles.desktopLinks}>
     {links?.map((link: ILink) => {

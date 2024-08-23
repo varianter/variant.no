@@ -80,7 +80,7 @@ export const Testimonials = ({ testimonials }: TestimonialsProps) => {
                   >
                     <RichText value={content.richText} />
                   </section>
-                )
+                ),
             )}
           </div>
         </div>

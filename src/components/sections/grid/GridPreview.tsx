@@ -14,15 +14,15 @@ export default function GridPreview({
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
   const grid = newData
     ? (newData.sections.find(
-        (section, index) => section._type === "grid" && index === sectionIndex
+        (section, index) => section._type === "grid" && index === sectionIndex,
       ) as GridSection)
     : (initialData.data.sections.find(
-        (section, index) => section._type === "grid" && index === sectionIndex
+        (section, index) => section._type === "grid" && index === sectionIndex,
       ) as GridSection);
 
   return (

@@ -58,8 +58,10 @@ const ReferenceSlugInput: React.FC<ReferenceSlugInputProps> = (props) => {
         setSlug(event.currentTarget.value);
         onChange(
           PatchEvent.from(
-            event.currentTarget.value ? set(event.currentTarget.value) : unset()
-          )
+            event.currentTarget.value
+              ? set(event.currentTarget.value)
+              : unset(),
+          ),
         );
       }}
     />

@@ -51,7 +51,7 @@ export function extractLeadText(blocks: PortableTextBlock[]): ExtractedText {
         // Split the block to fit the MAX_LENGTH without breaking words
         const splitIndex = blockText.lastIndexOf(
           " ",
-          MAX_LENGTH - accumulatedLength
+          MAX_LENGTH - accumulatedLength,
         );
         leadText += blockText.substring(0, splitIndex) + " ";
         leftoverText = blockText.substring(splitIndex + 1);
