@@ -20,17 +20,15 @@ export default function PostPagePreview({
   posts,
   blog,
 }: PostPagePreviewProps) {
-  const { data: newData } = useQuery<Post | null>(
+  const { data } = useQuery<Post>(
     POST_SLUG_QUERY,
     { id },
-    { initial: initialPost }
+    { initial: initialPost },
   );
-
-  const post = newData || initialPost.data;
 
   return (
     <Suspense>
-      <PostPage post={post} slug={slug} posts={posts} blog={blog} />
+      <PostPage post={data} slug={slug} posts={posts} blog={blog} />
     </Suspense>
   );
 }

@@ -16,17 +16,15 @@ export default function BlogPreview({
   initialPosts,
   slug,
 }: BlogPreviewProps) {
-  const { data: newData } = useQuery<BlogPage | null>(
+  const { data } = useQuery<BlogPage>(
     BLOG_PAGE_QUERY,
     { slug: slug, id: initialBlog.data._id },
-    { initial: initialBlog }
+    { initial: initialBlog },
   );
-
-  const overview = newData || initialBlog.data;
 
   return (
     <Suspense>
-      <Blog blog={overview} initialPosts={initialPosts} slug={slug} />
+      <Blog blog={data} initialPosts={initialPosts} slug={slug} />
     </Suspense>
   );
 }

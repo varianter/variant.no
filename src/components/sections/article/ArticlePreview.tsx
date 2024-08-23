@@ -11,21 +11,15 @@ export default function ArticlePreview({
   initialData,
   sectionIndex,
 }: PreviewProps) {
-  const { data: newData } = useQuery<PageBuilder | null>(
+  const { data } = useQuery<PageBuilder>(
     PAGE_QUERY,
     { id: initialData.data._id },
-    { initial: initialData }
+    { initial: initialData },
   );
 
-  const articleSection = newData
-    ? (newData.sections.find(
-        (section, index) =>
-          section._type === "article" && index === sectionIndex
-      ) as ArticleSection)
-    : (initialData.data.sections.find(
-        (section, index) =>
-          section._type === "article" && index === sectionIndex
-      ) as ArticleSection);
+  const articleSection = data.sections.find(
+    (section, index) => section._type === "article" && index === sectionIndex,
+  ) as ArticleSection;
 
   return (
     <Suspense>

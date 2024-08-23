@@ -12,24 +12,15 @@ interface SalaryAndBenefitsPreviewProps {
 const SalaryAndBenefitsPreview = ({
   initialSalaryAndBenefits,
 }: SalaryAndBenefitsPreviewProps) => {
-  const { data: newData } = useQuery<SalaryAndBenefitsPage>(
+  const { data } = useQuery<SalaryAndBenefitsPage>(
     SALARY_AND_BENEFITS_PAGE_QUERY,
     { slug: initialSalaryAndBenefits.data.slug.current },
     { initial: initialSalaryAndBenefits },
   );
 
-  if (process.env.NODE_ENV !== "production") {
-    if (typeof newData !== "object" || newData === null) {
-      console.error(
-        `newData has an unexpected type: ${typeof newData}. Expected an object.`,
-      );
-    }
-  }
-  const pageData = newData || initialSalaryAndBenefits.data;
-
   return (
     <Suspense>
-      <SalaryAndBenefits salaryAndBenefits={pageData} />
+      <SalaryAndBenefits salaryAndBenefits={data} />
     </Suspense>
   );
 };
