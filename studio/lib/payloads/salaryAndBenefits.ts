@@ -1,5 +1,5 @@
-import { PortableTextBlock } from 'src/components/richText/RichText';
-import { Slug } from './global';
+import { PortableTextBlock } from "src/components/richText/RichText";
+import { Slug } from "./global";
 
 export interface Benefit {
   _type: string;
@@ -8,8 +8,7 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
-
-export interface SalaryAndBenefits {
+export interface SalaryAndBenefitsPage {
   _createdAt: string;
   _id: string;
   _rev: string;
