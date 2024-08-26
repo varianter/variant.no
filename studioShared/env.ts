@@ -5,12 +5,12 @@ export const apiVersion =
 
 export const dataset = assertValue(
   process.env.NEXT_PUBLIC_SANITY_SHARED_DATASET,
-  "Missing environment variable: NEXT_PUBLIC_SANITY_SHARED_DATASET"
+  "Missing environment variable: NEXT_PUBLIC_SANITY_SHARED_DATASET",
 );
 
 export const projectId = assertValue(
   process.env.NEXT_PUBLIC_SANITY_SHARED_PROJECT_ID,
-  "Missing environment variable: NEXT_PUBLIC_SANITY_SHARED_PROJECT_ID"
+  "Missing environment variable: NEXT_PUBLIC_SANITY_SHARED_PROJECT_ID",
 );
 
 export const useCdn = process.env.NODE_ENV === "production";
