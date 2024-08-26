@@ -47,9 +47,9 @@ export default (S: StructureBuilder) =>
             .title("Navigation Manager"),
         ),
       S.listItem()
-        .title("Pages")
+        .title("Dynamic Pages")
         .icon(ProjectsIcon)
-        .child(S.documentTypeList(pageBuilderID).title("Pages")),
+        .child(S.documentTypeList(pageBuilderID).title("Dynamic Pages")),
       S.listItem()
         .title("Blog")
         .icon(ComposeIcon)
