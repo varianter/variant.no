@@ -21,7 +21,7 @@ const pageBuilder = defineType({
   fields: [
     defineField({
       name: "page",
-      title: "Dynamic page name",
+      title: "Page name",
       description:
         "Enter a distinctive name for the dynamic page to help content editors easily identify and manage it. This name is used internally and is not visible on your website.",
       type: "string",
