@@ -35,6 +35,7 @@ export default function SalaryCalculator({
 
   return (
     <form
+      //TODO: replace aria-label with static translation from Sanity
       aria-label="salary calculator"
       className={styles.calculator}
       onSubmit={onSubmit}
