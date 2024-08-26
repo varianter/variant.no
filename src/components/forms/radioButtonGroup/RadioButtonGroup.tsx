@@ -26,7 +26,7 @@ export const RadioButtonGroup = ({
 }: RadioButtonGroupProps) => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedOption = options.find(
-      (option) => option.id === e.target.value
+      (option) => option.id === e.target.value,
     );
     if (selectedOption) {
       onValueChange(selectedOption);
