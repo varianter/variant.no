@@ -60,8 +60,8 @@ const InputField = ({
         autoComplete={autoComplete}
         autoCorrect={autoCorrect}
         type={type}
-        max={max}
-        min={min}
+        max={type === "number" ? max : undefined}
+        min={type === "number" ? min : undefined}
         className={styles.input}
         spellCheck={spellCheck}
         value={value}
