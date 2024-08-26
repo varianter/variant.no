@@ -51,11 +51,11 @@ export default (S: StructureBuilder) =>
         .icon(ProjectsIcon)
         .child(S.documentTypeList(pageBuilderID).title("Dynamic Pages")),
       S.listItem()
-        .title("Blog")
-        .icon(ComposeIcon)
+        .title("Static Pages")
+        .icon(ProjectsIcon)
         .child(
           S.list()
-            .title("Blog")
+            .title("Static Pages")
             .items([
               S.listItem()
                 .title("Blog Overview & Settings")
