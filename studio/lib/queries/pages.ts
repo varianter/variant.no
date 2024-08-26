@@ -15,7 +15,43 @@ const SECTIONS_FRAGMENT = groq`
           }
         }
       }
-    }
+    },
+    _type == "article" => {
+      ...,
+      link {
+        ...,
+        linkType == "internal" => {
+          ...,
+          "internalLink": internalLink->{
+            "_ref": slug.current
+          }
+        }
+      }
+    },
+    _type == "callout" => {
+      ...,
+      link {
+        ...,
+        linkType == "internal" => {
+          ...,
+          "internalLink": internalLink->{
+            "_ref": slug.current
+          }
+        }
+      }
+    },
+       _type == "ctaSection" => {
+      ...,
+      callToActions[] {
+        ...,
+        linkType == "internal" => {
+          ...,
+          "internalLink": internalLink->{
+            "_ref": slug.current
+          }
+        }
+      }
+    },
   }
 `;
 
