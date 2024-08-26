@@ -1,6 +1,6 @@
-# Sankitty
+# Variant .no/.se
 
-Sankitty is a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content.
+Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content. This project has been customized to meet the specific needs of Variant’s websites for .no and .se domains.
 
 ## Key Features
 
@@ -10,6 +10,20 @@ Sankitty is a Next.js and Sanity-powered project designed to accelerate the deve
 - **Scoped Styling with CSS Modules:** CSS Modules are used for local scoping of styles, preventing naming conflicts and making it easier to maintain and scale the styling of components.
 - **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos, pages, blogs, and posts—offering a unified content management experience.
 - **Custom Theming and Typography:** Global styles such as colors are managed in global.css, while typography is primarily controlled within Text.tsx, ensuring a consistent design language throughout the application.
+
+## Shared Studio
+
+In addition to the primary Sanity Studio (accessible at http://localhost:3000/studio), this project includes a secondary studio called Shared Studio. This studio is designed to manage shared content between the different domains .no and .se, such as blog posts and customer cases.
+
+### Features of Shared Studio
+
+    •	Blog Posts: In the Shared Studio, you can create and manage Blog Posts. This content type allows for creating articles that can be displayed across different parts of the application.
+    •	Customer Cases: Customer Cases is another content type available in the Shared Studio, enabling you to showcase client stories or testimonials.
+
+Accessing Shared Studio
+
+    •	Studio URL: The Shared Studio is accessible at http://localhost:3000/shared.
+    •	Frontend Access: Content from the Shared Studio can be accessed on the frontend through API calls using sharedClient or loadSharedQuery.
 
 ## Getting Started
 
@@ -57,6 +71,7 @@ To get started with Sankitty, follow these steps:
 - `npm run dev`: Start the Next.js development server.
 - `npm run build`: Build the Next.js application for production.
 - `npm run start`: Start the Next.js application in production mode.
+- `npx prettier . --write`: Format the codebase using Prettier to ensure consistent code style across the project.
 - `npm run lint`: Lint the project using ESLint.
 
 ## Project Structure
