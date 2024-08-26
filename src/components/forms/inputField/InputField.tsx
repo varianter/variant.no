@@ -10,9 +10,11 @@ interface InputFieldProps {
   autoComplete?: HTMLInputAutoCompleteAttribute;
   autoCorrect?: string;
   type?: HTMLInputTypeAttribute;
+  max?: number;
+  min?: number;
   spellCheck?: "true" | "false";
   autoCapitalize?: string;
-  value: string;
+  value: string | number;
   onChange: (name: string, value: string) => void;
   required?: boolean;
 }
@@ -24,6 +26,8 @@ const InputField = ({
   autoComplete,
   autoCorrect = "off",
   type = "text",
+  max,
+  min,
   spellCheck,
   autoCapitalize,
   value,
@@ -56,6 +60,8 @@ const InputField = ({
         autoComplete={autoComplete}
         autoCorrect={autoCorrect}
         type={type}
+        max={type === "number" ? max : undefined}
+        min={type === "number" ? min : undefined}
         className={styles.input}
         spellCheck={spellCheck}
         value={value}
