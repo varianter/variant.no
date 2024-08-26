@@ -17,13 +17,13 @@ export const pageBuilderID = "pageBuilder";
 const pageBuilder = defineType({
   name: pageBuilderID,
   type: "document",
-  title: "Pages",
+  title: "Dynamic pages",
   fields: [
     defineField({
       name: "page",
-      title: "Page name",
+      title: "Dynamic page name",
       description:
-        "Enter a distinctive name for the page to help content editors easily identify and manage it. This name is used internally and is not visible on your website.",
+        "Enter a distinctive name for the dynamic page to help content editors easily identify and manage it. This name is used internally and is not visible on your website.",
       type: "string",
       validation: (Rule) => Rule.required().max(30),
     }),
