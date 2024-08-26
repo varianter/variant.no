@@ -47,8 +47,8 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
       calculateSalary(
         currentYear,
         formState.examinationYear,
-        formState.selectedDegree
-      )
+        formState.selectedDegree,
+      ),
     );
   };
 
