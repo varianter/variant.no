@@ -5,36 +5,34 @@ import {
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Button from "src/components/buttons/Button";
+import { maxExperience } from "src/salaryAndBenefits/utils/calculateSalary";
 
 export type Degree = "bachelor" | "master";
 
 const degreeOptions: IOption[] = [
-  {
-    id: "bachelor",
-    label: "Bachelor",
-    currentSelected: true,
-    disabled: false,
-  },
-  { id: "master", label: "Master", currentSelected: false, disabled: false },
+  { id: "bachelor", label: "Bachelor" },
+  { id: "master", label: "Master" },
 ];
 
 interface SalaryCalculatorProps {
-  examinationYear: number;
-  minExaminationYear: number;
-  maxExaminationYear: number;
+  examinationYearValue: number;
+  selectedDegree: Degree;
   onDegreeChanged: (degree: Degree) => void;
   onExaminationYearChanged: (examinationYear: number) => void;
   onSubmit: (event: React.FormEvent) => void;
 }
 
 export default function SalaryCalculator({
-  examinationYear,
-  minExaminationYear,
-  maxExaminationYear,
+  examinationYearValue: yearValue,
+  selectedDegree,
   onDegreeChanged,
   onExaminationYearChanged,
   onSubmit,
 }: SalaryCalculatorProps) {
+  const currentYear = new Date().getFullYear();
+  const minExaminationYear = maxExperience(currentYear);
+  const maxExaminationYear = currentYear - 1;
+
   return (
     <form
       aria-label="salary calculator"
@@ -45,18 +43,18 @@ export default function SalaryCalculator({
         id="degree-group"
         label="Choose your degree"
         options={degreeOptions}
-        onValueChange={(value) =>
-          (value.id === "bachelor" || value.id === "master") &&
-          onDegreeChanged(value.id)
+        selectedId={selectedDegree}
+        onValueChange={(selectedOption) =>
+          onDegreeChanged(selectedOption.id as Degree)
         }
       />
       <InputField
-        label="year"
+        label="Year"
         name="examinationYear"
         type="number"
-        max={maxExaminationYear}
         min={minExaminationYear}
-        value={examinationYear}
+        max={maxExaminationYear}
+        value={yearValue}
         onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
         required
       />
