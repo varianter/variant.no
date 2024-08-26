@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./salaryAndBenefits.module.css";
 import Text from "src/components/text/Text";
 import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
@@ -8,11 +7,7 @@ import SalaryCalculator, {
   Degree,
 } from "./components/salaryCalculator/SalaryCalculator";
 import { useState } from "react";
-import {
-  calculatePension,
-  calculateSalary,
-  maxExperience,
-} from "./utils/calculateSalary";
+import { calculatePension, calculateSalary } from "./utils/calculateSalary";
 
 interface SalaryAndBenefitsProps {
   salaryAndBenefits: SalaryAndBenefitsPage;
@@ -25,8 +20,6 @@ interface SalaryCalculatorFormState {
 
 const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
   const currentYear = new Date().getFullYear();
-  const minExaminationYear = maxExperience(currentYear);
-  const maxExaminationYear = currentYear - 1;
 
   const [formState, setFormState] = useState<SalaryCalculatorFormState>({
     examinationYear: currentYear - 1,
@@ -54,8 +47,8 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
       calculateSalary(
         currentYear,
         formState.examinationYear,
-        formState.selectedDegree,
-      ),
+        formState.selectedDegree
+      )
     );
   };
 
@@ -63,24 +56,24 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
     <div className={styles.wrapper}>
       <Text type="h1">{salaryAndBenefits.basicTitle}</Text>
       {salaryAndBenefits.showSalaryCalculator && (
-        <SalaryCalculator
-          // TODO: should also take in degree state (this requires changes to IOption of RadioButtonGroup)
-          examinationYear={formState.examinationYear}
-          minExaminationYear={minExaminationYear}
-          maxExaminationYear={maxExaminationYear}
-          onDegreeChanged={updateSelectedDegree}
-          onExaminationYearChanged={updateExaminationYear}
-          onSubmit={handleSubmit}
-        />
+        <>
+          <SalaryCalculator
+            examinationYearValue={formState.examinationYear}
+            selectedDegree={formState.selectedDegree}
+            onDegreeChanged={updateSelectedDegree}
+            onExaminationYearChanged={updateExaminationYear}
+            onSubmit={handleSubmit}
+          />
+          {salary !== null ? (
+            <div aria-live="polite">
+              <Text> Du vil få en årlig lønn på {salary}</Text>
+              <Text>
+                Du vil få en årlig pensjon på omtrent {calculatePension(salary)}
+              </Text>
+            </div>
+          ) : null}
+        </>
       )}
-      {salary !== null ? (
-        <div aria-live="polite">
-          <Text> Du vil få en årlig lønn på {salary}</Text>
-          <Text>
-            Du vil få en årlig pensjon på omtrent {calculatePension(salary)}
-          </Text>
-        </div>
-      ) : null}
       <div className={styles.benefits}>
         {salaryAndBenefits.benefits.map((benefit) => (
           <div key={benefit._key} className={styles.benefitWrapper}>
