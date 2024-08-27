@@ -7,6 +7,8 @@ import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
+import InformationMessage from "src/blog/components/informationMessage/InformationMessage";
+
 import { LinkType } from "studio/lib/payloads/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -43,9 +45,9 @@ const Home = async () => {
 
   if (!landingId) {
     return (
-      <CustomErrorMessage
-        title="Landing Page Has Not Been Set"
-        body="It looks like there's no page set as your landing page in the Studio. Head over to the Studio to select a landing page and guide visitors to the right place!"
+      <InformationMessage
+        title="Welcome! Velkommen! Välkommen!"
+        body={"It looks like there's no page set as your landing page in the Studio.\nHead over to the Studio to select a landing page and guide visitors to the right place!"}
         link={navigationManagerLink}
       />
     );
@@ -59,9 +61,9 @@ const Home = async () => {
 
   if (!initialLandingPage.data) {
     return (
-      <CustomErrorMessage
+      <InformationMessage
         title="Landing Page is Missing Content"
-        body={`Your landing page is set, but it looks like there’s no content yet. Visit the Studio to start adding content and make your landing page come to life!`}
+        body={`Your landing page is set, but it looks like there’s no content yet.\n Visit the Studio to start adding content and make your landing page come to life!`}
         link={pagesLink}
       />
     );
