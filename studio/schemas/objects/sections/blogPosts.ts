@@ -9,6 +9,12 @@ import callToActionField from "../../../schemas/fields/callToActionFields";
 
 export const articleID = "blogPostsID";
 
+/*
+ * DEPRECATED: The `blogPosts` object is deprecated.
+ * Please avoid using this field in new schemas or content types.
+ * Consider using a different structure for blog posts.
+ */
+
 export const blogPosts = defineField({
   name: articleID,
   title: "Blog Posts",

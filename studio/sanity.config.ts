@@ -6,11 +6,11 @@ import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
-import deskStructure from "./studio/schemas/deskStructure";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import { apiVersion, dataset, projectId } from "./studio/env";
-import { schema } from "./studio/schema";
+import { apiVersion, dataset, projectId } from "./env";
+import { schema } from "./schema";
+import deskStructure from "./schemas/deskStructure";
 
 export default defineConfig({
   basePath: "/studio",

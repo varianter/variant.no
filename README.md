@@ -1,6 +1,6 @@
-# Sankitty
+# Variant .no/.se
 
-Sankitty is a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content.
+Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content. This project has been customized to meet the specific needs of Variant’s websites for .no and .se domains.
 
 ## Key Features
 
@@ -10,6 +10,20 @@ Sankitty is a Next.js and Sanity-powered project designed to accelerate the deve
 - **Scoped Styling with CSS Modules:** CSS Modules are used for local scoping of styles, preventing naming conflicts and making it easier to maintain and scale the styling of components.
 - **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos, pages, blogs, and posts—offering a unified content management experience.
 - **Custom Theming and Typography:** Global styles such as colors are managed in global.css, while typography is primarily controlled within Text.tsx, ensuring a consistent design language throughout the application.
+
+## Shared Studio
+
+In addition to the primary Sanity Studio (accessible at http://localhost:3000/studio), this project includes a secondary studio called Shared Studio. This studio is designed to manage shared content between the different domains .no and .se, such as blog posts and customer cases.
+
+### Features of Shared Studio
+
+- Blog Posts: In the Shared Studio, you can create and manage Blog Posts. This content type allows for creating articles that can be displayed across different parts of the application.
+- Customer Cases: Customer Cases is another content type available in the Shared Studio, enabling you to showcase client stories or testimonials.
+
+Accessing Shared Studio
+
+- Studio URL: The Shared Studio is accessible at http://localhost:3000/shared.
+- Frontend Access: Content from the Shared Studio can be accessed on the frontend through API calls using sharedClient or loadSharedQuery.
 
 ## Getting Started
 
@@ -32,12 +46,20 @@ To get started with Sankitty, follow these steps:
    Ensure that the following environment variables are configured in your .env.local file:
 
    ```
+   # ENV KEYS FOR UNIQUE STUDIO
    NEXT_PUBLIC_SANITY_PROJECT_ID=<Your Sanity Project ID>
    NEXT_PUBLIC_SANITY_DATASET=<Your Sanity Dataset>
    NEXT_PUBLIC_SANITY_API_VERSION=<Your Sanity API Version>
    SANITY_API_TOKEN_DEV=<Your Sanity API Developer Token>
    SANITY_API_TOKEN_PROD=<Your Sanity API Viewer Token>
 
+   # ENV KEYS FOR SHARED STUDIO
+
+   NEXT_PUBLIC_SANITY_SHARED_PROJECT_ID=<Your Sanity SHARED Project ID>
+   NEXT_PUBLIC_SANITY_SHARED_DATASET=<Your Sanity SHARED Dataset>
+   NEXT_PUBLIC_SANITY_SHARED_API_VERSION=<Your Sanity SHARED API Version>
+   SANITY_SHARED_API_TOKEN_DEV=<Your Sanity SHARED API Developer Token>
+   SANITY_SHARED_API_TOKEN_PROD=<Your Sanity SHARED API Viewer Token>
    ```
 
 4. **Configure Sanity:**
@@ -47,6 +69,7 @@ To get started with Sankitty, follow these steps:
 
    ```
    npm run dev
+
    ```
 
 6. **View the Application**:
@@ -57,6 +80,7 @@ To get started with Sankitty, follow these steps:
 - `npm run dev`: Start the Next.js development server.
 - `npm run build`: Build the Next.js application for production.
 - `npm run start`: Start the Next.js application in production mode.
+- `npx prettier . --write`: Format the codebase using Prettier to ensure consistent code style across the project.
 - `npm run lint`: Lint the project using ESLint.
 
 ## Project Structure
@@ -106,6 +130,7 @@ To maintain consistency and efficiency, follow these steps when working on the p
 1. Branching Strategy: Follow your team’s branching convention, such as feature/ or fix/ branches, to keep the git history clean and organized.
 
 2. Adding New UI with Content:
+
    - Define the Sanity schema for new content types.
    - Implement the corresponding interface and payload structure in src/lib/payloads.
    - Fetch the necessary data and create the UI component.
@@ -126,29 +151,29 @@ import React, { useEffect, useState } from "react";
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 const MyCustomComponent: React.FC = () => {
-  const [data, setData] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
+const [data, setData] = useState<any>(null);
+const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const query = '*[_type == "myType"]'; // Replace with your GROQ query
-        const result = await fetchWithToken<any>(query);
-        setData(result);
-      } catch (err) {
-        console.error("Error fetching data:", err);
-        setError(err.message);
-      }
-    };
+useEffect(() => {
+ const fetchData = async () => {
+   try {
+     const query = '*[_type == "myType"]'; // Replace with your GROQ query
+     const result = await fetchWithToken<any>(query);
+     setData(result);
+   } catch (err) {
+     console.error("Error fetching data:", err);
+     setError(err.message);
+   }
+ };
 
-    fetchData();
-  }, []);
+ fetchData();
+}, []);
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+if (error) {
+ return <div>Error: {error}</div>;
+}
 
-  return <div>{JSON.stringify(data)}</div>; // Render your component's UI
+return <div>{JSON.stringify(data)}</div>; // Render your component's UI
 };
 
 export default MyCustomComponent;
