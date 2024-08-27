@@ -7,6 +7,7 @@ import {
   CogIcon,
   ControlsIcon,
   ProjectsIcon,
+  StackCompactIcon,
   ComposeIcon,
   HeartIcon,
 } from "@sanity/icons";
@@ -52,7 +53,7 @@ export default (S: StructureBuilder) =>
         .child(S.documentTypeList(pageBuilderID).title("Dynamic Pages")),
       S.listItem()
         .title("Static Pages")
-        .icon(ProjectsIcon)
+        .icon(StackCompactIcon)
         .child(
           S.list()
             .title("Static Pages")
