@@ -46,7 +46,7 @@ const SanityImage = ({ image }: { image: IImage }) => {
 
 // Custom hook for converting an image from Sanity to Next.js image component
 export function useConvertSanityImageToNextImage(
-  image: IImage | undefined
+  image: IImage | undefined,
 ): JSX.Element | null {
   // Return mockData.image for stories in Storybook
   if (image?.src) {
