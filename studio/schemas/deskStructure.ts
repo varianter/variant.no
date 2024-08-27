@@ -8,7 +8,6 @@ import {
   ControlsIcon,
   ProjectsIcon,
   StackCompactIcon,
-  ComposeIcon,
   HeartIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
