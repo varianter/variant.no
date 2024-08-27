@@ -43,13 +43,14 @@ const InformationMessage = ({
     <section className={styles.wrapper} role="status" aria-live="assertive">
       <div className={styles.info}>
         <Text type="h1">{title}</Text>
-        <span> 
-        {body.split('\n').map((line, index) => (
-        <Text key={index}>
-            {line}
-            <br />
-        </Text>
-        ))}</span>
+        <span>
+          {body.split("\n").map((line, index) => (
+            <Text key={index}>
+              {line}
+              <br />
+            </Text>
+          ))}
+        </span>
         <div className={styles.buttonWrapper}>
           {button && (
             <Button type="primary" onClick={button.onClick}>

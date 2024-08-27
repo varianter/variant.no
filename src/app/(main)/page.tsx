@@ -47,7 +47,9 @@ const Home = async () => {
     return (
       <InformationMessage
         title="Welcome! Velkommen! Välkommen!"
-        body={"It looks like there's no page set as your landing page in the Studio.\nHead over to the Studio to select a landing page and guide visitors to the right place!"}
+        body={
+          "It looks like there's no page set as your landing page in the Studio.\nHead over to the Studio to select a landing page and guide visitors to the right place!"
+        }
         link={navigationManagerLink}
       />
     );
