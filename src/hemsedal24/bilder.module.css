@@ -1,58 +1,96 @@
-.uploadDropZone {
+main {
   margin: 3rem auto;
-  width: 20%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.uploadDropZone {
+  z-index: 1;
 }
 .uploadDropZone svg {
   cursor: pointer;
+  z-index: -1;
 }
 
 /* applied to container */
 .customButton {
+  width: 25rem;
   background-color: none;
+  display: flex;
+  align-items: flex-end;
 }
 
 /* applied to button */
 .customButton > *[data-ut-element='button'] {
   width: 50%;
-  height: 50%;
-  font-size: 1rem;
   color: transparent;
-  border-radius: 6.25rem;
   background-color: transparent;
-  content: url('./images/Knapp.svg');
+  border-radius: 6.25rem;
+  background-image: url('./images/Knapp.svg');
+  background-size: cover;
 }
 
 .customButton > *[data-ut-element='button']:hover {
-  content: url('./images/knapp2.svg');
+  background-image: url('./images/knapp2.svg');
 }
+
 /* applied to button when uploading */
 .customButton > *[data-ut-element='button'][data-state='readying'] {
-  background-color: rgb(245 164 196);
+  width: 50%;
+  background-color: rgb(185, 20, 86 / 0.5);
+  background-image: url('./images/knapptom.svg');
+  background-size: cover;
   color: rgb(0 0 0 / 0.5);
   cursor: not-allowed;
 }
 
 /* applied to the button when uploading */
 .customButton > *[data-ut-element='button'][data-state='uploading'] {
-  background-color: rgb(245 164 196);
+  width: 50%;
+  background-color: rgb(185, 20, 86 / 0.5);
+  background-image: url('./images/knapptom.svg');
+  background-size: cover;
   color: rgb(0 0 0 / 0.5);
   cursor: not-allowed;
 }
 
 /* applied to the upload indicator when uploading */
 .customButton > *[data-ut-element='button'][data-state='uploading']::after {
-  background-color: rgb(245 164 196);
+  background-color: rgb(245 164 196 / 1);
 }
 
 .customButton > *[data-ut-element='allowed-content'] {
   display: none;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 10px; /* Space between the items */
+  height: 100%; /* Make sure container takes full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 aspect ratio (square) */
+  background-color: #f0f0f0; /* Fallback color */
+  border: 1px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .embla {
   overflow: hidden;
   width: 90%;
   height: 15rem;
-  margin: 3rem auto;
 }
 .embla__container {
   display: flex;
@@ -64,6 +102,37 @@
   user-select: none;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  color: var(--Secondary-4-D4, #2f2e2b);
+  /* Heading 3 / Regular */
+  font-family: Recoleta;
+  font-size: 2.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.375rem; /* 120% */
+}
+html {
+  scroll-behavior: smooth;
+}
+.bop {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.bop img {
+  /* Or another appropriate value */
+  height: auto; /* Maintain aspect ratio */
+}
 @media (max-width: 500px) {
   .embla__slide {
     max-width: 70%;
