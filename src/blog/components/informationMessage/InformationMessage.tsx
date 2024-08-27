@@ -40,7 +40,7 @@ const InformationMessage = ({
   link,
 }: InformationMessageProps) => {
   return (
-    <section className={styles.wrapper} role="info" aria-live="assertive">
+    <section className={styles.wrapper} role="status" aria-live="assertive">
       <div className={styles.info}>
         <Text type="h1">{title}</Text>
         <span> 
