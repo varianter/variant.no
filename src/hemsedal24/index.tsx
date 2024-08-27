@@ -108,7 +108,7 @@ const Hemsedal24: NextPage = () => {
 <time>07:30</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
 </li>
 <li>
-<time>09:30</time>       <span className={styles.underlined}>
+<time>09:00</time>       <span className={styles.underlined}>
   <Link className={styles.underlined} href={'/hemsedal24/aktiviteter'}>
   Hundekjøring / Via Ferrata klatring / Stisykling med Hemsedal Rides
   </Link>
@@ -132,7 +132,7 @@ const Hemsedal24: NextPage = () => {
     <time>07:30</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
     </li>
     <li>
-      <time>09:30 - 10:00</time> <span>Avreise fra hotellet, vi blir hentet med buss og kjørt til togstasjonen</span>
+      <time>10:00</time> <span>Buss til togstasjonen. Alle må være sjekket ut før dette, og ha betalt for snacks/drikke fra minibaren hvis dere har kost dere litt ekstra (as you should, <a href="https://www.youtube.com/watch?feature=shared&t=7&v=59lVs4dD4eM">treat yo self</a>!!!) 🥂</span>
     </li>
     <li>
       <time>11:16</time> <span>Toget går! 🚂</span>
