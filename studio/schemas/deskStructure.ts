@@ -67,10 +67,10 @@ export default (S: StructureBuilder) =>
                     .documentId(blogId)
                     .title("Blog Overview & Settings"),
                 ),
-              S.listItem()
-                .title("Posts")
-                .icon(ComposeIcon)
-                .child(S.documentTypeList(postId).title("Posts")),
+              // S.listItem()
+              //   .title("Posts")
+              //   .icon(ComposeIcon)
+              //   .child(S.documentTypeList(postId).title("Posts")),
             ]),
         ),
       S.listItem()
