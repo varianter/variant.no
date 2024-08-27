@@ -33,10 +33,10 @@ const Activities: NextPage = () => {
       </div>
       <ActivityBlock
         title="Stisykling med Hemsedal Rides 🚲⛰️"
-        text="Mellom kl 10:00 – 16:00 kan dere ta stolheisen Lodge Express opp fjellet til stiene i Hemsedal Skisenter⛰️ Heisen ligger en kort sykkeltur fra hotellet. Her kan dere sykle ned og ta heisen opp igjen så mange ganger dere vil for å teste ut de ulike stiene. Disse stiene passer for både nybegynnere og adrenalin junkiesene blant oss💥 Sykkel og hjelm får dere låne av hotellet!"
+        text="Mellom kl 10:00 – 16:00 kan dere ta stolheisen Lodge Express opp fjellet til stiene i Hemsedal Skisenter⛰️ Heisen ligger en kort sykkeltur fra hotellet. Her kan dere sykle ned og ta heisen opp igjen så mange ganger dere vil for å teste ut de ulike stiene. Disse stiene passer for både nybegynnere og adrenalin junkiesene blant oss💥 Sykkel og hjelm får dere låne, disse hentes på hotellet 🚲 Dere får også matpakke fra hotellet!"
         link="https://hemsedal.com/sykling/hemsedal-rides"
         reference="stisyklingen"
-        secondtext="Lunsj kan dere spise på skisenteret 🥪 (husk å ta vare på kvitteringen)"
+        secondtext=""
         picture={sykling}
       />
       <ActivityBlock
@@ -50,7 +50,7 @@ const Activities: NextPage = () => {
             viktig å påpeke at “det blir tid til å kose med hundene i
             hundegården også”😌 På grunn av veldig kosete hunder som er glad i
             mennesker så blir vi tipset om å gå med klær som tåler poter, snuter
-            og pels.
+            og pels. Matpakke får dere av hotellet!
           </>
         }
         link="https://hemsedalhusky.no/hundekjoring/"
@@ -80,7 +80,7 @@ const Activities: NextPage = () => {
             fjellhyller (hjelp) på en rute som tar deg til Vesle Røggjin. Det
             tar 3-5 timer, avhengig av nivået til de som klatrer💫 Men ikke vær
             for treig, for bussen plukker dere opp igjen kl 12:30 og kjører dere
-            tilbake til hotellet🤠
+            tilbake til hotellet🤠 Matpakke får dere av hotellet!
           </>
         }
         link="https://hemsedal.com/hemsedal-fjellsport/via-ferrata"
