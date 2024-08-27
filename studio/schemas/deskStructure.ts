@@ -8,7 +8,6 @@ import {
   ControlsIcon,
   ProjectsIcon,
   StackCompactIcon,
-  ComposeIcon,
   HeartIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
@@ -67,10 +66,6 @@ export default (S: StructureBuilder) =>
                     .documentId(blogId)
                     .title("Blog Overview & Settings"),
                 ),
-              S.listItem()
-                .title("Posts")
-                .icon(ComposeIcon)
-                .child(S.documentTypeList(postId).title("Posts")),
             ]),
         ),
       S.listItem()
