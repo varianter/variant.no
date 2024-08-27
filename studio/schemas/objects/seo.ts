@@ -1,4 +1,5 @@
 import { defineField } from "sanity";
+import { StringInputWithCharacterCount } from "studio/components/StringInputWithCharacterCount";
 
 const seoFieldID = {
   title: "seoTitle",
@@ -28,6 +29,9 @@ const seo = defineField({
           .error("A title of minimum 15 characters is required"),
         Rule.max(70).error("A title cannot exceed 70 characters"),
       ],
+      components: {
+        input: StringInputWithCharacterCount,
+      },
     }),
     defineField({
       name: seoFieldID.description,
@@ -43,6 +47,9 @@ const seo = defineField({
           "A description of more than 160 characters has a lower chance of converting visitors",
         ),
       ],
+      components: {
+        input: StringInputWithCharacterCount,
+      },
     }),
     defineField({
       name: seoFieldID.keywords,
