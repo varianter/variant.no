@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Files from './components/Files';
 import '@uploadthing/react/styles.css';
 import bop from './images/bop.svg';
+import Link from 'next/link';
+import arrowLeft from './images/arrow-left.svg'
 
 export default function Bilder() {
   const [mobile, setMobile] = useState(false);
@@ -31,7 +33,11 @@ export default function Bilder() {
     fetchFiles();
   }, []);
   return (
-    <main>
+    <main className={styles.main}>
+      <Link className={styles.tilbake} href="/hemsedal24">
+          <img src={arrowLeft} width={24} height={28} alt="pil venste" />
+          <span>Tilbake</span>
+        </Link>
       <div id="header" className={styles.header}>
         <h3>Bildeeeeeeeeeeeeeeeeeeeer 📸</h3>
 

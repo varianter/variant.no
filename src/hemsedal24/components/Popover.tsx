@@ -25,10 +25,9 @@ const Popover: React.FC<PopoverProps> = ({ onClose, children }) => {
 
   return (
     <>
-      <div className={styles.backdrop} onClick={onClose}>
-      <div ref={popoverRef} className={styles.popoverContent}>
+      <div className={styles.backdrop} onClick={onClose}>   </div>  
+      <div ref={popoverRef} className={styles.popover_content}>
         {children}
-      </div>
       </div>
     </>
   );

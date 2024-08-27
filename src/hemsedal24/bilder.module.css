@@ -1,7 +1,36 @@
-main {
+.main {
   margin: 3rem auto;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+.tilbake {
+  color: var(--color-standard__black);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 30%;
+  z-index: 1;
+  display: flex;
+  gap: 5%;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.tilbake span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.tilbake img {
+  vertical-align: middle;
+}
+
+.tilbake a {
+  margin-left: 6rem;
+  margin-right: 4rem;
+  text-decoration: none;
 }
 .uploadDropZone {
   z-index: 1;
@@ -89,17 +118,26 @@ main {
 }
 .embla {
   overflow: hidden;
-  width: 90%;
-  height: 15rem;
+  margin: auto;
+  width: 80rem;
+  max-height: 500px;
 }
 .embla__container {
   display: flex;
   cursor: grab;
+  align-items: center;
 }
 .embla__slide {
-  flex: 0 0 100%;
-  max-width: 30%;
+  flex: 0 0 60%;
+  width: 100%;
   user-select: none;
+  padding-left: 3rem;
+}
+
+.embla__slide img {
+  object-fit: contain; /* Ensure the entire image is visible */
+  max-height: 500px;
+  width: 100%;
 }
 
 .header {
@@ -134,6 +172,9 @@ html {
   height: auto; /* Maintain aspect ratio */
 }
 @media (max-width: 500px) {
+  .main {
+    width: 85vh;
+  }
   .embla__slide {
     max-width: 70%;
   }

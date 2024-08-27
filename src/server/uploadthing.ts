@@ -47,6 +47,6 @@ export const uploadRouter = {
 } satisfies FileRouter;
 
 export const utapi = new UTApi({
-    apiKey: ""
+    apiKey: process.env.UPLOADTHING_SECRET
 })
 export type OurFileRouter = typeof uploadRouter;
