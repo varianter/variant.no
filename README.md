@@ -131,10 +131,10 @@ To maintain consistency and efficiency, follow these steps when working on the p
 
 2. Adding New UI with Content:
 
-- Define the Sanity schema for new content types.
-- Implement the corresponding interface and payload structure in src/lib/payloads.
-- Fetch the necessary data and create the UI component.
-- Document and test the UI component in Storybook, using mock data for isolated development.
+   - Define the Sanity schema for new content types.
+   - Implement the corresponding interface and payload structure in src/lib/payloads.
+   - Fetch the necessary data and create the UI component.
+   - Document and test the UI component in Storybook, using mock data for isolated development.
 
 ### Using `fetchWithToken` for Custom Components in Sanity
 
