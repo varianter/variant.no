@@ -114,9 +114,9 @@ The `Site Settings` menu allows you to configure global settings for your site, 
 
 - **Setting the Landing Page**: The `Navigation Manager` allows editors to set the landing page for the site, which is crucial for determining the primary page visitors see upon arrival.
 - **Adding Menu Items**: Within the `Navigation Manager`, editors can add items to various pre-defined menus:
-- **Main Menu**: Add links and a single Call to Action (if needed) to the main menu, which appears at the top of the website. This helps visitors navigate to important sections.
-- **Footer Menu**: Add items to the footer menu, which consists of different sections. Each section can contain either social media links, custom links, text, or images (e.g., logos).
-- **Sidebar Menu**: Add links to the sidebar menu, which will appear on smaller screens to aid mobile navigation.
+  - **Main Menu**: Add links and a single Call to Action (if needed) to the main menu, which appears at the top of the website. This helps visitors navigate to important sections.
+  - **Footer Menu**: Add items to the footer menu, which consists of different sections. Each section can contain either social media links, custom links, text, or images (e.g., logos).
+  - **Sidebar Menu**: Add links to the sidebar menu, which will appear on smaller screens to aid mobile navigation.
 
 #### Pages
 
