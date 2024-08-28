@@ -20,7 +20,6 @@ export default function Files({ data }: any) {
   };
     
     const [emblaRef] = useEmblaCarousel({loop: true, skipSnaps:true, startIndex:startIndex});
-    console.log(data)
   return (
     <div className={styles.viewPort}>
       
@@ -28,7 +27,7 @@ export default function Files({ data }: any) {
       <div id="pictureContainer" className={styles.container}>
       {data.files.map((file:any, index:number) =>
       <div key={file.id} className={styles.image} onClick={()=>imageClicked(file.id, index)}>
-        <img src={`https://utfs.io/f/${file.key}`} alt={`image of ${file.name}`}/></div>)} </div>  :<div className={styles.nopictures}><h4>Ingen bilder ennå!</h4></div>}
+        <img src={`https://utfs.io/f/${file.key}`} alt={` ${file.name}`}/></div>)} </div>  :<div className={styles.nopictures}><h4>Ingen bilder ennå!</h4></div>}
      
       {isPopoverOpen && (
         <Popover onClose={closePopoever}>
@@ -36,7 +35,7 @@ export default function Files({ data }: any) {
             <div className={styles.embla__container}>
               {data.files.map((file:any) =>
               <div key = {file.id} className={styles.embla__slide}>
-                <img  src={`https://utfs.io/f/${file.key}`} alt={`image of ${file.name}`}/>
+                <img  src={`https://utfs.io/f/${file.key}`} alt={`${file.name}`}/>
                 </div>
               )}
             </div>

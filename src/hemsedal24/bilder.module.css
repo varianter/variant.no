@@ -188,7 +188,7 @@ html {
 @media (max-width: 500px) {
   .embla__slide {
     max-width: 120%;
-    flex: 0 0 100%;
+    flex: 0 0 75%;
   }
   .embla {
     width: 100%;
