@@ -1,4 +1,4 @@
-import { UploadDropzone, UploadButton } from '../../src/utils/uploadthing';
+import { UploadButton } from '../../src/utils/uploadthing';
 import styles from './bilder.module.css';
 import React, { useEffect, useState } from 'react';
 import Files from './components/Files';
@@ -9,9 +9,10 @@ import arrowLeft from './images/arrow-left.svg'
 
 export default function Bilder() {
   const [mobile, setMobile] = useState(false);
-
+  const [width, setWidth] = useState(0)
   useEffect(() => {
     const handleWindowSizeChange = () => {
+      setWidth(window.innerWidth)
       setMobile(window.innerWidth <= 500);
     };
 
@@ -39,7 +40,7 @@ export default function Bilder() {
           <span>Tilbake</span>
         </Link>
       <div id="header" className={styles.header}>
-        <h3>Bildeeeeeeeeeeeeeeeeeeeer 📸</h3>
+        <h3>{mobile ? `Bild${'e'.repeat((width/21.1))}r 📸` : 'Bildeeeeeeeeeeeeeeeeeeeer 📸'}</h3>
 
         <div className={styles.uploadDropZone}>
           <UploadButton
@@ -60,11 +61,12 @@ export default function Bilder() {
           <Files data={filesData} />
         </div>
       )}
+      {mobile ? <></> :
       <a href="#header">
           <div className={styles.bop}>
             <img src={bop} alt="big blobs" />
           </div>
-        </a>
+        </a>}
     </main>
   );
 }

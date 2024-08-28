@@ -5,7 +5,6 @@
 }
 .tilbake {
   color: var(--color-standard__black);
-  margin-top: 2rem;
   margin-bottom: 2rem;
   width: 30%;
   z-index: 1;
@@ -56,10 +55,14 @@
   border-radius: 6.25rem;
   background-image: url('./images/Knapp.svg');
   background-size: cover;
+  --tw-ring-color: transparent;
 }
 
 .customButton > *[data-ut-element='button']:hover {
   background-image: url('./images/knapp2.svg');
+}
+.customButton > *[data-ut-element='button']:focus-within {
+  --tw-ring-color: transparent;
 }
 
 /* applied to button when uploading */
@@ -70,6 +73,7 @@
   background-size: cover;
   color: rgb(0 0 0 / 0.5);
   cursor: not-allowed;
+  --tw-ring-color: transparent;
 }
 
 /* applied to the button when uploading */
@@ -80,11 +84,13 @@
   background-size: cover;
   color: rgb(0 0 0 / 0.5);
   cursor: not-allowed;
+  --tw-ring-color: transparent;
 }
 
 /* applied to the upload indicator when uploading */
 .customButton > *[data-ut-element='button'][data-state='uploading']::after {
   background-color: rgb(245 164 196 / 1);
+  --tw-ring-color: transparent;
 }
 
 .customButton > *[data-ut-element='allowed-content'] {
@@ -162,6 +168,7 @@ html {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 25rem;
   z-index: 10;
   margin: 0 auto;
@@ -171,11 +178,79 @@ html {
   /* Or another appropriate value */
   height: auto; /* Maintain aspect ratio */
 }
+
+.nopictures {
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 500px) {
-  .main {
-    width: 85vh;
-  }
   .embla__slide {
-    max-width: 70%;
+    max-width: 120%;
+    flex: 0 0 100%;
+  }
+  .embla {
+    width: 100%;
+    margin: 0;
+  }
+  .embla__container {
+    height: auto;
+    width: 100vw;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container {
+    margin-bottom: 4rem;
+  }
+
+  .uploadDropZone {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .customButton {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .customButton > *[data-ut-element='button'] {
+    width: 19.5rem;
+    height: 3.375rem;
+  }
+
+  .customButton > *[data-ut-element='button'][data-state='readying'],
+  .customButton > *[data-ut-element='button'][data-state='uploading'] {
+    width: 19.5rem;
+  }
+
+  .header {
+    width: 100%;
+  }
+  .header h3 {
+    font-size: 25px;
+    line-height: 2.4375rem;
+    -webkit-font-smoothing: antialiased; /* Improves rendering in WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .header > .uploadDropZone {
+    width: 100%;
+  }
+
+  @-moz-document url-prefix() {
+    .uploadDropZone {
+      margin-bottom: 1rem;
+    }
   }
 }
