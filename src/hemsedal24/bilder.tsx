@@ -28,7 +28,7 @@ export default function Bilder() {
     console.log(data);
     setFilesData(data);
   };
-
+console.log((width/21)+(((width / 100) | 0)/4))
   const [filesData, setFilesData] = useState(null);
   useEffect(() => {
     fetchFiles();
@@ -40,8 +40,7 @@ export default function Bilder() {
           <span>Tilbake</span>
         </Link>
       <div id="header" className={styles.header}>
-        <h3>{mobile ? `Bild${'e'.repeat((width/21.1))}r 📸` : 'Bildeeeeeeeeeeeeeeeeeeeer 📸'}</h3>
-
+        <h3>{mobile ? `Bild${'e'.repeat((width/24))}r 📸` : 'Bildeeeeeeeeeeeeeeeeeeeer 📸'}</h3>
         <div className={styles.uploadDropZone}>
           <UploadButton
             className={`${styles.customButton}`}
