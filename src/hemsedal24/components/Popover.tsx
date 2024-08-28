@@ -23,17 +23,16 @@ const Popover: React.FC<PopoverProps> = ({ onClose, children }) => {
     };
   }, [onClose]);
 
-  const handleKeyDown = (event: KeyboardEvent) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Escape' || event.key === 'Enter') {
       if (popoverRef.current && !popoverRef.current.contains(event.target as Node)) {
       onClose();
     }}
   };
-  document.addEventListener('keydown', handleKeyDown);
 
   return (
     <>
-      <div className={styles.backdrop} onClick={onClose} tabIndex={0} role='button' aria-label="Close popover">  </div>  
+      <div className={styles.backdrop} onClick={onClose} onKeyDown={handleKeyDown} tabIndex={0} role='button' aria-label="Close popover">  </div>  
       <div ref={popoverRef} className={styles.popover_content}>
         {children}
       </div>
