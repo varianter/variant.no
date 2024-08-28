@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 import seo from "../objects/seo";
 import { pageSlug } from "../schemaTypes/slug";
 import { title } from "../fields/text";
-import { OpenSharedButton } from "studio/components/OpenSharedButton";
+import { OpenSharedLink } from "studio/components/OpenSharedLink";
 
 export const blogId = "blog";
 
@@ -60,9 +60,9 @@ const blog = defineType({
       title: "Go To Shared Content",
       description:
         "To create and edit blog posts, go to the shared Sanity project",
-      type: "string",
+      type: "link",
       components: {
-        input: OpenSharedButton,
+        input: OpenSharedLink,
       },
     }),
   ],
