@@ -26,7 +26,7 @@ export default function Files({ data }: any) {
       {data.files.length > 0 ?
       <div id="pictureContainer" className={styles.container}>
       {data.files.map((file:any, index:number) =>
-      <div key={file.id} className={styles.image} onClick={()=>imageClicked(file.id, index)} tabIndex={index} role='picture' aria-label='open picture' onKeyDown={()=>imageClicked(file.id, index)}>
+      <div key={file.id} className={styles.image} onClick={()=>imageClicked(file.id, index)} tabIndex={0} role="button" aria-label='open picture' onKeyDown={()=>imageClicked(file.id, index)}>
         <img src={`https://utfs.io/f/${file.key}`} alt={` ${file.name}`}/></div>)} </div>  :<div className={styles.nopictures}><h4>Ingen bilder ennå!</h4></div>}
      
       {isPopoverOpen && (
