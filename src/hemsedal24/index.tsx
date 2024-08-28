@@ -17,7 +17,7 @@ import mobilepagebottomblub from "./images/mobilepagebottomblob.svg"
 import resortbottom from './images/resortbottom.svg'
 import { useState, useEffect } from 'react';
 import latter from './images/latter.svg'
-
+import fotobank from "./images/fotobank.svg"
 
 
 const Hemsedal24: NextPage = () => {
@@ -53,12 +53,14 @@ const Hemsedal24: NextPage = () => {
     <div style={{display:'relative'}}><img style={{display:"absolute"}} src={mobile ? mobiletopblub : topblub} alt="big blobs"/>  </div> 
         <div style={{background:'var(--Secondary-4-L2, #F4F1E7)', width:'100%'}} className={styles.overlay}>
         <div>
-        <h4>Hemsedal!!</h4>
+        <h4>Endelig Varianttur!</h4>
         <p>Johooooooo!!! Eller chooo-choooo som toget til Hemsedal...  
             <span className={styles.italic}> ikke</span> kommer til å si siden det er elektrisk, men vi kan late som🤝 
             Uansett! Årets Varianttur tar oss med opp på fjellet, 
             og her blir det hygge, kos, god mat og gøye aktiviteter💥</p>
-        <p>Og bilder!! Det er gøy å dele litt bilder underveis på turen, så vi skal ha vår egen lille fotobank her på denne nettsiden. Den kommer i løpet av uken, så stay tuned! 📸 </p></div>
+        <p>Og bilder!! Det er gøy å dele litt bilder underveis på turen, så vi har vår egen lille fotobank her på denne nettsiden. Ta bilder og del de med gjengen! 📸  </p>
+        <a className={styles.fotobank} href="hemsedal24/bilder"><div><img src={fotobank} alt="link til fotobank"/></div></a>
+        </div>
         <div className={styles.latter}><img src={latter} alt="koser seg"/></div>
       </div>
       <div style={{display:'relative', marginBottom:"10%"}}><img style={{display:"absolute"}} src={mobile ? mobilebottomblub : bottomblub} alt="big blobs"/>  </div> 
@@ -132,7 +134,7 @@ const Hemsedal24: NextPage = () => {
     <time>07:30</time> <span>Frokost 🥐 🍳 (spis når dere vil mellom 07:30 og 09:00)</span>
     </li>
     <li>
-      <time>10:00</time> <span>Buss til togstasjonen. Alle må være sjekket ut før dette, og ha betalt for snacks/drikke fra minibaren hvis dere har kost dere litt ekstra (as you should, <a href="https://www.youtube.com/watch?feature=shared&t=7&v=59lVs4dD4eM">treat yo self</a>!!!) 🥂</span>
+      <time>10:00</time> <span>Buss til togstasjonen. Alle må være sjekket ut før dette, og ha betalt for snacks/drikke fra minibaren hvis dere har kost dere litt ekstra (as you should, <Link  style={{color:"#e61a6b"}}className={styles.link} href="https://www.youtube.com/watch?feature=shared&t=7&v=59lVs4dD4eM">treat yo self</Link>!!!) 🥂</span>
     </li>
     <li>
       <time>11:16</time> <span>Toget går! 🚂</span>

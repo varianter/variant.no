@@ -1,0 +1,256 @@
+.main {
+  margin: 3rem auto;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.tilbake {
+  color: var(--color-standard__black);
+  margin-bottom: 2rem;
+  width: 30%;
+  z-index: 1;
+  display: flex;
+  gap: 5%;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.tilbake span {
+  color: var(--color-standard__black);
+  padding: 0 6px 0 0;
+  font-weight: 400;
+  font-family: 'Graphik Web';
+}
+
+.tilbake img {
+  vertical-align: middle;
+}
+
+.tilbake a {
+  margin-left: 6rem;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+.uploadDropZone {
+  z-index: 1;
+}
+.uploadDropZone svg {
+  cursor: pointer;
+  z-index: -1;
+}
+
+/* applied to container */
+.customButton {
+  width: 25rem;
+  background-color: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* applied to button */
+.customButton > *[data-ut-element='button'] {
+  width: 50%;
+  color: transparent;
+  background-color: transparent;
+  border-radius: 6.25rem;
+  background-image: url('./images/Knapp.svg');
+  background-size: cover;
+  --tw-ring-color: transparent;
+}
+
+.customButton > *[data-ut-element='button']:hover {
+  background-image: url('./images/knapp2.svg');
+}
+.customButton > *[data-ut-element='button']:focus-within {
+  --tw-ring-color: transparent;
+}
+
+/* applied to button when uploading */
+.customButton > *[data-ut-element='button'][data-state='readying'] {
+  width: 50%;
+  background-color: rgb(185, 20, 86 / 0.5);
+  background-image: url('./images/knapptom.svg');
+  background-size: cover;
+  color: rgb(0 0 0 / 0.5);
+  cursor: not-allowed;
+  --tw-ring-color: transparent;
+}
+
+/* applied to the button when uploading */
+.customButton > *[data-ut-element='button'][data-state='uploading'] {
+  width: 50%;
+  background-color: rgb(185, 20, 86 / 0.5);
+  background-image: url('./images/knapptom.svg');
+  background-size: cover;
+  color: rgb(0 0 0 / 0.5);
+  cursor: not-allowed;
+  --tw-ring-color: transparent;
+}
+
+/* applied to the upload indicator when uploading */
+.customButton > *[data-ut-element='button'][data-state='uploading']::after {
+  background-color: rgb(245 164 196 / 1);
+  --tw-ring-color: transparent;
+}
+
+.customButton > *[data-ut-element='allowed-content'] {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 10px; /* Space between the items */
+  height: 100%; /* Make sure container takes full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* 1:1 aspect ratio (square) */
+  background-color: #f0f0f0; /* Fallback color */
+  border: 1px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+.image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.embla {
+  overflow: hidden;
+  margin: auto;
+  width: 80rem;
+  max-height: 500px;
+}
+.embla__container {
+  display: flex;
+  cursor: grab;
+  align-items: center;
+}
+.embla__slide {
+  flex: 0 0 60%;
+  width: 100%;
+  user-select: none;
+  padding-left: 3rem;
+}
+
+.embla__slide img {
+  object-fit: contain; /* Ensure the entire image is visible */
+  max-height: 500px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  color: var(--Secondary-4-D4, #2f2e2b);
+  /* Heading 3 / Regular */
+  font-family: Recoleta;
+  font-size: 2.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.375rem; /* 120% */
+}
+html {
+  scroll-behavior: smooth;
+}
+.bop {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+.bop img {
+  /* Or another appropriate value */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nopictures {
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .embla__slide {
+    max-width: 120%;
+    flex: 0 0 75%;
+  }
+  .embla {
+    width: 100%;
+    margin: 0;
+  }
+  .embla__container {
+    height: auto;
+    width: 100vw;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container {
+    margin-bottom: 4rem;
+  }
+
+  .uploadDropZone {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .customButton {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .customButton > *[data-ut-element='button'] {
+    width: 19.5rem;
+    height: 3.375rem;
+  }
+
+  .customButton > *[data-ut-element='button'][data-state='readying'],
+  .customButton > *[data-ut-element='button'][data-state='uploading'] {
+    width: 19.5rem;
+  }
+
+  .header {
+    width: 100%;
+  }
+  .header h3 {
+    font-size: 25px;
+    line-height: 2.4375rem;
+    -webkit-font-smoothing: antialiased; /* Improves rendering in WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .header > .uploadDropZone {
+    width: 100%;
+  }
+
+  @-moz-document url-prefix() {
+    .uploadDropZone {
+      margin-bottom: 1rem;
+    }
+  }
+}
