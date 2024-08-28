@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@sanity/icons";
-import styles from "./linkButton.module.css"
+import styles from "./linkButton.module.css";
 
 export const LinkButton = () => {
   return (

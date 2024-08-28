@@ -4,8 +4,6 @@ import { pageSlug } from "../schemaTypes/slug";
 import { title } from "../fields/text";
 import { LinkButton } from "studio/components/linkButton/LinkButton";
 
-
-
 export const blogId = "blog";
 
 const blog = defineType({
