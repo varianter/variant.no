@@ -1,5 +1,5 @@
 .wrapper {
-  background: #e6e6ea;
+  background: #f6f6f8;
   gap: 0.5rem;
   align-items: center;
   display: flex;
@@ -7,6 +7,8 @@
   text-decoration: none;
   width: fit-content;
   padding: 0.5rem 1rem;
+  border-radius: 0.1875rem;
+  border: 1px #e6e6ea;
 }
 
 .wrapper:hover {
