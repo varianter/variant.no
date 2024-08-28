@@ -50,7 +50,7 @@ export default function Bilder() {
              * @see https://docs.uploadthing.com/api-reference/react#uploadbutton
              */
             endpoint="videoAndImage"
-            onClientUploadComplete={(res: any) => {
+            onClientUploadComplete={(_: any) => {
               fetchFiles();
             }}
           />
