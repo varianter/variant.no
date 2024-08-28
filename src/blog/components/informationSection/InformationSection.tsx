@@ -10,11 +10,7 @@ interface InformationSectionProps {
   link?: ILink;
 }
 
-const InformationSection = ({
-  title,
-  body,
-  link,
-}: InformationSectionProps) => {
+const InformationSection = ({ title, body, link }: InformationSectionProps) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.info}>
