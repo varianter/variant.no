@@ -1,28 +1,22 @@
-import Button from "src/components/buttons/Button";
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { ILink } from "studio/lib/payloads/navigation";
-import styles from "./informationMessage.module.css";
+import styles from "./informationSection.module.css";
 import React from "react";
 
-interface InformationMessageProps {
+interface InformationSectionProps {
   title: string;
   body: string;
-  button?: {
-    label: string;
-    onClick: () => void;
-  };
   link?: ILink;
 }
 
-const InformationMessage = ({
+const InformationSection = ({
   title,
   body,
-  button,
   link,
-}: InformationMessageProps) => {
+}: InformationSectionProps) => {
   return (
-    <section className={styles.wrapper} role="status" aria-live="assertive">
+    <section className={styles.wrapper}>
       <div className={styles.info}>
         <Text type="h1">{title}</Text>
         <span>
@@ -34,11 +28,6 @@ const InformationMessage = ({
           ))}
         </span>
         <div className={styles.buttonWrapper}>
-          {button && (
-            <Button type="primary" onClick={button.onClick}>
-              {button.label}
-            </Button>
-          )}
           {link && <LinkButton type="primary" link={link} />}
         </div>
       </div>
@@ -46,4 +35,4 @@ const InformationMessage = ({
   );
 };
 
-export default InformationMessage;
+export default InformationSection;

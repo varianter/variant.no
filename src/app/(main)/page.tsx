@@ -6,13 +6,12 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import InformationMessage from "src/blog/components/informationMessage/InformationMessage";
+import InformationSection from "src/blog/components/informationSection/InformationSection";
 import { LinkType } from "studio/lib/payloads/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
   const seo = await fetchSeoData(SEO_PAGE_QUERY, { id: landingId });
-
   return generateMetadataFromSeo(seo);
 }
 
@@ -43,7 +42,7 @@ const Home = async () => {
 
   if (!landingId) {
     return (
-      <InformationMessage
+      <InformationSection
         title="Welcome! Velkommen! Välkommen!"
         body={
           "It looks like there's no page set as your landing page in the Studio.\nHead over to the Studio to select a landing page and guide visitors to the right place!"
@@ -61,7 +60,7 @@ const Home = async () => {
 
   if (!initialLandingPage.data) {
     return (
-      <InformationMessage
+      <InformationSection
         title="Landing Page is Missing Content"
         body={`Your landing page is set, but it looks like there’s no content yet.\n Visit the Studio to start adding content and make your landing page come to life!`}
         link={pagesLink}
