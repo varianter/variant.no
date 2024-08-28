@@ -1,0 +1,22 @@
+.wrapper {
+  background: #e6e6ea;
+  gap: 0.5rem;
+  align-items: center;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+}
+
+.wrapper:hover {
+  background: #dedee3;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  color: #4e556d;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
