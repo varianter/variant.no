@@ -6,9 +6,7 @@ import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
 import InformationMessage from "src/blog/components/informationMessage/InformationMessage";
-
 import { LinkType } from "studio/lib/payloads/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
