@@ -59,7 +59,7 @@ const blog = defineType({
       name: "redirect",
       title: "Go To Shared Content",
       description:
-        "If you're interested in creating content that is shared across all domains, please add it to the shared Sanity project.",
+        "To create and edit blog posts, go to the shared Sanity project",
       type: "string",
       components: {
         input: OpenSharedButton,
