@@ -27,7 +27,7 @@ export default function Files({ data }: any) {
       <div id="pictureContainer" className={styles.container}>
       {data.files.map((file:any, index:number) =>
       <div key={file.id} className={styles.image} onClick={()=>imageClicked(file.id, index)} tabIndex={0} role="button" aria-label='open picture' onKeyDown={()=>imageClicked(file.id, index)}>
-        <img src={`https://utfs.io/f/${file.key}`} alt={` ${file.name}`}/></div>)} </div>  :<div className={styles.nopictures}><h4>Ingen bilder ennå!</h4></div>}
+        <img loading="lazy" src={`https://utfs.io/f/${file.key}`} alt={` ${file.name}`}/></div>)} </div>  :<div className={styles.nopictures}><h4>Ingen bilder ennå!</h4></div>}
      
       {isPopoverOpen && (
         <Popover onClose={closePopoever}>
@@ -35,7 +35,7 @@ export default function Files({ data }: any) {
             <div className={styles.embla__container}>
               {data.files.map((file:any) =>
               <div key = {file.id} className={styles.embla__slide}>
-                <img  src={`https://utfs.io/f/${file.key}`} alt={`${file.name}`}/>
+                <img loading="lazy"  src={`https://utfs.io/f/${file.key}`} alt={`${file.name}`}/>
                 </div>
               )}
             </div>
