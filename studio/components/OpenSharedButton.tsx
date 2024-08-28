@@ -5,5 +5,5 @@ export const OpenSharedButton = () => {
     window.open("http://localhost:3000/shared", "_blank");
   };
 
-  return <Button text="Open shared studio" onClick={handleClick} />;
+  return <Button text="Go to Shared" onClick={handleClick} />;
 };
