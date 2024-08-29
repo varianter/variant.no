@@ -17,6 +17,7 @@ import office from "./schemas/documents/office";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
+    office,
     siteSettings,
     navigationManager,
     socialMediaLinks,
