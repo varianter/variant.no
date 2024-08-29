@@ -66,15 +66,15 @@ export default (S: StructureBuilder) =>
                     .documentId(blogId)
                     .title("Blog Overview & Settings"),
                 ),
+              S.listItem()
+                .title("Compensations")
+                .icon(HeartIcon)
+                .child(
+                  S.document()
+                    .schemaType(compensationsId)
+                    .documentId(compensationsId)
+                    .title("Compensations"),
+                ),
             ]),
-        ),
-      S.listItem()
-        .title("Compensations")
-        .icon(HeartIcon)
-        .child(
-          S.document()
-            .schemaType(compensationsId)
-            .documentId(compensationsId)
-            .title("Compensations"),
         ),
     ]);
