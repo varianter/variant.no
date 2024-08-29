@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
+import offices from "../objects/offices";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 
@@ -11,6 +12,7 @@ const compensations = defineType({
   type: "document",
   title: "Compensations",
   fields: [
+    offices,
     title,
     titleSlug,
     seo,
@@ -29,6 +31,12 @@ const compensations = defineType({
       of: [{ type: benefitId }],
     }),
   ],
+  preview: {
+    select: {
+      title: "office.basicTitle",
+      subtitle: "basicTitle",
+    },
+  },
 });
 
 export default compensations;
