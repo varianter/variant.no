@@ -2,21 +2,21 @@ import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
-import SalaryAndBenefits from "src/salaryAndBenefits/SalaryAndBenefits";
+import Compensations from "src/compensations/Compensations";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { BlogPage, PageBuilder, Post } from "studio/lib/payloads/pages";
-import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
+import { CompensationsPage } from "studio/lib/payloads/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
-  SALARY_AND_BENEFITS_PAGE_QUERY,
+  COMPENSATIONS_PAGE_QUERY,
   SEO_SLUG_QUERY,
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
 import { loadQuery } from "studio/lib/store";
-import SalaryAndBenefitsPreview from "src/salaryAndBenefits/SalaryAndBenefitsPreview";
+import CompensationsPreview from "src/compensations/CompensationsPreview";
 
 export const dynamic = "force-dynamic";
 
@@ -36,12 +36,12 @@ async function Page({ params }: Props) {
   const { slug } = params;
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const [initialPage, initialBlogPage, initialSalaryAndBenefitsPage] =
+  const [initialPage, initialBlogPage, initialCompensationsPage] =
     await Promise.all([
       loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
       loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
-      loadQuery<SalaryAndBenefitsPage>(
-        SALARY_AND_BENEFITS_PAGE_QUERY,
+      loadQuery<CompensationsPage>(
+        COMPENSATIONS_PAGE_QUERY,
         { slug },
         { perspective },
       ),
@@ -50,7 +50,7 @@ async function Page({ params }: Props) {
   if (
     !initialPage.data &&
     !initialBlogPage.data &&
-    !initialSalaryAndBenefitsPage.data
+    !initialCompensationsPage.data
   ) {
     console.log(`Page ${slug} not found`);
     // TODO: add error snackbar
@@ -102,15 +102,11 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialSalaryAndBenefitsPage.data) {
+  if (initialCompensationsPage.data) {
     return isDraftMode ? (
-      <SalaryAndBenefitsPreview
-        initialSalaryAndBenefits={initialSalaryAndBenefitsPage}
-      />
+      <CompensationsPreview initialCompensations={initialCompensationsPage} />
     ) : (
-      <SalaryAndBenefits
-        salaryAndBenefits={initialSalaryAndBenefitsPage.data}
-      />
+      <Compensations compensations={initialCompensationsPage.data} />
     );
   }
 

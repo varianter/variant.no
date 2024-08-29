@@ -14,7 +14,7 @@ import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { siteSettingsID } from "./documents/siteSettings";
 import { postId } from "./documents/post";
 import { legalDocumentID } from "./documents/legalDocuments";
-import { salaryAndBenefitsId } from "./documents/salaryAndBenefits";
+import { compensationsId } from "./documents/compensations";
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -69,12 +69,12 @@ export default (S: StructureBuilder) =>
             ]),
         ),
       S.listItem()
-        .title("Salary and Benefits")
+        .title("Compensations")
         .icon(HeartIcon)
         .child(
           S.document()
-            .schemaType(salaryAndBenefitsId)
-            .documentId(salaryAndBenefitsId)
-            .title("Salary and Benefits"),
+            .schemaType(compensationsId)
+            .documentId(compensationsId)
+            .title("Compensations"),
         ),
     ]);
