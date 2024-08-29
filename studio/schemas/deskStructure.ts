@@ -70,10 +70,7 @@ export default (S: StructureBuilder) =>
                 .title("Compensations")
                 .icon(HeartIcon)
                 .child(
-                  S.document()
-                    .schemaType(compensationsId)
-                    .documentId(compensationsId)
-                    .title("Compensations"),
+                  S.documentTypeList(compensationsId).title("Compensations"),
                 ),
             ]),
         ),
