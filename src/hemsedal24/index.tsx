@@ -84,7 +84,7 @@ const Hemsedal24: NextPage = () => {
       <time>13:00 - 14:00</time> <span>Lunsj på hotellet</span>
     </li>
     <li>
-      <time>14:00 - 17:00</time> <span><span className={styles.programbold}>For varianter:</span>&nbsp;<span> Workshop med Marie, vi får servert snacks og drikke</span></span>
+      <time>14:00 - 17:00</time> <span><span className={styles.programbold}>For varianter:</span>&nbsp;<span> Rabalder 2025, Pre-mortem workshop og de nyes minutter. Det blir servert snacks og drikke. </span></span>
     </li>
     <li>
       <time>14:00 - 16:00</time> 
