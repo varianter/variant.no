@@ -9,9 +9,10 @@ import {
   ProjectsIcon,
   StackCompactIcon,
   HeartIcon,
+  CaseIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { siteSettingsID } from "./documents/siteSettings";
+import { companyInfoID } from "./documents/companyInfo";
 import { postId } from "./documents/post";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
@@ -21,13 +22,13 @@ export default (S: StructureBuilder) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Site Settings")
-        .icon(CogIcon)
+        .title("Company Info")
+        .icon(CaseIcon)
         .child(
           S.document()
-            .schemaType(siteSettingsID)
-            .documentId(siteSettingsID)
-            .title("Site Settings"),
+            .schemaType(companyInfoID)
+            .documentId(companyInfoID)
+            .title("Company Info"),
         ),
       S.listItem()
         .title("Legal Documents")

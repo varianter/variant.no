@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { toPlainText } from "@portabletext/toolkit";
 import { urlFor } from "studio/lib/image";
-import { SITESETTINGS_QUERY } from "studio/lib/queries/siteSettings";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
 import { loadQuery } from "studio/lib/store";
 import { PortableTextBlock } from "src/components/richText/RichText";
 
@@ -19,7 +19,7 @@ type PostSeoData = {
   keywords: string;
 };
 
-type SiteSettings = {
+type CompanyInfo = {
   siteMetadata: {
     siteName: string;
   };
@@ -65,9 +65,9 @@ export async function fetchPostSeoData(
   }
 }
 
-export async function fetchSiteSettings(): Promise<SiteSettings | null> {
+export async function fetchCompanyInfo(): Promise<CompanyInfo | null> {
   try {
-    const { data } = await loadQuery<SiteSettings>(SITESETTINGS_QUERY);
+    const { data } = await loadQuery<CompanyInfo>(COMPANY_INFO_QUERY);
     return data;
   } catch (error) {
     console.error("Error loading site settings:", error);
@@ -78,15 +78,15 @@ export async function fetchSiteSettings(): Promise<SiteSettings | null> {
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
-  const siteSettings = await fetchSiteSettings();
+  const companyInfo = await fetchCompanyInfo();
 
   const title =
-    seo?.title || siteSettings?.siteMetadata?.siteName || "Fallback Title";
+    seo?.title || companyInfo?.siteMetadata?.siteName || "Fallback Title";
   const description = seo?.description || "";
   const imageUrl = seo?.imageUrl || "";
   const keywords = seo?.keywords || "";
 
-  const favicon = siteSettings?.brandAssets?.favicon;
+  const favicon = companyInfo?.brandAssets?.favicon;
   const faviconUrl = favicon ? urlFor(favicon).url() : "";
 
   const icons = [faviconUrl ? { rel: "icon", url: faviconUrl } : null].filter(

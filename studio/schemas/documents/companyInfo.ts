@@ -1,16 +1,12 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
 
-export const siteSettingsID = "siteSettings";
+export const companyInfoID = "companyInfo";
 
-const siteSettings = defineType({
-  deprecated: {
-    reason: "Use the Company Info document type instead.",
-  },
-  readOnly: true,
-  name: siteSettingsID,
+const companyInfo = defineType({
+  name: companyInfoID,
   type: "document",
-  title: "Site Settings",
+  title: "Company Info",
   description:
     "Configure global settings for your site including brand assets, tracking codes, and default SEO settings.",
   fields: [
@@ -121,10 +117,10 @@ const siteSettings = defineType({
   preview: {
     prepare() {
       return {
-        title: "Site Settings",
+        title: "Company Info",
       };
     },
   },
 });
 
-export default siteSettings;
+export default companyInfo;
