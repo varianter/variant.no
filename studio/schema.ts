@@ -17,7 +17,6 @@ import office from "./schemas/documents/office";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-    office,
     siteSettings,
     navigationManager,
     socialMediaLinks,
@@ -32,5 +31,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     legalDocument,
     salaryAndBenefits,
     benefit,
+    office,
   ],
 };
