@@ -56,7 +56,7 @@ const blog = defineType({
       ],
     }),
     defineField({
-      name: "redirect",
+      name: "goToSharedContentLink",
       title: "Go To Shared Content",
       description:
         "To create and edit blog posts, go to the shared Sanity project",
