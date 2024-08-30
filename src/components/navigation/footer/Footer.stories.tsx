@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import {
   mockNavigation,
   mockSocialMediaProfiles,
-  mockSiteSettings,
+  mockCompanyInfo,
 } from "../mockData";
 
 const meta: Meta<typeof Footer> = {
@@ -25,7 +25,7 @@ type Story = StoryObj<typeof Footer>;
 export const Default: Story = {
   args: {
     navigationData: mockNavigation,
-    siteSettings: mockSiteSettings,
+    companyInfo: mockCompanyInfo,
     soMeData: mockSocialMediaProfiles,
   },
 };

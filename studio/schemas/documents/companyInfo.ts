@@ -1,16 +1,16 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
 
-// TODO: deprecated, drop support once important deployments have updated
+export const companyInfoID = "companyInfo";
 
-export const siteSettingsID = "siteSettings";
-
-const siteSettings = defineType({
-  name: siteSettingsID,
+const companyInfo = defineType({
+  name: companyInfoID,
   type: "document",
-  title: "Site Settings",
+  title: "Company Information",
   description:
-    "Configure global settings for your site including brand assets, tracking codes, and default SEO settings.",
+    "Manage all your global site settings here, including brand assets and company information. " +
+    "Everything stored here is essential for consistent branding, and is referenced across various site sections, " +
+    "such as your office locations.",
   fields: [
     {
       name: "siteMetadata",
@@ -74,6 +74,12 @@ const siteSettings = defineType({
       ],
     },
     {
+      // TODO: deprecated, drop support once important deployments have updated
+      deprecated: {
+        reason: "Analytics and Tracking is no longer used",
+      },
+      readOnly: true,
+      hidden: true,
       name: "analyticsTracking",
       type: "object",
       title: "Analytics and Tracking",
@@ -119,10 +125,10 @@ const siteSettings = defineType({
   preview: {
     prepare() {
       return {
-        title: "Site Settings",
+        title: "Company Information",
       };
     },
   },
 });
 
-export default siteSettings;
+export default companyInfo;

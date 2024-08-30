@@ -7,7 +7,7 @@ import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { linkID } from "studio/schemas/objects/link";
 import primaryLogoFile from "../../stories/assets/energiai-primary-logo.svg";
 import secondaryLogoFile from "../../stories/assets/energiai-secondary-logo.svg";
-import { BrandAssets } from "studio/lib/payloads/siteSettings";
+import { BrandAssets } from "studio/lib/payloads/companyInfo";
 import { SocialMediaProfiles } from "studio/lib/payloads/socialMedia";
 
 // Mock Navigation Data
@@ -110,7 +110,7 @@ export const mockNavigation: Navigation = {
   ],
 };
 
-export const mockSiteSettings = {
+export const mockCompanyInfo = {
   siteMetadata: {
     siteName: "Varaint",
     defaultLanguage: "en",

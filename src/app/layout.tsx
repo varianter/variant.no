@@ -1,8 +1,8 @@
 import { Darker_Grotesque, Figtree } from "next/font/google";
 import { draftMode } from "next/headers";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
-import { SiteSettings } from "studio/lib/payloads/siteSettings";
-import { SITESETTINGS_QUERY } from "studio/lib/queries/siteSettings";
+import { CompanyInfo } from "studio/lib/payloads/companyInfo";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
 import { Metadata } from "next";
 import { loadQuery } from "studio/lib/store";
 import "src/styles/global.css";
@@ -31,7 +31,7 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadQuery<SiteSettings>(SITESETTINGS_QUERY);
+    const { data } = await loadQuery<CompanyInfo>(COMPANY_INFO_QUERY);
     siteLang = data.siteMetadata?.defaultLanguage;
   } catch (error) {
     console.error("Error loading site settings:", error);

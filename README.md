@@ -101,16 +101,16 @@ This project includes a customized Sanity Studio desk structure to enhance conte
 
 ## Managing Content
 
-### Site Settings
+### Company Information
 
-The `Site Settings` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
+The `Company Information` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
 
-#### Social Media Profiles
+### Social Media Profiles
 
 - **Adding Social Media Links**: Editors can manage social media links under the `Social Media Profiles` menu. This allows visitors to connect with the website on various social platforms.
 - **Supported Platforms**: The 9 supported platforms include Facebook, Instagram, and LinkedIn, but more can be added to `SoMePlatforms` if needed.
 
-#### Navigation Management
+### Navigation Management
 
 - **Setting the Landing Page**: The `Navigation Manager` allows editors to set the landing page for the site, which is crucial for determining the primary page visitors see upon arrival.
 - **Adding Menu Items**: Within the `Navigation Manager`, editors can add items to various pre-defined menus:
@@ -118,7 +118,7 @@ The `Site Settings` menu allows you to configure global settings for your site, 
   - **Footer Menu**: Add items to the footer menu, which consists of different sections. Each section can contain either social media links, custom links, text, or images (e.g., logos).
   - **Sidebar Menu**: Add links to the sidebar menu, which will appear on smaller screens to aid mobile navigation.
 
-#### Pages
+### Pages
 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
 - **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.

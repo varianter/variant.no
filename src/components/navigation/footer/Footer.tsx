@@ -1,7 +1,7 @@
 "use client";
 
 import { ILink, LinkType, Navigation } from "studio/lib/payloads/navigation";
-import { SiteSettings } from "studio/lib/payloads/siteSettings";
+import { CompanyInfo } from "studio/lib/payloads/companyInfo";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import styles from "./footer.module.css";
 import CustomLink from "../../link/CustomLink";
@@ -16,19 +16,19 @@ import { LegalDocument } from "studio/lib/payloads/legalDocuments";
 
 export interface IFooter {
   navigationData: Navigation;
-  siteSettings: SiteSettings;
+  companyInfo: CompanyInfo;
   soMeData: SocialMediaProfiles;
   legalData: LegalDocument[];
 }
 
 const Footer = ({
   navigationData,
-  siteSettings,
+  companyInfo,
   soMeData,
   legalData,
 }: IFooter) => {
   const renderedLogo = useConvertSanityImageToNextImage(
-    siteSettings.brandAssets?.secondaryLogo,
+    companyInfo.brandAssets?.secondaryLogo,
   );
 
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ const Footer = ({
       <ul className={styles.credits}>
         <li key="credit-legal-key-1">
           <Text className={styles.whiteColor}>
-            {`© ${currentYear} ${siteSettings.siteMetadata?.siteName}`}
+            {`© ${currentYear} ${companyInfo.siteMetadata?.siteName}`}
           </Text>
         </li>
         {legalData?.map((legal) => {
