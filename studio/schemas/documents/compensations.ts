@@ -37,7 +37,11 @@ const compensations = defineType({
   preview: {
     select: {
       subtitle: "basicTitle",
-      // https://www.sanity.io/docs/previews-list-views#62febb15a63a
+      /*
+       Array object values are accessed with dot notation and array index: "offices.0.basicTitle"
+       This limits the preview to only select a subset of the array
+       https://www.sanity.io/docs/previews-list-views#62febb15a63a
+      */
       ...[...Array(OFFICES_PREVIEW_ELLIPSIS_LIMIT).keys()].reduce(
         (o, i) => ({ ...o, [`office${i}`]: `offices.${i}.basicTitle` }),
         {},
