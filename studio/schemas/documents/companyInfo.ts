@@ -8,7 +8,9 @@ const companyInfo = defineType({
   type: "document",
   title: "Company Information",
   description:
-    "Configure global settings for your site including brand assets, tracking codes, and default SEO settings.",
+    "Manage all your global site settings here, including brand assets and company information. " +
+    "Everything stored here is essential for consistent branding, and is referenced across various site sections, " +
+    "such as your office locations.",
   fields: [
     {
       name: "siteMetadata",
