@@ -1,13 +1,11 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
 
+// TODO: deprecated, drop support once important deployments have updated
+
 export const siteSettingsID = "siteSettings";
 
 const siteSettings = defineType({
-  deprecated: {
-    reason: "Use the Company Info document type instead.",
-  },
-  readOnly: true,
   name: siteSettingsID,
   type: "document",
   title: "Site Settings",
