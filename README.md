@@ -101,9 +101,9 @@ This project includes a customized Sanity Studio desk structure to enhance conte
 
 ## Managing Content
 
-### Company Info
+### Company Information
 
-The `Company Info` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
+The `Company Information` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
 
 ### Social Media Profiles
 

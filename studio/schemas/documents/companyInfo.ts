@@ -6,7 +6,7 @@ export const companyInfoID = "companyInfo";
 const companyInfo = defineType({
   name: companyInfoID,
   type: "document",
-  title: "Company Info",
+  title: "Company Information",
   description:
     "Configure global settings for your site including brand assets, tracking codes, and default SEO settings.",
   fields: [
@@ -123,7 +123,7 @@ const companyInfo = defineType({
   preview: {
     prepare() {
       return {
-        title: "Company Info",
+        title: "Company Information",
       };
     },
   },

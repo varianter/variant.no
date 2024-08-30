@@ -22,13 +22,13 @@ export default (S: StructureBuilder) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Company Info")
+        .title("Company Information")
         .icon(CaseIcon)
         .child(
           S.document()
             .schemaType(companyInfoID)
             .documentId(companyInfoID)
-            .title("Company Info"),
+            .title("Company Information"),
         ),
       S.listItem()
         .title("Legal Documents")
