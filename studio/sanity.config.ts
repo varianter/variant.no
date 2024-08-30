@@ -11,7 +11,7 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import deskStructure from "./schemas/deskStructure";
-import CustomToolMenu from "./components/customToolMenu/CustomToolMenu";
+import CustomToolMenu from "./components/CustomToolMenu";
 
 export default defineConfig({
   basePath: "/studio",
