@@ -22,7 +22,10 @@ const compensations = defineType({
   type: "document",
   title: "Compensations",
   fields: [
-    offices,
+    {
+      ...offices,
+      description: "Which offices are these compensations relevant for?",
+    },
     title,
     titleSlug,
     seo,
