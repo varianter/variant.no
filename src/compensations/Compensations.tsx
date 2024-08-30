@@ -1,7 +1,7 @@
 "use client";
-import styles from "./salaryAndBenefits.module.css";
+import styles from "./compensations.module.css";
 import Text from "src/components/text/Text";
-import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
+import { CompensationsPage } from "studio/lib/payloads/compensations";
 import { RichText } from "src/components/richText/RichText";
 import SalaryCalculator, {
   Degree,
@@ -9,8 +9,8 @@ import SalaryCalculator, {
 import { useState } from "react";
 import { calculatePension, calculateSalary } from "./utils/calculateSalary";
 
-interface SalaryAndBenefitsProps {
-  salaryAndBenefits: SalaryAndBenefitsPage;
+interface CompensationsProps {
+  compensations: CompensationsPage;
 }
 
 interface SalaryCalculatorFormState {
@@ -18,7 +18,7 @@ interface SalaryCalculatorFormState {
   selectedDegree: Degree;
 }
 
-const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
+const Compensations = ({ compensations }: CompensationsProps) => {
   const currentYear = new Date().getFullYear();
 
   const [formState, setFormState] = useState<SalaryCalculatorFormState>({
@@ -54,8 +54,8 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <Text type="h1">{salaryAndBenefits.basicTitle}</Text>
-      {salaryAndBenefits.showSalaryCalculator && (
+      <Text type="h1">{compensations.basicTitle}</Text>
+      {compensations.showSalaryCalculator && (
         <>
           <SalaryCalculator
             examinationYearValue={formState.examinationYear}
@@ -75,7 +75,7 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
         </>
       )}
       <div className={styles.benefits}>
-        {salaryAndBenefits.benefits.map((benefit) => (
+        {compensations.benefits.map((benefit) => (
           <div key={benefit._key} className={styles.benefitWrapper}>
             <Text type="h2">{benefit.basicTitle}</Text>
             <RichText value={benefit.richText} />
@@ -86,4 +86,4 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
   );
 };
 
-export default SalaryAndBenefits;
+export default Compensations;

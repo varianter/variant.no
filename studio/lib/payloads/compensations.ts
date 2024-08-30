@@ -8,7 +8,7 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
-export interface SalaryAndBenefitsPage {
+export interface CompensationsPage {
   _createdAt: string;
   _id: string;
   _rev: string;

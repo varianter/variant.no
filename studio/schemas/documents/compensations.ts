@@ -1,19 +1,15 @@
 import { defineField, defineType } from "sanity";
-import { title } from "../fields/text";
 import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
+import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 
-// TODO: deprecated, drop support once important deployments have updated
+export const compensationsId = "compensations";
 
-const salaryAndBenefits = defineType({
-  name: "salaryAndBenefits",
-  title: "Salary and Benefits",
+const compensations = defineType({
+  name: compensationsId,
   type: "document",
-  deprecated: {
-    reason: "Use the Compensations document type instead",
-  },
-  readOnly: true,
+  title: "Compensations",
   fields: [
     title,
     titleSlug,
@@ -28,11 +24,11 @@ const salaryAndBenefits = defineType({
     defineField({
       name: "benefits",
       title: "Benefits",
-      description: "Manage benefits for the salary and benefits page",
+      description: "Manage benefits for the compensations page",
       type: "array",
       of: [{ type: benefitId }],
     }),
   ],
 });
 
-export default salaryAndBenefits;
+export default compensations;

@@ -22,7 +22,7 @@ interface Parent {
 // Lazy reference to avoid circular dependency
 const lazyPageBuilderID = () => "pageBuilder";
 const lazyBlogID = () => "blog";
-const lazySalaryAndBenefitsID = () => "salaryAndBenefits";
+const lazyCompensationsID = () => "compensations";
 
 export const link = defineField({
   name: linkID,
@@ -61,7 +61,7 @@ export const link = defineField({
       to: [
         { type: lazyPageBuilderID() },
         { type: lazyBlogID() },
-        { type: lazySalaryAndBenefitsID() },
+        { type: lazyCompensationsID() },
       ],
       validation: (Rule: any) =>
         Rule.custom((value: any, context: any) => {
