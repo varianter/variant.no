@@ -13,6 +13,7 @@ import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/legalDocuments";
 import benefit from "./schemas/documents/benefit";
 import salaryAndBenefits from "./schemas/documents/salaryAndBenefits";
+import office from "./schemas/documents/office";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -30,5 +31,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     legalDocument,
     salaryAndBenefits,
     benefit,
+    office,
   ],
 };
