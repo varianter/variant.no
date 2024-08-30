@@ -52,15 +52,3 @@ export const deskStructure: StructureResolver = (S) =>
         ),
       // Other items can be added here if needed
     ]);
-
-export const defaultDocumentNode: DefaultDocumentNodeResolver = (
-  S,
-  { schemaType }
-) => {
-  switch (schemaType) {
-    case blogPostsID:
-      return S.document().views([S.view.form()]);
-    default:
-      return S.document();
-  }
-};
