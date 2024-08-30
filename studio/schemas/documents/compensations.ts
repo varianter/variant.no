@@ -22,6 +22,13 @@ const compensations = defineType({
       initialValue: true,
     }),
     defineField({
+      name: "pensionPercentage",
+      title: "Pension Percentage (%)",
+      type: "number",
+      initialValue: 7,
+      validation: (Rule) => Rule.required().positive(),
+    }),
+    defineField({
       name: "benefits",
       title: "Benefits",
       description: "Manage benefits for the compensations page",
