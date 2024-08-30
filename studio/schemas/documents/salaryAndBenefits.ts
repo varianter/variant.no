@@ -4,6 +4,8 @@ import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
 import { benefitId } from "./benefit";
 
+// TODO: deprecated, drop support once important deployments have updated
+
 const salaryAndBenefits = defineType({
   name: "salaryAndBenefits",
   title: "Salary and Benefits",
