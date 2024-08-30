@@ -4,7 +4,7 @@ import { LinkType } from "studio/lib/payloads/navigation";
 
 const meta: Meta<typeof CustomLink> = {
   title: "Components/Links/CustomLink",
-  CustomLink,
+  component: CustomLink,
   parameters: {
     a11y: {
       element: "a",
