@@ -72,6 +72,7 @@ const companyInfo = defineType({
       ],
     },
     {
+      // TODO: deprecated, drop support once important deployments have updated
       deprecated: {
         reason: "Analytics and Tracking is no longer used",
       },
