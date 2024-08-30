@@ -6,7 +6,7 @@ export default function CustomToolMenu(props: ToolMenuProps) {
   return (
     <Inline>
       {props.renderDefault(props)}
-      <LinkButton />
+      <LinkButton value="/shared" />
     </Inline>
   );
 }

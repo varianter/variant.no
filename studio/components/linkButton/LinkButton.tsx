@@ -1,9 +1,13 @@
 import { ArrowRightIcon } from "@sanity/icons";
 import styles from "./linkButton.module.css";
 
-export const LinkButton = () => {
+interface LinkButtonProps {
+  value?: string;
+}
+
+export const LinkButton = ({ value }: LinkButtonProps) => {
   return (
-    <a className={styles.wrapper} href={"/shared"}>
+    <a className={styles.wrapper} href={value}>
       <span className={styles.text}>
         Shared Studio <ArrowRightIcon />
       </span>

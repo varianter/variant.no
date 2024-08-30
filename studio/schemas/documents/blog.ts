@@ -2,7 +2,6 @@ import { defineField, defineType } from "sanity";
 import seo from "../objects/seo";
 import { pageSlug } from "../schemaTypes/slug";
 import { title } from "../fields/text";
-import { LinkButton } from "studio/components/linkButton/LinkButton";
 
 export const blogId = "blog";
 
@@ -54,16 +53,6 @@ const blog = defineType({
           ],
         }),
       ],
-    }),
-    defineField({
-      name: "goToSharedContentLink",
-      title: "Go To Shared Content",
-      description:
-        "To create and edit blog posts, go to the shared Sanity project",
-      type: "link",
-      components: {
-        input: LinkButton,
-      },
     }),
   ],
   preview: {
