@@ -1,24 +1,25 @@
 .wrapper {
-  background: #f6f6f8;
-  gap: 0.5rem;
   align-items: center;
-  display: flex;
+  display: block;
   list-style: none;
   text-decoration: none;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border-radius: 0.1875rem;
-  border: 1px #e6e6ea;
+  white-space: nowrap;
+  border-radius: 3px ;
+  padding: 0.2rem 0.5rem;
 }
 
 .wrapper:hover {
-  background: #dedee3;
+  background: #F5F5F7; 
 }
 
 .text {
   display: flex;
   align-items: center;
-  color: #4e556d;
-  font-size: 1rem;
-  gap: 0.5rem;
+  text-decoration: block; 
+  font-weight: 500;
+  color: #323545; 
+  letter-spacing: 0;
+  font-size: 13px;
+  gap: 0.2rem;
+  line-height: 19px;
 }

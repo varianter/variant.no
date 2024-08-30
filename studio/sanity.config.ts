@@ -3,7 +3,7 @@
  */
 
 import { visionTool } from "@sanity/vision";
-import { defineConfig } from "sanity";
+import { defineConfig, StudioToolMenu } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
@@ -11,6 +11,7 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import deskStructure from "./schemas/deskStructure";
+import CustomToolMenu from "./components/customToolMenu/CustomToolMenu";
 
 export default defineConfig({
   basePath: "/studio",
@@ -18,6 +19,11 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './studio/schema' folder
   schema,
+  studio: {
+    components: {
+      toolMenu: CustomToolMenu,
+    }
+  },
   plugins: [
     structureTool({
       structure: deskStructure,
