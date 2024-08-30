@@ -23,13 +23,8 @@ const blogPosts = defineType({
           // Ensure date is not undefined or null
           if (!date) return "The publish date is required.";
 
-          // Ensure context.document is defined and _createdAt exists
-          if (!context.document || !context.document._createdAt) {
-            return "Creation date is missing.";
-          }
-
           const selectedDate = new Date(date);
-          const createdAt = new Date(context.document._createdAt as string);
+          const createdAt = new Date(context.document?._createdAt as string);
           const now = new Date();
 
           // Add a small buffer of 1 second (1000 milliseconds)
@@ -50,6 +45,12 @@ const blogPosts = defineType({
       ...richText,
       description: "Enter the body content of the post.",
     }),
+    defineField({
+      name: "language",
+      type: "string",
+      readOnly: true,
+      hidden: true,
+    }),
   ],
   preview: {
     select: {
@@ -58,7 +59,7 @@ const blogPosts = defineType({
     },
     prepare({ title, date }) {
       const subtitles = [date && format(parseISO(date), "LLL d, yyyy")].filter(
-        Boolean,
+        Boolean
       );
 
       return { title, subtitle: subtitles.join(" ") };

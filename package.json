@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@google-cloud/pubsub": "^4.5.0",
+    "@sanity/document-internationalization": "^3.0.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^1.6.11",
     "@sanity/react-loader": "^1.9.15",
@@ -24,6 +25,7 @@
     "react-dom": "^18",
     "react-focus-on": "^3.9.3",
     "sanity": "^3.50.0",
+    "sanity-plugin-documents-pane": "^2.3.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
