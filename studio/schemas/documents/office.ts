@@ -7,6 +7,7 @@ const office = defineType({
   name: officeId,
   type: "document",
   title: "Office",
+  description: "Content related to an individual office within the company",
   fields: [title],
 });
 
