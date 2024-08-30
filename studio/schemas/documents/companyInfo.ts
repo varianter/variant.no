@@ -72,6 +72,11 @@ const companyInfo = defineType({
       ],
     },
     {
+      deprecated: {
+        reason: "Analytics and Tracking is no longer used",
+      },
+      readOnly: true,
+      hidden: true,
       name: "analyticsTracking",
       type: "object",
       title: "Analytics and Tracking",
