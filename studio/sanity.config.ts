@@ -22,7 +22,7 @@ export default defineConfig({
   studio: {
     components: {
       toolMenu: CustomToolMenu,
-    }
+    },
   },
   plugins: [
     structureTool({
