@@ -11,6 +11,7 @@ import {
   InfoOutlineIcon,
   HeartIcon,
   CaseIcon,
+  HomeIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
