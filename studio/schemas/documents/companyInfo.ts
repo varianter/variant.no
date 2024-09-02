@@ -88,7 +88,7 @@ const companyInfo = defineType({
               type: "object",
               fields: [
                 defineField({
-                  name: "name",
+                  name: "office",
                   type: "string",
                   title: "Office Name",
                   description: "The name of the office location.",
