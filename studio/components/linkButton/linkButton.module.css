@@ -22,4 +22,13 @@
   font-size: 13px;
   gap: 0.2rem;
   line-height: 19px;
+
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    -webkit-mask: url("/arrow-right.svg") no-repeat;
+    -webkit-mask-size: contain;
+    background-color: #323545;
+  }
 }

@@ -8,9 +8,7 @@ interface LinkButtonProps {
 export const LinkButton = ({ value }: LinkButtonProps) => {
   return (
     <a className={styles.wrapper} href={value}>
-      <span className={styles.text}>
-        Shared Studio <ArrowRightIcon />
-      </span>
+      <span className={styles.text}>Shared Studio</span>
     </a>
   );
 };
