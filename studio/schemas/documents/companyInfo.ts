@@ -74,6 +74,59 @@ const companyInfo = defineType({
       ],
     },
     {
+      name: "offices",
+      type: "object",
+      title: "Offices",
+      description: "Add all your office locations here.",
+      fields: [
+        defineField({
+          name: "officeLocations",
+          type: "array",
+          title: "Office Locations",
+          of: [
+            {
+              type: "object",
+              fields: [
+                defineField({
+                  name: "name",
+                  type: "string",
+                  title: "Office Name",
+                  description: "The name of the office location.",
+                  validation: (Rule) => Rule.required(),
+                }),
+                defineField({
+                  name: "address",
+                  type: "object",
+                  title: "Address",
+                  description: "The address of the office location.",
+                  fields: [
+                    {
+                      name: "streetName",
+                      type: "string",
+                      title: "Street name",
+                      validation: (Rule) => Rule.required(),
+                    },
+                    {
+                      name: "streetNumber",
+                      type: "string",
+                      title: "Street number",
+                      validation: (Rule) => Rule.required(),
+                    },
+                    {
+                      name: "city",
+                      type: "string",
+                      title: "City",
+                      validation: (Rule) => Rule.required(),
+                    },
+                  ],
+                }),
+              ],
+            },
+          ],
+        }),
+      ],
+    },
+    {
       // TODO: deprecated, drop support once important deployments have updated
       deprecated: {
         reason: "Analytics and Tracking is no longer used",
