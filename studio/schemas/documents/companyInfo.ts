@@ -74,24 +74,6 @@ const companyInfo = defineType({
       ],
     },
     {
-      name: "offices",
-      type: "object",
-      title: "Offices",
-      description: "Add all your office locations here.",
-      fields: [
-        defineField({
-          name: "officeLocations",
-          type: "array",
-          title: "Office Locations",
-          of: [
-            {
-              type: "office",
-            },
-          ],
-        }),
-      ],
-    },
-    {
       // TODO: deprecated, drop support once important deployments have updated
       deprecated: {
         reason: "Analytics and Tracking is no longer used",
