@@ -40,7 +40,7 @@ export default (S: StructureBuilder) =>
                 ),
               S.listItem()
                 .title("Offices")
-                .icon(CaseIcon)
+                .icon(HomeIcon)
                 .child(S.documentTypeList("office").title("Offices")),
             ]),
         ),
