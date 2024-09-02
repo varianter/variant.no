@@ -8,6 +8,10 @@
   padding: 0.2rem 0.5rem;
 }
 
+.wrapper.inSidebar {
+  padding: 0.5rem 0.75rem;
+}
+
 .wrapper:hover {
   background: #f5f5f7;
 }
@@ -19,9 +23,9 @@
   font-weight: 500;
   color: #323545;
   letter-spacing: 0;
-  font-size: 13px;
   gap: 0.2rem;
-  line-height: 19px;
+  font-size: 0.8125rem;
+  line-height: calc(19 / 13);
 
   &::after {
     content: "";
