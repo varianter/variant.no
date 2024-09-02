@@ -8,6 +8,7 @@ import {
   ControlsIcon,
   ProjectsIcon,
   StackCompactIcon,
+  InfoOutlineIcon,
   HeartIcon,
   CaseIcon,
 } from "@sanity/icons";
@@ -21,13 +22,26 @@ export default (S: StructureBuilder) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Company Information")
+        .title("Organization Details")
         .icon(CaseIcon)
         .child(
-          S.document()
-            .schemaType(companyInfoID)
-            .documentId(companyInfoID)
-            .title("Company Information"),
+          S.list()
+            .title("Organization Details")
+            .items([
+              S.listItem()
+                .title("Company Information")
+                .icon(InfoOutlineIcon)
+                .child(
+                  S.document()
+                    .schemaType(companyInfoID)
+                    .documentId(companyInfoID)
+                    .title("Company Information"),
+                ),
+              S.listItem()
+                .title("Offices")
+                .icon(CaseIcon)
+                .child(S.documentTypeList("office").title("Offices")),
+            ]),
         ),
       S.listItem()
         .title("Legal Documents")
