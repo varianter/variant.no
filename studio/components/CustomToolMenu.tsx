@@ -1,12 +1,17 @@
 import { ToolMenuProps } from "sanity";
-import { Inline } from "@sanity/ui";
-import { LinkButton } from "./linkButton/LinkButton";
+import { Inline, Stack } from "@sanity/ui";
+import { ToolMenuLinkButton } from "./toolMenuLinkButton/ToolMenuLinkButton";
 
 export default function CustomToolMenu(props: ToolMenuProps) {
+  const Wrapper = props.context === "topbar" ? Inline : Stack;
   return (
-    <Inline>
+    <Wrapper space={4}>
       {props.renderDefault(props)}
-      <LinkButton value="/shared" />
-    </Inline>
+      <ToolMenuLinkButton
+        value={"/shared"}
+        label={"Shared Studio"}
+        context={props.context}
+      />
+    </Wrapper>
   );
 }
