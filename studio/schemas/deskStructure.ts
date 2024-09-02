@@ -22,11 +22,11 @@ export default (S: StructureBuilder) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Organization Details")
+        .title("Company Details")
         .icon(CaseIcon)
         .child(
           S.list()
-            .title("Organization Details")
+            .title("Company Details")
             .items([
               S.listItem()
                 .title("Company Information")
