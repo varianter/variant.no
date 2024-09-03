@@ -11,7 +11,7 @@ import {
   InfoOutlineIcon,
   HeartIcon,
   CaseIcon,
-  HomeIcon,
+  PinIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
@@ -39,9 +39,9 @@ export default (S: StructureBuilder) =>
                     .title("Company Information"),
                 ),
               S.listItem()
-                .title("Offices")
-                .icon(HomeIcon)
-                .child(S.documentTypeList("office").title("Offices")),
+                .title("Locations")
+                .icon(PinIcon)
+                .child(S.documentTypeList("location").title("Locations")),
             ]),
         ),
       S.listItem()
