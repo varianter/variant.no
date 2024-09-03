@@ -33,6 +33,9 @@ export default function Upload() {
           onUploadError={(error: Error) => {
             alert(`En feil har skjedd. Feilmelding: ${error.message}`);
           }}
+          content={{allowedContent() {
+            return 'Bilder opp til 16MB, maks 20 om gangen'
+          }}}
         />
       </div>
     </div>

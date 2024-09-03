@@ -125,10 +125,6 @@
   --tw-ring-color: transparent;
 }
 
-.customButton > *[data-ut-element='allowed-content'] {
-  display: none;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Four columns */
@@ -166,7 +162,7 @@
   align-items: center;
 }
 .embla__slide {
-  flex: 0 0 60%;
+  flex: 0 0 40%;
   width: 100%;
   user-select: none;
   padding-left: 3rem;
@@ -259,8 +255,7 @@ html {
   }
 
   .customButton > *[data-ut-element='button'] {
-    width: 19.5rem;
-    height: 3.375rem;
+    width: 50%;
   }
 
   .customButton > *[data-ut-element='button'][data-state='readying'],
@@ -283,6 +278,10 @@ html {
 
   .lastoppbilder img {
     width: 120%;
+  }
+  .tilbake,
+  .lastoppbilder {
+    width: 100%;
   }
 
   @-moz-document url-prefix() {
