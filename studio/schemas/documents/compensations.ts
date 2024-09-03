@@ -22,8 +22,9 @@ const compensations = defineType({
     compensationDetails,
     defineField({
       name: "benefits",
-      title: "Benefits",
-      description: "Manage benefits for the compensations page",
+      title: "Included Benefits",
+      description:
+        "Add and manage information on the benefits included with the compensation package, such as health insurance, retirement plans, and paid time off.",
       type: "array",
       of: [{ type: benefitId }],
     }),
