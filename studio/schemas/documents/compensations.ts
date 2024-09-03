@@ -40,7 +40,7 @@ const compensations = defineType({
       */
       ...[...Array(LOCATIONS_PREVIEW_CUTOFF + 1).keys()].reduce(
         (o, i) => ({ ...o, [`location${i}`]: `locations.${i}.basicTitle` }),
-        {}
+        {},
       ),
     },
     prepare({ title, ...locationsMap }) {
@@ -48,7 +48,7 @@ const compensations = defineType({
         title,
         subtitle: previewStringFromLocationsMap(
           locationsMap,
-          LOCATIONS_PREVIEW_CUTOFF
+          LOCATIONS_PREVIEW_CUTOFF,
         ),
       };
     },
@@ -66,10 +66,10 @@ function previewStringFromLocationsMap(
   locationsMap: {
     [key: string]: string;
   },
-  cutoff: number
+  cutoff: number,
 ): string | undefined {
   const locations = Object.values<string>(locationsMap).filter(
-    (o) => o !== undefined
+    (o) => o !== undefined,
   );
   if (locations.length === 0) {
     return undefined;
