@@ -85,7 +85,7 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialBlogPage.data && !initialBlogPage.data) {
+  if (initialPage.data && !initialBlogPage.data) {
     return (
       <>
         {initialPage.data?.sections?.map((section, index) => (
