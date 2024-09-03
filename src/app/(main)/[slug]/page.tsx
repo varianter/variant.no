@@ -47,18 +47,25 @@ async function Page({ params }: Props) {
       ),
     ]);
 
-  if (
-    !initialPage.data &&
-    !initialBlogPage.data &&
-    !initialCompensationsPage.data
-  ) {
-    console.log(`Page ${slug} not found`);
-    // TODO: add error snackbar
-    redirect("/");
+  if (initialPage.data) {
+    return (
+      <>
+        {initialPage.data?.sections?.map((section, index) => (
+          <SectionRenderer
+            key={section._key}
+            section={section}
+            isDraftMode={isDraftMode}
+            initialData={initialPage}
+            isLandingPage={false}
+            sectionIndex={index}
+          />
+        ))}
+      </>
+    );
   }
 
   // TODO: fix error for when initialBlogPage.data is empty (say slug doesn't exists)
-  if (!initialPage.data && initialBlogPage.data) {
+  if (initialBlogPage.data) {
     const initialPosts = await loadQuery<Post[]>(
       POSTS_QUERY,
       { slug },
@@ -85,23 +92,6 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialPage.data && !initialBlogPage.data) {
-    return (
-      <>
-        {initialPage.data?.sections?.map((section, index) => (
-          <SectionRenderer
-            key={section._key}
-            section={section}
-            isDraftMode={isDraftMode}
-            initialData={initialPage}
-            isLandingPage={false}
-            sectionIndex={index}
-          />
-        ))}
-      </>
-    );
-  }
-
   if (initialCompensationsPage.data) {
     return isDraftMode ? (
       <CompensationsPreview initialCompensations={initialCompensationsPage} />
@@ -110,7 +100,9 @@ async function Page({ params }: Props) {
     );
   }
 
-  return null;
+  console.log(`Page ${slug} not found`);
+  // TODO: add error snackbar
+  redirect("/");
 }
 
 export default Page;
