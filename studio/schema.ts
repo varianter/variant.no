@@ -12,7 +12,7 @@ import posts from "./schemas/documents/post";
 import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/legalDocuments";
 import benefit from "./schemas/documents/benefit";
-import office from "./schemas/documents/office";
+import location from "./schemas/documents/location";
 import compensations from "./schemas/documents/compensations";
 import salaryAndBenefits from "./schemas/documents/salaryAndBenefits";
 import siteSettings from "./schemas/documents/siteSettings";
@@ -35,6 +35,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     compensations,
     salaryAndBenefits,
     benefit,
-    office,
+    location,
   ],
 };
