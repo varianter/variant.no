@@ -4,6 +4,7 @@ import seo from "../objects/seo";
 import locations from "../objects/locations";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
+import { compensationDetails } from "../objects/compensationData";
 
 // maximum number of locations to display in the preview without truncating
 const LOCATIONS_PREVIEW_CUTOFF = 3;
@@ -15,17 +16,21 @@ const compensations = defineType({
   type: "document",
   title: "Compensations",
   fields: [
-    locations,
     title,
     titleSlug,
-    seo,
+    locations,
     defineField({
-      name: "showSalaryCalculator",
-      title: "Show Salary Calculator",
-      description: "Should the salary calculator be visible on the page?",
-      type: "boolean",
-      initialValue: true,
+      ...compensationDetails,
+      readOnly: ({ parent }) => !parent?.showEstimatedSalary,
     }),
+    {
+      name: "showEstimatedSalary",
+      title: "Show Estimated Salary",
+      type: "boolean",
+      description:
+        "Toggle this option to show or hide the estimated salary for the locations you've selected. Disable this if the feature isn't ready or if you prefer not to display salary details at this time.",
+      initialValue: false,
+    },
     defineField({
       name: "benefits",
       title: "Benefits",
@@ -33,6 +38,12 @@ const compensations = defineType({
       type: "array",
       of: [{ type: benefitId }],
     }),
+    {
+      ...seo,
+      options: {
+        collapsed: true,
+      },
+    },
   ],
   preview: {
     select: {
@@ -44,7 +55,7 @@ const compensations = defineType({
       */
       ...[...Array(LOCATIONS_PREVIEW_CUTOFF + 1).keys()].reduce(
         (o, i) => ({ ...o, [`location${i}`]: `locations.${i}.basicTitle` }),
-        {},
+        {}
       ),
     },
     prepare({ title, ...locationsMap }) {
@@ -52,7 +63,7 @@ const compensations = defineType({
         title,
         subtitle: previewStringFromLocationsMap(
           locationsMap,
-          LOCATIONS_PREVIEW_CUTOFF,
+          LOCATIONS_PREVIEW_CUTOFF
         ),
       };
     },
@@ -70,10 +81,10 @@ function previewStringFromLocationsMap(
   locationsMap: {
     [key: string]: string;
   },
-  cutoff: number,
+  cutoff: number
 ): string | undefined {
   const locations = Object.values<string>(locationsMap).filter(
-    (o) => o !== undefined,
+    (o) => o !== undefined
   );
   if (locations.length === 0) {
     return undefined;
