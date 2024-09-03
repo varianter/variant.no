@@ -8,7 +8,7 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
-export interface Office {
+export interface Location {
   _type: string;
   _key: string;
  basicTitle: string;
@@ -25,5 +25,5 @@ export interface CompensationsPage {
   slug: Slug;
   benefits: Benefit[];
   showSalaryCalculator: boolean;
-  offices: Office[]; 
+  locations: Location[]; 
 }

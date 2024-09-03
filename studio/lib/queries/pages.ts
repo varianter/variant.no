@@ -97,7 +97,7 @@ export const COMPENSATIONS_PAGE_QUERY = groq`
     basicTitle,
     richText
   },
-  offices[]->{
+  locations[]->{
     _id,
     _type,  
     basicTitle
