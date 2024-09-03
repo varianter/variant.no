@@ -45,12 +45,19 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
     onChange(set(newPlatform, ["platform"]));
   };
 
+  const urlInputName = "social-url-input";
+  const platformInputName = "social-platform-input";
+
   return (
     <Stack space={6}>
       <Box>
         <Stack space={3}>
-          <Label>URL</Label>
+          <Label htmlFor={urlInputName} as={"label"}>
+            URL
+          </Label>
           <TextInput
+            id={urlInputName}
+            name={urlInputName}
             value={value.url}
             onChange={handleUrlChange}
             placeholder="Enter URL"
@@ -59,8 +66,15 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
       </Box>
       <Box>
         <Stack space={3}>
-          <Label>Platform</Label>
-          <Select value={value.platform} onChange={handlePlatformChange}>
+          <Label htmlFor={platformInputName} as={"label"}>
+            Platform
+          </Label>
+          <Select
+            id={platformInputName}
+            name={platformInputName}
+            value={value.platform}
+            onChange={handlePlatformChange}
+          >
             <option value="">Select Platform</option>
             {Object.values(SoMePlatforms).map((platform) => (
               <option key={platform} value={platform}>
