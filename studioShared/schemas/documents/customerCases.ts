@@ -10,6 +10,11 @@ const customerCases = defineType({
   type: "document",
   title: "Costumer Cases",
   fields: [
+    defineField({
+      name: "language",
+      type: "string",
+      readOnly: true,
+    }),
     title,
     titleSlug,
     defineField({
