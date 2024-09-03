@@ -19,18 +19,7 @@ const compensations = defineType({
     title,
     titleSlug,
     locations,
-    {
-      name: "showEstimatedSalary",
-      title: "Show Estimated Salary",
-      type: "boolean",
-      description:
-        "Toggle this option to show or hide the estimated salary for the locations you've selected. Disable this if the feature isn't ready or if you prefer not to display salary details at this time.",
-      initialValue: false,
-    },
-    defineField({
-      ...compensationDetails,
-      readOnly: ({ parent }) => !parent?.showEstimatedSalary,
-    }),
+    compensationDetails,
     defineField({
       name: "benefits",
       title: "Benefits",
