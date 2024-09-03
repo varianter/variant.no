@@ -4,13 +4,11 @@ import RedirectThumbnail from "../../components/RedirectThumbnail";
 import { pageBuilderID } from "../builders/pageBuilder";
 import { blogId } from "./blog";
 import { compensationsId } from "./compensations";
+import PrefixedSlugInput from "../../components/PrefixedSlugInput";
 
 const slugValidator = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {
     if (!value || !value.current) return "Can't be blank";
-    if (!value.current.startsWith("/")) {
-      return "The path must start with a forward slash ('/')";
-    }
     return true;
   });
 
@@ -37,6 +35,9 @@ const redirect = defineType({
       description: "Which url should this redirect apply for",
       type: "slug",
       validation: slugValidator,
+      components: {
+        input: (props) => PrefixedSlugInput({ prefix: "/", ...props }),
+      },
     }),
     defineField({
       name: "destination",
@@ -85,6 +86,9 @@ const redirect = defineType({
               return true;
             },
           },
+          components: {
+            input: (props) => PrefixedSlugInput({ prefix: "/", ...props }),
+          },
         }),
       ],
     }),
@@ -116,7 +120,7 @@ const redirect = defineType({
         destinationType === "slug" ? destinationSlug : destinationReferenceSlug;
       const title =
         source && destination
-          ? `${source.current} → ${destination}`
+          ? `/${source.current} → /${destination}`
           : undefined;
       return {
         title,
