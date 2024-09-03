@@ -38,12 +38,7 @@ const compensations = defineType({
       type: "array",
       of: [{ type: benefitId }],
     }),
-    {
-      ...seo,
-      options: {
-        collapsed: true,
-      },
-    },
+    seo,
   ],
   preview: {
     select: {
