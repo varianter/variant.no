@@ -1,4 +1,4 @@
-import { UploadButton } from '../../src/utils/uploadthing';
+
 import styles from './bilder.module.css';
 import React, { useEffect, useState } from 'react';
 import Files from './components/Files';
@@ -6,6 +6,7 @@ import '@uploadthing/react/styles.css';
 import bop from './images/bop.svg';
 import Link from 'next/link';
 import arrowLeft from './images/arrow-left.svg'
+import bildeopplastning from './images/bildeopplastning.svg'
 
 export default function Bilder() {
   const [mobile, setMobile] = useState(false);
@@ -35,25 +36,18 @@ console.log((width/21)+(((width / 100) | 0)/4))
   }, []);
   return (
     <main className={styles.main}>
+      <div className={styles.links}>
       <Link className={styles.tilbake} href="/hemsedal24">
           <img src={arrowLeft} width={24} height={28} alt="pil venste" />
           <span>Tilbake</span>
         </Link>
+      <Link className={styles.lastoppbilder} href="/hemsedal24/lastopp">
+      <img src={bildeopplastning} alt="knapp til bildeopplastning" />
+      </Link>
+      </div>
       <div id="header" className={styles.header}>
         <h3>{mobile ? `Bild${'e'.repeat((width/24))}r 📸` : 'Bildeeeeeeeeeeeeeeeeeeeer 📸'}</h3>
-        <div className={styles.uploadDropZone}>
-          <UploadButton
-            className={`${styles.customButton}`}
-            appearance={{container:"items-end"}}
-            /**
-             * @see https://docs.uploadthing.com/api-reference/react#uploadbutton
-             */
-            endpoint="videoAndImage"
-            onClientUploadComplete={(_: any) => {
-              fetchFiles();
-            }}
-          />
-        </div>
+  
       </div>
       {filesData && (
         <div>

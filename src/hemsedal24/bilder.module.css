@@ -3,7 +3,8 @@
   margin-left: 3rem;
   margin-right: 3rem;
 }
-.tilbake {
+.tilbake,
+.lastoppbilder {
   color: var(--color-standard__black);
   margin-bottom: 2rem;
   width: 30%;
@@ -11,25 +12,56 @@
   display: flex;
   gap: 5%;
   flex-direction: row;
-  justify-content: flex-start;
   text-decoration: none;
 }
+.tilbake {
+  justify-content: flex-start;
+}
+.lastoppbilder {
+  justify-content: flex-end;
+}
 
-.tilbake span {
+.tilbake span,
+.lastoppbilder span {
   color: var(--color-standard__black);
   padding: 0 6px 0 0;
   font-weight: 400;
   font-family: 'Graphik Web';
 }
 
-.tilbake img {
+.tilbake img,
+.lastoppbilder img {
   vertical-align: middle;
 }
 
-.tilbake a {
+.tilbake a,
+.lastoppbilder a {
   margin-left: 6rem;
   margin-right: 4rem;
   text-decoration: none;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.links a .child:nth-child(2) {
+  align-items: flex-end;
+}
+
+.uploadSite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  margin: 3rem;
+}
+
+.linksUploadsite {
+  width: 100%;
 }
 .uploadDropZone {
   z-index: 1;
@@ -44,7 +76,7 @@
   width: 25rem;
   background-color: none;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 /* applied to button */
@@ -208,7 +240,7 @@ html {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .uploadDropZone {
+  /*   .uploadDropZone {
     position: fixed;
     bottom: 5%;
     left: 50%;
@@ -220,7 +252,7 @@ html {
     width: auto;
     padding: 0;
     margin: 0;
-  }
+  } */
   .customButton {
     align-items: center;
     justify-content: center;
@@ -247,6 +279,10 @@ html {
   }
   .header > .uploadDropZone {
     width: 100%;
+  }
+
+  .lastoppbilder img {
+    width: 120%;
   }
 
   @-moz-document url-prefix() {

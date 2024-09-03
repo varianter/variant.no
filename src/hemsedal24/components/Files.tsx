@@ -4,7 +4,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import styles from '../bilder.module.css'
 import { useState } from "react";
 import Popover from "./Popover"
-
 export default function Files({ data }: any) {
   const [isPopoverOpen, setIsPopoverOpen] = useState("")
   const [startIndex, setStartIndex]= useState(1)
