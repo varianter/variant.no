@@ -59,6 +59,13 @@ const compensations = defineType({
   },
 });
 
+/**
+ * Generates a preview string based on the selected office locations.
+ *
+ * @param {Object} locationsMap - A map of office titles selected for preview, e.g., { office0: "Trondheim", office1: "Oslo", ... }.
+ * @param {number} cutoff - The maximum number of locations to display before shortening the preview string.
+ * @returns {string|undefined} - A formatted string summarizing the selected locations or `undefined` if no locations are selected.
+ */
 function previewStringFromLocationsMap(
   locationsMap: {
     [key: string]: string;
