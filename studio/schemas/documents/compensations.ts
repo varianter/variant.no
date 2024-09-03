@@ -5,14 +5,7 @@ import locations from "../objects/locations";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 
-/*
- maximum number of locations without preview string shortening
- (should be at least 2)
- given array: ["Trondheim", "Oslo", "Bergen", "Molde"]
- 2 => Trondheim, and more
- 3 => Trondheim, Oslo, and more
- 4 => Trondheim, Oslo, Bergen, and Molde
-*/
+// maximum number of locations to display in the preview without truncating
 const LOCATIONS_PREVIEW_CUTOFF = 3;
 
 export const compensationsId = "compensations";
