@@ -162,7 +162,7 @@
   align-items: center;
 }
 .embla__slide {
-  flex: 0 0 60%;
+  flex: 0 0 40%;
   width: 100%;
   user-select: none;
   padding-left: 3rem;

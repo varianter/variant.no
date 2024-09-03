@@ -34,7 +34,7 @@ export default function Files({ data }: any) {
             <div className={styles.embla__container}>
               {data.files.map((file:any) =>
               <div key = {file.id} className={styles.embla__slide}>
-                <img loading="lazy"  src={`https://utfs.io/f/${file.key}`} alt={`${file.name}`}/>
+                <img src={`https://utfs.io/f/${file.key}`} alt={`${file.name}`}/>
                 </div>
               )}
             </div>
