@@ -8,12 +8,13 @@ import {
   ControlsIcon,
   ProjectsIcon,
   StackCompactIcon,
+  InfoOutlineIcon,
   HeartIcon,
   CaseIcon,
+  HomeIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
-import { postId } from "./documents/post";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 
@@ -22,13 +23,26 @@ export default (S: StructureBuilder) =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Company Information")
+        .title("Company Details")
         .icon(CaseIcon)
         .child(
-          S.document()
-            .schemaType(companyInfoID)
-            .documentId(companyInfoID)
-            .title("Company Information"),
+          S.list()
+            .title("Company Details")
+            .items([
+              S.listItem()
+                .title("Company Information")
+                .icon(InfoOutlineIcon)
+                .child(
+                  S.document()
+                    .schemaType(companyInfoID)
+                    .documentId(companyInfoID)
+                    .title("Company Information"),
+                ),
+              S.listItem()
+                .title("Offices")
+                .icon(HomeIcon)
+                .child(S.documentTypeList("office").title("Offices")),
+            ]),
         ),
       S.listItem()
         .title("Legal Documents")
