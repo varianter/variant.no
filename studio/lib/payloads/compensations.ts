@@ -8,6 +8,12 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
+export interface Office {
+  _type: string;
+  _key: string;
+ basicTitle: string;
+}
+
 export interface CompensationsPage {
   _createdAt: string;
   _id: string;
@@ -19,4 +25,5 @@ export interface CompensationsPage {
   slug: Slug;
   benefits: Benefit[];
   showSalaryCalculator: boolean;
+  offices: Office[]; 
 }

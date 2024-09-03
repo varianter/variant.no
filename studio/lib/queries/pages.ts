@@ -88,7 +88,21 @@ export const BLOG_PAGE_QUERY = groq`
 `;
 
 export const COMPENSATIONS_PAGE_QUERY = groq`
-  *[_type == "compensations" && slug.current == $slug][0]
+  *[_type == "compensations" && slug.current == $slug][0]{
+    _id,
+  basicTitle,
+  showSalaryCalculator,
+  benefits[] {
+    _key,
+    basicTitle,
+    richText
+  },
+  offices[]->{
+    _id,
+    _type,  
+    basicTitle
+  }
+  }
 `;
 
 export const POSTS_QUERY = groq`

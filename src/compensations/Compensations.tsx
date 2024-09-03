@@ -55,6 +55,9 @@ const Compensations = ({ compensations }: CompensationsProps) => {
   return (
     <div className={styles.wrapper}>
       <Text type="h1">{compensations.basicTitle}</Text>
+      {compensations.offices.map((office) => (
+        <Text key={office._key}>{office.basicTitle}</Text>
+     ) )}
       {compensations.showSalaryCalculator && (
         <>
           <SalaryCalculator
