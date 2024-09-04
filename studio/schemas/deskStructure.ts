@@ -37,17 +37,17 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(companyInfoID)
                     .documentId(companyInfoID)
-                    .title("Company Information")
+                    .title("Company Information"),
                 ),
               S.listItem()
                 .title("Company Locations")
                 .icon(PinIcon)
                 .child(
                   S.documentTypeList(companyLocationsID).title(
-                    "Company Locations"
-                  )
+                    "Company Locations",
+                  ),
                 ),
-            ])
+            ]),
         ),
       S.listItem()
         .title("Legal Documents")
@@ -64,7 +64,7 @@ export default (S: StructureBuilder) =>
           S.document()
             .schemaType("navigationManager")
             .documentId("navigationManager")
-            .title("Navigation Manager")
+            .title("Navigation Manager"),
         ),
       S.listItem()
         .title("Dynamic Pages")
@@ -84,7 +84,7 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(blogId)
                     .documentId(blogId)
-                    .title("Blog Overview & Settings")
+                    .title("Blog Overview & Settings"),
                 ),
               S.listItem()
                 .title("Compensations")
@@ -93,8 +93,8 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(compensationsId)
                     .documentId(compensationsId)
-                    .title("Compensations")
+                    .title("Compensations"),
                 ),
-            ])
+            ]),
         ),
     ]);

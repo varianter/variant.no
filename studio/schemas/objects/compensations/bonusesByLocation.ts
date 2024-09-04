@@ -51,7 +51,7 @@ export const bonusesByLocation = defineField({
   validation: (Rule) =>
     Rule.custom((bonusesByLocation, context) => {
       const duplicateCheck = checkForDuplicateLocations(
-        bonusesByLocation as BonusEntry[] | undefined
+        bonusesByLocation as BonusEntry[] | undefined,
       );
 
       if (duplicateCheck !== true) return duplicateCheck;
@@ -79,7 +79,7 @@ interface BonusEntry {
  * @returns {string | true} - Returns an error message if duplicate locations are found, or true if all are unique.
  */
 const checkForDuplicateLocations = (
-  bonusesByLocation: BonusEntry[] | undefined
+  bonusesByLocation: BonusEntry[] | undefined,
 ): string | true => {
   if (!bonusesByLocation) return true;
 
