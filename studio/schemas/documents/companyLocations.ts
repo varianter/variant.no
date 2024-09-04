@@ -1,9 +1,9 @@
-import { defineField } from "sanity";
+import { defineField, defineType } from "sanity";
 
 export const companyLocationsID = "companyLocations";
 export const companyLocationID = "companyLocation";
 
-const companyLocations = defineField({
+const companyLocations = defineType({
   name: companyLocationsID,
   type: "document",
   title: "Location",
