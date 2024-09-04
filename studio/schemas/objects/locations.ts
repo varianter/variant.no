@@ -1,5 +1,5 @@
 import { defineField } from "sanity";
-import { companyLocationsID } from "../documents/companyLocations";
+import { companyLocationID } from "../documents/companyLocations";
 
 export const locationsID = "locations";
 export const locationID = "location";
@@ -10,7 +10,7 @@ export const location = defineField({
   title: "Select a location",
   description:
     "Select the office location this content applies to. If it applies to all locations, you can leave this field empty.",
-  to: [{ type: companyLocationsID }],
+  to: [{ type: companyLocationID }],
   options: {
     disableNew: true,
   },
