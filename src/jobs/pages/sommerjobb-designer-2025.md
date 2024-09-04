@@ -18,10 +18,10 @@ En sommerjobb i Variant er en fin mulighet til å anvende det du har lært på s
 
 </div>
 
-I 2025 tilbyr vi sommerjobb i tre byer: 4 i Trondheim, 4 i Oslo og 1 i Bergen.
+I 2025 tilbyr vi sommerjobb i tre byer: 8 i Trondheim hvorav 4 er designere, 8 i Oslo hvorav 4 er designere og 3 i Bergen hvorav 1 er designere.
 Vi har tro på at både kunder og sluttbrukere får det beste resultatet når vi jobber i tverrfaglige team. Derfor rekrutterer vi også utviklere parallelt. Sammen vil dere jobbe på et av våre spennende oppdrag for kundene våre - selvfølgelig med god støtte, oppfølging og tilrettelegging fra erfarne konsulenter som ønsker at du lykkes.
 
-Som sommerstudent hos oss får du et godt team med deg hos en givende kunde. Her vil du og teamet ditt få bidra til å gjøre hverdagen smooth for reelle brukere. Vi prøver alltid å finne prosjekter som i tillegg til å være lærerike, kan være med på å gjøre verden mer bærekraftig. I 2024 jobbet vi blant annet med Campio - en plattform for booking og administrering av campingplasser. Vi hjalp bønder selge maten de lager direkte til vanlige folk gjennom matfra.no og bisto The Life Balance Company med å fylle verden med litt mer selvmestring. Sammen med Schibsted og Bergens Tidene lagde vi et nytt digitalt hjem for alt fra presseetikk, historie og designretningslinjer, og satt opp verktøyene de trenger for å videreutvikle og forvalte innholdet på en enkel måte.
+Som sommerstudent hos oss får du et godt team med deg hos en givende kunde. Her vil du og teamet ditt få bidra til å gjøre hverdagen smooth for reelle brukere. Vi prøver alltid å finne prosjekter som i tillegg til å være lærerike, kan være med på å gjøre verden mer bærekraftig. I 2024 jobbet vi blant annet med Campio - en plattform for booking og administrering av campingplasser. Samtidig hjalp vi bønder selge maten de lager direkte til vanlige folk gjennom matfra.no og bisto The Life Balance Company med å fylle verden med litt mer selvmestring. Sammen med Schibsted og Bergens Tidene lagde vi et nytt digitalt hjem for alt fra presseetikk, historie og designretningslinjer, og satt opp verktøyene de trenger for å videreutvikle og forvalte innholdet på en enkel måte.
 
 ## Hvorfor jobbe i Variant?
 
@@ -62,9 +62,9 @@ I 2025 vil første arbeidsperiode være fra 9. juni - 4. juli (4 uker). Andre ar
 
 ## Hva ser vi etter i en søknad?
 
-Vi setter pris på en søknad med CV, motivasjonsbrev, karakterutskrift og gjerne også portifolio. Det viktigste for oss er å få et helhetlig bilde. Både av deg som person, din eksisterende kompetanse og dine ambisjoner. Så hvem er du og hvorfor søker du sommerjobb i Variant? Vi ser etter mennesker som bryr seg om å skape en bedre hverdag.
+Vi ønsker en søknad med CV, motivasjonsbrev, karakterutskrift og gjerne også portefølje. Det viktigste for oss er å få et helhetlig bilde. Både av deg som person, din eksisterende kompetanse og dine ambisjoner. Hvem er du og hvorfor søker du sommerjobb i Variant?
 
-Du bestemmer selv hvor du vil søke, men vi er ærlige på at vi håper at sommerjobben kan være første skritt mot å bli en fast Variant. Da kan det være lurt å tenke gjennom hvor du kan se for deg å slå røtter etter studiet. I sommerjobben har du nemlig muligheten til å bli kjent med folk som kan bli dine nærmeste kollegaer etter endt studie, og sommerjobben er like mye for at du også skal kjenne på om Variant er et sted du føler deg komfortabel og hjemme.
+Du bestemmer selv hvilken by du ønsker å søke til, men det er ikke noe hemmelighet at vi håper at sommerjobben kan være første skritt mot å bli en fast Variant. Da kan det være lurt å tenke gjennom hvor du kan se for deg å slå røtter etter studiet. I sommerjobben har du nemlig muligheten til å bli kjent med folk som kan bli dine nærmeste kollegaer etter endt studie. Sommerjobben er like mye for at du skal kjenne på om Variant er et sted du føler deg komfortabel og hjemme, som at vi skal bli kjent med deg.
 
 ## Søknadsfrist
 
