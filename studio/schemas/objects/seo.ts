@@ -37,10 +37,10 @@ const seo = defineField({
         "An optional but recommended short description to boost visitor engagement from social media and search engines. Try to keep it between 70-160 characters.",
       validation: (Rule) => [
         Rule.min(70).warning(
-          "A description of at least 70 characters has a higher chance of converting visitors",
+          "A description of at least 70 characters has a higher chance of converting visitors"
         ),
         Rule.max(160).warning(
-          "A description of more than 160 characters has a lower chance of converting visitors",
+          "A description of more than 160 characters has a lower chance of converting visitors"
         ),
       ],
     }),

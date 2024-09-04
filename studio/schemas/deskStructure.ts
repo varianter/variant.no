@@ -17,6 +17,7 @@ import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
+import { companyLocationsID } from "./documents/companyLocations";
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -36,13 +37,17 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(companyInfoID)
                     .documentId(companyInfoID)
-                    .title("Company Information"),
+                    .title("Company Information")
                 ),
               S.listItem()
-                .title("Locations")
+                .title("Company Locations")
                 .icon(PinIcon)
-                .child(S.documentTypeList("location").title("Locations")),
-            ]),
+                .child(
+                  S.documentTypeList(companyLocationsID).title(
+                    "Company Locations"
+                  )
+                ),
+            ])
         ),
       S.listItem()
         .title("Legal Documents")
@@ -59,7 +64,7 @@ export default (S: StructureBuilder) =>
           S.document()
             .schemaType("navigationManager")
             .documentId("navigationManager")
-            .title("Navigation Manager"),
+            .title("Navigation Manager")
         ),
       S.listItem()
         .title("Dynamic Pages")
@@ -79,14 +84,17 @@ export default (S: StructureBuilder) =>
                   S.document()
                     .schemaType(blogId)
                     .documentId(blogId)
-                    .title("Blog Overview & Settings"),
+                    .title("Blog Overview & Settings")
                 ),
               S.listItem()
                 .title("Compensations")
                 .icon(HeartIcon)
                 .child(
-                  S.documentTypeList(compensationsId).title("Compensations"),
+                  S.document()
+                    .schemaType(compensationsId)
+                    .documentId(compensationsId)
+                    .title("Compensations")
                 ),
-            ]),
+            ])
         ),
     ]);
