@@ -17,6 +17,7 @@ import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
+import { companyLocationsID } from "./documents/companyLocations";
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -39,9 +40,13 @@ export default (S: StructureBuilder) =>
                     .title("Company Information"),
                 ),
               S.listItem()
-                .title("Locations")
+                .title("Company Locations")
                 .icon(PinIcon)
-                .child(S.documentTypeList("location").title("Locations")),
+                .child(
+                  S.documentTypeList(companyLocationsID).title(
+                    "Company Locations",
+                  ),
+                ),
             ]),
         ),
       S.listItem()
@@ -85,7 +90,10 @@ export default (S: StructureBuilder) =>
                 .title("Compensations")
                 .icon(HeartIcon)
                 .child(
-                  S.documentTypeList(compensationsId).title("Compensations"),
+                  S.document()
+                    .schemaType(compensationsId)
+                    .documentId(compensationsId)
+                    .title("Compensations"),
                 ),
             ]),
         ),
