@@ -4,6 +4,7 @@ import seo from "../objects/seo";
 import locations from "../objects/locations";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
+import { compensationDetails } from "../objects/compensationData";
 
 // maximum number of locations to display in the preview without truncating
 const LOCATIONS_PREVIEW_CUTOFF = 3;
@@ -15,9 +16,10 @@ const compensations = defineType({
   type: "document",
   title: "Compensations",
   fields: [
-    locations,
     title,
-    titleSlug,
+    titleSlug, 
+    locations,
+    compensationDetails,
     seo,
     defineField({
       name: "showSalaryCalculator",
