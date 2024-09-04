@@ -70,7 +70,7 @@ type Offer = {
   careers_apply_url: string;
   id: number;
   position: number;
-  department: string;
+  department?: string;
   location: string;
   company_name: string;
 };
@@ -98,7 +98,7 @@ async function getValidityStatuses(department?: Office): Promise<Offer[]> {
 
     if (!department) {
       offers.push(offer);
-    } else if (offer.department.match(officeToDepartmentRegex(department))) {
+    } else if (offer.department?.match(officeToDepartmentRegex(department))) {
       offers.push(offer);
     }
   }
