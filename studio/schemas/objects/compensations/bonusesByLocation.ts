@@ -54,9 +54,7 @@ export const bonusesByLocation = defineField({
         bonusesByLocation as BonusEntry[] | undefined,
       );
 
-      if (duplicateCheck !== true) return duplicateCheck;
-
-      return true;
+      return duplicateCheck;
     }),
 });
 
