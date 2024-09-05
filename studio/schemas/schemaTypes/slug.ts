@@ -56,6 +56,8 @@ function createSlugField(source: string) {
       /*
         make slugs read-only after initial publish
         to avoid breaking shared links
+
+        if new slugs are needed, redirects can be used instead
        */
       return ctx.document !== undefined && isPublished(ctx.document);
     },
