@@ -11,7 +11,7 @@ export const salariesByLocation = defineField({
   name: "salaries",
   title: "Salaries by Location",
   description:
-    "Details of the salaries specific to a particular location. Each location should have a unique entry with the yearly salaries for that location.",
+    "Yearly salary data specific to a particular location. Each location should have a unique entry with the yearly salaries for that location.",
   type: "array",
   of: [
     {
@@ -28,7 +28,8 @@ export const salariesByLocation = defineField({
         defineField({
           name: "yearlySalaries",
           title: "Yearly Salaries",
-          description: "Salary tiers for each year",
+          description:
+            "Salary data reflecting salaries given to employees for a given year. ",
           type: "array",
           options: {
             sortable: false,
@@ -46,6 +47,8 @@ export const salariesByLocation = defineField({
                 defineField({
                   name: "salaries",
                   title: "Salaries",
+                  description:
+                    "Salary amounts for each examination year. File upload expects a CSV file (.csv) containing lines of '{year},{salary}', e.g. '2024,600000'.",
                   type: "string",
                   components: {
                     input: SalariesInput,
