@@ -4,8 +4,8 @@ import {
   DocumentWithLocation,
   checkForDuplicateLocations,
 } from "./utils/validation";
-import { SalariesInput } from "../../../components/SalaryCsvInput/SalariesInput";
 import { companyLocationNameID } from "../../documents/companyLocation";
+import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
 
 export const salariesByLocation = defineField({
   name: "salaries",

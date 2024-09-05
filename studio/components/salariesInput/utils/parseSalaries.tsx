@@ -1,4 +1,4 @@
-import { Result, ResultError, ResultOk } from "../../utils/result";
+import { Result, ResultError, ResultOk } from "../../../utils/result";
 
 export interface Salaries {
   [year: string]: number;
@@ -19,7 +19,7 @@ export type SalariesParseError =
       error:
         | SalariesParseErrorType.INVALID_SHAPE
         | SalariesParseErrorType.INVALID_DATA;
-      rowNumber: number;
+      rowIndex: number;
     }
   | {
       error:
@@ -49,7 +49,7 @@ export function salariesFromCsvString(
     const values = cleanRow.split(",");
     if (values.length != 2) {
       errors.push({
-        rowNumber: i,
+        rowIndex: i,
         error: SalariesParseErrorType.INVALID_SHAPE,
       });
       continue;
@@ -61,7 +61,7 @@ export function salariesFromCsvString(
         VALID_SALARY_REGEX.test(salary)
       )
     ) {
-      errors.push({ rowNumber: i, error: SalariesParseErrorType.INVALID_DATA });
+      errors.push({ rowIndex: i, error: SalariesParseErrorType.INVALID_DATA });
       continue;
     }
     salaries[Number(year)] = Number(salary);

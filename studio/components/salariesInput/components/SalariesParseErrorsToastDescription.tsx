@@ -1,18 +1,18 @@
 import {
   SalariesParseError,
   SalariesParseErrorType,
-} from "./salariesParseUtils";
+} from "../utils/parseSalaries";
 
-function descriptionOfCsvParseError(error: SalariesParseError): string {
+function descriptionOfSalariesParseError(error: SalariesParseError): string {
   switch (error.error) {
     case SalariesParseErrorType.INVALID_FORMAT:
       return "Invalid file type. Only CSV files (extension .csv) are allowed.";
     case SalariesParseErrorType.NO_DATA:
-      return "File is empty. Verify the file content and try again";
+      return "File is empty. Verify the file content and try again.";
     case SalariesParseErrorType.INVALID_SHAPE:
-      return `Row ${error.rowNumber} does not match the format '{year},{salary}'`;
+      return `Row ${error.rowIndex + 1} does not match the format '{year},{salary}'`;
     case SalariesParseErrorType.INVALID_DATA:
-      return `Row ${error.rowNumber} contains invalid salary data. Verify that each line has the format '{year},{salary}'.`;
+      return `Row ${error.rowIndex + 1} contains invalid salary data. Verify that each line has the format '{year},{salary}'.`;
   }
 }
 
@@ -26,7 +26,7 @@ export function SalariesParseErrorsToastDescription({
   return (
     <div>
       {errors.slice(0, maxLines).map((e, i) => (
-        <p key={i}>{descriptionOfCsvParseError(e)}</p>
+        <p key={i}>{descriptionOfSalariesParseError(e)}</p>
       ))}
       {errors.length > maxLines && (
         <p>+ {errors.length - maxLines} more errors</p>
