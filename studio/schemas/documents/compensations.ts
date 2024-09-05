@@ -4,6 +4,7 @@ import seo from "../objects/seo";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
+import { pension } from "../objects/compensations/pension";
 
 export const compensationsId = "compensations";
 
@@ -19,7 +20,15 @@ const compensations = defineType({
         "Enter the primary title that will be displayed at the top of the compensation page. This is what users will see when they visit the page.",
     },
     titleSlug,
-    // add pension here. pension doesn't rely on locations
+    defineField({
+      name: "showSalaryCalculator",
+      title: "Show Salary Calculator",
+      description:
+        "Toggle this setting to show or hide the salary calculator on the page. The salary calculator helps users estimate their total compensation based on various factors such as salary data, pension and bonuses.",
+      type: "boolean",
+      initialValue: true,
+    }),
+    pension,
     bonusesByLocation,
     // add salary here
     // benefits should be updated to match the grouping by location:
