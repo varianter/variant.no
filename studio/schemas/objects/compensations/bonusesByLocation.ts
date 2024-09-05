@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 import { location, locationID } from "../locations";
-import { companyLocationID } from "studio/schemas/documents/companyLocations";
+import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
 
 export const bonusesByLocation = defineField({
   name: "bonusesByLocation",
@@ -37,7 +37,7 @@ export const bonusesByLocation = defineField({
       preview: {
         select: {
           averageBonus: "averageBonus",
-          location: `${locationID}.${companyLocationID}`,
+          location: `${locationID}.${companyLocationNameID}`,
         },
         prepare({ averageBonus, location }) {
           return {

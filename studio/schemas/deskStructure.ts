@@ -17,7 +17,7 @@ import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
-import { companyLocationsID } from "./documents/companyLocations";
+import { companyLocationID } from "./documents/companyLocation";
 
 export default (S: StructureBuilder) =>
   S.list()
@@ -43,7 +43,7 @@ export default (S: StructureBuilder) =>
                 .title("Company Locations")
                 .icon(PinIcon)
                 .child(
-                  S.documentTypeList(companyLocationsID).title(
+                  S.documentTypeList(companyLocationID).title(
                     "Company Locations",
                   ),
                 ),
