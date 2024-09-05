@@ -11,7 +11,7 @@ export const benefitsByLocation = defineField({
   name: "benefitsByLocation",
   title: "Benefits by Location",
   description:
-    "Enter the benefits offered at each office location. You can only have one location entry, but you can list multiple benefits for each office location.",
+    "Specify the benefits offered at each office location. A benefit is only associated with a single location",
   type: "array",
   of: [
     {
