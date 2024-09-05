@@ -5,9 +5,11 @@ import ApplyImgWithBlob from 'src/summersplash2022/img/applyImgWithBlob';
 
 const Apply = ({ applyType }: { applyType: ApplyType }) => {
   const isApplyGraduate = applyType == ApplyType.GRADUATE;
-  const variantImg = require(isApplyGraduate
-    ? 'src/components/page-header/whiteVariant.svg'
-    : 'src/components/page-header/variant.svg');
+  const variantImg = require(
+    isApplyGraduate
+      ? 'src/components/page-header/whiteVariant.svg'
+      : 'src/components/page-header/variant.svg',
+  );
 
   return (
     <section
@@ -46,7 +48,7 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
             href={
               isApplyGraduate
                 ? '/jobs/nyutdannet-designer-2024'
-                : '/jobs/sommerjobb-designer-2024'
+                : '/jobs/sommerjobb-designer-2025'
             }
           >
             Søk som designer
@@ -56,7 +58,7 @@ const Apply = ({ applyType }: { applyType: ApplyType }) => {
             href={
               isApplyGraduate
                 ? '/jobs/nyutdannet-utvikler-2024'
-                : '/jobs/sommerjobb-utvikler-2024'
+                : '/jobs/sommerjobb-utvikler-2025'
             }
           >
             Søk som utvikler
