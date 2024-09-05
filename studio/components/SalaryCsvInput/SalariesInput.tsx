@@ -112,28 +112,26 @@ export const SalariesInput = (props: StringInputProps) => {
       </Inline>
       {salaries && (
         <Grid columns={[2]}>
-          <div className={styles.csvTableHeader}>
-            <span className={styles.csvTableHeaderLabel}>Examination Year</span>
+          <div className={styles.tableHeader}>
+            <span className={styles.tableHeaderLabel}>Examination Year</span>
           </div>
-          <div
-            className={`${styles.csvTableHeader} ${styles.csvTableSalaryHeader}`}
-          >
-            <span className={styles.csvTableHeaderLabel}>Amount</span>
+          <div className={`${styles.tableHeader} ${styles.tableSalaryHeader}`}>
+            <span className={styles.tableHeaderLabel}>Amount</span>
           </div>
           {Object.entries(salaries)
             .toSorted(([a], [b]) => Number(b) - Number(a))
             .map(([year, salary], index) => (
               <>
-                <div key={year} className={styles.csvTableCell}>
+                <div key={year} className={styles.tableCell}>
                   <label htmlFor={`salary-number-input-${year}`}>
-                    <span className={styles.csvTableYearLabel}>{year}</span>
+                    <span className={styles.tableYearLabel}>{year}</span>
                   </label>
                 </div>
-                <div key={`${year}-salary`} className={styles.csvTableCell}>
+                <div key={`${year}-salary`} className={styles.tableCell}>
                   <SalaryNumberInput
                     id={`salary-number-input-${year}`}
                     value={salary}
-                    className={styles.csvTableSalaryInput}
+                    className={styles.tableSalaryInput}
                     onChange={(s) => handleYearSalaryChange(year, s)}
                   />
                 </div>
