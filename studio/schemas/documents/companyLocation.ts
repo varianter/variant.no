@@ -3,7 +3,7 @@ import { defineField, defineType } from "sanity";
 export const companyLocationID = "companyLocation";
 export const companyLocationNameID = "companyLocationName";
 
-const companyLocations = defineType({
+const companyLocation = defineType({
   name: companyLocationID,
   type: "document",
   title: "Location",
@@ -17,4 +17,4 @@ const companyLocations = defineType({
   ],
 });
 
-export default companyLocations;
+export default companyLocation;

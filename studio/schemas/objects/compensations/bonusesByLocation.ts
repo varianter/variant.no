@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 import { location, locationID } from "../locations";
-import { companyLocationNameID } from "studio/schemas/documents/companyLocations";
+import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
 
 export const bonusesByLocation = defineField({
   name: "bonusesByLocation",
