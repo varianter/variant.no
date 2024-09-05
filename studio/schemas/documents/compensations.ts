@@ -24,7 +24,7 @@ const compensations = defineType({
       name: "showSalaryCalculator",
       title: "Show Salary Calculator",
       description:
-        "Toggle this setting to show or hide the salary calculator on the page.",
+        "Toggle this setting to show or hide the salary calculator on the page. The salary calculator helps users estimate their total compensation based on various factors such as salary data, pension and bonuses.",
       type: "boolean",
       initialValue: true,
     }),
