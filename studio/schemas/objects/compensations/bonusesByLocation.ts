@@ -54,10 +54,11 @@ export const bonusesByLocation = defineField({
   ],
   validation: (Rule) =>
     Rule.custom((bonusesByLocation) => {
+      const isNotDuplicate: boolean = checkForDuplicateLocations(
+        bonusesByLocation as DocumentWithLocation[] | undefined,
+      );
       return (
-        checkForDuplicateLocations(
-          bonusesByLocation as DocumentWithLocation[] | undefined,
-        ) ||
+        isNotDuplicate ||
         "Each location should be listed only once in the bonuses list. You can assign the same bonus amount to multiple locations, but make sure no location appears more than once."
       );
     }),

@@ -76,10 +76,11 @@ export const salariesByLocation = defineField({
   ],
   validation: (Rule) =>
     Rule.custom((salariesByLocation) => {
+      const isNotDuplicate: boolean = checkForDuplicateLocations(
+        salariesByLocation as DocumentWithLocation[] | undefined,
+      );
       return (
-        checkForDuplicateLocations(
-          salariesByLocation as DocumentWithLocation[] | undefined,
-        ) ||
+        isNotDuplicate ||
         "Each location should be listed only once in the salaries list. You can assign the same salary data to multiple locations, but make sure no location appears more than once."
       );
     }),
