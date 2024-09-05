@@ -41,6 +41,7 @@ export const SalariesInput = (props: StringInputProps) => {
           />
         ),
         status: "error",
+        duration: 10000,
       });
       return;
     }

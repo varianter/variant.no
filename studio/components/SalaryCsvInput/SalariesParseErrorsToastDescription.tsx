@@ -6,13 +6,13 @@ import {
 function descriptionOfCsvParseError(error: SalariesParseError): string {
   switch (error.error) {
     case SalariesParseErrorType.INVALID_FORMAT:
-      return "File has invalid format";
+      return "Invalid file type. Only CSV files (extension .csv) are allowed.";
     case SalariesParseErrorType.NO_DATA:
-      return "File is empty";
+      return "File is empty. Verify the file content and try again";
     case SalariesParseErrorType.INVALID_SHAPE:
-      return `Row ${error.rowNumber} has does not match format '{year},{salary}'`;
+      return `Row ${error.rowNumber} does not match the format '{year},{salary}'`;
     case SalariesParseErrorType.INVALID_DATA:
-      return `Row ${error.rowNumber} contains invalid data`;
+      return `Row ${error.rowNumber} contains invalid salary data. Verify that each line has the format '{year},{salary}'.`;
   }
 }
 
