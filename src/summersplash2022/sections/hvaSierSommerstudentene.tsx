@@ -42,7 +42,7 @@ const SummerstudentsQuotes = () => {
         className={`${style.section} ${sharedStyle.sectionDarkTeal}`}
         id="hvameneraretssommerstudenter"
       >
-        <h2>Hva mener årets sommerstudenter?</h2>
+        <h2>Hva mener tidligere sommerstudenter?</h2>
         {summerstudentsQuotes.map((student) => (
           <div className={style.summerstudent} key={student.name}>
             <img

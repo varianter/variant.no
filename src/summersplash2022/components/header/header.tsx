@@ -132,7 +132,7 @@ const Header = (props: { white: boolean }) => {
       >
         <header className={style.header}>
           <div className={style.header__logo}>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a aria-label="Variant startside">
                 <img src={require('./variant.svg')} alt="Variant" />
               </a>

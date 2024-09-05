@@ -3,8 +3,6 @@ import Header from 'src/summersplash2022/components/header/header';
 import MoreInfo from 'src/summersplash2022/img/merInfo';
 import { ApplyType } from 'src/summersplash2022/utils/utils';
 import ArrowDown from 'src/summersplash2022/img/arrowDown';
-import GraduateToggleArrow from '../img/graduateToggleArrow';
-import SummerjobToggleArrow from 'src/summersplash2022/img/summerjobToggleArrow';
 import LandingPageImgWithBlob from 'src/summersplash2022/img/landingpageImgWithBlob';
 
 const LandingPage = ({
@@ -20,35 +18,14 @@ const LandingPage = ({
     <>
       <section className={`${style.section} ${className}`} id="forside">
         <Header white={isApplyGraduate ? true : false} />
-        <div className={style.togglePageDiv}>
-          <div
-            className={`${style.togglePage} ${
-              isApplyGraduate ? style.togglePageLightBlue : style.togglePageBlue
-            }
-            `}
-          >
-            <a
-              href="/sommerjobb"
-              className={!isApplyGraduate ? style.toggleActiveBlue : ''}
-            >
-              Sommerjobb
-            </a>
-            <a
-              href="/nyutdannet"
-              className={isApplyGraduate ? style.toggleActiveLightBlue : ''}
-            >
-              Nyutdannet
-            </a>
-          </div>
-          {isApplyGraduate ? <SummerjobToggleArrow /> : <GraduateToggleArrow />}
-        </div>
+        <div className={style.togglePageDiv}></div>
         <div className={style.flex}>
           <h1>
             Vi ser etter
             <span className={style.textGradient}>
-              {isApplyGraduate ? ' 4 nyutdannede ' : ' 23 sommervarianter '}
+              {isApplyGraduate ? ' 4 nyutdannede ' : ' 19 sommervarianter '}
             </span>
-            i 2024!
+            i 2025!
           </h1>
           <div className={style.applyDiv}>
             <div>
