@@ -4,6 +4,7 @@ import seo from "../objects/seo";
 import { title } from "../fields/text";
 import { benefitId } from "./benefit";
 import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
+import { pension } from "../objects/compensations/pension";
 
 export const compensationsId = "compensations";
 
@@ -20,6 +21,7 @@ const compensations = defineType({
     },
     titleSlug,
     // add pension here. pension doesn't rely on locations
+    pension, 
     bonusesByLocation,
     // add salary here
     // benefits should be updated to match the grouping by location:
