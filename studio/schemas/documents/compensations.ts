@@ -20,7 +20,13 @@ const compensations = defineType({
         "Enter the primary title that will be displayed at the top of the compensation page. This is what users will see when they visit the page.",
     },
     titleSlug,
-    // add pension here. pension doesn't rely on locations
+    defineField({
+      name: "showSalaryCalculator",
+      title: "Show Salary Calculator",
+      description: "Should the salary calculator be visible on the page?",
+      type: "boolean",
+      initialValue: true,
+    }),
     pension, 
     bonusesByLocation,
     // add salary here
