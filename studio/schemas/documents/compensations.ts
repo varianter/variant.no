@@ -27,7 +27,7 @@ const compensations = defineType({
       type: "boolean",
       initialValue: true,
     }),
-    pension, 
+    pension,
     bonusesByLocation,
     // add salary here
     // benefits should be updated to match the grouping by location:
