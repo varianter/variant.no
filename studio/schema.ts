@@ -14,7 +14,6 @@ import legalDocument from "./schemas/documents/legalDocuments";
 import benefit from "./schemas/documents/benefit";
 import companyLocations from "./schemas/documents/companyLocations";
 import compensations from "./schemas/documents/compensations";
-import salaryAndBenefits from "./schemas/documents/salaryAndBenefits";
 import siteSettings from "./schemas/documents/siteSettings";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -33,7 +32,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
-    salaryAndBenefits,
     benefit,
     companyLocations,
   ],
