@@ -41,6 +41,8 @@ export const salariesByLocation = defineField({
                 defineField({
                   name: "year",
                   title: "Year",
+                  description:
+                    "The calendar year for which these salaries were in effect",
                   type: "number",
                   validation: (Rule) => Rule.required().min(2018),
                 }),
