@@ -23,7 +23,7 @@ const compensations = defineType({
     defineField({
       name: "showSalaryCalculator",
       title: "Show Salary Calculator",
-      description: "Should the salary calculator be visible on the page?",
+      description: "Toggle this setting to show or hide the salary calculator on the page.",
       type: "boolean",
       initialValue: true,
     }),
