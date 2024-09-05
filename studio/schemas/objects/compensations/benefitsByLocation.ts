@@ -51,10 +51,12 @@ export const benefitsByLocation = defineField({
   ],
   validation: (Rule) =>
     Rule.custom((benefitsByLocation) => {
+      const isNotDuplicate: boolean = checkForDuplicateLocations(
+        benefitsByLocation as DocumentWithLocation[] | undefined,
+      );
       return (
-        checkForDuplicateLocations(
-          benefitsByLocation as DocumentWithLocation[] | undefined,
-        ) || "Each location should be listed only once in the benefits list."
+        isNotDuplicate ||
+        "Each location should be listed only once in the benefits list."
       );
     }),
 });
