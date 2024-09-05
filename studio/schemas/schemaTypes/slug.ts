@@ -1,4 +1,5 @@
 import { defineField, SlugValidationContext } from "sanity";
+import { isPublished } from "../../utils/documentUtils";
 
 async function isSlugUniqueAcrossAllDocuments(
   slug: string,
@@ -51,6 +52,13 @@ function createSlugField(source: string) {
           "Slug can only consist of latin letters, digits, hyphen (-), underscore (_), full stop (.) and tilde (~)"
         );
       }),
+    readOnly: (ctx) => {
+      /*
+        make slugs read-only after initial publish
+        to avoid breaking shared links
+       */
+      return ctx.document !== undefined && isPublished(ctx.document);
+    },
   });
 }
 
