@@ -13,7 +13,7 @@ export const pension = defineField({
         context.document?.showSalaryCalculator &&
         (value === undefined || value === null)
       ) {
-        return "Pension percentage is required when the salary calculator is shown.";
+        return "Please enter a pension percentage. This is required when the salary calculator is enabled.";
       }
       if (value !== undefined && (value < 0 || value > 100)) {
         return "Pension percentage must be a positive value and less than or equal to 100";
