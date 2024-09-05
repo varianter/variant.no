@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
 import Compensations from "src/compensations/Compensations";
@@ -17,6 +16,8 @@ import {
 } from "studio/lib/queries/pages";
 import { loadQuery } from "studio/lib/store";
 import CompensationsPreview from "src/compensations/CompensationsPreview";
+import { homeLink } from "../../../blog/components/utils/linkTypes";
+import CustomErrorMessage from "../../../blog/components/customErrorMessage/CustomErrorMessage";
 
 export const dynamic = "force-dynamic";
 
@@ -31,6 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return generateMetadataFromSeo(seo);
 }
+
+const Page404 = (
+  <CustomErrorMessage
+    title="404 — Something went wrong"
+    body="The page you are looking for does not exist. There may be an error in the URL, or the page may have been moved or deleted."
+    link={homeLink}
+  />
+);
 
 async function Page({ params }: Props) {
   const { slug } = params;
@@ -47,18 +56,24 @@ async function Page({ params }: Props) {
       ),
     ]);
 
-  if (
-    !initialPage.data &&
-    !initialBlogPage.data &&
-    !initialCompensationsPage.data
-  ) {
-    console.log(`Page ${slug} not found`);
-    // TODO: add error snackbar
-    redirect("/");
+  if (initialPage.data) {
+    return (
+      <>
+        {initialPage.data?.sections?.map((section, index) => (
+          <SectionRenderer
+            key={section._key}
+            section={section}
+            isDraftMode={isDraftMode}
+            initialData={initialPage}
+            isLandingPage={false}
+            sectionIndex={index}
+          />
+        ))}
+      </>
+    );
   }
 
-  // TODO: fix error for when initialBlogPage.data is empty (say slug doesn't exists)
-  if (!initialPage.data && initialBlogPage.data) {
+  if (initialBlogPage.data) {
     const initialPosts = await loadQuery<Post[]>(
       POSTS_QUERY,
       { slug },
@@ -66,8 +81,7 @@ async function Page({ params }: Props) {
     );
 
     if (!initialPosts) {
-      console.log(`Posts for page: ${slug} not found`);
-      // TODO: ADD ERROR PAGE
+      return Page404;
     }
 
     return isDraftMode ? (
@@ -85,23 +99,6 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialPage.data && !initialBlogPage.data) {
-    return (
-      <>
-        {initialPage.data?.sections?.map((section, index) => (
-          <SectionRenderer
-            key={section._key}
-            section={section}
-            isDraftMode={isDraftMode}
-            initialData={initialPage}
-            isLandingPage={false}
-            sectionIndex={index}
-          />
-        ))}
-      </>
-    );
-  }
-
   if (initialCompensationsPage.data) {
     return isDraftMode ? (
       <CompensationsPreview initialCompensations={initialCompensationsPage} />
@@ -110,7 +107,7 @@ async function Page({ params }: Props) {
     );
   }
 
-  return null;
+  return Page404;
 }
 
 export default Page;
