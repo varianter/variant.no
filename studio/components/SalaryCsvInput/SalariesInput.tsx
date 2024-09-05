@@ -112,6 +112,14 @@ export const SalariesInput = (props: StringInputProps) => {
       </Inline>
       {salaries && (
         <Grid columns={[2]}>
+          <div className={styles.csvTableHeader}>
+            <span className={styles.csvTableHeaderLabel}>Examination Year</span>
+          </div>
+          <div
+            className={`${styles.csvTableHeader} ${styles.csvTableSalaryHeader}`}
+          >
+            <span className={styles.csvTableHeaderLabel}>Amount</span>
+          </div>
           {Object.entries(salaries)
             .toSorted(([a], [b]) => Number(b) - Number(a))
             .map(([year, salary], index) => (

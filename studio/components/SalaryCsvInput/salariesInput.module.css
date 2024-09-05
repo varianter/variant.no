@@ -58,20 +58,34 @@
   color: black;
 }
 
-.csvTableCell {
+.csvTableHeader {
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+.csvTableSalaryHeader {
+  justify-content: end;
+  padding-right: 1.25rem;
+}
+
+.csvTableCell,
+.csvTableHeader {
   display: flex;
   align-items: center;
-  font-size: 0.95rem;
   padding: 0.25rem;
 }
 
-.csvTableCell:nth-child(4n + 1),
-.csvTableCell:nth-child(4n + 2) {
+.csvTableCell {
+  font-size: 0.95rem;
+}
+
+.csvTableCell:nth-child(4n),
+.csvTableCell:nth-child(4n + 3) {
   background-color: #f5f5f5;
 }
 
-[data-scheme="dark"] .csvTableCell:nth-child(4n + 1),
-[data-scheme="dark"] .csvTableCell:nth-child(4n + 2) {
+[data-scheme="dark"] .csvTableCell:nth-child(4n),
+[data-scheme="dark"] .csvTableCell:nth-child(4n + 3) {
   background-color: #212121;
 }
 
@@ -85,6 +99,7 @@
   background-color: transparent;
 }
 
+.csvTableHeaderLabel,
 .csvTableYearLabel {
   padding: 0.5rem;
 }
