@@ -5,8 +5,7 @@ export const pension = defineField({
   title: "Pension Percentage",
   type: "number",
   initialValue: 7,
-  description:
-    `Specify the percentage of the pension provided by Variant for employees. The value should be a positive number and will be used to calculate the pension amount.`,
+  description: `Specify the percentage of the pension provided by Variant for employees. The value should be a positive number and will be used to calculate the pension amount.`,
   validation: (Rule) =>
     Rule.custom((value, context) => {
       if (
