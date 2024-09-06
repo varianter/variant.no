@@ -1,5 +1,3 @@
-import { getBackground } from "./background";
-
 interface OpenGraphImageProps {
   title: string;
   description?: string;
@@ -12,7 +10,7 @@ const OpenGraphImage = ({ title, description }: OpenGraphImageProps) => {
         display: "flex",
         flexDirection: "column",
         color: "white",
-        background: getBackground(),
+        background: "#13141b",
         width: "100%",
         height: "100%",
         padding: "0 75px",
@@ -29,7 +27,6 @@ const OpenGraphImage = ({ title, description }: OpenGraphImageProps) => {
       >
         <span
           style={{
-            fontFamily: "Recoleta",
             fontSize: 78,
           }}
         >
@@ -38,8 +35,6 @@ const OpenGraphImage = ({ title, description }: OpenGraphImageProps) => {
         {description && (
           <span
             style={{
-              fontFamily: "Graphik",
-              fontWeight: 400,
               fontSize: 36,
             }}
           >
