@@ -1,7 +1,7 @@
 /* global var */
 :root {
-  --recoleta-font-family: 'Recoleta';
-  --graphik-font-family: 'Graphik Web';
+  --recoleta-font-family: 'Recoleta', serif;
+  --graphik-font-family: 'Graphik Web', Arial, sans-serif;
 }
 
 /* Felles styling*/

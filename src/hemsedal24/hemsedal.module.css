@@ -18,7 +18,7 @@
   color: var(--color-standard__black);
   margin: 0;
   padding: 0;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@
 .tur h1,
 .tur h2,
 .tur h3 {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
 }
 
 .bunninfo h2 {
@@ -48,7 +48,7 @@
   color: var(--color-standard__black);
   padding: 0 6px 0 0;
   font-weight: 400;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
 }
 
 .tilbake img {
@@ -82,7 +82,7 @@
   color: var(--color-standard__black);
   padding: 0 6px 0 0;
   font-weight: 400;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
   font-size: 1rem;
 }
 
@@ -305,7 +305,7 @@ details[open] .disclosureArrow {
   }
 
   .program h2 {
-    font-family: 'Graphik Web';
+    font-family: 'Graphik Web', Arial, sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;

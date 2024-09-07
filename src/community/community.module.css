@@ -62,7 +62,7 @@
 }
 
 .main-content h3 {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-weight: 500;
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -232,7 +232,7 @@
 }
 
 .contact-section__flavor-text {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   display: flex;
   flex-direction: row-reverse;
   font-weight: 500;
@@ -299,7 +299,7 @@
 }
 
 .contact-section__card__info__title {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
 }
 
 .contact-section__card__info__description {

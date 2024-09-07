@@ -26,7 +26,7 @@
 }
 
 .nav-row {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-weight: 500;
   display: flex;
   gap: 2rem;

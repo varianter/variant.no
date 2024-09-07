@@ -67,7 +67,7 @@
 }
 
 .startskudd__info > div p:nth-child(1) {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.7rem;

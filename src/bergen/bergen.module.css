@@ -208,7 +208,7 @@ hack to avoid having to rewrite how employee tiles work for now.... */
 }
 
 .forecast_heading {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   text-align: right;
   min-width: 8rem;
 }

@@ -10,7 +10,7 @@
 }
 
 .clock > p {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -34,7 +34,7 @@
 }
 
 .clock__time > div p:nth-child(1) {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-size: 3rem;
   line-height: 4rem;
 }
