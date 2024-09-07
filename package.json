@@ -44,6 +44,7 @@
     "embla-carousel-react": "^8.2.0",
     "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
+    "isomorphic-dompurify": "^2.15.0",
     "markdown-it": "^13.0.2",
     "next": "^14.0.2",
     "next-images": "^1.8.5",
