@@ -3,7 +3,7 @@
   color: #fff;
   margin: 0;
   padding: 0;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
   min-height: 100vh;
   overflow: auto;
   font-weight: 400;
@@ -12,7 +12,7 @@
 .tur h1,
 .tur h2,
 .tur h3 {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
 }
 
 .tur h2 {
@@ -62,7 +62,7 @@
 .navigation > a {
   font-size: 16px;
   line-height: 24px;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
   justify-content: center;
   display: flex;
 }

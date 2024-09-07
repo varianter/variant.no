@@ -13,7 +13,7 @@
   color: var(--Primary-Default, #e61a6b);
 
   /* Heading 4 / Regular */
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   font-size: 1.675rem;
   font-style: normal;
   font-weight: 500;
@@ -34,7 +34,7 @@
   list-style: none;
   font-size: 110%;
   font-weight: 400;
-  font-family: 'Graphik Web';
+  font-family: 'Graphik Web', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -84,7 +84,7 @@ a {
   }
 
   .day > h2 {
-    font-family: 'Graphik Web';
+    font-family: 'Graphik Web', Arial, sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;

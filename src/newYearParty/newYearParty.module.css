@@ -19,7 +19,7 @@ p {
 }
 
 .newyearParty__invitation__overHeader {
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
 }
 
 .newyearParty__invitation__underHeader {
@@ -30,7 +30,7 @@ p {
 
 .newyearParty__invitation__underHeader p {
   margin-top: 0;
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
 }
 
 .newyearParty__invitation_ingress {

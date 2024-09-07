@@ -16,7 +16,7 @@
 
 .blobName {
   position: absolute;
-  font-family: 'Recoleta';
+  font-family: 'Recoleta', serif;
   top: -3rem;
   width: max-content;
 }
