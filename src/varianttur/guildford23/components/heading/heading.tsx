@@ -22,7 +22,7 @@ const Heading = () => {
         <h2 className={style.subHeading}>1.-3. september</h2>
       </div>
     </div>
-  )
+  );
 };
 
 export default Heading;

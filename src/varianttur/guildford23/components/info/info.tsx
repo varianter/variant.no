@@ -3,13 +3,12 @@ import Navbar, { NavItem } from './../navbar/navbar';
 
 const Info = () => {
   return (
-    <div id='info' className={style.infoContainer}>
+    <div id="info" className={style.infoContainer}>
       <div className={style.info}>
         <div className={style.navbarContainer}>
           <Navbar selectedNavItem={NavItem.INFO} />
         </div>
-        <div className={style.hotelBlobContainer}>
-        </div>
+        <div className={style.hotelBlobContainer}></div>
         <div className={style.hotelTextContainer}>
           <h3>Harbour Hotel Guildford</h3>
           <div className={style.addressContainer}>
@@ -40,18 +39,29 @@ const Info = () => {
             </div>
           </div>
         </div>
-        <div className={style.foodBlobContainer}>
-        </div>
+        <div className={style.foodBlobContainer}></div>
         <div className={style.foodTextContainer}>
           <h3>Allergier og matpreferanser</h3>
-          <p>Har du allergier eller matpreferanser og vil være <em>helt</em> sikker på at det er tatt hensyn til? Dobbeltsjekk heller med oss enn å lure, det gjør det bedre både for deg og oss!</p>
+          <p>
+            Har du allergier eller matpreferanser og vil være <em>helt</em>{' '}
+            sikker på at det er tatt hensyn til? Dobbeltsjekk heller med oss enn
+            å lure, det gjør det bedre både for deg og oss!
+          </p>
         </div>
         <div className={style.imageContainer}>
           <div className={style.hotelImageContainer}>
-            <img src='/images/varianttur/hotel.png' alt='Hotel' className={style.image} />
+            <img
+              src="/images/varianttur/hotel.png"
+              alt="Hotel"
+              className={style.image}
+            />
           </div>
           <div className={style.restaurantImageContainer}>
-            <img src='/images/varianttur/restaurant.png' alt='Restaurant' className={style.image} />
+            <img
+              src="/images/varianttur/restaurant.png"
+              alt="Restaurant"
+              className={style.image}
+            />
           </div>
         </div>
       </div>

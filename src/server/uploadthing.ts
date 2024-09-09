@@ -1,5 +1,5 @@
-import { createUploadthing } from "uploadthing/next-legacy";
-import type { FileRouter } from "uploadthing/next-legacy";
+import { createUploadthing } from 'uploadthing/next-legacy';
+import type { FileRouter } from 'uploadthing/next-legacy';
 import { UTApi } from 'uploadthing/server';
 const f = createUploadthing({
   /**
@@ -7,8 +7,8 @@ const f = createUploadthing({
    * @see https://docs.uploadthing.com/errors#error-formatting
    */
   errorFormatter: (err) => {
-    console.log("Error uploading file", err.message);
-    console.log("  - Above error caused by:", err.cause);
+    console.log('Error uploading file', err.message);
+    console.log('  - Above error caused by:', err.cause);
 
     return { message: err.message };
   },
@@ -21,11 +21,11 @@ const f = createUploadthing({
 export const uploadRouter = {
   videoAndImage: f({
     image: {
-      maxFileSize: "16MB",
+      maxFileSize: '16MB',
       maxFileCount: 20,
     },
     video: {
-      maxFileSize: "16MB",
+      maxFileSize: '16MB',
     },
   })
     .middleware(({ req }) => {
@@ -37,16 +37,16 @@ export const uploadRouter = {
       // }
 
       // Return some metadata to be stored with the file
-      return { foo: "bar" as const };
+      return { foo: 'bar' as const };
     })
     .onUploadComplete(({ file, metadata }) => {
       metadata;
       // ^?
-      console.log("upload completed", file);
+      console.log('upload completed', file);
     }),
 } satisfies FileRouter;
 
 export const utapi = new UTApi({
-    apiKey: process.env.UPLOADTHING_SECRET
-})
+  apiKey: process.env.UPLOADTHING_SECRET,
+});
 export type OurFileRouter = typeof uploadRouter;

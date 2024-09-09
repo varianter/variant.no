@@ -9,7 +9,6 @@ import hund from './images/hund.svg';
 import sykling from './images/sykling.svg';
 import via from './images/viaferrata.svg';
 const Activities: NextPage = () => {
-
   return (
     <div id="top" className={styles.tur}>
       <meta name="theme-color" content="#EDE8D7" />

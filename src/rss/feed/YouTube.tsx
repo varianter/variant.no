@@ -6,7 +6,11 @@ import { truncateOnSpace } from './utils';
 
 export default function YouTube({ item }: { item: YoutubeVideoItem }) {
   return (
-    <a className={and(style.card, style['card--youtube'])} href={item.url} target="_blank">
+    <a
+      className={and(style.card, style['card--youtube'])}
+      href={item.url}
+      target="_blank"
+    >
       <figure className={style.media}>
         <BaseBlob
           height={200}

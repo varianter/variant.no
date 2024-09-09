@@ -26,7 +26,10 @@
   line-height: 1.6;
 }
 .rendered__markdown__wrapper h4 {
-  font-family: Graphik Web, Arial, sans-serif;
+  font-family:
+    Graphik Web,
+    Arial,
+    sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
@@ -71,7 +74,10 @@
 .rendered__markdown__wrapper blockquote {
   margin: 2rem auto;
   position: relative;
-  font-family: Graphik Web, Arial, sans-serif;
+  font-family:
+    Graphik Web,
+    Arial,
+    sans-serif;
   font-size: 1.875rem;
   line-height: 2.875rem;
   padding: 3rem;

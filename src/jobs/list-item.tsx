@@ -18,7 +18,10 @@ export default function JobListingItem({ item }: JobListingItemProps) {
         <h3 className={and(style.job__title, 'fancy')}>{item.title}</h3>
         <span>{item.location}</span>
       </div>
-      <ButtonNextLink href={`/jobs/${item.name}`} aria-label={`Se på stillingen ${item.title} ${item.location}`}>
+      <ButtonNextLink
+        href={`/jobs/${item.name}`}
+        aria-label={`Se på stillingen ${item.title} ${item.location}`}
+      >
         Se på stillingen
       </ButtonNextLink>
     </section>

@@ -62,7 +62,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "gen:pay": "node tools/pay.js",
     "analyze-bundle": "ANALYZE=true yarn build",
     "prepare": "husky install",
@@ -75,7 +75,7 @@
     "not op_mini all"
   ],
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "**/*.{js,ts,tsx}": "eslint --cache --fix",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

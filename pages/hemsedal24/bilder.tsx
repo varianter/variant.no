@@ -1,1 +1,1 @@
-export {default} from '../../src/hemsedal24/bilder'
+export { default } from '../../src/hemsedal24/bilder';

@@ -1,1 +1,1 @@
-export {default} from "src/startskudd"
+export { default } from 'src/startskudd';
