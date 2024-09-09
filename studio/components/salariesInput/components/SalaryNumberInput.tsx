@@ -1,4 +1,4 @@
-import { HTMLProps, useState, ChangeEvent } from "react";
+import { HTMLProps, useState, ChangeEvent, useEffect } from "react";
 import { VALID_SALARY_REGEX } from "../utils/parseSalaries";
 
 type SalaryNumberInputProps = Omit<
@@ -15,6 +15,10 @@ export default function SalaryNumberInput({
   ...props
 }: SalaryNumberInputProps) {
   const [rawValue, setRawValue] = useState<string>(value.toString());
+
+  useEffect(() => {
+    setRawValue(value.toString());
+  }, [value]);
 
   function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
     const newRawValue = e.target.value;
