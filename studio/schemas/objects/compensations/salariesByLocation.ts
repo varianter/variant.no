@@ -32,9 +32,6 @@ export const salariesByLocation = defineField({
           description:
             "Salary data reflecting salaries given to employees for a given year. ",
           type: "array",
-          options: {
-            sortable: false,
-          },
           of: [
             {
               type: "object",
