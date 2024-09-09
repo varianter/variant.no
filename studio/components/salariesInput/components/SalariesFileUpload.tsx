@@ -63,15 +63,13 @@ const SalariesFileUpload = ({
         accept=".csv"
       />
       <Box className={styles.uploadButtonWrapper}>
-        <button className={styles.uploadButton} tabIndex={-1}>
-          <label
-            htmlFor={UPLOAD_CSV_INPUT_ID}
-            className={styles.uploadButtonContent}
-          >
-            <UploadIcon className={styles.uploadButtonIcon} />
-            <span className={styles.uploadButtonText}>Upload (.csv)</span>
-          </label>
-        </button>
+        <label
+          htmlFor={UPLOAD_CSV_INPUT_ID}
+          className={styles.uploadButtonContent}
+        >
+          <UploadIcon className={styles.uploadButtonIcon} />
+          <span className={styles.uploadButtonText}>Upload (.csv)</span>
+        </label>
       </Box>
     </div>
   );
