@@ -2,10 +2,8 @@ import { defineField } from "sanity";
 import { location, locationID } from "../locations";
 import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
 import { benefitId } from "studio/schemas/documents/benefit";
-import {
-  checkForDuplicateLocations,
-  DocumentWithLocation,
-} from "studio/utils/checkForDuplicateLocations";
+import { checkForDuplicateLocations, DocumentWithLocation } from "./utils/validation";
+
 
 export const benefitsByLocation = defineField({
   name: "benefitsByLocation",
