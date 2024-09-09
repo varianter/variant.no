@@ -45,8 +45,8 @@ export const bonusesByLocation = defineField({
         },
         prepare({ averageBonus, location }) {
           return {
-            title: `Average Bonus: ${averageBonus || "N/A"}`,
-            subtitle: `Location: ${location || "No location selected"}`,
+            title: location || "No location selected",
+            subtitle: averageBonus || "N/A",
           };
         },
       },
