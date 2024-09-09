@@ -183,6 +183,8 @@ By using fetchWithToken, you ensure that all data fetching happens securely, wit
 
 ### OpenGraph image customization
 
+As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified. Fonts and background can be customized as shown below.
+
 #### Custom fonts
 
 The following font utils file can be defined:
