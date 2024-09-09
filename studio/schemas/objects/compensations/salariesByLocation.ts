@@ -6,6 +6,7 @@ import {
 } from "./utils/validation";
 import { companyLocationNameID } from "../../documents/companyLocation";
 import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
+import { SalariesPage } from "../../../lib/payloads/compensations";
 
 export const salariesByLocation = defineField({
   name: "salaries",
@@ -69,11 +70,21 @@ export const salariesByLocation = defineField({
       preview: {
         select: {
           location: `${locationID}.${companyLocationNameID}`,
+          yearlySalaries: `yearlySalaries`,
         },
-        prepare({ location }) {
+        prepare({ location, yearlySalaries }) {
+          const latestYear =
+            yearlySalaries && yearlySalaries.length > 0
+              ? yearlySalaries.reduce((acc: number, salaries: SalariesPage) => {
+                  if (salaries.year > acc) {
+                    return salaries.year;
+                  }
+                  return acc;
+                }, yearlySalaries[0].year)
+              : undefined;
           return {
             title: location || "No location selected",
-            subtitle: "Location Salaries",
+            subtitle: latestYear ? `Latest year: ${latestYear}` : "N/A",
           };
         },
       },

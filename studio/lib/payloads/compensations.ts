@@ -8,6 +8,13 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
+export interface SalariesPage {
+  _type: string;
+  _key: string;
+  year: number;
+  salaries: string;
+}
+
 export interface CompensationsPage {
   _createdAt: string;
   _id: string;
