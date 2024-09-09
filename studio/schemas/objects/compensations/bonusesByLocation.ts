@@ -1,6 +1,10 @@
 import { defineField } from "sanity";
 import { location, locationID } from "../locations";
 import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
+import {
+  DocumentWithLocation,
+  checkForDuplicateLocations,
+} from "./utils/validation";
 
 export const bonusesByLocation = defineField({
   name: "bonusesByLocation",
@@ -49,47 +53,12 @@ export const bonusesByLocation = defineField({
     }),
   ],
   validation: (Rule) =>
-    Rule.custom((bonusesByLocation, context) => {
-      const duplicateCheck = checkForDuplicateLocations(
-        bonusesByLocation as BonusEntry[] | undefined,
+    Rule.custom((bonusesByLocation) => {
+      return (
+        checkForDuplicateLocations(
+          bonusesByLocation as DocumentWithLocation[] | undefined,
+        ) ||
+        "Each location should be listed only once in the bonuses list. You can assign the same bonus amount to multiple locations, but make sure no location appears more than once."
       );
-
-      return duplicateCheck;
     }),
 });
-
-interface LocationReference {
-  _ref: string;
-  _type: string;
-  title?: string;
-}
-
-interface BonusEntry {
-  location: LocationReference;
-  averageBonus: number;
-}
-
-/**
- * Checks for duplicate location references in the bonusesByLocation array.
- * Ensures each location has a unique bonus entry.
- *
- * @param {BonusEntry[] | undefined} bonusesByLocation - The array of bonus entries, each with one or more locations.
- * @returns {string | true} - Returns an error message if duplicate locations are found, or true if all are unique.
- */
-const checkForDuplicateLocations = (
-  bonusesByLocation: BonusEntry[] | undefined,
-): string | true => {
-  if (!bonusesByLocation) return true;
-
-  const locationRefs = bonusesByLocation
-    .map((entry) => entry.location?._ref)
-    .filter(Boolean);
-
-  const uniqueRefs = new Set(locationRefs);
-
-  if (uniqueRefs.size !== locationRefs.length) {
-    return "Each location should be listed only once in the bonuses list. You can assign the same bonus amount to multiple locations, but make sure no location appears more than once.";
-  }
-
-  return true;
-};
