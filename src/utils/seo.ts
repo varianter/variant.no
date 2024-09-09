@@ -26,6 +26,7 @@ type CompanyInfo = {
   brandAssets: {
     favicon: string;
   };
+  defaultSEO: SeoData;
 };
 
 export async function fetchSeoData(
@@ -95,12 +96,14 @@ export async function generateMetadataFromSeo(
     title: title,
     ...(description ? { description: description } : {}),
   })}`;
+  const imageUrl =
+    seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl || fallbackImageUrl;
 
   return {
     title: title,
     description: description,
     openGraph: {
-      images: [seo?.imageUrl ?? fallbackImageUrl],
+      images: [imageUrl],
     },
     icons: { icon: icons },
     keywords: keywords,
