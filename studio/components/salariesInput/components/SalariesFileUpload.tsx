@@ -12,11 +12,13 @@ import { ChangeEvent, useState, MouseEvent } from "react";
 const UPLOAD_CSV_INPUT_ID = "upload-csv-input";
 
 interface SalariesFileUploadProps {
+  hasValue?: boolean;
   onSalariesChanged: (salaries: Salaries) => void;
   onParseErrors: (errors: SalariesParseError[]) => void;
 }
 
 const SalariesFileUpload = ({
+  hasValue,
   onSalariesChanged,
   onParseErrors,
 }: SalariesFileUploadProps) => {
@@ -78,10 +80,12 @@ const SalariesFileUpload = ({
         <Box className={styles.uploadButtonWrapper}>
           <label
             htmlFor={UPLOAD_CSV_INPUT_ID}
-            className={styles.uploadButtonContent}
+            className={`${styles.uploadButtonContent}${hasValue ? ` ${styles.hasValue}` : ""}`}
           >
             <UploadIcon className={styles.uploadButtonIcon} />
-            <span className={styles.uploadButtonText}>Upload (.csv)</span>
+            <span className={styles.uploadButtonText}>
+              {hasValue ? "Re-upload" : "Upload"} (.csv)
+            </span>
           </label>
         </Box>
         {filename && (

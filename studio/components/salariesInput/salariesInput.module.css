@@ -23,14 +23,28 @@
   padding: 0.45rem 0.6rem 0.45rem 0.5rem !important;
   background-color: #252837; /* TODO: find Sanity Studio color variable */
   border-radius: 0.1875rem;
+  color: white;
 
   &:hover {
     background-color: #1b1d27; /* TODO: find Sanity Studio color variable */
+  }
+
+  &.hasValue {
+    background-color: rgb(246, 246, 248);
+    color: black;
+    border: 1px solid rgb(230, 230, 234);
   }
 }
 
 [data-scheme="dark"] .uploadButtonContent {
   background-color: lightgray;
+  color: black;
+
+  &.hasValue {
+    background-color: rgb(25, 26, 36);
+    color: rgb(228, 229, 233);
+    border: 1px solid rgb(228, 229, 233);
+  }
 }
 
 .uploadButton {
@@ -42,20 +56,10 @@
 
 .uploadButtonIcon {
   font-size: 1.35rem;
-  color: white;
-}
-
-[data-scheme="dark"] .uploadButtonIcon {
-  color: black;
 }
 
 .uploadButtonText {
   font-size: 0.8125rem;
-  color: white;
-}
-
-[data-scheme="dark"] .uploadButtonText {
-  color: black;
 }
 
 .tableHeader {

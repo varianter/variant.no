@@ -9,9 +9,12 @@ import {
 import { SalariesParseErrorsToastDescription } from "./components/SalariesParseErrorsToastDescription";
 import SalariesFileUpload from "./components/SalariesFileUpload";
 import SalariesTableEditor from "./components/SalariesTableEditor";
+import { useState } from "react";
 
 export const SalariesInput = (props: StringInputProps) => {
   const toast = useToast();
+
+  const [hasValue, setHasValue] = useState(props.value !== undefined);
 
   const salaries =
     props.value === undefined
@@ -31,6 +34,7 @@ export const SalariesInput = (props: StringInputProps) => {
 
   function handleSalariesChangedFromFile(salariesFromFile: Salaries) {
     props.onChange(set(salariesAsStoredString(salariesFromFile)));
+    setHasValue(true);
   }
 
   function handleSalariesFileParseErrors(errors: SalariesParseError[]) {
@@ -46,6 +50,7 @@ export const SalariesInput = (props: StringInputProps) => {
     <Stack space={4}>
       <Inline space={2}>
         <SalariesFileUpload
+          hasValue={hasValue}
           onSalariesChanged={handleSalariesChangedFromFile}
           onParseErrors={handleSalariesFileParseErrors}
         />
