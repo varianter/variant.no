@@ -49,11 +49,6 @@ export const SalariesInput = (props: StringInputProps) => {
           onSalariesChanged={handleSalariesChangedFromFile}
           onParseErrors={handleSalariesFileParseErrors}
         />
-        {salaries && Object.keys(salaries).length && (
-          <Text muted size={1}>
-            replaces all values below
-          </Text>
-        )}
       </Inline>
       {salaries && (
         <SalariesTableEditor

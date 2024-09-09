@@ -1,5 +1,5 @@
 import styles from "../salariesInput.module.css";
-import { Box } from "@sanity/ui";
+import { Box, Inline, Text } from "@sanity/ui";
 import { UploadIcon } from "@sanity/icons";
 import {
   Salaries,
@@ -7,7 +7,7 @@ import {
   SalariesParseError,
   SalariesParseErrorType,
 } from "../utils/parseSalaries";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 
 const UPLOAD_CSV_INPUT_ID = "upload-csv-input";
 
@@ -20,15 +20,19 @@ const SalariesFileUpload = ({
   onSalariesChanged,
   onParseErrors,
 }: SalariesFileUploadProps) => {
+  const [filename, setFilename] = useState<string | null>(null);
+
   async function handleFileRead(e: ProgressEvent<FileReader>): Promise<void> {
     const fileData = e.target?.result;
     if (fileData === null || typeof fileData !== "string") {
       onParseErrors([{ error: SalariesParseErrorType.INVALID_FORMAT }]);
+      setFilename(null);
       return;
     }
     const salariesParseResult = salariesFromCsvString(fileData);
     if (!salariesParseResult.ok) {
       onParseErrors(salariesParseResult.error);
+      setFilename(null);
       return;
     }
     onSalariesChanged(salariesParseResult.value);
@@ -38,6 +42,7 @@ const SalariesFileUpload = ({
     if (e.target.files !== null && e.target.files.length > 0) {
       const file = e.target.files[0];
       if (file.type === "text/csv") {
+        setFilename(file.name);
         const reader = new FileReader();
         reader.onload = handleFileRead;
         reader.readAsText(file);
@@ -62,15 +67,22 @@ const SalariesFileUpload = ({
         onChange={handleFileChange}
         accept=".csv"
       />
-      <Box className={styles.uploadButtonWrapper}>
-        <label
-          htmlFor={UPLOAD_CSV_INPUT_ID}
-          className={styles.uploadButtonContent}
-        >
-          <UploadIcon className={styles.uploadButtonIcon} />
-          <span className={styles.uploadButtonText}>Upload (.csv)</span>
-        </label>
-      </Box>
+      <Inline space={2}>
+        <Box className={styles.uploadButtonWrapper}>
+          <label
+            htmlFor={UPLOAD_CSV_INPUT_ID}
+            className={styles.uploadButtonContent}
+          >
+            <UploadIcon className={styles.uploadButtonIcon} />
+            <span className={styles.uploadButtonText}>Upload (.csv)</span>
+          </label>
+        </Box>
+        {filename && (
+          <Text muted size={1}>
+            {filename}
+          </Text>
+        )}
+      </Inline>
     </div>
   );
 };
