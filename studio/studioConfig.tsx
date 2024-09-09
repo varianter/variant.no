@@ -1,9 +1,4 @@
-/**
- * This configuration is used to for the Sanity Studio that’s mounted on the `/app/studio/[[...index]]/page.tsx` route
- */
-
 import { visionTool } from "@sanity/vision";
-import { defineConfig, StudioToolMenu } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
@@ -11,19 +6,19 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import deskStructure from "./schemas/deskStructure";
-import CustomToolMenu from "./components/CustomToolMenu";
+import { WorkspaceOptions } from "sanity";
+import StudioIcon from "./components/studioIcon/StudioIcon";
 
-export default defineConfig({
+const config: WorkspaceOptions = {
+  name: "studio",
+  title: "Studio",
+  subtitle: "Our Own Space",
+  icon: () => <StudioIcon variant={"studio"} />,
   basePath: "/studio",
   projectId,
   dataset,
   // Add and edit the content schema in the './studio/schema' folder
   schema,
-  studio: {
-    components: {
-      toolMenu: CustomToolMenu,
-    },
-  },
   plugins: [
     structureTool({
       structure: deskStructure,
@@ -39,4 +34,6 @@ export default defineConfig({
       },
     }),
   ],
-});
+};
+
+export default config;
