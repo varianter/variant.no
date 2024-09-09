@@ -7,7 +7,7 @@ import {
   SalariesParseError,
   SalariesParseErrorType,
 } from "../utils/parseSalaries";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, MouseEvent } from "react";
 
 const UPLOAD_CSV_INPUT_ID = "upload-csv-input";
 
@@ -50,8 +50,14 @@ const SalariesFileUpload = ({
         onParseErrors([{ error: SalariesParseErrorType.INVALID_FORMAT }]);
       }
     }
-    // reset to allow subsequent uploads of the same file
-    e.target.value = "";
+  }
+
+  function handleOnClick(e: MouseEvent<HTMLInputElement>) {
+    /*
+     resets input to allow subsequent uploads of the same file
+     has the downside that the file input will be cleared even if the user only cancels the file dialog without uploading a file
+    */
+    e.currentTarget.value = "";
   }
 
   return (
@@ -65,6 +71,7 @@ const SalariesFileUpload = ({
         className={styles.uploadInput}
         type={"file"}
         onChange={handleFileChange}
+        onClick={handleOnClick}
         accept=".csv"
       />
       <Inline space={2}>
