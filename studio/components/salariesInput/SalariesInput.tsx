@@ -51,10 +51,15 @@ export const SalariesInput = (props: StringInputProps) => {
         />
       </Inline>
       {salaries && (
-        <SalariesTableEditor
-          salaries={salaries}
-          onYearSalaryChange={handleYearSalaryChange}
-        />
+        <Stack space={2}>
+          <Text size={1} muted>
+            Individual salary amounts can be edited in the table below:
+          </Text>
+          <SalariesTableEditor
+            salaries={salaries}
+            onYearSalaryChange={handleYearSalaryChange}
+          />
+        </Stack>
       )}
     </Stack>
   );
