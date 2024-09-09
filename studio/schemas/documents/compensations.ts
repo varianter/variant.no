@@ -2,9 +2,9 @@ import { defineField, defineType } from "sanity";
 import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
 import { title } from "../fields/text";
-import { benefitId } from "./benefit";
 import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
 import { pension } from "../objects/compensations/pension";
+import { benefitsByLocation } from "../objects/compensations/benefitsByLocation";
 
 export const compensationsId = "compensations";
 
@@ -30,38 +30,8 @@ const compensations = defineType({
     }),
     pension,
     bonusesByLocation,
+    benefitsByLocation,
     // add salary here
-    // benefits should be updated to match the grouping by location:
-    // defineField({
-    //   name: "benefits",
-    //   title: "Benefits",
-    //   type: "array",
-    //   of: [
-    //     defineField({
-    //       name: "benefitGroup",
-    //       title: "Benefit Group",
-    //       type: "object",
-    //       fields: [
-    //         locations,
-    //         defineField({
-    //           name: "benefitsList",
-    //           title: "List of Benefits",
-    //           type: "array",
-    //           of: [{ type: benefitId }],
-    //         }),
-    //       ],
-    //     }),
-    //   ],
-    // }),
-    // IMPORTANT: this is just a very simple mockup and might not represent a good ux
-    defineField({
-      name: "benefits",
-      title: "Included Benefits",
-      description:
-        "Add and manage information on the benefits included with the compensation package, such as health insurance, retirement plans, and paid time off.",
-      type: "array",
-      of: [{ type: benefitId }],
-    }),
     seo,
   ],
   preview: {
