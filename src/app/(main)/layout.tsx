@@ -1,9 +1,9 @@
 import Footer from "src/components/navigation/footer/Footer";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { Header } from "src/components/navigation/header/Header";
 import { Navigation } from "studio/lib/payloads/navigation";
-import { CompanyInfo } from "studio/lib/payloads/companyInfo";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
 import { loadQuery } from "studio/lib/store";
 import HeaderPreview from "src/components/navigation/header/HeaderPreview";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";

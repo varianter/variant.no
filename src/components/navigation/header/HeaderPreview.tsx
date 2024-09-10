@@ -3,8 +3,8 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { Navigation } from "studio/lib/payloads/navigation";
 import { Header } from "./Header";
-import { CompanyInfo } from "studio/lib/payloads/companyInfo";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 
 export default function HeaderPreview({
   initialNav,

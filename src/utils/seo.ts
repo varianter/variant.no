@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { toPlainText } from "@portabletext/toolkit";
 import { urlFor } from "studio/lib/image";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { loadQuery } from "studio/lib/store";
 import { PortableTextBlock } from "src/components/richText/RichText";
 

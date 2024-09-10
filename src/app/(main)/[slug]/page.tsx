@@ -18,6 +18,8 @@ import { loadQuery } from "studio/lib/store";
 import CompensationsPreview from "src/compensations/CompensationsPreview";
 import { homeLink } from "../../../blog/components/utils/linkTypes";
 import CustomErrorMessage from "../../../blog/components/customErrorMessage/CustomErrorMessage";
+import { CompanyLocation } from "studio/lib/payloads/companyDetails";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 
 export const dynamic = "force-dynamic";
 
@@ -45,16 +47,21 @@ async function Page({ params }: Props) {
   const { slug } = params;
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const [initialPage, initialBlogPage, initialCompensationsPage] =
-    await Promise.all([
-      loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
-      loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
-      loadQuery<CompensationsPage>(
-        COMPENSATIONS_PAGE_QUERY,
-        { slug },
-        { perspective },
-      ),
-    ]);
+  const [
+    initialPage,
+    initialBlogPage,
+    initialCompensationsPage,
+    initialLocationsData,
+  ] = await Promise.all([
+    loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
+    loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
+    loadQuery<CompensationsPage>(
+      COMPENSATIONS_PAGE_QUERY,
+      { slug },
+      { perspective },
+    ),
+    loadQuery<CompanyLocation>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
+  ]);
 
   if (initialPage.data) {
     return (
@@ -99,11 +106,17 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialCompensationsPage.data) {
+  if (initialCompensationsPage.data && initialLocationsData.data) {
     return isDraftMode ? (
-      <CompensationsPreview initialCompensations={initialCompensationsPage} />
+      <CompensationsPreview
+        initialCompensations={initialCompensationsPage}
+        initialLocation={initialLocationsData}
+      />
     ) : (
-      <Compensations compensations={initialCompensationsPage.data} />
+      <Compensations
+        compensations={initialCompensationsPage.data}
+        locations={initialLocationsData.data}
+      />
     );
   }
 
