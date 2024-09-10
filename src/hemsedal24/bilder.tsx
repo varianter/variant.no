@@ -26,10 +26,8 @@ export default function Bilder() {
   const fetchFiles = async () => {
     const response = await fetch('/api/files');
     const data = await response.json();
-    console.log(data);
     setFilesData(data);
   };
-console.log((width/21)+(((width / 100) | 0)/4))
   const [filesData, setFilesData] = useState(null);
   useEffect(() => {
     fetchFiles();

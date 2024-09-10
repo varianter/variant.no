@@ -21,7 +21,7 @@ const ContentSecurityPolicy = `
     process.env.NODE_ENV !== 'production' ? "'unsafe-eval'" : ''
   };
   style-src 'self' 'unsafe-inline' http://hello.myfonts.net/;
-  img-src 'self' data: https://medium.com/ https://cdn-images-1.medium.com/ https://images.transistor.fm/ https://i.ytimg.com/;
+  img-src 'self' data: https://medium.com/ https://cdn-images-1.medium.com/ https://images.transistor.fm/ https://i.ytimg.com/ https://utfs.io/;
   media-src 'self' https://media.transistor.fm/;
   frame-src 'self' https://www.youtube-nocookie.com/;
   base-uri 'self';
