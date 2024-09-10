@@ -13,7 +13,7 @@ export interface BenefitsGroup {
   location: string;
   benefitsGroup: Benefit[];
 }
- 
+
 export interface SalariesPage {
   _type: string;
   _key: string;
