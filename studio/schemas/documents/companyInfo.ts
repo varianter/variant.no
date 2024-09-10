@@ -74,46 +74,6 @@ const companyInfo = defineType({
       ],
     },
     {
-      // TODO: deprecated, drop support once important deployments have updated
-      deprecated: {
-        reason: "Analytics and Tracking is no longer used",
-      },
-      readOnly: true,
-      hidden: true,
-      name: "analyticsTracking",
-      type: "object",
-      title: "Analytics and Tracking",
-      description:
-        "Select your analytics service and add the tracking ID to monitor site traffic and user interactions.",
-      fields: [
-        defineField({
-          name: "service",
-          type: "string",
-          title: "Analytics Service",
-          description: "Select the analytics service you are using.",
-          options: {
-            list: [
-              { title: "Google Analytics", value: "googleAnalytics" },
-              { title: "Facebook Pixel", value: "facebookPixel" },
-              { title: "Plausible", value: "plausible" },
-              { title: "Fathom", value: "fathom" },
-              { title: "Matomo", value: "matomo" },
-              { title: "Splitbee", value: "splitbee" },
-              { title: "Visitor Analytics", value: "visitorAnalytics" },
-            ],
-            layout: "dropdown",
-          },
-        }),
-        defineField({
-          name: "trackingID",
-          type: "string",
-          title: "Tracking ID",
-          description:
-            "Enter the tracking ID for the selected analytics service.",
-        }),
-      ],
-    },
-    {
       name: "defaultSEO",
       type: "object",
       title: "Default SEO Settings",
