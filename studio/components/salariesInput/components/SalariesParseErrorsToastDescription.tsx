@@ -24,13 +24,13 @@ export function SalariesParseErrorsToastDescription({
   maxLines?: number;
 }) {
   return (
-    <div>
+    <>
       {errors.slice(0, maxLines).map((e, i) => (
         <p key={i}>{descriptionOfSalariesParseError(e)}</p>
       ))}
       {errors.length > maxLines && (
-        <p>+ {errors.length - maxLines} more errors</p>
+        <p>and {errors.length - maxLines} more errors</p>
       )}
-    </div>
+    </>
   );
 }

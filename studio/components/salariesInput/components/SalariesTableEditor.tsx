@@ -15,10 +15,10 @@ const SalariesTableEditor = ({
   return (
     <Grid columns={[2]}>
       <div className={styles.tableHeader}>
-        <span className={styles.tableHeaderLabel}>Examination Year</span>
+        <p className={styles.tableHeaderLabel}>Examination Year</p>
       </div>
       <div className={`${styles.tableHeader} ${styles.tableSalaryHeader}`}>
-        <span className={styles.tableHeaderLabel}>Amount</span>
+        <p className={styles.tableHeaderLabel}>Amount</p>
       </div>
       {Object.entries(salaries)
         .toSorted(([a], [b]) => Number(b) - Number(a))
@@ -26,7 +26,7 @@ const SalariesTableEditor = ({
           <>
             <div key={year} className={styles.tableCell}>
               <label htmlFor={`salary-number-input-${year}`}>
-                <span className={styles.tableYearLabel}>{year}</span>
+                <p className={styles.tableYearLabel}>{year}</p>
               </label>
             </div>
             <div key={`${year}-salary`} className={styles.tableCell}>
