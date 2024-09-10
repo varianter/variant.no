@@ -28,7 +28,10 @@ function createSlugField(source: string) {
     name: "slug",
     title: "URL Path (slug)",
     description:
-      "Enter a unique URL path for the page. This path will be used in the website's address bar. A URL path, also known as a slug, is a URL-friendly version of the page title, used to create a human-readable and search engine optimized URL for the content. Legal characters include latin letters, digits, hyphen (-), underscore (_), full stop (.) and tilde (~)",
+      "Enter a unique URL path for the page. This path will be used in the website's address bar. " +
+      "A URL path, also known as a slug, is a URL-friendly version of the page title, used to create " +
+      "a human-readable and search engine optimized URL for the content. " +
+      "Note that the slug can not be changed after publication, but alternative slugs can be defined via Redirects.",
     options: {
       source,
       maxLength: SLUG_MAX_LENGTH,
@@ -49,7 +52,7 @@ function createSlugField(source: string) {
         if (value?.current === undefined) return true;
         return (
           encodeURIComponent(value.current) === value.current ||
-          "Slug can only consist of latin letters, digits, hyphen (-), underscore (_), full stop (.) and tilde (~)"
+          "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
         );
       }),
     readOnly: (ctx) => {
