@@ -110,8 +110,10 @@ const redirect = defineType({
       if (
         typeof sourceSlug !== "string" ||
         typeof destinationType !== "string" ||
-        typeof destinationReferenceSlug !== "string" ||
-        typeof destinationExternalURL !== "string"
+        (destinationType === "reference" &&
+          typeof destinationReferenceSlug !== "string") ||
+        (destinationType === "external" &&
+          typeof destinationExternalURL !== "string")
       ) {
         return {};
       }
