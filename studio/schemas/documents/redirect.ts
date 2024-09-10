@@ -1,15 +1,33 @@
 import { defineField, defineType, type Slug } from "sanity";
-import { SlugRule } from "@sanity/types";
+import { SanityDocument, SlugRule } from "@sanity/types";
 import { pageBuilderID } from "../builders/pageBuilder";
 import { blogId } from "./blog";
 import { compensationsId } from "./compensations";
 import PrefixedSlugInput from "../../components/PrefixedSlugInput";
 
-const slugValidator = (rule: SlugRule) =>
+const slugRequired = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {
     if (!value || !value.current) return "Can't be blank";
     return true;
   });
+
+const requiredIfDestinationType = (
+  type: string,
+  document: SanityDocument | undefined,
+  value: unknown,
+) => {
+  const destination = document?.destination;
+  if (
+    typeof destination === "object" &&
+    destination !== null &&
+    "type" in destination &&
+    destination.type === type &&
+    value === undefined
+  ) {
+    return "Can't be blank";
+  }
+  return true;
+};
 
 export const redirectId = "redirect";
 
@@ -23,7 +41,7 @@ const redirect = defineType({
       title: "Source",
       description: "Which url should this redirect apply for",
       type: "slug",
-      validation: slugValidator,
+      validation: (rule) => slugRequired(rule),
       components: {
         input: (props) => PrefixedSlugInput({ prefix: "/", ...props }),
       },
@@ -58,6 +76,10 @@ const redirect = defineType({
             { type: compensationsId },
           ],
           hidden: ({ parent }) => parent?.type !== "reference",
+          validation: (rule) =>
+            rule.custom((value, { document }) =>
+              requiredIfDestinationType("reference", document, value),
+            ),
         }),
         defineField({
           name: "slug",
@@ -65,7 +87,10 @@ const redirect = defineType({
           description: "Where should the user be redirected?",
           type: "slug",
           hidden: ({ parent }) => parent?.type !== "slug",
-          validation: slugValidator,
+          validation: (rule) =>
+            rule.custom((value, { document }) =>
+              requiredIfDestinationType("slug", document, value),
+            ),
           options: {
             isUnique: () => {
               /*
