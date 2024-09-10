@@ -40,10 +40,8 @@ export const benefitsByLocation = defineField({
         prepare({ location, benefitsGroup }) {
           const benefitsCount = benefitsGroup ? benefitsGroup.length : 0;
           return {
-            title: location
-              ? `Benefits group for ${location}`
-              : "No location selected",
-            subtitle: `Number of benefits: ${benefitsCount}`,
+            title: location || "No location selected",
+            subtitle: `${benefitsCount} benefit${benefitsCount > 1 ? "s" : ""}`,
           };
         },
       },

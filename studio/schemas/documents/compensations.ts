@@ -5,6 +5,7 @@ import { title } from "../fields/text";
 import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
 import { pension } from "../objects/compensations/pension";
 import { benefitsByLocation } from "../objects/compensations/benefitsByLocation";
+import { salariesByLocation } from "../objects/compensations/salariesByLocation";
 
 export const compensationsId = "compensations";
 
@@ -31,7 +32,7 @@ const compensations = defineType({
     pension,
     bonusesByLocation,
     benefitsByLocation,
-    // add salary here
+    salariesByLocation,
     seo,
   ],
   preview: {
