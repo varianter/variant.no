@@ -42,17 +42,17 @@ export function salariesFromCsvString(
     return ResultError([{ error: SalariesParseErrorType.NO_DATA }]);
   }
   const rows = cleanCsvString.split("\n");
-  for (let i = 0; i < rows.length; i++) {
-    const cleanRow = rows[i]
+  rows.forEach((row, index) => {
+    const cleanRow = row
       .replace(/\s/g, "") // remove all whitespace
       .replace(/,$/g, ""); // remove single trailing comma
     const values = cleanRow.split(",");
     if (values.length != 2) {
       errors.push({
-        rowIndex: i,
+        rowIndex: index,
         error: SalariesParseErrorType.INVALID_SHAPE,
       });
-      continue;
+      return;
     }
     const [year, salary] = values;
     if (
@@ -61,11 +61,14 @@ export function salariesFromCsvString(
         VALID_SALARY_REGEX.test(salary)
       )
     ) {
-      errors.push({ rowIndex: i, error: SalariesParseErrorType.INVALID_DATA });
-      continue;
+      errors.push({
+        rowIndex: index,
+        error: SalariesParseErrorType.INVALID_DATA,
+      });
+      return;
     }
     salaries[Number(year)] = Number(salary);
-  }
+  });
   if (errors.length > 0) {
     return ResultError(errors);
   }
