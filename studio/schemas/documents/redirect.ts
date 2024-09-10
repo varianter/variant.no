@@ -39,7 +39,7 @@ const redirect = defineType({
     defineField({
       name: "source",
       title: "Source",
-      description: "Which url should this redirect apply for",
+      description: "The url slug to be redirected to the destination",
       type: "slug",
       validation: (rule) => slugRequired(rule),
       components: {
@@ -54,13 +54,13 @@ const redirect = defineType({
         defineField({
           name: "type",
           title: "Type",
-          description: "Choose between an internal page or a static slug",
           type: "string",
           initialValue: "reference",
           options: {
             layout: "radio",
             list: [
               { value: "reference", title: "Internal Page" },
+              { value: "external", title: "External URL" },
               { value: "slug", title: "Slug" },
             ],
           },
@@ -79,6 +79,17 @@ const redirect = defineType({
           validation: (rule) =>
             rule.custom((value, { document }) =>
               requiredIfDestinationType("reference", document, value),
+            ),
+        }),
+        defineField({
+          name: "external",
+          title: "External URL",
+          description: "Where should the user be redirected?",
+          type: "url",
+          hidden: ({ parent }) => parent?.type !== "external",
+          validation: (rule) =>
+            rule.custom((value, { document }) =>
+              requiredIfDestinationType("external", document, value),
             ),
         }),
         defineField({
@@ -109,22 +120,34 @@ const redirect = defineType({
   ],
   preview: {
     select: {
-      source: "source",
+      sourceSlug: "source.current",
       destinationType: "destination.type",
       destinationSlug: "destination.slug.current",
       destinationReferenceSlug: "destination.reference.slug.current",
+      destinationExternalURL: "destination.external",
     },
     prepare({
-      source,
+      sourceSlug,
       destinationType,
       destinationSlug,
       destinationReferenceSlug,
+      destinationExternalURL,
+    }: {
+      sourceSlug: string;
+      destinationType: string;
+      destinationSlug: string;
+      destinationReferenceSlug: string;
+      destinationExternalURL: string;
     }) {
-      const destination =
-        destinationType === "slug" ? destinationSlug : destinationReferenceSlug;
+      const destination = {
+        slug: `/${destinationSlug}`,
+        reference: `/${destinationReferenceSlug}`,
+        external: destinationExternalURL,
+      }[destinationType];
+      console.log(destination);
       const title =
-        source && destination
-          ? `/${source.current} → /${destination}`
+        sourceSlug && destination
+          ? `/${sourceSlug} → ${destination}`
           : undefined;
       return {
         title,

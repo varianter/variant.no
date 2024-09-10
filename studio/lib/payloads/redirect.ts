@@ -1,3 +1,3 @@
 export interface RedirectDestinationSlugPage {
-  destinationSlug: string;
+  destination: string;
 }

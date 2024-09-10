@@ -26,9 +26,9 @@ export async function middleware(request: NextRequest) {
   if (redirectRes.ok) {
     const redirect: RedirectDestinationSlugPage | null =
       await redirectRes.json();
-    if (redirect?.destinationSlug) {
+    if (redirect?.destination) {
       return NextResponse.redirect(
-        new URL(redirect.destinationSlug, request.url),
+        new URL(redirect.destination, request.url),
         HTTP_STATUSES.TEMPORARY_REDIRECT,
       );
     }
