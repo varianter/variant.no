@@ -30,7 +30,8 @@ const seo = defineField({
         Rule.max(70).error("A title cannot exceed 70 characters"),
       ],
       components: {
-        input: StringInputWithCharacterCount,
+        input: (props) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 70 }),
       },
     }),
     defineField({
@@ -48,7 +49,8 @@ const seo = defineField({
         ),
       ],
       components: {
-        input: StringInputWithCharacterCount,
+        input: (props) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 160 }),
       },
     }),
     defineField({
