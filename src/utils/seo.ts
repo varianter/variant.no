@@ -29,6 +29,11 @@ type CompanyInfo = {
   defaultSEO: SeoData;
 };
 
+export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
+  width: 1200,
+  height: 630,
+};
+
 export async function fetchSeoData(
   query: string,
   variables?: any,
@@ -102,8 +107,8 @@ export async function generateMetadataFromSeo(
   })}`;
   const sanityImageUrl = seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl;
   const sanityImageParams = `?${new URLSearchParams({
-    w: "1200",
-    h: "630",
+    w: OPEN_GRAPH_IMAGE_DIMENSIONS.width.toString(),
+    h: OPEN_GRAPH_IMAGE_DIMENSIONS.height.toString(),
     fit: "fill",
     fm: "png", // required for transparent
     bg: "00000000", // transparent
