@@ -26,6 +26,7 @@ type CompanyInfo = {
   brandAssets: {
     favicon: string;
   };
+  defaultSEO: SeoData;
 };
 
 export async function fetchSeoData(
@@ -80,10 +81,8 @@ export async function generateMetadataFromSeo(
 ): Promise<Metadata> {
   const companyInfo = await fetchCompanyInfo();
 
-  const title =
-    seo?.title || companyInfo?.siteMetadata?.siteName || "Fallback Title";
-  const description = seo?.description || "";
-  const imageUrl = seo?.imageUrl || "";
+  const title = seo?.title || companyInfo?.siteMetadata?.siteName || "Variant";
+  const description = seo?.description;
   const keywords = seo?.keywords || "";
 
   const favicon = companyInfo?.brandAssets?.favicon;
@@ -92,6 +91,13 @@ export async function generateMetadataFromSeo(
   const icons = [faviconUrl ? { rel: "icon", url: faviconUrl } : null].filter(
     (icon): icon is NonNullable<typeof icon> => icon !== null,
   );
+
+  const fallbackImageUrl = `/api/openGraphImage?${new URLSearchParams({
+    title: title,
+    ...(description ? { description: description } : {}),
+  })}`;
+  const imageUrl =
+    seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl || fallbackImageUrl;
 
   return {
     title: title,

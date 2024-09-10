@@ -13,6 +13,13 @@ export interface BenefitsGroup {
   location: string;
   benefitsGroup: Benefit[];
 }
+ 
+export interface SalariesPage {
+  _type: string;
+  _key: string;
+  year: number;
+  salaries: string;
+}
 
 export interface CompensationsPage {
   _createdAt: string;
