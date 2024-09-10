@@ -58,7 +58,7 @@ const blogPosts = defineType({
     },
     prepare({ title, date }) {
       const subtitles = [date && format(parseISO(date), "LLL d, yyyy")].filter(
-        Boolean
+        Boolean,
       );
 
       return { title, subtitle: subtitles.join(" ") };
