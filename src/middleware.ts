@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { client } from "../studio/lib/client";
 import { RedirectSparsePage } from "../studio/lib/payloads/redirect";
+import { HTTP_STATUSES } from "./utils/http";
 
 export async function middleware(request: NextRequest) {
   const slug = request.nextUrl.pathname;
@@ -12,7 +13,7 @@ export async function middleware(request: NextRequest) {
   if (redirect !== null) {
     return NextResponse.redirect(
       new URL(redirect.destination, request.url),
-      307,
+      HTTP_STATUSES.TEMPORARY_REDIRECT,
     );
   }
 }
