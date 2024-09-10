@@ -11,12 +11,14 @@ import {
   InfoOutlineIcon,
   HeartIcon,
   CaseIcon,
+  DoubleChevronRightIcon,
   PinIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
+import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
 
 export default (S: StructureBuilder) =>
@@ -97,4 +99,8 @@ export default (S: StructureBuilder) =>
                 ),
             ]),
         ),
+      S.listItem()
+        .title("Redirects")
+        .icon(DoubleChevronRightIcon)
+        .child(S.documentTypeList(redirectId).title("Redirects")),
     ]);
