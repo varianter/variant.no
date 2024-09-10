@@ -12,6 +12,6 @@ export const deskStructure: StructureResolver = (S) =>
           S.documentTypeList(customerCaseID)
             .title("Customer cases")
             .filter("_type == $type && language == $lang")
-            .params({ type: customerCaseID, lang: i18n.base })
+            .params({ type: customerCaseID, lang: i18n.base }),
         ),
     ]);
