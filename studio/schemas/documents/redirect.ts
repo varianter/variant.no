@@ -1,6 +1,5 @@
 import { defineField, defineType, type Slug } from "sanity";
 import { SlugRule } from "@sanity/types";
-import RedirectThumbnail from "../../components/RedirectThumbnail";
 import { pageBuilderID } from "../builders/pageBuilder";
 import { blogId } from "./blog";
 import { compensationsId } from "./compensations";
@@ -18,16 +17,6 @@ const redirect = defineType({
   name: redirectId,
   title: "Redirect",
   type: "document",
-  readOnly: (ctx) => {
-    /*
-      make permanent redirects read-only after initial publish
-      this is a soft guardrail that is possible to bypass
-     */
-    return (
-      (ctx.document?.permanent ?? false) &&
-      !ctx.document?._id.startsWith("drafts.")
-    );
-  },
   fields: [
     defineField({
       name: "source",
@@ -92,14 +81,6 @@ const redirect = defineType({
         }),
       ],
     }),
-    defineField({
-      name: "permanent",
-      title: "Permanent",
-      description:
-        "Will this redirect exist throughout the foreseeable future?",
-      type: "boolean",
-      initialValue: false,
-    }),
   ],
   preview: {
     select: {
@@ -107,14 +88,12 @@ const redirect = defineType({
       destinationType: "destination.type",
       destinationSlug: "destination.slug.current",
       destinationReferenceSlug: "destination.reference.slug.current",
-      permanent: "permanent",
     },
     prepare({
       source,
       destinationType,
       destinationSlug,
       destinationReferenceSlug,
-      permanent,
     }) {
       const destination =
         destinationType === "slug" ? destinationSlug : destinationReferenceSlug;
@@ -124,8 +103,7 @@ const redirect = defineType({
           : undefined;
       return {
         title,
-        subtitle: permanent ? "Permanent" : "Temporary",
-        media: RedirectThumbnail({ permanent }),
+        subtitle: "type: " + destinationType,
       };
     },
   },

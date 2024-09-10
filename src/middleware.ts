@@ -6,14 +6,13 @@ export async function middleware(request: NextRequest) {
   const slug = request.nextUrl.pathname;
   const redirect = await client.fetch<RedirectSparsePage | null>(
     `*[_type == "redirect" && source.current == "${slug}"][0]{
-        "destination":destination.current,
-        permanent
+        "destination":destination.current
       }`,
   );
   if (redirect !== null) {
     return NextResponse.redirect(
       new URL(redirect.destination, request.url),
-      redirect.permanent ? 308 : 307,
+      307,
     );
   }
 }

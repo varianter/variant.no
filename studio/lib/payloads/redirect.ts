@@ -4,5 +4,4 @@ export interface RedirectPage extends RedirectSparsePage {
 
 export interface RedirectSparsePage {
   destination: string;
-  permanent: boolean;
 }
