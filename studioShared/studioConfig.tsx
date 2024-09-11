@@ -35,7 +35,6 @@ const config: WorkspaceOptions = {
       supportedLanguages: i18n.languages,
       schemaTypes: [customerCaseID],
       languageField: `language`,
-      metadataFields: [defineField({ name: "slug", type: "slug" })],
       apiVersion,
       // TODO:
       // Optional
