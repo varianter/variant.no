@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.table {
+  text-align: left;
+  max-width: 500px;
+}
+
+.bonusHeader,
+.bonusCell {
+  text-align: right;
+}
