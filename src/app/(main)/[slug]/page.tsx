@@ -110,7 +110,7 @@ async function Page({ params }: Props) {
     return isDraftMode ? (
       <CompensationsPreview
         initialCompensations={initialCompensationsPage}
-        initialLocation={initialLocationsData}
+        initialLocations={initialLocationsData}
       />
     ) : (
       <Compensations

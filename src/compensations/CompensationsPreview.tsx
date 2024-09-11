@@ -9,12 +9,12 @@ import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/pages";
 
 interface CompensationsPreviewProps {
   initialCompensations: QueryResponseInitial<CompensationsPage>;
-  initialLocation: QueryResponseInitial<CompanyLocation[]>;
+  initialLocations: QueryResponseInitial<CompanyLocation[]>;
 }
 
 const CompensationsPreview = ({
   initialCompensations,
-  initialLocation,
+  initialLocations,
 }: CompensationsPreviewProps) => {
   const { data } = useQuery<CompensationsPage>(
     COMPENSATIONS_PAGE_QUERY,
@@ -24,7 +24,7 @@ const CompensationsPreview = ({
 
   const { data: locationData } = useQuery<CompanyLocation[]>(
     COMPANY_LOCATIONS_QUERY,
-    { initial: initialLocation },
+    { initial: initialLocations },
   );
 
   return (
