@@ -1,0 +1,12 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  max-width: var(--max-content-width-medium);
+}
+
+.benefitWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

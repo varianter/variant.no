@@ -12,6 +12,7 @@ import {
   IOption,
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
+import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 
 interface CompensationsProps {
   compensations: CompensationsPage;
@@ -93,13 +94,10 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
           ) : null}
         </>
       )}
-      <div className={styles.benefits}>
-        {compensations.benefitsByLocation.map((benefit) => (
-          <div key={benefit._key} className={styles.benefitWrapper}>
-            {/* TODO: display benefits based on locations */}
-          </div>
-        ))}
-      </div>
+      <BenefitsByLocation
+        locationId={selectedLocation}
+        benefits={compensations.benefitsByLocation}
+      />
     </div>
   );
 };
