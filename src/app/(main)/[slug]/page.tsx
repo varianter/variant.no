@@ -60,7 +60,7 @@ async function Page({ params }: Props) {
       { slug },
       { perspective },
     ),
-    loadQuery<CompanyLocation>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
+    loadQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
   ]);
 
   if (initialPage.data) {
