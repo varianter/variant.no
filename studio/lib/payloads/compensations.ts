@@ -10,7 +10,7 @@ export interface Benefit {
 
 export interface BenefitsByLocation {
   _key: string;
-  location: { _ref: string; _type: string };
+  location: Reference;
   benefits: Benefit[];
 }
 
@@ -32,4 +32,9 @@ export interface CompensationsPage {
   slug: Slug;
   benefitsByLocation: BenefitsByLocation[];
   showSalaryCalculator: boolean;
+}
+
+export interface Reference {
+  _type: "reference";
+  _ref: string;
 }
