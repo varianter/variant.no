@@ -59,12 +59,10 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
     );
   };
 
-  const locationOptions: IOption[] = Object.values(locations).map(
-    (companyLocation) => ({
-      id: companyLocation._id,
-      label: companyLocation.companyLocationName,
-    }),
-  );
+  const locationOptions: IOption[] = locations.map((companyLocation) => ({
+    id: companyLocation._id,
+    label: companyLocation.companyLocationName,
+  }));
 
   return (
     <div className={styles.wrapper}>
