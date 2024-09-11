@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 export const companyLocationID = "companyLocation";
 export const companyLocationNameID = "companyLocationName";
@@ -13,6 +14,11 @@ const companyLocation = defineType({
       name: companyLocationNameID,
       type: "string",
       title: "Location",
+      validation: (rule) => rule.max(50),
+      components: {
+        input: (props) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 50 }),
+      },
     }),
   ],
 });

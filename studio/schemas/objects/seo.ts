@@ -1,4 +1,4 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import { StringInputWithCharacterCount } from "studio/components/StringInputWithCharacterCount";
 
 const seoFieldID = {
@@ -59,6 +59,9 @@ const seo = defineField({
       title: "SEO & Social Media Keywords",
       description:
         "Enter targeted keywords to enhance your content’s visibility in search engines and social media platforms. Use relevant and specific keywords that describe your content, helping to attract the right audience and improve your SEO performance",
+      components: {
+        input: StringInputWithCharacterCount,
+      },
     }),
     defineField({
       name: seoFieldID.image,

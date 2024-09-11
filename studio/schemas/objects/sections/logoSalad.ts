@@ -1,6 +1,7 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import image from "studio/schemas/fields/media";
 import { richText } from "studio/schemas/fields/text";
+import { StringInputWithCharacterCount } from "../../../components/StringInputWithCharacterCount";
 
 export const logoSaladID = "logoSalad";
 
@@ -21,8 +22,14 @@ export const logoSalad = defineField({
       type: "string",
       description:
         "Required text displayed in a smaller body text style. Use it to provide additional context or details about the logos.",
-      validation: (Rule) =>
+      validation: (Rule) => [
         Rule.required().error("Logo description is required."),
+        Rule.max(100),
+      ],
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 100 }),
+      },
     },
     {
       name: "logos",

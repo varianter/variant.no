@@ -1,4 +1,5 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 export enum ImageAlignment {
   Left = "left",
@@ -15,20 +16,25 @@ const alignmentOptions = [
   { title: "Right", value: ImageAlignment.Right },
 ];
 
+const imageAltField = defineField({
+  name: "alt",
+  type: "string",
+  title: "Alternative Text",
+  description:
+    "Provide a description of the image for accessibility. Leave empty if the image is purely decorative.",
+  validation: (rule) => rule.max(100),
+  components: {
+    input: (props: StringInputProps) =>
+      StringInputWithCharacterCount({ ...props, maxCount: 100 }),
+  },
+});
+
 const image = defineField({
   name: "image",
   title: "Image",
   type: "image",
   options: { hotspot: true },
-  fields: [
-    {
-      name: "alt",
-      type: "string",
-      title: "Alternative Text",
-      description:
-        "Provide a description of the image for accessibility. Leave empty if the image is purely decorative.",
-    },
-  ],
+  fields: [imageAltField],
 });
 
 export const imageExtended = defineField({
@@ -37,13 +43,7 @@ export const imageExtended = defineField({
   type: "image",
   options: { hotspot: true },
   fields: [
-    {
-      name: "alt",
-      type: "string",
-      title: "Alternative Text",
-      description:
-        "Provide a description of the image for accessibility. Leave empty if the image is purely decorative.",
-    },
+    imageAltField,
     {
       name: "imageAlignment",
       title: "Image Alignment",

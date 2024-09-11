@@ -1,7 +1,8 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import AnchorSelect from "../../components/AnchorSelect";
 import LinkTypeSelector from "../../components/LinkTypeSelector";
 import NewTabSelector from "../../components/NewTabSelector";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 export const linkID = "link";
 
@@ -34,6 +35,11 @@ export const link = defineField({
       title: "Provide a link title",
       type: "string",
       description: "Enter the link text that will be displayed on the website.",
+      validation: (rule) => rule.max(60),
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+      },
     },
     {
       name: "linkType",

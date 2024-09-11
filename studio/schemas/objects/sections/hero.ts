@@ -1,8 +1,9 @@
 // hero.ts
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import callToActionField from "../../fields/callToActionFields";
 import CustomCallToActions from "../../../components/CustomCallToActions";
 import { title } from "studio/schemas/fields/text";
+import { StringInputWithCharacterCount } from "../../../components/StringInputWithCharacterCount";
 
 export const heroID = "hero";
 
@@ -17,6 +18,10 @@ export const hero = defineField({
       title: "Description",
       type: "string",
       validation: (Rule) => Rule.max(200),
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 200 }),
+      },
     },
     {
       name: "callToActions",

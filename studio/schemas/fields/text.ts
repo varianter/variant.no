@@ -1,4 +1,5 @@
 import { StringRule, defineField } from "sanity";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 enum titleID {
   basic = "basicTitle",
@@ -35,6 +36,10 @@ const createField = ({
     title,
     type: "string",
     validation: validationRules,
+    components: {
+      input: (props) =>
+        StringInputWithCharacterCount({ ...props, maxCount: maxLength }),
+    },
   });
 };
 
@@ -54,6 +59,9 @@ export const optionalSubtitle = defineField({
   title: "Subtitle",
   type: "string",
   validation: (Rule) => Rule.max(60),
+  components: {
+    input: (props) => StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+  },
 });
 
 export const richTextID = "richText";

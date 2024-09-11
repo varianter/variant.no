@@ -1,5 +1,6 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 export const companyInfoID = "companyInfo";
 
@@ -24,6 +25,11 @@ const companyInfo = defineType({
           type: "string",
           title: "Site Name",
           description: "The name of your website.",
+          validation: (rule) => rule.max(60),
+          components: {
+            input: (props) =>
+              StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+          },
         }),
         defineField({
           name: "defaultLanguage",

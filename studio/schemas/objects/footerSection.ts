@@ -1,7 +1,8 @@
-import { defineType } from "sanity";
+import { defineType, StringInputProps } from "sanity";
 import { linkID } from "./link";
 import { soMeLinksID } from "../documents/socialMediaProfiles";
 import { richText, richTextID } from "../fields/text";
+import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
 
 export const footerSectionID = {
   main: "footerSection",
@@ -32,7 +33,14 @@ export const footerSection = defineType({
       type: "string",
       description:
         "Enter the title for this footer section. This will help identify the section within the footer.",
-      validation: (Rule) => Rule.required().error("Section title is required"),
+      validation: (Rule) => [
+        Rule.required().error("Section title is required"),
+        Rule.max(60),
+      ],
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+      },
     },
     {
       name: footerSectionID.type,

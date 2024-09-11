@@ -1,7 +1,8 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import { richText, title } from "../../../schemas/fields/text";
 import { imageExtended } from "../../../schemas/fields/media";
 import { link } from "../link";
+import { StringInputWithCharacterCount } from "../../../components/StringInputWithCharacterCount";
 
 export const articleID = "article";
 
@@ -14,6 +15,11 @@ export const article = defineField({
       name: "tag",
       title: "Tag",
       type: "string",
+      validation: (rule) => rule.max(60),
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+      },
     },
     title,
     richText,
