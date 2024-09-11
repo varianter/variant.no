@@ -65,6 +65,11 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
     label: companyLocation.companyLocationName,
   }));
 
+  const benefitsFilteredByLocation =
+    compensations.benefitsByLocation.find(
+      (benefit) => benefit.location._ref === selectedLocation,
+    )?.benefits || [];
+
   return (
     <div className={styles.wrapper}>
       <Text type="h1">{compensations.basicTitle}</Text>
@@ -94,10 +99,7 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
           ) : null}
         </>
       )}
-      <BenefitsByLocation
-        locationId={selectedLocation}
-        benefits={compensations.benefitsByLocation}
-      />
+      <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>
   );
 };

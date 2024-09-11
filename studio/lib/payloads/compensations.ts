@@ -10,7 +10,7 @@ export interface Benefit {
 
 export interface BenefitsByLocation {
   _key: string;
-  location: string;
+  location: { _ref: string; _type: string };
   benefits: Benefit[];
 }
 
