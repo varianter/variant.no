@@ -56,7 +56,7 @@ export const benefitsByLocation = defineField({
           of: [
             {
               name: "benefit",
-              type: "document",
+              type: "object",
               title: "Benefit",
               fields: [benefitType, title, richText],
               preview: {
