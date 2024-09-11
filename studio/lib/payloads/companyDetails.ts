@@ -20,5 +20,5 @@ export interface CompanyLocation {
   _key: string;
   _id: string;
   _updatedAt: string;
-  companyLocation: string;
+  companyLocationName: string;
 }

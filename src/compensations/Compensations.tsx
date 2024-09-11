@@ -15,7 +15,7 @@ import {
 
 interface CompensationsProps {
   compensations: CompensationsPage;
-  locations: CompanyLocation;
+  locations: CompanyLocation[];
 }
 
 interface SalaryCalculatorFormState {
@@ -24,7 +24,9 @@ interface SalaryCalculatorFormState {
 }
 
 const Compensations = ({ compensations, locations }: CompensationsProps) => {
-  const [selectedLocation, setSelectedLocation] = useState<string>("trondheim");
+  const [selectedLocation, setSelectedLocation] = useState<string>(
+    locations[0]._id,
+  );
   const currentYear = new Date().getFullYear();
   const [salary, setSalary] = useState<number | null>(null);
   const [formState, setFormState] = useState<SalaryCalculatorFormState>({
@@ -57,13 +59,9 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
     );
   };
 
-  const updateLocation = (id: string) => {
-    setSelectedLocation(id);
-  };
-
   const locationOptions: IOption[] = Object.values(locations).map(
     (companyLocation) => ({
-      id: companyLocation.companyLocationName.toLowerCase(),
+      id: companyLocation._id,
       label: companyLocation.companyLocationName,
     }),
   );
@@ -76,7 +74,7 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
         label="Choose your location"
         options={locationOptions}
         selectedId={selectedLocation}
-        onValueChange={(selectedOption) => updateLocation(selectedOption.id)}
+        onValueChange={(option) => setSelectedLocation(option.id)}
       />
       {compensations.showSalaryCalculator && (
         <>
