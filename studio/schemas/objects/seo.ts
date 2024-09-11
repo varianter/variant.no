@@ -56,7 +56,7 @@ const seo = defineField({
       title: "Social Media Image",
       type: "image",
       description:
-        "A compelling image for social media can greatly improve conversion rates, even though it doesn't directly affect SEO.",
+        "A compelling image for social media can greatly improve conversion rates, even though it doesn't directly affect SEO. Recommended dimensions: 1200x630 (landscape).",
     }),
   ],
 });

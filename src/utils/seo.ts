@@ -29,6 +29,11 @@ type CompanyInfo = {
   defaultSEO: SeoData;
 };
 
+export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
+  width: 1200,
+  height: 630,
+};
+
 export async function fetchSeoData(
   query: string,
   variables?: any,
@@ -81,8 +86,12 @@ export async function generateMetadataFromSeo(
 ): Promise<Metadata> {
   const companyInfo = await fetchCompanyInfo();
 
-  const title = seo?.title || companyInfo?.siteMetadata?.siteName || "Variant";
-  const description = seo?.description;
+  const title =
+    seo?.title ||
+    companyInfo?.defaultSEO?.title ||
+    companyInfo?.siteMetadata?.siteName ||
+    "Variant";
+  const description = seo?.description || companyInfo?.defaultSEO?.description;
   const keywords = seo?.keywords || "";
 
   const favicon = companyInfo?.brandAssets?.favicon;
@@ -96,8 +105,17 @@ export async function generateMetadataFromSeo(
     title: title,
     ...(description ? { description: description } : {}),
   })}`;
-  const imageUrl =
-    seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl || fallbackImageUrl;
+  const sanityImageUrl = seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl;
+  const sanityImageParams = `?${new URLSearchParams({
+    w: OPEN_GRAPH_IMAGE_DIMENSIONS.width.toString(),
+    h: OPEN_GRAPH_IMAGE_DIMENSIONS.height.toString(),
+    fit: "fill",
+    fm: "png", // required for transparent
+    bg: "00000000", // transparent
+  })}`;
+  const imageUrl = sanityImageUrl
+    ? `${sanityImageUrl}${sanityImageParams}`
+    : fallbackImageUrl;
 
   return {
     title: title,
