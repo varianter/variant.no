@@ -1,20 +1,24 @@
 import { defineField, defineType } from "sanity";
-import { format, parseISO } from "date-fns";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
-export const customerCasesID = "costumerCases";
+export const customerCaseID = "CustomerCase";
 
-const customerCases = defineType({
-  name: customerCasesID,
+const customerCase = defineType({
+  name: customerCaseID,
   type: "document",
-  title: "Costumer Cases",
+  title: "Customer Case",
   fields: [
+    defineField({
+      name: "language",
+      type: "string",
+      readOnly: true,
+    }),
     title,
     titleSlug,
     defineField({
       ...richText,
-      description: "Enter the body content of the costumer case.",
+      description: "Enter the body content of the Customer case.",
     }),
   ],
   preview: {
@@ -22,9 +26,9 @@ const customerCases = defineType({
       title: "basicTitle",
     },
     prepare({ title }) {
-      return { title, subtitle: "Costumer case" };
+      return { title, subtitle: "Customer case" };
     },
   },
 });
 
-export default customerCases;
+export default customerCase;
