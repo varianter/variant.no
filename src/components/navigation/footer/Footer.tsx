@@ -1,7 +1,7 @@
 "use client";
 
 import { ILink, LinkType, Navigation } from "studio/lib/payloads/navigation";
-import { CompanyInfo } from "studio/lib/payloads/companyInfo";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import styles from "./footer.module.css";
 import CustomLink from "../../link/CustomLink";

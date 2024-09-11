@@ -8,6 +8,12 @@ export interface Benefit {
   richText: PortableTextBlock[];
 }
 
+export interface BenefitsByLocation {
+  _key: string;
+  location: string;
+  benefits: Benefit[];
+}
+
 export interface SalariesPage {
   _type: string;
   _key: string;
@@ -24,6 +30,6 @@ export interface CompensationsPage {
   basicTitle: string;
   page: string;
   slug: Slug;
-  benefits: Benefit[];
+  benefitsByLocation: BenefitsByLocation[];
   showSalaryCalculator: boolean;
 }

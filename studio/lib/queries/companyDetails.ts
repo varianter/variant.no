@@ -11,3 +11,5 @@ export const COMPANY_INFO_QUERY = groq`*[_type == "companyInfo"]{
     },
     legalPages,
 }[0]`;
+
+export const COMPANY_LOCATIONS_QUERY = groq`*[_type == "companyLocation"]`;

@@ -3,14 +3,18 @@ import { Suspense } from "react";
 import Compensations from "./Compensations";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { CompensationsPage } from "studio/lib/payloads/compensations";
+import { CompanyLocation } from "studio/lib/payloads/companyDetails";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/pages";
 
 interface CompensationsPreviewProps {
   initialCompensations: QueryResponseInitial<CompensationsPage>;
+  initialLocations: QueryResponseInitial<CompanyLocation[]>;
 }
 
 const CompensationsPreview = ({
   initialCompensations,
+  initialLocations,
 }: CompensationsPreviewProps) => {
   const { data } = useQuery<CompensationsPage>(
     COMPENSATIONS_PAGE_QUERY,
@@ -18,10 +22,17 @@ const CompensationsPreview = ({
     { initial: initialCompensations },
   );
 
+  const { data: locationData } = useQuery<CompanyLocation[]>(
+    COMPANY_LOCATIONS_QUERY,
+    { initial: initialLocations },
+  );
+
   return (
-    <Suspense>
-      <Compensations compensations={data} />
-    </Suspense>
+    locationData && (
+      <Suspense>
+        <Compensations compensations={data} locations={locationData} />
+      </Suspense>
+    )
   );
 };
 

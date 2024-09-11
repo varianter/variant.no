@@ -2,8 +2,8 @@
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { Navigation } from "studio/lib/payloads/navigation";
-import { CompanyInfo } from "studio/lib/payloads/companyInfo";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import Footer from "./Footer";
 import { SocialMediaProfiles } from "studio/lib/payloads/socialMedia";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";

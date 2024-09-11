@@ -1,8 +1,8 @@
 import { Darker_Grotesque, Figtree } from "next/font/google";
 import { draftMode } from "next/headers";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
-import { CompanyInfo } from "studio/lib/payloads/companyInfo";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyInfo";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { Metadata } from "next";
 import { loadQuery } from "studio/lib/store";
 import "src/styles/global.css";
