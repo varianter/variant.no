@@ -14,13 +14,11 @@ import legalDocument from "./schemas/documents/legalDocuments";
 import benefit from "./schemas/documents/benefit";
 import companyLocation from "./schemas/documents/companyLocation";
 import compensations from "./schemas/documents/compensations";
-import siteSettings from "./schemas/documents/siteSettings";
 import redirect from "./schemas/documents/redirect";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     companyInfo,
-    siteSettings,
     navigationManager,
     socialMediaLinks,
     pageBuilder,
