@@ -21,6 +21,13 @@ export interface SalariesPage {
   salaries: string;
 }
 
+export interface BonusPage {
+  _type: string;
+  _key: string;
+  year: number;
+  bonus: number;
+}
+
 export interface CompensationsPage {
   _createdAt: string;
   _id: string;
