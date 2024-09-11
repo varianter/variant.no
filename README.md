@@ -101,16 +101,16 @@ This project includes a customized Sanity Studio desk structure to enhance conte
 
 ## Managing Content
 
-### Site Settings
+### Company Information
 
-The `Site Settings` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
+The `Company Information` menu allows you to configure global settings for your site, including brand assets, tracking codes, and default SEO settings.
 
-#### Social Media Profiles
+### Social Media Profiles
 
 - **Adding Social Media Links**: Editors can manage social media links under the `Social Media Profiles` menu. This allows visitors to connect with the website on various social platforms.
 - **Supported Platforms**: The 9 supported platforms include Facebook, Instagram, and LinkedIn, but more can be added to `SoMePlatforms` if needed.
 
-#### Navigation Management
+### Navigation Management
 
 - **Setting the Landing Page**: The `Navigation Manager` allows editors to set the landing page for the site, which is crucial for determining the primary page visitors see upon arrival.
 - **Adding Menu Items**: Within the `Navigation Manager`, editors can add items to various pre-defined menus:
@@ -118,7 +118,7 @@ The `Site Settings` menu allows you to configure global settings for your site, 
   - **Footer Menu**: Add items to the footer menu, which consists of different sections. Each section can contain either social media links, custom links, text, or images (e.g., logos).
   - **Sidebar Menu**: Add links to the sidebar menu, which will appear on smaller screens to aid mobile navigation.
 
-#### Pages
+### Pages
 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
 - **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
@@ -180,6 +180,77 @@ export default MyCustomComponent;
 ```
 
 By using fetchWithToken, you ensure that all data fetching happens securely, with the server-side API route handling the sensitive token.
+
+### OpenGraph image customization
+
+As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified. Fonts and background can be customized as shown below.
+
+#### Custom fonts
+
+The following font utils file can be defined:
+
+> fonts must be placed in `/public/fonts`
+
+```tsx
+import { readFile } from "fs/promises";
+import { join } from "path";
+
+type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+type FontStyle = "normal" | "italic";
+interface FontOptions {
+  data: Buffer | ArrayBuffer;
+  name: string;
+  weight?: Weight;
+  style?: FontStyle;
+  lang?: string;
+}
+
+function readFont(filename: string) {
+  return readFile(join(process.cwd(), "public/fonts", filename));
+}
+
+export async function getFonts(): Promise<FontOptions[]> {
+  return [
+    {
+      data: await readFont("graphik_regular.woff"),
+      name: "Graphik",
+      weight: 400,
+      style: "normal",
+    },
+    {
+      data: await readFont("graphik_medium.woff"),
+      name: "Graphik",
+      weight: 600,
+      style: "normal",
+    },
+    {
+      data: await readFont("recoleta.ttf"),
+      name: "Recoleta",
+      weight: 600,
+      style: "normal",
+    },
+  ];
+}
+```
+
+followed by a modification of the image route response:
+
+```tsx
+(<OpenGraphImage title={title} description={description ?? undefined} />),
+  {
+    width: 1200,
+    height: 630,
+    fonts: await getFonts(), // add this line
+  };
+```
+
+#### Custom background
+
+Simply use the CSS background property on the root element with a base64-encoded data url
+
+```css
+background: url("data:image/png;base64,...");
+```
 
 ### Troubleshooting
 

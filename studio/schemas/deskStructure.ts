@@ -8,26 +8,48 @@ import {
   ControlsIcon,
   ProjectsIcon,
   StackCompactIcon,
+  InfoOutlineIcon,
   HeartIcon,
+  CaseIcon,
+  DoubleChevronRightIcon,
+  PinIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { siteSettingsID } from "./documents/siteSettings";
-import { postId } from "./documents/post";
+import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
-import { salaryAndBenefitsId } from "./documents/salaryAndBenefits";
+import { compensationsId } from "./documents/compensations";
+import { redirectId } from "./documents/redirect";
+import { companyLocationID } from "./documents/companyLocation";
 
 export default (S: StructureBuilder) =>
   S.list()
     .title("Content")
     .items([
       S.listItem()
-        .title("Site Settings")
-        .icon(CogIcon)
+        .title("Company Details")
+        .icon(CaseIcon)
         .child(
-          S.document()
-            .schemaType(siteSettingsID)
-            .documentId(siteSettingsID)
-            .title("Site Settings"),
+          S.list()
+            .title("Company Details")
+            .items([
+              S.listItem()
+                .title("Company Information")
+                .icon(InfoOutlineIcon)
+                .child(
+                  S.document()
+                    .schemaType(companyInfoID)
+                    .documentId(companyInfoID)
+                    .title("Company Information"),
+                ),
+              S.listItem()
+                .title("Company Locations")
+                .icon(PinIcon)
+                .child(
+                  S.documentTypeList(companyLocationID).title(
+                    "Company Locations",
+                  ),
+                ),
+            ]),
         ),
       S.listItem()
         .title("Legal Documents")
@@ -66,15 +88,19 @@ export default (S: StructureBuilder) =>
                     .documentId(blogId)
                     .title("Blog Overview & Settings"),
                 ),
+              S.listItem()
+                .title("Compensations")
+                .icon(HeartIcon)
+                .child(
+                  S.document()
+                    .schemaType(compensationsId)
+                    .documentId(compensationsId)
+                    .title("Compensations"),
+                ),
             ]),
         ),
       S.listItem()
-        .title("Salary and Benefits")
-        .icon(HeartIcon)
-        .child(
-          S.document()
-            .schemaType(salaryAndBenefitsId)
-            .documentId(salaryAndBenefitsId)
-            .title("Salary and Benefits"),
-        ),
+        .title("Redirects")
+        .icon(DoubleChevronRightIcon)
+        .child(S.documentTypeList(redirectId).title("Redirects")),
     ]);

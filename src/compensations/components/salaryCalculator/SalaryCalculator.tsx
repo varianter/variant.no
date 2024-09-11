@@ -5,7 +5,7 @@ import {
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Button from "src/components/buttons/Button";
-import { maxExperience } from "src/salaryAndBenefits/utils/calculateSalary";
+import { maxExperience } from "src/compensations/utils/calculateSalary";
 
 export type Degree = "bachelor" | "master";
 

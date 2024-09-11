@@ -9,7 +9,7 @@ import { linkID } from "studio/schemas/objects/link";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { BrandAssets } from "studio/lib/payloads/siteSettings";
+import { BrandAssets } from "studio/lib/payloads/companyDetails";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getHref } from "src/utils/get";

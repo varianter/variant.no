@@ -1,6 +1,6 @@
 import { IImage } from "./media";
 
-export interface SiteSettings {
+export interface CompanyInfo {
   brandAssets: BrandAssets;
   siteMetadata: SiteMetadata;
 }
@@ -14,4 +14,11 @@ export interface BrandAssets {
 interface SiteMetadata {
   siteName: string;
   defaultLanguage: string;
+}
+
+export interface CompanyLocation {
+  _key: string;
+  _id: string;
+  _updatedAt: string;
+  companyLocationName: string;
 }

@@ -1,0 +1,50 @@
+.wrapper {
+  align-items: center;
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+}
+
+.wrapper.inSidebar {
+  padding: 0.5rem 0.75rem;
+}
+
+.wrapper:hover {
+  background: #f5f5f7;
+}
+
+.darkTheme.wrapper:hover {
+  background: #191a24;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  text-decoration: block;
+  font-weight: 500;
+  color: #323545;
+  letter-spacing: 0;
+  gap: 0.2rem;
+  font-size: 0.8125rem;
+  line-height: calc(19 / 13);
+
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    -webkit-mask: url("/arrow-right.svg") no-repeat;
+    -webkit-mask-size: contain;
+    background-color: #323545;
+  }
+}
+
+.darkTheme .text {
+  color: #bec0cd;
+
+  &::after {
+    background-color: #bec0cd;
+  }
+}

@@ -3,31 +3,31 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { Navigation } from "studio/lib/payloads/navigation";
 import { Header } from "./Header";
-import { SiteSettings } from "studio/lib/payloads/siteSettings";
-import { SITESETTINGS_QUERY } from "studio/lib/queries/siteSettings";
+import { CompanyInfo } from "studio/lib/payloads/companyDetails";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 
 export default function HeaderPreview({
   initialNav,
-  initialSiteSetting,
+  initialCompanyInfo,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
-  initialSiteSetting: QueryResponseInitial<SiteSettings>;
+  initialCompanyInfo: QueryResponseInitial<CompanyInfo>;
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
     {},
     { initial: initialNav },
   );
-  const { data: newSiteSettings } = useQuery<SiteSettings | null>(
-    SITESETTINGS_QUERY,
+  const { data: newCompanyInfo } = useQuery<CompanyInfo | null>(
+    COMPANY_INFO_QUERY,
     {},
-    { initial: initialSiteSetting },
+    { initial: initialCompanyInfo },
   );
 
   return (
     newNav &&
-    newSiteSettings && (
-      <Header data={newNav} assets={newSiteSettings.brandAssets} />
+    newCompanyInfo && (
+      <Header data={newNav} assets={newCompanyInfo.brandAssets} />
     )
   );
 }

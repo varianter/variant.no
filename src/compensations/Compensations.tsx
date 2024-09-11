@@ -1,16 +1,21 @@
 "use client";
-import styles from "./salaryAndBenefits.module.css";
+import styles from "./compensations.module.css";
 import Text from "src/components/text/Text";
-import { SalaryAndBenefitsPage } from "studio/lib/payloads/salaryAndBenefits";
-import { RichText } from "src/components/richText/RichText";
+import { CompensationsPage } from "studio/lib/payloads/compensations";
 import SalaryCalculator, {
   Degree,
 } from "./components/salaryCalculator/SalaryCalculator";
 import { useState } from "react";
 import { calculatePension, calculateSalary } from "./utils/calculateSalary";
+import { CompanyLocation } from "studio/lib/payloads/companyDetails";
+import {
+  IOption,
+  RadioButtonGroup,
+} from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 
-interface SalaryAndBenefitsProps {
-  salaryAndBenefits: SalaryAndBenefitsPage;
+interface CompensationsProps {
+  compensations: CompensationsPage;
+  locations: CompanyLocation[];
 }
 
 interface SalaryCalculatorFormState {
@@ -18,14 +23,16 @@ interface SalaryCalculatorFormState {
   selectedDegree: Degree;
 }
 
-const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
+const Compensations = ({ compensations, locations }: CompensationsProps) => {
+  const [selectedLocation, setSelectedLocation] = useState<string>(
+    locations[0]._id,
+  );
   const currentYear = new Date().getFullYear();
-
+  const [salary, setSalary] = useState<number | null>(null);
   const [formState, setFormState] = useState<SalaryCalculatorFormState>({
     examinationYear: currentYear - 1,
     selectedDegree: "bachelor",
   });
-  const [salary, setSalary] = useState<number | null>(null);
 
   const updateSelectedDegree = (newDegree: Degree) => {
     setFormState((prevState) => ({
@@ -52,10 +59,22 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
     );
   };
 
+  const locationOptions: IOption[] = locations.map((companyLocation) => ({
+    id: companyLocation._id,
+    label: companyLocation.companyLocationName,
+  }));
+
   return (
     <div className={styles.wrapper}>
-      <Text type="h1">{salaryAndBenefits.basicTitle}</Text>
-      {salaryAndBenefits.showSalaryCalculator && (
+      <Text type="h1">{compensations.basicTitle}</Text>
+      <RadioButtonGroup
+        id="location-group"
+        label="Choose your location"
+        options={locationOptions}
+        selectedId={selectedLocation}
+        onValueChange={(option) => setSelectedLocation(option.id)}
+      />
+      {compensations.showSalaryCalculator && (
         <>
           <SalaryCalculator
             examinationYearValue={formState.examinationYear}
@@ -75,10 +94,9 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
         </>
       )}
       <div className={styles.benefits}>
-        {salaryAndBenefits.benefits.map((benefit) => (
+        {compensations.benefitsByLocation.map((benefit) => (
           <div key={benefit._key} className={styles.benefitWrapper}>
-            <Text type="h2">{benefit.basicTitle}</Text>
-            <RichText value={benefit.richText} />
+            {/* TODO: display benefits based on locations */}
           </div>
         ))}
       </div>
@@ -86,4 +104,4 @@ const SalaryAndBenefits = ({ salaryAndBenefits }: SalaryAndBenefitsProps) => {
   );
 };
 
-export default SalaryAndBenefits;
+export default Compensations;

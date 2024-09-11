@@ -6,17 +6,19 @@ import { socialMedia } from "./schemas/objects/socialMedia";
 import { footerSection } from "./schemas/objects/footerSection";
 import socialMediaLinks from "./schemas/documents/socialMediaProfiles";
 import callToActionField from "./schemas/fields/callToActionFields";
-import siteSettings from "./schemas/documents/siteSettings";
+import companyInfo from "./schemas/documents/companyInfo";
 import blog from "./schemas/documents/blog";
 import posts from "./schemas/documents/post";
 import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/legalDocuments";
 import benefit from "./schemas/documents/benefit";
-import salaryAndBenefits from "./schemas/documents/salaryAndBenefits";
+import companyLocation from "./schemas/documents/companyLocation";
+import compensations from "./schemas/documents/compensations";
+import redirect from "./schemas/documents/redirect";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-    siteSettings,
+    companyInfo,
     navigationManager,
     socialMediaLinks,
     pageBuilder,
@@ -28,7 +30,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     posts,
     categories,
     legalDocument,
-    salaryAndBenefits,
+    compensations,
     benefit,
+    redirect,
+    companyLocation,
   ],
 };

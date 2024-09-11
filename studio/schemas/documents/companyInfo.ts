@@ -1,15 +1,16 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
-import legalDocument from "./legalDocuments";
 
-export const siteSettingsID = "siteSettings";
+export const companyInfoID = "companyInfo";
 
-const siteSettings = defineType({
-  name: siteSettingsID,
+const companyInfo = defineType({
+  name: companyInfoID,
   type: "document",
-  title: "Site Settings",
+  title: "Company Information",
   description:
-    "Configure global settings for your site including brand assets, tracking codes, and default SEO settings.",
+    "Manage all your global site settings here, including brand assets and company information. " +
+    "Everything stored here is essential for consistent branding, and is referenced across various site sections, " +
+    "such as your office locations.",
   fields: [
     {
       name: "siteMetadata",
@@ -73,40 +74,6 @@ const siteSettings = defineType({
       ],
     },
     {
-      name: "analyticsTracking",
-      type: "object",
-      title: "Analytics and Tracking",
-      description:
-        "Select your analytics service and add the tracking ID to monitor site traffic and user interactions.",
-      fields: [
-        defineField({
-          name: "service",
-          type: "string",
-          title: "Analytics Service",
-          description: "Select the analytics service you are using.",
-          options: {
-            list: [
-              { title: "Google Analytics", value: "googleAnalytics" },
-              { title: "Facebook Pixel", value: "facebookPixel" },
-              { title: "Plausible", value: "plausible" },
-              { title: "Fathom", value: "fathom" },
-              { title: "Matomo", value: "matomo" },
-              { title: "Splitbee", value: "splitbee" },
-              { title: "Visitor Analytics", value: "visitorAnalytics" },
-            ],
-            layout: "dropdown",
-          },
-        }),
-        defineField({
-          name: "trackingID",
-          type: "string",
-          title: "Tracking ID",
-          description:
-            "Enter the tracking ID for the selected analytics service.",
-        }),
-      ],
-    },
-    {
       name: "defaultSEO",
       type: "object",
       title: "Default SEO Settings",
@@ -118,10 +85,10 @@ const siteSettings = defineType({
   preview: {
     prepare() {
       return {
-        title: "Site Settings",
+        title: "Company Information",
       };
     },
   },
 });
 
-export default siteSettings;
+export default companyInfo;
