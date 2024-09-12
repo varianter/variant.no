@@ -11,20 +11,20 @@ export const bonusesByLocation = defineField({
   name: "bonusesByLocation",
   title: "Bonuses by Location",
   description:
-    "Yearly bonus data specific to a particular location. Each location should have a unique entry with the yearly bonuses given to employees.",
+    "Yearly bonus data specific to a particular company location. Each location should have a unique entry with the yearly bonuses given to their employees.",
   type: "array",
   of: [
     defineField({
       name: "bonusData",
-      title: "Location Bonuses",
+      title: "Bonus by location",
       description:
-        "Details of the bonus amount specific to a particular location. Each location should have a unique entry with the yearly bonuses given to employees.",
+        "Details of the bonus amount specific to a particular location. Each location should have a unique entry with the yearly bonus given to employees.",
       type: "object",
       fields: [
         {
           ...location,
           description:
-            "Select the company location for which you are entering the yearly bonuses data. Each location must be unique.",
+            "Select the company location for which you are entering the yearly bonus data. Each location must be unique.",
           validation: (Rule) => Rule.required(),
         },
         defineField({
