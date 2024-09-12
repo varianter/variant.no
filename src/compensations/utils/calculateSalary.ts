@@ -18,8 +18,11 @@ export function calculateSalary(
   return salaryPayscale[currentYear][adjustedYear];
 }
 
-export function calculatePension(salary: number): number {
-  return Math.round(salary * 0.07);
+export function calculatePension(
+  salary: number,
+  pensionPercent: number,
+): number {
+  return Math.round(salary * (pensionPercent / 100));
 }
 
 export function maxExperience(thisYear: number): number {

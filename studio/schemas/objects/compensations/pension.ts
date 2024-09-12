@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
 
 export const pension = defineField({
-  name: "pensionData",
+  name: "pensionPercent",
   title: "Pension Percentage",
   type: "number",
   initialValue: 7,
