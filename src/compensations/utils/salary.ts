@@ -34,6 +34,20 @@ export function maxSalariesExaminationYear(salaries: Salaries): number {
   return Math.max(...examinationYearsFromSalaries(salaries));
 }
 
+/**
+ * Retrieves salary data for a specific location and year.
+ *
+ * @param year - The year for which to retrieve salary data.
+ * @param locationId - The string from the `_ref` property of a location reference used in the salaries object.
+ * @param salariesByLocation - An array of salary data organized by location.
+ * @returns A Result containing either the Salaries object or an error message.
+ *
+ * @remarks
+ * This function searches for salary data based on the provided location and year.
+ * The locationId should match the _ref property of a location reference in the salariesByLocation array.
+ * If the data is found and valid, it returns a ResultOk with the parsed Salaries object.
+ * If the data is not found or invalid, it returns a ResultError with an appropriate error message.
+ */
 export function salariesFromLocation(
   year: number,
   locationId: string,
