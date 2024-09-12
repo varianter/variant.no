@@ -20,8 +20,8 @@ const posts = defineType({
       description: "Select the date and time when this post will be published.",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
-      validation: (Rule) =>
-        Rule.required().custom((date, context) => {
+      validation: (rule) =>
+        rule.required().custom((date, context) => {
           // Ensure date is not undefined or null
           if (!date) return "The publish date is required.";
 
@@ -57,7 +57,7 @@ const posts = defineType({
       components: {
         input: CategorySelector,
       },
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "lead",
@@ -69,15 +69,15 @@ const posts = defineType({
         defineField({
           ...richText,
           description: "Enter the introductory text for the post.",
-          validation: (Rule) => Rule.required(),
+          validation: (rule) => rule.required(),
         }),
         defineField({
           ...image,
           description: "Upload a featured image for the post.",
-          validation: (Rule) => Rule.required(),
+          validation: (rule) => rule.required(),
         }),
       ],
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       ...richText,

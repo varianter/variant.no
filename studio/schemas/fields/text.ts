@@ -23,8 +23,8 @@ const createField = ({
   isRequired = false,
   maxLength = 60,
 }: CreateFieldProps) => {
-  const validationRules = (Rule: StringRule) => {
-    let rules = Rule.max(maxLength);
+  const validationRules = (rule: StringRule) => {
+    let rules = rule.max(maxLength);
     if (isRequired) {
       rules = rules.required();
     }
@@ -58,7 +58,7 @@ export const optionalSubtitle = defineField({
   name: subtitleID.optional,
   title: "Subtitle",
   type: "string",
-  validation: (Rule) => Rule.max(60),
+  validation: (rule) => rule.max(60),
   components: {
     input: (props) => StringInputWithCharacterCount({ ...props, maxCount: 60 }),
   },

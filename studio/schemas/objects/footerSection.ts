@@ -33,9 +33,9 @@ export const footerSection = defineType({
       type: "string",
       description:
         "Enter the title for this footer section. This will help identify the section within the footer.",
-      validation: (Rule) => [
-        Rule.required().error("Section title is required"),
-        Rule.max(60),
+      validation: (rule) => [
+        rule.required().error("Section title is required"),
+        rule.max(60),
       ],
       components: {
         input: (props: StringInputProps) =>
@@ -55,7 +55,7 @@ export const footerSection = defineType({
         ],
         layout: "dropdown",
       },
-      validation: (Rule) => Rule.required().error("Content type is required"),
+      validation: (rule) => rule.required().error("Content type is required"),
       initialValue: SectionType.Content,
     },
     {

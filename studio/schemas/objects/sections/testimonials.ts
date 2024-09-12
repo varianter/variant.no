@@ -15,8 +15,9 @@ export const testimonals = defineField({
       title: "List of Testimonials",
       type: "array",
       of: [testimony],
-      validation: (Rule) =>
-        Rule.required()
+      validation: (rule) =>
+        rule
+          .required()
           .min(1)
           .max(4)
           .error("You must have between 1 and 4 testimonials."),

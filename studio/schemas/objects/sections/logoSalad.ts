@@ -22,9 +22,9 @@ export const logoSalad = defineField({
       type: "string",
       description:
         "Required text displayed in a smaller body text style. Use it to provide additional context or details about the logos.",
-      validation: (Rule) => [
-        Rule.required().error("Logo description is required."),
-        Rule.max(100),
+      validation: (rule) => [
+        rule.required().error("Logo description is required."),
+        rule.max(100),
       ],
       components: {
         input: (props: StringInputProps) =>
@@ -38,8 +38,9 @@ export const logoSalad = defineField({
         "Add a list of logos to display. You must include between 6 and 12 logos.",
       type: "array",
       of: [image],
-      validation: (Rule) =>
-        Rule.min(6)
+      validation: (rule) =>
+        rule
+          .min(6)
           .error("At least 6 logos are required.")
           .max(12)
           .error("You can add up to 12 logos.")

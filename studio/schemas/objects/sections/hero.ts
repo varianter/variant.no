@@ -17,7 +17,7 @@ export const hero = defineField({
       name: "description",
       title: "Description",
       type: "string",
-      validation: (Rule) => Rule.max(200),
+      validation: (rule) => rule.max(200),
       components: {
         input: (props: StringInputProps) =>
           StringInputWithCharacterCount({ ...props, maxCount: 200 }),
@@ -36,8 +36,8 @@ export const hero = defineField({
           preview: callToActionField.preview,
         },
       ],
-      validation: (Rule) =>
-        Rule.custom((callToActions) => {
+      validation: (rule) =>
+        rule.custom((callToActions) => {
           if (!Array.isArray(callToActions)) return true;
           if (callToActions.length > 2) {
             return "You can only have two Call to Action links";

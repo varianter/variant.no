@@ -12,7 +12,7 @@ const categories = defineField({
       name: "category",
       type: "string",
       title: "Category",
-      validation: (Rule) => Rule.required().min(1).max(100),
+      validation: (rule) => rule.required().min(1).max(100),
       components: {
         input: (props: StringInputProps) =>
           StringInputWithCharacterCount({ ...props, maxCount: 100 }),
