@@ -30,6 +30,7 @@ export interface CompensationsPage {
   basicTitle: string;
   page: string;
   slug: Slug;
+  pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
   showSalaryCalculator: boolean;
 }

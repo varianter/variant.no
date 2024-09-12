@@ -86,9 +86,12 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
           {salary !== null ? (
             <div aria-live="polite">
               <Text> Du vil få en årlig lønn på {salary}</Text>
-              <Text>
-                Du vil få en årlig pensjon på omtrent {calculatePension(salary)}
-              </Text>
+              {compensations.pensionPercent && (
+                <Text>
+                  Du vil få en årlig pensjon på omtrent{" "}
+                  {calculatePension(salary, compensations.pensionPercent)}
+                </Text>
+              )}
             </div>
           ) : null}
         </>
