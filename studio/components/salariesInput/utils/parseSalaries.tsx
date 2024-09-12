@@ -4,11 +4,11 @@ export interface Salaries {
   [year: string]: number;
 }
 
-export function isSalariesType(o: unknown): o is Salaries {
+export function isSalariesType(value: unknown): value is Salaries {
   return (
-    typeof o === "object" &&
-    o !== null &&
-    Object.entries(o).every(
+    typeof value === "object" &&
+    value !== null &&
+    Object.entries(value).every(
       ([k, v]) => !isNaN(Number(k)) && typeof v === "number",
     )
   );

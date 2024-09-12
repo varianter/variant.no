@@ -40,7 +40,7 @@ export function salariesFromLocation(
   salariesByLocation: SalariesByLocation[],
 ): Result<Salaries, string> {
   const yearlySalaries = salariesByLocation.find(
-    (s) => s.location._ref === locationId,
+    (salary) => salary.location._ref === locationId,
   )?.yearlySalaries;
   if (yearlySalaries === undefined) {
     return ResultError(`Could not find salaries for location '${locationId}'`);
