@@ -35,6 +35,13 @@ export interface BonusPage {
   bonus: number;
 }
 
+export interface SalariesByLocation {
+  _key: string;
+  _type: string;
+  location: Reference;
+  yearlySalaries: SalariesPage[];
+}
+
 export interface CompensationsPage {
   _createdAt: string;
   _id: string;
@@ -47,5 +54,6 @@ export interface CompensationsPage {
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
+  salaries: SalariesByLocation[];
   showSalaryCalculator: boolean;
 }
