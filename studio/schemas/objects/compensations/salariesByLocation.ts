@@ -9,7 +9,7 @@ import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
 import { SalariesPage } from "../../../lib/payloads/compensations";
 
 export const salariesByLocation = defineField({
-  name: "salaries",
+  name: "salariesByLocation",
   title: "Salaries by Location",
   description:
     "Yearly salary data specific to a particular location. Each location should have a unique entry with the yearly salaries for that location.",

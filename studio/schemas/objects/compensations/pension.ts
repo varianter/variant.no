@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-export const pension = defineField({
+export const pensionPercent = defineField({
   name: "pensionPercent",
   title: "Pension Percentage",
   type: "number",
