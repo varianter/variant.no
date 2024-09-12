@@ -1,11 +1,35 @@
 import { defineField } from "sanity";
 import { location, locationID } from "../locations";
 import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
-import { benefitId } from "studio/schemas/documents/benefit";
+import { richText, title } from "studio/schemas/fields/text";
 import {
   checkForDuplicateLocations,
   DocumentWithLocation,
 } from "./utils/validation";
+
+const benefitTypeId = "benefitType";
+
+const BENEFIT_TYPE_BASIC_VALUE = "basic";
+const BENEFIT_TYPES = [
+  { title: "Basic", value: BENEFIT_TYPE_BASIC_VALUE },
+  { title: "Bonus", value: "bonus" },
+  { title: "Pension", value: "pension" },
+  { title: "Salary Growth", value: "salaryGrowth" },
+];
+
+const benefitType = defineField({
+  name: benefitTypeId,
+  type: "string",
+  title: "Benefit Type",
+  description:
+    "Choose the type of benefit. Some benefit types include visual graphs that will be displayed together with the text.",
+  options: {
+    list: BENEFIT_TYPES,
+    layout: BENEFIT_TYPES.length > 5 ? "dropdown" : "radio",
+  },
+  initialValue: BENEFIT_TYPE_BASIC_VALUE,
+  validation: (Rule) => Rule.required(),
+});
 
 export const benefitsByLocation = defineField({
   name: "benefitsByLocation",
@@ -24,21 +48,43 @@ export const benefitsByLocation = defineField({
           validation: (Rule) => Rule.required(),
         },
         defineField({
-          name: "benefitsGroup",
-          title: "Benefits Group",
+          name: "benefits",
+          title: "Benefits",
           description:
             "Enter the benefits offered at the location selected above.",
           type: "array",
-          of: [{ type: benefitId }],
+          of: [
+            {
+              name: "benefit",
+              type: "object",
+              title: "Benefit",
+              fields: [benefitType, title, richText],
+              preview: {
+                select: {
+                  title: title.name,
+                  type: benefitType.name,
+                },
+                prepare({ title, type }) {
+                  const subtitle =
+                    BENEFIT_TYPES.find((o) => o.value === type)?.title ??
+                    "Unknown benefit type";
+                  return {
+                    title,
+                    subtitle,
+                  };
+                },
+              },
+            },
+          ],
         }),
       ],
       preview: {
         select: {
           location: `${locationID}.${companyLocationNameID}`,
-          benefitsGroup: "benefitsGroup",
+          benefits: "benefits",
         },
-        prepare({ location, benefitsGroup }) {
-          const benefitsCount = benefitsGroup ? benefitsGroup.length : 0;
+        prepare({ location, benefits }) {
+          const benefitsCount = benefits ? benefits.length : 0;
           return {
             title: location || "No location selected",
             subtitle: `${benefitsCount} benefit${benefitsCount > 1 ? "s" : ""}`,
@@ -58,3 +104,5 @@ export const benefitsByLocation = defineField({
       );
     }),
 });
+
+export default benefitsByLocation;

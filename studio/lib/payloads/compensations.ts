@@ -10,7 +10,7 @@ export interface Benefit {
 
 export interface BenefitsByLocation {
   _key: string;
-  location: string;
+  location: Reference;
   benefits: Benefit[];
 }
 
@@ -40,4 +40,9 @@ export interface CompensationsPage {
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
   showSalaryCalculator: boolean;
+}
+
+export interface Reference {
+  _type: "reference";
+  _ref: string;
 }

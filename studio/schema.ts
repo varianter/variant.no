@@ -11,10 +11,10 @@ import blog from "./schemas/documents/blog";
 import posts from "./schemas/documents/post";
 import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/legalDocuments";
-import benefit from "./schemas/documents/benefit";
 import companyLocation from "./schemas/documents/companyLocation";
 import compensations from "./schemas/documents/compensations";
 import redirect from "./schemas/documents/redirect";
+import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -31,8 +31,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
-    benefit,
     redirect,
+    benefitsByLocation,
     companyLocation,
   ],
 };
