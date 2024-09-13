@@ -47,9 +47,9 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
       salariesFromLocation(
         currentYear,
         selectedLocation,
-        compensations.salaries,
+        compensations.salariesByLocation,
       ),
-    [currentYear, selectedLocation, compensations.salaries],
+    [currentYear, selectedLocation, compensations.salariesByLocation],
   );
 
   const updateSelectedDegree = (newDegree: Degree) => {

@@ -54,6 +54,6 @@ export interface CompensationsPage {
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
-  salaries: SalariesByLocation[];
+  salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
 }
