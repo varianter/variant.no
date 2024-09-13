@@ -4,6 +4,8 @@ import { urlFor } from "studio/lib/image";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { loadQuery } from "studio/lib/store";
 import { PortableTextBlock } from "src/components/richText/RichText";
+import { FALLBACK_SEO_QUERY } from "../../studio/lib/queries/seo";
+import { SeoFallback } from "../../studio/lib/payloads/seoFallback";
 
 type SeoData = {
   title: string;
@@ -26,7 +28,6 @@ type CompanyInfo = {
   brandAssets: {
     favicon: string;
   };
-  defaultSEO: SeoData;
 };
 
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
@@ -84,14 +85,16 @@ export async function fetchCompanyInfo(): Promise<CompanyInfo | null> {
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
+  const { data: fallbackSeo } =
+    await loadQuery<SeoFallback>(FALLBACK_SEO_QUERY);
   const companyInfo = await fetchCompanyInfo();
 
   const title =
     seo?.title ||
-    companyInfo?.defaultSEO?.title ||
+    fallbackSeo?.seo?.seoTitle ||
     companyInfo?.siteMetadata?.siteName ||
     "Variant";
-  const description = seo?.description || companyInfo?.defaultSEO?.description;
+  const description = seo?.description || fallbackSeo.seo?.seoDescription;
   const keywords = seo?.keywords || "";
 
   const favicon = companyInfo?.brandAssets?.favicon;
@@ -105,7 +108,7 @@ export async function generateMetadataFromSeo(
     title: title,
     ...(description ? { description: description } : {}),
   })}`;
-  const sanityImageUrl = seo?.imageUrl || companyInfo?.defaultSEO?.imageUrl;
+  const sanityImageUrl = seo?.imageUrl || fallbackSeo.seo?.seoImageUrl;
   const sanityImageParams = `?${new URLSearchParams({
     w: OPEN_GRAPH_IMAGE_DIMENSIONS.width.toString(),
     h: OPEN_GRAPH_IMAGE_DIMENSIONS.height.toString(),
