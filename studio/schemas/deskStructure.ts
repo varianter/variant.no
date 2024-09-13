@@ -12,6 +12,7 @@ import {
   CaseIcon,
   DoubleChevronRightIcon,
   PinIcon,
+  SearchIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
@@ -19,6 +20,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
+import { seoFallbackID } from "./documents/admin/fallbackSeo";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -76,6 +78,23 @@ const siteSettingSection = (S: StructureBuilder) =>
             .icon(UsersIcon)
             .child(
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
+            ),
+          S.listItem()
+            .title("SEO Configurations")
+            .icon(SearchIcon)
+            .child(
+              S.list()
+                .title("SEO Configurations")
+                .items([
+                  S.listItem()
+                    .title("Fallback SEO")
+                    .child(
+                      S.document()
+                        .schemaType(seoFallbackID)
+                        .documentId(seoFallbackID)
+                        .title("Fallback SEO"),
+                    ),
+                ]),
             ),
           S.listItem()
             .title("Broken Links")

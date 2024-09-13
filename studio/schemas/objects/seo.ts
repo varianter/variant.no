@@ -1,4 +1,4 @@
-import { defineField, StringInputProps } from "sanity";
+import { defineField } from "sanity";
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 const seoFieldID = {
