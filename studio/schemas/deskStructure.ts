@@ -78,7 +78,7 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("SEO Redirects")
+            .title("Broken Links")
             .icon(DoubleChevronRightIcon)
             .child(S.documentTypeList(redirectId).title("Redirects")),
           //TODO: Add SEO Settings
