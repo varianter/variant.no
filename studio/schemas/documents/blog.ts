@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 import seo from "../objects/seo";
 import { pageSlug } from "../schemaTypes/slug";
 import { title } from "../fields/text";
-import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const blogId = "blog";
 

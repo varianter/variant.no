@@ -3,7 +3,7 @@ import { defineField, StringInputProps } from "sanity";
 import callToActionField from "../../fields/callToActionFields";
 import CustomCallToActions from "../../../components/CustomCallToActions";
 import { title } from "studio/schemas/fields/text";
-import { StringInputWithCharacterCount } from "../../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const heroID = "hero";
 

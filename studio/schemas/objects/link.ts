@@ -2,7 +2,7 @@ import { defineField, StringInputProps } from "sanity";
 import AnchorSelect from "../../components/AnchorSelect";
 import LinkTypeSelector from "../../components/LinkTypeSelector";
 import NewTabSelector from "../../components/NewTabSelector";
-import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const linkID = "link";
 

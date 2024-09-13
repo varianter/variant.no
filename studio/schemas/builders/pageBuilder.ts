@@ -11,7 +11,7 @@ import testimonals from "../objects/sections/testimonials";
 import imageSection from "../objects/sections/image";
 import grid from "../objects/sections/grid";
 import contactForm from "../objects/sections/form";
-import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const pageBuilderID = "pageBuilder";
 

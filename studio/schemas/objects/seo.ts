@@ -1,5 +1,5 @@
 import { defineField, StringInputProps } from "sanity";
-import { StringInputWithCharacterCount } from "studio/components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 const seoFieldID = {
   title: "seoTitle",
@@ -65,7 +65,8 @@ const seo = defineField({
       description:
         "Enter targeted keywords to enhance your content’s visibility in search engines and social media platforms. Use relevant and specific keywords that describe your content, helping to attract the right audience and improve your SEO performance",
       components: {
-        input: StringInputWithCharacterCount,
+        input: (props) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 200 }),
       },
     }),
     defineField({

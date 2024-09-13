@@ -2,7 +2,7 @@ import { defineField, StringInputProps } from "sanity";
 import { richText, title } from "../../../schemas/fields/text";
 import { imageExtended } from "../../../schemas/fields/media";
 import { link } from "../link";
-import { StringInputWithCharacterCount } from "../../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const articleID = "article";
 

@@ -1,6 +1,6 @@
 import { defineType, defineField } from "sanity";
 import seo from "../objects/seo";
-import { StringInputWithCharacterCount } from "../../components/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const companyInfoID = "companyInfo";
 
