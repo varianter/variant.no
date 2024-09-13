@@ -1,4 +1,4 @@
-import { defineField, StringInputProps } from "sanity";
+import { defineField } from "sanity";
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 const seoFieldID = {
@@ -45,12 +45,12 @@ const seo = defineField({
         rule
           .min(70)
           .warning(
-            "A description of at least 70 characters has a higher chance of converting visitors",
+            "A description of at least 70 characters has a higher chance of converting visitors"
           ),
         rule
           .max(160)
           .warning(
-            "A description of more than 160 characters has a lower chance of converting visitors",
+            "A description of more than 160 characters has a lower chance of converting visitors"
           ),
       ],
       components: {

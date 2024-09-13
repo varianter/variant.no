@@ -12,6 +12,7 @@ import {
   CaseIcon,
   DoubleChevronRightIcon,
   PinIcon,
+  SearchIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
@@ -19,6 +20,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
+import { seoFallbackID } from "./documents/admin/fallbackSeo";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -36,21 +38,21 @@ const adminSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(companyInfoID)
                 .documentId(companyInfoID)
-                .title("Company Information"),
+                .title("Company Information")
             ),
           S.listItem()
             .title("Company Locations")
             .icon(PinIcon)
             .child(
-              S.documentTypeList(companyLocationID).title("Company Locations"),
+              S.documentTypeList(companyLocationID).title("Company Locations")
             ),
           S.listItem()
             .title("Legal Documents")
             .icon(CogIcon)
             .child(
-              S.documentTypeList(legalDocumentID).title("Legal Documents"),
+              S.documentTypeList(legalDocumentID).title("Legal Documents")
             ),
-        ]),
+        ])
     );
 
 // Site Settings Section
@@ -69,13 +71,30 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType("navigationManager")
                 .documentId("navigationManager")
-                .title("Navigation Manager"),
+                .title("Navigation Manager")
             ),
           S.listItem()
             .title("Social Media Profiles")
             .icon(UsersIcon)
             .child(
-              S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
+              S.document().schemaType(soMeLinksID).documentId(soMeLinksID)
+            ),
+          S.listItem()
+            .title("SEO Configurations")
+            .icon(SearchIcon)
+            .child(
+              S.list()
+                .title("SEO Configurations")
+                .items([
+                  S.listItem()
+                    .title("Fallback SEO")
+                    .child(
+                      S.document()
+                        .schemaType(seoFallbackID)
+                        .documentId(seoFallbackID)
+                        .title("Fallback SEO")
+                    ),
+                ])
             ),
           S.listItem()
             .title("Broken Links")
@@ -83,7 +102,7 @@ const siteSettingSection = (S: StructureBuilder) =>
             .child(S.documentTypeList(redirectId).title("Redirects")),
           //TODO: Add SEO Settings
           //TODO: Add Language selector
-        ]),
+        ])
     );
 
 // Section for dynamic and customizable Pages
@@ -118,9 +137,9 @@ const SpecialPagesSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
-                .title("Compensations"),
+                .title("Compensations")
             ),
-        ]),
+        ])
     );
 
 // Main export
