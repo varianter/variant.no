@@ -21,8 +21,9 @@ export const contactForm = defineField({
           styles: [{ title: "Normal", value: "normal" }],
         },
       ],
-      validation: (Rule) =>
-        Rule.required()
+      validation: (rule) =>
+        rule
+          .required()
           .min(1)
           .error("Consent Agreement Text is required and cannot be empty."),
     },

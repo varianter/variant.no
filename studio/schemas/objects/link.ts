@@ -1,7 +1,8 @@
-import { defineField } from "sanity";
+import { defineField, StringInputProps } from "sanity";
 import AnchorSelect from "../../components/AnchorSelect";
 import LinkTypeSelector from "../../components/LinkTypeSelector";
 import NewTabSelector from "../../components/NewTabSelector";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const linkID = "link";
 
@@ -34,6 +35,11 @@ export const link = defineField({
       title: "Provide a link title",
       type: "string",
       description: "Enter the link text that will be displayed on the website.",
+      validation: (rule) => rule.max(60),
+      components: {
+        input: (props: StringInputProps) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+      },
     },
     {
       name: "linkType",
@@ -44,8 +50,8 @@ export const link = defineField({
       components: {
         input: LinkTypeSelector,
       },
-      validation: (Rule) =>
-        Rule.custom((value, context) => {
+      validation: (rule) =>
+        rule.custom((value, context) => {
           const parent = context.parent as Parent;
           if (parent?.linkTitle && !value) {
             return "Link type is required";
@@ -63,8 +69,8 @@ export const link = defineField({
         { type: lazyBlogID() },
         { type: lazyCompensationsID() },
       ],
-      validation: (Rule: any) =>
-        Rule.custom((value: any, context: any) => {
+      validation: (rule) =>
+        rule.custom((value: any, context: any) => {
           const parent = context.parent as Parent;
           if (
             parent?.linkTitle &&
@@ -87,29 +93,31 @@ export const link = defineField({
       type: "url",
       description:
         "Enter the full URL for the external link, including 'https://'. For example, 'https://www.example.com'.",
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ["http", "https"],
-          allowRelative: false,
-        }).custom((value, context) => {
-          const parent = context.parent as Parent;
-          if (
-            parent?.linkTitle &&
-            parent?.linkType === LinkType.External &&
-            !value
-          ) {
-            return "URL is required for external links";
-          }
-          return true;
-        }),
+      validation: (rule) =>
+        rule
+          .uri({
+            scheme: ["http", "https"],
+            allowRelative: false,
+          })
+          .custom((value, context) => {
+            const parent = context.parent as Parent;
+            if (
+              parent?.linkTitle &&
+              parent?.linkType === LinkType.External &&
+              !value
+            ) {
+              return "URL is required for external links";
+            }
+            return true;
+          }),
       hidden: ({ parent }) => parent?.linkType !== LinkType.External,
     },
     {
       name: "email",
       title: "Enter the email address",
       type: "string",
-      validation: (Rule) =>
-        Rule.custom((value: string, context) => {
+      validation: (rule) =>
+        rule.custom((value: string, context) => {
           const parent = context.parent as Parent;
           if (
             parent?.linkTitle &&
@@ -129,8 +137,8 @@ export const link = defineField({
       name: "phone",
       title: "Enter the phone number",
       type: "string",
-      validation: (Rule) =>
-        Rule.custom((value: string, context) => {
+      validation: (rule) =>
+        rule.custom((value: string, context) => {
           const parent = context.parent as Parent;
           if (
             parent?.linkTitle &&

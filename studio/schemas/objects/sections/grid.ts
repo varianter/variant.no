@@ -26,7 +26,7 @@ export const grid = defineField({
               title: "Item Title",
               description:
                 "Title of the grid item, such as the name of an employee.",
-              validation: (Rule) => Rule.required(),
+              validation: (rule) => rule.required(),
             },
             {
               ...richText,
@@ -39,7 +39,7 @@ export const grid = defineField({
               title: "Item Image",
               description:
                 "Image of the grid item, such as a photo of an employee.",
-              validation: (Rule) => Rule.required(),
+              validation: (rule) => rule.required(),
             },
           ],
           preview: {
@@ -58,8 +58,8 @@ export const grid = defineField({
           },
         },
       ],
-      validation: (Rule) =>
-        Rule.required().min(1).error("At least one grid item is required."),
+      validation: (rule) =>
+        rule.required().min(1).error("At least one grid item is required."),
     },
   ],
   preview: {

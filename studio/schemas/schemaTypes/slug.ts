@@ -47,8 +47,8 @@ function createSlugField(source: string) {
           .slice(0, SLUG_MAX_LENGTH),
       isUnique: isSlugUniqueAcrossAllDocuments,
     },
-    validation: (Rule) =>
-      Rule.required().custom((value) => {
+    validation: (rule) =>
+      rule.required().custom((value) => {
         if (value?.current === undefined) return true;
         return (
           encodeURIComponent(value.current) === value.current ||
