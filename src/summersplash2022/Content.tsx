@@ -51,8 +51,8 @@ const Content = () => {
               ligger nemlig åpent og tilgjengelig på våre nettsider. Timelønnen
               trenger du heller ikke å lure på, den er på 271,83kr (eller 100
               <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
-              🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om hva
-              Variant står for og tilbyr.
+              🤓). Under “Hvorfor akkurat Variant?” lenger ned kan du lese mer
+              om hva Variant står for og tilbyr.
             </p>
             <div className={omJobbenStyle.imgWrapper}>
               <img
