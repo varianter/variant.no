@@ -91,7 +91,6 @@ const siteSettingSection = (S: StructureBuilder) =>
                 .title("Supported Languages"),
             ),
           S.listItem()
-            .title("SEO Configurations")
             .title("Default SEO")
             .icon(SearchIcon)
             .child(
