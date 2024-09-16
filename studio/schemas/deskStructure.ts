@@ -144,7 +144,7 @@ const SpecialPagesSection = (S: StructureBuilder) =>
     );
 
 // Main export
-export default (S: StructureBuilder) =>
+const buildDeskStructure = (S: StructureBuilder) =>
   S.list()
     .title("Content")
     .items([
@@ -153,3 +153,5 @@ export default (S: StructureBuilder) =>
       pagesSection(S),
       SpecialPagesSection(S),
     ]);
+
+export default buildDeskStructure;
