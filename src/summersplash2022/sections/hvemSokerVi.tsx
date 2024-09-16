@@ -38,7 +38,7 @@ const WhoAreWeSeeking = ({ className }: { className: string }) => {
         <div className={style.imgWrapper}>
           <img
             src={graduateNorwayMap}
-            alt="Trondheim: 3 designere"
+            alt="Trondheim: 3 designere, Bergen: 1 utvikler"
             className={style.img}
           />
         </div>

@@ -9,7 +9,7 @@ import omJobbenStyle from './sections/hvemSokerVi.module.css';
 import SummerstudentsQuotes from './sections/hvaSierSommerstudentene';
 
 const Content = () => {
-  const norwayMap = require('./img/norway summer job.svg');
+  const norwayMap = require('./img/summerjob_norway_2025.svg');
 
   return (
     <>
@@ -38,11 +38,11 @@ const Content = () => {
               </p>
 
               <p>
-                I 2024 tilbyr vi sommerjobb i både <strong>Trondheim</strong>,{' '}
+                I 2025 tilbyr vi sommerjobb i både <strong>Trondheim</strong>,{' '}
                 <strong>Oslo</strong> og <strong>Bergen</strong>, til
-                henholdsvis ti, ti og tre studenter. Hvor du vil jobbe bestemmer
-                du naturligvis selv. Sommerjobben varer i fire + to uker med tre
-                uker ferie i mellomtiden.
+                henholdsvis åtte, åtte og tre studenter. Hvor du vil jobbe
+                bestemmer du naturligvis selv. Sommerjobben varer i fire + to
+                uker med tre uker ferie i mellomtiden.
               </p>
             </div>
             <p className={omJobbenStyle.textBelowImg}>
@@ -51,13 +51,13 @@ const Content = () => {
               ligger nemlig åpent og tilgjengelig på våre nettsider. Timelønnen
               trenger du heller ikke å lure på, den er på 271,83kr (eller 100
               <em style={{ fontFamily: 'Nimbus Roman No9 L' }}>e </em>
-              🤓). Under “Hvorfor akkurat Variant?” ned kan du lese mer om hva
-              Variant står for og tilbyr.
+              🤓). Under “Hvorfor akkurat Variant?” lenger ned kan du lese mer
+              om hva Variant står for og tilbyr.
             </p>
             <div className={omJobbenStyle.imgWrapper}>
               <img
                 src={norwayMap}
-                alt="Vi ansetter 10 i Trondheim, 10 i Oslo og 3 i Bergen"
+                alt="Vi ansetter 8 i Trondheim, 8 i Oslo og 3 i Bergen"
                 className={omJobbenStyle.img}
               />
             </div>

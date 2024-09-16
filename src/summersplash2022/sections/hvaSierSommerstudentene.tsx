@@ -4,34 +4,19 @@ import GreenBlob from '../img/greenBlob';
 
 const summerstudentsQuotes = [
   {
-    name: 'Emma',
-    quote: `“Jeg er utrolig glad for å få være en del av variantgjengen i
-      sommer! Det er gøy å se hvordan kjerneverdier som åpenhet og
-      læreglede virkelig praktiseres i arbeidshverdagen, ikke bare
-      på papiret. Det gjør at jeg føler meg veldig inkludert og
-      lærer masse, samtidig som vi har det mye moro!\”`,
-    picture: require('../img/emma.svg'),
+    name: 'Solveig',
+    quote: `“Sommeren hos Variant var som å bli tatt inn i varmen av en stor familie, som umiddelbart fikk meg til å føle meg hjemme. De faste ansatte delte raust av sin kunnskap, tid og støtte, noe som gjorde det lett å finne seg til rette. Sommerteamet vårt, bestående av to designere og to utviklere, jobbet i seks uker på et spennende prosjekt for en start-up. Det var kult å kunne bygge noe verdifullt på kort tid – og ikke minst at det gikk rett i produksjon etter sommeren! Og ja, tre uker med velfortjent fri midt i alt dette smakte også godt.”`,
+    picture: require('../img/solveig-blob.png'),
   },
   {
-    name: 'Mathias',
-    quote: `“Sommeren i Variant ga meg en smakebit av hva det vil si å
-      være konsulent. Med ekte kunder og reelle behov lærte jeg
-      masse og fikk vist frem ferdighetene mine. Gjennom sosiale
-      arrangementer og pulserende Slack-kanaler følte jeg meg
-      inkludert allerede før dag én. Jevnlige sparringer ga faglig
-      påfyll og støtte til teamet, og folkene her er rett og slett
-      herlige 🤗”`,
-    picture: require('../img/mathias.svg'),
+    name: 'August',
+    quote: `“Å få jobbe med Variant i sommer har vært en glede! Fra første stund følte jeg meg velkommen og inkludert, både faglig og sosialt. De inkluderte meg aktivt på Variantdagene deres selv før jeg begynte å jobbe. Miljøet har gitt meg muligheten til å vise mitt potensial, samtidig som jeg har lært utrolig mye fra erfarne kolleger. I tillegg til å få verdifull innsikt i konsulentrollen, har jeg også fått solid arbeidserfaring som har hjulpet meg å vokse personlig og profesjonelt.”`,
+    picture: require('../img/august-blob.png'),
   },
   {
-    name: 'Swarny',
-    quote: `“Sommeren hos Variant har vært helt fantastisk. Vi fikk jobbe
-      med et megakult og aktuelt prosjekt med god oppfølging, både
-      fra Variant og kunden. Selv om Variant er et konsulentselskap,
-      har de et godt sosialt miljø hvor alle er inkluderende, ivrige
-      og åpne. Jeg er superfornøyd med at
-      jeg søkte sommerjobb hos Variant!!”`,
-    picture: require('../img/swarny.svg'),
+    name: 'Max',
+    quote: `“Denne sommeren ble faktist en av de beste somrene på flere år, mye takket være Variant! Det var så fint å komme på jobb og bli mottatt med varme og få arbeide sammen med et fint team på et ordentlig prosjekt. Variant var skikkelig god på å arrangere sosiale aktiviteter utover arbeidet, uten press om at man må bli med på alt. Opplevelsen fikk meg til å føle at det kanskje ikke er så verst å bli ferdig som student, tross alt”`,
+    picture: require('../img/max-blob.png'),
   },
 ];
 

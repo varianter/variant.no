@@ -14,13 +14,13 @@ const AfterApplying = ({
   const timelineImage =
     applyType === ApplyType.GRADUATE
       ? require('../img/graduate timeline.svg')
-      : require('../img/timeline.svg');
+      : require('../img/summerjob_timeline_2025.svg');
 
   const timelineDescription =
     applyType == ApplyType.GRADUATE
-      ? `Søknadsfrist: 1.oktober, Kaffeprat: 4.-5.oktober, tilbud om sommerjobb: 6.oktober
-  sosiale og faglige arrangementer: november-juni, første arbeidsperiode: 10.juni - 5.juli (4 uker), ferie
-  8.juli - 26 juli (3 uker), andre arbeidsperiode : 29.juli - 9.august (2 uker)`
+      ? `Søknadsfrist: 1.oktober, Kaffeprat: 2.-3.oktober, tilbud om sommerjobb: 4.oktober
+  sosiale og faglige arrangementer: november-juni, første arbeidsperiode: 9.juni - 4.juli (4 uker), ferie
+  7.juli - 25. juli (3 uker), andre arbeidsperiode : 28.juli - 8.august (2 uker)`
       : '';
 
   const isApplyGraduate: boolean = applyType == ApplyType.GRADUATE;
