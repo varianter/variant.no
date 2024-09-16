@@ -21,7 +21,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
-import { supportedLanguageID } from "./documents/supportedLanguages";
+import { supportedLanguagesID } from "./documents/supportedLanguages";
 import { seoFallbackID } from "./documents/admin/fallbackSeo";
 
 // Admin Section
@@ -82,11 +82,11 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("Languages")
+            .title("Supported Languages")
             .icon(TranslateIcon)
             .child(
               S.document()
-                .schemaType(supportedLanguageID)
+                .schemaType(supportedLanguagesID)
                 .title("Supported Languages"),
             ),
           S.listItem()
