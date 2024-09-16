@@ -85,17 +85,17 @@ export async function fetchCompanyInfo(): Promise<CompanyInfo | null> {
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
-  const { data: fallbackSeo } = await loadQuery<DefaultSeo | null>(
+  const { data: defaultSeo } = await loadQuery<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
   );
   const companyInfo = await fetchCompanyInfo();
 
   const title =
     seo?.title ||
-    fallbackSeo?.seo?.seoTitle ||
+    defaultSeo?.seo?.seoTitle ||
     companyInfo?.siteMetadata?.siteName ||
     "Variant";
-  const description = seo?.description || fallbackSeo?.seo?.seoDescription;
+  const description = seo?.description || defaultSeo?.seo?.seoDescription;
   const keywords = seo?.keywords || "";
 
   const favicon = companyInfo?.brandAssets?.favicon;
@@ -109,7 +109,7 @@ export async function generateMetadataFromSeo(
     title: title,
     ...(description ? { description: description } : {}),
   })}`;
-  const sanityImageUrl = seo?.imageUrl || fallbackSeo?.seo?.seoImageUrl;
+  const sanityImageUrl = seo?.imageUrl || defaultSeo?.seo?.seoImageUrl;
   const sanityImageParams = `?${new URLSearchParams({
     w: OPEN_GRAPH_IMAGE_DIMENSIONS.width.toString(),
     h: OPEN_GRAPH_IMAGE_DIMENSIONS.height.toString(),
