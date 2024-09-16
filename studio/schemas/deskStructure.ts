@@ -82,7 +82,7 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("Languages")
+            .title("Supported Languages")
             .icon(TranslateIcon)
             .child(
               S.document()
