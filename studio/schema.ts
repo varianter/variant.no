@@ -15,7 +15,7 @@ import companyLocation from "./schemas/documents/companyLocation";
 import compensations from "./schemas/documents/compensations";
 import redirect from "./schemas/documents/redirect";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
-import seoFallback from "./schemas/documents/admin/fallbackSeo";
+import defaultSeo from "./schemas/documents/admin/defaultSeo";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -35,6 +35,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     redirect,
     benefitsByLocation,
     companyLocation,
-    seoFallback,
+    defaultSeo,
   ],
 };
