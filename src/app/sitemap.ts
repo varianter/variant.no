@@ -10,6 +10,9 @@ interface SitemapDocument {
 
 const clientWithToken = client.withConfig({ token });
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "default-no-store";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const documents =
     await clientWithToken.fetch<SitemapDocument[]>(`*[defined(slug)]`);

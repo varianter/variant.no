@@ -79,14 +79,6 @@ const companyInfo = defineType({
         }),
       ],
     },
-    {
-      name: "defaultSEO",
-      type: "object",
-      title: "Default SEO Settings",
-      description:
-        "If page-specific SEO settings are not provided, these settings will be applied as default.",
-      fields: seo.fields,
-    },
   ],
   preview: {
     prepare() {
