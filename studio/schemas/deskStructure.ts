@@ -87,6 +87,7 @@ const siteSettingSection = (S: StructureBuilder) =>
             .child(
               S.document()
                 .schemaType(supportedLanguagesID)
+                .documentId(supportedLanguagesID)
                 .title("Supported Languages"),
             ),
           S.listItem()
