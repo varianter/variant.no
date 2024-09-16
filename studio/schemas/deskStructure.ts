@@ -10,6 +10,7 @@ import {
   HeartIcon,
   SparkleIcon,
   CaseIcon,
+  TranslateIcon,
   DoubleChevronRightIcon,
   PinIcon,
   SearchIcon,
@@ -20,6 +21,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
+import { supportedLanguagesID } from "./documents/supportedLanguages";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
 
 // Admin Section
@@ -80,6 +82,15 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
+            .title("Supported Languages")
+            .icon(TranslateIcon)
+            .child(
+              S.document()
+                .schemaType(supportedLanguagesID)
+                .documentId(supportedLanguagesID)
+                .title("Supported Languages"),
+            ),
+          S.listItem()
             .title("Default SEO")
             .icon(SearchIcon)
             .child(
@@ -92,8 +103,6 @@ const siteSettingSection = (S: StructureBuilder) =>
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
             .child(S.documentTypeList(redirectId).title("Redirects")),
-          //TODO: Add SEO Settings
-          //TODO: Add Language selector
         ]),
     );
 
@@ -135,7 +144,7 @@ const SpecialPagesSection = (S: StructureBuilder) =>
     );
 
 // Main export
-export default (S: StructureBuilder) =>
+const buildDeskStructure = (S: StructureBuilder) =>
   S.list()
     .title("Content")
     .items([
@@ -144,3 +153,5 @@ export default (S: StructureBuilder) =>
       pagesSection(S),
       SpecialPagesSection(S),
     ]);
+
+export default buildDeskStructure;
