@@ -21,7 +21,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
-import { languageID } from "./documents/languageDetails";
+import { supportedLanguageID } from "./documents/supportedLanguages";
 import { seoFallbackID } from "./documents/admin/fallbackSeo";
 
 // Admin Section
@@ -84,7 +84,11 @@ const siteSettingSection = (S: StructureBuilder) =>
           S.listItem()
             .title("Languages")
             .icon(TranslateIcon)
-            .child(S.document().schemaType(languageID).title("Languages")),
+            .child(
+              S.document()
+                .schemaType(supportedLanguageID)
+                .title("Supported Languages"),
+            ),
           S.listItem()
             .title("SEO Configurations")
             .icon(SearchIcon)
@@ -106,8 +110,6 @@ const siteSettingSection = (S: StructureBuilder) =>
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
             .child(S.documentTypeList(redirectId).title("Redirects")),
-          //TODO: Add SEO Settings
-          //TODO: Add Language selector
         ]),
     );
 

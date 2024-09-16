@@ -5,10 +5,10 @@ const languageOptions = languages.map((language) => {
   return { title: language.title, value: language.id };
 });
 
-export const languageID = "languagesDetails";
+export const supportedLanguageID = "languagesDetails";
 
-const languageDetails = defineType({
-  name: languageID,
+const supportedLanguages = defineType({
+  name: supportedLanguageID,
   type: "document",
   fields: [
     {
@@ -68,4 +68,4 @@ const languageDetails = defineType({
   ],
 });
 
-export default languageDetails;
+export default supportedLanguages;
