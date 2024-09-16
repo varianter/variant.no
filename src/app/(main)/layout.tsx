@@ -14,6 +14,8 @@ import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
 import { LegalDocument } from "studio/lib/payloads/legalDocuments";
 import styles from "./layout.module.css";
+import { BRAND_ASSETS_QUERY } from "../../../studio/lib/queries/brandAssets";
+import { BrandAssets } from "../../../studio/lib/payloads/brandAssets";
 
 const hasValidData = (data: any) => data && Object.keys(data).length > 0;
 
@@ -24,13 +26,19 @@ export default async function Layout({
 }>) {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const [initialNav, initialCompanyInfo, initialSoMe, initialLegal] =
-    await Promise.all([
-      loadQuery<Navigation>(NAV_QUERY, {}, { perspective }),
-      loadQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
-      loadQuery<SocialMediaProfiles>(SOMEPROFILES_QUERY, {}, { perspective }),
-      loadQuery<LegalDocument[]>(LEGAL_DOCUMENTS_QUERY, {}, { perspective }),
-    ]);
+  const [
+    initialNav,
+    initialCompanyInfo,
+    initialSoMe,
+    initialLegal,
+    initialBrandAssets,
+  ] = await Promise.all([
+    loadQuery<Navigation>(NAV_QUERY, {}, { perspective }),
+    loadQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
+    loadQuery<SocialMediaProfiles>(SOMEPROFILES_QUERY, {}, { perspective }),
+    loadQuery<LegalDocument[]>(LEGAL_DOCUMENTS_QUERY, {}, { perspective }),
+    loadQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
+  ]);
 
   const hasNavData = hasValidData(initialNav.data);
   const hasCompanyInfoData = hasValidData(initialCompanyInfo.data);
@@ -55,13 +63,10 @@ export default async function Layout({
       {hasHeaderData && isDraftMode ? (
         <HeaderPreview
           initialNav={initialNav}
-          initialCompanyInfo={initialCompanyInfo}
+          initialBrandAssets={initialBrandAssets}
         />
       ) : (
-        <Header
-          data={initialNav.data}
-          assets={initialCompanyInfo.data?.brandAssets}
-        />
+        <Header data={initialNav.data} assets={initialBrandAssets.data} />
       )}
       <main id="main" tabIndex={-1}>
         {children}
@@ -70,6 +75,7 @@ export default async function Layout({
         <FooterPreview
           initialNav={initialNav}
           initialCompanyInfo={initialCompanyInfo}
+          initialBrandAssets={initialBrandAssets}
           initialSoMe={initialSoMe}
         />
       ) : (
@@ -77,6 +83,7 @@ export default async function Layout({
           navigationData={initialNav.data}
           legalData={initialLegal.data}
           companyInfo={initialCompanyInfo.data}
+          brandAssets={initialBrandAssets.data}
           soMeData={initialSoMe.data}
         />
       )}

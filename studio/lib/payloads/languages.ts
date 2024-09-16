@@ -1,0 +1,3 @@
+interface DefaultLanguageObject {
+  defaultLanguage: string;
+}

@@ -14,6 +14,7 @@ import {
   DoubleChevronRightIcon,
   PinIcon,
   SearchIcon,
+  ImagesIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
@@ -23,6 +24,7 @@ import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
 import { supportedLanguagesID } from "./documents/supportedLanguages";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
+import { brandAssetsID } from "./documents/brandAssets";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -66,6 +68,15 @@ const siteSettingSection = (S: StructureBuilder) =>
       S.list()
         .title("Site Settings")
         .items([
+          S.listItem()
+            .title("Brand Assets")
+            .icon(ImagesIcon)
+            .child(
+              S.document()
+                .schemaType(brandAssetsID)
+                .documentId(brandAssetsID)
+                .title("Brand Assets"),
+            ),
           S.listItem()
             .title("Navigation Manager")
             .icon(TransferIcon)

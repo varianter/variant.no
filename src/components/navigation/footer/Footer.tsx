@@ -13,10 +13,12 @@ import SoMeLink from "src/components/link/SoMeLink";
 import { ReactNode } from "react";
 import Text from "src/components/text/Text";
 import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import { BrandAssets } from "studio/lib/payloads/brandAssets";
 
 export interface IFooter {
   navigationData: Navigation;
   companyInfo: CompanyInfo;
+  brandAssets: BrandAssets;
   soMeData: SocialMediaProfiles;
   legalData: LegalDocument[];
 }
@@ -24,11 +26,12 @@ export interface IFooter {
 const Footer = ({
   navigationData,
   companyInfo,
+  brandAssets,
   soMeData,
   legalData,
 }: IFooter) => {
   const renderedLogo = useConvertSanityImageToNextImage(
-    companyInfo.brandAssets?.secondaryLogo,
+    brandAssets?.secondaryLogo,
   );
 
   const currentYear = new Date().getFullYear();
@@ -43,7 +46,7 @@ const Footer = ({
       <ul className={styles.credits}>
         <li key="credit-legal-key-1">
           <Text className={styles.whiteColor}>
-            {`© ${currentYear} ${companyInfo.siteMetadata?.siteName}`}
+            {`© ${currentYear} ${companyInfo.companyName}`}
           </Text>
         </li>
         {legalData?.map((legal) => {
