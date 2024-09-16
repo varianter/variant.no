@@ -18,8 +18,8 @@ const blogPosts = defineType({
       description: "Select the date and time when this post will be published.",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
-      validation: (Rule) =>
-        Rule.required().custom((date, context) => {
+      validation: (rule) =>
+        rule.required().custom((date, context) => {
           // Ensure date is not undefined or null
           if (!date) return "The publish date is required.";
 

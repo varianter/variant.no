@@ -29,7 +29,7 @@ export const callToAction = defineField({
           preview: callToActionField.preview,
         },
       ],
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     },
   ],
   initialValue: {

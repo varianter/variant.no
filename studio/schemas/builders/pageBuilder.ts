@@ -11,6 +11,7 @@ import testimonals from "../objects/sections/testimonials";
 import imageSection from "../objects/sections/image";
 import grid from "../objects/sections/grid";
 import contactForm from "../objects/sections/form";
+import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const pageBuilderID = "pageBuilder";
 
@@ -25,7 +26,11 @@ const pageBuilder = defineType({
       description:
         "Enter a distinctive name for the dynamic page to help content editors easily identify and manage it. This name is used internally and is not visible on your website.",
       type: "string",
-      validation: (Rule) => Rule.required().max(30),
+      validation: (rule) => rule.required().max(30),
+      components: {
+        input: (props) =>
+          StringInputWithCharacterCount({ ...props, maxCount: 30 }),
+      },
     }),
     pageSlug,
     seo,

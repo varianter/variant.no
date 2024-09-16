@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "src/components/richText/RichText";
-import { Slug } from "./global";
+import { Reference, Slug } from "./global";
 
 export interface Benefit {
   _type: string;
@@ -21,11 +21,25 @@ export interface SalariesPage {
   salaries: string;
 }
 
+export interface BonusesByLocationPage {
+  _type: string;
+  _key: string;
+  location: Reference;
+  yearlyBonuses: BonusPage[];
+}
+
 export interface BonusPage {
   _type: string;
   _key: string;
   year: number;
   bonus: number;
+}
+
+export interface SalariesByLocation {
+  _key: string;
+  _type: string;
+  location: Reference;
+  yearlySalaries: SalariesPage[];
 }
 
 export interface CompensationsPage {
@@ -39,10 +53,7 @@ export interface CompensationsPage {
   slug: Slug;
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
+  bonusesByLocation: BonusesByLocationPage[];
+  salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
-}
-
-export interface Reference {
-  _type: "reference";
-  _ref: string;
 }

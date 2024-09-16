@@ -16,6 +16,7 @@ import compensations from "./schemas/documents/compensations";
 import redirect from "./schemas/documents/redirect";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
 import languageDetails from "./schemas/documents/languageDetails";
+import seoFallback from "./schemas/documents/admin/fallbackSeo";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -36,5 +37,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     benefitsByLocation,
     companyLocation,
     languageDetails,
+    seoFallback,
   ],
 };

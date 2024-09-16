@@ -4,6 +4,16 @@ export interface Salaries {
   [year: string]: number;
 }
 
+export function isSalariesType(value: unknown): value is Salaries {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    Object.entries(value).every(
+      ([k, v]) => !isNaN(Number(k)) && typeof v === "number",
+    )
+  );
+}
+
 const NON_EMPTY_DIGITS_ONLY_REGEX = new RegExp(/^\d+$/);
 export const VALID_SALARY_REGEX = NON_EMPTY_DIGITS_ONLY_REGEX;
 

@@ -28,7 +28,7 @@ const benefitType = defineField({
     layout: BENEFIT_TYPES.length > 5 ? "dropdown" : "radio",
   },
   initialValue: BENEFIT_TYPE_BASIC_VALUE,
-  validation: (Rule) => Rule.required(),
+  validation: (rule) => rule.required(),
 });
 
 export const benefitsByLocation = defineField({
@@ -45,7 +45,7 @@ export const benefitsByLocation = defineField({
           ...location,
           description:
             "Select the office location for which you are entering benefits information. Each location must be unique.",
-          validation: (Rule) => Rule.required(),
+          validation: (rule) => rule.required(),
         },
         defineField({
           name: "benefits",
@@ -93,8 +93,8 @@ export const benefitsByLocation = defineField({
       },
     },
   ],
-  validation: (Rule) =>
-    Rule.custom((benefitsByLocation) => {
+  validation: (rule) =>
+    rule.custom((benefitsByLocation) => {
       const isNotDuplicate: boolean = checkForDuplicateLocations(
         benefitsByLocation as DocumentWithLocation[] | undefined,
       );

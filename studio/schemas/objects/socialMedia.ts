@@ -19,8 +19,8 @@ export const socialMedia = defineType({
       name: SocialMediaID.url,
       type: "url",
       title: "URL",
-      validation: (Rule) =>
-        Rule.uri({
+      validation: (rule) =>
+        rule.uri({
           allowRelative: false,
           scheme: ["http", "https"],
         }),

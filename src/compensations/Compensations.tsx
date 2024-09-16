@@ -5,13 +5,20 @@ import { CompensationsPage } from "studio/lib/payloads/compensations";
 import SalaryCalculator, {
   Degree,
 } from "./components/salaryCalculator/SalaryCalculator";
-import { useState } from "react";
-import { calculatePension, calculateSalary } from "./utils/calculateSalary";
+import { useMemo, useState } from "react";
+import {
+  calculatePension,
+  calculateSalary,
+  maxSalariesExaminationYear,
+  minSalariesExaminationYear,
+  salariesFromLocation,
+} from "./utils/salary";
 import { CompanyLocation } from "studio/lib/payloads/companyDetails";
 import {
   IOption,
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
+import YearlyBonuses from "./components/yearlyBonuses/YearlyBonuses";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 
 interface CompensationsProps {
@@ -35,6 +42,16 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
     selectedDegree: "bachelor",
   });
 
+  const currentYearSalariesResult = useMemo(
+    () =>
+      salariesFromLocation(
+        currentYear,
+        selectedLocation,
+        compensations.salariesByLocation,
+      ),
+    [currentYear, selectedLocation, compensations.salariesByLocation],
+  );
+
   const updateSelectedDegree = (newDegree: Degree) => {
     setFormState((prevState) => ({
       ...prevState,
@@ -51,13 +68,14 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    setSalary(
-      calculateSalary(
-        currentYear,
-        formState.examinationYear,
-        formState.selectedDegree,
-      ),
+    if (!currentYearSalariesResult.ok) return;
+    const salary = calculateSalary(
+      formState.examinationYear,
+      formState.selectedDegree,
+      currentYearSalariesResult.value,
     );
+    if (salary === undefined) return;
+    setSalary(salary);
   };
 
   const locationOptions: IOption[] = locations.map((companyLocation) => ({
@@ -70,6 +88,10 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
       (benefit) => benefit.location._ref === selectedLocation,
     )?.benefits || [];
 
+  const yearlyBonusesForLocation = compensations.bonusesByLocation.find(
+    (b) => b.location._ref === selectedLocation,
+  )?.yearlyBonuses;
+
   return (
     <div className={styles.wrapper}>
       <Text type="h1">{compensations.basicTitle}</Text>
@@ -80,10 +102,16 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
         selectedId={selectedLocation}
         onValueChange={(option) => setSelectedLocation(option.id)}
       />
-      {compensations.showSalaryCalculator && (
+      {compensations.showSalaryCalculator && currentYearSalariesResult.ok && (
         <>
           <SalaryCalculator
             examinationYearValue={formState.examinationYear}
+            minExaminationYear={minSalariesExaminationYear(
+              currentYearSalariesResult.value,
+            )}
+            maxExaminationYear={
+              maxSalariesExaminationYear(currentYearSalariesResult.value) - 1
+            }
             selectedDegree={formState.selectedDegree}
             onDegreeChanged={updateSelectedDegree}
             onExaminationYearChanged={updateExaminationYear}
@@ -101,6 +129,9 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
             </div>
           ) : null}
         </>
+      )}
+      {yearlyBonusesForLocation && (
+        <YearlyBonuses bonuses={yearlyBonusesForLocation} />
       )}
       <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>

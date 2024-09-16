@@ -3,7 +3,7 @@ import { titleSlug } from "../schemaTypes/slug";
 import seo from "../objects/seo";
 import { title } from "../fields/text";
 import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
-import { pension } from "../objects/compensations/pension";
+import { pensionPercent } from "../objects/compensations/pension";
 import { benefitsByLocation } from "../objects/compensations/benefitsByLocation";
 import { salariesByLocation } from "../objects/compensations/salariesByLocation";
 
@@ -29,7 +29,7 @@ const compensations = defineType({
       type: "boolean",
       initialValue: true,
     }),
-    pension,
+    pensionPercent,
     bonusesByLocation,
     benefitsByLocation,
     salariesByLocation,

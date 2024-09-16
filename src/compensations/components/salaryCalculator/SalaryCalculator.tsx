@@ -5,7 +5,6 @@ import {
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Button from "src/components/buttons/Button";
-import { maxExperience } from "src/compensations/utils/calculateSalary";
 
 export type Degree = "bachelor" | "master";
 
@@ -16,6 +15,8 @@ const degreeOptions: IOption[] = [
 
 interface SalaryCalculatorProps {
   examinationYearValue: number;
+  minExaminationYear: number;
+  maxExaminationYear: number;
   selectedDegree: Degree;
   onDegreeChanged: (degree: Degree) => void;
   onExaminationYearChanged: (examinationYear: number) => void;
@@ -24,15 +25,13 @@ interface SalaryCalculatorProps {
 
 export default function SalaryCalculator({
   examinationYearValue: yearValue,
+  minExaminationYear,
+  maxExaminationYear,
   selectedDegree,
   onDegreeChanged,
   onExaminationYearChanged,
   onSubmit,
 }: SalaryCalculatorProps) {
-  const currentYear = new Date().getFullYear();
-  const minExaminationYear = maxExperience(currentYear);
-  const maxExaminationYear = currentYear - 1;
-
   return (
     <form
       //TODO: replace aria-label with static translation from Sanity

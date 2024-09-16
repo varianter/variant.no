@@ -13,6 +13,7 @@ import {
   TranslateIcon,
   DoubleChevronRightIcon,
   PinIcon,
+  SearchIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
 import { companyInfoID } from "./documents/companyInfo";
@@ -21,6 +22,7 @@ import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
 import { languageID } from "./documents/languageDetails";
+import { seoFallbackID } from "./documents/admin/fallbackSeo";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -80,14 +82,32 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("SEO Redirects")
-            .icon(DoubleChevronRightIcon)
-            .child(S.documentTypeList(redirectId).title("Redirects")),
-          //TODO: Add SEO Settings
-          S.listItem()
             .title("Languages")
             .icon(TranslateIcon)
             .child(S.document().schemaType(languageID).title("Languages")),
+          S.listItem()
+            .title("SEO Configurations")
+            .icon(SearchIcon)
+            .child(
+              S.list()
+                .title("SEO Configurations")
+                .items([
+                  S.listItem()
+                    .title("Fallback SEO")
+                    .child(
+                      S.document()
+                        .schemaType(seoFallbackID)
+                        .documentId(seoFallbackID)
+                        .title("Fallback SEO"),
+                    ),
+                ]),
+            ),
+          S.listItem()
+            .title("Broken Links")
+            .icon(DoubleChevronRightIcon)
+            .child(S.documentTypeList(redirectId).title("Redirects")),
+          //TODO: Add SEO Settings
+          //TODO: Add Language selector
         ]),
     );
 

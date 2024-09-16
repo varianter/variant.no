@@ -36,8 +36,8 @@ const navigationManager = defineType({
         "Add links to the main menu. These links will appear at the top of your website and help visitors navigate to important sections. The first Call to Action (CTA) will be styled as a primary link button. Note: The order in which you add the links here is how they will be displayed on the website.",
       type: "array",
       of: [{ type: linkID }, { type: callToActionFieldID }],
-      validation: (Rule) =>
-        Rule.custom((links) => {
+      validation: (rule) =>
+        rule.custom((links) => {
           if (!Array.isArray(links)) return true;
           const ctaCount = links.filter(
             (link) => link._type === callToActionFieldID,

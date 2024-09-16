@@ -9,7 +9,7 @@ import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
 import { SalariesPage } from "../../../lib/payloads/compensations";
 
 export const salariesByLocation = defineField({
-  name: "salaries",
+  name: "salariesByLocation",
   title: "Salaries by Location",
   description:
     "Yearly salary data specific to a particular location. Each location should have a unique entry with the yearly salaries for that location.",
@@ -24,7 +24,7 @@ export const salariesByLocation = defineField({
           ...location,
           description:
             "Select the company location for which you are entering the salary information. Each location must be unique.",
-          validation: (Rule) => Rule.required(),
+          validation: (rule) => rule.required(),
         },
         defineField({
           name: "yearlySalaries",
@@ -42,7 +42,7 @@ export const salariesByLocation = defineField({
                   description:
                     "The calendar year for which these salaries were in effect",
                   type: "number",
-                  validation: (Rule) => Rule.required(),
+                  validation: (rule) => rule.required(),
                 }),
                 defineField({
                   name: "salaries",
@@ -87,8 +87,8 @@ export const salariesByLocation = defineField({
       },
     },
   ],
-  validation: (Rule) =>
-    Rule.custom((salariesByLocation) => {
+  validation: (rule) =>
+    rule.custom((salariesByLocation) => {
       const isNotDuplicate: boolean = checkForDuplicateLocations(
         salariesByLocation as DocumentWithLocation[] | undefined,
       );

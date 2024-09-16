@@ -13,7 +13,7 @@ export const imageSection = defineField({
     defineField({
       ...image,
       description: "Upload a featured image for the section.",
-      validation: (Rule) => Rule.required(),
+      validation: (rule) => rule.required(),
     }),
   ],
   preview: {
