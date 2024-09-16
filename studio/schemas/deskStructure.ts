@@ -20,7 +20,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
-import { seoFallbackID } from "./documents/admin/fallbackSeo";
+import { defaultSeoID } from "./documents/admin/defaultSeo";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -80,21 +80,13 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("SEO Configurations")
+            .title("Default SEO")
             .icon(SearchIcon)
             .child(
-              S.list()
-                .title("SEO Configurations")
-                .items([
-                  S.listItem()
-                    .title("Fallback SEO")
-                    .child(
-                      S.document()
-                        .schemaType(seoFallbackID)
-                        .documentId(seoFallbackID)
-                        .title("Fallback SEO"),
-                    ),
-                ]),
+              S.document()
+                .schemaType(defaultSeoID)
+                .documentId(defaultSeoID)
+                .title("Default SEO"),
             ),
           S.listItem()
             .title("Broken Links")

@@ -1,10 +1,10 @@
 import { defineField, defineType } from "sanity";
 import seo from "studio/schemas/objects/seo";
 
-export const seoFallbackID = "seoFallback";
+export const defaultSeoID = "seoFallback";
 
-const seoFallback = defineType({
-  name: seoFallbackID,
+const defaultSeo = defineType({
+  name: defaultSeoID,
   type: "document",
   title: "SEO Configurations",
   description:
@@ -29,4 +29,4 @@ const seoFallback = defineType({
   },
 });
 
-export default seoFallback;
+export default defaultSeo;
