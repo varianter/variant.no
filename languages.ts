@@ -1,4 +1,4 @@
-const languages = [
+export const languages = [
   { id: "en", title: "English" },
   { id: "se", title: "Swedish" },
   { id: "no", title: "Norwegian" },

@@ -15,6 +15,7 @@ import companyLocation from "./schemas/documents/companyLocation";
 import compensations from "./schemas/documents/compensations";
 import redirect from "./schemas/documents/redirect";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
+import languageDetails from "./schemas/documents/languageDetails";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -34,5 +35,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     redirect,
     benefitsByLocation,
     companyLocation,
+    languageDetails,
   ],
 };

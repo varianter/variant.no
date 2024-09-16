@@ -10,6 +10,7 @@ import {
   HeartIcon,
   SparkleIcon,
   CaseIcon,
+  TranslateIcon,
   DoubleChevronRightIcon,
   PinIcon,
 } from "@sanity/icons";
@@ -19,6 +20,7 @@ import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
 import { companyLocationID } from "./documents/companyLocation";
+import { languageID } from "./documents/languageDetails";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -82,7 +84,10 @@ const siteSettingSection = (S: StructureBuilder) =>
             .icon(DoubleChevronRightIcon)
             .child(S.documentTypeList(redirectId).title("Redirects")),
           //TODO: Add SEO Settings
-          //TODO: Add Language selector
+          S.listItem()
+            .title("Languages")
+            .icon(TranslateIcon)
+            .child(S.document().schemaType(languageID).title("Languages")),
         ]),
     );
 
