@@ -87,10 +87,10 @@ const siteSettingSection = (S: StructureBuilder) =>
             .child(
               S.document()
                 .schemaType(supportedLanguagesID)
+                .documentId(supportedLanguagesID)
                 .title("Supported Languages"),
             ),
           S.listItem()
-            .title("SEO Configurations")
             .title("Default SEO")
             .icon(SearchIcon)
             .child(
