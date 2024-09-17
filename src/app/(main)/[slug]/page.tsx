@@ -10,7 +10,7 @@ import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
-  COMPENSATIONS_PAGE_QUERY,
+
   SEO_SLUG_QUERY,
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
@@ -20,6 +20,7 @@ import { homeLink } from "../../../blog/components/utils/linkTypes";
 import CustomErrorMessage from "../../../blog/components/customErrorMessage/CustomErrorMessage";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
+import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/compensations";
 
 export const dynamic = "force-dynamic";
 
