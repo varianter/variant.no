@@ -121,7 +121,7 @@ The `Company Information` menu allows you to configure global settings for your 
 ### Pages
 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
-- **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.s
+- **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
 
 ## Development Workflow
 
