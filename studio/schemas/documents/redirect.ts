@@ -3,7 +3,7 @@ import { SanityDocument, SlugRule } from "@sanity/types";
 import { pageBuilderID } from "../builders/pageBuilder";
 import { blogId } from "./blog";
 import { compensationsId } from "./compensations";
-import PrefixedSlugInput from "../../components/PrefixedSlugInput";
+import PrefixedSlugInput from "../../components/slug/PrefixedSlugInput";
 
 const slugRequired = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {
