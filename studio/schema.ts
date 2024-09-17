@@ -9,7 +9,7 @@ import compensations from "./schemas/documents/compensations";
 import pageBuilder from "./schemas/documents/pageBuilder";
 import posts from "./schemas/documents/post";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
-import brokenLinks from "./schemas/documents/siteSettings/brokenLinks";
+import brokenLink from "./schemas/documents/siteSettings/brokenLink";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
@@ -35,7 +35,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
-    brokenLinks,
+    brokenLink,
     benefitsByLocation,
     companyLocation,
     supportedLanguages,

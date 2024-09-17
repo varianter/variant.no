@@ -32,8 +32,8 @@ const requiredIfDestinationType = (
 
 export const brokenLinkID = "brokenLink";
 
-const brokenLinks = defineType({
-  name: brokenLinksID,
+const brokenLink = defineType({
+  name: brokenLinkID,
   title: "Broken Links",
   type: "document",
   fields: [
@@ -137,4 +137,4 @@ const brokenLinks = defineType({
   },
 });
 
-export default brokenLinks;
+export default brokenLink;

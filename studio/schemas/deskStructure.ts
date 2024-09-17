@@ -23,7 +23,7 @@ import { legalDocumentID } from "./documents/admin/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { pageBuilderID } from "./documents/pageBuilder";
 import { brandAssetsID } from "./documents/siteSettings/brandAssets";
-import { brokenLinkID } from "./documents/siteSettings/brokenLinks";
+import { brokenLinkID } from "./documents/siteSettings/brokenLink";
 import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
 import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
 
