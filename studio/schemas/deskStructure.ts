@@ -17,7 +17,6 @@ import {
   ImagesIcon,
 } from "@sanity/icons";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { companyInfoID } from "./documents/companyInfo";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { redirectId } from "./documents/redirect";
@@ -25,6 +24,7 @@ import { companyLocationID } from "./documents/companyLocation";
 import { supportedLanguagesID } from "./documents/supportedLanguages";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
 import { brandAssetsID } from "./documents/brandAssets";
+import { companyInfoID } from "./documents/companyInfo";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -33,16 +33,16 @@ const adminSection = (S: StructureBuilder) =>
     .icon(CaseIcon)
     .child(
       S.list()
-        .title("Company Details")
+        .title("Admin")
         .items([
           S.listItem()
-            .title("Company Information")
+            .title("Parent Company")
             .icon(InfoOutlineIcon)
             .child(
               S.document()
                 .schemaType(companyInfoID)
                 .documentId(companyInfoID)
-                .title("Company Information"),
+                .title("Parent Company"),
             ),
           S.listItem()
             .title("Company Locations")
