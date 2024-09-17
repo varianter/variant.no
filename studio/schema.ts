@@ -13,7 +13,7 @@ import categories from "./schemas/fields/categories";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
 import companyLocation from "./schemas/documents/admin/companyLocation";
 import compensations from "./schemas/documents/compensations";
-import redirect from "./schemas/documents/siteSettings/redirect";
+import redirect from "./schemas/documents/siteSettings/brokenLinks";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
 import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
 import defaultSeo from "./schemas/documents/admin/defaultSeo";

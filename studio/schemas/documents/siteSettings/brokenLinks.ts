@@ -29,11 +29,11 @@ const requiredIfDestinationType = (
   return true;
 };
 
-export const redirectId = "redirect";
+export const brokenLinksID = "brokenLinks";
 
-const redirect = defineType({
-  name: redirectId,
-  title: "Redirect",
+const brokenLinks = defineType({
+  name: brokenLinksID,
+  title: "Broken Links",
   type: "document",
   fields: [
     defineField({
@@ -136,4 +136,4 @@ const redirect = defineType({
   },
 });
 
-export default redirect;
+export default brokenLinks;
