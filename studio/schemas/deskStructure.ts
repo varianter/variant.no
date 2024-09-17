@@ -15,7 +15,7 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-import { pageBuilderID } from "./builders/pageBuilder";
+import { pageBuilderID } from "./documents/pageBuilder";
 //import { blogId } from "./documents/blog";
 import { companyInfoID } from "./documents/admin/companyInfo";
 import { companyLocationID } from "./documents/admin/companyLocation";

@@ -1,6 +1,6 @@
 import { defineType } from "sanity";
 
-import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
+import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { footerSectionID } from "studio/schemas/objects/footerSection";
 import { linkID } from "studio/schemas/objects/link";

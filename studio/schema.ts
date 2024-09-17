@@ -1,6 +1,6 @@
 import { type SchemaTypeDefinition } from "sanity";
 
-import pageBuilder from "./schemas/builders/pageBuilder";
+import pageBuilder from "./schemas/documents/pageBuilder";
 import companyInfo from "./schemas/documents/admin/companyInfo";
 import companyLocation from "./schemas/documents/admin/companyLocation";
 import defaultSeo from "./schemas/documents/admin/defaultSeo";
