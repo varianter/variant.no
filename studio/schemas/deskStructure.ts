@@ -15,13 +15,13 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-import { pageBuilderID } from "./documents/pageBuilder";
 //import { blogId } from "./documents/blog";
 import { companyInfoID } from "./documents/admin/companyInfo";
 import { companyLocationID } from "./documents/admin/companyLocation";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
 import { legalDocumentID } from "./documents/admin/legalDocuments";
 import { compensationsId } from "./documents/compensations";
+import { pageBuilderID } from "./documents/pageBuilder";
 import { brandAssetsID } from "./documents/siteSettings/brandAssets";
 import { brokenLinksID } from "./documents/siteSettings/brokenLinks";
 import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";

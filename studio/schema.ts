@@ -1,12 +1,12 @@
 import { type SchemaTypeDefinition } from "sanity";
 
-import pageBuilder from "./schemas/documents/pageBuilder";
 import companyInfo from "./schemas/documents/admin/companyInfo";
 import companyLocation from "./schemas/documents/admin/companyLocation";
 import defaultSeo from "./schemas/documents/admin/defaultSeo";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
 import blog from "./schemas/documents/blog";
 import compensations from "./schemas/documents/compensations";
+import pageBuilder from "./schemas/documents/pageBuilder";
 import posts from "./schemas/documents/post";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import brokenLinks from "./schemas/documents/siteSettings/brokenLinks";
