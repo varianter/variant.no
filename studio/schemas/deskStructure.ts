@@ -23,7 +23,7 @@ import { legalDocumentID } from "./documents/admin/legalDocuments";
 import { compensationsId } from "./documents/compensations";
 import { pageBuilderID } from "./documents/pageBuilder";
 import { brandAssetsID } from "./documents/siteSettings/brandAssets";
-import { brokenLinksID } from "./documents/siteSettings/brokenLinks";
+import { brokenLinkID } from "./documents/siteSettings/brokenLinks";
 import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
 import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
 
@@ -114,7 +114,7 @@ const siteSettingSection = (S: StructureBuilder) =>
           S.listItem()
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
-            .child(S.documentTypeList(brokenLinksID).title("Redirects")),
+            .child(S.documentTypeList(brokenLinkID).title("Redirects")),
         ]),
     );
 
