@@ -1,6 +1,6 @@
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
-import { ILink } from "studio/lib/payloads/navigation";
+import { ILink } from "studio/lib/interfaces/navigation";
 import styles from "./informationSection.module.css";
 import React from "react";
 

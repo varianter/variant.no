@@ -2,7 +2,7 @@
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import Text from "src/components/text/Text";
-import { ContactFormSection } from "studio/lib/payloads/pages";
+import { ContactFormSection } from "studio/lib/interfaces/pages";
 import styles from "./contactForm.module.css";
 import InputField from "src/components/forms/inputField/InputField";
 import Button from "src/components/buttons/Button";

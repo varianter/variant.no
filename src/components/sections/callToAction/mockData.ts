@@ -1,4 +1,4 @@
-import { LinkType } from "studio/lib/payloads/navigation";
+import { LinkType } from "studio/lib/interfaces/navigation";
 
 export const ctaMockData = {
   _key: "9410f9860a00",

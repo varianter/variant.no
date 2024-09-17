@@ -1,4 +1,4 @@
-import { BlogPage, Post } from "studio/lib/payloads/pages";
+import { BlogPage, Post } from "studio/lib/interfaces/pages";
 import PostHero from "./hero/PostHero";
 import Lead from "./lead/Lead";
 import styles from "./post.module.css";

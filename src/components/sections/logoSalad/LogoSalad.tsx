@@ -1,5 +1,5 @@
 import Text from "src/components/text/Text";
-import { LogoSaladSection } from "studio/lib/payloads/pages";
+import { LogoSaladSection } from "studio/lib/interfaces/pages";
 import styles from "./logoSalad.module.css";
 import { RenderLogo } from "./LogoRender";
 import { PortableText } from "@portabletext/react";

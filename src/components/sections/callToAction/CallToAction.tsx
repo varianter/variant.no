@@ -1,6 +1,6 @@
 import Text from "src/components/text/Text";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { CallToActionSection } from "studio/lib/payloads/pages";
+import { CallToActionSection } from "studio/lib/interfaces/pages";
 import styles from "./callToAction.module.css";
 
 interface CallToActionProps {

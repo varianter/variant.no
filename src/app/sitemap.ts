@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { client } from "../../studio/lib/client";
-import { Slug } from "../../studio/lib/payloads/global";
+import { Slug } from "../../studio/lib/interfaces/global";
 import { token } from "../../studio/lib/token";
 
 interface SitemapDocument {

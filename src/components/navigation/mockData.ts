@@ -2,12 +2,12 @@ import {
   Navigation,
   LinkType,
   SectionType,
-} from "studio/lib/payloads/navigation";
+} from "studio/lib/interfaces/navigation";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { linkID } from "studio/schemas/objects/link";
 import primaryLogoFile from "../../stories/assets/energiai-primary-logo.svg";
 import secondaryLogoFile from "../../stories/assets/energiai-secondary-logo.svg";
-import { SocialMediaProfiles } from "studio/lib/payloads/socialMedia";
+import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 
 // Mock Navigation Data
 export const mockNavigation: Navigation = {

@@ -1,6 +1,6 @@
 import Text from "src/components/text/Text";
 import styles from "./blogHero.module.css";
-import { Category } from "studio/lib/payloads/pages";
+import { Category } from "studio/lib/interfaces/pages";
 import { LegacyRef } from "react";
 
 const BlogHero = ({

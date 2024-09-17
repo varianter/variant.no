@@ -19,7 +19,7 @@ import {
   ImageSection,
   GridSection,
   ContactFormSection,
-} from "studio/lib/payloads/pages";
+} from "studio/lib/interfaces/pages";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";

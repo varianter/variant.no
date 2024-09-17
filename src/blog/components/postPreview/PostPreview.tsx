@@ -1,10 +1,10 @@
 "use client";
 import { RichText, PortableTextBlock } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { Post } from "studio/lib/payloads/pages";
+import { Post } from "studio/lib/interfaces/pages";
 import styles from "./postPreview.module.css";
 import CustomLink from "src/components/link/CustomLink";
-import { LinkType } from "studio/lib/payloads/navigation";
+import { LinkType } from "studio/lib/interfaces/navigation";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 
 export interface PostPreviewProps {

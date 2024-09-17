@@ -1,7 +1,7 @@
 import Legal from "src/blog/components/legal/Legal";
 import LegalPreview from "src/blog/components/legal/LegalPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
-import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LEGAL_DOCUMENT_SLUG_QUERY } from "studio/lib/queries/legalDocuments";
 import { loadQuery } from "studio/lib/store";
 

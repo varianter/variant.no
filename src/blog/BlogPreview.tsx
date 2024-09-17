@@ -1,6 +1,6 @@
 "use client";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
-import { BlogPage, Post } from "studio/lib/payloads/pages";
+import { BlogPage, Post } from "studio/lib/interfaces/pages";
 import { BLOG_PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import { Blog } from "./Blog";

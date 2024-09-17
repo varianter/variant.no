@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { FocusOn } from "react-focus-on";
-import { ILink, Navigation } from "studio/lib/payloads/navigation";
+import { ILink, Navigation } from "studio/lib/interfaces/navigation";
 import styles from "./header.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { linkID } from "studio/schemas/objects/link";
@@ -12,7 +12,7 @@ import LinkButton from "src/components/linkButton/LinkButton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getHref } from "src/utils/get";
-import { BrandAssets } from "../../../../studio/lib/payloads/brandAssets";
+import { BrandAssets } from "../../../../studio/lib/interfaces/brandAssets";
 
 export interface IHeader {
   data: Navigation;

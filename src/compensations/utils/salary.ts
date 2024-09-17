@@ -2,7 +2,7 @@ import {
   isSalariesType,
   Salaries,
 } from "studio/components/salariesInput/utils/parseSalaries";
-import { SalariesByLocation } from "../../../studio/lib/payloads/compensations";
+import { SalariesByLocation } from "../../../studio/lib/interfaces/compensations";
 import { Result, ResultError, ResultOk } from "../../../studio/utils/result";
 
 export function calculateSalary(

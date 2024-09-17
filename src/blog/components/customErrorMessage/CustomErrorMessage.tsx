@@ -1,7 +1,7 @@
 import Button from "src/components/buttons/Button";
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
-import { ILink } from "studio/lib/payloads/navigation";
+import { ILink } from "studio/lib/interfaces/navigation";
 import styles from "./customErrorMessage.module.css";
 
 interface CustomErrorMessageProps {

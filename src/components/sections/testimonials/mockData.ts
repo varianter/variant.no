@@ -1,4 +1,4 @@
-import { TestimonialsSection } from "studio/lib/payloads/pages";
+import { TestimonialsSection } from "studio/lib/interfaces/pages";
 import alex from "../../../stories/assets/alex.jpg";
 import mika from "../../../stories/assets/mika.jpg";
 import vince from "../../../stories/assets/vince.jpg";

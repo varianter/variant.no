@@ -6,7 +6,7 @@ import {
 } from "./utils/validation";
 import { companyLocationNameID } from "../../documents/companyLocation";
 import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
-import { SalariesPage } from "../../../lib/payloads/compensations";
+import { SalariesPage } from "../../../lib/interfaces/compensations";
 
 export const salariesByLocation = defineField({
   name: "salariesByLocation",

@@ -1,5 +1,5 @@
 import CustomLink from "src/components/link/CustomLink";
-import { CalloutSection } from "studio/lib/payloads/pages";
+import { CalloutSection } from "studio/lib/interfaces/pages";
 import styles from "./callout.module.css";
 import { PortableText } from "@portabletext/react";
 import Text from "src/components/text/Text";

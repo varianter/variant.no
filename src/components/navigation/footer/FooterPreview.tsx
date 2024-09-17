@@ -1,13 +1,13 @@
 "use client";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
-import { Navigation } from "studio/lib/payloads/navigation";
-import { CompanyInfo } from "studio/lib/payloads/companyDetails";
+import { Navigation } from "studio/lib/interfaces/navigation";
+import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import Footer from "./Footer";
-import { SocialMediaProfiles } from "studio/lib/payloads/socialMedia";
+import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
-import { BrandAssets } from "studio/lib/payloads/brandAssets";
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
 
 function useInitialData<T>(

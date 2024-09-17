@@ -1,7 +1,7 @@
 import { useNextSanityImage } from "next-sanity-image";
 // TODO: add support for sharedClient
 import { client } from "studio/lib/client";
-import { IImage } from "studio/lib/payloads/media";
+import { IImage } from "studio/lib/interfaces/media";
 import Image from "next/image";
 import { JSX } from "react";
 

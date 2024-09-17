@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import CustomLink from "./CustomLink";
-import { LinkType } from "studio/lib/payloads/navigation";
+import { LinkType } from "studio/lib/interfaces/navigation";
 
 const meta: Meta<typeof CustomLink> = {
   title: "Components/Links/CustomLink",

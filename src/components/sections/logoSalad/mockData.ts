@@ -1,4 +1,4 @@
-import { LogoSaladSection } from "studio/lib/payloads/pages";
+import { LogoSaladSection } from "studio/lib/interfaces/pages";
 import sparebanknord from "../../../stories/assets/logoSalad/sparebank1-nord-norge.png";
 import sevenoffice from "../../../stories/assets/logoSalad/24sevenoffice.png";
 import credoPartners from "../../../stories/assets/logoSalad/credo-partners.png";

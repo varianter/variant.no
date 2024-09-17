@@ -1,7 +1,7 @@
 "use client";
 import styles from "./compensations.module.css";
 import Text from "src/components/text/Text";
-import { CompensationsPage } from "studio/lib/payloads/compensations";
+import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import SalaryCalculator, {
   Degree,
 } from "./components/salaryCalculator/SalaryCalculator";
@@ -13,7 +13,7 @@ import {
   minSalariesExaminationYear,
   salariesFromLocation,
 } from "./utils/salary";
-import { CompanyLocation } from "studio/lib/payloads/companyDetails";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import {
   IOption,
   RadioButtonGroup,

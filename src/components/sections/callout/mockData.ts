@@ -1,5 +1,5 @@
 import { PortableTextBlock } from "src/components/richText/RichText";
-import { LinkType } from "studio/lib/payloads/navigation";
+import { LinkType } from "studio/lib/interfaces/navigation";
 
 const RichTextMock: PortableTextBlock[] = [
   {

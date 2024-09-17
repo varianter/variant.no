@@ -1,6 +1,6 @@
 "use client";
 import Text from "src/components/text/Text";
-import { TestimonialsSection } from "studio/lib/payloads/pages";
+import { TestimonialsSection } from "studio/lib/interfaces/pages";
 import styles from "./testimonials.module.css";
 import { RenderImage } from "./RenderAvatar";
 import { RichText } from "src/components/richText/RichText";

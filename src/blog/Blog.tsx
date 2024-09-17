@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useCallback } from "react";
 import useTabs from "src/utils/hooks/useTabs";
-import { BlogPage, Post } from "studio/lib/payloads/pages";
+import { BlogPage, Post } from "studio/lib/interfaces/pages";
 import styles from "./blog.module.css";
 import { useFetchPosts } from "src/utils/hooks/useFetchPosts";
 import BlogHero from "./components/hero/BlogHero";

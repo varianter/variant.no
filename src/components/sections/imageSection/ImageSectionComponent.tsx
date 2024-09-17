@@ -1,7 +1,7 @@
 "use client";
 import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import { ImageSection } from "studio/lib/payloads/pages";
+import { ImageSection } from "studio/lib/interfaces/pages";
 import styles from "./imageSectionComponent.module.css";
 
 const ImageSectionComponent = ({ section }: { section: ImageSection }) => {
