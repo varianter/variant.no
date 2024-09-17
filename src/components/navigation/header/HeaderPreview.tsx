@@ -1,10 +1,12 @@
 "use client";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
+
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { Navigation } from "studio/lib/interfaces/navigation";
+import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
+import { NAV_QUERY } from "studio/lib/queries/navigation";
+
 import { Header } from "./Header";
-import { BrandAssets } from "../../../../studio/lib/interfaces/brandAssets";
-import { BRAND_ASSETS_QUERY } from "../../../../studio/lib/queries/brandAssets";
 
 export default function HeaderPreview({
   initialNav,

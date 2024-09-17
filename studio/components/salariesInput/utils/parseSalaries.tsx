@@ -1,4 +1,4 @@
-import { Result, ResultError, ResultOk } from "../../../utils/result";
+import { Result, ResultError, ResultOk } from "studio/utils/result";
 
 export interface Salaries {
   [year: string]: number;

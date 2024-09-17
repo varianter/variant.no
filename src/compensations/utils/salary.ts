@@ -1,9 +1,9 @@
 import {
-  isSalariesType,
   Salaries,
+  isSalariesType,
 } from "studio/components/salariesInput/utils/parseSalaries";
-import { SalariesByLocation } from "../../../studio/lib/interfaces/compensations";
-import { Result, ResultError, ResultOk } from "../../../studio/utils/result";
+import { SalariesByLocation } from "studio/lib/interfaces/compensations";
+import { Result, ResultError, ResultOk } from "studio/utils/result";
 
 export function calculateSalary(
   examinationYear: number,

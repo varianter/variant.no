@@ -1,14 +1,15 @@
-import { Metadata } from "next";
 import { toPlainText } from "@portabletext/toolkit";
-import { urlFor } from "studio/lib/image";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
-import { loadQuery } from "studio/lib/store";
+import { Metadata } from "next";
+
 import { PortableTextBlock } from "src/components/richText/RichText";
-import { DEFAULT_SEO_QUERY } from "../../studio/lib/queries/seo";
-import { DefaultSeo } from "../../studio/lib/interfaces/defaultSeo";
-import { BrandAssets } from "../../studio/lib/interfaces/brandAssets";
-import { BRAND_ASSETS_QUERY } from "../../studio/lib/queries/brandAssets";
-import { CompanyInfo } from "../../studio/lib/interfaces/companyDetails";
+import { urlFor } from "studio/lib/image";
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
+import { DefaultSeo } from "studio/lib/interfaces/defaultSeo";
+import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
+import { DEFAULT_SEO_QUERY } from "studio/lib/queries/seo";
+import { loadQuery } from "studio/lib/store";
 
 type SeoData = {
   title: string;

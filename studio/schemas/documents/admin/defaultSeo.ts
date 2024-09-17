@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+
 import seo from "studio/schemas/objects/seo";
 
 export const defaultSeoID = "seoFallback";

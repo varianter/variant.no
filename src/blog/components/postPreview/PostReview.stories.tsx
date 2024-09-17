@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import PostPreview from "./PostPreview";
+
 import { postMock } from "./mockData";
+import PostPreview from "./PostPreview";
 
 const meta: Meta<typeof PostPreview> = {
   title: "Blog/PostPreview",

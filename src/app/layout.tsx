@@ -1,11 +1,12 @@
+import { Metadata } from "next";
 import { Darker_Grotesque, Figtree } from "next/font/google";
 import { draftMode } from "next/headers";
+
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
-import { Metadata } from "next";
 import { loadQuery } from "studio/lib/store";
 import "src/styles/global.css";
 import { generateMetadataFromSeo } from "src/utils/seo";
-import { DEFAULT_LANGUAGE_QUERY } from "../../studio/lib/queries/languages";
+import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/languages";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],

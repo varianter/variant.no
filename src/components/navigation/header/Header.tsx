@@ -1,18 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { FocusOn } from "react-focus-on";
-import { ILink, Navigation } from "studio/lib/interfaces/navigation";
-import styles from "./header.module.css";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import { linkID } from "studio/schemas/objects/link";
-import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
-import CustomLink from "src/components/link/CustomLink";
-import LinkButton from "src/components/linkButton/LinkButton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FocusOn } from "react-focus-on";
+
+import CustomLink from "src/components/link/CustomLink";
+import LinkButton from "src/components/linkButton/LinkButton";
 import { getHref } from "src/utils/get";
-import { BrandAssets } from "../../../../studio/lib/interfaces/brandAssets";
+import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+import { ILink, Navigation } from "studio/lib/interfaces/navigation";
+import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
+import { linkID } from "studio/schemas/objects/link";
+
+import styles from "./header.module.css";
 
 export interface IHeader {
   data: Navigation;

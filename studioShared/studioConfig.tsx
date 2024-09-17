@@ -1,14 +1,15 @@
-import { WorkspaceOptions } from "sanity";
-import StudioIcon from "../studio/components/studioIcon/StudioIcon";
-import { defineField } from "sanity";
 import { documentInternationalization } from "@sanity/document-internationalization";
 import { visionTool } from "@sanity/vision";
+import { WorkspaceOptions } from "sanity";
 import { structureTool } from "sanity/structure";
+
+import { i18n } from "languages";
+import StudioIcon from "studio/components/studioIcon/StudioIcon";
+
+import { deskStructure } from "./deskStructure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
-import { i18n } from "languages";
 import { customerCaseID } from "./schemas/documents/customerCase";
-import { deskStructure } from "./deskStructure";
 
 const config: WorkspaceOptions = {
   name: "sharedStudio",

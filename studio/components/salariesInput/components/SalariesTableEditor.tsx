@@ -1,7 +1,9 @@
-import styles from "../salariesInput.module.css";
-import SalaryNumberInput from "./SalaryNumberInput";
 import { Grid } from "@sanity/ui";
-import { Salaries } from "../utils/parseSalaries";
+
+import styles from "studio/components/salariesInput/salariesInput.module.css";
+import { Salaries } from "studio/components/salariesInput/utils/parseSalaries";
+
+import SalaryNumberInput from "./SalaryNumberInput";
 
 interface SalariesTableEditorProps {
   salaries: Salaries;

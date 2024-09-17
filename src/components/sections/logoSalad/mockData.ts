@@ -1,9 +1,9 @@
+import sevenoffice from "src/stories/assets/logoSalad/24sevenoffice.png";
+import credoPartners from "src/stories/assets/logoSalad/credo-partners.png";
+import skift from "src/stories/assets/logoSalad/skift.png";
+import sparebanknord from "src/stories/assets/logoSalad/sparebank1-nord-norge.png";
+import virke from "src/stories/assets/logoSalad/virke.png";
 import { LogoSaladSection } from "studio/lib/interfaces/pages";
-import sparebanknord from "../../../stories/assets/logoSalad/sparebank1-nord-norge.png";
-import sevenoffice from "../../../stories/assets/logoSalad/24sevenoffice.png";
-import credoPartners from "../../../stories/assets/logoSalad/credo-partners.png";
-import skift from "../../../stories/assets/logoSalad/skift.png";
-import virke from "../../../stories/assets/logoSalad/virke.png";
 
 const logos = [
   {

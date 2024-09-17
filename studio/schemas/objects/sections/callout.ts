@@ -1,7 +1,8 @@
 import { defineField } from "sanity";
-import { richText, richTextID } from "../../fields/text";
-import { link } from "../link";
+
+import { richText, richTextID } from "studio/schemas/fields/text";
 import { theme } from "studio/schemas/fields/theme";
+import { link } from "studio/schemas/objects/link";
 
 export const calloutID = "callout";
 

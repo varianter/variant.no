@@ -1,7 +1,7 @@
+import alex from "src/stories/assets/alex.jpg";
+import mika from "src/stories/assets/mika.jpg";
+import vince from "src/stories/assets/vince.jpg";
 import { TestimonialsSection } from "studio/lib/interfaces/pages";
-import alex from "../../../stories/assets/alex.jpg";
-import mika from "../../../stories/assets/mika.jpg";
-import vince from "../../../stories/assets/vince.jpg";
 
 export const testimonialsMockData: TestimonialsSection = {
   _type: "testimonials",

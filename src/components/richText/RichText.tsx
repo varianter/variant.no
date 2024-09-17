@@ -1,10 +1,12 @@
 "use client";
 
 import { PortableText } from "@portabletext/react";
-import Text from "../text/Text";
-import styles from "./richText.module.css";
-import textStyles from "../text/text.module.css";
+
+import Text from "src/components/text/Text";
+import textStyles from "src/components/text/text.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
+
+import styles from "./richText.module.css";
 
 type Children = {
   _type: string;

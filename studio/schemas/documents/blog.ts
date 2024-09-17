@@ -1,8 +1,9 @@
 import { defineField, defineType } from "sanity";
-import seo from "../objects/seo";
-import { pageSlug } from "../schemaTypes/slug";
-import { title } from "../fields/text";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { title } from "studio/schemas/fields/text";
+import seo from "studio/schemas/objects/seo";
+import { pageSlug } from "studio/schemas/schemaTypes/slug";
 
 export const blogId = "blog";
 

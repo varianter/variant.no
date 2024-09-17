@@ -1,6 +1,7 @@
 import Text from "src/components/text/Text";
-import styles from "./inputTextArea.module.css";
 import textStyles from "src/components/text/text.module.css";
+
+import styles from "./inputTextArea.module.css";
 
 interface InputTextAreaProps {
   label: string;

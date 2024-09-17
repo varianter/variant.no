@@ -1,7 +1,9 @@
-import Text from "src/components/text/Text";
-import styles from "./inputField.module.css";
-import textStyles from "src/components/text/text.module.css";
 import { HTMLInputAutoCompleteAttribute, HTMLInputTypeAttribute } from "react";
+
+import Text from "src/components/text/Text";
+import textStyles from "src/components/text/text.module.css";
+
+import styles from "./inputField.module.css";
 
 interface InputFieldProps {
   label: string;

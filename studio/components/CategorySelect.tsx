@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { Select } from "@sanity/ui";
-import { useClient, set, StringInputProps, PatchEvent } from "sanity";
+import React, { useEffect, useState } from "react";
+import { PatchEvent, StringInputProps, set, useClient } from "sanity";
+
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 interface Category {

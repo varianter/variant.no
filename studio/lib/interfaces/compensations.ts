@@ -1,4 +1,5 @@
 import { PortableTextBlock } from "src/components/richText/RichText";
+
 import { Reference, Slug } from "./global";
 
 export interface Benefit {

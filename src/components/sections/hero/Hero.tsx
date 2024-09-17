@@ -1,8 +1,9 @@
-import Text from "src/components/text/Text";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { HeroSection } from "studio/lib/interfaces/pages";
-import styles from "./hero.module.css";
+import Text from "src/components/text/Text";
 import { ILink } from "studio/lib/interfaces/navigation";
+import { HeroSection } from "studio/lib/interfaces/pages";
+
+import styles from "./hero.module.css";
 
 interface HeroProps {
   hero: HeroSection;

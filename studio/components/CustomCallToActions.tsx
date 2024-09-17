@@ -1,3 +1,4 @@
+import { Card, Text } from "@sanity/ui";
 import React, { useEffect, useState } from "react";
 import {
   ArrayOfObjectsInput,
@@ -6,7 +7,7 @@ import {
   LoadingBlock,
   useFormValue,
 } from "sanity";
-import { Text, Card } from "@sanity/ui";
+
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 import { LANDING_QUERY } from "studio/lib/queries/navigation";
 
@@ -17,7 +18,7 @@ type CustomCallToActionsProps = ArrayOfObjectsInputProps<
 
 const CustomCallToActions: React.FC<CustomCallToActionsProps> = (props) => {
   const [isLandingPage, setIsLandingPage] = useState(false);
-  const [landingPageId, setLandingPageId] = useState<String | null>(null);
+  const [landingPageId, setLandingPageId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

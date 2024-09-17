@@ -1,8 +1,10 @@
-import Text from "src/components/text/Text";
-import styles from "./checkbox.module.css";
-import textStyles from "src/components/text/text.module.css";
-import { PortableTextBlock } from "src/components/richText/RichText";
 import { PortableText } from "@portabletext/react";
+
+import { PortableTextBlock } from "src/components/richText/RichText";
+import Text from "src/components/text/Text";
+import textStyles from "src/components/text/text.module.css";
+
+import styles from "./checkbox.module.css";
 
 interface CheckboxProps {
   label: string | PortableTextBlock[];

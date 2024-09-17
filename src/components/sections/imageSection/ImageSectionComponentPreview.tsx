@@ -1,13 +1,11 @@
 "use client";
 import { useQuery } from "@sanity/react-loader";
-import {
-  ImageSection,
-  PageBuilder,
-  TestimonialsSection,
-} from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
+
 import { PreviewProps } from "src/types/preview";
+import { ImageSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
+
 import ImageSectionComponent from "./ImageSectionComponent";
 
 export default function ImageSectionComponentPreview({

@@ -1,5 +1,5 @@
-import { ClientPerspective } from "next-sanity";
 import { draftMode } from "next/headers";
+import { ClientPerspective } from "next-sanity";
 
 export interface DraftModeInfo {
   isDraftMode: boolean;

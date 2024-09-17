@@ -1,13 +1,14 @@
-import styles from "../salariesInput.module.css";
-import { Box, Inline, Text } from "@sanity/ui";
 import { UploadIcon } from "@sanity/icons";
+import { Box, Inline, Text } from "@sanity/ui";
+import { ChangeEvent, MouseEvent, useState } from "react";
+
+import styles from "studio/components/salariesInput/salariesInput.module.css";
 import {
   Salaries,
-  salariesFromCsvString,
   SalariesParseError,
   SalariesParseErrorType,
-} from "../utils/parseSalaries";
-import { ChangeEvent, useState, MouseEvent } from "react";
+  salariesFromCsvString,
+} from "studio/components/salariesInput/utils/parseSalaries";
 
 const UPLOAD_CSV_INPUT_ID = "upload-csv-input";
 

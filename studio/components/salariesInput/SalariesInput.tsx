@@ -1,15 +1,16 @@
-import { set, StringInputProps } from "sanity";
 import { Inline, Stack, Text, useToast } from "@sanity/ui";
+import { useState } from "react";
+import { StringInputProps, set } from "sanity";
+
+import SalariesFileUpload from "./components/SalariesFileUpload";
+import { SalariesParseErrorsToastDescription } from "./components/SalariesParseErrorsToastDescription";
+import SalariesTableEditor from "./components/SalariesTableEditor";
 import {
   Salaries,
+  SalariesParseError,
   salariesAsStoredString,
   salariesFromStoredString,
-  SalariesParseError,
 } from "./utils/parseSalaries";
-import { SalariesParseErrorsToastDescription } from "./components/SalariesParseErrorsToastDescription";
-import SalariesFileUpload from "./components/SalariesFileUpload";
-import SalariesTableEditor from "./components/SalariesTableEditor";
-import { useState } from "react";
 
 export const SalariesInput = (props: StringInputProps) => {
   const toast = useToast();

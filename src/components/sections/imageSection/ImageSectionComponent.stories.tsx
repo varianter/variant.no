@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import placeholder from "../../../stories/assets/image-placeholder.png";
+
+import placeholder from "src/stories/assets/image-placeholder.png";
+
 import ImageSectionComponent from "./ImageSectionComponent";
 
 const meta: Meta<typeof ImageSectionComponent> = {

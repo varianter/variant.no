@@ -1,4 +1,5 @@
 import Text from "src/components/text/Text";
+
 import styles from "./loadingNews.module.css";
 
 const LoadingNews = () => {

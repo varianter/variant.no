@@ -1,30 +1,31 @@
+import {
+  CaseIcon,
+  CogIcon,
+  DoubleChevronRightIcon,
+  HeartIcon,
+  ImagesIcon,
+  InfoOutlineIcon,
+  PinIcon,
+  ProjectsIcon,
+  SearchIcon,
+  SparkleIcon,
+  TransferIcon,
+  TranslateIcon,
+  UsersIcon,
+} from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
+
 import { pageBuilderID } from "./builders/pageBuilder";
 //import { blogId } from "./documents/blog";
-import {
-  TransferIcon,
-  UsersIcon,
-  CogIcon,
-  ProjectsIcon,
-  InfoOutlineIcon,
-  HeartIcon,
-  SparkleIcon,
-  CaseIcon,
-  TranslateIcon,
-  DoubleChevronRightIcon,
-  PinIcon,
-  SearchIcon,
-  ImagesIcon,
-} from "@sanity/icons";
-import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { companyInfoID } from "./documents/companyInfo";
-import { legalDocumentID } from "./documents/legalDocuments";
-import { compensationsId } from "./documents/compensations";
-import { redirectId } from "./documents/redirect";
-import { companyLocationID } from "./documents/companyLocation";
-import { supportedLanguagesID } from "./documents/supportedLanguages";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
 import { brandAssetsID } from "./documents/brandAssets";
+import { companyInfoID } from "./documents/companyInfo";
+import { companyLocationID } from "./documents/companyLocation";
+import { compensationsId } from "./documents/compensations";
+import { legalDocumentID } from "./documents/legalDocuments";
+import { redirectId } from "./documents/redirect";
+import { soMeLinksID } from "./documents/socialMediaProfiles";
+import { supportedLanguagesID } from "./documents/supportedLanguages";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>

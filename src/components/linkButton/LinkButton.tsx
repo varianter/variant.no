@@ -1,7 +1,9 @@
 import React from "react";
-import styles from "./linkButton.module.css";
-import { ILink } from "studio/lib/interfaces/navigation";
+
 import { getHref } from "src/utils/get";
+import { ILink } from "studio/lib/interfaces/navigation";
+
+import styles from "./linkButton.module.css";
 
 type LinkButtonType = "primary" | "secondary";
 

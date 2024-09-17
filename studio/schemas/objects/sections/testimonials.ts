@@ -1,6 +1,7 @@
 import { defineField } from "sanity";
-import { title } from "../../fields/text";
-import testimony from "../testimony";
+
+import { title } from "studio/schemas/fields/text";
+import testimony from "studio/schemas/objects/testimony";
 
 export const testimonialsID = "testimonials";
 

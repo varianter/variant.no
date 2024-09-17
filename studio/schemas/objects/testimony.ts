@@ -1,7 +1,8 @@
-import { richText, title } from "../fields/text";
-import image from "../fields/media";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import { StringInputProps, StringRule } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import image from "studio/schemas/fields/media";
+import { richText, title } from "studio/schemas/fields/text";
 
 export const testimony = {
   name: "testimony",

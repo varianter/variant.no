@@ -1,8 +1,8 @@
 // components/ReferenceSlugInput.tsx
 
-import React, { useEffect, useState } from "react";
-import { useClient, PatchEvent, set, unset } from "sanity";
 import { TextInput } from "@sanity/ui";
+import React, { useEffect, useState } from "react";
+import { PatchEvent, set, unset, useClient } from "sanity";
 
 interface ReferenceSlugInputProps {
   value?: string;

@@ -1,9 +1,11 @@
-import { defineField, defineType, type Slug } from "sanity";
 import { SanityDocument, SlugRule } from "@sanity/types";
-import { pageBuilderID } from "../builders/pageBuilder";
+import { type Slug, defineField, defineType } from "sanity";
+
+import PrefixedSlugInput from "studio/components/slug/PrefixedSlugInput";
+import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
+
 import { blogId } from "./blog";
 import { compensationsId } from "./compensations";
-import PrefixedSlugInput from "../../components/slug/PrefixedSlugInput";
 
 const slugRequired = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {

@@ -1,7 +1,9 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+
+import { OPEN_GRAPH_IMAGE_DIMENSIONS } from "src/utils/seo";
+
 import OpenGraphImage from "./OpenGraphImage";
-import { OPEN_GRAPH_IMAGE_DIMENSIONS } from "../../../utils/seo";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;

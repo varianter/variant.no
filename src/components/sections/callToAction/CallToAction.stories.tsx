@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+
 import CallToAction from "./CallToAction";
 import { ctaMockData } from "./mockData";
 

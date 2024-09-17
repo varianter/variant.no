@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
-import { richText, title } from "../../../schemas/fields/text";
+
 import image from "studio/schemas/fields/media";
-import { theme } from "studio/schemas/fields/theme";
+import { richText, title } from "studio/schemas/fields/text";
 
 export const gridID = "grid";
 

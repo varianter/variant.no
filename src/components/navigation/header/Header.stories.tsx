@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
+
+import { mockLogo, mockNavigation } from "src/components/navigation/mockData";
+
 import { Header } from "./Header";
-import { mockNavigation, mockLogo } from "../mockData";
 
 const meta: Meta<typeof Header> = {
   title: "Components/Navigation/Header",

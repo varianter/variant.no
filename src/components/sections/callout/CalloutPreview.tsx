@@ -1,11 +1,13 @@
 "use client";
 
 import { useQuery } from "@sanity/react-loader";
-import Callout from "./Callout";
-import { PageBuilder, CalloutSection } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
+
 import { PreviewProps } from "src/types/preview";
+import { CalloutSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
+
+import Callout from "./Callout";
 
 export default function CalloutPreview({
   initialData,

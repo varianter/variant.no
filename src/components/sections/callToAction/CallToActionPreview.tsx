@@ -1,11 +1,13 @@
 "use client";
 
 import { useQuery } from "@sanity/react-loader";
-import CallToAction from "./CallToAction";
-import { PageBuilder, CallToActionSection } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
+
 import { PreviewProps } from "src/types/preview";
+import { CallToActionSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
+
+import CallToAction from "./CallToAction";
 
 export default function CallToActionPreview({
   initialData,

@@ -1,5 +1,6 @@
 import { defineField } from "sanity";
-import { richText, title } from "../../../schemas/fields/text";
+
+import { title } from "studio/schemas/fields/text";
 
 export const contactFormID = "contactForm";
 
