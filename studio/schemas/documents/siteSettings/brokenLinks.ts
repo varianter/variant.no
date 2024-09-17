@@ -3,9 +3,8 @@ import { type Slug, defineField, defineType } from "sanity";
 
 import PrefixedSlugInput from "studio/components/slug/PrefixedSlugInput";
 import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
-
-import { blogId } from "../blog";
-import { compensationsId } from "../compensations";
+import { blogId } from "studio/schemas/documents/blog";
+import { compensationsId } from "studio/schemas/documents/compensations";
 
 const slugRequired = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {

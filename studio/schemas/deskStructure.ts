@@ -17,15 +17,15 @@ import { StructureBuilder } from "sanity/structure";
 
 import { pageBuilderID } from "./builders/pageBuilder";
 //import { blogId } from "./documents/blog";
-import { defaultSeoID } from "./documents/admin/defaultSeo";
-import { brandAssetsID } from "./documents/siteSettings/brandAssets";
 import { companyInfoID } from "./documents/admin/companyInfo";
 import { companyLocationID } from "./documents/admin/companyLocation";
-import { compensationsId } from "./documents/compensations";
+import { defaultSeoID } from "./documents/admin/defaultSeo";
 import { legalDocumentID } from "./documents/admin/legalDocuments";
+import { compensationsId } from "./documents/compensations";
+import { brandAssetsID } from "./documents/siteSettings/brandAssets";
+import { brokenLinksID } from "./documents/siteSettings/brokenLinks";
 import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
 import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
-import { brokenLinksID } from "./documents/siteSettings/brokenLinks";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>

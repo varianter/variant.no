@@ -1,16 +1,16 @@
 import { type SchemaTypeDefinition } from "sanity";
 
 import pageBuilder from "./schemas/builders/pageBuilder";
-import defaultSeo from "./schemas/documents/admin/defaultSeo";
-import blog from "./schemas/documents/blog";
-import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import companyInfo from "./schemas/documents/admin/companyInfo";
 import companyLocation from "./schemas/documents/admin/companyLocation";
-import compensations from "./schemas/documents/compensations";
+import defaultSeo from "./schemas/documents/admin/defaultSeo";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
-import navigationManager from "./schemas/documents/siteSettings/navigationManager";
+import blog from "./schemas/documents/blog";
+import compensations from "./schemas/documents/compensations";
 import posts from "./schemas/documents/post";
+import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import brokenLinks from "./schemas/documents/siteSettings/brokenLinks";
+import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
 import callToActionField from "./schemas/fields/callToActionFields";

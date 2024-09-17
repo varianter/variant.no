@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+
 import { SocialMediaID } from "studio/schemas/objects/socialMedia";
 
 export const soMeLinksID = "soMeLinksID";

@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+
 import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { footerSectionID } from "studio/schemas/objects/footerSection";
