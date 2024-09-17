@@ -1,5 +1,5 @@
 "use client";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import { PortableTextBlock } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
@@ -54,6 +54,6 @@ const Element = ({
   );
 };
 
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="small">{children}</Text>,
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+  block: ({ children }) => <Text type="small">{children}</Text>,
 };

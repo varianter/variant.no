@@ -8,7 +8,7 @@ const clientWithToken = client.withConfig({ token });
 
 interface FetchRequestBody {
   query: string;
-  params?: Record<string, any>;
+  params?: Record<string, unknown>;
 }
 
 export async function POST(req: Request) {

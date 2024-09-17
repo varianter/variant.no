@@ -18,7 +18,7 @@ import { loadQuery } from "studio/lib/store";
 
 import styles from "./layout.module.css";
 
-const hasValidData = (data: any) => data && Object.keys(data).length > 0;
+const hasValidData = (data: unknown) => data && Object.keys(data).length > 0;
 
 export default async function Layout({
   children,

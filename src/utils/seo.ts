@@ -1,4 +1,5 @@
 import { toPlainText } from "@portabletext/toolkit";
+import type { QueryParams } from "@sanity/client";
 import { Metadata } from "next";
 
 import { PortableTextBlock } from "src/components/richText/RichText";
@@ -32,7 +33,7 @@ export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
 
 export async function fetchSeoData(
   query: string,
-  variables?: any,
+  variables?: QueryParams | undefined,
 ): Promise<SeoData | null> {
   try {
     const { data } = await loadQuery<SeoData>(query, variables);
@@ -45,7 +46,7 @@ export async function fetchSeoData(
 
 export async function fetchPostSeoData(
   query: string,
-  variables?: any,
+  variables?: QueryParams | undefined,
 ): Promise<SeoData | null> {
   try {
     const { data } = await loadQuery<PostSeoData>(query, variables);

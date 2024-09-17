@@ -1,16 +1,19 @@
 "use client";
 
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+import { PortableTextObject } from "@sanity/types";
+import { ReactNode } from "react";
 
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
+import { getReactNodeTextContent } from "src/utils/reactNode";
 
 import styles from "./richText.module.css";
 
 type Children = {
   _type: string;
-  marks: any[];
+  marks: string[];
   text: string;
   _key: string;
 };
@@ -27,11 +30,11 @@ export type PortableTextBlock = {
     _type: string;
   };
   alt?: string;
-  markDefs?: any[];
+  markDefs?: PortableTextObject[];
 };
 
-const formatId = (children: any): string => {
-  const text = children.join(" ");
+const formatId = (children: ReactNode): string => {
+  const text = getReactNodeTextContent(children);
 
   return text
     .toLowerCase()
@@ -44,36 +47,32 @@ const SanityImage = ({ value }: { value: PortableTextBlock }) => {
   return <div className={styles.image}>{ImageElement}</div>;
 };
 
-const myPortableTextComponents = {
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   block: {
-    h2: ({ children }: any) => (
+    h2: ({ children }) => (
       <Text type="h2" id={formatId(children)}>
         {children}
       </Text>
     ),
-    h3: ({ children }: any) => (
+    h3: ({ children }) => (
       <Text type="h3" id={formatId(children)}>
         {children}
       </Text>
     ),
-    normal: ({ children }: any) => <Text type="body">{children}</Text>,
-    blockquote: ({ children }: any) => (
+    normal: ({ children }) => <Text type="body">{children}</Text>,
+    blockquote: ({ children }) => (
       <blockquote className={`${styles.blockquote} ${textStyles.body}`}>
         {children}
       </blockquote>
     ),
   },
   list: {
-    bullet: ({ children }: any) => <ul className={styles.list}>{children}</ul>,
-    number: ({ children }: any) => <ol className={styles.list}>{children}</ol>,
+    bullet: ({ children }) => <ul className={styles.list}>{children}</ul>,
+    number: ({ children }) => <ol className={styles.list}>{children}</ol>,
   },
   listItem: {
-    bullet: ({ children }: any) => (
-      <li className={textStyles.body}>{children}</li>
-    ),
-    number: ({ children }: any) => (
-      <li className={textStyles.body}>{children}</li>
-    ),
+    bullet: ({ children }) => <li className={textStyles.body}>{children}</li>,
+    number: ({ children }) => <li className={textStyles.body}>{children}</li>,
   },
   types: {
     image: SanityImage,
