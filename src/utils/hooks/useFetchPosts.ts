@@ -60,6 +60,7 @@ export const useFetchPosts = ({
 
         setPostsCount(count);
       } catch (error) {
+        console.log("Error when fetching posts:", error);
         setPosts((prevState) => ({
           ...prevState,
           initialLoading: false,

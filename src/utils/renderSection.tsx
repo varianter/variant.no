@@ -162,7 +162,6 @@ const renderContactFormSection = (
   section: ContactFormSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? <div></div> : <ContactForm data={section} />;
 };
@@ -237,7 +236,6 @@ const SectionRenderer = ({
         section as ContactFormSection,
         sectionIndex,
         isDraftMode,
-        initialData,
       );
     default:
       return null;

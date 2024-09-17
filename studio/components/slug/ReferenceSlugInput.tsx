@@ -29,8 +29,7 @@ interface ReferenceSlugInputProps {
 }
 
 const ReferenceSlugInput: React.FC<ReferenceSlugInputProps> = (props) => {
-  const { value, readOnly, schemaType, onChange, elementProps, document } =
-    props;
+  const { value, readOnly, onChange, elementProps, document } = props;
   const [slug, setSlug] = useState<string | null>(value || null);
   const client = useClient();
 

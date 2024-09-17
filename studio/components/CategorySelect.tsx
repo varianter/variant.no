@@ -1,5 +1,5 @@
 import { Select } from "@sanity/ui";
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { PatchEvent, StringInputProps, set, useClient } from "sanity";
 
 import { fetchWithToken } from "studio/lib/fetchWithToken";
@@ -9,49 +9,48 @@ interface Category {
   name: string;
 }
 
-interface CategorySelectorProps extends StringInputProps {}
+type CategorySelectorProps = StringInputProps;
 
-const CategorySelector = React.forwardRef<
-  HTMLSelectElement,
-  CategorySelectorProps
->((props, ref) => {
-  const { value, onChange } = props;
-  const client = useClient();
-  const [categories, setCategories] = useState<Category[]>([]);
+const CategorySelector = forwardRef<HTMLSelectElement, CategorySelectorProps>(
+  (props, ref) => {
+    const { value, onChange } = props;
+    const client = useClient();
+    const [categories, setCategories] = useState<Category[]>([]);
 
-  useEffect(() => {
-    async function fetchCategories() {
-      const result = await fetchWithToken<Category[]>(
-        `*[_type == "blog"][0].categories`,
-      );
+    useEffect(() => {
+      async function fetchCategories() {
+        const result = await fetchWithToken<Category[]>(
+          `*[_type == "blog"][0].categories`,
+        );
 
-      setCategories(result || []);
-    }
-    fetchCategories();
-  }, [client]);
+        setCategories(result || []);
+      }
+      fetchCategories();
+    }, [client]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange(PatchEvent.from(set(event.target.value)));
-  };
+    const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+      onChange(PatchEvent.from(set(event.target.value)));
+    };
 
-  return (
-    <Select
-      ref={ref}
-      value={value || ""}
-      onChange={handleChange}
-      placeholder="Select a category"
-    >
-      <option value="" disabled>
-        Select a category
-      </option>
-      {categories.map((category) => (
-        <option key={category.name} value={category.name}>
-          {category.name}
+    return (
+      <Select
+        ref={ref}
+        value={value || ""}
+        onChange={handleChange}
+        placeholder="Select a category"
+      >
+        <option value="" disabled>
+          Select a category
         </option>
-      ))}
-    </Select>
-  );
-});
+        {categories.map((category) => (
+          <option key={category.name} value={category.name}>
+            {category.name}
+          </option>
+        ))}
+      </Select>
+    );
+  },
+);
 
 CategorySelector.displayName = "CategorySelector";
 

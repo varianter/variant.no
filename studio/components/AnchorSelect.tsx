@@ -53,7 +53,7 @@ const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
       });
 
       const formattedResponseToListItems = response.sections.map(
-        (section: AnchorItem, index: number) => {
+        (section: AnchorItem) => {
           const title = section.basicTitle || fromCamelCase(section._type);
           return {
             basicTitle: title,

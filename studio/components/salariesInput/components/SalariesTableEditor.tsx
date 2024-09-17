@@ -24,7 +24,7 @@ const SalariesTableEditor = ({
       </div>
       {Object.entries(salaries)
         .toSorted(([a], [b]) => Number(b) - Number(a))
-        .map(([year, salary], index) => (
+        .map(([year, salary]) => (
           <>
             <div key={year} className={styles.tableCell}>
               <label htmlFor={`salary-number-input-${year}`}>
