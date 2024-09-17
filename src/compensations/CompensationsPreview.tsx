@@ -7,7 +7,6 @@ import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/compensations";
 
-
 interface CompensationsPreviewProps {
   initialCompensations: QueryResponseInitial<CompensationsPage>;
   initialLocations: QueryResponseInitial<CompanyLocation[]>;

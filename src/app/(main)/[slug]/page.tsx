@@ -10,7 +10,6 @@ import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
-
   SEO_SLUG_QUERY,
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
