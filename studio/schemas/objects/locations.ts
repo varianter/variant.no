@@ -1,5 +1,5 @@
 import { defineField } from "sanity";
-import { companyLocationID } from "../documents/companyLocation";
+import { companyLocationID } from "../documents/admin/companyLocation";
 
 export const locationsID = "locations";
 export const locationID = "location";

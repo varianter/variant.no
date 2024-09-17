@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
-import { linkID } from "../objects/link";
-import { footerSectionID } from "../objects/footerSection";
-import { pageBuilderID } from "../builders/pageBuilder";
-import { callToActionFieldID } from "../fields/callToActionFields";
+import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
+import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
+import { footerSectionID } from "studio/schemas/objects/footerSection";
+import { linkID } from "studio/schemas/objects/link";
 
 export const navManagerID = {
   navigationManager: "navigationManager",

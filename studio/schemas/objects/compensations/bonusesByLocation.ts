@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 import { location, locationID } from "../locations";
-import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
+import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import {
   DocumentWithLocation,
   checkForDuplicateLocations,

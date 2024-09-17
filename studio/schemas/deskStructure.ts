@@ -16,15 +16,16 @@ import {
   SearchIcon,
   ImagesIcon,
 } from "@sanity/icons";
-import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { legalDocumentID } from "./documents/legalDocuments";
+
+import { legalDocumentID } from "./documents/admin/legalDocuments";
 import { compensationsId } from "./documents/compensations";
-import { redirectId } from "./documents/redirect";
-import { companyLocationID } from "./documents/companyLocation";
-import { supportedLanguagesID } from "./documents/supportedLanguages";
+import { redirectId } from "./documents/siteSettings/redirect";
+import { companyLocationID } from "./documents/admin/companyLocation";
+import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
-import { brandAssetsID } from "./documents/brandAssets";
-import { companyInfoID } from "./documents/companyInfo";
+import { brandAssetsID } from "./documents/siteSettings/brandAssets";
+import { companyInfoID } from "./documents/admin/companyInfo";
+import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>

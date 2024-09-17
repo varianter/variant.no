@@ -1,6 +1,6 @@
 import { defineType, StringInputProps } from "sanity";
 import { linkID } from "./link";
-import { soMeLinksID } from "../documents/socialMediaProfiles";
+import { soMeLinksID } from "../documents/siteSettings/socialMediaProfiles";
 import { richText, richTextID } from "../fields/text";
 import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 

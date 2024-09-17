@@ -4,7 +4,7 @@ import {
   DocumentWithLocation,
   checkForDuplicateLocations,
 } from "./utils/validation";
-import { companyLocationNameID } from "../../documents/companyLocation";
+import { companyLocationNameID } from "../../documents/admin/companyLocation";
 import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
 import { SalariesPage } from "../../../lib/interfaces/compensations";
 

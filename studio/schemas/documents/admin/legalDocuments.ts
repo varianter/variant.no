@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
-import { richText, title } from "../fields/text";
-import { titleSlug } from "../schemaTypes/slug";
+import { richText, title } from "../../fields/text";
+import { titleSlug } from "../../schemaTypes/slug";
 
 export const legalDocumentID = "legalDocuments";
 
