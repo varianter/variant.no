@@ -1,5 +1,7 @@
-import { i18n } from "languages";
 import { StructureResolver } from "sanity/structure";
+
+import { i18n } from "languages";
+
 import { customerCaseID } from "./schemas/documents/customerCase";
 
 export const deskStructure: StructureResolver = (S) =>

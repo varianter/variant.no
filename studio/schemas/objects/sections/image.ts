@@ -1,6 +1,7 @@
 import { defineField } from "sanity";
-import { title } from "../../../schemas/fields/text";
+
 import image from "studio/schemas/fields/media";
+import { title } from "studio/schemas/fields/text";
 
 export const imageID = "imageSection";
 

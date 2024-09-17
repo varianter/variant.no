@@ -1,6 +1,7 @@
-import { SlugInputProps } from "sanity";
-import styles from "./prefixedSlugInput.module.css";
 import { useTheme } from "@sanity/ui";
+import { SlugInputProps } from "sanity";
+
+import styles from "./prefixedSlugInput.module.css";
 
 type PrefixedSlugInputProps = SlugInputProps & {
   prefix: string;

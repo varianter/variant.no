@@ -1,3 +1,3 @@
-interface DefaultLanguageObject {
+export interface DefaultLanguageObject {
   defaultLanguage: string;
 }

@@ -1,9 +1,10 @@
-import { defineField, defineType } from "sanity";
 import { format, parseISO } from "date-fns";
-import { titleSlug } from "../schemaTypes/slug";
-import { richText, title } from "../fields/text";
+import { defineField, defineType } from "sanity";
+
 import CategorySelector from "studio/components/CategorySelect";
-import image from "../fields/media";
+import image from "studio/schemas/fields/media";
+import { richText, title } from "studio/schemas/fields/text";
+import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
 export const postId = "blogPosts";
 

@@ -1,11 +1,13 @@
 "use client";
 
-import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
-import { LogoSalad } from "./LogoSalad";
-import { PageBuilder, LogoSaladSection } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
+import { useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
+
 import { PreviewProps } from "src/types/preview";
+import { LogoSaladSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
+
+import { LogoSalad } from "./LogoSalad";
 
 export default function LogoSaladPreview({
   initialData,

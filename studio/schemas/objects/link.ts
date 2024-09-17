@@ -1,8 +1,9 @@
-import { defineField, StringInputProps } from "sanity";
-import AnchorSelect from "../../components/AnchorSelect";
-import LinkTypeSelector from "../../components/LinkTypeSelector";
-import NewTabSelector from "../../components/NewTabSelector";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { StringInputProps, defineField } from "sanity";
+
+import AnchorSelect from "studio/components/AnchorSelect";
+import LinkTypeSelector from "studio/components/LinkTypeSelector";
+import NewTabSelector from "studio/components/NewTabSelector";
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const linkID = "link";
 

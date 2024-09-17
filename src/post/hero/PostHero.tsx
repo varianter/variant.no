@@ -1,6 +1,7 @@
-import Text from "src/components/text/Text";
-import styles from "./postHero.module.css";
 import BackButton from "src/components/buttons/BackButton";
+import Text from "src/components/text/Text";
+
+import styles from "./postHero.module.css";
 
 const formatDate = (date: string | number | Date): string => {
   const d: Date = new Date(date);

@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import MorePostsGrid from "./MorePostsGrid";
+
 import { mockPosts } from "./mockdata";
+import MorePostsGrid from "./MorePostsGrid";
 
 const meta: Meta<typeof MorePostsGrid> = {
   title: "Post/MorePostsGrid",

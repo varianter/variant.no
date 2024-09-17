@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+
 import { Hero } from "./Hero";
 import { mockHeroSection } from "./mockData";
 

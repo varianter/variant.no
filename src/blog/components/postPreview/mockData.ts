@@ -1,5 +1,5 @@
-import placeholder from "src/stories/assets/image-placeholder.png";
 import { PortableTextBlock } from "src/components/richText/RichText";
+import placeholder from "src/stories/assets/image-placeholder.png";
 
 // Common rich text for lead and main content
 const leadRichText: PortableTextBlock[] = [

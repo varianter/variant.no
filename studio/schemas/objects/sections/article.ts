@@ -1,8 +1,9 @@
-import { defineField, StringInputProps } from "sanity";
-import { richText, title } from "../../../schemas/fields/text";
-import { imageExtended } from "../../../schemas/fields/media";
-import { link } from "../link";
-import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { StringInputProps, defineField } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { imageExtended } from "studio/schemas/fields/media";
+import { richText, title } from "studio/schemas/fields/text";
+import { link } from "studio/schemas/objects/link";
 
 export const articleID = "article";
 

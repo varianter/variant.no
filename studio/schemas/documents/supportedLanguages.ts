@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+
 import { languages } from "languages";
 
 const languageOptions = languages.map((language) => {

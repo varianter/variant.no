@@ -82,6 +82,7 @@ To get started with Sankitty, follow these steps:
 - `npm run start`: Start the Next.js application in production mode.
 - `npm run format`: Format the codebase using Prettier to ensure consistent code style across the project.
 - `npm run lint`: Lint the project using ESLint.
+- `npm run fix`: Format and lint in one command.
 
 ## Project Structure
 

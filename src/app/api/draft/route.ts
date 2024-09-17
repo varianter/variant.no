@@ -2,9 +2,9 @@ import { validatePreviewUrl } from "@sanity/preview-url-secret";
 import { draftMode } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
+import { absoluteUrlFromNextRequest } from "src/utils/url";
 import { client } from "studio/lib/client";
 import { token } from "studio/lib/token";
-import { absoluteUrlFromNextRequest } from "src/utils/url";
 
 const clientWithToken = client.withConfig({ token });
 

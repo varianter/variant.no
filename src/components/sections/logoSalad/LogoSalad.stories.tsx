@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
+
 import { LogoSalad } from "./LogoSalad";
 import { extendedMockLogoSaladSection, mockLogoSaladSection } from "./mockData";
 

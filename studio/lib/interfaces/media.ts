@@ -1,4 +1,5 @@
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 import { ImageAlignment } from "studio/schemas/fields/media";
 
 interface IHotspot {

@@ -1,13 +1,13 @@
+import primaryLogoFile from "src/stories/assets/energiai-primary-logo.svg";
+import secondaryLogoFile from "src/stories/assets/energiai-secondary-logo.svg";
 import {
-  Navigation,
   LinkType,
+  Navigation,
   SectionType,
 } from "studio/lib/interfaces/navigation";
+import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { linkID } from "studio/schemas/objects/link";
-import primaryLogoFile from "../../stories/assets/energiai-primary-logo.svg";
-import secondaryLogoFile from "../../stories/assets/energiai-secondary-logo.svg";
-import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 
 // Mock Navigation Data
 export const mockNavigation: Navigation = {

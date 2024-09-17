@@ -1,9 +1,9 @@
 import { client } from "studio/lib/client";
+import { Post } from "studio/lib/interfaces/pages";
 import {
   CATEGORIZED_POSTS_QUERY,
   COUNT_POSTS_QUERY,
 } from "studio/lib/queries/pages";
-import { Post } from "studio/lib/interfaces/pages";
 
 interface FetchResult {
   data: Post[];

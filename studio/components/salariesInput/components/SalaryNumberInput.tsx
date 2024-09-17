@@ -1,5 +1,6 @@
-import { HTMLProps, useState, ChangeEvent, useEffect } from "react";
-import { VALID_SALARY_REGEX } from "../utils/parseSalaries";
+import { ChangeEvent, HTMLProps, useEffect, useState } from "react";
+
+import { VALID_SALARY_REGEX } from "studio/components/salariesInput/utils/parseSalaries";
 
 type SalaryNumberInputProps = Omit<
   HTMLProps<HTMLInputElement>,

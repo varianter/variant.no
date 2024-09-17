@@ -5,7 +5,8 @@
  */
 
 import { defineConfig } from "sanity";
-import sharedStudioConfig from "./studioShared/studioConfig";
+
 import studioConfig from "./studio/studioConfig";
+import sharedStudioConfig from "./studioShared/studioConfig";
 
 export default defineConfig([studioConfig, sharedStudioConfig]);

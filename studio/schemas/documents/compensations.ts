@@ -1,11 +1,12 @@
 import { defineField, defineType } from "sanity";
-import { titleSlug } from "../schemaTypes/slug";
-import seo from "../objects/seo";
-import { title } from "../fields/text";
-import { bonusesByLocation } from "../objects/compensations/bonusesByLocation";
-import { pensionPercent } from "../objects/compensations/pension";
-import { benefitsByLocation } from "../objects/compensations/benefitsByLocation";
-import { salariesByLocation } from "../objects/compensations/salariesByLocation";
+
+import { title } from "studio/schemas/fields/text";
+import { benefitsByLocation } from "studio/schemas/objects/compensations/benefitsByLocation";
+import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
+import { pensionPercent } from "studio/schemas/objects/compensations/pension";
+import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
+import seo from "studio/schemas/objects/seo";
+import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
 export const compensationsId = "compensations";
 

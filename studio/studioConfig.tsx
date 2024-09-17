@@ -1,13 +1,13 @@
 import { visionTool } from "@sanity/vision";
+import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
+import StudioIcon from "./components/studioIcon/StudioIcon";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import deskStructure from "./schemas/deskStructure";
-import { WorkspaceOptions } from "sanity";
-import StudioIcon from "./components/studioIcon/StudioIcon";
 
 const config: WorkspaceOptions = {
   name: "studio",

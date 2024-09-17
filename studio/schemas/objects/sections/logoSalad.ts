@@ -1,7 +1,8 @@
-import { defineField, StringInputProps } from "sanity";
+import { StringInputProps, defineField } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import image from "studio/schemas/fields/media";
 import { richText } from "studio/schemas/fields/text";
-import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const logoSaladID = "logoSalad";
 

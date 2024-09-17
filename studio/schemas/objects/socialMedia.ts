@@ -1,5 +1,6 @@
 import { defineType } from "sanity";
-import SoMeInputs, { SoMePlatforms } from "../../components/SoMeInputs";
+
+import SoMeInputs, { SoMePlatforms } from "studio/components/SoMeInputs";
 
 export const SocialMediaID = {
   link: "socialMediaLinkID",

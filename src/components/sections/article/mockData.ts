@@ -1,8 +1,8 @@
+import { PortableTextBlock } from "src/components/richText/RichText";
+import placeholder from "src/stories/assets/image-placeholder.png";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { ArticleSection } from "studio/lib/interfaces/pages";
 import { ImageAlignment } from "studio/schemas/fields/media";
-import placeholder from "../../../stories/assets/image-placeholder.png";
-import { PortableTextBlock } from "src/components/richText/RichText";
 
 const commonRichText: PortableTextBlock[] = [
   {

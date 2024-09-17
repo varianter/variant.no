@@ -1,9 +1,10 @@
 // hero.ts
-import { defineField, StringInputProps } from "sanity";
-import callToActionField from "../../fields/callToActionFields";
-import CustomCallToActions from "../../../components/CustomCallToActions";
+import { StringInputProps, defineField } from "sanity";
+
+import CustomCallToActions from "studio/components/CustomCallToActions";
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import callToActionField from "studio/schemas/fields/callToActionFields";
 import { title } from "studio/schemas/fields/text";
-import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const heroID = "hero";
 

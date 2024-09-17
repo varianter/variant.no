@@ -1,6 +1,6 @@
+import { Box, Label, Select, Stack, TextInput } from "@sanity/ui";
 import React from "react";
 import { ObjectInputProps, set } from "sanity";
-import { Box, TextInput, Select, Stack, Label } from "@sanity/ui";
 
 export const SoMePlatforms: { [key: string]: string } = {
   facebook: "Facebook",

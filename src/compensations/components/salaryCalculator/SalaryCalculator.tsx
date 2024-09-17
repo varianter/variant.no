@@ -1,10 +1,11 @@
-import styles from "./salaryCalculator.module.css";
+import Button from "src/components/buttons/Button";
 import InputField from "src/components/forms/inputField/InputField";
 import {
   IOption,
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
-import Button from "src/components/buttons/Button";
+
+import styles from "./salaryCalculator.module.css";
 
 export type Degree = "bachelor" | "master";
 

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+
 import styles from "./skipToMain.module.css";
 
 const SkipToMain = () => {

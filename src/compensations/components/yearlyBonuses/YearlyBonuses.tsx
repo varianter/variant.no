@@ -1,5 +1,6 @@
+import Text from "src/components/text/Text";
 import { BonusPage } from "studio/lib/interfaces/compensations";
-import Text from "../../../components/text/Text";
+
 import styles from "./yearlyBonuses.module.css";
 
 interface YearlyBonusesProps {

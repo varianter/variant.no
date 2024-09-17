@@ -1,5 +1,6 @@
-import { defineField, defineType } from "sanity";
 import { format, parseISO } from "date-fns";
+import { defineField, defineType } from "sanity";
+
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
