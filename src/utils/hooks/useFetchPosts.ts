@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
+
+import { fetchCategorizedPosts, fetchPostCount } from "src/utils/api";
 import { Category, Post } from "studio/lib/interfaces/pages";
-import { fetchCategorizedPosts, fetchPostCount } from "../api";
 
 interface FetchState {
   data: Post[];
@@ -59,6 +60,7 @@ export const useFetchPosts = ({
 
         setPostsCount(count);
       } catch (error) {
+        console.log("Error when fetching posts:", error);
         setPosts((prevState) => ({
           ...prevState,
           initialLoading: false,

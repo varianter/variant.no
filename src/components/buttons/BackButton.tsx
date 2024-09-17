@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
-import styles from "./button.module.css";
 import { useRouter } from "next/navigation";
+import React from "react";
+
+import styles from "./button.module.css";
 
 type ButtonSize = "large" | "small";
 

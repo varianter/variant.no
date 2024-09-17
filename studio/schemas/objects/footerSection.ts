@@ -1,8 +1,10 @@
-import { defineType, StringInputProps } from "sanity";
+import { StringInputProps, defineType } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { soMeLinksID } from "studio/schemas/documents/siteSettings/socialMediaProfiles";
+import { richText } from "studio/schemas/fields/text";
+
 import { linkID } from "./link";
-import { soMeLinksID } from "../documents/siteSettings/socialMediaProfiles";
-import { richText, richTextID } from "../fields/text";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const footerSectionID = {
   main: "footerSection",

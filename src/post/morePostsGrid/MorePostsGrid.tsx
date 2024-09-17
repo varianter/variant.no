@@ -1,8 +1,9 @@
+import { PostCard } from "src/blog/components/postCard/PostCard";
+import BackButton from "src/components/buttons/BackButton";
 import Text from "src/components/text/Text";
 import { Post } from "studio/lib/interfaces/pages";
+
 import styles from "./morePostsGrid.module.css";
-import BackButton from "src/components/buttons/BackButton";
-import { PostCard } from "src/blog/components/postCard/PostCard";
 
 const MorePostsGrid = ({
   posts,

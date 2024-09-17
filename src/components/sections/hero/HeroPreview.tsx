@@ -1,11 +1,13 @@
 "use client";
 
 import { useQuery } from "@sanity/react-loader";
-import { Hero } from "./Hero";
-import { PageBuilder, HeroSection } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
+
 import { PreviewProps } from "src/types/preview";
+import { HeroSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
+
+import { Hero } from "./Hero";
 
 interface HeroPreviewProps extends PreviewProps {
   isLanding: boolean;

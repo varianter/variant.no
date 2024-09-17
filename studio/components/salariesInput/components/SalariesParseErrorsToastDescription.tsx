@@ -1,7 +1,7 @@
 import {
   SalariesParseError,
   SalariesParseErrorType,
-} from "../utils/parseSalaries";
+} from "studio/components/salariesInput/utils/parseSalaries";
 
 function descriptionOfSalariesParseError(error: SalariesParseError): string {
   switch (error.error) {

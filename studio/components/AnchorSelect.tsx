@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { Button, Select, Stack } from "@sanity/ui";
+import React, { useEffect, useState } from "react";
 import { PatchEvent, set, unset, useFormValue } from "sanity";
-import { Select, Button, Stack } from "@sanity/ui";
+
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 interface AnchorSelectProps {
@@ -52,7 +53,7 @@ const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
       });
 
       const formattedResponseToListItems = response.sections.map(
-        (section: AnchorItem, index: number) => {
+        (section: AnchorItem) => {
           const title = section.basicTitle || fromCamelCase(section._type);
           return {
             basicTitle: title,

@@ -1,7 +1,8 @@
-import Text from "src/components/text/Text";
 import { RichText } from "src/components/richText/RichText";
-import styles from "./benefitsByLocation.module.css";
+import Text from "src/components/text/Text";
 import { Benefit } from "studio/lib/interfaces/compensations";
+
+import styles from "./benefitsByLocation.module.css";
 
 interface BenefitsByLocationProps {
   benefits: Benefit[];

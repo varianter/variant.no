@@ -1,5 +1,6 @@
-import { defineType, defineField } from "sanity";
-import { StringInputWithCharacterCount } from "../../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { defineField, defineType } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const companyInfoID = "companyInfo";
 

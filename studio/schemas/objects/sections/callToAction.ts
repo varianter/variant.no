@@ -1,6 +1,7 @@
 import { defineField } from "sanity";
-import { title } from "../../../schemas/fields/text";
+
 import callToActionField from "studio/schemas/fields/callToActionFields";
+import { title } from "studio/schemas/fields/text";
 import { theme } from "studio/schemas/fields/theme";
 
 export const callToActionSectionID = "ctaSection";

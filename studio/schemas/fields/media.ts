@@ -1,5 +1,6 @@
-import { defineField, StringInputProps } from "sanity";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { StringInputProps, defineField } from "sanity";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export enum ImageAlignment {
   Left = "left",

@@ -1,11 +1,20 @@
 "use client";
-import styles from "./compensations.module.css";
+import { useMemo, useState } from "react";
+
+import {
+  IOption,
+  RadioButtonGroup,
+} from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Text from "src/components/text/Text";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+
+import styles from "./compensations.module.css";
+import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 import SalaryCalculator, {
   Degree,
 } from "./components/salaryCalculator/SalaryCalculator";
-import { useMemo, useState } from "react";
+import YearlyBonuses from "./components/yearlyBonuses/YearlyBonuses";
 import {
   calculatePension,
   calculateSalary,
@@ -13,13 +22,6 @@ import {
   minSalariesExaminationYear,
   salariesFromLocation,
 } from "./utils/salary";
-import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
-import {
-  IOption,
-  RadioButtonGroup,
-} from "src/components/forms/radioButtonGroup/RadioButtonGroup";
-import YearlyBonuses from "./components/yearlyBonuses/YearlyBonuses";
-import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 
 interface CompensationsProps {
   compensations: CompensationsPage;

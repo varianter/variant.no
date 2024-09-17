@@ -1,14 +1,16 @@
 "use client";
-import { useEffect, useCallback } from "react";
+import { useCallback, useEffect } from "react";
+
+import PostPreview from "src/blog/components/postPreview/PostPreview";
+import { useFetchPosts } from "src/utils/hooks/useFetchPosts";
 import useTabs from "src/utils/hooks/useTabs";
 import { BlogPage, Post } from "studio/lib/interfaces/pages";
+
 import styles from "./blog.module.css";
-import { useFetchPosts } from "src/utils/hooks/useFetchPosts";
-import BlogHero from "./components/hero/BlogHero";
-import PostPreview from "src/blog/components/postPreview/PostPreview";
-import PostPreviewGrid from "./components/postPreviewGrid/PostPreviewGrid";
-import LoadingNews from "./components/loadingNews/LoadingNews";
 import CustomErrorMessage from "./components/customErrorMessage/CustomErrorMessage";
+import BlogHero from "./components/hero/BlogHero";
+import LoadingNews from "./components/loadingNews/LoadingNews";
+import PostPreviewGrid from "./components/postPreviewGrid/PostPreviewGrid";
 import { homeLink } from "./components/utils/linkTypes";
 
 interface BlogProps {

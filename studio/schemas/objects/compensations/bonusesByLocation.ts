@@ -1,11 +1,13 @@
 import { defineField } from "sanity";
-import { location, locationID } from "../locations";
+
+import { BonusPage } from "studio/lib/interfaces/compensations";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
+import { location, locationID } from "studio/schemas/objects/locations";
+
 import {
   DocumentWithLocation,
   checkForDuplicateLocations,
 } from "./utils/validation";
-import { BonusPage } from "../../../lib/interfaces/compensations";
 
 export const bonusesByLocation = defineField({
   name: "bonusesByLocation",

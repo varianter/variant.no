@@ -1,7 +1,9 @@
 "use client";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
+
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
+import { NAV_QUERY } from "studio/lib/queries/navigation";
+
 import Legal from "./Legal";
 
 export default function LegalPreview({

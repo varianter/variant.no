@@ -1,5 +1,6 @@
-import styles from "./studioIcon.module.css";
 import Image from "next/image";
+
+import styles from "./studioIcon.module.css";
 
 const StudioIcon = ({ variant }: { variant: "studio" | "shared" }) => {
   return (

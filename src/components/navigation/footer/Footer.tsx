@@ -1,19 +1,21 @@
 "use client";
 
-import { ILink, LinkType, Navigation } from "studio/lib/interfaces/navigation";
-import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
+import { ReactNode } from "react";
+
+import CustomLink from "src/components/link/CustomLink";
+import SoMeLink from "src/components/link/SoMeLink";
+import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import styles from "./footer.module.css";
-import CustomLink from "../../link/CustomLink";
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
+import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
+import { ILink, LinkType, Navigation } from "studio/lib/interfaces/navigation";
 import {
   SocialMediaLink,
   SocialMediaProfiles,
 } from "studio/lib/interfaces/socialMedia";
-import SoMeLink from "src/components/link/SoMeLink";
-import { ReactNode } from "react";
-import Text from "src/components/text/Text";
-import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
-import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+
+import styles from "./footer.module.css";
 
 export interface IFooter {
   navigationData: Navigation;

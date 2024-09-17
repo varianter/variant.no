@@ -1,5 +1,5 @@
+import placeholder from "src/stories/assets/image-placeholder.png";
 import { Post } from "studio/lib/interfaces/pages";
-import placeholder from "../../stories/assets/image-placeholder.png";
 
 export const mockPosts: Post[] = [
   {

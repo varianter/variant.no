@@ -1,11 +1,13 @@
 "use client";
 
 import { useQuery } from "@sanity/react-loader";
-import { Testimonials } from "./Testimonials";
+import { Suspense } from "react";
+
+import { PreviewProps } from "src/types/preview";
 import { PageBuilder, TestimonialsSection } from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/pages";
-import { Suspense } from "react";
-import { PreviewProps } from "src/types/preview";
+
+import { Testimonials } from "./Testimonials";
 
 export default function TestimonialsPreview({
   sectionIndex,

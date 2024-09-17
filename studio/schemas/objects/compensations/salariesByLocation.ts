@@ -1,12 +1,14 @@
 import { defineField } from "sanity";
-import { location, locationID } from "../locations";
+
+import { SalariesInput } from "studio/components/salariesInput/SalariesInput";
+import { SalariesPage } from "studio/lib/interfaces/compensations";
+import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
+import { location, locationID } from "studio/schemas/objects/locations";
+
 import {
   DocumentWithLocation,
   checkForDuplicateLocations,
 } from "./utils/validation";
-import { companyLocationNameID } from "../../documents/admin/companyLocation";
-import { SalariesInput } from "../../../components/salariesInput/SalariesInput";
-import { SalariesPage } from "../../../lib/interfaces/compensations";
 
 export const salariesByLocation = defineField({
   name: "salariesByLocation",

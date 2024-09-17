@@ -1,5 +1,6 @@
 import { StringRule, defineField } from "sanity";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 enum titleID {
   basic = "basicTitle",

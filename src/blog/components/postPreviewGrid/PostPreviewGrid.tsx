@@ -1,9 +1,11 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+
+import { PostCard } from "src/blog/components/postCard/PostCard";
+import Button from "src/components/buttons/Button";
 import Text from "src/components/text/Text";
 import { Post } from "studio/lib/interfaces/pages";
+
 import styles from "./postPreviewGrid.module.css";
-import Button from "src/components/buttons/Button";
-import { PostCard } from "../postCard/PostCard";
 
 const PostPreviewGrid = ({
   posts,

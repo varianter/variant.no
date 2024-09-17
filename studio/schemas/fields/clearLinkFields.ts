@@ -1,4 +1,4 @@
-import ClearLinkFieldsButton from "../../components/ClearLinkFieldsButton";
+import ClearLinkFieldsButton from "studio/components/ClearLinkFieldsButton";
 
 export const clearLinkFields = {
   name: "clearFields",

@@ -1,10 +1,12 @@
 import { defineField } from "sanity";
-import { location, locationID } from "../locations";
+
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { richText, title } from "studio/schemas/fields/text";
+import { location, locationID } from "studio/schemas/objects/locations";
+
 import {
-  checkForDuplicateLocations,
   DocumentWithLocation,
+  checkForDuplicateLocations,
 } from "./utils/validation";
 
 const benefitTypeId = "benefitType";

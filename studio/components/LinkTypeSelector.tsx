@@ -1,5 +1,5 @@
-import React from "react";
 import { Box, Card, Flex, Grid, Text } from "@sanity/ui";
+import React from "react";
 import { PatchEvent, set } from "sanity";
 
 interface LinkTypeSelectorProps {

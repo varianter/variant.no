@@ -1,10 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Footer from "./Footer";
+
 import {
+  mockCompanyInfo,
   mockNavigation,
   mockSocialMediaProfiles,
-  mockCompanyInfo,
-} from "../mockData";
+} from "src/components/navigation/mockData";
+
+import Footer from "./Footer";
 
 const meta: Meta<typeof Footer> = {
   title: "Components/Navigation/Footer",

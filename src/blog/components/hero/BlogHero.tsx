@@ -1,7 +1,9 @@
-import Text from "src/components/text/Text";
-import styles from "./blogHero.module.css";
-import { Category } from "studio/lib/interfaces/pages";
 import { LegacyRef } from "react";
+
+import Text from "src/components/text/Text";
+import { Category } from "studio/lib/interfaces/pages";
+
+import styles from "./blogHero.module.css";
 
 const BlogHero = ({
   title,

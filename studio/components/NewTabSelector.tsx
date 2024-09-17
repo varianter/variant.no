@@ -1,5 +1,5 @@
+import { Box, Card, Flex, Grid, Stack, Text } from "@sanity/ui";
 import React from "react";
-import { Box, Card, Flex, Grid, Text, Stack } from "@sanity/ui";
 import { PatchEvent, set } from "sanity";
 
 interface NewTabSelectorProps {

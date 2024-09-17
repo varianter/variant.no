@@ -1,5 +1,6 @@
 import { loadQuery } from "@sanity/react-loader";
 import { Metadata } from "next";
+
 import PostPage from "src/post/PostPage";
 import PostPagePreview from "src/post/PostPagePreview";
 import { getDraftModeInfo } from "src/utils/draftmode";

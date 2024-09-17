@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
+
+import placeholder from "src/stories/assets/image-placeholder.png";
+
 import Lead from "./Lead";
-import placeholder from "../../stories/assets/image-placeholder.png";
 
 const meta: Meta<typeof Lead> = {
   title: "Post/Lead",

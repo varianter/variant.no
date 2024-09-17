@@ -1,5 +1,7 @@
 import { defineField } from "sanity";
-import { link } from "../objects/link";
+
+import { link } from "studio/schemas/objects/link";
+
 import { clearLinkFields } from "./clearLinkFields";
 
 export const callToActionFieldID = "callToActionField";

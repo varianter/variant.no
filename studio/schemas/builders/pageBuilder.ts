@@ -1,17 +1,17 @@
 import { defineField, defineType } from "sanity";
 
-import seo from "../objects/seo";
-import { pageSlug } from "../schemaTypes/slug";
-import hero from "../objects/sections/hero";
-import article from "../objects/sections/article";
-import logoSalad from "../objects/sections/logoSalad";
-import callout from "../objects/sections/callout";
-import callToAction from "../objects/sections/callToAction";
-import testimonals from "../objects/sections/testimonials";
-import imageSection from "../objects/sections/image";
-import grid from "../objects/sections/grid";
-import contactForm from "../objects/sections/form";
-import { StringInputWithCharacterCount } from "../../components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import article from "studio/schemas/objects/sections/article";
+import callout from "studio/schemas/objects/sections/callout";
+import callToAction from "studio/schemas/objects/sections/callToAction";
+import contactForm from "studio/schemas/objects/sections/form";
+import grid from "studio/schemas/objects/sections/grid";
+import hero from "studio/schemas/objects/sections/hero";
+import imageSection from "studio/schemas/objects/sections/image";
+import logoSalad from "studio/schemas/objects/sections/logoSalad";
+import testimonals from "studio/schemas/objects/sections/testimonials";
+import seo from "studio/schemas/objects/seo";
+import { pageSlug } from "studio/schemas/schemaTypes/slug";
 
 export const pageBuilderID = "pageBuilder";
 

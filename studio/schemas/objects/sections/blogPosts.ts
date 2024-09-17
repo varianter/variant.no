@@ -1,11 +1,8 @@
 import { defineArrayMember, defineField } from "sanity";
-import {
-  optionalSubtitle,
-  richText,
-  title,
-} from "../../../schemas/fields/text";
-import image from "../../../schemas/fields/media";
-import callToActionField from "../../../schemas/fields/callToActionFields";
+
+import callToActionField from "studio/schemas/fields/callToActionFields";
+import image from "studio/schemas/fields/media";
+import { optionalSubtitle, richText, title } from "studio/schemas/fields/text";
 
 export const articleID = "blogPostsID";
 

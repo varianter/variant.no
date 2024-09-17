@@ -1,5 +1,5 @@
-import placeholder from "../../../stories/assets/image-placeholder.png";
 import { PortableTextBlock } from "src/components/richText/RichText";
+import placeholder from "src/stories/assets/image-placeholder.png";
 
 const commonRichText: PortableTextBlock[] = [
   {

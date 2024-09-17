@@ -1,9 +1,10 @@
+import { RichText } from "src/components/richText/RichText";
 import { BlogPage, Post } from "studio/lib/interfaces/pages";
+
 import PostHero from "./hero/PostHero";
 import Lead from "./lead/Lead";
-import styles from "./post.module.css";
-import { RichText } from "src/components/richText/RichText";
 import MorePostsGrid from "./morePostsGrid/MorePostsGrid";
+import styles from "./post.module.css";
 
 const PostPage = ({
   post,

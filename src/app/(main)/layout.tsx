@@ -1,21 +1,22 @@
 import Footer from "src/components/navigation/footer/Footer";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
-import { Header } from "src/components/navigation/header/Header";
-import { Navigation } from "studio/lib/interfaces/navigation";
-import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
-import { loadQuery } from "studio/lib/store";
-import HeaderPreview from "src/components/navigation/header/HeaderPreview";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
-import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
-import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
-import { getDraftModeInfo } from "src/utils/draftmode";
+import { Header } from "src/components/navigation/header/Header";
+import HeaderPreview from "src/components/navigation/header/HeaderPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
-import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
+import { getDraftModeInfo } from "src/utils/draftmode";
+import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
+import { Navigation } from "studio/lib/interfaces/navigation";
+import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
+import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
+import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
+import { NAV_QUERY } from "studio/lib/queries/navigation";
+import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
+import { loadQuery } from "studio/lib/store";
+
 import styles from "./layout.module.css";
-import { BRAND_ASSETS_QUERY } from "../../../studio/lib/queries/brandAssets";
-import { BrandAssets } from "../../../studio/lib/interfaces/brandAssets";
 
 const hasValidData = (data: any) => data && Object.keys(data).length > 0;
 

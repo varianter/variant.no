@@ -1,23 +1,24 @@
 import { type SchemaTypeDefinition } from "sanity";
+
 import pageBuilder from "./schemas/builders/pageBuilder";
-import navigationManager from "./schemas/documents/siteSettings/navigationManager";
-import { link } from "./schemas/objects/link";
-import { socialMedia } from "./schemas/objects/socialMedia";
-import { footerSection } from "./schemas/objects/footerSection";
-import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
-import callToActionField from "./schemas/fields/callToActionFields";
-import companyInfo from "./schemas/documents/admin/companyInfo";
+import defaultSeo from "./schemas/documents/admin/defaultSeo";
 import blog from "./schemas/documents/blog";
-import posts from "./schemas/documents/post";
-import categories from "./schemas/fields/categories";
-import legalDocument from "./schemas/documents/admin/legalDocuments";
+import brandAssets from "./schemas/documents/siteSettings/brandAssets";
+import companyInfo from "./schemas/documents/admin/companyInfo";
 import companyLocation from "./schemas/documents/admin/companyLocation";
 import compensations from "./schemas/documents/compensations";
-import redirect from "./schemas/documents/siteSettings/brokenLinks";
-import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
+import legalDocument from "./schemas/documents/admin/legalDocuments";
+import navigationManager from "./schemas/documents/siteSettings/navigationManager";
+import posts from "./schemas/documents/post";
+import brokenLinks from "./schemas/documents/siteSettings/brokenLinks";
+import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
-import defaultSeo from "./schemas/documents/admin/defaultSeo";
-import brandAssets from "./schemas/documents/siteSettings/brandAssets";
+import callToActionField from "./schemas/fields/callToActionFields";
+import categories from "./schemas/fields/categories";
+import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
+import { footerSection } from "./schemas/objects/footerSection";
+import { link } from "./schemas/objects/link";
+import { socialMedia } from "./schemas/objects/socialMedia";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -34,7 +35,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
-    redirect,
+    brokenLinks,
     benefitsByLocation,
     companyLocation,
     supportedLanguages,

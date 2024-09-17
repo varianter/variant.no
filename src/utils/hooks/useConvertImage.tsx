@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
-// TODO: add support for sharedClient
+import { JSX } from "react";
+
 import { client } from "studio/lib/client";
 import { IImage } from "studio/lib/interfaces/media";
-import Image from "next/image";
-import { JSX } from "react";
+
+// TODO: add support for sharedClient
 
 const MockImage = ({ image }: { image: IImage }) => {
   if (!image.src) {

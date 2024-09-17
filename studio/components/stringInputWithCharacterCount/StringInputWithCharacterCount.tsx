@@ -1,6 +1,7 @@
 "use client";
 import { Box, Stack, Text } from "@sanity/ui";
 import { StringInputProps } from "sanity";
+
 import styles from "./stringInputWithCharacterCount.module.css";
 
 type StringInputWithCharacterCountProps = StringInputProps & {

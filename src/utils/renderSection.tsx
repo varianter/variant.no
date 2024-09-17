@@ -1,35 +1,36 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
 import React from "react";
+
 import Article from "src/components/sections/article/Article";
-import Callout from "src/components/sections/callout/Callout";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
+import Callout from "src/components/sections/callout/Callout";
+import CalloutPreview from "src/components/sections/callout/CalloutPreview";
+import CallToAction from "src/components/sections/callToAction/CallToAction";
+import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import ContactForm from "src/components/sections/contactForm/ContactForm";
+import Grid from "src/components/sections/grid/Grid";
+import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
+import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
+import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
+import { Testimonials } from "src/components/sections/testimonials/Testimonials";
+import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import {
   ArticleSection,
   CallToActionSection,
   CalloutSection,
+  ContactFormSection,
+  GridSection,
   HeroSection,
+  ImageSection,
   LogoSaladSection,
   PageBuilder,
-  TestimonialsSection,
   Section,
-  ImageSection,
-  GridSection,
-  ContactFormSection,
+  TestimonialsSection,
 } from "studio/lib/interfaces/pages";
-import CalloutPreview from "src/components/sections/callout/CalloutPreview";
-import CallToAction from "src/components/sections/callToAction/CallToAction";
-import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
-import { Testimonials } from "src/components/sections/testimonials/Testimonials";
-import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
-import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
-import Grid from "src/components/sections/grid/Grid";
-import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
-import GridPreview from "src/components/sections/grid/GridPreview";
-import ContactForm from "src/components/sections/contactForm/ContactForm";
 
 interface SectionRendererProps {
   section: Section;
@@ -161,7 +162,6 @@ const renderContactFormSection = (
   section: ContactFormSection,
   sectionIndex: number,
   isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
 ) => {
   return isDraftMode ? <div></div> : <ContactForm data={section} />;
 };
@@ -236,7 +236,6 @@ const SectionRenderer = ({
         section as ContactFormSection,
         sectionIndex,
         isDraftMode,
-        initialData,
       );
     default:
       return null;

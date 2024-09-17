@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
+
 import Article from "./Article";
 import {
-  articleRightMock,
   articleLeftMock,
+  articleRightMock,
   extendedArticleLargeLeftMock,
   extendedArticleLargeRightMock,
 } from "./mockData";

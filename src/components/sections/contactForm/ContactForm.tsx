@@ -1,14 +1,16 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+
+import { ContactData } from "src/app/api/contactForm/route";
+import Button from "src/components/buttons/Button";
+import Checkbox from "src/components/forms/checkbox/Checkbox";
+import InputField from "src/components/forms/inputField/InputField";
+import InputTextArea from "src/components/forms/inputTextArea/InputTextArea";
 import Text from "src/components/text/Text";
 import { ContactFormSection } from "studio/lib/interfaces/pages";
+
 import styles from "./contactForm.module.css";
-import InputField from "src/components/forms/inputField/InputField";
-import Button from "src/components/buttons/Button";
-import InputTextArea from "src/components/forms/inputTextArea/InputTextArea";
-import Checkbox from "src/components/forms/checkbox/Checkbox";
-import { ContactData } from "src/app/api/contactForm/route";
 
 interface SubmitStatus {
   message?: string;

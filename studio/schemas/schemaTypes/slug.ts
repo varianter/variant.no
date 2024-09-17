@@ -1,5 +1,6 @@
-import { defineField, SlugValidationContext } from "sanity";
-import { isPublished } from "../../utils/documentUtils";
+import { SlugValidationContext, defineField } from "sanity";
+
+import { isPublished } from "studio/utils/documentUtils";
 
 async function isSlugUniqueAcrossAllDocuments(
   slug: string,

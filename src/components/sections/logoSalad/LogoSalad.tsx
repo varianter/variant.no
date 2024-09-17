@@ -1,8 +1,10 @@
+import { PortableText } from "@portabletext/react";
+
 import Text from "src/components/text/Text";
 import { LogoSaladSection } from "studio/lib/interfaces/pages";
-import styles from "./logoSalad.module.css";
+
 import { RenderLogo } from "./LogoRender";
-import { PortableText } from "@portabletext/react";
+import styles from "./logoSalad.module.css";
 
 interface LogoSaladProps {
   logoSalad: LogoSaladSection;

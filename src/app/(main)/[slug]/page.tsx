@@ -1,12 +1,19 @@
 import { Metadata } from "next";
+
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
+import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
+import { homeLink } from "src/blog/components/utils/linkTypes";
 import Compensations from "src/compensations/Compensations";
+import CompensationsPreview from "src/compensations/CompensationsPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
+import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -14,12 +21,6 @@ import {
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
 import { loadQuery } from "studio/lib/store";
-import CompensationsPreview from "src/compensations/CompensationsPreview";
-import { homeLink } from "../../../blog/components/utils/linkTypes";
-import CustomErrorMessage from "../../../blog/components/customErrorMessage/CustomErrorMessage";
-import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
-import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
-import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/compensations";
 
 export const dynamic = "force-dynamic";
 

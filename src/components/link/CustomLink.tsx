@@ -1,8 +1,10 @@
-import React from "react";
-import styles from "./link.module.css";
 import Link from "next/link";
-import { ILink } from "studio/lib/interfaces/navigation";
+import React from "react";
+
 import { getHref } from "src/utils/get";
+import { ILink } from "studio/lib/interfaces/navigation";
+
+import styles from "./link.module.css";
 
 type ComponentLinkType = "link" | "headerLink" | "footerLink";
 
