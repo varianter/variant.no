@@ -4,7 +4,7 @@ import PostPage from "src/post/PostPage";
 import PostPagePreview from "src/post/PostPagePreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPostSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { BlogPage, Post } from "studio/lib/payloads/pages";
+import { BlogPage, Post } from "studio/lib/interfaces/pages";
 import {
   BLOG_PAGE_QUERY,
   MORE_POST_PREVIEW,

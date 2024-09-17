@@ -5,8 +5,8 @@ import Compensations from "src/compensations/Compensations";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { BlogPage, PageBuilder, Post } from "studio/lib/payloads/pages";
-import { CompensationsPage } from "studio/lib/payloads/compensations";
+import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
+import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -18,7 +18,7 @@ import { loadQuery } from "studio/lib/store";
 import CompensationsPreview from "src/compensations/CompensationsPreview";
 import { homeLink } from "../../../blog/components/utils/linkTypes";
 import CustomErrorMessage from "../../../blog/components/customErrorMessage/CustomErrorMessage";
-import { CompanyLocation } from "studio/lib/payloads/companyDetails";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 
 export const dynamic = "force-dynamic";

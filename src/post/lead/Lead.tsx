@@ -1,7 +1,7 @@
 "use client";
 import { PortableTextBlock } from "src/components/richText/RichText";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import { IImage } from "studio/lib/payloads/media";
+import { IImage } from "studio/lib/interfaces/media";
 import styles from "./lead.module.css";
 import { PortableText } from "@portabletext/react";
 import Text from "src/components/text/Text";

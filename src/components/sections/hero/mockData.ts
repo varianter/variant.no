@@ -1,5 +1,5 @@
-import { HeroSection } from "studio/lib/payloads/pages";
-import { LinkType } from "studio/lib/payloads/navigation";
+import { HeroSection } from "studio/lib/interfaces/pages";
+import { LinkType } from "studio/lib/interfaces/navigation";
 
 export const mockHeroSection: HeroSection = {
   _key: "",

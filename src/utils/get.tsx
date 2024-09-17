@@ -1,4 +1,4 @@
-import { ILink, LinkType } from "studio/lib/payloads/navigation";
+import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 
 const hash = "#";
 

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Category, Post } from "studio/lib/payloads/pages";
+import { Category, Post } from "studio/lib/interfaces/pages";
 import { fetchCategorizedPosts, fetchPostCount } from "../api";
 
 interface FetchState {

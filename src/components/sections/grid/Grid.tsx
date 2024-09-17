@@ -1,11 +1,11 @@
 "use client";
 import Text from "src/components/text/Text";
-import { GridSection } from "studio/lib/payloads/pages";
+import { GridSection } from "studio/lib/interfaces/pages";
 import styles from "./grid.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { PortableText } from "@portabletext/react";
 import { PortableTextBlock } from "src/components/richText/RichText";
-import { IImage } from "studio/lib/payloads/media";
+import { IImage } from "studio/lib/interfaces/media";
 
 const Grid = ({ grid }: { grid: GridSection }) => {
   return (

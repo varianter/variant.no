@@ -5,7 +5,7 @@ import {
   DocumentWithLocation,
   checkForDuplicateLocations,
 } from "./utils/validation";
-import { BonusPage } from "../../../lib/payloads/compensations";
+import { BonusPage } from "../../../lib/interfaces/compensations";
 
 export const bonusesByLocation = defineField({
   name: "bonusesByLocation",

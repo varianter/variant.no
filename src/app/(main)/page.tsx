@@ -1,13 +1,13 @@
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { LANDING_QUERY } from "studio/lib/queries/navigation";
 import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
-import { PageBuilder } from "studio/lib/payloads/pages";
+import { PageBuilder } from "studio/lib/interfaces/pages";
 import SectionRenderer from "src/utils/renderSection";
 import { loadQuery } from "studio/lib/store";
 import { Metadata } from "next";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import InformationSection from "src/blog/components/informationSection/InformationSection";
-import { LinkType } from "studio/lib/payloads/navigation";
+import { LinkType } from "studio/lib/interfaces/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadQuery<string>(LANDING_QUERY);

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./link.module.css";
 import Link from "next/link";
-import { SocialMediaLink } from "studio/lib/payloads/socialMedia";
+import { SocialMediaLink } from "studio/lib/interfaces/socialMedia";
 
 interface ISoMeLink {
   link: SocialMediaLink;

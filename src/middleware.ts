@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { HTTP_STATUSES } from "./utils/http";
-import { RedirectDestinationSlugPage } from "studio/lib/payloads/redirect";
+import { RedirectDestinationSlugPage } from "studio/lib/interfaces/redirect";
 import { REDIRECT_BY_SOURCE_SLUG_QUERY } from "../studio/lib/queries/redirects";
 
 export async function middleware(request: NextRequest) {

@@ -1,7 +1,7 @@
 "use client";
 import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import { Post } from "studio/lib/payloads/pages";
+import { Post } from "studio/lib/interfaces/pages";
 import styles from "./postCard.module.css";
 
 export const PostCard = ({

@@ -4,7 +4,7 @@ import {
   ImageSection,
   PageBuilder,
   TestimonialsSection,
-} from "studio/lib/payloads/pages";
+} from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/pages";
 import { Suspense } from "react";
 import { PreviewProps } from "src/types/preview";

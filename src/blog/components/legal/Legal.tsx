@@ -1,6 +1,6 @@
 import Text from "src/components/text/Text";
 import styles from "./legal.module.css";
-import { LegalDocument } from "studio/lib/payloads/legalDocuments";
+import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { RichText, PortableTextBlock } from "src/components/richText/RichText";
 import Link from "next/link";
 

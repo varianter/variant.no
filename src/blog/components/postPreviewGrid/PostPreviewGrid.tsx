@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Text from "src/components/text/Text";
-import { Post } from "studio/lib/payloads/pages";
+import { Post } from "studio/lib/interfaces/pages";
 import styles from "./postPreviewGrid.module.css";
 import Button from "src/components/buttons/Button";
 import { PostCard } from "../postCard/PostCard";

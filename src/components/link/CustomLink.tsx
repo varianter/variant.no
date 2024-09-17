@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./link.module.css";
 import Link from "next/link";
-import { ILink } from "studio/lib/payloads/navigation";
+import { ILink } from "studio/lib/interfaces/navigation";
 import { getHref } from "src/utils/get";
 
 type ComponentLinkType = "link" | "headerLink" | "footerLink";

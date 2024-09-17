@@ -1,7 +1,7 @@
 "use client";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { ArticleSection } from "studio/lib/payloads/pages";
+import { ArticleSection } from "studio/lib/interfaces/pages";
 import styles from "./article.module.css";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import CustomLink from "src/components/link/CustomLink";

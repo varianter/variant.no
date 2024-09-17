@@ -5,10 +5,10 @@ import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { loadQuery } from "studio/lib/store";
 import { PortableTextBlock } from "src/components/richText/RichText";
 import { DEFAULT_SEO_QUERY } from "../../studio/lib/queries/seo";
-import { DefaultSeo } from "../../studio/lib/payloads/defaultSeo";
-import { BrandAssets } from "../../studio/lib/payloads/brandAssets";
+import { DefaultSeo } from "../../studio/lib/interfaces/defaultSeo";
+import { BrandAssets } from "../../studio/lib/interfaces/brandAssets";
 import { BRAND_ASSETS_QUERY } from "../../studio/lib/queries/brandAssets";
-import { CompanyInfo } from "../../studio/lib/payloads/companyDetails";
+import { CompanyInfo } from "../../studio/lib/interfaces/companyDetails";
 
 type SeoData = {
   title: string;
