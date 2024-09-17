@@ -110,21 +110,10 @@ export const mockNavigation: Navigation = {
 };
 
 export const mockCompanyInfo = {
-  siteMetadata: {
-    siteName: "Varaint",
-    defaultLanguage: "en",
-  },
-  brandAssets: {
-    primaryLogo: {
-      src: primaryLogoFile,
-      alt: "Primary Logo",
-    },
-    secondaryLogo: {
-      src: secondaryLogoFile,
-      alt: "Secondary Logo",
-    },
-    favicon: {},
-  },
+  companyName: "Variant",
+  organizationNumber: "",
+  companyPhone: "",
+  companyEmail: "",
 };
 
 export const mockLogo = {

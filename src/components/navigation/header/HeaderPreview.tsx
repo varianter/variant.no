@@ -3,31 +3,28 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { Navigation } from "studio/lib/payloads/navigation";
 import { Header } from "./Header";
-import { CompanyInfo } from "studio/lib/payloads/companyDetails";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
+import { BrandAssets } from "../../../../studio/lib/payloads/brandAssets";
+import { BRAND_ASSETS_QUERY } from "../../../../studio/lib/queries/brandAssets";
 
 export default function HeaderPreview({
   initialNav,
-  initialCompanyInfo,
+  initialBrandAssets,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
-  initialCompanyInfo: QueryResponseInitial<CompanyInfo>;
+  initialBrandAssets: QueryResponseInitial<BrandAssets>;
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
     {},
     { initial: initialNav },
   );
-  const { data: newCompanyInfo } = useQuery<CompanyInfo | null>(
-    COMPANY_INFO_QUERY,
+  const { data: newBrandAssets } = useQuery<BrandAssets | null>(
+    BRAND_ASSETS_QUERY,
     {},
-    { initial: initialCompanyInfo },
+    { initial: initialBrandAssets },
   );
 
   return (
-    newNav &&
-    newCompanyInfo && (
-      <Header data={newNav} assets={newCompanyInfo.brandAssets} />
-    )
+    newNav && newBrandAssets && <Header data={newNav} assets={newBrandAssets} />
   );
 }

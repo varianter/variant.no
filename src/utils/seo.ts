@@ -6,6 +6,9 @@ import { loadQuery } from "studio/lib/store";
 import { PortableTextBlock } from "src/components/richText/RichText";
 import { DEFAULT_SEO_QUERY } from "../../studio/lib/queries/seo";
 import { DefaultSeo } from "../../studio/lib/payloads/defaultSeo";
+import { BrandAssets } from "../../studio/lib/payloads/brandAssets";
+import { BRAND_ASSETS_QUERY } from "../../studio/lib/queries/brandAssets";
+import { CompanyInfo } from "../../studio/lib/payloads/companyDetails";
 
 type SeoData = {
   title: string;
@@ -19,15 +22,6 @@ type PostSeoData = {
   description: PortableTextBlock[];
   imageUrl: string;
   keywords: string;
-};
-
-type CompanyInfo = {
-  siteMetadata: {
-    siteName: string;
-  };
-  brandAssets: {
-    favicon: string;
-  };
 };
 
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
@@ -72,33 +66,28 @@ export async function fetchPostSeoData(
   }
 }
 
-export async function fetchCompanyInfo(): Promise<CompanyInfo | null> {
-  try {
-    const { data } = await loadQuery<CompanyInfo>(COMPANY_INFO_QUERY);
-    return data;
-  } catch (error) {
-    console.error("Error loading site settings:", error);
-    return null;
-  }
-}
-
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
   const { data: defaultSeo } = await loadQuery<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
   );
-  const companyInfo = await fetchCompanyInfo();
+  const { data: companyInfo } = await loadQuery<CompanyInfo | null>(
+    COMPANY_INFO_QUERY,
+  );
+  const { data: brandAssets } = await loadQuery<BrandAssets | null>(
+    BRAND_ASSETS_QUERY,
+  );
 
   const title =
     seo?.title ||
     defaultSeo?.seo?.seoTitle ||
-    companyInfo?.siteMetadata?.siteName ||
+    companyInfo?.companyName ||
     "Variant";
   const description = seo?.description || defaultSeo?.seo?.seoDescription;
   const keywords = seo?.keywords || "";
 
-  const favicon = companyInfo?.brandAssets?.favicon;
+  const favicon = brandAssets?.favicon;
   const faviconUrl = favicon ? urlFor(favicon).url() : "";
 
   const icons = [faviconUrl ? { rel: "icon", url: faviconUrl } : null].filter(

@@ -7,6 +7,8 @@ import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import Footer from "./Footer";
 import { SocialMediaProfiles } from "studio/lib/payloads/socialMedia";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
+import { BrandAssets } from "studio/lib/payloads/brandAssets";
+import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
 
 function useInitialData<T>(
   query: string,
@@ -19,23 +21,28 @@ function useInitialData<T>(
 export default function FooterPreview({
   initialNav,
   initialCompanyInfo,
+  initialBrandAssets,
   initialSoMe,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
   initialCompanyInfo: QueryResponseInitial<CompanyInfo>;
+  initialBrandAssets: QueryResponseInitial<BrandAssets>;
   initialSoMe: QueryResponseInitial<SocialMediaProfiles>;
 }) {
   const newNav = useInitialData(NAV_QUERY, initialNav);
   const newCompanyInfo = useInitialData(COMPANY_INFO_QUERY, initialCompanyInfo);
+  const newBrandAssets = useInitialData(BRAND_ASSETS_QUERY, initialBrandAssets);
   const newSoMedata = useInitialData(SOMEPROFILES_QUERY, initialSoMe);
   // TODO: add legal preview
   return (
     newNav &&
     newCompanyInfo &&
+    newBrandAssets &&
     newSoMedata && (
       <Footer
         navigationData={newNav}
         companyInfo={newCompanyInfo}
+        brandAssets={newBrandAssets}
         soMeData={newSoMedata}
         legalData={[]}
       />

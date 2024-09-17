@@ -1,12 +1,11 @@
 import { Darker_Grotesque, Figtree } from "next/font/google";
 import { draftMode } from "next/headers";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
-import { CompanyInfo } from "studio/lib/payloads/companyDetails";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { Metadata } from "next";
 import { loadQuery } from "studio/lib/store";
 import "src/styles/global.css";
 import { generateMetadataFromSeo } from "src/utils/seo";
+import { DEFAULT_LANGUAGE_QUERY } from "../../studio/lib/queries/languages";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
@@ -31,8 +30,10 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadQuery<CompanyInfo>(COMPANY_INFO_QUERY);
-    siteLang = data.siteMetadata?.defaultLanguage;
+    const { data } = await loadQuery<DefaultLanguageObject>(
+      DEFAULT_LANGUAGE_QUERY,
+    );
+    siteLang = data.defaultLanguage;
   } catch (error) {
     console.error("Error loading site settings:", error);
     siteLang = "en";
