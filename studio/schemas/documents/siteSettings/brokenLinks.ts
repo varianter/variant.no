@@ -2,7 +2,7 @@ import { SanityDocument, SlugRule } from "@sanity/types";
 import { type Slug, defineField, defineType } from "sanity";
 
 import PrefixedSlugInput from "studio/components/slug/PrefixedSlugInput";
-import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
+import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 import { blogId } from "studio/schemas/documents/blog";
 import { compensationsId } from "studio/schemas/documents/compensations";
 
