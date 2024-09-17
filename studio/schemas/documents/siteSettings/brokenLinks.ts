@@ -30,7 +30,7 @@ const requiredIfDestinationType = (
   return true;
 };
 
-export const brokenLinksID = "brokenLinks";
+export const brokenLinkID = "brokenLink";
 
 const brokenLinks = defineType({
   name: brokenLinksID,
