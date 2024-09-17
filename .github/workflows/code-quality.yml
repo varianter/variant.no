@@ -1,11 +1,11 @@
-name: Prettier Check
+name: Code Quality Checks
 
 on:
   pull_request:
     branches: [main, v3]
 
 jobs:
-  prettier:
+  code_quality:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,9 +16,15 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/prettier.yml') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/code-quality.yml') }}
           restore-keys: |
             ${{ runner.os }}-npm-
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Prettier Check
         run: npx prettier --check .
+
+      - name: ESLint Check
+        run: npx eslint .
