@@ -38,12 +38,7 @@ const compensations = defineType({
   ],
   preview: {
     select: {
-      title: "title",
-    },
-    prepare({ title }) {
-      return {
-        title,
-      };
+      title: title.name,
     },
   },
 });
