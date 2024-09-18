@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
 import { HeroSection, PageBuilder } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
+import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import { Hero } from "./Hero";
 

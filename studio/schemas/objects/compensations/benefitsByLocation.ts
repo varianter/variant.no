@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
+import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { richText, title } from "studio/schemas/fields/text";
 import { location, locationID } from "studio/schemas/objects/locations";
 

@@ -18,12 +18,16 @@ import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 import {
   BLOG_PAGE_QUERY,
-  COMPENSATIONS_PAGE_QUERY,
   POSTS_QUERY,
   SEO_SLUG_QUERY,
   SLUG_QUERY,
+<<<<<<< HEAD
 } from "studio/lib/queries/pages";
 import { CUSTOMER_CASES_PAGE_QUERY } from "studio/lib/queries/specialPages";
+=======
+} from "studio/lib/queries/page";
+import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/specialPages";
+>>>>>>> v3
 import { loadQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
