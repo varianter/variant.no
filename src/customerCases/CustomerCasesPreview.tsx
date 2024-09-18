@@ -22,7 +22,7 @@ const CustomerCasesPreview = ({
   return (
     data && (
       <Suspense>
-        <CustomerCases />
+        <CustomerCases customerCases={data} />
       </Suspense>
     )
   );
