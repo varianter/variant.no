@@ -1,4 +1,5 @@
 "use client";
+import { stegaClean } from "@sanity/client/stega";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
@@ -18,7 +19,7 @@ const CompensationsPreview = ({
   initialCompensations,
   initialLocations,
 }: CompensationsPreviewProps) => {
-  const { data } = useQuery<CompensationsPage>(
+  const { data: compensationsData } = useQuery<CompensationsPage>(
     COMPENSATIONS_PAGE_QUERY,
     { slug: initialCompensations.data.slug.current },
     { initial: initialCompensations },
@@ -29,10 +30,17 @@ const CompensationsPreview = ({
     { initial: initialLocations },
   );
 
+  compensationsData.salariesByLocation = stegaClean(
+    compensationsData.salariesByLocation,
+  );
+
   return (
     locationData && (
       <Suspense>
-        <Compensations compensations={data} locations={locationData} />
+        <Compensations
+          compensations={compensationsData}
+          locations={locationData}
+        />
       </Suspense>
     )
   );
