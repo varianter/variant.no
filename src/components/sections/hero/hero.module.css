@@ -6,8 +6,7 @@
 }
 
 .secondaryColor {
-  background-image: url("/headerAnimation.svg");
-  background-size: cover;
+  background-color: var(--secondary-green3);
   padding: 7.5rem 2rem;
 
   @media (min-width: 640px) {
