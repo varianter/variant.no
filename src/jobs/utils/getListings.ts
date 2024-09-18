@@ -72,8 +72,16 @@ type Offer = {
   position: number;
   department?: string;
   location: string;
+  locations: Array<Location>;
   company_name: string;
 };
+
+type Location = {
+  city: string,
+  state: string,
+  country: string,
+  street: string,
+}
 
 type OfferResult = {
   offers: Array<Offer>;
@@ -92,6 +100,7 @@ async function getValidityStatuses(department?: Office): Promise<Offer[]> {
 
   let offers: Offer[] = [];
   for (let offer of data.offers) {
+    console.log(offer.locations);
     if (!offer.careers_apply_url) {
       throw new Error('Could not fetch data from Recruitee');
     }
