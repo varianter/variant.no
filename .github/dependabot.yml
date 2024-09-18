@@ -5,3 +5,8 @@ updates:
     target-branch: "v3"
     schedule:
       interval: "daily"
+    groups:
+      storybook:
+        patterns:
+          - "@storybook/*"
+          - "storybook"
