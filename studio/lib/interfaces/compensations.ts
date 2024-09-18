@@ -1,4 +1,4 @@
-import { PortableTextBlock } from "src/components/richText/RichText";
+import { PortableTextBlock } from "sanity";
 
 import { Reference, Slug } from "./global";
 

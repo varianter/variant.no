@@ -1,8 +1,8 @@
 "use client";
 
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
-import { PortableTextObject } from "@sanity/types";
 import { ReactNode } from "react";
+import { PortableTextBlock } from "sanity";
 
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
@@ -10,28 +10,6 @@ import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImag
 import { getReactNodeTextContent } from "src/utils/reactNode";
 
 import styles from "./richText.module.css";
-
-type Children = {
-  _type: string;
-  marks: string[];
-  text: string;
-  _key: string;
-};
-
-export type RichTextType = "h1" | "h2" | "h3" | "normal" | "blockquote";
-
-export type PortableTextBlock = {
-  children?: Children[];
-  _type: string;
-  style?: RichTextType;
-  _key: string;
-  asset?: {
-    _ref: string;
-    _type: string;
-  };
-  alt?: string;
-  markDefs?: PortableTextObject[];
-};
 
 const formatId = (children: ReactNode): string => {
   const text = getReactNodeTextContent(children);

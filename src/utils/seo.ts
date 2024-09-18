@@ -1,8 +1,8 @@
 import { toPlainText } from "@portabletext/toolkit";
 import type { QueryParams } from "@sanity/client";
 import { Metadata } from "next";
+import { PortableTextBlock } from "sanity";
 
-import { PortableTextBlock } from "src/components/richText/RichText";
 import { urlFor } from "studio/lib/image";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";

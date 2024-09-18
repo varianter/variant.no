@@ -1,4 +1,5 @@
-import { PortableTextBlock } from "src/components/richText/RichText";
+import { PortableTextBlock } from "sanity";
+
 import placeholder from "src/stories/assets/image-placeholder.png";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { ArticleSection } from "studio/lib/interfaces/pages";
