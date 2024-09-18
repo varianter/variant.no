@@ -6,12 +6,15 @@ import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErr
 import { homeLink } from "src/blog/components/utils/linkTypes";
 import Compensations from "src/compensations/Compensations";
 import CompensationsPreview from "src/compensations/CompensationsPreview";
+import CustomerCases from "src/customerCases/CustomerCases";
+import CustomerCasesPreview from "src/customerCases/CustomerCasesPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
+import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 import {
   BLOG_PAGE_QUERY,
@@ -20,6 +23,7 @@ import {
   SEO_SLUG_QUERY,
   SLUG_QUERY,
 } from "studio/lib/queries/pages";
+import { CUSTOMER_CASES_PAGE_QUERY } from "studio/lib/queries/specialPages";
 import { loadQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -53,6 +57,7 @@ async function Page({ params }: Props) {
     initialBlogPage,
     initialCompensationsPage,
     initialLocationsData,
+    initialCustomerCases,
   ] = await Promise.all([
     loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
@@ -62,6 +67,11 @@ async function Page({ params }: Props) {
       { perspective },
     ),
     loadQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
+    loadQuery<CustomerCasePage>(
+      CUSTOMER_CASES_PAGE_QUERY,
+      { slug },
+      { perspective },
+    ),
   ]);
 
   if (initialPage.data) {
@@ -118,6 +128,14 @@ async function Page({ params }: Props) {
         compensations={initialCompensationsPage.data}
         locations={initialLocationsData.data}
       />
+    );
+  }
+
+  if (initialCustomerCases.data) {
+    return isDraftMode ? (
+      <CustomerCasesPreview initialCustomerCases={initialCustomerCases} />
+    ) : (
+      <CustomerCases />
     );
   }
 

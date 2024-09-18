@@ -18,7 +18,7 @@ const CompensationsPreview = ({
   initialCompensations,
   initialLocations,
 }: CompensationsPreviewProps) => {
-  const { data } = useQuery<CompensationsPage>(
+  const { data: compensationData } = useQuery<CompensationsPage>(
     COMPENSATIONS_PAGE_QUERY,
     { slug: initialCompensations.data.slug.current },
     { initial: initialCompensations },
@@ -32,7 +32,10 @@ const CompensationsPreview = ({
   return (
     locationData && (
       <Suspense>
-        <Compensations compensations={data} locations={locationData} />
+        <Compensations
+          compensations={compensationData}
+          locations={locationData}
+        />
       </Suspense>
     )
   );
