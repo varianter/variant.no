@@ -13,13 +13,13 @@ import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
-import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/compensations";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
   SEO_SLUG_QUERY,
   SLUG_QUERY,
-} from "studio/lib/queries/pages";
+} from "studio/lib/queries/page";
+import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/specialPages";
 import { loadQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
