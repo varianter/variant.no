@@ -108,7 +108,7 @@ export default function PageHeader({
               ref={navRef}
             >
               <li>
-                <Link href="/tjenesteomrader">Tjenester</Link>
+                <Link href="/sommerjobb">Sommerjobb</Link>
               </li>
               <li>
                 <a href="http://handbook.variant.no" rel="noopener">
