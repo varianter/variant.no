@@ -25,6 +25,7 @@ import { compensationsId } from "./documents/compensations";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { redirectId } from "./documents/redirect";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
+import { customerCasesID } from "./documents/specialPages/customerCases";
 import { supportedLanguagesID } from "./documents/supportedLanguages";
 
 // Admin Section
@@ -151,6 +152,15 @@ const SpecialPagesSection = (S: StructureBuilder) =>
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
                 .title("Compensations"),
+            ),
+          S.listItem()
+            .title("Customer Cases")
+            .icon(ProjectsIcon)
+            .child(
+              S.document()
+                .schemaType(customerCasesID)
+                .documentId(customerCasesID)
+                .title("Customer Cases"),
             ),
         ]),
     );

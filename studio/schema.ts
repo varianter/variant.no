@@ -12,6 +12,7 @@ import navigationManager from "./schemas/documents/navigationManager";
 import posts from "./schemas/documents/post";
 import redirect from "./schemas/documents/redirect";
 import socialMediaLinks from "./schemas/documents/socialMediaProfiles";
+import customerCases from "./schemas/documents/specialPages/customerCases";
 import supportedLanguages from "./schemas/documents/supportedLanguages";
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
@@ -35,6 +36,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
+    customerCases,
     redirect,
     benefitsByLocation,
     companyLocation,
