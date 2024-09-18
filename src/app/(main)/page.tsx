@@ -7,7 +7,7 @@ import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
 import { LANDING_QUERY } from "studio/lib/queries/navigation";
-import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
+import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
 import { loadQuery } from "studio/lib/store";
 
 export async function generateMetadata(): Promise<Metadata> {

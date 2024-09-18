@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
 import { GridSection, PageBuilder } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
+import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import Grid from "./Grid";
 

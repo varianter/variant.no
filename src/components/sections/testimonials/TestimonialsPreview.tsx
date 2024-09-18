@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
 import { PageBuilder, TestimonialsSection } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/pages";
+import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import { Testimonials } from "./Testimonials";
 

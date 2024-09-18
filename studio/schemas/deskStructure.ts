@@ -15,17 +15,17 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-import { pageBuilderID } from "./builders/pageBuilder";
 //import { blogId } from "./documents/blog";
+import { companyInfoID } from "./documents/admin/companyInfo";
+import { companyLocationID } from "./documents/admin/companyLocation";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
-import { brandAssetsID } from "./documents/brandAssets";
-import { companyInfoID } from "./documents/companyInfo";
-import { companyLocationID } from "./documents/companyLocation";
+import { legalDocumentID } from "./documents/admin/legalDocuments";
 import { compensationsId } from "./documents/compensations";
-import { legalDocumentID } from "./documents/legalDocuments";
-import { redirectId } from "./documents/redirect";
-import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { supportedLanguagesID } from "./documents/supportedLanguages";
+import { pageBuilderID } from "./documents/pageBuilder";
+import { brandAssetsID } from "./documents/siteSettings/brandAssets";
+import { brokenLinkID } from "./documents/siteSettings/brokenLink";
+import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
+import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -34,16 +34,16 @@ const adminSection = (S: StructureBuilder) =>
     .icon(CaseIcon)
     .child(
       S.list()
-        .title("Company Details")
+        .title("Admin")
         .items([
           S.listItem()
-            .title("Company Information")
+            .title("Parent Company")
             .icon(InfoOutlineIcon)
             .child(
               S.document()
                 .schemaType(companyInfoID)
                 .documentId(companyInfoID)
-                .title("Company Information"),
+                .title("Parent Company"),
             ),
           S.listItem()
             .title("Company Locations")
@@ -114,7 +114,7 @@ const siteSettingSection = (S: StructureBuilder) =>
           S.listItem()
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
-            .child(S.documentTypeList(redirectId).title("Redirects")),
+            .child(S.documentTypeList(brokenLinkID).title("Redirects")),
         ]),
     );
 
