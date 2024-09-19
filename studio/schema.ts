@@ -7,12 +7,12 @@ import brandAssets from "./schemas/documents/brandAssets";
 import companyInfo from "./schemas/documents/companyInfo";
 import companyLocation from "./schemas/documents/companyLocation";
 import compensations from "./schemas/documents/compensations";
+import languageSettings from "./schemas/documents/languageSettings";
 import legalDocument from "./schemas/documents/legalDocuments";
 import navigationManager from "./schemas/documents/navigationManager";
 import posts from "./schemas/documents/post";
 import redirect from "./schemas/documents/redirect";
 import socialMediaLinks from "./schemas/documents/socialMediaProfiles";
-import supportedLanguages from "./schemas/documents/supportedLanguages";
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
@@ -38,7 +38,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     redirect,
     benefitsByLocation,
     companyLocation,
-    supportedLanguages,
+    languageSettings,
     defaultSeo,
     brandAssets,
   ],

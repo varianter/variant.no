@@ -15,6 +15,8 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
+import { languageID } from "internationalization/languageSchemaField";
+
 import { pageBuilderID } from "./builders/pageBuilder";
 //import { blogId } from "./documents/blog";
 import { defaultSeoID } from "./documents/admin/defaultSeo";
@@ -22,10 +24,10 @@ import { brandAssetsID } from "./documents/brandAssets";
 import { companyInfoID } from "./documents/companyInfo";
 import { companyLocationID } from "./documents/companyLocation";
 import { compensationsId } from "./documents/compensations";
+import { languageSettingsID } from "./documents/languageSettings";
 import { legalDocumentID } from "./documents/legalDocuments";
 import { redirectId } from "./documents/redirect";
 import { soMeLinksID } from "./documents/socialMediaProfiles";
-import { supportedLanguagesID } from "./documents/supportedLanguages";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -55,7 +57,11 @@ const adminSection = (S: StructureBuilder) =>
             .title("Legal Documents")
             .icon(CogIcon)
             .child(
-              S.documentTypeList(legalDocumentID).title("Legal Documents"),
+              S.documentTypeList(legalDocumentID)
+                .title("Legal Documents")
+                // Only show documents that do not have a 'language' field (i.e., documents in the default language)
+                .filter(`_type == $type && !defined(${languageID})`)
+                .params({ type: legalDocumentID }),
             ),
         ]),
     );
@@ -94,13 +100,13 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("Supported Languages")
+            .title("Languages")
             .icon(TranslateIcon)
             .child(
               S.document()
-                .schemaType(supportedLanguagesID)
-                .documentId(supportedLanguagesID)
-                .title("Supported Languages"),
+                .schemaType(languageSettingsID)
+                .documentId(languageSettingsID)
+                .title("Languages"),
             ),
           S.listItem()
             .title("Default SEO")

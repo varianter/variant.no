@@ -1,5 +1,6 @@
 import { defineField, defineType } from "sanity";
 
+import languageSchemaField from "internationalization/languageSchemaField";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
@@ -10,11 +11,7 @@ const customerCase = defineType({
   type: "document",
   title: "Customer Case",
   fields: [
-    defineField({
-      name: "language",
-      type: "string",
-      readOnly: true,
-    }),
+    languageSchemaField,
     title,
     titleSlug,
     defineField({

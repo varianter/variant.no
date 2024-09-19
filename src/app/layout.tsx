@@ -3,7 +3,7 @@ import { Darker_Grotesque, Figtree } from "next/font/google";
 import { draftMode } from "next/headers";
 
 import { generateMetadataFromSeo } from "src/utils/seo";
-import { DefaultLanguageObject } from "studio/lib/interfaces/languages";
+import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
 import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/languages";
 import { loadQuery } from "studio/lib/store";
@@ -33,15 +33,12 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadQuery<DefaultLanguageObject>(
-      DEFAULT_LANGUAGE_QUERY,
-    );
-    siteLang = data.defaultLanguage;
+    const { data } = await loadQuery<LanguageObject[]>(DEFAULT_LANGUAGE_QUERY);
+    siteLang = data[0].id;
   } catch (error) {
     console.error("Error loading site settings:", error);
     siteLang = "en";
   }
-
   return (
     <html lang={siteLang}>
       <body className={`${figtree.variable} ${darkerGrotesque.variable}`}>
