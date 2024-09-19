@@ -9,27 +9,22 @@ html {
 }
 
 :root {
-  /* primary colors */
+  --primary-dark: #e61a6b;
+  --primary-darker: #8b0f40;
+  --primary-light: #f5a4c4;
+  --primary-bg: #f4f1e7;
+  --primary-bg-dark: #fad2e2;
+
   --primary-white-bright: #ffffff;
   --primary-white: #faf8f5;
   --primary-black: #1f1f1f;
-  --primary-pink-light: #e3a2d9;
-  --primary-pink-dark: #baa7e2;
-  --primary-green-dark: #206a6f;
-  --primary-green-light: #a9db91;
-  --primary-red-error: #b30b0b;
 
-  /* secondary colors */
-  --secondary-yellow1: #f5f3e5;
-  --secondary-green2: #ddece6;
-  --secondary-green3: #9bcbc0;
-  --secondary-gradient-pink: linear-gradient(180deg, #e3a2d9 0%, #baa7e2 100%);
-  --secondary-gradient-green: linear-gradient(180deg, #a9db91 0%, #9bcbc0 100%);
   --secondary-off-white1: #f4efe8;
   --secondary-off-white2: #ece1d3;
-  --secondary-green-dark2: #085156;
 
-  --focus-color: #2f68a0;
+  --primary-red-error: #b30b0b;
+
+  --focus-color: #8b0f40;
 
   /* breakpoints */
   --breakpoint-mobile: 767px;
@@ -51,7 +46,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  background-color: var(--primary-white-bright);
+  background-color: var(--primary-bg);
 }
 
 main {

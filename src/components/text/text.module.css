@@ -97,7 +97,7 @@
 .caption {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--primary-green-dark);
+  color: var(--primary-dark);
 
   @media (min-width: 1024px) {
     font-size: 1.125rem;

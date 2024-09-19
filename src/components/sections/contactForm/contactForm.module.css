@@ -75,9 +75,9 @@
 
 .succsess {
   composes: status;
-  color: var(--primary-green-dark);
+  color: var(--primary-dark);
   &::before {
-    background-color: var(--primary-green-dark);
+    background-color: var(--primary-dark);
     -webkit-mask: url("/check-circle.svg") no-repeat 50% 50%;
   }
 }

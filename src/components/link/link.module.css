@@ -61,11 +61,11 @@
   font-weight: 500;
 
   &:hover {
-    color: var(--primary-green-dark);
+    color: var(--primary-dark);
   }
 
   &:active {
-    color: var(--secondary-green-dark2);
+    color: var(--primary-darker);
   }
 }
 
@@ -87,5 +87,5 @@
 }
 
 .selected {
-  color: var(--primary-green-dark);
+  color: var(--primary-dark);
 }

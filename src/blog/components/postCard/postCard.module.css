@@ -23,7 +23,7 @@
   flex-grow: 1;
 
   &:hover {
-    background-color: var(--secondary-yellow1);
+    background-color: var(--primary-bg-dark);
   }
 
   &:active {

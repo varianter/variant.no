@@ -38,9 +38,9 @@
 }
 
 .primary {
-  background: var(--primary-green-dark);
+  background: var(--primary-dark);
   color: var(--primary-white);
-  border: 1px solid var(--primary-green-dark);
+  border: 1px solid var(--primary-dark);
 
   &:hover {
     background: #085156;

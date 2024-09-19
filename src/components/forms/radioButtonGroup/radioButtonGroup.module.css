@@ -45,16 +45,16 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--primary-green-dark);
+  background-color: var(--primary-dark);
 }
 
 .input:hover {
-  background-color: var(--primary-green-light);
-  outline: 2px solid var(--primary-green-light);
+  background-color: var(--primary-light);
+  outline: 2px solid var(--primary-light);
 }
 
 .input:focus {
-  outline: 2px solid var(--primary-green-light);
+  outline: 2px solid var(--primary-light);
 }
 
 .input[disabled] {

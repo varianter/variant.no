@@ -5,7 +5,7 @@
   text-align: center;
   gap: 1.5rem;
   padding: 5rem 2rem;
-  background: var(--secondary-gradient-pink);
+  background: var(--primary-bg-dark);
 
   @media (min-width: 640px) {
     padding: 5rem 3rem;
