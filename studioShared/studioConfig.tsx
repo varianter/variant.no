@@ -2,6 +2,7 @@ import { documentInternationalization } from "@sanity/document-internationalizat
 import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { structureTool } from "sanity/structure";
+import { media } from "sanity-plugin-media";
 
 import { i18n } from "languages";
 import StudioIcon from "studio/components/studioIcon/StudioIcon";
@@ -29,6 +30,7 @@ const config: WorkspaceOptions = {
       structure: deskStructure,
     }),
     visionTool({ defaultApiVersion: apiVersion }),
+    media(),
     documentInternationalization({
       // TODO: a function that takes the client and returns a promise of an array of supported languages
       // MUST return an "id" and "title" as strings
