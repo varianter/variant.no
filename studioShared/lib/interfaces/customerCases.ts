@@ -1,4 +1,5 @@
-import { PortableTextBlock } from "src/components/richText/RichText";
+import { PortableTextBlock } from "sanity";
+
 import { Slug } from "./global";
 
 export interface CustomerCase {

@@ -147,40 +147,44 @@ When building custom components in Sanity Studio that need to fetch data, it's i
 
 **Implementation Example:**
 
-```typescript
+```tsx
 import React, { useEffect, useState } from "react";
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 
 const MyCustomComponent: React.FC = () => {
-const [data, setData] = useState<any>(null);
-const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
-useEffect(() => {
- const fetchData = async () => {
-   try {
-     const query = '*[_type == "myType"]'; // Replace with your GROQ query
-     const result = await fetchWithToken<any>(query);
-     setData(result);
-   } catch (err) {
-     console.error("Error fetching data:", err);
-     setError(err.message);
-   }
- };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const query = '*[_type == "myType"]'; // Replace with your GROQ query
+        const result = await fetchWithToken<any>(query);
+        setData(result);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        setError(err.message);
+      }
+    };
 
- fetchData();
-}, []);
+    fetchData();
+  }, []);
 
-if (error) {
- return <div>Error: {error}</div>;
-}
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-return <div>{JSON.stringify(data)}</div>; // Render your component's UI
+  return <div>{JSON.stringify(data)}</div>; // Render your component's UI
 };
 
 export default MyCustomComponent;
 ```
 
 By using fetchWithToken, you ensure that all data fetching happens securely, with the server-side API route handling the sensitive token.
+
+### Steganography in Presentation
+
+To enable preview functionality in the Presentation view, Sanity applies [steganography](https://www.sanity.io/docs/stega) to the string data. This manipulates the data to include invisible HTML entities to store various metadata. If the strings are used in business logic, that logic will likely break in the Presentation view. To fix this, Sanity provides the `stegaClean` utility to remove this extra metadata. An example of this in action can be found in [CompensationsPreview.tsx](src/compensations/CompensationsPreview.tsx), where JSON parsing of salary data fails without stega cleaning.
 
 ### OpenGraph image customization
 

@@ -1,7 +1,8 @@
+import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
-import { RichText } from "src/components/richText/RichText";
+
 import styles from "./customerCases.module.css";
 
 interface CustomerCasesProps {
