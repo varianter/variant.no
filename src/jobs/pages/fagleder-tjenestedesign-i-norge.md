@@ -5,7 +5,7 @@ slug: fagleder-tjenestedesign-i-norge
 contact_emails: ewa@variant.no, mk@variant.no
 meta_title: Fagleder tjenestedesign
 meta_description: Vi ser etter en dyktig og erfaren tjenestedesigner som kan være fagleder i Norge!
-meta_image: https://www.variant.no/images/fagleder_tjenestedesign_meta.jpg
+meta_image: https://www.variant.no/images/fagleder_tjenestedesign_meta.png
 ---
 
 ## Fagleder / Senior Tjenestedesigner
