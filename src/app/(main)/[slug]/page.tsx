@@ -26,7 +26,7 @@ import {
   COMPENSATIONS_PAGE_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
@@ -65,29 +65,21 @@ async function Page({ params }: Props) {
     initialCustomerCases,
     initialSharedCustomerCases,
   ] = await Promise.all([
-    loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
-    loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
-    loadQuery<CompensationsPage>(
+    loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
+    loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
+    loadStudioQuery<CompensationsPage>(
       COMPENSATIONS_PAGE_QUERY,
       { slug },
       { perspective },
     ),
-    loadQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
-    loadQuery<CustomerCasePage>(
+    loadStudioQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
+    loadStudioQuery<CustomerCasePage>(
       CUSTOMER_CASES_PAGE_QUERY,
       { slug },
       { perspective },
     ),
     loadSharedQuery<CustomerCase>(CUSTOMER_CASES_QUERY, {}, { perspective }),
   ]);
-
-  // const [initialSharedCustomerCases] = await Promise.all([
-  //   loadSharedQuery<CustomerCase>(CUSTOMER_CASES_QUERY, {}, { perspective }),
-  // ]);
-
-  console.log("shared:", initialSharedCustomerCases);
-  console.log("customer case", initialCustomerCases);
-  console.log("locations", initialLocationsData);
 
   if (initialPage.data) {
     return (
@@ -107,7 +99,7 @@ async function Page({ params }: Props) {
   }
 
   if (initialBlogPage.data) {
-    const initialPosts = await loadQuery<Post[]>(
+    const initialPosts = await loadStudioQuery<Post[]>(
       POSTS_QUERY,
       { slug },
       { perspective },
@@ -147,7 +139,6 @@ async function Page({ params }: Props) {
   }
 
   if (initialCustomerCases.data && initialSharedCustomerCases.data) {
-    console.log("this is in page", initialSharedCustomerCases);
     return isDraftMode ? (
       <CustomerCasesPreview
         initialCustomerCases={initialCustomerCases}

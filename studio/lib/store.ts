@@ -1,10 +1,13 @@
-import * as queryStore from "@sanity/react-loader";
+import {createQueryStore} from "@sanity/react-loader";
 
 import { client } from "./client";
 import { token } from "./token";
 
-const regularQueryStore = { ...queryStore };
+const {
+    loadQuery: loadStudioQuery,
+    setServerClient,
+  } = createQueryStore({client: false, ssr: true})
 
-regularQueryStore.setServerClient(client.withConfig({ token }));
+  setServerClient(client.withConfig({ token }));
 
-export const { loadQuery } = queryStore;
+export { loadStudioQuery }

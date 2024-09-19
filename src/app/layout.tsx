@@ -6,7 +6,7 @@ import { generateMetadataFromSeo } from "src/utils/seo";
 import { DefaultLanguageObject } from "studio/lib/interfaces/languages";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
 import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/languages";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 
 import "src/styles/global.css";
 
@@ -33,7 +33,7 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadQuery<DefaultLanguageObject>(
+    const { data } = await loadStudioQuery<DefaultLanguageObject>(
       DEFAULT_LANGUAGE_QUERY,
     );
     siteLang = data.defaultLanguage;

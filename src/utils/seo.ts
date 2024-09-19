@@ -9,7 +9,7 @@ import { DefaultSeo } from "studio/lib/interfaces/defaultSeo";
 import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { DEFAULT_SEO_QUERY } from "studio/lib/queries/seo";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 
 type SeoData = {
   title: string;
@@ -35,7 +35,7 @@ export async function fetchSeoData(
   variables?: any,
 ): Promise<SeoData | null> {
   try {
-    const { data } = await loadQuery<SeoData>(query, variables);
+    const { data } = await loadStudioQuery<SeoData>(query, variables);
     return data;
   } catch (error) {
     console.error("Error loading SEO data:", error);
@@ -48,7 +48,7 @@ export async function fetchPostSeoData(
   variables?: any,
 ): Promise<SeoData | null> {
   try {
-    const { data } = await loadQuery<PostSeoData>(query, variables);
+    const { data } = await loadStudioQuery<PostSeoData>(query, variables);
     if (data && data.description) {
       const plainTextDescription = toPlainText(data.description);
 
@@ -70,13 +70,13 @@ export async function fetchPostSeoData(
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
-  const { data: defaultSeo } = await loadQuery<DefaultSeo | null>(
+  const { data: defaultSeo } = await loadStudioQuery<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
   );
-  const { data: companyInfo } = await loadQuery<CompanyInfo | null>(
+  const { data: companyInfo } = await loadStudioQuery<CompanyInfo | null>(
     COMPANY_INFO_QUERY,
   );
-  const { data: brandAssets } = await loadQuery<BrandAssets | null>(
+  const { data: brandAssets } = await loadStudioQuery<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
   );
 
