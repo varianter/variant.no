@@ -42,7 +42,7 @@ export default function SalaryCalculator({
     >
       <RadioButtonGroup
         id="degree-group"
-        label="Choose your degree"
+        label="Velg utdanning"
         options={degreeOptions}
         selectedId={selectedDegree}
         onValueChange={(selectedOption) =>
@@ -62,7 +62,7 @@ export default function SalaryCalculator({
         />
       </div>
       <Button type="secondary" size="small">
-        Submit
+        Regn ut
       </Button>
     </form>
   );
