@@ -31,7 +31,6 @@ module.exports = {
     },
   },
   rules: {
-    "@typescript-eslint/no-explicit-any": "off", // TODO
     "unused-imports/no-unused-imports": "error",
     "import/no-named-as-default": "off",
     "import/no-unresolved": "error",

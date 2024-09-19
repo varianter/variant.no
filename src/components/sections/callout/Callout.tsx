@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
@@ -10,8 +10,8 @@ interface CalloutProps {
   callout: CalloutSection;
 }
 
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="bodySuperLarge">{children}</Text>,
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+  block: ({ children }) => <Text type="bodySuperLarge">{children}</Text>,
 };
 
 const Callout = ({ callout }: CalloutProps) => {

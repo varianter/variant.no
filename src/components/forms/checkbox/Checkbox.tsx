@@ -1,6 +1,6 @@
 import { PortableText } from "@portabletext/react";
+import { PortableTextBlock } from "sanity";
 
-import { PortableTextBlock } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
 

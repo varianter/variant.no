@@ -71,7 +71,7 @@ export const link = defineField({
         { type: lazyCompensationsID() },
       ],
       validation: (rule) =>
-        rule.custom((value: any, context: any) => {
+        rule.custom((value, context) => {
           const parent = context.parent as Parent;
           if (
             parent?.linkTitle &&

@@ -1,6 +1,8 @@
 "use client";
+import { PortableTextBlock } from "sanity";
+
 import CustomLink from "src/components/link/CustomLink";
-import { PortableTextBlock, RichText } from "src/components/richText/RichText";
+import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { LinkType } from "studio/lib/interfaces/navigation";
@@ -32,12 +34,20 @@ const PostPreview = ({
     },
   };
 
-  const truncateFirstBlock = (richText: PortableTextBlock[], limit: number) => {
+  const truncateFirstBlock = (
+    richText: PortableTextBlock[],
+    limit: number,
+  ): PortableTextBlock[] => {
     if (!richText || richText.length === 0) return richText;
 
     const firstBlock = richText[0];
     let charCount = 0;
-    const truncatedChildren = firstBlock?.children?.map((child) => {
+
+    if (!("children" in firstBlock) || !Array.isArray(firstBlock.children)) {
+      return [firstBlock];
+    }
+
+    const truncatedChildren = firstBlock.children?.map((child) => {
       if (charCount >= limit) return { ...child, text: "" };
       const remainingChars = limit - charCount;
       const truncatedText = child.text.slice(0, remainingChars);
