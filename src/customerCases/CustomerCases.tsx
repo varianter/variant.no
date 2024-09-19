@@ -18,10 +18,8 @@ const CustomerCases = async ({
     <div className={styles.wrapper}>
       <Text type="h1"> {customerCases.basicTitle} </Text>
       {sharedCustomerCases.map((customerCase: CustomerCase) => (
-        <div>
-          <Text key={customerCase._id} type="h2">
-            {customerCase.basicTitle}
-          </Text>
+        <div key={customerCase._id}>
+          <Text type="h2">{customerCase.basicTitle}</Text>
           {customerCase.richText && <RichText value={customerCase.richText} />}
         </div>
       ))}
