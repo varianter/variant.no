@@ -6,17 +6,17 @@ import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import styles from "./customerCases.module.css";
 
 interface CustomerCasesProps {
-  customerCases: CustomerCasePage;
+  customerCasesPage: CustomerCasePage;
   sharedCustomerCases: CustomerCase[];
 }
 
 const CustomerCases = async ({
-  customerCases,
+  customerCasesPage,
   sharedCustomerCases,
 }: CustomerCasesProps) => {
   return (
     <div className={styles.wrapper}>
-      <Text type="h1"> {customerCases.basicTitle} </Text>
+      <Text type="h1"> {customerCasesPage.basicTitle} </Text>
       {sharedCustomerCases.map((customerCase: CustomerCase) => (
         <div key={customerCase._id}>
           <Text type="h2">{customerCase.basicTitle}</Text>

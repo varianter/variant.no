@@ -150,7 +150,7 @@ async function Page({ params }: Props) {
       />
     ) : (
       <CustomerCases
-        customerCases={initialCustomerCases.data}
+        customerCasesPage={initialCustomerCases.data}
         sharedCustomerCases={initialSharedCustomerCases.data}
       />
     );
