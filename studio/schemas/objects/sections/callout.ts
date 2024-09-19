@@ -1,7 +1,6 @@
 import { defineField } from "sanity";
 
 import { richText, richTextID } from "studio/schemas/fields/text";
-import { theme } from "studio/schemas/fields/theme";
 import { link } from "studio/schemas/objects/link";
 
 export const calloutID = "callout";
@@ -10,7 +9,7 @@ export const callout = defineField({
   name: calloutID,
   title: "Callout",
   type: "object",
-  fields: [theme, richText, link],
+  fields: [richText, link],
   initialValue: {
     theme: "primary",
   },

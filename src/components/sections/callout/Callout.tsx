@@ -15,10 +15,9 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 };
 
 const Callout = ({ callout }: CalloutProps) => {
-  const theme = callout.theme == "primary" ? styles.primary : styles.secondary;
   return (
     callout.richText && (
-      <article className={`${styles.shared} ${theme}`} id={callout._key}>
+      <article className={`${styles.shared}`} id={callout._key}>
         <div className={styles.callout}>
           <PortableText
             value={callout.richText}
