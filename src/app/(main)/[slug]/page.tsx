@@ -27,6 +27,9 @@ import {
   CUSTOMER_CASES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadQuery } from "studio/lib/store";
+import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
+import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
+import { loadSharedQuery } from "studioShared/lib/store";
 
 export const dynamic = "force-dynamic";
 
@@ -60,6 +63,7 @@ async function Page({ params }: Props) {
     initialCompensationsPage,
     initialLocationsData,
     initialCustomerCases,
+    initialSharedCustomerCases,
   ] = await Promise.all([
     loadQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
@@ -74,7 +78,16 @@ async function Page({ params }: Props) {
       { slug },
       { perspective },
     ),
+    loadSharedQuery<CustomerCase>(CUSTOMER_CASES_QUERY, {}, { perspective }),
   ]);
+
+  // const [initialSharedCustomerCases] = await Promise.all([
+  //   loadSharedQuery<CustomerCase>(CUSTOMER_CASES_QUERY, {}, { perspective }),
+  // ]);
+
+  console.log("shared:", initialSharedCustomerCases);
+  console.log("customer case", initialCustomerCases);
+  console.log("locations", initialLocationsData);
 
   if (initialPage.data) {
     return (
@@ -133,11 +146,18 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialCustomerCases.data) {
+  if (initialCustomerCases.data && initialSharedCustomerCases.data) {
+    console.log("this is in page", initialSharedCustomerCases);
     return isDraftMode ? (
-      <CustomerCasesPreview initialCustomerCases={initialCustomerCases} />
+      <CustomerCasesPreview
+        initialCustomerCases={initialCustomerCases}
+        initialSharedCustomerCases={initialSharedCustomerCases}
+      />
     ) : (
-      <CustomerCases customerCases={initialCustomerCases.data} />
+      <CustomerCases
+        customerCases={initialCustomerCases.data}
+        sharedCustomerCases={initialSharedCustomerCases.data}
+      />
     );
   }
 
