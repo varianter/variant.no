@@ -1,6 +1,4 @@
-import { PortableTextBlock } from "sanity";
-
-import { Slug } from "./global";
+import { PortableTextBlock, Slug } from "sanity";
 
 export interface CustomerCase {
   language: string;
