@@ -34,7 +34,7 @@ const CustomerCasesPreview = ({
     sharedCustomerCases && (
       <Suspense>
         <CustomerCases
-          customerCases={customerCases}
+          customerCasesPage={customerCases}
           sharedCustomerCases={sharedCustomerCases}
         />
       </Suspense>
