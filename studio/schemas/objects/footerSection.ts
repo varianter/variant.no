@@ -1,6 +1,8 @@
 import { StringInputProps, defineType } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { client } from "studio/lib/client";
+import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
 import { soMeLinksID } from "studio/schemas/documents/siteSettings/socialMediaProfiles";
 import { richText } from "studio/schemas/fields/text";
 
@@ -86,9 +88,14 @@ export const footerSection = defineType({
       description:
         "This section automatically uses your social media links. Any updates to your social media links will appear here.",
       hidden: ({ parent }) => parent?.sectionType !== SectionType.SocialMedia,
-      initialValue: {
-        _type: "reference",
-        _ref: soMeLinksID,
+      initialValue: async () => {
+        // use Social Media Profiles singleton document if it exists
+        return (await client.fetch(SOMEPROFILES_QUERY)) !== null
+          ? {
+              _type: "reference",
+              _ref: soMeLinksID,
+            }
+          : undefined;
       },
     },
   ],
