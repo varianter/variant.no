@@ -1,6 +1,6 @@
-import { PortableTextBlock, Reference } from "sanity";
+import { PortableTextBlock } from "sanity";
 
-import { Slug } from "./global";
+import { Reference, Slug } from "./global";
 
 export interface Benefit {
   _type: string;
@@ -16,25 +16,11 @@ export interface BenefitsByLocation {
 }
 
 export interface SalariesPage {
-  _type?: string;
+  _type: string;
   _key: string;
   year: number;
   salaries: string;
 }
-
-export const isSalariesPage = (value: unknown): value is SalariesPage => {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    (!("_type" in value) || typeof value._type === "string") &&
-    "_key" in value &&
-    typeof value._key === "string" &&
-    "year" in value &&
-    typeof value.year === "number" &&
-    "salaries" in value &&
-    typeof value.salaries === "string"
-  );
-};
 
 export interface BonusesByLocationPage {
   _type: string;
@@ -44,25 +30,11 @@ export interface BonusesByLocationPage {
 }
 
 export interface BonusPage {
-  _type?: string;
+  _type: string;
   _key: string;
   year: number;
   bonus: number;
 }
-
-export const isBonusPage = (value: unknown): value is BonusPage => {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    (!("_type" in value) || typeof value._type === "string") &&
-    "_key" in value &&
-    typeof value._key === "string" &&
-    "year" in value &&
-    typeof value.year === "number" &&
-    "bonus" in value &&
-    typeof value.bonus === "number"
-  );
-};
 
 export interface SalariesByLocation {
   _key: string;

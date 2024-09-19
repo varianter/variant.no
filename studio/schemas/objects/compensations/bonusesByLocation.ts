@@ -1,7 +1,6 @@
-import { ArrayOfObjectsInputProps, defineField } from "sanity";
+import { defineField } from "sanity";
 
-import ValueOrderedArrayOfObjectsInput from "studio/components/ValueOrderedArrayOfObjectsInput";
-import { BonusPage, isBonusPage } from "studio/lib/interfaces/compensations";
+import { BonusPage } from "studio/lib/interfaces/compensations";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { location, locationID } from "studio/schemas/objects/locations";
 
@@ -36,26 +35,6 @@ export const bonusesByLocation = defineField({
           description:
             "Bonus data reflecting the bonus given to employees for a given year.",
           type: "array",
-          options: {
-            sortable: false,
-          },
-          components: {
-            input: (props: ArrayOfObjectsInputProps) =>
-              ValueOrderedArrayOfObjectsInput({
-                ...props,
-                valueCompareFn: (a, b) => {
-                  if (isBonusPage(a)) {
-                    if (isBonusPage(b)) {
-                      return b.year - a.year;
-                    }
-                    return -1;
-                  } else if (isBonusPage(b)) {
-                    return 1;
-                  }
-                  return 0;
-                },
-              }),
-          },
           of: [
             {
               type: "object",
