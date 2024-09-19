@@ -20,12 +20,7 @@ const customerCases = defineType({
   ],
   preview: {
     select: {
-      title: "title",
-    },
-    prepare({ title }) {
-      return {
-        title,
-      };
+      title: "basicTitle",
     },
   },
 });
