@@ -36,8 +36,16 @@ export default async function Layout({
   ] = await Promise.all([
     loadStudioQuery<Navigation>(NAV_QUERY, {}, { perspective }),
     loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
-    loadStudioQuery<SocialMediaProfiles>(SOMEPROFILES_QUERY, {}, { perspective }),
-    loadStudioQuery<LegalDocument[]>(LEGAL_DOCUMENTS_QUERY, {}, { perspective }),
+    loadStudioQuery<SocialMediaProfiles>(
+      SOMEPROFILES_QUERY,
+      {},
+      { perspective },
+    ),
+    loadStudioQuery<LegalDocument[]>(
+      LEGAL_DOCUMENTS_QUERY,
+      {},
+      { perspective },
+    ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
   ]);
 

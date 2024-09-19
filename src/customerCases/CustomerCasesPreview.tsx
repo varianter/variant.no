@@ -10,7 +10,7 @@ import CustomerCases from "./CustomerCases";
 
 interface CustomerCasesPreviewProps {
   initialCustomerCases: QueryResponseInitial<CustomerCasePage>;
-  initialSharedCustomerCases: QueryResponseInitial<CustomerCase>;
+  initialSharedCustomerCases: QueryResponseInitial<CustomerCase[]>;
 }
 
 const CustomerCasesPreview = ({
@@ -23,7 +23,7 @@ const CustomerCasesPreview = ({
     { initial: initialCustomerCases },
   );
 
-  const { data: sharedCustomerCases } = useQuery<CustomerCase>(
+  const { data: sharedCustomerCases } = useQuery<CustomerCase[]>(
     CUSTOMER_CASES_QUERY,
     {},
     { initial: initialSharedCustomerCases },

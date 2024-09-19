@@ -72,13 +72,17 @@ async function Page({ params }: Props) {
       { slug },
       { perspective },
     ),
-    loadStudioQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}, { perspective }),
+    loadStudioQuery<CompanyLocation[]>(
+      COMPANY_LOCATIONS_QUERY,
+      {},
+      { perspective },
+    ),
     loadStudioQuery<CustomerCasePage>(
       CUSTOMER_CASES_PAGE_QUERY,
       { slug },
       { perspective },
     ),
-    loadSharedQuery<CustomerCase>(CUSTOMER_CASES_QUERY, {}, { perspective }),
+    loadSharedQuery<CustomerCase[]>(CUSTOMER_CASES_QUERY, {}, { perspective }),
   ]);
 
   if (initialPage.data) {

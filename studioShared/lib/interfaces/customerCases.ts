@@ -1,3 +1,4 @@
+import { PortableTextBlock } from "src/components/richText/RichText";
 import { Slug } from "./global";
 
 export interface CustomerCase {
@@ -9,4 +10,5 @@ export interface CustomerCase {
   _createdAt: string;
   _rev: string;
   _type: string;
+  richText: PortableTextBlock[];
 }
