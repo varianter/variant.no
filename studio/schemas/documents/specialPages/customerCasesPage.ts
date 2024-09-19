@@ -3,10 +3,10 @@ import { defineType } from "sanity";
 import { title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
-export const customerCasesID = "customerCases";
+export const customerCasesPageID = "customerCasesPage";
 
-const customerCases = defineType({
-  name: customerCasesID,
+const customerCasesPage = defineType({
+  name: customerCasesPageID,
   type: "document",
   title: "Customer Cases",
   fields: [
@@ -25,4 +25,4 @@ const customerCases = defineType({
   },
 });
 
-export default customerCases;
+export default customerCasesPage;
