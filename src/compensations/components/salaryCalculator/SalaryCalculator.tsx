@@ -49,16 +49,18 @@ export default function SalaryCalculator({
           onDegreeChanged(selectedOption.id as Degree)
         }
       />
-      <InputField
-        label="Year"
-        name="examinationYear"
-        type="number"
-        min={minExaminationYear}
-        max={maxExaminationYear}
-        value={yearValue}
-        onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
-        required
-      />
+      <div className={styles.yearInputWrapper}>
+        <InputField
+          label="Year"
+          name="examinationYear"
+          type="number"
+          min={minExaminationYear}
+          max={maxExaminationYear}
+          value={yearValue}
+          onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
+          required
+        />
+      </div>
       <Button type="secondary" size="small">
         Submit
       </Button>
