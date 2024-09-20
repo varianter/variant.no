@@ -36,7 +36,7 @@ export default async function Layout({
   ] = await Promise.all([
     loadStudioQuery<Navigation>(NAV_QUERY, {}, { perspective }),
     loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
-    loadStudioQuery<SocialMediaProfiles>(
+    loadStudioQuery<SocialMediaProfiles | null>(
       SOMEPROFILES_QUERY,
       {},
       { perspective },

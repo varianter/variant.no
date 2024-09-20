@@ -29,7 +29,7 @@ export default function FooterPreview({
   initialNav: QueryResponseInitial<Navigation>;
   initialCompanyInfo: QueryResponseInitial<CompanyInfo>;
   initialBrandAssets: QueryResponseInitial<BrandAssets>;
-  initialSoMe: QueryResponseInitial<SocialMediaProfiles>;
+  initialSoMe: QueryResponseInitial<SocialMediaProfiles | null>;
 }) {
   const newNav = useInitialData(NAV_QUERY, initialNav);
   const newCompanyInfo = useInitialData(COMPANY_INFO_QUERY, initialCompanyInfo);
