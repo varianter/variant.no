@@ -25,16 +25,16 @@ const detectPlatformFromUrl = (url: string): string | null => {
   return null;
 };
 
-function isSocialMediaLinkType(value: unknown): value is SocialMediaLink {
+function isDraftSocialMediaLinkType(
+  value: unknown,
+): value is Partial<SocialMediaLink> {
   return (
     typeof value === "object" &&
     value !== null &&
     "_type" in value &&
     typeof value._type === "string" &&
-    "url" in value &&
-    typeof value.url === "string" &&
-    "platform" in value &&
-    typeof value.platform === "string"
+    (!("url" in value) || typeof value.url === "string") &&
+    (!("platform" in value) || typeof value.platform === "string")
   );
 }
 
@@ -42,7 +42,7 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, unknown>>> = ({
   value = {},
   onChange,
 }) => {
-  if (!isSocialMediaLinkType(value)) {
+  if (!isDraftSocialMediaLinkType(value)) {
     console.error("Unexpected value type for SoMeInputs");
     return;
   }
