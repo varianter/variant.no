@@ -92,6 +92,7 @@ const renderSoMe = (data: Navigation, soMeData: SocialMediaProfiles) => {
   const socialMediaSections = filterSectionsByType(data, "socialMedia");
   return (
     socialMediaSections &&
+    soMeData.soMeLinkArray &&
     renderList(
       soMeData.soMeLinkArray.map((link: SocialMediaLink) => (
         <li key={link._key}>

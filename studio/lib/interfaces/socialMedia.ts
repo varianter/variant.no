@@ -12,5 +12,5 @@ export interface SocialMediaLink {
 export interface SocialMediaProfiles {
   _id: string;
   _type: typeof soMeLinksID;
-  soMeLinkArray: SocialMediaLink[];
+  soMeLinkArray?: SocialMediaLink[];
 }
