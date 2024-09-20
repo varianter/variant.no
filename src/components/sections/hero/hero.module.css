@@ -6,7 +6,7 @@
 }
 
 .secondaryColor {
-  background-color: var(--secondary-green3);
+  background-color: var(--primary-bg);
   padding: 7.5rem 2rem;
 
   @media (min-width: 640px) {
@@ -51,6 +51,7 @@
 }
 
 .title {
+  font-weight: 700;
   text-align: center;
 }
 

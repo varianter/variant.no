@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Darker_Grotesque, Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import { draftMode } from "next/headers";
 
 import { generateMetadataFromSeo } from "src/utils/seo";
@@ -10,11 +11,12 @@ import { loadQuery } from "studio/lib/store";
 
 import "src/styles/global.css";
 
-const darkerGrotesque = Darker_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-darkerGrotesque",
+const fontRecoleta = localFont({
+  src: "../../public/recoleta.otf",
+  variable: "--font-recoleta",
 });
-const figtree = Figtree({
+
+const fontFigtree = Figtree({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-figtree",
@@ -44,7 +46,7 @@ export default async function RootLayout({
 
   return (
     <html lang={siteLang}>
-      <body className={`${figtree.variable} ${darkerGrotesque.variable}`}>
+      <body className={`${fontFigtree.variable} ${fontRecoleta.variable}`}>
         {children}
         {draftMode().isEnabled && <LiveVisualEditing />}
       </body>
