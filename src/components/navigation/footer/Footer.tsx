@@ -21,7 +21,7 @@ export interface IFooter {
   navigationData: Navigation;
   companyInfo: CompanyInfo;
   brandAssets: BrandAssets;
-  soMeData: SocialMediaProfiles;
+  soMeData: SocialMediaProfiles | null;
   legalData: LegalDocument[];
 }
 
@@ -43,7 +43,7 @@ const Footer = ({
       <div className={styles.logo}>{renderedLogo}</div>
       <nav className={styles.nav}>
         {renderLinks(navigationData)}
-        {renderSoMe(navigationData, soMeData)}
+        {soMeData && renderSoMe(navigationData, soMeData)}
       </nav>
       <ul className={styles.credits}>
         <li key="credit-legal-key-1">
@@ -92,6 +92,7 @@ const renderSoMe = (data: Navigation, soMeData: SocialMediaProfiles) => {
   const socialMediaSections = filterSectionsByType(data, "socialMedia");
   return (
     socialMediaSections &&
+    socialMediaSections.length > 0 &&
     soMeData.soMeLinkArray &&
     renderList(
       soMeData.soMeLinkArray.map((link: SocialMediaLink) => (
