@@ -2,8 +2,8 @@ import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { media } from "sanity-plugin-media";
 
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import StudioIcon from "./components/studioIcon/StudioIcon";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
@@ -33,6 +33,7 @@ const config: WorkspaceOptions = {
         },
       },
     }),
+    media(),
   ],
 };
 
