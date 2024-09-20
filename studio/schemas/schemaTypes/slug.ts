@@ -1,5 +1,6 @@
-import { SlugValidationContext, defineField } from "sanity";
+import { SlugValidationContext, defineField, isSlug } from "sanity";
 
+import { apiVersion } from "studio/env";
 import { isPublished } from "studio/utils/documentUtils";
 
 async function isSlugUniqueAcrossAllDocuments(
@@ -49,17 +50,40 @@ function createSlugField(source: string) {
       isUnique: isSlugUniqueAcrossAllDocuments,
     },
     validation: (rule) =>
-      rule.required().custom((value) => {
-        if (value?.current === undefined) return true;
-        return (
-          encodeURIComponent(value.current) === value.current ||
-          "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
-        );
-      }),
+      rule
+        .required()
+        .custom((value) => {
+          if (value?.current === undefined) return true;
+          return (
+            encodeURIComponent(value.current) === value.current ||
+            "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
+          );
+        })
+        .custom(async (value, { document, getClient }) => {
+          /*
+            prevent slug changes after initial publication
+           */
+          if (document === undefined || isPublished(document)) return true;
+          const publishedDocument = await getClient({ apiVersion }).getDocument(
+            document._id.replace(/^drafts\./, ""),
+          );
+          if (
+            publishedDocument !== undefined &&
+            "slug" in publishedDocument &&
+            isSlug(publishedDocument.slug) &&
+            (value === undefined ||
+              publishedDocument.slug.current !== value.current)
+          ) {
+            return "Can not be changed after publication";
+          }
+          return true;
+        }),
     readOnly: (ctx) => {
       /*
         make slugs read-only after initial publish
         to avoid breaking shared links
+
+        if document is already draft, this is handled through validation instead
 
         if new slugs are needed, redirects can be used instead
        */
