@@ -26,6 +26,7 @@ import { brandAssetsID } from "./documents/siteSettings/brandAssets";
 import { brokenLinkID } from "./documents/siteSettings/brokenLink";
 import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
 import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
+import { customerCasesPageID } from "./documents/specialPages/customerCasesPage";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -151,6 +152,15 @@ const SpecialPagesSection = (S: StructureBuilder) =>
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
                 .title("Compensations"),
+            ),
+          S.listItem()
+            .title("Customer Cases")
+            .icon(ProjectsIcon)
+            .child(
+              S.document()
+                .schemaType(customerCasesPageID)
+                .documentId(customerCasesPageID)
+                .title("Customer Cases"),
             ),
         ]),
     );

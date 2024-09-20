@@ -13,6 +13,7 @@ import brokenLink from "./schemas/documents/siteSettings/brokenLink";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
+import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
@@ -35,6 +36,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     categories,
     legalDocument,
     compensations,
+    customerCasesPage,
     brokenLink,
     benefitsByLocation,
     companyLocation,
