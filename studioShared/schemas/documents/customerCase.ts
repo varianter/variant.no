@@ -3,7 +3,7 @@ import { defineField, defineType } from "sanity";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
-export const customerCaseID = "CustomerCase";
+export const customerCaseID = "customerCase";
 
 const customerCase = defineType({
   name: customerCaseID,
