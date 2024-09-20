@@ -9,7 +9,7 @@ import {
 } from "sanity";
 
 import { fetchWithToken } from "studio/lib/fetchWithToken";
-import { LANDING_QUERY } from "studio/lib/queries/navigation";
+import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
 
 type CustomCallToActionsProps = ArrayOfObjectsInputProps<
   { _key: string },
@@ -28,7 +28,7 @@ const CustomCallToActions: React.FC<CustomCallToActionsProps> = (props) => {
     const fetchLandingId = async () => {
       try {
         setLoading(true);
-        const landingId = await fetchWithToken<string>(LANDING_QUERY);
+        const landingId = await fetchWithToken<string>(LANDING_PAGE_REF_QUERY);
         setLandingPageId(landingId);
       } catch (error) {
         console.error("Failed to fetch navigation manager", error);
