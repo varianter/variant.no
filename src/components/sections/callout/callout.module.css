@@ -3,14 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.primary {
   background: var(--secondary-yellow1);
-}
-
-.secondary {
-  background: var(--primary-white-bright);
 }
 
 .callout {

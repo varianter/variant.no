@@ -2,7 +2,6 @@ import { defineField } from "sanity";
 
 import callToActionField from "studio/schemas/fields/callToActionFields";
 import { title } from "studio/schemas/fields/text";
-import { theme } from "studio/schemas/fields/theme";
 
 export const callToActionSectionID = "ctaSection";
 
@@ -11,7 +10,6 @@ export const callToAction = defineField({
   title: "Call to Action",
   type: "object",
   fields: [
-    theme,
     {
       ...title,
       description:
