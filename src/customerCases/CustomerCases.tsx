@@ -36,9 +36,8 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
       ) : (
         <div className={styles.section}>
           <Text>
-            {" "}
-            It looks like you haven´t created any customer cases yet. Please
-            visit the shared studio to add some.{" "}
+            It looks like you haven&apos;t created any customer cases yet.
+            Please visit the shared studio to add some.
           </Text>
           <LinkButton link={sharedCustomerCasesLink} />
         </div>
