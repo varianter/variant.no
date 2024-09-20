@@ -27,9 +27,6 @@ import {
   CUSTOMER_CASES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
-import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
-import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
-import { loadSharedQuery } from "studioShared/lib/store";
 
 export const dynamic = "force-dynamic";
 
@@ -63,7 +60,6 @@ async function Page({ params }: Props) {
     initialCompensationsPage,
     initialLocationsData,
     initialCustomerCases,
-    initialSharedCustomerCases,
   ] = await Promise.all([
     loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
@@ -82,7 +78,6 @@ async function Page({ params }: Props) {
       { slug },
       { perspective },
     ),
-    loadSharedQuery<CustomerCase[]>(CUSTOMER_CASES_QUERY, {}, { perspective }),
   ]);
 
   if (initialPage.data) {
@@ -142,17 +137,11 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialCustomerCases.data && initialSharedCustomerCases.data) {
+  if (initialCustomerCases.data) {
     return isDraftMode ? (
-      <CustomerCasesPreview
-        initialCustomerCases={initialCustomerCases}
-        initialSharedCustomerCases={initialSharedCustomerCases}
-      />
+      <CustomerCasesPreview initialCustomerCases={initialCustomerCases} />
     ) : (
-      <CustomerCases
-        customerCasesPage={initialCustomerCases.data}
-        sharedCustomerCases={initialSharedCustomerCases.data}
-      />
+      <CustomerCases customerCasesPage={initialCustomerCases.data} />
     );
   }
 

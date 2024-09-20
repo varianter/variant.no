@@ -4,3 +4,9 @@
   padding: 10rem 5rem;
   gap: 5rem;
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
