@@ -1,6 +1,6 @@
 import { StructureResolver } from "sanity/structure";
 
-import { supportedLanguages } from "internationalization/supportedLanguages";
+import { defaultLanguage } from "internationalization/supportedLanguages";
 
 import { customerCaseID } from "./schemas/documents/customerCase";
 
@@ -17,7 +17,7 @@ export const deskStructure: StructureResolver = (S) =>
             .filter("_type == $type && language == $lang")
             .params({
               type: customerCaseID,
-              lang: supportedLanguages.find((language) => language.default)?.id,
-            }),
+              lang: defaultLanguage?.id,
+            })
         ),
     ]);

@@ -5,7 +5,10 @@ import { structureTool } from "sanity/structure";
 import { media } from "sanity-plugin-media";
 
 import { languageID } from "internationalization/languageSchemaField";
-import { supportedLanguages } from "internationalization/supportedLanguages";
+import {
+  defaultLanguage,
+  supportedLanguages,
+} from "internationalization/supportedLanguages";
 import StudioIcon from "studio/components/studioIcon/StudioIcon";
 
 import { deskStructure } from "./deskStructure";
@@ -25,9 +28,7 @@ const config: WorkspaceOptions = {
     ...schema,
     templates: (prev) =>
       prev.filter(
-        (template) =>
-          template.value.language ===
-          supportedLanguages.find((language) => language.default)?.id,
+        (template) => template.value.language === defaultLanguage?.id
       ),
   },
   plugins: [
@@ -37,9 +38,6 @@ const config: WorkspaceOptions = {
     visionTool({ defaultApiVersion: apiVersion }),
     media(),
     documentInternationalization({
-      // TODO: a function that takes the client and returns a promise of an array of supported languages
-      // MUST return an "id" and "title" as strings
-      // supportedLanguages: (client) => client.fetch(`*[_type == "language"]{id, title}`),
       supportedLanguages: supportedLanguages,
       schemaTypes: [customerCaseID],
       languageField: languageID,

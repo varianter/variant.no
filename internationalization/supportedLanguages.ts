@@ -1,3 +1,5 @@
+import { uuid } from "@sanity/uuid";
+
 export interface Language {
   _key: string;
   title: string;
@@ -8,24 +10,26 @@ export interface Language {
 
 export const supportedLanguages: Language[] = [
   {
-    _key: `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
+    _key: uuid(),
     title: "English",
     id: "en",
     icon: "🇬🇧",
     default: true,
   },
   {
-    _key: `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
+    _key: uuid(),
     title: "Swedish",
     id: "se",
     icon: "🇸🇪",
     default: false,
   },
   {
-    _key: `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
+    _key: uuid(),
     title: "Norwegian",
     id: "no",
     icon: "🇳🇴",
     default: false,
   },
 ];
+
+export const defaultLanguage = supportedLanguages.find((lang) => lang.default);

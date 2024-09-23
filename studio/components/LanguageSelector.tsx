@@ -29,9 +29,16 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 
   // Get the currently set default language
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
+  console.log(currentDefaultLanguage);
 
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
+    // Prevent deselecting the last remaining language
+    if (isSelected && value.length === 1) {
+      console.log("Cannot deselect the last remaining language.");
+      return; // Exit early if there's only one language selected
+    }
+
     const updatedValue = isSelected
       ? value.filter((item) => item.id !== lang.id) // Deselect language
       : [...value, { ...lang, default: false }]; // Select language
@@ -39,7 +46,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
     const newDefaultLanguage = getNewDefaultLanguage(
       updatedValue,
       currentDefaultLanguage,
-      lang,
+      lang
     );
 
     const finalValue = updatedValue.map((item) => ({
@@ -124,7 +131,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 const getNewDefaultLanguage = (
   updatedLanguages: Language[],
   currentDefault: string | null,
-  deselectedLang: Language,
+  deselectedLang: Language
 ): string | null => {
   if (updatedLanguages.length === 1) {
     return updatedLanguages[0].id; // Only one language left
@@ -134,7 +141,7 @@ const getNewDefaultLanguage = (
     // Find a new default language if the current default is deselected
     return (
       supportedLanguages.find((lang) =>
-        updatedLanguages.some((item) => item.id === lang.id),
+        updatedLanguages.some((item) => item.id === lang.id)
       )?.id || null
     );
   }

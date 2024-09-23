@@ -1,7 +1,6 @@
-"use client";
 import { defineType } from "sanity";
 
-import { supportedLanguages } from "internationalization/supportedLanguages";
+import { defaultLanguage } from "internationalization/supportedLanguages";
 import LanguageSelector from "studio/components/LanguageSelector";
 
 export const languageSettingsID = "languageSettings";
@@ -27,9 +26,7 @@ const languageSettings = defineType({
         },
       ],
       components: { input: LanguageSelector },
-      initialValue: () => [
-        supportedLanguages.find((language) => language.default)?.id,
-      ],
+      initialValue: () => [defaultLanguage],
     },
   ],
 });
