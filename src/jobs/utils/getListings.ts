@@ -72,8 +72,16 @@ type Offer = {
   position: number;
   department?: string;
   location: string;
+  locations: Array<Location>;
   company_name: string;
 };
+
+type Location = {
+  city: string,
+  state: string,
+  country: string,
+  street: string,
+}
 
 type OfferResult = {
   offers: Array<Offer>;
