@@ -7,3 +7,8 @@ export interface Reference {
   _type: "reference";
   _ref: string;
 }
+
+export interface DocumentWithSlug {
+  slug: Slug;
+  _updatedAt: string;
+}
