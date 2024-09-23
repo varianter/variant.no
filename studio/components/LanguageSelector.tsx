@@ -29,7 +29,6 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 
   // Get the currently set default language
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
-  console.log(currentDefaultLanguage);
 
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
@@ -46,7 +45,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
     const newDefaultLanguage = getNewDefaultLanguage(
       updatedValue,
       currentDefaultLanguage,
-      lang,
+      lang
     );
 
     const finalValue = updatedValue.map((item) => ({
@@ -131,17 +130,17 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 const getNewDefaultLanguage = (
   updatedLanguages: Language[],
   currentDefault: string | null,
-  deselectedLang: Language,
+  deselectedLang: Language
 ): string | null => {
   if (updatedLanguages.length === 1) {
-    return updatedLanguages[0].id; // Only one language left
+    return updatedLanguages[0].id;
   }
 
   if (currentDefault === deselectedLang.id) {
     // Find a new default language if the current default is deselected
     return (
       supportedLanguages.find((lang) =>
-        updatedLanguages.some((item) => item.id === lang.id),
+        updatedLanguages.some((item) => item.id === lang.id)
       )?.id || null
     );
   }
