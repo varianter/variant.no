@@ -25,9 +25,11 @@ export default function JobListingItem({ item }: JobListingItemProps) {
       <div>
         <h3 className={and(style.job__title, 'fancy')}>{item.title}</h3>
         <span>
-          {`${item.locations.map((location) => {
-            return ' ' + location.city;
-          })}`}
+          {item.locations
+            .map((location) => {
+              return location.city;
+            })
+            .join(', ')}
         </span>
       </div>
       <ButtonNextLink
