@@ -27,7 +27,7 @@ const config: WorkspaceOptions = {
       prev.filter(
         (template) =>
           template.value.language ===
-          supportedLanguages.find((language) => language.default)?.id
+          supportedLanguages.find((language) => language.default)?.id,
       ),
   },
   plugins: [

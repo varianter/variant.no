@@ -25,7 +25,7 @@ const config: WorkspaceOptions = {
     ...schema,
     templates: (prev) => {
       const prevFiltered = prev.filter(
-        (template) => template.id !== "legalDocument"
+        (template) => template.id !== "legalDocument",
       );
 
       // Ensures no legal document is created with an empty language field

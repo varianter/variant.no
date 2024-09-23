@@ -6,6 +6,7 @@ import defaultSeo from "./schemas/documents/admin/defaultSeo";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
 import blog from "./schemas/documents/blog";
 import compensations from "./schemas/documents/compensations";
+import languageSettings from "./schemas/documents/languageSettings";
 import pageBuilder from "./schemas/documents/pageBuilder";
 import posts from "./schemas/documents/post";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
@@ -19,7 +20,6 @@ import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocati
 import { footerSection } from "./schemas/objects/footerSection";
 import { link } from "./schemas/objects/link";
 import { socialMedia } from "./schemas/objects/socialMedia";
-import languageSettings from "./schemas/documents/languageSettings";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
