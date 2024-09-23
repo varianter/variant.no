@@ -15,19 +15,17 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-import { languageID } from "internationalization/languageSchemaField";
-
-import { pageBuilderID } from "./builders/pageBuilder";
+import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
 //import { blogId } from "./documents/blog";
-import { defaultSeoID } from "./documents/admin/defaultSeo";
-import { brandAssetsID } from "./documents/brandAssets";
-import { companyInfoID } from "./documents/companyInfo";
-import { companyLocationID } from "./documents/companyLocation";
-import { compensationsId } from "./documents/compensations";
-import { languageSettingsID } from "./documents/languageSettings";
-import { legalDocumentID } from "./documents/legalDocuments";
-import { redirectId } from "./documents/redirect";
-import { soMeLinksID } from "./documents/socialMediaProfiles";
+import { defaultSeoID } from "studio/schemas/documents/admin/defaultSeo";
+import { brandAssetsID } from "studio/schemas/documents/brandAssets";
+import { companyInfoID } from "studio/schemas/documents/companyInfo";
+import { companyLocationID } from "studio/schemas/documents/companyLocation";
+import { compensationsId } from "studio/schemas/documents/compensations";
+import { languageSettingsID } from "studio/schemas/documents/languageSettings";
+import { legalDocumentID } from "studio/schemas/documents/legalDocuments";
+import { redirectId } from "studio/schemas/documents/redirect";
+import { soMeLinksID } from "studio/schemas/documents/socialMediaProfiles";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -57,11 +55,7 @@ const adminSection = (S: StructureBuilder) =>
             .title("Legal Documents")
             .icon(CogIcon)
             .child(
-              S.documentTypeList(legalDocumentID)
-                .title("Legal Documents")
-                // Only show documents that do not have a 'language' field (i.e., documents in the default language)
-                .filter(`_type == $type && !defined(${languageID})`)
-                .params({ type: legalDocumentID }),
+              S.documentTypeList(legalDocumentID).title("Company Locations"),
             ),
         ]),
     );
@@ -132,7 +126,7 @@ const pagesSection = (S: StructureBuilder) =>
     .child(S.documentTypeList(pageBuilderID).title("Pages"));
 
 //Section for set pages
-const SpecialPagesSection = (S: StructureBuilder) =>
+const specialPagesSection = (S: StructureBuilder) =>
   S.listItem()
     .title("Special Pages")
     .icon(SparkleIcon)
@@ -162,14 +156,12 @@ const SpecialPagesSection = (S: StructureBuilder) =>
     );
 
 // Main export
-const buildDeskStructure = (S: StructureBuilder) =>
+export const deskStructure = (S: StructureBuilder) =>
   S.list()
     .title("Content")
     .items([
       adminSection(S),
       siteSettingSection(S),
       pagesSection(S),
-      SpecialPagesSection(S),
+      specialPagesSection(S),
     ]);
-
-export default buildDeskStructure;

@@ -1,7 +1,6 @@
-import { Box, Button, Card, Checkbox, Flex, Text } from "@sanity/ui";
+import { Box, Button, Card, Checkbox, Flex, Text, useTheme } from "@sanity/ui";
 import React from "react";
 import { PatchEvent, set } from "sanity";
-
 import {
   Language,
   supportedLanguages,
@@ -12,25 +11,36 @@ interface LanguageSelectorProps {
   onChange: (event: PatchEvent) => void;
 }
 
+const colorMap = {
+  dark: {
+    selected: "#29356a",
+    default: "rgba(19, 20, 27, 0.5)",
+  },
+  light: {
+    selected: "#E3F2FD",
+    default: "white",
+  },
+};
+
 const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
+  const theme = useTheme();
+  const prefersDark = theme.sanity.v2?.color._dark ?? false;
+
   // Get the currently set default language
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
 
-  // Handle the selection or deselection of a language
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
     const updatedValue = isSelected
-      ? value.filter((item) => item.id !== lang.id) // Deselect if already selected
-      : [...value, { ...lang, default: false }]; // Select if not already selected
+      ? value.filter((item) => item.id !== lang.id) // Deselect language
+      : [...value, { ...lang, default: false }]; // Select language
 
-    // Determine the new default language
     const newDefaultLanguage = getNewDefaultLanguage(
       updatedValue,
       currentDefaultLanguage,
-      lang,
+      lang
     );
 
-    // Apply the new default language to the updated list
     const finalValue = updatedValue.map((item) => ({
       ...item,
       default: item.id === newDefaultLanguage,
@@ -39,15 +49,19 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
     onChange(PatchEvent.from(set(finalValue)));
   };
 
-  // Handle setting a specific language as the default
   const handleDefaultSetting = (lang: Language) => {
-    const updatedValue = value.map(
-      (item) =>
-        item.id === lang.id
-          ? { ...item, default: true } // Set this language as default
-          : { ...item, default: false }, // Unset default for others
-    );
+    const updatedValue = value.map((item) => ({
+      ...item,
+      default: item.id === lang.id, // Set selected language as default
+    }));
     onChange(PatchEvent.from(set(updatedValue)));
+  };
+
+  const getBackgroundColor = (lang: Language) => {
+    const isSelected = value.some((item) => item.id === lang.id);
+    const theme = prefersDark ? "dark" : "light";
+
+    return isSelected ? colorMap[theme].selected : colorMap[theme].default;
   };
 
   return (
@@ -60,9 +74,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
           shadow={1}
           style={{
             cursor: "pointer",
-            backgroundColor: value.some((item) => item.id === lang.id)
-              ? "#E3F2FD"
-              : "white",
+            backgroundColor: getBackgroundColor(lang),
           }}
           onClick={() => handleLanguageSelection(lang)}
         >
@@ -86,7 +98,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
                 <Button
                   padding={2}
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevents the button click from triggering the card's click handler
+                    e.stopPropagation(); // Prevent triggering card's click handler
                     handleDefaultSetting(lang);
                   }}
                   mode={
@@ -111,22 +123,22 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 const getNewDefaultLanguage = (
   updatedLanguages: Language[],
   currentDefault: string | null,
-  deselectedLang: Language,
+  deselectedLang: Language
 ): string | null => {
   if (updatedLanguages.length === 1) {
-    // If only one language remains, set it as the default
-    return updatedLanguages[0].id;
+    return updatedLanguages[0].id; // Only one language left
   }
 
   if (currentDefault === deselectedLang.id) {
     // Find a new default language if the current default is deselected
-    const newDefaultLang = supportedLanguages.find((lang) =>
-      updatedLanguages.some((item) => item.id === lang.id),
+    return (
+      supportedLanguages.find((lang) =>
+        updatedLanguages.some((item) => item.id === lang.id)
+      )?.id || null
     );
-    return newDefaultLang?.id || null;
   }
 
-  return currentDefault;
+  return currentDefault; // Return existing default
 };
 
 export default LanguageSelector;

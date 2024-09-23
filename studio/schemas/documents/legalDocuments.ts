@@ -1,6 +1,7 @@
 import { defineField } from "sanity";
 
 import languageSchemaField from "internationalization/languageSchemaField";
+import { supportedLanguages } from "internationalization/supportedLanguages";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 
@@ -14,6 +15,21 @@ const legalDocument = defineField({
   preview: {
     select: {
       title: "basicTitle",
+      language: "language",
+    },
+    prepare({ title, language }) {
+      const languageEntry = supportedLanguages.find(
+        (lang) => lang.id === language,
+      )?.title;
+
+      const languageTitle = languageEntry
+        ? languageEntry
+        : "No language specified";
+
+      return {
+        title: title || "Untitled",
+        subtitle: languageTitle,
+      };
     },
   },
 });
