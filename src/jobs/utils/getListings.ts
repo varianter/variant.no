@@ -100,7 +100,6 @@ async function getValidityStatuses(department?: Office): Promise<Offer[]> {
 
   let offers: Offer[] = [];
   for (let offer of data.offers) {
-    console.log(offer.locations);
     if (!offer.careers_apply_url) {
       throw new Error('Could not fetch data from Recruitee');
     }
