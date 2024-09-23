@@ -42,25 +42,27 @@ export default function SalaryCalculator({
     >
       <RadioButtonGroup
         id="degree-group"
-        label="Choose your degree"
+        label="Velg utdanning"
         options={degreeOptions}
         selectedId={selectedDegree}
         onValueChange={(selectedOption) =>
           onDegreeChanged(selectedOption.id as Degree)
         }
       />
-      <InputField
-        label="Year"
-        name="examinationYear"
-        type="number"
-        min={minExaminationYear}
-        max={maxExaminationYear}
-        value={yearValue}
-        onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
-        required
-      />
+      <div className={styles.yearInputWrapper}>
+        <InputField
+          label="Year"
+          name="examinationYear"
+          type="number"
+          min={minExaminationYear}
+          max={maxExaminationYear}
+          value={yearValue}
+          onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
+          required
+        />
+      </div>
       <Button type="secondary" size="small">
-        Submit
+        Regn ut
       </Button>
     </form>
   );

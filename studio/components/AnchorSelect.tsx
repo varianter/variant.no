@@ -1,16 +1,8 @@
 import { Button, Select, Stack } from "@sanity/ui";
 import React, { useEffect, useState } from "react";
-import { PatchEvent, set, unset, useFormValue } from "sanity";
+import { PatchEvent, StringInputProps, set, unset, useFormValue } from "sanity";
 
 import { fetchWithToken } from "studio/lib/fetchWithToken";
-
-interface AnchorSelectProps {
-  value?: string;
-  type: any;
-  onChange: (event: PatchEvent) => void;
-  path: any[];
-  schemaType: any;
-}
 
 interface AnchorItem {
   basicTitle?: string;
@@ -30,7 +22,7 @@ function fromCamelCase(value?: string) {
     }); // Capitalize the first letter
 }
 
-const AnchorSelect = ({ value, onChange, path }: AnchorSelectProps) => {
+const AnchorSelect = ({ value, onChange, path }: StringInputProps) => {
   const [listItems, setListItems] = useState<AnchorItem[]>([]);
 
   // Extract the internal link reference from the form value

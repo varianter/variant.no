@@ -46,8 +46,8 @@
 }
 
 .input:checked + .checkbox {
-  background-color: var(--primary-green-dark);
-  border-color: var(--primary-green-dark);
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
 .input:checked + .checkbox::after {

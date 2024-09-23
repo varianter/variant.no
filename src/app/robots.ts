@@ -1,11 +1,22 @@
 import type { MetadataRoute } from "next";
 
+import { readBaseUrl } from "./env";
+
 export default function robots(): MetadataRoute.Robots {
-  return {
+  const robotsFile: MetadataRoute.Robots = {
     rules: {
       userAgent: "*",
       disallow: ["/studio", "/shared", "/api"],
     },
-    sitemap: new URL("sitemap.xml", process.env.NEXT_PUBLIC_URL).toString(),
   };
+  const baseUrlResult = readBaseUrl();
+  if (baseUrlResult.ok) {
+    robotsFile.sitemap = new URL("sitemap.xml", baseUrlResult.value).toString();
+  } else {
+    console.warn(
+      "Could not include sitemap in robots.txt, missing base url:",
+      baseUrlResult.error,
+    );
+  }
+  return robotsFile;
 }

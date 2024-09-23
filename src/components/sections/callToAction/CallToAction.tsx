@@ -9,11 +9,8 @@ interface CallToActionProps {
 }
 
 const CallToAction = ({ callToAction }: CallToActionProps) => {
-  const theme =
-    callToAction.theme === "primary" ? styles.primary : styles.secondary;
-
   return (
-    <article className={`${styles.article} ${theme}`} id={callToAction._key}>
+    <article className={`${styles.article}`} id={callToAction._key}>
       <Text type="h2">{callToAction?.basicTitle}</Text>
       <ul className={styles.list}>
         {callToAction?.callToActions?.map((cta, index) => (

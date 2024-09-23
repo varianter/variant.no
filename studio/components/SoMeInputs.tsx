@@ -2,6 +2,8 @@ import { Box, Label, Select, Stack, TextInput } from "@sanity/ui";
 import React from "react";
 import { ObjectInputProps, set } from "sanity";
 
+import { SocialMediaLink } from "studio/lib/interfaces/socialMedia";
+
 export const SoMePlatforms: { [key: string]: string } = {
   facebook: "Facebook",
   x: "X",
@@ -23,10 +25,28 @@ const detectPlatformFromUrl = (url: string): string | null => {
   return null;
 };
 
-const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
+function isDraftSocialMediaLinkType(
+  value: unknown,
+): value is Partial<SocialMediaLink> {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "_type" in value &&
+    typeof value._type === "string" &&
+    (!("url" in value) || typeof value.url === "string") &&
+    (!("platform" in value) || typeof value.platform === "string")
+  );
+}
+
+const SoMeInputs: React.FC<ObjectInputProps<Record<string, unknown>>> = ({
   value = {},
   onChange,
 }) => {
+  if (!isDraftSocialMediaLinkType(value)) {
+    console.error("Unexpected value type for SoMeInputs");
+    return;
+  }
+
   const handleUrlChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!onChange) return;
     const newUrl = event.target.value;
@@ -58,7 +78,7 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
           <TextInput
             id={urlInputName}
             name={urlInputName}
-            value={value.url}
+            value={value && value.url}
             onChange={handleUrlChange}
             placeholder="Enter URL"
           />
@@ -72,7 +92,7 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, any>>> = ({
           <Select
             id={platformInputName}
             name={platformInputName}
-            value={value.platform}
+            value={value && value.platform}
             onChange={handlePlatformChange}
           >
             <option value="">Select Platform</option>

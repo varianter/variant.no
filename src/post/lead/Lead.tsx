@@ -1,15 +1,15 @@
 "use client";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+import { PortableTextBlock } from "sanity";
 
-import { PortableTextBlock } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { IImage } from "studio/lib/interfaces/media";
 
 import styles from "./lead.module.css";
 
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="bodyLarge">{children}</Text>,
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+  block: ({ children }) => <Text type="bodyLarge">{children}</Text>,
 };
 
 const Lead = ({

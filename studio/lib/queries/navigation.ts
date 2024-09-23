@@ -38,6 +38,10 @@ export const NAV_QUERY = groq`
   }
 `;
 
-export const LANDING_QUERY = groq`
+export const LANDING_PAGE_REF_QUERY = groq`
   *[_type == "navigationManager"][0].setLanding._ref
+`;
+
+export const LANDING_PAGE_QUERY = groq`
+  *[_type == "navigationManager"][0].setLanding ->
 `;

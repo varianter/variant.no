@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import Text from "src/components/text/Text";
 import { LogoSaladSection } from "studio/lib/interfaces/pages";
@@ -10,8 +10,8 @@ interface LogoSaladProps {
   logoSalad: LogoSaladSection;
 }
 
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="bodySuperLarge">{children}</Text>,
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+  block: ({ children }) => <Text type="bodySuperLarge">{children}</Text>,
 };
 
 export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {

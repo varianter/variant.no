@@ -77,7 +77,7 @@ export const SLUG_QUERY = groq`
 `;
 
 export const SEO_SLUG_QUERY = groq`
-  *[_type == "pageBuilder" && slug.current == $slug][0]{
+  *[defined(seo) && slug.current == $slug][0]{
         "title": seo.seoTitle,
         "description": seo.seoDescription,
         "imageUrl": seo.seoImage.asset->url
@@ -85,10 +85,6 @@ export const SEO_SLUG_QUERY = groq`
 
 export const BLOG_PAGE_QUERY = groq`
   *[_type == "blog" && slug.current == $slug][0]
-`;
-
-export const COMPENSATIONS_PAGE_QUERY = groq`
-  *[_type == "compensations" && slug.current == $slug][0]
 `;
 
 export const POSTS_QUERY = groq`

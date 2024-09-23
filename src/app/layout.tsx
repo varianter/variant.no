@@ -1,20 +1,22 @@
 import { Metadata } from "next";
-import { Darker_Grotesque, Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import { draftMode } from "next/headers";
 
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
 import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/languages";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 
 import "src/styles/global.css";
 
-const darkerGrotesque = Darker_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-darkerGrotesque",
+const fontRecoleta = localFont({
+  src: "../../public/recoleta.otf",
+  variable: "--font-recoleta",
 });
-const figtree = Figtree({
+
+const fontFigtree = Figtree({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-figtree",
@@ -33,7 +35,9 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadQuery<LanguageObject[]>(DEFAULT_LANGUAGE_QUERY);
+    const { data } = await loadStudioQuery<LanguageObject[]>(
+      DEFAULT_LANGUAGE_QUERY,
+    );
     siteLang = data[0].id;
   } catch (error) {
     console.error("Error loading site settings:", error);
@@ -41,7 +45,7 @@ export default async function RootLayout({
   }
   return (
     <html lang={siteLang}>
-      <body className={`${figtree.variable} ${darkerGrotesque.variable}`}>
+      <body className={`${fontFigtree.variable} ${fontRecoleta.variable}`}>
         {children}
         {draftMode().isEnabled && <LiveVisualEditing />}
       </body>

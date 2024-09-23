@@ -2,7 +2,7 @@ import { defineField } from "sanity";
 
 import { SalariesInput } from "studio/components/salariesInput/SalariesInput";
 import { SalariesPage } from "studio/lib/interfaces/compensations";
-import { companyLocationNameID } from "studio/schemas/documents/companyLocation";
+import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { location, locationID } from "studio/schemas/objects/locations";
 
 import {

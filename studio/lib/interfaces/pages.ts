@@ -1,10 +1,8 @@
-import { PortableTextBlock } from "src/components/richText/RichText";
+import { PortableTextBlock } from "sanity";
 
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
-
-export type ThemeType = "primary" | "secondary";
 
 export interface HeroSection {
   _key: string;
@@ -37,7 +35,6 @@ export interface CalloutSection {
   _type: string;
   richText?: PortableTextBlock[];
   link?: ILink;
-  theme?: ThemeType;
 }
 
 export interface CallToActionSection {
@@ -45,7 +42,6 @@ export interface CallToActionSection {
   _type: string;
   basicTitle?: string;
   callToActions?: ILink[];
-  theme?: ThemeType;
 }
 
 export interface TestimonialsSection {

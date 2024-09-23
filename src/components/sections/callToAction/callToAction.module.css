@@ -1,11 +1,3 @@
-.primary {
-  background: var(--secondary-gradient-pink);
-}
-
-.secondary {
-  background-color: var(--secondary-yellow-1);
-}
-
 .article {
   display: flex;
   flex-direction: column;
@@ -13,6 +5,7 @@
   text-align: center;
   gap: 1.5rem;
   padding: 5rem 2rem;
+  background: var(--primary-bg-dark);
 
   @media (min-width: 640px) {
     padding: 5rem 3rem;

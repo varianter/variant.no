@@ -99,7 +99,7 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
       <Text type="h1">{compensations.basicTitle}</Text>
       <RadioButtonGroup
         id="location-group"
-        label="Choose your location"
+        label="Velg lokasjon"
         options={locationOptions}
         selectedId={selectedLocation}
         onValueChange={(option) => setSelectedLocation(option.id)}

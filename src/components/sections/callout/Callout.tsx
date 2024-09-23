@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
@@ -10,15 +10,14 @@ interface CalloutProps {
   callout: CalloutSection;
 }
 
-const myPortableTextComponents = {
-  block: ({ children }: any) => <Text type="bodySuperLarge">{children}</Text>,
+const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+  block: ({ children }) => <Text type="bodySuperLarge">{children}</Text>,
 };
 
 const Callout = ({ callout }: CalloutProps) => {
-  const theme = callout.theme == "primary" ? styles.primary : styles.secondary;
   return (
     callout.richText && (
-      <article className={`${styles.shared} ${theme}`} id={callout._key}>
+      <article className={`${styles.shared}`} id={callout._key}>
         <div className={styles.callout}>
           <PortableText
             value={callout.richText}

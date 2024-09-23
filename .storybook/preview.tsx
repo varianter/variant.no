@@ -1,14 +1,15 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { Darker_Grotesque, Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "../src/styles/global.css";
+import localFont from "next/font/local";
 
-const darkerGrotesque = Darker_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-darkerGrotesque",
+const fontRecoleta = localFont({
+  src: "../../public/recoleta.otf",
+  variable: "--font-recoleta",
 });
 
-const figtree = Figtree({
+const fontFigtree = Figtree({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-figtree",
@@ -41,7 +42,7 @@ const preview: Preview = {
       }
 
       return (
-        <div className={`${figtree.variable} ${darkerGrotesque.variable}`}>
+        <div className={`${fontFigtree.variable} ${fontRecoleta.variable}`}>
           <Story />
         </div>
       );

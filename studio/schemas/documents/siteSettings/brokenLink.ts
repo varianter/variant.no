@@ -2,10 +2,9 @@ import { SanityDocument, SlugRule } from "@sanity/types";
 import { type Slug, defineField, defineType } from "sanity";
 
 import PrefixedSlugInput from "studio/components/slug/PrefixedSlugInput";
-import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
-
-import { blogId } from "./blog";
-import { compensationsId } from "./compensations";
+import { blogId } from "studio/schemas/documents/blog";
+import { compensationsId } from "studio/schemas/documents/compensations";
+import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 
 const slugRequired = (rule: SlugRule) =>
   rule.required().custom((value: Slug | undefined) => {
@@ -31,11 +30,11 @@ const requiredIfDestinationType = (
   return true;
 };
 
-export const redirectId = "redirect";
+export const brokenLinkID = "brokenLink";
 
-const redirect = defineType({
-  name: redirectId,
-  title: "Redirect",
+const brokenLink = defineType({
+  name: brokenLinkID,
+  title: "Broken Links",
   type: "document",
   fields: [
     defineField({
@@ -138,4 +137,4 @@ const redirect = defineType({
   },
 });
 
-export default redirect;
+export default brokenLink;

@@ -15,17 +15,17 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-import { pageBuilderID } from "studio/schemas/builders/pageBuilder";
-//import { blogId } from "./documents/blog";
-import { defaultSeoID } from "studio/schemas/documents/admin/defaultSeo";
-import { brandAssetsID } from "studio/schemas/documents/brandAssets";
-import { companyInfoID } from "studio/schemas/documents/companyInfo";
-import { companyLocationID } from "studio/schemas/documents/companyLocation";
-import { compensationsId } from "studio/schemas/documents/compensations";
-import { languageSettingsID } from "studio/schemas/documents/languageSettings";
-import { legalDocumentID } from "studio/schemas/documents/legalDocuments";
-import { redirectId } from "studio/schemas/documents/redirect";
-import { soMeLinksID } from "studio/schemas/documents/socialMediaProfiles";
+import { companyInfoID } from "./schemas/documents/admin/companyInfo";
+import { companyLocationID } from "./schemas/documents/admin/companyLocation";
+import { defaultSeoID } from "./schemas/documents/admin/defaultSeo";
+import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
+import { compensationsId } from "./schemas/documents/compensations";
+import { languageSettingsID } from "./schemas/documents/languageSettings";
+import { pageBuilderID } from "./schemas/documents/pageBuilder";
+import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
+import { brokenLinkID } from "./schemas/documents/siteSettings/brokenLink";
+import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
+import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -34,16 +34,16 @@ const adminSection = (S: StructureBuilder) =>
     .icon(CaseIcon)
     .child(
       S.list()
-        .title("Company Details")
+        .title("Admin")
         .items([
           S.listItem()
-            .title("Company Information")
+            .title("Parent Company")
             .icon(InfoOutlineIcon)
             .child(
               S.document()
                 .schemaType(companyInfoID)
                 .documentId(companyInfoID)
-                .title("Company Information"),
+                .title("Parent Company"),
             ),
           S.listItem()
             .title("Company Locations")
@@ -114,7 +114,7 @@ const siteSettingSection = (S: StructureBuilder) =>
           S.listItem()
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
-            .child(S.documentTypeList(redirectId).title("Redirects")),
+            .child(S.documentTypeList(brokenLinkID).title("Redirects")),
         ]),
     );
 
@@ -151,6 +151,15 @@ const specialPagesSection = (S: StructureBuilder) =>
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
                 .title("Compensations"),
+            ),
+          S.listItem()
+            .title("Customer Cases")
+            .icon(ProjectsIcon)
+            .child(
+              S.document()
+                .schemaType(customerCasesPageID)
+                .documentId(customerCasesPageID)
+                .title("Customer Cases"),
             ),
         ]),
     );

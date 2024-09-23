@@ -3,7 +3,7 @@ import LegalPreview from "src/blog/components/legal/LegalPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LEGAL_DOCUMENT_SLUG_QUERY } from "studio/lib/queries/legalDocuments";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +19,7 @@ async function Page({ params }: Props) {
   const { id } = params;
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const initialDocument = await loadQuery<LegalDocument>(
+  const initialDocument = await loadStudioQuery<LegalDocument>(
     LEGAL_DOCUMENT_SLUG_QUERY,
     { slug: id },
     { perspective },

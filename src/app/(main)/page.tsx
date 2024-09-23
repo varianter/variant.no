@@ -6,12 +6,14 @@ import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
-import { LANDING_QUERY } from "studio/lib/queries/navigation";
-import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
-import { loadQuery } from "studio/lib/store";
+import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
+import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
+import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { data: landingId } = await loadQuery<string>(LANDING_QUERY);
+  const { data: landingId } = await loadStudioQuery<string>(
+    LANDING_PAGE_REF_QUERY,
+  );
   const seo = await fetchSeoData(SEO_PAGE_QUERY, { id: landingId });
   return generateMetadataFromSeo(seo);
 }
@@ -35,8 +37,8 @@ const pagesLink = {
 const Home = async () => {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const { data: landingId } = await loadQuery<string>(
-    LANDING_QUERY,
+  const { data: landingId } = await loadStudioQuery<string>(
+    LANDING_PAGE_REF_QUERY,
     {},
     { perspective },
   );
@@ -53,7 +55,7 @@ const Home = async () => {
     );
   }
 
-  const initialLandingPage = await loadQuery<PageBuilder>(
+  const initialLandingPage = await loadStudioQuery<PageBuilder>(
     PAGE_QUERY,
     { id: landingId },
     { perspective },

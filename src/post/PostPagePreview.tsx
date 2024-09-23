@@ -3,7 +3,7 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
 import { BlogPage, Post } from "studio/lib/interfaces/pages";
-import { POST_SLUG_QUERY } from "studio/lib/queries/pages";
+import { POST_SLUG_QUERY } from "studio/lib/queries/page";
 
 import PostPage from "./PostPage";
 

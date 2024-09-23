@@ -10,7 +10,7 @@
   align-items: center;
   gap: var(--borderRadius-borderRadius-s, 0.5rem);
   align-self: stretch;
-  background: var(--primary-green-dark, #206a6f);
+  background: var(--primary-dark, #206a6f);
 
   text-decoration: none;
   color: var(--primary-white, #faf8f5);

@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-import { companyInfoID } from "studio/schemas/documents/companyInfo";
+import { companyInfoID } from "studio/schemas/documents/admin/companyInfo";
 
 export const COMPANY_INFO_QUERY = groq`*[_type == "${companyInfoID}"][0]`;
 

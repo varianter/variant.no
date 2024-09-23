@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { PortableTextBlock } from "sanity";
 
-import { PortableTextBlock, RichText } from "src/components/richText/RichText";
+import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 
@@ -9,7 +10,12 @@ import styles from "./legal.module.css";
 const extractHeadings = (blocks: PortableTextBlock[]) => {
   return blocks
     .filter((block) => block.style === "h2")
-    .map((block) => block.children?.map((child) => child.text).join(" ") || "");
+    .map(
+      (block) =>
+        (Array.isArray(block.children) &&
+          block.children?.map((child) => child.text).join(" ")) ||
+        "",
+    );
 };
 
 const Legal = ({ document }: { document: LegalDocument }) => {

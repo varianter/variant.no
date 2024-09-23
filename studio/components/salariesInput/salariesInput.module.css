@@ -9,7 +9,7 @@
 }
 
 .uploadInput:is(:focus, :focus-within) + * label {
-  outline: 2px solid var(--focus-color);
+  outline: 2px solid #556bfc;
 }
 
 .uploadButtonWrapper {

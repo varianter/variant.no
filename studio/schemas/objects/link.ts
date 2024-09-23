@@ -25,6 +25,7 @@ interface Parent {
 const lazyPageBuilderID = () => "pageBuilder";
 const lazyBlogID = () => "blog";
 const lazyCompensationsID = () => "compensations";
+const lazyCustomerCasesPageID = () => "customerCasesPage";
 
 export const link = defineField({
   name: linkID,
@@ -69,9 +70,10 @@ export const link = defineField({
         { type: lazyPageBuilderID() },
         { type: lazyBlogID() },
         { type: lazyCompensationsID() },
+        { type: lazyCustomerCasesPageID() },
       ],
       validation: (rule) =>
-        rule.custom((value: any, context: any) => {
+        rule.custom((value, context) => {
           const parent = context.parent as Parent;
           if (
             parent?.linkTitle &&

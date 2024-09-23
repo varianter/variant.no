@@ -3,14 +3,15 @@ import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { media } from "sanity-plugin-media";
 
 import { languageID } from "internationalization/languageSchemaField";
 
 import StudioIcon from "./components/studioIcon/StudioIcon";
+import { deskStructure } from "./deskStructure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
-import { legalDocumentID } from "./schemas/documents/legalDocuments";
-import { deskStructure } from "./deskStructure";
+import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 
 const config: WorkspaceOptions = {
   name: "studio",
@@ -75,6 +76,7 @@ const config: WorkspaceOptions = {
         },
       },
     }),
+    media(),
   ],
 };
 

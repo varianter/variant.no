@@ -1,4 +1,4 @@
-import { soMeLinksID } from "studio/schemas/documents/socialMediaProfiles";
+import { soMeLinksID } from "studio/schemas/documents/siteSettings/socialMediaProfiles";
 
 // Define the SocialMediaLink interface based on the expected structure
 export interface SocialMediaLink {
@@ -12,5 +12,5 @@ export interface SocialMediaLink {
 export interface SocialMediaProfiles {
   _id: string;
   _type: typeof soMeLinksID;
-  soMeLinkArray: SocialMediaLink[];
+  soMeLinkArray?: SocialMediaLink[];
 }

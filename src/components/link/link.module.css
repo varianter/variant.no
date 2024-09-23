@@ -61,11 +61,11 @@
   font-weight: 500;
 
   &:hover {
-    color: var(--primary-green-dark);
+    color: var(--primary-dark);
   }
 
   &:active {
-    color: var(--secondary-green-dark2);
+    color: var(--primary-darker);
   }
 }
 
@@ -73,7 +73,7 @@
   color: var(--primary-white);
   cursor: pointer;
   text-decoration: none;
-  font-family: var(--font-darkerGrotesque);
+  font-family: var(--font-recoleta);
   font-size: 2rem;
   font-weight: 400;
 
@@ -87,5 +87,5 @@
 }
 
 .selected {
-  color: var(--primary-green-dark);
+  color: var(--primary-dark);
 }

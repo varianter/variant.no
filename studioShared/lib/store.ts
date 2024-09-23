@@ -1,8 +1,13 @@
-import * as queryStore from "@sanity/react-loader";
+import { createQueryStore } from "@sanity/react-loader";
 
 import { sharedClient } from "./client";
 import { token } from "./token";
 
-queryStore.setServerClient(sharedClient.withConfig({ token }));
+const { loadQuery: loadSharedQuery, setServerClient } = createQueryStore({
+  client: false,
+  ssr: true,
+});
 
-export const { loadQuery: loadSharedQuery } = queryStore;
+setServerClient(sharedClient.withConfig({ token }));
+
+export { loadSharedQuery };

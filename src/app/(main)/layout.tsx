@@ -14,11 +14,11 @@ import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
-import { loadQuery } from "studio/lib/store";
+import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./layout.module.css";
 
-const hasValidData = (data: any) => data && Object.keys(data).length > 0;
+const hasValidData = (data: unknown) => data && Object.keys(data).length > 0;
 
 export default async function Layout({
   children,
@@ -34,11 +34,19 @@ export default async function Layout({
     initialLegal,
     initialBrandAssets,
   ] = await Promise.all([
-    loadQuery<Navigation>(NAV_QUERY, {}, { perspective }),
-    loadQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
-    loadQuery<SocialMediaProfiles>(SOMEPROFILES_QUERY, {}, { perspective }),
-    loadQuery<LegalDocument[]>(LEGAL_DOCUMENTS_QUERY, {}, { perspective }),
-    loadQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
+    loadStudioQuery<Navigation>(NAV_QUERY, {}, { perspective }),
+    loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
+    loadStudioQuery<SocialMediaProfiles | null>(
+      SOMEPROFILES_QUERY,
+      {},
+      { perspective },
+    ),
+    loadStudioQuery<LegalDocument[]>(
+      LEGAL_DOCUMENTS_QUERY,
+      {},
+      { perspective },
+    ),
+    loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
   ]);
 
   const hasNavData = hasValidData(initialNav.data);
