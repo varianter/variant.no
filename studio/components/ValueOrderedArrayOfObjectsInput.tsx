@@ -1,13 +1,14 @@
 import { ArrayOfObjectsInputProps, ObjectItem } from "sanity";
 
-interface OrderedArrayOfObjectsInputProps extends ArrayOfObjectsInputProps {
+interface ValueOrderedArrayOfObjectsInputProps
+  extends ArrayOfObjectsInputProps {
   valueCompareFn: (a: ObjectItem, b: ObjectItem) => number;
 }
 
 export default function ValueOrderedArrayOfObjectsInput({
   valueCompareFn,
   ...defaultProps
-}: OrderedArrayOfObjectsInputProps) {
+}: ValueOrderedArrayOfObjectsInputProps) {
   const orderedMembers = defaultProps.members.toSorted((a, b) => {
     // place error items at the end
     if (a.kind === "error") {
