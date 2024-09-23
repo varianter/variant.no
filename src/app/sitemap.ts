@@ -25,9 +25,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const slugDocuments = await clientWithToken.fetch<DocumentWithSlug[]>(
     DOCUMENTS_WITH_SLUG_QUERY,
   );
-  const sitemapEntries = slugDocuments.map((s) => ({
-    url: new URL(s.slug.current, baseUrl).toString(),
-    lastModified: new Date(s._updatedAt),
+  const sitemapEntries = slugDocuments.map((slugDocument) => ({
+    url: new URL(slugDocument.slug.current, baseUrl).toString(),
+    lastModified: new Date(slugDocument._updatedAt),
   }));
   const landingPage = await clientWithToken.fetch<PageBuilder | null>(
     LANDING_PAGE_QUERY,
