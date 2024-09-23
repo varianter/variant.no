@@ -28,7 +28,7 @@ const config: WorkspaceOptions = {
     ...schema,
     templates: (prev) =>
       prev.filter(
-        (template) => template.value.language === defaultLanguage?.id
+        (template) => template.value.language === defaultLanguage?.id,
       ),
   },
   plugins: [

@@ -35,10 +35,10 @@ export default async function RootLayout({
   let siteLang;
 
   try {
-    const { data } = await loadStudioQuery<LanguageObject[]>(
+    const { data } = await loadStudioQuery<LanguageObject>(
       DEFAULT_LANGUAGE_QUERY,
     );
-    siteLang = data[0].id;
+    siteLang = data.id;
   } catch (error) {
     console.error("Error loading site settings:", error);
     siteLang = "en";

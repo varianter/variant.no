@@ -43,21 +43,21 @@ const adminSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(companyInfoID)
                 .documentId(companyInfoID)
-                .title("Parent Company")
+                .title("Parent Company"),
             ),
           S.listItem()
             .title("Company Locations")
             .icon(PinIcon)
             .child(
-              S.documentTypeList(companyLocationID).title("Company Locations")
+              S.documentTypeList(companyLocationID).title("Company Locations"),
             ),
           S.listItem()
             .title("Legal Documents")
             .icon(CogIcon)
             .child(
-              S.documentTypeList(legalDocumentID).title("Legal Documents")
+              S.documentTypeList(legalDocumentID).title("Legal Documents"),
             ),
-        ])
+        ]),
     );
 
 // Site Settings Section
@@ -76,7 +76,7 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(brandAssetsID)
                 .documentId(brandAssetsID)
-                .title("Brand Assets")
+                .title("Brand Assets"),
             ),
           S.listItem()
             .title("Navigation Manager")
@@ -85,13 +85,13 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType("navigationManager")
                 .documentId("navigationManager")
-                .title("Navigation Manager")
+                .title("Navigation Manager"),
             ),
           S.listItem()
             .title("Social Media Profiles")
             .icon(UsersIcon)
             .child(
-              S.document().schemaType(soMeLinksID).documentId(soMeLinksID)
+              S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
             .title("Languages")
@@ -100,7 +100,7 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(languageSettingsID)
                 .documentId(languageSettingsID)
-                .title("Languages")
+                .title("Languages"),
             ),
           S.listItem()
             .title("Default SEO")
@@ -109,13 +109,13 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(defaultSeoID)
                 .documentId(defaultSeoID)
-                .title("Default SEO")
+                .title("Default SEO"),
             ),
           S.listItem()
             .title("Broken Links")
             .icon(DoubleChevronRightIcon)
             .child(S.documentTypeList(brokenLinkID).title("Redirects")),
-        ])
+        ]),
     );
 
 // Section for dynamic and customizable Pages
@@ -150,7 +150,7 @@ const specialPagesSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
-                .title("Compensations")
+                .title("Compensations"),
             ),
           S.listItem()
             .title("Customer Cases")
@@ -159,9 +159,9 @@ const specialPagesSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(customerCasesPageID)
                 .documentId(customerCasesPageID)
-                .title("Customer Cases")
+                .title("Customer Cases"),
             ),
-        ])
+        ]),
     );
 
 // Main export

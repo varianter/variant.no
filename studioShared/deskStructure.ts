@@ -18,6 +18,6 @@ export const deskStructure: StructureResolver = (S) =>
             .params({
               type: customerCaseID,
               lang: defaultLanguage?.id,
-            })
+            }),
         ),
     ]);
