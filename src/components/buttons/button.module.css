@@ -43,11 +43,11 @@
   border: 1px solid var(--primary-dark);
 
   &:hover {
-    background: #085156;
+    background: var(--primary-darker);
   }
 
   &:active {
-    background: #053235;
+    background: var(--primary-darker);
   }
 }
 
