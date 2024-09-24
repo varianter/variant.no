@@ -69,9 +69,8 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
           : colorMap[themeType].default;
 
         return (
-          <label htmlFor={lang.id}>
+          <label htmlFor={lang.id} key={lang.id}>
             <Card
-              key={lang.id}
               padding={4}
               radius={2}
               shadow={1}
@@ -114,7 +113,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
           </label>
         );
       }),
-    [value, currentDefaultLanguage, themeType],
+    [value, currentDefaultLanguage, themeType]
   );
 
   return (
