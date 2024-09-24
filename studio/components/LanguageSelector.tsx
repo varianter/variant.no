@@ -113,7 +113,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
           </label>
         );
       }),
-    [value, currentDefaultLanguage, themeType]
+    [value, currentDefaultLanguage, themeType],
   );
 
   return (
