@@ -1,6 +1,7 @@
-import { Box, Button, Card, Checkbox, Flex, Text, useTheme } from "@sanity/ui";
+import { Box, Button, Card, Checkbox, Flex, useTheme } from "@sanity/ui";
 import React, { useMemo } from "react";
 import { PatchEvent, set } from "sanity";
+
 import {
   Language,
   supportedLanguages,
@@ -68,47 +69,52 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
           : colorMap[themeType].default;
 
         return (
-          <Card
-            key={lang.id}
-            padding={4}
-            radius={2}
-            shadow={1}
-            style={{ cursor: "pointer", backgroundColor }}
-            onClick={() => handleLanguageSelection(lang)}
-          >
-            <Flex align="center" justify="space-between">
-              <Flex align="center">
-                <Checkbox id={lang.id} checked={isSelected} readOnly />
-                <Box flex={1} paddingLeft={3}>
-                  <label htmlFor={lang.id}>
-                    {lang.icon} {lang.title}
-                  </label>
-                </Box>
-              </Flex>
-              {isSelected && (
-                <Box>
-                  <Button
-                    padding={2}
-                    onClick={(e) => {
-                      e.stopPropagation(); // Prevent triggering card's click handler
-                      handleDefaultSetting(lang);
+          <label htmlFor={lang.id}>
+            <Card
+              key={lang.id}
+              padding={4}
+              radius={2}
+              shadow={1}
+              style={{ cursor: "pointer", backgroundColor }}
+            >
+              <Flex align="center" justify="space-between">
+                <Flex align="center">
+                  <Checkbox
+                    id={lang.id}
+                    checked={isSelected}
+                    onClick={() => {
+                      handleLanguageSelection(lang);
                     }}
-                    mode={
-                      currentDefaultLanguage === lang.id ? "default" : "ghost"
-                    }
-                    tone="primary"
-                  >
-                    {currentDefaultLanguage === lang.id
-                      ? "Default"
-                      : "Set as Default"}
-                  </Button>
-                </Box>
-              )}
-            </Flex>
-          </Card>
+                  />
+                  <Box flex={1} paddingLeft={3}>
+                    {lang.icon} {lang.title}
+                  </Box>
+                </Flex>
+                {isSelected && (
+                  <Box>
+                    <Button
+                      padding={2}
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent triggering card's click handler
+                        handleDefaultSetting(lang);
+                      }}
+                      mode={
+                        currentDefaultLanguage === lang.id ? "default" : "ghost"
+                      }
+                      tone="primary"
+                    >
+                      {currentDefaultLanguage === lang.id
+                        ? "Default"
+                        : "Set as Default"}
+                    </Button>
+                  </Box>
+                )}
+              </Flex>
+            </Card>
+          </label>
         );
       }),
-    [value, currentDefaultLanguage, themeType]
+    [value, currentDefaultLanguage, themeType],
   );
 
   return (
