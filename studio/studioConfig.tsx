@@ -3,6 +3,7 @@ import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { internationalizedArray } from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
 
 import { languageID } from "internationalization/languageSchemaField";
@@ -12,7 +13,6 @@ import { deskStructure } from "./deskStructure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
-import { internationalizedArray } from "sanity-plugin-internationalized-array";
 
 const config: WorkspaceOptions = {
   name: "studio",
