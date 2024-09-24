@@ -1,11 +1,15 @@
 import { Box, Button, Card, Checkbox, Flex, Text, useTheme } from "@sanity/ui";
-import React from "react";
-import { ArrayOfObjectsInputProps, PatchEvent, set } from "sanity";
-
+import React, { useMemo } from "react";
+import { PatchEvent, set } from "sanity";
 import {
   Language,
   supportedLanguages,
 } from "internationalization/supportedLanguages";
+
+interface LanguageSelectorProps {
+  value?: Language[];
+  onChange: (event: PatchEvent) => void;
+}
 
 const colorMap = {
   dark: {
@@ -18,129 +22,100 @@ const colorMap = {
   },
 };
 
-const LanguageSelector = ({
-  value = [],
-  onChange,
-}: ArrayOfObjectsInputProps<Language>) => {
+const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
   const theme = useTheme();
   const prefersDark = theme.sanity.v2?.color._dark ?? false;
+  const themeType = prefersDark ? "dark" : "light";
 
-  // Get the currently set default language
+  // Find current default language
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
 
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
-    const updatedValue = isSelected
-      ? value.filter((item) => item.id !== lang.id) // Deselect language
-      : [...value, { ...lang, default: false }]; // Select language
+    let updatedValue;
 
-    const newDefaultLanguage = getNewDefaultLanguage(
-      updatedValue,
-      currentDefaultLanguage,
-      lang,
-    );
+    if (isSelected) {
+      // Deselect language
+      updatedValue = value.filter((item) => item.id !== lang.id);
 
-    const finalValue = updatedValue.map((item) => ({
-      ...item,
-      default: item.id === newDefaultLanguage,
-    }));
+      // If deselecting the default language, assign a new default
+      if (currentDefaultLanguage === lang.id && updatedValue.length > 0) {
+        updatedValue[0] = { ...updatedValue[0], default: true }; // Set the first language as default
+      }
+    } else {
+      // Add new language, without making it the default
+      updatedValue = [...value, { ...lang, default: false }];
+    }
 
-    onChange(PatchEvent.from(set(finalValue)));
+    onChange(PatchEvent.from(set(updatedValue)));
   };
 
   const handleDefaultSetting = (lang: Language) => {
     const updatedValue = value.map((item) => ({
       ...item,
-      default: item.id === lang.id, // Set selected language as default
+      default: item.id === lang.id, // Only one language can be the default
     }));
     onChange(PatchEvent.from(set(updatedValue)));
   };
 
-  const getBackgroundColor = (lang: Language) => {
-    const isSelected = value.some((item) => item.id === lang.id);
-    const theme = prefersDark ? "dark" : "light";
+  // Memoize value for performance and reusability
+  const languageCards = useMemo(
+    () =>
+      supportedLanguages.map((lang) => {
+        const isSelected = value.some((item) => item.id === lang.id);
+        const backgroundColor = isSelected
+          ? colorMap[themeType].selected
+          : colorMap[themeType].default;
 
-    return isSelected ? colorMap[theme].selected : colorMap[theme].default;
-  };
-
-  return (
-    <Flex direction="column" gap={3}>
-      {supportedLanguages.map((lang) => (
-        <Card
-          key={lang._key}
-          padding={4}
-          radius={2}
-          shadow={1}
-          style={{
-            cursor: "pointer",
-            backgroundColor: getBackgroundColor(lang),
-          }}
-          onClick={() => handleLanguageSelection(lang)}
-        >
-          <Flex align="center" justify="space-between">
-            <Flex align="center">
-              <Checkbox
-                id={lang.id}
-                checked={value.some((item) => item.id === lang.id)}
-                readOnly
-                disabled={
-                  value?.length <= 1 && currentDefaultLanguage === lang.id
-                }
-              />
-              <Box flex={1} paddingLeft={3}>
-                <Text>
+        return (
+          <Card
+            key={lang.id}
+            padding={4}
+            radius={2}
+            shadow={1}
+            style={{ cursor: "pointer", backgroundColor }}
+            onClick={() => handleLanguageSelection(lang)}
+          >
+            <Flex align="center" justify="space-between">
+              <Flex align="center">
+                <Checkbox id={lang.id} checked={isSelected} readOnly />
+                <Box flex={1} paddingLeft={3}>
                   <label htmlFor={lang.id}>
                     {lang.icon} {lang.title}
                   </label>
-                </Text>
-              </Box>
+                </Box>
+              </Flex>
+              {isSelected && (
+                <Box>
+                  <Button
+                    padding={2}
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent triggering card's click handler
+                      handleDefaultSetting(lang);
+                    }}
+                    mode={
+                      currentDefaultLanguage === lang.id ? "default" : "ghost"
+                    }
+                    tone="primary"
+                  >
+                    {currentDefaultLanguage === lang.id
+                      ? "Default"
+                      : "Set as Default"}
+                  </Button>
+                </Box>
+              )}
             </Flex>
-            {value.some((item) => item.id === lang.id) && (
-              <Box>
-                <Button
-                  padding={2}
-                  onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering card's click handler
-                    handleDefaultSetting(lang);
-                  }}
-                  mode={
-                    currentDefaultLanguage === lang.id ? "default" : "ghost"
-                  }
-                  tone="primary"
-                >
-                  {currentDefaultLanguage === lang.id
-                    ? "Default"
-                    : "Set as Default"}
-                </Button>
-              </Box>
-            )}
-          </Flex>
-        </Card>
-      ))}
+          </Card>
+        );
+      }),
+    [value, currentDefaultLanguage, themeType]
+  );
+
+  return (
+    <Flex direction="column" gap={3}>
+      {languageCards}
     </Flex>
   );
-};
-
-// Helper function to determine the new default language
-const getNewDefaultLanguage = (
-  updatedLanguages: Language[],
-  currentDefault: string | null,
-  deselectedLang: Language,
-): string | null => {
-  if (updatedLanguages.length === 1) {
-    return updatedLanguages[0].id;
-  }
-
-  if (currentDefault === deselectedLang.id) {
-    // Find a new default language if the current default is deselected
-    return (
-      supportedLanguages.find((lang) =>
-        updatedLanguages.some((item) => item.id === lang.id),
-      )?.id || null
-    );
-  }
-
-  return currentDefault; // Return existing default
 };
 
 export default LanguageSelector;
