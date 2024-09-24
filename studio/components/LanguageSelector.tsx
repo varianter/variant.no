@@ -45,7 +45,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
     const newDefaultLanguage = getNewDefaultLanguage(
       updatedValue,
       currentDefaultLanguage,
-      lang
+      lang,
     );
 
     const finalValue = updatedValue.map((item) => ({
@@ -130,7 +130,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 const getNewDefaultLanguage = (
   updatedLanguages: Language[],
   currentDefault: string | null,
-  deselectedLang: Language
+  deselectedLang: Language,
 ): string | null => {
   if (updatedLanguages.length === 1) {
     return updatedLanguages[0].id;
@@ -140,7 +140,7 @@ const getNewDefaultLanguage = (
     // Find a new default language if the current default is deselected
     return (
       supportedLanguages.find((lang) =>
-        updatedLanguages.some((item) => item.id === lang.id)
+        updatedLanguages.some((item) => item.id === lang.id),
       )?.id || null
     );
   }
