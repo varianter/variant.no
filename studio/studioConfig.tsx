@@ -12,6 +12,7 @@ import { deskStructure } from "./deskStructure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
+import { internationalizedArray } from "sanity-plugin-internationalized-array";
 
 const config: WorkspaceOptions = {
   name: "studio",
@@ -23,25 +24,7 @@ const config: WorkspaceOptions = {
   dataset,
   schema: {
     ...schema,
-    templates: (prev) => {
-      const prevFiltered = prev.filter(
-        (template) => template.id !== "legalDocument",
-      );
-
-      // Ensures no legal document is created with an empty language field
-      return [
-        ...prevFiltered,
-        {
-          id: "legalDocument-language",
-          title: "Legal Document with Language",
-          schemaType: "legalDocument",
-          parameters: [{ name: "language", type: "string" }],
-          value: (params: { language: string }) => ({
-            language: params.language,
-          }),
-        },
-      ];
-    },
+    templates: (prev) => prev.filter((template) => !template.value.language),
   },
   plugins: [
     structureTool({
@@ -68,6 +51,18 @@ const config: WorkspaceOptions = {
       // Optional. Adds UI for publishing all translations at once. Requires access to the Scheduling API
       // https://www.sanity.io/docs/scheduling-api
       // bulkPublish: true,
+    }),
+    internationalizedArray({
+      languages: [
+        { id: "no", title: "Norwegian" },
+        { id: "se", title: "Swedish" },
+        { id: "en", title: "English" },
+      ],
+      // languages: (client) =>
+      //   client.fetch(
+      //     `*[_type == "languageSettings"].languages[!default]{id, title}`
+      //   ),
+      fieldTypes: ["string"],
     }),
     presentationTool({
       previewUrl: {
