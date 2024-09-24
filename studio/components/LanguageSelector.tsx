@@ -30,11 +30,6 @@ const LanguageSelector = ({
 
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
-    // Prevent deselecting the last remaining language
-    if (isSelected && value.length === 1) {
-      return; // Exit early if there's only one language selected
-    }
-
     const updatedValue = isSelected
       ? value.filter((item) => item.id !== lang.id) // Deselect language
       : [...value, { ...lang, default: false }]; // Select language
@@ -88,6 +83,9 @@ const LanguageSelector = ({
                 id={lang.id}
                 checked={value.some((item) => item.id === lang.id)}
                 readOnly
+                disabled={
+                  value?.length <= 1 && currentDefaultLanguage === lang.id
+                }
               />
               <Box flex={1} paddingLeft={3}>
                 <Text>
