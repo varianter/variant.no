@@ -31,9 +31,6 @@ export const callToAction = defineField({
       validation: (rule) => rule.required(),
     },
   ],
-  initialValue: {
-    theme: "primary",
-  },
   preview: {
     select: {
       title: "basicTitle",
