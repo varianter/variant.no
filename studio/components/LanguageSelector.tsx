@@ -31,9 +31,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
   // Find current default language
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
 
-  const handleLanguageSelection = (lang: Language) => {
-    const isSelected = value.some((item) => item.id === lang.id);
-
+  const handleLanguageSelection = (lang: Language, isSelected: boolean) => {
     let updatedValue;
 
     if (isSelected) {
@@ -82,7 +80,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
                     id={lang.id}
                     checked={isSelected}
                     onClick={() => {
-                      handleLanguageSelection(lang);
+                      handleLanguageSelection(lang, isSelected);
                     }}
                     disabled={isSelected && value.length === 1}
                   />
