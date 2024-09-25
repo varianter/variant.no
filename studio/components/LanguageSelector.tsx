@@ -32,9 +32,8 @@ const LanguageSelector = ({
   const handleLanguageSelection = (lang: Language, isSelected: boolean) => {
     let updatedValue: Language[];
 
-    // Handle deselection of a language
     if (isSelected) {
-      // Remove the deselected language from the current value
+      // Deselect the language
       updatedValue = value.filter((item) => item.id !== lang.id);
 
       // If the deselected language is the current default
@@ -44,7 +43,7 @@ const LanguageSelector = ({
           (language) => language.id === lang.id,
         );
 
-        // Attempt to find the next selected language after the deselected one
+        // Get the next selected language in the supportedLanguages order
         const nextDefaultLanguage =
           supportedLanguages
             .slice(indexInSupported + 1) // Get languages after the deselected one
@@ -52,6 +51,7 @@ const LanguageSelector = ({
               updatedValue.some((item) => item.id === language.id),
             ) || updatedValue[0]; // Fallback to the first selected language if none found
 
+        // Set the new default if there's a next selected language
         updatedValue = updatedValue.map((item) => ({
           ...item,
           default: item.id === nextDefaultLanguage.id,
