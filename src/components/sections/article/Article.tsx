@@ -3,12 +3,12 @@ import CustomLink from "src/components/link/CustomLink";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
-import { ArticleSection } from "studio/lib/interfaces/pages";
+import { ArticleObject } from "studio/lib/interfaces/pages";
 
 import styles from "./article.module.css";
 
 interface ArticleProps {
-  article: ArticleSection;
+  article: ArticleObject;
 }
 
 const Article = ({ article }: ArticleProps) => {

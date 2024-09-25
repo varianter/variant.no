@@ -2,7 +2,7 @@ import { PortableTextBlock } from "sanity";
 
 import placeholder from "src/stories/assets/image-placeholder.png";
 import { LinkType } from "studio/lib/interfaces/navigation";
-import { ArticleSection } from "studio/lib/interfaces/pages";
+import { ArticleObject } from "studio/lib/interfaces/pages";
 import { ImageAlignment } from "studio/schemas/fields/media";
 
 const commonRichText: PortableTextBlock[] = [
@@ -43,11 +43,11 @@ const commonLink = {
   },
 };
 
-const createArticleSection = (
+const createArticle = (
   imageAlignment: ImageAlignment,
   includeLink: boolean,
   tag?: string,
-): ArticleSection => ({
+): ArticleObject => ({
   _key: "286f87152fce",
   _type: "article",
   basicTitle: "AI Carbon Accounting",
@@ -63,19 +63,16 @@ const createArticleSection = (
   ...(includeLink ? { link: commonLink } : {}),
 });
 
-export const extendedArticleLargeLeftMock = createArticleSection(
+export const extendedArticleLargeLeftMock = createArticle(
   ImageAlignment.Left,
   true,
   "Measure",
 );
-export const extendedArticleLargeRightMock = createArticleSection(
+export const extendedArticleLargeRightMock = createArticle(
   ImageAlignment.Right,
   true,
   "Measure",
 );
 
-export const articleLeftMock = createArticleSection(ImageAlignment.Left, false);
-export const articleRightMock = createArticleSection(
-  ImageAlignment.Right,
-  false,
-);
+export const articleLeftMock = createArticle(ImageAlignment.Left, false);
+export const articleRightMock = createArticle(ImageAlignment.Right, false);

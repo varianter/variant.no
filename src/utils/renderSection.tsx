@@ -19,7 +19,7 @@ import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import {
-  ArticleSection,
+  ArticleObject,
   CallToActionSection,
   CalloutSection,
   ContactFormSection,
@@ -71,8 +71,8 @@ const renderLogoSalad = (
   );
 };
 
-const renderArticleSection = (
-  section: ArticleSection,
+const renderArticle = (
+  section: ArticleObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -190,8 +190,8 @@ const SectionRenderer = ({
         initialData,
       );
     case "article":
-      return renderArticleSection(
-        section as ArticleSection,
+      return renderArticle(
+        section as ArticleObject,
         sectionIndex,
         isDraftMode,
         initialData,

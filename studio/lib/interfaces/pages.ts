@@ -20,7 +20,7 @@ export interface LogoSaladObject {
   supporting: string;
 }
 
-export interface ArticleSection {
+export interface ArticleObject {
   _key: string;
   _type: string;
   tag?: string;
@@ -89,7 +89,7 @@ export interface ContactFormSection {
 export type Section =
   | HeroObject
   | LogoSaladObject
-  | ArticleSection
+  | ArticleObject
   | CalloutSection
   | CallToActionSection;
 
