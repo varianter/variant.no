@@ -28,8 +28,8 @@
     display: block;
     width: 1.5rem;
     height: 1.5rem;
-    -webkit-mask: url("/spinner.svg") no-repeat 50% 50%;
-    mask: url("/spinner.svg") no-repeat 50% 50%;
+    -webkit-mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
+    mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
     background-color: var(--primary-black);
     animation: rotateSpinner 750ms linear infinite;
   }

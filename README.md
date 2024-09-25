@@ -186,6 +186,10 @@ By using fetchWithToken, you ensure that all data fetching happens securely, wit
 
 To enable preview functionality in the Presentation view, Sanity applies [steganography](https://www.sanity.io/docs/stega) to the string data. This manipulates the data to include invisible HTML entities to store various metadata. If the strings are used in business logic, that logic will likely break in the Presentation view. To fix this, Sanity provides the `stegaClean` utility to remove this extra metadata. An example of this in action can be found in [CompensationsPreview.tsx](src/compensations/CompensationsPreview.tsx), where JSON parsing of salary data fails without stega cleaning.
 
+### Serving files from `/public`
+
+As part of the Next.js middlewares setup, a [matcher config](src/middleware.ts) is used to ignore certain paths. In most cases, static files stored in the `/public` folder should not be passed through the middlewares. However, defining a regex that excludes all files from this folder can [get messy and risks excluding too many paths](https://github.com/vercel/next.js/discussions/36308#discussioncomment-9913288). To make the regex matcher cleaner, it is encouraged that no files are placed directly in `/public`. Instead, subfolders (e.g. `/public/_assets`) should be defined and then excluded explicitly. Just make sure to not collide with other router paths (prefixing with `_` reduces this risk).
+
 ### OpenGraph image customization
 
 As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified. Fonts and background can be customized as shown below.

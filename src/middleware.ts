@@ -49,10 +49,13 @@ export const config = {
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
+     * - sw.js (Service Worker)
      * - _next/static (static files)
      * - _next/image (image optimization files)
+     * - _assets (asset files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
+     * - studio, shared (Sanity studios)
      */
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/((?!api|sw.js|_next/static|_next/image|_assets|favicon.ico|sitemap.xml|robots.txt|studio|shared).*)",
   ],
 };
