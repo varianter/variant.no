@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { Hero } from "./Hero";
-import { mockHeroSection } from "./mockData";
+import { mockHero } from "./mockData";
 
 const meta: Meta<typeof Hero> = {
   title: "Components/Sections/Hero",
@@ -21,14 +21,14 @@ type Story = StoryObj<typeof Hero>;
 
 export const Landing: Story = {
   args: {
-    hero: mockHeroSection,
+    hero: mockHero,
     isLanding: true,
   },
 };
 
 export const Default: Story = {
   args: {
-    hero: mockHeroSection,
+    hero: mockHero,
     isLanding: false,
   },
 };

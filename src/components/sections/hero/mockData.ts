@@ -1,7 +1,7 @@
 import { LinkType } from "studio/lib/interfaces/navigation";
-import { HeroSection } from "studio/lib/interfaces/pages";
+import { HeroObject } from "studio/lib/interfaces/pages";
 
-export const mockHeroSection: HeroSection = {
+export const mockHero: HeroObject = {
   _key: "",
   _type: "hero",
   basicTitle: "Effortless Climate Action",

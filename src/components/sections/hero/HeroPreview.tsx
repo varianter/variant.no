@@ -4,7 +4,7 @@ import { useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
-import { HeroSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { HeroObject, PageBuilder } from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import { Hero } from "./Hero";
@@ -24,17 +24,17 @@ export default function HeroPreview({
     { initial: initialData },
   );
 
-  const heroSection = newData
+  const heroObject = newData
     ? (newData.sections.find(
         (section, index) => section._type === "hero" && index === sectionIndex,
-      ) as HeroSection)
+      ) as HeroObject)
     : (initialData.data.sections.find(
         (section, index) => section._type === "hero" && index === sectionIndex,
-      ) as HeroSection);
+      ) as HeroObject);
 
   return (
     <Suspense>
-      <Hero hero={heroSection} isLanding={isLanding} />
+      <Hero hero={heroObject} isLanding={isLanding} />
     </Suspense>
   );
 }

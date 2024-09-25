@@ -24,7 +24,7 @@ import {
   CalloutSection,
   ContactFormSection,
   GridSection,
-  HeroSection,
+  HeroObject,
   ImageSection,
   LogoSaladSection,
   PageBuilder,
@@ -40,8 +40,8 @@ interface SectionRendererProps {
   isLandingPage?: boolean;
 }
 
-const renderHeroSection = (
-  section: HeroSection,
+const renderHeroObject = (
+  section: HeroObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -175,8 +175,8 @@ const SectionRenderer = ({
 }: SectionRendererProps) => {
   switch (section._type) {
     case "hero":
-      return renderHeroSection(
-        section as HeroSection,
+      return renderHeroObject(
+        section as HeroObject,
         sectionIndex,
         isDraftMode,
         initialData,

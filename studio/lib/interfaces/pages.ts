@@ -4,7 +4,7 @@ import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
 
-export interface HeroSection {
+export interface HeroObject {
   _key: string;
   _type: string;
   basicTitle: string;
@@ -87,7 +87,7 @@ export interface ContactFormSection {
 }
 
 export type Section =
-  | HeroSection
+  | HeroObject
   | LogoSaladSection
   | ArticleSection
   | CalloutSection
