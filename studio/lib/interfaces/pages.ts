@@ -30,7 +30,7 @@ export interface ArticleObject {
   imageExtended: ImageExtendedProps;
 }
 
-export interface CalloutSection {
+export interface CalloutObject {
   _key: string;
   _type: string;
   richText?: PortableTextBlock[];
@@ -90,7 +90,7 @@ export type Section =
   | HeroObject
   | LogoSaladObject
   | ArticleObject
-  | CalloutSection
+  | CalloutObject
   | CallToActionSection;
 
 export interface PageBuilder {

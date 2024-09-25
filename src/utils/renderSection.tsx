@@ -21,7 +21,7 @@ import TestimonialsPreview from "src/components/sections/testimonials/Testimonia
 import {
   ArticleObject,
   CallToActionSection,
-  CalloutSection,
+  CalloutObject,
   ContactFormSection,
   GridSection,
   HeroObject,
@@ -84,8 +84,8 @@ const renderArticle = (
   );
 };
 
-const renderCalloutSection = (
-  section: CalloutSection,
+const renderCallout = (
+  section: CalloutObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -197,8 +197,8 @@ const SectionRenderer = ({
         initialData,
       );
     case "callout":
-      return renderCalloutSection(
-        section as CalloutSection,
+      return renderCallout(
+        section as CalloutObject,
         sectionIndex,
         isDraftMode,
         initialData,

@@ -10,7 +10,7 @@ export const heroID = "hero";
 
 export const hero = defineField({
   name: heroID,
-  title: "Hero Section",
+  title: "Hero",
   type: "object",
   fields: [
     title,
@@ -58,7 +58,7 @@ export const hero = defineField({
       const { title } = selection;
       return {
         title: title,
-        subtitle: "Hero Section",
+        subtitle: "Hero",
       };
     },
   },

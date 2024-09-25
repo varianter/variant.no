@@ -2,12 +2,12 @@ import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
-import { CalloutSection } from "studio/lib/interfaces/pages";
+import { CalloutObject } from "studio/lib/interfaces/pages";
 
 import styles from "./callout.module.css";
 
 interface CalloutProps {
-  callout: CalloutSection;
+  callout: CalloutObject;
 }
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
