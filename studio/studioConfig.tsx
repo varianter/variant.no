@@ -3,6 +3,7 @@ import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { internationalizedArray } from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
 
 import { languageID } from "internationalization/languageSchemaField";
@@ -13,6 +14,8 @@ import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 
+const SUPPORTED_LANGUAGES_QUERY = `*[_type == "languageSettings" && !(_id in path("drafts.*"))].languages[]{id, title}`;
+
 const config: WorkspaceOptions = {
   name: "studio",
   title: "Studio",
@@ -21,53 +24,28 @@ const config: WorkspaceOptions = {
   basePath: "/studio",
   projectId,
   dataset,
-  schema: {
-    ...schema,
-    templates: (prev) => {
-      const prevFiltered = prev.filter(
-        (template) => template.id !== "legalDocument",
-      );
-
-      // Ensures no legal document is created with an empty language field
-      return [
-        ...prevFiltered,
-        {
-          id: "legalDocument-language",
-          title: "Legal Document with Language",
-          schemaType: "legalDocument",
-          parameters: [{ name: "language", type: "string" }],
-          value: (params: { language: string }) => ({
-            language: params.language,
-          }),
-        },
-      ];
-    },
-  },
+  schema,
   plugins: [
     structureTool({
       structure: deskStructure,
     }),
     visionTool({ defaultApiVersion: apiVersion }),
     documentInternationalization({
-      // When async initial value templates are supported by the plugin, we can fetch dynamic languages like:
-      // (client) => {
-      //   return client.fetch(
-      //     `*[_type == "languageSettings"].languages[]{id, title}`
-      //   );
-      // }
-      // Currently, we have to use a static list of supported languages for both Norway and Sweden
-      // Limitation: Variant Norway and Varaint Sweden will not be able to filter out unsupported languages
-      supportedLanguages: [
-        { id: "no", title: "Norwegian" },
-        { id: "se", title: "Swedish" },
-        { id: "en", title: "English" },
-      ],
+      supportedLanguages: (client) => {
+        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
+      },
       schemaTypes: [legalDocumentID],
       languageField: languageID,
       apiVersion,
       // Optional. Adds UI for publishing all translations at once. Requires access to the Scheduling API
       // https://www.sanity.io/docs/scheduling-api
       // bulkPublish: true,
+    }),
+    internationalizedArray({
+      languages: (client) => {
+        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
+      },
+      fieldTypes: ["string"],
     }),
     presentationTool({
       previewUrl: {

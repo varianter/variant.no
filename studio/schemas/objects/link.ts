@@ -1,9 +1,8 @@
-import { StringInputProps, defineField } from "sanity";
+import { defineField } from "sanity";
 
 import AnchorSelect from "studio/components/AnchorSelect";
 import LinkTypeSelector from "studio/components/LinkTypeSelector";
 import NewTabSelector from "studio/components/NewTabSelector";
-import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
 export const linkID = "link";
 
@@ -27,22 +26,25 @@ const lazyBlogID = () => "blog";
 const lazyCompensationsID = () => "compensations";
 const lazyCustomerCasesPageID = () => "customerCasesPage";
 
+const linkTitle = defineField({
+  name: "linkTitle",
+  title: "Provide a link title",
+  type: "string",
+  description: "Enter the link text that will be displayed on the website.",
+  validation: (rule) => rule.max(60),
+  // adding custom components changes the internationalizedArrayString UI
+  // components: {
+  //   input: (props: StringInputProps) =>
+  //     StringInputWithCharacterCount({ ...props, maxCount: 60 }),
+  // },
+});
+
 export const link = defineField({
   name: linkID,
   title: "Link",
   type: "object",
   fields: [
-    {
-      name: "linkTitle",
-      title: "Provide a link title",
-      type: "string",
-      description: "Enter the link text that will be displayed on the website.",
-      validation: (rule) => rule.max(60),
-      components: {
-        input: (props: StringInputProps) =>
-          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
-      },
-    },
+    { ...linkTitle, type: "internationalizedArrayString" },
     {
       name: "linkType",
       title: "What type of link is this?",
@@ -191,7 +193,7 @@ export const link = defineField({
     prepare(selection) {
       const { title, type } = selection;
       return {
-        title: title,
+        title: title[0].value,
         subtitle: type ? type.charAt(0).toUpperCase() + type.slice(1) : "",
       };
     },
