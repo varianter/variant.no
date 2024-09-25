@@ -1,5 +1,5 @@
 import { Box, Button, Card, Checkbox, Flex, useTheme } from "@sanity/ui";
-import React, { useMemo } from "react";
+import React from "react";
 import { PatchEvent, set } from "sanity";
 
 import {
@@ -33,6 +33,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
 
   const handleLanguageSelection = (lang: Language) => {
     const isSelected = value.some((item) => item.id === lang.id);
+
     let updatedValue;
 
     if (isSelected) {
@@ -59,10 +60,9 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
     onChange(PatchEvent.from(set(updatedValue)));
   };
 
-  // Memoize value for performance and reusability
-  const languageCards = useMemo(
-    () =>
-      supportedLanguages.map((lang) => {
+  return (
+    <Flex direction="column" gap={3}>
+      {supportedLanguages.map((lang) => {
         const isSelected = value.some((item) => item.id === lang.id);
         const backgroundColor = isSelected
           ? colorMap[themeType].selected
@@ -84,6 +84,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
                     onClick={() => {
                       handleLanguageSelection(lang);
                     }}
+                    disabled={isSelected && value.length === 1}
                   />
                   <Box flex={1} paddingLeft={3}>
                     {lang.icon} {lang.title}
@@ -112,13 +113,7 @@ const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
             </Card>
           </label>
         );
-      }),
-    [value, currentDefaultLanguage, themeType],
-  );
-
-  return (
-    <Flex direction="column" gap={3}>
-      {languageCards}
+      })}
     </Flex>
   );
 };
