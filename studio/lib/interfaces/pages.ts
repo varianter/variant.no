@@ -12,7 +12,7 @@ export interface HeroObject {
   description: string;
 }
 
-export interface LogoSaladSection {
+export interface LogoSaladObject {
   _key: string;
   _type: string;
   logos: IImage[];
@@ -88,7 +88,7 @@ export interface ContactFormSection {
 
 export type Section =
   | HeroObject
-  | LogoSaladSection
+  | LogoSaladObject
   | ArticleSection
   | CalloutSection
   | CallToActionSection;

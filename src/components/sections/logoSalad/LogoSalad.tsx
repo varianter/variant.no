@@ -1,13 +1,13 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import Text from "src/components/text/Text";
-import { LogoSaladSection } from "studio/lib/interfaces/pages";
+import { LogoSaladObject } from "studio/lib/interfaces/pages";
 
 import { RenderLogo } from "./LogoRender";
 import styles from "./logoSalad.module.css";
 
 interface LogoSaladProps {
-  logoSalad: LogoSaladSection;
+  logoSalad: LogoSaladObject;
 }
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {

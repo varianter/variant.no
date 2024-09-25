@@ -4,7 +4,7 @@ import { useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
-import { LogoSaladSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { LogoSaladObject, PageBuilder } from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import { LogoSalad } from "./LogoSalad";
@@ -19,19 +19,19 @@ export default function LogoSaladPreview({
     { initial: initialData },
   );
 
-  const logoSaladSection = newData
+  const logoSalad = newData
     ? (newData.sections.find(
         (section, index) =>
           section._type === "logoSalad" && index === sectionIndex,
-      ) as LogoSaladSection)
+      ) as LogoSaladObject)
     : (initialData.data.sections.find(
         (section, index) =>
           section._type === "logoSalad" && index === sectionIndex,
-      ) as LogoSaladSection);
+      ) as LogoSaladObject);
 
   return (
     <Suspense>
-      <LogoSalad logoSalad={logoSaladSection} />
+      <LogoSalad logoSalad={logoSalad} />
     </Suspense>
   );
 }

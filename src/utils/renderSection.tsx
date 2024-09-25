@@ -26,7 +26,7 @@ import {
   GridSection,
   HeroObject,
   ImageSection,
-  LogoSaladSection,
+  LogoSaladObject,
   PageBuilder,
   Section,
   TestimonialsSection,
@@ -40,7 +40,7 @@ interface SectionRendererProps {
   isLandingPage?: boolean;
 }
 
-const renderHeroObject = (
+const renderHero = (
   section: HeroObject,
   sectionIndex: number,
   isDraftMode: boolean,
@@ -58,8 +58,8 @@ const renderHeroObject = (
   );
 };
 
-const renderLogoSaladSection = (
-  section: LogoSaladSection,
+const renderLogoSalad = (
+  section: LogoSaladObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -175,7 +175,7 @@ const SectionRenderer = ({
 }: SectionRendererProps) => {
   switch (section._type) {
     case "hero":
-      return renderHeroObject(
+      return renderHero(
         section as HeroObject,
         sectionIndex,
         isDraftMode,
@@ -183,8 +183,8 @@ const SectionRenderer = ({
         isLandingPage,
       );
     case "logoSalad":
-      return renderLogoSaladSection(
-        section as LogoSaladSection,
+      return renderLogoSalad(
+        section as LogoSaladObject,
         sectionIndex,
         isDraftMode,
         initialData,

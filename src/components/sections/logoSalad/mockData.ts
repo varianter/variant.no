@@ -3,7 +3,7 @@ import credoPartners from "src/stories/assets/logoSalad/credo-partners.png";
 import skift from "src/stories/assets/logoSalad/skift.png";
 import sparebanknord from "src/stories/assets/logoSalad/sparebank1-nord-norge.png";
 import virke from "src/stories/assets/logoSalad/virke.png";
-import { LogoSaladSection } from "studio/lib/interfaces/pages";
+import { LogoSaladObject } from "studio/lib/interfaces/pages";
 
 const logos = [
   {
@@ -38,7 +38,7 @@ const logos = [
   },
 ];
 
-export const mockLogoSaladSection: LogoSaladSection = {
+export const mockLogoSalad: LogoSaladObject = {
   _key: "1a33ab36f595",
   _type: "logoSalad",
   logos: logos,
@@ -46,7 +46,7 @@ export const mockLogoSaladSection: LogoSaladSection = {
     "More than 7000 companies are already using EnergiAI to stay compliant and save valuable time.",
 };
 
-export const extendedMockLogoSaladSection: LogoSaladSection = {
+export const extendedMockLogoSalad: LogoSaladObject = {
   _key: "1a33ab36f595",
   _type: "logoSalad",
   logos: logos,

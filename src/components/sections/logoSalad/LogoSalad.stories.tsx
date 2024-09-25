@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { LogoSalad } from "./LogoSalad";
-import { extendedMockLogoSaladSection, mockLogoSaladSection } from "./mockData";
+import { extendedMockLogoSalad, mockLogoSalad } from "./mockData";
 
 const meta: Meta<typeof LogoSalad> = {
   title: "Components/Sections/LogoSalad",
@@ -21,12 +21,12 @@ type Story = StoryObj<typeof LogoSalad>;
 
 export const Default: Story = {
   args: {
-    logoSalad: mockLogoSaladSection,
+    logoSalad: mockLogoSalad,
   },
 };
 
 export const Extended: Story = {
   args: {
-    logoSalad: extendedMockLogoSaladSection,
+    logoSalad: extendedMockLogoSalad,
   },
 };
