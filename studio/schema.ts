@@ -17,7 +17,7 @@ import customerCasesPage from "./schemas/documents/specialPages/customerCasesPag
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
-import { footerSection } from "./schemas/objects/footerSection";
+import { footerObject } from "./schemas/objects/footer";
 import { link } from "./schemas/objects/link";
 import { socialMedia } from "./schemas/objects/socialMedia";
 
@@ -29,7 +29,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pageBuilder,
     link,
     socialMedia,
-    footerSection,
+    footerObject,
     callToActionField,
     blog,
     posts,

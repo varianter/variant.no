@@ -2,7 +2,7 @@ export interface Navigation {
   _id: string;
   main: ILink[];
   sidebar?: ILink[];
-  footer?: FooterSection[];
+  footer?: FooterObject[];
 }
 
 interface Reference {
@@ -30,7 +30,7 @@ export enum LinkType {
   Phone = "phone",
 }
 
-export interface FooterSection {
+export interface FooterObject {
   _key: string;
   _type: string;
   sectionTitle: string;

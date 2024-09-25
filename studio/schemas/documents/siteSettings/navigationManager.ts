@@ -2,7 +2,7 @@ import { defineType } from "sanity";
 
 import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
-import { footerSectionID } from "studio/schemas/objects/footerSection";
+import { footerID } from "studio/schemas/objects/footer";
 import { linkID } from "studio/schemas/objects/link";
 
 export const navManagerID = {
@@ -52,7 +52,7 @@ const navigationManager = defineType({
       description:
         "The footer menu consists of different sections. Here you can add and define these sections. Each section can contain either social media links or custom links and text or images (e.g., logos). Note: The order in which you add the sections here is how they will be displayed on the website.",
       type: "array",
-      of: [{ type: footerSectionID.main }],
+      of: [{ type: footerID.main }],
     },
     {
       name: navManagerID.sidebar,

@@ -59,7 +59,7 @@ export const mockNavigation: Navigation = {
   footer: [
     {
       _key: "47456f5da563",
-      _type: "footerSection",
+      _type: "footer",
       sectionTitle: "Social Media",
       sectionType: SectionType.SocialMedia,
       socialMediaLinks: {
@@ -68,7 +68,7 @@ export const mockNavigation: Navigation = {
     },
     {
       _key: "c3d5803182fb",
-      _type: "footerSection",
+      _type: "footer",
       sectionTitle: "Content",
       sectionType: SectionType.Content,
       linksAndContent: [

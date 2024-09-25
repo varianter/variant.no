@@ -8,8 +8,8 @@ import { richText } from "studio/schemas/fields/text";
 
 import { linkID } from "./link";
 
-export const footerSectionID = {
-  main: "footerSection",
+export const footerID = {
+  main: "footerObject",
   title: "sectionTitle",
   type: "sectionType",
   soMeLinks: "socialMediaLinks",
@@ -26,13 +26,13 @@ interface Parent {
   sectionType?: SectionType;
 }
 
-export const footerSection = defineType({
-  name: footerSectionID.main,
-  title: "Footer Section",
+export const footerObject = defineType({
+  name: footerID.main,
+  title: "Footer",
   type: "object",
   fields: [
     {
-      name: footerSectionID.title,
+      name: footerID.title,
       title: "Section Title",
       type: "string",
       description:
@@ -47,7 +47,7 @@ export const footerSection = defineType({
       },
     },
     {
-      name: footerSectionID.type,
+      name: footerID.type,
       title: "Content Type",
       description:
         "Select the type of content to display in this footer section.",
@@ -63,7 +63,7 @@ export const footerSection = defineType({
       initialValue: SectionType.Content,
     },
     {
-      name: footerSectionID.linksAndContent,
+      name: footerID.linksAndContent,
       title: "Links and Content",
       type: "array",
       of: [
@@ -81,7 +81,7 @@ export const footerSection = defineType({
         parent?.sectionType !== SectionType.Content,
     },
     {
-      name: footerSectionID.soMeLinks,
+      name: footerID.soMeLinks,
       title: "Social Media Links",
       type: "reference",
       to: [{ type: soMeLinksID }],
@@ -101,8 +101,8 @@ export const footerSection = defineType({
   ],
   preview: {
     select: {
-      title: footerSectionID.title,
-      type: footerSectionID.type,
+      title: footerID.title,
+      type: footerID.type,
     },
     prepare(selection) {
       const { title, type } = selection;
