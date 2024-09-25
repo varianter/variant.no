@@ -15,18 +15,17 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
-//import { blogId } from "./documents/blog";
-import { companyInfoID } from "./documents/admin/companyInfo";
-import { companyLocationID } from "./documents/admin/companyLocation";
-import { defaultSeoID } from "./documents/admin/defaultSeo";
-import { legalDocumentID } from "./documents/admin/legalDocuments";
-import { compensationsId } from "./documents/compensations";
-import { pageBuilderID } from "./documents/pageBuilder";
-import { brandAssetsID } from "./documents/siteSettings/brandAssets";
-import { brokenLinkID } from "./documents/siteSettings/brokenLink";
-import { soMeLinksID } from "./documents/siteSettings/socialMediaProfiles";
-import { supportedLanguagesID } from "./documents/siteSettings/supportedLanguages";
-import { customerCasesPageID } from "./documents/specialPages/customerCasesPage";
+import { companyInfoID } from "./schemas/documents/admin/companyInfo";
+import { companyLocationID } from "./schemas/documents/admin/companyLocation";
+import { defaultSeoID } from "./schemas/documents/admin/defaultSeo";
+import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
+import { compensationsId } from "./schemas/documents/compensations";
+import { languageSettingsID } from "./schemas/documents/languageSettings";
+import { pageBuilderID } from "./schemas/documents/pageBuilder";
+import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
+import { brokenLinkID } from "./schemas/documents/siteSettings/brokenLink";
+import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
+import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -95,13 +94,13 @@ const siteSettingSection = (S: StructureBuilder) =>
               S.document().schemaType(soMeLinksID).documentId(soMeLinksID),
             ),
           S.listItem()
-            .title("Supported Languages")
+            .title("Languages")
             .icon(TranslateIcon)
             .child(
               S.document()
-                .schemaType(supportedLanguagesID)
-                .documentId(supportedLanguagesID)
-                .title("Supported Languages"),
+                .schemaType(languageSettingsID)
+                .documentId(languageSettingsID)
+                .title("Languages"),
             ),
           S.listItem()
             .title("Default SEO")
@@ -127,7 +126,7 @@ const pagesSection = (S: StructureBuilder) =>
     .child(S.documentTypeList(pageBuilderID).title("Pages"));
 
 //Section for set pages
-const SpecialPagesSection = (S: StructureBuilder) =>
+const specialPagesSection = (S: StructureBuilder) =>
   S.listItem()
     .title("Special Pages")
     .icon(SparkleIcon)
@@ -166,14 +165,12 @@ const SpecialPagesSection = (S: StructureBuilder) =>
     );
 
 // Main export
-const buildDeskStructure = (S: StructureBuilder) =>
+export const deskStructure = (S: StructureBuilder) =>
   S.list()
     .title("Content")
     .items([
       adminSection(S),
       siteSettingSection(S),
       pagesSection(S),
-      SpecialPagesSection(S),
+      specialPagesSection(S),
     ]);
-
-export default buildDeskStructure;

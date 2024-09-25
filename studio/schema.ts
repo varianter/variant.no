@@ -6,13 +6,13 @@ import defaultSeo from "./schemas/documents/admin/defaultSeo";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
 import blog from "./schemas/documents/blog";
 import compensations from "./schemas/documents/compensations";
+import languageSettings from "./schemas/documents/languageSettings";
 import pageBuilder from "./schemas/documents/pageBuilder";
 import posts from "./schemas/documents/post";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import brokenLink from "./schemas/documents/siteSettings/brokenLink";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
-import supportedLanguages from "./schemas/documents/siteSettings/supportedLanguages";
 import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
@@ -40,8 +40,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     brokenLink,
     benefitsByLocation,
     companyLocation,
-    supportedLanguages,
     defaultSeo,
     brandAssets,
+    languageSettings,
   ],
 };
