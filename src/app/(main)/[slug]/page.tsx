@@ -12,7 +12,7 @@ import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
-import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { CompensationsDocument } from "studio/lib/interfaces/compensations";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
@@ -57,13 +57,13 @@ async function Page({ params }: Props) {
   const [
     initialPage,
     initialBlogPage,
-    initialCompensationsPage,
+    initialCompensationsDocument,
     initialLocationsData,
     initialCustomerCases,
   ] = await Promise.all([
     loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
-    loadStudioQuery<CompensationsPage>(
+    loadStudioQuery<CompensationsDocument>(
       COMPENSATIONS_PAGE_QUERY,
       { slug },
       { perspective },
@@ -123,15 +123,15 @@ async function Page({ params }: Props) {
     );
   }
 
-  if (initialCompensationsPage.data && initialLocationsData.data) {
+  if (initialCompensationsDocument.data && initialLocationsData.data) {
     return isDraftMode ? (
       <CompensationsPreview
-        initialCompensations={initialCompensationsPage}
+        initialCompensations={initialCompensationsDocument}
         initialLocations={initialLocationsData}
       />
     ) : (
       <Compensations
-        compensations={initialCompensationsPage.data}
+        compensations={initialCompensationsDocument.data}
         locations={initialLocationsData.data}
       />
     );

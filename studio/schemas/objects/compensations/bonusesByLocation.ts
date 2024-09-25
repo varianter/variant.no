@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-import { BonusPage } from "studio/lib/interfaces/compensations";
+import { BonusObject } from "studio/lib/interfaces/compensations";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { location, locationID } from "studio/schemas/objects/locations";
 
@@ -79,7 +79,7 @@ export const bonusesByLocation = defineField({
           const latestBonus =
             yearlyBonuses && yearlyBonuses.length > 0
               ? yearlyBonuses.reduce(
-                  (latestBonus: BonusPage, bonus: BonusPage) => {
+                  (latestBonus: BonusObject, bonus: BonusObject) => {
                     if (bonus.year > latestBonus.year) {
                       return bonus;
                     }

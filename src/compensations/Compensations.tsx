@@ -7,7 +7,7 @@ import {
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Text from "src/components/text/Text";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
-import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { CompensationsDocument } from "studio/lib/interfaces/compensations";
 
 import styles from "./compensations.module.css";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
@@ -24,7 +24,7 @@ import {
 } from "./utils/salary";
 
 interface CompensationsProps {
-  compensations: CompensationsPage;
+  compensations: CompensationsDocument;
   locations: CompanyLocation[];
 }
 

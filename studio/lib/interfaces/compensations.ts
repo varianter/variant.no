@@ -15,21 +15,21 @@ export interface BenefitsByLocation {
   benefits: Benefit[];
 }
 
-export interface SalariesPage {
+export interface SalariesObject {
   _type: string;
   _key: string;
   year: number;
   salaries: string;
 }
 
-export interface BonusesByLocationPage {
+export interface BonusesByLocationObject {
   _type: string;
   _key: string;
   location: Reference;
-  yearlyBonuses: BonusPage[];
+  yearlyBonuses: BonusObject[];
 }
 
-export interface BonusPage {
+export interface BonusObject {
   _type: string;
   _key: string;
   year: number;
@@ -40,10 +40,10 @@ export interface SalariesByLocation {
   _key: string;
   _type: string;
   location: Reference;
-  yearlySalaries: SalariesPage[];
+  yearlySalaries: SalariesObject[];
 }
 
-export interface CompensationsPage {
+export interface CompensationsDocument {
   _createdAt: string;
   _id: string;
   _rev: string;
@@ -54,7 +54,7 @@ export interface CompensationsPage {
   slug: Slug;
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
-  bonusesByLocation: BonusesByLocationPage[];
+  bonusesByLocation: BonusesByLocationObject[];
   salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
 }

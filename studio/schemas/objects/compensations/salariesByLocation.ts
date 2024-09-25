@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
 
 import { SalariesInput } from "studio/components/salariesInput/SalariesInput";
-import { SalariesPage } from "studio/lib/interfaces/compensations";
+import { SalariesObject } from "studio/lib/interfaces/compensations";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { location, locationID } from "studio/schemas/objects/locations";
 
@@ -74,12 +74,15 @@ export const salariesByLocation = defineField({
         prepare({ location, yearlySalaries }) {
           const latestYear =
             yearlySalaries && yearlySalaries.length > 0
-              ? yearlySalaries.reduce((acc: number, salaries: SalariesPage) => {
-                  if (salaries.year > acc) {
-                    return salaries.year;
-                  }
-                  return acc;
-                }, yearlySalaries[0].year)
+              ? yearlySalaries.reduce(
+                  (acc: number, salaries: SalariesObject) => {
+                    if (salaries.year > acc) {
+                      return salaries.year;
+                    }
+                    return acc;
+                  },
+                  yearlySalaries[0].year,
+                )
               : undefined;
           return {
             title: location || "No location selected",

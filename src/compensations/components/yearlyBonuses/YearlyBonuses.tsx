@@ -1,10 +1,10 @@
 import Text from "src/components/text/Text";
-import { BonusPage } from "studio/lib/interfaces/compensations";
+import { BonusObject } from "studio/lib/interfaces/compensations";
 
 import styles from "./yearlyBonuses.module.css";
 
 interface YearlyBonusesProps {
-  bonuses: BonusPage[];
+  bonuses: BonusObject[];
 }
 
 const YearlyBonuses = ({ bonuses }: YearlyBonusesProps) => {
