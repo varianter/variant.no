@@ -37,7 +37,7 @@ export interface CalloutObject {
   link?: ILink;
 }
 
-export interface CallToActionSection {
+export interface CallToActionObject {
   _key: string;
   _type: string;
   basicTitle?: string;
@@ -91,7 +91,7 @@ export type Section =
   | LogoSaladObject
   | ArticleObject
   | CalloutObject
-  | CallToActionSection;
+  | CallToActionObject;
 
 export interface PageBuilder {
   _createdAt: string;

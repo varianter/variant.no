@@ -3,10 +3,10 @@ import { defineField } from "sanity";
 import callToActionField from "studio/schemas/fields/callToActionFields";
 import { title } from "studio/schemas/fields/text";
 
-export const callToActionSectionID = "ctaSection";
+export const callToActionID = "ctaObject";
 
 export const callToAction = defineField({
-  name: callToActionSectionID,
+  name: callToActionID,
   title: "Call to Action",
   type: "object",
   fields: [

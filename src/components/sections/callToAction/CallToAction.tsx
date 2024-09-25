@@ -1,11 +1,11 @@
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
-import { CallToActionSection } from "studio/lib/interfaces/pages";
+import { CallToActionObject } from "studio/lib/interfaces/pages";
 
 import styles from "./callToAction.module.css";
 
 interface CallToActionProps {
-  callToAction: CallToActionSection;
+  callToAction: CallToActionObject;
 }
 
 const CallToAction = ({ callToAction }: CallToActionProps) => {

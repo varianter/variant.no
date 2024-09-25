@@ -4,7 +4,7 @@ import { useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
-import { CallToActionSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { CallToActionObject, PageBuilder } from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/page";
 
 import CallToAction from "./CallToAction";
@@ -19,19 +19,19 @@ export default function CallToActionPreview({
     { initial: initialData },
   );
 
-  const callToActionSection = newData
+  const callToAction = newData
     ? (newData.sections.find(
         (section, index) =>
           section._type === "ctaSection" && index === sectionIndex,
-      ) as CallToActionSection)
+      ) as CallToActionObject)
     : (initialData.data.sections.find(
         (section, index) =>
           section._type === "ctaSection" && index === sectionIndex,
-      ) as CallToActionSection);
+      ) as CallToActionObject);
 
   return (
     <Suspense>
-      <CallToAction callToAction={callToActionSection} />
+      <CallToAction callToAction={callToAction} />
     </Suspense>
   );
 }

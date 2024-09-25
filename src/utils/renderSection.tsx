@@ -20,7 +20,7 @@ import { Testimonials } from "src/components/sections/testimonials/Testimonials"
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import {
   ArticleObject,
-  CallToActionSection,
+  CallToActionObject,
   CalloutObject,
   ContactFormSection,
   GridSection,
@@ -97,8 +97,8 @@ const renderCallout = (
   );
 };
 
-const renderCallToActionSection = (
-  section: CallToActionSection,
+const renderCallToAction = (
+  section: CallToActionObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -204,8 +204,8 @@ const SectionRenderer = ({
         initialData,
       );
     case "ctaSection":
-      return renderCallToActionSection(
-        section as CallToActionSection,
+      return renderCallToAction(
+        section as CallToActionObject,
         sectionIndex,
         isDraftMode,
         initialData,
