@@ -30,18 +30,35 @@ const LanguageSelector = ({
   const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
 
   const handleLanguageSelection = (lang: Language, isSelected: boolean) => {
-    let updatedValue;
+    let updatedValue: Language[];
 
+    // Handle deselection of a language
     if (isSelected) {
-      // Deselect language
+      // Remove the deselected language from the current value
       updatedValue = value.filter((item) => item.id !== lang.id);
 
-      // If deselecting the default language, assign a new default
-      if (currentDefaultLanguage === lang.id && updatedValue.length > 0) {
-        updatedValue[0] = { ...updatedValue[0], default: true }; // Set the first language as default
+      // If the deselected language is the current default
+      if (lang.id === currentDefaultLanguage) {
+        // Find the index of the deselected language in supportedLanguages
+        const indexInSupported = supportedLanguages.findIndex(
+          (language) => language.id === lang.id,
+        );
+
+        // Attempt to find the next selected language after the deselected one
+        const nextDefaultLanguage =
+          supportedLanguages
+            .slice(indexInSupported + 1) // Get languages after the deselected one
+            .find((language) =>
+              updatedValue.some((item) => item.id === language.id),
+            ) || updatedValue[0]; // Fallback to the first selected language if none found
+
+        updatedValue = updatedValue.map((item) => ({
+          ...item,
+          default: item.id === nextDefaultLanguage.id,
+        }));
       }
     } else {
-      // Add new language, without making it the default
+      // Add the newly selected language without making it default
       updatedValue = [...value, { ...lang, default: false }];
     }
 
