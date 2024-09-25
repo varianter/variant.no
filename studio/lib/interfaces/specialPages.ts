@@ -1,6 +1,6 @@
 import { Slug } from "./global";
 
-export interface CustomerCasePage {
+export interface CustomerCaseDocument {
   _createdAt: string;
   _id: string;
   _rev: string;

@@ -3,7 +3,7 @@ import LinkButton from "src/components/linkButton/LinkButton";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { getDraftModeInfo } from "src/utils/draftmode";
-import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
+import { CustomerCaseDocument } from "studio/lib/interfaces/specialPages";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
@@ -11,7 +11,7 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import styles from "./customerCases.module.css";
 
 interface CustomerCasesProps {
-  customerCasesPage: CustomerCasePage;
+  customerCasesPage: CustomerCaseDocument;
 }
 
 const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {

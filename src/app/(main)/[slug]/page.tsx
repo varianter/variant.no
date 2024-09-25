@@ -14,7 +14,7 @@ import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsDocument } from "studio/lib/interfaces/compensations";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
-import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
+import { CustomerCaseDocument } from "studio/lib/interfaces/specialPages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
 import {
   BLOG_PAGE_QUERY,
@@ -73,7 +73,7 @@ async function Page({ params }: Props) {
       {},
       { perspective },
     ),
-    loadStudioQuery<CustomerCasePage>(
+    loadStudioQuery<CustomerCaseDocument>(
       CUSTOMER_CASES_PAGE_QUERY,
       { slug },
       { perspective },
