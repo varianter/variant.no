@@ -44,7 +44,7 @@ export interface CallToActionObject {
   callToActions?: ILink[];
 }
 
-export interface TestimonialsSection {
+export interface TestimonialsObject {
   _key: string;
   _type: string;
   basicTitle?: string;

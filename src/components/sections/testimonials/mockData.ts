@@ -1,9 +1,9 @@
 import alex from "src/stories/assets/alex.jpg";
 import mika from "src/stories/assets/mika.jpg";
 import vince from "src/stories/assets/vince.jpg";
-import { TestimonialsSection } from "studio/lib/interfaces/pages";
+import { TestimonialsObject } from "studio/lib/interfaces/pages";
 
-export const testimonialsMockData: TestimonialsSection = {
+export const testimonialsMockData: TestimonialsObject = {
   _type: "testimonials",
   _key: "b69121269c53",
   basicTitle: "Take it from our customers",

@@ -29,7 +29,7 @@ import {
   LogoSaladObject,
   PageBuilder,
   Section,
-  TestimonialsSection,
+  TestimonialsObject,
 } from "studio/lib/interfaces/pages";
 
 interface SectionRendererProps {
@@ -113,8 +113,8 @@ const renderCallToAction = (
   );
 };
 
-const renderTestimonialsSection = (
-  section: TestimonialsSection,
+const renderTestimonials = (
+  section: TestimonialsObject,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -211,8 +211,8 @@ const SectionRenderer = ({
         initialData,
       );
     case "testimonials":
-      return renderTestimonialsSection(
-        section as TestimonialsSection,
+      return renderTestimonials(
+        section as TestimonialsObject,
         sectionIndex,
         isDraftMode,
         initialData,

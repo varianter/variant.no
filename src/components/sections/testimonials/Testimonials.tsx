@@ -2,13 +2,13 @@
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import useTabs from "src/utils/hooks/useTabs";
-import { TestimonialsSection } from "studio/lib/interfaces/pages";
+import { TestimonialsObject } from "studio/lib/interfaces/pages";
 
 import { RenderImage } from "./RenderAvatar";
 import styles from "./testimonials.module.css";
 
 interface TestimonialsProps {
-  testimonials: TestimonialsSection;
+  testimonials: TestimonialsObject;
 }
 
 export const Testimonials = ({ testimonials }: TestimonialsProps) => {
