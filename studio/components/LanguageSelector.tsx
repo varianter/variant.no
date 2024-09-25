@@ -18,48 +18,43 @@ const colorMap = {
   },
 };
 
-const LanguageSelector = ({
-  value = [],
-  onChange,
-}: ArrayOfObjectsInputProps<Language>) => {
+const LanguageSelector = (props: ArrayOfObjectsInputProps<Language>) => {
+  const { value = [], onChange } = props;
   const theme = useTheme();
   const prefersDark = theme.sanity.v2?.color._dark ?? false;
   const themeType = prefersDark ? "dark" : "light";
+  const currentDefaultLanguage: string | null =
+    value.find((lang) => lang.default)?.id || null;
 
-  // Find current default language
-  const currentDefaultLanguage = value.find((lang) => lang.default)?.id || null;
+  const getNextDefaultLanguage = (updatedValue: Language[], lang: Language) => {
+    const indexInSupported = supportedLanguages.findIndex(
+      (language) => language.id === lang.id,
+    );
+    return (
+      supportedLanguages
+        .slice(indexInSupported + 1)
+        .find((language) =>
+          updatedValue.some((item) => item.id === language.id),
+        ) ||
+      supportedLanguages.find((language) =>
+        updatedValue.some((item) => item.id === language.id),
+      )
+    );
+  };
 
   const handleLanguageSelection = (lang: Language, isSelected: boolean) => {
-    let updatedValue: Language[];
+    if (isSelected && value.length === 1) return;
 
-    if (isSelected) {
-      // Deselect the language
-      updatedValue = value.filter((item) => item.id !== lang.id);
+    let updatedValue = isSelected
+      ? value.filter((item) => item.id !== lang.id)
+      : [...value, { ...lang, default: false }];
 
-      // If the deselected language is the current default
-      if (lang.id === currentDefaultLanguage) {
-        // Find the index of the deselected language in supportedLanguages
-        const indexInSupported = supportedLanguages.findIndex(
-          (language) => language.id === lang.id,
-        );
-
-        // Get the next selected language in the supportedLanguages order
-        const nextDefaultLanguage =
-          supportedLanguages
-            .slice(indexInSupported + 1) // Get languages after the deselected one
-            .find((language) =>
-              updatedValue.some((item) => item.id === language.id),
-            ) || updatedValue[0]; // Fallback to the first selected language if none found
-
-        // Set the new default if there's a next selected language
-        updatedValue = updatedValue.map((item) => ({
-          ...item,
-          default: item.id === nextDefaultLanguage.id,
-        }));
-      }
-    } else {
-      // Add the newly selected language without making it default
-      updatedValue = [...value, { ...lang, default: false }];
+    if (isSelected && lang.id === currentDefaultLanguage) {
+      const nextDefaultLanguage = getNextDefaultLanguage(updatedValue, lang);
+      updatedValue = updatedValue.map((item) => ({
+        ...item,
+        default: item.id === (nextDefaultLanguage?.id || null),
+      }));
     }
 
     onChange(PatchEvent.from(set(updatedValue)));
@@ -68,7 +63,7 @@ const LanguageSelector = ({
   const handleDefaultSetting = (lang: Language) => {
     const updatedValue = value.map((item) => ({
       ...item,
-      default: item.id === lang.id, // Only one language can be the default
+      default: item.id === lang.id,
     }));
     onChange(PatchEvent.from(set(updatedValue)));
   };
@@ -94,10 +89,8 @@ const LanguageSelector = ({
                   <Checkbox
                     id={lang.id}
                     checked={isSelected}
-                    onClick={() => {
-                      handleLanguageSelection(lang, isSelected);
-                    }}
-                    disabled={isSelected && value.length === 1}
+                    onClick={() => handleLanguageSelection(lang, isSelected)}
+                    aria-label={`Select ${lang.title}`}
                   />
                   <Box flex={1} paddingLeft={3}>
                     {lang.icon} {lang.title}
@@ -108,7 +101,7 @@ const LanguageSelector = ({
                     <Button
                       padding={2}
                       onClick={(e) => {
-                        e.stopPropagation(); // Prevent triggering card's click handler
+                        e.stopPropagation();
                         handleDefaultSetting(lang);
                       }}
                       mode={
