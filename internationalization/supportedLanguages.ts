@@ -33,3 +33,6 @@ export const supportedLanguages: Language[] = [
 ];
 
 export const defaultLanguage = supportedLanguages.find((lang) => lang.default);
+export function getLanguageById(id: string) {
+  return supportedLanguages.find((lang) => lang.id === id);
+}
