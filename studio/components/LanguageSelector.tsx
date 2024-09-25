@@ -1,16 +1,11 @@
 import { Box, Button, Card, Checkbox, Flex, useTheme } from "@sanity/ui";
 import React from "react";
-import { PatchEvent, set } from "sanity";
+import { ArrayOfObjectsInputProps, PatchEvent, set } from "sanity";
 
 import {
   Language,
   supportedLanguages,
 } from "internationalization/supportedLanguages";
-
-interface LanguageSelectorProps {
-  value?: Language[];
-  onChange: (event: PatchEvent) => void;
-}
 
 const colorMap = {
   dark: {
@@ -23,7 +18,10 @@ const colorMap = {
   },
 };
 
-const LanguageSelector = ({ value = [], onChange }: LanguageSelectorProps) => {
+const LanguageSelector = ({
+  value = [],
+  onChange,
+}: ArrayOfObjectsInputProps<Language>) => {
   const theme = useTheme();
   const prefersDark = theme.sanity.v2?.color._dark ?? false;
   const themeType = prefersDark ? "dark" : "light";
