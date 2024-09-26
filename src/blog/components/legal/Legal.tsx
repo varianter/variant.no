@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { PortableTextBlock } from "sanity";
 
+import LinkButton from "src/components/linkButton/LinkButton";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
+import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 
 import styles from "./legal.module.css";
 
@@ -19,7 +21,18 @@ const extractHeadings = (blocks: PortableTextBlock[]) => {
 };
 
 const Legal = ({ document }: { document: LegalDocument }) => {
-  const headings = extractHeadings(document.richText);
+  console.log(document.richText);
+  const headings = extractHeadings(document.richText ?? []);
+
+  const link: ILink = {
+    _key: "string",
+    _type: "internalLink",
+    linkTitle: "Add legal data",
+    linkType: LinkType.Internal,
+    internalLink: {
+      _ref: `studio/structure/admin;legalDocuments;${document._id}`,
+    },
+  };
 
   return (
     <div>
@@ -51,7 +64,18 @@ const Legal = ({ document }: { document: LegalDocument }) => {
             </ul>
           </div>
           <div className={styles.document}>
-            <RichText value={document.richText} />
+            {document.richText ? (
+              <RichText value={document.richText} />
+            ) : (
+              <section className={styles.document}>
+                <Text type="body">
+                  It appears that this legal document is missing some
+                  information. Please visit the studio to add the necessary
+                  details.
+                </Text>
+                <LinkButton link={link} />
+              </section>
+            )}
           </div>
         </div>
       </div>
