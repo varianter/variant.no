@@ -2,7 +2,7 @@ import { StringRule, defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
-enum titleID {
+export enum titleID {
   basic = "basicTitle",
   optional = "optionalTitle",
 }

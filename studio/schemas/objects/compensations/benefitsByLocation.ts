@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
 
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
-import { richTextID, title } from "studio/schemas/fields/text";
+import { richTextID, titleID } from "studio/schemas/fields/text";
 import { location, locationID } from "studio/schemas/objects/locations";
 
 import {
@@ -62,7 +62,10 @@ export const benefitsByLocation = defineField({
               title: "Benefit",
               fields: [
                 benefitType,
-                title,
+                {
+                  name: titleID.basic,
+                  type: "internationalizedArrayString",
+                },
                 {
                   name: richTextID,
                   title: "Body",
@@ -71,7 +74,7 @@ export const benefitsByLocation = defineField({
               ],
               preview: {
                 select: {
-                  title: title.name,
+                  title: titleID.basic,
                   type: benefitType.name,
                 },
                 prepare({ title, type }) {
