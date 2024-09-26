@@ -11,7 +11,7 @@ import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
-import { LEGAL_DOCUMENTS_QUERY } from "studio/lib/queries/legalDocuments";
+import { LEGAL_DOCUMENTS_BY_LANG_QUERY } from "studio/lib/queries/legalDocuments";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
 import { loadStudioQuery } from "studio/lib/store";
@@ -42,8 +42,8 @@ export default async function Layout({
       { perspective },
     ),
     loadStudioQuery<LegalDocument[]>(
-      LEGAL_DOCUMENTS_QUERY,
-      {},
+      LEGAL_DOCUMENTS_BY_LANG_QUERY,
+      { language: "en" }, //TODO: replace this with selected language for the page
       { perspective },
     ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
