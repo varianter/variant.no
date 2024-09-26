@@ -54,7 +54,7 @@ const Footer = ({
         {legalData?.map((legal) => {
           const path = `legal/${legal.slug.current}`;
           const link = {
-            _key: legal._key,
+            _key: legal._id,
             _type: legal._type,
             linkTitle: legal.basicTitle,
             linkType: LinkType.Internal,
@@ -63,7 +63,7 @@ const Footer = ({
             },
           };
           return (
-            <li key={legal.slug.current}>
+            <li key={legal._id}>
               <CustomLink link={link} type="footerLink" />
             </li>
           );

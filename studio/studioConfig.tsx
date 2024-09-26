@@ -14,6 +14,8 @@ import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 
+const SUPPORTED_LANGUAGES_QUERY = `*[_type == "languageSettings" && !(_id in path("drafts.*"))].languages[]{id, title}`;
+
 const config: WorkspaceOptions = {
   name: "studio",
   title: "Studio",
@@ -22,29 +24,16 @@ const config: WorkspaceOptions = {
   basePath: "/studio",
   projectId,
   dataset,
-  schema: {
-    ...schema,
-    templates: (prev) => prev.filter((template) => !template.value.language),
-  },
+  schema,
   plugins: [
     structureTool({
       structure: deskStructure,
     }),
     visionTool({ defaultApiVersion: apiVersion }),
     documentInternationalization({
-      // When async initial value templates are supported by the plugin, we can fetch dynamic languages like:
-      // (client) => {
-      //   return client.fetch(
-      //     `*[_type == "languageSettings"].languages[]{id, title}`
-      //   );
-      // }
-      // Currently, we have to use a static list of supported languages for both Norway and Sweden
-      // Limitation: Variant Norway and Varaint Sweden will not be able to filter out unsupported languages
-      supportedLanguages: [
-        { id: "no", title: "Norwegian" },
-        { id: "se", title: "Swedish" },
-        { id: "en", title: "English" },
-      ],
+      supportedLanguages: (client) => {
+        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
+      },
       schemaTypes: [legalDocumentID],
       languageField: languageID,
       apiVersion,
@@ -53,15 +42,9 @@ const config: WorkspaceOptions = {
       // bulkPublish: true,
     }),
     internationalizedArray({
-      languages: [
-        { id: "no", title: "Norwegian" },
-        { id: "se", title: "Swedish" },
-        { id: "en", title: "English" },
-      ],
-      // languages: (client) =>
-      //   client.fetch(
-      //     `*[_type == "languageSettings"].languages[!default]{id, title}`
-      //   ),
+      languages: (client) => {
+        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
+      },
       fieldTypes: ["string"],
     }),
     presentationTool({

@@ -2,7 +2,7 @@ import Legal from "src/blog/components/legal/Legal";
 import LegalPreview from "src/blog/components/legal/LegalPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
-import { LEGAL_DOCUMENT_SLUG_QUERY } from "studio/lib/queries/legalDocuments";
+import { LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY } from "studio/lib/queries/legalDocuments";
 import { loadStudioQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
@@ -20,8 +20,8 @@ async function Page({ params }: Props) {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
   const initialDocument = await loadStudioQuery<LegalDocument>(
-    LEGAL_DOCUMENT_SLUG_QUERY,
-    { slug: id },
+    LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
+    { slug: id, language: "en" }, //TODO: replace this with selected language for the page
     { perspective },
   );
 
@@ -32,6 +32,7 @@ async function Page({ params }: Props) {
   if (isDraftMode) {
     return <LegalPreview initialDocument={initialDocument} />;
   }
+
   if (initialDocument) {
     return <Legal document={initialDocument.data} />;
   }
