@@ -18,7 +18,11 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
   const { perspective } = getDraftModeInfo();
 
   const [sharedCustomerCases] = await Promise.all([
-    loadSharedQuery<CustomerCase[]>(CUSTOMER_CASES_QUERY, {}, { perspective }),
+    loadSharedQuery<CustomerCase[]>(
+      CUSTOMER_CASES_QUERY,
+      { language: "en" },
+      { perspective },
+    ), //TODO: Replace hard coded language with selected language
   ]);
 
   return (
