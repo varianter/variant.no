@@ -21,7 +21,6 @@ const extractHeadings = (blocks: PortableTextBlock[]) => {
 };
 
 const Legal = ({ document }: { document: LegalDocument }) => {
-  console.log(document.richText);
   const headings = extractHeadings(document.richText ?? []);
 
   const link: ILink = {
