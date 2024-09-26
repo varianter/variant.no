@@ -20,6 +20,7 @@ import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocati
 import { footerSection } from "./schemas/objects/footerSection";
 import { link } from "./schemas/objects/link";
 import { socialMedia } from "./schemas/objects/socialMedia";
+import { richText } from "./schemas/fields/text";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -43,5 +44,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     defaultSeo,
     brandAssets,
     languageSettings,
+    richText,
   ],
 };
