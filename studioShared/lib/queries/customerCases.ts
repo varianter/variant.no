@@ -1,4 +1,4 @@
 import { groq } from "next-sanity";
 
-export const CUSTOMER_CASES_QUERY = groq`*[_type == "customerCase"]
+export const CUSTOMER_CASES_QUERY = groq`*[_type == "customerCase" && language == $language]
 `;
