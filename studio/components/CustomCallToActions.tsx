@@ -10,6 +10,7 @@ import {
 
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
+import { buildPublishedId } from "studio/utils/documentUtils";
 
 type CustomCallToActionsProps = ArrayOfObjectsInputProps<
   { _key: string },
@@ -44,9 +45,7 @@ const CustomCallToActions: React.FC<CustomCallToActionsProps> = (props) => {
   useEffect(() => {
     if (!landingPageId) return;
 
-    const currentPageId = documentId?.startsWith("drafts.")
-      ? documentId.split("drafts.")[1]
-      : documentId;
+    const currentPageId = buildPublishedId(documentId);
 
     const isLanding = landingPageId === currentPageId;
 
