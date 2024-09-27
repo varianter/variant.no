@@ -1,24 +1,79 @@
-import { SlugValidationContext, defineField } from "sanity";
+import {
+  SlugValidationContext,
+  SlugValue,
+  ValidationContext,
+  defineField,
+  isSlug,
+} from "sanity";
 
-import { isPublished } from "studio/utils/documentUtils";
+import { apiVersion } from "studio/env";
+import {
+  buildDraftId,
+  buildPublishedId,
+  isPublished,
+} from "studio/utils/documentUtils";
 
-async function isSlugUniqueAcrossAllDocuments(
+function isSlugUniqueAcrossAllDocuments(
   slug: string,
-  context: SlugValidationContext,
+  { document, getClient }: SlugValidationContext,
 ) {
-  const { document, getClient } = context;
-  const client = getClient({ apiVersion: "2022-12-07" });
-  const id = document?._id.replace(/^drafts\./, "");
-  const params = {
-    draft: `drafts.${id}`,
-    published: id,
+  if (document === undefined) {
+    return true;
+  }
+  const language = "language" in document ? document.language : undefined;
+  const isUniqueQuery =
+    language !== undefined
+      ? `
+    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug && language == $language][0]._id)
+  `
+      : `
+    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)
+  `;
+  return getClient({ apiVersion }).fetch<boolean>(isUniqueQuery, {
+    draft: buildDraftId(document._id),
+    published: buildPublishedId(document._id),
     slug,
-  };
-  const SLUG_QUERY =
-    "!defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)";
+    ...(language !== undefined ? { language } : {}),
+  });
+}
 
-  const result = await client.fetch(SLUG_QUERY, params);
-  return result;
+/**
+ Validate that slug has not been changed after initial publication
+ */
+async function validateSlugNotChangedAfterPublication(
+  value: SlugValue | undefined,
+  { document, getClient }: ValidationContext,
+) {
+  if (document === undefined || isPublished(document)) {
+    return true;
+  }
+  const publishedDocument = await getClient({ apiVersion }).getDocument(
+    buildPublishedId(document._id),
+  );
+  if (
+    publishedDocument !== undefined &&
+    "slug" in publishedDocument &&
+    isSlug(publishedDocument.slug) &&
+    publishedDocument.slug.current !== value?.current
+  ) {
+    return "Can not be changed after publication";
+  }
+  return true;
+}
+
+function slugify(input: string): string {
+  return (
+    input
+      .toLowerCase()
+      // replace æøå according to https://sprakradet.no/spraksporsmal-og-svar/ae-o-og-a-i-internasjonal-sammenheng/
+      .replace(/[æ,å]/g, "a")
+      .replace(/ø/g, "o")
+      // remove non-whitespace URL-unsafe chars (section 2.3 in https://www.ietf.org/rfc/rfc3986.txt)
+      .replace(/[^a-zA-Z0-9-_.~\s]/g, "")
+      .trim()
+      .replace(/\s+/g, "-")
+      .slice(0, SLUG_MAX_LENGTH)
+  );
 }
 
 const SLUG_MAX_LENGTH = 200;
@@ -36,34 +91,30 @@ function createSlugField(source: string) {
     options: {
       source,
       maxLength: SLUG_MAX_LENGTH,
-      slugify: (input) =>
-        input
-          .toLowerCase()
-          // replace æøå according to https://sprakradet.no/spraksporsmal-og-svar/ae-o-og-a-i-internasjonal-sammenheng/
-          .replace(/[æ,å]/g, "a")
-          .replace(/ø/g, "o")
-          .replace(/[^a-zA-Z0-9-_.~\s]/g, "") // remove non-whitespace URL-unsafe chars (section 2.3 in https://www.ietf.org/rfc/rfc3986.txt)
-          .trim()
-          .replace(/\s+/g, "-")
-          .slice(0, SLUG_MAX_LENGTH),
+      slugify,
       isUnique: isSlugUniqueAcrossAllDocuments,
     },
     validation: (rule) =>
-      rule.required().custom((value) => {
-        if (value?.current === undefined) return true;
-        return (
-          encodeURIComponent(value.current) === value.current ||
-          "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
-        );
-      }),
-    readOnly: (ctx) => {
+      rule
+        .required()
+        .custom(validateSlugNotChangedAfterPublication)
+        .custom((value) => {
+          if (value?.current === undefined) return true;
+          return (
+            encodeURIComponent(value.current) === value.current ||
+            "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
+          );
+        }),
+    readOnly: ({ document }) => {
       /*
         make slugs read-only after initial publish
         to avoid breaking shared links
 
+        if document is already draft, this is handled through validation instead
+
         if new slugs are needed, redirects can be used instead
        */
-      return ctx.document !== undefined && isPublished(ctx.document);
+      return document !== undefined && isPublished(document);
     },
   });
 }

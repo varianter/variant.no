@@ -10,9 +10,21 @@ import { loadStudioQuery } from "studio/lib/store";
 
 import "src/styles/global.css";
 
+<<<<<<< HEAD
 const fontBrittiSans = localFont({
   src: "../../public/_assets/fonts/britti-sans-variable.woff2",
   variable: "--font-britti-sans",
+=======
+const fontRecoleta = localFont({
+  src: "../../public/_assets/recoleta.otf",
+  variable: "--font-recoleta",
+});
+
+const fontFigtree = Figtree({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-figtree",
+>>>>>>> v3
 });
 
 export async function generateMetadata(): Promise<Metadata> {

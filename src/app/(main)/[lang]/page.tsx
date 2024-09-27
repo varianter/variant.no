@@ -1,11 +1,16 @@
 import { Metadata } from "next";
 
+import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
 import InformationSection from "src/blog/components/informationSection/InformationSection";
+import { homeLink } from "src/blog/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
+import { client } from "studio/lib/client";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
+import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
+import { LANGUAGES_QUERY } from "studio/lib/queries/languages";
 import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
 import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
 import { loadStudioQuery } from "studio/lib/store";
@@ -34,8 +39,28 @@ const pagesLink = {
   internalLink: { _ref: "studio/structure/pages" },
 };
 
-const Home = async () => {
+type Props = {
+  params: { lang: string; slug: string };
+};
+
+const Page404 = (
+  <CustomErrorMessage
+    title="404 — Something went wrong"
+    body="The page you are looking for does not exist. There may be an error in the URL, or the page may have been moved or deleted."
+    link={homeLink}
+  />
+);
+
+const Home = async ({ params }: Props) => {
   const { perspective, isDraftMode } = getDraftModeInfo();
+
+  const language = (
+    await client.fetch<LanguageObject[] | null>(LANGUAGES_QUERY)
+  )?.find((l) => l.id === params.lang);
+
+  if (language === undefined) {
+    return Page404;
+  }
 
   const { data: landingId } = await loadStudioQuery<string>(
     LANDING_PAGE_REF_QUERY,

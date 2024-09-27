@@ -72,7 +72,7 @@
     display: inline-block;
     -webkit-mask-size: cover;
     background-color: var(--primary-red-error);
-    -webkit-mask: url("/alert-circle.svg") no-repeat 50% 50%;
+    -webkit-mask: url("/_assets/alert-circle.svg") no-repeat 50% 50%;
   }
 
   @media (min-height: 1024px) {
