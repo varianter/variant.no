@@ -3,8 +3,7 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { Navigation } from "studio/lib/interfaces/navigation";
-import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
+import { BRAND_ASSETS_QUERY, NAV_QUERY } from "studio/lib/queries/siteSettings";
 
 import { Header } from "./Header";
 

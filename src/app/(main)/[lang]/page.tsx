@@ -11,8 +11,8 @@ import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import { LANGUAGES_QUERY } from "studio/lib/queries/languages";
-import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
-import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
+import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
+import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata(): Promise<Metadata> {

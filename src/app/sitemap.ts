@@ -3,8 +3,8 @@ import type { MetadataRoute } from "next";
 import { client } from "studio/lib/client";
 import { DocumentWithSlug } from "studio/lib/interfaces/global";
 import { PageBuilder } from "studio/lib/interfaces/pages";
-import { DOCUMENTS_WITH_SLUG_QUERY } from "studio/lib/queries/document";
-import { LANDING_PAGE_QUERY } from "studio/lib/queries/navigation";
+import { DOCUMENTS_WITH_SLUG_QUERY } from "studio/lib/queries/siteMap";
+import { LANDING_PAGE_QUERY } from "studio/lib/queries/siteSettings";
 import { token } from "studio/lib/token";
 
 import { readBaseUrl } from "./env";

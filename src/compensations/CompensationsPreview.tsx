@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
-import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/admin";
 import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/specialPages";
 
 import Compensations from "./Compensations";

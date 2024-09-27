@@ -18,14 +18,16 @@ import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
-import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
-import { LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY } from "studio/lib/queries/legalDocuments";
+import {
+  COMPANY_LOCATIONS_QUERY,
+  LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
+} from "studio/lib/queries/admin";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
   SEO_SLUG_QUERY,
   SLUG_QUERY,
-} from "studio/lib/queries/page";
+} from "studio/lib/queries/pages";
 import {
   COMPENSATIONS_PAGE_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,

@@ -2,7 +2,7 @@
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
+import { NAV_QUERY } from "studio/lib/queries/siteSettings";
 
 import Legal from "./Legal";
 

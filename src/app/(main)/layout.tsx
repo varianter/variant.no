@@ -9,11 +9,15 @@ import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
-import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
-import { LEGAL_DOCUMENTS_BY_LANG_QUERY } from "studio/lib/queries/legalDocuments";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
-import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
+import {
+  COMPANY_INFO_QUERY,
+  LEGAL_DOCUMENTS_BY_LANG_QUERY,
+} from "studio/lib/queries/admin";
+import {
+  BRAND_ASSETS_QUERY,
+  NAV_QUERY,
+  SOME_PROFILES_QUERY,
+} from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./layout.module.css";
@@ -37,7 +41,7 @@ export default async function Layout({
     loadStudioQuery<Navigation>(NAV_QUERY, {}, { perspective }),
     loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
     loadStudioQuery<SocialMediaProfiles | null>(
-      SOMEPROFILES_QUERY,
+      SOME_PROFILES_QUERY,
       {},
       { perspective },
     ),

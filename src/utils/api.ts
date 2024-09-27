@@ -3,7 +3,7 @@ import { Post } from "studio/lib/interfaces/pages";
 import {
   CATEGORIZED_POSTS_QUERY,
   COUNT_POSTS_QUERY,
-} from "studio/lib/queries/page";
+} from "studio/lib/queries/pages";
 
 interface FetchResult {
   data: Post[];

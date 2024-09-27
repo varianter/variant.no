@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
 import { CallToActionSection, PageBuilder } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY } from "studio/lib/queries/page";
+import { PAGE_QUERY } from "studio/lib/queries/pages";
 
 import CallToAction from "./CallToAction";
 
