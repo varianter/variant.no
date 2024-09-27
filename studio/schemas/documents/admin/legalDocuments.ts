@@ -11,7 +11,18 @@ const legalDocument = defineField({
   name: legalDocumentID,
   type: "document",
   title: "Legal Document",
-  fields: [languageSchemaField, title, titleSlug, richText],
+  fields: [
+    languageSchemaField,
+    title,
+    titleSlug,
+    {
+      ...richText,
+      validation: (Rule) =>
+        Rule.required().error(
+          "Content is required. Please add the necessary information to the legal document.",
+        ),
+    },
+  ],
   preview: {
     select: {
       title: "basicTitle",
