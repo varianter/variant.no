@@ -6,7 +6,7 @@ import { draftMode } from "next/headers";
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
-import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/languages";
+import { DEFAULT_LANGUAGE_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import "src/styles/global.css";

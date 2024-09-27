@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { RedirectDestinationSlugPage } from "studio/lib/interfaces/redirect";
-import { REDIRECT_BY_SOURCE_SLUG_QUERY } from "studio/lib/queries/redirects";
+import { REDIRECT_BY_SOURCE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 
 import { readBaseUrl } from "./app/env";
 import { HTTP_STATUSES } from "./utils/http";

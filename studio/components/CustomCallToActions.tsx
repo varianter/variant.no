@@ -9,7 +9,7 @@ import {
 } from "sanity";
 
 import { fetchWithToken } from "studio/lib/fetchWithToken";
-import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
+import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/siteSettings";
 import { buildPublishedId } from "studio/utils/documentUtils";
 
 type CustomCallToActionsProps = ArrayOfObjectsInputProps<

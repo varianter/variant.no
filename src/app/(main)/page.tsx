@@ -6,8 +6,8 @@ import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
-import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/navigation";
 import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
+import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata(): Promise<Metadata> {

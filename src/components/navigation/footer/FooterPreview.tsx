@@ -6,9 +6,11 @@ import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/admin";
-import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
-import { NAV_QUERY } from "studio/lib/queries/navigation";
-import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
+import {
+  BRAND_ASSETS_QUERY,
+  NAV_QUERY,
+  SOME_PROFILES_QUERY,
+} from "studio/lib/queries/siteSettings";
 
 import Footer from "./Footer";
 
@@ -34,7 +36,7 @@ export default function FooterPreview({
   const newNav = useInitialData(NAV_QUERY, initialNav);
   const newCompanyInfo = useInitialData(COMPANY_INFO_QUERY, initialCompanyInfo);
   const newBrandAssets = useInitialData(BRAND_ASSETS_QUERY, initialBrandAssets);
-  const newSoMedata = useInitialData(SOMEPROFILES_QUERY, initialSoMe);
+  const newSoMedata = useInitialData(SOME_PROFILES_QUERY, initialSoMe);
   // TODO: add legal preview
   return (
     newNav &&
