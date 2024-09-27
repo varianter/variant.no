@@ -69,7 +69,7 @@
   color: var(--primary-red-error);
   &::before {
     background-color: var(--primary-red-error);
-    -webkit-mask: url("/alert-circle.svg") no-repeat 50% 50%;
+    -webkit-mask: url("/_assets/alert-circle.svg") no-repeat 50% 50%;
   }
 }
 
@@ -78,6 +78,6 @@
   color: var(--primary-dark);
   &::before {
     background-color: var(--primary-dark);
-    -webkit-mask: url("/check-circle.svg") no-repeat 50% 50%;
+    -webkit-mask: url("/_assets/check-circle.svg") no-repeat 50% 50%;
   }
 }

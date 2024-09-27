@@ -138,10 +138,10 @@
 
 .closed {
   composes: button;
-  background: url("/menu.svg") no-repeat 50% 50%;
+  background: url("/_assets/menu.svg") no-repeat 50% 50%;
 }
 
 .open {
   composes: button;
-  background: url("/menu-close.svg") no-repeat 50% 50%;
+  background: url("/_assets/menu-close.svg") no-repeat 50% 50%;
 }

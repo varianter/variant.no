@@ -12,7 +12,7 @@ import { loadStudioQuery } from "studio/lib/store";
 import "src/styles/global.css";
 
 const fontRecoleta = localFont({
-  src: "../../public/recoleta.otf",
+  src: "../../public/_assets/recoleta.otf",
   variable: "--font-recoleta",
 });
 

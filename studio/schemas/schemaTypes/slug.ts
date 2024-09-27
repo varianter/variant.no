@@ -20,14 +20,21 @@ function isSlugUniqueAcrossAllDocuments(
   if (document === undefined) {
     return true;
   }
-  return getClient({ apiVersion }).fetch(
-    "!defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)",
-    {
-      draft: buildDraftId(document._id),
-      published: buildPublishedId(document._id),
-      slug,
-    },
-  );
+  const language = "language" in document ? document.language : undefined;
+  const isUniqueQuery =
+    language !== undefined
+      ? `
+    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug && language == $language][0]._id)
+  `
+      : `
+    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)
+  `;
+  return getClient({ apiVersion }).fetch<boolean>(isUniqueQuery, {
+    draft: buildDraftId(document._id),
+    published: buildPublishedId(document._id),
+    slug,
+    ...(language !== undefined ? { language } : {}),
+  });
 }
 
 /**
