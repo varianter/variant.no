@@ -4,9 +4,9 @@ import { languageMiddleware } from "./middlewares/languageMiddleware";
 import { redirectMiddleware } from "./middlewares/redirectMiddleware";
 
 export async function middleware(request: NextRequest) {
-  const res = await redirectMiddleware(request);
-  if (res !== undefined) {
-    return res;
+  const response = await redirectMiddleware(request);
+  if (response !== undefined) {
+    return response;
   }
   return languageMiddleware(request);
 }
@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
+     * Exclude request paths starting with:
      * - api (API routes)
      * - sw.js (Service Worker)
      * - _next/static (static files)

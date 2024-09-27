@@ -32,7 +32,8 @@ async function translateSlug(
     },
   );
   return slugTranslations?._translations.find(
-    (t) => t !== null && t.language === targetLanguageId,
+    (translation) =>
+      translation !== null && translation.language === targetLanguageId,
   )?.slug;
 }
 
@@ -48,19 +49,33 @@ function negotiateClientLanguage(
 }
 
 /**
- * Handles rerouting of paths based on URL language code or user's preferred language
+ * Handles rerouting of paths based on the language code in the URL or the user's preferred language settings,
+ * with special emphasis on cases where words are spelled the same in both Norwegian and English but have different meanings.
  *
- * Limitations/notes:
- * - no special treatment of nested paths (e.g. `/blogg` uses slug `blogg`, while `/blogg/hei` uses slug `blogg/hei`)
- * - given the following valid pages, an English user will be redirected from (1) to (2), and not to (3):
- *      - (1) `/gift`
- *      - (2) `/en/poison`
- *      - (3) `/en/gift`
- * - given the following valid pages, an English user navigating to (1) will not be redirected to (2), but receive a 404 error:
- *      - (1) `/gift`
- *      - (2) `/en/gift`
+ * Key behaviors:
+ * - Reroutes users to the appropriate page based on their language preferences, especially for words that
+ *   are identical in spelling across languages but have different meanings (false friends).
+ * - If a page does not exist in the user's preferred language, the system will show the default language version instead of a 404 error.
  *
- * @param request
+ * Limitations/Notes:
+ * - No special handling for nested paths (e.g., `/blogg` and `/blogg/post` are treated as distinct slugs `blogg` and `blogg/post`).
+ * - **False friend handling:**
+ *   - For words spelled the same in different languages, but with different meanings (e.g., "gift" in Norwegian and English),
+ *     the system prioritizes the user's preferred language and reroutes to the correct content based on translations.
+ *   - Example scenario:
+ *     - Given the following pages:
+ *        - (1) `/gift` (Norwegian page for "poison")
+ *        - (2) `/en/poison` (English page for "poison")
+ *        - (3) `/en/gift` (English page for "present")
+ *     - If a user with English preferences visits (1) `/gift`, they will be rerouted to (2) `/en/poison` because
+ *       the system prioritizes translated content over slug matching, despite identical slugs in (1) and (3).
+ *     - If the same user visits (3) `/en/gift`, they will be directed to the English page for "present".
+ *
+ * - **Default language fallback:**
+ *   - If a user visits a page like `/eple` and no translation exists in their preferred language (e.g., `/en/apple`),
+ *     they will see the default language version (`/eple`) instead of receiving a 404 error.
+ *
+ * @param {Object} request - The incoming request object containing URL and user preferences.
  */
 export async function languageMiddleware(
   request: NextRequest,
@@ -83,7 +98,7 @@ export async function languageMiddleware(
 }
 
 /**
- * Check that the slug actually exists for the given language.
+ * Language is provided, check that the slug actually exists for the given language.
  * - If it exists, no changes are made.
  * - Otherwise, we attempt to translate to the specified language
  *   - If translated, user is redirected to `/[language]/[translatedSlug]`
@@ -112,16 +127,18 @@ async function redirectWithLanguage(
 }
 
 /**
+ * Determines the user's most preferred language from the available languages and handles URL redirection accordingly.
  *
- * Negotiate with the user to find the most preferred languages from the list of available languages
- *   - If the negotiated language is the same as default, no changes are made.
- *   - Otherwise, we attempt to translate to the negotiated language
- *     - If translated, user is redirected to `/[negotiatedLanguage]/[translatedSlug]`
- *     - Otherwise, user is redirected to the slug with default language (`/[slug]`)
+ * Key behaviors:
+ * - If the user's preferred (negotiated) language matches the default language, no redirection occurs.
+ * - If the user's preferred language is different from the default:
+ *   - Attempt to find a translation for the current page.
+ *     - If a translated version exists, redirect the user to the corresponding path: `/[negotiatedLanguage]/[translatedSlug]`.
+ *     - If no translation is found, keep the user on the default language page at `/[slug]`.
  *
- * @param pathname
- * @param availableLanguages
- * @param baseUrl
+ * @param {string} pathname - The current URL path.
+ * @param {string[]} availableLanguages - A list of languages supported by the site.
+ * @param {string} baseUrl - The base URL of the site.
  */
 async function redirectMissingLanguage(
   pathname: string,
@@ -139,21 +156,21 @@ async function redirectMissingLanguage(
     );
     return;
   }
-  const negotiatedLanguage =
+  const preferredLanguage =
     negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
     ) ?? defaultLanguageId;
-  if (negotiatedLanguage === defaultLanguageId) {
+  if (preferredLanguage === defaultLanguageId) {
     // Same as default, simply rewrite internally to include language code
     return NextResponse.rewrite(
-      new URL(`/${negotiatedLanguage}${pathname}`, baseUrl),
+      new URL(`/${preferredLanguage}${pathname}`, baseUrl),
     );
   }
-  // Attempt to translate to the negotiated language
+  // Attempt to translate to the preferred language
   const slug = pathname.replace(/^\//, "");
   const translatedSlug = await translateSlug(
     slug,
-    negotiatedLanguage,
+    preferredLanguage,
     defaultLanguageId,
   );
   if (translatedSlug === undefined) {
@@ -164,6 +181,6 @@ async function redirectMissingLanguage(
   }
   // Redirect with language code and translated slug
   return NextResponse.redirect(
-    new URL(`/${negotiatedLanguage}/${translatedSlug}`, baseUrl),
+    new URL(`/${preferredLanguage}/${translatedSlug}`, baseUrl),
   );
 }

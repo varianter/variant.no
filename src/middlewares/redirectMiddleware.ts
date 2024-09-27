@@ -18,7 +18,6 @@ export async function redirectMiddleware(
   }
   const baseUrl = baseUrlResult.value;
   const slug = request.nextUrl.pathname;
-  // TODO: handle language path segment
   const slugQueryParam = slug.replace(/^\/+/, "");
   /*
    fetching redirect data via API route to avoid token leaking to client
