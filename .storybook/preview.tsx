@@ -35,7 +35,7 @@ const preview: Preview = {
       }
 
       return (
-        <div className={`${fontBrittiSans.variable}`}>
+        <div className={fontBrittiSans.variable}>
           <Story />
         </div>
       );
