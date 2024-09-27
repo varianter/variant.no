@@ -5,8 +5,8 @@ import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/admin";
 import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { NAV_QUERY } from "studio/lib/queries/navigation";
 import { SOMEPROFILES_QUERY } from "studio/lib/queries/socialMediaProfiles";
 

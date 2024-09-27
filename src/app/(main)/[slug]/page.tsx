@@ -15,7 +15,7 @@ import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
-import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/admin";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,

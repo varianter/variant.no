@@ -2,7 +2,7 @@ import Legal from "src/blog/components/legal/Legal";
 import LegalPreview from "src/blog/components/legal/LegalPreview";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
-import { LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY } from "studio/lib/queries/legalDocuments";
+import { LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY } from "studio/lib/queries/admin";
 import { loadStudioQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";

@@ -7,8 +7,8 @@ import { urlFor } from "studio/lib/image";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { DefaultSeo } from "studio/lib/interfaces/defaultSeo";
+import { COMPANY_INFO_QUERY } from "studio/lib/queries/admin";
 import { BRAND_ASSETS_QUERY } from "studio/lib/queries/brandAssets";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/companyDetails";
 import { DEFAULT_SEO_QUERY } from "studio/lib/queries/seo";
 import { loadStudioQuery } from "studio/lib/store";
 
