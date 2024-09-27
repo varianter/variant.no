@@ -82,7 +82,7 @@ export const benefitsByLocation = defineField({
                     BENEFIT_TYPES.find((o) => o.value === type)?.title ??
                     "Unknown benefit type";
                   return {
-                    title,
+                    title: title[0]?.value,
                     subtitle,
                   };
                 },
@@ -109,7 +109,7 @@ export const benefitsByLocation = defineField({
   validation: (rule) =>
     rule.custom((benefitsByLocation) => {
       const isNotDuplicate: boolean = checkForDuplicateLocations(
-        benefitsByLocation as DocumentWithLocation[] | undefined
+        benefitsByLocation as DocumentWithLocation[] | undefined,
       );
       return (
         isNotDuplicate ||
