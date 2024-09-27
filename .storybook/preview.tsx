@@ -4,7 +4,7 @@ import "../src/styles/global.css";
 import localFont from "next/font/local";
 
 const fontBrittiSans = localFont({
-  src: "../../public/fonts/britti-sans-variable.woff2",
+  src: "../../public/_assets/britti-sans-variable.woff2",
   variable: "--font-britti-sans",
 });
 
