@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import { Blog } from "src/blog/Blog";
 import BlogPreview from "src/blog/BlogPreview";
 import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
+import Legal from "src/blog/components/legal/Legal";
+import LegalPreview from "src/blog/components/legal/LegalPreview";
 import { homeLink } from "src/blog/components/utils/linkTypes";
 import Compensations from "src/compensations/Compensations";
 import CompensationsPreview from "src/compensations/CompensationsPreview";
@@ -13,9 +15,11 @@ import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/companyDetails";
+import { LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY } from "studio/lib/queries/legalDocuments";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -31,9 +35,7 @@ import { loadStudioQuery } from "studio/lib/store";
 export const dynamic = "force-dynamic";
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: { lang: string; slug: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -51,7 +53,8 @@ const Page404 = (
 );
 
 async function Page({ params }: Props) {
-  const { slug } = params;
+  const { lang, slug } = params;
+
   const { perspective, isDraftMode } = getDraftModeInfo();
 
   const [
@@ -60,6 +63,7 @@ async function Page({ params }: Props) {
     initialCompensationsPage,
     initialLocationsData,
     initialCustomerCases,
+    initialLegalDocument,
   ] = await Promise.all([
     loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
@@ -76,6 +80,11 @@ async function Page({ params }: Props) {
     loadStudioQuery<CustomerCasePage>(
       CUSTOMER_CASES_PAGE_QUERY,
       { slug },
+      { perspective },
+    ),
+    loadStudioQuery<LegalDocument>(
+      LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
+      { slug, language: lang },
       { perspective },
     ),
   ]);
@@ -142,6 +151,14 @@ async function Page({ params }: Props) {
       <CustomerCasesPreview initialCustomerCases={initialCustomerCases} />
     ) : (
       <CustomerCases customerCasesPage={initialCustomerCases.data} />
+    );
+  }
+
+  if (initialLegalDocument.data) {
+    return isDraftMode ? (
+      <LegalPreview initialDocument={initialLegalDocument} />
+    ) : (
+      <Legal document={initialLegalDocument.data} />
     );
   }
 
