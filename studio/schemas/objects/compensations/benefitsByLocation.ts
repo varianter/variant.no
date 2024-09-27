@@ -82,7 +82,7 @@ export const benefitsByLocation = defineField({
                     BENEFIT_TYPES.find((o) => o.value === type)?.title ??
                     "Unknown benefit type";
                   return {
-                    title,
+                    title: title[0]?.value,
                     subtitle,
                   };
                 },
