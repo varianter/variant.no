@@ -71,13 +71,3 @@ export const DEFAULT_SEO_QUERY = groq`*[_type == "seoFallback"]{
       "seoImageUrl": seoImage.asset->url
     }
   }[0]`;
-
-//Broken Links
-export const REDIRECT_BY_SOURCE_SLUG_QUERY = groq`
-  *[_type == "redirect" && source.current == $slug][0]{
-    "destination": select(
-      destination.type == "reference" => destination.reference->slug.current,
-      destination.type == "external" => destination.external
-    )
-  }
-`;
