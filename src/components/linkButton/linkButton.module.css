@@ -32,9 +32,9 @@
     width: 1.5rem;
     height: 1.5rem;
     content: "";
-    -webkit-mask: url("/arrow.svg") no-repeat center;
+    -webkit-mask: url("/_assets/arrow.svg") no-repeat center;
     -webkit-mask-size: cover;
-    mask: url("/arrow.svg") no-repeat center;
+    mask: url("/_assets/arrow.svg") no-repeat center;
     mask-size: cover;
   }
 }

@@ -1,3 +1,5 @@
+import { InternationalizedString } from "./global";
+
 export interface Navigation {
   _id: string;
   main: ILink[];
@@ -12,7 +14,7 @@ interface Reference {
 export interface ILink {
   _key: string;
   _type: string;
-  linkTitle: string;
+  linkTitle: string | InternationalizedString;
   linkType: LinkType;
   internalLink?: Reference;
   url?: string;

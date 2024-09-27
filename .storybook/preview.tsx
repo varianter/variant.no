@@ -5,7 +5,7 @@ import "../src/styles/global.css";
 import localFont from "next/font/local";
 
 const fontRecoleta = localFont({
-  src: "../../public/recoleta.otf",
+  src: "../../public/_assets/recoleta.otf",
   variable: "--font-recoleta",
 });
 

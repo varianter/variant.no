@@ -52,14 +52,13 @@ const Footer = ({
           </Text>
         </li>
         {legalData?.map((legal) => {
-          const path = `legal/${legal.slug.current}`;
           const link = {
             _key: legal._id,
             _type: legal._type,
             linkTitle: legal.basicTitle,
             linkType: LinkType.Internal,
             internalLink: {
-              _ref: path,
+              _ref: legal.slug.current,
             },
           };
           return (

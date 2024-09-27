@@ -44,7 +44,7 @@
     display: inline-block;
     -webkit-mask-size: cover;
     background-color: var(--primary-black);
-    -webkit-mask: url("/arrow.svg") no-repeat 50% 50%;
+    -webkit-mask: url("/_assets/arrow.svg") no-repeat 50% 50%;
   }
 }
 
