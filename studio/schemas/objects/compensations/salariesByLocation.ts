@@ -1,7 +1,11 @@
-import { defineField } from "sanity";
+import { ArrayOfObjectsInputProps, defineField } from "sanity";
 
 import { SalariesInput } from "studio/components/salariesInput/SalariesInput";
-import { SalariesPage } from "studio/lib/interfaces/compensations";
+import ValueOrderedArrayOfObjectsInput from "studio/components/ValueOrderedArrayOfObjectsInput";
+import {
+  SalariesPage,
+  isSalariesPage,
+} from "studio/lib/interfaces/compensations";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { location, locationID } from "studio/schemas/objects/locations";
 
@@ -34,6 +38,26 @@ export const salariesByLocation = defineField({
           description:
             "Salary data reflecting salaries given to employees for a given year. ",
           type: "array",
+          options: {
+            sortable: false,
+          },
+          components: {
+            input: (props: ArrayOfObjectsInputProps) =>
+              ValueOrderedArrayOfObjectsInput({
+                ...props,
+                valueCompareFn: (a, b) => {
+                  if (isSalariesPage(a)) {
+                    if (isSalariesPage(b)) {
+                      return b.year - a.year;
+                    }
+                    return -1;
+                  } else if (isSalariesPage(b)) {
+                    return 1;
+                  }
+                  return 0;
+                },
+              }),
+          },
           of: [
             {
               type: "object",
