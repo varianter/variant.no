@@ -16,6 +16,9 @@ interface ICustomLink {
 
 const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
   const linkTitle = link.linkTitle;
+  // TODO: pick title based on selected language
+  const linkTitleValue =
+    (typeof linkTitle === "string" ? linkTitle : linkTitle[0].value) ?? "";
   const href = getHref(link);
   const newTab = link.newTab;
   const target = newTab ? "_blank" : undefined;
@@ -34,7 +37,7 @@ const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
         rel={rel}
         aria-label={link.ariaLabel}
       >
-        <span className={styles.span}>{linkTitle}</span>
+        <span className={styles.span}>{linkTitleValue}</span>
       </Link>
       <div className={styles.underline}></div>
     </div>
@@ -46,7 +49,7 @@ const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
       rel={rel}
       aria-label={link.ariaLabel}
     >
-      {linkTitle}
+      {linkTitleValue}
     </Link>
   );
 };
