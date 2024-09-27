@@ -11,7 +11,7 @@ import { loadStudioQuery } from "studio/lib/store";
 import "src/styles/global.css";
 
 const fontBrittiSans = localFont({
-  src: "../../public/fonts/britti-sans-variable.woff2",
+  src: "../../public/_assets/fonts/britti-sans-variable.woff2",
   variable: "--font-britti-sans",
 });
 
