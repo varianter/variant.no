@@ -21,7 +21,7 @@ import {
   POSTS_QUERY,
   SEO_SLUG_QUERY,
   SLUG_QUERY,
-} from "studio/lib/queries/page";
+} from "studio/lib/queries/pages";
 import {
   COMPENSATIONS_PAGE_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,

@@ -11,7 +11,7 @@ import {
   MORE_POST_PREVIEW,
   POST_SLUG_QUERY,
   SEO_POST_SLUG_QUERY,
-} from "studio/lib/queries/page";
+} from "studio/lib/queries/pages";
 
 type Props = {
   params: {

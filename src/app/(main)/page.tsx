@@ -6,7 +6,7 @@ import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
-import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/page";
+import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
 import { LANDING_PAGE_REF_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
