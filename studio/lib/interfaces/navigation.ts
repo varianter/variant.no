@@ -23,6 +23,7 @@ export interface ILink {
   anchor?: string;
   newTab?: boolean;
   ariaLabel?: string;
+  language?: string;
 }
 
 export enum LinkType {

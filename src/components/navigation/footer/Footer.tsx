@@ -52,7 +52,7 @@ const Footer = ({
           </Text>
         </li>
         {legalData?.map((legal) => {
-          const link = {
+          const link: ILink = {
             _key: legal._id,
             _type: legal._type,
             linkTitle: legal.basicTitle,
@@ -60,6 +60,7 @@ const Footer = ({
             internalLink: {
               _ref: legal.slug.current,
             },
+            language: legal.language,
           };
           return (
             <li key={legal._id}>

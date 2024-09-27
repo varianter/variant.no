@@ -7,7 +7,7 @@ export const getHref = (link: ILink): string => {
     case LinkType.Internal:
       if (link.internalLink?._ref) {
         try {
-          return `/${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
+          return `${link.language ? `/${link.language}` : ""}/${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
         } catch (error) {
           console.error("Error fetching page:", error);
           return hash;

@@ -8,6 +8,7 @@ export interface LegalDocument {
   slug: Slug;
   basicTitle: string;
   richText: PortableTextBlock[];
+  language: string;
   _translations: Translations[];
 }
 
