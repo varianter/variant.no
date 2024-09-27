@@ -1,18 +1,11 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { Figtree } from "next/font/google";
 import "../src/styles/global.css";
 import localFont from "next/font/local";
 
-const fontRecoleta = localFont({
-  src: "../../public/recoleta.otf",
-  variable: "--font-recoleta",
-});
-
-const fontFigtree = Figtree({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-figtree",
+const fontBrittiSans = localFont({
+  src: "../../public/fonts/britti-sans-variable.woff2",
+  variable: "--font-britti-sans",
 });
 
 const preview: Preview = {
@@ -42,7 +35,7 @@ const preview: Preview = {
       }
 
       return (
-        <div className={`${fontFigtree.variable} ${fontRecoleta.variable}`}>
+        <div className={`${fontBrittiSans.variable}`}>
           <Story />
         </div>
       );

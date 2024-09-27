@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
 import { draftMode } from "next/headers";
 
@@ -11,15 +10,9 @@ import { loadStudioQuery } from "studio/lib/store";
 
 import "src/styles/global.css";
 
-const fontRecoleta = localFont({
-  src: "../../public/recoleta.otf",
-  variable: "--font-recoleta",
-});
-
-const fontFigtree = Figtree({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-figtree",
+const fontBrittiSans = localFont({
+  src: "../../public/fonts/britti-sans-variable.woff2",
+  variable: "--font-britti-sans",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -45,7 +38,7 @@ export default async function RootLayout({
   }
   return (
     <html lang={siteLang}>
-      <body className={`${fontFigtree.variable} ${fontRecoleta.variable}`}>
+      <body className={`${fontBrittiSans.variable}`}>
         {children}
         {draftMode().isEnabled && <LiveVisualEditing />}
       </body>

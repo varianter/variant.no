@@ -4,7 +4,7 @@
 .h3,
 .bodySuperLarge {
   color: var(--primary-black);
-  font-family: var(--font-recoleta);
+  font-family: var(--font-britti-sans);
 }
 
 .bodyLarge,
@@ -13,7 +13,7 @@
 .caption,
 .list {
   color: var(--primary-black);
-  font-family: var(--font-figtree);
+  font-family: var(--font-britti-sans);
   line-height: 140%;
 }
 

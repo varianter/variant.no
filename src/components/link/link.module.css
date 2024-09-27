@@ -22,7 +22,7 @@
   align-items: center;
   text-decoration: none;
   gap: 0.5rem;
-  font-family: var(--font-figtree);
+  font-family: var(--font-britti-sans);
   font-size: 1.125rem;
   font-weight: 500;
 
@@ -56,7 +56,7 @@
   color: var(--primary-black);
   cursor: pointer;
   text-decoration: none;
-  font-family: var(--font-figtree);
+  font-family: var(--font-britti-sans);
   font-size: 1.25rem;
   font-weight: 500;
 
@@ -73,7 +73,7 @@
   color: var(--primary-white);
   cursor: pointer;
   text-decoration: none;
-  font-family: var(--font-recoleta);
+  font-family: var(--font-britti-sans);
   font-size: 2rem;
   font-weight: 400;
 

@@ -69,7 +69,7 @@
 
 .whiteColor {
   color: var(--primary-white) !important;
-  font-family: var(--font-recoleta) !important;
+  font-family: var(--font-britti-sans) !important;
   font-size: 2rem !important;
   font-weight: 400 !important;
 }
