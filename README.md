@@ -289,6 +289,10 @@ Simply use the CSS background property on the root element with a base64-encoded
 background: url("data:image/png;base64,...");
 ```
 
+### Sanity TypeGen
+
+[TypeGen for Sanity](https://www.sanity.io/docs/sanity-typegen) was considered for this project in september 2024. At that time, it was not considered a good fit. This was mainly because of the tool being in beta, and concerns regarding ownership and flexibility of type definitions. See [TYPEGEN.md](TYPEGEN.md) for more details on the lessons learned.
+
 ### Troubleshooting
 
 - Sanity Preview: While the Sanity preview functionality is not fully optimized, it currently meets the essential requirements.
