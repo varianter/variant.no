@@ -16,12 +16,14 @@ import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
+import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import {
   COMPANY_LOCATIONS_QUERY,
   LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
 } from "studio/lib/queries/admin";
+import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import {
   BLOG_PAGE_QUERY,
   POSTS_QUERY,
@@ -66,6 +68,7 @@ async function Page({ params }: Props) {
     initialLocationsData,
     initialCustomerCases,
     initialLegalDocument,
+    initialLocale,
   ] = await Promise.all([
     loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
     loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
@@ -89,6 +92,7 @@ async function Page({ params }: Props) {
       { slug, language: lang },
       { perspective },
     ),
+    loadStudioQuery<LocaleDocument>(LOCALE_QUERY, {}, { perspective }),
   ]);
 
   if (initialPage.data) {
@@ -139,11 +143,13 @@ async function Page({ params }: Props) {
       <CompensationsPreview
         initialCompensations={initialCompensationsPage}
         initialLocations={initialLocationsData}
+        initialLocale={initialLocale}
       />
     ) : (
       <Compensations
         compensations={initialCompensationsPage.data}
         locations={initialLocationsData.data}
+        locale={initialLocale.data}
       />
     );
   }

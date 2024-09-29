@@ -6,8 +6,10 @@ import {
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Text from "src/components/text/Text";
+import { formatAsCurrency } from "src/utils/i18n";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { LocaleDocument } from "studio/lib/interfaces/locale";
 
 import styles from "./compensations.module.css";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
@@ -26,6 +28,7 @@ import {
 interface CompensationsProps {
   compensations: CompensationsPage;
   locations: CompanyLocation[];
+  locale: LocaleDocument;
 }
 
 interface SalaryCalculatorFormState {
@@ -33,7 +36,11 @@ interface SalaryCalculatorFormState {
   selectedDegree: Degree;
 }
 
-const Compensations = ({ compensations, locations }: CompensationsProps) => {
+const Compensations = ({
+  compensations,
+  locations,
+  locale,
+}: CompensationsProps) => {
   const [selectedLocation, setSelectedLocation] = useState<string>(
     locations[0]._id,
   );
@@ -121,11 +128,17 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
           />
           {salary !== null ? (
             <div aria-live="polite">
-              <Text> Du vil få en årlig lønn på {salary}</Text>
+              <Text>
+                {`Du vil få en årlig lønn på ${formatAsCurrency(salary, locale.locale, locale.currency)}`}
+              </Text>
               {compensations.pensionPercent && (
                 <Text>
                   Du vil få en årlig pensjon på omtrent{" "}
-                  {calculatePension(salary, compensations.pensionPercent)}
+                  {formatAsCurrency(
+                    calculatePension(salary, compensations.pensionPercent),
+                    locale.locale,
+                    locale.currency,
+                  )}
                 </Text>
               )}
             </div>
@@ -133,7 +146,7 @@ const Compensations = ({ compensations, locations }: CompensationsProps) => {
         </>
       )}
       {yearlyBonusesForLocation && (
-        <YearlyBonuses bonuses={yearlyBonusesForLocation} />
+        <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
       )}
       <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>

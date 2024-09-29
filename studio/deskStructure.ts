@@ -2,6 +2,7 @@ import {
   CaseIcon,
   CogIcon,
   DoubleChevronRightIcon,
+  EarthGlobeIcon,
   HeartIcon,
   ImagesIcon,
   InfoOutlineIcon,
@@ -24,6 +25,7 @@ import { languageSettingsID } from "./schemas/documents/languageSettings";
 import { pageBuilderID } from "./schemas/documents/pageBuilder";
 import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
 import { brokenLinkID } from "./schemas/documents/siteSettings/brokenLink";
+import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
 import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
 
@@ -101,6 +103,15 @@ const siteSettingSection = (S: StructureBuilder) =>
                 .schemaType(languageSettingsID)
                 .documentId(languageSettingsID)
                 .title("Languages"),
+            ),
+          S.listItem()
+            .title("Region")
+            .icon(EarthGlobeIcon)
+            .child(
+              S.document()
+                .schemaType(localeID)
+                .documentId(localeID)
+                .title("Region"),
             ),
           S.listItem()
             .title("Default SEO")
