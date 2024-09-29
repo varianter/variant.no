@@ -60,6 +60,7 @@ export const SOME_PROFILES_QUERY = groq`
 `;
 
 //Languages
+export const LANGUAGES_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages`;
 export const DEFAULT_LANGUAGE_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages[default][0]`;
 
 //Default SEO

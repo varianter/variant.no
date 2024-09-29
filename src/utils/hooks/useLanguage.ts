@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchWithToken } from "studio/lib/fetchWithToken";
 import { SlugTranslations } from "studio/lib/interfaces/slugTranslations";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
-import { LANGUAGES_QUERY } from "studio/lib/queries/languages";
+import { LANGUAGES_QUERY } from "studio/lib/queries/siteSettings";
 import { SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY } from "studio/lib/queries/slugTranslations";
 
 /**

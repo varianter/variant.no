@@ -8,7 +8,7 @@ import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import {
   DEFAULT_LANGUAGE_QUERY,
   LANGUAGES_QUERY,
-} from "studio/lib/queries/languages";
+} from "studio/lib/queries/siteSettings";
 import {
   SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
   SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
