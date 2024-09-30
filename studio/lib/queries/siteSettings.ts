@@ -1,10 +1,8 @@
 import { groq } from "next-sanity";
 
-import { brandAssetsID } from "studio/schemas/documents/siteSettings/brandAssets";
-
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
-  *[_type == "${brandAssetsID}" && _id == "${brandAssetsID}"][0]
+  *[_type == "brandAssets" && _id == "brandAssets"][0]
 `;
 
 //Navigation Manager
