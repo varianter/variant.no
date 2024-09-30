@@ -9,6 +9,7 @@ import Link from 'next/link';
 import Arrow from 'src/components/arrow';
 import { and } from 'src/utils/css';
 import { EmployeeTile } from 'src/employees';
+import BlobLink from '@components/blob-link';
 
 const stavangerBlobUrl = require('./assets/stavanger.png');
 const bygningUrl = require('./assets/finkel.png');
@@ -146,6 +147,14 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               .
             </p>
           </div>
+
+          <BlobLink
+              text="Les om våre vyer for Stavanger"
+              href="stavanger/vyer"
+              size={220}
+              className={style.timelineButton}
+            />
+
 
     
           {listings.length > 0 && (
