@@ -1,0 +1,202 @@
+@import '~@variant/profile/lib/colors/index.module.css';
+
+:global(html) {
+  --font-size-min: 12;
+  --font-size-max: 18;
+  --viewport-min: 400;
+  --viewport-max: 1400;
+  line-height: 1.6;
+  /* Explanation for this madness: https://css-tricks.com/snippets/css/fluid-typography/ */
+  font-size: calc(
+    (var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) *
+      (
+        (100vh - (var(--viewport-min) * 1px)) /
+          (var(--viewport-max) - var(--viewport-min))
+      )
+  );
+}
+
+:global(h1) {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+:global(h2) {
+  line-height: 1.2;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.wrapper {
+  background: var(--color-secondary4__tint3);
+  padding: 5rem 2rem;
+  min-height: calc(100vh - 2rem);
+  margin: 1rem auto 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'left right';
+
+  max-width: 1300px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
+    0 8px 16px rgba(0, 0, 0, 0.11);
+
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'left' 'right';
+    max-width: 600px;
+  }
+}
+
+.wrapper__purple {
+  background-color: var(--color-secondary1);
+  color: var(--color-secondary1--text);
+}
+
+.page1 {
+  background-image: url('./assets/bg-page1.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.page1 h1 {
+  text-align: center;
+}
+.page1 img,
+.backPage img {
+  display: block;
+  margin: 0 auto;
+}
+
+.backPage {
+  background-image: url('./assets/bg-backPage.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.page2 {
+  background-image: url('./assets/bg-page2.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.page2__varianthuset {
+  display: none;
+  float: right;
+  shape-outside: url('./assets/varianthuset.png');
+  position: relative;
+  right: -1rem;
+  margin-right: -10rem;
+}
+
+@media (max-width: 1100px) {
+  .page2 {
+    background: url('./assets/bg-page2-alt1.svg') top left no-repeat,
+      url('./assets/bg-page2-alt2.svg') bottom right no-repeat,
+      var(--color-secondary4__tint3);
+  }
+  .page2__varianthuset {
+    display: block;
+  }
+}
+
+.page3 {
+  background: url('./assets/bg-page3-1.svg') top left no-repeat,
+    url('./assets/bg-page3-2.svg') bottom center no-repeat,
+    url('./assets/bg-page3-3.jpg') right 250px no-repeat,
+    var(--color-secondary4__tint3);
+}
+@media (max-width: 1100px) {
+  .page3 {
+    background: url('./assets/bg-page3-1.svg') -25px top no-repeat,
+      url('./assets/bg-page3-2.svg') bottom center no-repeat,
+      var(--color-secondary4__tint3);
+  }
+}
+
+.page4 {
+  background: url('./assets/bg-page4-2.svg') bottom left no-repeat,
+    url('./assets/bg-page4-3.jpg') bottom right no-repeat,
+    var(--color-secondary4__tint3);
+}
+@media (max-width: 1100px) {
+  .page4 {
+    background: url('./assets/bg-page4-2.svg') bottom left no-repeat,
+      var(--color-secondary4__tint3);
+  }
+}
+.page4__img {
+  display: block;
+  float: left;
+  shape-outside: url('./assets/bg-page4-1.png');
+  margin-left: -4rem;
+  position: relative;
+  left: -1rem;
+}
+
+.page5 {
+  background: url('./assets/bg-page5-1.svg') bottom left no-repeat,
+    url('./assets/bg-page5-2.svg') top right no-repeat;
+}
+
+@media (max-width: 1100px) {
+  .page5 {
+    background: url('./assets/bg-page5-1.svg') -50px 130% no-repeat,
+      url('./assets/bg-page5-2.svg') top right no-repeat;
+  }
+}
+
+.content {
+  max-width: 30rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    min-height: auto;
+  }
+}
+
+.content p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.content__left {
+  grid-area: left;
+}
+.content__right {
+  grid-area: right;
+}
+.content__right_bottom {
+  composes: content__right;
+  justify-content: flex-end;
+}
+.content__left_bottom {
+  composes: content__left;
+  justify-content: flex-end;
+}
+.content__center_bottom {
+  grid-area: left / span 2;
+  justify-content: flex-end;
+}
+
+.block {
+  margin-bottom: 4rem;
+}
+
+.em {
+  font-style: italic;
+  font-weight: 300;
+}
