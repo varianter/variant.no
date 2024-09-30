@@ -9,12 +9,12 @@ export default function Home() {
     <Layout>
       <Wrapper mode="purple" className={styles.page1}>
         <Content mode="right_bottom">
-          <h1>Hallaien!</h1>
+          <h1>Hallo der!</h1>
 
           <p>
-            Her har vi skrevet litt om våre tanker om å bygge Variant i Stavanger.
-            Nå er vi spente på hva du tenker. Hva tror du er viktig for å
-            lykkes? Hvordan ønsker du å utvikle Stavanger sammen med oss?
+            Her har vi skrevet litt om våre tanker om å bygge Variant i Stavanger. 
+            Nå er vi spente på hva du tenker. Hva tror du er viktig for å lykkes? 
+            Hvordan ønsker du å utvikle Stavanger sammen med oss?
           </p>
         </Content>
       </Wrapper>
@@ -25,12 +25,11 @@ export default function Home() {
             <h2>Vil du utvikle Stavanger?</h2>
 
             <p>
-              Det er det vi ønsker du skal gjøre, – sammen med flere og sammen
-              med oss. Etablere neste generasjons selskapskultur hvor
-              medarbeideres potensial utnyttes til det fulle ved å gi tillit og
-              transparens. En kultur som består av gjensidig raushet, åpenhet og
-              læreglede. En kultur som har mot til å stå som et eksempel for
-              andre og ydmykhet til å lære av de samme.
+              For det er nettopp det vi ønsker du skal gjøre, – sammen med flere og sammen med oss. 
+              Stavanger har allerede et rikt og spennende næringsliv, og vi tror vi kan være med å utfordre her. 
+              Vil vil etablere neste generasjons selskapskultur hvor medarbeideres potensial utnyttes til det 
+              fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. 
+              En kultur som har mot til å stå som et eksempel for andre og ydmykhet til å lære av de samme.
             </p>
           </Block>
 
@@ -43,12 +42,12 @@ export default function Home() {
               className={styles.page2__varianthuset}
             />
             <p>
-              Det er det vi ønsker du skal gjøre, – sammen med flere og sammen
-              med oss. Vi har tillit til dine tanker og forslag til hvordan
-              selskapet mellom de syv fjell skal bygges og drives. Vi gir dere
-              frihet som om dere skulle startet for dere selv. Så gir vi dere
-              trygghet for at det dere ønsker å gjøre lykkes. Frihet og trygghet
-              – vi kommer tilbake til det.
+              For det er nettopp det vi ønsker du skal gjøre, – sammen med flere og sammen 
+              med oss. Vi har tillit til dine tanker og 
+              forslag til hvordan selskapet mellom de syv fjell skal bygges og drives. Vi gir dere 
+              frihet som om dere skulle startet for dere selv. 
+              Så gir vi dere trygghet for at det dere ønsker å gjøre lykkes. 
+              Frihet og trygghet – vi kommer tilbake til det.
             </p>
           </Block>
 
@@ -56,16 +55,13 @@ export default function Home() {
             <h2>Vil du utvikle Variant?</h2>
 
             <p>
-              Det er det vi ønsker du skal gjøre, – sammen med flere og sammen
-              med oss. Vi vil ikke at du skal bli som oss. Å være en Variant
-              handler om å lære av hverandre og ha egne tanker. Det er en
-              Variants plikt å lære bort like sterkt som å lære av. Vi har lovd
-              oss selv å alltid være ydmyk for andres erfaringer, kunnskap og
-              idéer. Vi har erfaring med å prøve ut ting. Om det ikke fungerer
-              så justerer vi. Dette gjelder stort og smått. Vi kommer med et
-              standpunkt og en filosofi slik håndboken vår beskriver. Utover det
-              ønsker vi at du og ditt team bidrar til å utvikle konsernet
-              Variant på lik linje med oss.
+              For det er nettopp det vi ønsker du skal gjøre, – sammen med flere og sammen med oss. 
+              Vi vil ikke at du skal bli som oss. Å være en Variant handler om å lære av hverandre og ha 
+              egne tanker. Det er en Variants plikt å lære bort like sterkt som å lære av. Vi har lovd 
+              oss selv å alltid være ydmyk for andres erfaringer, kunnskap og idéer. Vi har erfaring 
+              med å prøve ut ting. Om det ikke fungerer så justerer vi. Dette gjelder stort og smått. 
+              Vi kommer med et standpunkt og en filosofi slik håndboken vår beskriver. Utover det ønsker 
+              vi at du og ditt team bidrar til å utvikle konsernet Variant på lik linje med oss.
             </p>
           </Block>
         </Content>
@@ -73,46 +69,43 @@ export default function Home() {
 
       <Wrapper className={styles.page3}>
         <Content mode="left">
-          <h2>2025</h2>
+          <h2>2028</h2>
           <div className={styles.strong}>
             <p>
-              Vi har latt tankene spinne. Vi har latt fantasien løpe fritt.
-              Hvordan tror vi at Variant Stavanger kan bli? Sånn litt inn i
-              framtida? Dette er tanker som du og ditt team må være med å
-              forbedre og foredle. Så med alle forbehold, her er slik vi ser for
-              oss at 2025 <i>kan</i> se ut.
+              Vi har latt tankene spinne. Vi har latt fantasien løpe fritt. 
+              Hvordan tror vi at Variant Stavanger kan bli? Sånn litt inn i framtida? 
+              Dette er tanker som du og ditt team må være med å forbedre og foredle. 
+              Så med alle forbehold, her er slik vi ser for oss at oktober 2028 <i>kan</i> se ut.
             </p>
           </div>
 
           <div className={styles.em}>
             <p>
-              I løpet året flytter Variant Stavanger inn et eget lokale på
-              Strandgaten med utsikt mot Bryggen. Lokalene er store og
-              attraktive, og er optimalisert for samhandling. Store
-              fellesarealer for å gjennomføre Variantdager, kundeworkshops og
-              lignende. Her er det arbeidsplasser til en del, men en god andel
-              jobber ute hos kunde. Dette er lokaler med sjel og som man føler
-              seg stolte av.
+              Den store snakkisen under lunsjen den siste tiden er våre nye lokaler. 
+              Vi har til de grader vokst fra Vingtor. De har vært en god match for oss 
+              så langt, men nå kjenner vi behovet for å “flytte hjemmefra.” 18.-20. 
+              desember går flyttelasset og fra 2. januar holder vi til i egne lokaler i 
+              Kirkegata.
+            </p>
+            <p>
+              Mandag 2. oktober startet Arne og Anna, hennholdsvis designer og 
+              utvikler. Arne kommer fra Bouvet hvor han har jobbet som interaksjonsdesigner 
+              mens Anna har vært utvikler i Miles de siste 3 årene. Med disse to om 
+              bord er vi nå 31 konsulenter i Stavanger. Og i neste måned får vi en transfer 
+              fra Variant Oslo, da Torill flytter hjem etter sju år i hovedstaden.
             </p>
 
             <p>
-              I løpet av høsten starter konsulent nr. 30. Det er en god balanse
-              mellom designere og utviklere. I tillegg er det en litt mindre
-              gruppe prosjektledere. I år omsetter selskapet for 45 millioner og
-              genererer et overskudd på 4,5 millioner. Omsetningen kommer fra en
-              lik fordeling mellom CV-baserte oppdrag, relasjonssalg og
-              prosjekter med ansvar og risiko.
-            </p>
+              Fredag 6. oktober holder vi som vanlig variantdag den føste fredagen i måneden. 
+              Keynote for dagen holdes av produktsjef Jostein fra vår kunde Aker BP. Her forteller han 
+              hvordan Aker gikk fra å være prosjektorientert til å bli produktorientert. 
 
-            <p>
-              Under både lokale og nasjonale variantdager, bidrar
-              stavangersvarianter med læreglede, faglige bidrag og innsats for å
-              utvikle selskap og konsern. Variantdagen i november arrangeres
-              bare for Stavanger. Her gjennomføres 3 ulike faglige sesjoner
-              parallelt. Et av dem er variant:skudd som bidrar til å gjøre
-              konsulenter av de 6 nyutdannede variantene som startet i august.
-              Hver måned publiserer stavangervarianter faglige bloggposer i
-              tillegg publiserer de en månedlig video med utviklerinnhold.
+              Videre gjennomføres variantdagen i to ulike spor. For utviklerne har vi et videregående 
+              kurs i Kotlin og Spring som nå endlig har fått stor oppmerksomhet hos våre kunder. På designsiden har 
+              Tonje Evanger kommet på besøk, og sammen med henne har vi sesjoner innen Tjnestedesign. 
+
+              Dagen avsluttes som vanlig med at vår daglige leder går igennom selskapstatus, hvor forrige måneds resultater 
+              legges fram sammen med prognosene for året. 
             </p>
           </div>
         </Content>
@@ -120,9 +113,9 @@ export default function Home() {
         <Content mode="right" className={styles.page3__right}>
           <div className={styles.em}>
             <p>
-              Designergruppen har nettopp feiret årsdag for deres månedlige
-              designprogram i Variants YouTube-kanal. Selskapet hostet 4 ulike
-              meetups i år, og har hatt faglig bidrag dobbelt så mange.
+              Etter variantdagen arrangeres energirebus. Dette har blitt en tradisjon i Variant Stavanger, der ulike team 
+              drar rundt i byens gater og streder for å finne løsninger på ulike gåter som vår gåtemester lager. 
+              I fjor var noen av oppgavene så vanskelige at ene teamet endte på Backstage i stedet. 
             </p>
 
             <p>
@@ -153,28 +146,28 @@ export default function Home() {
 
             <div className={styles.em}>
               <p>
-                Ved oppstart 1. september 2022 har vi 6 ansatte. Dette er da
-                CEO, CTO og CDO sammen med tre andre ganske erfarne konsulenter.
+                Ved oppstart 1. januar 2025 er vi 7 ansatte. Dette er da
+                CEO, CTO og CDO sammen med fire andre ganske erfarne konsulenter.
                 Alle er lett å få ut i oppdrag.
               </p>
 
               <p>
-                Fokus resten av 2022 er todelt, rekruttere flere og få folk ut i
-                oppdrag. I løpet av høsten har vi signert 6 nye, og de første
-                begynner i januar. Idet selskapet er ett år jobber det 15
+                Fokus resten av 2025 er todelt, rekruttere flere og få folk ut i
+                oppdrag. I løpet av våre har vi signert 6 nye, og de første
+                begynner i mai. Idet selskapet er ett år jobber det 15
                 mennesker der, 2 av dem er nyutdannede som startet i august.
                 Stavanger støtter seg kraftig på konsernets rekrutteringskapasitet.
               </p>
               <p>
                 Allerede i september inviteres dere med på Varianttur med
-                fadderen Variant Trondheim. Da blir dere sammen med følge,
-                samboer eller kone introdusert for oss, og vi og dere får
+                Variant Trondheim. Da blir dere sammen med følge,
+                samboer eller kone introdusert for Trønderne, og vi og dere får
                 sjansen til å bli godt kjent.
               </p>
               <p>
                 Det første halvåret selger vi oppdrag basert på CV-salg til
                 eksisterende Variantkunder og gjennom megleravtaler og
-                rammeavtaler som Variant har tilgang til. På våren har Variant
+                rammeavtaler som Variant har tilgang til. På høste har Variant
                 Stavanger også begynt å vinne egne kunder. Men gjennom hele det
                 første året handler det om CV-salg, og det må rekrutteringen ta
                 høyde for. Konsernet bidrar med salgskompetanse og -kapasitet.
@@ -186,18 +179,17 @@ export default function Home() {
         <Content mode="right">
           <div className={styles.em}>
             <p>
-              Det første året gjennomføres Variantdager dels sammen med Oslo
-              eller Trondheim og dels på egenhånd. Noen ganger reiser varianter
-              mellom byene, andre ganger benyttes video. 1. september 2023
-              feirer Stavanger ettårsdagen med en Varianttur på egenhånd sammen med
-              følge til Reykjavik.
+              En gang i året arrangerer Variant den nordiske konferansen Refill. I 2025 gjennoføre 
+              denne i Stockholm, den 4. aril. Dit reiser alle varianter, også fra Stavanger. Konferansen 
+              har både interne og esterne speakers, og Stavanger er representert med hele 2 av de interne 
+              foredragene. 
             </p>
 
             <p>
-              Den første tiden leier Variant et kontor i Vaskerelven 39.
+              Den første tiden leier Variant et kontor i Vingtor arbeidsbar.
               Antallet rom og arbeidsplasser utvides etter hvert som vi vokser.
               Konsernet stiller med struktur- og systemkapital. Konsernets
-              ledelse jobber tett på en coachende måte med Stavangers ledergruppe.
+              ledelse jobber tett med Stavangers ledergruppe for å støtte dem i arbeidet.
             </p>
           </div>
         </Content>
