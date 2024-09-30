@@ -103,7 +103,7 @@
   display: block;
 }
 
-.bergenBlob {
+.stavangerBlob {
   shape-outside: url('./assets/stavanger.png');
   float: right;
   margin-top: 3rem;
@@ -121,9 +121,9 @@
   flex-direction: column;
 }
 .mapImage {
-  top: 8rem;
-  left: 20%;
-  width: 80%;
+  top: 18rem;
+  left: 30%;
+  width: 60%;
   display: block;
   position: absolute;
 }
@@ -188,7 +188,7 @@
 }
 
 @media (max-width: 500px) {
-  .bergenBlob,
+  .stavangerBlob,
   .lufthavn {
     float: none;
     margin-bottom: 2rem;
