@@ -81,9 +81,9 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </header>
 
             <p className="lead">
-              I løpet av høsten og vinteren skal vi etablere oss i vakre Stavanger.  
-              Da trenger vi folk, dyktige folk, mye folk! Vil du være med å forme et
-              annerledes konsulentselskap?
+              I løpet av høsten og vinteren skal vi etablere oss i vakre
+              Stavanger. Da trenger vi folk, dyktige folk, mye folk! Vil du være
+              med å forme et annerledes konsulentselskap?
             </p>
             <p>
               Les mer om oss og våre verdier i{' '}
@@ -107,9 +107,9 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <h3 className="fancy">Så, hvorfor Stavanger?</h3>
 
             <p className={and('lead', style.map__text__lead)}>
-              Den korte oppsummeringen er; Stavanger har et spesielt viktig marked i landet og
-              mange spennedne kunder. I tillegg spennende fagmiljøer og studiesteder, og ikke minst
-              spennende folk.
+              Den korte oppsummeringen er; Stavanger har et spesielt viktig
+              marked i landet og mange spennedne kunder. I tillegg spennende
+              fagmiljøer og studiesteder, og ikke minst spennende folk.
             </p>
 
             <p className={style.map__text__first}>
@@ -117,9 +117,10 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               2018 har vi hatt stor vekst. Variant-konseptet har blitt veldig
               godt mottatt og vi får også tilbakemeldinger på at vi har
               inspirert andre. Vi ønsker derfor å spre verdiene og tankesettene
-              våre videre. Bærekraft har vært viktig for oss siden -, for alltid egentlig. 
-              Vi mener at i akkurat i Stavanger kan kanskje i større grad enn noe annet sted faktisk 
-              jobbe med bærekraftsutfordinger som faktisk betyr noe. 
+              våre videre. Bærekraft har vært viktig for oss siden -, for alltid
+              egentlig. Vi mener at i akkurat i Stavanger kan kanskje i større
+              grad enn noe annet sted faktisk jobbe med bærekraftsutfordinger
+              som faktisk betyr noe.
             </p>
 
             <img
@@ -129,9 +130,10 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             />
 
             <p className={style.map__text__second}>
-              Vi lærte mye fra oppstarten i Oslo og Bergen  som vi ønsker å ta med oss
-              sør-vestover. Jo flere selskaper vi har, jo flere stemmer får vi inn på vårt bord. Dette skaper bedre 
-              perpektiver og bedre beslutninger. Stavanger vil gi oss enda en stemme og nye
+              Vi lærte mye fra oppstarten i Oslo og Bergen som vi ønsker å ta
+              med oss sør-vestover. Jo flere selskaper vi har, jo flere stemmer
+              får vi inn på vårt bord. Dette skaper bedre perpektiver og bedre
+              beslutninger. Stavanger vil gi oss enda en stemme og nye
               perspektiver inn i det som begynner å bli et stort
               Variant-fellesskap.
             </p>
@@ -146,17 +148,15 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               </a>
               .
             </p>
-          </div>
 
-          <BlobLink
+            <BlobLink
               text="Les om våre vyer for Stavanger"
               href="stavanger/vyer"
               size={220}
               className={style.timelineButton}
             />
+          </div>
 
-
-    
           {listings.length > 0 && (
             <div className={style.content}>
               <h3 className="fancy">Høres det interessant ut?</h3>

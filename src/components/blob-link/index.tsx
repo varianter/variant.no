@@ -24,14 +24,16 @@ export default function BlobLink({
 }: BlobLinkProps) {
   return (
     <Link href={href} className={and(style.blobLink, className)}>
-      <div>
+      <div className={style.blobContainer}>
         <BaseBlob
           width={size}
           height={size}
           randomness={2}
           extraPoints={6}
           color={background}
-          />
+        />
+      </div>
+      <div className={style.linkContent}>
         <span>{text}</span>
         <Arrow className={style.blobLinkArrow} />
       </div>

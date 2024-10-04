@@ -30,8 +30,7 @@
 }
 
 .timelineButton {
-  float: right;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 .timelineButton span {
   max-width: 220px;
