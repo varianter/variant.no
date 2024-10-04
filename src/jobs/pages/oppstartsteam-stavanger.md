@@ -14,7 +14,7 @@ meta_image: https://www.variant.no/images/cdo-bergen.jpg
 
 Det er det vi ønsker du skal gjøre – sammen med oss. Vi ser etter deg som vil være med på å etablere neste generasjons selskapskultur, hvor medarbeidernes potensiale utnyttes til det fulle ved å gi tillit og transparens. En kultur som består av gjensidig raushet, åpenhet og læreglede. En kultur som har mot til å stå som et eksempel for andre, og har ydmykhet nok til å lære.
 
-Les mer om våre ambisjoner for Stavanger [her](https://variant.no/stavanger). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Oljehovedstaden](https://blog.variant.no/kor-e-det-stavanger-a0c519d1e7f2).
+Les mer om våre ambisjoner for Stavanger [her](/stavanger). I tillegg har Odd Morten skrevet litt om [hvorfor vi etablerer oss i Oljehovedstaden](https://blog.variant.no/kor-e-det-stavanger-a0c519d1e7f2).
 
 ## Hvem ser vi etter?
 
