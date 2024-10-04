@@ -77,11 +77,11 @@ type Offer = {
 };
 
 type Location = {
-  city: string,
-  state: string,
-  country: string,
-  street: string,
-}
+  city: string;
+  state: string;
+  country: string;
+  street: string;
+};
 
 type OfferResult = {
   offers: Array<Offer>;
@@ -122,6 +122,8 @@ function officeToDepartmentRegex(department: Office) {
       return /oslo/i;
     case 'trondheim':
       return /trondheim/i;
+    case 'stavanger':
+      return /stavanger/i;
   }
 }
 

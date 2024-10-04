@@ -12,9 +12,9 @@ export default function Home() {
           <h1>Hallo der!</h1>
 
           <p>
-            Her har vi skrevet litt om våre tanker om å bygge Variant i Stavanger. 
-            Nå er vi spente på hva du tenker. Hva tror du er viktig for å lykkes? 
-            Hvordan ønsker du å utvikle Stavanger sammen med oss?
+            Her har vi skrevet litt om våre tanker om å bygge Variant i
+            Stavanger. Nå er vi spente på hva du tenker. Hva tror du er viktig
+            for å lykkes? Hvordan ønsker du å utvikle Stavanger sammen med oss?
           </p>
         </Content>
       </Wrapper>
@@ -133,7 +133,11 @@ export default function Home() {
           <h2>Det første året</h2>
 
           <div className={styles.page4__padded}>
-            <img src="/bg-page4-1.png" alt="" className={styles.page4__img} />
+            <img
+              src={require('./assets/bg-page4-1.png')}
+              alt=""
+              className={styles.page4__img}
+            />
             <div className={styles.strong}>
               <p>
                 Også det første året vil i stor grad påvirkes av hva du og ditt
@@ -156,7 +160,8 @@ export default function Home() {
                 oppdrag. I løpet av våre har vi signert 6 nye, og de første
                 begynner i mai. Idet selskapet er ett år jobber det 15
                 mennesker der, 2 av dem er nyutdannede som startet i august.
-                Stavanger støtter seg kraftig på konsernets rekrutteringskapasitet.
+                Stavanger støtter seg kraftig på konsernets
+                rekrutteringskapasitet.
               </p>
               <p>
                 Allerede i september inviteres dere med på Varianttur med
@@ -179,17 +184,18 @@ export default function Home() {
         <Content mode="right">
           <div className={styles.em}>
             <p>
-              En gang i året arrangerer Variant den nordiske konferansen Refill. I 2025 gjennoføre 
-              denne i Stockholm, den 4. aril. Dit reiser alle varianter, også fra Stavanger. Konferansen 
-              har både interne og esterne speakers, og Stavanger er representert med hele 2 av de interne 
-              foredragene. 
+              Det første året gjennomføres Variantdager dels sammen med Oslo
+              eller Trondheim og dels på egenhånd. Noen ganger reiser varianter
+              mellom byene, andre ganger benyttes video. 1. september 2023
+              feirer Stavanger ettårsdagen med en Varianttur på egenhånd sammen med
+              følge til Reykjavik.
             </p>
 
             <p>
               Den første tiden leier Variant et kontor i Vingtor arbeidsbar.
               Antallet rom og arbeidsplasser utvides etter hvert som vi vokser.
               Konsernet stiller med struktur- og systemkapital. Konsernets
-              ledelse jobber tett med Stavangers ledergruppe for å støtte dem i arbeidet.
+              ledelse jobber tett på en coachende måte med Stavangers ledergruppe.
             </p>
           </div>
         </Content>
