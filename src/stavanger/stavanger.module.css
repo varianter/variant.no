@@ -95,14 +95,6 @@
   left: 0;
 }
 
-.lufthavn {
-  shape-outside: url(./verdiutvikling/bergen-lufthavn.png);
-  float: right;
-  right: -1rem;
-  position: relative;
-  display: block;
-}
-
 .stavangerBlob {
   shape-outside: url('./assets/stavanger.png');
   float: right;
