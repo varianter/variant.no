@@ -2,8 +2,8 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { PortableTextBlock } from "sanity";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { IImage } from "studio/lib/interfaces/media";
 import { GridSection } from "studio/lib/interfaces/pages";
 
@@ -39,10 +39,13 @@ const Element = ({
     image: IImage;
   };
 }) => {
-  const renderImage = useConvertSanityImageToNextImage(item.image);
   return (
     <li className={styles.listItem}>
-      {renderImage && <div className={styles.image}>{renderImage}</div>}
+      {item.image && (
+        <div className={styles.image}>
+          <SanityImage image={item.image} />
+        </div>
+      )}
       <Text>{item.basicTitle}</Text>
       {item.richText && (
         <PortableText

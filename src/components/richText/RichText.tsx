@@ -4,9 +4,9 @@ import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { ReactNode } from "react";
 import { PortableTextBlock } from "sanity";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { getReactNodeTextContent } from "src/utils/reactNode";
 
 import styles from "./richText.module.css";
@@ -18,11 +18,6 @@ const formatId = (children: ReactNode): string => {
     .toLowerCase()
     .replace(/\s+/g, "-")
     .replace(/[^\w-]+/g, "");
-};
-
-const SanityImage = ({ value }: { value: PortableTextBlock }) => {
-  const ImageElement = useConvertSanityImageToNextImage(value);
-  return <div className={styles.image}>{ImageElement}</div>;
 };
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
@@ -53,7 +48,11 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     number: ({ children }) => <li className={textStyles.body}>{children}</li>,
   },
   types: {
-    image: SanityImage,
+    image: ({ value }) => (
+      <div className={styles.image}>
+        <SanityImage image={value} />
+      </div>
+    ),
   },
 };
 

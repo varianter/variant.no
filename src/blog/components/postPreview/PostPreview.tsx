@@ -1,10 +1,10 @@
 "use client";
 import { PortableTextBlock } from "sanity";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import CustomLink from "src/components/link/CustomLink";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { Post } from "studio/lib/interfaces/pages";
 
@@ -21,8 +21,6 @@ const PostPreview = ({
   alignImageToRight = true,
   slug,
 }: PostPreviewProps) => {
-  const renderedImage = useConvertSanityImageToNextImage(post.lead.image);
-
   const link = {
     _key: "string",
     _type: "string",
@@ -60,14 +58,20 @@ const PostPreview = ({
 
   const truncatedText = truncateFirstBlock(post.lead.richText, 400);
 
+  const hasImage = post.lead.image !== undefined;
+
   return (
     <article className={styles.wrapper}>
       <div
         className={`${styles.postPreview} ${alignImageToRight ? styles.right : ""}`}
       >
-        {renderedImage && <div className={styles.image}>{renderedImage}</div>}
+        {hasImage && (
+          <div className={styles.image}>
+            <SanityImage image={post.lead.image} />
+          </div>
+        )}
         <div
-          className={`${styles.content} ${renderedImage ? styles.maxWidthSmall : styles.maxWidthLarge}`}
+          className={`${styles.content} ${hasImage ? styles.maxWidthSmall : styles.maxWidthLarge}`}
         >
           <div>
             <Text type="caption">{post.category}</Text>
