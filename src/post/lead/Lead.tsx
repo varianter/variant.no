@@ -2,8 +2,8 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { PortableTextBlock } from "sanity";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { IImage } from "studio/lib/interfaces/media";
 
 import styles from "./lead.module.css";
@@ -19,11 +19,11 @@ const Lead = ({
   image: IImage;
   richText: PortableTextBlock[];
 }) => {
-  const renderedImage = useConvertSanityImageToNextImage(image);
-
   return (
     <div className={styles.lead}>
-      {renderedImage && <div className={styles.image}>{renderedImage}</div>}
+      <div className={styles.image}>
+        <SanityImage image={image} />
+      </div>
       {richText && (
         <div className={styles.body}>
           <PortableText

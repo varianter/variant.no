@@ -2,10 +2,10 @@
 
 import { ReactNode } from "react";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import CustomLink from "src/components/link/CustomLink";
 import SoMeLink from "src/components/link/SoMeLink";
 import Text from "src/components/text/Text";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
@@ -32,15 +32,15 @@ const Footer = ({
   soMeData,
   legalData,
 }: IFooter) => {
-  const renderedLogo = useConvertSanityImageToNextImage(
-    brandAssets?.secondaryLogo,
-  );
-
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.logo}>{renderedLogo}</div>
+      {brandAssets?.secondaryLogo && (
+        <div className={styles.logo}>
+          <SanityImage image={brandAssets.secondaryLogo} />
+        </div>
+      )}
       <nav className={styles.nav}>
         {renderLinks(navigationData)}
         {soMeData && renderSoMe(navigationData, soMeData)}

@@ -1,9 +1,9 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { LogoSaladSection } from "studio/lib/interfaces/pages";
 
-import { RenderLogo } from "./LogoRender";
 import styles from "./logoSalad.module.css";
 
 interface LogoSaladProps {
@@ -32,7 +32,7 @@ export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {
                 (logo) =>
                   logo && (
                     <li key={logo._key}>
-                      <RenderLogo asset={logo} />
+                      <SanityImage image={logo} />
                     </li>
                   ),
               )}

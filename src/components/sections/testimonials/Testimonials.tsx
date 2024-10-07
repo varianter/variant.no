@@ -1,10 +1,10 @@
 "use client";
+import { SanityImage } from "src/components/image/SanityImage";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import useTabs from "src/utils/hooks/useTabs";
 import { TestimonialsSection } from "studio/lib/interfaces/pages";
 
-import { RenderImage } from "./RenderAvatar";
 import styles from "./testimonials.module.css";
 
 interface TestimonialsProps {
@@ -36,7 +36,7 @@ export const Testimonials = ({ testimonials }: TestimonialsProps) => {
             className={styles.tabList}
             ref={tabListRef}
           >
-            {testimonials.listOfTestimonials.map((testiomny, index) => {
+            {testimonials.listOfTestimonials.map((testimony, index) => {
               const isSelected = selectedTabIndex === index;
               return (
                 <li role="presentation" key={`panel-${index}`}>
@@ -49,14 +49,14 @@ export const Testimonials = ({ testimonials }: TestimonialsProps) => {
                     className={`${styles.tab} ${isSelected && styles.selected}`}
                   >
                     <div className={imageStyling}>
-                      <RenderImage image={testiomny.image} />
+                      <SanityImage image={testimony.image} />
                     </div>
                     <span className={styles.info}>
                       <span className={styles.title}>
-                        {testiomny.basicTitle}
+                        {testimony.basicTitle}
                       </span>
                       <span className={styles.subTitle}>
-                        {testiomny.subTitle}
+                        {testimony.subTitle}
                       </span>
                     </span>
                   </button>

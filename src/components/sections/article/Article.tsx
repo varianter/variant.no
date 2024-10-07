@@ -1,8 +1,8 @@
 "use client";
+import { SanityImage } from "src/components/image/SanityImage";
 import CustomLink from "src/components/link/CustomLink";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { ArticleSection } from "studio/lib/interfaces/pages";
 
 import styles from "./article.module.css";
@@ -12,16 +12,16 @@ interface ArticleProps {
 }
 
 const Article = ({ article }: ArticleProps) => {
-  const renderedImage = useConvertSanityImageToNextImage(
-    article?.imageExtended,
-  );
-
   return (
     <article className={styles.wrapper} id={article._key}>
       <div
         className={`${styles.article} ${article.imageExtended.imageAlignment == "right" ? styles.right : ""}`}
       >
-        <div className={styles.image}>{renderedImage}</div>
+        {article?.imageExtended && (
+          <div className={styles.image}>
+            <SanityImage image={article.imageExtended} />
+          </div>
+        )}
         <div className={styles.content}>
           <div>
             <Text type="caption">{article.tag}</Text>

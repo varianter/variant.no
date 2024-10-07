@@ -5,11 +5,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { getHref } from "src/utils/get";
-import { useConvertSanityImageToNextImage } from "src/utils/hooks/useConvertImage";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
@@ -29,7 +29,6 @@ export const Header = ({ data, assets }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const renderedLogo = useConvertSanityImageToNextImage(assets?.primaryLogo);
   const sidebarData = data.sidebar || data.main;
 
   const links = filterLinks(data.main, linkID);
@@ -80,7 +79,7 @@ export const Header = ({ data, assets }: IHeader) => {
             {assets?.primaryLogo && (
               <div className={styles.logo}>
                 <Link href="/" aria-label="Home">
-                  {renderedLogo}
+                  <SanityImage image={assets.primaryLogo} />
                 </Link>
               </div>
             )}
