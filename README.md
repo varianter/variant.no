@@ -2,6 +2,34 @@
 
 Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content. This project has been customized to meet the specific needs of Variant’s websites for .no and .se domains.
 
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Shared Studio](#shared-studio)
+  - [Features of Shared Studio](#features-of-shared-studio)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Project Structure](#project-structure)
+- [Custom Desk Structure](#custom-desk-structure)
+- [Managing Content](#managing-content)
+  - [Company Information](#company-information)
+  - [Social Media Profiles](#social-media-profiles)
+  - [Navigation Management](#navigation-management)
+  - [Pages](#pages)
+- [Development Workflow](#development-workflow)
+  - [Using `fetchWithToken` for Custom Components in Sanity](#using-fetchwithtoken-for-custom-components-in-sanity)
+  - [Steganography in Presentation](#steganography-in-presentation)
+  - [Serving files from `/public`](#serving-files-from-public)
+  - [OpenGraph image customization](#opengraph-image-customization)
+    - [Custom fonts](#custom-fonts)
+    - [Custom background](#custom-background)
+  - [Troubleshooting](#troubleshooting)
+  - [Testing and Deployment](#testing-and-deployment)
+- [Dependencies](#dependencies)
+- [Development Dependencies](#development-dependencies)
+- [Documentation and Resources](#documentation-and-resources)
+- [License and Credits](#license-and-credits)
+
 ## Key Features
 
 - **Rapid UI Development:** Built with Next.js and Sanity, Sankitty provides a streamlined environment for creating and managing dynamic, content-driven websites. The integration minimizes the setup time, letting developers focus on building out the UI faster.
