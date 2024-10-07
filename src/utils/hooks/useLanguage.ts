@@ -10,6 +10,8 @@ import { SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY } from "studio/lib/queries/slugTr
 /**
  * Client hook providing access to the available Sanity translations for the given slug
  *
+ * Includes the trivial translation for the current language
+ *
  * @param currentLanguage the language of the given slug
  * @param slug slug to translate
  * @param availableLanguages languages with possible slug translation
@@ -35,7 +37,7 @@ function useSlugTranslations(
     ).then(setSlugTranslationsData);
   }, [currentLanguage, slug]);
 
-  const allSlugTranslations =
+  const slugTranslations =
     slug === ""
       ? availableLanguages?.map((lang) => ({
           slug: "",
@@ -43,13 +45,8 @@ function useSlugTranslations(
         }))
       : slugTranslationsData?._translations;
 
-  const otherSlugTranslations = allSlugTranslations?.filter(
-    (translation) =>
-      translation && translation.language !== currentLanguage?.id,
-  );
-
   // include full language object, not just id, in slug translation
-  return otherSlugTranslations?.map(
+  return slugTranslations?.map(
     (translation) =>
       translation && {
         slug: `/${translation.language}/${translation.slug}`,

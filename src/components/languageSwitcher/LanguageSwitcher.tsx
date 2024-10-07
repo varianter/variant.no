@@ -7,26 +7,46 @@ import useLanguage from "src/utils/hooks/useLanguage";
 import styles from "./languageSwitcher.module.css";
 
 export default function LanguageSwitcher() {
-  const { slugTranslations } = useLanguage();
+  const { slugTranslations, language, defaultLanguage } = useLanguage();
+
+  const currentLanguage = language ?? defaultLanguage;
+
+  // make sure the current language is the first item in the languages list
+  const sortedTranslations = slugTranslations?.toSorted((a, b) =>
+    a?.language?.id === currentLanguage?.id
+      ? -1
+      : b?.language?.id === currentLanguage?.id
+        ? 1
+        : 0,
+  );
+
   return (
     <ul className={styles.list}>
-      {slugTranslations?.map(
-        (slugTranslation, index) =>
-          slugTranslation?.language && (
-            <Fragment key={slugTranslation.language.id}>
-              <li>
-                <Link href={slugTranslation.slug}>
-                  <Text type={"small"}>
-                    {slugTranslation.language.id.toUpperCase()}
-                  </Text>
-                </Link>
-              </li>
-              {index < slugTranslations.length - 1 && (
-                <span className={styles.divider}></span>
+      {sortedTranslations?.map((slugTranslation, index) => {
+        if (slugTranslation?.language === undefined) {
+          return null;
+        }
+        const linkText = (
+          <Text type={"small"}>
+            {slugTranslation.language.id.toUpperCase()}
+          </Text>
+        );
+        return (
+          <Fragment key={slugTranslation.language.id}>
+            <li>
+              {currentLanguage === undefined ||
+              slugTranslation.language.id !== currentLanguage.id ? (
+                <Link href={slugTranslation.slug}>{linkText}</Link>
+              ) : (
+                linkText
               )}
-            </Fragment>
-          ),
-      )}
+            </li>
+            {index < sortedTranslations.length - 1 && (
+              <span className={styles.divider}></span>
+            )}
+          </Fragment>
+        );
+      })}
     </ul>
   );
 }
