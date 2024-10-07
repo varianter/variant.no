@@ -289,7 +289,3 @@ background: url("data:image/png;base64,...");
 - [Sanity Documentation](https://www.sanity.io/docs) - Explore Sanity’s powerful CMS features.
 - [Storybook Documentation](https://storybook.js.org/docs) - Get started with component-driven development.
 - [Sanity Slack Community](https://slack.sanity.io) - Join the community for support and collaboration.
-
-## License and Credits
-
-© Sankitty. Created by Christina Roise.
