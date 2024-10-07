@@ -26,8 +26,12 @@ const hasValidData = (data: unknown) => data && Object.keys(data).length > 0;
 
 export default async function Layout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: {
+    lang: string;
+  };
 }>) {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
@@ -47,7 +51,7 @@ export default async function Layout({
     ),
     loadStudioQuery<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
-      { language: "en" }, //TODO: replace this with selected language for the page
+      { language: params.lang },
       { perspective },
     ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
@@ -90,6 +94,8 @@ export default async function Layout({
           initialCompanyInfo={initialCompanyInfo}
           initialBrandAssets={initialBrandAssets}
           initialSoMe={initialSoMe}
+          initialLegal={initialLegal}
+          language={params.lang}
         />
       ) : (
         <Footer

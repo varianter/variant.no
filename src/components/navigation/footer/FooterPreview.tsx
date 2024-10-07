@@ -3,9 +3,13 @@ import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
+import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
-import { COMPANY_INFO_QUERY } from "studio/lib/queries/admin";
+import {
+  COMPANY_INFO_QUERY,
+  LEGAL_DOCUMENTS_BY_LANG_QUERY,
+} from "studio/lib/queries/admin";
 import {
   BRAND_ASSETS_QUERY,
   NAV_QUERY,
@@ -27,28 +31,37 @@ export default function FooterPreview({
   initialCompanyInfo,
   initialBrandAssets,
   initialSoMe,
+  initialLegal,
+  language,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
   initialCompanyInfo: QueryResponseInitial<CompanyInfo>;
   initialBrandAssets: QueryResponseInitial<BrandAssets>;
   initialSoMe: QueryResponseInitial<SocialMediaProfiles | null>;
+  initialLegal: QueryResponseInitial<LegalDocument[] | null>;
+  language: string;
 }) {
   const newNav = useInitialData(NAV_QUERY, initialNav);
   const newCompanyInfo = useInitialData(COMPANY_INFO_QUERY, initialCompanyInfo);
   const newBrandAssets = useInitialData(BRAND_ASSETS_QUERY, initialBrandAssets);
   const newSoMedata = useInitialData(SOME_PROFILES_QUERY, initialSoMe);
-  // TODO: add legal preview
+  const { data: newLegal } = useQuery(
+    LEGAL_DOCUMENTS_BY_LANG_QUERY,
+    { language },
+    { initial: initialLegal },
+  );
   return (
     newNav &&
     newCompanyInfo &&
     newBrandAssets &&
-    newSoMedata && (
+    newSoMedata &&
+    newLegal && (
       <Footer
         navigationData={newNav}
         companyInfo={newCompanyInfo}
         brandAssets={newBrandAssets}
         soMeData={newSoMedata}
-        legalData={[]}
+        legalData={newLegal}
       />
     )
   );

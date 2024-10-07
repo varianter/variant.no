@@ -1,6 +1,8 @@
+export interface SlugTranslation {
+  language: string;
+  slug: string;
+}
+
 export interface SlugTranslations {
-  _translations: ({
-    language: string;
-    slug: string;
-  } | null)[];
+  _translations: (SlugTranslation | null)[];
 }

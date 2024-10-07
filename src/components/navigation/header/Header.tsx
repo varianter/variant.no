@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
+import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { getHref } from "src/utils/get";
@@ -85,6 +86,9 @@ export const Header = ({ data, assets }: IHeader) => {
             )}
             {renderPageLinks(links, false, pathname)}
             {renderPageCTAs(ctas, false)}
+            <div className={styles.languageSwitcher}>
+              <LanguageSwitcher />
+            </div>
             <button
               aria-haspopup="true"
               aria-controls={sidebarID}
@@ -102,6 +106,7 @@ export const Header = ({ data, assets }: IHeader) => {
             >
               {renderPageLinks(sidebarLinks, true, pathname)}
               {renderPageCTAs(sidebarCtas, true)}
+              <LanguageSwitcher />
             </div>
           )}
         </nav>

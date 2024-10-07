@@ -1,10 +1,8 @@
 import { groq } from "next-sanity";
 
-import { brandAssetsID } from "studio/schemas/documents/siteSettings/brandAssets";
-
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
-  *[_type == "${brandAssetsID}" && _id == "${brandAssetsID}"][0]
+  *[_type == "brandAssets" && _id == "brandAssets"][0]
 `;
 
 //Navigation Manager
@@ -60,6 +58,7 @@ export const SOME_PROFILES_QUERY = groq`
 `;
 
 //Languages
+export const LANGUAGES_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages`;
 export const DEFAULT_LANGUAGE_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages[default][0]`;
 
 //Default SEO
