@@ -106,65 +106,74 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           >
             <h3 className="fancy">Så, hvorfor Stavanger?</h3>
 
-            <p className={style.map__text__lead}>
-              Den korte oppsummeringen er; Stavanger har et spesielt viktig
-              marked i landet og mange spennende kunder. I tillegg spennende
-              fagmiljøer og studiesteder, og ikke minst spennende folk.
-            </p>
+            <div className={style.contentNarrow}>
+              <p>
+                Den korte oppsummeringen er; Stavanger har et spesielt viktig
+                marked i landet og mange spennende kunder. I tillegg spennende
+                fagmiljøer og studiesteder, og ikke minst spennende folk.
+              </p>
 
-            <p className={style.map__text__lead}>
-              Den litt lengre forklaringen er at siden Variant ble startet i
-              2018 har vi hatt stor vekst. Variant-konseptet har blitt veldig
-              godt mottatt og vi får også tilbakemeldinger på at vi har
-              inspirert andre. Vi ønsker derfor å spre verdiene og tankesettene
-              våre videre. Bærekraft har vært viktig for oss siden -, for alltid
-              egentlig. Vi mener at i akkurat i Stavanger kan vi jobbe med 
-              bærekraftsutfordinger som faktisk betyr noe.
-            </p>
+              <p>
+                Den litt lengre forklaringen er at siden Variant ble startet i
+                2018 har vi hatt stor vekst. Variant-konseptet har blitt veldig
+                godt mottatt og vi får også tilbakemeldinger på at vi har
+                inspirert andre. Vi ønsker derfor å spre verdiene og
+                tankesettene våre videre. Bærekraft har vært viktig for oss
+                siden -, for alltid egentlig. Vi mener at i akkurat i Stavanger
+                kan vi jobbe med bærekraftsutfordinger som faktisk betyr noe.
+              </p>
+            </div>
 
-            <img
-              className={style.mapImage}
-              src={bygningUrl}
-              alt="Hus i Stavanger sentrum"
-            />
+            <div className={style.contentSplit}>
+              <img src={bygningUrl} alt="Hus i Stavanger sentrum" />
 
-            <p className={style.map__text__second}>
-              Vi lærte mye fra oppstarten i Oslo og Bergen som vi ønsker å ta
-              med oss sør-vestover. Jo flere selskaper vi har, jo flere stemmer
-              får vi inn på vårt bord. Dette skaper bedre perpektiver og bedre
-              beslutninger. Stavanger vil gi oss enda en stemme og nye
-              perspektiver inn i det som begynner å bli et stort
-              Variant-fellesskap.
-            </p>
+              <div>
+                <p>
+                  Vi lærte mye fra oppstarten i Oslo og Bergen som vi ønsker å
+                  ta med oss sør-vestover. Jo flere selskaper vi har, jo flere
+                  stemmer får vi inn på vårt bord. Dette skaper bedre
+                  perpektiver og bedre beslutninger. Stavanger vil gi oss enda
+                  en stemme og nye perspektiver inn i det som begynner å bli et
+                  stort Variant-fellesskap.
+                </p>
 
-            <p className={style.map__text__third}>
-              Om du ønsker å lese mer så kan du{' '}
-              <a
-                href="https://blog.variant.no/kor-e-det-stavanger-a0c519d1e7f2"
-                title="Kor e det, Stavanger?"
-              >
-                lese Odd Mortens bloggpost om hvorfor vi drar til Stavanger
-              </a>
-              .
-            </p>
+                <p>
+                  Om du ønsker å lese mer så kan du{' '}
+                  <a
+                    href="https://blog.variant.no/kor-e-det-stavanger-a0c519d1e7f2"
+                    title="Kor e det, Stavanger?"
+                  >
+                    lese Odd Mortens bloggpost om hvorfor vi drar til Stavanger
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
 
-            <h3 className={and('fancy', style.map__text__lead)}>Bærekraft</h3>
+            <div
+              className={and(
+                style.contentNarrow,
+                style['contentNarrow--marginTop'],
+              )}
+            >
+              <h3 className={and('fancy')}>Bærekraft</h3>
+              <p>
+                Det vi skal opprette i Stavanger vil minne om de selskapene vi
+                har i Trondheim, Oslo og Bergen, men dette selskapet vil ha en
+                enda tydeligere bærekraftsprofil. Og da tenker vi i første rekke
+                på hvordan vi skal bidra hos kunder som jobber med virkelig
+                viktige og vanskelige bærekraftsspørsmål.
+              </p>
 
-            <p className={style.map__text__bread}>
-              Det vi skal opprette i Stavanger vil minne om de selskapene vi har
-              i Trondheim, Oslo og Bergen, men dette selskapet vil ha en enda
-              tydeligere bærekraftsprofil. Og da tenker vi i første rekke på
-              hvordan vi skal bidra hos kunder som jobber med virkelig viktige
-              og vanskelige bærekraftsspørsmål.
-            </p>
-
-            <p className={style.map__text__bread}>
-              Konkret handler dette blant annet om å delta i prosjekter som reduserer karbonutslipp,
-              bidrar til økt bruk av fornybar energi og bærekraftig matforskyning.  
-              Dette må vi gjøre sammen med våre kunder. 
-              Vi er sikre på at vår plattform, våre verdier, vår kultur og vår
-              kompetanse er nødvendig for å lykkes med slike problemstillinger.
-            </p>
+              <p>
+                Konkret handler dette blant annet om å delta i prosjekter som
+                reduserer karbonutslipp, bidrar til økt bruk av fornybar energi
+                og bærekraftig matforskyning. Dette må vi gjøre sammen med våre
+                kunder. Vi er sikre på at vår plattform, våre verdier, vår
+                kultur og vår kompetanse er nødvendig for å lykkes med slike
+                problemstillinger.
+              </p>
+            </div>
 
             <BlobLink
               text="Les om våre vyer for Stavanger"
