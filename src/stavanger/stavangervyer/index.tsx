@@ -98,7 +98,9 @@ export default function Home() {
             <p>
               Fredag 6. oktober holder vi som vanlig variantdag den føste fredagen i måneden. 
               Keynote for dagen holdes av produktsjef Sarah fra vår kunde Aker BP. Her forteller han 
-              hvordan Aker gikk fra å være prosjektorientert til å bli produktorientert. 
+              hvordan Aker via digitalisering og predikativ modellering reduserte karbonavtrykket for sine 
+              utviklingsprosjekter med 27%. Faktisk helt nede på 3,1 kg carbon emisjon per fat Olje. Vi er ikke så rent lite 
+              stolte av å ha vært en betydelig bidragsyter i denne utviklingen. 
               Videre gjennomføres variantdagen i to ulike spor. For utviklerne har vi et videregående 
               kurs i Kotlin og Spring som nå endlig har fått stor oppmerksomhet hos våre kunder. På designsiden har 
               Tonje Evanger kommet på besøk, og sammen med henne har vi sesjoner innen tjenestedesign. 

@@ -159,6 +159,9 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             </p>
 
             <p className={style.map__text__bread}>
+              Konkret handler dette blant annet om å delta i prosjekter som reduserer karbonutslipp,
+              bidrar til økt bruk av fornybar energi og bærekraftig matforskyning.  
+              Dette må vi gjøre sammen med våre kunder. 
               Vi er sikre på at vår plattform, våre verdier, vår kultur og vår
               kompetanse er nødvendig for å lykkes med slike problemstillinger.
             </p>
