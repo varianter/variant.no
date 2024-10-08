@@ -124,7 +124,7 @@ function officeToDepartmentRegex(department: Office) {
       return /trondheim/i;
     case 'stavanger':
       return /stavanger/i;
-  }
+    }
 }
 
 function findStatus(offers: Offer[], slug: string): Offer | undefined {
