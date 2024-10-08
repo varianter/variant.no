@@ -9,7 +9,7 @@
 }
 
 .content--block {
-  margin-top: 15rem;
+  margin-top: 4rem;
   margin-bottom: 15rem;
 }
 
@@ -112,15 +112,20 @@
   flex-direction: column;
 }
 .mapImage {
-  top: 43rem;
+  top: 18rem;
   width: 60%;
   display: block;
   position: absolute;
 }
 .map__text__lead {
   width: 60%;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
 }
+.map__text__bread {
+  width: 80%;
+  margin-top: 0.5rem;
+}
+
 .map__text__first,
 .map__text__second,
 .map__text__third {
@@ -158,7 +163,7 @@
 }
 
 .blobmap__text__lead {
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
   max-width: 80%;
 }
 .blobmap__image {

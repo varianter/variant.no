@@ -97,13 +97,11 @@ export default function Home() {
 
             <p>
               Fredag 6. oktober holder vi som vanlig variantdag den føste fredagen i måneden. 
-              Keynote for dagen holdes av produktsjef Jostein fra vår kunde Aker BP. Her forteller han 
+              Keynote for dagen holdes av produktsjef Sarah fra vår kunde Aker BP. Her forteller han 
               hvordan Aker gikk fra å være prosjektorientert til å bli produktorientert. 
-
               Videre gjennomføres variantdagen i to ulike spor. For utviklerne har vi et videregående 
               kurs i Kotlin og Spring som nå endlig har fått stor oppmerksomhet hos våre kunder. På designsiden har 
-              Tonje Evanger kommet på besøk, og sammen med henne har vi sesjoner innen Tjnestedesign. 
-
+              Tonje Evanger kommet på besøk, og sammen med henne har vi sesjoner innen tjenestedesign. 
               Dagen avsluttes som vanlig med at vår daglige leder går igennom selskapstatus, hvor forrige måneds resultater 
               legges fram sammen med prognosene for året. 
             </p>
@@ -112,8 +110,8 @@ export default function Home() {
 
         <Content mode="right" className={styles.page3__right}>
           <div className={styles.em}>
-            <p>
-              Etter variantdagen arrangeres energirebus. Dette har blitt en tradisjon i Variant Stavanger, der ulike team 
+            <p className={styles.page7}>
+              Etter variantdagen arrangeres rebus. Dette har blitt en tradisjon i Variant Stavanger, der ulike team 
               drar rundt i byens gater og streder for å finne løsninger på ulike gåter som vår gåtemester lager. 
               I fjor var noen av oppgavene så vanskelige at ene teamet endte på Backstage i stedet. 
             </p>
@@ -165,14 +163,14 @@ export default function Home() {
               </p>
               <p>
                 Allerede i september inviteres dere med på Varianttur med
-                Variant Trondheim. Da blir dere sammen med følge,
-                samboer eller kone introdusert for Trønderne, og vi og dere får
+                Variant Trondheim. Da blir dere sammen med følge 
+                introdusert for Trønderne, og vi og dere får
                 sjansen til å bli godt kjent.
               </p>
               <p>
                 Det første halvåret selger vi oppdrag basert på CV-salg til
                 eksisterende Variantkunder og gjennom megleravtaler og
-                rammeavtaler som Variant har tilgang til. På høste har Variant
+                rammeavtaler som Variant har tilgang til. På høsten har Variant
                 Stavanger også begynt å vinne egne kunder. Men gjennom hele det
                 første året handler det om CV-salg, og det må rekrutteringen ta
                 høyde for. Konsernet bidrar med salgskompetanse og -kapasitet.
@@ -184,11 +182,10 @@ export default function Home() {
         <Content mode="right">
           <div className={styles.em}>
             <p>
-              Det første året gjennomføres Variantdager dels sammen med Oslo
-              eller Trondheim og dels på egenhånd. Noen ganger reiser varianter
-              mellom byene, andre ganger benyttes video. 1. september 2023
-              feirer Stavanger ettårsdagen med en Varianttur på egenhånd sammen med
-              følge til Reykjavik.
+              Det første året gjennomføres Variantdager dels sammen andre selskaper 
+              og dels på egenhånd. Noen ganger reiser varianter
+              mellom byene, andre ganger benyttes video. 5. september 2026
+              drar vi på Varianttur sammen med følge til Reykjavik.
             </p>
 
             <p>
