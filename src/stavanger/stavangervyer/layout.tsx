@@ -38,7 +38,7 @@ export default function Layout({ children, title = 'Variant' }: LayoutProps) {
         />
         <meta
           property="og:image"
-          content="https://www.variant.no/images/og-variant-stavanger.png"
+          content="https://www.variant.no/images/og-variant-stavanger.jpg"
         />
       </Head>
 
