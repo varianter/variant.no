@@ -2,7 +2,7 @@
 title: Prosjektleder i Stavanger
 h1_title: Prosjektleder i Stavanger
 slug: prosjektleder-i-stavanger
-contact_emails: th@variant.no
+contact_emails: oms@variant.no
 meta_title: Vi ønsker oss flere prosjektledere til Variant Stavanger
 meta_description: Vi ser etter en prosjektleder som ønsker å bidra inn i Stavangers mest spennende fagmiljø for prosjektledere
 meta_image: https://www.variant.no/images/erfaren_prosjektleder_meta.jpg
@@ -71,4 +71,4 @@ Variant er en stolt bærekraftig bedrift, som betyr at det er viktig for oss at 
 
 ## Kontakt
 
-Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår rekrutteringsansvarlig Tormod Haugene på th@variant.no eller på telefon 98 48 44 46.
+Har du spørsmål eller ønsker å snakke med oss om dette? Ikke vær redd for å kontakte vår konserdirektør Odd Morten på telefon 928 07 375
