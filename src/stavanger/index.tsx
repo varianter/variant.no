@@ -64,7 +64,7 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           />
           <meta
             property="og:image"
-            content="https://www.variant.no/images/og-variant-stavanger.png"
+            content="https://www.variant.no/images/og-variant-stavanger.jpg"
             key="og:image"
           />
         </Head>
@@ -163,18 +163,17 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <h3 className={and('fancy', style.map__text__second)}>Bærekraft</h3>
 
             <p className={style.map__text__second}>
-              Det vi skal opprette i Stavanger vil minne om de selskapene vi har i 
-              Trondheim, Oslo og Bergen, men dette selskapet vil ha en enda 
-              tydeligere bærekraftsprofil. Og da tenker vi i første rekke på hvordan 
-              vi skal bidra hos kunder som jobber med virkelig viktige og vanskelige 
-              bærekraftsspørsmål. 
+              Det vi skal opprette i Stavanger vil minne om de selskapene vi har
+              i Trondheim, Oslo og Bergen, men dette selskapet vil ha en enda
+              tydeligere bærekraftsprofil. Og da tenker vi i første rekke på
+              hvordan vi skal bidra hos kunder som jobber med virkelig viktige
+              og vanskelige bærekraftsspørsmål.
             </p>
 
             <p className={style.map__text__second}>
-              Vi er sikre på at vår plattform, våre verdier, vår kultur 
-              og vår kompetanse er nødvendig for å lykkes med slike problemstillinger. 
+              Vi er sikre på at vår plattform, våre verdier, vår kultur og vår
+              kompetanse er nødvendig for å lykkes med slike problemstillinger.
             </p>
-
 
             <BlobLink
               text="Les om våre vyer for Stavanger"
