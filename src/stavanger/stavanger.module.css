@@ -1,0 +1,292 @@
+.wrapper {
+  padding: 0 1rem 7.2rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.content {
+  margin: auto;
+}
+
+.content--block {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+.content--timeline {
+  padding: 3rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: calc(100% + 6rem);
+  left: -3rem;
+  right: -3rem;
+  margin: 2rem auto;
+}
+.timelineText {
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+.timelineButton {
+  margin-top: 5rem;
+}
+.timelineButton span {
+  max-width: 220px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .content--timeline {
+    padding: 0rem;
+  }
+  .timeline {
+    position: static;
+    max-width: 100%;
+    left: initial;
+    right: initial;
+  }
+  .timelineText {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .timelineButton {
+    float: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.number {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tableContainer {
+  position: relative;
+  overflow: auto;
+  margin: 6rem 0;
+}
+
+.forecast {
+  margin: 0 auto;
+}
+
+.forecast tbody tr td,
+.forecast th:first-child {
+  background: var(--color-secondary4__tint2);
+}
+.forecast tbody tr:nth-child(2n + 1) td {
+  background: var(--color-secondary4__tint1);
+}
+
+.forecast th,
+.forecast td {
+  padding: 0.8rem;
+}
+.forecast td:first-child,
+.forecast th:first-child {
+  position: sticky;
+  min-width: 150px;
+  left: 0;
+}
+
+.stavangerBlob {
+  shape-outside: url('./assets/stavanger.png');
+  float: right;
+  margin-top: 3rem;
+  shape-margin: 2rem;
+  margin-left: 1.5rem;
+  margin-right: -3rem;
+  display: block;
+  max-width: 395px;
+  width: 100%;
+}
+
+.content--map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.mapImage {
+  top: 43rem;
+  width: 60%;
+  display: block;
+  position: absolute;
+}
+.map__text__lead {
+  width: 60%;
+  margin-top: 2.5rem;
+}
+.map__text__first,
+.map__text__second,
+.map__text__third {
+  width: 40%;
+}
+.map__text__first {
+  margin-top: 8rem;
+}
+.map__text__second {
+  margin-top: 2rem;
+  align-self: flex-end;
+}
+.map__text__third {
+  align-self: flex-end;
+}
+.map__text__second,
+.map__text__third {
+  margin-right: -2rem;
+}
+@media (max-width: 900px) {
+  .map__text__lead {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .map__text__first,
+  .map__text__second,
+  .map__text__third {
+    width: 100%;
+    margin: 0;
+  }
+  .mapImage {
+    position: static;
+    max-width: 100%;
+  }
+}
+
+.blobmap__text__lead {
+  margin-top: 2.5rem;
+  max-width: 80%;
+}
+.blobmap__image {
+  display: block;
+  max-width: 100%;
+}
+
+.footerLine {
+  max-width: 70%;
+}
+
+.content--employees {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  --image-width: 300px;
+}
+
+@media (max-width: 500px) {
+  .stavangerBlob,
+  .lufthavn {
+    float: none;
+    margin-bottom: 2rem;
+  }
+  .barcode {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+/* Override manually. Not ideal solution but quick and dirty
+hack to avoid having to rewrite how employee tiles work for now.... */
+@media (min-width: 500px) {
+  .content--employees > :nth-child(2n) {
+    margin-top: 4rem;
+  }
+}
+
+.forecast_heading {
+  font-family: 'Recoleta', serif;
+  text-align: right;
+  min-width: 8rem;
+}
+
+.title {
+  font-weight: bold;
+  margin: 2.8rem 0;
+  font-size: 3.3rem;
+
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-secondary1),
+    var(--color-secondary2)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  transition: color 0.2s ease-in-out;
+  color: rgba(0, 0, 0, 0);
+
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .employee {
+    margin: 0;
+  }
+  .employee:not(:first-of-type) {
+    margin-top: 4.8rem;
+  }
+  .employees__layout {
+    justify-content: center;
+  }
+}
+
+@keyframes backgroundPos {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.buttonGroup {
+  width: 80%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.buttonGroup__first {
+  align-self: flex-start;
+}
+.buttonGroup__second {
+  align-self: flex-end;
+  margin-top: -2rem;
+}
+
+.infoBlock {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.infoBlock__blob {
+  flex: 1;
+  display: block;
+  min-width: 20rem;
+  max-width: 50%;
+}
+.infoBlock__link:link,
+.infoBlock__link:visited {
+  color: var(--color-standard__white);
+  text-align: left;
+}
+.infoBlock__title {
+  flex: 1;
+  align-self: center;
+  text-align: center;
+  min-width: 20rem;
+  padding: 2rem;
+  margin: 0;
+}
+.infoBlock__arrow {
+  display: block;
+  margin: 1rem auto 0;
+}
