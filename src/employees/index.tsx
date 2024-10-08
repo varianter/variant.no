@@ -136,10 +136,39 @@ const blurDataUrl =
 
 export const EmployeeTile = ({
   employee: { name, telephone, email, imageUrl, officeName },
-}: PropsWithChildren<{ employee: EmployeeItem }>) => {
+  alwaysEmail = false,
+  subtitle = undefined,
+}: PropsWithChildren<{
+  employee: EmployeeItem;
+  alwaysEmail?: boolean;
+  subtitle?: string;
+}>) => {
   if (!imageUrl) {
     return null;
   }
+
+  const mailOrPhone =
+    telephone && !alwaysEmail ? (
+      <a href={`tel:${telephone}`} className={style.employee__phone}>
+        📞 {formatTelephone(telephone)}
+      </a>
+    ) : (
+      <a href={`mailto:${email}`} className={style.employee__phone}>
+        📧 {email}
+      </a>
+    );
+  const mailAndPhone = (
+    <>
+      {telephone && (
+        <a href={`tel:${telephone}`} className={style.employee__phone}>
+          📞 {formatTelephone(telephone)}
+        </a>
+      )}
+      <a href={`mailto:${email}`} className={style.employee__phone}>
+        📧 {email}
+      </a>
+    </>
+  );
 
   return (
     <div
@@ -155,16 +184,8 @@ export const EmployeeTile = ({
         placeholder="blur"
       />
       <h2 className={and(style.employee__name, 'fancy')}>{name}</h2>
-      <div className={style.employee__office}>{officeName}</div>
-      {telephone ? (
-        <a href={`tel:${telephone}`} className={style.employee__phone}>
-          📞 {formatTelephone(telephone)}
-        </a>
-      ) : (
-        <a href={`mailto:${email}`} className={style.employee__phone}>
-          📧 {email}
-        </a>
-      )}
+      <div className={style.employee__office}>{subtitle ?? officeName}</div>
+      {alwaysEmail ? mailAndPhone : mailOrPhone}
     </div>
   );
 };

@@ -211,7 +211,12 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             )}
           >
             {employees.map((employee) => (
-              <EmployeeTile key={employee.email} employee={employee} />
+              <EmployeeTile
+                key={employee.email}
+                alwaysEmail
+                subtitle={mailToTitle(employee.email)}
+                employee={employee}
+              />
             ))}
           </div>
         </div>
@@ -219,5 +224,28 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     </Layout>
   );
 };
+
+/**
+ * Hacky workaround to get title quickly for stavanger.
+ * New web page incoming: "flytta læll™"
+ * @param mail string
+ * @returns string
+ */
+function mailToTitle(mail: string) {
+  if (mail.startsWith('mb@')) {
+    return 'CTO';
+  }
+  if (mail.startsWith('te@')) {
+    return 'CDO';
+  }
+  if (mail.startsWith('ah@')) {
+    return 'Kommersiell direktør';
+  }
+  if (mail.startsWith('oms@')) {
+    return 'Konserndirektør';
+  }
+
+  return undefined;
+}
 
 export default Stavanger;
