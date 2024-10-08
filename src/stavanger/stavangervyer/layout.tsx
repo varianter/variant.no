@@ -32,10 +32,13 @@ export default function Layout({ children, title = 'Variant' }: LayoutProps) {
           key="description"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.variant.no/stavanger/vyer" />
+        <meta
+          property="og:url"
+          content="https://www.variant.no/stavanger/vyer"
+        />
         <meta
           property="og:image"
-          content="https://www.variant.no/og-header-min.png"
+          content="https://www.variant.no/images/og-variant-stavanger.png"
         />
       </Head>
 

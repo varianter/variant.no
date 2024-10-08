@@ -5,7 +5,7 @@ slug: oppstartsteam-stavanger
 contact_emails: oms@variant.no, ah@variant.no
 meta_title: Vi søker oppstartsteam til Variant Stavanger
 meta_description: Vi søker deg som vil utvikle Stavanger – sammen med flere og sammen med oss!
-meta_image: https://www.variant.no/images/cdo-bergen.jpg
+meta_image: https://www.variant.no/images/og-variant-stavanger.png
 ---
 
 ## Vi søker dere som vil utvikle Stavanger!

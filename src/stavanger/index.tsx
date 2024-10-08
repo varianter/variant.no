@@ -64,7 +64,7 @@ const Stavanger: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           />
           <meta
             property="og:image"
-            content="https://www.variant.no/images/bergen_meta.png"
+            content="https://www.variant.no/images/og-variant-stavanger.png"
             key="og:image"
           />
         </Head>
