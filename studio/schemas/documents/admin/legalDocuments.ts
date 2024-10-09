@@ -1,7 +1,7 @@
 import { defineField } from "sanity";
 
-import languageSchemaField from "internationalization/languageSchemaField";
-import { getLanguageById } from "internationalization/supportedLanguages";
+import languageSchemaField from "i18n/languageSchemaField";
+import { getLanguageById } from "i18n/supportedLanguages";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 

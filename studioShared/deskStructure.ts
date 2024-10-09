@@ -1,6 +1,6 @@
 import { StructureResolver } from "sanity/structure";
 
-import { defaultLanguage } from "internationalization/supportedLanguages";
+import { defaultLanguage } from "i18n/supportedLanguages";
 
 import { customerCaseID } from "./schemas/documents/customerCase";
 

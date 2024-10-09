@@ -4,11 +4,8 @@ import { WorkspaceOptions } from "sanity";
 import { structureTool } from "sanity/structure";
 import { media } from "sanity-plugin-media";
 
-import { languageID } from "internationalization/languageSchemaField";
-import {
-  defaultLanguage,
-  supportedLanguages,
-} from "internationalization/supportedLanguages";
+import { languageID } from "i18n/languageSchemaField";
+import { defaultLanguage, supportedLanguages } from "i18n/supportedLanguages";
 import StudioIcon from "studio/components/studioIcon/StudioIcon";
 
 import { deskStructure } from "./deskStructure";
