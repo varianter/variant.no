@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-import { translatedFieldFragment } from "./pages";
+import { translatedFieldFragment } from "./utils/i18n";
 
 export const SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY = groq`
   *[${translatedFieldFragment("slug")} == $slug][0] {
