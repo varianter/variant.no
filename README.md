@@ -285,11 +285,11 @@ background: url("data:image/png;base64,...");
 
 ## Documentation and Resources
 
-- Next.js Documentation - Learn more about the Next.js framework.
-- Sanity Documentation - Explore Sanity’s powerful CMS features.
-- Storybook Documentation - Get started with component-driven development.
-- Sanity Slack Community - Join the community for support and collaboration.
+- [Next.js Documentation](https://nextjs.org/docs) - Learn more about the Next.js framework.
+- [Sanity Documentation](https://www.sanity.io/docs) - Explore Sanity’s powerful CMS features.
+- [Storybook Documentation](https://storybook.js.org/docs) - Get started with component-driven development.
+- [Sanity Slack Community](https://slack.sanity.io) - Join the community for support and collaboration.
 
-## License and Credits
+## Credits
 
-© Sankitty. Created by Christina Roise.
+This project is based on _Sankitty_, created by Christina Roise.
