@@ -23,6 +23,7 @@ Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered 
   - [OpenGraph image customization](#opengraph-image-customization)
     - [Custom fonts](#custom-fonts)
     - [Custom background](#custom-background)
+  - [Sanity TypeGen](#sanity-typegen)
   - [Troubleshooting](#troubleshooting)
   - [Testing and Deployment](#testing-and-deployment)
 - [Dependencies](#dependencies)
