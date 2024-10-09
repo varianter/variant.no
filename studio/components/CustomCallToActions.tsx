@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, Text } from "@sanity/ui";
 import React, { useEffect, useState } from "react";
 import {

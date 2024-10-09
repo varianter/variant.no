@@ -1,3 +1,5 @@
+"use client";
+
 import { Inline, Stack, Text, useToast } from "@sanity/ui";
 import { useState } from "react";
 import { StringInputProps, set } from "sanity";
