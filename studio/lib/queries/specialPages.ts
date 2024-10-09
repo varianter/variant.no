@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-import { translatedFieldFragment } from "./pages";
+import { translatedFieldFragment } from "./utils/i18n";
 
 //Compensations
 export const COMPENSATIONS_PAGE_QUERY = groq`

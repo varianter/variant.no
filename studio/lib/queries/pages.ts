@@ -1,37 +1,6 @@
 import { groq } from "next-sanity";
 
-export const LANGUAGE_FIELD_FRAGMENT = groq`
-  "language": $language
-`;
-
-export function translatedFieldFragment(fieldName: string) {
-  return groq`${fieldName}[_key == $language][0].value`;
-}
-
-export const TRANSLATED_LINK_TITLE_FRAGMENT = groq`
-  "linkTitle": ${translatedFieldFragment("linkTitle")}
-`;
-
-export const TRANSLATED_SLUG_VALUE_FRAGMENT = groq`
-  select(
-    slug._type == "slug" => slug.current,
-    ${translatedFieldFragment("slug")}
-  )
-`;
-
-export const TRANSLATED_INTERNAL_LINK_FRAGMENT = groq`
-    ...select(linkType == "internal" => {
-      "internalLink": internalLink->{
-        "_ref": ${TRANSLATED_SLUG_VALUE_FRAGMENT}
-      }
-    })
-`;
-
-export const TRANSLATED_LINK_FRAGMENT = groq`
-    ${LANGUAGE_FIELD_FRAGMENT},
-    ${TRANSLATED_LINK_TITLE_FRAGMENT},
-    ${TRANSLATED_INTERNAL_LINK_FRAGMENT}
-`;
+import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 
 const SECTIONS_FRAGMENT = groq`
   sections[]{

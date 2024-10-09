@@ -2,10 +2,10 @@ import { groq } from "next-sanity";
 
 import {
   LANGUAGE_FIELD_FRAGMENT,
-  PAGE_FRAGMENT,
   TRANSLATED_LINK_FRAGMENT,
   TRANSLATED_SLUG_VALUE_FRAGMENT,
-} from "./pages";
+} from "./i18n";
+import { PAGE_FRAGMENT } from "./pages";
 
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
