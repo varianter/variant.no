@@ -41,7 +41,11 @@ export default function FooterPreview({
   initialLegal: QueryResponseInitial<LegalDocument[] | null>;
   language: string;
 }) {
-  const newNav = useInitialData(NAV_QUERY, initialNav);
+  const { data: newNav } = useQuery(
+    NAV_QUERY,
+    { language },
+    { initial: initialNav },
+  );
   const newCompanyInfo = useInitialData(COMPANY_INFO_QUERY, initialCompanyInfo);
   const newBrandAssets = useInitialData(BRAND_ASSETS_QUERY, initialBrandAssets);
   const newSoMedata = useInitialData(SOME_PROFILES_QUERY, initialSoMe);

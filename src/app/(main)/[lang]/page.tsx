@@ -10,7 +10,7 @@ import { client } from "studio/lib/client";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
-import { PAGE_QUERY, SEO_PAGE_QUERY } from "studio/lib/queries/pages";
+import { PAGE_QUERY, PAGE_SEO_QUERY } from "studio/lib/queries/pages";
 import {
   LANDING_PAGE_REF_QUERY,
   LANGUAGES_QUERY,
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const { data: landingId } = await loadStudioQuery<string>(
     LANDING_PAGE_REF_QUERY,
   );
-  const seo = await fetchSeoData(SEO_PAGE_QUERY, { id: landingId });
+  const seo = await fetchSeoData(PAGE_SEO_QUERY, { id: landingId });
   return generateMetadataFromSeo(seo);
 }
 
@@ -84,7 +84,7 @@ const Home = async ({ params }: Props) => {
 
   const initialLandingPage = await loadStudioQuery<PageBuilder>(
     PAGE_QUERY,
-    { id: landingId },
+    { id: landingId, language: params.lang },
     { perspective },
   );
 

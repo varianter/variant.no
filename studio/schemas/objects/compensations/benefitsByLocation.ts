@@ -1,8 +1,10 @@
 import { defineField } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
 import { richTextID, titleID } from "studio/schemas/fields/text";
 import { location, locationID } from "studio/schemas/objects/locations";
+import { firstTranslation } from "studio/utils/i18n";
 
 import {
   DocumentWithLocation,
@@ -78,11 +80,14 @@ export const benefitsByLocation = defineField({
                   type: benefitType.name,
                 },
                 prepare({ title, type }) {
+                  const translatedTitle = isInternationalizedString(title)
+                    ? firstTranslation(title)
+                    : null;
                   const subtitle =
                     BENEFIT_TYPES.find((o) => o.value === type)?.title ??
                     "Unknown benefit type";
                   return {
-                    title: title[0]?.value,
+                    title: translatedTitle ?? "Missing title",
                     subtitle,
                   };
                 },

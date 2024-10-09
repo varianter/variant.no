@@ -15,10 +15,6 @@ interface ICustomLink {
 }
 
 const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
-  const linkTitle = link.linkTitle;
-  // TODO: pick title based on selected language
-  const linkTitleValue =
-    (typeof linkTitle === "string" ? linkTitle : linkTitle[0].value) ?? "";
   const href = getHref(link);
   const newTab = link.newTab;
   const target = newTab ? "_blank" : undefined;
@@ -28,29 +24,32 @@ const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
       ? `${styles.headerLink} ${isSelected ? styles.selected : ""}`
       : styles.footerLink;
 
-  return type === "link" ? (
-    <div className={styles.wrapper}>
+  return (
+    link.linkTitle &&
+    (type === "link" ? (
+      <div className={styles.wrapper}>
+        <Link
+          className={styles.link}
+          href={href}
+          target={target}
+          rel={rel}
+          aria-label={link.ariaLabel}
+        >
+          <span className={styles.span}>{link.linkTitle}</span>
+        </Link>
+        <div className={styles.underline}></div>
+      </div>
+    ) : (
       <Link
-        className={styles.link}
+        className={className}
         href={href}
         target={target}
         rel={rel}
         aria-label={link.ariaLabel}
       >
-        <span className={styles.span}>{linkTitleValue}</span>
+        {link.linkTitle}
       </Link>
-      <div className={styles.underline}></div>
-    </div>
-  ) : (
-    <Link
-      className={className}
-      href={href}
-      target={target}
-      rel={rel}
-      aria-label={link.ariaLabel}
-    >
-      {linkTitleValue}
-    </Link>
+    ))
   );
 };
 

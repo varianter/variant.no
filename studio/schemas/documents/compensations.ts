@@ -1,11 +1,13 @@
 import { defineField, defineType } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { title, titleID } from "studio/schemas/fields/text";
 import { benefitsByLocation } from "studio/schemas/objects/compensations/benefitsByLocation";
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
 import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const compensationsId = "compensations";
 
@@ -45,6 +47,14 @@ const compensations = defineType({
   preview: {
     select: {
       title: title.name,
+    },
+    prepare({ title }) {
+      const translatedTitle = isInternationalizedString(title)
+        ? firstTranslation(title)
+        : null;
+      return {
+        title: translatedTitle ?? "Missing title",
+      };
     },
   },
 });

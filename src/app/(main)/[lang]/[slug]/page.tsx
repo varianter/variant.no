@@ -21,14 +21,14 @@ import { BlogPage, PageBuilder, Post } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import {
   COMPANY_LOCATIONS_QUERY,
-  LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
+  LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import {
   BLOG_PAGE_QUERY,
+  PAGE_BY_SLUG_QUERY,
   POSTS_QUERY,
   SEO_SLUG_QUERY,
-  SLUG_QUERY,
 } from "studio/lib/queries/pages";
 import {
   COMPENSATIONS_PAGE_QUERY,
@@ -70,11 +70,15 @@ async function Page({ params }: Props) {
     initialLegalDocument,
     initialLocale,
   ] = await Promise.all([
-    loadStudioQuery<PageBuilder>(SLUG_QUERY, { slug }, { perspective }),
+    loadStudioQuery<PageBuilder>(
+      PAGE_BY_SLUG_QUERY,
+      { slug, language: lang },
+      { perspective },
+    ),
     loadStudioQuery<BlogPage>(BLOG_PAGE_QUERY, { slug }, { perspective }),
     loadStudioQuery<CompensationsPage>(
       COMPENSATIONS_PAGE_QUERY,
-      { slug },
+      { slug, language: lang },
       { perspective },
     ),
     loadStudioQuery<CompanyLocation[]>(
@@ -88,7 +92,7 @@ async function Page({ params }: Props) {
       { perspective },
     ),
     loadStudioQuery<LegalDocument>(
-      LEGAL_DOCUMENTS_BY_SLUG_AND_LANG_QUERY,
+      LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
       { slug, language: lang },
       { perspective },
     ),

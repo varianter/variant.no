@@ -1,6 +1,8 @@
 import { defineField } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { link } from "studio/schemas/objects/link";
+import { firstTranslation } from "studio/utils/i18n";
 
 import { clearLinkFields } from "./clearLinkFields";
 
@@ -16,8 +18,11 @@ const callToActionField = defineField({
       title: "linkTitle",
     },
     prepare({ title }) {
+      const translatedTitle = isInternationalizedString(title)
+        ? firstTranslation(title)
+        : null;
       return {
-        title: title,
+        title: translatedTitle ?? "Missing title",
         subtitle: "Call to Action",
       };
     },

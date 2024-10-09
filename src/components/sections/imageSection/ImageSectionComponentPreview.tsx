@@ -14,7 +14,7 @@ export default function ImageSectionComponentPreview({
 }: PreviewProps) {
   const { data: newData } = useQuery<PageBuilder | null>(
     PAGE_QUERY,
-    { id: initialData.data._id },
+    { id: initialData.data._id, language: initialData.data.language },
     { initial: initialData },
   );
 

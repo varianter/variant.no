@@ -16,7 +16,7 @@ export default function HeaderPreview({
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
-    {},
+    { language: initialNav.data.language },
     { initial: initialNav },
   );
   const { data: newBrandAssets } = useQuery<BrandAssets | null>(

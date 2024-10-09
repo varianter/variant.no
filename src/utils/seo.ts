@@ -6,7 +6,7 @@ import { PortableTextBlock } from "sanity";
 import { urlFor } from "studio/lib/image";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
-import { DefaultSeo } from "studio/lib/interfaces/defaultSeo";
+import { DefaultSeo } from "studio/lib/interfaces/seo";
 import { COMPANY_INFO_QUERY } from "studio/lib/queries/admin";
 import {
   BRAND_ASSETS_QUERY,

@@ -1,22 +1,23 @@
-import { InternationalizedString } from "./global";
+import { Reference } from "sanity";
 
 export interface Navigation {
   _id: string;
+  language: string;
   main: ILink[];
   sidebar?: ILink[];
   footer?: FooterSection[];
 }
 
-interface Reference {
+interface InternalLinkSlug {
   _ref: string;
 }
 
 export interface ILink {
   _key: string;
   _type: string;
-  linkTitle: string | InternationalizedString;
+  linkTitle: string;
   linkType: LinkType;
-  internalLink?: Reference;
+  internalLink?: InternalLinkSlug;
   url?: string;
   email?: string;
   phone?: string;
