@@ -5,7 +5,10 @@ import { fetchWithToken } from "studio/lib/fetchWithToken";
 import { SlugTranslations } from "studio/lib/interfaces/slugTranslations";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import { LANGUAGES_QUERY } from "studio/lib/queries/siteSettings";
-import { SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY } from "studio/lib/queries/slugTranslations";
+import {
+  SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+  SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+} from "studio/lib/queries/slugTranslations";
 
 /**
  * Client hook providing access to the available Sanity translations for the given slug
@@ -34,7 +37,19 @@ function useSlugTranslations(
         slug,
         language: currentLanguage?.id,
       },
-    ).then(setSlugTranslationsData);
+    ).then(async (translations) => {
+      if (translations !== null) {
+        setSlugTranslationsData(translations);
+      }
+      const fieldTranslations = await fetchWithToken<SlugTranslations | null>(
+        SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+        {
+          slug,
+          language: currentLanguage?.id,
+        },
+      );
+      setSlugTranslationsData(fieldTranslations);
+    });
   }, [currentLanguage, slug]);
 
   const slugTranslations =

@@ -12,6 +12,7 @@ import { linkID } from "studio/schemas/objects/link";
 // Mock Navigation Data
 export const mockNavigation: Navigation = {
   _id: "main-navigation",
+  language: "en",
   main: [
     {
       _key: "functionality",
@@ -63,6 +64,7 @@ export const mockNavigation: Navigation = {
       sectionTitle: "Social Media",
       sectionType: SectionType.SocialMedia,
       socialMediaLinks: {
+        _type: "reference",
         _ref: "soMeLinksID",
       },
     },

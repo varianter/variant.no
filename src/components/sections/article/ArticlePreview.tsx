@@ -15,7 +15,7 @@ export default function ArticlePreview({
 }: PreviewProps) {
   const { data } = useQuery<PageBuilder>(
     PAGE_QUERY,
-    { id: initialData.data._id },
+    { id: initialData.data._id, language: initialData.data.language },
     { initial: initialData },
   );
 

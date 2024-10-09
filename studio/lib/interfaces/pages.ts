@@ -99,6 +99,7 @@ export interface PageBuilder {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  language: string;
   page: string;
   sections: Section[];
   slug: Slug;
