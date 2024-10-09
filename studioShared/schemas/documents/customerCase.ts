@@ -13,7 +13,7 @@ const customerCase = defineType({
   fields: [
     languageSchemaField,
     title,
-    titleSlug,
+    titleSlug, // TODO: only check if unique across customer cases
     defineField({
       ...richText,
       description: "Enter the body content of the Customer case.",
