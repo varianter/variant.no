@@ -53,7 +53,7 @@ const compensations = defineType({
         ? firstTranslation(title)
         : null;
       return {
-        title: translatedTitle ?? "Missing title",
+        title: translatedTitle ?? undefined,
       };
     },
   },
