@@ -197,7 +197,7 @@ export const link = defineField({
         ? firstTranslation(title)
         : null;
       return {
-        title: translatedTitle ?? "Missing title",
+        title: translatedTitle ?? undefined,
         subtitle: type ? type.charAt(0).toUpperCase() + type.slice(1) : "",
       };
     },

@@ -22,7 +22,7 @@ const callToActionField = defineField({
         ? firstTranslation(title)
         : null;
       return {
-        title: translatedTitle ?? "Missing title",
+        title: translatedTitle ?? undefined,
         subtitle: "Call to Action",
       };
     },
