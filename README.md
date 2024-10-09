@@ -28,7 +28,7 @@ Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered 
 - [Dependencies](#dependencies)
 - [Development Dependencies](#development-dependencies)
 - [Documentation and Resources](#documentation-and-resources)
-- [License and Credits](#license-and-credits)
+- [Credits](#credits)
 
 ## Key Features
 
