@@ -1,7 +1,5 @@
 # Variant .no/.se
 
-Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered project designed to accelerate the development process from prototype to production. With minimal configuration and boilerplate, Sankitty allows developers to quickly get started on building user interfaces while maintaining full control over both UI and content. This project has been customized to meet the specific needs of Variant’s websites for .no and .se domains.
-
 ## Table of Contents
 
 - [Key Features](#key-features)
@@ -16,7 +14,7 @@ Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered 
   - [Social Media Profiles](#social-media-profiles)
   - [Navigation Management](#navigation-management)
   - [Pages](#pages)
-- [Development Workflow](#development-workflow)
+- [Development](#development)
   - [Using `fetchWithToken` for Custom Components in Sanity](#using-fetchwithtoken-for-custom-components-in-sanity)
   - [Steganography in Presentation](#steganography-in-presentation)
   - [Serving files from `/public`](#serving-files-from-public)
@@ -24,18 +22,16 @@ Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered 
     - [Custom fonts](#custom-fonts)
     - [Custom background](#custom-background)
   - [Sanity TypeGen](#sanity-typegen)
-  - [Troubleshooting](#troubleshooting)
-  - [Testing and Deployment](#testing-and-deployment)
-- [Dependencies](#dependencies)
-- [Development Dependencies](#development-dependencies)
+  - [Sanity Preview](#sanity-preview)
+  - [Testing](#testing)
+- [Key Dependencies](#key-dependencies)
 - [Documentation and Resources](#documentation-and-resources)
 - [Credits](#credits)
 
 ## Key Features
 
-- **Rapid UI Development:** Built with Next.js and Sanity, Sankitty provides a streamlined environment for creating and managing dynamic, content-driven websites. The integration minimizes the setup time, letting developers focus on building out the UI faster.
 - **CMS-Driven Content Management:** Pages are dynamically constructed using content blocks defined in Sanity. This CMS-like approach enables content creators to manage all aspects of the site, from page content to menus and SEO, without touching the codebase.
-- **Storybook Integration:** Sankitty includes Storybook for isolated component development and testing. This allows for the visual verification of UI components, ensuring design consistency and usability across the application.
+- **Storybook Integration:** Storybook enables isolated component development and testing. This allows for the visual verification of UI components, ensuring design consistency and usability across the application.
 - **Scoped Styling with CSS Modules:** CSS Modules are used for local scoping of styles, preventing naming conflicts and making it easier to maintain and scale the styling of components.
 - **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos, pages, blogs, and posts—offering a unified content management experience.
 - **Custom Theming and Typography:** Global styles such as colors are managed in global.css, while typography is primarily controlled within Text.tsx, ensuring a consistent design language throughout the application.
@@ -56,18 +52,13 @@ Accessing Shared Studio
 
 ## Getting Started
 
-To get started with Sankitty, follow these steps:
+To get started, follow these steps:
 
-1. **Clone the Repository**:
-
-   ```
-   git clone https://github.com/your-username/sankitty.git
-   ```
+1. **Clone the Repository**
 
 2. **Install Dependencies**:
 
    ```
-   cd sankitty
    npm install
    ```
 
@@ -98,7 +89,6 @@ To get started with Sankitty, follow these steps:
 
    ```
    npm run dev
-
    ```
 
 6. **View the Application**:
@@ -115,7 +105,7 @@ To get started with Sankitty, follow these steps:
 
 ## Project Structure
 
-Sankitty follows a component-based architecture with a focus on modularity and reusability. Below is an overview of the main directories:
+The project follows a component-based architecture with a focus on modularity and reusability. Below is an overview of the main directories:
 
 - **src/app:** Contains the main application routes and layout components, organizing the site’s pages and their respective content.
 - **src/api:** API routes are handled here, including form submissions and any other backend processes.
@@ -153,18 +143,7 @@ The `Company Information` menu allows you to configure global settings for your 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
 - **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
 
-## Development Workflow
-
-To maintain consistency and efficiency, follow these steps when working on the project:
-
-1. Branching Strategy: Follow your team’s branching convention, such as feature/ or fix/ branches, to keep the git history clean and organized.
-
-2. Adding New UI with Content:
-
-   - Define the Sanity schema for new content types.
-   - Implement the corresponding interface and payload structure in src/lib/interfaces.
-   - Fetch the necessary data and create the UI component.
-   - Document and test the UI component in Storybook, using mock data for isolated development.
+## Development
 
 ### Using `fetchWithToken` for Custom Components in Sanity
 
@@ -294,23 +273,19 @@ background: url("data:image/png;base64,...");
 
 [TypeGen for Sanity](https://www.sanity.io/docs/sanity-typegen) was considered for this project in september 2024. At that time, it was not considered a good fit. This was mainly because of the tool being in beta, and concerns regarding ownership and flexibility of type definitions. See [TYPEGEN.md](TYPEGEN.md) for more details on the lessons learned.
 
-### Troubleshooting
+### Sanity Preview
 
-- Sanity Preview: While the Sanity preview functionality is not fully optimized, it currently meets the essential requirements.
+Sanity Preview, or Presentation, is not yet fully supported in this project. Bugs and instabilities should be expected.
 
-### Testing and Deployment
+### Testing
 
 - Storybook Accessibility Testing: Storybook is set up with accessibility (a11y) testing tools, but you’ll need to add tests to each story manually.
-- CI/CD Pipeline: A CI/CD pipeline is not yet configured. Setting up a pipeline would enhance the development process by automating tests, builds, and deployments.
 
-## Dependencies
+## Key Dependencies
 
 - [Next.js](https://nextjs.org/): React framework for building server-rendered and statically-generated web applications.
 - [Sanity](https://www.sanity.io/): Headless CMS for structured content with a real-time API.
 - [next-sanity](https://github.com/leighhalliday/next-sanity): Next.js integration for Sanity with image optimization and preview support.
-- [styled-components](https://styled-components.com/): CSS-in-JS library for styling React components.
-
-## Development Dependencies
 
 - [@types/react](https://www.npmjs.com/package/@types/react), [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): TypeScript type definitions for React.
 - [eslint](https://eslint.org/): JavaScript linter.
