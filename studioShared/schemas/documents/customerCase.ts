@@ -2,7 +2,10 @@ import { defineField, defineType } from "sanity";
 
 import languageSchemaField from "i18n/languageSchemaField";
 import { richText, title } from "studio/schemas/fields/text";
-import { titleSlug } from "studio/schemas/schemaTypes/slug";
+import {
+  isSlugUniqueAcrossDocuments,
+  titleSlug,
+} from "studio/schemas/schemaTypes/slug";
 
 export const customerCaseID = "customerCase";
 
@@ -13,7 +16,14 @@ const customerCase = defineType({
   fields: [
     languageSchemaField,
     title,
-    titleSlug,
+    {
+      ...titleSlug,
+      options: {
+        ...titleSlug.options,
+        isUnique: (slug, ctx) =>
+          isSlugUniqueAcrossDocuments(slug, ctx, customerCaseID),
+      },
+    },
     defineField({
       ...richText,
       description: "Enter the body content of the Customer case.",

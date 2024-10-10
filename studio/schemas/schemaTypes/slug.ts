@@ -1,3 +1,4 @@
+import { groq } from "next-sanity";
 import {
   SlugValidationContext,
   SlugValue,
@@ -13,26 +14,28 @@ import {
   isPublished,
 } from "studio/utils/documentUtils";
 
-function isSlugUniqueAcrossAllDocuments(
+export function isSlugUniqueAcrossDocuments(
   slug: string,
   { document, getClient }: SlugValidationContext,
+  documentType?: string,
 ) {
   if (document === undefined) {
     return true;
   }
   const language = "language" in document ? document.language : undefined;
-  const isUniqueQuery =
-    language !== undefined
-      ? `
-    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug && language == $language][0]._id)
-  `
-      : `
-    !defined(*[!(_id in [$draft, $published]) && slug.current == $slug][0]._id)
+  const isUniqueQuery = groq`
+    count(*[
+      !(_id in [$draft, $published])
+      && slug.current == $slug
+      ${documentType !== undefined ? `&& _type == $documentType` : ""}
+      ${language !== undefined ? " && language == $language" : ""}
+    ]) == 0
   `;
   return getClient({ apiVersion }).fetch<boolean>(isUniqueQuery, {
     draft: buildDraftId(document._id),
     published: buildPublishedId(document._id),
     slug,
+    ...(documentType !== undefined ? { documentType } : {}),
     ...(language !== undefined ? { language } : {}),
   });
 }
@@ -92,7 +95,7 @@ function createSlugField(source: string) {
       source,
       maxLength: SLUG_MAX_LENGTH,
       slugify,
-      isUnique: isSlugUniqueAcrossAllDocuments,
+      isUnique: isSlugUniqueAcrossDocuments,
     },
     validation: (rule) =>
       rule
