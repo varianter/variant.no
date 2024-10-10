@@ -110,39 +110,3 @@ export interface SEO {
   description: string;
   imageUrl?: string;
 }
-
-export type Category = {
-  _key: string;
-  _type: string;
-  name: string;
-};
-
-export interface BlogPage {
-  _createdAt: string;
-  _id: string;
-  _rev: string;
-  _type: string;
-  _updatedAt: string;
-  basicTitle: string;
-  page: string;
-  slug: Slug;
-  allPostsLabel: string;
-  categories: Category[];
-}
-
-export interface Post {
-  _type: string;
-  _updatedAt: string;
-  slug: Slug;
-  _createdAt: string;
-  _rev: string;
-  _id: string;
-  basicTitle: string;
-  category: string;
-  richText: PortableTextBlock[];
-  lead: {
-    image: IImage;
-    richText: PortableTextBlock[];
-  };
-  date: string;
-}

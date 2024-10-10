@@ -24,7 +24,6 @@ interface Parent {
 
 // Lazy reference to avoid circular dependency
 const lazyPageBuilderID = () => "pageBuilder";
-const lazyBlogID = () => "blog";
 const lazyCompensationsID = () => "compensations";
 const lazyCustomerCasesPageID = () => "customerCasesPage";
 
@@ -72,7 +71,6 @@ export const link = defineField({
       type: "reference",
       to: [
         { type: lazyPageBuilderID() },
-        { type: lazyBlogID() },
         { type: lazyCompensationsID() },
         { type: lazyCustomerCasesPageID() },
       ],

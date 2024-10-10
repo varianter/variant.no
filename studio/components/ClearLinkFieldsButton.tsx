@@ -27,10 +27,7 @@ const ClearLinkFieldsButton = ({ path }: ClearLinkFieldsButtonProps) => {
     const sectionKey = path[1]._key;
     if (!sectionKey) return "";
 
-    if (path[2] === "posts" && isObjectWithKey(path[3])) {
-      const postKey = path[3]._key;
-      return `sections[_key=="${sectionKey}"].posts[_key=="${postKey}"].callToAction`;
-    } else if (path[2] === "clearFields") {
+    if (path[2] === "clearFields") {
       return `sections[_key=="${sectionKey}"].${linkID}`;
     } else {
       return `sections[_key=="${sectionKey}"].callToAction`;
