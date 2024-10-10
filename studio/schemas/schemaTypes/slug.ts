@@ -1,18 +1,8 @@
 import { groq } from "next-sanity";
-import {
-  SlugValidationContext,
-  SlugValue,
-  ValidationContext,
-  defineField,
-  isSlug,
-} from "sanity";
+import { SlugValidationContext, defineField } from "sanity";
 
 import { apiVersion } from "studio/env";
-import {
-  buildDraftId,
-  buildPublishedId,
-  isPublished,
-} from "studio/utils/documentUtils";
+import { buildDraftId, buildPublishedId } from "studio/utils/documentUtils";
 
 export function isSlugUniqueAcrossDocuments(
   slug: string,
@@ -38,30 +28,6 @@ export function isSlugUniqueAcrossDocuments(
     ...(documentType !== undefined ? { documentType } : {}),
     ...(language !== undefined ? { language } : {}),
   });
-}
-
-/**
- Validate that slug has not been changed after initial publication
- */
-async function validateSlugNotChangedAfterPublication(
-  value: SlugValue | undefined,
-  { document, getClient }: ValidationContext,
-) {
-  if (document === undefined || isPublished(document)) {
-    return true;
-  }
-  const publishedDocument = await getClient({ apiVersion }).getDocument(
-    buildPublishedId(document._id),
-  );
-  if (
-    publishedDocument !== undefined &&
-    "slug" in publishedDocument &&
-    isSlug(publishedDocument.slug) &&
-    publishedDocument.slug.current !== value?.current
-  ) {
-    return "Can not be changed after publication";
-  }
-  return true;
 }
 
 function slugify(input: string): string {
@@ -98,27 +64,13 @@ function createSlugField(source: string) {
       isUnique: isSlugUniqueAcrossDocuments,
     },
     validation: (rule) =>
-      rule
-        .required()
-        .custom(validateSlugNotChangedAfterPublication)
-        .custom((value) => {
-          if (value?.current === undefined) return true;
-          return (
-            encodeURIComponent(value.current) === value.current ||
-            "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
-          );
-        }),
-    readOnly: ({ document }) => {
-      /*
-        make slugs read-only after initial publish
-        to avoid breaking shared links
-
-        if document is already draft, this is handled through validation instead
-
-        if new slugs are needed, redirects can be used instead
-       */
-      return document !== undefined && isPublished(document);
-    },
+      rule.required().custom((value) => {
+        if (value?.current === undefined) return true;
+        return (
+          encodeURIComponent(value.current) === value.current ||
+          "Slug can only consist of latin letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), full stop (.) and tilde (~)"
+        );
+      }),
   });
 }
 
