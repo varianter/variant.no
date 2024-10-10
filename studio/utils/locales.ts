@@ -8,10 +8,6 @@ export const relevantLocales: Locale[] = [
     title: "🇳🇴 Norway",
     code: "nb-NO",
   },
-  // {
-  //   title: "🇳🇴 Norway",
-  //   code: "nn-NO",
-  // },
   {
     title: "🇸🇪 Sweden",
     code: "sv-SE",

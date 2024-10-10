@@ -29,8 +29,4 @@ export const relevantCurrencies: Currency[] = [
     title: "🇩🇰 Danish Krone",
     code: "DKK",
   },
-  {
-    title: "🇮🇸 Icelandic Króna",
-    code: "ISK",
-  },
 ];
