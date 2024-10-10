@@ -11,6 +11,7 @@ import pageBuilder from "./schemas/documents/pageBuilder";
 import posts from "./schemas/documents/post";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import brokenLink from "./schemas/documents/siteSettings/brokenLink";
+import locale from "./schemas/documents/siteSettings/locale";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
@@ -43,5 +44,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     defaultSeo,
     brandAssets,
     languageSettings,
+    locale,
   ],
 };
