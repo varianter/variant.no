@@ -7,7 +7,6 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
-import ContactForm from "src/components/sections/contactForm/ContactForm";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
@@ -22,7 +21,6 @@ import {
   ArticleSection,
   CallToActionSection,
   CalloutSection,
-  ContactFormSection,
   GridSection,
   HeroSection,
   ImageSection,
@@ -158,14 +156,6 @@ const renderGridSection = (
   );
 };
 
-const renderContactFormSection = (
-  section: ContactFormSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-) => {
-  return isDraftMode ? <div></div> : <ContactForm data={section} />;
-};
-
 const SectionRenderer = ({
   section,
   sectionIndex,
@@ -230,12 +220,6 @@ const SectionRenderer = ({
         sectionIndex,
         isDraftMode,
         initialData,
-      );
-    case "contactForm":
-      return renderContactFormSection(
-        section as ContactFormSection,
-        sectionIndex,
-        isDraftMode,
       );
     default:
       return null;

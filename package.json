@@ -14,7 +14,6 @@
     "test-storybook": "test-storybook"
   },
   "dependencies": {
-    "@google-cloud/pubsub": "^4.5.0",
     "@sanity/document-internationalization": "^3.0.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^1.6.11",
