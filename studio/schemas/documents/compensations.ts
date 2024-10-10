@@ -49,11 +49,13 @@ const compensations = defineType({
       title: title.name,
     },
     prepare({ title }) {
-      const translatedTitle = isInternationalizedString(title)
-        ? firstTranslation(title)
-        : null;
+      if (!isInternationalizedString(title)) {
+        throw new TypeError(
+          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+        );
+      }
       return {
-        title: translatedTitle ?? undefined,
+        title: firstTranslation(title) ?? undefined,
       };
     },
   },

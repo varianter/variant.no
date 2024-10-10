@@ -80,14 +80,16 @@ export const benefitsByLocation = defineField({
                   type: benefitType.name,
                 },
                 prepare({ title, type }) {
-                  const translatedTitle = isInternationalizedString(title)
-                    ? firstTranslation(title)
-                    : null;
+                  if (!isInternationalizedString(title)) {
+                    throw new TypeError(
+                      `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+                    );
+                  }
                   const subtitle =
                     BENEFIT_TYPES.find((o) => o.value === type)?.title ??
                     "Unknown benefit type";
                   return {
-                    title: translatedTitle ?? undefined,
+                    title: firstTranslation(title) ?? undefined,
                     subtitle,
                   };
                 },

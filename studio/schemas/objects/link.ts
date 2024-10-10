@@ -193,11 +193,13 @@ export const link = defineField({
       type: "linkType",
     },
     prepare({ title, type }) {
-      const translatedTitle = isInternationalizedString(title)
-        ? firstTranslation(title)
-        : null;
+      if (!isInternationalizedString(title)) {
+        throw new TypeError(
+          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+        );
+      }
       return {
-        title: translatedTitle ?? undefined,
+        title: firstTranslation(title) ?? undefined,
         subtitle: type ? type.charAt(0).toUpperCase() + type.slice(1) : "",
       };
     },
