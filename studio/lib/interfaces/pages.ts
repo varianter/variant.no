@@ -79,13 +79,6 @@ export interface GridSection {
   }[];
 }
 
-export interface ContactFormSection {
-  _key: string;
-  _type: string;
-  basicTitle: string;
-  checkboxLabel: PortableTextBlock[];
-}
-
 export type Section =
   | HeroSection
   | LogoSaladSection
