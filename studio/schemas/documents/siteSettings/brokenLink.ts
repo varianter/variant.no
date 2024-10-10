@@ -2,7 +2,6 @@ import { SanityDocument, SlugRule } from "@sanity/types";
 import { type Slug, defineField, defineType } from "sanity";
 
 import PrefixedSlugInput from "studio/components/slug/PrefixedSlugInput";
-import { blogId } from "studio/schemas/documents/blog";
 import { compensationsId } from "studio/schemas/documents/compensations";
 import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 
@@ -70,11 +69,7 @@ const brokenLink = defineType({
           title: "Internal Page",
           description: "Where should the user be redirected?",
           type: "reference",
-          to: [
-            { type: pageBuilderID },
-            { type: blogId },
-            { type: compensationsId },
-          ],
+          to: [{ type: pageBuilderID }, { type: compensationsId }],
           hidden: ({ parent }) => parent?.type !== "reference",
           validation: (rule) =>
             rule.custom((value, { document }) =>

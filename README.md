@@ -37,7 +37,7 @@ Variant’s webpages are based off of Sankitty — a Next.js and Sanity-powered 
 - **CMS-Driven Content Management:** Pages are dynamically constructed using content blocks defined in Sanity. This CMS-like approach enables content creators to manage all aspects of the site, from page content to menus and SEO, without touching the codebase.
 - **Storybook Integration:** Sankitty includes Storybook for isolated component development and testing. This allows for the visual verification of UI components, ensuring design consistency and usability across the application.
 - **Scoped Styling with CSS Modules:** CSS Modules are used for local scoping of styles, preventing naming conflicts and making it easier to maintain and scale the styling of components.
-- **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos, pages, blogs, and posts—offering a unified content management experience.
+- **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos and pages—offering a unified content management experience.
 - **Custom Theming and Typography:** Global styles such as colors are managed in global.css, while typography is primarily controlled within Text.tsx, ensuring a consistent design language throughout the application.
 
 ## Shared Studio
@@ -46,7 +46,6 @@ In addition to the primary Sanity Studio (accessible at http://localhost:3000/st
 
 ### Features of Shared Studio
 
-- Blog Posts: In the Shared Studio, you can create and manage Blog Posts. This content type allows for creating articles that can be displayed across different parts of the application.
 - Customer Cases: Customer Cases is another content type available in the Shared Studio, enabling you to showcase client stories or testimonials.
 
 Accessing Shared Studio

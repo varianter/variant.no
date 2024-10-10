@@ -71,7 +71,7 @@ function negotiateClientLanguage(
  * - If a page does not exist in the user's preferred language, the system will show the default language version instead of a 404 error.
  *
  * Limitations/Notes:
- * - No special handling for nested paths (e.g., `/blogg` and `/blogg/post` are treated as distinct slugs `blogg` and `blogg/post`).
+ * - No special handling for nested paths (e.g., `/kunder` and `/kunder/nav` are treated as distinct slugs `kunder` and `kunder/nav`).
  * - **False friend handling:**
  *   - For words spelled the same in different languages, but with different meanings (e.g., "gift" in Norwegian and English),
  *     the system prioritizes the user's preferred language and reroutes to the correct content based on translations.
