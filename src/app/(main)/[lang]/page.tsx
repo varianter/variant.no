@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
-import InformationSection from "src/blog/components/informationSection/InformationSection";
-import { homeLink } from "src/blog/components/utils/linkTypes";
+import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
+import InformationSection from "src/components/informationSection/InformationSection";
+import { homeLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import SectionRenderer from "src/utils/renderSection";
 import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
