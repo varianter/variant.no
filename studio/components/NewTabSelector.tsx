@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Card, Flex, Grid, Stack, Text } from "@sanity/ui";
 import React from "react";
 import { PatchEvent, set } from "sanity";

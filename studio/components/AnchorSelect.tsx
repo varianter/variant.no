@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Select, Stack } from "@sanity/ui";
 import React, { useEffect, useState } from "react";
 import { PatchEvent, StringInputProps, set, unset, useFormValue } from "sanity";

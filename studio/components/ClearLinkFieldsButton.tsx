@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@sanity/ui";
 import { useFormValue } from "sanity";
 
