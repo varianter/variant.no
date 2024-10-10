@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
-import CustomErrorMessage from "src/blog/components/customErrorMessage/CustomErrorMessage";
-import Legal from "src/blog/components/legal/Legal";
-import LegalPreview from "src/blog/components/legal/LegalPreview";
-import { homeLink } from "src/blog/components/utils/linkTypes";
-import Compensations from "src/compensations/Compensations";
-import CompensationsPreview from "src/compensations/CompensationsPreview";
-import CustomerCases from "src/customerCases/CustomerCases";
-import CustomerCasesPreview from "src/customerCases/CustomerCasesPreview";
+import Compensations from "src/components/compensations/Compensations";
+import CompensationsPreview from "src/components/compensations/CompensationsPreview";
+import CustomerCases from "src/components/customerCases/CustomerCases";
+import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
+import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
+import Legal from "src/components/legal/Legal";
+import LegalPreview from "src/components/legal/LegalPreview";
+import { homeLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";

@@ -119,7 +119,6 @@ Sankitty follows a component-based architecture with a focus on modularity and r
 
 - **src/app:** Contains the main application routes and layout components, organizing the site’s pages and their respective content.
 - **src/api:** API routes are handled here, including form submissions and any other backend processes.
-- **src/blog:** Blog-specific components and pages, including blog post layouts and previews.
 - **src/components:** Houses reusable UI components, such as buttons, forms, navigation elements, and content sections. These components are the building blocks for pages.
 - **src/lib:** Utility functions, data-fetching logic, and other shared code that supports the application’s functionality.
 - **src/schemas:** Sanity content models (schemas) defining the structure of the content stored in the CMS.
