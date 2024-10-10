@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 
-// TODO: set all sectons.ref's to slug.current
+import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
+
 const SECTIONS_FRAGMENT = groq`
   sections[]{
     ...,
@@ -8,80 +9,66 @@ const SECTIONS_FRAGMENT = groq`
       ...,
       callToActions[] {
         ...,
-        linkType == "internal" => {
-          ...,
-          "internalLink": internalLink->{
-            "_ref": slug.current
-          }
-        }
+        ${TRANSLATED_LINK_FRAGMENT}
       }
     },
     _type == "article" => {
       ...,
       link {
         ...,
-        linkType == "internal" => {
-          ...,
-          "internalLink": internalLink->{
-            "_ref": slug.current
-          }
-        }
+        ${TRANSLATED_LINK_FRAGMENT}
       }
     },
     _type == "callout" => {
       ...,
       link {
         ...,
-        linkType == "internal" => {
-          ...,
-          "internalLink": internalLink->{
-            "_ref": slug.current
-          }
-        }
+        ${TRANSLATED_LINK_FRAGMENT}
       }
     },
-       _type == "ctaSection" => {
+    _type == "ctaSection" => {
       ...,
       callToActions[] {
         ...,
-        linkType == "internal" => {
-          ...,
-          "internalLink": internalLink->{
-            "_ref": slug.current
-          }
-        }
+        ${TRANSLATED_LINK_FRAGMENT}
       }
-    },
+    }
   }
+`;
+
+export const PAGE_FRAGMENT = groq`
+  ...,
+  ${LANGUAGE_FIELD_FRAGMENT},
+  ${SECTIONS_FRAGMENT}
 `;
 
 export const PAGE_QUERY = groq`
   *[_type == "pageBuilder" && _id == $id][0]{
-    ...,
-    ${SECTIONS_FRAGMENT}
+    ${PAGE_FRAGMENT}
   }
 `;
 
-export const SEO_PAGE_QUERY = groq`
+export const PAGE_SEO_QUERY = groq`
   *[_type == "pageBuilder" && _id == $id][0]{
-        "title": seo.seoTitle,
-        "description": seo.seoDescription,
-        "imageUrl": seo.seoImage.asset->url
-}`;
+      "title": seo.seoTitle,
+      "description": seo.seoDescription,
+      "imageUrl": seo.seoImage.asset->url
+  }
+`;
 
-export const SLUG_QUERY = groq`
+export const PAGE_BY_SLUG_QUERY = groq`
   *[_type == "pageBuilder" && slug.current == $slug][0]{
-    ...,
-    ${SECTIONS_FRAGMENT}
+    ${PAGE_FRAGMENT}
   }
 `;
 
 export const SEO_SLUG_QUERY = groq`
   *[defined(seo) && slug.current == $slug][0]{
-        "title": seo.seoTitle,
-        "description": seo.seoDescription,
-        "imageUrl": seo.seoImage.asset->url
-}`;
+      "title": seo.seoTitle,
+      "description": seo.seoDescription,
+      "imageUrl": seo.seoImage.asset->url
+  }
+`;
 
 export const BLOG_PAGE_QUERY = groq`
   *[_type == "blog" && slug.current == $slug][0]
@@ -105,10 +92,10 @@ export const POST_SLUG_QUERY = groq`
 
 export const SEO_POST_SLUG_QUERY = groq`
   *[_type == "blogPosts" && slug.current == $id][0]{
-        "title": basicTitle,
-        "description": richText,
-        "imageUrl": image.asset->url
-}
+      "title": basicTitle,
+      "description": richText,
+      "imageUrl": image.asset->url
+  }
 `;
 
 export const MORE_POST_PREVIEW = groq`

@@ -3,6 +3,8 @@ import { defineField } from "sanity";
 import AnchorSelect from "studio/components/AnchorSelect";
 import LinkTypeSelector from "studio/components/LinkTypeSelector";
 import NewTabSelector from "studio/components/NewTabSelector";
+import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const linkID = "link";
 
@@ -190,10 +192,14 @@ export const link = defineField({
       title: "linkTitle",
       type: "linkType",
     },
-    prepare(selection) {
-      const { title, type } = selection;
+    prepare({ title, type }) {
+      if (!isInternationalizedString(title)) {
+        throw new TypeError(
+          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+        );
+      }
       return {
-        title: title[0].value,
+        title: firstTranslation(title) ?? undefined,
         subtitle: type ? type.charAt(0).toUpperCase() + type.slice(1) : "",
       };
     },

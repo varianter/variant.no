@@ -1,6 +1,6 @@
 import { PortableTextBlock, Reference } from "sanity";
 
-import { Slug } from "./global";
+import { SeoObject } from "./seo";
 
 export interface Benefit {
   _type: string;
@@ -77,12 +77,14 @@ export interface CompensationsPage {
   _rev: string;
   _type: string;
   _updatedAt: string;
+  language: string;
   basicTitle: string;
   page: string;
-  slug: Slug;
+  slug: string;
   pensionPercent?: number;
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
+  seo: SeoObject;
 }

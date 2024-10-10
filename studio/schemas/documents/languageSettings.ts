@@ -1,6 +1,6 @@
 import { defineType } from "sanity";
 
-import { defaultLanguage } from "internationalization/supportedLanguages";
+import { defaultLanguage } from "i18n/supportedLanguages";
 import LanguageSelector from "studio/components/LanguageSelector";
 
 export const languageSettingsID = "languageSettings";

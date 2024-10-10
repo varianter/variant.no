@@ -10,6 +10,8 @@ import {
   LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import {
+  SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+  SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_QUERY,
   SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
   SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
 } from "studio/lib/queries/slugTranslations";
@@ -22,15 +24,26 @@ async function translateSlug(
   if (slug.length === 0) {
     return slug;
   }
-  const slugTranslations = await client.fetch<SlugTranslations | null>(
+  const queryParams = {
+    slug,
+    language: sourceLanguageId ?? targetLanguageId,
+  };
+  // query document-based slug translations
+  let slugTranslations = await client.fetch<SlugTranslations | null>(
     sourceLanguageId !== undefined
       ? SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY
       : SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
-    {
-      slug,
-      language: sourceLanguageId ?? targetLanguageId,
-    },
+    queryParams,
   );
+  if (slugTranslations === null) {
+    // try field-based slug translations instead
+    slugTranslations = await client.fetch<SlugTranslations | null>(
+      sourceLanguageId !== undefined
+        ? SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY
+        : SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_QUERY,
+      queryParams,
+    );
+  }
   return slugTranslations?._translations.find(
     (translation) =>
       translation !== null && translation.language === targetLanguageId,

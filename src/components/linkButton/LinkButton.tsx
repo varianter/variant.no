@@ -21,10 +21,7 @@ const typeClassMap: { [key in LinkButtonType]: string } = {
 const LinkButton = ({ isSmall, type = "primary", link }: IButton) => {
   const className = `${styles.button} ${isSmall ? styles.small : ""} ${typeClassMap[type]}`;
   const href = getHref(link);
-  const linkTitle = link.linkTitle;
-  // TODO: pick title based on selected language
-  const linkTitleValue =
-    typeof linkTitle === "string" ? linkTitle : linkTitle[0].value;
+  const linkTitleValue = link.linkTitle;
   return (
     href &&
     linkTitleValue && (

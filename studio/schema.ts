@@ -17,9 +17,11 @@ import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfil
 import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
 import callToActionField from "./schemas/fields/callToActionFields";
 import categories from "./schemas/fields/categories";
+import { richText } from "./schemas/fields/text";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
 import { footerSection } from "./schemas/objects/footerSection";
 import { link } from "./schemas/objects/link";
+import seo from "./schemas/objects/seo";
 import { socialMedia } from "./schemas/objects/socialMedia";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -45,5 +47,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     brandAssets,
     languageSettings,
     locale,
+    richText,
+    seo,
   ],
 };

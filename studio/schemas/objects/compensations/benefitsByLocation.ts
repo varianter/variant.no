@@ -1,8 +1,10 @@
 import { defineField } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { companyLocationNameID } from "studio/schemas/documents/admin/companyLocation";
-import { richText, title } from "studio/schemas/fields/text";
+import { richTextID, titleID } from "studio/schemas/fields/text";
 import { location, locationID } from "studio/schemas/objects/locations";
+import { firstTranslation } from "studio/utils/i18n";
 
 import {
   DocumentWithLocation,
@@ -60,18 +62,34 @@ export const benefitsByLocation = defineField({
               name: "benefit",
               type: "object",
               title: "Benefit",
-              fields: [benefitType, title, richText],
+              fields: [
+                benefitType,
+                {
+                  name: titleID.basic,
+                  type: "internationalizedArrayString",
+                },
+                {
+                  name: richTextID,
+                  title: "Body",
+                  type: "internationalizedArrayRichText",
+                },
+              ],
               preview: {
                 select: {
-                  title: title.name,
+                  title: titleID.basic,
                   type: benefitType.name,
                 },
                 prepare({ title, type }) {
+                  if (!isInternationalizedString(title)) {
+                    throw new TypeError(
+                      `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+                    );
+                  }
                   const subtitle =
                     BENEFIT_TYPES.find((o) => o.value === type)?.title ??
                     "Unknown benefit type";
                   return {
-                    title,
+                    title: firstTranslation(title) ?? undefined,
                     subtitle,
                   };
                 },

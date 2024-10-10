@@ -6,7 +6,7 @@ import { structureTool } from "sanity/structure";
 import { internationalizedArray } from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
 
-import { languageID } from "internationalization/languageSchemaField";
+import { languageID } from "i18n/languageSchemaField";
 
 import StudioIcon from "./components/studioIcon/StudioIcon";
 import { deskStructure } from "./deskStructure";
@@ -45,7 +45,7 @@ const config: WorkspaceOptions = {
       languages: (client) => {
         return client.fetch(SUPPORTED_LANGUAGES_QUERY);
       },
-      fieldTypes: ["string"],
+      fieldTypes: ["string", "richText", "seo"],
     }),
     presentationTool({
       previewUrl: {

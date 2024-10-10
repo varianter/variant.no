@@ -25,7 +25,10 @@ const CompensationsPreview = ({
 }: CompensationsPreviewProps) => {
   const { data: compensationsData } = useQuery<CompensationsPage>(
     COMPENSATIONS_PAGE_QUERY,
-    { slug: initialCompensations.data.slug.current },
+    {
+      slug: initialCompensations.data.slug,
+      language: initialCompensations.data.language,
+    },
     { initial: initialCompensations },
   );
 

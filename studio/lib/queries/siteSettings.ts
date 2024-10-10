@@ -1,5 +1,12 @@
 import { groq } from "next-sanity";
 
+import {
+  LANGUAGE_FIELD_FRAGMENT,
+  TRANSLATED_LINK_FRAGMENT,
+  TRANSLATED_SLUG_VALUE_FRAGMENT,
+} from "./i18n";
+import { PAGE_FRAGMENT } from "./pages";
+
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
   *[_type == "brandAssets" && _id == "brandAssets"][0]
@@ -8,38 +15,24 @@ export const BRAND_ASSETS_QUERY = groq`
 //Navigation Manager
 export const NAV_QUERY = groq`
   *[_type == "navigationManager"][0]{
+    ${LANGUAGE_FIELD_FRAGMENT},
     "main": main[] {
       ...,
-      linkType == "internal" => {
-        ...,
-        "internalLink": internalLink->{
-          "_ref": slug.current
-        }
-      }
+      ${TRANSLATED_LINK_FRAGMENT}
     },
     "footer": footer[] {
       ...,
       linksAndContent[] {
         ...,
-        linkType == "internal" => {
-          ...,
-          "internalLink": internalLink->{
-            "_ref": slug.current
-          }
-        }
+        ${TRANSLATED_LINK_FRAGMENT}
       },
       socialMediaLinks->{
-        "_ref": slug.current
+        "_ref": ${TRANSLATED_SLUG_VALUE_FRAGMENT}
       }
     },
     "sidebar": sidebar[] {
       ...,
-      linkType == "internal" => {
-        ...,
-        "internalLink": internalLink->{
-          "_ref": slug.current
-        }
-      }
+      ${TRANSLATED_LINK_FRAGMENT}
     }
   }
 `;
@@ -49,7 +42,9 @@ export const LANDING_PAGE_REF_QUERY = groq`
 `;
 
 export const LANDING_PAGE_QUERY = groq`
-  *[_type == "navigationManager"][0].setLanding ->
+  *[_type == "navigationManager"][0].setLanding -> {
+    ${PAGE_FRAGMENT}
+  }
 `;
 
 //Social Media Profiles
@@ -58,15 +53,21 @@ export const SOME_PROFILES_QUERY = groq`
 `;
 
 //Languages
-export const LANGUAGES_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages`;
-export const DEFAULT_LANGUAGE_QUERY = groq`*[_type == "languageSettings" && _id == "languageSettings"][0].languages[default][0]`;
+export const LANGUAGES_QUERY = groq`
+  *[_type == "languageSettings" && _id == "languageSettings"][0].languages
+`;
+export const DEFAULT_LANGUAGE_QUERY = groq`
+  *[_type == "languageSettings" && _id == "languageSettings"][0].languages[default][0]
+`;
 
 //Default SEO
-export const DEFAULT_SEO_QUERY = groq`*[_type == "seoFallback"]{
+export const DEFAULT_SEO_QUERY = groq`
+  *[_type == "seoFallback"][0]{
     seo {
       seoTitle,
       seoDescription,
       seoKeywords,
       "seoImageUrl": seoImage.asset->url
     }
-  }[0]`;
+  }
+`;

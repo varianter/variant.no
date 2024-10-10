@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 
-import languageSchemaField from "internationalization/languageSchemaField";
+import languageSchemaField from "i18n/languageSchemaField";
 import { richText, title } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 

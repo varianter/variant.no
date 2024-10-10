@@ -2,10 +2,7 @@ import { Box, Button, Card, Checkbox, Flex, useTheme } from "@sanity/ui";
 import React from "react";
 import { ArrayOfObjectsInputProps, PatchEvent, set } from "sanity";
 
-import {
-  Language,
-  supportedLanguages,
-} from "internationalization/supportedLanguages";
+import { Language, supportedLanguages } from "i18n/supportedLanguages";
 
 const colorMap = {
   dark: {
