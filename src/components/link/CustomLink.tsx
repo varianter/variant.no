@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import { getHref } from "src/utils/get";
+import { getHref } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./link.module.css";

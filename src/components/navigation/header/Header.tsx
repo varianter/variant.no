@@ -9,7 +9,7 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { getHref } from "src/utils/get";
+import { getHref } from "src/utils/link";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";

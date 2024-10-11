@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getHref } from "src/utils/get";
+import { getHref } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./linkButton.module.css";
