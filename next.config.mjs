@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.sanity.io",
       },
+      {
+        protocol: "https",
+        hostname: "chewiesald2ijhpvmb34c.blob.core.windows.net",
+      },
     ],
   },
   experimental: {
