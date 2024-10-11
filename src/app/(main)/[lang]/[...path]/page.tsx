@@ -6,6 +6,7 @@ import CustomerCase from "src/components/customerCases/customerCase/CustomerCase
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
 import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
+import EmployeesPage from "src/components/employees/EmployeesPage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
@@ -135,18 +136,7 @@ async function Page({ params }: Props) {
                 <Legal document={queryResponse.data} />
               );
             case "employeesPage":
-              return (
-                // TODO: implement employees page
-                <pre
-                  style={{
-                    background: "hotpink",
-                    marginTop: "8rem",
-                    textWrap: "wrap",
-                  }}
-                >
-                  {JSON.stringify(pageData, null, 2)}
-                </pre>
-              );
+              return <EmployeesPage />;
           }
           return Page404;
         })()}
