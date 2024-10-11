@@ -14,11 +14,11 @@ import {
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
-type SeoData = {
-  title: string;
-  description: string;
-  imageUrl: string;
-  keywords: string;
+export type SeoData = {
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  keywords?: string;
 };
 
 type PostSeoData = {

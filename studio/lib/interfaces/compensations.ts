@@ -1,6 +1,6 @@
 import { PortableTextBlock, Reference } from "sanity";
 
-import { SeoObject } from "./seo";
+import { SeoData } from "src/utils/seo";
 
 export interface Benefit {
   _type: string;
@@ -86,5 +86,5 @@ export interface CompensationsPage {
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
-  seo: SeoObject;
+  seo: SeoData;
 }
