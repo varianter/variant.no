@@ -25,9 +25,11 @@ export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
 
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
+  language: string,
 ): Promise<Metadata> {
   const { data: defaultSeo } = await loadStudioQuery<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
+    { language },
   );
   const { data: companyInfo } = await loadStudioQuery<CompanyInfo | null>(
     COMPANY_INFO_QUERY,

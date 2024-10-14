@@ -9,11 +9,14 @@ import { PageBuilder } from "studio/lib/interfaces/pages";
 import { LANDING_PAGE_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } = await loadStudioQuery<PageBuilder | null>(
     LANDING_PAGE_QUERY,
+    {
+      language: params.lang,
+    },
   );
-  return generateMetadataFromSeo(landingPage?.seo ?? null);
+  return generateMetadataFromSeo(landingPage?.seo ?? null, params.lang);
 }
 
 const navigationManagerLink = {
@@ -25,7 +28,7 @@ const navigationManagerLink = {
 };
 
 type Props = {
-  params: { lang: string; slug: string };
+  params: { lang: string };
 };
 
 const Home = async ({ params }: Props) => {
