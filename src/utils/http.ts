@@ -1,3 +1,0 @@
-export const HTTP_STATUSES = {
-  TEMPORARY_REDIRECT: 307,
-};

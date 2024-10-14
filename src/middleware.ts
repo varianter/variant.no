@@ -1,13 +1,8 @@
 import { NextRequest } from "next/server";
 
 import { languageMiddleware } from "./middlewares/languageMiddleware";
-import { redirectMiddleware } from "./middlewares/redirectMiddleware";
 
 export async function middleware(request: NextRequest) {
-  const response = await redirectMiddleware(request);
-  if (response !== undefined) {
-    return response;
-  }
   return languageMiddleware(request);
 }
 
