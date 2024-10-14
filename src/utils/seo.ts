@@ -1,7 +1,5 @@
-import { toPlainText } from "@portabletext/toolkit";
 import type { QueryParams } from "@sanity/client";
 import { Metadata } from "next";
-import { PortableTextBlock } from "sanity";
 
 import { urlFor } from "studio/lib/image";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -21,13 +19,6 @@ type SeoData = {
   keywords: string;
 };
 
-type PostSeoData = {
-  title: string;
-  description: PortableTextBlock[];
-  imageUrl: string;
-  keywords: string;
-};
-
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
   width: 1200,
   height: 630,
@@ -40,30 +31,6 @@ export async function fetchSeoData(
   try {
     const { data } = await loadStudioQuery<SeoData>(query, variables);
     return data;
-  } catch (error) {
-    console.error("Error loading SEO data:", error);
-    return null;
-  }
-}
-
-export async function fetchPostSeoData(
-  query: string,
-  variables?: QueryParams | undefined,
-): Promise<SeoData | null> {
-  try {
-    const { data } = await loadStudioQuery<PostSeoData>(query, variables);
-    if (data && data.description) {
-      const plainTextDescription = toPlainText(data.description);
-
-      return {
-        title: data.title,
-        description: plainTextDescription,
-        imageUrl: data.imageUrl,
-        keywords: data.keywords,
-      };
-    }
-
-    return null;
   } catch (error) {
     console.error("Error loading SEO data:", error);
     return null;

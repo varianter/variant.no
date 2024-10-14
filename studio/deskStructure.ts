@@ -145,15 +145,6 @@ const specialPagesSection = (S: StructureBuilder) =>
       S.list()
         .title("Special Pages")
         .items([
-          // S.listItem()
-          //   .title("Blog Overview & Settings")
-          //   .icon(ControlsIcon)
-          //   .child(
-          //     S.document()
-          //       .schemaType(blogId)
-          //       .documentId(blogId)
-          //       .title("Blog Overview & Settings"),
-          //   ),
           S.listItem()
             .title("Compensations")
             .icon(HeartIcon)
