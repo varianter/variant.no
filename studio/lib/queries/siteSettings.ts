@@ -47,6 +47,12 @@ export const LANDING_PAGE_QUERY = groq`
   }
 `;
 
+export const LANDING_PAGE_SITEMAP_QUERY = groq`
+  *[_type == "navigationManager"][0].setLanding -> {
+    _updatedAt
+  }
+`;
+
 //Social Media Profiles
 export const SOME_PROFILES_QUERY = groq`
   *[_type == "soMeLinksID" && _id == "soMeLinksID"][0]

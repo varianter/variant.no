@@ -8,7 +8,7 @@ import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
-import { COMPENSATIONS_PAGE_QUERY } from "studio/lib/queries/specialPages";
+import { COMPENSATIONS_PAGE_BY_SLUG_QUERY } from "studio/lib/queries/specialPages";
 
 import Compensations from "./Compensations";
 
@@ -24,7 +24,7 @@ const CompensationsPreview = ({
   initialLocale,
 }: CompensationsPreviewProps) => {
   const { data: compensationsData } = useQuery<CompensationsPage>(
-    COMPENSATIONS_PAGE_QUERY,
+    COMPENSATIONS_PAGE_BY_SLUG_QUERY,
     {
       slug: initialCompensations.data.slug,
       language: initialCompensations.data.language,
