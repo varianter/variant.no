@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 
 import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
+import { translatedFieldFragment } from "./utils/i18n";
 
 const SECTIONS_FRAGMENT = groq`
   sections[]{
@@ -36,10 +37,20 @@ const SECTIONS_FRAGMENT = groq`
   }
 `;
 
+export const SEO_FRAGMENT = groq`
+  "seo": ${translatedFieldFragment("seo")} {
+    "title": seoTitle,
+    "description": seoDescription,
+    "imageUrl": seoImage.asset->url,
+    "keywords": seoKeywords
+  },
+`;
+
 export const PAGE_FRAGMENT = groq`
   ...,
   ${LANGUAGE_FIELD_FRAGMENT},
-  ${SECTIONS_FRAGMENT}
+  ${SECTIONS_FRAGMENT},
+  ${SEO_FRAGMENT}
 `;
 
 export const PAGE_QUERY = groq`
@@ -48,24 +59,8 @@ export const PAGE_QUERY = groq`
   }
 `;
 
-export const PAGE_SEO_QUERY = groq`
-  *[_type == "pageBuilder" && _id == $id][0]{
-      "title": seo.seoTitle,
-      "description": seo.seoDescription,
-      "imageUrl": seo.seoImage.asset->url
-  }
-`;
-
 export const PAGE_BY_SLUG_QUERY = groq`
   *[_type == "pageBuilder" && slug.current == $slug][0]{
     ${PAGE_FRAGMENT}
-  }
-`;
-
-export const SEO_SLUG_QUERY = groq`
-  *[defined(seo) && slug.current == $slug][0]{
-      "title": seo.seoTitle,
-      "description": seo.seoDescription,
-      "imageUrl": seo.seoImage.asset->url
   }
 `;

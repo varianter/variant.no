@@ -5,7 +5,7 @@ import {
   TRANSLATED_LINK_FRAGMENT,
   TRANSLATED_SLUG_VALUE_FRAGMENT,
 } from "./i18n";
-import { PAGE_FRAGMENT } from "./pages";
+import { PAGE_FRAGMENT, SEO_FRAGMENT } from "./pages";
 
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
@@ -63,11 +63,7 @@ export const DEFAULT_LANGUAGE_QUERY = groq`
 //Default SEO
 export const DEFAULT_SEO_QUERY = groq`
   *[_type == "seoFallback"][0]{
-    seo {
-      seoTitle,
-      seoDescription,
-      seoKeywords,
-      "seoImageUrl": seoImage.asset->url
-    }
+    ...,
+    ${SEO_FRAGMENT}
   }
 `;
