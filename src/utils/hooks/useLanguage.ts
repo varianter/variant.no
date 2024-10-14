@@ -40,6 +40,7 @@ function useSlugTranslations(
     ).then(async (translations) => {
       if (translations !== null) {
         setSlugTranslationsData(translations);
+        return null;
       }
       const fieldTranslations = await fetchWithToken<SlugTranslations | null>(
         SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
