@@ -6,7 +6,7 @@ export const homeLink = {
   linkTitle: "Return to home",
   linkType: LinkType.Internal,
   internalLink: {
-    _ref: "/",
+    _ref: "",
   },
 };
 

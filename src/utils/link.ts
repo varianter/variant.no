@@ -3,15 +3,10 @@ import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 const hash = "#";
 
 export const getHref = (link: ILink): string => {
-  switch (link?.linkType) {
+  switch (link.linkType) {
     case LinkType.Internal:
-      if (link.internalLink?._ref) {
-        try {
-          return `${link.language ? `/${link.language}` : ""}/${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
-        } catch (error) {
-          console.error("Error fetching page:", error);
-          return hash;
-        }
+      if (link.internalLink?._ref !== undefined) {
+        return `${link.language ? `/${link.language}` : ""}/${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
       }
       return hash;
     case LinkType.External:
@@ -20,7 +15,5 @@ export const getHref = (link: ILink): string => {
       return `mailto:${link.email}`;
     case LinkType.Phone:
       return `tel:${link.phone}`;
-    default:
-      return hash;
   }
 };

@@ -30,7 +30,7 @@ const navigationManagerLink = {
   _type: "link",
   linkTitle: "Go to Navigation Manager",
   linkType: LinkType.Internal,
-  internalLink: { _ref: "studio/structure/navigationManager" },
+  internalLink: { _ref: "studio/structure/siteSettings;navigationManager" },
 };
 
 const pagesLink = {
