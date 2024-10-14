@@ -55,8 +55,7 @@ function createSlugField(source: string) {
     description:
       "Enter a unique URL path for the page. This path will be used in the website's address bar. " +
       "A URL path, also known as a slug, is a URL-friendly version of the page title, used to create " +
-      "a human-readable and search engine optimized URL for the content. " +
-      "Note that the slug can not be changed after publication, but alternative slugs can be defined via Redirects.",
+      "a human-readable and search engine optimized URL for the content. ",
     options: {
       source,
       maxLength: SLUG_MAX_LENGTH,

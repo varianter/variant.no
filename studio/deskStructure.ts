@@ -1,7 +1,6 @@
 import {
   CaseIcon,
   CogIcon,
-  DoubleChevronRightIcon,
   EarthGlobeIcon,
   HeartIcon,
   ImagesIcon,
@@ -24,7 +23,6 @@ import { compensationsId } from "./schemas/documents/compensations";
 import { languageSettingsID } from "./schemas/documents/languageSettings";
 import { pageBuilderID } from "./schemas/documents/pageBuilder";
 import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
-import { brokenLinkID } from "./schemas/documents/siteSettings/brokenLink";
 import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
 import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
@@ -122,10 +120,6 @@ const siteSettingSection = (S: StructureBuilder) =>
                 .documentId(defaultSeoID)
                 .title("Default SEO"),
             ),
-          S.listItem()
-            .title("Broken Links")
-            .icon(DoubleChevronRightIcon)
-            .child(S.documentTypeList(brokenLinkID).title("Redirects")),
         ]),
     );
 

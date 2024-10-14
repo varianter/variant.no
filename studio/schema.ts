@@ -8,7 +8,6 @@ import compensations from "./schemas/documents/compensations";
 import languageSettings from "./schemas/documents/languageSettings";
 import pageBuilder from "./schemas/documents/pageBuilder";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
-import brokenLink from "./schemas/documents/siteSettings/brokenLink";
 import locale from "./schemas/documents/siteSettings/locale";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
@@ -34,7 +33,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     legalDocument,
     compensations,
     customerCasesPage,
-    brokenLink,
     benefitsByLocation,
     companyLocation,
     defaultSeo,
