@@ -109,7 +109,7 @@ export default async function Layout({
         ) : (
           <Header data={initialNav.data} assets={initialBrandAssets.data} />
         )}
-        <main id="main" tabIndex={-1} className={styles.offsetForStickyHeader}>
+        <main id="main" tabIndex={-1}>
           {children}
         </main>
         {hasFooterData && isDraftMode ? (
