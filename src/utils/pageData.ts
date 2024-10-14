@@ -14,7 +14,7 @@ import {
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import { PAGE_BY_SLUG_QUERY } from "studio/lib/queries/pages";
 import {
-  COMPENSATIONS_PAGE_QUERY,
+  COMPENSATIONS_PAGE_BY_SLUG_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
@@ -89,7 +89,7 @@ async function fetchCompensationsPage({
   };
   const compensationsPageResult =
     await loadStudioQuery<CompensationsPage | null>(
-      COMPENSATIONS_PAGE_QUERY,
+      COMPENSATIONS_PAGE_BY_SLUG_QUERY,
       queryParams,
       {
         perspective,
@@ -115,7 +115,7 @@ async function fetchCompensationsPage({
     return null;
   }
   return {
-    query: COMPENSATIONS_PAGE_QUERY,
+    query: COMPENSATIONS_PAGE_BY_SLUG_QUERY,
     queryParams,
     queryResponse: {
       compensationsPage: {
