@@ -1,3 +1,5 @@
+import { SeoData } from "src/utils/seo";
+
 import { Slug } from "./global";
 
 export interface CustomerCasePage {
@@ -9,4 +11,5 @@ export interface CustomerCasePage {
   basicTitle: string;
   page: string;
   slug: Slug;
+  seo: SeoData;
 }
