@@ -1,5 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
+import { SeoData } from "src/utils/seo";
+
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
@@ -96,10 +98,5 @@ export interface PageBuilder {
   page: string;
   sections: Section[];
   slug: Slug;
-}
-
-export interface SEO {
-  title: string;
-  description: string;
-  imageUrl?: string;
+  seo: SeoData;
 }

@@ -1,9 +1,4 @@
-export interface SeoObject {
-  seoTitle?: string;
-  seoDescription?: string;
-  seoKeywords?: string;
-  seoImageUrl?: string;
-}
+import { SeoData } from "src/utils/seo";
 
 export type DefaultSeo = {
   _id: string;
@@ -11,5 +6,5 @@ export type DefaultSeo = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  seo?: SeoObject;
+  seo?: SeoData;
 };

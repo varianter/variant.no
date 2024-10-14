@@ -1,4 +1,3 @@
-import type { QueryParams } from "@sanity/client";
 import { Metadata } from "next";
 
 import { urlFor } from "studio/lib/image";
@@ -24,19 +23,6 @@ export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
   height: 630,
 };
 
-export async function fetchSeoData(
-  query: string,
-  variables?: QueryParams | undefined,
-): Promise<SeoData | null> {
-  try {
-    const { data } = await loadStudioQuery<SeoData>(query, variables);
-    return data;
-  } catch (error) {
-    console.error("Error loading SEO data:", error);
-    return null;
-  }
-}
-
 export async function generateMetadataFromSeo(
   seo: SeoData | null,
 ): Promise<Metadata> {
@@ -52,10 +38,10 @@ export async function generateMetadataFromSeo(
 
   const title =
     seo?.title ||
-    defaultSeo?.seo?.seoTitle ||
+    defaultSeo?.seo?.title ||
     companyInfo?.companyName ||
     "Variant";
-  const description = seo?.description || defaultSeo?.seo?.seoDescription;
+  const description = seo?.description || defaultSeo?.seo?.description;
   const keywords = seo?.keywords || "";
 
   const favicon = brandAssets?.favicon;
@@ -69,7 +55,7 @@ export async function generateMetadataFromSeo(
     title: title,
     ...(description ? { description: description } : {}),
   })}`;
-  const sanityImageUrl = seo?.imageUrl || defaultSeo?.seo?.seoImageUrl;
+  const sanityImageUrl = seo?.imageUrl || defaultSeo?.seo?.imageUrl;
   const sanityImageParams = `?${new URLSearchParams({
     w: OPEN_GRAPH_IMAGE_DIMENSIONS.width.toString(),
     h: OPEN_GRAPH_IMAGE_DIMENSIONS.height.toString(),
