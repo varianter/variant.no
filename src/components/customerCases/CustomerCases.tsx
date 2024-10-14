@@ -1,7 +1,7 @@
-import { sharedCustomerCasesLink } from "src/blog/components/utils/linkTypes";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
+import { sharedCustomerCasesLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
