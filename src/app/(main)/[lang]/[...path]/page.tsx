@@ -11,8 +11,7 @@ import { homeLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
-import { fetchSeoData, generateMetadataFromSeo } from "src/utils/seo";
-import { SEO_SLUG_QUERY } from "studio/lib/queries/pages";
+import { SeoData, generateMetadataFromSeo } from "src/utils/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -20,13 +19,41 @@ type Props = {
   params: { lang: string; path: string[] };
 };
 
+function seoDataFromPageData(
+  data: Awaited<ReturnType<typeof fetchPageDataFromParams>>,
+): SeoData | null {
+  if (data === null) {
+    return null;
+  }
+  switch (data.docType) {
+    case "customerCase":
+      // TODO
+      return null;
+    case "customerCasesPage":
+      // TODO
+      return null;
+    case "pageBuilder":
+      // TODO
+      return null;
+    case "legalDocument":
+      // TODO
+      return null;
+    case "compensations": {
+      return data.queryResponse.compensationsPage.data.seo;
+    }
+  }
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const seo = await fetchSeoData(SEO_SLUG_QUERY, {
-    // TODO: handle full path, not just the first slug
-    slug: params.path[0],
+  const { perspective } = getDraftModeInfo();
+
+  const pageData = await fetchPageDataFromParams({
+    language: params.lang,
+    path: params.path,
+    perspective: perspective ?? "published",
   });
 
-  return generateMetadataFromSeo(seo);
+  return generateMetadataFromSeo(seoDataFromPageData(pageData));
 }
 
 const Page404 = (

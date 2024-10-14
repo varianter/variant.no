@@ -17,7 +17,12 @@ export const COMPENSATIONS_PAGE_QUERY = groq`
         "richText": ${translatedFieldFragment("richText")}
       }
     },
-    "seo": ${translatedFieldFragment("seo")}
+    "seo": ${translatedFieldFragment("seo")} {
+      "title": seoTitle,
+      "description": seoDescription,
+      "imageUrl": seoImage.asset->url,
+      "keywords": seoKeywords
+    },
   }
 `;
 

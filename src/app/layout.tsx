@@ -16,7 +16,7 @@ const fontBrittiSans = localFont({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  // TODO: Root metadata should only rely on seo from site settings
+  // fallback if no page-specific metadata is provided
   return generateMetadataFromSeo(null);
 }
 
