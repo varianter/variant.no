@@ -46,14 +46,13 @@ function seoDataFromPageData(
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { perspective } = getDraftModeInfo();
-
+  const language = params.lang;
   const pageData = await fetchPageDataFromParams({
-    language: params.lang,
+    language,
     path: params.path,
     perspective: perspective ?? "published",
   });
-
-  return generateMetadataFromSeo(seoDataFromPageData(pageData));
+  return generateMetadataFromSeo(seoDataFromPageData(pageData), language);
 }
 
 const Page404 = (
