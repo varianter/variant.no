@@ -1,7 +1,7 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
-import { title } from "studio/schemas/fields/text";
+import { titleID } from "studio/schemas/fields/text";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -14,17 +14,22 @@ const customerCasesPage = defineType({
   title: "Customer Cases",
   fields: [
     {
-      ...title,
+      name: titleID.basic,
+      type: "internationalizedArrayString",
       title: "Customer Case Page Title",
       description:
         "Enter the primary title that will be displayed at the top of the customer cases page. This is what users will see when they visit the page.",
     },
-    titleSlug,
+    {
+      ...titleSlug,
+      type: "internationalizedArrayString",
+    },
     seo,
+    //Todo: add translations for SEO
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      title: titleID.basic,
     },
     prepare({ title }) {
       if (!isInternationalizedString(title)) {
