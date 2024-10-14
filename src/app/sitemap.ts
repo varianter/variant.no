@@ -18,14 +18,14 @@ import {
   COMPENSATIONS_PAGE_SITEMAP_QUERY,
   CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
 } from "studio/lib/queries/specialPages";
-import { token } from "studio/lib/token";
+import { token as studioToken } from "studio/lib/token";
 import { sharedClient } from "studioShared/lib/client";
 import { CUSTOMER_CASES_SITEMAP_QUERY } from "studioShared/lib/queries/customerCases";
 import { token as sharedToken } from "studioShared/lib/token";
 
 import { readBaseUrl } from "./env";
 
-const clientWithToken = client.withConfig({ token });
+const clientWithToken = client.withConfig({ token: studioToken });
 const sharedClientWithToken = sharedClient.withConfig({ token: sharedToken });
 
 export const dynamic = "force-dynamic";
