@@ -1,8 +1,10 @@
 import { defineType } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { title } from "studio/schemas/fields/text";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const customerCasesPageID = "customerCasesPage";
 
@@ -23,6 +25,16 @@ const customerCasesPage = defineType({
   preview: {
     select: {
       title: "basicTitle",
+    },
+    prepare({ title }) {
+      if (!isInternationalizedString(title)) {
+        throw new TypeError(
+          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+        );
+      }
+      return {
+        title: firstTranslation(title) ?? undefined,
+      };
     },
   },
 });
