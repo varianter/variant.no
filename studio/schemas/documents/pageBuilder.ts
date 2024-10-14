@@ -4,7 +4,6 @@ import { StringInputWithCharacterCount } from "studio/components/stringInputWith
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
-import contactForm from "studio/schemas/objects/sections/form";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
@@ -48,7 +47,6 @@ const pageBuilder = defineType({
         testimonals,
         imageSection,
         grid,
-        contactForm,
       ],
     }),
   ],
