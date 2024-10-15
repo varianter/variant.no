@@ -30,8 +30,7 @@ function seoDataFromPageData(
       // TODO
       return null;
     case "customerCasesPage":
-      // TODO
-      return null;
+      return data.queryResponse.data.seo;
     case "pageBuilder":
       // TODO
       return null;

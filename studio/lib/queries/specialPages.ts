@@ -34,7 +34,18 @@ export const COMPENSATIONS_PAGE_SITEMAP_QUERY = groq`
 
 //Customer Cases
 export const CUSTOMER_CASES_PAGE_QUERY = groq`
-  *[_type == "customerCasesPage" && slug.current == $slug][0]`;
+  *[_type == "customerCasesPage" && ${translatedFieldFragment("slug")} == $slug][0]{
+    ...,
+    "language": $language,
+    "slug": ${translatedFieldFragment("slug")},
+    "basicTitle": ${translatedFieldFragment("basicTitle")},
+    "seo": ${translatedFieldFragment("seo")} {
+      "title": seoTitle,
+      "description": seoDescription,
+      "imageUrl": seoImage.asset->url,
+      "keywords": seoKeywords
+    },
+  }`;
 
 export const CUSTOMER_CASES_PAGE_SITEMAP_QUERY = groq`
   *[_type == "customerCasesPage"][0] {

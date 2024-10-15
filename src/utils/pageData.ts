@@ -149,6 +149,7 @@ async function fetchCustomerCase({
   }
   const customerCasesPageParams = {
     slug: path[0],
+    language,
   };
   const customerCasesPageResult =
     await loadStudioQuery<CustomerCasePage | null>(

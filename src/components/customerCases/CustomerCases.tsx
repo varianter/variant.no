@@ -20,9 +20,9 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
   const [sharedCustomerCases] = await Promise.all([
     loadSharedQuery<CustomerCase[]>(
       CUSTOMER_CASES_QUERY,
-      { language: "en" },
+      { language: customerCasesPage.language },
       { perspective },
-    ), //TODO: Replace hard coded language with selected language
+    ),
   ]);
 
   return (
