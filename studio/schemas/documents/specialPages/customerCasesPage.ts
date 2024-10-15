@@ -2,7 +2,6 @@ import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
-import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 
@@ -24,8 +23,10 @@ const customerCasesPage = defineType({
       ...titleSlug,
       type: "internationalizedArrayString",
     },
-    seo,
-    //TODO: add translations for SEO
+    {
+      name: "seo",
+      type: "internationalizedArraySeo",
+    },
   ],
   preview: {
     select: {
