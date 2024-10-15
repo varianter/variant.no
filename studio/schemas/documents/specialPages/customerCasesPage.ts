@@ -25,7 +25,7 @@ const customerCasesPage = defineType({
       type: "internationalizedArrayString",
     },
     seo,
-    //Todo: add translations for SEO
+    //TODO: add translations for SEO
   ],
   preview: {
     select: {

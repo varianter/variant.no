@@ -11,5 +11,6 @@ export interface CustomerCasePage {
   basicTitle: string;
   page: string;
   slug: Slug;
+  language: string;
   seo: SeoData;
 }
