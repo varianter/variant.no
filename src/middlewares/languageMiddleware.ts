@@ -1,6 +1,7 @@
 import Negotiator from "negotiator";
 import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
+import { SanityClient } from "next-sanity";
 
 import { client } from "studio/lib/client";
 import { SlugTranslations } from "studio/lib/interfaces/slugTranslations";
@@ -10,44 +11,162 @@ import {
   LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import {
+  SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
   SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+  SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_BY_TYPE_QUERY,
   SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_QUERY,
+  SLUG_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
   SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+  SLUG_TRANSLATIONS_TO_LANGUAGE_BY_TYPE_QUERY,
   SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
 } from "studio/lib/queries/slugTranslations";
+import { sharedClient } from "studioShared/lib/client";
+
+async function translateDocumentSlug(
+  queryClient: SanityClient,
+  slug: string,
+  targetLanguageId: string,
+  sourceLanguageId?: string,
+  docType?: string,
+) {
+  return queryClient.fetch<SlugTranslations | null>(
+    sourceLanguageId !== undefined
+      ? docType !== undefined
+        ? SLUG_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY
+        : SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY
+      : docType !== undefined
+        ? SLUG_TRANSLATIONS_TO_LANGUAGE_BY_TYPE_QUERY
+        : SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
+    {
+      slug,
+      language: sourceLanguageId ?? targetLanguageId,
+      ...(docType !== undefined
+        ? {
+            type: docType,
+          }
+        : {}),
+    },
+    {
+      perspective: "published",
+    },
+  );
+}
+
+async function translateFieldSlug(
+  queryClient: SanityClient,
+  slug: string,
+  targetLanguageId: string,
+  sourceLanguageId?: string,
+  docType?: string,
+) {
+  return queryClient.fetch<SlugTranslations | null>(
+    sourceLanguageId !== undefined
+      ? docType !== undefined
+        ? SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY
+        : SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY
+      : docType !== undefined
+        ? SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_BY_TYPE_QUERY
+        : SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_QUERY,
+    {
+      slug,
+      language: sourceLanguageId ?? targetLanguageId,
+      ...(docType !== undefined
+        ? {
+            type: docType,
+          }
+        : {}),
+    },
+    {
+      perspective: "published",
+    },
+  );
+}
 
 async function translateSlug(
   slug: string,
   targetLanguageId: string,
   sourceLanguageId?: string,
+  docType?: string,
+  translationType?: "document" | "field",
+  project: "studio" | "shared" = "studio",
 ): Promise<string | undefined> {
-  if (slug.length === 0) {
-    return slug;
+  const queryClient = project === "studio" ? client : sharedClient;
+  let slugTranslations;
+  if (translationType === "document" || translationType === undefined) {
+    slugTranslations = await translateDocumentSlug(
+      queryClient,
+      slug,
+      targetLanguageId,
+      sourceLanguageId,
+      docType,
+    );
   }
-  const queryParams = {
-    slug,
-    language: sourceLanguageId ?? targetLanguageId,
-  };
-  // query document-based slug translations
-  let slugTranslations = await client.fetch<SlugTranslations | null>(
-    sourceLanguageId !== undefined
-      ? SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY
-      : SLUG_TRANSLATIONS_TO_LANGUAGE_QUERY,
-    queryParams,
-  );
-  if (slugTranslations === null) {
-    // try field-based slug translations instead
-    slugTranslations = await client.fetch<SlugTranslations | null>(
-      sourceLanguageId !== undefined
-        ? SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY
-        : SLUG_FIELD_TRANSLATIONS_TO_LANGUAGE_QUERY,
-      queryParams,
+  if (
+    translationType === "field" ||
+    (translationType === undefined && slugTranslations === null)
+  ) {
+    slugTranslations = await translateFieldSlug(
+      queryClient,
+      slug,
+      targetLanguageId,
+      sourceLanguageId,
+      docType,
     );
   }
   return slugTranslations?._translations.find(
     (translation) =>
       translation !== null && translation.language === targetLanguageId,
   )?.slug;
+}
+
+async function translateCustomerCasePath(
+  path: string[],
+  targetLanguageId: string,
+  sourceLanguageId?: string,
+): Promise<string[] | undefined> {
+  const pageSlugTranslation = await translateSlug(
+    path[0],
+    targetLanguageId,
+    sourceLanguageId,
+    "customerCasesPage",
+  );
+  if (pageSlugTranslation === undefined) {
+    return undefined;
+  }
+  return translateSlug(
+    path[1],
+    targetLanguageId,
+    sourceLanguageId,
+    "customerCase",
+    "field",
+    "shared",
+  ).then((slug) =>
+    slug !== undefined ? [pageSlugTranslation, slug] : undefined,
+  );
+}
+
+async function translatePath(
+  path: string[],
+  targetLanguageId: string,
+  sourceLanguageId?: string,
+): Promise<string[] | undefined> {
+  if (path.length === 0) {
+    return path;
+  }
+  if (path.length === 1) {
+    return translateSlug(path[0], targetLanguageId, sourceLanguageId).then(
+      (slug) => (slug !== undefined ? [slug] : undefined),
+    );
+  }
+  const pathTranslation = await translateCustomerCasePath(
+    path,
+    targetLanguageId,
+    sourceLanguageId,
+  );
+  if (pathTranslation !== undefined) {
+    return pathTranslation;
+  }
+  return undefined;
 }
 
 function negotiateClientLanguage(
@@ -100,14 +219,12 @@ export async function languageMiddleware(
     console.error("No languages available, language middleware aborted.");
     return;
   }
-  const pathname = request.nextUrl.pathname;
-  const language = availableLanguages.find(
-    ({ id }) => pathname.startsWith(`/${id}/`) || pathname === `/${id}`,
-  );
+  const path = request.nextUrl.pathname.replace(/^\//, "").split("/");
+  const language = availableLanguages.find(({ id }) => path[0] === id);
   if (language === undefined) {
-    return redirectMissingLanguage(pathname, availableLanguages, request.url);
+    return redirectMissingLanguage(path, availableLanguages, request.url);
   }
-  return redirectWithLanguage(pathname, language, request.url);
+  return redirectWithLanguage(path, language, request.url);
 }
 
 /**
@@ -117,23 +234,26 @@ export async function languageMiddleware(
  *   - If translated, user is redirected to `/[language]/[translatedSlug]`
  *   - Otherwise, user is redirected to the slug with default language (`/[slug]`)
  *
- * @param pathname
- * @param language
- * @param baseUrl
+ * @param {string[]} path - The current URL path segments.
+ * @param {LanguageObject} language - Language object from URL path
+ * @param {string} baseUrl - The base URL of the site.
  */
 async function redirectWithLanguage(
-  pathname: string,
+  path: string[],
   language: LanguageObject,
   baseUrl: string,
 ) {
-  const slug = pathname.split("/").slice(2).join("/");
-  const translatedSlug = await translateSlug(slug, language.id);
-  if (translatedSlug === undefined) {
-    return NextResponse.redirect(new URL(`/${slug}`, baseUrl));
+  const pathWithoutLanguage = path.slice(1);
+  const translatedPath = await translatePath(pathWithoutLanguage, language.id);
+  if (translatedPath === undefined) {
+    return NextResponse.redirect(
+      new URL(`/${pathWithoutLanguage.join("/")}`, baseUrl),
+    );
   }
-  if (translatedSlug !== slug) {
-    const translatedPathname = `/${language.id}/${translatedSlug}`;
-    return NextResponse.redirect(new URL(translatedPathname, baseUrl));
+  if (translatedPath.join("/") !== pathWithoutLanguage.join("/")) {
+    return NextResponse.redirect(
+      new URL(`/${language.id}/${translatedPath.join("/")}`, baseUrl),
+    );
   }
   // all good, no modifications needed
   return;
@@ -149,12 +269,12 @@ async function redirectWithLanguage(
  *     - If a translated version exists, redirect the user to the corresponding path: `/[negotiatedLanguage]/[translatedSlug]`.
  *     - If no translation is found, keep the user on the default language page at `/[slug]`.
  *
- * @param {string} pathname - The current URL path.
+ * @param {string[]} path - The current URL path segments.
  * @param {string[]} availableLanguages - A list of languages supported by the site.
  * @param {string} baseUrl - The base URL of the site.
  */
 async function redirectMissingLanguage(
-  pathname: string,
+  path: string[],
   availableLanguages: LanguageObject[],
   baseUrl: string,
 ) {
@@ -176,20 +296,19 @@ async function redirectMissingLanguage(
   if (preferredLanguage === defaultLanguageId) {
     // Same as default, simply rewrite internally to include language code
     return NextResponse.rewrite(
-      new URL(`/${preferredLanguage}${pathname}`, baseUrl),
+      new URL(`/${preferredLanguage}/${path.join("/")}`, baseUrl),
     );
   }
   // Attempt to translate to the preferred language
-  const slug = pathname.replace(/^\//, "");
-  const translatedSlug = await translateSlug(
-    slug,
+  const translatedSlug = await translatePath(
+    path,
     preferredLanguage,
     defaultLanguageId,
   );
   if (translatedSlug === undefined) {
     // Translation not available, rewrite to default language
     return NextResponse.rewrite(
-      new URL(`/${defaultLanguageId}${pathname}`, baseUrl),
+      new URL(`/${defaultLanguageId}/${path.join("/")}`, baseUrl),
     );
   }
   // Redirect with language code and translated slug
