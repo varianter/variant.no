@@ -1,11 +1,9 @@
 import { defineField, defineType } from "sanity";
 
-import languageSchemaField from "i18n/languageSchemaField";
-import { richText, title } from "studio/schemas/fields/text";
-import {
-  isSlugUniqueAcrossDocuments,
-  titleSlug,
-} from "studio/schemas/schemaTypes/slug";
+import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { richTextID, titleID } from "studio/schemas/fields/text";
+import { titleSlug } from "studio/schemas/schemaTypes/slug";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const customerCaseID = "customerCase";
 
@@ -14,27 +12,35 @@ const customerCase = defineType({
   type: "document",
   title: "Customer Case",
   fields: [
-    languageSchemaField,
-    title,
+    {
+      name: titleID.basic,
+      type: "internationalizedArrayString",
+      title: "Customer Case Title",
+    },
     {
       ...titleSlug,
-      options: {
-        ...titleSlug.options,
-        isUnique: (slug, ctx) =>
-          isSlugUniqueAcrossDocuments(slug, ctx, customerCaseID),
-      },
+      type: "internationalizedArrayString",
     },
     defineField({
-      ...richText,
-      description: "Enter the body content of the Customer case.",
+      name: richTextID,
+      title: "Body",
+      type: "internationalizedArrayRichText",
     }),
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      title: titleID.basic,
     },
     prepare({ title }) {
-      return { title, subtitle: "Customer case" };
+      if (!isInternationalizedString(title)) {
+        throw new TypeError(
+          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
+        );
+      }
+      return {
+        title: firstTranslation(title) ?? undefined,
+        subtitle: "Customer case",
+      };
     },
   },
 });
