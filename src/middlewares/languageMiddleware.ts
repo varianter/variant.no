@@ -329,20 +329,28 @@ async function redirectMissingLanguage(
     // a different language to the preferred language
     translatedPath = await translatePath(path, preferredLanguage);
   }
+  const pathString = path.join("/");
   if (translatedPath === undefined) {
     // Translation not available, rewrite to default language
     return NextResponse.rewrite(
-      new URL(`/${defaultLanguageId}/${path.join("/")}`, baseUrl),
+      new URL(`/${defaultLanguageId}/${pathString}`, baseUrl),
     );
   }
+  const translatedPathString = translatedPath.join("/");
   if (preferredLanguage === defaultLanguageId) {
-    // Rewrite to default language and translated path
+    if (translatedPathString !== pathString) {
+      // Redirect to translated path, preserving default language
+      return NextResponse.redirect(
+        new URL(`/${translatedPathString}`, baseUrl),
+      );
+    }
+    // Rewrite to include language code for internal routing
     return NextResponse.rewrite(
-      new URL(`/${defaultLanguageId}/${translatedPath}`, baseUrl),
+      new URL(`/${defaultLanguageId}/${translatedPathString}`, baseUrl),
     );
   }
   // Redirect with language code and translated path
   return NextResponse.redirect(
-    new URL(`/${preferredLanguage}/${translatedPath}`, baseUrl),
+    new URL(`/${preferredLanguage}/${translatedPathString}`, baseUrl),
   );
 }
