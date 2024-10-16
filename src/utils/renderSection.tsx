@@ -229,6 +229,18 @@ const SectionRenderer = ({
           {JSON.stringify(section, null, 2)}
         </pre>
       );
+    case "employees":
+      return (
+        <pre
+          style={{
+            background: "hotpink",
+            padding: "3rem",
+            margin: 0,
+          }}
+        >
+          {JSON.stringify(section, null, 2)}
+        </pre>
+      );
     default:
       return null;
   }
