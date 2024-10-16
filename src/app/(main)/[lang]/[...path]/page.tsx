@@ -41,6 +41,10 @@ function seoDataFromPageData(
     case "compensations": {
       return data.queryResponse.compensationsPage.data.seo;
     }
+    case "employeesPage": {
+      // TODO
+      return null;
+    }
   }
 }
 
@@ -124,7 +128,13 @@ async function Page({ params }: Props) {
             case "customerCase":
               return (
                 // TODO: implement customer case detail page
-                <pre style={{ background: "hotpink", marginTop: "8rem" }}>
+                <pre
+                  style={{
+                    background: "hotpink",
+                    marginTop: "8rem",
+                    textWrap: "wrap",
+                  }}
+                >
                   {JSON.stringify(pageData, null, 2)}
                 </pre>
               );
@@ -133,6 +143,19 @@ async function Page({ params }: Props) {
                 <LegalPreview initialDocument={queryResponse} />
               ) : (
                 <Legal document={queryResponse.data} />
+              );
+            case "employeesPage":
+              return (
+                // TODO: implement employees page
+                <pre
+                  style={{
+                    background: "hotpink",
+                    marginTop: "8rem",
+                    textWrap: "wrap",
+                  }}
+                >
+                  {JSON.stringify(pageData, null, 2)}
+                </pre>
               );
           }
           return Page404;

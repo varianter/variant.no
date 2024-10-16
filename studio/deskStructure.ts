@@ -26,6 +26,7 @@ import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
 import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
 import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
+import { employeesPageId } from "./schemas/documents/specialPages/employeesPage";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -156,6 +157,15 @@ const specialPagesSection = (S: StructureBuilder) =>
                 .schemaType(customerCasesPageID)
                 .documentId(customerCasesPageID)
                 .title("Customer Cases"),
+            ),
+          S.listItem()
+            .title("Employees")
+            .icon(UsersIcon)
+            .child(
+              S.document()
+                .schemaType(employeesPageId)
+                .documentId(employeesPageId)
+                .title("Employees"),
             ),
         ]),
     );
