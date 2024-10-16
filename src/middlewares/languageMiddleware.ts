@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { SanityClient } from "next-sanity";
 
 import { client } from "studio/lib/client";
-import { SlugTranslations } from "studio/lib/interfaces/slugTranslations";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import {
   DEFAULT_LANGUAGE_QUERY,
@@ -22,14 +22,14 @@ import {
 } from "studio/lib/queries/slugTranslations";
 import { sharedClient } from "studioShared/lib/client";
 
-async function translateDocumentSlug(
+export async function translateDocumentSlug(
   queryClient: SanityClient,
   slug: string,
   targetLanguageId: string,
   sourceLanguageId?: string,
   docType?: string,
 ) {
-  return queryClient.fetch<SlugTranslations | null>(
+  return queryClient.fetch<InternationalizedString | null>(
     sourceLanguageId !== undefined
       ? docType !== undefined
         ? SLUG_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY
@@ -52,14 +52,14 @@ async function translateDocumentSlug(
   );
 }
 
-async function translateFieldSlug(
+export async function translateFieldSlug(
   queryClient: SanityClient,
   slug: string,
   targetLanguageId: string,
   sourceLanguageId?: string,
   docType?: string,
 ) {
-  return queryClient.fetch<SlugTranslations | null>(
+  return queryClient.fetch<InternationalizedString | null>(
     sourceLanguageId !== undefined
       ? docType !== undefined
         ? SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY
@@ -91,7 +91,7 @@ async function translateSlug(
   project: "studio" | "shared" = "studio",
 ): Promise<string | undefined> {
   const queryClient = project === "studio" ? client : sharedClient;
-  let slugTranslations;
+  let slugTranslations = null;
   if (translationType === "document" || translationType === undefined) {
     slugTranslations = await translateDocumentSlug(
       queryClient,
@@ -103,7 +103,8 @@ async function translateSlug(
   }
   if (
     translationType === "field" ||
-    (translationType === undefined && slugTranslations === null)
+    (translationType === undefined &&
+      (slugTranslations === null || slugTranslations.length === 0))
   ) {
     slugTranslations = await translateFieldSlug(
       queryClient,
@@ -113,10 +114,9 @@ async function translateSlug(
       docType,
     );
   }
-  return slugTranslations?._translations.find(
-    (translation) =>
-      translation !== null && translation.language === targetLanguageId,
-  )?.slug;
+  return slugTranslations?.find(
+    (translation) => translation._key === targetLanguageId,
+  )?.value;
 }
 
 async function translateCustomerCasePath(

@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
+import { defaultLanguage } from "i18n/supportedLanguages";
 import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { getHref } from "src/utils/link";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
 import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
 import { linkID } from "studio/schemas/objects/link";
@@ -18,21 +20,28 @@ import { linkID } from "studio/schemas/objects/link";
 import styles from "./header.module.css";
 
 export interface IHeader {
-  data: Navigation;
+  navigation: Navigation;
   assets: BrandAssets;
+  currentLanguage: string;
+  pathTranslations: InternationalizedString;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
   data?.filter((link) => link._type === type);
 
-export const Header = ({ data, assets }: IHeader) => {
+export const Header = ({
+  navigation,
+  assets,
+  currentLanguage,
+  pathTranslations,
+}: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const sidebarData = data.sidebar || data.main;
+  const sidebarData = navigation.sidebar || navigation.main;
 
-  const links = filterLinks(data.main, linkID);
-  const ctas = filterLinks(data.main, callToActionFieldID);
+  const links = filterLinks(navigation.main, linkID);
+  const ctas = filterLinks(navigation.main, callToActionFieldID);
 
   const sidebarLinks = filterLinks(sidebarData, linkID);
   const sidebarCtas = filterLinks(sidebarData, callToActionFieldID);
@@ -86,7 +95,12 @@ export const Header = ({ data, assets }: IHeader) => {
             {renderPageLinks(links, false, pathname)}
             {renderPageCTAs(ctas, false)}
             <div className={styles.languageSwitcher}>
-              <LanguageSwitcher />
+              {defaultLanguage && (
+                <LanguageSwitcher
+                  currentLanguage={currentLanguage}
+                  pathTranslations={pathTranslations}
+                />
+              )}
             </div>
             <button
               aria-haspopup="true"
@@ -105,7 +119,12 @@ export const Header = ({ data, assets }: IHeader) => {
             >
               {renderPageLinks(sidebarLinks, true, pathname)}
               {renderPageCTAs(sidebarCtas, true)}
-              <LanguageSwitcher />
+              {defaultLanguage && (
+                <LanguageSwitcher
+                  currentLanguage={currentLanguage}
+                  pathTranslations={pathTranslations}
+                />
+              )}
             </div>
           )}
         </nav>

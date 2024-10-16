@@ -1,6 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { mockLogo, mockNavigation } from "src/components/navigation/mockData";
+import { defaultLanguage } from "i18n/supportedLanguages";
+import {
+  mockLogo,
+  mockNavigation,
+  mockPathTranslations,
+} from "src/components/navigation/mockData";
 
 import { Header } from "./Header";
 
@@ -23,7 +28,9 @@ type Story = StoryObj<typeof Header>;
 
 export const Default: Story = {
   args: {
-    data: mockNavigation,
+    navigation: mockNavigation,
     assets: mockLogo,
+    currentLanguage: defaultLanguage?.id ?? "en",
+    pathTranslations: mockPathTranslations,
   },
 };

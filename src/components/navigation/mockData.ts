@@ -1,5 +1,6 @@
 import primaryLogoFile from "src/stories/assets/energiai-primary-logo.svg";
 import secondaryLogoFile from "src/stories/assets/energiai-secondary-logo.svg";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import {
   LinkType,
   Navigation,
@@ -155,3 +156,14 @@ export const mockSocialMediaProfiles: SocialMediaProfiles = {
     },
   ],
 };
+
+export const mockPathTranslations: InternationalizedString = [
+  {
+    _key: "no",
+    value: "kunder",
+  },
+  {
+    _key: "en",
+    value: "customers",
+  },
+];
