@@ -11,7 +11,23 @@ export const CUSTOMER_CASES_QUERY = groq`
   }
 `;
 
-export const CUSTOMER_CASE_QUERY = groq`*[_type == "customerCase" && slug.current == $slug && language == $language][0]`;
+export const CUSTOMER_CASE_QUERY = groq`
+  *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
+    ${LANGUAGE_FIELD_FRAGMENT},
+    "slug": ${translatedFieldFragment("slug")},
+    "basicTitle": ${translatedFieldFragment("basicTitle")},
+    "description": ${translatedFieldFragment("description")},
+    "richText": ${translatedFieldFragment("richText")},
+    "projectInfo": projectInfo {
+      customer,
+      "name": ${translatedFieldFragment("name")},
+      "duration": ${translatedFieldFragment("duration")},
+      "sector": ${translatedFieldFragment("sector")},
+      "delivery": ${translatedFieldFragment("delivery")},
+      consultants
+    }
+  }
+`;
 
 export const CUSTOMER_CASES_SITEMAP_QUERY = groq`
   *[_type == "customerCase"] {

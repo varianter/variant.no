@@ -4,6 +4,7 @@ import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { richTextID, titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
+import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
 
 export const customerCaseID = "customerCase";
 
@@ -12,15 +13,24 @@ const customerCase = defineType({
   type: "document",
   title: "Customer Case",
   fields: [
-    {
-      name: titleID.basic,
-      type: "internationalizedArrayString",
-      title: "Customer Case Title",
-    },
-    {
+    defineField({
       ...titleSlug,
       type: "internationalizedArrayString",
-    },
+    }),
+    defineField({
+      name: titleID.basic,
+      type: "internationalizedArrayString",
+      title: "Title",
+    }),
+    defineField({
+      name: "description",
+      type: "internationalizedArrayText",
+      title: "Description",
+      description:
+        "Short paragraph displayed at the top of the customer case page",
+    }),
+    customerCaseProjectInfo,
+    //TODO: Block section
     defineField({
       name: richTextID,
       title: "Body",
