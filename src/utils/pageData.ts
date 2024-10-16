@@ -27,6 +27,8 @@ import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
 import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
+import { isNonNullQueryResponse } from "./queryResponse";
+
 type PageFromParams<D, T> = {
   queryResponse: D;
   docType: T;
@@ -43,7 +45,7 @@ async function fetchDynamicPage({
   if (path.length === 0) {
     return null;
   }
-  const pageResult = await loadStudioQuery<PageBuilder | null>(
+  const queryResponse = await loadStudioQuery<PageBuilder | null>(
     PAGE_BY_SLUG_QUERY,
     {
       slug: path[0],
@@ -51,14 +53,11 @@ async function fetchDynamicPage({
     },
     { perspective },
   );
-  if (pageResult.data === null) {
+  if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
   return {
-    queryResponse: {
-      ...pageResult,
-      data: pageResult.data,
-    },
+    queryResponse,
     docType: pageBuilderID,
   };
 }
@@ -89,7 +88,7 @@ async function fetchCompensationsPage({
         perspective,
       },
     );
-  if (compensationsPageResult.data === null) {
+  if (!isNonNullQueryResponse(compensationsPageResult)) {
     return null;
   }
   const companyLocationsResult = await loadStudioQuery<CompanyLocation[]>(
@@ -97,7 +96,7 @@ async function fetchCompensationsPage({
     {},
     { perspective },
   );
-  if (companyLocationsResult.data === null) {
+  if (!isNonNullQueryResponse(companyLocationsResult)) {
     return null;
   }
   const localeDocumentResult = await loadStudioQuery<LocaleDocument>(
@@ -105,23 +104,14 @@ async function fetchCompensationsPage({
     {},
     { perspective },
   );
-  if (localeDocumentResult.data === null) {
+  if (!isNonNullQueryResponse(localeDocumentResult)) {
     return null;
   }
   return {
     queryResponse: {
-      compensationsPage: {
-        ...compensationsPageResult,
-        data: compensationsPageResult.data,
-      },
-      companyLocations: {
-        ...companyLocationsResult,
-        data: companyLocationsResult.data,
-      },
-      locale: {
-        ...localeDocumentResult,
-        data: localeDocumentResult.data,
-      },
+      compensationsPage: compensationsPageResult,
+      companyLocations: companyLocationsResult,
+      locale: localeDocumentResult,
     },
     docType: compensationsId,
   };
@@ -148,15 +138,12 @@ async function fetchCustomerCase({
       },
       { perspective },
     );
-  if (customerCasesPageResult.data === null) {
+  if (!isNonNullQueryResponse(customerCasesPageResult)) {
     return null;
   }
   if (path.length === 1) {
     return {
-      queryResponse: {
-        ...customerCasesPageResult,
-        data: customerCasesPageResult.data,
-      },
+      queryResponse: customerCasesPageResult,
       docType: customerCasesPageID,
     };
   }
@@ -170,14 +157,11 @@ async function fetchCustomerCase({
       perspective,
     },
   );
-  if (customerCaseResult.data === null) {
+  if (!isNonNullQueryResponse(customerCaseResult)) {
     return null;
   }
   return {
-    queryResponse: {
-      ...customerCaseResult,
-      data: customerCaseResult.data,
-    },
+    queryResponse: customerCaseResult,
     docType: customerCaseID,
   };
 }
@@ -203,14 +187,11 @@ async function fetchLegalDocument({
       perspective,
     },
   );
-  if (queryResponse.data === null) {
+  if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
   return {
-    queryResponse: {
-      ...queryResponse,
-      data: queryResponse.data,
-    },
+    queryResponse,
     docType: legalDocumentID,
   };
 }
