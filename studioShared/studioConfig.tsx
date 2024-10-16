@@ -1,17 +1,15 @@
-import { documentInternationalization } from "@sanity/document-internationalization";
 import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { structureTool } from "sanity/structure";
+import { internationalizedArray } from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
 
-import { languageID } from "i18n/languageSchemaField";
-import { defaultLanguage, supportedLanguages } from "i18n/supportedLanguages";
+import { supportedLanguages } from "i18n/supportedLanguages";
 import StudioIcon from "studio/components/studioIcon/StudioIcon";
 
 import { deskStructure } from "./deskStructure";
 import { apiVersion, dataset, projectId } from "./env";
 import { schema } from "./schema";
-import { customerCaseID } from "./schemas/documents/customerCase";
 
 const config: WorkspaceOptions = {
   name: "sharedStudio",
@@ -23,10 +21,6 @@ const config: WorkspaceOptions = {
   dataset,
   schema: {
     ...schema,
-    templates: (prev) =>
-      prev.filter(
-        (template) => template.value.language === defaultLanguage?.id,
-      ),
   },
   plugins: [
     structureTool({
@@ -34,14 +28,9 @@ const config: WorkspaceOptions = {
     }),
     visionTool({ defaultApiVersion: apiVersion }),
     media(),
-    documentInternationalization({
-      supportedLanguages: supportedLanguages,
-      schemaTypes: [customerCaseID],
-      languageField: languageID,
-      apiVersion,
-      // Optional. Adds UI for publishing all translations at once. Requires access to the Scheduling API
-      // https://www.sanity.io/docs/scheduling-api
-      // bulkPublish: true,
+    internationalizedArray({
+      languages: supportedLanguages,
+      fieldTypes: ["string", "richText"],
     }),
   ],
 };
