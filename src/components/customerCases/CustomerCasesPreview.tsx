@@ -15,7 +15,7 @@ const CustomerCasesPreview = ({
 }: CustomerCasesPreviewProps) => {
   const { data: customerCases } = useQuery<CustomerCasePage>(
     CUSTOMER_CASES_PAGE_QUERY,
-    { slug: initialCustomerCases.data.slug.current },
+    { slug: initialCustomerCases.data.slug },
     { initial: initialCustomerCases },
   );
 

@@ -1,13 +1,23 @@
-import { PortableTextBlock, Slug } from "sanity";
+import { PortableTextBlock } from "sanity";
 
-export interface CustomerCase {
-  language: string;
+export interface CustomerCaseProjectInfo {
+  customer: string;
+  name: string;
+  duration: string;
+  sector: string;
+  delivery: string;
+  consultants: string[];
+}
+
+export interface CustomerCaseBase {
   _id: string;
+  language: string;
+  slug: string;
   basicTitle: string;
-  _updatedAt: string;
-  slug: Slug;
-  _createdAt: string;
-  _rev: string;
-  _type: string;
+  description: string;
+}
+
+export interface CustomerCase extends CustomerCaseBase {
   richText: PortableTextBlock[];
+  projectInfo: CustomerCaseProjectInfo;
 }
