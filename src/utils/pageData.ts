@@ -1,4 +1,4 @@
-import { ClientPerspective, QueryParams } from "@sanity/client";
+import { ClientPerspective } from "@sanity/client";
 import { QueryResponseInitial } from "@sanity/react-loader";
 
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
@@ -28,8 +28,6 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
 type PageFromParams<D, T> = {
-  query: string;
-  queryParams: QueryParams;
   queryResponse: D;
   docType: T;
 };
@@ -45,21 +43,18 @@ async function fetchDynamicPage({
   if (path.length === 0) {
     return null;
   }
-  const queryParams = {
-    slug: path[0],
-    language,
-  };
   const pageResult = await loadStudioQuery<PageBuilder | null>(
     PAGE_BY_SLUG_QUERY,
-    queryParams,
+    {
+      slug: path[0],
+      language,
+    },
     { perspective },
   );
   if (pageResult.data === null) {
     return null;
   }
   return {
-    query: PAGE_BY_SLUG_QUERY,
-    queryParams,
     queryResponse: {
       ...pageResult,
       data: pageResult.data,
@@ -83,14 +78,13 @@ async function fetchCompensationsPage({
   if (path.length !== 1) {
     return null;
   }
-  const queryParams = {
-    slug: path[0],
-    language,
-  };
   const compensationsPageResult =
     await loadStudioQuery<CompensationsPage | null>(
       COMPENSATIONS_PAGE_BY_SLUG_QUERY,
-      queryParams,
+      {
+        slug: path[0],
+        language,
+      },
       {
         perspective,
       },
@@ -115,8 +109,6 @@ async function fetchCompensationsPage({
     return null;
   }
   return {
-    query: COMPENSATIONS_PAGE_BY_SLUG_QUERY,
-    queryParams,
     queryResponse: {
       compensationsPage: {
         ...compensationsPageResult,
@@ -147,14 +139,13 @@ async function fetchCustomerCase({
   if (path.length === 0) {
     return null;
   }
-  const customerCasesPageParams = {
-    slug: path[0],
-    language,
-  };
   const customerCasesPageResult =
     await loadStudioQuery<CustomerCasePage | null>(
       CUSTOMER_CASES_PAGE_QUERY,
-      customerCasesPageParams,
+      {
+        slug: path[0],
+        language,
+      },
       { perspective },
     );
   if (customerCasesPageResult.data === null) {
@@ -162,8 +153,6 @@ async function fetchCustomerCase({
   }
   if (path.length === 1) {
     return {
-      query: CUSTOMER_CASES_PAGE_QUERY,
-      queryParams: customerCasesPageParams,
       queryResponse: {
         ...customerCasesPageResult,
         data: customerCasesPageResult.data,
@@ -171,13 +160,12 @@ async function fetchCustomerCase({
       docType: customerCasesPageID,
     };
   }
-  const customerCaseParams = {
-    slug: path[1],
-    language,
-  };
   const customerCaseResult = await loadSharedQuery<CustomerCase | null>(
     CUSTOMER_CASE_QUERY,
-    customerCaseParams,
+    {
+      slug: path[1],
+      language,
+    },
     {
       perspective,
     },
@@ -186,8 +174,6 @@ async function fetchCustomerCase({
     return null;
   }
   return {
-    query: CUSTOMER_CASE_QUERY,
-    queryParams: customerCaseParams,
     queryResponse: {
       ...customerCaseResult,
       data: customerCaseResult.data,
@@ -207,13 +193,12 @@ async function fetchLegalDocument({
   if (path.length !== 1) {
     return null;
   }
-  const queryParams = {
-    slug: path[0],
-    language,
-  };
   const queryResponse = await loadStudioQuery<LegalDocument | null>(
     LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
-    queryParams,
+    {
+      slug: path[0],
+      language,
+    },
     {
       perspective,
     },
@@ -222,8 +207,6 @@ async function fetchLegalDocument({
     return null;
   }
   return {
-    query: LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
-    queryParams,
     queryResponse: {
       ...queryResponse,
       data: queryResponse.data,
