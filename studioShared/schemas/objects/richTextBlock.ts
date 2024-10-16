@@ -16,7 +16,9 @@ const richTextBlock = defineField({
       text: "richText",
     },
     prepare({ text }) {
-      //TODO: add preview
+      return {
+        title: text, //Does not work
+      };
     },
   },
 });
