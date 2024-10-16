@@ -30,7 +30,7 @@ const config: WorkspaceOptions = {
     media(),
     internationalizedArray({
       languages: supportedLanguages,
-      fieldTypes: ["string", "richText"],
+      fieldTypes: ["string", "richText", "text"],
     }),
   ],
 };
