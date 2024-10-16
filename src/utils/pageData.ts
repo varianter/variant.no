@@ -3,6 +3,7 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { PageBuilder } from "studio/lib/interfaces/pages";
@@ -13,6 +14,11 @@ import {
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import { PAGE_BY_SLUG_QUERY } from "studio/lib/queries/pages";
+import {
+  SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
+  SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+  SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+} from "studio/lib/queries/slugTranslations";
 import {
   COMPENSATIONS_PAGE_BY_SLUG_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,
@@ -32,6 +38,7 @@ import { isNonNullQueryResponse } from "./queryResponse";
 type PageFromParams<D, T> = {
   queryResponse: D;
   docType: T;
+  pathTranslations: InternationalizedString;
 };
 
 async function fetchDynamicPage({
@@ -59,6 +66,7 @@ async function fetchDynamicPage({
   return {
     queryResponse,
     docType: pageBuilderID,
+    pathTranslations: [],
   };
 }
 
@@ -107,6 +115,14 @@ async function fetchCompensationsPage({
   if (!isNonNullQueryResponse(localeDocumentResult)) {
     return null;
   }
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+    );
   return {
     queryResponse: {
       compensationsPage: compensationsPageResult,
@@ -114,6 +130,7 @@ async function fetchCompensationsPage({
       locale: localeDocumentResult,
     },
     docType: compensationsId,
+    pathTranslations: pathTranslations.data ?? [],
   };
 }
 
@@ -141,10 +158,19 @@ async function fetchCustomerCase({
   if (!isNonNullQueryResponse(customerCasesPageResult)) {
     return null;
   }
+  const pagePathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+    );
   if (path.length === 1) {
     return {
       queryResponse: customerCasesPageResult,
       docType: customerCasesPageID,
+      pathTranslations: pagePathTranslations.data ?? [],
     };
   }
   const customerCaseResult = await loadSharedQuery<CustomerCase | null>(
@@ -160,9 +186,36 @@ async function fetchCustomerCase({
   if (!isNonNullQueryResponse(customerCaseResult)) {
     return null;
   }
+  const casePathTranslations =
+    await loadSharedQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
+      {
+        slug: path[1],
+        language,
+        type: customerCaseID,
+      },
+    );
   return {
     queryResponse: customerCaseResult,
     docType: customerCaseID,
+    pathTranslations:
+      casePathTranslations.data?.reduce<InternationalizedString>(
+        (acc, translation) => {
+          const pageSlug = pagePathTranslations.data?.find(
+            (pageTranslation) => pageTranslation._key === translation._key,
+          )?.value;
+          return pageSlug !== undefined
+            ? [
+                ...acc,
+                {
+                  _key: translation._key,
+                  value: `${pageSlug}/${translation.value}`,
+                },
+              ]
+            : acc;
+        },
+        [],
+      ) ?? [],
   };
 }
 
@@ -190,9 +243,18 @@ async function fetchLegalDocument({
   if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+    );
   return {
     queryResponse,
     docType: legalDocumentID,
+    pathTranslations: pathTranslations.data ?? [],
   };
 }
 

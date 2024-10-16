@@ -3,8 +3,6 @@ import { draftMode } from "next/headers";
 
 import Footer from "src/components/navigation/footer/Footer";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
-import { Header } from "src/components/navigation/header/Header";
-import HeaderPreview from "src/components/navigation/header/HeaderPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -23,8 +21,6 @@ import {
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
-
-import styles from "./layout.module.css";
 
 import "src/styles/global.css";
 
@@ -73,45 +69,14 @@ export default async function Layout({
   ]);
 
   const hasNavData = hasValidData(initialNav.data);
-  const hasCompanyInfoData = hasValidData(initialCompanyInfo.data);
-
-  const hasHeaderData =
-    hasNavData && (initialNav.data.main || initialNav.data.sidebar);
 
   const hasFooterData = hasNavData && initialNav.data.footer;
-  const hasMenuData = hasCompanyInfoData && (hasHeaderData || hasFooterData);
-
-  if (!hasMenuData) {
-    return (
-      <html lang={params.lang}>
-        <body className={fontBrittiSans.variable}>
-          <main
-            id="main"
-            tabIndex={-1}
-            className={styles.offsetForStickyHeader}
-          >
-            {children}
-          </main>
-        </body>
-      </html>
-    );
-  }
 
   return (
     <html lang={params.lang}>
       <body className={fontBrittiSans.variable}>
         <SkipToMain />
-        {hasHeaderData && isDraftMode ? (
-          <HeaderPreview
-            initialNav={initialNav}
-            initialBrandAssets={initialBrandAssets}
-          />
-        ) : (
-          <Header data={initialNav.data} assets={initialBrandAssets.data} />
-        )}
-        <main id="main" tabIndex={-1}>
-          {children}
-        </main>
+        {children}
         {hasFooterData && isDraftMode ? (
           <FooterPreview
             initialNav={initialNav}

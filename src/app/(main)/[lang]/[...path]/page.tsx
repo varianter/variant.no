@@ -7,6 +7,7 @@ import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPrev
 import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
+import PageHeader from "src/components/navigation/header/PageHeader";
 import { homeLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
@@ -77,60 +78,68 @@ async function Page({ params }: Props) {
     return Page404;
   }
 
-  const { queryResponse, docType } = pageData;
+  const { queryResponse, docType, pathTranslations } = pageData;
 
-  switch (docType) {
-    case "pageBuilder":
-      return (
-        <>
-          {queryResponse.data?.sections?.map((section, index) => (
-            <SectionRenderer
-              key={section._key}
-              section={section}
-              isDraftMode={isDraftMode}
-              initialData={queryResponse}
-              isLandingPage={false}
-              sectionIndex={index}
-            />
-          ))}
-        </>
-      );
-    case "compensations":
-      return isDraftMode ? (
-        <CompensationsPreview
-          initialCompensations={queryResponse.compensationsPage}
-          initialLocations={queryResponse.companyLocations}
-          initialLocale={queryResponse.locale}
-        />
-      ) : (
-        <Compensations
-          compensations={queryResponse.compensationsPage.data}
-          locations={queryResponse.companyLocations.data}
-          locale={queryResponse.locale.data}
-        />
-      );
-    case "customerCasesPage":
-      return isDraftMode ? (
-        <CustomerCasesPreview initialCustomerCases={queryResponse} />
-      ) : (
-        <CustomerCases customerCasesPage={queryResponse.data} />
-      );
-    case "customerCase":
-      return (
-        // TODO: implement customer case detail page
-        <pre style={{ background: "hotpink", marginTop: "8rem" }}>
-          {JSON.stringify(pageData, null, 2)}
-        </pre>
-      );
-    case "legalDocument":
-      return isDraftMode ? (
-        <LegalPreview initialDocument={queryResponse} />
-      ) : (
-        <Legal document={queryResponse.data} />
-      );
-  }
-
-  return Page404;
+  return (
+    <>
+      <PageHeader language={lang} pathTranslations={pathTranslations} />
+      <main id={"main"} tabIndex={-1}>
+        {(() => {
+          switch (docType) {
+            case "pageBuilder":
+              return (
+                <>
+                  {queryResponse.data?.sections?.map((section, index) => (
+                    <SectionRenderer
+                      key={section._key}
+                      section={section}
+                      isDraftMode={isDraftMode}
+                      initialData={queryResponse}
+                      isLandingPage={false}
+                      sectionIndex={index}
+                    />
+                  ))}
+                </>
+              );
+            case "compensations":
+              return isDraftMode ? (
+                <CompensationsPreview
+                  initialCompensations={queryResponse.compensationsPage}
+                  initialLocations={queryResponse.companyLocations}
+                  initialLocale={queryResponse.locale}
+                />
+              ) : (
+                <Compensations
+                  compensations={queryResponse.compensationsPage.data}
+                  locations={queryResponse.companyLocations.data}
+                  locale={queryResponse.locale.data}
+                />
+              );
+            case "customerCasesPage":
+              return isDraftMode ? (
+                <CustomerCasesPreview initialCustomerCases={queryResponse} />
+              ) : (
+                <CustomerCases customerCasesPage={queryResponse.data} />
+              );
+            case "customerCase":
+              return (
+                // TODO: implement customer case detail page
+                <pre style={{ background: "hotpink", marginTop: "8rem" }}>
+                  {JSON.stringify(pageData, null, 2)}
+                </pre>
+              );
+            case "legalDocument":
+              return isDraftMode ? (
+                <LegalPreview initialDocument={queryResponse} />
+              ) : (
+                <Legal document={queryResponse.data} />
+              );
+          }
+          return Page404;
+        })()}
+      </main>
+    </>
+  );
 }
 
 export default Page;

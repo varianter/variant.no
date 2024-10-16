@@ -1,13 +1,19 @@
 import { Metadata } from "next";
 
 import InformationSection from "src/components/informationSection/InformationSection";
+import PageHeader from "src/components/navigation/header/PageHeader";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { isNonNullQueryResponse } from "src/utils/queryResponse";
 import SectionRenderer from "src/utils/renderSection";
 import { generateMetadataFromSeo } from "src/utils/seo";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { PageBuilder } from "studio/lib/interfaces/pages";
-import { LANDING_PAGE_QUERY } from "studio/lib/queries/siteSettings";
+import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
+import {
+  LANDING_PAGE_QUERY,
+  LANGUAGES_QUERY,
+} from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -53,16 +59,33 @@ const Home = async ({ params }: Props) => {
     );
   }
 
-  return initialLandingPage.data.sections.map((section, index) => (
-    <SectionRenderer
-      key={section._key}
-      section={section}
-      isDraftMode={isDraftMode}
-      initialData={initialLandingPage}
-      isLandingPage={true}
-      sectionIndex={index}
-    />
-  ));
+  const languages = await loadStudioQuery<LanguageObject[] | null>(
+    LANGUAGES_QUERY,
+  );
+
+  const pathTranslations: InternationalizedString =
+    languages?.data?.map((language) => ({
+      _key: language.id,
+      value: "",
+    })) ?? [];
+
+  return (
+    <>
+      <PageHeader language={params.lang} pathTranslations={pathTranslations} />
+      <main id={"main"} tabIndex={-1}>
+        {initialLandingPage.data.sections.map((section, index) => (
+          <SectionRenderer
+            key={section._key}
+            section={section}
+            isDraftMode={isDraftMode}
+            initialData={initialLandingPage}
+            isLandingPage={true}
+            sectionIndex={index}
+          />
+        ))}
+      </main>
+    </>
+  );
 };
 
 export default Home;
