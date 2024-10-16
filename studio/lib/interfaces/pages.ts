@@ -81,12 +81,19 @@ export interface GridSection {
   }[];
 }
 
+export interface EmployeesSection {
+  _type: "employees";
+  _key: string;
+  basicTitle: string;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
   | ArticleSection
   | CalloutSection
-  | CallToActionSection;
+  | CallToActionSection
+  | EmployeesSection;
 
 export interface PageBuilder {
   _createdAt: string;

@@ -5,6 +5,7 @@ import { isInternationalizedString } from "studio/lib/interfaces/global";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
@@ -52,6 +53,7 @@ const pageBuilder = defineType({
         testimonals,
         imageSection,
         grid,
+        employees,
       ],
     }),
   ],
