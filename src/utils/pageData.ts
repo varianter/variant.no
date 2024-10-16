@@ -3,6 +3,7 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { EmployeesPage } from "studio/lib/interfaces/employeesPage";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
@@ -22,12 +23,14 @@ import {
 import {
   COMPENSATIONS_PAGE_BY_SLUG_QUERY,
   CUSTOMER_CASES_PAGE_QUERY,
+  EMPLOYEES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 import { legalDocumentID } from "studio/schemas/documents/admin/legalDocuments";
 import { compensationsId } from "studio/schemas/documents/compensations";
 import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
 import { customerCasesPageID } from "studio/schemas/documents/specialPages/customerCasesPage";
+import { employeesPageId } from "studio/schemas/documents/specialPages/employeesPage";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
@@ -258,6 +261,43 @@ async function fetchLegalDocument({
   };
 }
 
+async function fetchEmployeesPage({
+  language,
+  path,
+  perspective,
+}: PageDataParams): Promise<PageFromParams<
+  QueryResponseInitial<EmployeesPage>,
+  typeof employeesPageId
+> | null> {
+  if (path.length === 0) {
+    return null;
+  }
+  const queryResponse = await loadStudioQuery<EmployeesPage | null>(
+    EMPLOYEES_PAGE_QUERY,
+    {
+      slug: path[0],
+      language,
+    },
+    { perspective },
+  );
+  if (!isNonNullQueryResponse(queryResponse)) {
+    return null;
+  }
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+    );
+  return {
+    queryResponse,
+    docType: employeesPageId,
+    pathTranslations: pathTranslations.data ?? [],
+  };
+}
+
 export interface PageDataParams {
   language: string;
   path: string[];
@@ -269,6 +309,7 @@ export async function fetchPageDataFromParams(params: PageDataParams) {
     (await fetchDynamicPage(params)) ??
     (await fetchCompensationsPage(params)) ??
     (await fetchCustomerCase(params)) ??
-    (await fetchLegalDocument(params))
+    (await fetchLegalDocument(params)) ??
+    (await fetchEmployeesPage(params))
   );
 }
