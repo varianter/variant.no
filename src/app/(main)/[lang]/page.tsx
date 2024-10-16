@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import InformationSection from "src/components/informationSection/InformationSection";
 import { getDraftModeInfo } from "src/utils/draftmode";
+import { isNonNullQueryResponse } from "src/utils/queryResponse";
 import SectionRenderer from "src/utils/renderSection";
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { LinkType } from "studio/lib/interfaces/navigation";
@@ -40,7 +41,7 @@ const Home = async ({ params }: Props) => {
     { perspective },
   );
 
-  if (initialLandingPage.data === null) {
+  if (!isNonNullQueryResponse(initialLandingPage)) {
     return (
       <InformationSection
         title="Welcome! Velkommen! Välkommen!"
@@ -52,17 +53,12 @@ const Home = async ({ params }: Props) => {
     );
   }
 
-  const initialData = {
-    ...initialLandingPage,
-    data: initialLandingPage.data,
-  };
-
   return initialLandingPage.data.sections.map((section, index) => (
     <SectionRenderer
       key={section._key}
       section={section}
       isDraftMode={isDraftMode}
-      initialData={initialData}
+      initialData={initialLandingPage}
       isLandingPage={true}
       sectionIndex={index}
     />
