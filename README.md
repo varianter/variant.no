@@ -16,6 +16,7 @@
   - [Pages](#pages)
 - [Development](#development)
   - [Using `fetchWithToken` for Custom Components in Sanity](#using-fetchwithtoken-for-custom-components-in-sanity)
+  - [Nested Path Translation](#nested-path-translation)
   - [Steganography in Presentation](#steganography-in-presentation)
   - [Serving files from `/public`](#serving-files-from-public)
   - [OpenGraph image customization](#opengraph-image-customization)
@@ -187,6 +188,10 @@ export default MyCustomComponent;
 ```
 
 By using fetchWithToken, you ensure that all data fetching happens securely, with the server-side API route handling the sensitive token.
+
+### Nested Path Translation
+
+Some extra handling is required for translating paths with multiple slugs/segments, e.g. `/kunder/fram`. In these cases, the `translatePath` function in [`languageMiddleware.tsx`](src/middlewares/languageMiddleware.ts) must be extended to handle the specific path structure. This usually involves checking which document type corresponds to the first path segment (e.g. `kunder` corresponds to the `customerCase` document type), and then finding the document for the second segment (e.g. customer case with slug `fram`).
 
 ### Steganography in Presentation
 
