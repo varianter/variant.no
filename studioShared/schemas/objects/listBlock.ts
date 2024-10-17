@@ -44,7 +44,6 @@ const listBlock = defineField({
                 );
               }
               const translatedListItem = firstTranslation(item);
-              console.log(translatedListItem);
               return {
                 title:
                   translatedListItem !== null ? translatedListItem : undefined,
