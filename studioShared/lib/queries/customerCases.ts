@@ -32,8 +32,13 @@ export const CUSTOMER_CASE_QUERY = groq`
     "sections": sections[] {
       _type,
       _type == "richTextBlock" => {
-        ...,
         "richText": ${translatedFieldFragment("richText")},
+      },
+      _type == "imageBlock" => {
+        "images": images[] {
+          asset,
+          "alt": ${translatedFieldFragment("alt")}
+        } 
       }
     }
   }
