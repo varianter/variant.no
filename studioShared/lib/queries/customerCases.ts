@@ -46,6 +46,12 @@ export const CUSTOMER_CASE_QUERY = groq`
         "images": images[] {
           ${INTERNATIONALIZED_IMAGE_FRAGMENT}
         } 
+      },
+      _type == "listBlock" => {
+        "description": ${translatedFieldFragment("description")},
+        "list": list[] {
+          "text": ${translatedFieldFragment("text")},
+        },
       }
     }
   }
