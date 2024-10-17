@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import Compensations from "src/components/compensations/Compensations";
 import CompensationsPreview from "src/components/compensations/CompensationsPreview";
+import CustomerCase from "src/components/customerCases/customerCase/CustomerCase";
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
 import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
@@ -122,12 +123,7 @@ async function Page({ params }: Props) {
                 <CustomerCases customerCasesPage={queryResponse.data} />
               );
             case "customerCase":
-              return (
-                // TODO: implement customer case detail page
-                <pre style={{ background: "hotpink", marginTop: "8rem" }}>
-                  {JSON.stringify(pageData, null, 2)}
-                </pre>
-              );
+              return <CustomerCase customerCase={queryResponse.data} />;
             case "legalDocument":
               return isDraftMode ? (
                 <LegalPreview initialDocument={queryResponse} />

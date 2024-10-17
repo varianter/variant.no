@@ -19,6 +19,9 @@ export const CUSTOMER_CASES_QUERY = groq`
 
 const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
   asset,
+  "metadata": asset -> metadata {
+    lqip
+  },
   "alt": ${translatedFieldFragment("alt")}
 `;
 
@@ -37,6 +40,7 @@ export const CUSTOMER_CASE_QUERY = groq`
       consultants
     },
     "sections": sections[] {
+      _key,
       _type,
       _type == "richTextBlock" => {
         "richText": ${translatedFieldFragment("richText")},

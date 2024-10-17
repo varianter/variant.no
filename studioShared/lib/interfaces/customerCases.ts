@@ -1,5 +1,8 @@
 import { IImage } from "studio/lib/interfaces/media";
 
+import { ImageBlock } from "./imageBlock";
+import { RichTextBlock } from "./richTextBlock";
+
 export interface CustomerCaseProjectInfo {
   customer: string;
   name: string;
@@ -17,7 +20,10 @@ export interface CustomerCaseBase {
   description: string;
 }
 
+export type CustomerCaseSections = (RichTextBlock | ImageBlock)[];
+
 export interface CustomerCase extends CustomerCaseBase {
   image: IImage;
   projectInfo: CustomerCaseProjectInfo;
+  sections: CustomerCaseSections;
 }
