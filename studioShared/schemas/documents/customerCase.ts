@@ -5,6 +5,7 @@ import { richTextID, titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
+import imageBlock from "studioShared/schemas/objects/imageBlock";
 import richTextBlock from "studioShared/schemas/objects/richTextBlock";
 
 export const customerCaseID = "customerCase";
@@ -30,13 +31,18 @@ const customerCase = defineType({
       description:
         "Short paragraph displayed at the top of the customer case page",
     }),
-    customerCaseProjectInfo,
+    defineField({
+      ...customerCaseProjectInfo,
+      options: {
+        collapsible: true,
+      },
+    }),
     defineField({
       name: "sections",
       title: "Sections",
       description: "Add sections here",
       type: "array",
-      of: [richTextBlock],
+      of: [richTextBlock, imageBlock],
     }),
     defineField({
       name: richTextID,
