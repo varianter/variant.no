@@ -6,7 +6,7 @@ export const getHref = (link: ILink): string => {
   switch (link.linkType) {
     case LinkType.Internal:
       if (link.internalLink?._ref !== undefined) {
-        return `${link.language ? `/${link.language}` : ""}/${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
+        return `${link.internalLink._ref}${link.anchor ? `#${link.anchor}` : ""}`;
       }
       return hash;
     case LinkType.External:
