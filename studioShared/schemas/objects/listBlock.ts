@@ -36,12 +36,12 @@ const listBlock = defineField({
           ],
           preview: {
             select: {
-              item: "listItem",
+              item: "text",
             },
             prepare({ item }) {
               if (!isInternationalizedString(item)) {
                 throw new TypeError(
-                  `Expected 'listItem' to be InternationalizedString, was ${typeof item}`,
+                  `Expected 'item' to be InternationalizedString, was ${typeof item}`,
                 );
               }
               return {
