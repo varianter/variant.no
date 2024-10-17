@@ -37,11 +37,6 @@ html {
   --max-content-width-small: 1000px;
 }
 
-:focus {
-  outline: 2px solid var(--focus-color);
-  border-radius: 4px;
-}
-
 body {
   margin: 0;
   padding: 0;
