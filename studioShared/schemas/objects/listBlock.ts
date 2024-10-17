@@ -21,7 +21,7 @@ const listBlock = defineField({
       title: "List",
       description:
         "Add the items to be included in this list (e.g., skills, tools, methods).",
-      type: "array", // Make it an array
+      type: "array",
       of: [
         {
           type: "object", // You need to define it as an object since it's a custom field
