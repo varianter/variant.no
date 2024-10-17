@@ -12,12 +12,12 @@ html {
   --primary-dark: #e61a6b;
   --primary-darker: #8b0f40;
   --primary-light: #f5a4c4;
-  --primary-bg: #f4f1e7;
-  --primary-bg-dark: #fad2e2;
+  --primary-bg: #f2f2f2;
+  --primary-bg-dark: #d9d9d9;
 
   --primary-white-bright: #ffffff;
   --primary-white: #faf8f5;
-  --primary-black: #1f1f1f;
+  --primary-black: #2d2d2d;
 
   --secondary-off-white1: #f4efe8;
   --secondary-off-white2: #ece1d3;
