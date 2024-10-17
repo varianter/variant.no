@@ -41,12 +41,17 @@ export const CUSTOMER_CASE_QUERY = groq`
       _type,
       _type == "richTextBlock" => {
         "richText": ${translatedFieldFragment("richText")},
-        "listBlock": ${translatedFieldFragment("listBlock")}, 
       },
       _type == "imageBlock" => {
         "images": images[] {
           ${INTERNATIONALIZED_IMAGE_FRAGMENT}
         } 
+      },
+      _type == "listBlock" => {
+        "description": ${translatedFieldFragment("description")},
+        "list": list[] {
+          "text": ${translatedFieldFragment("text")},
+        },
       }
     }
   }
