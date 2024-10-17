@@ -44,10 +44,8 @@ const listBlock = defineField({
                   `Expected 'listItem' to be InternationalizedString, was ${typeof item}`,
                 );
               }
-              const translatedListItem = firstTranslation(item);
               return {
-                title:
-                  translatedListItem !== null ? translatedListItem : undefined,
+                title: firstTranslation(item) ?? undefined,
               };
             },
           },
