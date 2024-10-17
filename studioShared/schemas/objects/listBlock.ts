@@ -40,7 +40,7 @@ const listBlock = defineField({
             prepare({ item }) {
               if (!isInternationalizedString(item)) {
                 throw new TypeError(
-                  `Expected 'listItem' to be InternationalizedRichText, was ${typeof item}`,
+                  `Expected 'listItem' to be InternationalizedString, was ${typeof item}`,
                 );
               }
               const translatedListItem = firstTranslation(item);
