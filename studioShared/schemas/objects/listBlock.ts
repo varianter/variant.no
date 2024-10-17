@@ -25,11 +25,12 @@ const listBlock = defineField({
       of: [
         {
           type: "object", // You need to define it as an object since it's a custom field
-          name: "internationalizedItem",
+          title: "List Item",
+          name: "listItem",
           fields: [
             {
-              name: "listItem",
-              title: "List Item",
+              name: "text",
+              title: "Text",
               type: "internationalizedArrayString",
             },
           ],
