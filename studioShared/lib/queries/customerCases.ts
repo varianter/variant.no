@@ -17,9 +17,17 @@ export const CUSTOMER_CASES_QUERY = groq`
   }
 `;
 
+const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
+  asset,
+  "alt": ${translatedFieldFragment("alt")}
+`;
+
 export const CUSTOMER_CASE_QUERY = groq`
   *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
+    "image": image {
+      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+    },
     "richText": ${translatedFieldFragment("richText")},
     "projectInfo": projectInfo {
       customer,
@@ -32,9 +40,13 @@ export const CUSTOMER_CASE_QUERY = groq`
     "sections": sections[] {
       _type,
       _type == "richTextBlock" => {
-        ...,
         "richText": ${translatedFieldFragment("richText")},
         "listBlock": ${translatedFieldFragment("listBlock")}, 
+      },
+      _type == "imageBlock" => {
+        "images": images[] {
+          ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+        } 
       }
     }
   }

@@ -1,6 +1,8 @@
 import { StringInputProps, defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { firstTranslation } from "studio/utils/i18n";
 
 export enum ImageAlignment {
   Left = "left",
@@ -30,12 +32,45 @@ const imageAltField = defineField({
   },
 });
 
+const internationalizedImageAltField = defineField({
+  name: "alt",
+  type: "internationalizedArrayString",
+  title: "Alternative Text",
+  description:
+    "Provide a description of the image for accessibility. Leave empty if the image is purely decorative.",
+});
+
 const image = defineField({
   name: "image",
   title: "Image",
   type: "image",
   options: { hotspot: true },
   fields: [imageAltField],
+});
+
+export const internationalizedImage = defineField({
+  name: "image",
+  title: "Image",
+  type: "image",
+  options: { hotspot: true },
+  fields: [internationalizedImageAltField],
+  preview: {
+    select: {
+      alt: "alt",
+      media: "asset",
+    },
+    prepare({ alt, media }) {
+      if (!isInternationalizedString(alt)) {
+        throw new TypeError(
+          `Expected 'alt' to be InternationalizedString, was ${typeof alt}`,
+        );
+      }
+      return {
+        title: firstTranslation(alt) ?? undefined,
+        media,
+      };
+    },
+  },
 });
 
 export const imageExtended = defineField({
