@@ -1,12 +1,34 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10rem 5rem;
+  margin: 8rem 0;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   gap: 5rem;
+  max-width: 1200px;
+  padding: 1rem;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+}
+
+.caseWrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.caseImageWrapper {
+  min-width: 20rem;
+  max-width: 20rem;
+}
+
+.caseImageWrapper img {
+  border-radius: 12px;
 }
