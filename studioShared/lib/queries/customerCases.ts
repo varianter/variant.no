@@ -28,6 +28,13 @@ export const CUSTOMER_CASE_QUERY = groq`
       "sector": ${translatedFieldFragment("sector")},
       "delivery": ${translatedFieldFragment("delivery")},
       consultants
+    },
+    "sections": sections[] {
+      _type,
+      _type == "richTextBlock" => {
+        ...,
+        "richText": ${translatedFieldFragment("richText")},
+      }
     }
   }
 `;
