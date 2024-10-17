@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { internationalizedImage } from "studio/schemas/fields/media";
 import { richTextID, titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -30,6 +31,11 @@ const customerCase = defineType({
       title: "Description",
       description:
         "Short paragraph displayed at the top of the customer case page",
+    }),
+    defineField({
+      ...internationalizedImage,
+      title: "Header Image",
+      description: "Large image displayed at the top of the customer case page",
     }),
     defineField({
       ...customerCaseProjectInfo,
