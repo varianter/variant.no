@@ -1,10 +1,10 @@
-import { InternationalizedString } from "studio/lib/interfaces/global";
+import { InternationalizedValue } from "studio/lib/interfaces/global";
 
-export function firstTranslation(
-  translatedString: InternationalizedString,
-): string | null {
-  if (translatedString.length === 0) {
+export function firstTranslation<T>(
+  internationalizedValue: InternationalizedValue<T>,
+): T | null {
+  if (internationalizedValue.length === 0) {
     return null;
   }
-  return translatedString[0].value;
+  return internationalizedValue[0].value;
 }
