@@ -21,15 +21,16 @@ const listBlock = defineField({
       title: "List",
       description:
         "Add the items to be included in this list (e.g., skills, tools, methods).",
-      type: "array", // Make it an array
+      type: "array",
       of: [
         {
           type: "object", // You need to define it as an object since it's a custom field
-          name: "internationalizedItem",
+          title: "List Item",
+          name: "listItem",
           fields: [
             {
-              name: "listItem",
-              title: "List Item",
+              name: "text",
+              title: "Text",
               type: "internationalizedArrayString",
             },
           ],
@@ -40,13 +41,11 @@ const listBlock = defineField({
             prepare({ item }) {
               if (!isInternationalizedString(item)) {
                 throw new TypeError(
-                  `Expected 'listItem' to be InternationalizedRichText, was ${typeof item}`,
+                  `Expected 'listItem' to be InternationalizedString, was ${typeof item}`,
                 );
               }
-              const translatedListItem = firstTranslation(item);
               return {
-                title:
-                  translatedListItem !== null ? translatedListItem : undefined,
+                title: firstTranslation(item) ?? undefined,
               };
             },
           },
