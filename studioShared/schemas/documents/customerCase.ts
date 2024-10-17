@@ -6,11 +6,8 @@ import { richTextID, titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
-<<<<<<< HEAD
-import listBlock from "studioShared/schemas/objects/listBlock";
-=======
 import imageBlock from "studioShared/schemas/objects/imageBlock";
->>>>>>> v3
+import listBlock from "studioShared/schemas/objects/listBlock";
 import richTextBlock from "studioShared/schemas/objects/richTextBlock";
 
 export const customerCaseID = "customerCase";
@@ -52,11 +49,7 @@ const customerCase = defineType({
       title: "Sections",
       description: "Add sections here",
       type: "array",
-<<<<<<< HEAD
-      of: [richTextBlock, listBlock],
-=======
-      of: [richTextBlock, imageBlock],
->>>>>>> v3
+      of: [richTextBlock, imageBlock, listBlock],
     }),
     defineField({
       name: richTextID,
