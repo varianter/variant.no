@@ -53,6 +53,21 @@ const listBlock = defineField({
       ],
     },
   ],
+  preview: {
+    select: {
+      description: "description",
+    },
+    prepare({ description }) {
+      if (!isInternationalizedString(description)) {
+        throw new TypeError(
+          `Expected 'description' to be InternationalizedString, was ${typeof description}`,
+        );
+      }
+      return {
+        title: firstTranslation(description) ?? undefined,
+      };
+    },
+  },
 });
 
 export default listBlock;
