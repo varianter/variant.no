@@ -55,6 +55,7 @@ const SanityAssetImage = ({
       {...imageProps}
       width={imageProps.width}
       height={imageProps.height}
+      blurDataURL={image.metadata?.lqip}
       style={{
         objectFit: "cover",
         objectPosition,
