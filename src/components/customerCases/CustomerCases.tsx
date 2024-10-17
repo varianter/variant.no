@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { sharedCustomerCasesLink } from "src/components/utils/linkTypes";
@@ -30,7 +32,9 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
       {sharedCustomerCases && sharedCustomerCases.data.length > 0 ? (
         sharedCustomerCases.data.map((customerCase) => (
           <div key={customerCase._id}>
-            <Text type="h2">{customerCase.basicTitle}</Text>
+            <Link href={`${customerCasesPage.slug}/${customerCase.slug}`}>
+              <Text type="h2">{customerCase.basicTitle}</Text>
+            </Link>
             {customerCase.description && (
               <Text>{customerCase.description}</Text>
             )}
