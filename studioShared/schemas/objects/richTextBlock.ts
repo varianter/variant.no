@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-import { isInternationalizedValue } from "studio/lib/interfaces/global";
+import { isInternationalizedRichText } from "studio/lib/interfaces/global";
 import { firstTranslation } from "studio/utils/i18n";
 import { richTextPreview } from "studio/utils/preview";
 
@@ -20,15 +20,17 @@ const richTextBlock = defineField({
       richText: "richText",
     },
     prepare({ richText }) {
-      // TODO: better type guard for rich text
-      if (!isInternationalizedValue(richText)) {
+      if (!isInternationalizedRichText(richText)) {
         throw new TypeError(
-          `Expected 'richText' to be InternationalizedValue, was ${typeof richText}`,
+          `Expected 'richText' to be InternationalizedRichText, was ${typeof richText}`,
         );
       }
       const translatedRichText = firstTranslation(richText);
       return {
-        title: richTextPreview(translatedRichText),
+        title:
+          translatedRichText !== null
+            ? richTextPreview(translatedRichText)
+            : undefined,
       };
     },
   },

@@ -1,3 +1,7 @@
+import { PortableTextBlock } from "sanity";
+
+import { isRichText } from "./richText";
+
 export interface Slug {
   _type: string;
   current: string;
@@ -25,6 +29,15 @@ export function isInternationalizedString(
   return (
     isInternationalizedValue(value) &&
     value.every((item) => typeof item.value === "string")
+  );
+}
+
+export function isInternationalizedRichText(
+  value: unknown,
+): value is InternationalizedValue<PortableTextBlock[]> {
+  return (
+    isInternationalizedValue(value) &&
+    value.every((record) => isRichText(record.value))
   );
 }
 

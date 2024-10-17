@@ -1,27 +1,20 @@
-import { PortableTextBlock } from "sanity";
+import {
+  PortableTextBlock,
+  isPortableTextSpan,
+  isPortableTextTextBlock,
+} from "sanity";
 
 // Convert rich text content to plaintext preview string
-// (see https://www.sanity.io/docs/previewing-block-content)
+// (inspired by https://www.sanity.io/docs/previewing-block-content)
 export function richTextPreview(
   richText: PortableTextBlock[],
 ): string | undefined {
-  console.log(richText);
   const block = richText.find((block) => block._type === "block");
-  if (
-    block === undefined ||
-    !("children" in block) ||
-    !Array.isArray(block.children)
-  ) {
+  if (!isPortableTextTextBlock(block)) {
     return undefined;
   }
   return block.children
-    .filter(
-      (child: unknown) =>
-        typeof child === "object" &&
-        child !== null &&
-        "_type" in child &&
-        child._type === "span",
-    )
+    .filter((child) => isPortableTextSpan(child))
     .map((span) => span.text)
     .join("");
 }
