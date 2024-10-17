@@ -34,7 +34,12 @@ export const CUSTOMER_CASE_QUERY = groq`
       _type == "richTextBlock" => {
         ...,
         "richText": ${translatedFieldFragment("richText")},
-        "listBlock": ${translatedFieldFragment("listBlock")}, 
+      },
+      _type == "listBlock" => {
+        "description": ${translatedFieldFragment("description")},
+        "list": list[] {
+          "text": ${translatedFieldFragment("text")},
+        },
       }
     }
   }
