@@ -10,7 +10,6 @@ export interface CustomerCaseProps {
 }
 
 export default function CustomerCase({ customerCase }: CustomerCaseProps) {
-  console.log(customerCase.image);
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
