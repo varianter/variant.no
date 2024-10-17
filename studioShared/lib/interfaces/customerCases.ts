@@ -1,5 +1,3 @@
-import { PortableTextBlock } from "sanity";
-
 import { IImage } from "studio/lib/interfaces/media";
 
 export interface CustomerCaseProjectInfo {
@@ -21,6 +19,5 @@ export interface CustomerCaseBase {
 
 export interface CustomerCase extends CustomerCaseBase {
   image: IImage;
-  richText: PortableTextBlock[];
   projectInfo: CustomerCaseProjectInfo;
 }

@@ -28,7 +28,6 @@ export const CUSTOMER_CASE_QUERY = groq`
     "image": image {
       ${INTERNATIONALIZED_IMAGE_FRAGMENT}
     },
-    "richText": ${translatedFieldFragment("richText")},
     "projectInfo": projectInfo {
       customer,
       "name": ${translatedFieldFragment("name")},
