@@ -36,8 +36,13 @@ const useNextSanityGlobalImage = (
   return globalImage;
 };
 
-const SanityAssetImage = ({ image }: { image: IImage }) => {
-  const imageProps = useNextSanityGlobalImage(image);
+const SanityAssetImage = ({
+  image,
+  imageProps,
+}: {
+  image: IImage;
+  imageProps?: UseNextSanityImageProps;
+}) => {
   const objectPosition = image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
     : "50% 50%"; // Default to center if no hotspot is defined
@@ -50,6 +55,7 @@ const SanityAssetImage = ({ image }: { image: IImage }) => {
       {...imageProps}
       width={imageProps.width}
       height={imageProps.height}
+      blurDataURL={image.metadata?.lqip}
       style={{
         objectFit: "cover",
         objectPosition,
@@ -61,6 +67,23 @@ const SanityAssetImage = ({ image }: { image: IImage }) => {
     />
   );
 };
+
+export function SanityStudioImage({ image }: { image: IImage }) {
+  const imageProps = useNextSanityImage(client, image);
+  return <SanityAssetImage image={image} imageProps={imageProps} />;
+}
+
+export function SanitySharedImage({ image }: { image: IImage }) {
+  const imageProps = useNextSanityImage(sharedClient, image);
+  return <SanityAssetImage image={image} imageProps={imageProps} />;
+}
+
+function SanityGlobalImage({ image }: { image: IImage }) {
+  const imageProps = useNextSanityGlobalImage(image);
+  return (
+    <SanityAssetImage image={image} imageProps={imageProps ?? undefined} />
+  );
+}
 
 export function SanityImage({ image }: { image: IImage }) {
   if (image?.src) {
@@ -74,5 +97,5 @@ export function SanityImage({ image }: { image: IImage }) {
       />
     );
   }
-  return <SanityAssetImage image={image} />;
+  return <SanityGlobalImage image={image} />;
 }

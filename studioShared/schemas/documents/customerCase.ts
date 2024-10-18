@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { internationalizedImage } from "studio/schemas/fields/media";
-import { richTextID, titleID } from "studio/schemas/fields/text";
+import { titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
@@ -50,11 +50,6 @@ const customerCase = defineType({
       description: "Add sections here",
       type: "array",
       of: [richTextBlock, imageBlock, listBlock],
-    }),
-    defineField({
-      name: richTextID,
-      title: "Body",
-      type: "internationalizedArrayRichText",
     }),
   ],
   preview: {

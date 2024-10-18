@@ -3,12 +3,23 @@ import { groq } from "next-sanity";
 import { LANGUAGE_FIELD_FRAGMENT } from "studio/lib/queries/i18n";
 import { translatedFieldFragment } from "studio/lib/queries/utils/i18n";
 
+const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
+  asset,
+  "metadata": asset -> metadata {
+    lqip
+  },
+  "alt": ${translatedFieldFragment("alt")}
+`;
+
 const CUSTOMER_CASE_BASE_FRAGMENT = groq`
   _id,
   ${LANGUAGE_FIELD_FRAGMENT},
   "slug": ${translatedFieldFragment("slug")},
   "basicTitle": ${translatedFieldFragment("basicTitle")},
-  "description": ${translatedFieldFragment("description")}
+  "description": ${translatedFieldFragment("description")},
+  "image": image {
+    ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+  }
 `;
 
 export const CUSTOMER_CASES_QUERY = groq`
@@ -17,18 +28,9 @@ export const CUSTOMER_CASES_QUERY = groq`
   }
 `;
 
-const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
-  asset,
-  "alt": ${translatedFieldFragment("alt")}
-`;
-
 export const CUSTOMER_CASE_QUERY = groq`
   *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
-    "image": image {
-      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-    },
-    "richText": ${translatedFieldFragment("richText")},
     "projectInfo": projectInfo {
       customer,
       "name": ${translatedFieldFragment("name")},
@@ -38,6 +40,7 @@ export const CUSTOMER_CASE_QUERY = groq`
       consultants
     },
     "sections": sections[] {
+      _key,
       _type,
       _type == "richTextBlock" => {
         "richText": ${translatedFieldFragment("richText")},

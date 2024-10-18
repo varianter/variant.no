@@ -24,6 +24,9 @@ export interface IImage {
   alt?: string;
   crop?: ICrop;
   hotspot?: IHotspot;
+  metadata?: {
+    lqip: string;
+  };
 }
 
 export interface ImageExtendedProps extends IImage {
