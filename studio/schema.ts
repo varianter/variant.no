@@ -12,6 +12,7 @@ import locale from "./schemas/documents/siteSettings/locale";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
 import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfiles";
 import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
+import employeesPage from "./schemas/documents/specialPages/employeesPage";
 import callToActionField from "./schemas/fields/callToActionFields";
 import { richText } from "./schemas/fields/text";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
@@ -41,5 +42,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     locale,
     richText,
     seo,
+    employeesPage,
   ],
 };
