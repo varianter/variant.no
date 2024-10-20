@@ -3,6 +3,16 @@ name: strategi
 color: 0d0c1b
 ---
 
+Først tenker du at det er selvsagt. At mer eller mindre dagligdagse sysler,
+slik som retningsvalg og beslutninger, forretnings- og leveranseplaner,
+ansettelser eller organisasjons-endringer ikke er tilfeldige eller
+personavhengige – men velbegrunnede, samkjørte og strategisk forankrete aktiviteter.
+
+Du tar det for gitt at hele organisasjonen på tvers av team og miljøer jobber mot et
+felles overordnet målbilde, kundeverdi og forretningsverdi og at de flinke folkene løser
+oppgaver som realiserer både samtidig med at den fjelltoppen som er peilet ut som mål,
+kommer stadig nærmere.
+
 <div class="bigText">
 
 Som virksomme fagfolk i et mangfold av bransjer, ser vi at
