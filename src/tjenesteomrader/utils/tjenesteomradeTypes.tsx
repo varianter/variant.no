@@ -14,5 +14,5 @@ export type TjenesteomradeProps = {
 export type TjenesteomradeMetadata = {
   name: (typeof tjenesteomradePath)[number];
   color: string;
-  contact?: EmployeeItem;
+  contact: EmployeeItem | null;
 };

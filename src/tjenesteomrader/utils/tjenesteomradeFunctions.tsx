@@ -31,6 +31,6 @@ export const getMarkdownObject = async (
   return {
     ...matterData,
     fileContents: html,
-    contact: contact?.[0],
+    contact: contact?.[0] ?? null,
   };
 };
