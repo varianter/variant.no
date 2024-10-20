@@ -10,6 +10,7 @@ import {
   TjenesteomradeProps,
 } from '../utils/tjenesteomradeTypes';
 import { and } from 'src/utils/css';
+import { EmployeeTile } from 'src/employees';
 
 const Areas = (prop: TjenesteomradeProps) => {
   return (
@@ -23,6 +24,17 @@ const Areas = (prop: TjenesteomradeProps) => {
           className={style.bottomText__content}
           dangerouslySetInnerHTML={{ __html: prop.fileContents }}
         />
+
+        {prop.contact && (
+          <div
+            className={and(
+              style.bottomText__content,
+              style['bottomText__content--marginTOp'],
+            )}
+          >
+            <EmployeeTile employee={prop.contact} alwaysEmail />
+          </div>
+        )}
 
         {prop.name == 'strategi' && (
           <div

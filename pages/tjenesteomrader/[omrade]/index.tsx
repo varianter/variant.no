@@ -25,6 +25,7 @@ export const getStaticProps: GetStaticProps<TjenesteomradeProps> = async (
         fileContents: markdown.fileContents,
         name: markdown.name,
         color: markdown.color,
+        contact: markdown.contact,
       },
     };
   }

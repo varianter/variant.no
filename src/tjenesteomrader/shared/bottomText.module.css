@@ -9,6 +9,9 @@
   flex-direction: column;
   gap: 3rem;
 }
+.bottomText__content--marginTOp {
+  margin-top: 6rem;
+}
 
 .bottomText__content--large {
   padding-inline: 6rem;

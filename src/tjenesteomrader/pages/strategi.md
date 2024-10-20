@@ -47,3 +47,9 @@ metodikk som samler folk og gjør det enklere å foreta bærekraftige
 veivalg for produkter, tjenester og forretning.
 
 </div>
+
+<div class="wrapper">
+
+Les og lær mer om [strategiutvikling i Variant på vår blogg](https://blog.variant.no/strategi/home).
+
+</div>
