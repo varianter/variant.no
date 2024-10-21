@@ -23,7 +23,7 @@ const quoteBlock = defineField({
       title: "quote",
     },
     prepare({ title }) {
-      return { title: "Quote: " + firstTranslation(title) ?? undefined };
+      return { title: firstTranslation(title) ?? undefined };
     },
   },
 });
