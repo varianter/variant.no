@@ -140,7 +140,7 @@ const Svv: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                       alt={interview.imageAltText}
                     />
                     <p>{interview.quote}</p>
-                    <Link href={interview.name} className={style.buttonLink}>
+                    <Link href={interview.name} className={style.buttonLink} aria-label={`${interview.variant}s egne ord om prosjektet`}>
                       <strong>Les mer</strong>
                     </Link>
                   </div>
