@@ -120,6 +120,7 @@ export default function Employees({
               <EmployeeTile
                 key={`${employee.name}-${index}`}
                 employee={employee}
+                alwaysEmail
               />
             );
           })}
