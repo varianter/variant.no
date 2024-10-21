@@ -67,9 +67,16 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
             <div key={section._key}>
               {section._type === "richTextBlock" ? (
                 <RichText value={section.richText} />
+              ) : section._type === "quoteBlock" ? (
+                section.quote && (
+                  <div>
+                    <Text>{section.quote}</Text>
+                    {section.author && <Text>- {section.author}</Text>}
+                  </div>
+                )
               ) : (
                 <div className={styles.imageBlockWrapper}>
-                  {section.images.map((image) => (
+                  {section.images?.map((image) => (
                     <div
                       key={image._key}
                       className={styles.imageBlockImageWrapper}

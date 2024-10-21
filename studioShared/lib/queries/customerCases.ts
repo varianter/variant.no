@@ -55,7 +55,11 @@ export const CUSTOMER_CASE_QUERY = groq`
         "list": list[] {
           "text": ${translatedFieldFragment("text")},
         },
-      }
+      }, 
+      _type == "quoteBlock" => {
+        "quote": ${translatedFieldFragment("quote")},
+        "author": ${translatedFieldFragment("author")},
+      },
     }
   }
 `;
