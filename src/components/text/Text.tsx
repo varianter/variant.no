@@ -11,7 +11,7 @@ export type TextType =
   | "small"
   | "caption";
 
-const elementMap: { [key in TextType]: string } = {
+const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   display: "h1",
   h1: "h1",
   h2: "h2",
@@ -46,8 +46,8 @@ const Text = ({
   id?: string;
   className?: string;
 }) => {
-  const Element = elementMap[type] as keyof JSX.IntrinsicElements;
-  const generatedClassName = `${classMap[type]} ${className ? className : ""}`;
+  const Element = elementMap[type];
+  const generatedClassName = `${classMap[type]} ${className ?? ""}`;
 
   return (
     <Element className={generatedClassName} id={id}>
