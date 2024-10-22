@@ -144,7 +144,10 @@ const GroupedBlogText = ({ value }: GroupedBlogTextProps) => {
 
         // Render h2 titles, h3 subtitles, and paragraphs within a div wrapper for other groups
         return (
-          <div key={index} className={styles.paragraph}>
+          <div
+            key={group.title?._key ?? `group-${index}`}
+            className={styles.paragraph}
+          >
             {group.title && (
               <PortableText
                 value={[group.title]}
