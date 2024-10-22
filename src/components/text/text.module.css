@@ -5,7 +5,6 @@
 .h4,
 .h5,
 .h6,
-.h7,
 .bodyXl {
   color: var(--primary-black);
   font-family: var(--font-britti-sans);
@@ -61,7 +60,7 @@
   }
 }
 
-/* TODO: we need to add sizes og h4-h7 */
+/* TODO: we need to add sizes og h4-h6 */
 
 .desktopLink {
   font-size: 10rem;
