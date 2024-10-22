@@ -1,24 +1,37 @@
-.display,
+.desktopLink
 .h1,
 .h2,
 .h3,
-.bodySuperLarge {
+.h4,
+.h5,
+.h6,
+.h7,
+.bodyXl {
   color: var(--primary-black);
   font-family: var(--font-britti-sans);
 }
 
-.bodyLarge,
-.body,
-.small,
-.caption,
+.bodyBig,
+.bodyNormal,
+.labelSmall,
+.labelLight,
+.labelRegular,
+.labelSemibold,
+.labelBold,
+.quoteItalic,
+.quoteNormal,
+.bodyExtraSmall,
+.bodySmall,
+.bodyNormal,
+.bodyBig,
 .list {
   color: var(--primary-black);
   font-family: var(--font-britti-sans);
   line-height: 140%;
 }
 
-.display {
-  font-size: 3.75rem;
+.desktopLink {
+  font-size: 10rem;
   line-height: 100%;
   font-weight: 500;
 
@@ -26,12 +39,18 @@
     font-size: 5.25rem;
     line-height: normal;
   }
-}
+} 
 
 .h1 {
-  font-size: 3.125rem;
+  /* font-size: 3.125rem;
   font-weight: 500;
-  line-height: 110%;
+  line-height: 110%; */
+
+ 
+font-size: 4.5rem;
+/* font-style: normal; */
+font-weight: 100;
+line-height: 120%; /* 5.4rem */
 
   @media (min-width: 1024px) {
     font-size: 4.25rem;
@@ -58,7 +77,10 @@
   }
 }
 
-.bodySuperLarge {
+/* TODO: we need to add sizes og h4-h7 */
+
+
+.bodyXl {
   font-size: 2.125rem;
   font-weight: 500;
 
@@ -67,7 +89,7 @@
   }
 }
 
-.bodyLarge {
+.bodyBig {
   font-size: 1.5rem;
   font-weight: 400;
 
@@ -76,7 +98,7 @@
   }
 }
 
-.body {
+.bodyNormal {
   font-size: 1.25rem;
   font-weight: 400;
 
@@ -85,7 +107,7 @@
   }
 }
 
-.small {
+.bodySmall {
   font-size: 1rem;
   font-weight: 400;
 
@@ -94,7 +116,7 @@
   }
 }
 
-.caption {
+.labelSmall {
   font-size: 1rem;
   font-weight: 500;
   color: var(--primary-dark);
@@ -103,3 +125,5 @@
     font-size: 1.125rem;
   }
 }
+
+/* TODO: We need to add media sizes to all text styles */

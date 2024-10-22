@@ -74,7 +74,7 @@ const InputField = ({
       {error && (
         <span>
           <Text
-            type="small"
+            type="bodySmall"
             className={styles.error}
             id={hintID}
             aria-live="assertive"

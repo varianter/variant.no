@@ -31,10 +31,10 @@ const YearlyBonuses = ({ bonuses, locale }: YearlyBonusesProps) => {
             .map((bonus) => (
               <tr key={bonus._key}>
                 <th>
-                  <Text type={"small"}>{bonus.year}</Text>
+                  <Text type={"bodySmall"}>{bonus.year}</Text>
                 </th>
                 <td className={styles.bonusCell}>
-                  <Text type={"small"}>
+                  <Text type={"bodySmall"}>
                     {formatAsCurrency(
                       bonus.bonus,
                       locale.locale,

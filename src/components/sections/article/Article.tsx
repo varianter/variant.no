@@ -24,7 +24,7 @@ const Article = ({ article }: ArticleProps) => {
         )}
         <div className={styles.content}>
           <div>
-            <Text type="caption">{article.tag}</Text>
+            <Text type="labelSmall">{article.tag}</Text>
             <Text type="h2">{article.basicTitle}</Text>
           </div>
           {article.richText && <RichText value={article.richText} />}

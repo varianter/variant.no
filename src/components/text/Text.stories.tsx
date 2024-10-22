@@ -10,15 +10,29 @@ const meta: Meta<typeof Text> = {
       control: {
         type: "select",
         options: [
-          "display",
+          "desktopLink",
           "h1",
           "h2",
           "h3",
-          "bodySuperLarge",
-          "bodyLarge",
-          "body",
-          "small",
-          "caption",
+          "h4",
+          "h5",
+          "h6",
+          "h7",
+          "labelSmall",
+          "labelLight",
+          "labelRegular",
+          "labelSemibold",
+          "labelBold",
+          "quoteItalic",
+          "quoteNormal",
+          "bodyExtraSmall",
+          "bodySmall",
+          "bodyNormal",
+          "bodySmall",
+          "bodyBig",
+          "bodyXl",
+          "mobileH1",
+          "mobileBodyNormal",
         ],
       },
     },
@@ -31,9 +45,9 @@ const meta: Meta<typeof Text> = {
 export default meta;
 type Story = StoryObj<typeof Text>;
 
-export const Display: Story = {
+export const DesktopLink: Story = {
   args: {
-    type: "display",
+    type: "desktopLink",
     children: "This is a display text",
   },
 };
@@ -59,37 +73,114 @@ export const H3: Story = {
   },
 };
 
-export const BodySuperLarge: Story = {
+export const H4: Story = {
   args: {
-    type: "bodySuperLarge",
-    children: "This is a Body Super Large text",
+    type: "h4",
+    children: "This is an H4 text",
   },
 };
 
-export const BodyLarge: Story = {
+export const H5: Story = {
   args: {
-    type: "bodyLarge",
-    children: "This is a Body Large text",
+    type: "h5",
+    children: "This is an H5 text",
   },
 };
 
-export const Body: Story = {
+export const H6: Story = {
   args: {
-    type: "body",
-    children: "This is a Body text",
+    type: "h6",
+    children: "This is an H6 text",
   },
 };
 
-export const Small: Story = {
+export const H7: Story = {
   args: {
-    type: "small",
+    type: "h7",
+    children: "This is an H7 text",
+  },
+};
+
+export const LabelSmall: Story = {
+  args: {
+    type: "labelSmall",
+    children: "This is a Label Small text",
+  },
+};
+
+export const LabelLight: Story = {
+  args: {
+    type: "labelLight",
+    children: "This is a Label Light text",
+  },
+};
+
+export const LabelRegular: Story = {
+  args: {
+    type: "labelRegular",
+    children: "This is a Label Regular text",
+  },
+};
+
+export const LabelSemibold: Story = {
+  args: {
+    type: "labelSemibold",
+    children: "This is a Label Semibold text",
+  },
+};
+
+export const QuoteItalic: Story = {
+  args: {
+    type: "quoteItalic",
+    children: "This is a Quote Italic text",
+  },
+};
+
+export const QuoteNormal: Story = {
+  args: {
+    type: "quoteNormal",
+    children: "This is a Quote Normal text",
+  },
+};
+
+export const BodySmall: Story = {
+  args: {
+    type: "bodySmall",
     children: "This is a Small text",
   },
 };
 
-export const Caption: Story = {
+export const BodyNormal: Story = {
   args: {
-    type: "caption",
-    children: "This is a Caption text",
+    type: "bodyNormal",
+    children: "This is a Body text",
+  },
+};
+
+export const BodyBig: Story = {
+  args: {
+    type: "bodyBig",
+    children: "This is a Body Super Large text",
+  },
+};
+
+export const BodyXl: Story = {
+  args: {
+    type: "bodyXl",
+    children: "This is a Body Large text",
+  },
+};
+
+export const MobileH1: Story = {
+  args: {
+    type: "mobileH1",
+    children: "This is a Mobile H1 text",
+  },
+};
+
+export const MobileBodyNormal: Story = {
+  args: {
+    type: "mobileBodyNormal",
+    children: "This is a Mobile Body text",
   },
 };

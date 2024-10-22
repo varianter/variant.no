@@ -69,7 +69,7 @@ export const richTextID = "richText";
 
 export const richText = defineField({
   name: richTextID,
-  title: "Body",
+  title: "BodyNormal",
   type: "array",
   of: [
     {

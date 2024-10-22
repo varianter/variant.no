@@ -1,42 +1,80 @@
-import styles from "./text.module.css";
-
 export type TextType =
-  | "display"
+  | "desktopLink"
   | "h1"
   | "h2"
   | "h3"
-  | "bodySuperLarge"
-  | "bodyLarge"
-  | "body"
-  | "small"
-  | "caption";
+  | "h4"
+  | "h5"
+  | "h6"
+  | "h7"
+  | "labelSmall"
+  | "labelLight"
+  | "labelRegular"
+  | "labelSemibold"
+  | "labelBold"
+  | "quoteItalic"
+  | "quoteNormal"
+  | "bodyExtraSmall"
+  | "bodySmall"
+  | "bodyNormal"
+  | "bodySmall"
+  | "bodyBig"
+  | "bodyXl"
+  | "mobileH1"
+  | "mobileBodyNormal";
 
 const elementMap: { [key in TextType]: string } = {
-  display: "h1",
   h1: "h1",
   h2: "h2",
   h3: "h3",
-  bodySuperLarge: "p",
-  bodyLarge: "p",
-  body: "p",
-  small: "p",
-  caption: "p",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  h7: "h7",
+  desktopLink: "p",
+  labelSmall: "p",
+  labelLight: "p",
+  labelRegular: "p",
+  labelSemibold: "p",
+  labelBold: "p",
+  quoteItalic: "p",
+  quoteNormal: "p",
+  bodyExtraSmall: "p",
+  bodySmall: "p",
+  bodyNormal: "p",
+  bodyBig: "p",
+  bodyXl: "p",
+  mobileH1: "h1",
+  mobileBodyNormal: "p",
 };
 
 const classMap: { [key in TextType]?: string } = {
-  display: styles.display,
-  h1: styles.h1,
-  h2: styles.h2,
-  h3: styles.h3,
-  bodySuperLarge: styles.bodySuperLarge,
-  bodyLarge: styles.bodyLarge,
-  body: styles.body,
-  small: styles.small,
-  caption: styles.caption,
+  desktopLink: "p",
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  h7: "h7",
+  labelSmall: "p",
+  labelLight: "p",
+  labelRegular: "p",
+  labelSemibold: "p",
+  labelBold: "p",
+  quoteItalic: "p",
+  quoteNormal: "p",
+  bodyExtraSmall: "p",
+  bodySmall: "p",
+  bodyNormal: "p",
+  bodyBig: "p",
+  bodyXl: "p",
+  mobileH1: "h1",
+  mobileBodyNormal: "p",
 };
 
 const Text = ({
-  type = "body",
+  type = "bodyNormal",
   children,
   id,
   className,

@@ -67,7 +67,7 @@ const Legal = ({ document }: { document: LegalDocument }) => {
               <RichText value={document.richText} />
             ) : (
               <section className={styles.document}>
-                <Text type="body">
+                <Text type="bodyNormal">
                   It appears that this legal document is missing some
                   information. Please visit the studio to add the necessary
                   details.
