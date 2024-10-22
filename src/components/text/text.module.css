@@ -30,27 +30,13 @@
   line-height: 140%;
 }
 
-.desktopLink {
-  font-size: 10rem;
-  line-height: 100%;
-  font-weight: 500;
 
-  @media (min-width: 1024px) {
-    font-size: 5.25rem;
-    line-height: normal;
-  }
-} 
 
 .h1 {
-  /* font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 110%; */
-
- 
 font-size: 4.5rem;
-/* font-style: normal; */
-font-weight: 100;
-line-height: 120%; /* 5.4rem */
+font-style: normal;
+font-weight: 500;
+line-height: 120%; 
 
   @media (min-width: 1024px) {
     font-size: 4.25rem;
@@ -79,6 +65,16 @@ line-height: 120%; /* 5.4rem */
 
 /* TODO: we need to add sizes og h4-h7 */
 
+.desktopLink {
+  font-size: 10rem;
+  line-height: 100%;
+  font-weight: 500;
+
+  @media (min-width: 1024px) {
+    font-size: 5.25rem;
+    line-height: normal;
+  }
+} 
 
 .bodyXl {
   font-size: 2.125rem;
