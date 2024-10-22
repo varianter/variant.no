@@ -58,5 +58,5 @@ const Element = ({
 };
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
-  block: ({ children }) => <Text type="small">{children}</Text>,
+  block: ({ children }) => <Text type="bodySmall">{children}</Text>,
 };

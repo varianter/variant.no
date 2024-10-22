@@ -22,7 +22,7 @@ export default function LanguageSwitcher({
           return null;
         }
         const linkText = (
-          <Text type={"small"}>{pathTranslation._key.toUpperCase()}</Text>
+          <Text type={"bodySmall"}>{pathTranslation._key.toUpperCase()}</Text>
         );
         return (
           <Fragment key={pathTranslation._key}>
