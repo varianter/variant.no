@@ -1,4 +1,4 @@
-.desktopLink, 
+.desktopLink,
 .h1,
 .h2,
 .h3,
@@ -10,7 +10,7 @@
   color: var(--primary-black);
   font-family: var(--font-britti-sans);
 }
- 
+
 .bodyBig,
 .bodyNormal,
 .labelSmall,
@@ -31,10 +31,10 @@
 }
 
 .h1 {
-font-size: 4.5rem;
-font-style: normal;
-font-weight: 500;
-line-height: 120%; 
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
 
   @media (min-width: 1024px) {
     font-size: 4.25rem;
@@ -72,7 +72,7 @@ line-height: 120%;
     font-size: 5.25rem;
     line-height: normal;
   }
-} 
+}
 
 .bodyXl {
   font-size: 2.125rem;
