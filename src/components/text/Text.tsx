@@ -7,7 +7,6 @@ export type TextType =
   | "h4"
   | "h5"
   | "h6"
-  | "h7"
   | "desktopLink"
   | "labelSmall"
   | "labelLight"
@@ -25,14 +24,13 @@ export type TextType =
   | "mobileH1"
   | "mobileBodyNormal";
 
-const elementMap: { [key in TextType]: string } = {
+const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
   h4: "h4",
   h5: "h5",
   h6: "h6",
-  h7: "h7",
   desktopLink: "p",
   labelSmall: "p",
   labelLight: "p",
@@ -57,7 +55,6 @@ const classMap: { [key in TextType]?: string } = {
   h4: styles.h4,
   h5: styles.h5,
   h6: styles.h6,
-  h7: styles.h7,
   desktopLink: styles.desktopLink,
   labelSmall: styles.labelSmall,
   labelLight: styles.labelLight,
@@ -86,8 +83,8 @@ const Text = ({
   id?: string;
   className?: string;
 }) => {
-  const Element = elementMap[type] as keyof JSX.IntrinsicElements;
-  const generatedClassName = `${classMap[type]} ${className ? className : ""}`;
+  const Element = elementMap[type];
+  const generatedClassName = `${classMap[type]} ${className ?? ""}`;
 
   return (
     <Element className={generatedClassName} id={id}>

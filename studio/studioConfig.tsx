@@ -19,7 +19,7 @@ const SUPPORTED_LANGUAGES_QUERY = `*[_type == "languageSettings" && !(_id in pat
 const config: WorkspaceOptions = {
   name: "studio",
   title: "Studio",
-  subtitle: "Our Own Space",
+  subtitle: "Variant Norge",
   icon: () => <StudioIcon variant="studio" />,
   basePath: "/studio",
   projectId,

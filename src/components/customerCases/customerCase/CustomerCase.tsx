@@ -78,7 +78,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
                 <div className={styles.imageBlockWrapper}>
                   {section.images?.map((image) => (
                     <div
-                      key={image._key}
+                      key={image._key ?? `${section._key}-${image.alt}`}
                       className={styles.imageBlockImageWrapper}
                     >
                       <div className={styles.imageBlockImageContent}>
