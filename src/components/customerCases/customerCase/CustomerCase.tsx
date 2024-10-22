@@ -69,7 +69,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
                 <RichText value={section.richText} />
               ) : (
                 <div className={styles.imageBlockWrapper}>
-                  {section.images.map((image) => (
+                  {section.images?.map((image) => (
                     <div
                       key={image._key}
                       className={styles.imageBlockImageWrapper}
