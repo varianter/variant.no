@@ -20,12 +20,12 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
     >
       {isLanding ? (
         <div className={styles.secondary}>
-          <Text type="display" className={styles.title}>
+          <Text type="h1" className={styles.title}>
             {hero.basicTitle}
           </Text>
           {hero.description && (
             <div className={styles.description}>
-              <Text type="bodyLarge">{hero.description}</Text>
+              <Text type="bodyBig">{hero.description}</Text>
             </div>
           )}
           <ul className={styles.cta}>
@@ -46,9 +46,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
       ) : (
         <div className={styles.primary}>
           <Text type="h1">{hero.basicTitle}</Text>
-          {hero.description && (
-            <Text type="bodySuperLarge">{hero.description}</Text>
-          )}
+          {hero.description && <Text type="bodyXl">{hero.description}</Text>}
         </div>
       )}
     </div>

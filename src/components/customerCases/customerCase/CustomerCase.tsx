@@ -20,7 +20,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
           <SanitySharedImage image={customerCase.image} />
         </div>
         <div className={styles.ingress}>
-          <Text type={"bodyLarge"}>{customerCase.description}</Text>
+          <Text type={"bodyBig"}>{customerCase.description}</Text>
           <div className={styles.projectInfo}>
             <div className={styles.projectInfoItem}>
               <Text>Kunde</Text>
@@ -67,6 +67,13 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
             <div key={section._key}>
               {section._type === "richTextBlock" ? (
                 <RichText value={section.richText} />
+              ) : section._type === "quoteBlock" ? (
+                section.quote && (
+                  <div>
+                    <Text>{section.quote}</Text>
+                    {section.author && <Text>- {section.author}</Text>}
+                  </div>
+                )
               ) : (
                 <div className={styles.imageBlockWrapper}>
                   {section.images?.map((image) => (

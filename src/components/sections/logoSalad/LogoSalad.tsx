@@ -11,7 +11,7 @@ interface LogoSaladProps {
 }
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
-  block: ({ children }) => <Text type="bodySuperLarge">{children}</Text>,
+  block: ({ children }) => <Text type="bodyXl">{children}</Text>,
 };
 
 export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {

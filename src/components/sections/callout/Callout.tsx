@@ -11,7 +11,7 @@ interface CalloutProps {
 }
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
-  block: ({ children }) => <Text type="bodySuperLarge">{children}</Text>,
+  block: ({ children }) => <Text type="bodyXl">{children}</Text>,
 };
 
 const Callout = ({ callout }: CalloutProps) => {
