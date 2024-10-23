@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
@@ -10,6 +12,8 @@ export interface CustomerCaseProps {
 }
 
 export default function CustomerCase({ customerCase }: CustomerCaseProps) {
+  const t = useTranslations("CustomerCase");
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -29,7 +33,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
               </Text>
             </div>
             <div className={styles.projectInfoItem}>
-              <Text>Prosjekt</Text>
+              <Text>{t("project")}</Text>
               <Text className={styles.projectInfoItemValue}>
                 {customerCase.projectInfo.name}
               </Text>

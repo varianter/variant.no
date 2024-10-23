@@ -2,8 +2,11 @@ import { NextRequest } from "next/server";
 
 import { languageMiddleware } from "./middlewares/languageMiddleware";
 
-export async function middleware(request: NextRequest) {
-  return languageMiddleware(request);
+export async function middleware(request: NextRequest) {;
+const response = request.url.split("/")[3];
+console.log("It is possible to fetch only the language", response);
+
+return languageMiddleware(request);
 }
 
 export const config = {
