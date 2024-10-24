@@ -3,17 +3,17 @@
   top: 0;
   overflow: hidden;
   z-index: 9999;
-
-  & > header {
+  background-color: var(--primary-black); 
+  /* & > header {
     padding: 1rem 2.5rem;
     transition: background-color 0.4s ease;
     position: sticky;
     top: 0;
-  }
+  } */
 }
 
 .scrolled {
-  background-color: var(--primary-bg);
+  background-color: var(--primary-black);
 }
 
 .isOpen {
@@ -22,7 +22,7 @@
   flex-direction: column;
 
   @media (max-width: 1024px) {
-    background: var(--primary-bg-dark);
+    background: var(--primary-black);
 
     & > header {
       flex: 1;
@@ -93,7 +93,7 @@
   flex: 2;
   gap: 2rem;
   justify-content: center;
-
+  
   @media (min-width: 1200px) {
     gap: 3rem;
   }

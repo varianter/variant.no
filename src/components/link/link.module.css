@@ -53,7 +53,7 @@
 }
 
 .headerLink {
-  color: var(--primary-black);
+  color: var(--primary-white);
   cursor: pointer;
   text-decoration: none;
   font-family: var(--font-britti-sans);
@@ -61,11 +61,11 @@
   font-weight: 500;
 
   &:hover {
-    color: var(--primary-dark);
+    color: var(--primary-light);
   }
 
   &:active {
-    color: var(--primary-darker);
+    color: var(--primary-light);
   }
 }
 
@@ -87,5 +87,5 @@
 }
 
 .selected {
-  color: var(--primary-dark);
+  color: var(--primary-light);
 }
