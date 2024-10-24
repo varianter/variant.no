@@ -41,12 +41,12 @@
 }
 
 .wrapper {
-  background-color: #FFF;
-  border-radius: 1rem; 
+  background-color: #fff;
+  border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 1.5rem; 
+  padding: 0rem 1.5rem;
 }
 
 .logo {
@@ -96,7 +96,7 @@
   flex: 1 0 0;
   gap: 1.5rem;
   justify-content: center;
-  align-self: stretch; 
+  align-self: stretch;
 
   @media (min-width: 1200px) {
     gap: 3rem;
