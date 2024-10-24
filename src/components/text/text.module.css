@@ -32,7 +32,7 @@
 .h1 {
   font-size: 4.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
 
   @media (min-width: 1024px) {

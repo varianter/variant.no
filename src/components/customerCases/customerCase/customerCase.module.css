@@ -8,17 +8,16 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
 }
 
 .mainTitle {
   font-weight: 600;
+  gap: 1.62rem; 
 }
 
 .mainImageWrapper {
   width: 100%;
-  height: 32rem;
+  height: 36.5rem;;
   overflow: hidden;
 }
 
