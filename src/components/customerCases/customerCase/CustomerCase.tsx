@@ -23,6 +23,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
           <div className={styles.projectDescription}>
             <Text type={"bodyBig"}>{customerCase.description}</Text>
           </div>
+
           <div className={styles.projectInfo}>
             <div className={styles.projectInfoItem}>
               <Text>Kunde</Text>

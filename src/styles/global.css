@@ -39,7 +39,7 @@ html {
 
 body {
   margin: 0;
-  padding: 2.5rem;
+  padding: 1rem;
   overflow-x: hidden;
   width: 100vw;
   background-color: var(--primary-bg);

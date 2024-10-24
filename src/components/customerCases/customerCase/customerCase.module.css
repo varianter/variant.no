@@ -16,8 +16,18 @@
   font-weight: 600;
 }
 
+.mainImageWrapper {
+  width: 100%;
+  height: 32rem;
+  overflow: hidden;
+}
+
 .mainImageWrapper img {
-  border-radius: 12px;
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-width: 100%;
 }
 
 .ingress {
