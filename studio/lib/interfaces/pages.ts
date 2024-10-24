@@ -7,24 +7,24 @@ import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
 
 export interface HeroSection {
+  _type: "hero";
   _key: string;
-  _type: string;
   basicTitle: string;
   callToActions: ILink[];
   description: string;
 }
 
 export interface LogoSaladSection {
+  _type: "logoSalad";
   _key: string;
-  _type: string;
   logos: IImage[];
   richText?: PortableTextBlock[];
   supporting: string;
 }
 
 export interface ArticleSection {
+  _type: "article";
   _key: string;
-  _type: string;
   tag?: string;
   basicTitle: string;
   richText?: PortableTextBlock[];
@@ -33,22 +33,22 @@ export interface ArticleSection {
 }
 
 export interface CalloutSection {
+  _type: "callout";
   _key: string;
-  _type: string;
   richText?: PortableTextBlock[];
   link?: ILink;
 }
 
 export interface CallToActionSection {
+  _type: "ctaSection";
   _key: string;
-  _type: string;
   basicTitle?: string;
   callToActions?: ILink[];
 }
 
 export interface TestimonialsSection {
+  _type: "testimonials";
   _key: string;
-  _type: string;
   basicTitle?: string;
   imagesAsCircles: boolean;
   listOfTestimonials: {
@@ -62,15 +62,15 @@ export interface TestimonialsSection {
 }
 
 export interface ImageSection {
+  _type: "imageSection";
   _key: string;
-  _type: string;
   basicTitle: string;
   image: IImage;
 }
 
 export interface GridSection {
+  _type: "grid";
   _key: string;
-  _type: string;
   basicTitle: string;
   items: {
     _key: string;
@@ -93,6 +93,9 @@ export type Section =
   | ArticleSection
   | CalloutSection
   | CallToActionSection
+  | TestimonialsSection
+  | ImageSection
+  | GridSection
   | EmployeesSection;
 
 export interface PageBuilder {

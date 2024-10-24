@@ -1,6 +1,7 @@
 import { LinkType } from "studio/lib/interfaces/navigation";
+import { CallToActionSection } from "studio/lib/interfaces/pages";
 
-export const ctaMockData = {
+export const ctaMockData: CallToActionSection = {
   _key: "9410f9860a00",
   _type: "ctaSection",
   basicTitle: "Ready to begin your climate journey?",
@@ -18,7 +19,6 @@ export const ctaMockData = {
       _key: "8aba2dc3497b",
       internalLink: {
         _ref: "696ab97f-4830-4812-9aa3-4050196fab58",
-        _type: "reference",
       },
       linkTitle: "Book a demo",
       linkType: LinkType.Internal,
@@ -29,7 +29,6 @@ export const ctaMockData = {
       _key: "0a6e47ebca0e",
       internalLink: {
         _ref: "696ab97f-4830-4812-9aa3-4050196fab58",
-        _type: "reference",
       },
       linkTitle: "Partner with us",
       linkType: LinkType.Internal,

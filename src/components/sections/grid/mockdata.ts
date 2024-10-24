@@ -1,6 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
 import placeholder from "src/stories/assets/image-placeholder.png";
+import { GridSection } from "studio/lib/interfaces/pages";
 
 const commonRichText: PortableTextBlock[] = [
   {
@@ -29,7 +30,7 @@ const item = {
   richText: commonRichText,
 };
 
-export const mockGrid = {
+export const mockGrid: GridSection = {
   _type: "grid",
   _key: "8f79f85866cb",
   basicTitle: "The team",
