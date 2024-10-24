@@ -20,7 +20,9 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
           <SanitySharedImage image={customerCase.image} />
         </div>
         <div className={styles.ingress}>
-          <Text type={"bodyBig"}>{customerCase.description}</Text>
+          <div className={styles.projectDescription}>
+            <Text type={"bodyBig"}>{customerCase.description}</Text>
+          </div>
           <div className={styles.projectInfo}>
             <div className={styles.projectInfoItem}>
               <Text>Kunde</Text>
@@ -40,8 +42,6 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
                 {customerCase.projectInfo.duration}
               </Text>
             </div>
-          </div>
-          <div className={styles.projectInfo}>
             <div className={styles.projectInfoItem}>
               <Text>Bransje</Text>
               <Text className={styles.projectInfoItemValue}>
