@@ -37,7 +37,6 @@ export const Header = ({
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
 
   const links = filterLinks(navigation.main, linkID);
@@ -53,24 +52,17 @@ export const Header = ({
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
     const handleResize = () => {
       if (window.innerWidth > 1024) {
         setIsOpen(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     handleResize();
-    handleScroll();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -82,7 +74,7 @@ export const Header = ({
       onEscapeKey={toggleMenu}
       className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
     >
-      <header className={`${isScrolled && !isOpen && styles.scrolled}`}>
+      <header>
         <nav aria-label="Main menu">
           <div className={styles.wrapper}>
             {assets?.primaryLogo && (

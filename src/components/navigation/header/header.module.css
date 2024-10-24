@@ -12,10 +12,6 @@
   }
 }
 
-.scrolled {
-  background-color: var(--primary-bg);
-}
-
 .isOpen {
   height: 100vh;
   display: flex;
