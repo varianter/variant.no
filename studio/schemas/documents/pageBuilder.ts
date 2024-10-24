@@ -33,7 +33,10 @@ const pageBuilder = defineType({
           StringInputWithCharacterCount({ ...props, maxCount: 30 }),
       },
     }),
-    pageSlug,
+    {
+      ...pageSlug,
+      type: "internationalizedArrayString",
+    },
     seo,
     defineField({
       name: "sections",
