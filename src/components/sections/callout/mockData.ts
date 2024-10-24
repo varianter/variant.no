@@ -1,6 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
 import { LinkType } from "studio/lib/interfaces/navigation";
+import { CalloutSection } from "studio/lib/interfaces/pages";
 
 const RichTextMock: PortableTextBlock[] = [
   {
@@ -42,7 +43,7 @@ const RichTextMock: PortableTextBlock[] = [
   },
 ];
 
-export const calloutMockData = {
+export const calloutMockData: CalloutSection = {
   _key: "3d99dad2f909",
   _type: "callout",
   link: {

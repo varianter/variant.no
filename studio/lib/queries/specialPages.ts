@@ -1,12 +1,13 @@
 import { groq } from "next-sanity";
 
+import { LANGUAGE_FIELD_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Compensations
 export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
   *[_type == "compensations" && ${translatedFieldFragment("slug")} == $slug][0] {
     ...,
-    "language": $language,
+    ${LANGUAGE_FIELD_FRAGMENT},
     "slug": ${translatedFieldFragment("slug")},
     "basicTitle": ${translatedFieldFragment("basicTitle")},
     "benefitsByLocation": benefitsByLocation[] {

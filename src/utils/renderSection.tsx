@@ -166,7 +166,7 @@ const SectionRenderer = ({
   switch (section._type) {
     case "hero":
       return renderHeroSection(
-        section as HeroSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
@@ -174,52 +174,60 @@ const SectionRenderer = ({
       );
     case "logoSalad":
       return renderLogoSaladSection(
-        section as LogoSaladSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "article":
       return renderArticleSection(
-        section as ArticleSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "callout":
       return renderCalloutSection(
-        section as CalloutSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "ctaSection":
       return renderCallToActionSection(
-        section as CallToActionSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "testimonials":
       return renderTestimonialsSection(
-        section as TestimonialsSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "imageSection":
       return renderImageSection(
-        section as ImageSection,
+        section,
         sectionIndex,
         isDraftMode,
         initialData,
       );
     case "grid":
-      return renderGridSection(
-        section as GridSection,
-        sectionIndex,
-        isDraftMode,
-        initialData,
+      return renderGridSection(section, sectionIndex, isDraftMode, initialData);
+    case "employees":
+      return (
+        // TODO: implement employees section
+        <pre
+          style={{
+            background: "hotpink",
+            padding: "3rem",
+            margin: 0,
+          }}
+        >
+          {JSON.stringify(section, null, 2)}
+        </pre>
       );
     default:
       return null;
