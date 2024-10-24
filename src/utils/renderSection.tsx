@@ -7,6 +7,7 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
@@ -217,18 +218,7 @@ const SectionRenderer = ({
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "employees":
-      return (
-        // TODO: implement employees section
-        <pre
-          style={{
-            background: "hotpink",
-            padding: "3rem",
-            margin: 0,
-          }}
-        >
-          {JSON.stringify(section, null, 2)}
-        </pre>
-      );
+      return <Employees section={section} />;
     default:
       return null;
   }
