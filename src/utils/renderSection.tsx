@@ -218,6 +218,7 @@ const SectionRenderer = ({
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "employees":
       return (
+        // TODO: implement employees section
         <pre
           style={{
             background: "hotpink",
