@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 8rem 0;
+  margin: 8rem 0; 
   align-items: center;
 }
 
@@ -9,8 +9,6 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  max-width: 1200px;
-  padding: 1rem;
 }
 
 .section {
@@ -25,10 +23,10 @@
 }
 
 .caseImageWrapper {
-  min-width: 20rem;
+  min-width: 20rem; 
   max-width: 20rem;
 }
 
 .caseImageWrapper img {
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
