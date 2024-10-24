@@ -12,12 +12,12 @@
 
 .mainTitle {
   font-weight: 600;
-  gap: 1.62rem; 
+  gap: 1.62rem;
 }
 
 .mainImageWrapper {
   width: 100%;
-  height: 36.5rem;;
+  height: 36.5rem;
   overflow: hidden;
 }
 

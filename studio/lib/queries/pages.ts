@@ -33,6 +33,9 @@ const SECTIONS_FRAGMENT = groq`
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
       }
+    },
+    _type == "employees" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")}
     }
   }
 `;
@@ -48,6 +51,7 @@ export const SEO_FRAGMENT = groq`
 
 export const PAGE_FRAGMENT = groq`
   ...,
+  "slug": ${translatedFieldFragment("slug")},
   ${LANGUAGE_FIELD_FRAGMENT},
   ${SECTIONS_FRAGMENT},
   ${SEO_FRAGMENT}
@@ -66,16 +70,8 @@ export const PAGES_SITEMAP_QUERY = groq`
   }
 `;
 
-export const PAGE_SEO_QUERY = groq`
-  *[_type == "pageBuilder" && _id == $id][0]{
-      "title": seo.seoTitle,
-      "description": seo.seoDescription,
-      "imageUrl": seo.seoImage.asset->url
-  }
-`;
-
 export const PAGE_BY_SLUG_QUERY = groq`
-  *[_type == "pageBuilder" && slug.current == $slug][0]{
+  *[_type == "pageBuilder" && ${translatedFieldFragment("slug")} == $slug][0]{
     ${PAGE_FRAGMENT}
   }
 `;

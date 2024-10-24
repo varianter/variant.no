@@ -45,10 +45,6 @@ body {
   background-color: var(--primary-bg);
 }
 
-main {
-  margin-top: -72px;
-}
-
 h1,
 h2,
 h3,
