@@ -41,7 +41,7 @@
 }
 
 .wrapper {
-  background-color: #fff;
+  background-color: var(--primary-white-bright);
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
