@@ -63,10 +63,18 @@ async function fetchDynamicPage({
   if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+    );
   return {
     queryResponse,
     docType: pageBuilderID,
-    pathTranslations: [],
+    pathTranslations: pathTranslations.data ?? [],
   };
 }
 
