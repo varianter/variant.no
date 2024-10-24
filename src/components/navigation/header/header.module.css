@@ -41,9 +41,12 @@
 }
 
 .wrapper {
+  background-color: #FFF;
+  border-radius: 1rem; 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0rem 1.5rem; 
 }
 
 .logo {
@@ -90,9 +93,10 @@
 
 .desktopLinks {
   composes: listDesktop;
-  flex: 2;
-  gap: 2rem;
+  flex: 1 0 0;
+  gap: 1.5rem;
   justify-content: center;
+  align-self: stretch; 
 
   @media (min-width: 1200px) {
     gap: 3rem;
