@@ -1,6 +1,7 @@
 import { defineField, defineType } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
+import { isInternationalizedString } from "studio/lib/interfaces/global";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
@@ -11,6 +12,7 @@ import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
 import { pageSlug } from "studio/schemas/schemaTypes/slug";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const pageBuilderID = "pageBuilder";
 
@@ -53,13 +55,17 @@ const pageBuilder = defineType({
   preview: {
     select: {
       title: "page",
-      urlSlug: "slug.current",
+      slug: pageSlug.name,
     },
-    prepare(selection) {
-      const { title, urlSlug } = selection;
+    prepare({ title, slug }) {
+      if (!isInternationalizedString(slug)) {
+        throw new TypeError(
+          `Expected 'slug' to be InternationalizedString, was ${typeof slug}`,
+        );
+      }
       return {
-        title: title,
-        subtitle: urlSlug,
+        title: title ?? undefined,
+        subtitle: firstTranslation(slug) ?? undefined,
       };
     },
   },
