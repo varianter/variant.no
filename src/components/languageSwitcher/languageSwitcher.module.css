@@ -6,6 +6,10 @@
 }
 
 .divider {
-  border-left: 1px solid var(--primary-black);
+  border-left: 1px solid var(--primary-white);
   flex-grow: 1;
+}
+
+.link{
+  color: var(--primary-white); 
 }
