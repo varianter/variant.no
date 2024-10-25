@@ -153,3 +153,39 @@
   composes: button;
   background: url("/_assets/menu-close.svg") no-repeat 50% 50%;
 }
+
+.breadCrumbMenu {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dotSeparator {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.breadCrumbLinks {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary-bg-dark);
+}
+
+.activeBreadCrumb {
+  border-bottom: none;
+  font-weight: bold;
+}

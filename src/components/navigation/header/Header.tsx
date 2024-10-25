@@ -120,10 +120,36 @@ export const Header = ({
             </div>
           )}
         </nav>
+        {breadCrumb(currentLanguage, pathname)}
       </header>
     </FocusOn>
   );
 };
+
+export const breadCrumb = (currentLanguage: string, pathname: string) => (
+  <div className={styles.breadCrumbMenu}>
+    {["Home", ...pathname.split("/").slice(2)].map((e, index, array) => {
+      const href =
+        "/" + currentLanguage + "/" + array.slice(1, index + 1).join("/");
+      const isActive = href === "/" + pathname.slice(1);
+      //TODO: Fix this logic for the styling
+
+      return (
+        <div
+          key={index}
+          className={`${styles.breadCrumbLinks} ${isActive ? styles.activeBreadCrumb : ""} `}
+        >
+          <Link className={styles.breadCrumbLinks} href={href}>
+            {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
+          </Link>
+          {index < array.length - 1 && (
+            <span className={styles.dotSeparator}>•</span>
+          )}
+        </div>
+      );
+    })}
+  </div>
+);
 
 export const renderPageLinks = (
   links: ILink[],
