@@ -22,12 +22,12 @@ Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue
 
 **_For tiden jobber vi mye med_**
 
-- JavaScript (i alle mulige former, som f.eks React, Vue og Node.js)
-- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
 - Docker og Kubernetes
 - C#, .NET, Java og Kotlin
 - Skyplattformer (Azure, AWS, GCP, Vercel og Heroku)
-- og ikke minst: empati, utviklerkultur og samarbeid
+- JavaScript/TypeScript (i alle mulige former, som f.eks React, Vue og Node.js)
+- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
+- og ikke minst: å dele læreglede, empati, utviklerkultur og samarbeid
 
 Samtidig er ingen noensinne ferdig utlært, og vi legger opp for at du får relevant faglig og personlig utvikling i Variant. Dette garanterer vi med [utviklingsprogrammet vårt RÅ](https://handbook.variant.no/prosesser-raa#RA), som jevnlig følger opp alle i Variant slik at vi forblir flinke konsulenter, og samtidig fortsette å gjøre oss dyktig i faget vårt. 
 
