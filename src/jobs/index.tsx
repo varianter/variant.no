@@ -11,7 +11,6 @@ import { and } from 'src/utils/css';
 import JobListingItem from './list-item';
 import { OfficeSelector } from 'src/office-selector';
 import PageTitle from '@components/page-title';
-import OpenApplicationListingItem from './open-application-listing-item';
 
 const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   listings,
@@ -113,7 +112,6 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               key={`${item.name}_${item.title}_${item.location}`}
             />
           ))}
-          <OpenApplicationListingItem/>
         </section>
         <section className={style.omVariant}>
           <h2>Variantdag - November 2019</h2>
