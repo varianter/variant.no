@@ -103,6 +103,7 @@ const JobsIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
               Alle: '/jobs',
               Bergen: '/jobs/office/bergen',
               Oslo: '/jobs/office/oslo',
+              Stavanger: '/jobs/office/stavanger',
               Trondheim: '/jobs/office/trondheim',
             }}
           />
