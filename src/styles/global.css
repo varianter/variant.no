@@ -39,14 +39,13 @@ html {
 
 body {
   margin: 0;
-  padding: 1rem;
+  padding: 0; 
   overflow-x: hidden;
   width: 100vw;
   background-color: var(--primary-bg);
 }
-
-header {
-  padding: 0;
+main {
+ padding: 1rem; 
 }
 
 h1,
