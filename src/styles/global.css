@@ -45,6 +45,10 @@ body {
   background-color: var(--primary-bg);
 }
 
+header {
+  padding: 0;
+}
+
 h1,
 h2,
 h3,

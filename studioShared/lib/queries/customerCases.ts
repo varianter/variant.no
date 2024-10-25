@@ -36,7 +36,9 @@ export const CUSTOMER_CASE_QUERY = groq`
       "name": ${translatedFieldFragment("name")},
       "duration": ${translatedFieldFragment("duration")},
       "sector": ${translatedFieldFragment("sector")},
-      "delivery": ${translatedFieldFragment("delivery")},
+      "deliveries": delivery[] {
+        "delivery": ${translatedFieldFragment("delivery")},
+      },
       consultants
     },
     "sections": sections[] {

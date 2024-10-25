@@ -60,7 +60,9 @@
   }
 }
 
-/* TODO: we need to add sizes og h4-h6 */
+/* .h4 */
+/* .h5 */
+/* .h6 */
 
 .desktopLink {
   font-size: 10rem;
@@ -84,7 +86,9 @@
 
 .bodyBig {
   font-size: 1.5rem;
+  font-style: normal;
   font-weight: 400;
+  line-height: 130%;
 
   @media (min-width: 1024px) {
     font-size: 1.875rem;
@@ -109,14 +113,29 @@
   }
 }
 
+/* .bodyExtraSmall */
+
 .labelSmall {
   font-size: 1rem;
   font-weight: 500;
   color: var(--primary-dark);
-
-  @media (min-width: 1024px) {
-    font-size: 1.125rem;
-  }
 }
 
-/* TODO: We need to add media sizes to all text styles */
+.labelLight {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.labelRegular {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* .labelSemibold, */
+/* .labelBold, */
+/* .quoteItalic, */
+/* .quoteNormal, */

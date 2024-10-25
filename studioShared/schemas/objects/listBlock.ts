@@ -24,7 +24,7 @@ const listBlock = defineField({
       type: "array",
       of: [
         {
-          type: "object", // You need to define it as an object since it's a custom field
+          type: "object",
           title: "List Item",
           name: "listItem",
           fields: [
