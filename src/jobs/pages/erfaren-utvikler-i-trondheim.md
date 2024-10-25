@@ -1,10 +1,10 @@
 ---
-title: Erfaren backend-utvikler i Trondheim
-h1_title: Erfaren backend-utvikler i Trondheim
-slug: erfaren-backend-utvikler-i-trondheim
+title: Erfaren utvikler i Trondheim
+h1_title: Erfaren utvikler i Trondheim
+slug: erfaren-utvikler-i-trondheim
 contact_emails: ewa@variant.no, tv@variant.no
-meta_title: Erfaren backendutvikler i Trondheim
-meta_description: Vi ser etter en dyktig og erfaren backendutvikler til Variant Trondheim!
+meta_title: Erfaren utvikler i Trondheim
+meta_description: Vi ser etter en dyktig og erfaren utvikler til Variant Trondheim!
 meta_image: https://www.variant.no/images/erfaren_backendutvikler_trondheim_meta.png
 ---
 
@@ -16,16 +16,20 @@ Variant er et selskap av og for læreglade mennesker, som styrer sin egen hverda
 
 ## Hvem ser vi etter?
 
-Vi ser etter deg som:
+Vi ser etter deg som har minst 5-6 års erfaring med utvikling av digtiale tjenester eller produkter. En som tar med seg spennende historier og erfaringer som vi kan lære av.
 
-- Har over 5 års erfaring med utvikling av digitale tjenester eller produkter
-- Er backend- eller fullstack-utvikler, og har jobbet mye med språk som C# eller F#
-- Har utviklet løsninger i rammeverk som ASP.NET MVC, og kjørt disse på skytjenester som Azure eller GCP
-- Har kjørt tjenester med Docker, bonus hvis dette ble gjort i et Kubernetes-cluster
-- Vet hvordan CI/CD pipelines funker, og kan sette opp dette selv i løsninger som Github Actions eller Azure DevOps
-- Tar ansvar når du jobber i team, og har erfaring med å veilede andre
+Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue, Angular eller andre moderne frontend-teknologier? Eller kanskje du har jobbet mer .NET, Java eller Kotlin? Kanskje har du hodet i skyen og erfaring med Azure, GCP, AWS eller lignende skyplattformer?
 
-Samtidig er ingen noensinne ferdig utlært, og vi legger opp for at du får relevant faglig og personlig utvikling i Variant. Dette garanterer vi med [utviklingsprogrammet vårt RÅ](https://handbook.variant.no/prosesser-raa#RA), som jevnlig følger opp alle i Variant slik at vi forblir flinke konsulenter, og samtidig fortsette å gjøre oss dyktig i faget vårt. For det sistnevnte har vi 11 faggrupper i RÅ, og for backend-utviklere kan vi nevne at vi har egne [faggrupper for .NET, Java og Plattform-utvikling](https://handbook.variant.no/prosesser-raa#Faggrupper).  
+**_For tiden jobber vi mye med_**
+
+- JavaScript (i alle mulige former, som f.eks React, Vue og Node.js)
+- [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
+- Docker og Kubernetes
+- C#, .NET, Java og Kotlin
+- Skyplattformer (Azure, AWS, GCP, Vercel og Heroku)
+- og ikke minst: empati, utviklerkultur og samarbeid
+
+Samtidig er ingen noensinne ferdig utlært, og vi legger opp for at du får relevant faglig og personlig utvikling i Variant. Dette garanterer vi med [utviklingsprogrammet vårt RÅ](https://handbook.variant.no/prosesser-raa#RA), som jevnlig følger opp alle i Variant slik at vi forblir flinke konsulenter, og samtidig fortsette å gjøre oss dyktig i faget vårt. 
 
 Det aller viktigste for oss er at du har et ønske om å fortsette å utvikle deg som en dyktig utvikler og at du er en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvikle hverandre videre. 
 
@@ -50,7 +54,7 @@ Det er forskjellig hvilke goder den enkelte verdsetter mest, så vi anbefaler at
 
 ## Lønn, bonus & eierskap
 
-- Vi har gode lønns- og pensjonsordninger. Se hvilken lønn du vil få i dag og hva du kan forvente frem i tid i vår lønnskalkulator. Ingen flere lønnsforhandlinger!
+- Vi har gode lønns- og pensjonsordninger. Se hvilken lønn du vil få i dag og hva du kan forvente frem i tid i vår [lønnskalkulator](https://www.variant.no/kalkulator). Ingen flere lønnsforhandlinger!
 - Du vil, sammen med alle ansatte, dele 30 % av overskuddet per kvartal som en resultatbonus. Gjør vi det bra som gruppe, feirer vi som gruppe!
 - Gjennom medeierskapsprogrammet kan du kjøpe aksjer i Variant.
 
