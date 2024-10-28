@@ -1,0 +1,68 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 8rem 0;
+}
+
+.employee {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  margin: 1rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.employeeImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-black);
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.employeeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.employeeName {
+  color: var(--primary-black);
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.employeeRole {
+  color: var(--primary-black);
+  font-weight: 300;
+}
+
+.employeeEmail,
+.employeeTelephone {
+  color: var(--primary-black);
+  font-weight: 300;
+}
