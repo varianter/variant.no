@@ -71,7 +71,7 @@ export const customerCaseProjectInfo = defineField({
       description:
         "The consultants for the project. Use employee emails (e.g. 'oms@variant.no').",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "email" }],
     }),
   ],
 });
