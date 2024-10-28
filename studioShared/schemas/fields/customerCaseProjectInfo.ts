@@ -68,7 +68,8 @@ export const customerCaseProjectInfo = defineField({
     defineField({
       // TODO: We should be able to select the consultants from a list
       name: "consultants",
-      description: "The consultants for the project",
+      description:
+        "The consultants for the project. Use the identifier before '@' in the employee email (e.g. 'oms' for 'oms@variant.no').",
       type: "array",
       of: [{ type: "string" }],
     }),
