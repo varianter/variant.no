@@ -40,8 +40,7 @@ const customerCase = defineType({
             if (value) {
               const invalidItems = value.filter(
                 (item) =>
-                  typeof item.value === "string" &&
-                  item.value.length > 300,
+                  typeof item.value === "string" && item.value.length > 300,
               );
 
               if (invalidItems.length > 0) {
