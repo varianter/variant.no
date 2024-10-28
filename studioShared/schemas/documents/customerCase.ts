@@ -41,10 +41,10 @@ const customerCase = defineType({
               const invalidItems = value.filter(
                 (item) =>
                   typeof item.value === "string" &&
-                  item.value.length - 1 >= 300,
+                  item.value.length > 300,
               );
 
-              if (invalidItems.length) {
+              if (invalidItems.length > 0) {
                 return invalidItems.map((item) => ({
                   message: `Description can not be more than 300 characters.`,
                   path: [{ _key: item._key }, "value"],
