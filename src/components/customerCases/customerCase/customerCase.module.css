@@ -8,6 +8,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
 }
 
 .mainTitle {
@@ -55,7 +56,6 @@
 .projectInfo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex: 6;
   max-width: 50%;
   flex-direction: row;
