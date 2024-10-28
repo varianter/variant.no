@@ -32,8 +32,8 @@ export const customerCaseProjectInfo = defineField({
     }),
     defineField({
       // TODO: pick from global delivery tags
-      name: "delivery",
-      description: "The delivery of the project",
+      name: "deliveries",
+      description: "The deliveries of the project",
       type: "array",
       of: [
         {
