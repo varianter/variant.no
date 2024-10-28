@@ -1,0 +1,83 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.header {
+  grid-column: 1 / -1;
+  color: var(--primary-black);
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.employeeCountWrapper {
+  width: 100%;
+  grid-column: 1 / -1;
+  margin-bottom: -24px;
+}
+
+.employeeCount {
+  color: var(--primary-black);
+  font-size: 16px;
+}
+
+.employeeCountValue {
+  font-weight: 500;
+}
+
+.employees {
+  max-width: 1400px;
+  width: 100%;
+  text-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 52px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 225px);
+  justify-content: center;
+  padding: 1rem;
+}
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.employeeImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-black);
+  border-radius: 12px;
+  height: 150px;
+  padding: 1rem;
+  position: relative;
+}
+
+.employeeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.employeeName {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.employeeRole {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.employeeEmail,
+.employeeTelephone {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 300;
+}
