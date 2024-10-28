@@ -51,14 +51,14 @@ export const customerCaseProjectInfo = defineField({
             select: {
               item: "delivery",
             },
-            prepare({ item }) {
-              if (!isInternationalizedString(item)) {
+            prepare({ delivery }) {
+              if (!isInternationalizedString(delivery)) {
                 throw new TypeError(
-                  `Expected 'item' to be InternationalizedString, was ${typeof item}`,
+                  `Expected 'item' to be InternationalizedString, was ${typeof delivery}`,
                 );
               }
               return {
-                title: firstTranslation(item) ?? undefined,
+                title: firstTranslation(delivery) ?? undefined,
               };
             },
           },
