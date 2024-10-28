@@ -111,7 +111,7 @@ export default function Employees({
               return (
                 <React.Fragment key={`${employee.name}-${index}`}>
                   <JobsLink text="Er du kanskje en aspirerende Variant?" />
-                  <EmployeeTile employee={employee} />
+                  <EmployeeTile employee={employee} alwaysEmail />
                 </React.Fragment>
               );
             }
