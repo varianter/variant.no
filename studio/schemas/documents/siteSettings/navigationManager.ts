@@ -12,6 +12,7 @@ export const navManagerID = {
   main: "main",
   sidebar: "sidebar",
   footer: "footer",
+  employeesPage: "employeesPage",
 };
 
 const navigationManager = defineType({
@@ -45,6 +46,17 @@ const navigationManager = defineType({
           ).length;
           return ctaCount <= 2 || "You can only have two Call to Action links";
         }),
+    },
+    {
+      name: navManagerID.employeesPage,
+      title: "Employees Page",
+      description:
+        "Select the employees page for the website. This is used to define subpages for each employee. The employees page typically includes the Employees page section. ",
+      type: "reference",
+      to: [{ type: pageBuilderID }],
+      options: {
+        disableNew: true,
+      },
     },
     {
       name: navManagerID.footer,
