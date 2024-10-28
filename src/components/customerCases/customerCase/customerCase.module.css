@@ -1,8 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 8rem 0;
+  margin: 4rem 0;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    margin: 2rem 0;
+  }
 }
 
 .content {
@@ -56,7 +60,7 @@
 .projectInfo {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   flex: 6;
   max-width: 50%;
   flex-direction: row;

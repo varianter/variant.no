@@ -43,9 +43,6 @@ body {
   width: 100vw;
   background-color: var(--primary-bg);
 }
-main {
-  padding: 1rem;
-}
 
 h1,
 h2,
