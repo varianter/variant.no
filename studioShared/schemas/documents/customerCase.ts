@@ -32,7 +32,7 @@ const customerCase = defineType({
       type: "internationalizedArrayText",
       title: "Description",
       description:
-        "Short paragraph displayed at the top of the customer case page. Description can not be more than 50 words.",
+        "Short paragraph displayed at the top of the customer case page. Description can not be more than 300 characters.",
       validation: (rule) =>
         rule.custom<{ value: string; _type: string; _key: string }[]>(
           (value) => {
@@ -41,12 +41,12 @@ const customerCase = defineType({
               const invalidItems = value.filter(
                 (item) =>
                   typeof item.value === "string" &&
-                  item.value.split(" ").length > 50,
+                  item.value.length - 1 >= 300,
               );
 
               if (invalidItems.length) {
                 return invalidItems.map((item) => ({
-                  message: `Description can not be more than 50 words.`,
+                  message: `Description can not be more than 300 characters.`,
                   path: [{ _key: item._key }, "value"],
                 }));
               }
