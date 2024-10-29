@@ -11,5 +11,5 @@
 }
 
 .link {
-  color: var(--primary-white);
+  color: var(--primary-white) !important;
 }
