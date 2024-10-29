@@ -27,7 +27,7 @@
   align-items: center;
   background-color: var(--primary-black);
   border-radius: 12px;
-  height: 124px;
+  height: 125px;
   width: 50%;
   padding: 1rem;
   position: relative;
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  gap: 6px;
+  gap: 0.5rem;
 }
 
 .consultantName {
@@ -55,6 +55,6 @@
 .consultantEmail,
 .consultantTelephone {
   color: var(--primary-black);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }

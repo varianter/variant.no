@@ -141,7 +141,10 @@ export default async function CustomerCase({
           ))}
         </div>
         {consultantsResult.ok && (
-          <CustomerCaseConsultants consultants={consultantsResult.value} />
+          <CustomerCaseConsultants
+            language={customerCase.language}
+            consultants={consultantsResult.value}
+          />
         )}
         {customerCase.featuredCases &&
           customerCase.featuredCases.length > 0 && (
