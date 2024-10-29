@@ -4,4 +4,5 @@ export interface ImageBlock {
   _key: string;
   _type: "imageBlock";
   images: IImage[];
+  fullWidth?: boolean;
 }

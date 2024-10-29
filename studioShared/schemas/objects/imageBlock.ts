@@ -15,12 +15,19 @@ const imageBlock = defineField({
       type: "array",
       of: [internationalizedImage],
     },
+    {
+      name: "fullWidth",
+      title: "Full Width",
+      description: "Should these images occupy the full width of the page?",
+      type: "boolean",
+    },
   ],
   preview: {
     select: {
       images: "images",
+      fullWidth: "fullWidth",
     },
-    prepare: ({ images }) => {
+    prepare: ({ images, fullWidth }) => {
       const count = Object.keys(images).length;
       const firstImage = count > 0 ? images[0] : undefined;
       let firstImageAlt = null;
@@ -35,6 +42,7 @@ const imageBlock = defineField({
       }
       return {
         title: count > 1 ? `${count} images` : (firstImageAlt ?? undefined),
+        subtitle: fullWidth ? "Full Width" : undefined,
         media: firstImage,
       };
     },
