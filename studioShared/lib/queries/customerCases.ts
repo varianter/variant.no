@@ -50,7 +50,8 @@ export const CUSTOMER_CASE_QUERY = groq`
       _type == "imageBlock" => {
         "images": images[] {
           ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-        } 
+        },
+        fullWidth
       },
       _type == "listBlock" => {
         "description": ${translatedFieldFragment("description")},

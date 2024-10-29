@@ -10,16 +10,20 @@ export interface ImageSectionProps {
 export default function ImageSection({ section }: ImageSectionProps) {
   return (
     <div className={styles.wrapper}>
-      {section.images?.map((image) => (
-        <div
-          key={image._key ?? `${section._key}-${image.alt}`}
-          className={styles.imageWrapper}
-        >
-          <div className={styles.imageContent}>
-            <SanitySharedImage image={image} />
+      <div
+        className={`${styles.content}${section.fullWidth ? ` ${styles.fullWidth}` : ""}`}
+      >
+        {section.images?.map((image) => (
+          <div
+            key={image._key ?? `${section._key}-${image.alt}`}
+            className={styles.imageWrapper}
+          >
+            <div className={styles.imageContent}>
+              <SanitySharedImage image={image} />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
