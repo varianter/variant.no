@@ -3,7 +3,7 @@ import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import {
   CustomerCase as CustomerCaseDocument,
-  CustomerCaseSection,
+  CustomerCaseSection as CustomerCaseSectionObject,
   Delivery,
 } from "studioShared/lib/interfaces/customerCases";
 
@@ -14,7 +14,11 @@ export interface CustomerCaseProps {
   customerCase: CustomerCaseDocument;
 }
 
-function renderCustomerCaseSection(section: CustomerCaseSection) {
+function CustomerCaseSection({
+  section,
+}: {
+  section: CustomerCaseSectionObject;
+}) {
   switch (section._type) {
     case "richTextBlock":
       return <RichText value={section.richText} />;
@@ -122,7 +126,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (
-            <div key={section._key}>{renderCustomerCaseSection(section)}</div>
+            <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
       </div>
