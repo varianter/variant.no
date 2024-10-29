@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContent {
+  max-width: 800px;
+  height: 100%;
+}
+
+.imageContent img {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100% !important;
+}
