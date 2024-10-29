@@ -63,6 +63,9 @@ export const CUSTOMER_CASE_QUERY = groq`
         "quote": ${translatedFieldFragment("quote")},
         "author": ${translatedFieldFragment("author")},
       },
+    },
+    "featuredCases": featuredCases[] -> {
+      ${CUSTOMER_CASE_BASE_FRAGMENT}
     }
   }
 `;

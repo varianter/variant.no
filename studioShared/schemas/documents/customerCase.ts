@@ -1,9 +1,11 @@
-import { defineField, defineType } from "sanity";
+import { groq } from "next-sanity";
+import { Reference, defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { internationalizedImage } from "studio/schemas/fields/media";
 import { titleID } from "studio/schemas/fields/text";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
+import { buildDraftId, buildPublishedId } from "studio/utils/documentUtils";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
 import imageBlock from "studioShared/schemas/objects/imageBlock";
@@ -72,6 +74,51 @@ const customerCase = defineType({
       description: "Add sections here",
       type: "array",
       of: [richTextBlock, imageBlock, listBlock, quoteBlock],
+    }),
+    defineField({
+      name: "featuredCases",
+      title: "Featured Cases",
+      description:
+        "List of Customer Cases that should be displayed at the bottom of this Customer Case",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: customerCaseID }],
+          validation: (rule) =>
+            rule.custom((value: Reference, context) => {
+              if (
+                context.document !== undefined &&
+                buildPublishedId(value._ref) ===
+                  buildPublishedId(context.document._id)
+              ) {
+                return "Can not feature itself";
+              }
+              return true;
+            }),
+          options: {
+            disableNew: true,
+            filter: ({ document, parent }) => ({
+              // hide current and already featured customer cases
+              filter: groq`!(_id in $forbiddenIds)`,
+              params: {
+                forbiddenIds: [
+                  buildPublishedId(document._id),
+                  buildDraftId(document._id),
+                  ...(Array.isArray(parent)
+                    ? parent.flatMap((r) =>
+                        typeof r._ref === "string"
+                          ? [buildPublishedId(r._ref), buildDraftId(r._ref)]
+                          : undefined,
+                      )
+                    : []),
+                ],
+              },
+            }),
+          },
+        },
+      ],
+      validation: (rule) => rule.max(3).unique(),
     }),
   ],
   preview: {

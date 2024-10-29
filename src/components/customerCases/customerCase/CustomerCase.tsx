@@ -7,6 +7,7 @@ import {
 } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCase.module.css";
+import FeaturedCases from "./featuredCases/FeaturedCases";
 import ImageSection from "./sections/image/ImageSection";
 import RichTextSection from "./sections/richText/RichTextSection";
 
@@ -129,6 +130,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
             <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
+        <FeaturedCases featuredCases={customerCase.featuredCases} />
       </div>
     </div>
   );
