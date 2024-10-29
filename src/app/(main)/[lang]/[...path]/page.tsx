@@ -123,7 +123,12 @@ async function Page({ params }: Props) {
                 <CustomerCases customerCasesPage={queryResponse.data} />
               );
             case "customerCase":
-              return <CustomerCase customerCase={queryResponse.data} />;
+              return (
+                <CustomerCase
+                  customerCase={queryResponse.customerCase.data}
+                  customerCasesPagePath={queryResponse.customerCasesPagePath}
+                />
+              );
             case "legalDocument":
               return isDraftMode ? (
                 <LegalPreview initialDocument={queryResponse} />

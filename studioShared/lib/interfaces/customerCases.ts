@@ -32,5 +32,5 @@ export type CustomerCaseSection = RichTextBlock | ImageBlock | QuoteBlock;
 export interface CustomerCase extends CustomerCaseBase {
   projectInfo: CustomerCaseProjectInfo;
   sections: CustomerCaseSection[];
-  featuredCases: CustomerCaseBase[];
+  featuredCases?: CustomerCaseBase[] | null;
 }
