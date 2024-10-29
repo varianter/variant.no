@@ -9,6 +9,7 @@ import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCas
 import imageBlock from "studioShared/schemas/objects/imageBlock";
 import listBlock from "studioShared/schemas/objects/listBlock";
 import quoteBlock from "studioShared/schemas/objects/quoteBlock";
+import resultBlock from "studioShared/schemas/objects/resultBlock";
 import richTextBlock from "studioShared/schemas/objects/richTextBlock";
 
 export const customerCaseID = "customerCase";
@@ -71,7 +72,7 @@ const customerCase = defineType({
       title: "Sections",
       description: "Add sections here",
       type: "array",
-      of: [richTextBlock, imageBlock, listBlock, quoteBlock],
+      of: [richTextBlock, imageBlock, listBlock, quoteBlock, resultBlock],
     }),
   ],
   preview: {
