@@ -1,5 +1,8 @@
 import { defineField } from "sanity";
 
+import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { firstTranslation } from "studio/utils/i18n";
+
 export const customerCaseProjectInfo = defineField({
   name: "projectInfo",
   title: "Project Info",
@@ -29,9 +32,38 @@ export const customerCaseProjectInfo = defineField({
     }),
     defineField({
       // TODO: pick from global delivery tags
-      name: "delivery",
-      description: "The delivery of the project",
-      type: "internationalizedArrayString",
+      name: "deliveries",
+      description: "The deliveries of the project",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          title: "List Item",
+          name: "listItem",
+          fields: [
+            {
+              name: "delivery",
+              title: "Delivery",
+              type: "internationalizedArrayString",
+            },
+          ],
+          preview: {
+            select: {
+              item: "delivery",
+            },
+            prepare({ delivery }) {
+              if (!isInternationalizedString(delivery)) {
+                throw new TypeError(
+                  `Expected 'item' to be InternationalizedString, was ${typeof delivery}`,
+                );
+              }
+              return {
+                title: firstTranslation(delivery) ?? undefined,
+              };
+            },
+          },
+        },
+      ],
     }),
     defineField({
       // TODO: We should be able to select the consultants from a list

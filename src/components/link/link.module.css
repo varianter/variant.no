@@ -53,19 +53,25 @@
 }
 
 .headerLink {
-  color: var(--primary-black);
+  color: var(--primary-white);
   cursor: pointer;
   text-decoration: none;
   font-family: var(--font-britti-sans);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
 
   &:hover {
-    color: var(--primary-dark);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 
   &:active {
-    color: var(--primary-darker);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
 }
 
@@ -87,5 +93,7 @@
 }
 
 .selected {
-  color: var(--primary-dark);
+  color: var(--primary-white);
+  font-weight: 700;
+  line-height: normal;
 }

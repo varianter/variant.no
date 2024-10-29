@@ -36,7 +36,9 @@ export const CUSTOMER_CASE_QUERY = groq`
       "name": ${translatedFieldFragment("name")},
       "duration": ${translatedFieldFragment("duration")},
       "sector": ${translatedFieldFragment("sector")},
-      "delivery": ${translatedFieldFragment("delivery")},
+      "deliveries": deliveries[] {
+        "delivery": ${translatedFieldFragment("delivery")},
+      },
       consultants
     },
     "sections": sections[] {
@@ -67,7 +69,6 @@ export const CUSTOMER_CASE_QUERY = groq`
 export const CUSTOMER_CASES_SITEMAP_QUERY = groq`
   *[_type == "customerCase"] {
     _updatedAt,
-    language,
-    slug
+    "slug": ${translatedFieldFragment("slug")}
   }
 `;

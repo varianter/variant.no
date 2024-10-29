@@ -9,8 +9,13 @@ export interface CustomerCaseProjectInfo {
   name: string;
   duration: string;
   sector: string;
-  delivery: string;
+  deliveries: Delivery[];
   consultants: string[];
+}
+
+export interface Delivery {
+  delivery: string;
+  key: string;
 }
 
 export interface CustomerCaseBase {

@@ -32,7 +32,28 @@ const customerCase = defineType({
       type: "internationalizedArrayText",
       title: "Description",
       description:
-        "Short paragraph displayed at the top of the customer case page",
+        "Short paragraph displayed at the top of the customer case page. Description can not be more than 300 characters.",
+      validation: (rule) =>
+        rule.custom<{ value: string; _type: string; _key: string }[]>(
+          (value) => {
+            if (!value) return true;
+            if (value) {
+              const invalidItems = value.filter(
+                (item) =>
+                  typeof item.value === "string" && item.value.length > 300,
+              );
+
+              if (invalidItems.length > 0) {
+                return invalidItems.map((item) => ({
+                  message: `Description can not be more than 300 characters.`,
+                  path: [{ _key: item._key }, "value"],
+                }));
+              }
+            }
+
+            return true;
+          },
+        ),
     }),
     defineField({
       ...internationalizedImage,

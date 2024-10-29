@@ -8,6 +8,10 @@ export interface FieldTranslatedSitemapData extends SitemapBaseData {
   slug: InternationalizedString;
 }
 
+export interface SingleTranslationSitemapData extends SitemapBaseData {
+  slug: string;
+}
+
 export interface UntranslatedSitemapData extends SitemapBaseData {
   slug: Slug;
 }

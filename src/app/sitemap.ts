@@ -4,8 +4,8 @@ import { client } from "studio/lib/client";
 import {
   DocumentTranslatedSitemapData,
   FieldTranslatedSitemapData,
+  SingleTranslationSitemapData,
   SitemapBaseData,
-  UntranslatedSitemapData,
 } from "studio/lib/interfaces/sitemap";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import { LEGAL_DOCUMENTS_SITEMAP_QUERY } from "studio/lib/queries/admin";
@@ -73,43 +73,48 @@ async function compensationsPageSitemap(): Promise<RelativeSiteMap> {
 }
 
 async function dynamicPagesSitemap(): Promise<RelativeSiteMap> {
-  const pages = await clientWithToken.fetch<UntranslatedSitemapData[] | null>(
-    PAGES_SITEMAP_QUERY,
-  );
+  const pages = await clientWithToken.fetch<
+    FieldTranslatedSitemapData[] | null
+  >(PAGES_SITEMAP_QUERY);
   if (pages !== null) {
-    return pages.map((page) => ({
-      relativeUrl: page.slug.current,
-      lastModified: new Date(page._updatedAt),
-    }));
+    return pages.flatMap((page) =>
+      page.slug.map((slug) => ({
+        relativeUrl: `${slug._key}/${slug.value}`,
+        lastModified: new Date(page._updatedAt),
+      })),
+    );
   }
   return [];
 }
 
 async function customerCasesSitemap(): Promise<RelativeSiteMap> {
-  const page = await clientWithToken.fetch<UntranslatedSitemapData | null>(
+  const page = await clientWithToken.fetch<FieldTranslatedSitemapData | null>(
     CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
   );
-  if (page !== null) {
-    const siteMap = [
-      {
-        relativeUrl: page.slug.current,
-        lastModified: new Date(page._updatedAt),
-      },
-    ];
+  if (page?.slug === undefined) {
+    return [];
+  }
+  const siteMap = [];
+  for (const slug of page.slug) {
+    siteMap.push({
+      relativeUrl: `${slug._key}/${slug.value}`,
+      lastModified: new Date(page._updatedAt),
+    });
     const cases = await sharedClientWithToken.fetch<
-      DocumentTranslatedSitemapData[] | null
-    >(CUSTOMER_CASES_SITEMAP_QUERY);
+      SingleTranslationSitemapData[] | null
+    >(CUSTOMER_CASES_SITEMAP_QUERY, {
+      language: slug._key,
+    });
     if (cases !== null) {
       siteMap.push(
         ...cases.map((customerCase) => ({
-          relativeUrl: `${customerCase.language}/${page.slug.current}/${customerCase.slug.current}`,
+          relativeUrl: `${slug._key}/${slug.value}/${customerCase.slug}`,
           lastModified: new Date(customerCase._updatedAt),
         })),
       );
     }
-    return siteMap;
   }
-  return [];
+  return siteMap;
 }
 
 async function legalDocumentsSitemap(): Promise<RelativeSiteMap> {

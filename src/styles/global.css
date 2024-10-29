@@ -42,6 +42,7 @@ body {
   padding: 0;
   width: 100vw;
   background-color: var(--primary-bg);
+  font-family: var(--font-britti-sans);
 }
 
 h1,

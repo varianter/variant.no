@@ -8,9 +8,8 @@
 .content {
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
   gap: 5rem;
-  max-width: 1200px;
-  padding: 1rem;
 }
 
 .section {
@@ -30,5 +29,5 @@
 }
 
 .caseImageWrapper img {
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
