@@ -10,6 +10,7 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
+import Text from "src/components/text/Text";
 import { getHref } from "src/utils/link";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
@@ -68,87 +69,98 @@ export const Header = ({
   }, []);
 
   return (
-    <FocusOn
-      enabled={isOpen}
-      onClickOutside={toggleMenu}
-      onEscapeKey={toggleMenu}
-      className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
-    >
-      <header>
-        <nav aria-label="Main menu">
-          <div className={styles.wrapper}>
-            {assets?.primaryLogo && (
-              <div className={styles.logo}>
-                <Link href="/" aria-label="Home">
-                  <SanityImage image={assets.primaryLogo} />
-                </Link>
+    <>
+      <FocusOn
+        enabled={isOpen}
+        onClickOutside={toggleMenu}
+        onEscapeKey={toggleMenu}
+        className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
+      >
+        <header>
+          <nav aria-label="Main menu">
+            <div className={styles.wrapper}>
+              {assets?.primaryLogo && (
+                <div className={styles.logo}>
+                  <Link href="/" aria-label="Home">
+                    <SanityImage image={assets.primaryLogo} />
+                  </Link>
+                </div>
+              )}
+              {renderPageLinks(links, false, pathname)}
+              {renderPageCTAs(ctas, false)}
+              <div className={styles.languageSwitcher}>
+                {defaultLanguage && (
+                  <LanguageSwitcher
+                    currentLanguage={currentLanguage}
+                    pathTranslations={pathTranslations}
+                  />
+                )}
+              </div>
+              <button
+                aria-haspopup="true"
+                aria-controls={sidebarID}
+                className={isOpen ? styles.open : styles.closed}
+                aria-expanded={isOpen}
+                onClick={toggleMenu}
+              />
+            </div>
+            {isOpen && (
+              <div
+                className={styles.mobileMenu}
+                id={sidebarID}
+                aria-label="Mobile Menu"
+                onClick={() => setIsOpen(false)}
+              >
+                {renderPageLinks(sidebarLinks, true, pathname)}
+                {renderPageCTAs(sidebarCtas, true)}
+                {defaultLanguage && (
+                  <LanguageSwitcher
+                    currentLanguage={currentLanguage}
+                    pathTranslations={pathTranslations}
+                  />
+                )}
               </div>
             )}
-            {renderPageLinks(links, false, pathname)}
-            {renderPageCTAs(ctas, false)}
-            <div className={styles.languageSwitcher}>
-              {defaultLanguage && (
-                <LanguageSwitcher
-                  currentLanguage={currentLanguage}
-                  pathTranslations={pathTranslations}
-                />
-              )}
-            </div>
-            <button
-              aria-haspopup="true"
-              aria-controls={sidebarID}
-              className={isOpen ? styles.open : styles.closed}
-              aria-expanded={isOpen}
-              onClick={toggleMenu}
-            />
-          </div>
-          {isOpen && (
-            <div
-              className={styles.mobileMenu}
-              id={sidebarID}
-              aria-label="Mobile Menu"
-              onClick={() => setIsOpen(false)}
-            >
-              {renderPageLinks(sidebarLinks, true, pathname)}
-              {renderPageCTAs(sidebarCtas, true)}
-              {defaultLanguage && (
-                <LanguageSwitcher
-                  currentLanguage={currentLanguage}
-                  pathTranslations={pathTranslations}
-                />
-              )}
-            </div>
-          )}
-        </nav>
-        {breadCrumb(currentLanguage, pathname)}
-      </header>
-    </FocusOn>
+          </nav>
+        </header>
+      </FocusOn>
+      {breadCrumb(currentLanguage, pathname)}
+    </>
   );
 };
 
 export const breadCrumb = (currentLanguage: string, pathname: string) => (
-  <div className={styles.breadCrumbMenu}>
-    {["Home", ...pathname.split("/").slice(2)].map((e, index, array) => {
+  <ul className={styles.breadCrumbMenu}>
+    {["Home", ...pathname.split("/").slice(2)].map((e, index, path) => {
       const href =
-        "/" + currentLanguage + "/" + array.slice(1, index + 1).join("/");
-      const isActive = href === "/" + pathname.slice(1);
-      //TODO: Fix this logic for the styling
+        "/" + currentLanguage + "/" + path.slice(1, index + 1).join("/");
+      const isLast = index === path.length - 1;
 
       return (
-        <div
-          key={index}
-          className={`${styles.breadCrumbLinks} ${isActive ? styles.activeBreadCrumb : ""} `}
-        >
-          <Link className={styles.breadCrumbLinks} href={href}>
-            {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
+        <li key={index} className={styles.breadCrumb}>
+          <Link className={styles.breadCrumb} href={href}>
+            <Text
+              className={isLast ? styles.breadCrumbText : styles.breadCrumbLink}
+              type={isLast ? "labelSemibold" : "desktopLink"}
+            >
+              {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
+            </Text>
           </Link>
-          {index < array.length - 1 && (
-            <span className={styles.dotSeparator}>•</span>
+          {!isLast && (
+            <span
+              className={
+                index < path.length - 2
+                  ? styles.dotSeparator
+                  : styles.lastDotSeparator
+              }
+            >
+              •
+            </span>
           )}
-        </div>
+        </li>
       );
     })}
-  </div>
+  </ul>
 );
 
 export const renderPageLinks = (

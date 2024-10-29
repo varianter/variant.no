@@ -66,14 +66,10 @@
 /* .h6 */
 
 .desktopLink {
-  font-size: 10rem;
-  line-height: 100%;
-  font-weight: 500;
-
-  @media (min-width: 1024px) {
-    font-size: 5.25rem;
-    line-height: normal;
-  }
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
 }
 
 .bodyXl {
@@ -137,8 +133,14 @@
   line-height: 120%;
 }
 
+.labelSemibold {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
 /* TODO: add font variables */
-/* .labelSemibold, */
-/* .labelBold, */
-/* .quoteItalic, */
-/* .quoteNormal, */
+/* .labelBold */
+/* .quoteItalic */
+/* .quoteNormal */
