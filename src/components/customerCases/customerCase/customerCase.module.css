@@ -13,6 +13,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 1400px;
   padding: 0 2rem;
 
