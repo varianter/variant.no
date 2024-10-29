@@ -3,13 +3,33 @@ import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import {
   CustomerCase as CustomerCaseDocument,
+  CustomerCaseSection,
   Delivery,
 } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCase.module.css";
+import ImageSection from "./sections/image/ImageSection";
 
 export interface CustomerCaseProps {
   customerCase: CustomerCaseDocument;
+}
+
+function renderCustomerCaseSection(section: CustomerCaseSection) {
+  switch (section._type) {
+    case "richTextBlock":
+      return <RichText value={section.richText} />;
+    case "quoteBlock":
+      return (
+        section.quote && (
+          <div>
+            <Text>{section.quote}</Text>
+            {section.author && <Text>- {section.author}</Text>}
+          </div>
+        )
+      );
+    case "imageBlock":
+      return <ImageSection section={section} />;
+  }
 }
 
 export default function CustomerCase({ customerCase }: CustomerCaseProps) {
@@ -102,31 +122,7 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (
-            <div key={section._key}>
-              {section._type === "richTextBlock" ? (
-                <RichText value={section.richText} />
-              ) : section._type === "quoteBlock" ? (
-                section.quote && (
-                  <div>
-                    <Text>{section.quote}</Text>
-                    {section.author && <Text>- {section.author}</Text>}
-                  </div>
-                )
-              ) : (
-                <div className={styles.imageBlockWrapper}>
-                  {section.images?.map((image) => (
-                    <div
-                      key={image._key ?? `${section._key}-${image.alt}`}
-                      className={styles.imageBlockImageWrapper}
-                    >
-                      <div className={styles.imageBlockImageContent}>
-                        <SanitySharedImage image={image} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            <div key={section._key}>{renderCustomerCaseSection(section)}</div>
           ))}
         </div>
       </div>
