@@ -32,9 +32,9 @@ export const BreadCrumbMenu = ({
               {index !== 0 && (
                 <span
                   className={
-                    index < path.length - 1
-                      ? styles.dotSeparator
-                      : styles.lastDotSeparator
+                    isLast
+                      ? styles.lastDotSeparator
+                      : styles.dotSeparator
                   }
                 >
                   •
