@@ -21,7 +21,7 @@ export const BreadCrumbMenu = ({
         ...(pathname.includes("/" + currentLanguage + "/")
           ? pathname.split("/").slice(2)
           : pathname.split("/").slice(1)),
-      ].map((e, index, path) => {
+      ].map((slug, index, path) => {
         const href =
           "/" + currentLanguage + "/" + path.slice(1, index + 1).join("/");
         const isLast = index === path.length - 1;
@@ -46,7 +46,7 @@ export const BreadCrumbMenu = ({
                 }
                 type={isLast ? "labelSemibold" : "desktopLink"}
               >
-                {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
+                {slug.charAt(0).toUpperCase() + slug.slice(1).toLowerCase()}
               </Text>
             </Link>
           </li>
