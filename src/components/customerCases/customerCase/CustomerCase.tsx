@@ -23,8 +23,16 @@ function CustomerCaseSection({
       return (
         section.quote && (
           <div className={styles.quoteBlock}>
-            <Text>{section.quote}</Text>
-            {section.author && <Text>- {section.author}</Text>}
+            <div className={styles.quoteBlockInner}>
+              <Text type="quoteNormal">
+                {"“"}
+                {section.quote}
+                {"”"}
+              </Text>
+              {section.author && (
+                <Text type="labelRegular">- {section.author}</Text>
+              )}
+            </div>
           </div>
         )
       );
