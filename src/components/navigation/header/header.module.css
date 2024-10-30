@@ -177,7 +177,8 @@
   text-decoration: underline;
 }
 
-.dotSeparator, .lastDotSeparator {
+.dotSeparator,
+.lastDotSeparator {
   font-size: 2.5em;
 }
 
