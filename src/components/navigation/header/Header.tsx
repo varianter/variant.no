@@ -133,6 +133,7 @@ export const Header = ({
 
 export const breadCrumb = (currentLanguage: string, pathname: string) => (
   <ul className={styles.breadCrumbMenu}>
+    {/* TODO: Home should be updated with translation */}
     {["Home", ...pathname.split("/").slice(2)].map((e, index, path) => {
       const href =
         "/" + currentLanguage + "/" + path.slice(1, index + 1).join("/");
