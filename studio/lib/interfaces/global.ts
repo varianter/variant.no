@@ -49,3 +49,17 @@ export interface InternationalizedValueRecord<T> {
 }
 
 export type InternationalizedString = InternationalizedValueRecord<string>[];
+
+export function isSanityKeyTypeObject(value: unknown): value is {
+  _key: string;
+  _type: string;
+} {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "_key" in value &&
+    typeof value._key === "string" &&
+    "_type" in value &&
+    typeof value._type === "string"
+  );
+}

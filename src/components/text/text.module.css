@@ -34,30 +34,17 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-
-  @media (min-width: 1024px) {
-    font-size: 4.25rem;
-  }
 }
 
 .h2 {
   font-size: 2.5625rem;
   font-weight: 500;
   line-height: 110%;
-
-  @media (min-width: 1024px) {
-    font-size: 3.375;
-    line-height: 120%;
-  }
 }
 
 .h3 {
   font-size: 2.125rem;
   font-weight: 600;
-
-  @media (min-width: 1024px) {
-    font-size: 2.25rem;
-  }
 }
 
 /* TODO: add font variables */
@@ -69,20 +56,11 @@
   font-size: 10rem;
   line-height: 100%;
   font-weight: 500;
-
-  @media (min-width: 1024px) {
-    font-size: 5.25rem;
-    line-height: normal;
-  }
 }
 
 .bodyXl {
   font-size: 2.125rem;
   font-weight: 500;
-
-  @media (min-width: 1024px) {
-    font-size: 2.625rem;
-  }
 }
 
 .bodyBig {
@@ -90,28 +68,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-
-  @media (min-width: 1024px) {
-    font-size: 1.875rem;
-  }
 }
 
 .bodyNormal {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 400;
-
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
-  }
 }
 
 .bodySmall {
   font-size: 1rem;
   font-weight: 400;
-
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-  }
 }
 
 /* TODO: add font variables */

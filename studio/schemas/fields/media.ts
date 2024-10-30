@@ -60,13 +60,14 @@ export const internationalizedImage = defineField({
       media: "asset",
     },
     prepare({ alt, media }) {
-      if (!isInternationalizedString(alt)) {
+      if (alt !== undefined && !isInternationalizedString(alt)) {
         throw new TypeError(
           `Expected 'alt' to be InternationalizedString, was ${typeof alt}`,
         );
       }
       return {
-        title: firstTranslation(alt) ?? undefined,
+        title:
+          alt !== undefined ? (firstTranslation(alt) ?? undefined) : undefined,
         media,
       };
     },

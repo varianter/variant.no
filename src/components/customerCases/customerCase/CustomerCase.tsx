@@ -3,47 +3,13 @@ import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import {
   CustomerCase as CustomerCaseDocument,
-  CustomerCaseSection as CustomerCaseSectionObject,
   Delivery,
 } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCase.module.css";
 import FeaturedCases from "./featuredCases/FeaturedCases";
 import CustomerCaseConsultants from "./sections/customerCaseConsultants/CustomerCaseConsultants";
-import ImageSection from "./sections/image/ImageSection";
-import RichTextSection from "./sections/richText/RichTextSection";
-
-function CustomerCaseSection({
-  section,
-}: {
-  section: CustomerCaseSectionObject;
-}) {
-  switch (section._type) {
-    case "richTextBlock":
-      return <RichTextSection section={section} />;
-    case "quoteBlock":
-      return (
-        section.quote && (
-          <div className={styles.quoteBlock}>
-            <div
-              className={`${styles.quoteBlockInner} ${section.author ? styles.withAuthor : styles.withoutAuthor}`}
-            >
-              <Text type="quoteNormal">
-                {"“"}
-                {section.quote}
-                {"”"}
-              </Text>
-              {section.author && (
-                <Text type="labelRegular">- {section.author}</Text>
-              )}
-            </div>
-          </div>
-        )
-      );
-    case "imageBlock":
-      return <ImageSection section={section} />;
-  }
-}
+import { CustomerCaseSection } from "./sections/CustomerCaseSection";
 
 export interface CustomerCaseProps {
   customerCase: CustomerCaseDocument;

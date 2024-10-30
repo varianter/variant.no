@@ -8,12 +8,12 @@ import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { buildDraftId, buildPublishedId } from "studio/utils/documentUtils";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
-import imageBlock from "studioShared/schemas/objects/imageBlock";
-import listBlock from "studioShared/schemas/objects/listBlock";
-import quoteBlock from "studioShared/schemas/objects/quoteBlock";
-import richTextBlock from "studioShared/schemas/objects/richTextBlock";
+import { baseCustomerCaseSections } from "studioShared/schemas/objects/sections";
+import splitSection from "studioShared/schemas/objects/splitSection";
 
 export const customerCaseID = "customerCase";
+
+export const customerCaseSections = [...baseCustomerCaseSections, splitSection];
 
 const customerCase = defineType({
   name: customerCaseID,
@@ -73,7 +73,7 @@ const customerCase = defineType({
       title: "Sections",
       description: "Add sections here",
       type: "array",
-      of: [richTextBlock, imageBlock, listBlock, quoteBlock],
+      of: customerCaseSections,
     }),
     defineField({
       name: "featuredCases",
