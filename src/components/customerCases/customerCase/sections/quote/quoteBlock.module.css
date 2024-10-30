@@ -1,0 +1,26 @@
+.quoteBlock {
+  align-self: center;
+  max-width: 960px;
+  width: 100%;
+  border: 2px solid var(--primary-yellow-warning);
+  border-radius: 0.5rem;
+  background-color: var(--primary-yellow-warning);
+}
+
+.quoteBlockInner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-bg);
+  border-radius: 2rem;
+  gap: 1.25rem;
+  width: 100%;
+  align-items: center;
+}
+
+.withAuthor {
+  padding: 4.5rem 0.5rem 3.5rem 0.5rem;
+}
+
+.withoutAuthor {
+  padding: 4.5rem 0.5rem;
+}
