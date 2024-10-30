@@ -29,6 +29,17 @@ export const BreadCrumbMenu = ({
         return (
           <li key={index} className={styles.breadCrumb}>
             <Link className={styles.breadCrumb} href={href}>
+              {index !== 0 && (
+                <span
+                  className={
+                    index < path.length - 1
+                      ? styles.dotSeparator
+                      : styles.lastDotSeparator
+                  }
+                >
+                  •
+                </span>
+              )}
               <Text
                 className={
                   isLast ? styles.breadCrumbText : styles.breadCrumbLink
@@ -38,17 +49,6 @@ export const BreadCrumbMenu = ({
                 {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
               </Text>
             </Link>
-            {!isLast && (
-              <span
-                className={
-                  index < path.length - 2
-                    ? styles.dotSeparator
-                    : styles.lastDotSeparator
-                }
-              >
-                •
-              </span>
-            )}
           </li>
         );
       })}
