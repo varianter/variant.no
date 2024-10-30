@@ -7,10 +7,22 @@
   border-radius: 1.5625rem;
 }
 
+.sizeSmall.wrapper {
+  gap: 0;
+}
+
 .underline {
   width: 100%;
   height: 0.0625rem;
   background-color: var(--primary-black);
+}
+
+.colorLight .underline {
+  background-color: var(--primary-white);
+}
+
+.sizeSmall .underline {
+  margin-top: -0.125rem;
 }
 
 .link {
@@ -45,6 +57,14 @@
     -webkit-mask-size: cover;
     background-color: var(--primary-black);
     -webkit-mask: url("/_assets/arrow.svg") no-repeat 50% 50%;
+  }
+}
+
+.colorLight .link {
+  color: var(--primary-white);
+
+  &::after {
+    background-color: var(--primary-white);
   }
 }
 
