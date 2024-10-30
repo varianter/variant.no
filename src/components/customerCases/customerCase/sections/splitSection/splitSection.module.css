@@ -20,3 +20,9 @@
   flex-basis: 0;
   flex-grow: 1;
 }
+
+.emptySection {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

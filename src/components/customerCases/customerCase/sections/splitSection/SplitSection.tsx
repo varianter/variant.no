@@ -17,7 +17,7 @@ function SplitSectionSection({
 }) {
   switch (section._type) {
     case "emptySection":
-      return <div></div>;
+      return <div className={styles.emptySection}></div>;
   }
   return <CustomerCaseSection section={section} />;
 }
