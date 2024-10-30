@@ -148,7 +148,13 @@ async function fetchCustomerCase({
   perspective,
 }: PageDataParams): Promise<
   | PageFromParams<QueryResponseInitial<CustomerCasePage>, "customerCasesPage">
-  | PageFromParams<QueryResponseInitial<CustomerCase>, "customerCase">
+  | PageFromParams<
+      {
+        customerCase: QueryResponseInitial<CustomerCase>;
+        customerCasesPagePath: string[];
+      },
+      "customerCase"
+    >
   | null
 > {
   if (path.length === 0) {
@@ -204,7 +210,10 @@ async function fetchCustomerCase({
       },
     );
   return {
-    queryResponse: customerCaseResult,
+    queryResponse: {
+      customerCase: customerCaseResult,
+      customerCasesPagePath: [language, customerCasesPageResult.data.slug],
+    },
     docType: customerCaseID,
     pathTranslations:
       casePathTranslations.data?.reduce<InternationalizedString>(

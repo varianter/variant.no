@@ -7,12 +7,9 @@ import {
 } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCase.module.css";
+import FeaturedCases from "./featuredCases/FeaturedCases";
 import ImageSection from "./sections/image/ImageSection";
 import RichTextSection from "./sections/richText/RichTextSection";
-
-export interface CustomerCaseProps {
-  customerCase: CustomerCaseDocument;
-}
 
 function CustomerCaseSection({
   section,
@@ -36,7 +33,15 @@ function CustomerCaseSection({
   }
 }
 
-export default function CustomerCase({ customerCase }: CustomerCaseProps) {
+export interface CustomerCaseProps {
+  customerCase: CustomerCaseDocument;
+  customerCasesPagePath: string[];
+}
+
+export default function CustomerCase({
+  customerCase,
+  customerCasesPagePath,
+}: CustomerCaseProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -129,6 +134,13 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
             <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
+        {customerCase.featuredCases &&
+          customerCase.featuredCases.length > 0 && (
+            <FeaturedCases
+              featuredCases={customerCase.featuredCases}
+              customerCasesPath={customerCasesPagePath}
+            />
+          )}
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 4rem 0;
+  margin: 4rem 2rem;
   align-items: center;
 
   @media (max-width: 1024px) {
-    margin: 2rem 0;
+    margin: 2rem 1rem;
   }
 }
 
