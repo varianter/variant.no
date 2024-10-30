@@ -1,6 +1,5 @@
 import {
   ChewbaccaEmployee,
-  isChewbaccaEmployeeResponse,
   isChewbaccaEmployeesResponse,
 } from "src/types/employees";
 import { Result, ResultError, ResultOk } from "studio/utils/result";
@@ -58,23 +57,19 @@ export function domainFromEmail(email: string) {
   return email.split("@")[1];
 }
 
-export async function fetchEmployeeByAlias(
-  alias: string,
-): Promise<Result<ChewbaccaEmployee, string>> {
-  const country = "no"; // TODO: https://github.com/varianter/chewbacca/issues/132
-  const employeeRes = await fetch(
-    new URL(`employees/${alias}?country=${country}`, CHEWBACCA_URL),
+export async function fetchEmployeesByEmails(
+  emails: string[],
+): Promise<Result<ChewbaccaEmployee[], string>> {
+  const allEmployeesRes = await fetchAllChewbaccaEmployees();
+  if (!allEmployeesRes.ok) {
+    return allEmployeesRes;
+  }
+  return ResultOk(
+    // mapping from input array (instead of filtering all employees) to preserve order
+    emails
+      .map((email) =>
+        allEmployeesRes.value.find((employee) => employee.email === email),
+      )
+      .filter((employee) => employee !== undefined),
   );
-  if (!employeeRes.ok) {
-    return ResultError(
-      `Fetch returned status ${employeeRes.status} ${employeeRes.statusText}`,
-    );
-  }
-  const employeeData = await employeeRes.json();
-  if (!isChewbaccaEmployeeResponse(employeeData)) {
-    return ResultError(
-      `Expected ChewbaccaEmployeeResponse, was ${employeeData}`,
-    );
-  }
-  return ResultOk(employeeData);
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
-import { fetchEmployeeByAlias } from "src/utils/employees";
+import { fetchEmployeesByEmails } from "src/utils/employees";
 import {
   CustomerCase as CustomerCaseDocument,
   CustomerCaseSection as CustomerCaseSectionObject,
@@ -45,13 +45,9 @@ export default async function CustomerCase({
   customerCase,
   customerCasesPagePath,
 }: CustomerCaseProps) {
-  const consultantsResult = await Promise.all(
-    customerCase.projectInfo.consultants.map((alias) =>
-      fetchEmployeeByAlias(alias),
-    ),
+  const consultantsResult = await fetchEmployeesByEmails(
+    customerCase.projectInfo.consultants,
   );
-
-  const consultants = consultantsResult.filter((c) => c.ok).map((c) => c.value);
 
   return (
     <div className={styles.wrapper}>
@@ -127,14 +123,14 @@ export default async function CustomerCase({
                 )}
               </div>
             )}
-            {customerCase.projectInfo.consultants && (
+            {consultantsResult.ok && (
               <div className={styles.projectInfoItem}>
                 <Text type={"labelRegular"}>Konsulenter</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
                 >
-                  {consultants.map((c) => c.name).join(", ")}
+                  {consultantsResult.value.map((c) => c.name).join(", ")}
                 </Text>
               </div>
             )}
@@ -145,46 +141,50 @@ export default async function CustomerCase({
             <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
-        <div className={styles.consultantsWrapper}>
-          <Text type={"h3"}>Varianter på prosjektet</Text>
-          <div className={styles.consultants}>
-            {consultants.map(
-              (consultant) =>
-                consultant.imageThumbUrl &&
-                consultant.name &&
-                consultant.email && (
-                  <div key={consultant.email} className={styles.consultant}>
-                    <div className={styles.consultantImage}>
-                      <Image
-                        src={consultant.imageUrl ?? consultant.imageThumbUrl}
-                        alt={consultant.name}
-                        objectFit="cover"
-                        fill={true}
-                      />
+        {consultantsResult.ok && (
+          <div className={styles.consultantsWrapper}>
+            <Text type={"h3"}>Varianter på prosjektet</Text>
+            <div className={styles.consultants}>
+              {consultantsResult.value.map(
+                (consultant) =>
+                  consultant.imageThumbUrl &&
+                  consultant.name &&
+                  consultant.email && (
+                    <div key={consultant.email} className={styles.consultant}>
+                      <div className={styles.consultantImage}>
+                        <Image
+                          src={consultant.imageUrl ?? consultant.imageThumbUrl}
+                          alt={consultant.name}
+                          objectFit="cover"
+                          fill={true}
+                        />
+                      </div>
+                      <div className={styles.consultantInfo}>
+                        <p className={styles.consultantName}>
+                          {consultant.name}
+                        </p>
+                        {consultant.officeName && (
+                          <p className={styles.consultantRole}>
+                            {consultant.officeName}
+                          </p>
+                        )}
+                        {consultant.email && (
+                          <p className={styles.consultantEmail}>
+                            {consultant.email}
+                          </p>
+                        )}
+                        {consultant.telephone && (
+                          <p className={styles.consultantTelephone}>
+                            {consultant.telephone}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div className={styles.consultantInfo}>
-                      <p className={styles.consultantName}>{consultant.name}</p>
-                      {consultant.officeName && (
-                        <p className={styles.consultantRole}>
-                          {consultant.officeName}
-                        </p>
-                      )}
-                      {consultant.email && (
-                        <p className={styles.consultantEmail}>
-                          {consultant.email}
-                        </p>
-                      )}
-                      {consultant.telephone && (
-                        <p className={styles.consultantTelephone}>
-                          {consultant.telephone}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ),
-            )}
+                  ),
+              )}
+            </div>
           </div>
-        </div>
+        )}
         {customerCase.featuredCases &&
           customerCase.featuredCases.length > 0 && (
             <FeaturedCases

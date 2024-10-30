@@ -16,12 +16,6 @@ export function isChewbaccaEmployeesResponse(
   );
 }
 
-export function isChewbaccaEmployeeResponse(
-  value: unknown,
-): value is ChewbaccaEmployeeResponse {
-  return isChewbaccaEmployee(value);
-}
-
 export interface ChewbaccaEmployee {
   email?: string | null;
   name?: string | null;
