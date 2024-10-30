@@ -10,7 +10,7 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import Text from "src/components/text/Text";
+import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import { getHref } from "src/utils/link";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
@@ -25,11 +25,6 @@ export interface IHeader {
   assets: BrandAssets;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
-}
-
-export interface BreadCrumbProps {
-  currentLanguage: string;
-  pathname: string;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -130,53 +125,9 @@ export const Header = ({
         </header>
       </FocusOn>
       {pathname !== "/" && pathname !== "/" + currentLanguage && (
-        <BreadCrumb currentLanguage={currentLanguage} pathname={pathname} />
+        <BreadCrumbMenu currentLanguage={currentLanguage} pathname={pathname} />
       )}
     </>
-  );
-};
-
-export const BreadCrumb = ({ currentLanguage, pathname }: BreadCrumbProps) => {
-  return (
-    <ul className={styles.breadCrumbMenu}>
-      {/* TODO: "Hjem" should be updated with translation */}
-      {[
-        "Hjem",
-        ...(pathname.includes("/" + currentLanguage + "/")
-          ? pathname.split("/").slice(2)
-          : pathname.split("/").slice(1)),
-      ].map((e, index, path) => {
-        const href =
-          "/" + currentLanguage + "/" + path.slice(1, index + 1).join("/");
-        const isLast = index === path.length - 1;
-
-        return (
-          <li key={index} className={styles.breadCrumb}>
-            <Link className={styles.breadCrumb} href={href}>
-              <Text
-                className={
-                  isLast ? styles.breadCrumbText : styles.breadCrumbLink
-                }
-                type={isLast ? "labelSemibold" : "desktopLink"}
-              >
-                {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}
-              </Text>
-            </Link>
-            {!isLast && (
-              <span
-                className={
-                  index < path.length - 2
-                    ? styles.dotSeparator
-                    : styles.lastDotSeparator
-                }
-              >
-                •
-              </span>
-            )}
-          </li>
-        );
-      })}
-    </ul>
   );
 };
 
