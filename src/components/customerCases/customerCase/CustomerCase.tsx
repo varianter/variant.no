@@ -1,18 +1,63 @@
 import { SanitySharedImage } from "src/components/image/SanityImage";
-import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
+import { fetchEmployeesByEmails } from "src/utils/employees";
 import {
   CustomerCase as CustomerCaseDocument,
+  CustomerCaseSection as CustomerCaseSectionObject,
   Delivery,
 } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCase.module.css";
+import FeaturedCases from "./featuredCases/FeaturedCases";
+import CustomerCaseConsultants from "./sections/customerCaseConsultants/CustomerCaseConsultants";
+import ImageSection from "./sections/image/ImageSection";
+import RichTextSection from "./sections/richText/RichTextSection";
+
+function CustomerCaseSection({
+  section,
+}: {
+  section: CustomerCaseSectionObject;
+}) {
+  switch (section._type) {
+    case "richTextBlock":
+      return <RichTextSection section={section} />;
+    case "quoteBlock":
+      return (
+        section.quote && (
+          <div className={styles.quoteBlock}>
+            <div
+              className={`${styles.quoteBlockInner} ${section.author ? styles.withAuthor : styles.withoutAuthor}`}
+            >
+              <Text type="quoteNormal">
+                {"“"}
+                {section.quote}
+                {"”"}
+              </Text>
+              {section.author && (
+                <Text type="labelRegular">- {section.author}</Text>
+              )}
+            </div>
+          </div>
+        )
+      );
+    case "imageBlock":
+      return <ImageSection section={section} />;
+  }
+}
 
 export interface CustomerCaseProps {
   customerCase: CustomerCaseDocument;
+  customerCasesPagePath: string[];
 }
 
-export default function CustomerCase({ customerCase }: CustomerCaseProps) {
+export default async function CustomerCase({
+  customerCase,
+  customerCasesPagePath,
+}: CustomerCaseProps) {
+  const consultantsResult = await fetchEmployeesByEmails(
+    customerCase.projectInfo.consultants,
+  );
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -87,14 +132,14 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
                 )}
               </div>
             )}
-            {customerCase.projectInfo.consultants && (
+            {consultantsResult.ok && (
               <div className={styles.projectInfoItem}>
                 <Text type={"labelRegular"}>Konsulenter</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
                 >
-                  {customerCase.projectInfo.consultants.join(", ")}
+                  {consultantsResult.value.map((c) => c.name).join(", ")}
                 </Text>
               </div>
             )}
@@ -102,33 +147,22 @@ export default function CustomerCase({ customerCase }: CustomerCaseProps) {
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (
-            <div key={section._key}>
-              {section._type === "richTextBlock" ? (
-                <RichText value={section.richText} />
-              ) : section._type === "quoteBlock" ? (
-                section.quote && (
-                  <div>
-                    <Text>{section.quote}</Text>
-                    {section.author && <Text>- {section.author}</Text>}
-                  </div>
-                )
-              ) : (
-                <div className={styles.imageBlockWrapper}>
-                  {section.images?.map((image) => (
-                    <div
-                      key={image._key ?? `${section._key}-${image.alt}`}
-                      className={styles.imageBlockImageWrapper}
-                    >
-                      <div className={styles.imageBlockImageContent}>
-                        <SanitySharedImage image={image} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
+        {consultantsResult.ok && (
+          <CustomerCaseConsultants
+            language={customerCase.language}
+            consultants={consultantsResult.value}
+          />
+        )}
+        {customerCase.featuredCases &&
+          customerCase.featuredCases.length > 0 && (
+            <FeaturedCases
+              featuredCases={customerCase.featuredCases}
+              customerCasesPath={customerCasesPagePath}
+            />
+          )}
       </div>
     </div>
   );

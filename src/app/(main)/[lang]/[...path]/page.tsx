@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 import Compensations from "src/components/compensations/Compensations";
 import CompensationsPreview from "src/components/compensations/CompensationsPreview";
@@ -6,10 +7,12 @@ import CustomerCase from "src/components/customerCases/customerCase/CustomerCase
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
 import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
+import EmployeePage from "src/components/employeePage/EmployeePage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { homeLink } from "src/components/utils/linkTypes";
+import { ChewbaccaEmployee } from "src/types/employees";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
@@ -20,6 +23,17 @@ export const dynamic = "force-dynamic";
 type Props = {
   params: { lang: string; path: string[] };
 };
+
+function seoDataFromChewbaccaEmployee(employee: ChewbaccaEmployee) {
+  return {
+    title: employee.name ?? undefined,
+    description: employee.email ?? undefined,
+    imageUrl: employee.imageThumbUrl ?? undefined,
+    keywords: [employee.name, employee.email, employee.telephone]
+      .filter((d) => d != null)
+      .join(","),
+  };
+}
 
 function seoDataFromPageData(
   data: Awaited<ReturnType<typeof fetchPageDataFromParams>>,
@@ -42,6 +56,9 @@ function seoDataFromPageData(
     case "compensations": {
       return data.queryResponse.compensationsPage.data.seo;
     }
+    case "employee": {
+      return seoDataFromChewbaccaEmployee(data.queryResponse);
+    }
   }
 }
 
@@ -52,6 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     language,
     path: params.path,
     perspective: perspective ?? "published",
+    hostname: headers().get("host"),
   });
   return generateMetadataFromSeo(seoDataFromPageData(pageData), language);
 }
@@ -73,6 +91,7 @@ async function Page({ params }: Props) {
     language: lang,
     path,
     perspective: perspective ?? "published",
+    hostname: headers().get("host"),
   });
 
   if (pageData == null) {
@@ -93,6 +112,7 @@ async function Page({ params }: Props) {
                   {queryResponse.data?.sections?.map((section, index) => (
                     <SectionRenderer
                       key={section._key}
+                      language={lang}
                       section={section}
                       isDraftMode={isDraftMode}
                       initialData={queryResponse}
@@ -123,13 +143,20 @@ async function Page({ params }: Props) {
                 <CustomerCases customerCasesPage={queryResponse.data} />
               );
             case "customerCase":
-              return <CustomerCase customerCase={queryResponse.data} />;
+              return (
+                <CustomerCase
+                  customerCase={queryResponse.customerCase.data}
+                  customerCasesPagePath={queryResponse.customerCasesPagePath}
+                />
+              );
             case "legalDocument":
               return isDraftMode ? (
                 <LegalPreview initialDocument={queryResponse} />
               ) : (
                 <Legal document={queryResponse.data} />
               );
+            case "employee":
+              return <EmployeePage employee={queryResponse} />;
           }
           return Page404;
         })()}

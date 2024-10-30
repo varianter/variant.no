@@ -27,9 +27,10 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type CustomerCaseSections = (RichTextBlock | ImageBlock | QuoteBlock)[];
+export type CustomerCaseSection = RichTextBlock | ImageBlock | QuoteBlock;
 
 export interface CustomerCase extends CustomerCaseBase {
   projectInfo: CustomerCaseProjectInfo;
-  sections: CustomerCaseSections;
+  sections: CustomerCaseSection[];
+  featuredCases?: CustomerCaseBase[] | null;
 }

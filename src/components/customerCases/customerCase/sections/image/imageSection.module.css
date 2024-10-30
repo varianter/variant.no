@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  max-width: 960px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.content.fullWidth {
+  max-width: unset;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContent {
+  height: 100%;
+}
+
+.imageContent img {
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100% !important;
+}

@@ -50,7 +50,8 @@ export const CUSTOMER_CASE_QUERY = groq`
       _type == "imageBlock" => {
         "images": images[] {
           ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-        } 
+        },
+        fullWidth
       },
       _type == "listBlock" => {
         "description": ${translatedFieldFragment("description")},
@@ -62,6 +63,9 @@ export const CUSTOMER_CASE_QUERY = groq`
         "quote": ${translatedFieldFragment("quote")},
         "author": ${translatedFieldFragment("author")},
       },
+    },
+    "featuredCases": featuredCases[] -> {
+      ${CUSTOMER_CASE_BASE_FRAGMENT}
     }
   }
 `;

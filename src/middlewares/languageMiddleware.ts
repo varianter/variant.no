@@ -145,6 +145,26 @@ async function translateCustomerCasePath(
   );
 }
 
+async function translateEmployeePagePath(
+  path: string[],
+  targetLanguageId: string,
+  sourceLanguageId?: string,
+) {
+  if (path.length !== 2) {
+    return undefined;
+  }
+  const pageSlugTranslation = await translateSlug(
+    path[0],
+    targetLanguageId,
+    sourceLanguageId,
+    "pageBuilder",
+  );
+  if (pageSlugTranslation === undefined) {
+    return undefined;
+  }
+  return [pageSlugTranslation, path[1]];
+}
+
 async function translatePath(
   path: string[],
   targetLanguageId: string,
@@ -158,7 +178,15 @@ async function translatePath(
       (slug) => (slug !== undefined ? [slug] : undefined),
     );
   }
-  const pathTranslation = await translateCustomerCasePath(
+  let pathTranslation = await translateCustomerCasePath(
+    path,
+    targetLanguageId,
+    sourceLanguageId,
+  );
+  if (pathTranslation !== undefined) {
+    return pathTranslation;
+  }
+  pathTranslation = await translateEmployeePagePath(
     path,
     targetLanguageId,
     sourceLanguageId,
