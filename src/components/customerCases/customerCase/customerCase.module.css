@@ -109,3 +109,13 @@
   flex-direction: column;
   gap: 4.5rem;
 }
+
+.quoteBlock {
+  border: 2px solid #f1c40f; /* Yellow border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Inner padding */
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Text color */
+  max-width: 400px; /* Set max-width if desired */
+  font-family: Arial, sans-serif; /* Basic font */
+}

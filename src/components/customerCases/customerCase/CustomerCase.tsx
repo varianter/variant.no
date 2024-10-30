@@ -22,7 +22,7 @@ function CustomerCaseSection({
     case "quoteBlock":
       return (
         section.quote && (
-          <div>
+          <div className={styles.quoteBlock}>
             <Text>{section.quote}</Text>
             {section.author && <Text>- {section.author}</Text>}
           </div>
