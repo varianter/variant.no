@@ -2,6 +2,8 @@ export interface ChewbaccaEmployeesResponse {
   employees: ChewbaccaEmployee[];
 }
 
+export type ChewbaccaEmployeeResponse = ChewbaccaEmployee;
+
 export function isChewbaccaEmployeesResponse(
   value: unknown,
 ): value is ChewbaccaEmployeesResponse {
@@ -12,6 +14,12 @@ export function isChewbaccaEmployeesResponse(
     Array.isArray(value.employees) &&
     value.employees.every(isChewbaccaEmployee)
   );
+}
+
+export function isChewbaccaEmployeeResponse(
+  value: unknown,
+): value is ChewbaccaEmployeeResponse {
+  return isChewbaccaEmployee(value);
 }
 
 export interface ChewbaccaEmployee {
