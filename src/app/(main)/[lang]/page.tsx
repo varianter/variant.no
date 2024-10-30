@@ -76,6 +76,7 @@ const Home = async ({ params }: Props) => {
         {initialLandingPage.data.sections.map((section, index) => (
           <SectionRenderer
             key={section._key}
+            language={params.lang}
             section={section}
             isDraftMode={isDraftMode}
             initialData={initialLandingPage}

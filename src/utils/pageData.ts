@@ -1,6 +1,7 @@
 import { ClientPerspective } from "@sanity/client";
 import { QueryResponseInitial } from "@sanity/react-loader";
 
+import { ChewbaccaEmployee } from "src/types/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { InternationalizedString } from "studio/lib/interfaces/global";
@@ -14,6 +15,7 @@ import {
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import { PAGE_BY_SLUG_QUERY } from "studio/lib/queries/pages";
+import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import {
   SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
   SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
@@ -33,6 +35,7 @@ import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
 import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
+import { emailFromAliasAndHostname, fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 
 type PageFromParams<D, T> = {
@@ -236,6 +239,53 @@ async function fetchCustomerCase({
   };
 }
 
+async function fetchEmployeePage({
+  language,
+  path,
+  perspective,
+  hostname,
+}: PageDataParams): Promise<PageFromParams<
+  ChewbaccaEmployee,
+  "employee"
+> | null> {
+  if (path.length !== 2) {
+    return null;
+  }
+  const employeePageSlugRes = await loadStudioQuery<{ slug: string } | null>(
+    EMPLOYEE_PAGE_SLUG_QUERY,
+    {
+      language,
+    },
+    { perspective },
+  );
+  if (!isNonNullQueryResponse(employeePageSlugRes)) {
+    return null;
+  }
+  if (path[0] !== employeePageSlugRes.data.slug) {
+    return null;
+  }
+  const employee = await fetchChewbaccaEmployee(
+    emailFromAliasAndHostname(path[1], hostname),
+  );
+  if (!employee.ok) {
+    return null;
+  }
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[0],
+        language,
+      },
+      { perspective },
+    );
+  return {
+    queryResponse: employee.value,
+    docType: "employee",
+    pathTranslations: pathTranslations.data ?? [],
+  };
+}
+
 async function fetchLegalDocument({
   language,
   path,
@@ -279,10 +329,12 @@ export interface PageDataParams {
   language: string;
   path: string[];
   perspective: ClientPerspective;
+  hostname: string | null;
 }
 
 export async function fetchPageDataFromParams(params: PageDataParams) {
   return (
+    (await fetchEmployeePage(params)) ??
     (await fetchDynamicPage(params)) ??
     (await fetchCompensationsPage(params)) ??
     (await fetchCustomerCase(params)) ??
