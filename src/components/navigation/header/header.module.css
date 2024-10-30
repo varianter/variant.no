@@ -177,11 +177,10 @@
   text-decoration: underline;
 }
 
-.dotSeparator {
+.dotSeparator, .lastDotSeparator {
   font-size: 2.5em;
 }
 
 .lastDotSeparator {
-  font-size: 2.5em;
   color: var(--secondary-red);
 }
