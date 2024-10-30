@@ -124,7 +124,9 @@ export const Header = ({
           </nav>
         </header>
       </FocusOn>
-      {breadCrumb(currentLanguage, pathname)}
+      {pathname !== "/" &&
+        pathname !== "/" + currentLanguage &&
+        breadCrumb(currentLanguage, pathname)}
     </>
   );
 };
