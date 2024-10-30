@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
@@ -11,6 +9,7 @@ import {
 
 import styles from "./customerCase.module.css";
 import FeaturedCases from "./featuredCases/FeaturedCases";
+import CustomerCaseConsultants from "./sections/customerCaseConsultants/CustomerCaseConsultants";
 import ImageSection from "./sections/image/ImageSection";
 import RichTextSection from "./sections/richText/RichTextSection";
 
@@ -142,48 +141,7 @@ export default async function CustomerCase({
           ))}
         </div>
         {consultantsResult.ok && (
-          <div className={styles.consultantsWrapper}>
-            <Text type={"h3"}>Varianter på prosjektet</Text>
-            <div className={styles.consultants}>
-              {consultantsResult.value.map(
-                (consultant) =>
-                  consultant.imageThumbUrl &&
-                  consultant.name &&
-                  consultant.email && (
-                    <div key={consultant.email} className={styles.consultant}>
-                      <div className={styles.consultantImage}>
-                        <Image
-                          src={consultant.imageUrl ?? consultant.imageThumbUrl}
-                          alt={consultant.name}
-                          objectFit="cover"
-                          fill={true}
-                        />
-                      </div>
-                      <div className={styles.consultantInfo}>
-                        <p className={styles.consultantName}>
-                          {consultant.name}
-                        </p>
-                        {consultant.officeName && (
-                          <p className={styles.consultantRole}>
-                            {consultant.officeName}
-                          </p>
-                        )}
-                        {consultant.email && (
-                          <p className={styles.consultantEmail}>
-                            {consultant.email}
-                          </p>
-                        )}
-                        {consultant.telephone && (
-                          <p className={styles.consultantTelephone}>
-                            {consultant.telephone}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ),
-              )}
-            </div>
-          </div>
+          <CustomerCaseConsultants consultants={consultantsResult.value} />
         )}
         {customerCase.featuredCases &&
           customerCase.featuredCases.length > 0 && (
