@@ -2,6 +2,8 @@ export interface ChewbaccaEmployeesResponse {
   employees: ChewbaccaEmployee[];
 }
 
+export type ChewbaccaEmployeeResponse = ChewbaccaEmployee;
+
 export function isChewbaccaEmployeesResponse(
   value: unknown,
 ): value is ChewbaccaEmployeesResponse {

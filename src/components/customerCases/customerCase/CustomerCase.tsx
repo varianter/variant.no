@@ -1,5 +1,6 @@
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
+import { fetchEmployeesByEmails } from "src/utils/employees";
 import {
   CustomerCase as CustomerCaseDocument,
   CustomerCaseSection as CustomerCaseSectionObject,
@@ -8,6 +9,7 @@ import {
 
 import styles from "./customerCase.module.css";
 import FeaturedCases from "./featuredCases/FeaturedCases";
+import CustomerCaseConsultants from "./sections/customerCaseConsultants/CustomerCaseConsultants";
 import ImageSection from "./sections/image/ImageSection";
 import RichTextSection from "./sections/richText/RichTextSection";
 
@@ -38,10 +40,14 @@ export interface CustomerCaseProps {
   customerCasesPagePath: string[];
 }
 
-export default function CustomerCase({
+export default async function CustomerCase({
   customerCase,
   customerCasesPagePath,
 }: CustomerCaseProps) {
+  const consultantsResult = await fetchEmployeesByEmails(
+    customerCase.projectInfo.consultants,
+  );
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -116,14 +122,14 @@ export default function CustomerCase({
                 )}
               </div>
             )}
-            {customerCase.projectInfo.consultants && (
+            {consultantsResult.ok && (
               <div className={styles.projectInfoItem}>
                 <Text type={"labelRegular"}>Konsulenter</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
                 >
-                  {customerCase.projectInfo.consultants.join(", ")}
+                  {consultantsResult.value.map((c) => c.name).join(", ")}
                 </Text>
               </div>
             )}
@@ -134,6 +140,12 @@ export default function CustomerCase({
             <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
+        {consultantsResult.ok && (
+          <CustomerCaseConsultants
+            language={customerCase.language}
+            consultants={consultantsResult.value}
+          />
+        )}
         {customerCase.featuredCases &&
           customerCase.featuredCases.length > 0 && (
             <FeaturedCases

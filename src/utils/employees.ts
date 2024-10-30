@@ -56,3 +56,20 @@ export function aliasFromEmail(email: string): string {
 export function domainFromEmail(email: string) {
   return email.split("@")[1];
 }
+
+export async function fetchEmployeesByEmails(
+  emails: string[],
+): Promise<Result<ChewbaccaEmployee[], string>> {
+  const allEmployeesRes = await fetchAllChewbaccaEmployees();
+  if (!allEmployeesRes.ok) {
+    return allEmployeesRes;
+  }
+  return ResultOk(
+    // mapping from input array (instead of filtering all employees) to preserve order
+    emails
+      .map((email) =>
+        allEmployeesRes.value.find((employee) => employee.email === email),
+      )
+      .filter((employee) => employee !== undefined),
+  );
+}
