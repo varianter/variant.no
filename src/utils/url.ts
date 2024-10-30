@@ -20,6 +20,15 @@ const FALLBACK_DOMAIN = "variant.no";
 /**
  * attempts to extract the relevant Variant domain, without subdomains, from the given hostname
  *
+ * accepts any Top-level domain (TLD), not just .no or .se
+ *
+ * in general:
+ * ```
+ * 'variant.{someTLD}' -> 'variant.{someTLD}'
+ * '{someString}.variant.{someTLD}' -> 'variant.{someTLD}'
+ * ```
+ *
+ * non-exhaustive list of examples:
  * ```
  * 'v3.variant.no' -> 'variant.no'
  *
