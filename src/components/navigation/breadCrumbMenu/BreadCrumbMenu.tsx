@@ -44,7 +44,8 @@ export const BreadCrumbMenu = ({
                 }
                 type={isLast ? "labelSemibold" : "desktopLink"}
               >
-                {slug.charAt(0).toUpperCase() + slug.slice(1).toLowerCase()}
+                {slug.charAt(0).toUpperCase() +
+                  (slug.length > 1 ? slug.slice(1).toLowerCase() : "")}
               </Text>
             </Link>
           </li>
