@@ -23,7 +23,9 @@ function CustomerCaseSection({
       return (
         section.quote && (
           <div className={styles.quoteBlock}>
-            <div className={styles.quoteBlockInner}>
+            <div
+              className={`${styles.quoteBlockInner} ${section.author ? styles.withAuthor : styles.withoutAuthor}`}
+            >
               <Text type="quoteNormal">
                 {"“"}
                 {section.quote}
