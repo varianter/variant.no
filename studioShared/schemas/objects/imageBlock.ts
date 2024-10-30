@@ -33,12 +33,14 @@ const imageBlock = defineField({
       let firstImageAlt = null;
       if (firstImage !== undefined) {
         const imageAlt = firstImage.alt;
-        if (!isInternationalizedString(imageAlt)) {
-          throw new TypeError(
-            `Expected image 'alt' to be InternationalizedString, was ${typeof firstImage.alt}`,
-          );
+        if (imageAlt !== undefined) {
+          if (!isInternationalizedString(imageAlt)) {
+            throw new TypeError(
+              `Expected image 'alt' to be InternationalizedString, was ${typeof firstImage.alt}`,
+            );
+          }
+          firstImageAlt = firstTranslation(imageAlt);
         }
-        firstImageAlt = firstTranslation(imageAlt);
       }
       return {
         title: count > 1 ? `${count} images` : (firstImageAlt ?? undefined),
