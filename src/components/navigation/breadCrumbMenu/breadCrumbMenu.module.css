@@ -1,0 +1,38 @@
+.breadCrumbMenu {
+  color: var(--primary-black);
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+.breadCrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-black);
+  text-decoration: none;
+  list-style: none;
+}
+
+.breadCrumbText {
+  color: var(--primary-black);
+}
+
+.breadCrumbLink {
+  color: var(--primary-black);
+  text-decoration: underline;
+}
+
+.dotSeparator,
+.lastDotSeparator {
+  font-size: 2.5em;
+}
+
+.lastDotSeparator {
+  color: var(--secondary-red);
+}

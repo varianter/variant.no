@@ -10,6 +10,7 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
+import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import { getHref } from "src/utils/link";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
@@ -68,60 +69,65 @@ export const Header = ({
   }, []);
 
   return (
-    <FocusOn
-      enabled={isOpen}
-      onClickOutside={toggleMenu}
-      onEscapeKey={toggleMenu}
-      className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
-    >
-      <header>
-        <nav aria-label="Main menu">
-          <div className={styles.wrapper}>
-            {assets?.primaryLogo && (
-              <div className={styles.logo}>
-                <Link href="/" aria-label="Home">
-                  <SanityImage image={assets.primaryLogo} />
-                </Link>
+    <>
+      <FocusOn
+        enabled={isOpen}
+        onClickOutside={toggleMenu}
+        onEscapeKey={toggleMenu}
+        className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
+      >
+        <header>
+          <nav aria-label="Main menu">
+            <div className={styles.wrapper}>
+              {assets?.primaryLogo && (
+                <div className={styles.logo}>
+                  <Link href="/" aria-label="Home">
+                    <SanityImage image={assets.primaryLogo} />
+                  </Link>
+                </div>
+              )}
+              {renderPageLinks(links, false, pathname)}
+              {renderPageCTAs(ctas, false)}
+              <div className={styles.languageSwitcher}>
+                {defaultLanguage && (
+                  <LanguageSwitcher
+                    currentLanguage={currentLanguage}
+                    pathTranslations={pathTranslations}
+                  />
+                )}
+              </div>
+              <button
+                aria-haspopup="true"
+                aria-controls={sidebarID}
+                className={isOpen ? styles.open : styles.closed}
+                aria-expanded={isOpen}
+                onClick={toggleMenu}
+              />
+            </div>
+            {isOpen && (
+              <div
+                className={styles.mobileMenu}
+                id={sidebarID}
+                aria-label="Mobile Menu"
+                onClick={() => setIsOpen(false)}
+              >
+                {renderPageLinks(sidebarLinks, true, pathname)}
+                {renderPageCTAs(sidebarCtas, true)}
+                {defaultLanguage && (
+                  <LanguageSwitcher
+                    currentLanguage={currentLanguage}
+                    pathTranslations={pathTranslations}
+                  />
+                )}
               </div>
             )}
-            {renderPageLinks(links, false, pathname)}
-            {renderPageCTAs(ctas, false)}
-            <div className={styles.languageSwitcher}>
-              {defaultLanguage && (
-                <LanguageSwitcher
-                  currentLanguage={currentLanguage}
-                  pathTranslations={pathTranslations}
-                />
-              )}
-            </div>
-            <button
-              aria-haspopup="true"
-              aria-controls={sidebarID}
-              className={isOpen ? styles.open : styles.closed}
-              aria-expanded={isOpen}
-              onClick={toggleMenu}
-            />
-          </div>
-          {isOpen && (
-            <div
-              className={styles.mobileMenu}
-              id={sidebarID}
-              aria-label="Mobile Menu"
-              onClick={() => setIsOpen(false)}
-            >
-              {renderPageLinks(sidebarLinks, true, pathname)}
-              {renderPageCTAs(sidebarCtas, true)}
-              {defaultLanguage && (
-                <LanguageSwitcher
-                  currentLanguage={currentLanguage}
-                  pathTranslations={pathTranslations}
-                />
-              )}
-            </div>
-          )}
-        </nav>
-      </header>
-    </FocusOn>
+          </nav>
+        </header>
+      </FocusOn>
+      {pathname !== "/" && pathname !== "/" + currentLanguage && (
+        <BreadCrumbMenu currentLanguage={currentLanguage} pathname={pathname} />
+      )}
+    </>
   );
 };
 
