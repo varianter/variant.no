@@ -10,12 +10,16 @@ import HeaderPreview from "./HeaderPreview";
 
 interface PageHeaderProps {
   language: string;
+  pathTitles: string[];
   pathTranslations: InternationalizedString;
+  showBreadcrumbs: boolean;
 }
 
 export default async function PageHeader({
   language,
+  pathTitles,
   pathTranslations,
+  showBreadcrumbs,
 }: PageHeaderProps) {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
@@ -45,14 +49,18 @@ export default async function PageHeader({
           data: initialBrandAssets.data,
         }}
         currentLanguage={language}
+        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
+        showBreadcrumbs={showBreadcrumbs}
       />
     ) : (
       <Header
         navigation={initialNav.data}
         assets={initialBrandAssets.data}
         currentLanguage={language}
+        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
+        showBreadcrumbs={showBreadcrumbs}
       />
     ))
   );

@@ -60,6 +60,13 @@ export const EMPLOYEE_PAGE_SLUG_QUERY = groq`
   }
 `;
 
+export const EMPLOYEE_PAGE_SLUG_AND_TITLE_QUERY = groq`
+  *[_type == "navigationManager"][0].employeesPage -> {
+    "slug": ${translatedFieldFragment("slug")},
+    "basicTitle": ${translatedFieldFragment("basicTitle")}
+  }
+`;
+
 //Social Media Profiles
 export const SOME_PROFILES_QUERY = groq`
   *[_type == "soMeLinksID" && _id == "soMeLinksID"][0]

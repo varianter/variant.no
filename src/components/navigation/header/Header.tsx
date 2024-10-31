@@ -24,7 +24,9 @@ export interface IHeader {
   navigation: Navigation;
   assets: BrandAssets;
   currentLanguage: string;
+  pathTitles: string[];
   pathTranslations: InternationalizedString;
+  showBreadcrumbs: boolean;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -34,7 +36,9 @@ export const Header = ({
   navigation,
   assets,
   currentLanguage,
+  pathTitles,
   pathTranslations,
+  showBreadcrumbs,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -124,8 +128,12 @@ export const Header = ({
           </nav>
         </header>
       </FocusOn>
-      {pathname !== "/" && pathname !== "/" + currentLanguage && (
-        <BreadCrumbMenu currentLanguage={currentLanguage} pathname={pathname} />
+      {showBreadcrumbs && (
+        <BreadCrumbMenu
+          currentLanguage={currentLanguage}
+          pathTitles={pathTitles}
+          pathname={pathname}
+        />
       )}
     </>
   );
