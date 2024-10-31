@@ -1,5 +1,7 @@
+import imageUrlBuilder from "@sanity/image-url";
 import { Metadata } from "next";
 
+import { ChewbaccaEmployee } from "src/types/employees";
 import { urlFor } from "studio/lib/image";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
@@ -10,6 +12,8 @@ import {
   DEFAULT_SEO_QUERY,
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
+import { sharedClient } from "studioShared/lib/client";
+import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
 
 export type SeoData = {
   title?: string;
@@ -77,5 +81,30 @@ export async function generateMetadataFromSeo(
     },
     icons: { icon: icons },
     keywords: keywords,
+  };
+}
+
+export function seoDataFromChewbaccaEmployee(employee: ChewbaccaEmployee) {
+  return {
+    title: employee.name ?? undefined,
+    description: employee.email ?? undefined,
+    imageUrl: employee.imageThumbUrl ?? undefined,
+    keywords: [employee.name, employee.email, employee.telephone]
+      .filter((d) => d != null)
+      .join(","),
+  };
+}
+
+export function seoDataFromCustomerCase(customerCase: CustomerCaseDocument) {
+  return {
+    title: customerCase.basicTitle,
+    description: customerCase.description,
+    imageUrl: imageUrlBuilder(sharedClient).image(customerCase.image).url(),
+    keywords: [
+      customerCase.projectInfo.name,
+      customerCase.projectInfo.customer,
+      customerCase.projectInfo.sector,
+      ...customerCase.projectInfo.deliveries.map((d) => d.delivery),
+    ].join(","),
   };
 }
