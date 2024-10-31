@@ -105,7 +105,7 @@ export interface PageBuilder {
   _type: string;
   _updatedAt: string;
   language: string;
-  page: string;
+  basicTitle: string;
   sections: Section[];
   slug: Slug;
   seo: SeoData;

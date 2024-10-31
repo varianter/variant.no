@@ -52,6 +52,7 @@ export const SEO_FRAGMENT = groq`
 export const PAGE_FRAGMENT = groq`
   ...,
   "slug": ${translatedFieldFragment("slug")},
+  "basicTitle": ${translatedFieldFragment("basicTitle")},
   ${LANGUAGE_FIELD_FRAGMENT},
   ${SECTIONS_FRAGMENT},
   ${SEO_FRAGMENT}
