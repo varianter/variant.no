@@ -24,7 +24,7 @@ const companyLocation = defineType({
     }),
     defineField({
       name: companyLocationContactPersonID,
-      type: "string",
+      type: "email",
       title: "Contact person for Sales",
       description: "Add the email of the contact person for Sales",
     }),

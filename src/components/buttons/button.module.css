@@ -76,6 +76,20 @@
   }
 }
 
+.secondaryFilled {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  border: 1px solid var(--primary-black);
+
+  &:hover {
+    background: var(--primary-black-darker);
+  }
+
+  &:active {
+    background: var(--primary-black-darker);
+  }
+}
+
 .back {
   composes: secondary;
 

@@ -1,0 +1,9 @@
+.locationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.consultantSection {
+  min-width: 400px;
+}

@@ -130,7 +130,7 @@ export default async function CustomerCase({
               customerCasesPath={customerCasesPagePath}
             />
           )}
-        {<ContactInformation />}
+        <ContactInformation language={customerCase.language} />
       </div>
     </div>
   );

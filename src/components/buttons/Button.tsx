@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./button.module.css";
 
-type ButtonType = "primary" | "secondary";
+type ButtonType = "primary" | "secondary" | "secondaryFilled";
 type ButtonSize = "large" | "small" | "extraSmall";
 
 interface IButton {
@@ -24,6 +24,7 @@ const sizeClassMap: { [key in ButtonSize]: string } = {
 const typeClassMap: { [key in ButtonType]: string } = {
   primary: styles.primary,
   secondary: styles.secondary,
+  secondaryFilled: styles.secondaryFilled,
 };
 
 const Button = ({

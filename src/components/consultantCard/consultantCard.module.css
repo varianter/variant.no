@@ -1,0 +1,43 @@
+.consultant {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.consultantImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-black);
+  border-radius: 12px;
+  height: 125px;
+  width: 50%;
+  padding: 1rem;
+  position: relative;
+}
+
+.consultantInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 0.5rem;
+}
+
+.consultantName {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.consultantRole {
+  color: var(--primary-black);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.consultantEmail,
+.consultantTelephone {
+  color: var(--primary-black);
+  font-size: 14px;
+  font-weight: 300;
+}
