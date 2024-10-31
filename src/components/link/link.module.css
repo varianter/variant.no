@@ -48,8 +48,29 @@
   }
 }
 
+.sizeSmall .link {
+  font-size: 0.95rem;
+  gap: 0.25rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    gap: 0.5rem;
+  }
+
+  &::after {
+    transform: scale(0.75);
+  }
+}
+
 .span {
   padding-bottom: 0.125rem;
+}
+
+.sizeSmall .span {
+  padding-bottom: 0;
 }
 
 .headerLink {

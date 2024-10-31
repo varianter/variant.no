@@ -6,6 +6,7 @@ import {
   TRANSLATED_SLUG_VALUE_FRAGMENT,
 } from "./i18n";
 import { PAGE_FRAGMENT, SEO_FRAGMENT } from "./pages";
+import { translatedFieldFragment } from "./utils/i18n";
 
 //Brand Assets
 export const BRAND_ASSETS_QUERY = groq`
@@ -50,6 +51,12 @@ export const LANDING_PAGE_QUERY = groq`
 export const LANDING_PAGE_SITEMAP_QUERY = groq`
   *[_type == "navigationManager"][0].setLanding -> {
     _updatedAt
+  }
+`;
+
+export const EMPLOYEE_PAGE_SLUG_QUERY = groq`
+  *[_type == "navigationManager"][0].employeesPage -> {
+    "slug": ${translatedFieldFragment("slug")}
   }
 `;
 

@@ -23,8 +23,12 @@ html {
   --secondary-off-white2: #ece1d3;
 
   --primary-red-error: #b30b0b;
+  --primary-yellow-warning: #ffd02f;
 
   --focus-color: #8b0f40;
+
+  /* TODO: upgrade color-scheme with correct colors */
+  --secondary-red: #f0503f;
 
   /* breakpoints */
   --breakpoint-mobile: 767px;

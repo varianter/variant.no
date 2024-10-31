@@ -28,4 +28,23 @@ export function normalizeSpaces(string: string): string {
   return string.trim().replace(/\s+/g, " ");
 }
 
+/**
+ * Converts a camel cased string (first letter can be either upper- or lowercase),
+ * to a more human-readable string where words are seperated with spaces and
+ * the first letter of each word is in uppercase
+ *
+ * ThisIsTheStringToSplit -> This Is The String To Split
+ * thisIsTheStringToSplit -> This Is The String To Split
+ * thisIsATrickyOne -> This Is A Tricky One
+ *
+ * @param {string} s
+ * @returns {string}
+ */
+export function humanizeCamelCase(s: string): string {
+  if (s.length === 0) {
+    return s;
+  }
+  return (s[0].toUpperCase() + s.slice(1)).split(/(?=[A-Z])/).join(" ");
+}
+
 // Add more string utility functions as needed...

@@ -34,30 +34,17 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-
-  @media (min-width: 1024px) {
-    font-size: 4.25rem;
-  }
 }
 
 .h2 {
   font-size: 2.5625rem;
   font-weight: 500;
   line-height: 110%;
-
-  @media (min-width: 1024px) {
-    font-size: 3.375;
-    line-height: 120%;
-  }
 }
 
 .h3 {
   font-size: 2.125rem;
   font-weight: 600;
-
-  @media (min-width: 1024px) {
-    font-size: 2.25rem;
-  }
 }
 
 /* TODO: add font variables */
@@ -66,23 +53,15 @@
 /* .h6 */
 
 .desktopLink {
-  font-size: 10rem;
-  line-height: 100%;
-  font-weight: 500;
-
-  @media (min-width: 1024px) {
-    font-size: 5.25rem;
-    line-height: normal;
-  }
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
 }
 
 .bodyXl {
   font-size: 2.125rem;
   font-weight: 500;
-
-  @media (min-width: 1024px) {
-    font-size: 2.625rem;
-  }
 }
 
 .bodyBig {
@@ -90,28 +69,16 @@
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-
-  @media (min-width: 1024px) {
-    font-size: 1.875rem;
-  }
 }
 
 .bodyNormal {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 400;
-
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
-  }
 }
 
 .bodySmall {
   font-size: 1rem;
   font-weight: 400;
-
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-  }
 }
 
 /* TODO: add font variables */
@@ -137,8 +104,24 @@
   line-height: 120%;
 }
 
+.labelSemibold {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.quoteNormal {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  white-space: pre-line;
+}
+
 /* TODO: add font variables */
+/* .labelBold */
+/* .quoteItalic */
 /* .labelSemibold, */
 /* .labelBold, */
 /* .quoteItalic, */
-/* .quoteNormal, */

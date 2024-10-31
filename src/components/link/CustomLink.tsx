@@ -12,9 +12,15 @@ interface ICustomLink {
   type?: ComponentLinkType;
   link: ILink;
   isSelected?: boolean;
+  size?: "normal" | "small";
 }
 
-const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
+const CustomLink = ({
+  type = "link",
+  link,
+  isSelected,
+  size = "normal",
+}: ICustomLink) => {
   const href = getHref(link);
   const newTab = link.newTab;
   const target = newTab ? "_blank" : undefined;
@@ -27,7 +33,11 @@ const CustomLink = ({ type = "link", link, isSelected }: ICustomLink) => {
   return (
     link.linkTitle &&
     (type === "link" ? (
-      <div className={styles.wrapper}>
+      <div
+        className={
+          styles.wrapper + (size === "small" ? ` ${styles.sizeSmall}` : "")
+        }
+      >
         <Link
           className={styles.link}
           href={href}

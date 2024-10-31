@@ -28,6 +28,35 @@ export const CUSTOMER_CASES_QUERY = groq`
   }
 `;
 
+export const BASE_SECTIONS_FRAGMENT = groq`
+  _type == "richTextBlock" => {
+    "richText": ${translatedFieldFragment("richText")},
+  },
+  _type == "imageBlock" => {
+    "images": images[] {
+      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+    },
+    fullWidth
+  },
+  _type == "listBlock" => {
+    "description": ${translatedFieldFragment("description")},
+    "list": list[] {
+      "text": ${translatedFieldFragment("text")},
+    },
+  }, 
+  _type == "quoteBlock" => {
+    "quote": ${translatedFieldFragment("quote")},
+    "author": ${translatedFieldFragment("author")},
+  },
+  _type == "resultBlock" => {
+        "resultBlockTitle": ${translatedFieldFragment("resultBlockTitle")},
+        "resultList": resultList[] {
+          result,
+          "description": ${translatedFieldFragment("description")},
+          }
+        }
+`;
+
 export const CUSTOMER_CASE_QUERY = groq`
   *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
@@ -44,31 +73,18 @@ export const CUSTOMER_CASE_QUERY = groq`
     "sections": sections[] {
       _key,
       _type,
-      _type == "richTextBlock" => {
-        "richText": ${translatedFieldFragment("richText")},
-      },
-      _type == "imageBlock" => {
-        "images": images[] {
-          ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-        } 
-      },
-      _type == "listBlock" => {
-        "description": ${translatedFieldFragment("description")},
-        "list": list[] {
-          "text": ${translatedFieldFragment("text")},
-        },
-      }, 
-      _type == "quoteBlock" => {
-        "quote": ${translatedFieldFragment("quote")},
-        "author": ${translatedFieldFragment("author")},
-      },
-      _type == "resultBlock" => {
-        "resultBlockTitle": ${translatedFieldFragment("resultBlockTitle")},
-        "resultList": resultList[] {
-          result,
-          "description": ${translatedFieldFragment("description")},
-          }
+      _type == "splitSection" => {
+        "sections": sections[] {
+          _key,
+          _type,
+          _type == "emptySection" => {},
+          ${BASE_SECTIONS_FRAGMENT}
         }
+      },
+      ${BASE_SECTIONS_FRAGMENT}
+    },
+    "featuredCases": featuredCases[] -> {
+      ${CUSTOMER_CASE_BASE_FRAGMENT}
     }
   }
 `;

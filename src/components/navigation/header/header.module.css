@@ -6,10 +6,6 @@
   background-color: var(--primary-black);
 }
 
-.scrolled {
-  background-color: var(--primary-black);
-}
-
 .isOpen {
   height: 100vh;
   display: flex;

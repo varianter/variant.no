@@ -4,6 +4,7 @@ import { ImageBlock } from "./imageBlock";
 import { QuoteBlock } from "./quoteBlock";
 import { ResultBlock } from "./resultBlock";
 import { RichTextBlock } from "./richTextBlock";
+import { SplitSection } from "./splitSection";
 
 export interface CustomerCaseProjectInfo {
   customer: string;
@@ -28,14 +29,16 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type CustomerCaseSections = (
+export type BaseCustomerCaseSection =
   | RichTextBlock
   | ImageBlock
   | QuoteBlock
-  | ResultBlock
-)[];
+  | ResultBlock;
+
+export type CustomerCaseSection = BaseCustomerCaseSection | SplitSection;
 
 export interface CustomerCase extends CustomerCaseBase {
   projectInfo: CustomerCaseProjectInfo;
-  sections: CustomerCaseSections;
+  sections: CustomerCaseSection[];
+  featuredCases?: CustomerCaseBase[] | null;
 }
