@@ -4,6 +4,7 @@ import { StringInputWithCharacterCount } from "studio/components/stringInputWith
 
 export const companyLocationID = "companyLocation";
 export const companyLocationNameID = "companyLocationName";
+export const companyLocationContactPersonID = "contactPerson";
 
 const companyLocation = defineType({
   name: companyLocationID,
@@ -20,6 +21,12 @@ const companyLocation = defineType({
         input: (props) =>
           StringInputWithCharacterCount({ ...props, maxCount: 50 }),
       },
+    }),
+    defineField({
+      name: companyLocationContactPersonID,
+      type: "string",
+      title: "Contact person for Sales",
+      description: "Add the email of the contact person for Sales",
     }),
   ],
 });
