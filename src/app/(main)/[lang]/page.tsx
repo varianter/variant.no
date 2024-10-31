@@ -71,7 +71,12 @@ const Home = async ({ params }: Props) => {
 
   return (
     <>
-      <PageHeader language={params.lang} pathTranslations={pathTranslations} />
+      <PageHeader
+        language={params.lang}
+        pathTranslations={pathTranslations}
+        pathTitles={[]}
+        showBreadcrumbs={false}
+      />
       <main id={"main"} tabIndex={-1}>
         {initialLandingPage.data.sections.map((section, index) => (
           <SectionRenderer

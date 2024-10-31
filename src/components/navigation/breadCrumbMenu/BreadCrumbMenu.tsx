@@ -6,11 +6,13 @@ import styles from "./breadCrumbMenu.module.css";
 
 export interface BreadCrumbProps {
   currentLanguage: string;
+  pathTitles: string[];
   pathname: string;
 }
 
 export const BreadCrumbMenu = ({
   currentLanguage,
+  pathTitles,
   pathname,
 }: BreadCrumbProps) => {
   return (
@@ -18,13 +20,16 @@ export const BreadCrumbMenu = ({
       {/* TODO: "Hjem" should be updated with translation */}
       {[
         "Hjem",
-        ...(pathname.includes("/" + currentLanguage + "/")
+        ...(pathname.includes(`/${currentLanguage}/`)
           ? pathname.split("/").slice(2)
           : pathname.split("/").slice(1)),
       ].map((slug, index, path) => {
-        const href =
-          "/" + currentLanguage + "/" + path.slice(1, index + 1).join("/");
+        const href = `/${currentLanguage}/${path.slice(1, index + 1).join("/")}`;
         const isLast = index === path.length - 1;
+        const title =
+          index === 0 || pathTitles.length < index
+            ? slug
+            : pathTitles[index - 1];
 
         return (
           <li key={index} className={styles.breadCrumb}>
@@ -44,8 +49,7 @@ export const BreadCrumbMenu = ({
                 }
                 type={isLast ? "labelSemibold" : "desktopLink"}
               >
-                {slug.charAt(0).toUpperCase() +
-                  (slug.length > 1 ? slug.slice(1).toLowerCase() : "")}
+                {title}
               </Text>
             </Link>
           </li>

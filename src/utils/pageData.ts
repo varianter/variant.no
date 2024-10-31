@@ -15,7 +15,7 @@ import {
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import { PAGE_BY_SLUG_QUERY } from "studio/lib/queries/pages";
-import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
+import { EMPLOYEE_PAGE_SLUG_AND_TITLE_QUERY } from "studio/lib/queries/siteSettings";
 import {
   SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
   SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
@@ -41,6 +41,7 @@ import { isNonNullQueryResponse } from "./queryResponse";
 type PageFromParams<D, T> = {
   queryResponse: D;
   docType: T;
+  pathTitles: string[];
   pathTranslations: InternationalizedString;
 };
 
@@ -77,6 +78,7 @@ async function fetchDynamicPage({
   return {
     queryResponse,
     docType: pageBuilderID,
+    pathTitles: [queryResponse.data.basicTitle],
     pathTranslations: pathTranslations.data ?? [],
   };
 }
@@ -141,6 +143,7 @@ async function fetchCompensationsPage({
       locale: localeDocumentResult,
     },
     docType: compensationsId,
+    pathTitles: [compensationsPageResult.data.basicTitle],
     pathTranslations: pathTranslations.data ?? [],
   };
 }
@@ -187,6 +190,7 @@ async function fetchCustomerCase({
     return {
       queryResponse: customerCasesPageResult,
       docType: customerCasesPageID,
+      pathTitles: [customerCasesPageResult.data.basicTitle],
       pathTranslations: pagePathTranslations.data ?? [],
     };
   }
@@ -218,6 +222,10 @@ async function fetchCustomerCase({
       customerCasesPagePath: [language, customerCasesPageResult.data.slug],
     },
     docType: customerCaseID,
+    pathTitles: [
+      customerCasesPageResult.data.basicTitle,
+      customerCaseResult.data.basicTitle,
+    ],
     pathTranslations:
       casePathTranslations.data?.reduce<InternationalizedString>(
         (acc, translation) => {
@@ -251,21 +259,25 @@ async function fetchEmployeePage({
   if (path.length !== 2) {
     return null;
   }
-  const employeePageSlugRes = await loadStudioQuery<{ slug: string } | null>(
-    EMPLOYEE_PAGE_SLUG_QUERY,
+  const employeePageSlugAndTitleRes = await loadStudioQuery<{
+    slug: string;
+    basicTitle: string;
+  } | null>(
+    EMPLOYEE_PAGE_SLUG_AND_TITLE_QUERY,
     {
       language,
     },
     { perspective },
   );
-  if (!isNonNullQueryResponse(employeePageSlugRes)) {
+  if (!isNonNullQueryResponse(employeePageSlugAndTitleRes)) {
     return null;
   }
-  if (path[0] !== employeePageSlugRes.data.slug) {
+  if (path[0] !== employeePageSlugAndTitleRes.data.slug) {
     return null;
   }
+  const employeeAlias = path[1];
   const employee = await fetchChewbaccaEmployee(
-    emailFromAliasAndHostname(path[1], hostname),
+    emailFromAliasAndHostname(employeeAlias, hostname),
   );
   if (!employee.ok) {
     return null;
@@ -282,6 +294,10 @@ async function fetchEmployeePage({
   return {
     queryResponse: employee.value,
     docType: "employee",
+    pathTitles: [
+      employeePageSlugAndTitleRes.data.basicTitle,
+      employee.value.name ?? employeeAlias,
+    ],
     pathTranslations: pathTranslations.data ?? [],
   };
 }
@@ -321,6 +337,7 @@ async function fetchLegalDocument({
   return {
     queryResponse,
     docType: legalDocumentID,
+    pathTitles: [queryResponse.data.basicTitle],
     pathTranslations: pathTranslations.data ?? [],
   };
 }

@@ -12,12 +12,16 @@ export default function HeaderPreview({
   initialNav,
   initialBrandAssets,
   currentLanguage,
+  pathTitles,
   pathTranslations,
+  showBreadcrumbs,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
   initialBrandAssets: QueryResponseInitial<BrandAssets>;
   currentLanguage: string;
+  pathTitles: string[];
   pathTranslations: InternationalizedString;
+  showBreadcrumbs: boolean;
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
@@ -37,7 +41,9 @@ export default function HeaderPreview({
         navigation={newNav}
         assets={newBrandAssets}
         currentLanguage={currentLanguage}
+        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
+        showBreadcrumbs={showBreadcrumbs}
       />
     )
   );
