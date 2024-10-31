@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./button.module.css";
 
 type ButtonType = "primary" | "secondary";
-type ButtonSize = "large" | "small";
+type ButtonSize = "large" | "small" | "extraSmall";
 
 interface IButton {
   size?: ButtonSize;
@@ -18,6 +18,7 @@ interface IButton {
 const sizeClassMap: { [key in ButtonSize]: string } = {
   large: styles.large,
   small: styles.small,
+  extraSmall: styles.extraSmall,
 };
 
 const typeClassMap: { [key in ButtonType]: string } = {

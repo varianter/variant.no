@@ -37,6 +37,17 @@
   }
 }
 
+.extraSmall {
+  composes: button;
+  padding: 0.375rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}
+
 .primary {
   background: var(--primary-dark);
   color: var(--primary-white);
