@@ -10,8 +10,14 @@ export interface RichTextSectionProps {
 export default function RichTextSection({ section }: RichTextSectionProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.content}>
-        <RichText value={section.richText} />
+      <div
+        className={
+          styles.content + (section.highlighted ? ` ${styles.highlighted}` : "")
+        }
+      >
+        <div className={styles.innerContent}>
+          <RichText value={section.richText} />
+        </div>
       </div>
     </div>
   );

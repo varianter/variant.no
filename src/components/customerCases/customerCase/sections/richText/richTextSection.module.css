@@ -7,3 +7,15 @@
 .content {
   max-width: 960px;
 }
+
+.content.highlighted {
+  border: 2px solid var(--primary-yellow-warning);
+  border-radius: 0.25rem;
+  background-color: var(--primary-yellow-warning);
+}
+
+.highlighted .innerContent {
+  background-color: var(--primary-bg);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
