@@ -53,9 +53,10 @@
 /* .h6 */
 
 .desktopLink {
-  font-size: 10rem;
-  line-height: 100%;
-  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
 }
 
 .bodyXl {
