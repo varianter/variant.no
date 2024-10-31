@@ -62,6 +62,13 @@ export const CUSTOMER_CASE_QUERY = groq`
         "quote": ${translatedFieldFragment("quote")},
         "author": ${translatedFieldFragment("author")},
       },
+      _type == "resultBlock" => {
+        "resultBlockTitle": ${translatedFieldFragment("resultBlockTitle")},
+        "resultList": resultList[] {
+          result,
+          "description": ${translatedFieldFragment("description")},
+          }
+        }
     }
   }
 `;
