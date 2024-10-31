@@ -14,12 +14,20 @@ const richTextBlock = defineField({
       title: "Rich Text",
       type: "internationalizedArrayRichText",
     },
+    {
+      name: "highlighted",
+      title: "Highlighted",
+      type: "boolean",
+      description: "Display the rich text with a highlight frame",
+      initialValue: false,
+    },
   ],
   preview: {
     select: {
       richText: "richText",
+      highlighted: "highlighted",
     },
-    prepare({ richText }) {
+    prepare({ richText, highlighted }) {
       if (!isInternationalizedRichText(richText)) {
         throw new TypeError(
           `Expected 'richText' to be InternationalizedRichText, was ${typeof richText}`,
@@ -30,6 +38,10 @@ const richTextBlock = defineField({
         title:
           translatedRichText !== null
             ? richTextPreview(translatedRichText)
+            : undefined,
+        subtitle:
+          typeof highlighted === "boolean" && highlighted
+            ? "Highlighted"
             : undefined,
       };
     },
