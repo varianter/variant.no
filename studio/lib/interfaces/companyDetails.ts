@@ -10,4 +10,5 @@ export interface CompanyLocation {
   _id: string;
   _updatedAt: string;
   companyLocationName: string;
+  contactPerson?: string;
 }

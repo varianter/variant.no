@@ -37,6 +37,17 @@
   }
 }
 
+.extraSmall {
+  composes: button;
+  padding: 0.375rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}
+
 .primary {
   background: var(--primary-dark);
   color: var(--primary-white);
@@ -62,6 +73,20 @@
 
   &:active {
     background: rgba(31, 31, 31, 0.16);
+  }
+}
+
+.secondaryFilled {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  border: 1px solid var(--primary-black);
+
+  &:hover {
+    background: var(--primary-black-darker);
+  }
+
+  &:active {
+    background: var(--primary-black-darker);
   }
 }
 

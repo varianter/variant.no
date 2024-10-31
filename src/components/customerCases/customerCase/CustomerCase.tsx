@@ -6,6 +6,7 @@ import {
   Delivery,
 } from "studioShared/lib/interfaces/customerCases";
 
+import ContactInformation from "./contactInformation/ContactInformation";
 import styles from "./customerCase.module.css";
 import FeaturedCases from "./featuredCases/FeaturedCases";
 import CustomerCaseConsultants from "./sections/customerCaseConsultants/CustomerCaseConsultants";
@@ -129,6 +130,7 @@ export default async function CustomerCase({
               customerCasesPath={customerCasesPagePath}
             />
           )}
+        <ContactInformation language={customerCase.language} />
       </div>
     </div>
   );
