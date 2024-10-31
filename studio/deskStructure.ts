@@ -1,6 +1,7 @@
 import {
   CaseIcon,
   CogIcon,
+  ConfettiIcon,
   EarthGlobeIcon,
   HeartIcon,
   ImagesIcon,
@@ -22,6 +23,7 @@ import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 import { compensationsId } from "./schemas/documents/compensations";
 import { languageSettingsID } from "./schemas/documents/languageSettings";
 import { pageBuilderID } from "./schemas/documents/pageBuilder";
+import { announcementID } from "./schemas/documents/siteSettings/announcement";
 import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
 import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
@@ -119,6 +121,15 @@ const siteSettingSection = (S: StructureBuilder) =>
                 .schemaType(defaultSeoID)
                 .documentId(defaultSeoID)
                 .title("Default SEO"),
+            ),
+          S.listItem()
+            .title("Announcement")
+            .icon(ConfettiIcon)
+            .child(
+              S.document()
+                .schemaType(announcementID)
+                .documentId(announcementID)
+                .title("Announcement"),
             ),
         ]),
     );

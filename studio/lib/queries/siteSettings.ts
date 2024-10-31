@@ -87,3 +87,16 @@ export const DEFAULT_SEO_QUERY = groq`
     ${SEO_FRAGMENT}
   }
 `;
+
+// Announcement
+export const ANNOUNCEMENT_QUERY = groq`
+  *[_type == "announcement"][0]{
+    ${LANGUAGE_FIELD_FRAGMENT},
+    "text": ${translatedFieldFragment("text")},
+    "link": link {
+      ...,
+      ${TRANSLATED_LINK_FRAGMENT}
+    },
+    hideAfter
+  }
+`;

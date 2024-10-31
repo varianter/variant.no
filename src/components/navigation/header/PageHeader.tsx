@@ -1,8 +1,14 @@
 import { getDraftModeInfo } from "src/utils/draftmode";
+import { isNonNullQueryResponse } from "src/utils/queryResponse";
+import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { Navigation } from "studio/lib/interfaces/navigation";
-import { BRAND_ASSETS_QUERY, NAV_QUERY } from "studio/lib/queries/siteSettings";
+import {
+  ANNOUNCEMENT_QUERY,
+  BRAND_ASSETS_QUERY,
+  NAV_QUERY,
+} from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import { Header } from "./Header";
@@ -35,19 +41,20 @@ export default async function PageHeader({
     { perspective },
   );
 
+  const initialAnnouncement = await loadStudioQuery<Announcement | null>(
+    ANNOUNCEMENT_QUERY,
+    { language },
+    { perspective },
+  );
+
   return (
-    initialBrandAssets.data !== null &&
-    initialNav.data !== null &&
+    isNonNullQueryResponse(initialBrandAssets) &&
+    isNonNullQueryResponse(initialNav) &&
     (isDraftMode ? (
       <HeaderPreview
-        initialNav={{
-          ...initialNav,
-          data: initialNav.data,
-        }}
-        initialBrandAssets={{
-          ...initialBrandAssets,
-          data: initialBrandAssets.data,
-        }}
+        initialNav={initialNav}
+        initialBrandAssets={initialBrandAssets}
+        initialAnnouncement={initialAnnouncement}
         currentLanguage={language}
         pathTitles={pathTitles}
         pathTranslations={pathTranslations}
@@ -57,6 +64,7 @@ export default async function PageHeader({
       <Header
         navigation={initialNav.data}
         assets={initialBrandAssets.data}
+        announcement={initialAnnouncement.data}
         currentLanguage={language}
         pathTitles={pathTitles}
         pathTranslations={pathTranslations}

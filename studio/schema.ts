@@ -7,6 +7,7 @@ import legalDocument from "./schemas/documents/admin/legalDocuments";
 import compensations from "./schemas/documents/compensations";
 import languageSettings from "./schemas/documents/languageSettings";
 import pageBuilder from "./schemas/documents/pageBuilder";
+import announcement from "./schemas/documents/siteSettings/announcement";
 import brandAssets from "./schemas/documents/siteSettings/brandAssets";
 import locale from "./schemas/documents/siteSettings/locale";
 import navigationManager from "./schemas/documents/siteSettings/navigationManager";
@@ -41,5 +42,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     locale,
     richText,
     seo,
+    announcement,
   ],
 };
