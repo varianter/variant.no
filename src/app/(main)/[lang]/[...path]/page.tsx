@@ -12,28 +12,21 @@ import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { homeLink } from "src/components/utils/linkTypes";
-import { ChewbaccaEmployee } from "src/types/employees";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
-import { SeoData, generateMetadataFromSeo } from "src/utils/seo";
+import {
+  SeoData,
+  generateMetadataFromSeo,
+  seoDataFromChewbaccaEmployee,
+  seoDataFromCustomerCase,
+} from "src/utils/seo";
 
 export const dynamic = "force-dynamic";
 
 type Props = {
   params: { lang: string; path: string[] };
 };
-
-function seoDataFromChewbaccaEmployee(employee: ChewbaccaEmployee) {
-  return {
-    title: employee.name ?? undefined,
-    description: employee.email ?? undefined,
-    imageUrl: employee.imageThumbUrl ?? undefined,
-    keywords: [employee.name, employee.email, employee.telephone]
-      .filter((d) => d != null)
-      .join(","),
-  };
-}
 
 function seoDataFromPageData(
   data: Awaited<ReturnType<typeof fetchPageDataFromParams>>,
@@ -43,22 +36,17 @@ function seoDataFromPageData(
   }
   switch (data.docType) {
     case "customerCase":
-      // TODO
-      return null;
+      return seoDataFromCustomerCase(data.queryResponse.customerCase.data);
     case "customerCasesPage":
       return data.queryResponse.data.seo;
     case "pageBuilder":
-      // TODO
-      return null;
-    case "legalDocument":
-      // TODO
-      return null;
-    case "compensations": {
+      return data.queryResponse.data.seo;
+    case "compensations":
       return data.queryResponse.compensationsPage.data.seo;
-    }
-    case "employee": {
+    case "employee":
       return seoDataFromChewbaccaEmployee(data.queryResponse);
-    }
+    case "legalDocument":
+      return null;
   }
 }
 
