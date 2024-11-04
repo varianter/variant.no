@@ -1,6 +1,7 @@
 interface ResultListItem {
   result: string;
   description: string;
+  _key: string;
 }
 
 export interface ResultBlock {

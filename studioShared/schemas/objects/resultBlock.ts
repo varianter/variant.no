@@ -44,8 +44,9 @@ const resultBlock = defineField({
           preview: {
             select: {
               item: "description",
+              subtitle: "result",
             },
-            prepare({ item }) {
+            prepare({ item, subtitle }) {
               if (item !== undefined && !isInternationalizedString(item)) {
                 throw new TypeError(
                   `Expected 'title' to be InternationalizedString, was ${typeof item}`,
@@ -56,6 +57,7 @@ const resultBlock = defineField({
                   item !== undefined
                     ? (firstTranslation(item) ?? undefined)
                     : undefined,
+                subtitle: subtitle,
               };
             },
           },

@@ -29,13 +29,12 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type BaseCustomerCaseSection =
-  | RichTextBlock
-  | ImageBlock
-  | QuoteBlock
-  | ResultBlock;
+export type BaseCustomerCaseSection = RichTextBlock | ImageBlock | QuoteBlock;
 
-export type CustomerCaseSection = BaseCustomerCaseSection | SplitSection;
+export type CustomerCaseSection =
+  | BaseCustomerCaseSection
+  | SplitSection
+  | ResultBlock;
 
 export interface CustomerCase extends CustomerCaseBase {
   projectInfo: CustomerCaseProjectInfo;
