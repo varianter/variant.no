@@ -74,9 +74,9 @@ export const CUSTOMER_CASE_QUERY = groq`
           ${BASE_SECTIONS_FRAGMENT}
         }
       },
-      _type == "resultBlock" => {
-        "resultBlockTitle": ${translatedFieldFragment("resultBlockTitle")},
-        "resultList": resultList[] {
+      _type == "resultsBlock" => {
+        "resultsBlockTitle": ${translatedFieldFragment("resultsBlockTitle")},
+        "resultsList": resultsList[] {
           _key,
           result,
           "description": ${translatedFieldFragment("description")},

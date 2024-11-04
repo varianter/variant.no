@@ -1,29 +1,29 @@
 import Text from "src/components/text/Text";
-import { ResultBlock as ResultBlockObject } from "studioShared/lib/interfaces/resultBlock";
+import { ResultsBlock as ResultsBlockObject } from "studioShared/lib/interfaces/resultsBlock";
 
-import styles from "./resultBlock.module.css";
+import styles from "./resultsBlock.module.css";
 
-export interface ResultBlockProps {
-  section: ResultBlockObject;
+export interface ResultsBlockProps {
+  section: ResultsBlockObject;
 }
 
-export default function QuoteBlock({ section }: ResultBlockProps) {
+export default function ResultsBlock({ section }: ResultsBlockProps) {
   return (
-    section.resultBlockTitle && (
+    section.resultsBlockTitle && (
       <div className={styles.wrapper}>
         <div className={styles.resultblock}>
           <Text type="h4" className={styles.blocktitle}>
-            {section.resultBlockTitle}
+            {section.resultsBlockTitle}
           </Text>
           <div className={styles.resultrow}>
-            {section.resultList?.map((result) => (
+            {section.resultsList?.map((result) => (
               <div className={styles.results} key={result._key}>
                 <Text type="h2" className={styles.mainresult}>
                   {result.result}
                 </Text>
                 <Text type="labelRegular">{result.description}</Text>
               </div>
-            ))}{" "}
+            ))}
           </div>
         </div>
       </div>

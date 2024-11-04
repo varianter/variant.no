@@ -1,14 +1,6 @@
-:where(.desktopLink,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-.bodyXl) {
+:where(.desktopLink, .h1, .h2, .h3, .h4, .h5, .h6, .bodyXl) {
   font-family: var(--font-britti-sans);
 }
-
 
 .bodyBig,
 .bodyNormal,

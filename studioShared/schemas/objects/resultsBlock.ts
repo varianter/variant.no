@@ -3,21 +3,21 @@ import { defineField } from "sanity";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { firstTranslation } from "studio/utils/i18n";
 
-const resultBlock = defineField({
-  name: "resultBlock",
+const resultsBlock = defineField({
+  name: "resultsBlock",
   type: "object",
-  title: "Result Block",
+  title: "Results Block",
   description: "This block can be used to add some results from the project.",
   fields: [
     {
-      name: "resultBlockTitle",
-      title: "Result Block Title",
+      name: "resultsBlockTitle",
+      title: "Results Block Title",
       description:
         "Please provide a title for the result block, for example: 'These are the results from the project'",
       type: "internationalizedArrayString",
     },
     {
-      name: "resultList",
+      name: "resultsList",
       title: "List of results",
       description: "Add up to five results to be included in this list",
       type: "array",
@@ -67,7 +67,7 @@ const resultBlock = defineField({
   ],
   preview: {
     select: {
-      title: "resultBlockTitle",
+      title: "resultsBlockTitle",
     },
     prepare({ title }) {
       if (title !== undefined && !isInternationalizedString(title)) {
@@ -85,4 +85,4 @@ const resultBlock = defineField({
   },
 });
 
-export default resultBlock;
+export default resultsBlock;
