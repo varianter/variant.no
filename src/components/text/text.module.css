@@ -1,5 +1,3 @@
-/*
----- Declaring color here will overwrite any other color applied later
 :where(.desktopLink,
 .h1,
 .h2,
@@ -8,10 +6,9 @@
 .h5,
 .h6,
 .bodyXl) {
- color: var(--primary-black);
   font-family: var(--font-britti-sans);
 }
-*/
+
 
 .bodyBig,
 .bodyNormal,
@@ -27,8 +24,7 @@
 .bodyNormal,
 .bodyBig,
 .list {
-  /*color: var(--primary-black);
-  font-family: var(--font-britti-sans);*/
+  font-family: var(--font-britti-sans);
   line-height: 140%;
 }
 
