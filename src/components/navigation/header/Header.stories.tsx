@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
 import {
+  mockAnnouncement,
   mockLogo,
   mockNavigation,
   mockPathTranslations,
@@ -30,6 +31,7 @@ export const Default: Story = {
   args: {
     navigation: mockNavigation,
     assets: mockLogo,
+    announcement: mockAnnouncement,
     currentLanguage: defaultLanguage?.id ?? "en",
     pathTranslations: mockPathTranslations,
   },

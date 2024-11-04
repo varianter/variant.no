@@ -13,6 +13,7 @@ interface ICustomLink {
   link: ILink;
   isSelected?: boolean;
   size?: "normal" | "small";
+  color?: "dark" | "light";
 }
 
 const CustomLink = ({
@@ -20,6 +21,7 @@ const CustomLink = ({
   link,
   isSelected,
   size = "normal",
+  color = "dark",
 }: ICustomLink) => {
   const href = getHref(link);
   const newTab = link.newTab;
@@ -35,7 +37,9 @@ const CustomLink = ({
     (type === "link" ? (
       <div
         className={
-          styles.wrapper + (size === "small" ? ` ${styles.sizeSmall}` : "")
+          styles.wrapper +
+          (size === "small" ? ` ${styles.sizeSmall}` : "") +
+          (color === "light" ? ` ${styles.colorLight}` : "")
         }
       >
         <Link

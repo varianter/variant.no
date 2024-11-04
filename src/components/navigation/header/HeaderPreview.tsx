@@ -1,16 +1,22 @@
 "use client";
 import { QueryResponseInitial, useQuery } from "@sanity/react-loader";
 
+import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { Navigation } from "studio/lib/interfaces/navigation";
-import { BRAND_ASSETS_QUERY, NAV_QUERY } from "studio/lib/queries/siteSettings";
+import {
+  ANNOUNCEMENT_QUERY,
+  BRAND_ASSETS_QUERY,
+  NAV_QUERY,
+} from "studio/lib/queries/siteSettings";
 
 import { Header } from "./Header";
 
 export default function HeaderPreview({
   initialNav,
   initialBrandAssets,
+  initialAnnouncement,
   currentLanguage,
   pathTitles,
   pathTranslations,
@@ -18,6 +24,7 @@ export default function HeaderPreview({
 }: {
   initialNav: QueryResponseInitial<Navigation>;
   initialBrandAssets: QueryResponseInitial<BrandAssets>;
+  initialAnnouncement: QueryResponseInitial<Announcement | null>;
   currentLanguage: string;
   pathTitles: string[];
   pathTranslations: InternationalizedString;
@@ -25,13 +32,18 @@ export default function HeaderPreview({
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
-    { language: initialNav.data.language },
+    { language: currentLanguage },
     { initial: initialNav },
   );
   const { data: newBrandAssets } = useQuery<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
     {},
     { initial: initialBrandAssets },
+  );
+  const { data: newAnnouncement } = useQuery<Announcement | null>(
+    ANNOUNCEMENT_QUERY,
+    { language: currentLanguage },
+    { initial: initialAnnouncement },
   );
 
   return (
@@ -40,6 +52,7 @@ export default function HeaderPreview({
       <Header
         navigation={newNav}
         assets={newBrandAssets}
+        announcement={newAnnouncement}
         currentLanguage={currentLanguage}
         pathTitles={pathTitles}
         pathTranslations={pathTranslations}

@@ -1,5 +1,6 @@
 import primaryLogoFile from "src/stories/assets/energiai-primary-logo.svg";
 import secondaryLogoFile from "src/stories/assets/energiai-secondary-logo.svg";
+import { Announcement } from "studio/lib/interfaces/announcement";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import {
   LinkType,
@@ -129,6 +130,14 @@ export const mockLogo = {
     alt: "Secondary Logo",
   },
   favicon: {},
+};
+
+export const mockAnnouncement: Announcement = {
+  language: "no",
+  text: "Mandag 21.10. er det TDC! Møt oss der!",
+  hideAfter: new Date(
+    new Date().setMonth(new Date().getMonth() + 1),
+  ).toISOString(),
 };
 
 // Mock Social Media Profiles

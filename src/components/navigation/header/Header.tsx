@@ -11,7 +11,9 @@ import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
+import Text from "src/components/text/Text";
 import { getHref } from "src/utils/link";
+import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
@@ -23,6 +25,7 @@ import styles from "./header.module.css";
 export interface IHeader {
   navigation: Navigation;
   assets: BrandAssets;
+  announcement: Announcement | null;
   currentLanguage: string;
   pathTitles: string[];
   pathTranslations: InternationalizedString;
@@ -35,6 +38,7 @@ const filterLinks = (data: ILink[], type: string) =>
 export const Header = ({
   navigation,
   assets,
+  announcement,
   currentLanguage,
   pathTitles,
   pathTranslations,
@@ -71,6 +75,11 @@ export const Header = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const showAnnouncement =
+    announcement !== null &&
+    announcement.text.length > 0 &&
+    (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
 
   return (
     <>
@@ -126,6 +135,22 @@ export const Header = ({
               </div>
             )}
           </nav>
+          {showAnnouncement && (
+            <div className={styles.announcementWrapper}>
+              <div className={styles.announcementContent}>
+                <Text type={"bodySmall"}>{announcement.text}</Text>
+                {announcement.link && announcement.link.linkTitle && (
+                  <div>
+                    <CustomLink
+                      link={announcement.link}
+                      size={"small"}
+                      color={"light"}
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </header>
       </FocusOn>
       {showBreadcrumbs && (
