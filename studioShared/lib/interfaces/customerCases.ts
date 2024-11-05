@@ -3,8 +3,8 @@ import { IImage } from "studio/lib/interfaces/media";
 import { ImageBlock } from "./imageBlock";
 import { QuoteBlock } from "./quoteBlock";
 import { ResultsBlock } from "./resultsBlock";
-import { RichTextBlock } from "./richTextBlock";
 import { SplitSection } from "./splitSection";
+import { TextBlock } from "./textBlock";
 
 export interface CustomerCaseProjectInfo {
   customer: string;
@@ -29,7 +29,7 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type BaseCustomerCaseSection = RichTextBlock | ImageBlock | QuoteBlock;
+export type BaseCustomerCaseSection = TextBlock | ImageBlock | QuoteBlock;
 
 export type CustomerCaseSection =
   | BaseCustomerCaseSection
