@@ -29,6 +29,8 @@ html {
 
   --focus-color: #8b0f40;
 
+  --blue-dark: #0014cd;
+
   /* TODO: upgrade color-scheme with correct colors */
   --secondary-red: #f0503f;
 
@@ -49,6 +51,7 @@ body {
   width: 100vw;
   background-color: var(--primary-bg);
   font-family: var(--font-britti-sans);
+  color: var(--primary-black);
 }
 
 h1,
