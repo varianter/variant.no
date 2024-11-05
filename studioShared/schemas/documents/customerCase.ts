@@ -8,6 +8,7 @@ import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { buildDraftId, buildPublishedId } from "studio/utils/documentUtils";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
+import listBlock from "studioShared/schemas/objects/listBlock";
 import resultsBlock from "studioShared/schemas/objects/resultsBlock";
 import { baseCustomerCaseSections } from "studioShared/schemas/objects/sections";
 import splitSection from "studioShared/schemas/objects/splitSection";
@@ -18,6 +19,7 @@ export const customerCaseSections = [
   ...baseCustomerCaseSections,
   splitSection,
   resultsBlock,
+  listBlock,
 ];
 
 const customerCase = defineType({
