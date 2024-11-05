@@ -8,7 +8,6 @@ export interface ListBlockProps {
 }
 
 export default function ListBlock({ section }: ListBlockProps) {
-  console.log(section);
   return (
     section.description && (
       <div className={styles.wrapper}>
