@@ -39,12 +39,6 @@ export const BASE_SECTIONS_FRAGMENT = groq`
     },
     fullWidth
   },
-  _type == "listBlock" => {
-    "description": ${translatedFieldFragment("description")},
-    "list": list[] {
-      "text": ${translatedFieldFragment("text")},
-    },
-  }, 
   _type == "quoteBlock" => {
     "quote": ${translatedFieldFragment("quote")},
     "author": ${translatedFieldFragment("author")},
@@ -83,6 +77,13 @@ export const CUSTOMER_CASE_QUERY = groq`
           "description": ${translatedFieldFragment("description")},
           }
         },
+      _type == "listBlock" => {
+        "description": ${translatedFieldFragment("description")},
+        "list": list[] {
+          _key,
+          "text": ${translatedFieldFragment("text")},
+          },
+        }, 
       ${BASE_SECTIONS_FRAGMENT}
     },
     "featuredCases": featuredCases[] -> {
