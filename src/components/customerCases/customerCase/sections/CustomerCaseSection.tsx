@@ -1,6 +1,7 @@
 import { CustomerCaseSection as CustomerCaseSectionObject } from "studioShared/lib/interfaces/customerCases";
 
 import ImageSection from "./image/ImageSection";
+import ListBlock from "./list/ListBlock";
 import QuoteBlock from "./quote/QuoteBlock";
 import ResultsBlock from "./results/ResultsBlock";
 import RichTextSection from "./richText/RichTextSection";
@@ -22,5 +23,7 @@ export function CustomerCaseSection({
       return <ImageSection section={section} />;
     case "resultsBlock":
       return <ResultsBlock section={section} />;
+    case "listBlock":
+      return <ListBlock section={section} />;
   }
 }
