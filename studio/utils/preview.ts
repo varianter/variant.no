@@ -4,7 +4,7 @@ import {
   isPortableTextTextBlock,
 } from "sanity";
 
-// Convert rich text content to plaintext preview string
+// This help method convert rich text content to plaintext so it could be used as preview in sanity studio
 // (inspired by https://www.sanity.io/docs/previewing-block-content)
 export function richTextPreview(
   richText: PortableTextBlock[],
