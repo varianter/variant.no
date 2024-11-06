@@ -5,18 +5,18 @@
   "customer_case": {
     "customer": "Customer",
     "project": "Project",
-    "duration": "Duration", 
+    "duration": "Duration",
     "industry": "Industry",
     "delivery": "Delivery",
-    "consultants": "Consultants", 
+    "consultants": "Consultants",
     "in_project": "In project"
   },
   "contact_information": {
-    "help": "Curious about Variant and want to explore what we offer?", 
+    "help": "Curious about Variant and want to explore what we offer?",
     "contact_sale": "Contact sale!"
   },
-  "custom_link":{
-    "visit_cv":"Visit mini-CV", 
+  "custom_link": {
+    "visit_cv": "Visit mini-CV",
     "read_more": "Read more"
   }
 }
