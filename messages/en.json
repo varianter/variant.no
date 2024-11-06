@@ -1,0 +1,7 @@
+{
+  "CustomerCase": {
+    "customer": "Customer",
+    "project": "Project",
+    "duration": "Duration"
+  }
+}

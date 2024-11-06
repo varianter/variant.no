@@ -1,9 +1,13 @@
 import localFont from "next/font/local";
 import { draftMode } from "next/headers";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 import Footer from "src/components/navigation/footer/Footer";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
+import { routing } from "src/i18n/routing";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
@@ -21,7 +25,6 @@ import {
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
-
 import "src/styles/global.css";
 
 const fontBrittiSans = localFont({
@@ -37,9 +40,15 @@ export default async function Layout({
 }: Readonly<{
   children: React.ReactNode;
   params: {
-    lang: string;
+    locale: string;
   };
 }>) {
+  if (!routing.locales.includes(params.locale as "en" | "no")) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   const { perspective, isDraftMode } = getDraftModeInfo();
 
   const [
@@ -51,7 +60,7 @@ export default async function Layout({
   ] = await Promise.all([
     loadStudioQuery<Navigation>(
       NAV_QUERY,
-      { language: params.lang },
+      { language: params.locale },
       { perspective },
     ),
     loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
@@ -62,7 +71,7 @@ export default async function Layout({
     ),
     loadStudioQuery<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
-      { language: params.lang },
+      { language: params.locale },
       { perspective },
     ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
@@ -73,29 +82,31 @@ export default async function Layout({
   const hasFooterData = hasNavData && initialNav.data.footer;
 
   return (
-    <html lang={params.lang}>
+    <html lang={params.locale}>
       <body className={fontBrittiSans.variable}>
-        <SkipToMain />
-        {children}
-        {hasFooterData && isDraftMode ? (
-          <FooterPreview
-            initialNav={initialNav}
-            initialCompanyInfo={initialCompanyInfo}
-            initialBrandAssets={initialBrandAssets}
-            initialSoMe={initialSoMe}
-            initialLegal={initialLegal}
-            language={params.lang}
-          />
-        ) : (
-          <Footer
-            navigationData={initialNav.data}
-            legalData={initialLegal.data}
-            companyInfo={initialCompanyInfo.data}
-            brandAssets={initialBrandAssets.data}
-            soMeData={initialSoMe.data}
-          />
-        )}
-        {draftMode().isEnabled && <LiveVisualEditing />}
+        <NextIntlClientProvider messages={messages}>
+          <SkipToMain />
+          {children}
+          {hasFooterData && isDraftMode ? (
+            <FooterPreview
+              initialNav={initialNav}
+              initialCompanyInfo={initialCompanyInfo}
+              initialBrandAssets={initialBrandAssets}
+              initialSoMe={initialSoMe}
+              initialLegal={initialLegal}
+              language={params.locale}
+            />
+          ) : (
+            <Footer
+              navigationData={initialNav.data}
+              legalData={initialLegal.data}
+              companyInfo={initialCompanyInfo.data}
+              brandAssets={initialBrandAssets.data}
+              soMeData={initialSoMe.data}
+            />
+          )}
+          {draftMode().isEnabled && <LiveVisualEditing />}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

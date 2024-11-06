@@ -1,9 +1,12 @@
 import { NextRequest } from "next/server";
+import createMiddleware from "next-intl/middleware";
 
+import { routing } from "./i18n/routing";
 import { languageMiddleware } from "./middlewares/languageMiddleware";
 
 export async function middleware(request: NextRequest) {
-  return languageMiddleware(request);
+  await languageMiddleware(request);
+  return createMiddleware(routing)(request);
 }
 
 export const config = {
