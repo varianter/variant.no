@@ -78,7 +78,7 @@ export const Header = ({
 
   const showAnnouncement =
     announcement !== null &&
-    announcement.text.length > 0 &&
+    announcement.text?.length > 0 &&
     (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
 
   return (

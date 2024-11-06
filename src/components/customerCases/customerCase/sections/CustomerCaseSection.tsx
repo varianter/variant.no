@@ -4,8 +4,8 @@ import ImageSection from "./image/ImageSection";
 import ListBlock from "./list/ListBlock";
 import QuoteBlock from "./quote/QuoteBlock";
 import ResultsBlock from "./results/ResultsBlock";
-import RichTextSection from "./richText/RichTextSection";
 import SplitSection from "./splitSection/SplitSection";
+import TextSection from "./text/TextSection";
 
 export function CustomerCaseSection({
   section,
@@ -15,8 +15,8 @@ export function CustomerCaseSection({
   switch (section._type) {
     case "splitSection":
       return <SplitSection section={section} />;
-    case "richTextBlock":
-      return <RichTextSection section={section} />;
+    case "textBlock":
+      return <TextSection section={section} />;
     case "quoteBlock":
       return <QuoteBlock section={section} />;
     case "imageBlock":
