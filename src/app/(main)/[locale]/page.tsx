@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } = await loadStudioQuery<PageBuilder | null>(
     LANDING_PAGE_QUERY,
     {
-      language: params.lang,
+      language: params.locale,
     },
   );
-  return generateMetadataFromSeo(landingPage?.seo ?? null, params.lang);
+  return generateMetadataFromSeo(landingPage?.seo ?? null, params.locale);
 }
 
 const navigationManagerLink = {
@@ -35,7 +35,7 @@ const navigationManagerLink = {
 };
 
 type Props = {
-  params: { lang: string };
+  params: { locale: string };
 };
 
 const Home = async ({ params }: Props) => {
@@ -43,7 +43,7 @@ const Home = async ({ params }: Props) => {
 
   const initialLandingPage = await loadStudioQuery<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    { language: params.lang },
+    { language: params.locale },
     { perspective },
   );
 
@@ -72,7 +72,7 @@ const Home = async ({ params }: Props) => {
   return (
     <>
       <PageHeader
-        language={params.lang}
+        language={params.locale}
         pathTranslations={pathTranslations}
         pathTitles={[]}
         showBreadcrumbs={false}
@@ -81,7 +81,7 @@ const Home = async ({ params }: Props) => {
         {initialLandingPage.data.sections.map((section, index) => (
           <SectionRenderer
             key={section._key}
-            language={params.lang}
+            language={params.locale}
             section={section}
             isDraftMode={isDraftMode}
             initialData={initialLandingPage}

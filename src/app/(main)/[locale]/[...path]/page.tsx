@@ -25,7 +25,7 @@ import {
 export const dynamic = "force-dynamic";
 
 type Props = {
-  params: { lang: string; path: string[] };
+  params: { locale: string; path: string[] };
 };
 
 function seoDataFromPageData(
@@ -52,7 +52,7 @@ function seoDataFromPageData(
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { perspective } = getDraftModeInfo();
-  const language = params.lang;
+  const language = params.locale;
   const pageData = await fetchPageDataFromParams({
     language,
     path: params.path,
@@ -71,12 +71,12 @@ const Page404 = (
 );
 
 async function Page({ params }: Props) {
-  const { lang, path } = params;
+  const { locale, path } = params;
 
   const { perspective, isDraftMode } = getDraftModeInfo();
 
   const pageData = await fetchPageDataFromParams({
-    language: lang,
+    language: locale,
     path,
     perspective: perspective ?? "published",
     hostname: headers().get("host"),
@@ -91,7 +91,7 @@ async function Page({ params }: Props) {
   return (
     <>
       <PageHeader
-        language={lang}
+        language={locale}
         pathTitles={pathTitles}
         pathTranslations={pathTranslations}
         showBreadcrumbs={true}
@@ -105,7 +105,7 @@ async function Page({ params }: Props) {
                   {queryResponse.data?.sections?.map((section, index) => (
                     <SectionRenderer
                       key={section._key}
-                      language={lang}
+                      language={locale}
                       section={section}
                       isDraftMode={isDraftMode}
                       initialData={queryResponse}

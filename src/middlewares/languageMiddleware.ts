@@ -1,6 +1,6 @@
 import Negotiator from "negotiator";
 import { headers } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { SanityClient } from "next-sanity";
 
 import { client } from "studio/lib/client";
@@ -203,7 +203,6 @@ function negotiateClientLanguage(
   const acceptLanguage = headers().get("Accept-Language");
   if (acceptLanguage === null) return undefined;
   return new Negotiator({
-    // Negotiator expects lower-case header name
     headers: { "accept-language": acceptLanguage },
   }).language(availableLanguages);
 }
@@ -235,10 +234,9 @@ function negotiateClientLanguage(
  *     they will see the default language version (`/eple`) instead of receiving a 404 error.
  *
  * @param {Object} request - The incoming request object containing URL and user preferences.
+ * @returns {Promise<void>} - No return; modifies `request.nextUrl.pathname` directly.
  */
-export async function languageMiddleware(
-  request: NextRequest,
-): Promise<NextResponse | undefined> {
+export async function languageMiddleware(request: NextRequest): Promise<void> {
   const availableLanguages = await client.fetch<LanguageObject[] | null>(
     LANGUAGES_QUERY,
   );
@@ -246,139 +244,110 @@ export async function languageMiddleware(
     console.error("No languages available, language middleware aborted.");
     return;
   }
+
   const path = request.nextUrl.pathname.replace(/^\//, "").split("/");
   const language = availableLanguages.find(({ id }) => path[0] === id);
   const defaultLanguageId = (
     await client.fetch<LanguageObject | null>(DEFAULT_LANGUAGE_QUERY)
   )?.id;
+
   if (defaultLanguageId === undefined) {
     console.error(
       "No default language available, language middleware aborted.",
     );
     return;
   }
+
   if (language === undefined) {
-    return redirectMissingLanguage(
+    await rewriteMissingLanguage(
+      request,
       path,
       availableLanguages,
       defaultLanguageId,
-      request.url,
     );
+  } else {
+    await rewriteWithLanguage(request, path, language, defaultLanguageId);
   }
-  return redirectWithLanguage(path, language, defaultLanguageId, request.url);
 }
 
 /**
- * Language is provided, check that the path actually exists for the given language.
- * - If it exists, no changes are made.
- * - Otherwise, we attempt to translate to the specified language.
- *   We first check if a translation exists from the default language, before checking other languages.
- *   - If translated, user is redirected to `/[language]/[translatedPath]`
- *   - Otherwise, user is redirected to the path with default language (`/[path]`)
+ * Rewrites the request path to the language-specific version if it exists.
  *
- * @param {string[]} path - The current URL path segments.
- * @param {LanguageObject} language - Language object from URL path
- * @param {string} defaultLanguageId - Language id for the default language
- * @param {string} baseUrl - The base URL of the site.
+ * @param {NextRequest} request - The incoming request.
+ * @param {string[]} path - The path segments of the URL.
+ * @param {LanguageObject} language - The language object based on the detected language code in the URL.
+ * @param {string} defaultLanguageId - The ID of the default language.
+ * @returns {Promise<void>} - No return; modifies `request.nextUrl.pathname` directly.
  */
-async function redirectWithLanguage(
+async function rewriteWithLanguage(
+  request: NextRequest,
   path: string[],
   language: LanguageObject,
   defaultLanguageId: string,
-  baseUrl: string,
-) {
+): Promise<void> {
   const pathWithoutLanguage = path.slice(1);
   let translatedPath = await translatePath(
     pathWithoutLanguage,
     language.id,
     language.id,
   );
+
   if (translatedPath === undefined) {
-    // path does not exist for requested language, try default language
     translatedPath = await translatePath(
       pathWithoutLanguage,
       language.id,
       defaultLanguageId,
     );
   }
+
   if (translatedPath === undefined) {
-    // path does not exist for requested or default language, try other languages
     translatedPath = await translatePath(pathWithoutLanguage, language.id);
   }
-  if (translatedPath === undefined) {
-    return NextResponse.redirect(
-      new URL(`/${pathWithoutLanguage.join("/")}`, baseUrl),
-    );
+
+  if (translatedPath !== undefined) {
+    const newPath = `/${language.id}/${translatedPath.join("/")}`;
+    if (newPath !== request.nextUrl.pathname) {
+      request.nextUrl.pathname = newPath;
+    }
+  } else {
+    request.nextUrl.pathname = `/${pathWithoutLanguage.join("/")}`;
   }
-  if (translatedPath.join("/") !== pathWithoutLanguage.join("/")) {
-    return NextResponse.redirect(
-      new URL(`/${language.id}/${translatedPath.join("/")}`, baseUrl),
-    );
-  }
-  // all good, no modifications needed
-  return;
 }
 
 /**
- * Determines the user's most preferred language from the available languages and handles URL redirection accordingly.
+ * Handles cases where no language is provided in the URL by negotiating the preferred language.
  *
- * Key behaviors:
- * - If the user's preferred (negotiated) language matches the default language, no redirection occurs.
- * - If the user's preferred language is different from the default:
- *   - Attempt to find a translation for the current page.
- *     - If a translated version exists, redirect the user to the corresponding path: `/[negotiatedLanguage]/[translatedPath]`.
- *     - If no translation is found, keep the user on the default language page at `/[path]`.
- *
- * @param {string[]} path - The current URL path segments.
- * @param {string[]} availableLanguages - A list of languages supported by the site.
- * @param {string} defaultLanguageId - Language id for the default language
- * @param {string} baseUrl - The base URL of the site.
+ * @param {NextRequest} request - The incoming request.
+ * @param {string[]} path - The path segments of the URL.
+ * @param {LanguageObject[]} availableLanguages - A list of available languages supported by the site.
+ * @param {string} defaultLanguageId - The ID of the default language.
+ * @returns {Promise<void>} - No return; modifies `request.nextUrl.pathname` directly.
  */
-async function redirectMissingLanguage(
+async function rewriteMissingLanguage(
+  request: NextRequest,
   path: string[],
   availableLanguages: LanguageObject[],
   defaultLanguageId: string,
-  baseUrl: string,
-) {
-  // Pathname does NOT include a language code, we negotiate with the user to find
-  // the most preferred languages from the list of available languages
+): Promise<void> {
   const preferredLanguage =
     negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
     ) ?? defaultLanguageId;
-  // Attempt to translate from default to the preferred language
+
   let translatedPath = await translatePath(
     path,
     preferredLanguage,
     defaultLanguageId,
   );
+
   if (translatedPath === undefined) {
-    // Path not valid for default language, attempt to translate from
-    // a different language to the preferred language
     translatedPath = await translatePath(path, preferredLanguage);
   }
-  const pathString = path.join("/");
-  if (translatedPath === undefined) {
-    // Translation not available, rewrite to default language
-    return NextResponse.rewrite(
-      new URL(`/${defaultLanguageId}/${pathString}`, baseUrl),
-    );
+
+  if (translatedPath !== undefined) {
+    const newPath = `/${preferredLanguage}/${translatedPath.join("/")}`;
+    request.nextUrl.pathname = newPath;
+  } else {
+    request.nextUrl.pathname = `/${defaultLanguageId}/${path.join("/")}`;
   }
-  const translatedPathString = translatedPath.join("/");
-  if (preferredLanguage === defaultLanguageId) {
-    if (translatedPathString !== pathString) {
-      // Redirect to translated path, preserving default language
-      return NextResponse.redirect(
-        new URL(`/${translatedPathString}`, baseUrl),
-      );
-    }
-    // Rewrite to include language code for internal routing
-    return NextResponse.rewrite(
-      new URL(`/${defaultLanguageId}/${translatedPathString}`, baseUrl),
-    );
-  }
-  // Redirect with language code and translated path
-  return NextResponse.redirect(
-    new URL(`/${preferredLanguage}/${translatedPathString}`, baseUrl),
-  );
 }

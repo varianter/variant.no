@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
@@ -25,6 +27,8 @@ export default async function CustomerCase({
     customerCase.projectInfo.consultants,
   );
 
+  const t = await getTranslations("CustomerCase");
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -41,7 +45,7 @@ export default async function CustomerCase({
           <div className={styles.projectInfo}>
             {customerCase.projectInfo.customer && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Kunde</Text>
+                <Text type={"labelRegular"}>{t("customer")}</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
@@ -52,7 +56,7 @@ export default async function CustomerCase({
             )}
             {customerCase.projectInfo.name && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Prosjekt</Text>
+                <Text type={"labelRegular"}>{t("project")}</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
@@ -63,7 +67,7 @@ export default async function CustomerCase({
             )}
             {customerCase.projectInfo.duration && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Varighet</Text>
+                <Text type={"labelRegular"}>{t("duration")}</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}
