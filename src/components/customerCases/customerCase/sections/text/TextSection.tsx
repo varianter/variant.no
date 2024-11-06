@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
 import { LinkType } from "studio/lib/interfaces/navigation";
@@ -10,6 +12,7 @@ export interface TextSectionProps {
 }
 
 export default function TextSection({ section }: TextSectionProps) {
+  const t = useTranslations("custom_link");
   return (
     <div className={styles.wrapper}>
       <div
@@ -35,7 +38,7 @@ export default function TextSection({ section }: TextSectionProps) {
                   _key: "read-more",
                   _type: "link",
                   linkType: LinkType.External,
-                  linkTitle: "Les mer", //Todo: Add translation
+                  linkTitle: t("read_more"),
                   newTab: true,
                   url: section.url,
                 }}

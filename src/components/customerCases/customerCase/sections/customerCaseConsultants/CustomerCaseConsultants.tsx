@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import ConsultantCard from "src/components/consultantCard/ConsultantCard";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee } from "src/types/employees";
@@ -23,9 +25,11 @@ export default async function CustomerCaseConsultants({
   );
   const employeePageSlug = employeePageSlugRes.data?.slug;
 
+  const t = await getTranslations("customer_case");
+
   return (
     <div className={styles.wrapper}>
-      <Text type={"h3"}>Varianter på prosjektet</Text>
+      <Text type={"h3"}>{t("in_project")}</Text>
       <div className={styles.content}>
         {consultants.map((consultant) => (
           <ConsultantCard

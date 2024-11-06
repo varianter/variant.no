@@ -27,7 +27,7 @@ export default async function CustomerCase({
     customerCase.projectInfo.consultants,
   );
 
-  const t = await getTranslations("CustomerCase");
+  const t = await getTranslations("customer_case");
 
   return (
     <div className={styles.wrapper}>
@@ -78,7 +78,7 @@ export default async function CustomerCase({
             )}
             {customerCase.projectInfo.sector && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Bransje</Text>
+                <Text type={"labelRegular"}>{t("industry")}</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemBadge}
@@ -89,7 +89,7 @@ export default async function CustomerCase({
             )}
             {customerCase.projectInfo.deliveries && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Leveranse</Text>
+                <Text type={"labelRegular"}>{t("delivery")}</Text>
                 {customerCase.projectInfo.deliveries.map(
                   (delivery: Delivery) => (
                     <Text
@@ -105,7 +105,7 @@ export default async function CustomerCase({
             )}
             {consultantsResult.ok && (
               <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>Konsulenter</Text>
+                <Text type={"labelRegular"}>{t("consultants")}</Text>
                 <Text
                   type={"labelLight"}
                   className={styles.projectInfoItemValue}

@@ -1,7 +1,22 @@
 {
+  "navigation": {
+    "home": "Hem"
+  },
   "CustomerCase": {
     "customer": "Kund",
     "project": "Projekt",
-    "duration": "Varaktighet"
+    "duration": "Varaktighet",
+    "industry": "Bransch",
+    "delivery": "Leverans",
+    "consultants": "Folk", 
+    "in_project": "Varianter i projektet"
+  },
+  "contact_information": {
+    "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?", 
+    "contact_sale": "Kontakta sälj!"
+  },
+  "custom_link":{
+    "visit_cv": "Besök mini-CV", 
+    "read_more": "Läs mer"
   }
 }

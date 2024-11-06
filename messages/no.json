@@ -1,7 +1,22 @@
 {
-  "CustomerCase": {
+  "navigation": {
+    "home": "Hjem"
+  },
+  "customer_case": {
     "customer": "Kunde",
     "project": "Prosjekt",
-    "duration": "Varighet"
+    "duration": "Varighet", 
+    "industry": "Bransje",
+    "delivery": "Leveranse",
+    "consultants": "Folk", 
+    "in_project": "Varianter i prosjektet"
+  }, 
+  "contact_information": {
+    "help": "Trenger du hjelp med lignende eller noe helt annet?", 
+    "contact_sale": "Kontakt salg!"
+  },
+  "custom_link":{
+    "visit_cv":"Gå til mini-CV", 
+    "read_more":"Les mer"
   }
 }

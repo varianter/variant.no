@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+
 import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
@@ -50,16 +52,13 @@ export default async function ContactInformation({
   const locationsWithContact = companyLocations.filter((location) =>
     locationIdsWithContact.includes(location._id),
   );
-
+  const t = await getTranslations("contact_information");
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.titleSection}>
-          {/* TODO: translation */}
-          <Text type={"bodyXl"}>
-            Trenger du hjelp med lignende eller noe helt annet?
-          </Text>
-          <Text type="bodyBig"> Kontakt salg! </Text>
+          <Text type={"bodyXl"}>{t("help")}</Text>
+          <Text type="bodyBig">{t("contact_sale")} </Text>
         </div>
         <div className={styles.contactSection}>
           <ContactSelector

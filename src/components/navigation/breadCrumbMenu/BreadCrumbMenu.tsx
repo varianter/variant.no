@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import Text from "src/components/text/Text";
 
@@ -15,11 +16,11 @@ export const BreadCrumbMenu = ({
   pathTitles,
   pathname,
 }: BreadCrumbProps) => {
+  const t = useTranslations("navigation");
   return (
     <ul className={styles.breadCrumbMenu}>
-      {/* TODO: "Hjem" should be updated with translation */}
       {[
-        "Hjem",
+        t("home"),
         ...(pathname.includes(`/${currentLanguage}/`)
           ? pathname.split("/").slice(2)
           : pathname.split("/").slice(1)),
