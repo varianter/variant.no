@@ -15,9 +15,7 @@ export default function TextSection({ section }: TextSectionProps) {
       <div
         className={
           styles.content +
-          (section.textBlockType === "highlighted"
-            ? ` ${styles.highlighted}`
-            : "")
+          (section.textBlockType === "framed" ? ` ${styles.highlighted}` : "")
         }
       >
         <div className={styles.innerContent}>

@@ -39,7 +39,7 @@ const textBlock = defineField({
       title: "Block text content",
       type: "internationalizedArrayText",
       description:
-        "Please type the text content for the block. This field is required, and cannot be more than 300 characters.",
+        "Please type the text content for the block. This field is required, and cannot be more than 500 characters.",
       validation: (rule) =>
         rule.custom<{ value: string; _type: string; _key: string }[]>(
           (value) => {
@@ -48,12 +48,12 @@ const textBlock = defineField({
             }
             const invalidItems = value.filter(
               (item) =>
-                typeof item.value === "string" && item.value.length > 300,
+                typeof item.value === "string" && item.value.length > 500,
             );
 
             if (invalidItems.length > 0) {
               return invalidItems.map((item) => ({
-                message: "Title cannot be more than 50 characters long.",
+                message: "Text cannot be more than 500 characters long.",
                 path: [{ _key: item._key }, "value"],
               }));
             }
