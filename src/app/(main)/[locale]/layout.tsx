@@ -43,7 +43,7 @@ export default async function Layout({
     locale: string;
   };
 }>) {
-  if (!routing.locales.includes(params.locale as "en" | "no")) {
+  if (!routing.locales.includes(params.locale as "en" | "no" | "se")) {
     notFound();
   }
 
