@@ -28,6 +28,8 @@
   height: fit-content;
 }
 .header {
+  /* TODO: this needs to be changed */
+  margin-top: 0px;
   margin-bottom: 16px;
 }
 
