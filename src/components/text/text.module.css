@@ -45,8 +45,14 @@
   line-height: 120%; /* 1.8rem */
 }
 
+.h5{
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+}
+
 /* TODO: add font variables */
-/* .h5 */
 /* .h6 */
 
 .desktopLink {
@@ -54,6 +60,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
+}
+
+.desktopLinkBig {
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 300;
+line-height: 120%; 
+text-decoration-line: underline;
 }
 
 .bodyXl {

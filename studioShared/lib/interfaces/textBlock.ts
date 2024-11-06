@@ -1,6 +1,8 @@
 export interface TextBlock {
   _key: string;
   _type: "textBlock";
+  sectionTitle?: string;
   text: string;
-  highlighted?: boolean;
+  url?: string;
+  textBlockType?: string;
 }

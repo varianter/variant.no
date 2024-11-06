@@ -62,6 +62,18 @@ const textBlock = defineField({
         ),
     },
     {
+      name: "url",
+      title: "Enter an external link",
+      type: "url",
+      description:
+        "If the text block should include a URL, please enter the full URL, including 'https://'. For example, 'https://www.example.com'.",
+      validation: (rule) =>
+        rule.uri({
+          scheme: ["http", "https"],
+          allowRelative: false,
+        }),
+    },
+    {
       name: "textBlockType",
       title: "Text Block Type",
       type: "string",
@@ -75,6 +87,7 @@ const textBlock = defineField({
         layout: "radio",
         direction: "vertical",
       },
+      initialValue: "normal",
     },
   ],
   preview: {
