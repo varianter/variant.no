@@ -13,16 +13,9 @@ export default function ImageSection({ section }: ImageSectionProps) {
       <div
         className={`${styles.content}${section.fullWidth ? ` ${styles.fullWidth}` : ""}`}
       >
-        {section.images?.map((image) => (
-          <div
-            key={image._key ?? `${section._key}-${image.alt}`}
-            className={styles.imageWrapper}
-          >
-            <div className={styles.imageContent}>
-              <SanitySharedImage image={image} />
-            </div>
-          </div>
-        ))}
+        <div className={styles.imageContent}>
+          <SanitySharedImage image={section.image} />
+        </div>
       </div>
     </div>
   );

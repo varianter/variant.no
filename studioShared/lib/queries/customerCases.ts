@@ -34,9 +34,7 @@ export const BASE_SECTIONS_FRAGMENT = groq`
     highlighted
   },
   _type == "imageBlock" => {
-    "images": images[] {
-      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-    },
+    "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     fullWidth
   },
   _type == "quoteBlock" => {
