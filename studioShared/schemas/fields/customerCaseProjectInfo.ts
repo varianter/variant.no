@@ -49,7 +49,7 @@ export const customerCaseProjectInfo = defineField({
           ],
           preview: {
             select: {
-              item: "delivery",
+              delivery: "delivery",
             },
             prepare({ delivery }) {
               if (!isInternationalizedString(delivery)) {
