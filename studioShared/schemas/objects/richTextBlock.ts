@@ -10,6 +10,11 @@ const richTextBlock = defineField({
   type: "object",
   fields: [
     {
+      name: "title",
+      title: "Section Title",
+      type: "internationalizedArrayString",
+    },
+    {
       name: "richText",
       title: "Rich Text",
       type: "internationalizedArrayRichText",
