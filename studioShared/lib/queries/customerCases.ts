@@ -30,13 +30,13 @@ export const CUSTOMER_CASES_QUERY = groq`
 
 export const BASE_SECTIONS_FRAGMENT = groq`
   _type == "textBlock" => {
+    "sectionTitle": ${translatedFieldFragment("sectionTitle")},
     "text": ${translatedFieldFragment("text")},
-    highlighted
+     url,
+     textBlockType, 
   },
   _type == "imageBlock" => {
-    "images": images[] {
-      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
-    },
+    "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     fullWidth
   },
   _type == "quoteBlock" => {
