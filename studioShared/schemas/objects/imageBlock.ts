@@ -10,42 +10,36 @@ const imageBlock = defineField({
   type: "object",
   fields: [
     {
-      name: "images",
-      title: "Images",
-      type: "array",
-      of: [internationalizedImage],
+      title: "Image",
+      ...internationalizedImage,
     },
     {
       name: "fullWidth",
       title: "Full Width",
-      description: "Should these images occupy the full width of the page?",
+      description:
+        "Should the image occupy the full width of the page? (Only works if the image is not a part of a split section)",
       type: "boolean",
     },
   ],
   preview: {
     select: {
-      images: "images",
+      image: "image",
       fullWidth: "fullWidth",
     },
-    prepare: ({ images, fullWidth }) => {
-      const count = Object.keys(images).length;
-      const firstImage = count > 0 ? images[0] : undefined;
-      let firstImageAlt = null;
-      if (firstImage !== undefined) {
-        const imageAlt = firstImage.alt;
-        if (imageAlt !== undefined) {
-          if (!isInternationalizedString(imageAlt)) {
-            throw new TypeError(
-              `Expected image 'alt' to be InternationalizedString, was ${typeof firstImage.alt}`,
-            );
-          }
-          firstImageAlt = firstTranslation(imageAlt);
-        }
+    prepare: ({ image, fullWidth }) => {
+      const imageAlt = image.alt;
+      if (!isInternationalizedString(imageAlt)) {
+        throw new TypeError(
+          `Expected image 'alt' to be InternationalizedString, was ${typeof image.alt}`,
+        );
       }
       return {
-        title: count > 1 ? `${count} images` : (firstImageAlt ?? undefined),
+        title:
+          imageAlt !== undefined
+            ? (firstTranslation(imageAlt) ?? undefined)
+            : undefined,
         subtitle: fullWidth ? "Full Width" : undefined,
-        media: firstImage,
+        media: image,
       };
     },
   },
