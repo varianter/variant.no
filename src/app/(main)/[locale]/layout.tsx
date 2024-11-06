@@ -7,7 +7,7 @@ import { getMessages } from "next-intl/server";
 import Footer from "src/components/navigation/footer/Footer";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
-import { routing } from "src/i18n/routing";
+import { Locale, routing } from "src/i18n/routing";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
@@ -43,7 +43,7 @@ export default async function Layout({
     locale: string;
   };
 }>) {
-  if (!routing.locales.includes(params.locale as "en" | "no" | "se")) {
+  if (!routing.locales.includes(params.locale as Locale)) {
     notFound();
   }
 
