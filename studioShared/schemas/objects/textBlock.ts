@@ -53,7 +53,7 @@ const textBlock = defineField({
 
             if (invalidItems.length > 0) {
               return invalidItems.map((item) => ({
-                message: "Title cannot be more than 500 characters long.",
+                message: "Text cannot be more than 500 characters long.",
                 path: [{ _key: item._key }, "value"],
               }));
             }
