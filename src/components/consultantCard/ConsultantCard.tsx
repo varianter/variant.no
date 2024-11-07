@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import CustomLink from "src/components/link/CustomLink";
 import { ChewbaccaEmployee } from "src/types/employees";
@@ -20,6 +21,8 @@ export default function ConsultantCard({
   employeePageSlug,
 }: ConsultantCardProps) {
   const title = <p className={styles.consultantName}>{consultant.name}</p>;
+  const t = useTranslations("custom_link");
+
   return (
     consultant.imageThumbUrl &&
     consultant.name &&
@@ -59,7 +62,7 @@ export default function ConsultantCard({
                 _key: "go-to-mini-cv",
                 _type: "link",
                 linkType: LinkType.Internal,
-                linkTitle: "Gå til Mini-CV", // TODO: translate
+                linkTitle: t("visit_cv"),
                 language: currentLanguage,
                 internalLink: {
                   _ref: `${employeePageSlug}/${aliasFromEmail(consultant.email)}`,
