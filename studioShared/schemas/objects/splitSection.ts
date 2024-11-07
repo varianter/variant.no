@@ -1,3 +1,4 @@
+import { InlineIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { humanizeCamelCase } from "studio/utils/stringUtils";
@@ -11,6 +12,7 @@ export const splitSectionSections = [...baseCustomerCaseSections, emptySection];
 const splitSection = defineField({
   name: "splitSection",
   title: "Split Section",
+  icon: InlineIcon,
   description: "Section containing two other sections, displayed side-by-side",
   type: "object",
   fields: [

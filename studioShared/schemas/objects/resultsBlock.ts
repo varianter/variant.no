@@ -1,3 +1,4 @@
+import { BarChartIcon, ChartUpwardIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -7,6 +8,7 @@ const resultsBlock = defineField({
   name: "resultsBlock",
   type: "object",
   title: "Results Block",
+  icon: ChartUpwardIcon,
   description: "This block can be used to add some results from the project.",
   fields: [
     {
@@ -28,6 +30,7 @@ const resultsBlock = defineField({
           type: "object",
           title: "Result List Item",
           name: "resultlistitem",
+          icon: BarChartIcon,
           fields: [
             {
               name: "result",

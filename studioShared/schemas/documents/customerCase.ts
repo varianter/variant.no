@@ -1,3 +1,4 @@
+import { DocumentTextIcon } from "@sanity/icons";
 import { groq } from "next-sanity";
 import { Reference, defineField, defineType } from "sanity";
 
@@ -26,6 +27,7 @@ const customerCase = defineType({
   name: customerCaseID,
   type: "document",
   title: "Customer Case",
+  icon: DocumentTextIcon,
   fields: [
     defineField({
       ...titleSlug,

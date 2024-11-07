@@ -1,3 +1,4 @@
+import { UlistIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -40,6 +41,7 @@ export const customerCaseProjectInfo = defineField({
           type: "object",
           title: "List Item",
           name: "listItem",
+          icon: UlistIcon,
           fields: [
             {
               name: "delivery",

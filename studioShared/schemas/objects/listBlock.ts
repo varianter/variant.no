@@ -1,3 +1,4 @@
+import { TagIcon, TagsIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -5,6 +6,7 @@ import { firstTranslation } from "studio/utils/i18n";
 const listBlock = defineField({
   name: "listBlock",
   title: "List Block",
+  icon: TagsIcon,
   description:
     "This block could be used to add a list of skills, tools, methods etc. used for this project.",
   type: "object",
@@ -27,6 +29,7 @@ const listBlock = defineField({
           type: "object",
           title: "List Item",
           name: "listItem",
+          icon: TagIcon,
           fields: [
             {
               name: "text",
