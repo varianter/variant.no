@@ -1,3 +1,4 @@
+import { BlockContentIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { firstTranslation } from "studio/utils/i18n";
@@ -6,6 +7,7 @@ const textBlock = defineField({
   name: "textBlock",
   title: "Text Block",
   type: "object",
+  icon: BlockContentIcon,
   fields: [
     {
       name: "sectionTitle",

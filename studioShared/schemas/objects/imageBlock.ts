@@ -1,3 +1,4 @@
+import { ImageIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -8,6 +9,7 @@ const imageBlock = defineField({
   name: "imageBlock",
   title: "Image Block",
   type: "object",
+  icon: ImageIcon,
   fields: [
     {
       title: "Image",
