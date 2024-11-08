@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 
+import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import {
   aliasFromEmail,
   domainFromEmail,
@@ -81,7 +82,7 @@ export default async function Employees({ language, section }: EmployeesProps) {
                   )}
                   {employee.telephone && (
                     <p className={styles.employeeTelephone}>
-                      {employee.telephone}
+                      {formatPhoneNumber(employee.telephone)}
                     </p>
                   )}
                 </div>

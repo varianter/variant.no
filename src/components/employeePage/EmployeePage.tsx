@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Text from "src/components/text/Text";
+import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
 
 import styles from "./employeePage.module.css";
@@ -11,6 +12,7 @@ export interface EmployeePageProps {
 
 export default function EmployeePage({ employee }: EmployeePageProps) {
   const image = employee.imageUrl ?? employee.imageThumbUrl ?? null;
+
   return (
     employee.name && (
       <div className={styles.wrapper}>
@@ -35,7 +37,7 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
               )}
               {employee.telephone && (
                 <Text type={"bodyBig"} className={styles.employeeTelephone}>
-                  {employee.telephone}
+                  {formatPhoneNumber(employee.telephone)}
                 </Text>
               )}
               {employee.officeName && (
