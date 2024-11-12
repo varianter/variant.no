@@ -103,8 +103,10 @@ export const Header = ({
                   </Link>
                 </div>
               )}
-              {renderPageLinks(links, false, pathname)}
-              {renderPageCTAs(ctas, false)}
+              <div>
+                {renderPageLinks(links, false, pathname)}
+                {renderPageCTAs(ctas, false)}
+              </div>
               <div className={styles.languageSwitcher}>
                 {defaultLanguage && (
                   <LanguageSwitcher

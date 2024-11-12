@@ -1,24 +1,4 @@
-:where(.desktopLink, .h1, .h2, .h3, .h4, .h5, .h6, .bodyXl) {
-  font-family: var(--font-britti-sans);
-}
 
-.bodyBig,
-.bodyNormal,
-.labelSmall,
-.labelLight,
-.labelRegular,
-.labelSemibold,
-.labelBold,
-.quoteItalic,
-.quoteNormal,
-.bodyExtraSmall,
-.bodySmall,
-.bodyNormal,
-.bodyBig,
-.list {
-  font-family: var(--font-britti-sans);
-  line-height: 140%;
-}
 
 .h1 {
   font-size: 4.5rem;

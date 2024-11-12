@@ -34,9 +34,9 @@ html {
   --Gray-300: #e1e1e1;
   --Gray-500: #595959;
   --Gray-900: #0e0f0f;
- --outline-dark: #2D2D2D; 
+  --outline-dark: #2d2d2d;
 
-  --light-500: #EAEAEA; 
+  --light-500: #eaeaea;
 
   /* TODO: upgrade color-scheme with correct colors */
   --secondary-red: #f0503f;
@@ -51,14 +51,18 @@ html {
   --max-content-width-medium: 1200px;
   --max-content-width-small: 1000px;
 }
-
+:root{
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+}
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  color: var(--primary-black);
   background-color: var(--primary-bg);
   font-family: var(--font-britti-sans);
-  color: var(--primary-black);
+  line-height: 1.4;
+  font-weight: 300;
+  
 }
 
 h1,
