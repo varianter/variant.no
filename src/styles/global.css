@@ -51,7 +51,7 @@ html {
   --max-content-width-medium: 1200px;
   --max-content-width-small: 1000px;
 }
-:root{
+:root {
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
 }
 body {
@@ -62,7 +62,6 @@ body {
   font-family: var(--font-britti-sans);
   line-height: 1.4;
   font-weight: 300;
-  
 }
 
 h1,
