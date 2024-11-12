@@ -17,13 +17,25 @@ const meta: Meta<typeof Button> = {
     size: {
       control: {
         type: "select",
-        options: ["large", "small"],
+        options: ["large", "medium", "small"],
       },
     },
     type: {
       control: {
         type: "select",
         options: ["primary", "secondary"],
+      },
+    },
+    icon: {
+      control: {
+        type: "select",
+        options: ["iconLeft", "iconRight"],
+      },
+    },
+    background: {
+      control: {
+        type: "select",
+        options: ["dark", "light"],
       },
     },
     onClick: { action: "clicked" },
@@ -40,7 +52,17 @@ export const PrimaryLarge: Story = {
   args: {
     size: "large",
     type: "primary",
-    children: "Primary Large Button",
+    children: "Primary large Button",
+    background: "dark",
+  },
+};
+
+export const PrimaryMedium: Story = {
+  args: {
+    size: "medium",
+    type: "primary",
+    children: "Primary Medium Button",
+    background: "dark",
   },
 };
 
@@ -49,6 +71,7 @@ export const PrimarySmall: Story = {
     size: "small",
     type: "primary",
     children: "Primary Small Button",
+    background: "dark",
   },
 };
 
@@ -60,10 +83,40 @@ export const SecondaryLarge: Story = {
   },
 };
 
+export const SecondaryMedium: Story = {
+  args: {
+    size: "medium",
+    type: "secondary",
+    children: "Secondary Medium Button",
+    background: "dark",
+  },
+};
+
 export const SecondarySmall: Story = {
   args: {
     size: "small",
     type: "secondary",
     children: "Secondary Small Button",
+    background: "dark",
+  },
+};
+
+export const PrimaryLargeLeftIcon: Story = {
+  args: {
+    size: "large",
+    type: "primary",
+    children: "Primary Large Left Icon Button",
+    icon: "iconLeft",
+    background: "dark",
+  },
+};
+
+export const FilledMediumRightIcon: Story = {
+  args: {
+    size: "medium",
+    type: "primary",
+    children: "Primary Medium Left Icon Button",
+    icon: "iconRight",
+    background: "dark",
   },
 };

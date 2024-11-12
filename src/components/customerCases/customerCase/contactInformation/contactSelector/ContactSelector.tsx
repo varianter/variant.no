@@ -45,10 +45,13 @@ export default function ContactSelector({
           <Button
             type={
               location._id === selectedOrDefaultLocationId
-                ? "secondaryFilled"
+                ? "primary"
                 : "secondary"
             }
-            size={"extraSmall"}
+            size={"small"}
+            background={
+              location._id === selectedOrDefaultLocationId ? "dark" : "light"
+            }
             key={location._id}
             onClick={() => setSelectedLocationId(location._id)}
           >

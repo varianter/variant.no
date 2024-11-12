@@ -29,7 +29,14 @@ html {
 
   --focus-color: #8b0f40;
 
-  --blue-dark: #0014cd;
+  /* Updated colorscheme here */
+  --Gray-100: #f2f2f2;
+  --Gray-300: #e1e1e1;
+  --Gray-500: #595959;
+  --Gray-900: #0e0f0f;
+ --outline-dark: #2D2D2D; 
+
+  --light-500: #EAEAEA; 
 
   /* TODO: upgrade color-scheme with correct colors */
   --secondary-red: #f0503f;
