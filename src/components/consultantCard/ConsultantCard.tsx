@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import CustomLink from "src/components/link/CustomLink";
+import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { aliasFromEmail } from "src/utils/employees";
 import { LinkType } from "studio/lib/interfaces/navigation";
@@ -53,7 +54,9 @@ export default function ConsultantCard({
             <p className={styles.consultantEmail}>{consultant.email}</p>
           )}
           {consultant.telephone && (
-            <p className={styles.consultantTelephone}>{consultant.telephone}</p>
+            <p className={styles.consultantTelephone}>
+              {formatPhoneNumber(consultant.telephone)}
+            </p>
           )}
           {employeePageSlug && (
             <CustomLink
