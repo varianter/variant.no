@@ -7,7 +7,7 @@
 }
 
 .label {
-  color: var(--primary-black);
+  color: var(--background-bg-dark-black);
 }
 
 .textarea {
@@ -18,9 +18,9 @@
   align-self: stretch;
 
   border-radius: 0.5rem;
-  border: 1px solid var(--secondary-off-white-2, #ece1d3);
-  background: var(--primary-white-bright, #fff);
-
+  border: 1px solid var(--background-bg-light-secondary, #ece1d3);
+  background: var(--text-primary-light, #fff);
+  /* Todo: Update color */
   min-height: 10rem;
 }
 

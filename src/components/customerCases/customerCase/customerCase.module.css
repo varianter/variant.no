@@ -101,7 +101,7 @@
 .projectInfoItemBadge {
   compose: projectInfoItemValue;
   padding: 0.375rem 0.75rem;
-  border: 1px solid var(--primary-black);
+  border: 1px solid var(--Dark-500);
   border-radius: 32.18156rem;
 }
 

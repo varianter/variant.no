@@ -10,7 +10,6 @@
 .quoteBlockInner {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-bg);
   border-radius: 2rem;
   gap: 1.25rem;
   width: 100%;

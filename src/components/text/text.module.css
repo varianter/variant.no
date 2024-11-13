@@ -76,7 +76,7 @@
 .labelSmall {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--primary-dark);
+  color: var(--text-link);
 }
 
 .labelLight {

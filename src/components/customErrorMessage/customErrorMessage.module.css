@@ -24,7 +24,8 @@
 
   border-radius: 1rem;
   border: 2px solid var(--primary-red-error);
-  background: var(--primary-white, #faf8f5);
+  background: var(--text-primary-light, #faf8f5);
+  /* TODO: update this color */
 }
 
 .buttonWrapper {

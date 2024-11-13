@@ -7,7 +7,6 @@
 
 .header {
   grid-column: 1 / -1;
-  color: var(--primary-black);
   font-size: 48px;
   font-weight: 600;
 }
@@ -19,7 +18,6 @@
 }
 
 .employeeCount {
-  color: var(--primary-black);
   font-size: 16px;
 }
 
@@ -50,7 +48,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary-black);
   border-radius: 12px;
   height: 150px;
   padding: 1rem;
@@ -58,20 +55,20 @@
 }
 
 .employeeName {
-  color: var(--primary-black);
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
 }
 
 .employeeRole {
-  color: var(--primary-black);
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 300;
 }
 
 .employeeEmail,
 .employeeTelephone {
-  color: var(--primary-black);
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 300;
 }

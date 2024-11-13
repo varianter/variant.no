@@ -1,3 +1,209 @@
+:where(.button, .button-secondary) {
+  --_button-color-background: var(
+    --button-color-background,
+    var(--color-background-interactive-primary-default)
+  );
+  font-size: var(--button-font-size, var(--font-size-s));
+  font-weight: var(--button-font-weight, 600);
+  font-family: var(--button-font-family, inherit);
+  background: var(
+    --_button-color-background,
+    var(--color-background-interactive-primary-default, var(--background-color))
+  );
+  color: var(
+    --button-color-foreground,
+    var(--color-foreground-neutral-inverted, black)
+  );
+  border: var(--button-border-width, var(--border-width-base)) solid
+    var(--button-color-border, var(--_button-color-background));
+  border-radius: var(--radius-large, var(--radius-medium));
+
+  /* 
+    We're using padding to control the height of buttons.
+    Instead of padding top + padding bottom + text height = button height
+    We're setting a min-height to ensure the button is at least a certain height.
+    This height is also the same as the input height.
+  */
+  min-height: var(--button-height, var(--size-input-height-medium, 2rem));
+  /* 
+    The components in Figma does have padding on top and bottom, 
+    but if a user zooms and text wraps onto multiple lines, 
+    that padding will only make the buttons really awkward.
+  */
+  padding-block: 0;
+  padding-inline: var(--button-padding-inline, 0.75rem);
+  text-align: center;
+  line-height: 1;
+  outline-offset: var(--focus-ring-offset);
+  outline-width: var(--focus-ring-width);
+  outline-color: transparent;
+  outline-color: oklch(from var(--focus-ring-color, transparent) l c h / 0%);
+  outline-style: var(--focus-ring-style);
+
+  transition:
+    outline 145ms ease,
+    background-color 145ms ease,
+    transform 145ms ease;
+
+  &:focus-visible {
+    outline-color: var(--focus-ring-color);
+    z-index: 1;
+  }
+
+  &:where(:active) {
+    transform: scale(0.97);
+  }
+}
+
+:where(.button) {
+  --button-height: var(--size-input-height-medium);
+  --button-padding-inline: var(--spacing-m);
+  --button-font-size: var(--font-size-s);
+  --button-gap: var(--spacing-xs);
+}
+
+:where(.button-s) {
+  --button-height: var(--size-input-height-small);
+  --button-padding-inline: var(--spacing-m);
+  --button-font-size: var(--font-size-xs);
+  --button-gap: var(--spacing-2xs);
+}
+
+:where(.button-l) {
+  --button-height: var(--size-input-height-large);
+  --button-padding-inline: var(--spacing-l);
+  --button-font-size: var(--font-size-m);
+  --button-gap: var(--spacing-xs);
+}
+
+:where(.button),
+:where(.button-secondary) {
+  &:where(:not(:active)):focus-visible {
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+:where(.button) {
+  --button-color-foreground: var(--color-foreground-neutral-inverted);
+  --button-color-background: var(
+    --color-background-interactive-primary-default
+  );
+  --button-color-border: var(
+    --button-color-border,
+    var(--_button-color-background)
+  );
+  &:where(:not(:active):hover) {
+    --button-color-background: var(
+      --color-background-interactive-primary-hover
+    );
+  }
+
+  &:where(:is(:active)) {
+    --button-color-background: var(
+      --color-background-interactive-primary-active
+    );
+  }
+}
+
+:where(.button-secondary) {
+  --button-color-foreground: var(--color-foreground-interactive-default);
+  --button-color-background: var(
+    --color-background-interactive-secondary-default
+  );
+  --button-color-border: var(--color-border-interactive-default);
+
+  &:where(:not(:active):hover) {
+    --button-color-background: var(
+      --color-background-interactive-secondary-hover
+    );
+    --button-color-foreground: var(--color-foreground-interactive-hover);
+    --button-color-border: var(--color-border-interactive-hover);
+  }
+
+  &:where(:is(:active)) {
+    --button-color-background: var(
+      --color-background-interactive-secondary-active
+    );
+    --button-color-foreground: var(--color-foreground-interactive-active);
+    --button-color-border: var(--color-border-interactive-active);
+  }
+}
+
+:where(.button) {
+  --button-height: var(--size-input-height-medium);
+  --button-padding-inline: var(--spacing-m);
+  --button-font-size: var(--font-size-s);
+  --button-gap: var(--spacing-xs);
+}
+
+:where(.button-s) {
+  --button-height: var(--size-input-height-small);
+  --button-padding-inline: var(--spacing-m);
+  --button-font-size: var(--font-size-xs);
+  --button-gap: var(--spacing-2xs);
+}
+
+:where(.button-l) {
+  --button-height: var(--size-input-height-large);
+  --button-padding-inline: var(--spacing-l);
+  --button-font-size: var(--font-size-m);
+  --button-gap: var(--spacing-xs);
+}
+
+:where(.button),
+:where(.button-secondary) {
+  &:where(:not(:active)):focus-visible {
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+:where(.button) {
+  --button-color-foreground: var(--color-foreground-neutral-inverted);
+  --button-color-background: var(
+    --color-background-interactive-primary-default
+  );
+  --button-color-border: var(
+    --button-color-border,
+    var(--_button-color-background)
+  );
+  &:where(:not(:active):hover) {
+    --button-color-background: var(
+      --color-background-interactive-primary-hover
+    );
+  }
+
+  &:where(:is(:active)) {
+    --button-color-background: var(
+      --color-background-interactive-primary-active
+    );
+  }
+}
+
+:where(.button-secondary) {
+  --button-color-foreground: var(--color-foreground-interactive-default);
+  --button-color-background: var(
+    --color-background-interactive-secondary-default
+  );
+  --button-color-border: var(--color-border-interactive-default);
+
+  &:where(:not(:active):hover) {
+    --button-color-background: var(
+      --color-background-interactive-secondary-hover
+    );
+    --button-color-foreground: var(--color-foreground-interactive-hover);
+    --button-color-border: var(--color-border-interactive-hover);
+  }
+
+  &:where(:is(:active)) {
+    --button-color-background: var(
+      --color-background-interactive-secondary-active
+    );
+    --button-color-foreground: var(--color-foreground-interactive-active);
+    --button-color-border: var(--color-border-interactive-active);
+  }
+}
+
+/* Old code 
 .button {
   max-width: 320px;
   height: fit-content;
@@ -11,7 +217,7 @@
 
 .dark {
   background-color: var(--outline-dark);
-  color: var(--primary-white);
+  color: var(--text-primary-light);
 }
 
 .light {
@@ -74,7 +280,7 @@
 }
 
 .iconColorDark {
-  color: var(--primary-white);
+  color: var(--text-primary-light);
 }
 
 .iconColorLight {
@@ -104,7 +310,7 @@
     height: 1.5rem;
     -webkit-mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
     mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
-    background-color: var(--primary-black);
+    background-color: var(--Dark-500);
     animation: rotateSpinner 750ms linear infinite;
   }
 }
@@ -119,4 +325,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
