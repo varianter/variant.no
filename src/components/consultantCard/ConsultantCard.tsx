@@ -48,8 +48,8 @@ export default function ConsultantCard({
           ) : (
             title
           )}
-          {consultant.competences.map((competence, index) => (
-            <Text type="labelRegular" key={index}>
+          {consultant.competences.map((competence) => (
+            <Text type="labelRegular" key={competence}>
               {competence}
             </Text>
           ))}

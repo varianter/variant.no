@@ -75,10 +75,10 @@ export default async function Employees({ language, section }: EmployeesProps) {
                 </Link>
                 <div className={styles.employeeInfo}>
                   <p className={styles.employeeName}>{employee.name}</p>
-                  {employee.competences.map((competence, index) => (
+                  {employee.competences.map((competence) => (
                     <Text
                       type="labelRegular"
-                      key={index}
+                      key={competence}
                       className={styles.employeeRole}
                     >
                       {competence}
