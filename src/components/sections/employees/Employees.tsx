@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 
+import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import {
   aliasFromEmail,
@@ -74,9 +75,15 @@ export default async function Employees({ language, section }: EmployeesProps) {
                 </Link>
                 <div className={styles.employeeInfo}>
                   <p className={styles.employeeName}>{employee.name}</p>
-                  {employee.officeName && (
-                    <p className={styles.employeeRole}>{employee.officeName}</p>
-                  )}
+                  {employee.competences.map((competence, index) => (
+                    <Text
+                      type="labelRegular"
+                      key={index}
+                      className={styles.employeeRole}
+                    >
+                      {competence}
+                    </Text>
+                  ))}
                   {employee.email && (
                     <p className={styles.employeeEmail}>{employee.email}</p>
                   )}
