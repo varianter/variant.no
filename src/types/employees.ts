@@ -24,6 +24,7 @@ export interface ChewbaccaEmployee {
   imageThumbUrl?: string | null;
   officeName?: string | null;
   startDate?: string | null;
+  competences: string[];
 }
 
 export function isChewbaccaEmployee(
@@ -52,6 +53,9 @@ export function isChewbaccaEmployee(
       value.officeName === null) &&
     (!("startDate" in value) ||
       typeof value.startDate === "string" ||
-      value.startDate === null)
+      value.startDate === null) &&
+    (!("competences" in value) ||
+      typeof value.competences === "object" ||
+      value.competences === null)
   );
 }
