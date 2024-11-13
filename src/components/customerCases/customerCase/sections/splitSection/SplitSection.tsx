@@ -26,7 +26,7 @@ export default function SplitSection({ section }: SplitSectionProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        {section.sections.map((section) => (
+        {section.sections?.map((section) => (
           <SplitSectionSection key={section._key} section={section} />
         ))}
       </div>
