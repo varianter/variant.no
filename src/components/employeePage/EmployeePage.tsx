@@ -45,6 +45,11 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
                   {employee.officeName}
                 </Text>
               )}
+              {employee.competences.map((competence) => (
+                <Text type="bodyNormal" key={competence}>
+                  {competence}
+                </Text>
+              ))}
             </div>
           </div>
         </div>

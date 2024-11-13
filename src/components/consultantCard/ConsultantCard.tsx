@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import CustomLink from "src/components/link/CustomLink";
+import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { aliasFromEmail } from "src/utils/employees";
@@ -47,6 +48,11 @@ export default function ConsultantCard({
           ) : (
             title
           )}
+          {consultant.competences.map((competence) => (
+            <Text type="labelRegular" key={competence}>
+              {competence}
+            </Text>
+          ))}
           {consultant.officeName && (
             <p className={styles.consultantRole}>{consultant.officeName}</p>
           )}

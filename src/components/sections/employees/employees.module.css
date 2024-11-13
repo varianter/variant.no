@@ -70,9 +70,7 @@
 }
 
 .employeeRole {
-  color: var(--primary-black);
-  font-size: 16px;
-  font-weight: 300;
+  color: var(--primary-grey);
 }
 
 .employeeEmail,
