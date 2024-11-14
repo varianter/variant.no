@@ -79,3 +79,12 @@
   font-size: 16px;
   font-weight: 300;
 }
+
+.peopleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+
+}

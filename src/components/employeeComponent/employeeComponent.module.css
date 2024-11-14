@@ -1,0 +1,115 @@
+
+
+
+
+/*---------CustomerCase consultantCard------*/
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.consultantImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-black);
+    border-radius: 12px;
+    height: 125px;
+    width: 50%;
+    padding: 1rem;
+    position: relative;
+  }
+
+
+
+.consultantInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.contactInfo{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 14.4px */
+    gap: 0.375rem;
+
+}
+
+ 
+
+.consultantName {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+}
+
+
+/*---------ConsultantCardPeoplePage------*/
+
+.peopleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 1rem;
+    min-width: 280px;
+    max-width: var(--Text-paragraph, 537px);
+    gap: var(--small, 6px);
+
+
+}
+
+.peopleConsultantInfoWrapper{
+    display: flex;
+    text-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content, 100%;
+    gap: 0.25rem;
+    align-self: stretch;   
+}
+
+.peopleConsultantImage {
+    display: block;
+    height: 206px;
+    min-width: 280px;
+    max-width: var(--Text-paragraph, 537px);
+    position: relative;
+
+    background-color: var(--primary-black);
+    border-radius: var(--medium, 12px);
+}
+
+
+
+/*---------Name_Competence-------------*/
+
+.peopleConsultantInfo {
+    color: var(--stroke-tertiary, #5E5E5E);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.peopleConsultantName {
+    color: var(--text-primary, #222424);
+   
+}
+
+/*-------------Email_PhoneNR----------------*/
+
+.peopleContactInfo{
+    font-weight: 400;
+    line-height: 120%; 
+    gap: 0.375rem;
+    font-size: 1rem;
+    color: var(--text-tertiary, #5E5E5E);
+
+}
+
+ 
