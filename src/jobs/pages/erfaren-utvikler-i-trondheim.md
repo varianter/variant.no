@@ -5,7 +5,7 @@ slug: erfaren-utvikler-i-trondheim
 contact_emails: ewa@variant.no, tv@variant.no
 meta_title: Erfaren utvikler i Trondheim
 meta_description: Vi ser etter en dyktig og erfaren utvikler til Variant Trondheim!
-meta_image: https://www.variant.no/images/erfaren_backendutvikler_trondheim_meta.png
+meta_image: https://www.variant.no/images/erfaren_utvikler_trondheim_meta.png
 ---
 
 ## Vi søker etter deg som vil være med å bygge Variant Trondheim!
@@ -29,9 +29,9 @@ Din utviklerprofil kan være så mangt. Kanskje er du en kløpper på React, Vue
 - [HTML og CSS](https://www.kode24.no/kodenytt/identitetskrise-i-frontend-utvikling/70738327)
 - og ikke minst: å dele læreglede, empati, utviklerkultur og samarbeid
 
-Samtidig er ingen noensinne ferdig utlært, og vi legger opp for at du får relevant faglig og personlig utvikling i Variant. Dette garanterer vi med [utviklingsprogrammet vårt RÅ](https://handbook.variant.no/prosesser-raa#RA), som jevnlig følger opp alle i Variant slik at vi forblir flinke konsulenter, og samtidig fortsette å gjøre oss dyktig i faget vårt. 
+Samtidig er ingen noensinne ferdig utlært, og vi legger opp for at du får relevant faglig og personlig utvikling i Variant. Dette garanterer vi med [utviklingsprogrammet vårt RÅ](https://handbook.variant.no/prosesser-raa#RA), som jevnlig følger opp alle i Variant slik at vi forblir flinke konsulenter, og samtidig fortsette å gjøre oss dyktig i faget vårt.
 
-Det aller viktigste for oss er at du har et ønske om å fortsette å utvikle deg som en dyktig utvikler og at du er en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvikle hverandre videre. 
+Det aller viktigste for oss er at du har et ønske om å fortsette å utvikle deg som en dyktig utvikler og at du er en raus kollega. Sammen utgjør vi et bredt spekter av utviklere med ulik bakgrunn, fagprofil og styrker som kan lære av, og utvikle hverandre videre.
 
 Vi ser etter en teknolog med en god porsjon entusiasme og nysgjerrighet. Dette er en person som skal være med å forme kultur og fagmiljø sammen med resten av gjengen i Trondheim. Våre verdier er åpenhet, raushet og læreglede, og det er viktig at du har verdi- og tankesett som harmonerer med disse.
 Du bør være noen som holder seg oppdatert innen utvikling. Samtidig har faget vårt blitt mer enn å bare kverne ut flest mulig kodelinjer. Vi lever i skjæringspunktet mellom design, utvikling og mennesker, og derfor tror vi det er en fordel om du har jobbet i kryssfunksjonelle team før. Det er også en fordel om du har jobbet i konsulentbransjen, og kan se muligheter, behov og løsninger hos våre kunder. Om det gjelder teknologi, innovasjon eller produktutvikling.
