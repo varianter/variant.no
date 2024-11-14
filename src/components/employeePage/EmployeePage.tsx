@@ -1,13 +1,11 @@
 import Image from "next/image";
 
+import EmployeeComponent from "src/components/employeeComponent/employeeComponent";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
 
 import styles from "./employeePage.module.css";
-
-import EmployeeComponent from "../employeeComponent/employeeComponent";
-import { languageID } from "i18n/languageSchemaField";
 
 export interface EmployeePageProps {
   employee: ChewbaccaEmployee;
@@ -52,8 +50,7 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
                 <Text type="bodyNormal" key={competence}>
                   {competence}
                 </Text>
-              ))} 
-              <EmployeeComponent consultant={employee}></EmployeeComponent>
+              ))}
             </div>
           </div>
         </div>

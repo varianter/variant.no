@@ -7,7 +7,6 @@ import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./customerCaseConsulants.module.css";
-import EmployeeComponent from "src/components/employeeComponent/employeeComponent";
 
 export interface CustomerCaseConsultantsProps {
   language: string;
@@ -33,17 +32,12 @@ export default async function CustomerCaseConsultants({
       <Text type={"h3"}>{t("in_project")}</Text>
       <div className={styles.content}>
         {consultants.map((consultant) => (
-          <>
-          {/* <ConsultantCard
+          <ConsultantCard
             key={consultant.email}
             currentLanguage={language}
             consultant={consultant}
-            employeePageSlug={employeePageSlug} />
-             */}
-            <EmployeeComponent
-              consultant={consultant}
-              employeePageSlug={employeePageSlug} />
-              </>
+            employeePageSlug={employeePageSlug}
+          />
         ))}
       </div>
     </div>

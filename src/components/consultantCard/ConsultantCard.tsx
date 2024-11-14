@@ -53,9 +53,6 @@ export default function ConsultantCard({
               {competence}
             </Text>
           ))}
-          {consultant.officeName && (
-            <p className={styles.consultantRole}>{consultant.officeName}</p>
-          )}
           {consultant.email && (
             <p className={styles.consultantEmail}>{consultant.email}</p>
           )}
