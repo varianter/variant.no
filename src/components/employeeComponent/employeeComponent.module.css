@@ -101,6 +101,22 @@
    
 }
 
+.peopleConsultantRole{
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    align-self: stretch;
+}
+
+.peopleConsultantRoleDot::after {
+    content: "·";
+    margin: 0 0.5rem
+}
+
+.peopleConsultantRoleDot:last-child:after{
+    content: "";
+    margin: 0;
+}
 /*-------------Email_PhoneNR----------------*/
 
 .peopleContactInfo{

@@ -37,12 +37,18 @@ export default function EmployeeComponent({
         <div className={styles.peopleConsultantInfoWrapper}>
           <div className={styles.peopleConsultantInfo}>
             <p className={styles.peopleConsultantName}>{consultant.name}</p>
+            <div className={styles.peopleConsultantRole}>
 
             {consultant.competences.map((competence) => (
-              <Text type="labelRegular" key={competence}>
-                {competence}
+                <>
+                <Text className={styles.peopleConsultantRoleDot} type="labelRegular" key={competence}>
+                {competence} 
+
               </Text>
+              </>
             ))}
+            
+            </div>
           </div>
 
           <div className={styles.peopleContactInfo}>
