@@ -1,11 +1,7 @@
 import { headers } from "next/headers";
-import Image from "next/image";
-import Link from "next/link";
 
-import Text from "src/components/text/Text";
-import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
+import EmployeeComponent from "src/components/employeeComponent/employeeComponent";
 import {
-  aliasFromEmail,
   domainFromEmail,
   fetchAllChewbaccaEmployees,
 } from "src/utils/employees";
@@ -15,8 +11,6 @@ import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./employees.module.css";
-import EmployeeComponent from "src/components/employeeComponent/employeeComponent";
-
 
 export interface EmployeesProps {
   language: string;
@@ -48,34 +42,32 @@ export default async function Employees({ language, section }: EmployeesProps) {
 
   return (
     <>
-          
-    <div className={styles.wrapper}>
-      <div className={styles.employees}>
-        <h1 className={styles.header}>{section.basicTitle}</h1>
-        <div className={styles.employeeCountWrapper}>
-          <p className={styles.employeeCount}>
-            Viser <span className={styles.employeeCountValue}>{total}</span> av{" "}
-            <span className={styles.employeeCountValue}>{total}</span>{" "}
-            konsulenter
-          </p>
-        </div>
-          <div className={styles.peopleContainer}>
-          {employees.map((employee) => (
-            <EmployeeComponent
-
-            consultant={employee}
-            employeePageSlug={employeesPageSlug} 
-            language={language}/>
-          ))}
+      <div className={styles.wrapper}>
+        <div className={styles.employees}>
+          <h1 className={styles.header}>{section.basicTitle}</h1>
+          <div className={styles.employeeCountWrapper}>
+            <p className={styles.employeeCount}>
+              Viser <span className={styles.employeeCountValue}>{total}</span>{" "}
+              av <span className={styles.employeeCountValue}>{total}</span>{" "}
+              konsulenter
+            </p>
           </div>
+          <div className={styles.peopleContainer}>
+            {employees.map((employee) => (
+              <EmployeeComponent
+                consultant={employee}
+                employeePageSlug={employeesPageSlug}
+                language={language}
+                key={employee.name}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-    
-             
-    
     </>
-  )
-   {/*     {employees.map(
+  );
+  {
+    /*     {employees.map(
           (employee) =>
             employee.imageThumbUrl &&
             employee.name &&
@@ -117,8 +109,6 @@ export default async function Employees({ language, section }: EmployeesProps) {
             ),
         )}
       </div>
-    </div> */}
-
-    
-  
+    </div> */
+  }
 }

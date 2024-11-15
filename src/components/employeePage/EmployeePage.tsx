@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import EmployeeComponent from "src/components/employeeComponent/employeeComponent";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";

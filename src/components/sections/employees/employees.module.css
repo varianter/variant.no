@@ -4,7 +4,6 @@
   align-items: center;
   margin: 5rem 0;
   flex-wrap: wrap;
-
 }
 
 .header {
@@ -12,12 +11,10 @@
   font-size: 48px;
   font-weight: 600;
   align-self: flex-start;
-
 }
 
 .employeeCountWrapper {
   width: 100%;
-
 }
 
 .employeeCount {
