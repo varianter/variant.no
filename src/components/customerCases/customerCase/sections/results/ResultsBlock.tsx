@@ -1,3 +1,4 @@
+import StackedHighlights from "src/components/stackedHighlights/StackedHighlights";
 import Text from "src/components/text/Text";
 import { ResultsBlock as ResultsBlockObject } from "studioShared/lib/interfaces/resultsBlock";
 
@@ -25,6 +26,9 @@ export default function ResultsBlock({ section }: ResultsBlockProps) {
               </div>
             ))}
           </div>
+        </div>
+        <div>
+          <StackedHighlights></StackedHighlights>
         </div>
       </div>
     )

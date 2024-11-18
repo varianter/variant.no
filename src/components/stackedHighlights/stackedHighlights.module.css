@@ -1,0 +1,90 @@
+.highlightCard {
+  border: 3px solid var(--primary-yellow-warning);
+  border-radius: 0.25rem;
+  background-color: var(--primary-yellow-warning);
+}
+
+.highlightCard .innerContent {
+  background-color: var(--primary-bg);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  height: fit-content;
+  max-width: 960px;
+}
+
+.subtitle {
+  color: var(--primary-grey);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+
+.highlightOutside {
+  background-color: var(--primary-yellow-warning);
+  color: var(--secondary-text-black-darker);
+  display: inline-block;
+  padding: 0.25rem 1.25rem;
+  z-index: 2;
+  line-height: 1.5;
+  margin-right: auto;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+.highlightBlock {
+  display: inline-flex;
+  flex-direction: column;
+  align-self: start;
+}
+
+.highlightBlock:not(:first-child) {
+  margin-top: calc(3px * -1);
+}
+
+.highlightCard:not(:first-child) {
+  margin-top: calc(3px * -1);
+}
+
+.highlightWrapper {
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  width: 100%;
+  /* overflow: clip; */
+}
+
+.highlightWrapper:has(+ :not(.highlightOutside)) {
+  border-radius: inherit;
+  border-bottom-right-radius: 0;
+}
+
+.highlightRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.highlightRow .highlightCard {
+  margin-top: calc(3px * -1);
+}
+
+.highlightRow .highlightCard:not(:last-child) {
+  border-bottom-right-radius: 0;
+}
+
+.highlightRow .highlightCard:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-left: 1.5rem;
+}
+
+.highlightRow .highlightCard:first-child {
+  border-top-left-radius: 0;
+}
+
+.highlightRow .highlightCard:last-child {
+  border-top-right-radius: 0;
+}
+
+.highlightRow .highlightCard {
+  width: 100%;
+}
