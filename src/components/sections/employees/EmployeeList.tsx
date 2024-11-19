@@ -81,15 +81,11 @@ export default function EmployeeList({
     const combinedFilters = { ...employeeFilters, ...newFilters };
     setEmployeeFilters(combinedFilters);
 
-    console.table(newFilters);
-    console.table(combinedFilters);
-
     const newFilteredEmployees = employees.filter((e) => {
       if (
         combinedFilters.competenceFilter !== null &&
         !e.competences.includes(combinedFilters.competenceFilter)
       ) {
-        console.log("Employee competence does not match filter", e.competences);
         return false;
       }
 
@@ -97,7 +93,6 @@ export default function EmployeeList({
         combinedFilters.locationFilter !== null &&
         e.officeName !== combinedFilters.locationFilter
       ) {
-        console.log("Employee location does not match filter", e.officeName);
         return false;
       }
 
