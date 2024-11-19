@@ -1,14 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import Button from "src/components/buttons/Button";
+import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
 
 import styles from "./employees.module.css";
-import { useTranslations } from "next-intl";
-import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 
 const competences: Competence[] = [
   "Utvikling",
