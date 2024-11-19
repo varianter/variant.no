@@ -18,5 +18,10 @@
   "custom_link": {
     "visit_cv": "Visit mini-CV",
     "read_more": "Read more"
+  },
+  "employee_card": {
+    "show": "Show",
+    "of": "of",
+    "consultants": "consultants"
   }
 }

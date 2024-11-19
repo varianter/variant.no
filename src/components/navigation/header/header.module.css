@@ -37,18 +37,6 @@
   padding: 0rem 1.5rem;
 }
 
-.logo {
-  overflow: hidden;
-  width: auto;
-  display: flex;
-  max-width: 100%;
-  height: 1.25rem;
-
-  @media (min-width: 1200px) {
-    flex: 1;
-  }
-}
-
 .list {
   list-style-type: none;
   margin: 0;
@@ -168,4 +156,11 @@
 .announcementContent p {
   font-weight: 600;
   color: var(--primary-white);
+}
+
+.logo {
+  width: 130px;
+  height: 37px;
+  background-color: var(--primary-white);
+  -webkit-mask: url("/_assets/variant-logo.svg") no-repeat 50% 50%;
 }

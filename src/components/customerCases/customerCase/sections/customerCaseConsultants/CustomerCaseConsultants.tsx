@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import ConsultantCard from "src/components/consultantCard/ConsultantCard";
+import CustomerCaseEmployeeCard from "src/components/customerCaseEmployeeCard/CustomerCaseEmployeeCard";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
@@ -32,10 +32,10 @@ export default async function CustomerCaseConsultants({
       <Text type={"h3"}>{t("in_project")}</Text>
       <div className={styles.content}>
         {consultants.map((consultant) => (
-          <ConsultantCard
+          <CustomerCaseEmployeeCard
             key={consultant.email}
             currentLanguage={language}
-            consultant={consultant}
+            employee={consultant}
             employeePageSlug={employeePageSlug}
           />
         ))}

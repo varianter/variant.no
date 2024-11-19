@@ -55,7 +55,7 @@
     height: 24px;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-black);
+    background-color: var(--primary-white);
     -webkit-mask: url("/_assets/arrow.svg") no-repeat 50% 50%;
   }
 }
