@@ -12,27 +12,14 @@ import { aliasFromEmail } from "src/utils/employees";
 
 import styles from "./employees.module.css";
 
-export interface EmployeesProps {
-  employees: ChewbaccaEmployee[];
-  language: string;
-  employeesPageSlug: string;
-}
+const competences: Competence[] = [
+  "Utvikling",
+  "Administasjon",
+  "Design",
+  "Project Management",
+];
 
-export default function EmployeeList({
-  employees,
-  language,
-  employeesPageSlug,
-}: EmployeesProps) {
-  const [filteredEmployees, setFilteredEmployees] =
-    useState<ChewbaccaEmployee[]>(employees);
-
-  const competences: Competence[] = [
-    "Utvikling",
-    "Administasjon",
-    "Design",
-    "Project Management",
-  ];
-
+function countCompetences(employees: ChewbaccaEmployee[]) {
   const competenceCounts: Record<Competence, number> = {
     Utvikling: 0,
     Administasjon: 0,
@@ -44,32 +31,150 @@ export default function EmployeeList({
     .flatMap((e) => e.competences)
     .forEach((c) => (competenceCounts[c] += 1));
 
-  const [competenceFilters, setCompetenceFilters] = useState(
-    new Map<Competence, boolean>(competences.map((c) => [c, false])),
-  );
+  return competenceCounts;
+}
 
-  function toggleFilter(toggleFilterKey: Competence) {
-    const newFilters = competenceFilters;
-    newFilters.set(toggleFilterKey, !newFilters.get(toggleFilterKey));
-    setCompetenceFilters(newFilters);
+function countLocations(employees: ChewbaccaEmployee[]) {
+  const locationCounts: Record<string, number> = {};
 
-    console.log(newFilters.values());
-
-    if (newFilters.values().every((x) => !x)) {
-      setFilteredEmployees(employees);
-      return;
-    }
-
-    const newFilteredEmployees = employees.filter((x) =>
-      x.competences.some((c) => newFilters.get(c)),
+  employees
+    .flatMap((e) => e.officeName)
+    .filter((o) => !!o)
+    .forEach((o) =>
+      !locationCounts[o!]
+        ? (locationCounts[o!] = 1)
+        : (locationCounts[o!] += 1),
     );
+
+  return locationCounts;
+}
+
+export interface EmployeesProps {
+  employees: ChewbaccaEmployee[];
+  language: string;
+  employeesPageSlug: string;
+}
+
+interface EmployeeFilters {
+  competenceFilter: Competence | null;
+  locationFilter: string | null;
+}
+
+export default function EmployeeList({
+  employees,
+  language,
+  employeesPageSlug,
+}: EmployeesProps) {
+  const competenceCounts = countCompetences(employees);
+  const locationCounts = countLocations(employees);
+  const locations = Object.keys(locationCounts);
+
+  const [filteredEmployees, setFilteredEmployees] =
+    useState<ChewbaccaEmployee[]>(employees);
+
+  const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
+    competenceFilter: null,
+    locationFilter: null,
+  });
+
+  function filterEmployees(newFilters: Partial<EmployeeFilters>) {
+    const combinedFilters = { ...employeeFilters, ...newFilters };
+    setEmployeeFilters(combinedFilters);
+
+    console.table(newFilters);
+    console.table(combinedFilters);
+
+    const newFilteredEmployees = employees.filter((e) => {
+      if (
+        combinedFilters.competenceFilter !== null &&
+        !e.competences.includes(combinedFilters.competenceFilter)
+      ) {
+        console.log("Employee competence does not match filter", e.competences);
+        return false;
+      }
+
+      if (
+        combinedFilters.locationFilter !== null &&
+        e.officeName !== combinedFilters.locationFilter
+      ) {
+        console.log("Employee location does not match filter", e.officeName);
+        return false;
+      }
+
+      return true;
+    });
 
     setFilteredEmployees(newFilteredEmployees);
   }
 
   return (
     <>
+      <div className={styles.employeeFiltersWrapper}>
+        <div className={styles.employeeFilterWrapper}>
+          <Text type="labelSemibold" className={styles.employeeFilterLabel}>
+            Fag
+          </Text>
+          <Button
+            size="small"
+            type={
+              employeeFilters.competenceFilter == null
+                ? "secondaryFilled"
+                : "secondary"
+            }
+            onClick={() => filterEmployees({ competenceFilter: null })}
+          >
+            Alle
+          </Button>
+          {competences.map((competence) => {
+            const active = employeeFilters.competenceFilter == competence;
+            return (
+              <Button
+                size="small"
+                key={competence}
+                type={active ? "secondaryFilled" : "secondary"}
+                onClick={() =>
+                  filterEmployees({ competenceFilter: competence })
+                }
+              >
+                {competence} ({competenceCounts[competence]})
+              </Button>
+            );
+          })}
+        </div>
+        <div className={styles.employeeFilterWrapper}>
+          <Text type="labelSemibold" className={styles.employeeFilterLabel}>
+            Lokasjon
+          </Text>
+          <Button
+            size="small"
+            type={
+              employeeFilters.locationFilter == null
+                ? "secondaryFilled"
+                : "secondary"
+            }
+            onClick={() => filterEmployees({ locationFilter: null })}
+          >
+            Alle
+          </Button>
+          {locations.map((location) => {
+            const active = employeeFilters.locationFilter == location;
+            return (
+              <Button
+                size="small"
+                key={location}
+                type={active ? "secondaryFilled" : "secondary"}
+                onClick={() => filterEmployees({ locationFilter: location })}
+              >
+                {location} ({locationCounts[location]})
+              </Button>
+            );
+          })}
+        </div>
+      </div>
+
       <div className={styles.employeeCountWrapper}>
+        <div style={{ display: "flex" }}></div>
+
         <p className={styles.employeeCount}>
           Viser{" "}
           <span className={styles.employeeCountValue}>
@@ -79,29 +184,6 @@ export default function EmployeeList({
           <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
           konsulenter
         </p>
-        <div style={{ display: "flex" }}>
-          {competences.map((competence) => {
-            const active = competenceFilters.get(competence);
-            return (
-              <Button
-                key={competence}
-                type={active ? "secondaryFilled" : "secondary"}
-                onClick={() => toggleFilter(competence)}
-              >
-                {competence} ({competenceCounts[competence]})
-              </Button>
-              //   <Checkbox
-              //     key={competence}
-              //     name={`show${competence}`}
-              //     value={competenceFilters.get(competence)!}
-              //     label={competence}
-              //     onChange={() => {
-              //       toggleFilter(competence);
-              //     }}
-              //   />
-            );
-          })}
-        </div>
       </div>
 
       {filteredEmployees.map(

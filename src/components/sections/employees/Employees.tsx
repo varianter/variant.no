@@ -48,47 +48,6 @@ export default async function Employees({ language, section }: EmployeesProps) {
           employees={employees}
           employeesPageSlug={employeesPageSlug}
         />
-        {/* {employees.map(
-          (employee) =>
-            employee.imageThumbUrl &&
-            employee.name &&
-            employee.email && (
-              <div key={employee.email} className={styles.employee}>
-                <Link
-                  href={`/${language}/${employeesPageSlug}/${aliasFromEmail(employee.email)}`}
-                >
-                  <div className={styles.employeeImage}>
-                    <Image
-                      src={employee.imageUrl ?? employee.imageThumbUrl}
-                      alt={employee.name}
-                      objectFit="cover"
-                      fill={true}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.employeeInfo}>
-                  <p className={styles.employeeName}>{employee.name}</p>
-                  {employee.competences.map((competence) => (
-                    <Text
-                      type="labelRegular"
-                      key={competence}
-                      className={styles.employeeRole}
-                    >
-                      {competence}
-                    </Text>
-                  ))}
-                  {employee.email && (
-                    <p className={styles.employeeEmail}>{employee.email}</p>
-                  )}
-                  {employee.telephone && (
-                    <p className={styles.employeeTelephone}>
-                      {formatPhoneNumber(employee.telephone)}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ),
-        )} */}
       </div>
     </div>
   );

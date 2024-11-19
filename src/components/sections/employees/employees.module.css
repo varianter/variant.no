@@ -12,6 +12,23 @@
   font-weight: 600;
 }
 
+.employeeFiltersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.employeeFilterWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.employeeFilterLabel {
+  min-width: 4.5rem;
+  width: 4.5rem;
+}
+
 .employeeCountWrapper {
   width: 100%;
   grid-column: 1 / -1;
