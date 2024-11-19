@@ -15,7 +15,6 @@ html {
   --primary-bg: #f2f2f2;
   --primary-bg-dark: #d9d9d9;
   --primary-bg-blue: #0014cd;
-
   --primary-white-bright: #ffffff;
   --primary-white: #faf8f5;
   --primary-black: #2d2d2d;
@@ -34,6 +33,7 @@ html {
 
   /* TODO: upgrade color-scheme with correct colors */
   --secondary-red: #f0503f;
+  --text-primary: #222424;
 
   /* breakpoints */
   --breakpoint-mobile: 767px;

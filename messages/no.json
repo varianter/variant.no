@@ -18,5 +18,10 @@
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
     "read_more": "Les mer"
+  },
+  "employee_card": {
+    "show": "Vis",
+    "of": "av",
+    "consultants": "konsulenter"
   }
 }

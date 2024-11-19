@@ -1,11 +1,8 @@
 import { headers } from "next/headers";
-import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-import Text from "src/components/text/Text";
-import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
+import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import {
-  aliasFromEmail,
   domainFromEmail,
   fetchAllChewbaccaEmployees,
 } from "src/utils/employees";
@@ -15,13 +12,13 @@ import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./employees.module.css";
-
 export interface EmployeesProps {
   language: string;
   section: EmployeesSection;
 }
 
 export default async function Employees({ language, section }: EmployeesProps) {
+  const t = await getTranslations("employee_card");
   const employeesPageRes = await loadStudioQuery<{ slug: string }>(
     EMPLOYEE_PAGE_SLUG_QUERY,
     {
@@ -50,52 +47,23 @@ export default async function Employees({ language, section }: EmployeesProps) {
         <h1 className={styles.header}>{section.basicTitle}</h1>
         <div className={styles.employeeCountWrapper}>
           <p className={styles.employeeCount}>
-            Viser <span className={styles.employeeCountValue}>{total}</span> av{" "}
+            {t("show")}
+            <span className={styles.employeeCountValue}>{total}</span>
+            {t("of")}
             <span className={styles.employeeCountValue}>{total}</span>{" "}
-            konsulenter
+            {t("consultants")}
           </p>
         </div>
-        {employees.map(
-          (employee) =>
-            employee.imageThumbUrl &&
-            employee.name &&
-            employee.email && (
-              <div key={employee.email} className={styles.employee}>
-                <Link
-                  href={`/${language}/${employeesPageSlug}/${aliasFromEmail(employee.email)}`}
-                >
-                  <div className={styles.employeeImage}>
-                    <Image
-                      src={employee.imageUrl ?? employee.imageThumbUrl}
-                      alt={employee.name}
-                      objectFit="cover"
-                      fill={true}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.employeeInfo}>
-                  <p className={styles.employeeName}>{employee.name}</p>
-                  {employee.competences.map((competence) => (
-                    <Text
-                      type="labelRegular"
-                      key={competence}
-                      className={styles.employeeRole}
-                    >
-                      {competence}
-                    </Text>
-                  ))}
-                  {employee.email && (
-                    <p className={styles.employeeEmail}>{employee.email}</p>
-                  )}
-                  {employee.telephone && (
-                    <p className={styles.employeeTelephone}>
-                      {formatPhoneNumber(employee.telephone)}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ),
-        )}
+        <div className={styles.peopleContainer}>
+          {employees.map((employee) => (
+            <EmployeeCard
+              employee={employee}
+              employeePageSlug={employeesPageSlug}
+              language={language}
+              key={employee.name}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
