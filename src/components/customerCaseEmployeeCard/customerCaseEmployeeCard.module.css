@@ -1,10 +1,10 @@
-.consultant {
+.employee {
   display: flex;
   width: 100%;
   gap: 1rem;
 }
 
-.consultantImage {
+.employeeImage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,30 +16,49 @@
   position: relative;
 }
 
-.consultantInfo {
+.employeeInfo {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
-.consultantName {
-  color: #282828;
+.employeeRole {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+  align-self: stretch;
+  width: 100%;
+}
+
+.employeeRoleDot::after {
+  content: "·";
+  margin: 0 0.5rem;
+}
+
+.employeeRoleDot:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+.employeeName {
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
   line-height: 120%;
 }
 
-.consultantRole {
-  color: #282828;
+.employeeRole {
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 400;
   line-height: 120%;
 }
 
-.consultantEmail,
-.consultantTelephone {
-  color: #282828;
+.employeeEmail,
+.employeeTelephone {
+  color: var(--text-primary);
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 120%;

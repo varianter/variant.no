@@ -18,5 +18,10 @@
   "custom_link": {
     "visit_cv": "Besök mini-CV",
     "read_more": "Läs mer"
+  },
+  "employee_card": {
+    "show": "Visa",
+    "of": "av",
+    "consultants": "konsulentar"
   }
 }
