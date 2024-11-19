@@ -1,11 +1,6 @@
 import { headers } from "next/headers";
-import Image from "next/image";
-import Link from "next/link";
 
-import Text from "src/components/text/Text";
-import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import {
-  aliasFromEmail,
   domainFromEmail,
   fetchAllChewbaccaEmployees,
 } from "src/utils/employees";
@@ -14,6 +9,7 @@ import { EmployeesSection } from "studio/lib/interfaces/pages";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
+import EmployeeList from "./EmployeeList";
 import styles from "./employees.module.css";
 
 export interface EmployeesProps {
@@ -42,20 +38,17 @@ export default async function Employees({ language, section }: EmployeesProps) {
     (employee) =>
       employee.email != null && domainFromEmail(employee.email) === domain,
   );
-  const total = employees.length;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.employees}>
         <h1 className={styles.header}>{section.basicTitle}</h1>
-        <div className={styles.employeeCountWrapper}>
-          <p className={styles.employeeCount}>
-            Viser <span className={styles.employeeCountValue}>{total}</span> av{" "}
-            <span className={styles.employeeCountValue}>{total}</span>{" "}
-            konsulenter
-          </p>
-        </div>
-        {employees.map(
+        <EmployeeList
+          language={language}
+          employees={employees}
+          employeesPageSlug={employeesPageSlug}
+        />
+        {/* {employees.map(
           (employee) =>
             employee.imageThumbUrl &&
             employee.name &&
@@ -95,7 +88,7 @@ export default async function Employees({ language, section }: EmployeesProps) {
                 </div>
               </div>
             ),
-        )}
+        )} */}
       </div>
     </div>
   );
