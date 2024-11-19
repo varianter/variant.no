@@ -220,7 +220,6 @@ const SectionRenderer = ({
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "employees":
-      console.table(section);
       return <Employees language={language} section={section} />;
     default:
       return null;

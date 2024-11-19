@@ -1,16 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 import Button from "src/components/buttons/Button";
 import Text from "src/components/text/Text";
-import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
-import { aliasFromEmail } from "src/utils/employees";
 
 import styles from "./employees.module.css";
+import { useTranslations } from "next-intl";
+import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 
 const competences: Competence[] = [
   "Utvikling",
@@ -68,6 +66,8 @@ export default function EmployeeList({
   const competenceCounts = countCompetences(employees);
   const locationCounts = countLocations(employees);
   const locations = Object.keys(locationCounts);
+
+  const t = useTranslations("employee_card");
 
   const [filteredEmployees, setFilteredEmployees] =
     useState<ChewbaccaEmployee[]>(employees);
@@ -171,57 +171,24 @@ export default function EmployeeList({
         <div style={{ display: "flex" }}></div>
 
         <p className={styles.employeeCount}>
-          Viser{" "}
-          <span className={styles.employeeCountValue}>
-            {filteredEmployees.length}
-          </span>{" "}
-          av{" "}
+          {t("show")}{" "}
           <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
-          konsulenter
+          {t("of")}{" "}
+          <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
+          {t("consultants")}
         </p>
       </div>
 
-      {filteredEmployees.map(
-        (employee) =>
-          employee.imageThumbUrl &&
-          employee.name &&
-          employee.email && (
-            <div key={employee.email} className={styles.employee}>
-              <Link
-                href={`/${language}/${employeesPageSlug}/${aliasFromEmail(employee.email)}`}
-              >
-                <div className={styles.employeeImage}>
-                  <Image
-                    src={employee.imageUrl ?? employee.imageThumbUrl}
-                    alt={employee.name}
-                    style={{ objectFit: "cover" }}
-                    fill={true}
-                  />
-                </div>
-              </Link>
-              <div className={styles.employeeInfo}>
-                <p className={styles.employeeName}>{employee.name}</p>
-                {employee.competences.map((competence) => (
-                  <Text
-                    type="labelRegular"
-                    key={competence}
-                    className={styles.employeeRole}
-                  >
-                    {competence}
-                  </Text>
-                ))}
-                {employee.email && (
-                  <p className={styles.employeeEmail}>{employee.email}</p>
-                )}
-                {employee.telephone && (
-                  <p className={styles.employeeTelephone}>
-                    {formatPhoneNumber(employee.telephone)}
-                  </p>
-                )}
-              </div>
-            </div>
-          ),
-      )}
+      <div className={styles.peopleContainer}>
+        {filteredEmployees.map((employee) => (
+          <EmployeeCard
+            employee={employee}
+            employeePageSlug={employeesPageSlug}
+            language={language}
+            key={employee.name}
+          />
+        ))}
+      </div>
     </>
   );
 }

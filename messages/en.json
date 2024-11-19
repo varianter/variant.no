@@ -20,8 +20,8 @@
     "read_more": "Read more"
   },
   "employee_card": {
-    "show": "Show",
-    "of": "of",
+    "show": "Showing",
+    "of": "out of",
     "consultants": "consultants"
   }
 }

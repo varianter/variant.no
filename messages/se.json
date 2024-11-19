@@ -20,8 +20,8 @@
     "read_more": "Läs mer"
   },
   "employee_card": {
-    "show": "Visa",
+    "show": "Visar",
     "of": "av",
-    "consultants": "konsulentar"
+    "consultants": "konsulter"
   }
 }
