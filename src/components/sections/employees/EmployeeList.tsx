@@ -118,7 +118,7 @@ export default function EmployeeList({
             }
             onClick={() => filterEmployees({ competenceFilter: null })}
           >
-            Alle
+            {t("all")}
           </Button>
           {competences.map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
@@ -131,14 +131,14 @@ export default function EmployeeList({
                   filterEmployees({ competenceFilter: competence })
                 }
               >
-                {competence} ({competenceCounts[competence]})
+                {t(competence)} ({competenceCounts[competence]})
               </Button>
             );
           })}
         </div>
         <div className={styles.employeeFilterWrapper}>
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
-            Lokasjon
+            {t("location")}
           </Text>
           <Button
             size="small"
@@ -149,7 +149,7 @@ export default function EmployeeList({
             }
             onClick={() => filterEmployees({ locationFilter: null })}
           >
-            Alle
+            {t("all")}
           </Button>
           {locations.map((location) => {
             const active = employeeFilters.locationFilter == location;

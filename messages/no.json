@@ -22,6 +22,12 @@
   "employee_card": {
     "show": "Viser",
     "of": "av",
-    "consultants": "konsulenter"
+    "consultants": "konsulenter",
+    "location": "Lokasjon",
+    "all": "Alle",
+    "Project Management": "Prosjektledelse",
+    "Design": "Design",
+    "Utvikling": "Utvikling",
+    "Administasjon": "Administrasjon"
   }
 }
