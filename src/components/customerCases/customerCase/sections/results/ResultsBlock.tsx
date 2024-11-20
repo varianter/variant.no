@@ -11,22 +11,42 @@ export default function ResultsBlock({ section }: ResultsBlockProps) {
   return (
     section.resultsBlockTitle && (
       <div className={styles.wrapper}>
-        <div className={styles.resultblock}>
-          <Text type="h4" className={styles.blocktitle}>
-            {section.resultsBlockTitle}
-          </Text>
-          <div className={styles.resultrow}>
-            {section.resultsList?.map((result) => (
-              <div className={styles.results} key={result._key}>
-                <Text type="h2" className={styles.mainresult}>
-                  {result.result}
-                </Text>
-                <Text type="labelRegular">{result.description}</Text>
-              </div>
-            ))}
-          </div>
+        <div>
+          <StackedHighlights section={section}></StackedHighlights>
         </div>
       </div>
     )
+  );
+}
+
+function StackedHighlights({ section }: ResultsBlockProps) {
+  return (
+    <div className={styles.highlightWrapper}>
+      <div className={styles.highlightBlock}>
+        <Text type="labelRegular" className={styles.highlightOutside}>
+          {section.resultsBlockTitle}
+        </Text>
+        {section.quote?.map((quote) => (
+          <div className={styles.highlightCard} key={quote._key}>
+            <div className={styles.innerContent}>
+              <Text type="h2">{quote.quoteText}</Text>
+              <p className={styles.subtitle}>{quote.quoteAuthor}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.highlightRow}>
+        {section.resultsList?.map((result) => (
+          <div className={styles.highlightCard} key={result._key}>
+            <div className={styles.innerContent}>
+              <Text type="h2" className={styles.result}>
+                {result.result}
+              </Text>
+              <p className={styles.subtitle}>{result.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
