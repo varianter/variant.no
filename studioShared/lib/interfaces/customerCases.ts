@@ -2,7 +2,6 @@ import { IImage } from "studio/lib/interfaces/media";
 
 import { ImageBlock } from "./imageBlock";
 import { ListBlock } from "./listBlock";
-import { QuoteBlock } from "./quoteBlock";
 import { ResultsBlock } from "./resultsBlock";
 import { SplitSection } from "./splitSection";
 import { TextBlock } from "./textBlock";
@@ -30,7 +29,7 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type BaseCustomerCaseSection = TextBlock | ImageBlock | QuoteBlock;
+export type BaseCustomerCaseSection = TextBlock | ImageBlock;
 
 export type CustomerCaseSection =
   | BaseCustomerCaseSection
