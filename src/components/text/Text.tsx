@@ -19,7 +19,6 @@ export type TextType =
   | "bodyExtraSmall"
   | "bodySmall"
   | "bodyNormal"
-  | "bodySmall"
   | "bodyBig"
   | "bodyXl"
   | "mobileH1"
