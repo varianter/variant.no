@@ -39,10 +39,6 @@ export const BASE_SECTIONS_FRAGMENT = groq`
     "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     fullWidth
   },
-  _type == "quoteBlock" => {
-    "quote": ${translatedFieldFragment("quote")},
-    "author": ${translatedFieldFragment("author")},
-  },
 `;
 
 export const CUSTOMER_CASE_QUERY = groq`
@@ -71,11 +67,16 @@ export const CUSTOMER_CASE_QUERY = groq`
       },
       _type == "resultsBlock" => {
         "resultsBlockTitle": ${translatedFieldFragment("resultsBlockTitle")},
+        "quote": quote[] {
+          _key,
+          "quoteText": ${translatedFieldFragment("quoteText")},
+          "quoteAuthor": ${translatedFieldFragment("quoteAuthor")},
+        },
         "resultsList": resultsList[] {
           _key,
           result,
           "description": ${translatedFieldFragment("description")},
-          }
+          },
         },
       _type == "listBlock" => {
         "description": ${translatedFieldFragment("description")},
