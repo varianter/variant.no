@@ -20,8 +20,14 @@
     "read_more": "Read more"
   },
   "employee_card": {
-    "show": "Show",
-    "of": "of",
-    "consultants": "consultants"
+    "show": "Showing",
+    "of": "out of",
+    "consultants": "consultants",
+    "location": "Location",
+    "all": "All",
+    "Project Management": "Project Management",
+    "Design": "Design",
+    "Utvikling": "Development",
+    "Administasjon": "Administration"
   }
 }

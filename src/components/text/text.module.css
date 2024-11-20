@@ -2,8 +2,6 @@
   font-family: var(--font-britti-sans);
 }
 
-.bodyBig,
-.bodyNormal,
 .labelSmall,
 .labelLight,
 .labelRegular,
@@ -119,6 +117,13 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
+  line-height: 120%;
+}
+
+.labelBold {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
   line-height: 120%;
 }
 

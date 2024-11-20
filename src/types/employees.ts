@@ -16,6 +16,12 @@ export function isChewbaccaEmployeesResponse(
   );
 }
 
+export type Competence =
+  | "Project Management"
+  | "Design"
+  | "Utvikling"
+  | "Administasjon";
+
 export interface ChewbaccaEmployee {
   email?: string | null;
   name?: string | null;
@@ -24,7 +30,7 @@ export interface ChewbaccaEmployee {
   imageThumbUrl?: string | null;
   officeName?: string | null;
   startDate?: string | null;
-  competences: string[];
+  competences: Competence[];
 }
 
 export function isChewbaccaEmployee(

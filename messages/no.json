@@ -20,8 +20,14 @@
     "read_more": "Les mer"
   },
   "employee_card": {
-    "show": "Vis",
+    "show": "Viser",
     "of": "av",
-    "consultants": "konsulenter"
+    "consultants": "konsulenter",
+    "location": "Lokasjon",
+    "all": "Alle",
+    "Project Management": "Prosjektledelse",
+    "Design": "Design",
+    "Utvikling": "Utvikling",
+    "Administasjon": "Administrasjon"
   }
 }
