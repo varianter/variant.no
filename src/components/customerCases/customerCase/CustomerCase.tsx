@@ -35,75 +35,140 @@ export default async function CustomerCase({
         <Text type={"h1"} className={styles.mainTitle}>
           {customerCase.basicTitle}
         </Text>
+        <hr className={styles.divider} />
         <div className={styles.projectInfo}>
-          <div>
-   
+          <div className={styles.projectInfoInner}>
             {customerCase.projectInfo.customerSectors && (
-                <div className={styles.projectInfoItem}>
-                
-                <Text type={"labelRegular"}>{t("customer")}</Text>
-                {customerCase.projectInfo.customerSectors.map(
-                 (sector: CustomerSector) => (
-                      <div className={styles.projectInfoValue}> 
-                      <Text
-                      key={sector.key}
-                      type={"labelLight"}
-                    >
-                      {sector.customerSector}
-                    </Text></div>
-                  ),
-                )}
-                </div> 
-            )}
-            {/* </div> */}
-            {consultantsResult.ok && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("varianter")}</Text>
-                <Text
-                  type={"labelLight"}
-                >
-                  {consultantsResult.value.map((c) => c.name).join(" - ")}
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("customer").toUpperCase()}
                 </Text>
+                <div className={styles.projectInfoItem}>
+                  {customerCase.projectInfo.customerSectors.map(
+                    (sector: CustomerSector) => (
+                      <Text
+                        key={sector.key}
+                        type="bodyNormal"
+                        className={styles.dotSeperator}
+                      >
+                        {sector.customerSector}
+                      </Text>
+                    ),
+                  )}
+                </div>
+              </div>
+            )}
+            {consultantsResult.ok && (
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("varianter").toUpperCase()}
+                </Text>
+                <div className={styles.varianter}>
+                  <Text>【</Text>
+                  {consultantsResult.value.map((c) => (
+                    <Text
+                      key={c.name}
+                      type="bodyNormal"
+                      className={styles.dotSeperatorVarianter}
+                    >
+                      {c.name}
+                    </Text>
+                  ))}
+                  <Text>】</Text>
+                </div>
               </div>
             )}
             {customerCase.projectInfo.collaborators && (
-              <div className="styles.projectInfoItem">
-                <Text type={"labelRegular"}>{t("collaborators")}</Text>
-                {customerCase.projectInfo.collaborators.map((collaborator) => (
-                  <Text key={collaborator}>{collaborator}</Text>
-                ))}
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("collaborators").toUpperCase()}
+                </Text>
+                <div className={styles.projectInfoItem}>
+                  {customerCase.projectInfo.collaborators.map(
+                    (collaborator) => (
+                      <Text
+                        type="bodyNormal"
+                        key={collaborator}
+                        className={styles.dotSeperator}
+                      >
+                        {collaborator}
+                      </Text>
+                    ),
+                  )}
+                </div>
               </div>
             )}
             {customerCase.projectInfo.url && (
-              <div> 
-              <Text type={"labelRegular"}>{t("url")}</Text>
-              <Text>{customerCase.projectInfo.url}</Text></div> 
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("url").toUpperCase()}
+                </Text>
+                <Text type="bodyNormal">{customerCase.projectInfo.url}</Text>
+              </div>
             )}
           </div>
-          <div className={styles.deliveries}>
+          <div>
             {customerCase.projectInfo.deliveries && (
-              <div>
-                {customerCase.projectInfo.deliveries["projectManagement"].map(
-                  (projectManagement) => (
-                    <div key={projectManagement.key}>
-                      <Text type="labelRegular">{t("project_management")}</Text>
-                      <Text>{projectManagement.projectManagementDelivery}</Text>
+              <div className={styles.deliveries}>
+                {customerCase.projectInfo.deliveries["projectManagement"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("project_management").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries[
+                        "projectManagement"
+                      ].map((projectManagement) => (
+                        <Text
+                          type="bodyNormal"
+                          key={projectManagement.key}
+                          className={styles.dotSeperator}
+                        >
+                          {projectManagement.projectManagementDelivery}
+                        </Text>
+                      ))}
                     </div>
-                  ),
-                )}
-                {customerCase.projectInfo.deliveries["design"].map((design) => (
-                  <div key={design.key}>
-                    <Text type="labelRegular"> {t("design")}</Text>
-                    <Text> {design.designDelivery} </Text>
                   </div>
-                ))}
-                {customerCase.projectInfo.deliveries["development"].map(
-                  (development) => (
-                    <div key={development.key}>
-                      <Text type="labelRegular"> {t("development")}</Text>
-                      <Text> {development.developmentDelivery} </Text>
+                )}
+                {customerCase.projectInfo.deliveries["design"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("design").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries["design"].map(
+                        (design) => (
+                          <Text
+                            key={design.key}
+                            type="bodyNormal"
+                            className={styles.dotSeperator}
+                          >
+                            {design.designDelivery}
+                          </Text>
+                        ),
+                      )}
                     </div>
-                  ),
+                  </div>
+                )}
+                {customerCase.projectInfo.deliveries["development"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("development").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries["development"].map(
+                        (development) => (
+                          <Text
+                            key={development.key}
+                            type="bodyNormal"
+                            className={styles.dotSeperator}
+                          >
+                            {development.developmentDelivery}
+                          </Text>
+                        ),
+                      )}
+                    </div>
+                  </div>
                 )}
               </div>
             )}
