@@ -104,7 +104,7 @@ export function seoDataFromCustomerCase(customerCase: CustomerCaseDocument) {
       customerCase.projectInfo.name,
       customerCase.projectInfo.customer,
       customerCase.projectInfo.sector,
-      ...customerCase.projectInfo.deliveries.map((d) => d.delivery),
+      // ...customerCase.projectInfo.deliveries.map((d) => d.delivery),
     ].join(","),
   };
 }

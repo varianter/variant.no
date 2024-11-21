@@ -3,13 +3,18 @@
     "home": "Hjem"
   },
   "customer_case": {
-    "customer": "Kunde",
+    "customer": "Kunden",
     "project": "Prosjekt",
     "duration": "Varighet",
     "industry": "Bransje",
     "delivery": "Leveranse",
-    "consultants": "Folk",
-    "in_project": "Varianter i prosjektet"
+    "varianter": "Variantene",
+    "in_project": "Varianter i prosjektet",
+    "design": "Design",
+    "development": "Utvikling",
+    "project_management": "Prosjektledelse",
+    "url": "Link",
+    "collaborators": "Samarbeidspartnere"
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
