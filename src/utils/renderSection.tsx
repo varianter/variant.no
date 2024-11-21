@@ -7,6 +7,7 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
@@ -18,10 +19,12 @@ import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
+import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
   CallToActionSection,
   CalloutSection,
+  CustomerCasesEntrySection,
   GridSection,
   HeroSection,
   ImageSection,
@@ -158,6 +161,20 @@ const renderGridSection = (
   );
 };
 
+const renderCustomerCasesEntrySection = (
+  section: CustomerCasesEntrySection,
+  sectionIndex: number,
+  isDraftMode: boolean,
+  initialData: QueryResponseInitial<PageBuilder>,
+  language: Locale,
+) => {
+  return isDraftMode ? (
+    <CustomerCasesEntry language={language} />
+  ) : (
+    <CustomerCasesEntry language={language} />
+  );
+};
+
 const SectionRenderer = ({
   language,
   section,
@@ -219,6 +236,14 @@ const SectionRenderer = ({
       );
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
+    case "customerCasesEntry":
+      return renderCustomerCasesEntrySection(
+        section,
+        sectionIndex,
+        isDraftMode,
+        initialData,
+        language as Locale,
+      );
     case "employees":
       return <Employees language={language} section={section} />;
     default:

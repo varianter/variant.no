@@ -87,6 +87,12 @@ export interface EmployeesSection {
   basicTitle: string;
 }
 
+export interface CustomerCasesEntrySection {
+  _type: "customerCasesEntry";
+  _key: string;
+  basicTitle: string;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -96,7 +102,8 @@ export type Section =
   | TestimonialsSection
   | ImageSection
   | GridSection
-  | EmployeesSection;
+  | EmployeesSection
+  | CustomerCasesEntrySection;
 
 export interface PageBuilder {
   _createdAt: string;
