@@ -18,17 +18,25 @@ export default function TextSection({ section }: TextSectionProps) {
       <div
         className={
           styles.content +
-          (section.textBlockType === "framed" ? ` ${styles.highlighted}` : "")
+          (section.textBlockType === "framed" ? ` ${styles.framed}` : "")
         }
       >
         <div className={styles.innerContent}>
           <div>
             {section.sectionTitle && (
-              <Text className={styles.header} type={"h5"}>
+              <Text className={styles.header} type={"h4"}>
                 {section.sectionTitle}
               </Text>
             )}
-            <Text>{section.text}</Text>
+            <Text
+              type={
+                section.textBlockType === "highlighted"
+                  ? "bodyXl"
+                  : "bodyNormal"
+              }
+            >
+              {section.text}
+            </Text>
           </div>
           <div className={styles.link}>
             {section.url && (

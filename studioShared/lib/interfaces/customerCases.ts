@@ -4,7 +4,6 @@ import { ImageBlock } from "./imageBlock";
 import { ListBlock } from "./listBlock";
 import { ResultsBlock } from "./resultsBlock";
 import { SplitSection } from "./splitSection";
-import { TextBlock } from "./textBlock";
 
 export interface CustomerCaseProjectInfo {
   customer: string;
@@ -29,10 +28,8 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type BaseCustomerCaseSection = TextBlock | ImageBlock;
-
 export type CustomerCaseSection =
-  | BaseCustomerCaseSection
+  | ImageBlock
   | SplitSection
   | ResultsBlock
   | ListBlock;
