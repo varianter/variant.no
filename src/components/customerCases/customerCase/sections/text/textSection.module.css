@@ -33,3 +33,10 @@
   text-decoration: none;
   color: var(--primary-black-darker);
 }
+
+.title {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 450;
+  line-height: 2rem;
+}

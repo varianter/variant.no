@@ -17,14 +17,14 @@ export default function TextSection({ section }: TextSectionProps) {
     <div className={styles.wrapper}>
       <div
         className={
-          styles.content +
-          (section.textBlockType === "framed" ? ` ${styles.framed}` : "")
+          styles.content /* +
+          (section.textBlockType === "framed" ? ` ${styles.framed}` : "") */
         }
       >
         <div className={styles.innerContent}>
           <div>
             {section.sectionTitle && (
-              <Text className={styles.header} type={"h4"}>
+              <Text className={styles.title} type={"h4"}>
                 {section.sectionTitle}
               </Text>
             )}
