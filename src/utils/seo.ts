@@ -101,10 +101,15 @@ export function seoDataFromCustomerCase(customerCase: CustomerCaseDocument) {
     description: customerCase.description,
     imageUrl: imageUrlBuilder(sharedClient).image(customerCase.image).url(),
     keywords: [
-      customerCase.projectInfo.name,
       customerCase.projectInfo.customer,
       customerCase.projectInfo.sector,
-      // ...customerCase.projectInfo.deliveries.map((d) => d.delivery),
+      customerCase.projectInfo.deliveries.projectManagement.map(
+        (d) => d.projectManagementDelivery,
+      ),
+      customerCase.projectInfo.deliveries.design.map((d) => d.designDelivery),
+      customerCase.projectInfo.deliveries.development.map(
+        (d) => d.developmentDelivery,
+      ),
     ].join(","),
   };
 }
