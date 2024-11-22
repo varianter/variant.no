@@ -8,7 +8,6 @@ import { FocusOn } from "react-focus-on";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
 import Button from "src/components/buttons/Button";
-import { SanityImage } from "src/components/image/SanityImage";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
@@ -39,7 +38,6 @@ const filterLinks = (data: ILink[], type: string) =>
 
 export const Header = ({
   navigation,
-  assets,
   announcement,
   currentLanguage,
   pathTitles,
@@ -96,17 +94,9 @@ export const Header = ({
         <header>
           <nav aria-label="Main menu">
             <div className={styles.wrapper}>
-              {assets?.primaryLogo && (
-                <div className={styles.logo}>
-                  <Link href="/" aria-label="Home">
-                    <SanityImage image={assets.primaryLogo} />
-                  </Link>
-                </div>
-              )}
-              <div>
-                {renderPageLinks(links, false, pathname)}
-                {renderPageCTAs(ctas, false)}
-              </div>
+              <Link href="/" aria-label="Home" className={styles.logo} />
+              {renderPageLinks(links, false, pathname)}
+              {renderPageCTAs(ctas, false)}
               <div className={styles.languageSwitcher}>
                 {defaultLanguage && (
                   <LanguageSwitcher

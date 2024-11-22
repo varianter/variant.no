@@ -1,10 +1,6 @@
 import { headers } from "next/headers";
-import Image from "next/image";
-import Link from "next/link";
 
-import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import {
-  aliasFromEmail,
   domainFromEmail,
   fetchAllChewbaccaEmployees,
 } from "src/utils/employees";
@@ -13,8 +9,8 @@ import { EmployeesSection } from "studio/lib/interfaces/pages";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
+import EmployeeList from "./EmployeeList";
 import styles from "./employees.module.css";
-
 export interface EmployeesProps {
   language: string;
   section: EmployeesSection;
@@ -41,54 +37,16 @@ export default async function Employees({ language, section }: EmployeesProps) {
     (employee) =>
       employee.email != null && domainFromEmail(employee.email) === domain,
   );
-  const total = employees.length;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.employees}>
         <h1 className={styles.header}>{section.basicTitle}</h1>
-        <div className={styles.employeeCountWrapper}>
-          <p className={styles.employeeCount}>
-            Viser <span className={styles.employeeCountValue}>{total}</span> av{" "}
-            <span className={styles.employeeCountValue}>{total}</span>{" "}
-            konsulenter
-          </p>
-        </div>
-        {employees.map(
-          (employee) =>
-            employee.imageThumbUrl &&
-            employee.name &&
-            employee.email && (
-              <div key={employee.email} className={styles.employee}>
-                <Link
-                  href={`/${language}/${employeesPageSlug}/${aliasFromEmail(employee.email)}`}
-                >
-                  <div className={styles.employeeImage}>
-                    <Image
-                      src={employee.imageUrl ?? employee.imageThumbUrl}
-                      alt={employee.name}
-                      objectFit="cover"
-                      fill={true}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.employeeInfo}>
-                  <p className={styles.employeeName}>{employee.name}</p>
-                  {employee.officeName && (
-                    <p className={styles.employeeRole}>{employee.officeName}</p>
-                  )}
-                  {employee.email && (
-                    <p className={styles.employeeEmail}>{employee.email}</p>
-                  )}
-                  {employee.telephone && (
-                    <p className={styles.employeeTelephone}>
-                      {formatPhoneNumber(employee.telephone)}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ),
-        )}
+        <EmployeeList
+          employees={employees}
+          employeesPageSlug={employeesPageSlug}
+          language={language}
+        />
       </div>
     </div>
   );

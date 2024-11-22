@@ -13,6 +13,7 @@ const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
 
 const CUSTOMER_CASE_BASE_FRAGMENT = groq`
   _id,
+  domains,
   ${LANGUAGE_FIELD_FRAGMENT},
   "slug": ${translatedFieldFragment("slug")},
   "basicTitle": ${translatedFieldFragment("basicTitle")},
@@ -23,39 +24,46 @@ const CUSTOMER_CASE_BASE_FRAGMENT = groq`
 `;
 
 export const CUSTOMER_CASES_QUERY = groq`
-  *[_type == "customerCase"]{
+  *[_type == "customerCase" && ($domain == null || $domain in domains)]{
     ${CUSTOMER_CASE_BASE_FRAGMENT}
   }
 `;
 
-export const BASE_SECTIONS_FRAGMENT = groq`
+export const SPLIT_SECTIONS_FRAGMENT = groq`
+  _type == "emptySection" => {},
   _type == "textBlock" => {
     "sectionTitle": ${translatedFieldFragment("sectionTitle")},
     "text": ${translatedFieldFragment("text")},
      url,
-     textBlockType, 
+     textBlockType,
   },
   _type == "imageBlock" => {
     "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     fullWidth
   },
-  _type == "quoteBlock" => {
-    "quote": ${translatedFieldFragment("quote")},
-    "author": ${translatedFieldFragment("author")},
-  },
 `;
 
 export const CUSTOMER_CASE_QUERY = groq`
-  *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
+  *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug && ($domain == null || $domain in domains)][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
       customer,
-      "name": ${translatedFieldFragment("name")},
-      "duration": ${translatedFieldFragment("duration")},
-      "sector": ${translatedFieldFragment("sector")},
-      "deliveries": deliveries[] {
-        "delivery": ${translatedFieldFragment("delivery")},
+      "customerSectors": customerSectors[] {
+        "customerSector": ${translatedFieldFragment("customerSectorItem")}
+        },
+      url,
+      "deliveries": {
+        "design": deliveries.design[] {
+          "designDelivery": ${translatedFieldFragment("designDelivery")}
+        },
+        "development": deliveries.development[] {
+          "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
+        },
+        "projectManagement": deliveries.projectManagement[] {
+          "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
+        }
       },
+      collaborators,
       consultants
     },
     "sections": sections[] {
@@ -65,17 +73,22 @@ export const CUSTOMER_CASE_QUERY = groq`
         "sections": sections[] {
           _key,
           _type,
-          _type == "emptySection" => {},
-          ${BASE_SECTIONS_FRAGMENT}
+
+          ${SPLIT_SECTIONS_FRAGMENT}
         }
       },
       _type == "resultsBlock" => {
         "resultsBlockTitle": ${translatedFieldFragment("resultsBlockTitle")},
+        "quote": quote[] {
+          _key,
+          "quoteText": ${translatedFieldFragment("quoteText")},
+          "quoteAuthor": ${translatedFieldFragment("quoteAuthor")},
+        },
         "resultsList": resultsList[] {
           _key,
           result,
           "description": ${translatedFieldFragment("description")},
-          }
+          },
         },
       _type == "listBlock" => {
         "description": ${translatedFieldFragment("description")},
@@ -83,8 +96,11 @@ export const CUSTOMER_CASE_QUERY = groq`
           _key,
           "text": ${translatedFieldFragment("text")},
           },
-        }, 
-      ${BASE_SECTIONS_FRAGMENT}
+        },
+      _type == "imageBlock" => {
+        "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
+        fullWidth
+        },
     },
     "featuredCases": featuredCases[] -> {
       ${CUSTOMER_CASE_BASE_FRAGMENT}

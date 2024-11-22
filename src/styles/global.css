@@ -9,11 +9,10 @@ html {
 }
 
 :root {
-  /* Colors for button*/
-  --_button-color-background: var(--background-bg-dark);
+  /* --_button-color-background: var(--background-bg-dark);
   --button-color-background: var(--surface-yellow);
   --button-color-foreground: var(--Blue-200);
-  --button-color-border: var(--Blue-500);
+  --button-color-border: var(--Blue-500); */
 
   --color-background-interactive-primary-default: var(--Lila-200);
   --color-background-interactive-primary-hover: var(--Lila-400);
@@ -162,7 +161,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--primary-black);
+  color: var(--text-primary);
   background-color: var(--background-bg-light-primary);
   font-family: var(--font-britti-sans);
   line-height: 1.4;

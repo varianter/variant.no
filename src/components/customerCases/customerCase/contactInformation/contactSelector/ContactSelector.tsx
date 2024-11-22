@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import Button from "src/components/buttons/Button";
-import ConsultantCard from "src/components/consultantCard/ConsultantCard";
+import CustomerCaseEmployeeCard from "src/components/customerCaseEmployeeCard/CustomerCaseEmployeeCard";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 
@@ -60,9 +60,9 @@ export default function ContactSelector({
         ))}
       </div>
       <div className={styles.consultantSection}>
-        <ConsultantCard
+        <CustomerCaseEmployeeCard
           currentLanguage={language}
-          consultant={contactByLocation[selectedOrDefaultLocationId]}
+          employee={contactByLocation[selectedOrDefaultLocationId]}
           employeePageSlug={employeePageSlug}
         />
       </div>

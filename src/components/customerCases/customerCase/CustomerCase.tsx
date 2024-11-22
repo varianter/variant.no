@@ -5,7 +5,7 @@ import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import {
   CustomerCase as CustomerCaseDocument,
-  Delivery,
+  CustomerSector,
 } from "studioShared/lib/interfaces/customerCases";
 
 import ContactInformation from "./contactInformation/ContactInformation";
@@ -35,86 +35,147 @@ export default async function CustomerCase({
         <Text type={"h1"} className={styles.mainTitle}>
           {customerCase.basicTitle}
         </Text>
-        <div className={styles.mainImageWrapper}>
-          <SanitySharedImage image={customerCase.image} />
-        </div>
-        <div className={styles.ingress}>
-          <div className={styles.projectDescription}>
-            <Text type={"bodyBig"}>{customerCase.description}</Text>
-          </div>
-          <div className={styles.projectInfo}>
-            {customerCase.projectInfo.customer && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("customer")}</Text>
-                <Text
-                  type={"labelLight"}
-                  className={styles.projectInfoItemValue}
-                >
-                  {customerCase.projectInfo.customer}
+        <hr className={styles.divider} />
+        <div className={styles.projectInfo}>
+          <div className={styles.projectInfoInner}>
+            {customerCase.projectInfo.customerSectors && (
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("customer").toUpperCase()}
                 </Text>
-              </div>
-            )}
-            {customerCase.projectInfo.name && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("project")}</Text>
-                <Text
-                  type={"labelLight"}
-                  className={styles.projectInfoItemValue}
-                >
-                  {customerCase.projectInfo.name}
-                </Text>
-              </div>
-            )}
-            {customerCase.projectInfo.duration && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("duration")}</Text>
-                <Text
-                  type={"labelLight"}
-                  className={styles.projectInfoItemValue}
-                >
-                  {customerCase.projectInfo.duration}
-                </Text>
-              </div>
-            )}
-            {customerCase.projectInfo.sector && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("industry")}</Text>
-                <Text
-                  type={"labelLight"}
-                  className={styles.projectInfoItemBadge}
-                >
-                  {customerCase.projectInfo.sector}
-                </Text>
-              </div>
-            )}
-            {customerCase.projectInfo.deliveries && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("delivery")}</Text>
-                {customerCase.projectInfo.deliveries.map(
-                  (delivery: Delivery) => (
-                    <Text
-                      key={delivery.key}
-                      type={"labelLight"}
-                      className={styles.projectInfoItemBadge}
-                    >
-                      {delivery.delivery}
-                    </Text>
-                  ),
-                )}
+                <div className={styles.projectInfoItem}>
+                  {customerCase.projectInfo.customerSectors.map(
+                    (sector: CustomerSector) => (
+                      <Text
+                        key={sector.key}
+                        type="bodyNormal"
+                        className={styles.dotSeperator}
+                      >
+                        {sector.customerSector}
+                      </Text>
+                    ),
+                  )}
+                </div>
               </div>
             )}
             {consultantsResult.ok && (
-              <div className={styles.projectInfoItem}>
-                <Text type={"labelRegular"}>{t("consultants")}</Text>
-                <Text
-                  type={"labelLight"}
-                  className={styles.projectInfoItemValue}
-                >
-                  {consultantsResult.value.map((c) => c.name).join(", ")}
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("variants").toUpperCase()}
                 </Text>
+                <div className={styles.varianter}>
+                  <Text>【</Text>
+                  {consultantsResult.value.map((c) => (
+                    <Text
+                      key={c.name}
+                      type="bodyNormal"
+                      className={styles.dotSeperatorVarianter}
+                    >
+                      {c.name}
+                    </Text>
+                  ))}
+                  <Text>】</Text>
+                </div>
+              </div>
+            )}
+            {customerCase.projectInfo.collaborators && (
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("collaborators").toUpperCase()}
+                </Text>
+                <div className={styles.projectInfoItem}>
+                  {customerCase.projectInfo.collaborators.map(
+                    (collaborator) => (
+                      <Text
+                        type="bodyNormal"
+                        key={collaborator}
+                        className={styles.dotSeperator}
+                      >
+                        {collaborator}
+                      </Text>
+                    ),
+                  )}
+                </div>
+              </div>
+            )}
+            {customerCase.projectInfo.url && (
+              <div>
+                <Text className={styles.title} type="labelRegular">
+                  {t("url").toUpperCase()}
+                </Text>
+                <Text type="bodyNormal">{customerCase.projectInfo.url}</Text>
               </div>
             )}
           </div>
+          <div>
+            {customerCase.projectInfo.deliveries && (
+              <div className={styles.deliveries}>
+                {customerCase.projectInfo.deliveries["projectManagement"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("project_management").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries[
+                        "projectManagement"
+                      ].map((projectManagement) => (
+                        <Text
+                          type="bodyNormal"
+                          key={projectManagement.key}
+                          className={styles.dotSeperator}
+                        >
+                          {projectManagement.projectManagementDelivery}
+                        </Text>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {customerCase.projectInfo.deliveries["design"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("design").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries["design"].map(
+                        (design) => (
+                          <Text
+                            key={design.key}
+                            type="bodyNormal"
+                            className={styles.dotSeperator}
+                          >
+                            {design.designDelivery}
+                          </Text>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
+                {customerCase.projectInfo.deliveries["development"] && (
+                  <div>
+                    <Text className={styles.title} type="labelRegular">
+                      {t("development").toUpperCase()}
+                    </Text>
+                    <div className={styles.projectInfoItem}>
+                      {customerCase.projectInfo.deliveries["development"].map(
+                        (development) => (
+                          <Text
+                            key={development.key}
+                            type="bodyNormal"
+                            className={styles.dotSeperator}
+                          >
+                            {development.developmentDelivery}
+                          </Text>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className={styles.mainImageWrapper}>
+          <SanitySharedImage image={customerCase.image} />
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (

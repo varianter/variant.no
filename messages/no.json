@@ -3,13 +3,18 @@
     "home": "Hjem"
   },
   "customer_case": {
-    "customer": "Kunde",
+    "customer": "Kunden",
     "project": "Prosjekt",
     "duration": "Varighet",
     "industry": "Bransje",
     "delivery": "Leveranse",
-    "consultants": "Folk",
-    "in_project": "Varianter i prosjektet"
+    "variants": "Variantene",
+    "in_project": "Varianter i prosjektet",
+    "design": "Design",
+    "development": "Utvikling",
+    "project_management": "Prosjektledelse",
+    "url": "Link",
+    "collaborators": "Samarbeidspartnere"
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
@@ -19,5 +24,16 @@
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
     "read_more": "Les mer"
+  },
+  "employee_card": {
+    "show": "Viser",
+    "of": "av",
+    "consultants": "konsulenter",
+    "location": "Lokasjon",
+    "all": "Alle",
+    "Project Management": "Prosjektledelse",
+    "Design": "Design",
+    "Utvikling": "Utvikling",
+    "Administasjon": "Administrasjon"
   }
 }

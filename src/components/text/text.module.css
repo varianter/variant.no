@@ -1,3 +1,23 @@
+:where(.desktopLink, .h1, .h2, .h3, .h4, .h5, .h6, .bodyXl) {
+  font-family: var(--font-britti-sans);
+}
+
+.labelSmall,
+.labelLight,
+.labelRegular,
+.labelSemibold,
+.labelBold,
+.quoteItalic,
+.quoteNormal,
+.bodyExtraSmall,
+.bodySmall,
+.bodyNormal,
+.bodyBig,
+.list {
+  font-family: var(--font-britti-sans);
+  line-height: 140%;
+}
+
 .h1 {
   font-size: 4.5rem;
   font-style: normal;
@@ -49,8 +69,10 @@
 }
 
 .bodyXl {
-  font-size: 2.125rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.025rem;
 }
 
 .bodyBig {
@@ -62,6 +84,7 @@
 
 .bodyNormal {
   font-size: 20px;
+  font-style: normal;
   font-weight: 300;
 }
 
@@ -97,6 +120,13 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
+  line-height: 120%;
+}
+
+.labelBold {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
   line-height: 120%;
 }
 

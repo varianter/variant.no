@@ -9,15 +9,16 @@ import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { buildDraftId, buildPublishedId } from "studio/utils/documentUtils";
 import { firstTranslation } from "studio/utils/i18n";
 import { customerCaseProjectInfo } from "studioShared/schemas/fields/customerCaseProjectInfo";
+import { domainsField } from "studioShared/schemas/fields/domains";
+import imageBlock from "studioShared/schemas/objects/imageBlock";
 import listBlock from "studioShared/schemas/objects/listBlock";
 import resultsBlock from "studioShared/schemas/objects/resultsBlock";
-import { baseCustomerCaseSections } from "studioShared/schemas/objects/sections";
 import splitSection from "studioShared/schemas/objects/splitSection";
 
 export const customerCaseID = "customerCase";
 
 export const customerCaseSections = [
-  ...baseCustomerCaseSections,
+  imageBlock,
   splitSection,
   resultsBlock,
   listBlock,
@@ -38,6 +39,7 @@ const customerCase = defineType({
       type: "internationalizedArrayString",
       title: "Title",
     }),
+    defineField({ ...domainsField, validation: (rule) => rule.required() }),
     defineField({
       name: "description",
       type: "internationalizedArrayText",

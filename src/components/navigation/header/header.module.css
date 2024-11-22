@@ -78,10 +78,8 @@
 
 .desktopLinks {
   composes: listDesktop;
-  /* flex: 1 0 0; */
   gap: 1.5rem;
   justify-content: center;
-  /* width: fit-content; */
   align-self: stretch;
 
   @media (min-width: 1200px) {
@@ -167,4 +165,11 @@
 .announcementContent p {
   font-weight: 600;
   color: var(--background-bg-light-primary);
+}
+
+.logo {
+  width: 130px;
+  height: 37px;
+  background-color: var(--primary-white);
+  -webkit-mask: url("/_assets/variant-logo.svg") no-repeat 50% 50%;
 }

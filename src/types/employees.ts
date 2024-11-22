@@ -16,6 +16,12 @@ export function isChewbaccaEmployeesResponse(
   );
 }
 
+export type Competence =
+  | "Project Management"
+  | "Design"
+  | "Utvikling"
+  | "Administasjon";
+
 export interface ChewbaccaEmployee {
   email?: string | null;
   name?: string | null;
@@ -24,6 +30,7 @@ export interface ChewbaccaEmployee {
   imageThumbUrl?: string | null;
   officeName?: string | null;
   startDate?: string | null;
+  competences: Competence[];
 }
 
 export function isChewbaccaEmployee(
@@ -52,6 +59,9 @@ export function isChewbaccaEmployee(
       value.officeName === null) &&
     (!("startDate" in value) ||
       typeof value.startDate === "string" ||
-      value.startDate === null)
+      value.startDate === null) &&
+    (!("competences" in value) ||
+      typeof value.competences === "object" ||
+      value.competences === null)
   );
 }
