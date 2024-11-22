@@ -46,6 +46,7 @@ export interface CustomerCaseBase {
   _id: string;
   language: string;
   slug: string;
+  domains: string[];
   basicTitle: string;
   description: string;
   image: IImage;
