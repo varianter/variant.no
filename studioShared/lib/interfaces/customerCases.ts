@@ -4,19 +4,41 @@ import { ImageBlock } from "./imageBlock";
 import { ListBlock } from "./listBlock";
 import { ResultsBlock } from "./resultsBlock";
 import { SplitSection } from "./splitSection";
-import { TextBlock } from "./textBlock";
 
 export interface CustomerCaseProjectInfo {
   customer: string;
-  name: string;
-  duration: string;
-  sector: string;
-  deliveries: Delivery[];
+  customerSectors: CustomerSector[];
+  url: string;
+  sector: string[];
+  collaborators: string[];
+  deliveries: Deliveries;
   consultants: string[];
 }
 
-export interface Delivery {
-  delivery: string;
+export interface CustomerSector {
+  customerSector: string;
+  key: string;
+}
+
+export interface Deliveries {
+  design: DesignDelivery[];
+  development: DevelopmentDelivery[];
+  projectManagement: ProjectManagementDelivery[];
+  key: string;
+}
+
+export interface DesignDelivery {
+  designDelivery: string;
+  key: string;
+}
+
+export interface DevelopmentDelivery {
+  developmentDelivery: string;
+  key: string;
+}
+
+export interface ProjectManagementDelivery {
+  projectManagementDelivery: string;
   key: string;
 }
 
@@ -29,10 +51,8 @@ export interface CustomerCaseBase {
   image: IImage;
 }
 
-export type BaseCustomerCaseSection = TextBlock | ImageBlock;
-
 export type CustomerCaseSection =
-  | BaseCustomerCaseSection
+  | ImageBlock
   | SplitSection
   | ResultsBlock
   | ListBlock;

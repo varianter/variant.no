@@ -69,8 +69,10 @@
 }
 
 .bodyXl {
-  font-size: 2.125rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.025rem;
 }
 
 .bodyBig {
@@ -82,6 +84,7 @@
 
 .bodyNormal {
   font-size: 20px;
+  font-style: normal;
   font-weight: 300;
 }
 

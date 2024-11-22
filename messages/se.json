@@ -8,8 +8,13 @@
     "duration": "Varaktighet",
     "industry": "Bransch",
     "delivery": "Leverans",
-    "consultants": "Folk",
-    "in_project": "Varianter i projektet"
+    "variants": "Variantene",
+    "in_project": "Varianter i projektet",
+    "design": "Design",
+    "development": "Utveckling",
+    "project_management": "Projektledning",
+    "url": "Link",
+    "collaborators": "Samarbeidspartnere"
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",

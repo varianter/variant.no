@@ -1,14 +1,15 @@
 import { isSanityKeyTypeObject } from "studio/lib/interfaces/global";
 import { splitSectionSections } from "studioShared/schemas/objects/splitSection";
 
-import { BaseCustomerCaseSection } from "./customerCases";
+import { ImageBlock } from "./imageBlock";
+import { TextBlock } from "./textBlock";
 
 export interface EmptySection {
   _key: string;
   _type: "emptySection";
 }
 
-export type SplitSectionSection = BaseCustomerCaseSection | EmptySection;
+export type SplitSectionSection = TextBlock | ImageBlock | EmptySection;
 
 export interface SplitSection {
   _key: string;

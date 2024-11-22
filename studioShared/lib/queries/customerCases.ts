@@ -28,7 +28,8 @@ export const CUSTOMER_CASES_QUERY = groq`
   }
 `;
 
-export const BASE_SECTIONS_FRAGMENT = groq`
+export const SPLIT_SECTIONS_FRAGMENT = groq`
+  _type == "emptySection" => {},
   _type == "textBlock" => {
     "sectionTitle": ${translatedFieldFragment("sectionTitle")},
     "text": ${translatedFieldFragment("text")},
@@ -45,13 +46,23 @@ export const CUSTOMER_CASE_QUERY = groq`
   *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
-      customer,
-      "name": ${translatedFieldFragment("name")},
-      "duration": ${translatedFieldFragment("duration")},
-      "sector": ${translatedFieldFragment("sector")},
-      "deliveries": deliveries[] {
-        "delivery": ${translatedFieldFragment("delivery")},
+      customer, 
+      "customerSectors": customerSectors[] {
+        "customerSector": ${translatedFieldFragment("customerSectorItem")}
+        },
+      url,  
+      "deliveries": {
+        "design": deliveries.design[] {
+          "designDelivery": ${translatedFieldFragment("designDelivery")}
+        },
+        "development": deliveries.development[] {
+          "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
+        },
+        "projectManagement": deliveries.projectManagement[] {
+          "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
+        }
       },
+      collaborators, 
       consultants
     },
     "sections": sections[] {
@@ -61,8 +72,8 @@ export const CUSTOMER_CASE_QUERY = groq`
         "sections": sections[] {
           _key,
           _type,
-          _type == "emptySection" => {},
-          ${BASE_SECTIONS_FRAGMENT}
+          
+          ${SPLIT_SECTIONS_FRAGMENT}
         }
       },
       _type == "resultsBlock" => {
@@ -85,7 +96,10 @@ export const CUSTOMER_CASE_QUERY = groq`
           "text": ${translatedFieldFragment("text")},
           },
         }, 
-      ${BASE_SECTIONS_FRAGMENT}
+      _type == "imageBlock" => {
+        "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
+        fullWidth
+        },
     },
     "featuredCases": featuredCases[] -> {
       ${CUSTOMER_CASE_BASE_FRAGMENT}
