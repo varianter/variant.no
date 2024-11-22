@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary-black);
+  background-color: var(--background-bg-dark);
   border-radius: 12px;
   height: 125px;
   width: 50%;
@@ -63,7 +63,7 @@
   max-width: var(--Text-paragraph, 537px);
   position: relative;
 
-  background-color: var(--primary-black);
+  background-color: var(--background-bg-dark);
   border-radius: var(--medium, 12px);
 }
 

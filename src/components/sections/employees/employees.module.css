@@ -7,7 +7,7 @@
 }
 
 .header {
-  color: var(--primary-black);
+  color: var(--background-bg-light-primary);
   font-size: 48px;
   font-weight: 600;
   align-self: flex-start;

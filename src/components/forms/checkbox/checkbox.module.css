@@ -64,14 +64,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-red-error);
+  color: var(--surface-red);
   &::before {
     content: "";
     width: 1.25rem;
     height: 1.25rem;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-red-error);
+    background-color: var(--surface-red);
     -webkit-mask: url("/_assets/alert-circle.svg") no-repeat 50% 50%;
   }
 

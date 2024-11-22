@@ -170,6 +170,6 @@
 .logo {
   width: 130px;
   height: 37px;
-  background-color: var(--primary-white);
+  background-color: var(--background-bg-light-primary);
   -webkit-mask: url("/_assets/variant-logo.svg") no-repeat 50% 50%;
 }

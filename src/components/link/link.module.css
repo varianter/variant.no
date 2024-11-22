@@ -52,7 +52,7 @@
     height: 24px;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-white);
+    background-color: var(--text-primary); 
     -webkit-mask: url("/_assets/arrow.svg") no-repeat 50% 50%;
   }
 }
