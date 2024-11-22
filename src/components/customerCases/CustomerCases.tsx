@@ -2,9 +2,7 @@ import { headers } from "next/headers";
 import Link from "next/link";
 
 import { SanitySharedImage } from "src/components/image/SanityImage";
-import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
-import { sharedCustomerCasesLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { domainFromHostname } from "src/utils/url";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
