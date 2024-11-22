@@ -61,7 +61,7 @@ export default async function CustomerCase({
             {consultantsResult.ok && (
               <div>
                 <Text className={styles.title} type="labelRegular">
-                  {t("varianter").toUpperCase()}
+                  {t("variants").toUpperCase()}
                 </Text>
                 <div className={styles.varianter}>
                   <Text>【</Text>
