@@ -22,7 +22,7 @@
 }
 
 .subtitle {
-  color: var(--primary-grey);
+  color: var(--text-tertiary);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -30,7 +30,7 @@
 
 .highlightOutside {
   background-color: var(--primary-yellow-warning);
-  color: var(--secondary-text-black-darker);
+  color: var(--text-primary);
   display: inline-block;
   padding: 0.25rem 1.25rem;
   z-index: 2;

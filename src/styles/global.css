@@ -12,16 +12,13 @@ html {
   --primary-dark: #e61a6b;
   --primary-darker: #8b0f40;
   --primary-light: #f5a4c4;
-  --primary-bg: #f2f2f2;
+  --primary-bg: #fafafa;
   --primary-bg-dark: #d9d9d9;
   --primary-bg-blue: #0014cd;
   --primary-white-bright: #ffffff;
   --primary-white: #faf8f5;
   --primary-black: #2d2d2d;
   --primary-black-darker: #000000;
-  --primary-grey: #5e5e5e;
-
-  --secondary-text-black-darker: #222424;
 
   --secondary-off-white1: #f4efe8;
   --secondary-off-white2: #ece1d3;
@@ -30,8 +27,6 @@ html {
   --primary-yellow-warning: #ffd02f;
 
   --focus-color: #8b0f40;
-
-  --blue-dark: #0014cd;
 
   /* TODO: upgrade color-scheme with correct colors */
   --secondary-red: #f0503f;
