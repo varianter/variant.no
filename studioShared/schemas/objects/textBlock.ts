@@ -84,7 +84,7 @@ const textBlock = defineField({
         list: [
           { title: "Normal", value: "normal" },
           { title: "Highlighted", value: "highlighted" },
-          { title: "Framed", value: "framed" },
+          /* { title: "Framed", value: "framed" }, */
         ],
         layout: "radio",
         direction: "vertical",

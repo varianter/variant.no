@@ -5,9 +5,10 @@ import { humanizeCamelCase } from "studio/utils/stringUtils";
 import { isSplitSectionSections } from "studioShared/lib/interfaces/splitSection";
 
 import emptySection from "./emptySection";
-import { baseCustomerCaseSections } from "./sections";
+import imageBlock from "./imageBlock";
+import textBlock from "./textBlock";
 
-export const splitSectionSections = [...baseCustomerCaseSections, emptySection];
+export const splitSectionSections = [textBlock, imageBlock, emptySection];
 
 const splitSection = defineField({
   name: "splitSection",
