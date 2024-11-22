@@ -172,7 +172,9 @@ export default function EmployeeList({
 
         <p className={styles.employeeCount}>
           {t("show")}{" "}
-          <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
+          <span className={styles.employeeCountValue}>
+            {filteredEmployees.length}
+          </span>{" "}
           {t("of")}{" "}
           <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
           {t("consultants")}
