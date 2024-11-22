@@ -31,8 +31,6 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
     ),
   ]);
 
-  console.log(sharedCustomerCases);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
