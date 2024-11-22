@@ -45,13 +45,23 @@ export const CUSTOMER_CASE_QUERY = groq`
   *[_type == "customerCase" && ${translatedFieldFragment("slug")} == $slug][0] {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
-      customer,
-      "name": ${translatedFieldFragment("name")},
-      "duration": ${translatedFieldFragment("duration")},
-      "sector": ${translatedFieldFragment("sector")},
-      "deliveries": deliveries[] {
-        "delivery": ${translatedFieldFragment("delivery")},
+      customer, 
+      "customerSectors": customerSectors[] {
+        "customerSector": ${translatedFieldFragment("customerSectorItem")}
+        },
+      url,  
+      "deliveries": {
+        "design": deliveries.design[] {
+          "designDelivery": ${translatedFieldFragment("designDelivery")}
+        },
+        "development": deliveries.development[] {
+          "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
+        },
+        "projectManagement": deliveries.projectManagement[] {
+          "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
+        }
       },
+      collaborators, 
       consultants
     },
     "sections": sections[] {

@@ -3,13 +3,18 @@
     "home": "Home"
   },
   "customer_case": {
-    "customer": "Customer",
+    "customer": "The customer",
     "project": "Project",
     "duration": "Duration",
     "industry": "Industry",
     "delivery": "Delivery",
-    "consultants": "Consultants",
-    "in_project": "In project"
+    "variants": "Variants",
+    "in_project": "In project",
+    "design": "Design",
+    "development": "Development",
+    "project_management": "Project management",
+    "url": "Url",
+    "collaborators": "Collaborators"
   },
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",
