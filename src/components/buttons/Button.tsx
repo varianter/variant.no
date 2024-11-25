@@ -19,62 +19,42 @@ interface IButton {
   ariaDisabled?: boolean;
 }
 
-// const sizeClassMap: { [key in ButtonSize]: string } = {
-//   large: styles.large,
-//   medium: styles.medium,
-//   small: styles.small,
-// };
+const sizeClassMap: { [key in ButtonSize]: string } = {
+  large: styles.large,
+  medium: styles.medium,
+  small: styles.small,
+};
 
-// const typeClassMap: { [key in ButtonType]: string } = {
-//   primary: styles.primary,
-//   secondary: styles.secondary,
-// };
+const typeClassMap: { [key in ButtonType]: string } = {
+  primary: styles.primary,
+  secondary: styles.secondary,
+};
 
-// const backgroundClassMap: { [key in ButtonBackground]: string } = {
-//   dark: styles.dark,
-//   light: styles.light,
-// };
-
-// const iconColorClassMap: { [key in ButtonBackground]: string } = {
-//   dark: styles.iconColorDark,
-//   light: styles.iconColorLight,
-// };
-
-// const iconSizeClassMap: { [key in ButtonSize]: string } = {
-//   large: styles.iconLarge,
-//   medium: styles.iconMedium,
-//   small: styles.iconSmall,
-// };
+const backgroundClassMap: { [key in ButtonBackground]: string } = {
+  dark: styles.dark,
+  light: styles.light,
+};
 
 const Button = ({
-  // size = "large",
-  // type = "primary",
+  size = "large",
+  type = "primary",
   onClick,
   children,
   disabled,
-  // loading,
+  loading,
   ariaDisabled,
-  // icon,
-  // background = "dark",
+  background = "dark",
 }: IButton) => {
-  // const className = `${styles.button} ${typeClassMap[type]} ${sizeClassMap[size]} ${backgroundClassMap[background]} ${loading ? styles.loading : ""}`;
-  // const iconColorClass = `${iconColorClassMap[background]} ${iconSizeClassMap[size]}`;
+  const className = `${styles.button} ${typeClassMap[type]} ${sizeClassMap[size]} ${backgroundClassMap[background]} ${loading ? styles.loading : ""}`;
 
   return (
     <button
-      className={styles.button}
+      className={className}
       onClick={onClick}
       disabled={disabled}
       aria-disabled={ariaDisabled}
     >
       {children}
-      {/* {icon === "iconLeft" && (
-        <span className={`${styles.iconLeft} ${iconColorClass}`}></span>
-      )}
-     
-      {icon === "iconRight" && (
-        <span className={`${styles.iconRight} ${iconColorClass}`}></span>
-      )} */}
     </button>
   );
 };

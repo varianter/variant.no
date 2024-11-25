@@ -9,30 +9,6 @@ html {
 }
 
 :root {
-  /* --_button-color-background: var(--background-bg-dark);
-  --button-color-background: var(--surface-yellow);
-  --button-color-foreground: var(--Blue-200);
-  --button-color-border: var(--Blue-500); */
-
-  --color-background-interactive-primary-default: var(--Lila-200);
-  --color-background-interactive-primary-hover: var(--Lila-400);
-  --color-background-interactive-primary-active: var(--surface-yellow);
-
-  --color-background-interactive-secondary-default: var(--background-bg-blue);
-  --color-background-interactive-secondary-hover: var(--surface-blue);
-  --color-background-interactive-secondary-active: var(--surface-green);
-
-  --color-foreground-neutral-inverted: var(--surface-yellow);
-  --color-foreground-interactive-default: var(--surface-red);
-  --color-foreground-interactive-hover: var(--surface-yellow);
-  --color-foreground-interactive-active: var(--surface-yellow);
-
-  --color-border-interactive-default: var(--surface-yellow);
-  --color-border-interactive-hover: var(--surface-yellow);
-  --color-border-interactive-active: var(--surface-yellow);
-  --focus-ring-color: var(--surface-yellow);
-
-  /* ---------------- */
   --Blue-500: #3840ff;
   --Blue-700: #0014cd;
   --Blue-300: #c3c8f6;
@@ -50,7 +26,7 @@ html {
   --Green-300: #58bb5c;
   --Green-200: #8cd18f;
   --Green-100: #b2e0b3;
-  --Green-50: #e6f5e7; 
+  --Green-50: #e6f5e7;
 
   --Red-900: #46100a;
   --Red-700: #7c2318;
