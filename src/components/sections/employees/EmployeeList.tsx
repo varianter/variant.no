@@ -17,21 +17,6 @@ const competences: Competence[] = [
   "Project Management",
 ];
 
-function countCompetences(employees: ChewbaccaEmployee[]) {
-  const competenceCounts: Record<Competence, number> = {
-    Utvikling: 0,
-    Administasjon: 0,
-    Design: 0,
-    "Project Management": 0,
-  };
-
-  employees
-    .flatMap((e) => e.competences)
-    .forEach((c) => (competenceCounts[c] += 1));
-
-  return competenceCounts;
-}
-
 function countLocations(employees: ChewbaccaEmployee[]) {
   const locationCounts: Record<string, number> = {};
 
@@ -63,7 +48,6 @@ export default function EmployeeList({
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const competenceCounts = countCompetences(employees);
   const locationCounts = countLocations(employees);
   const locations = Object.keys(locationCounts);
 
@@ -79,6 +63,15 @@ export default function EmployeeList({
 
   function filterEmployees(newFilters: Partial<EmployeeFilters>) {
     const combinedFilters = { ...employeeFilters, ...newFilters };
+
+    if (newFilters.competenceFilter === employeeFilters.competenceFilter) {
+      combinedFilters.competenceFilter = null;
+    }
+
+    if (newFilters.locationFilter === employeeFilters.locationFilter) {
+      combinedFilters.locationFilter = null;
+    }
+
     setEmployeeFilters(combinedFilters);
 
     const newFilteredEmployees = employees.filter((e) => {
@@ -111,10 +104,9 @@ export default function EmployeeList({
           </Text>
           <Button
             size="small"
+            background={employeeFilters.competenceFilter ? "light" : "dark"}
             type={
-              employeeFilters.competenceFilter == null
-                ? "secondaryFilled"
-                : "secondary"
+              employeeFilters.competenceFilter == null ? "primary" : "secondary"
             }
             onClick={() => filterEmployees({ competenceFilter: null })}
           >
@@ -126,12 +118,13 @@ export default function EmployeeList({
               <Button
                 size="small"
                 key={competence}
-                type={active ? "secondaryFilled" : "secondary"}
+                background={active ? "dark" : "light"}
+                type={"secondary"}
                 onClick={() =>
                   filterEmployees({ competenceFilter: competence })
                 }
               >
-                {t(competence)} ({competenceCounts[competence]})
+                {t(competence)}
               </Button>
             );
           })}
@@ -142,10 +135,9 @@ export default function EmployeeList({
           </Text>
           <Button
             size="small"
+            background={employeeFilters.locationFilter ? "light" : "dark"}
             type={
-              employeeFilters.locationFilter == null
-                ? "secondaryFilled"
-                : "secondary"
+              employeeFilters.locationFilter == null ? "primary" : "secondary"
             }
             onClick={() => filterEmployees({ locationFilter: null })}
           >
@@ -157,10 +149,11 @@ export default function EmployeeList({
               <Button
                 size="small"
                 key={location}
-                type={active ? "secondaryFilled" : "secondary"}
+                background={active ? "dark" : "light"}
+                type={"secondary"}
                 onClick={() => filterEmployees({ locationFilter: location })}
               >
-                {location} ({locationCounts[location]})
+                {location}
               </Button>
             );
           })}
