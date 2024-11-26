@@ -19,6 +19,7 @@ import { StructureBuilder } from "sanity/structure";
 import { companyInfoID } from "./schemas/documents/admin/companyInfo";
 import { companyLocationID } from "./schemas/documents/admin/companyLocation";
 import { defaultSeoID } from "./schemas/documents/admin/defaultSeo";
+import { jobPostingsID } from "./schemas/documents/admin/jobPostings";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 import { compensationsId } from "./schemas/documents/compensations";
 import { languageSettingsID } from "./schemas/documents/languageSettings";
@@ -28,7 +29,6 @@ import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
 import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
 import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
-import { jobPostingsID } from "./schemas/documents/admin/jobPostings";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>

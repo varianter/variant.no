@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { firstTranslation } from "studio/utils/i18n";
 
