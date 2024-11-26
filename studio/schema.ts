@@ -20,6 +20,8 @@ import { footerSection } from "./schemas/objects/footerSection";
 import { link } from "./schemas/objects/link";
 import seo from "./schemas/objects/seo";
 import { socialMedia } from "./schemas/objects/socialMedia";
+import jobPosting from "./schemas/objects/jobPosting";
+import jobPostings from "./schemas/documents/admin/jobPostings";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -43,5 +45,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     richText,
     seo,
     announcement,
+    jobPosting,
+    jobPostings,
   ],
 };

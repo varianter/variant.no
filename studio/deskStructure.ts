@@ -28,6 +28,7 @@ import { brandAssetsID } from "./schemas/documents/siteSettings/brandAssets";
 import { localeID } from "./schemas/documents/siteSettings/locale";
 import { soMeLinksID } from "./schemas/documents/siteSettings/socialMediaProfiles";
 import { customerCasesPageID } from "./schemas/documents/specialPages/customerCasesPage";
+import { jobPostingsID } from "./schemas/documents/admin/jobPostings";
 
 // Admin Section
 const adminSection = (S: StructureBuilder) =>
@@ -58,6 +59,15 @@ const adminSection = (S: StructureBuilder) =>
             .icon(CogIcon)
             .child(
               S.documentTypeList(legalDocumentID).title("Legal Documents"),
+            ),
+          S.listItem()
+            .title("Job Postings")
+            .icon(CaseIcon)
+            .child(
+              S.document()
+                .schemaType(jobPostingsID)
+                .documentId(jobPostingsID)
+                .title("Job Postings"),
             ),
         ]),
     );
