@@ -17,7 +17,7 @@ export interface CustomerCaseProjectInfo {
 
 export interface CustomerSector {
   customerSector: string;
-  key: string;
+  _key: string;
 }
 
 export interface Deliveries {

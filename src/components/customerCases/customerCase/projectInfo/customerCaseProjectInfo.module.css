@@ -1,0 +1,84 @@
+.projectInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.projectInfoInner {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.badgeWrapper {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0.375rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+  padding-top: 0.25rem;
+}
+
+.dotSeperator::after {
+  content: "·";
+  margin: 0 0.5rem;
+}
+
+.dotSeperator:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+.varianter {
+  max-width: 537px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dotSeperatorVarianter::after {
+  content: "·";
+  margin: 0 0.5rem;
+}
+
+.dotSeperatorVarianter:nth-last-child(2)::after {
+  content: "";
+  margin: 0rem;
+}
+
+.projectInfoItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  color: var(--text-tertiary);
+}
+
+.deliveries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.preFancyCharacter {
+  margin-right: 0.38rem;
+}
+
+.afterFancyCharacter {
+  margin-left: 0.38rem;
+}
+
+.urlWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
