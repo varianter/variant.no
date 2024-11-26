@@ -10,7 +10,7 @@ const jobPostings = defineType({
   title: "Job Postings",
   fields: [
     {
-      name: "jobPostings",
+      name: "jobPostingsArray",
       title: "Job Postings",
       type: "array",
       of: [{ type: jobPostingID }],

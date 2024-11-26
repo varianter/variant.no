@@ -15,6 +15,7 @@ const jobPosting = defineType({
       name: "role",
       type: "internationalizedArrayString",
       description: "The name of the role",
+      validation: (rule) => rule.required().error("Role name is required"),
     },
     {
       title: "Location",
@@ -27,7 +28,15 @@ const jobPosting = defineType({
       title: "Recruitee ad URL",
       name: "recruiteeAdUrl",
       type: "url",
-      description: "URL to Recruitee ad",
+      description:
+        "URL to Recruitee ad. Please  enter the full URL, including 'https://', e.g., 'https://www.example.com'.",
+      validation: (rule) => [
+        rule.required(),
+        rule.uri({
+          scheme: ["http", "https"],
+          allowRelative: false,
+        }),
+      ],
     },
   ],
   preview: {
