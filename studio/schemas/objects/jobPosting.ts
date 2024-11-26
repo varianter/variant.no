@@ -1,6 +1,7 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { companyLocationID } from "studio/schemas/documents/admin/companyLocation";
 import { firstTranslation } from "studio/utils/i18n";
 
 export const jobPostingID = "jobPosting";
@@ -18,18 +19,24 @@ const jobPosting = defineType({
       validation: (rule) => rule.required().error("Role name is required"),
     },
     {
-      title: "Location",
-      name: "location",
-      type: "reference",
-      to: [{ type: "companyLocation" }],
+      title: "Locations",
+      name: "locations",
+      type: "array",
       description: "Where is the role located?",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: companyLocationID }],
+        },
+      ],
+      validation: (rule) => rule.required(),
     },
     {
       title: "Recruitee ad URL",
       name: "recruiteeAdUrl",
       type: "url",
       description:
-        "URL to Recruitee ad. Please  enter the full URL, including 'https://', e.g., 'https://www.example.com'.",
+        "URL to Recruitee ad. Please enter the full URL, including 'https://', e.g., 'https://www.example.com'.",
       validation: (rule) => [
         rule.required(),
         rule.uri({
@@ -42,10 +49,8 @@ const jobPosting = defineType({
   preview: {
     select: {
       title: "role",
-      location: "location.companyLocationName",
     },
-    prepare(selection) {
-      const { title, location } = selection;
+    prepare({ title }) {
       if (!isInternationalizedString(title)) {
         throw new TypeError(
           `Expected 'title' to be InternationalizedString, was ${typeof title}`,
@@ -53,7 +58,6 @@ const jobPosting = defineType({
       }
       return {
         title: firstTranslation(title) ?? undefined,
-        subtitle: location,
       };
     },
   },
