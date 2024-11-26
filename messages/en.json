@@ -1,4 +1,7 @@
 {
+  "linking_words":{
+    "for": "for"
+  }, 
   "navigation": {
     "home": "Home"
   },
@@ -14,7 +17,10 @@
     "development": "Development",
     "project_management": "Project management",
     "url": "Url",
-    "collaborators": "Collaborators"
+    "collaborators": "Collaborators", 
+    "customer_case_entry": {
+      "image": "image"
+    }
   },
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",

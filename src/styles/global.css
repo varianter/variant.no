@@ -34,6 +34,7 @@ html {
   --text-tertiary: #5e5e5e;
 
   --background-bg-light-secondary: #eaeaea;
+  --background-bg-dark: #2D2D2D; 
 
   /* breakpoints */
   --breakpoint-mobile: 767px;

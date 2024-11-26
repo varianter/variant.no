@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import Button from "src/components/buttons/Button";
@@ -12,11 +14,14 @@ interface CustomerCasesProps {
 }
 
 const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
+  const t = useTranslations();
   const [selectedCustomerCase, setSelectedCustomerCase] =
-    useState<CustomerCaseBase>();
+    useState<CustomerCaseBase>(customerCases[0]);
+
+  console.log("customerCases", selectedCustomerCase);
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.buttonRow}>
         {customerCases.map(
           (customerCase: CustomerCaseBase) =>
@@ -24,7 +29,7 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
             customerCase.slug && (
               <div key={customerCase._id}>
                 <Button
-                  type="secondary"
+                  type="primary"
                   onClick={() => setSelectedCustomerCase(customerCase)}
                 >
                   {/* Todo: this should be replaced with the customername from projectinfo*/}
@@ -34,7 +39,25 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
             ),
         )}
       </div>
-      <Text> {selectedCustomerCase?.basicTitle}</Text>
+      <div className={styles.cardInfo}>
+        <Text> {selectedCustomerCase.description}</Text>
+        <Text> {selectedCustomerCase.basicTitle}</Text>
+        <Text> fag: design . prosjektledelse </Text>
+        {selectedCustomerCase.image.metadata?.lqip && (
+          <Image
+            src={selectedCustomerCase.image.metadata?.lqip}
+            alt={
+              selectedCustomerCase.image.alt ??
+              t("customer_case.customer_case_entry.image") +
+                " " +
+                t("linking_words.for") +
+                selectedCustomerCase.basicTitle
+            }
+            objectFit="cover"
+            fill={true}
+          />
+        )}
+      </div>
     </div>
   );
 };

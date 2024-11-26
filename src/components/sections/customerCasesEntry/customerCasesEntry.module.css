@@ -1,5 +1,18 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--background-bg-dark); 
+}
+
 .buttonRow {
     display: flex;
     flex-direction: row;
     gap: 0rem; 
+}
+
+.cardInfo{
+    background-color: red; 
+    display: flex; 
+    flex-direction: row;
 }

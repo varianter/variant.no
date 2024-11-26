@@ -1,4 +1,7 @@
 {
+  "linking_words":{
+    "for": "for"
+  }, 
   "navigation": {
     "home": "Hjem"
   },
@@ -14,7 +17,10 @@
     "development": "Utvikling",
     "project_management": "Prosjektledelse",
     "url": "Link",
-    "collaborators": "Samarbeidspartnere"
+    "collaborators": "Samarbeidspartnere",
+    "customer_case_entry": {
+      "image": "bilde"
+    }
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",

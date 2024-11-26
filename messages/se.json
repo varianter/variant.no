@@ -1,4 +1,7 @@
-{
+{ 
+  "linking_words":{
+    "for": "för"
+}, 
   "navigation": {
     "home": "Hem"
   },
@@ -14,7 +17,10 @@
     "development": "Utveckling",
     "project_management": "Projektledning",
     "url": "Link",
-    "collaborators": "Samarbeidspartnere"
+    "collaborators": "Samarbeidspartnere",
+    "customer_case_entry": {
+      "image": "bild"
+    }
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
