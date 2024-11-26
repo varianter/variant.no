@@ -37,6 +37,7 @@ import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
 import { emailFromAliasAndHostname, fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
+import { domainFromHostname } from "./url";
 
 type PageFromParams<D, T> = {
   queryResponse: D;
@@ -150,6 +151,7 @@ async function fetchCompensationsPage({
 
 async function fetchCustomerCase({
   language,
+  hostname,
   path,
   perspective,
 }: PageDataParams): Promise<
@@ -166,6 +168,9 @@ async function fetchCustomerCase({
   if (path.length === 0) {
     return null;
   }
+
+  const domain = hostname === null ? null : domainFromHostname(hostname);
+
   const customerCasesPageResult =
     await loadStudioQuery<CustomerCasePage | null>(
       CUSTOMER_CASES_PAGE_QUERY,
@@ -197,6 +202,7 @@ async function fetchCustomerCase({
   const customerCaseResult = await loadSharedQuery<CustomerCase | null>(
     CUSTOMER_CASE_QUERY,
     {
+      domain,
       slug: path[1],
       language,
     },

@@ -1,10 +1,10 @@
+import { headers } from "next/headers";
 import Link from "next/link";
 
 import { SanitySharedImage } from "src/components/image/SanityImage";
-import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
-import { sharedCustomerCasesLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
+import { domainFromHostname } from "src/utils/url";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import { CustomerCaseBase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
@@ -19,10 +19,12 @@ interface CustomerCasesProps {
 const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
   const { perspective } = getDraftModeInfo();
 
+  const domain = domainFromHostname(headers().get("host"));
+
   const [sharedCustomerCases] = await Promise.all([
     loadSharedQuery<CustomerCaseBase[]>(
       CUSTOMER_CASES_QUERY,
-      { language: customerCasesPage.language },
+      { language: customerCasesPage.language, domain },
       { perspective },
     ),
   ]);
@@ -49,11 +51,7 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
           ))
         ) : (
           <div className={styles.section}>
-            <Text>
-              It looks like you haven&apos;t created any customer cases yet.
-              Please visit the shared studio to add some.
-            </Text>
-            <LinkButton link={sharedCustomerCasesLink} />
+            <Text>No customer cases... yet :)</Text>
           </div>
         )}
       </div>
