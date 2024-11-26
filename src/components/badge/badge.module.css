@@ -1,0 +1,9 @@
+.badgeWrapper {
+  display: inline-flex;
+  height: 1.5rem;
+  padding: 0.375rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 624.9375rem;
+}
