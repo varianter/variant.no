@@ -3,7 +3,7 @@
   width: 100%;
   gap: 1rem;
   min-width: 400px;
-  width: fit-content; 
+  width: fit-content;
 }
 
 .employeeImage {
@@ -24,7 +24,7 @@
   height: 100%;
 }
 
-.employeeName{
+.employeeName {
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -46,10 +46,10 @@
   margin: 0;
 }
 
-.employeeRole{
-  color: var(--text-tertiary); 
-} 
+.employeeRole {
+  color: var(--text-tertiary);
+}
 .employeeEmail,
 .employeeTelephone {
-  color: var(--text-tertiary); 
+  color: var(--text-tertiary);
 }
