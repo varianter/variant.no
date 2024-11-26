@@ -2,6 +2,8 @@
   display: flex;
   width: 100%;
   gap: 1rem;
+  min-width: 400px;
+  width: fit-content; 
 }
 
 .employeeImage {
@@ -10,26 +12,28 @@
   align-items: center;
   background-color: var(--primary-black);
   border-radius: 12px;
-  height: 125px;
-  width: 50%;
-  padding: 1rem;
   position: relative;
+  width: 96px;
+  height: 94px;
 }
 
 .employeeInfo {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 0.5rem;
-  white-space: nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.employeeName{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .employeeRole {
   display: flex;
+  width: fit-content;
   flex-direction: row;
-  overflow: visible;
-  align-self: stretch;
-  width: 100%;
 }
 
 .employeeRoleDot::after {
@@ -42,24 +46,10 @@
   margin: 0;
 }
 
-.employeeName {
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 120%;
-}
-
-.employeeRole {
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 120%;
-}
-
+.employeeRole{
+  color: var(--text-tertiary); 
+} 
 .employeeEmail,
 .employeeTelephone {
-  color: var(--text-primary);
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 120%;
+  color: var(--text-tertiary); 
 }
