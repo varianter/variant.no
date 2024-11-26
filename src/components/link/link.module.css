@@ -11,21 +11,7 @@
   gap: 0;
 }
 
-.underline {
-  width: 100%;
-  height: 0.0625rem;
-  background-color: var(--primary-black);
-}
-
-.colorLight .underline {
-  background-color: var(--primary-white);
-}
-
-.sizeSmall .underline {
-  margin-top: -0.125rem;
-}
-
-.link {
+.internalLink {
   color: var(--primary-black);
 
   display: inline-flex;
@@ -36,7 +22,7 @@
   gap: 0.5rem;
   font-family: var(--font-britti-sans);
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 300;
 
   transition: gap 100ms ease-in-out;
 
@@ -46,7 +32,7 @@
 
   &:hover {
     gap: 1rem;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   &::after {
@@ -55,12 +41,47 @@
     height: 24px;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-white);
-    -webkit-mask: url("/_assets/arrow.svg") no-repeat 50% 50%;
+    background-color: var(--primary-black);
+    -webkit-mask: url("/_assets/arrow-right.svg") no-repeat 50% 50%;
   }
 }
 
-.colorLight .link {
+.externalLink {
+  color: var(--primary-black);
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+  font-family: var(--font-britti-sans);
+  font-size: 1.125rem;
+  font-weight: 300;
+
+  transition: gap 100ms ease-in-out;
+
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
+
+  &:hover {
+    gap: 1rem;
+    font-weight: 400;
+  }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    background-color: var(--primary-black);
+    -webkit-mask: url("/_assets/arrow-up-right.svg") no-repeat 50% 50%;
+  }
+}
+
+.colorLight .internalLink {
   color: var(--primary-white);
 
   &::after {
@@ -68,7 +89,32 @@
   }
 }
 
-.sizeSmall .link {
+.colorLight .externalLink {
+  color: var(--primary-white);
+
+  &::after {
+    background-color: var(--primary-white);
+  }
+}
+
+.sizeSmall .internalLink {
+  font-size: 0.95rem;
+  gap: 0.25rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    gap: 0.5rem;
+  }
+
+  &::after {
+    transform: scale(0.75);
+  }
+}
+
+.sizeSmall .externalLink {
   font-size: 0.95rem;
   gap: 0.25rem;
 
@@ -87,6 +133,8 @@
 
 .span {
   padding-bottom: 0.125rem;
+  text-decoration: underline;
+  text-underline-position: from-font;
 }
 
 .sizeSmall .span {

@@ -83,14 +83,15 @@
 }
 
 .bodyNormal {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
 }
 
 .bodySmall {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 150%;
 }
 
 /* TODO: add font variables */
