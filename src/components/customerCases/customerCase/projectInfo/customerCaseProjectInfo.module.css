@@ -14,7 +14,6 @@
   gap: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .badgeWrapper {
@@ -38,10 +37,10 @@
 }
 
 .varianter {
-  max-width: 537px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 80%;
 }
 
 .dotSeperatorVarianter::after {
@@ -57,6 +56,7 @@
 .projectInfoItem {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -67,6 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .preFancyCharacter {
