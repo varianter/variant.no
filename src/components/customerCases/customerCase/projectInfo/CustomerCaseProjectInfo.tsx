@@ -20,147 +20,145 @@ export default async function CustomerCaseProjectInfo({
 }: CustomerCaseProjectInfoProps) {
   const t = await getTranslations("customer_case");
 
-  const consultantsFirstNames = projectInfo.consultants.map(
-    (n) => n.employeeFirstName,
-  );
+  let consultantsFirstNames;
+
+  if (projectInfo.consultants) {
+    consultantsFirstNames = projectInfo.consultants.map(
+      (n) => n.employeeFirstName,
+    );
+  }
 
   return (
-    <>
-      <div className={styles.projectInfo}>
-        <div className={styles.projectInfoInner}>
-          {projectInfo.customerSectors && (
-            <div>
-              <Text className={styles.title} type="labelRegular">
-                {t("customer").toUpperCase()}
-              </Text>
-              <div className={styles.badgeWrapper}>
-                {projectInfo.customerSectors.map((sector: CustomerSector) => (
-                  <Badge key={sector._key}>{sector.customerSector}</Badge>
-                ))}
-              </div>
+    <div className={styles.projectInfo}>
+      <div className={styles.projectInfoInner}>
+        {projectInfo.customerSectors && (
+          <div>
+            <Text className={styles.title} type="labelRegular">
+              {t("customer").toUpperCase()}
+            </Text>
+            <div className={styles.badgeWrapper}>
+              {projectInfo.customerSectors.map((sector: CustomerSector) => (
+                <Badge key={sector._key}>{sector.customerSector}</Badge>
+              ))}
             </div>
-          )}
-          {consultantsFirstNames && (
-            <div>
-              <Text className={styles.title} type="labelRegular">
-                {t("variants").toUpperCase()}
-              </Text>
-              <div className={styles.varianter}>
-                <Text className={styles.preFancyCharacter}>【 </Text>
-                {consultantsFirstNames.map((name) => (
-                  <Text
-                    key={name}
-                    type="bodyNormal"
-                    className={styles.dotSeperatorVarianter}
-                  >
-                    {name}
-                  </Text>
-                ))}
-                <Text className={styles.afterFancyCharacter}> 】</Text>
-              </div>
+          </div>
+        )}
+        {consultantsFirstNames && (
+          <div>
+            <Text className={styles.title} type="labelRegular">
+              {t("variants").toUpperCase()}
+            </Text>
+            <div className={styles.varianter}>
+              <Text className={styles.preFancyCharacter}>【 </Text>
+              {consultantsFirstNames.map((name) => (
+                <Text
+                  key={name}
+                  type="bodyNormal"
+                  className={styles.dotSeperatorVarianter}
+                >
+                  {name}
+                </Text>
+              ))}
+              <Text className={styles.afterFancyCharacter}> 】</Text>
             </div>
-          )}
-          {projectInfo.collaborators && (
+          </div>
+        )}
+        {projectInfo.collaborators && (
+          <div>
+            <Text className={styles.title} type="labelRegular">
+              {t("collaborators").toUpperCase()}
+            </Text>
+            <div className={styles.projectInfoItem}>
+              {projectInfo.collaborators.map((collaborator) => (
+                <Text
+                  type="bodyNormal"
+                  key={collaborator}
+                  className={styles.dotSeperator}
+                >
+                  {collaborator}
+                </Text>
+              ))}
+            </div>
+          </div>
+        )}
+        {projectInfo.url && (
+          <div className={styles.urlWrapper}>
+            <Text className={styles.title} type="labelRegular">
+              {t("url")}
+            </Text>
+            <CustomLink
+              link={{
+                _key: "go-to-external-link",
+                _type: "link",
+                linkType: LinkType.External,
+                linkTitle: projectInfo.url,
+                url: projectInfo.url,
+                ariaLabel: projectInfo.url,
+              }}
+            />
+          </div>
+        )}
+      </div>
+      {projectInfo.deliveries && (
+        <div className={styles.deliveries}>
+          {projectInfo.deliveries["projectManagement"] && (
             <div>
               <Text className={styles.title} type="labelRegular">
-                {t("collaborators").toUpperCase()}
+                {t("project_management").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.collaborators.map((collaborator) => (
+                {projectInfo.deliveries["projectManagement"].map(
+                  (projectManagement) => (
+                    <Text
+                      type="bodyNormal"
+                      key={projectManagement.key}
+                      className={styles.dotSeperator}
+                    >
+                      {projectManagement.projectManagementDelivery}
+                    </Text>
+                  ),
+                )}
+              </div>
+            </div>
+          )}
+          {projectInfo.deliveries["design"] && (
+            <div>
+              <Text className={styles.title} type="labelRegular">
+                {t("design").toUpperCase()}
+              </Text>
+              <div className={styles.projectInfoItem}>
+                {projectInfo.deliveries["design"].map((design) => (
                   <Text
+                    key={design.key}
                     type="bodyNormal"
-                    key={collaborator}
                     className={styles.dotSeperator}
                   >
-                    {collaborator}
+                    {design.designDelivery}
                   </Text>
                 ))}
               </div>
             </div>
           )}
-          {projectInfo.url && (
-            <div className={styles.urlWrapper}>
+          {projectInfo.deliveries["development"] && (
+            <div>
               <Text className={styles.title} type="labelRegular">
-                {t("url")}
+                {t("development").toUpperCase()}
               </Text>
-              <CustomLink
-                link={{
-                  _key: "go-to-external-link",
-                  _type: "link",
-                  linkType: LinkType.External,
-                  linkTitle: projectInfo.url,
-                  url: projectInfo.url,
-                  ariaLabel: projectInfo.url,
-                }}
-              />
+              <div className={styles.projectInfoItem}>
+                {projectInfo.deliveries["development"].map((development) => (
+                  <Text
+                    key={development.key}
+                    type="bodyNormal"
+                    className={styles.dotSeperator}
+                  >
+                    {development.developmentDelivery}
+                  </Text>
+                ))}
+              </div>
             </div>
           )}
         </div>
-        <div>
-          {projectInfo.deliveries && (
-            <div className={styles.deliveries}>
-              {projectInfo.deliveries["projectManagement"] && (
-                <div>
-                  <Text className={styles.title} type="labelRegular">
-                    {t("project_management").toUpperCase()}
-                  </Text>
-                  <div className={styles.projectInfoItem}>
-                    {projectInfo.deliveries["projectManagement"].map(
-                      (projectManagement) => (
-                        <Text
-                          type="bodyNormal"
-                          key={projectManagement.key}
-                          className={styles.dotSeperator}
-                        >
-                          {projectManagement.projectManagementDelivery}
-                        </Text>
-                      ),
-                    )}
-                  </div>
-                </div>
-              )}
-              {projectInfo.deliveries["design"] && (
-                <div>
-                  <Text className={styles.title} type="labelRegular">
-                    {t("design").toUpperCase()}
-                  </Text>
-                  <div className={styles.projectInfoItem}>
-                    {projectInfo.deliveries["design"].map((design) => (
-                      <Text
-                        key={design.key}
-                        type="bodyNormal"
-                        className={styles.dotSeperator}
-                      >
-                        {design.designDelivery}
-                      </Text>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {projectInfo.deliveries["development"] && (
-                <div>
-                  <Text className={styles.title} type="labelRegular">
-                    {t("development").toUpperCase()}
-                  </Text>
-                  <div className={styles.projectInfoItem}>
-                    {projectInfo.deliveries["development"].map(
-                      (development) => (
-                        <Text
-                          key={development.key}
-                          type="bodyNormal"
-                          className={styles.dotSeperator}
-                        >
-                          {development.developmentDelivery}
-                        </Text>
-                      ),
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 }
