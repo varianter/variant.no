@@ -117,8 +117,8 @@ html {
   --surface-white: var(--Light-50);
 
   /* breakpoints */
-  --breakpoint-mobile: 767px;
-  --breakpoint-tablet: 640px;
+  --breakpoint-mobile: 425px;
+  --breakpoint-tablet: 834px;
   --breakpoint-large: 1024px;
 
   /* max widths */

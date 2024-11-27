@@ -103,13 +103,16 @@ export function seoDataFromCustomerCase(customerCase: CustomerCaseDocument) {
     keywords: [
       customerCase.projectInfo.customer,
       customerCase.projectInfo.sector,
-      customerCase.projectInfo.deliveries.projectManagement.map(
-        (d) => d.projectManagementDelivery,
-      ),
-      customerCase.projectInfo.deliveries.design.map((d) => d.designDelivery),
-      customerCase.projectInfo.deliveries.development.map(
-        (d) => d.developmentDelivery,
-      ),
+      customerCase.projectInfo.deliveries.projectManagement &&
+        customerCase.projectInfo.deliveries.projectManagement.map(
+          (d) => d.projectManagementDelivery,
+        ),
+      customerCase.projectInfo.deliveries.design &&
+        customerCase.projectInfo.deliveries.design.map((d) => d.designDelivery),
+      customerCase.projectInfo.deliveries.development &&
+        customerCase.projectInfo.deliveries.development.map(
+          (d) => d.developmentDelivery,
+        ),
     ].join(","),
   };
 }

@@ -7,10 +7,9 @@
 
 .content {
   width: 100%;
-  text-wrap: wrap;
   column-gap: 12px;
   row-gap: 52px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, 420px);
+  /* justify-content: space-between;  */
 }

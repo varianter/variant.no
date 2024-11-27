@@ -49,6 +49,7 @@ export const CUSTOMER_CASE_QUERY = groq`
     "projectInfo": projectInfo {
       customer,
       "customerSectors": customerSectors[] {
+        _key,
         "customerSector": ${translatedFieldFragment("customerSectorItem")}
         },
       url,

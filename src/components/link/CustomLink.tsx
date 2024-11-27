@@ -43,7 +43,11 @@ const CustomLink = ({
         }
       >
         <Link
-          className={styles.link}
+          className={
+            link.linkType == "internal"
+              ? styles.internalLink
+              : styles.externalLink
+          }
           href={href}
           target={target}
           rel={rel}
@@ -51,7 +55,6 @@ const CustomLink = ({
         >
           <span className={styles.span}>{link.linkTitle}</span>
         </Link>
-        <div className={styles.underline}></div>
       </div>
     ) : (
       <Link
