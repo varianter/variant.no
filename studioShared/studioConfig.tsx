@@ -1,3 +1,4 @@
+import { colorInput } from "@sanity/color-input";
 import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
 import { structureTool } from "sanity/structure";
@@ -32,6 +33,7 @@ const config: WorkspaceOptions = {
       languages: supportedLanguages,
       fieldTypes: ["string", "richText", "text"],
     }),
+    colorInput(),
   ],
 };
 

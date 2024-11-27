@@ -17,9 +17,15 @@ const CUSTOMER_CASE_BASE_FRAGMENT = groq`
   ${LANGUAGE_FIELD_FRAGMENT},
   "slug": ${translatedFieldFragment("slug")},
   "basicTitle": ${translatedFieldFragment("basicTitle")},
+  "basicTitleColorPart": ${translatedFieldFragment("basicTitleColorPart")},
   "description": ${translatedFieldFragment("description")},
   "image": image {
     ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+  },
+  "clientColors": {
+    "title": clientColorTitle.hex,
+    "badge": clientColorBadge.hex,
+    "badgeText": clientColorBadgeText.hex
   }
 `;
 
@@ -66,7 +72,7 @@ export const CUSTOMER_CASE_QUERY = groq`
       },
       collaborators,
       "consultants": consultants[] {
-        _key,  
+        _key,
         employeeEmail,
         employeeFirstName,
       }
