@@ -65,7 +65,11 @@ export const CUSTOMER_CASE_QUERY = groq`
         }
       },
       collaborators,
-      consultants
+      "consultants": consultants[] {
+        _key,  
+        employeeEmail,
+        employeeFirstName,
+      }
     },
     "sections": sections[] {
       _key,
