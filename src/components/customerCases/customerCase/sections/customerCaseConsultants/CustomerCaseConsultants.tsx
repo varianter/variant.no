@@ -29,7 +29,7 @@ export default async function CustomerCaseConsultants({
 
   return (
     <div className={styles.wrapper}>
-      <Text type={"h3"}>{t("in_project")}</Text>
+      <Text type={"h4"}>{t("in_project")}</Text>
       <div className={styles.content}>
         {consultants.map((consultant) => (
           <CustomerCaseEmployeeCard
