@@ -40,7 +40,7 @@ export default async function CustomerCaseProjectInfo({
                 {projectInfo.customerSectors.map((sector: CustomerSector) => (
                   <Badge
                     key={sector._key}
-                    badgeColor={clientColors.badge}
+                    badgeColor={clientColors.color}
                     textColor={clientColors.badgeText}
                   >
                     {sector.customerSector}

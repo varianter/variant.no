@@ -61,8 +61,7 @@ export interface CustomerCaseBase {
 }
 
 export interface CustomerCaseClientColors {
-  title?: string;
-  badge?: string;
+  color?: string;
   badgeText?: string;
 }
 

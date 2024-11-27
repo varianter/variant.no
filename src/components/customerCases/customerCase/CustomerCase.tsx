@@ -29,7 +29,7 @@ export default async function CustomerCase({
         <ColoredTitle
           title={customerCase.basicTitle}
           colorPart={customerCase.basicTitleColorPart}
-          color={customerCase.clientColors.title}
+          color={customerCase.clientColors.color}
         />
         <hr className={styles.divider} />
         {consultantsResult.ok && (

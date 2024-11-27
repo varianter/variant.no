@@ -47,25 +47,22 @@ const customerCase = defineType({
     }),
     defineField({ ...domainsField, validation: (rule) => rule.required() }),
     defineField({
-      name: "clientColorTitle",
+      name: "clientColor",
       type: "color",
-      title: "Client Color (Title)",
-      description: "This color will be used for parts of the title",
-      options: { disableAlpha: true },
-    }),
-    defineField({
-      name: "clientColorBadge",
-      type: "color",
-      title: "Client Color (Badge)",
-      description: "This color will be used for the badges under project info",
+      title: "Client Color (Title & Badges)",
+      description: "This color will be used for parts of the title and badges",
       options: { disableAlpha: true },
     }),
     defineField({
       name: "clientColorBadgeText",
       type: "color",
       title: "Client Color (Badge Text)",
-      description: "This color will be used for the text on the badges",
-      options: { disableAlpha: true },
+      description:
+        "This color will be used for the text on the badges. There are predefined colors for text in the component",
+      options: {
+        disableAlpha: true,
+        colorList: ["#222424", "#faf8f5"],
+      },
     }),
     defineField({
       name: "description",

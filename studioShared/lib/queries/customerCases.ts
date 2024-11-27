@@ -23,8 +23,7 @@ const CUSTOMER_CASE_BASE_FRAGMENT = groq`
     ${INTERNATIONALIZED_IMAGE_FRAGMENT}
   },
   "clientColors": {
-    "title": clientColorTitle.hex,
-    "badge": clientColorBadge.hex,
+    "color": clientColor.hex,
     "badgeText": clientColorBadgeText.hex
   }
 `;
