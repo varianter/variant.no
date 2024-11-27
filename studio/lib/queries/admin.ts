@@ -20,3 +20,15 @@ export const LEGAL_DOCUMENTS_SITEMAP_QUERY = groq`
     slug
   }
 `;
+
+// Job Postings
+export const JOB_POSTINGS_QUERY = groq`
+  *[_type == "jobPostings"] {
+    jobPostingsArray[] {
+      ...,
+      locations[] -> {
+        ...
+      }
+    }
+  }
+`;
