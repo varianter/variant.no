@@ -20,7 +20,7 @@ export default async function CustomerCase({
   customerCasesPagePath,
 }: CustomerCaseProps) {
   const consultantsResult = await fetchEmployeesByEmails(
-    customerCase.projectInfo.consultants,
+    customerCase.projectInfo.consultants.map((e) => e.employeeEmail),
   );
 
   return (
@@ -32,10 +32,7 @@ export default async function CustomerCase({
         <hr className={styles.divider} />
         {consultantsResult.ok && (
           <div className={styles.projectInfoWrapper}>
-            <CustomerCaseProjectInfo
-              projectInfo={customerCase.projectInfo}
-              consultantsInProject={consultantsResult.value}
-            />
+            <CustomerCaseProjectInfo projectInfo={customerCase.projectInfo} />
           </div>
         )}
         <div className={styles.mainImageWrapper}>

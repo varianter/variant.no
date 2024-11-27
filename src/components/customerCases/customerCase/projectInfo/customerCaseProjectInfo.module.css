@@ -29,7 +29,7 @@
 
 .dotSeperator::after {
   content: "·";
-  margin: 0 0.5rem;
+  margin: 0 0.38rem;
 }
 
 .dotSeperator:last-child:after {
@@ -46,7 +46,7 @@
 
 .dotSeperatorVarianter::after {
   content: "·";
-  margin: 0 0.5rem;
+  margin: 0 0.38rem;
 }
 
 .dotSeperatorVarianter:nth-last-child(2)::after {

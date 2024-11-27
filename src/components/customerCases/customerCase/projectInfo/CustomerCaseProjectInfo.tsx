@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server";
 import Badge from "src/components/badge/Badge";
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
-import { ChewbaccaEmployee } from "src/types/employees";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import {
   CustomerCaseProjectInfo as CustomerCaseCaseProjectInfoObject,
@@ -14,14 +13,16 @@ import styles from "./customerCaseProjectInfo.module.css";
 
 interface CustomerCaseProjectInfoProps {
   projectInfo: CustomerCaseCaseProjectInfoObject;
-  consultantsInProject: ChewbaccaEmployee[];
 }
 
 export default async function CustomerCaseProjectInfo({
   projectInfo,
-  consultantsInProject,
 }: CustomerCaseProjectInfoProps) {
   const t = await getTranslations("customer_case");
+
+  const consultantsFirstNames = projectInfo.consultants.map(
+    (n) => n.employeeFirstName,
+  );
 
   return (
     <>
@@ -39,24 +40,26 @@ export default async function CustomerCaseProjectInfo({
               </div>
             </div>
           )}
-          <div>
-            <Text className={styles.title} type="labelRegular">
-              {t("variants").toUpperCase()}
-            </Text>
-            <div className={styles.varianter}>
-              <Text className={styles.preFancyCharacter}>【 </Text>
-              {consultantsInProject.map((c) => (
-                <Text
-                  key={c.name}
-                  type="bodyNormal"
-                  className={styles.dotSeperatorVarianter}
-                >
-                  {c.name}
-                </Text>
-              ))}
-              <Text className={styles.afterFancyCharacter}> 】</Text>
+          {consultantsFirstNames && (
+            <div>
+              <Text className={styles.title} type="labelRegular">
+                {t("variants").toUpperCase()}
+              </Text>
+              <div className={styles.varianter}>
+                <Text className={styles.preFancyCharacter}>【 </Text>
+                {consultantsFirstNames.map((name) => (
+                  <Text
+                    key={name}
+                    type="bodyNormal"
+                    className={styles.dotSeperatorVarianter}
+                  >
+                    {name}
+                  </Text>
+                ))}
+                <Text className={styles.afterFancyCharacter}> 】</Text>
+              </div>
             </div>
-          </div>
+          )}
           {projectInfo.collaborators && (
             <div>
               <Text className={styles.title} type="labelRegular">

@@ -12,7 +12,13 @@ export interface CustomerCaseProjectInfo {
   sector: string[];
   collaborators: string[];
   deliveries: Deliveries;
-  consultants: string[];
+  consultants: Consultants[];
+}
+
+export interface Consultants {
+  employeeEmail: string;
+  employeeFirstName: string;
+  _key: string;
 }
 
 export interface CustomerSector {
