@@ -98,17 +98,13 @@ export default async function Layout({
               language={params.locale}
             />
           ) : (
-            <div
-              style={{ display: "flex", gap: "1rem", flexDirection: "column" }}
-            >
-              <Footer
-                navigationData={initialNav.data}
-                legalData={initialLegal.data}
-                companyInfo={initialCompanyInfo.data}
-                brandAssets={initialBrandAssets.data}
-                soMeData={initialSoMe.data}
-              />
-            </div>
+            <Footer
+              navigationData={initialNav.data}
+              legalData={initialLegal.data}
+              companyInfo={initialCompanyInfo.data}
+              brandAssets={initialBrandAssets.data}
+              soMeData={initialSoMe.data}
+            />
           )}
           {draftMode().isEnabled && <LiveVisualEditing />}
         </NextIntlClientProvider>
