@@ -7,9 +7,9 @@ import Button from "src/components/buttons/Button";
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
+import { Result } from "studio/utils/result";
 
 import styles from "./employees.module.css";
-import { Result } from "studio/utils/result";
 
 const competences: Competence[] = [
   "Utvikling",

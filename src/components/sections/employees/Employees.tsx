@@ -1,9 +1,8 @@
 import { headers } from "next/headers";
+import { Suspense } from "react";
 
-import {
-  domainFromEmail,
-  fetchAllChewbaccaEmployees,
-} from "src/utils/employees";
+import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
+import { fetchAllChewbaccaEmployees } from "src/utils/employees";
 import { domainFromHostname } from "src/utils/url";
 import { EmployeesSection } from "studio/lib/interfaces/pages";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
@@ -11,8 +10,7 @@ import { loadStudioQuery } from "studio/lib/store";
 
 import EmployeeList from "./EmployeeList";
 import styles from "./employees.module.css";
-import { Suspense } from "react";
-import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
+
 export interface EmployeesProps {
   language: string;
   section: EmployeesSection;
