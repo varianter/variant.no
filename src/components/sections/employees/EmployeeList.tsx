@@ -137,29 +137,25 @@ export default function EmployeeList({
         </div>
       </div>
 
-      <div className={styles.employeeCountWrapper}>
-        <div style={{ display: "flex" }}></div>
-
+      <div className={styles.peopleCountWrapper}>
         <p className={styles.employeeCount}>
           {t("show")}{" "}
           <span className={styles.employeeCountValue}>
             {filteredEmployees.length}
           </span>{" "}
-          {t("of")}{" "}
-          <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
-          {t("consultants")}
+          {t("of")} <span>{employees.length}</span> {t("consultants")}
         </p>
-      </div>
 
-      <div className={styles.peopleContainer}>
-        {filteredEmployees.map((employee) => (
-          <EmployeeCard
-            employee={employee}
-            employeePageSlug={employeesPageSlug}
-            language={language}
-            key={employee.name}
-          />
-        ))}
+        <div className={styles.peopleContainer}>
+          {filteredEmployees.map((employee) => (
+            <EmployeeCard
+              employee={employee}
+              employeePageSlug={employeesPageSlug}
+              language={language}
+              key={employee.name}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

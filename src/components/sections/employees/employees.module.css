@@ -46,8 +46,10 @@
   width: 4.5rem;
 }
 
-.employeeCountWrapper {
-  width: 100%;
+.peopleCountWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .employeeCount {
@@ -61,5 +63,5 @@
 .peopleContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
