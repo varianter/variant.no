@@ -101,7 +101,7 @@
   line-height: 18px;
   letter-spacing: 0.14px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 440px) {
     font-size: 12px;
     letter-spacing: 0.12px;
   }
