@@ -3,6 +3,7 @@
   flex-direction: row;
   gap: 1rem;
   width: 100%;
+  max-width: 960px;
 
   @media (max-width: 425px) {
     flex-direction: column;
@@ -14,7 +15,7 @@
   gap: 1.5rem;
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  width: 50%;
 }
 
 .badgeWrapper {
@@ -69,6 +70,7 @@
   flex-direction: column;
   gap: 1.5rem;
   flex-wrap: wrap;
+  width: 50%;
 }
 
 .preFancyCharacter {
