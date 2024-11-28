@@ -6,6 +6,7 @@ import Text from "src/components/text/Text";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import {
   CustomerCaseProjectInfo as CustomerCaseCaseProjectInfoObject,
+  CustomerCaseClientColors,
   CustomerSector,
 } from "studioShared/lib/interfaces/customerCases";
 
@@ -13,10 +14,12 @@ import styles from "./customerCaseProjectInfo.module.css";
 
 interface CustomerCaseProjectInfoProps {
   projectInfo: CustomerCaseCaseProjectInfoObject;
+  clientColors: CustomerCaseClientColors;
 }
 
 export default async function CustomerCaseProjectInfo({
   projectInfo,
+  clientColors,
 }: CustomerCaseProjectInfoProps) {
   const t = await getTranslations("customer_case");
 
@@ -38,7 +41,13 @@ export default async function CustomerCaseProjectInfo({
             </Text>
             <div className={styles.badgeWrapper}>
               {projectInfo.customerSectors.map((sector: CustomerSector) => (
-                <Badge key={sector._key}>{sector.customerSector}</Badge>
+                <Badge
+                    key={sector._key}
+                    badgeColor={clientColors.color}
+                    textColor={clientColors.badgeText}
+                  >
+                    {sector.customerSector}
+                  </Badge>
               ))}
             </div>
           </div>
@@ -118,7 +127,6 @@ export default async function CustomerCaseProjectInfo({
                     </Text>
                   ),
                 )}
-              </div>
             </div>
           )}
           {projectInfo.deliveries["design"] && (

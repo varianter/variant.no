@@ -54,8 +54,15 @@ export interface CustomerCaseBase {
   slug: string;
   domains: string[];
   basicTitle: string;
+  basicTitleColorPart: string;
   description: string;
   image: IImage;
+  clientColors: CustomerCaseClientColors;
+}
+
+export interface CustomerCaseClientColors {
+  color?: string;
+  badgeText?: string;
 }
 
 export type CustomerCaseSection =

@@ -31,12 +31,15 @@ export default async function CustomerCase({
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <Text type={"h1"} className={styles.mainTitle}>
-          {customerCase.basicTitle}
-        </Text>
+        <ColoredTitle
+          title={customerCase.basicTitle}
+          colorPart={customerCase.basicTitleColorPart}
+          color={customerCase.clientColors.color}
+        />
         <hr className={styles.divider} />
         <div className={styles.projectInfoWrapper}>
           <CustomerCaseProjectInfo projectInfo={customerCase.projectInfo} />
+          clientColors={customerCase.clientColors}
         </div>
         <div className={styles.mainImageWrapper}>
           <SanitySharedImage image={customerCase.image} />
@@ -62,5 +65,37 @@ export default async function CustomerCase({
         <ContactInformation language={customerCase.language} />
       </div>
     </div>
+  );
+}
+
+function ColoredTitle({
+  title,
+  colorPart,
+  color,
+}: {
+  title: string;
+  colorPart?: string;
+  color?: string;
+}) {
+  if (colorPart === undefined || colorPart === "")
+    return (
+      <Text type={"h1"} className={styles.mainTitle}>
+        {title}
+      </Text>
+    );
+
+  const startColorIndex = title.indexOf(colorPart);
+  const endColorIndex = startColorIndex + colorPart.length;
+
+  const preColorText = title.slice(0, startColorIndex);
+  const colorText = title.slice(startColorIndex, endColorIndex);
+  const postColorText = title.slice(endColorIndex);
+
+  return (
+    <Text type={"h1"} className={styles.mainTitle}>
+      <span>{preColorText}</span>
+      <span style={{ color: color }}>{colorText}</span>
+      <span>{postColorText}</span>
+    </Text>
   );
 }
