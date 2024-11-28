@@ -13,6 +13,7 @@ import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import testimonals from "studio/schemas/objects/sections/testimonials";
+import { jobs } from "studio/schemas/objects/sections/jobs";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -53,6 +54,7 @@ const pageBuilder = defineType({
         grid,
         employees,
         contactBox,
+        jobs,
       ],
     }),
   ],

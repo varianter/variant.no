@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 
 import { companyInfoID } from "studio/schemas/documents/admin/companyInfo";
+import { translatedFieldFragment } from "./utils/i18n";
 
 //Parent Company
 export const COMPANY_INFO_QUERY = groq`*[_type == "${companyInfoID}"][0]`;
@@ -23,9 +24,10 @@ export const LEGAL_DOCUMENTS_SITEMAP_QUERY = groq`
 
 // Job Postings
 export const JOB_POSTINGS_QUERY = groq`
-  *[_type == "jobPostings"] {
+  *[_type == "jobPostings"][0] {
     jobPostingsArray[] {
-      ...,
+      recruiteeAdUrl,
+      "role": ${translatedFieldFragment("role")}, 
       locations[] -> {
         ...
       }

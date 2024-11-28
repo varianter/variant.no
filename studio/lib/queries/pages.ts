@@ -49,6 +49,10 @@ const SECTIONS_FRAGMENT = groq`
     _type == "contactBox" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "optionalSubtitle": ${translatedFieldFragment("optionalSubtitle")}
+    },
+    _type == "jobs" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "subtitle": ${translatedFieldFragment("subtitle")}
     }
   }
 `;
