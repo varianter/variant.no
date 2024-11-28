@@ -38,8 +38,10 @@ export default async function CustomerCase({
         />
         <hr className={styles.divider} />
         <div className={styles.projectInfoWrapper}>
-          <CustomerCaseProjectInfo projectInfo={customerCase.projectInfo} />
-          clientColors={customerCase.clientColors}
+          <CustomerCaseProjectInfo
+            projectInfo={customerCase.projectInfo}
+            clientColors={customerCase.clientColors}
+          />
         </div>
         <div className={styles.mainImageWrapper}>
           <SanitySharedImage image={customerCase.image} />

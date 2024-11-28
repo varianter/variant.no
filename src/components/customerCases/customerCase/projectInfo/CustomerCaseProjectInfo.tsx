@@ -42,12 +42,12 @@ export default async function CustomerCaseProjectInfo({
             <div className={styles.badgeWrapper}>
               {projectInfo.customerSectors.map((sector: CustomerSector) => (
                 <Badge
-                    key={sector._key}
-                    badgeColor={clientColors.color}
-                    textColor={clientColors.badgeText}
-                  >
-                    {sector.customerSector}
-                  </Badge>
+                  key={sector._key}
+                  badgeColor={clientColors.color}
+                  textColor={clientColors.badgeText}
+                >
+                  {sector.customerSector}
+                </Badge>
               ))}
             </div>
           </div>
@@ -127,6 +127,7 @@ export default async function CustomerCaseProjectInfo({
                     </Text>
                   ),
                 )}
+              </div>
             </div>
           )}
           {projectInfo.deliveries["design"] && (
