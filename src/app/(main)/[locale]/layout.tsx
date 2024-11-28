@@ -101,11 +101,6 @@ export default async function Layout({
             <div
               style={{ display: "flex", gap: "1rem", flexDirection: "column" }}
             >
-              <FooterNew
-                navigationData={initialNav.data}
-                legalData={initialLegal.data}
-                soMeData={initialSoMe.data}
-              />
               <Footer
                 navigationData={initialNav.data}
                 legalData={initialLegal.data}
