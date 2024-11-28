@@ -1,6 +1,7 @@
 import { groq } from "next-sanity";
 
 import { companyInfoID } from "studio/schemas/documents/admin/companyInfo";
+
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Parent Company

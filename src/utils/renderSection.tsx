@@ -16,6 +16,7 @@ import ImageSplitComponent from "src/components/sections/image-split/ImageSplit"
 import ImageSplitComponentPreview from "src/components/sections/image-split/ImageSplitPreview";
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
+import Jobs from "src/components/sections/jobs/Jobs";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
@@ -255,6 +256,8 @@ const SectionRenderer = ({
       return <ContactBox section={section} language={language} />;
     case "employees":
       return <Employees language={language} section={section} />;
+    case "jobs":
+      return <Jobs language={language} section={section} />;
     default:
       return null;
   }

@@ -1,0 +1,31 @@
+.jobPosting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  height: 64px;
+  padding: 8px 24px;
+  gap: 5rem;
+  background-color: var(--text-primary-light);
+  color: var(--text-primary);
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role {
+  width: 250px;
+}
+
+.locations {
+  padding: 6px 12px;
+  border: solid;
+  border-color: var(--text-primary);
+  border-width: thin;
+  border-radius: 24px;
+}

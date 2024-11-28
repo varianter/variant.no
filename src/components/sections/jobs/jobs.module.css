@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 6px 6px 6px;
+  max-width: 50%;
+  margin: 5rem auto;
+  border-radius: 6px;
+  gap: 0.5rem;
+  background-color: var(--Violet-700);
+  color: var(--text-primary-light);
+}
+
+.titleSection {
+  padding: 0px 24px;
+}
+
+.jobPostings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-wrap: wrap;
+  gap: 0.5rem;
+}
