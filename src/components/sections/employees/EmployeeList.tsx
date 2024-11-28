@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 import { use, useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
+import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
 import { Result } from "studio/utils/result";
@@ -88,30 +88,25 @@ export default function EmployeeList({
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
             {t("field")}
           </Text>
-          <Button
-            size="small"
-            background={employeeFilters.competenceFilter ? "light" : "dark"}
-            type={
-              employeeFilters.competenceFilter == null ? "primary" : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.competenceFilter}
+            type="button"
             onClick={() => filterEmployees({ competenceFilter: null })}
-          >
-            <Text type="labelSmall"> {t("all")}</Text>
-          </Button>
+            text={t("all")}
+          />
+
           {competences.map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={competence}
-                background={active ? "dark" : "light"}
-                type={"secondary"}
+                active={active}
+                type="button"
                 onClick={() =>
                   filterEmployees({ competenceFilter: competence })
                 }
-              >
-                <Text type="labelSmall"> {t(competence)}</Text>
-              </Button>
+                text={t(competence)}
+              />
             );
           })}
         </div>
@@ -119,29 +114,24 @@ export default function EmployeeList({
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
-          <Button
-            size="small"
-            background={employeeFilters.locationFilter ? "light" : "dark"}
-            type={
-              employeeFilters.locationFilter == null ? "primary" : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.locationFilter}
+            type="button"
             onClick={() => filterEmployees({ locationFilter: null })}
-          >
-            <Text type="labelSmall"> {t("all")}</Text>
-          </Button>
+            text={t("all")}
+          />
 
           {locations.map((location) => {
+            if (!location) return null;
             const active = employeeFilters.locationFilter == location;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={location}
-                background={active ? "dark" : "light"}
-                type={"secondary"}
+                active={active}
+                type="button"
                 onClick={() => filterEmployees({ locationFilter: location })}
-              >
-                <Text type="labelSmall"> {location} </Text>
-              </Button>
+                text={location}
+              />
             );
           })}
         </div>
