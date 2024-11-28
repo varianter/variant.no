@@ -2,10 +2,10 @@ import { headers } from "next/headers";
 import { Suspense } from "react";
 
 import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
+import Text from "src/components/text/Text";
 import { fetchAllChewbaccaEmployees } from "src/utils/employees";
 import { domainFromHostname } from "src/utils/url";
 import { EmployeesSection } from "studio/lib/interfaces/pages";
-import Text from "src/components/text/Text";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
