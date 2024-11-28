@@ -53,27 +53,28 @@
 }
 
 .primary {
-  background: var(--primary-dark);
-  color: var(--primary-white);
-  border: 1px solid var(--primary-dark);
+  background: var(--background-bg-dark);
+  color: var(--background-bg-light-primary);
+  border: 1px solid var(--text-secondary);
 
   &:hover {
-    background: var(--primary-darker);
+    background: var(--text-primary);
   }
 
   &:active {
-    background: var(--primary-darker);
+    background: var(--text-secondary);
   }
 
   &::after {
-    background-color: var(--primary-white);
+    background-color: var(--text-primary-light);
   }
 }
 
 .secondary {
-  color: var(--primary-black);
+  /* Todo: this color needs to be changes */
+  color: var(--background-bg-dark);
   background: rgba(255, 255, 255, 0);
-  border: 1px solid var(--primary-black);
+  border: 1px solid var(--text-secondary);
 
   &:hover {
     background: rgba(31, 31, 31, 0.05);
@@ -84,6 +85,6 @@
   }
 
   &::after {
-    background-color: var(--primary-black);
+    background-color: var(--text-secondary);
   }
 }

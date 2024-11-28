@@ -108,9 +108,9 @@
 }
 
 .labelSmall {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--primary-dark);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .labelLight {

@@ -24,7 +24,8 @@
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
-    "contact_sale": "Kontakta sälj!"
+    "contact_sale": "Kontakta sälj!",
+    "contact_us": "Kontakt oss"
   },
   "custom_link": {
     "visit_cv": "Besök mini-CV",
@@ -39,6 +40,7 @@
     "Project Management": "Projektledning",
     "Design": "Design",
     "Utvikling": "Utveckling",
-    "Administasjon": "Administration"
+    "Administasjon": "Administration",
+    "field": "Fält"
   }
 }

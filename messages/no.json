@@ -24,7 +24,8 @@
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
-    "contact_sale": "Kontakt salg!"
+    "contact_sale": "Kontakt salg!",
+    "contact_us": "Kontakt oss"
   },
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
@@ -39,6 +40,7 @@
     "Project Management": "Prosjektledelse",
     "Design": "Design",
     "Utvikling": "Utvikling",
-    "Administasjon": "Administrasjon"
+    "Administasjon": "Administrasjon",
+    "field": "Fag"
   }
 }

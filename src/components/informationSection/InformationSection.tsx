@@ -26,7 +26,7 @@ const InformationSection = ({ title, body, link }: InformationSectionProps) => {
           ))}
         </span>
         <div className={styles.buttonWrapper}>
-          {link && <LinkButton type="primary" link={link} />}
+          {link && <LinkButton link={link} />}
         </div>
       </div>
     </section>

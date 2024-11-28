@@ -45,16 +45,16 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--primary-dark);
+  background-color: var(--background-bg-dark);
 }
 
 .input:hover {
-  background-color: var(--primary-light);
-  outline: 2px solid var(--primary-light);
+  background-color: var(--background-bg-light-primary);
+  outline: 2px solid var(--background-button-outline-dark);
 }
 
 .input:focus {
-  outline: 2px solid var(--primary-light);
+  outline: 2px solid var(--background-button-outline-dark);
 }
 
 .input[disabled] {

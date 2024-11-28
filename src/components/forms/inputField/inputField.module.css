@@ -8,7 +8,7 @@
 }
 
 .label {
-  color: var(--primary-black);
+  color: var(--background-bg-dark);
 }
 
 .input {
@@ -19,22 +19,22 @@
   align-self: stretch;
 
   border-radius: 0.5rem;
-  border: 1px solid var(--secondary-off-white-2, #ece1d3);
-  background: var(--primary-white-bright, #fff);
+  border: 1px solid var(--background-bg-light-secondary, #ece1d3);
+  background: var(--text-primary-light, #fff);
 }
 
 .error {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-red-error);
+  color: var(--surface-red);
   &::before {
     content: "";
     width: 1.25rem;
     height: 1.25rem;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-red-error);
+    background-color: var(--surface-red);
     -webkit-mask: url("/_assets/alert-circle.svg") no-repeat 50% 50%;
   }
 

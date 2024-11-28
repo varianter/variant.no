@@ -10,11 +10,10 @@
   align-items: center;
   gap: var(--borderRadius-borderRadius-s, 0.5rem);
   align-self: stretch;
-  background: var(--primary-dark, #206a6f);
+  background: var(--background-bg-dark, #206a6f);
 
   text-decoration: none;
-  color: var(--primary-white, #faf8f5);
-  font-family: var(--font-britti-sans);
+  color: var(--background-bg-light-primary, #faf8f5);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;

@@ -17,36 +17,6 @@ const competences: Competence[] = [
   "Project Management",
 ];
 
-function countCompetences(employees: ChewbaccaEmployee[]) {
-  const competenceCounts: Record<Competence, number> = {
-    Utvikling: 0,
-    Administasjon: 0,
-    Design: 0,
-    "Project Management": 0,
-  };
-
-  employees
-    .flatMap((e) => e.competences)
-    .forEach((c) => (competenceCounts[c] += 1));
-
-  return competenceCounts;
-}
-
-function countLocations(employees: ChewbaccaEmployee[]) {
-  const locationCounts: Record<string, number> = {};
-
-  employees
-    .flatMap((e) => e.officeName)
-    .filter((o) => !!o)
-    .forEach((o) =>
-      !locationCounts[o!]
-        ? (locationCounts[o!] = 1)
-        : (locationCounts[o!] += 1),
-    );
-
-  return locationCounts;
-}
-
 export interface EmployeesProps {
   employees: ChewbaccaEmployee[];
   language: string;
@@ -63,10 +33,7 @@ export default function EmployeeList({
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const competenceCounts = countCompetences(employees);
-  const locationCounts = countLocations(employees);
-  const locations = Object.keys(locationCounts);
-
+  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
 
   const [filteredEmployees, setFilteredEmployees] =
@@ -79,6 +46,15 @@ export default function EmployeeList({
 
   function filterEmployees(newFilters: Partial<EmployeeFilters>) {
     const combinedFilters = { ...employeeFilters, ...newFilters };
+
+    if (newFilters.competenceFilter === employeeFilters.competenceFilter) {
+      combinedFilters.competenceFilter = null;
+    }
+
+    if (newFilters.locationFilter === employeeFilters.locationFilter) {
+      combinedFilters.locationFilter = null;
+    }
+
     setEmployeeFilters(combinedFilters);
 
     const newFilteredEmployees = employees.filter((e) => {
@@ -107,18 +83,17 @@ export default function EmployeeList({
       <div className={styles.employeeFiltersWrapper}>
         <div className={styles.employeeFilterWrapper}>
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
-            Fag
+            {t("field")}
           </Text>
           <Button
             size="small"
+            background={employeeFilters.competenceFilter ? "light" : "dark"}
             type={
-              employeeFilters.competenceFilter == null
-                ? "secondaryFilled"
-                : "secondary"
+              employeeFilters.competenceFilter == null ? "primary" : "secondary"
             }
             onClick={() => filterEmployees({ competenceFilter: null })}
           >
-            {t("all")}
+            <Text type="labelSmall"> {t("all")}</Text>
           </Button>
           {competences.map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
@@ -126,12 +101,13 @@ export default function EmployeeList({
               <Button
                 size="small"
                 key={competence}
-                type={active ? "secondaryFilled" : "secondary"}
+                background={active ? "dark" : "light"}
+                type={"secondary"}
                 onClick={() =>
                   filterEmployees({ competenceFilter: competence })
                 }
               >
-                {t(competence)} ({competenceCounts[competence]})
+                <Text type="labelSmall"> {t(competence)}</Text>
               </Button>
             );
           })}
@@ -142,25 +118,26 @@ export default function EmployeeList({
           </Text>
           <Button
             size="small"
+            background={employeeFilters.locationFilter ? "light" : "dark"}
             type={
-              employeeFilters.locationFilter == null
-                ? "secondaryFilled"
-                : "secondary"
+              employeeFilters.locationFilter == null ? "primary" : "secondary"
             }
             onClick={() => filterEmployees({ locationFilter: null })}
           >
-            {t("all")}
+            <Text type="labelSmall"> {t("all")}</Text>
           </Button>
+
           {locations.map((location) => {
             const active = employeeFilters.locationFilter == location;
             return (
               <Button
                 size="small"
                 key={location}
-                type={active ? "secondaryFilled" : "secondary"}
+                background={active ? "dark" : "light"}
+                type={"secondary"}
                 onClick={() => filterEmployees({ locationFilter: location })}
               >
-                {location} ({locationCounts[location]})
+                <Text type="labelSmall"> {location} </Text>
               </Button>
             );
           })}
