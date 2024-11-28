@@ -108,7 +108,7 @@
 
 .skeletonText {
   height: 20px;
-  background-color: #e5e7eb;
+  background-color: var(--background-bg-light-primary);
   border-radius: 4px;
   align-self: flex-start;
 }
