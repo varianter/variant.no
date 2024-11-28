@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 import Footer from "src/components/navigation/footer/Footer";
-import FooterNew from "src/components/navigation/footer/Footer_new";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
