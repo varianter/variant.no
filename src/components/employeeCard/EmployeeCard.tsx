@@ -30,7 +30,7 @@ export default function EmployeeCard({
           <div className={styles.employeeImage}>
             <Image
               src={employee.imageUrl}
-              alt=""
+              alt={employee.name}
               style={{ objectFit: "cover" }}
               fill={true}
             />
@@ -41,15 +41,13 @@ export default function EmployeeCard({
             <p className={styles.employeeName}>{employee.name}</p>
             <div className={styles.employeeRole}>
               {employee.competences.map((competence) => (
-                <>
-                  <Text
-                    className={styles.employeeRoleDot}
-                    type="labelRegular"
-                    key={competence}
-                  >
-                    {competence}
-                  </Text>
-                </>
+                <Text
+                  className={styles.employeeRoleDot}
+                  type="labelRegular"
+                  key={competence}
+                >
+                  {competence}
+                </Text>
               ))}
             </div>
           </div>
@@ -63,5 +61,17 @@ export default function EmployeeCard({
         </div>
       </div>
     )
+  );
+}
+
+export function EmployeeCardSkeleton() {
+  return (
+    <div className={`${styles.employeeWrapper} ${styles.skeletonCard}`}>
+      <div className={styles.employeeImage} />
+      <div className={`${styles.skeletonText} ${styles.skeletonName}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonTitle}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+    </div>
   );
 }

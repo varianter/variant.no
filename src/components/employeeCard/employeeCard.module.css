@@ -103,3 +103,47 @@
   font-size: 1rem;
   color: var(--text-tertiary, #5e5e5e);
 }
+
+/* Update the skeleton styles */
+.skeletonCard {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeletonImage {
+  display: block;
+  height: 206px;
+  min-width: 280px;
+  max-width: var(--Text-paragraph, 537px);
+  position: relative;
+  background-color: var(--background-bg-dark);
+  border-radius: var(--medium, 12px);
+}
+
+.skeletonText {
+  height: 20px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.skeletonName {
+  width: 150px;
+}
+
+.skeletonTitle {
+  width: 100px;
+}
+
+.skeletonContact {
+  width: 130px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { use, useState } from "react";
 
 import Button from "src/components/buttons/Button";
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
@@ -9,6 +9,7 @@ import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
 
 import styles from "./employees.module.css";
+import { Result } from "studio/utils/result";
 
 const competences: Competence[] = [
   "Utvikling",
@@ -18,7 +19,7 @@ const competences: Competence[] = [
 ];
 
 export interface EmployeesProps {
-  employees: ChewbaccaEmployee[];
+  employees: Promise<Result<ChewbaccaEmployee[], string>>;
   language: string;
   employeesPageSlug: string;
 }
@@ -29,15 +30,17 @@ interface EmployeeFilters {
 }
 
 export default function EmployeeList({
-  employees,
+  employees: employeesPromise,
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
-  const t = useTranslations("employee_card");
-
+  const employeesRes = use(employeesPromise);
+  const employees = employeesRes.ok ? employeesRes.value : [];
   const [filteredEmployees, setFilteredEmployees] =
     useState<ChewbaccaEmployee[]>(employees);
+
+  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
+  const t = useTranslations("employee_card");
 
   const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
     competenceFilter: null,
