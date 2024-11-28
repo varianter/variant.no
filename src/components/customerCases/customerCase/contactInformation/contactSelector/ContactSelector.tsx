@@ -42,13 +42,17 @@ export default function ContactSelector({
     <>
       <div className={styles.locationSection}>
         {locations.map((location) => (
+          //Todo: replace this with tag component
           <Button
             type={
               location._id === selectedOrDefaultLocationId
-                ? "secondaryFilled"
+                ? "primary"
                 : "secondary"
             }
-            size={"extraSmall"}
+            size={"medium"}
+            background={
+              location._id === selectedOrDefaultLocationId ? "dark" : "light"
+            }
             key={location._id}
             onClick={() => setSelectedLocationId(location._id)}
           >

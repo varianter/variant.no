@@ -1,3 +1,4 @@
+/* Employees.tsx */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -7,11 +8,22 @@
 }
 
 .header {
-  color: var(--primary-black);
+  color: var(--background-bg-light-primary);
   font-size: 48px;
   font-weight: 600;
   align-self: flex-start;
 }
+
+.employees {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  text-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* EmployeeList.tsx */
 
 .employeeFiltersWrapper {
   padding: 1.5rem 0;
@@ -39,21 +51,11 @@
 }
 
 .employeeCount {
-  color: var(--primary-black);
   font-size: 16px;
 }
 
 .employeeCountValue {
   font-weight: 500;
-}
-
-.employees {
-  display: flex;
-  flex-direction: column;
-  max-width: 1400px;
-  width: 100%;
-  text-wrap: wrap;
-  gap: 0.5rem;
 }
 
 .peopleContainer {

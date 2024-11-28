@@ -1,6 +1,6 @@
 .wrapper {
   overflow: hidden;
-  background-color: var(--primary-white);
+  background-color: var(--background-bg-light-primary);
   display: flex;
   justify-content: center;
 }

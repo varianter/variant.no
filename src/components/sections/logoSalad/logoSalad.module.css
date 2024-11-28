@@ -7,7 +7,7 @@
 .wrapper {
   composes: shared;
   padding: 5rem 2rem;
-  background-color: var(--primary-white);
+  background-color: var(--background-bg-light-primary);
 
   @media (min-width: 1024px) {
     padding: 7.5rem 15rem;

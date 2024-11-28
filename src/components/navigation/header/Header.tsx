@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
+import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
@@ -79,6 +81,8 @@ export const Header = ({
     announcement.text?.length > 0 &&
     (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
 
+  const t = useTranslations("contact_information");
+
   return (
     <>
       <FocusOn
@@ -100,6 +104,9 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
+                <Button size="large" type="primary" background="light">
+                  <Text type="labelRegular">{t("contact_us")}</Text>
+                </Button>
               </div>
               <button
                 aria-haspopup="true"
@@ -124,6 +131,10 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
+                {/* TODO: add styling for this section */}
+                <Button size="large" type="primary" background="light">
+                  <Text type="labelRegular">{t("contact_us")}</Text>
+                </Button>
               </div>
             )}
           </nav>

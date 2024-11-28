@@ -1,6 +1,4 @@
 .breadCrumbMenu {
-  color: var(--primary-black);
-  background-color: var(--primary-bg);
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -14,17 +12,11 @@
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-black);
   text-decoration: none;
   list-style: none;
 }
 
-.breadCrumbText {
-  color: var(--primary-black);
-}
-
 .breadCrumbLink {
-  color: var(--primary-black);
   text-decoration: underline;
 }
 
@@ -34,5 +26,5 @@
 }
 
 .lastDotSeparator {
-  color: var(--secondary-red);
+  color: var(--background-bg-red);
 }

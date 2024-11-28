@@ -2,12 +2,16 @@ import React from "react";
 
 import styles from "./button.module.css";
 
-type ButtonType = "primary" | "secondary" | "secondaryFilled";
-type ButtonSize = "large" | "small" | "extraSmall";
+type ButtonType = "primary" | "secondary";
+type ButtonSize = "large" | "medium" | "small";
+type ButtonIcon = "iconLeft" | "iconRight";
+type ButtonBackground = "dark" | "light";
 
 interface IButton {
   size?: ButtonSize;
   type?: ButtonType;
+  icon?: ButtonIcon;
+  background?: ButtonBackground;
   onClick?: () => void;
   children: React.ReactNode;
   disabled?: boolean;
@@ -17,14 +21,18 @@ interface IButton {
 
 const sizeClassMap: { [key in ButtonSize]: string } = {
   large: styles.large,
+  medium: styles.medium,
   small: styles.small,
-  extraSmall: styles.extraSmall,
 };
 
 const typeClassMap: { [key in ButtonType]: string } = {
   primary: styles.primary,
   secondary: styles.secondary,
-  secondaryFilled: styles.secondaryFilled,
+};
+
+const backgroundClassMap: { [key in ButtonBackground]: string } = {
+  dark: styles.dark,
+  light: styles.light,
 };
 
 const Button = ({
@@ -35,8 +43,9 @@ const Button = ({
   disabled,
   loading,
   ariaDisabled,
+  background = "dark",
 }: IButton) => {
-  const className = `${styles.button} ${sizeClassMap[size]} ${typeClassMap[type]} ${loading ? styles.loading : ""}`;
+  const className = `${styles.button} ${typeClassMap[type]} ${sizeClassMap[size]} ${backgroundClassMap[background]} ${loading ? styles.loading : ""}`;
 
   return (
     <button

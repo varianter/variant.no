@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: var(--primary-white-bright, #faf8f5);
+  background: var(--text-primary-light, #faf8f5);
 
   padding: 7.5rem 3rem 5rem 3rem;
 
@@ -20,7 +20,7 @@
 }
 
 .wrapper {
-  background: var(--primary-white, #faf8f5);
+  background: var(--text-primary-light, #faf8f5);
 }
 
 .body {
@@ -75,7 +75,7 @@
 }
 
 .linkTitle {
-  color: var(--primary-black, #1f1f1f);
+  color: var(--background-bg-dark-black, #1f1f1f);
   font-family: var(--font-britti-sans);
   font-size: 1.5rem;
   font-style: normal;
