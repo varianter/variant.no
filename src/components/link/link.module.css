@@ -190,11 +190,7 @@
   font-weight: 500;
 
   &:hover {
-    font-weight: 600;
-  }
-
-  &:active {
-    color: var(--secondary-off-white2);
+    color: var(--text-tertiary);
   }
 }
 
@@ -206,6 +202,10 @@
   font-weight: 400;
   text-decoration-line: underline;
   text-decoration-style: solid;
+
+  &:hover {
+    color: var(--text-primary);
+  }
 }
 
 .selected {
