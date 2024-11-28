@@ -55,9 +55,28 @@ export const customerCaseProjectInfo = defineField({
     defineField({
       name: "consultants",
       description:
-        "The consultants enrolled in the project. Use employee emails (e.g. 'oms@variant.no').",
+        "The consultants enrolled in the project. Use employee emails and first names  (e.g. 'oms@variant.no' and Odd Morten).",
       type: "array",
-      of: [{ type: "email" }],
+      of: [
+        {
+          type: "object",
+          title: "List of employees in project",
+          name: "employeesInProjectList",
+          fields: [
+            {
+              name: "employeeEmail",
+              title: "Add employee email (e.g. oms@variant.no)",
+              type: "email",
+            },
+            {
+              name: "employeeFirstName",
+              title:
+                "Add the first name(s) of the consultant corresponding to the email above. If there are multiple employees with the same name, feel free to include the initials of the last name (e.g. Odd Morten S.)",
+              type: "string",
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: "collaborators",
