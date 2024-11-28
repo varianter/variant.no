@@ -1,18 +1,64 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   background-color: var(--background-bg-dark);
+  height: fit-content;
+  justify-content: space-between;
+  padding: 6px;
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
+}
+
+.heading {
+  @media (max-width: 1130px) {
+    font-size: 2.125rem;
+  }
 }
 
 .buttonRow {
   display: flex;
   flex-direction: row;
-  gap: 0rem;
+  gap: 1rem;
+}
+
+.info {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .cardInfo {
-  background-color: red;
+  color: var(--text-primary-light);
   display: flex;
-  flex-direction: row;
+  gap: 48px;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.imageWrapper {
+  max-width: 791px !important;
+  max-height: 27rem !important;
+  min-height: 27rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important;
+  padding: 0;
+  margin: 6px;
+  border-radius: 24px;
+}
+
+.imageWrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 24px;
 }

@@ -1,63 +1,60 @@
 "use client";
 
-import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import Button from "src/components/buttons/Button";
+import { SanitySharedImage } from "src/components/image/SanityImage";
 import styles from "src/components/sections/customerCasesEntry/customerCasesEntry.module.css";
 import Text from "src/components/text/Text";
-import { CustomerCaseBase } from "studioShared/lib/interfaces/customerCases";
+import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
+import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 interface CustomerCasesProps {
-  customerCases: CustomerCaseBase[];
+  customerCases: CustomerCaseEntry[];
 }
 
 const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
-  const t = useTranslations();
   const [selectedCustomerCase, setSelectedCustomerCase] =
-    useState<CustomerCaseBase>(customerCases[0]);
+    useState<CustomerCaseEntry>(customerCases[0] || null);
 
-  console.log("customerCases", selectedCustomerCase);
+  const deliveryNames = [
+    selectedCustomerCase.projectInfo.deliveries.projectManagement &&
+      "Project Management",
+    selectedCustomerCase.projectInfo.deliveries.design && "Design",
+    selectedCustomerCase.projectInfo.deliveries.development && "Development",
+  ].filter(Boolean);
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.buttonRow}>
-        {customerCases.map(
-          (customerCase: CustomerCaseBase) =>
-            //Todo: this should be a better test
-            customerCase.slug && (
-              <div key={customerCase._id}>
-                <Button
-                  type="primary"
-                  onClick={() => setSelectedCustomerCase(customerCase)}
-                >
-                  {/* Todo: this should be replaced with the customername from projectinfo*/}
-                  {customerCase.slug}
-                </Button>
-              </div>
-            ),
-        )}
+      <div className={styles.info}>
+        <div className={styles.buttonRow}>
+          {customerCases.map(
+            (customerCase: CustomerCaseEntry) =>
+              customerCase && (
+                <div key={customerCase._id}>
+                  <Button
+                    type="primary"
+                    onClick={() => setSelectedCustomerCase(customerCase)}
+                  >
+                    {capitalizeFirstLetter(customerCase.projectInfo.customer)}
+                  </Button>
+                </div>
+              ),
+          )}
+        </div>
+        <div className={styles.cardInfo}>
+          <Text type="h2" className={styles.heading}>
+            {" "}
+            {selectedCustomerCase.basicTitle}
+          </Text>
+          <Text type="h5"> {deliveryNames} </Text>
+        </div>
       </div>
-      <div className={styles.cardInfo}>
-        <Text> {selectedCustomerCase.description}</Text>
-        <Text> {selectedCustomerCase.basicTitle}</Text>
-        <Text> fag: design . prosjektledelse </Text>
-        {selectedCustomerCase.image.metadata?.lqip && (
-          <Image
-            src={selectedCustomerCase.image.metadata?.lqip}
-            alt={
-              selectedCustomerCase.image.alt ??
-              t("customer_case.customer_case_entry.image") +
-                " " +
-                t("linking_words.for") +
-                selectedCustomerCase.basicTitle
-            }
-            objectFit="cover"
-            fill={true}
-          />
-        )}
-      </div>
+      {selectedCustomerCase.image && (
+        <div className={styles.imageWrapper}>
+          <SanitySharedImage image={selectedCustomerCase.image} />
+        </div>
+      )}
     </div>
   );
 };
