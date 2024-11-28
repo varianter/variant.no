@@ -19,9 +19,14 @@ export default async function CustomerCase({
   customerCase,
   customerCasesPagePath,
 }: CustomerCaseProps) {
-  const consultantsResult = await fetchEmployeesByEmails(
-    customerCase.projectInfo.consultants.map((e) => e.employeeEmail),
-  );
+  let consultantsResult;
+
+  if (customerCase.projectInfo.consultants) {
+    const consultantsEmail = customerCase.projectInfo.consultants.map(
+      (e) => e.employeeEmail,
+    );
+    consultantsResult = await fetchEmployeesByEmails(consultantsEmail);
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -32,14 +37,12 @@ export default async function CustomerCase({
           color={customerCase.clientColors.color}
         />
         <hr className={styles.divider} />
-        {consultantsResult.ok && (
-          <div className={styles.projectInfoWrapper}>
-            <CustomerCaseProjectInfo
-              projectInfo={customerCase.projectInfo}
-              clientColors={customerCase.clientColors}
-            />
-          </div>
-        )}
+        <div className={styles.projectInfoWrapper}>
+          <CustomerCaseProjectInfo
+            projectInfo={customerCase.projectInfo}
+            clientColors={customerCase.clientColors}
+          />
+        </div>
         <div className={styles.mainImageWrapper}>
           <SanitySharedImage image={customerCase.image} />
         </div>
@@ -48,7 +51,7 @@ export default async function CustomerCase({
             <CustomerCaseSection key={section._key} section={section} />
           ))}
         </div>
-        {consultantsResult.ok && (
+        {consultantsResult?.ok && (
           <CustomerCaseConsultants
             language={customerCase.language}
             consultants={consultantsResult.value}
