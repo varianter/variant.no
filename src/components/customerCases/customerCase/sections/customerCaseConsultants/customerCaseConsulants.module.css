@@ -7,8 +7,8 @@
 
 .content {
   width: 100%;
-  column-gap: 12px;
-  row-gap: 52px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 420px);
+  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

@@ -17,21 +17,6 @@ const competences: Competence[] = [
   "Project Management",
 ];
 
-function countLocations(employees: ChewbaccaEmployee[]) {
-  const locationCounts: Record<string, number> = {};
-
-  employees
-    .flatMap((e) => e.officeName)
-    .filter((o) => !!o)
-    .forEach((o) =>
-      !locationCounts[o!]
-        ? (locationCounts[o!] = 1)
-        : (locationCounts[o!] += 1),
-    );
-
-  return locationCounts;
-}
-
 export interface EmployeesProps {
   employees: ChewbaccaEmployee[];
   language: string;
@@ -48,9 +33,7 @@ export default function EmployeeList({
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const locationCounts = countLocations(employees);
-  const locations = Object.keys(locationCounts);
-
+  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
 
   const [filteredEmployees, setFilteredEmployees] =
@@ -124,7 +107,7 @@ export default function EmployeeList({
                   filterEmployees({ competenceFilter: competence })
                 }
               >
-              <Text type="labelSmall"> {t(competence)}</Text>
+                <Text type="labelSmall"> {t(competence)}</Text>
               </Button>
             );
           })}
@@ -141,8 +124,9 @@ export default function EmployeeList({
             }
             onClick={() => filterEmployees({ locationFilter: null })}
           >
-           <Text type="labelSmall"> {t("all")}</Text>
+            <Text type="labelSmall"> {t("all")}</Text>
           </Button>
+
           {locations.map((location) => {
             const active = employeeFilters.locationFilter == location;
             return (
@@ -153,7 +137,7 @@ export default function EmployeeList({
                 type={"secondary"}
                 onClick={() => filterEmployees({ locationFilter: location })}
               >
-               <Text type="labelSmall"> {location} </Text>
+                <Text type="labelSmall"> {location} </Text>
               </Button>
             );
           })}
