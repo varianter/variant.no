@@ -6,13 +6,10 @@
   height: fit-content;
   justify-content: space-between;
   padding: 6px;
+  border-radius: 0.375rem;
 
   @media (max-width: 834px) {
-    flex-direction: column;
-  }
-
-  @media (max-width: 834px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -22,9 +19,14 @@
   }
 }
 
-.buttonRow {
+.font {
+  color: var(--text-primary-light);
+}
+
+.TagRow {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -54,6 +56,14 @@
   padding: 0;
   margin: 6px;
   border-radius: 24px;
+
+  @media (max-width: 834px) {
+    align-items: start;
+    max-width: 54.3125rem !important;
+    min-height: 18rem !important;
+    max-height: 18rem !important;
+    margin: 0px;
+  }
 }
 
 .imageWrapper img {

@@ -19,7 +19,9 @@
     "url": "Url",
     "collaborators": "Collaborators",
     "customer_case_entry": {
-      "image": "image"
+      "image": "image",
+      "case": "Case",
+      "field": "Field"
     }
   },
   "contact_information": {

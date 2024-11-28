@@ -1,10 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import styles from "src/components/sections/customerCasesEntry/customerCasesEntry.module.css";
+import Tag from "src/components/tags/Tag";
 import Text from "src/components/text/Text";
 import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
@@ -14,6 +15,7 @@ interface CustomerCasesProps {
 }
 
 const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
+  const t = useTranslations("customer_case");
   const [selectedCustomerCase, setSelectedCustomerCase] =
     useState<CustomerCaseEntry>(customerCases[0] || null);
 
@@ -27,17 +29,24 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.info}>
-        <div className={styles.buttonRow}>
+        <div className={styles.TagRow}>
+          <Text className={styles.font} type="labelRegular">
+            {t("customer_case_entry.case")}
+          </Text>
           {customerCases.map(
             (customerCase: CustomerCaseEntry) =>
               customerCase && (
                 <div key={customerCase._id}>
-                  <Button
-                    type="primary"
+                  <Tag
+                    background={
+                      selectedCustomerCase == customerCase ? "light" : "dark"
+                    }
                     onClick={() => setSelectedCustomerCase(customerCase)}
                   >
-                    {capitalizeFirstLetter(customerCase.projectInfo.customer)}
-                  </Button>
+                    <Text type="labelRegular">
+                      {capitalizeFirstLetter(customerCase.projectInfo.customer)}
+                    </Text>
+                  </Tag>
                 </div>
               ),
           )}
@@ -47,6 +56,7 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
             {" "}
             {selectedCustomerCase.basicTitle}
           </Text>
+          <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
           <Text type="h5"> {deliveryNames} </Text>
         </div>
       </div>

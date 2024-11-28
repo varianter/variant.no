@@ -19,7 +19,9 @@
     "url": "Link",
     "collaborators": "Samarbeidspartnere",
     "customer_case_entry": {
-      "image": "bild"
+      "image": "bild",
+      "case": "Case",
+      "field": "Field"
     }
   },
   "contact_information": {
