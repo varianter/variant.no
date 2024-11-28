@@ -37,27 +37,37 @@ export default function EmployeeCard({
           </div>
         </Link>
         <div className={styles.employeeInfoWrapper}>
-          <div className={styles.employeeInfo}>
-            <p className={styles.employeeName}>{employee.name}</p>
-            <div className={styles.employeeRole}>
-              {employee.competences.map((competence) => (
-                <Text
-                  className={styles.employeeRoleDot}
-                  type="labelRegular"
-                  key={competence}
-                >
-                  {competence}
-                </Text>
-              ))}
-            </div>
+          <Text type="h4" as="h2">
+            <Link
+              href={`/${language}/${employeePageSlug}/${aliasFromEmail(employee.email)}`}
+              className={styles.employeeNameLink}
+            >
+              {employee.name}
+            </Link>
+          </Text>
+
+          <div className={styles.employeeRole}>
+            {employee.competences.map((competence) => (
+              <Text
+                className={styles.employeeRoleDot}
+                type="labelRegular"
+                key={competence}
+              >
+                {competence}
+              </Text>
+            ))}
           </div>
 
-          <div className={styles.employeeContactInfo}>
-            <p>{employee.email}</p>
-            {employee.telephone && (
-              <p>{formatPhoneNumber(employee.telephone)}</p>
-            )}
-          </div>
+          <Text type="bodyExtraSmall">
+            <a href={`mailto:${employee.email}`}>{employee.email}</a>
+          </Text>
+          {employee.telephone && (
+            <Text type="bodyExtraSmall">
+              <a href={`tel:${employee.telephone}`}>
+                {formatPhoneNumber(employee.telephone)}
+              </a>
+            </Text>
+          )}
         </div>
       </div>
     )
