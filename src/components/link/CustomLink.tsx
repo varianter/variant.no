@@ -6,7 +6,12 @@ import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./link.module.css";
 
-type ComponentLinkType = "link" | "headerLink" | "footerLink";
+type ComponentLinkType =
+  | "link"
+  | "headerLink"
+  | "footerLink"
+  | "footerLinkNew"
+  | "footerLinkGrey";
 
 interface ICustomLink {
   type?: ComponentLinkType;
@@ -27,10 +32,19 @@ const CustomLink = ({
   const newTab = link.newTab;
   const target = newTab ? "_blank" : undefined;
   const rel = newTab ? "noopener noreferrer" : undefined;
-  const className =
-    type === "headerLink"
-      ? `${styles.headerLink} ${isSelected ? styles.selected : ""}`
-      : styles.footerLink;
+
+  function getLinkClassName() {
+    if (type === "headerLink") {
+      return `${styles.headerLink} ${isSelected ? styles.selected : ""}`;
+    } else if (type === "footerLink") {
+      return styles.footerLink;
+    } else if (type === "footerLinkNew") {
+      return styles.footerLink_new;
+    } else if (type === "footerLinkGrey") {
+      return styles.footerLinkGrey;
+    }
+  }
+  const className = getLinkClassName();
 
   return (
     link.linkTitle &&

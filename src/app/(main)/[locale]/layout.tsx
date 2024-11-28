@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 import Footer from "src/components/navigation/footer/Footer";
+import FooterNew from "src/components/navigation/footer/Footer_new";
 import FooterPreview from "src/components/navigation/footer/FooterPreview";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
@@ -97,13 +98,22 @@ export default async function Layout({
               language={params.locale}
             />
           ) : (
-            <Footer
-              navigationData={initialNav.data}
-              legalData={initialLegal.data}
-              companyInfo={initialCompanyInfo.data}
-              brandAssets={initialBrandAssets.data}
-              soMeData={initialSoMe.data}
-            />
+            <div
+              style={{ display: "flex", gap: "1rem", flexDirection: "column" }}
+            >
+              <FooterNew
+                navigationData={initialNav.data}
+                legalData={initialLegal.data}
+                soMeData={initialSoMe.data}
+              />
+              <Footer
+                navigationData={initialNav.data}
+                legalData={initialLegal.data}
+                companyInfo={initialCompanyInfo.data}
+                brandAssets={initialBrandAssets.data}
+                soMeData={initialSoMe.data}
+              />
+            </div>
           )}
           {draftMode().isEnabled && <LiveVisualEditing />}
         </NextIntlClientProvider>

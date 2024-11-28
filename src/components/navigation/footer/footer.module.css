@@ -58,7 +58,7 @@
   gap: 1rem;
   flex-wrap: wrap;
 
-  & > li {
+  &>li {
     text-wrap: nowrap;
   }
 
