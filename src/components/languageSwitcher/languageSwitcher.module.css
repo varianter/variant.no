@@ -6,10 +6,10 @@
 }
 
 .divider {
-  border-left: 1px solid var(--primary-white);
+  border-left: 1px solid var(--text-primary);
   flex-grow: 1;
 }
 
 .link {
-  color: var(--primary-white) !important;
+  color: var(--text-primary) !important;
 }

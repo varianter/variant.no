@@ -142,7 +142,7 @@
 }
 
 .headerLink {
-  color: var(--primary-white);
+  color: var(--text-primary);
   cursor: pointer;
   text-decoration: none;
   font-family: var(--font-britti-sans);
@@ -182,7 +182,7 @@
 }
 
 .selected {
-  color: var(--primary-white);
+  color: var(--text-primary);
   font-weight: 700;
   line-height: normal;
 }

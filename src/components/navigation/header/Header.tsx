@@ -11,6 +11,7 @@ import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import Text from "src/components/text/Text";
+import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -45,6 +46,10 @@ export const Header = ({
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
+
+  const scrollDirection = useScrollDirection();
+
+  console.log("#####", scrollDirection);
 
   const links = filterLinks(navigation.main, linkID);
   const ctas = filterLinks(navigation.main, callToActionFieldID);
@@ -88,8 +93,15 @@ export const Header = ({
         className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
       >
         <header>
+          <div className={styles.spacer}></div>
           <nav aria-label="Main menu">
-            <div className={styles.wrapper}>
+            <div
+              className={
+                styles.wrapper +
+                ` ` +
+                (scrollDirection === "down" ? `${styles.hidden}` : "")
+              }
+            >
               <Link href="/" aria-label="Home" className={styles.logo} />
               {renderPageLinks(links, false, pathname)}
               {renderPageCTAs(ctas, false)}
@@ -145,6 +157,7 @@ export const Header = ({
           )}
         </header>
       </FocusOn>
+
       {showBreadcrumbs && (
         <BreadCrumbMenu
           currentLanguage={currentLanguage}
