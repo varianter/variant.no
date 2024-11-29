@@ -38,24 +38,26 @@ export default async function ContactBox({
 
   return (
     <section className={styles.contactBox}>
-      <div>
-        <Text type="h3" as="h2">
-          {section.basicTitle}
-        </Text>
+      <div className={styles.contactBox__inner}>
+        <div className={styles.textContent}>
+          <Text type="h3" as="h2">
+            {section.basicTitle}
+          </Text>
 
-        {section.optionalSubtitle && (
-          <Text type="bodyBig">{section.optionalSubtitle}</Text>
-        )}
-      </div>
+          {section.optionalSubtitle && (
+            <Text type="bodyBig">{section.optionalSubtitle}</Text>
+          )}
+        </div>
 
-      <div>
-        <Suspense fallback={<EmployeeCardSkeleton />}>
-          <ContactSelector
-            employeesPageSlug={employeesPageSlug}
-            contactPoints={contactPoints}
-            language={language}
-          />
-        </Suspense>
+        <div>
+          <Suspense fallback={<EmployeeCardSkeleton />}>
+            <ContactSelector
+              employeesPageSlug={employeesPageSlug}
+              contactPoints={contactPoints}
+              language={language}
+            />
+          </Suspense>
+        </div>
       </div>
     </section>
   );

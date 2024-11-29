@@ -46,7 +46,7 @@
   gap: 1rem;
   row-gap: var(--small, 6px);
 }
-@container employee (min-width: 400px) {
+@container employee (min-width: 320px) {
   .employeeWrapper__inner {
     flex-direction: row;
   }
@@ -68,7 +68,7 @@
 .employeeImage {
   display: block;
   height: 206px;
-  min-width: 280px;
+  min-width: 206px;
   max-width: var(--Text-paragraph, 537px);
   position: relative;
 

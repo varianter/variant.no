@@ -6,6 +6,8 @@ import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
 import { ChewbaccaEmployee } from "src/types/employees";
 
+import styles from "./contact-box.module.css";
+
 export type EmployeeAndTag = {
   employee: ChewbaccaEmployee;
   tag: string;
@@ -32,8 +34,8 @@ export default function ContactSelector({
   );
 
   return (
-    <div>
-      <div>
+    <div className={styles.contactSelector}>
+      <div className={styles.tagList}>
         {contactPoints.map((contactPoint) => (
           <Tag
             key={contactPoint.tag}
@@ -44,7 +46,7 @@ export default function ContactSelector({
           />
         ))}
       </div>
-      <div>
+      <div className={styles.employeeCard}>
         {selectedContactPoint?.employee && (
           <EmployeeCard
             employee={selectedContactPoint.employee}
