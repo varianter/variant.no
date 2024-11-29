@@ -35,7 +35,7 @@ import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
 import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
-import { emailFromAliasAndHostname, fetchChewbaccaEmployee } from "./employees";
+import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
 
@@ -282,9 +282,8 @@ async function fetchEmployeePage({
     return null;
   }
   const employeeAlias = path[1];
-  const employee = await fetchChewbaccaEmployee(
-    emailFromAliasAndHostname(employeeAlias, hostname),
-  );
+  const employee = await fetchChewbaccaEmployee(employeeAlias, hostname);
+
   if (!employee.ok) {
     return null;
   }
