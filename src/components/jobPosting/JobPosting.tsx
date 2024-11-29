@@ -24,7 +24,7 @@ export default async function JobPosting({ jobPosting }: JobPostingProps) {
           <Text type={"h5"}>{jobPosting.role}</Text>
         </div>
         <div className={styles.locations}>
-          <Text type={"bodyNormal"}>{jobPostingLocations}</Text>
+          <Text type={"labelLight"}>{jobPostingLocations}</Text>
         </div>
       </div>
     </a>
