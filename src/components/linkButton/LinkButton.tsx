@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 import { getHref } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
@@ -25,9 +25,9 @@ const LinkButton = ({ isSmall, type = "primary", link }: IButton) => {
   return (
     href &&
     linkTitleValue && (
-      <a className={className} href={href}>
+      <Link className={className} href={href}>
         {linkTitleValue}
-      </a>
+      </Link>
     )
   );
 };

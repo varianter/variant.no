@@ -1,7 +1,7 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 import { SanityImage } from "src/components/image/SanityImage";
-import CustomLink from "src/components/link/CustomLink";
+import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { ImageSplitSection } from "studio/lib/interfaces/pages";
 
@@ -12,22 +12,29 @@ interface ImageSplitProps {
 }
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
-  block: ({ children }) => <Text type="bodySmall">{children}</Text>,
+  block: ({ children }) => <Text type="bodyNormal">{children}</Text>,
 };
 
 const ImageSplitComponent = ({ section }: ImageSplitProps) => {
   return (
-    <article className={styles.article}>
-      <Text type="h2">{section.basicTitle}</Text>
+    <article className={styles.imageSplit}>
+      <div className={styles.textContainer}>
+        <Text type="h4" as="h2">
+          {section.basicTitle}
+        </Text>
 
-      <div>
         {section.richText && (
           <PortableText
             value={section.richText}
             components={myPortableTextComponents}
           />
         )}
-        {section.link && <CustomLink link={section.link} />}
+
+        {section.link && (
+          <div className={styles.textContainer__link}>
+            <LinkButton isSmall link={section.link} />
+          </div>
+        )}
       </div>
 
       {section.imageExtended && (

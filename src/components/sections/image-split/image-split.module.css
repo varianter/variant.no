@@ -1,23 +1,29 @@
-.shared {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.imageSplit {
+  max-width: var(--max-content-width-small);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 3rem;
+  row-gap: 5.25rem;
+  padding: 1rem;
+  margin: 3.75rem auto;
+
+  box-sizing: content-box;
   align-items: center;
 }
 
-.callout {
-  composes: shared;
-  width: -webkit-fill-available;
-  max-width: 75rem;
-  gap: 3rem;
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-  padding: 5rem 2rem;
+.textContainer__link {
+  margin-top: 1.5rem;
+}
 
-  @media (min-width: 640px) {
-    padding: 5rem 3rem;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 7.5rem;
-  }
+.image {
+  display: flex;
+  justify-content: center;
 }
