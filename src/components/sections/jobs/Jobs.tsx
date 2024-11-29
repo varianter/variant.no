@@ -1,6 +1,6 @@
 import JobPosting from "src/components/jobPosting/JobPosting";
 import Text from "src/components/text/Text";
-import { IJobPosting } from "studio/lib/interfaces/jobPosting";
+import { IJobPosting, IJobPostings } from "studio/lib/interfaces/jobPosting";
 import { JobsSection } from "studio/lib/interfaces/pages";
 import { JOB_POSTINGS_QUERY } from "studio/lib/queries/admin";
 import { loadStudioQuery } from "studio/lib/store";
@@ -13,7 +13,7 @@ export interface JobsProps {
 }
 
 export default async function Jobs({ language, section }: JobsProps) {
-  const { data: jobPostings } = await loadStudioQuery<IJobPosting[] | null>(
+  const { data: jobPostings } = await loadStudioQuery<IJobPostings | null>(
     JOB_POSTINGS_QUERY,
     {
       language,

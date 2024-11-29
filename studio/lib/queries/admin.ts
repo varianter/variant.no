@@ -27,6 +27,7 @@ export const LEGAL_DOCUMENTS_SITEMAP_QUERY = groq`
 export const JOB_POSTINGS_QUERY = groq`
   *[_type == "jobPostings"][0] {
     jobPostingsArray[] {
+      _key, 
       recruiteeAdUrl,
       "role": ${translatedFieldFragment("role")}, 
       locations[] -> {
