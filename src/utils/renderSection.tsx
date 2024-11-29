@@ -1,5 +1,4 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
-import React from "react";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
@@ -13,6 +12,8 @@ import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
+import ImageSplitComponent from "src/components/sections/image-split/ImageSplit";
+import ImageSplitComponentPreview from "src/components/sections/image-split/ImageSplitPreview";
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
@@ -26,6 +27,7 @@ import {
   GridSection,
   HeroSection,
   ImageSection,
+  ImageSplitSection,
   LogoSaladSection,
   PageBuilder,
   Section,
@@ -145,6 +147,26 @@ const renderImageSection = (
     <ImageSectionComponent section={section} />
   );
 };
+function ImageSplitSectionWrapper({
+  section,
+  sectionIndex,
+  isDraftMode,
+  initialData,
+}: {
+  section: ImageSplitSection;
+  sectionIndex: number;
+  isDraftMode: boolean;
+  initialData: QueryResponseInitial<PageBuilder>;
+}) {
+  return isDraftMode ? (
+    <ImageSplitComponentPreview
+      initialData={initialData}
+      sectionIndex={sectionIndex}
+    />
+  ) : (
+    <ImageSplitComponent section={section} />
+  );
+}
 
 const renderGridSection = (
   section: GridSection,
@@ -217,6 +239,15 @@ const SectionRenderer = ({
         sectionIndex,
         isDraftMode,
         initialData,
+      );
+    case "imageSplitSection":
+      return (
+        <ImageSplitSectionWrapper
+          section={section}
+          sectionIndex={sectionIndex}
+          isDraftMode={isDraftMode}
+          initialData={initialData}
+        />
       );
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);

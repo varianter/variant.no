@@ -10,6 +10,7 @@ import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
+import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
@@ -47,6 +48,7 @@ const pageBuilder = defineType({
         callout,
         callToAction,
         testimonals,
+        imageSplitSection,
         imageSection,
         grid,
         employees,
