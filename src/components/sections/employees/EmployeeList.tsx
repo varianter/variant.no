@@ -46,7 +46,7 @@ export default function EmployeeList({
     useState<ChewbaccaEmployee[]>(employees);
 
   const {
-    isShowMore,
+    showShowMoreButton,
     isShowMorePending,
     limitedEmployees,
     showMoreHandler,
@@ -172,7 +172,7 @@ export default function EmployeeList({
         </div>
         {isShowMorePending && <EmployeeListSkeleton />}
 
-        {(!isShowMore || isShowMorePending) && (
+        {showShowMoreButton && (
           <ShowMoreButton
             showMoreHandler={showMoreHandler}
             showMoreHref={showMoreHref}
@@ -235,7 +235,8 @@ function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
     limitedEmployees,
     showMoreHandler,
     isShowMorePending: isPending,
-    isShowMore: !limitEmployees,
+    showShowMoreButton:
+      limitEmployees && !isPending && filteredEmployees.length > DEFAULT_LIMIT,
     showMoreHref: `${currentPath}?showAll`,
   };
 }
