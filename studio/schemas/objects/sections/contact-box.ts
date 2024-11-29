@@ -1,7 +1,8 @@
 import { defineField } from "sanity";
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
-import { optionalSubtitle, title } from "studio/schemas/fields/text";
+import { subtitleID, titleID } from "studio/schemas/fields/text";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const contactBoxID = "contactBox";
 
@@ -10,8 +11,19 @@ export const contactBox = defineField({
   title: "Contact Box",
   type: "object",
   fields: [
-    title,
-    optionalSubtitle,
+    {
+      name: titleID.basic,
+      type: "internationalizedArrayString",
+      title: "Title",
+      description:
+        "Enter the primary title that will be displayed as large text in contact box.",
+    },
+    {
+      name: subtitleID.optional,
+      type: "internationalizedArrayString",
+      title: "Subtitle",
+      description: "Extra context under the main title.",
+    },
 
     {
       name: "contactPoints",
@@ -61,8 +73,8 @@ export const contactBox = defineField({
     prepare(selection) {
       const { title, subtitle } = selection;
       return {
-        title: title,
-        subtitle: subtitle,
+        title: firstTranslation(title) ?? undefined,
+        subtitle: firstTranslation(subtitle) ?? undefined,
       };
     },
   },
