@@ -84,7 +84,7 @@ export interface ContactBoxSection {
   _type: "contactBox";
   _key: string;
   basicTitle: string;
-  optionalSubtitle: string;
+  optionalSubtitle?: string;
   contactPoints: {
     _key: string;
     _type: string;
@@ -108,6 +108,7 @@ export type Section =
   | TestimonialsSection
   | ImageSection
   | GridSection
+  | ContactBoxSection
   | EmployeesSection;
 
 export interface PageBuilder {

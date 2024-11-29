@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
-import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
+import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import { subtitleID, titleID } from "studio/schemas/fields/text";
 import { firstTranslation } from "studio/utils/i18n";
 
@@ -60,6 +60,17 @@ export const contactBox = defineField({
                 }),
             }),
           ],
+          preview: {
+            select: {
+              tag: "tag",
+              email: "email",
+            },
+            prepare({ tag, email }) {
+              return {
+                title: `${tag} (${email})`,
+              };
+            },
+          },
         },
       ],
       validation: (rule) => rule.required(),
@@ -68,13 +79,17 @@ export const contactBox = defineField({
   preview: {
     select: {
       title: "basicTitle",
-      subtitle: "optionalSubtitle",
+      contactPoints: "contactPoints",
     },
     prepare(selection) {
-      const { title, subtitle } = selection;
+      const { title, contactPoints } = selection;
       return {
-        title: firstTranslation(title) ?? undefined,
-        subtitle: firstTranslation(subtitle) ?? undefined,
+        title: "Contact Box: " + firstTranslation(title) ?? undefined,
+        subtitle: contactPoints
+          .map(
+            (cp: { tag: string; email: string }) => `(${cp.tag}: ${cp.email})`,
+          )
+          .join(" - "),
       };
     },
   },

@@ -5,6 +5,7 @@ import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import contactBox from "studio/schemas/objects/sections/contact-box";
 import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
@@ -14,7 +15,6 @@ import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
-import contactBox from "../objects/sections/contact-box";
 
 export const pageBuilderID = "pageBuilder";
 
