@@ -79,7 +79,7 @@ function ColoredTitle({
   colorPart?: string;
   color?: string;
 }) {
-  if (colorPart === undefined || colorPart === "")
+  if (!colorPart)
     return (
       <Text type={"h1"} className={styles.mainTitle}>
         {title}
