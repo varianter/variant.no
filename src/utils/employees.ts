@@ -8,10 +8,13 @@ import { domainFromHostname } from "./url";
 
 const CHEWBACCA_URL = "https://chewie-webapp-ld2ijhpvmb34c.azurewebsites.net";
 
-export async function fetchAllChewbaccaEmployees(): Promise<
-  Result<ChewbaccaEmployee[], string>
-> {
-  const employeesRes = await fetch(new URL("employees", CHEWBACCA_URL));
+export async function fetchAllChewbaccaEmployees(
+  countryCode?: string,
+): Promise<Result<ChewbaccaEmployee[], string>> {
+  const url = countryCode
+    ? `${CHEWBACCA_URL}/employees?country=${countryCode}`
+    : `${CHEWBACCA_URL}/employees`;
+  const employeesRes = await fetch(url);
   if (!employeesRes.ok) {
     return ResultError(
       `Fetch returned status ${employeesRes.status} ${employeesRes.statusText}`,

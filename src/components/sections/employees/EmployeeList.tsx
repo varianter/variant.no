@@ -1,12 +1,13 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { use, useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
+import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
+import { Result } from "studio/utils/result";
 
 import styles from "./employees.module.css";
 
@@ -17,38 +18,8 @@ const competences: Competence[] = [
   "Project Management",
 ];
 
-function countCompetences(employees: ChewbaccaEmployee[]) {
-  const competenceCounts: Record<Competence, number> = {
-    Utvikling: 0,
-    Administasjon: 0,
-    Design: 0,
-    "Project Management": 0,
-  };
-
-  employees
-    .flatMap((e) => e.competences)
-    .forEach((c) => (competenceCounts[c] += 1));
-
-  return competenceCounts;
-}
-
-function countLocations(employees: ChewbaccaEmployee[]) {
-  const locationCounts: Record<string, number> = {};
-
-  employees
-    .flatMap((e) => e.officeName)
-    .filter((o) => !!o)
-    .forEach((o) =>
-      !locationCounts[o!]
-        ? (locationCounts[o!] = 1)
-        : (locationCounts[o!] += 1),
-    );
-
-  return locationCounts;
-}
-
 export interface EmployeesProps {
-  employees: ChewbaccaEmployee[];
+  employees: Promise<Result<ChewbaccaEmployee[], string>>;
   language: string;
   employeesPageSlug: string;
 }
@@ -59,18 +30,18 @@ interface EmployeeFilters {
 }
 
 export default function EmployeeList({
-  employees,
+  employees: employeesPromise,
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const competenceCounts = countCompetences(employees);
-  const locationCounts = countLocations(employees);
-  const locations = Object.keys(locationCounts);
+  const employeesRes = use(employeesPromise);
+  const employees = employeesRes.ok ? employeesRes.value : [];
+  const [filteredEmployees, setFilteredEmployees] = useState<
+    ChewbaccaEmployee[]
+  >(shuffleEmployees(employees));
 
+  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
-
-  const [filteredEmployees, setFilteredEmployees] =
-    useState<ChewbaccaEmployee[]>(employees);
 
   const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
     competenceFilter: null,
@@ -79,6 +50,15 @@ export default function EmployeeList({
 
   function filterEmployees(newFilters: Partial<EmployeeFilters>) {
     const combinedFilters = { ...employeeFilters, ...newFilters };
+
+    if (newFilters.competenceFilter === employeeFilters.competenceFilter) {
+      combinedFilters.competenceFilter = null;
+    }
+
+    if (newFilters.locationFilter === employeeFilters.locationFilter) {
+      combinedFilters.locationFilter = null;
+    }
+
     setEmployeeFilters(combinedFilters);
 
     const newFilteredEmployees = employees.filter((e) => {
@@ -107,32 +87,27 @@ export default function EmployeeList({
       <div className={styles.employeeFiltersWrapper}>
         <div className={styles.employeeFilterWrapper}>
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
-            Fag
+            {t("field")}
           </Text>
-          <Button
-            size="small"
-            type={
-              employeeFilters.competenceFilter == null
-                ? "secondaryFilled"
-                : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.competenceFilter}
+            type="button"
             onClick={() => filterEmployees({ competenceFilter: null })}
-          >
-            {t("all")}
-          </Button>
+            text={t("all")}
+          />
+
           {competences.map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={competence}
-                type={active ? "secondaryFilled" : "secondary"}
+                active={active}
+                type="button"
                 onClick={() =>
                   filterEmployees({ competenceFilter: competence })
                 }
-              >
-                {t(competence)} ({competenceCounts[competence]})
-              </Button>
+                text={t(competence)}
+              />
             );
           })}
         </div>
@@ -140,57 +115,53 @@ export default function EmployeeList({
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
-          <Button
-            size="small"
-            type={
-              employeeFilters.locationFilter == null
-                ? "secondaryFilled"
-                : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.locationFilter}
+            type="button"
             onClick={() => filterEmployees({ locationFilter: null })}
-          >
-            {t("all")}
-          </Button>
+            text={t("all")}
+          />
+
           {locations.map((location) => {
+            if (!location) return null;
             const active = employeeFilters.locationFilter == location;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={location}
-                type={active ? "secondaryFilled" : "secondary"}
+                active={active}
+                type="button"
                 onClick={() => filterEmployees({ locationFilter: location })}
-              >
-                {location} ({locationCounts[location]})
-              </Button>
+                text={location}
+              />
             );
           })}
         </div>
       </div>
 
-      <div className={styles.employeeCountWrapper}>
-        <div style={{ display: "flex" }}></div>
-
+      <div className={styles.peopleCountWrapper}>
         <p className={styles.employeeCount}>
           {t("show")}{" "}
           <span className={styles.employeeCountValue}>
             {filteredEmployees.length}
           </span>{" "}
-          {t("of")}{" "}
-          <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
-          {t("consultants")}
+          {t("of")} <span>{employees.length}</span> {t("consultants")}
         </p>
-      </div>
 
-      <div className={styles.peopleContainer}>
-        {filteredEmployees.map((employee) => (
-          <EmployeeCard
-            employee={employee}
-            employeePageSlug={employeesPageSlug}
-            language={language}
-            key={employee.name}
-          />
-        ))}
+        <div className={styles.peopleContainer}>
+          {filteredEmployees.map((employee) => (
+            <EmployeeCard
+              employee={employee}
+              employeePageSlug={employeesPageSlug}
+              language={language}
+              key={employee.name}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
+}
+
+function shuffleEmployees(employees: ChewbaccaEmployee[]) {
+  return employees.sort(() => Math.random() - 0.5);
 }

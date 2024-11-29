@@ -1,5 +1,5 @@
 .article {
-  background: var(--primary-white);
+  background: var(--background-bg-light-primary);
 }
 
 .grid {
@@ -57,7 +57,7 @@
   gap: 0.5rem;
   word-wrap: break-word;
   border-radius: 0.5rem;
-  border: 1px solid var(--secondary-yellow-1, #f5f3e5);
+  border: 1px solid var(--background-bg-yellow, #f5f3e5);
   background: rgba(255, 255, 255, 0.6);
 }
 

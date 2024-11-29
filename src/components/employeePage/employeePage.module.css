@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary-black);
+  background-color: var(--Dark-500);
   border-radius: 12px;
   width: 300px;
   height: 300px;
@@ -51,18 +51,18 @@
 }
 
 .employeeName {
-  color: var(--primary-black);
+  color: var(--Dark-500);
   font-size: 64px;
   font-weight: 600;
 }
 
 .employeeRole {
-  color: var(--primary-black);
+  color: var(--Dark-500);
   font-weight: 300;
 }
 
 .employeeEmail,
 .employeeTelephone {
-  color: var(--primary-black);
+  color: var(--Dark-500);
   font-weight: 300;
 }

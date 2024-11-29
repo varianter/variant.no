@@ -60,16 +60,25 @@
   top: -6.5rem;
 }
 
+.logo {
+  overflow: hidden;
+  width: auto;
+  display: flex;
+  max-width: 100%;
+  height: 1.25rem;
+}
+
 .list {
+  width: fit-content;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 .listMobile {
   composes: list;
   display: flex;
+  align-items: space-between;
   flex-direction: column;
   gap: 1.5rem;
 
@@ -111,13 +120,14 @@
   display: none;
 
   @media (min-width: 1024px) {
+    align-items: center;
+    gap: 0.75rem;
     display: flex;
   }
 }
 
 .mobileMenu {
   flex: 1;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -159,7 +169,7 @@
   display: flex;
   flex-direction: column;
   padding: 0.75rem;
-  background-color: var(--primary-bg-blue);
+  background-color: var(--background-bg-blue);
   align-items: center;
 }
 
@@ -176,7 +186,7 @@
 
 .announcementContent p {
   font-weight: 600;
-  color: var(--primary-white);
+  color: var(--background-bg-light-primary);
 }
 
 .logo {
