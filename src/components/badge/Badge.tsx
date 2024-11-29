@@ -8,14 +8,13 @@ interface IBadge {
   textColor?: string;
 }
 
-const Badge = ({
-  children,
-  badgeColor = "#EAEAEA",
-  textColor = "#222424",
-}: IBadge) => {
+const DEFAULT_BADGE_COLOR = "#EAEAEA";
+const DEFAULT_TEXT_COLOR = "#222424";
+
+const Badge = ({ children, badgeColor, textColor }: IBadge) => {
   const badgeColors = {
-    backgroundColor: badgeColor,
-    color: textColor,
+    backgroundColor: badgeColor || DEFAULT_BADGE_COLOR,
+    color: textColor || DEFAULT_TEXT_COLOR,
   };
   return (
     <div className={styles.badgeWrapper} style={badgeColors}>
