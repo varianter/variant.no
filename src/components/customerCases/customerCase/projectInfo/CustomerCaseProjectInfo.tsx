@@ -58,7 +58,9 @@ export default async function CustomerCaseProjectInfo({
               {t("variants").toUpperCase()}
             </Text>
             <div className={styles.varianter}>
-              <Text className={styles.preFancyCharacter}>【 </Text>
+              <Text className={styles.preFancyCharacter}>
+                <span style={{ color: clientColors.color }}>【 </span>
+              </Text>
               {consultantsFirstNames.map((name) => (
                 <Text
                   key={name}
@@ -68,7 +70,9 @@ export default async function CustomerCaseProjectInfo({
                   {name}
                 </Text>
               ))}
-              <Text className={styles.afterFancyCharacter}> 】</Text>
+              <Text className={styles.afterFancyCharacter}>
+                <span style={{ color: clientColors.color }}> 】</span>
+              </Text>
             </div>
           </div>
         )}
