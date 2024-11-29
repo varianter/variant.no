@@ -6,6 +6,7 @@ import Text from "src/components/text/Text";
 import { ImageSplitSection } from "studio/lib/interfaces/pages";
 
 import styles from "./image-split.module.css";
+import { ImageAlignment } from "studio/schemas/fields/media";
 
 interface ImageSplitProps {
   section: ImageSplitSection;
@@ -16,8 +17,19 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 };
 
 const ImageSplitComponent = ({ section }: ImageSplitProps) => {
+  const hasImage = section.imageExtended;
+  const alignment = section.imageExtended?.imageAlignment;
+  const showImageToLeft = hasImage && alignment == ImageAlignment.Left;
+  const showImageToRight = hasImage && alignment == ImageAlignment.Right;
+
   return (
     <article className={styles.imageSplit}>
+      {showImageToLeft && (
+        <div className={styles.image}>
+          <SanityImage image={section.imageExtended} />
+        </div>
+      )}
+
       <div className={styles.textContainer}>
         <Text type="h4" as="h2">
           {section.basicTitle}
@@ -37,7 +49,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
         )}
       </div>
 
-      {section.imageExtended && (
+      {showImageToRight && (
         <div className={styles.image}>
           <SanityImage image={section.imageExtended} />
         </div>
