@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 
 import { TextTertiary } from "src/components/navigation/footer/textTertiary/TextTertiary";
 
@@ -10,7 +10,7 @@ interface IFooterSection {
 }
 
 export const FooterSection = ({ title, children }: IFooterSection) => {
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = Children.toArray(children);
 
   return (
     <div className={styles.footer_section}>
