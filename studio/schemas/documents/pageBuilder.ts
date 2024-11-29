@@ -14,6 +14,7 @@ import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
+import contactBox from "../objects/sections/contact-box";
 
 export const pageBuilderID = "pageBuilder";
 
@@ -49,6 +50,7 @@ const pageBuilder = defineType({
         imageSection,
         grid,
         employees,
+        contactBox,
       ],
     }),
   ],

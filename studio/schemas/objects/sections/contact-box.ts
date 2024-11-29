@@ -56,12 +56,13 @@ export const contactBox = defineField({
   preview: {
     select: {
       title: "basicTitle",
+      subtitle: "optionalSubtitle",
     },
     prepare(selection) {
-      const { title } = selection;
+      const { title, subtitle } = selection;
       return {
         title: title,
-        subtitle: "Logo Salad",
+        subtitle: subtitle,
       };
     },
   },
