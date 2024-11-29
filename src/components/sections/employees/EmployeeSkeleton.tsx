@@ -1,4 +1,5 @@
 import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
+
 import styles from "./employees.module.css";
 
 export function EmployeeListSkeleton() {

@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { use, useState, useTransition } from "react";
 
-import EmployeeCard, {
-  EmployeeCardSkeleton,
-} from "src/components/employeeCard/EmployeeCard";
+import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
@@ -41,22 +40,18 @@ export default function EmployeeList({
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  let [isPending, startTransition] = useTransition();
-
-  const currentPath = usePathname();
-  const searchParams = useSearchParams();
-  const { replace } = useRouter();
-  const limitEmployees = !searchParams.has("showAll");
-  console.log(searchParams, searchParams.has("showAll"));
-
   const employeesRes = use(employeesPromise);
   const employees = employeesRes.ok ? employeesRes.value : [];
   const [filteredEmployees, setFilteredEmployees] =
     useState<ChewbaccaEmployee[]>(employees);
 
-  const limitedEmployees = limitEmployees
-    ? filteredEmployees.slice(0, DEFAULT_LIMIT)
-    : filteredEmployees;
+  const {
+    isShowMore,
+    isShowMorePending,
+    limitedEmployees,
+    showMoreHandler,
+    showMoreHref,
+  } = useShowAll(filteredEmployees);
 
   const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
@@ -175,22 +170,74 @@ export default function EmployeeList({
             />
           ))}
         </div>
-        {isPending && <EmployeeListSkeleton />}
-        <Link
-          onClick={() =>
-            startTransition(() => {
-              replace(`${currentPath}?showAll`);
-            })
-          }
-          href={`${currentPath}?showAll`}
-          shallow
-          scroll={false}
-        >
-          Show more
-        </Link>
+        {isShowMorePending && <EmployeeListSkeleton />}
+
+        {(!isShowMore || isShowMorePending) && (
+          <ShowMoreButton
+            showMoreHandler={showMoreHandler}
+            showMoreHref={showMoreHref}
+          />
+        )}
       </div>
     </>
   );
+}
+
+function ShowMoreButton({
+  showMoreHandler,
+  showMoreHref,
+}: {
+  showMoreHandler: () => void;
+  showMoreHref: string;
+}) {
+  const t = useTranslations("employee_card");
+
+  // @TODO Replace with Button component when actually implemented
+  return (
+    <div className={styles.showMore}>
+      <Link
+        className={styles.showMore__button}
+        onClick={showMoreHandler}
+        href={showMoreHref}
+        shallow
+        scroll={false}
+      >
+        {t("showMore")}{" "}
+        <Image
+          src="/_assets/arrow-down.svg"
+          alt=""
+          role="none"
+          width={24}
+          height={24}
+        />
+      </Link>
+    </div>
+  );
+}
+
+function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
+  const [isPending, startTransition] = useTransition();
+
+  const currentPath = usePathname();
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const limitEmployees = !searchParams.has("showAll");
+  const limitedEmployees = limitEmployees
+    ? filteredEmployees.slice(0, DEFAULT_LIMIT)
+    : filteredEmployees;
+
+  const showMoreHandler = () =>
+    startTransition(() => {
+      replace(`${currentPath}?showAll`);
+    });
+
+  return {
+    limitedEmployees,
+    showMoreHandler,
+    isShowMorePending: isPending,
+    isShowMore: !limitEmployees,
+    showMoreHref: `${currentPath}?showAll`,
+  };
 }
 
 function sortAlphabetically(filter: (string | null | undefined)[]) {
