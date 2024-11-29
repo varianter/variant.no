@@ -81,12 +81,19 @@ export async function fetchEmployeesByEmails(
   if (!allEmployeesRes.ok) {
     return allEmployeesRes;
   }
-  return ResultOk(
-    // mapping from input array (instead of filtering all employees) to preserve order
-    emails
-      .map((email) =>
-        allEmployeesRes.value.find((employee) => employee.email === email),
-      )
-      .filter((employee) => employee !== undefined),
-  );
+
+  const allResults = (
+    await Promise.all(
+      emails.map((email) => {
+        const alias = aliasFromEmail(email);
+        const hostname = domainFromEmail(email);
+        return fetchChewbaccaEmployee(alias, hostname);
+      }),
+    )
+  ).reduce((acc, employee) => {
+    if (!employee.ok) return acc;
+    return acc.concat(employee.value);
+  }, [] as ChewbaccaEmployee[]);
+
+  return ResultOk(allResults);
 }
