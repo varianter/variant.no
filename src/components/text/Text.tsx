@@ -79,13 +79,15 @@ const Text = ({
   children,
   id,
   className,
+  as: asElement,
 }: {
   type?: TextType;
   children: React.ReactNode;
   id?: string;
+  as?: React.ElementType;
   className?: string;
 }) => {
-  const Element = elementMap[type];
+  const Element = asElement ?? elementMap[type];
   const generatedClassName = `${classMap[type]} ${className ?? ""}`;
 
   return (

@@ -1,12 +1,13 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { use, useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
+import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
+import { Result } from "studio/utils/result";
 
 import styles from "./employees.module.css";
 
@@ -18,7 +19,7 @@ const competences: Competence[] = [
 ];
 
 export interface EmployeesProps {
-  employees: ChewbaccaEmployee[];
+  employees: Promise<Result<ChewbaccaEmployee[], string>>;
   language: string;
   employeesPageSlug: string;
 }
@@ -29,15 +30,18 @@ interface EmployeeFilters {
 }
 
 export default function EmployeeList({
-  employees,
+  employees: employeesPromise,
   language,
   employeesPageSlug,
 }: EmployeesProps) {
+  const employeesRes = use(employeesPromise);
+  const employees = employeesRes.ok ? employeesRes.value : [];
+  const [filteredEmployees, setFilteredEmployees] = useState<
+    ChewbaccaEmployee[]
+  >(shuffleEmployees(employees));
+
   const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
-
-  const [filteredEmployees, setFilteredEmployees] =
-    useState<ChewbaccaEmployee[]>(employees);
 
   const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
     competenceFilter: null,
@@ -85,30 +89,25 @@ export default function EmployeeList({
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
             {t("field")}
           </Text>
-          <Button
-            size="small"
-            background={employeeFilters.competenceFilter ? "light" : "dark"}
-            type={
-              employeeFilters.competenceFilter == null ? "primary" : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.competenceFilter}
+            type="button"
             onClick={() => filterEmployees({ competenceFilter: null })}
-          >
-            <Text type="labelSmall"> {t("all")}</Text>
-          </Button>
+            text={t("all")}
+          />
+
           {competences.map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={competence}
-                background={active ? "dark" : "light"}
-                type={"secondary"}
+                active={active}
+                type="button"
                 onClick={() =>
                   filterEmployees({ competenceFilter: competence })
                 }
-              >
-                <Text type="labelSmall"> {t(competence)}</Text>
-              </Button>
+                text={t(competence)}
+              />
             );
           })}
         </div>
@@ -116,58 +115,53 @@ export default function EmployeeList({
           <Text type="labelSemibold" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
-          <Button
-            size="small"
-            background={employeeFilters.locationFilter ? "light" : "dark"}
-            type={
-              employeeFilters.locationFilter == null ? "primary" : "secondary"
-            }
+          <Tag
+            active={!employeeFilters.locationFilter}
+            type="button"
             onClick={() => filterEmployees({ locationFilter: null })}
-          >
-            <Text type="labelSmall"> {t("all")}</Text>
-          </Button>
+            text={t("all")}
+          />
 
           {locations.map((location) => {
+            if (!location) return null;
             const active = employeeFilters.locationFilter == location;
             return (
-              <Button
-                size="small"
+              <Tag
                 key={location}
-                background={active ? "dark" : "light"}
-                type={"secondary"}
+                active={active}
+                type="button"
                 onClick={() => filterEmployees({ locationFilter: location })}
-              >
-                <Text type="labelSmall"> {location} </Text>
-              </Button>
+                text={location}
+              />
             );
           })}
         </div>
       </div>
 
-      <div className={styles.employeeCountWrapper}>
-        <div style={{ display: "flex" }}></div>
-
+      <div className={styles.peopleCountWrapper}>
         <p className={styles.employeeCount}>
           {t("show")}{" "}
           <span className={styles.employeeCountValue}>
             {filteredEmployees.length}
           </span>{" "}
-          {t("of")}{" "}
-          <span className={styles.employeeCountValue}>{employees.length}</span>{" "}
-          {t("consultants")}
+          {t("of")} <span>{employees.length}</span> {t("consultants")}
         </p>
-      </div>
 
-      <div className={styles.peopleContainer}>
-        {filteredEmployees.map((employee) => (
-          <EmployeeCard
-            employee={employee}
-            employeePageSlug={employeesPageSlug}
-            language={language}
-            key={employee.name}
-          />
-        ))}
+        <div className={styles.peopleContainer}>
+          {filteredEmployees.map((employee) => (
+            <EmployeeCard
+              employee={employee}
+              employeePageSlug={employeesPageSlug}
+              language={language}
+              key={employee.name}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
+}
+
+function shuffleEmployees(employees: ChewbaccaEmployee[]) {
+  return employees.sort(() => Math.random() - 0.5);
 }
