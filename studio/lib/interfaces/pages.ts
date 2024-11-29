@@ -85,6 +85,7 @@ export interface ContactBoxSection {
   _key: string;
   basicTitle: string;
   optionalSubtitle?: string;
+  designMode: "light" | "dark";
   contactPoints: {
     _key: string;
     _type: string;

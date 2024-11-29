@@ -35,6 +35,7 @@ export default async function ContactBox({
       ? result.value.map((e) => employeeAndTag(e, section.contactPoints))
       : [],
   );
+
   return (
     <section className={styles.contactBox}>
       <div>

@@ -6,6 +6,16 @@ import { firstTranslation } from "studio/utils/i18n";
 
 export const contactBoxID = "contactBox";
 
+export enum ContacxtBoxDesignMode {
+  Dark = "dark",
+  Light = "light",
+}
+
+const designModeOptions = [
+  { title: "Dark", value: ContacxtBoxDesignMode.Dark },
+  { title: "Light", value: ContacxtBoxDesignMode.Light },
+];
+
 export const contactBox = defineField({
   name: contactBoxID,
   title: "Contact Box",
@@ -24,7 +34,18 @@ export const contactBox = defineField({
       title: "Subtitle",
       description: "Extra context under the main title.",
     },
-
+    {
+      name: "designMode",
+      title: "Design Mode",
+      type: "string",
+      description:
+        "Select the whether the contact box should be light or dark.",
+      options: {
+        list: designModeOptions,
+        layout: "radio",
+      },
+      initialValue: ContacxtBoxDesignMode.Dark,
+    },
     {
       name: "contactPoints",
       title: "List of people to contact",
