@@ -14,7 +14,13 @@ export async function fetchAllChewbaccaEmployees(
   const url = countryCode
     ? `${CHEWBACCA_URL}/employees?country=${countryCode}`
     : `${CHEWBACCA_URL}/employees`;
-  const employeesRes = await fetch(url);
+
+  const employeesRes = await fetch(url, {
+    next: {
+      revalidate: 60 * 60 * 24,
+    },
+  });
+
   if (!employeesRes.ok) {
     return ResultError(
       `Fetch returned status ${employeesRes.status} ${employeesRes.statusText}`,
@@ -26,23 +32,29 @@ export async function fetchAllChewbaccaEmployees(
       `Expected ChewbaccaEmployeesResponse, was ${employeesData}`,
     );
   }
-  return ResultOk(employeesData.employees);
+  return ResultOk(shuffleEmployees(employeesData.employees));
+}
+function shuffleEmployees(employees: ChewbaccaEmployee[]) {
+  return employees.sort(() => Math.random() - 0.5);
 }
 
 export async function fetchChewbaccaEmployee(
-  email: string,
+  alias: string,
+  hostname: string | null,
 ): Promise<Result<ChewbaccaEmployee, string>> {
-  const allEmployeesRes = await fetchAllChewbaccaEmployees();
-  if (!allEmployeesRes.ok) {
-    return allEmployeesRes;
-  }
-  const employee = allEmployeesRes.value.find(
-    (employee) => employee.email === email,
-  );
-  if (!employee) {
+  const url = `${CHEWBACCA_URL}/employees/${aliasFromEmail(alias)}?country=${countryCodeFromEmail(hostname)}`;
+
+  const employeeRes = await fetch(url, {
+    next: {
+      revalidate: 60 * 60 * 24,
+    },
+  });
+
+  if (!employeeRes.ok) {
     return ResultError("Employee does not exist for given email");
   }
-  return ResultOk(employee);
+
+  return ResultOk(await employeeRes.json());
 }
 
 export function emailFromAliasAndHostname(
@@ -55,7 +67,9 @@ export function emailFromAliasAndHostname(
 export function aliasFromEmail(email: string): string {
   return email.split("@")[0];
 }
-
+export function countryCodeFromEmail(hostname: string | null): string {
+  return domainFromHostname(hostname).split(".").at(-1) ?? "no";
+}
 export function domainFromEmail(email: string) {
   return email.split("@")[1];
 }

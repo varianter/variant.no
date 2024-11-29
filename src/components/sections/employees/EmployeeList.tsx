@@ -36,9 +36,8 @@ export default function EmployeeList({
 }: EmployeesProps) {
   const employeesRes = use(employeesPromise);
   const employees = employeesRes.ok ? employeesRes.value : [];
-  const [filteredEmployees, setFilteredEmployees] = useState<
-    ChewbaccaEmployee[]
-  >(shuffleEmployees(employees));
+  const [filteredEmployees, setFilteredEmployees] =
+    useState<ChewbaccaEmployee[]>(employees);
 
   const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
@@ -160,8 +159,4 @@ export default function EmployeeList({
       </div>
     </>
   );
-}
-
-function shuffleEmployees(employees: ChewbaccaEmployee[]) {
-  return employees.sort(() => Math.random() - 0.5);
 }
