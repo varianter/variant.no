@@ -1,8 +1,6 @@
-import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { IJobPosting } from "studio/lib/interfaces/jobPosting";
-import { LinkType } from "studio/lib/interfaces/navigation";
 
 import styles from "./jobPosting.module.css";
 
@@ -16,7 +14,11 @@ export default async function JobPosting({ jobPosting }: JobPostingProps) {
     .join(", ");
 
   return (
-    <div className={styles.jobPosting}>
+    <a
+      href={jobPosting.recruiteeAdUrl}
+      target="_blank"
+      className={styles.jobPosting}
+    >
       <div className={styles.details}>
         <div className={styles.role}>
           <Text type={"h5"}>{jobPosting.role}</Text>
@@ -25,17 +27,6 @@ export default async function JobPosting({ jobPosting }: JobPostingProps) {
           <Text type={"bodyNormal"}>{jobPostingLocations}</Text>
         </div>
       </div>
-      <LinkButton
-        link={{
-          _key: "recruitee",
-          _type: "link",
-          linkType: LinkType.External,
-          linkTitle: " ",
-          newTab: true,
-          url: jobPosting.recruiteeAdUrl,
-        }}
-        type="secondary"
-      />
-    </div>
+    </a>
   );
 }
