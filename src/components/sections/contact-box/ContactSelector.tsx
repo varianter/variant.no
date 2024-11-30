@@ -18,12 +18,14 @@ export type ContactSelectorProps = {
   contactPoints: Promise<EmployeeAndTag[]>;
   employeesPageSlug: string;
   language: string;
+  background?: "dark" | "light";
 };
 
 export default function ContactSelector({
   contactPoints: contactPointsPromise,
   employeesPageSlug,
   language,
+  background = "dark",
 }: ContactSelectorProps) {
   const contactPoints = use(contactPointsPromise);
 
@@ -39,6 +41,7 @@ export default function ContactSelector({
             key={contactPoint.tagSlug}
             type="button"
             role="tab"
+            background={background}
             aria-selected={selectedTag === contactPoint.tagSlug}
             aria-controls={`panel-${contactPoint.tagSlug}`}
             id={`tab-${contactPoint.tagSlug}`}

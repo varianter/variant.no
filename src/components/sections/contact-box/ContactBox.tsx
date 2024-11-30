@@ -55,6 +55,7 @@ export default async function ContactBox({
               employeesPageSlug={employeesPageSlug}
               contactPoints={contactPoints}
               language={language}
+              background={section.designMode}
             />
           </Suspense>
         </div>
