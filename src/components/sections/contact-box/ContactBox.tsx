@@ -73,5 +73,9 @@ function employeeAndTag(
   return {
     employee,
     tag,
+    tagSlug: slugify(tag),
   };
+}
+function slugify(tag: string) {
+  return tag.toLowerCase().replace(/ /g, "-");
 }

@@ -5,14 +5,14 @@ import Text from "src/components/text/Text";
 import styles from "./tag.module.css";
 
 type TagInner =
-  | {
+  | ({
       type: "button";
       onClick?: () => void;
-    }
-  | {
+    } & JSX.IntrinsicElements["button"])
+  | ({
       type: "link";
       href: string;
-    };
+    } & JSX.IntrinsicElements["link"]);
 
 type TagProps = {
   active?: boolean;

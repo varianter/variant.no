@@ -11,6 +11,7 @@ import styles from "./contact-box.module.css";
 export type EmployeeAndTag = {
   employee: ChewbaccaEmployee;
   tag: string;
+  tagSlug: string;
 };
 
 export type ContactSelectorProps = {
@@ -27,33 +28,42 @@ export default function ContactSelector({
   const contactPoints = use(contactPointsPromise);
 
   const [selectedTag, setSelectedTag] = useState<string | null>(
-    contactPoints[0].tag,
-  );
-  const selectedContactPoint = contactPoints.find(
-    (contactPoint) => selectedTag == contactPoint.tag,
+    contactPoints[0].tagSlug,
   );
 
   return (
     <div className={styles.contactSelector}>
-      <div className={styles.tagList}>
+      <div className={styles.tagList} role="tablist">
         {contactPoints.map((contactPoint) => (
           <Tag
-            key={contactPoint.tag}
+            key={contactPoint.tagSlug}
             type="button"
-            active={selectedTag === contactPoint.tag}
-            onClick={() => setSelectedTag(contactPoint.tag)}
+            role="tab"
+            aria-selected={selectedTag === contactPoint.tagSlug}
+            aria-controls={`panel-${contactPoint.tagSlug}`}
+            id={`tab-${contactPoint.tagSlug}`}
+            active={selectedTag === contactPoint.tagSlug}
+            onClick={() => setSelectedTag(contactPoint.tagSlug)}
             text={contactPoint.tag}
           />
         ))}
       </div>
       <div className={styles.employeeCard}>
-        {selectedContactPoint?.employee && (
-          <EmployeeCard
-            employee={selectedContactPoint.employee}
-            employeePageSlug={employeesPageSlug}
-            language={language}
-          />
-        )}
+        {contactPoints.map((contactPoint) => (
+          <div
+            key={contactPoint.tagSlug}
+            role="tabpanel"
+            id={`panel-${contactPoint.tagSlug}`}
+            aria-labelledby={`tab-${contactPoint.tagSlug}`}
+            hidden={selectedTag !== contactPoint.tagSlug}
+          >
+            <EmployeeCard
+              employee={contactPoint.employee}
+              employeePageSlug={employeesPageSlug}
+              language={language}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
