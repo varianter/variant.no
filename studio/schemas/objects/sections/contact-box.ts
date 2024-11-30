@@ -6,14 +6,14 @@ import { firstTranslation } from "studio/utils/i18n";
 
 export const contactBoxID = "contactBox";
 
-export enum ContacxtBoxDesignMode {
+export enum ContactBoxBackground {
   Dark = "dark",
   Light = "light",
 }
 
-const designModeOptions = [
-  { title: "Dark", value: ContacxtBoxDesignMode.Dark },
-  { title: "Light", value: ContacxtBoxDesignMode.Light },
+const backgroundOptions = [
+  { title: "Dark", value: ContactBoxBackground.Dark },
+  { title: "Light", value: ContactBoxBackground.Light },
 ];
 
 export const contactBox = defineField({
@@ -35,16 +35,16 @@ export const contactBox = defineField({
       description: "Extra context under the main title.",
     },
     {
-      name: "designMode",
-      title: "Design Mode",
+      name: "background",
+      title: "Background",
       type: "string",
       description:
-        "Select the whether the contact box should be light or dark.",
+        "Select the whether the contact box should have light or dark background.",
       options: {
-        list: designModeOptions,
+        list: backgroundOptions,
         layout: "radio",
       },
-      initialValue: ContacxtBoxDesignMode.Dark,
+      initialValue: ContactBoxBackground.Dark,
     },
     {
       name: "contactPoints",

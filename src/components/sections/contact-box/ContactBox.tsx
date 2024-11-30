@@ -51,13 +51,13 @@ export default async function ContactBox({
 
         <div className={styles.contactSelectorWrapper}>
           <Suspense
-            fallback={<EmployeeCardSkeleton background={section.designMode} />}
+            fallback={<EmployeeCardSkeleton background={section.background} />}
           >
             <ContactSelector
               employeesPageSlug={employeesPageSlug}
               contactPoints={contactPoints}
               language={language}
-              background={section.designMode}
+              background={section.background}
             />
           </Suspense>
         </div>
