@@ -105,7 +105,7 @@ export const contactBox = defineField({
     prepare(selection) {
       const { title, contactPoints } = selection;
       return {
-        title: "Contact Box: " + firstTranslation(title) ?? undefined,
+        title: "Contact Box: " + (firstTranslation(title) ?? undefined),
         subtitle: contactPoints
           .map(
             (cp: { tag: string; email: string }) => `(${cp.tag}: ${cp.email})`,
