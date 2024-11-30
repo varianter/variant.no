@@ -4,18 +4,6 @@
   gap: 1rem;
 }
 
-.employeeImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--background-bg-dark);
-  border-radius: 12px;
-  height: 125px;
-  width: 50%;
-  padding: 1rem;
-  position: relative;
-}
-
 .employeeInfoWrapper {
   display: flex;
   flex-direction: column;
@@ -51,25 +39,6 @@
   gap: 1rem;
   row-gap: var(--small, 6px);
 }
-@container employee (min-width: 380px) {
-  .employeeWrapper__inner {
-    flex-direction: row;
-  }
-  .employeeEmail {
-    margin-top: auto;
-  }
-  .employeeEmail,
-  .employeePhone,
-  .employeeRoleDot {
-    font-size: 1rem;
-  }
-  .employeePhone {
-    margin-top: 0.5rem;
-  }
-  .employeeInfoWrapper {
-    padding: 0.5rem 0;
-  }
-}
 
 .employeeInfoWrapper {
   display: flex;
@@ -89,6 +58,9 @@
 
   background-color: var(--background-bg-dark);
   border-radius: var(--medium, 12px);
+}
+.employeeImage--dark {
+  background-color: var(--background-bg-light-primary);
 }
 
 .employeeInfo {
@@ -124,7 +96,7 @@
   color: var(--text-tertiary, #5e5e5e);
 }
 
-/* Update the skeleton styles */
+/* Skeleton styles */
 .skeletonCard {
   animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -155,5 +127,29 @@
   }
   50% {
     opacity: 0.5;
+  }
+}
+
+@container employee (min-width: 380px) {
+  .employeeWrapper__inner {
+    flex-direction: row;
+  }
+  .employeeEmail {
+    margin-top: auto;
+  }
+  .employeeEmail,
+  .employeePhone,
+  .employeeRoleDot {
+    font-size: 1rem;
+  }
+  .employeePhone {
+    margin-top: 0.5rem;
+  }
+  .employeeInfoWrapper {
+    padding: 0.5rem 0;
+  }
+
+  .skeletonAutoMargin {
+    margin-top: auto;
   }
 }

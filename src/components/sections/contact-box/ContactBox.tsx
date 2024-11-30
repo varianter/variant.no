@@ -50,7 +50,9 @@ export default async function ContactBox({
         </div>
 
         <div>
-          <Suspense fallback={<EmployeeCardSkeleton />}>
+          <Suspense
+            fallback={<EmployeeCardSkeleton background={section.designMode} />}
+          >
             <ContactSelector
               employeesPageSlug={employeesPageSlug}
               contactPoints={contactPoints}

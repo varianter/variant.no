@@ -77,14 +77,28 @@ export default function EmployeeCard({
   );
 }
 
-export function EmployeeCardSkeleton() {
+export function EmployeeCardSkeleton({
+  background = "light",
+}: {
+  background?: "light" | "dark";
+}) {
+  const backgroundClass =
+    background === "dark" ? styles["employeeImage--dark"] : "";
   return (
-    <div className={`${styles.employeeWrapper} ${styles.skeletonCard}`}>
-      <div className={styles.employeeImage} />
-      <div className={`${styles.skeletonText} ${styles.skeletonName}`} />
-      <div className={`${styles.skeletonText} ${styles.skeletonTitle}`} />
-      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
-      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+    <div className={styles.employeeWrapper}>
+      <div
+        className={`${styles.employeeWrapper__inner} ${styles.skeletonCard}`}
+      >
+        <div className={`${styles.employeeImage} ${backgroundClass}`} />
+        <div className={styles.employeeInfoWrapper}>
+          <div className={`${styles.skeletonText} ${styles.skeletonName}`} />
+          <div className={`${styles.skeletonText} ${styles.skeletonTitle}`} />
+          <div
+            className={`${styles.skeletonText} ${styles.skeletonAutoMargin} ${styles.skeletonContact}`}
+          />
+          <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+        </div>
+      </div>
     </div>
   );
 }
