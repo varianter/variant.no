@@ -49,7 +49,7 @@ export default async function ContactBox({
           )}
         </div>
 
-        <div>
+        <div className={styles.contactSelectorWrapper}>
           <Suspense
             fallback={<EmployeeCardSkeleton background={section.designMode} />}
           >

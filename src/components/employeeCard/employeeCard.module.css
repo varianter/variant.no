@@ -35,7 +35,6 @@
 .employeeWrapper__inner {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
   gap: 1rem;
   row-gap: var(--small, 6px);
 }

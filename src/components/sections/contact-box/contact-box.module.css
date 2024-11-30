@@ -6,7 +6,7 @@
 
 .contactBox__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
   padding: 1.5rem 3rem;
   flex-direction: column;
@@ -29,6 +29,11 @@
   justify-content: flex-end;
 }
 
+.contactSelectorWrapper {
+  container-type: inline-size;
+  container-name: contactSelectorWrapper;
+}
+
 .contactSelector {
   display: flex;
   gap: 1rem;
@@ -40,8 +45,25 @@
   gap: 0.75rem;
 
   align-items: flex-start;
+  min-width: 120px;
 }
 
 .employeeCard {
   flex: 1;
+}
+
+@media (max-width: 400px) {
+  .contactBox__inner {
+    padding: 1rem 1rem;
+  }
+}
+
+@container contactSelectorWrapper (max-width: 350px) {
+  .contactSelector {
+    flex-direction: column;
+  }
+
+  .tagList {
+    flex-direction: row;
+  }
 }
