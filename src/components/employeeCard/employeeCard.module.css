@@ -102,9 +102,12 @@
 
 .skeletonText {
   height: 20px;
-  background-color: var(--background-bg-light-primary);
+  background-color: var(--background-bg-dark);
   border-radius: 4px;
   align-self: flex-start;
+}
+.skeletonText--dark {
+  background-color: var(--background-bg-light-primary);
 }
 
 .skeletonName {

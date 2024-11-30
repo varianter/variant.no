@@ -5,6 +5,9 @@
 }
 
 .contactBox__inner {
+  --_contactBox__background: var(--background-bg-dark);
+  --_contactBox__color: var(--text-primary-light);
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
@@ -16,8 +19,12 @@
   align-self: stretch;
 
   border-radius: var(--radius-small);
-  background: var(--background-bg-dark);
-  color: var(--text-primary-light);
+  background: var(--_contactBox__background);
+  color: var(--_contactBox__color);
+}
+.contactBox__inner--light {
+  --_contactBox__background: var(--background-bg-light-primary);
+  --_contactBox__color: var(--text-primary);
 }
 
 .textContent {

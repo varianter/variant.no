@@ -36,9 +36,12 @@ export default async function ContactBox({
       : [],
   );
 
+  const backgroundClass =
+    section.background === "light" ? styles["contactBox__inner--light"] : "";
+
   return (
     <section className={styles.contactBox}>
-      <div className={styles.contactBox__inner}>
+      <div className={`${styles.contactBox__inner} ${backgroundClass}`}>
         <div className={styles.textContent}>
           <Text type="h3" as="h2">
             {section.basicTitle}

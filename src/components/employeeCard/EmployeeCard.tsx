@@ -84,6 +84,10 @@ export function EmployeeCardSkeleton({
 }) {
   const backgroundClass =
     background === "dark" ? styles["employeeImage--dark"] : "";
+  const backgroundClassText =
+    background === "dark"
+      ? `${styles.skeletonText} ${styles["skeletonText--dark"]}`
+      : styles.skeletonText;
   return (
     <div className={styles.employeeWrapper}>
       <div
@@ -91,12 +95,12 @@ export function EmployeeCardSkeleton({
       >
         <div className={`${styles.employeeImage} ${backgroundClass}`} />
         <div className={styles.employeeInfoWrapper}>
-          <div className={`${styles.skeletonText} ${styles.skeletonName}`} />
-          <div className={`${styles.skeletonText} ${styles.skeletonTitle}`} />
+          <div className={`${backgroundClassText} ${styles.skeletonName}`} />
+          <div className={`${backgroundClassText} ${styles.skeletonTitle}`} />
           <div
-            className={`${styles.skeletonText} ${styles.skeletonAutoMargin} ${styles.skeletonContact}`}
+            className={`${backgroundClassText} ${styles.skeletonAutoMargin} ${styles.skeletonContact}`}
           />
-          <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+          <div className={`${backgroundClassText} ${styles.skeletonContact}`} />
         </div>
       </div>
     </div>
