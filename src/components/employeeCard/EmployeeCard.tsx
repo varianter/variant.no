@@ -53,6 +53,7 @@ export default function EmployeeCard({
                   className={styles.employeeRoleDot}
                   type="labelRegular"
                   key={competence}
+                  as="span"
                 >
                   {competence}
                 </Text>
@@ -63,7 +64,7 @@ export default function EmployeeCard({
               <a href={`mailto:${employee.email}`}>{employee.email}</a>
             </Text>
             {employee.telephone && (
-              <Text type="bodyExtraSmall">
+              <Text type="bodyExtraSmall" className={styles.employeePhone}>
                 <a href={`tel:${employee.telephone}`}>
                   {formatPhoneNumber(employee.telephone)}
                 </a>

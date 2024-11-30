@@ -32,6 +32,12 @@
 
 .employeeNameLink {
   text-decoration: none;
+  color: currentColor;
+}
+
+.employeeEmail a,
+.employeePhone a {
+  color: currentColor;
 }
 
 .employeeWrapper {
@@ -41,17 +47,27 @@
 .employeeWrapper__inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   min-width: 280px;
   gap: 1rem;
   row-gap: var(--small, 6px);
 }
-@container employee (min-width: 320px) {
+@container employee (min-width: 380px) {
   .employeeWrapper__inner {
     flex-direction: row;
   }
   .employeeEmail {
     margin-top: auto;
+  }
+  .employeeEmail,
+  .employeePhone,
+  .employeeRoleDot {
+    font-size: 1rem;
+  }
+  .employeePhone {
+    margin-top: 0.5rem;
+  }
+  .employeeInfoWrapper {
+    padding: 0.5rem 0;
   }
 }
 
@@ -60,15 +76,14 @@
   text-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  height: fit-content;
   gap: 0.25rem;
-  align-self: stretch;
 }
 
 .employeeImage {
   display: block;
   height: 206px;
   min-width: 206px;
+  width: 100%;
   max-width: var(--Text-paragraph, 537px);
   position: relative;
 
@@ -85,14 +100,10 @@
 }
 
 .employeeName {
-  color: var(--text-primary, #222424);
+  color: currentColor;
 }
 
 .employeeRole {
-  display: flex;
-  flex-direction: row;
-  overflow: visible;
-  align-self: stretch;
 }
 
 .employeeRoleDot::after {
