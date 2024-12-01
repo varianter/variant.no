@@ -43,6 +43,13 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
+    _type == "compensationCalculator" => {
+      "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+      "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+      "calculatorDesc": ${translatedFieldFragment("calculatorDesc")},
+      "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+      "handbookDesc": ${translatedFieldFragment("handbookDesc")}
+    },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
     },

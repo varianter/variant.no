@@ -26,6 +26,20 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     },
   }
 `;
+export const COMPENSATIONS_BENEFITS = groq`
+  *[_type == "compensations"][0] {
+    ...,
+    ${LANGUAGE_FIELD_FRAGMENT},
+    "benefitsByLocation": benefitsByLocation[] {
+      ...,
+      "benefits": benefits[] {
+        ...,
+        "basicTitle": ${translatedFieldFragment("basicTitle")},
+        "richText": ${translatedFieldFragment("richText")}
+      }
+    },
+  }
+`;
 export const COMPENSATIONS_PAGE_SITEMAP_QUERY = groq`
   *[_type == "compensations"][0] {
     _updatedAt,

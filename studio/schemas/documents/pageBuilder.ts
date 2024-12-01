@@ -5,6 +5,7 @@ import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
@@ -57,6 +58,7 @@ const pageBuilder = defineType({
         contactBox,
         jobs,
         employeeHighlightSection,
+        compensationCalculator,
       ],
     }),
   ],

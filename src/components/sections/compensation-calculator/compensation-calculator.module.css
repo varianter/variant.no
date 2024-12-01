@@ -1,0 +1,80 @@
+/* Employees.tsx */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 1rem;
+  flex-wrap: wrap;
+
+  max-width: var(--max-content-width-large);
+  margin: 0 auto;
+
+  background: var(--background-bg-light-secondary);
+  padding: 3rem;
+  border-radius: var(--radius-large, 24px);
+
+  @media (max-width: 375px) {
+    padding: 1.5rem;
+  }
+}
+
+.header {
+  color: var(--background-bg-light-primary);
+  font-size: 48px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.employees {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  text-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* EmployeeList.tsx */
+
+.employeeFiltersWrapper {
+  padding: 1.5rem 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.employeeFilterWrapper {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.employeeFilterLabel {
+  flex-shrink: 0;
+  @media (min-width: 375px) {
+    min-width: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+.peopleCountWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.employeeCount {
+  font-size: 16px;
+}
+
+.employeeCountValue {
+  font-weight: 500;
+}
+
+.peopleContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}

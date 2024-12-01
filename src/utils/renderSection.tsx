@@ -6,6 +6,7 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
@@ -251,6 +252,8 @@ const SectionRenderer = ({
           initialData={initialData}
         />
       );
+    case "compensationCalculator":
+      return <CompensationCalculator section={section} language={language} />;
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "contactBox":

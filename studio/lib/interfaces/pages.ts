@@ -116,6 +116,16 @@ export interface JobsSection {
   subtitle: string;
 }
 
+export interface CompensationCalculatorSection {
+  _type: "compensationCalculator";
+  _key: string;
+  moduleTitle: string;
+  calculatorTitle: string;
+  calculatorDescription: PortableTextBlock[];
+  handbookTitle: string;
+  handbookDescription: PortableTextBlock[];
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
@@ -137,8 +147,8 @@ export type Section =
   | GridSection
   | ContactBoxSection
   | EmployeesSection
-  | JobsSection
-  | EmployeeHighlightSection;
+  | CompensationCalculatorSection
+  | JobsSection;
 
 export interface PageBuilder {
   _createdAt: string;
