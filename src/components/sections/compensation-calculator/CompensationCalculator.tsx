@@ -21,6 +21,7 @@ export default async function CompensationCalculator({
     },
   );
   const compensationCalculator = employeesPageRes.data.slug;
+  console.log(compensationCalculator);
 
   return (
     <div className={styles.wrapper}>
