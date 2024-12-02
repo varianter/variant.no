@@ -5,6 +5,7 @@ import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import contactBox from "studio/schemas/objects/sections/contact-box";
 import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
@@ -49,6 +50,7 @@ const pageBuilder = defineType({
         imageSection,
         grid,
         employees,
+        contactBox,
       ],
     }),
   ],

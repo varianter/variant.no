@@ -80,6 +80,19 @@ export interface GridSection {
     image: IImage;
   }[];
 }
+export interface ContactBoxSection {
+  _type: "contactBox";
+  _key: string;
+  basicTitle: string;
+  optionalSubtitle?: string;
+  background: "light" | "dark";
+  contactPoints: {
+    _key: string;
+    _type: string;
+    tag: string;
+    email: string;
+  }[];
+}
 
 export interface EmployeesSection {
   _type: "employees";
@@ -96,6 +109,7 @@ export type Section =
   | TestimonialsSection
   | ImageSection
   | GridSection
+  | ContactBoxSection
   | EmployeesSection;
 
 export interface PageBuilder {

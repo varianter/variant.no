@@ -7,6 +7,7 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import ContactBox from "src/components/sections/contact-box/ContactBox";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
@@ -219,6 +220,8 @@ const SectionRenderer = ({
       );
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
+    case "contactBox":
+      return <ContactBox section={section} language={language} />;
     case "employees":
       return <Employees language={language} section={section} />;
     default:

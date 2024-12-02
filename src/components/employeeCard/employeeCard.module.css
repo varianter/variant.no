@@ -4,18 +4,6 @@
   gap: 1rem;
 }
 
-.employeeImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--background-bg-dark);
-  border-radius: 12px;
-  height: 125px;
-  width: 50%;
-  padding: 1rem;
-  position: relative;
-}
-
 .employeeInfoWrapper {
   display: flex;
   flex-direction: column;
@@ -32,15 +20,23 @@
 
 .employeeNameLink {
   text-decoration: none;
+  color: currentColor;
+}
+
+.employeeEmail a,
+.employeePhone a {
+  color: currentColor;
 }
 
 .employeeWrapper {
+  container-type: inline-size;
+  container-name: employee;
+}
+.employeeWrapper__inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 280px;
-  max-width: var(--Text-paragraph, 537px);
-  gap: var(--small, 6px);
+  gap: 1rem;
+  row-gap: var(--small, 6px);
 }
 
 .employeeInfoWrapper {
@@ -48,20 +44,22 @@
   text-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  height: fit-content;
   gap: 0.25rem;
-  align-self: stretch;
 }
 
 .employeeImage {
   display: block;
   height: 206px;
-  min-width: 280px;
+  min-width: 206px;
+  width: 100%;
   max-width: var(--Text-paragraph, 537px);
   position: relative;
 
   background-color: var(--background-bg-dark);
   border-radius: var(--medium, 12px);
+}
+.employeeImage--dark {
+  background-color: var(--background-bg-light-primary);
 }
 
 .employeeInfo {
@@ -73,14 +71,10 @@
 }
 
 .employeeName {
-  color: var(--text-primary, #222424);
+  color: currentColor;
 }
 
 .employeeRole {
-  display: flex;
-  flex-direction: row;
-  overflow: visible;
-  align-self: stretch;
 }
 
 .employeeRoleDot::after {
@@ -101,16 +95,19 @@
   color: var(--text-tertiary, #5e5e5e);
 }
 
-/* Update the skeleton styles */
+/* Skeleton styles */
 .skeletonCard {
   animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .skeletonText {
   height: 20px;
-  background-color: var(--background-bg-light-primary);
+  background-color: var(--background-bg-dark);
   border-radius: 4px;
   align-self: flex-start;
+}
+.skeletonText--dark {
+  background-color: var(--background-bg-light-primary);
 }
 
 .skeletonName {
@@ -132,5 +129,29 @@
   }
   50% {
     opacity: 0.5;
+  }
+}
+
+@container employee (min-width: 380px) {
+  .employeeWrapper__inner {
+    flex-direction: row;
+  }
+  .employeeEmail {
+    margin-top: auto;
+  }
+  .employeeEmail,
+  .employeePhone,
+  .employeeRoleDot {
+    font-size: 1rem;
+  }
+  .employeePhone {
+    margin-top: 0.5rem;
+  }
+  .employeeInfoWrapper {
+    padding: 0.5rem 0;
+  }
+
+  .skeletonAutoMargin {
+    margin-top: auto;
   }
 }
