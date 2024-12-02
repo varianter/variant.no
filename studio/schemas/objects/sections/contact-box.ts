@@ -68,17 +68,7 @@ export const contactBox = defineField({
             defineField({
               name: "email",
               title: "Enter the email address for contact point",
-              type: "string",
-              validation: (rule) =>
-                rule.custom((value: string | undefined) => {
-                  if (!value) {
-                    return "Must have a valid email address";
-                  }
-                  if (value && !/^\S+@\S+\.\S+$/.test(value)) {
-                    return "Must be a valid email address";
-                  }
-                  return true;
-                }),
+              type: "email",
             }),
           ],
           preview: {
