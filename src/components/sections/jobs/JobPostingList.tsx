@@ -57,7 +57,8 @@ export default function JobPostingList({
           active={!locationFilter}
           type="button"
           onClick={() => setLocationFilter(null)}
-          text={"Alle"}
+          text="Alle"
+          background="violet"
         />
         {companyLocations.map((location: CompanyLocation) => (
           <Tag
@@ -66,6 +67,7 @@ export default function JobPostingList({
             onClick={() => setLocationFilter(location)}
             text={location.companyLocationName}
             key={location._id}
+            background="violet"
           />
         ))}
       </div>

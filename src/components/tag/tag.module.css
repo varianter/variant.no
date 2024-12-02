@@ -38,6 +38,19 @@
   --_tag-background: transparent;
 }
 
+.tag--bgViolet {
+  --_tag-borderColor: var(--text-primary-light);
+  --_tag-color: var(--text-primary-light);
+}
+.tag--bgViolet:active {
+  --_tag-background: var(--text-primary-light);
+  --_tag-color: var(--text-primary);
+}
+.tag--bgViolet:hover {
+  --_tag-color: var(--text-primary-light);
+  --_tag-background: transparent;
+}
+
 .tag--active {
   --_tag-background: var(--background-bg-dark);
   --_tag-color: var(--text-primary-light);
@@ -47,5 +60,9 @@
 }
 .tag--active.tag--bgDark {
   --_tag-background: var(--background-bg-light-primary);
+  --_tag-color: var(--text-primary);
+}
+.tag--active.tag--bgViolet {
+  --_tag-background: var(--text-primary-light);
   --_tag-color: var(--text-primary);
 }
