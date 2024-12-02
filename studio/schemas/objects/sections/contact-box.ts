@@ -59,6 +59,8 @@ export const contactBox = defineField({
               name: "tag",
               title: "Tag",
               type: "string",
+              description:
+                "Used button to filter contact points (e.g. Trondheim, Bergen, Oslo).",
               validation: (rule) => rule.max(30).required(),
               components: {
                 input: (props) =>
