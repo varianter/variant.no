@@ -29,6 +29,8 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "imageSplitSection" => {
       ...,
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
       actions[] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}

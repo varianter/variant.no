@@ -73,7 +73,7 @@ export interface ImageSplitSection {
   _key: string;
   basicTitle: string;
   imageExtended: ImageExtendedProps;
-  richText?: PortableTextBlock[];
+  description: string;
   actions: ILink[];
 }
 

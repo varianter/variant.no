@@ -1,8 +1,9 @@
 import { defineField } from "sanity";
 
 import { imageExtended } from "studio/schemas/fields/media";
-import { richText, title } from "studio/schemas/fields/text";
+import { titleID } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
+import { firstTranslation } from "studio/utils/i18n";
 
 export const imageID = "imageSplitSection";
 
@@ -11,8 +12,22 @@ export const imageSplitSection = defineField({
   title: "Image Split",
   type: "object",
   fields: [
-    title,
-    richText,
+    {
+      name: titleID.basic,
+      type: "internationalizedArrayString",
+      title: "Title",
+      description:
+        "Enter the primary title that will be displayed at the top of the employees section.",
+    },
+
+    {
+      name: "description",
+      type: "internationalizedArrayString",
+      title: "Main content",
+      description:
+        "Enter the main content that will be displayed below the title.",
+    },
+
     imageExtended,
     {
       name: "actions",
@@ -28,8 +43,7 @@ export const imageSplitSection = defineField({
     prepare(selection) {
       const { title } = selection;
       return {
-        title: title,
-        subtitle: "Image",
+        title: firstTranslation(title) ?? undefined,
       };
     },
   },
