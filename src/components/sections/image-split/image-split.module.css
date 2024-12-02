@@ -21,6 +21,9 @@
 
 .textContainer__link {
   margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .image {

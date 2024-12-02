@@ -74,7 +74,7 @@ export interface ImageSplitSection {
   basicTitle: string;
   imageExtended: ImageExtendedProps;
   richText?: PortableTextBlock[];
-  link?: ILink;
+  actions: ILink[];
 }
 
 export interface GridSection {

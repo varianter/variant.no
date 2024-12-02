@@ -10,7 +10,17 @@ export const imageSplitSection = defineField({
   name: imageID,
   title: "Image Split",
   type: "object",
-  fields: [title, richText, imageExtended, link],
+  fields: [
+    title,
+    richText,
+    imageExtended,
+    {
+      name: "actions",
+      title: "Actions (links)",
+      type: "array",
+      of: [link],
+    },
+  ],
   preview: {
     select: {
       title: "basicTitle",

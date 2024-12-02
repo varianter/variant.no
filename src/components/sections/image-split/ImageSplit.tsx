@@ -42,9 +42,16 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
           />
         )}
 
-        {section.link && (
+        {section.actions.length > 0 && (
           <div className={styles.textContainer__link}>
-            <LinkButton isSmall link={section.link} />
+            {section.actions.map((action, index) => (
+              <LinkButton
+                key={action._key}
+                type={index === 0 ? "primary" : "secondary"}
+                isSmall
+                link={action}
+              />
+            ))}
           </div>
         )}
       </div>

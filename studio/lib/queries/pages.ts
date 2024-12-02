@@ -29,7 +29,7 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "imageSplitSection" => {
       ...,
-      link {
+      actions[] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
       }
