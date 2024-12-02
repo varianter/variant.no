@@ -1,10 +1,14 @@
-import JobPosting from "src/components/jobPosting/JobPosting";
 import Text from "src/components/text/Text";
-import { IJobPosting, IJobPostings } from "studio/lib/interfaces/jobPosting";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
+import { IJobPostings } from "studio/lib/interfaces/jobPosting";
 import { JobsSection } from "studio/lib/interfaces/pages";
-import { JOB_POSTINGS_QUERY } from "studio/lib/queries/admin";
+import {
+  COMPANY_LOCATIONS_QUERY,
+  JOB_POSTINGS_QUERY,
+} from "studio/lib/queries/admin";
 import { loadStudioQuery } from "studio/lib/store";
 
+import JobPostingList from "./JobPostingList";
 import styles from "./jobs.module.css";
 
 export interface JobsProps {
@@ -20,17 +24,24 @@ export default async function Jobs({ language, section }: JobsProps) {
     },
   );
 
+  const { data: companyLocations } = await loadStudioQuery<CompanyLocation[]>(
+    COMPANY_LOCATIONS_QUERY,
+    {},
+  );
+
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.titleSection}>
-        <Text type={"h2"}>{section.basicTitle}</Text>
-        <Text type={"bodyNormal"}>{section.subtitle}</Text>
+    jobPostings &&
+    companyLocations && (
+      <div className={styles.wrapper}>
+        <div className={styles.titleSection}>
+          <Text type={"h2"}>{section.basicTitle}</Text>
+          <Text type={"bodyNormal"}>{section.subtitle}</Text>
+        </div>
+        <JobPostingList
+          jobPostings={jobPostings.jobPostingsArray}
+          companyLocations={companyLocations}
+        />
       </div>
-      <div className={styles.jobPostings}>
-        {jobPostings?.jobPostingsArray?.map((jobPosting: IJobPosting) => (
-          <JobPosting jobPosting={jobPosting} key={jobPosting._key} />
-        ))}
-      </div>
-    </div>
+    )
   );
 }

@@ -8,7 +8,7 @@ interface JobPostingProps {
   jobPosting: IJobPosting;
 }
 
-export default async function JobPosting({ jobPosting }: JobPostingProps) {
+export default function JobPosting({ jobPosting }: JobPostingProps) {
   const jobPostingLocations = jobPosting.locations
     .map((location: CompanyLocation) => location.companyLocationName)
     .join(", ");
