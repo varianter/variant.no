@@ -1,0 +1,32 @@
+.imageSplit {
+  max-width: var(--max-content-width-small);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 3rem;
+  row-gap: 5.25rem;
+  padding: 1rem;
+  margin: 3.75rem auto;
+
+  box-sizing: content-box;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textContainer__link {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}

@@ -68,6 +68,15 @@ export interface ImageSection {
   image: IImage;
 }
 
+export interface ImageSplitSection {
+  _type: "imageSplitSection";
+  _key: string;
+  basicTitle: string;
+  imageExtended: ImageExtendedProps;
+  description: string;
+  actions: ILink[];
+}
+
 export interface GridSection {
   _type: "grid";
   _key: string;
@@ -108,6 +117,7 @@ export type Section =
   | CallToActionSection
   | TestimonialsSection
   | ImageSection
+  | ImageSplitSection
   | GridSection
   | ContactBoxSection
   | EmployeesSection;
