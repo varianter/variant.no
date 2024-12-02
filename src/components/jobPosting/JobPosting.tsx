@@ -1,3 +1,4 @@
+import Badge from "src/components/badge/Badge";
 import Text from "src/components/text/Text";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { IJobPosting } from "studio/lib/interfaces/jobPosting";
@@ -23,9 +24,7 @@ export default function JobPosting({ jobPosting }: JobPostingProps) {
         <div className={styles.role}>
           <Text type={"h5"}>{jobPosting.role}</Text>
         </div>
-        <div className={styles.locations}>
-          <Text type={"labelLight"}>{jobPostingLocations}</Text>
-        </div>
+        <Badge>{jobPostingLocations}</Badge>
       </div>
     </a>
   );
