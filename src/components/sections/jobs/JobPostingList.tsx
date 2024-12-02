@@ -51,7 +51,7 @@ export default function JobPostingList({
 
   return (
     <div className={styles.jobPostingsContainer}>
-      <div className={styles.jobPostingFilterWrapper}>
+      <div className={styles.filters}>
         <Text type="labelRegular">Kontor</Text>
         <Tag
           active={!locationFilter}
