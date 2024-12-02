@@ -2,6 +2,16 @@ import { defineField } from "sanity";
 
 export const compensationCalculatorId = "compensationCalculator";
 
+export enum CompensationCalculatorBackground {
+  Dark = "dark",
+  Violet = "violet",
+}
+
+const backgroundOptions = [
+  { title: "Dark", value: CompensationCalculatorBackground.Dark },
+  { title: "Violet", value: CompensationCalculatorBackground.Violet },
+];
+
 export const compensationCalculator = defineField({
   name: compensationCalculatorId,
   title: "Compensation Calculator",
@@ -18,6 +28,19 @@ export const compensationCalculator = defineField({
       ],
     },
     {
+      name: "background",
+      title: "Background",
+      type: "string",
+      description:
+        "Select the whether the calculator should be purple or have dark background.",
+      options: {
+        list: backgroundOptions,
+        layout: "radio",
+      },
+      initialValue: CompensationCalculatorBackground.Dark,
+    },
+
+    {
       name: "calculatorTitle",
       type: "internationalizedArrayString",
       title: "Calculator Title",
@@ -28,7 +51,7 @@ export const compensationCalculator = defineField({
       ],
     },
     {
-      name: "calculatorDesc",
+      name: "calculatorDescription",
       title: "Calculator Description",
       type: "internationalizedArrayString",
       description: "Description that will be displayed inside the calculator.",
@@ -56,7 +79,7 @@ export const compensationCalculator = defineField({
       ],
     },
     {
-      name: "handbookDesc",
+      name: "handbookDescription",
       title: "Handbook Description",
       type: "internationalizedArrayString",
       description:

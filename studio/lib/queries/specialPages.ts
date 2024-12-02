@@ -26,17 +26,11 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     },
   }
 `;
-export const COMPENSATIONS_BENEFITS = groq`
+export const COMPENSATIONS_SALARIES = groq`
   *[_type == "compensations"][0] {
-    ...,
-    ${LANGUAGE_FIELD_FRAGMENT},
-    "benefitsByLocation": benefitsByLocation[] {
-      ...,
-      "benefits": benefits[] {
-        ...,
-        "basicTitle": ${translatedFieldFragment("basicTitle")},
-        "richText": ${translatedFieldFragment("richText")}
-      }
+    "slug": ${translatedFieldFragment("slug")},
+    "salariesByLocation": salariesByLocation[] {
+      ...
     },
   }
 `;

@@ -5,6 +5,7 @@ import { SeoData } from "src/utils/seo";
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
+import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 export interface HeroSection {
   _type: "hero";
@@ -120,10 +121,11 @@ export interface CompensationCalculatorSection {
   _type: "compensationCalculator";
   _key: string;
   moduleTitle: string;
+  background: CompensationCalculatorBackground;
   calculatorTitle: string;
-  calculatorDescription: PortableTextBlock[];
+  calculatorDescription: string;
   handbookTitle: string;
-  handbookDescription: PortableTextBlock[];
+  handbookDescription: string;
 }
 
 export interface EmployeeHighlightSection {
