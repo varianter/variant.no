@@ -1,11 +1,11 @@
 import { PortableTextBlock } from "sanity";
 
 import { SeoData } from "src/utils/seo";
+import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
-import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 export interface HeroSection {
   _type: "hero";

@@ -1,8 +1,8 @@
 import Text from "src/components/text/Text";
+import { SalariesByLocation } from "studio/lib/interfaces/compensations";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
 import { COMPENSATIONS_SALARIES } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
-import { SalariesByLocation } from "studio/lib/interfaces/compensations";
 
 import styles from "./compensation-calculator.module.css";
 
