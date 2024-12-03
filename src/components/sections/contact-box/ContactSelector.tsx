@@ -30,8 +30,12 @@ export default function ContactSelector({
   const contactPoints = use(contactPointsPromise);
 
   const [selectedTag, setSelectedTag] = useState<string | null>(
-    contactPoints[0].tagSlug,
+    contactPoints[0]?.tagSlug,
   );
+
+  if (!contactPoints.length) {
+    return null;
+  }
 
   return (
     <div className={styles.contactSelector}>
