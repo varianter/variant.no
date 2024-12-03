@@ -1,55 +1,48 @@
 "use client";
 
-import { use, useEffect, useOptimistic, useState } from "react";
-import Text from "src/components/text/Text";
-import { formatAsCurrency } from "src/utils/i18n";
-import { LocaleDocument } from "studio/lib/interfaces/locale";
-import { getSalaryByYear } from "./actions";
+import { use, useState } from "react";
+
+import Button from "src/components/buttons/Button";
+import { calculateSalary } from "src/components/compensations/utils/salary";
+import InputField from "src/components/forms/inputField/InputField";
 import {
   IOption,
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
-import InputField from "src/components/forms/inputField/InputField";
-import Button from "src/components/buttons/Button";
+import Text from "src/components/text/Text";
+import { formatAsCurrency } from "src/utils/i18n";
+import { LocaleDocument } from "studio/lib/interfaces/locale";
+import { Result } from "studio/utils/result";
 
-export type Degree = "bachelor" | "master";
+import { Degree, SalaryData } from "./types";
 
 type CalculatorProps = {
-  initialSalary: number;
   localeRes: Promise<LocaleDocument>;
-};
+  salariesRes: Promise<Result<SalaryData, unknown>>;
 
-type SalarySettings = {
-  year: number;
-  degree: Degree;
+  initialDegree: Degree;
+  initialYear: number;
 };
 
 export default function Calculator({
   localeRes,
-  initialSalary,
+  salariesRes,
+  initialDegree,
+  initialYear,
 }: CalculatorProps) {
   const locale = use(localeRes);
-  const [year, setYear] = useState(2024);
-  const [degree, setDegree] = useState<Degree>("bachelor");
-  const [salary, setSalary] = useState(initialSalary);
+  const salaries = use(salariesRes);
+  const [year, setYear] = useState(initialYear);
+  const [degree, setDegree] = useState<Degree>(initialDegree);
 
-  if (!locale) {
+  if (!locale || !salaries.ok) {
     console.error(
       "[CompensationCalculator]: Sanity data not found. Not rendering CompensationCalculator.",
     );
     return null;
   }
 
-  useEffect(() => {
-    async function fetchSalary() {
-      const salaryByYear = await getSalaryByYear(year);
-      console.log(salaryByYear);
-
-      setSalary(salaryByYear.ok ? salaryByYear.value : initialSalary);
-    }
-
-    fetchSalary();
-  }, [year, degree]);
+  const salary = calculateSalary(year, degree, salaries.value) ?? 0;
 
   return (
     <div>
@@ -60,19 +53,14 @@ export default function Calculator({
         selectedDegree={degree}
         onDegreeChanged={setDegree}
         onExaminationYearChanged={setYear}
-        action={async () => {
-          const salaryByYear = await getSalaryByYear(2024);
-
-          console.log(salaryByYear);
-        }}
+        action={async () => {}}
       />
 
       {salary !== null ? (
         <div aria-live="polite">
           <Text>Din årslønn</Text>
           <Text>
-            {salary}
-            {/* {formatAsCurrency(salary, locale.locale, locale.currency)} */}
+            {formatAsCurrency(salary, locale.locale, locale.currency)}
           </Text>
           <Text>+ bonus</Text>
         </div>
