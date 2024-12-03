@@ -1,0 +1,76 @@
+.contactBox {
+  margin: 8rem auto;
+  padding: 0 1rem;
+  max-width: var(--max-content-width-large);
+}
+
+.contactBox__inner {
+  --_contactBox__background: var(--background-bg-dark);
+  --_contactBox__color: var(--text-primary-light);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  padding: 1.5rem 3rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: var(--Padding-l, 48px);
+  align-self: stretch;
+
+  border-radius: var(--radius-small);
+  background: var(--_contactBox__background);
+  color: var(--_contactBox__color);
+}
+.contactBox__inner--light {
+  --_contactBox__background: var(--background-bg-light-primary);
+  --_contactBox__color: var(--text-primary);
+}
+
+.textContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  justify-content: flex-end;
+}
+
+.contactSelectorWrapper {
+  container-type: inline-size;
+  container-name: contactSelectorWrapper;
+}
+
+.contactSelector {
+  display: flex;
+  gap: 1rem;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  align-items: flex-start;
+  min-width: 120px;
+}
+
+.employeeCard {
+  flex: 1;
+}
+
+@media (max-width: 400px) {
+  .contactBox__inner {
+    padding: 1rem 1rem;
+  }
+}
+
+@container contactSelectorWrapper (max-width: 350px) {
+  .contactSelector {
+    flex-direction: column;
+  }
+
+  .tagList {
+    flex-direction: row;
+  }
+}

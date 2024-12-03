@@ -1,7 +1,6 @@
 import { headers } from "next/headers";
 import { Suspense } from "react";
 
-import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
 import Text from "src/components/text/Text";
 import { fetchAllChewbaccaEmployees } from "src/utils/employees";
 import { domainFromHostname } from "src/utils/url";
@@ -11,6 +10,7 @@ import { loadStudioQuery } from "studio/lib/store";
 
 import EmployeeList from "./EmployeeList";
 import styles from "./employees.module.css";
+import { EmployeeListSkeleton } from "./EmployeeSkeleton";
 
 export interface EmployeesProps {
   language: string;
@@ -26,7 +26,9 @@ export default async function Employees({ language, section }: EmployeesProps) {
   );
   const employeesPageSlug = employeesPageRes.data.slug;
 
-  const countryTld = domainFromHostname(headers().get("host")).split(".")[1];
+  const countryTld = domainFromHostname(headers().get("host"))
+    .split(".")
+    .at(-1);
   const employees = fetchAllChewbaccaEmployees(countryTld);
 
   return (
@@ -42,16 +44,6 @@ export default async function Employees({ language, section }: EmployeesProps) {
           />
         </Suspense>
       </div>
-    </div>
-  );
-}
-
-function EmployeeListSkeleton() {
-  return (
-    <div className={styles.peopleContainer}>
-      {[...Array(4)].map((_, index) => (
-        <EmployeeCardSkeleton key={index} />
-      ))}
     </div>
   );
 }

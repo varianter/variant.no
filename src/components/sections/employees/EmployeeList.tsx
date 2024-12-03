@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { use, useState } from "react";
+import { use, useState, useTransition } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
@@ -10,6 +13,7 @@ import { ChewbaccaEmployee, Competence } from "src/types/employees";
 import { Result } from "studio/utils/result";
 
 import styles from "./employees.module.css";
+import { EmployeeListSkeleton } from "./EmployeeSkeleton";
 
 const competences: Competence[] = [
   "Utvikling",
@@ -29,6 +33,8 @@ interface EmployeeFilters {
   locationFilter: string | null;
 }
 
+const DEFAULT_LIMIT = 4 * 2;
+
 export default function EmployeeList({
   employees: employeesPromise,
   language,
@@ -36,9 +42,16 @@ export default function EmployeeList({
 }: EmployeesProps) {
   const employeesRes = use(employeesPromise);
   const employees = employeesRes.ok ? employeesRes.value : [];
-  const [filteredEmployees, setFilteredEmployees] = useState<
-    ChewbaccaEmployee[]
-  >(shuffleEmployees(employees));
+  const [filteredEmployees, setFilteredEmployees] =
+    useState<ChewbaccaEmployee[]>(employees);
+
+  const {
+    showShowMoreButton,
+    isShowMorePending,
+    limitedEmployees,
+    showMoreHandler,
+    showMoreHref,
+  } = useShowAll(filteredEmployees);
 
   const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
@@ -96,7 +109,7 @@ export default function EmployeeList({
             text={t("all")}
           />
 
-          {competences.map((competence) => {
+          {sortCompetenceAlphabetically(competences).map((competence) => {
             const active = employeeFilters.competenceFilter == competence;
             return (
               <Tag
@@ -122,7 +135,7 @@ export default function EmployeeList({
             text={t("all")}
           />
 
-          {locations.map((location) => {
+          {sortAlphabetically(locations).map((location) => {
             if (!location) return null;
             const active = employeeFilters.locationFilter == location;
             return (
@@ -148,7 +161,7 @@ export default function EmployeeList({
         </p>
 
         <div className={styles.peopleContainer}>
-          {filteredEmployees.map((employee) => (
+          {limitedEmployees.map((employee) => (
             <EmployeeCard
               employee={employee}
               employeePageSlug={employeesPageSlug}
@@ -157,11 +170,81 @@ export default function EmployeeList({
             />
           ))}
         </div>
+        {isShowMorePending && <EmployeeListSkeleton />}
+
+        {showShowMoreButton && (
+          <ShowMoreButton
+            showMoreHandler={showMoreHandler}
+            showMoreHref={showMoreHref}
+          />
+        )}
       </div>
     </>
   );
 }
 
-function shuffleEmployees(employees: ChewbaccaEmployee[]) {
-  return employees.sort(() => Math.random() - 0.5);
+function ShowMoreButton({
+  showMoreHandler,
+  showMoreHref,
+}: {
+  showMoreHandler: () => void;
+  showMoreHref: string;
+}) {
+  const t = useTranslations("employee_card");
+
+  // @TODO Replace with Button component when actually implemented
+  return (
+    <div className={styles.showMore}>
+      <Link
+        className={styles.showMore__button}
+        onClick={showMoreHandler}
+        href={showMoreHref}
+        shallow
+        scroll={false}
+      >
+        {t("showMore")}{" "}
+        <Image
+          src="/_assets/arrow-down.svg"
+          alt=""
+          role="none"
+          width={24}
+          height={24}
+        />
+      </Link>
+    </div>
+  );
+}
+
+function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
+  const [isPending, startTransition] = useTransition();
+
+  const currentPath = usePathname();
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const limitEmployees = !searchParams.has("showAll");
+  const limitedEmployees = limitEmployees
+    ? filteredEmployees.slice(0, DEFAULT_LIMIT)
+    : filteredEmployees;
+
+  const showMoreHandler = () =>
+    startTransition(() => {
+      replace(`${currentPath}?showAll`);
+    });
+
+  return {
+    limitedEmployees,
+    showMoreHandler,
+    isShowMorePending: isPending,
+    showShowMoreButton:
+      limitEmployees && !isPending && filteredEmployees.length > DEFAULT_LIMIT,
+    showMoreHref: `${currentPath}?showAll`,
+  };
+}
+
+function sortAlphabetically(filter: (string | null | undefined)[]) {
+  return filter.sort((a, b) => a?.localeCompare(b ?? "") ?? 0);
+}
+
+function sortCompetenceAlphabetically(competences: Competence[]) {
+  return competences.sort((a, b) => a?.localeCompare(b ?? "") ?? 0);
 }

@@ -7,7 +7,7 @@ export enum titleID {
   optional = "optionalTitle",
 }
 
-enum subtitleID {
+export enum subtitleID {
   optional = "optionalSubtitle",
 }
 

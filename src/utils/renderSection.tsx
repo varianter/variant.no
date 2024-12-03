@@ -1,5 +1,4 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
-import React from "react";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
@@ -7,13 +6,17 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import ContactBox from "src/components/sections/contact-box/ContactBox";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
+import ImageSplitComponent from "src/components/sections/image-split/ImageSplit";
+import ImageSplitComponentPreview from "src/components/sections/image-split/ImageSplitPreview";
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
+import Jobs from "src/components/sections/jobs/Jobs";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
@@ -25,6 +28,7 @@ import {
   GridSection,
   HeroSection,
   ImageSection,
+  ImageSplitSection,
   LogoSaladSection,
   PageBuilder,
   Section,
@@ -144,6 +148,26 @@ const renderImageSection = (
     <ImageSectionComponent section={section} />
   );
 };
+function ImageSplitSectionWrapper({
+  section,
+  sectionIndex,
+  isDraftMode,
+  initialData,
+}: {
+  section: ImageSplitSection;
+  sectionIndex: number;
+  isDraftMode: boolean;
+  initialData: QueryResponseInitial<PageBuilder>;
+}) {
+  return isDraftMode ? (
+    <ImageSplitComponentPreview
+      initialData={initialData}
+      sectionIndex={sectionIndex}
+    />
+  ) : (
+    <ImageSplitComponent section={section} />
+  );
+}
 
 const renderGridSection = (
   section: GridSection,
@@ -217,10 +241,23 @@ const SectionRenderer = ({
         isDraftMode,
         initialData,
       );
+    case "imageSplitSection":
+      return (
+        <ImageSplitSectionWrapper
+          section={section}
+          sectionIndex={sectionIndex}
+          isDraftMode={isDraftMode}
+          initialData={initialData}
+        />
+      );
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
+    case "contactBox":
+      return <ContactBox section={section} language={language} />;
     case "employees":
       return <Employees language={language} section={section} />;
+    case "jobs":
+      return <Jobs language={language} section={section} />;
     default:
       return null;
   }

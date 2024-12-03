@@ -35,6 +35,11 @@
     "Design": "Design",
     "Utvikling": "Utvikling",
     "Administasjon": "Administrasjon",
-    "field": "Fag"
+    "field": "Fag",
+    "showMore": "Vis alle"
+  },
+  "job_posting": {
+    "office": "Kontor",
+    "all": "Alle"
   }
 }

@@ -68,6 +68,15 @@ export interface ImageSection {
   image: IImage;
 }
 
+export interface ImageSplitSection {
+  _type: "imageSplitSection";
+  _key: string;
+  basicTitle: string;
+  imageExtended: ImageExtendedProps;
+  description: string;
+  actions: ILink[];
+}
+
 export interface GridSection {
   _type: "grid";
   _key: string;
@@ -80,11 +89,31 @@ export interface GridSection {
     image: IImage;
   }[];
 }
+export interface ContactBoxSection {
+  _type: "contactBox";
+  _key: string;
+  basicTitle: string;
+  optionalSubtitle?: string;
+  background: "light" | "dark";
+  contactPoints: {
+    _key: string;
+    _type: string;
+    tag: string;
+    email: string;
+  }[];
+}
 
 export interface EmployeesSection {
   _type: "employees";
   _key: string;
   basicTitle: string;
+}
+
+export interface JobsSection {
+  _type: "jobs";
+  _key: string;
+  basicTitle: string;
+  subtitle: string;
 }
 
 export type Section =
@@ -95,8 +124,11 @@ export type Section =
   | CallToActionSection
   | TestimonialsSection
   | ImageSection
+  | ImageSplitSection
   | GridSection
-  | EmployeesSection;
+  | ContactBoxSection
+  | EmployeesSection
+  | JobsSection;
 
 export interface PageBuilder {
   _createdAt: string;
