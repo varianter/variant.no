@@ -81,16 +81,17 @@ export default function JobPostingList({
           background="violet"
         />
         {sortAlphabetically(companyLocations).map(
-          (location: CompanyLocation) => (
-            <Tag
-              active={locationFilter === location}
-              type="button"
-              onClick={() => setLocationFilter(location)}
-              text={`${location.companyLocationName} (${jobPostingsPerLocation[location.companyLocationName]})`}
-              key={location._id}
-              background="violet"
-            />
-          ),
+          (location: CompanyLocation) =>
+            jobPostingsPerLocation[location.companyLocationName] > 0 && (
+              <Tag
+                active={locationFilter === location}
+                type="button"
+                onClick={() => setLocationFilter(location)}
+                text={`${location.companyLocationName} (${jobPostingsPerLocation[location.companyLocationName]})`}
+                key={location._id}
+                background="violet"
+              />
+            ),
         )}
       </div>
       <div className={styles.jobPostings}>
