@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
 
 import JobPosting from "src/components/jobPosting/JobPosting";
@@ -15,6 +16,13 @@ interface JobPostingListProps {
   companyLocations: CompanyLocation[];
 }
 
+function sortAlphabetically(filter: CompanyLocation[]) {
+  return filter.sort(
+    (a, b) =>
+      a?.companyLocationName.localeCompare(b.companyLocationName ?? "") ?? 0,
+  );
+}
+
 export default function JobPostingList({
   jobPostings,
   companyLocations,
@@ -24,6 +32,7 @@ export default function JobPostingList({
   );
   const [filteredJobPostings, setFilteredJobPostings] =
     useState<IJobPosting[]>(jobPostings);
+
   const jobPostingLocations = useMemo(
     () =>
       Object.fromEntries(
@@ -34,6 +43,17 @@ export default function JobPostingList({
       ),
     [jobPostings],
   );
+
+  const jobPostingsPerLocation = Object.fromEntries(
+    companyLocations.map((location) => [location.companyLocationName, 0]),
+  );
+  for (const jobPosting of jobPostings) {
+    for (const location of jobPosting.locations) {
+      jobPostingsPerLocation[location.companyLocationName]++;
+    }
+  }
+
+  const t = useTranslations("employee_card");
 
   useEffect(() => {
     if (locationFilter === null) {
@@ -57,19 +77,21 @@ export default function JobPostingList({
           active={!locationFilter}
           type="button"
           onClick={() => setLocationFilter(null)}
-          text="Alle"
+          text={`${t("all")} (${jobPostings.length})`}
           background="violet"
         />
-        {companyLocations.map((location: CompanyLocation) => (
-          <Tag
-            active={locationFilter === location}
-            type="button"
-            onClick={() => setLocationFilter(location)}
-            text={location.companyLocationName}
-            key={location._id}
-            background="violet"
-          />
-        ))}
+        {sortAlphabetically(companyLocations).map(
+          (location: CompanyLocation) => (
+            <Tag
+              active={locationFilter === location}
+              type="button"
+              onClick={() => setLocationFilter(location)}
+              text={`${location.companyLocationName} (${jobPostingsPerLocation[location.companyLocationName]})`}
+              key={location._id}
+              background="violet"
+            />
+          ),
+        )}
       </div>
       <div className={styles.jobPostings}>
         {filteredJobPostings?.map((jobPosting: IJobPosting) => (
