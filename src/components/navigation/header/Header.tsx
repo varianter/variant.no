@@ -11,7 +11,6 @@ import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import Text from "src/components/text/Text";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
@@ -29,9 +28,7 @@ export interface IHeader {
   assets: BrandAssets;
   announcement: Announcement | null;
   currentLanguage: string;
-  pathTitles: string[];
   pathTranslations: InternationalizedString;
-  showBreadcrumbs: boolean;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -41,17 +38,13 @@ export const Header = ({
   navigation,
   announcement,
   currentLanguage,
-  pathTitles,
   pathTranslations,
-  showBreadcrumbs,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
 
   const scrollDirection = useScrollDirection();
-
-  console.log("#####", scrollDirection);
 
   const links = filterLinks(navigation.main, linkID);
   const ctas = filterLinks(navigation.main, callToActionFieldID);
@@ -116,7 +109,7 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
-                <Button size="large" type="primary" background="light">
+                <Button size="large" type="secondary" background="light">
                   <Text type="labelRegular">{t("contact_us")}</Text>
                 </Button>
               </div>
@@ -144,7 +137,7 @@ export const Header = ({
                   />
                 )}
                 {/* TODO: add styling for this section */}
-                <Button size="large" type="primary" background="light">
+                <Button size="large" type="primary" background="dark">
                   <Text type="labelRegular">{t("contact_us")}</Text>
                 </Button>
               </div>
@@ -168,14 +161,6 @@ export const Header = ({
           )}
         </header>
       </FocusOn>
-
-      {showBreadcrumbs && (
-        <BreadCrumbMenu
-          currentLanguage={currentLanguage}
-          pathTitles={pathTitles}
-          pathname={pathname}
-        />
-      )}
     </>
   );
 };

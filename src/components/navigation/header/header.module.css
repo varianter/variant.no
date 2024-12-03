@@ -54,22 +54,18 @@
   transition-duration: 500ms;
   left: 50%;
   transform: translate(-50%, 0);
+
+  @media (max-width: 834px) {
+    width: 40rem;
+  }
 }
 
 .wrapper.hidden {
   top: -6.5rem;
 }
 
-.logo {
-  overflow: hidden;
-  width: auto;
-  display: flex;
-  max-width: 100%;
-  height: 1.25rem;
-}
-
 .list {
-  width: fit-content;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -100,12 +96,18 @@
 }
 
 .desktopLinks {
-  composes: listDesktop;
-  gap: 1.5rem;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  justify-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 
-  @media (min-width: 1200px) {
-    gap: 3rem;
+  @media (max-width: 834px) {
+    display: none;
   }
 }
 
@@ -190,7 +192,7 @@
 }
 
 .logo {
-  width: 130px;
+  width: 9rem;
   height: 37px;
   background-color: var(--text-primary);
   -webkit-mask: url("/_assets/variant-logo.svg") no-repeat 50% 50%;

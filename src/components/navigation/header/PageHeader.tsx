@@ -66,9 +66,7 @@ export default async function PageHeader({
         assets={initialBrandAssets.data}
         announcement={initialAnnouncement.data}
         currentLanguage={language}
-        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
-        showBreadcrumbs={showBreadcrumbs}
       />
     ))
   );
