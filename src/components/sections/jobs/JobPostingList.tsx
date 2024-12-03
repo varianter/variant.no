@@ -53,7 +53,7 @@ export default function JobPostingList({
     }
   }
 
-  const t = useTranslations("employee_card");
+  const t = useTranslations("job_posting");
 
   useEffect(() => {
     if (locationFilter === null) {
@@ -72,7 +72,7 @@ export default function JobPostingList({
   return (
     <div className={styles.jobPostingsContainer}>
       <div className={styles.filters}>
-        <Text type="labelRegular">Kontor</Text>
+        <Text type="labelRegular">{t("office")}</Text>
         <Tag
           active={!locationFilter}
           type="button"
