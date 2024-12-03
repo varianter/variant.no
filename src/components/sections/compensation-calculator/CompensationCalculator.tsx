@@ -25,8 +25,6 @@ export default async function CompensationCalculator({
     (d) => d.data,
   );
 
-  console.log("DATA", section);
-
   // TODO: add cn util or andIf
   const calculatorBgClassname =
     section.background === "violet"
