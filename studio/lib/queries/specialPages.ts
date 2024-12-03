@@ -34,6 +34,15 @@ export const COMPENSATIONS_SALARIES = groq`
     },
   }
 `;
+export const COMPENSATIONS_SALARY_BY_YEAR = groq`
+  *[_type == "compensations"][0] {
+    "salariesByLocation": salariesByLocation[0] {
+      "yearlySalaries": yearlySalaries[0] {
+        ...
+      }
+    },
+  }
+`;
 export const COMPENSATIONS_PAGE_SITEMAP_QUERY = groq`
   *[_type == "compensations"][0] {
     _updatedAt,

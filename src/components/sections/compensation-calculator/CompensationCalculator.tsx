@@ -1,10 +1,16 @@
 import Text from "src/components/text/Text";
-import { SalariesByLocation } from "studio/lib/interfaces/compensations";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
 import { COMPENSATIONS_SALARIES } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
+import { Suspense } from "react";
+import { LocaleDocument } from "studio/lib/interfaces/locale";
+import { LOCALE_QUERY } from "studio/lib/queries/locale";
+import Calculator from "./Calculator";
+import { CompensationData } from "./types";
+
 import styles from "./compensation-calculator.module.css";
+import { getSalaryByYear } from "./actions";
 
 export interface CompensationCalculatorProps {
   language: string;
@@ -15,13 +21,18 @@ export default async function CompensationCalculator({
   language,
   section,
 }: CompensationCalculatorProps) {
-  const employeesPageRes = await loadStudioQuery<{
-    slug: string;
-    salariesByLocation: SalariesByLocation[];
-  }>(COMPENSATIONS_SALARIES, {
-    language,
-  });
-  console.log(employeesPageRes.data);
+  const compensationsSalariesRes = loadStudioQuery<CompensationData>(
+    COMPENSATIONS_SALARIES,
+    {
+      language,
+    },
+  ).then((d) => d.data);
+
+  const localeRes = loadStudioQuery<LocaleDocument>(LOCALE_QUERY).then(
+    (d) => d.data,
+  );
+
+  const data = await getSalaryByYear(2024);
 
   // TODO: add cn util or andIf
   const calculatorBgClassname =
@@ -33,6 +44,13 @@ export default async function CompensationCalculator({
       ? `${styles.handbook} ${styles["handbook--violet"]}`
       : styles.handbook;
 
+  if (!data.ok) {
+    console.error(
+      "[CompensationCalculator]: Failed to get salary data for year 2024",
+    );
+    return null;
+  }
+
   return (
     <div>
       <Text type="h2">{section.moduleTitle}</Text>
@@ -41,6 +59,15 @@ export default async function CompensationCalculator({
         <div className={calculatorBgClassname}>
           <Text type="h3">{section.calculatorTitle}</Text>
           <Text type="bodyBig">{section.calculatorDescription}</Text>
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <Calculator
+              localeRes={localeRes}
+              salary={data.value}
+              year={2024}
+              degree={"bachelor"}
+            />
+          </Suspense>
         </div>
         <div className={handbookBgClassname}>
           <Text type="h3">{section.handbookTitle}</Text>
