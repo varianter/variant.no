@@ -130,16 +130,18 @@ export const Header = ({
               >
                 {renderPageLinks(sidebarLinks, true, pathname)}
                 {renderPageCTAs(sidebarCtas, true)}
-                {defaultLanguage && (
-                  <LanguageSwitcher
-                    currentLanguage={currentLanguage}
-                    pathTranslations={pathTranslations}
-                  />
-                )}
-                {/* TODO: add styling for this section */}
-                <Button size="large" type="primary" background="dark">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
-                </Button>
+                <div className={styles.mobileButtons}>
+                  {defaultLanguage && (
+                    <LanguageSwitcher
+                      currentLanguage={currentLanguage}
+                      pathTranslations={pathTranslations}
+                    />
+                  )}
+                  {/* TODO: add styling for this section */}
+                  <Button size="large" type="primary" background="dark">
+                    <Text type="labelRegular">{t("contact_us")}</Text>
+                  </Button>
+                </div>
               </div>
             )}
           </nav>

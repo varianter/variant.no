@@ -57,6 +57,14 @@
 
   @media (max-width: 834px) {
     width: 40rem;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+
+  @media (max-width: 425px) {
+    width: 22.375rem;
+    justify-content: space-between;
+    align-self: stretch;
   }
 }
 
@@ -141,6 +149,13 @@
   @media (min-width: 1024px) {
     display: none;
   }
+}
+
+.mobileButtons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
 /* MOBILE BUTTON */
