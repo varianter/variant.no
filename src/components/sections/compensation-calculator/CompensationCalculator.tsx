@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 
+import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
@@ -17,11 +18,14 @@ export interface CompensationCalculatorProps {
 
 export default async function CompensationCalculator({
   section,
+  language,
 }: CompensationCalculatorProps) {
-  const salariesRes = getSalaryByYear(2024);
+  const salariesRes = getSalaryByYear(2024, language);
   const localeRes = loadStudioQuery<LocaleDocument>(LOCALE_QUERY).then(
     (d) => d.data,
   );
+
+  console.log("DATA", section);
 
   // TODO: add cn util or andIf
   const calculatorBgClassname =
@@ -39,21 +43,33 @@ export default async function CompensationCalculator({
 
       <div className={styles.grid}>
         <div className={calculatorBgClassname}>
-          <Text type="h3">{section.calculatorTitle}</Text>
-          <Text type="bodyBig">{section.calculatorDescription}</Text>
+          <Text type="h3">{section.calculatorBlock.calculatorTitle}</Text>
+          <Text type="bodyBig">
+            {section.calculatorBlock.calculatorDescription}
+          </Text>
 
           <Suspense fallback={<div>Loading...</div>}>
             <Calculator
               localeRes={localeRes}
               salariesRes={salariesRes}
               initialYear={2024}
-              initialDegree={"bachelor"}
+              initialDegree={"master"}
             />
           </Suspense>
+
+          {section.calculatorBlock.calculatorLink && (
+            <LinkButton link={section.calculatorBlock.calculatorLink} />
+          )}
         </div>
         <div className={handbookBgClassname}>
-          <Text type="h3">{section.handbookTitle}</Text>
-          <Text type="bodyBig">{section.handbookDescription}</Text>
+          <Text type="h3">{section.handbookBlock.handbookTitle}</Text>
+          <Text type="bodyBig">
+            {section.handbookBlock.handbookDescription}
+          </Text>
+
+          {section.handbookBlock.handbookLink && (
+            <LinkButton link={section.handbookBlock.handbookLink} />
+          )}
         </div>
       </div>
     </div>

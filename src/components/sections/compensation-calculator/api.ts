@@ -7,13 +7,16 @@ import { SalaryData } from "./types";
 
 export async function getSalaryByYear(
   year: number,
+  language: string,
 ): Promise<Result<SalaryData, unknown>> {
   const res = await loadStudioQuery<{
+    slug: string;
     salariesByLocation: { yearlySalaries: { salaries: string } };
   }>(
     COMPENSATIONS_SALARY_BY_YEAR,
     {
       year,
+      language,
     },
     {
       cache: "force-cache",

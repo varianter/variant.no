@@ -1,5 +1,7 @@
 import { defineField } from "sanity";
 
+import { link } from "studio/schemas/objects/link";
+
 export const compensationCalculatorId = "compensationCalculator";
 
 export enum CompensationCalculatorBackground {
@@ -27,6 +29,7 @@ export const compensationCalculator = defineField({
         { _key: "no", value: "Ansattopplevelsen" },
       ],
     },
+
     {
       name: "background",
       title: "Background",
@@ -41,60 +44,88 @@ export const compensationCalculator = defineField({
     },
 
     {
-      name: "calculatorTitle",
-      type: "internationalizedArrayString",
-      title: "Calculator Title",
-      description: "Title that will be displayed inside the calculator.",
-      initialValue: [
-        { _key: "en", value: "Salary Calculator" },
-        { _key: "no", value: "Lønnskalkulator" },
-      ],
-    },
-    {
-      name: "calculatorDescription",
-      title: "Calculator Description",
-      type: "internationalizedArrayString",
-      description: "Description that will be displayed inside the calculator.",
-      initialValue: [
-        {
-          _key: "en",
-          value:
-            "We believe that salary should be simple, open and predictable. Therefore, we designed a transparent salary model that equalizes all employees.",
-        },
-        {
-          _key: "no",
-          value:
-            "Vi mener lønn bør være enkelt, åpent og forutsigbart. Derfor designet vi en transparent lønnsmodell som likestiller alle ansatte.",
-        },
-      ],
-    },
-    {
-      name: "handbookTitle",
-      type: "internationalizedArrayString",
-      title: "Handbook Title",
-      description: "Title that will be displayed inside the handbook section.",
-      initialValue: [
-        { _key: "en", value: "Handbook" },
-        { _key: "no", value: "Håndbok" },
-      ],
-    },
-    {
-      name: "handbookDescription",
-      title: "Handbook Description",
-      type: "internationalizedArrayString",
-      description:
-        "Description that will be displayed inside the handbook section.",
+      name: "calculatorBlock",
+      type: "object",
 
-      initialValue: [
+      fields: [
         {
-          _key: "en",
-          value:
-            "Words and actions should go hand in hand. All about us, rules and more you can find in the handbook. If we change, we change the handbook.",
+          name: "calculatorTitle",
+          type: "internationalizedArrayString",
+          title: "Calculator Title",
+          description: "Title that will be displayed inside the calculator.",
+          initialValue: [
+            { _key: "en", value: "Salary Calculator" },
+            { _key: "no", value: "Lønnskalkulator" },
+          ],
+        },
+
+        {
+          name: "calculatorDescription",
+          title: "Calculator Description",
+          type: "internationalizedArrayString",
+          description:
+            "Description that will be displayed inside the calculator.",
+          initialValue: [
+            {
+              _key: "en",
+              value:
+                "We believe that salary should be simple, open and predictable. Therefore, we designed a transparent salary model that equalizes all employees.",
+            },
+            {
+              _key: "no",
+              value:
+                "Vi mener lønn bør være enkelt, åpent og forutsigbart. Derfor designet vi en transparent lønnsmodell som likestiller alle ansatte.",
+            },
+          ],
+        },
+
+        {
+          ...link,
+          name: "calculatorLink",
+        },
+      ],
+    },
+
+    {
+      name: "handbookBlock",
+      type: "object",
+
+      fields: [
+        {
+          name: "handbookTitle",
+          type: "internationalizedArrayString",
+          title: "Handbook Title",
+          description:
+            "Title that will be displayed inside the handbook section.",
+          initialValue: [
+            { _key: "en", value: "Handbook" },
+            { _key: "no", value: "Håndbok" },
+          ],
         },
         {
-          _key: "no",
-          value:
-            "Ord og handling bør gå hånd i hånd. Alt om oss, regler og finner du i håndboken. Endrer vi på oss, endrer vi håndboken.",
+          name: "handbookDescription",
+          title: "Handbook Description",
+          type: "internationalizedArrayString",
+          description:
+            "Description that will be displayed inside the handbook section.",
+
+          initialValue: [
+            {
+              _key: "en",
+              value:
+                "Words and actions should go hand in hand. All about us, rules and more you can find in the handbook. If we change, we change the handbook.",
+            },
+            {
+              _key: "no",
+              value:
+                "Ord og handling bør gå hånd i hånd. Alt om oss, regler og finner du i håndboken. Endrer vi på oss, endrer vi håndboken.",
+            },
+          ],
+        },
+
+        {
+          ...link,
+          name: "handbookLink",
         },
       ],
     },

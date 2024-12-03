@@ -34,8 +34,12 @@ export const COMPENSATIONS_SALARIES = groq`
     },
   }
 `;
+
+// Just select the first location and the first year..
+// @TODO: make this a bit more robust.
 export const COMPENSATIONS_SALARY_BY_YEAR = groq`
   *[_type == "compensations"][0] {
+    "slug": ${translatedFieldFragment("slug")},
     "salariesByLocation": salariesByLocation[0] {
       "yearlySalaries": yearlySalaries[0] {
         ...

@@ -44,11 +44,19 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "compensationCalculator" => {
+      ...,
       "moduleTitle": ${translatedFieldFragment("moduleTitle")},
-      "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
-      "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
-      "handbookTitle": ${translatedFieldFragment("handbookTitle")},
-      "handbookDescription": ${translatedFieldFragment("handbookDescription")}
+
+      "calculatorBlock": calculatorBlock {
+        ...,
+        "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+        "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+      },
+      "handbookBlock": handbookBlock {
+        ...,
+        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+        "handbookDescription": ${translatedFieldFragment("handbookDescription")}
+      }
     },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}

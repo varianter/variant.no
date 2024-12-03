@@ -122,10 +122,18 @@ export interface CompensationCalculatorSection {
   _key: string;
   moduleTitle: string;
   background: CompensationCalculatorBackground;
-  calculatorTitle: string;
-  calculatorDescription: string;
-  handbookTitle: string;
-  handbookDescription: string;
+
+  calculatorBlock: {
+    calculatorTitle: string;
+    calculatorDescription: string;
+    calculatorLink: ILink;
+  };
+
+  handbookBlock: {
+    handbookTitle: string;
+    handbookDescription: string;
+    handbookLink: ILink;
+  };
 }
 
 export interface EmployeeHighlightSection {
