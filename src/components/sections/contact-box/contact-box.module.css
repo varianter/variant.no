@@ -23,7 +23,7 @@
   color: var(--_contactBox__color);
 }
 .contactBox__inner--light {
-  --_contactBox__background: var(--background-bg-light-primary);
+  --_contactBox__background: var(--background-bg-light-secondary);
   --_contactBox__color: var(--text-primary);
 }
 
