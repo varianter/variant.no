@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
@@ -19,6 +20,7 @@ export default function EmployeeCard({
   employeePageSlug,
   language,
 }: EmployeeCardProps) {
+  const t = useTranslations("employee_card");
   return (
     employee.imageUrl &&
     employee.name &&
@@ -56,7 +58,7 @@ export default function EmployeeCard({
                   key={competence}
                   as="span"
                 >
-                  {competence}
+                  {t(competence)}
                 </Text>
               ))}
             </div>
