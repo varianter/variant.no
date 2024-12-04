@@ -179,6 +179,33 @@
   }
 }
 
+.footerLink_new {
+  color: var(--text-primary);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-britti-sans);
+  font-size: 1rem;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--text-tertiary);
+  }
+}
+
+.footerLinkGrey {
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-family: var(--font-britti-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
 .selected {
   color: var(--text-primary-light);
   font-weight: 700;
