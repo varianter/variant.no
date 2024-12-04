@@ -13,7 +13,7 @@ export function CustomerCaseSection({
   clientColors,
 }: {
   section: CustomerCaseSectionObject;
-  clientColors: CustomerCaseClientColors;
+  clientColors?: CustomerCaseClientColors;
 }) {
   switch (section._type) {
     case "splitSection":
@@ -21,7 +21,9 @@ export function CustomerCaseSection({
     case "imageBlock":
       return <ImageSection section={section} />;
     case "resultsBlock":
-      return <ResultsBlock section={section} blockColor={clientColors.color} />;
+      return (
+        <ResultsBlock section={section} blockColor={clientColors?.color} />
+      );
     case "listBlock":
       return <ListBlock section={section} />;
   }
