@@ -120,6 +120,7 @@ export const Header = ({
                   className={isOpen ? styles.open : styles.closed}
                   aria-expanded={isOpen}
                   onClick={toggleMenu}
+                  aria-label="Mobile menu"
                 />
               </div>
               {isOpen && (
