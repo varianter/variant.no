@@ -14,8 +14,8 @@ export default function EmployeeHighLight({ section }: EmployeeHighlightProps) {
       <div className={styles.image}>
         <SanityImage image={section.employeePhoto} />
       </div>
-      <div>
-        <div className={styles.titleSection}>
+      <div className={styles.textContainer}>
+        <div className={styles.titleContainer}>
           <Text type={"h5"} className={styles.title}>
             {section.basicTitle}
           </Text>
