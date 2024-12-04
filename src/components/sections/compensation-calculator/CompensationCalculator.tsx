@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { Suspense } from "react";
 
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
+import { getHref } from "src/utils/link";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
@@ -59,6 +61,15 @@ export default async function CompensationCalculator({
           {section.calculatorBlock.calculatorLink && (
             <LinkButton link={section.calculatorBlock.calculatorLink} />
           )}
+
+          {section.calculatorBlock.calculatorLink && (
+            <div className={styles.calculatorLink}>
+              <LinkButton
+                type="secondary"
+                link={section.calculatorBlock.calculatorLink}
+              />
+            </div>
+          )}
         </div>
         <div className={handbookBgClassname}>
           <Text type="h3">{section.handbookBlock.handbookTitle}</Text>
@@ -69,13 +80,24 @@ export default async function CompensationCalculator({
           {handbookLinksRes.ok && (
             <div className={styles.handbookLinks}>
               {handbookLinksRes.value.map((link) => (
-                <LinkButton key={link.url} link={link} />
+                <Link
+                  key={link._key}
+                  className={styles.handbookLink}
+                  href={getHref(link)}
+                >
+                  {link.linkTitle}
+                </Link>
               ))}
             </div>
           )}
 
           {section.handbookBlock.handbookLink && (
-            <LinkButton link={section.handbookBlock.handbookLink} />
+            <div className={styles.handbookLink}>
+              <LinkButton
+                type="secondary"
+                link={section.handbookBlock.handbookLink}
+              />
+            </div>
           )}
         </div>
       </div>

@@ -51,11 +51,19 @@ const SECTIONS_FRAGMENT = groq`
         ...,
         "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
         "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+        "calculatorLink": calculatorLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
       },
       "handbookBlock": handbookBlock {
         ...,
         "handbookTitle": ${translatedFieldFragment("handbookTitle")},
-        "handbookDescription": ${translatedFieldFragment("handbookDescription")}
+        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+        "handbookLink": handbookLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
       }
     },
     _type == "employees" => {

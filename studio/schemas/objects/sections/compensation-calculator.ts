@@ -82,6 +82,8 @@ export const compensationCalculator = defineField({
         {
           ...link,
           name: "calculatorLink",
+          description:
+            "Bottom link that will be displayed inside the handbook section.",
         },
       ],
     },
@@ -126,6 +128,8 @@ export const compensationCalculator = defineField({
         {
           ...link,
           name: "handbookLink",
+          description:
+            "Bottom link that will be displayed inside the handbook section.",
         },
       ],
     },
