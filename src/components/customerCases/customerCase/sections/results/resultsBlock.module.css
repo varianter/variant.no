@@ -94,7 +94,7 @@
   border-top-left-radius: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 425px) {
   div:has(> .highlightWrapper) {
     width: 100%;
   }
