@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-import { LANGUAGE_FIELD_FRAGMENT } from "./i18n";
+import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Compensations
@@ -44,9 +44,18 @@ export const COMPENSATIONS_SALARY_BY_YEAR = groq`
       "yearlySalaries": yearlySalaries[0] {
         ...
       }
-    },
+    }
   }
 `;
+export const COMPENSATIONS_HANDBOOK_LINKS = groq`
+  *[_type == "compensations"][0] {
+    "handbookLinks": handbookLinks[] {
+      ...,
+      ${TRANSLATED_LINK_FRAGMENT}
+    }
+  }
+`;
+
 export const COMPENSATIONS_PAGE_SITEMAP_QUERY = groq`
   *[_type == "compensations"][0] {
     _updatedAt,

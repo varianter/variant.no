@@ -2,7 +2,6 @@
 
 import { use, useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import { calculateSalary } from "src/components/compensations/utils/salary";
 import InputField from "src/components/forms/inputField/InputField";
 import {
@@ -120,9 +119,6 @@ function SalaryCalculator({
           required
         />
       </div>
-      <Button type="secondary" size="small">
-        Regn ut
-      </Button>
     </form>
   );
 }

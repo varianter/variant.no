@@ -7,7 +7,7 @@ import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import { loadStudioQuery } from "studio/lib/store";
 
-import { getSalaryByYear } from "./api";
+import { getHandbookLinksFromCompensationPage, getSalaryByYear } from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 
@@ -24,6 +24,7 @@ export default async function CompensationCalculator({
   const localeRes = loadStudioQuery<LocaleDocument>(LOCALE_QUERY).then(
     (d) => d.data,
   );
+  const handbookLinksRes = await getHandbookLinksFromCompensationPage(language);
 
   // TODO: add cn util or andIf
   const calculatorBgClassname =
@@ -64,6 +65,14 @@ export default async function CompensationCalculator({
           <Text type="bodyBig">
             {section.handbookBlock.handbookDescription}
           </Text>
+
+          {handbookLinksRes.ok && (
+            <div className={styles.handbookLinks}>
+              {handbookLinksRes.value.map((link) => (
+                <LinkButton key={link.url} link={link} />
+              ))}
+            </div>
+          )}
 
           {section.handbookBlock.handbookLink && (
             <LinkButton link={section.handbookBlock.handbookLink} />

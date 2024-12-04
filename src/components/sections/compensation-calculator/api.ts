@@ -1,9 +1,30 @@
 import { isSalariesType } from "studio/components/salariesInput/utils/parseSalaries";
-import { COMPENSATIONS_SALARY_BY_YEAR } from "studio/lib/queries/specialPages";
+import { ILink } from "studio/lib/interfaces/navigation";
+import {
+  COMPENSATIONS_HANDBOOK_LINKS,
+  COMPENSATIONS_SALARY_BY_YEAR,
+} from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 import { Result, ResultError, ResultOk } from "studio/utils/result";
 
 import { SalaryData } from "./types";
+
+export async function getHandbookLinksFromCompensationPage(
+  language: string,
+): Promise<Result<ILink[], unknown>> {
+  const res = await loadStudioQuery<{ handbookLinks: ILink[] }>(
+    COMPENSATIONS_HANDBOOK_LINKS,
+    { language },
+    {
+      cache: "force-cache",
+      next: {
+        revalidate: 60 * 60,
+      },
+    },
+  );
+
+  return ResultOk(res.data.handbookLinks);
+}
 
 export async function getSalaryByYear(
   year: number,
