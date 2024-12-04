@@ -140,7 +140,6 @@ export const Header = ({
                         pathTranslations={pathTranslations}
                       />
                     )}
-                    {/* TODO: add styling for this section */}
                     <Button size="large" type="primary" background="dark">
                       <Text type="labelRegular">{t("contact_us")}</Text>
                     </Button>
