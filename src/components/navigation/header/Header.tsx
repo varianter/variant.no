@@ -99,51 +99,54 @@ export const Header = ({
                 (scrollDirection === "down" ? `${styles.hidden}` : "")
               }
             >
-              <Link href="/" aria-label="Home" className={styles.logo} />
-              {renderPageLinks(links, false, pathname)}
-              {renderPageCTAs(ctas, false)}
-              <div className={styles.languageSwitcher}>
-                {defaultLanguage && (
-                  <LanguageSwitcher
-                    currentLanguage={currentLanguage}
-                    pathTranslations={pathTranslations}
-                  />
-                )}
-                <Button size="large" type="secondary" background="light">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
-                </Button>
-              </div>
-              <button
-                aria-haspopup="true"
-                aria-controls={sidebarID}
-                className={isOpen ? styles.open : styles.closed}
-                aria-expanded={isOpen}
-                onClick={toggleMenu}
-              />
-            </div>
-            {isOpen && (
-              <div
-                className={styles.mobileMenu}
-                id={sidebarID}
-                aria-label="Mobile Menu"
-                onClick={() => setIsOpen(false)}
-              >
-                {renderPageLinks(sidebarLinks, true, pathname)}
-                {renderPageCTAs(sidebarCtas, true)}
-                <div className={styles.mobileButtons}>
+              <div className={styles.desktopWrapper}>
+                <Link href="/" aria-label="Home" className={styles.logo} />
+                {renderPageLinks(links, false, pathname)}
+                {renderPageCTAs(ctas, false)}
+                <div className={styles.languageSwitcher}>
                   {defaultLanguage && (
                     <LanguageSwitcher
                       currentLanguage={currentLanguage}
                       pathTranslations={pathTranslations}
                     />
                   )}
-                  {/* TODO: add styling for this section */}
-                  <Button size="large" type="primary" background="dark">
+                  <Button size="large" type="secondary" background="light">
                     <Text type="labelRegular">{t("contact_us")}</Text>
                   </Button>
                 </div>
+                <button
+                  aria-haspopup="true"
+                  aria-controls={sidebarID}
+                  className={isOpen ? styles.open : styles.closed}
+                  aria-expanded={isOpen}
+                  onClick={toggleMenu}
+                />
               </div>
-            )}
+              {isOpen && (
+                <div
+                  className={styles.mobileMenu}
+                  id={sidebarID}
+                  aria-label="Mobile Menu"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {renderPageLinks(sidebarLinks, true, pathname)}
+                  {renderPageCTAs(sidebarCtas, true)}
+                  <hr className={styles.divider} />
+                  <div className={styles.mobileButtons}>
+                    {defaultLanguage && (
+                      <LanguageSwitcher
+                        currentLanguage={currentLanguage}
+                        pathTranslations={pathTranslations}
+                      />
+                    )}
+                    {/* TODO: add styling for this section */}
+                    <Button size="large" type="primary" background="dark">
+                      <Text type="labelRegular">{t("contact_us")}</Text>
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
           {showAnnouncement && (
             <div className={styles.announcementWrapper}>
