@@ -25,7 +25,7 @@ export const employeeHighlightSection = defineField({
     },
     {
       name: "description",
-      type: "internationalizedArrayString",
+      type: "internationalizedArrayText",
       title: "Description",
       description: "The body text in the section.",
     },
