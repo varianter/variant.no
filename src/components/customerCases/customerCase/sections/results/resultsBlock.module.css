@@ -5,9 +5,9 @@
 }
 
 .highlightCard {
-  border: 3px solid var(--surface-yellow);
+  border: 3px solid var(--block-color);
   border-radius: 0.25rem;
-  background-color: var(--surface-yellow);
+  background-color: var(--block-color);
 }
 
 .highlightCard .innerContent {
@@ -29,7 +29,7 @@
 }
 
 .highlightOutside {
-  background-color: var(--surface-yellow);
+  background-color: var(--block-color);
   color: var(--text-primary);
   display: inline-block;
   padding: 0.25rem 1.25rem;
@@ -77,6 +77,7 @@
   margin-top: calc(3px * -1);
   border-top-left-radius: 0;
   height: auto;
+  width: 100%;
 }
 
 .highlightRow .highlightCard:not(:last-child) {
@@ -93,6 +94,28 @@
   border-top-left-radius: 0;
 }
 
-.highlightRow .highlightCard {
-  width: 100%;
+@media (max-width: 640px) {
+  div:has(> .highlightWrapper) {
+    width: 100%;
+  }
+
+  .highlightOutside {
+    margin-bottom: 0;
+  }
+
+  .highlightRow {
+    flex-direction: column;
+  }
+
+  .highlightRow .highlightCard:first-child {
+    border-top-right-radius: 0.25rem;
+  }
+
+  .highlightRow .highlightCard:last-child {
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .highlightRow .highlightCard:not(:first-child) {
+    border-left: 3px solid var(--block-color);
+  }
 }

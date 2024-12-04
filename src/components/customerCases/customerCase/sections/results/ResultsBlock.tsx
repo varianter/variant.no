@@ -5,23 +5,34 @@ import styles from "./resultsBlock.module.css";
 
 export interface ResultsBlockProps {
   section: ResultsBlockObject;
+  blockColor?: string;
 }
 
-export default function ResultsBlock({ section }: ResultsBlockProps) {
+export default function ResultsBlock({
+  section,
+  blockColor,
+}: ResultsBlockProps) {
   return (
     section.resultsBlockTitle && (
       <div className={styles.wrapper}>
         <div>
-          <StackedHighlights section={section}></StackedHighlights>
+          <StackedHighlights
+            section={section}
+            blockColor={blockColor}
+          ></StackedHighlights>
         </div>
       </div>
     )
   );
 }
 
-function StackedHighlights({ section }: ResultsBlockProps) {
+function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
+  const style = {
+    "--block-color": blockColor ?? "var(--surface-yellow)",
+  } as React.CSSProperties;
+
   return (
-    <div className={styles.highlightWrapper}>
+    <div className={styles.highlightWrapper} style={style}>
       <div className={styles.highlightBlock}>
         <Text type="labelRegular" className={styles.highlightOutside}>
           {section.resultsBlockTitle}

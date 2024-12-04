@@ -1,4 +1,7 @@
-import { CustomerCaseSection as CustomerCaseSectionObject } from "studioShared/lib/interfaces/customerCases";
+import {
+  CustomerCaseClientColors,
+  CustomerCaseSection as CustomerCaseSectionObject,
+} from "studioShared/lib/interfaces/customerCases";
 
 import ImageSection from "./image/ImageSection";
 import ListBlock from "./list/ListBlock";
@@ -7,8 +10,10 @@ import SplitSection from "./splitSection/SplitSection";
 
 export function CustomerCaseSection({
   section,
+  clientColors,
 }: {
   section: CustomerCaseSectionObject;
+  clientColors: CustomerCaseClientColors;
 }) {
   switch (section._type) {
     case "splitSection":
@@ -16,7 +21,7 @@ export function CustomerCaseSection({
     case "imageBlock":
       return <ImageSection section={section} />;
     case "resultsBlock":
-      return <ResultsBlock section={section} />;
+      return <ResultsBlock section={section} blockColor={clientColors.color} />;
     case "listBlock":
       return <ListBlock section={section} />;
   }
