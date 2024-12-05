@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   @media (max-width: 834px) {
-    background: var(--background-bg-light-primary);
-
     & > header {
       display: flex;
       flex-direction: column;
