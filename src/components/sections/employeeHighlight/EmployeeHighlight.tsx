@@ -25,9 +25,7 @@ export default function EmployeeHighLight({ section }: EmployeeHighlightProps) {
             </Text>
           </div>
         </div>
-        <Text type={"bodyNormal"} className={styles.description}>
-          {section.description}
-        </Text>
+        <Text type={"bodyNormal"}>{section.description}</Text>
       </div>
     </div>
   );
