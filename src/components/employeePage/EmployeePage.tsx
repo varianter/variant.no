@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
@@ -12,6 +13,7 @@ export interface EmployeePageProps {
 
 export default function EmployeePage({ employee }: EmployeePageProps) {
   const image = employee.imageUrl ?? employee.imageThumbUrl ?? null;
+  const t = useTranslations("employee_card");
 
   return (
     employee.name && (
@@ -47,7 +49,7 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
               )}
               {employee.competences.map((competence) => (
                 <Text type="bodyNormal" key={competence}>
-                  {competence}
+                  {t(competence)}
                 </Text>
               ))}
             </div>

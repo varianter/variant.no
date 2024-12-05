@@ -5,11 +5,14 @@ import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
 import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
+import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
+import { jobs } from "studio/schemas/objects/sections/jobs";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
@@ -47,10 +50,13 @@ const pageBuilder = defineType({
         callout,
         callToAction,
         testimonals,
+        imageSplitSection,
         imageSection,
         grid,
         employees,
         customerCasesEntry,
+        contactBox,
+        jobs,
       ],
     }),
   ],

@@ -45,7 +45,7 @@ const config: WorkspaceOptions = {
       languages: (client) => {
         return client.fetch(SUPPORTED_LANGUAGES_QUERY);
       },
-      fieldTypes: ["string", "richText", "seo"],
+      fieldTypes: ["string", "richText", "seo", "text"],
     }),
     presentationTool({
       previewUrl: {

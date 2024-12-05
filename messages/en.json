@@ -43,6 +43,11 @@
     "Design": "Design",
     "Utvikling": "Development",
     "Administasjon": "Administration",
-    "field": "Field"
+    "field": "Field",
+    "showMore": "Show all"
+  },
+  "job_posting": {
+    "office": "Office",
+    "all": "All"
   }
 }

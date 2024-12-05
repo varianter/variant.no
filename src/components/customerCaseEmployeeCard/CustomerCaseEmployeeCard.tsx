@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
@@ -15,6 +16,8 @@ export interface CustomerCaseEmployeeCardProps {
 export default function CustomerCaseEmployeeCard({
   employee,
 }: CustomerCaseEmployeeCardProps) {
+  const t = useTranslations("employee_card");
+
   return (
     employee.imageThumbUrl &&
     employee.name &&
@@ -38,7 +41,7 @@ export default function CustomerCaseEmployeeCard({
                   type="labelRegular"
                   key={competence}
                 >
-                  {competence}
+                  {t(competence)}
                 </Text>
               ))}
             </div>
