@@ -1,6 +1,9 @@
 import { groq } from "next-sanity";
 
-import { LANGUAGE_FIELD_FRAGMENT } from "./i18n";
+import {
+  LANGUAGE_FIELD_FRAGMENT,
+  TRANSLATED_SLUG_VALUE_FRAGMENT,
+} from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Compensations
@@ -51,6 +54,6 @@ export const CUSTOMER_CASES_PAGE_QUERY = groq`
 export const CUSTOMER_CASES_PAGE_SITEMAP_QUERY = groq`
   *[_type == "customerCasesPage"][0] {
     _updatedAt,
-    slug
+    "slug": ${TRANSLATED_SLUG_VALUE_FRAGMENT}
   }
 `;
