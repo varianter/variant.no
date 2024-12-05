@@ -8,6 +8,14 @@ html {
   box-sizing: inherit;
 }
 
+:where(.debug) {
+  *,
+  *::before,
+  *::after {
+    outline: 1px solid lime;
+  }
+}
+
 :root {
   --Blue-500: #3840ff;
   --Blue-700: #0014cd;

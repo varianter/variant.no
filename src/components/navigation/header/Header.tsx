@@ -50,7 +50,6 @@ export const Header = ({
   const ctas = filterLinks(navigation.main, callToActionFieldID);
 
   const sidebarLinks = filterLinks(sidebarData, linkID);
-  const sidebarCtas = filterLinks(sidebarData, callToActionFieldID);
 
   const sidebarID = "sidebar";
 
@@ -85,86 +84,77 @@ export const Header = ({
     <>
       <FocusOn
         enabled={isOpen}
+        as="header"
         onClickOutside={toggleMenu}
         onEscapeKey={toggleMenu}
-        className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
+        className={`${styles.header} ${styles.focusOn} ${isOpen && styles.isOpen} ${scrollDirection === "down" ? `${styles.hidden}` : ""} `}
       >
-        <header>
-          <div className={styles.spacer}></div>
-          <nav aria-label="Main menu">
-            <div
-              className={
-                styles.wrapper +
-                ` ` +
-                (scrollDirection === "down" ? `${styles.hidden}` : "")
-              }
-            >
-              <div className={styles.desktopWrapper}>
-                <Link href="/" aria-label="Home" className={styles.logo} />
-                {renderPageLinks(links, false, pathname)}
-                {renderPageCTAs(ctas, false)}
-                <div className={styles.languageSwitcher}>
+        <nav className={styles.nav} aria-label="Main menu">
+          <div className={styles.wrapper}>
+            <div className={styles.desktopWrapper}>
+              <Link href="/" aria-label="Home" className={styles.logo} />
+              {renderPageLinks(links, false, pathname)}
+              {renderPageCTAs(ctas, false)}
+              <div className={styles.languageSwitcher}>
+                {defaultLanguage && (
+                  <LanguageSwitcher
+                    currentLanguage={currentLanguage}
+                    pathTranslations={pathTranslations}
+                  />
+                )}
+                <Button size="large" type="secondary" background="light">
+                  <Text type="labelRegular">{t("contact_us")}</Text>
+                </Button>
+              </div>
+              <button
+                aria-haspopup="true"
+                aria-controls={sidebarID}
+                className={isOpen ? styles.open : styles.closed}
+                aria-expanded={isOpen}
+                onClick={toggleMenu}
+                aria-label="Mobile menu"
+              />
+            </div>
+            {isOpen && (
+              <div
+                className={styles.mobileMenu}
+                id={sidebarID}
+                aria-label="Mobile Menu"
+                onClick={() => setIsOpen(false)}
+              >
+                {renderPageLinks(sidebarLinks, true, pathname)}
+                <hr className={styles.divider} />
+                <div className={styles.mobileButtons}>
                   {defaultLanguage && (
                     <LanguageSwitcher
                       currentLanguage={currentLanguage}
                       pathTranslations={pathTranslations}
                     />
                   )}
-                  <Button size="large" type="secondary" background="light">
+                  <Button size="large" type="primary" background="dark">
                     <Text type="labelRegular">{t("contact_us")}</Text>
                   </Button>
                 </div>
-                <button
-                  aria-haspopup="true"
-                  aria-controls={sidebarID}
-                  className={isOpen ? styles.open : styles.closed}
-                  aria-expanded={isOpen}
-                  onClick={toggleMenu}
-                  aria-label="Mobile menu"
-                />
               </div>
-              {isOpen && (
-                <div
-                  className={styles.mobileMenu}
-                  id={sidebarID}
-                  aria-label="Mobile Menu"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {renderPageLinks(sidebarLinks, true, pathname)}
-                  {renderPageCTAs(sidebarCtas, true)}
-                  <hr className={styles.divider} />
-                  <div className={styles.mobileButtons}>
-                    {defaultLanguage && (
-                      <LanguageSwitcher
-                        currentLanguage={currentLanguage}
-                        pathTranslations={pathTranslations}
-                      />
-                    )}
-                    <Button size="large" type="primary" background="dark">
-                      <Text type="labelRegular">{t("contact_us")}</Text>
-                    </Button>
-                  </div>
+            )}
+          </div>
+        </nav>
+        {showAnnouncement && (
+          <div className={styles.announcementWrapper}>
+            <div className={styles.announcementContent}>
+              <Text type={"bodySmall"}>{announcement.text}</Text>
+              {announcement.link && announcement.link.linkTitle && (
+                <div>
+                  <CustomLink
+                    link={announcement.link}
+                    size={"small"}
+                    color={"light"}
+                  />
                 </div>
               )}
             </div>
-          </nav>
-          {showAnnouncement && (
-            <div className={styles.announcementWrapper}>
-              <div className={styles.announcementContent}>
-                <Text type={"bodySmall"}>{announcement.text}</Text>
-                {announcement.link && announcement.link.linkTitle && (
-                  <div>
-                    <CustomLink
-                      link={announcement.link}
-                      size={"small"}
-                      color={"light"}
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-        </header>
+          </div>
+        )}
       </FocusOn>
     </>
   );
