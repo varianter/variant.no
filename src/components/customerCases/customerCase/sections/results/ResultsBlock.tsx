@@ -16,10 +16,7 @@ export default function ResultsBlock({
     section.resultsBlockTitle && (
       <div className={styles.wrapper}>
         <div>
-          <StackedHighlights
-            section={section}
-            blockColor={blockColor}
-          />
+          <StackedHighlights section={section} blockColor={blockColor} />
         </div>
       </div>
     )
