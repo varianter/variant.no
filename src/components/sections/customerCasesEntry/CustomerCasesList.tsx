@@ -8,6 +8,7 @@ import { SanitySharedImage } from "src/components/image/SanityImage";
 import styles from "src/components/sections/customerCasesEntry/customerCasesEntry.module.css";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
+import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 interface CustomerCasesProps {
@@ -48,7 +49,9 @@ const CustomerCaseList = ({
                     type="button"
                     background="dark"
                     onClick={() => setSelectedCustomerCase(customerCase)}
-                    text={customerCase.projectInfo.customer}
+                    text={capitalizeFirstLetter(
+                      customerCase.projectInfo.customer,
+                    )}
                   />
                 </div>
               ),
@@ -62,16 +65,28 @@ const CustomerCaseList = ({
               {" "}
               {selectedCustomerCase.basicTitle}
             </Text>
-            <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
-            <Text type="h5"> {deliveryNames} </Text>
+            <div className={styles.deliveries}>
+              <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
+              <div className={styles.deliveriesList}>
+                {deliveryNames.map((deliveryName, index) => (
+                  <Text key={index} type="h5" className={styles.dotSeparator}>
+                    {deliveryName}
+                  </Text>
+                ))}
+              </div>
+            </div>
           </div>
         </Link>
       </div>
-      {selectedCustomerCase.image && (
-        <div className={styles.imageWrapper}>
-          <SanitySharedImage image={selectedCustomerCase.image} />
-        </div>
-      )}
+      <Link
+        href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+      >
+        {selectedCustomerCase.image && (
+          <div className={styles.imageWrapper}>
+            <SanitySharedImage image={selectedCustomerCase.image} />
+          </div>
+        )}
+      </Link>
     </div>
   );
 };
