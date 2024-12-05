@@ -157,6 +157,7 @@ export type Section =
   | GridSection
   | ContactBoxSection
   | EmployeesSection
+  | EmployeeHighlightSection
   | CompensationCalculatorSection
   | JobsSection;
 

@@ -11,15 +11,32 @@ interface IButton {
   isSmall?: boolean;
   type?: LinkButtonType;
   link: ILink;
+  background?: "dark" | "light";
 }
 
-const typeClassMap: { [key in LinkButtonType]: string } = {
-  primary: styles.primary,
-  secondary: styles.secondary,
-};
+const typeClassMap = (
+  background: IButton["background"],
+): {
+  [key in LinkButtonType]: string;
+} => ({
+  primary:
+    background === "dark"
+      ? `${styles.primary} ${styles["primary--darkBg"]}`
+      : styles.primary,
+  secondary:
+    background === "dark"
+      ? `${styles.secondary} ${styles["secondary--darkBg"]}`
+      : styles.secondary,
+});
 
-const LinkButton = ({ isSmall, type = "primary", link }: IButton) => {
-  const className = `${styles.button} ${isSmall ? styles.small : ""} ${typeClassMap[type]}`;
+const LinkButton = ({
+  isSmall,
+  type = "primary",
+  link,
+  background,
+}: IButton) => {
+  const classMap = typeClassMap(background);
+  const className = `${styles.button} ${isSmall ? styles.small : ""} ${classMap[type]}`;
   const href = getHref(link);
   const linkTitleValue = link.linkTitle;
   return (

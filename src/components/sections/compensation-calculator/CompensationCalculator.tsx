@@ -38,14 +38,18 @@ export default async function CompensationCalculator({
       ? `${styles.handbook} ${styles["handbook--violet"]}`
       : styles.handbook;
 
+  const radioBackground = section.background === "violet" ? "light" : "dark";
+
+  // @TODO add proper translations
+
   return (
-    <div>
+    <div className={styles.container}>
       <Text type="h2">{section.moduleTitle}</Text>
 
       <div className={styles.grid}>
         <div className={calculatorBgClassname}>
           <Text type="h3">{section.calculatorBlock.calculatorTitle}</Text>
-          <Text type="bodyBig">
+          <Text type="bodyBig" className={styles.lightFont}>
             {section.calculatorBlock.calculatorDescription}
           </Text>
 
@@ -55,17 +59,17 @@ export default async function CompensationCalculator({
               salariesRes={salariesRes}
               initialYear={2024}
               initialDegree={"master"}
+              background={radioBackground}
             />
           </Suspense>
 
-          {section.calculatorBlock.calculatorLink && (
-            <LinkButton link={section.calculatorBlock.calculatorLink} />
-          )}
-
-          {section.calculatorBlock.calculatorLink && (
+          {section.calculatorBlock.calculatorLink?.linkTitle && (
             <div className={styles.calculatorLink}>
               <LinkButton
                 type="secondary"
+                background={
+                  section.background === "violet" ? undefined : "dark"
+                }
                 link={section.calculatorBlock.calculatorLink}
               />
             </div>
@@ -73,28 +77,29 @@ export default async function CompensationCalculator({
         </div>
         <div className={handbookBgClassname}>
           <Text type="h3">{section.handbookBlock.handbookTitle}</Text>
-          <Text type="bodyBig">
+          <Text type="bodyBig" className={styles.lightFont}>
             {section.handbookBlock.handbookDescription}
           </Text>
 
           {handbookLinksRes.ok && (
-            <div className={styles.handbookLinks}>
+            <ul className={styles.handbookLinks}>
               {handbookLinksRes.value.map((link) => (
-                <Link
-                  key={link._key}
-                  className={styles.handbookLink}
-                  href={getHref(link)}
-                >
-                  {link.linkTitle}
-                </Link>
+                <li key={link._key}>
+                  <Link className={styles.handbookLink} href={getHref(link)}>
+                    {link.linkTitle}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
-          {section.handbookBlock.handbookLink && (
+          {section.handbookBlock.handbookLink?.linkTitle && (
             <div className={styles.handbookLink}>
               <LinkButton
                 type="secondary"
+                background={
+                  section.background === "violet" ? "dark" : undefined
+                }
                 link={section.handbookBlock.handbookLink}
               />
             </div>

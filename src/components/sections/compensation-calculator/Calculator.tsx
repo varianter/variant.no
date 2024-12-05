@@ -13,21 +13,28 @@ import { formatAsCurrency } from "src/utils/i18n";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { Result } from "studio/utils/result";
 
+import styles from "./compensation-calculator.module.css";
 import { Degree, SalaryData } from "./types";
 
 type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
   salariesRes: Promise<Result<SalaryData, unknown>>;
-
+  background: "light" | "dark" | "violet";
   initialDegree: Degree;
   initialYear: number;
 };
+
+const degreeOptions: IOption[] = [
+  { id: "bachelor", label: "Bachelor" },
+  { id: "master", label: "Master" },
+];
 
 export default function Calculator({
   localeRes,
   salariesRes,
   initialDegree,
   initialYear,
+  background,
 }: CalculatorProps) {
   const locale = use(localeRes);
   const salaries = use(salariesRes);
@@ -44,81 +51,40 @@ export default function Calculator({
   const salary = calculateSalary(year, degree, salaries.value) ?? 0;
 
   return (
-    <div>
-      <SalaryCalculator
-        examinationYearValue={year}
-        minExaminationYear={1985}
-        maxExaminationYear={2024}
-        selectedDegree={degree}
-        onDegreeChanged={setDegree}
-        onExaminationYearChanged={setYear}
-        action={async () => {}}
-      />
-
-      {salary !== null ? (
-        <div aria-live="polite">
-          <Text>Din årslønn</Text>
-          <Text>
-            {formatAsCurrency(salary, locale.locale, locale.currency)}
-          </Text>
-          <Text>+ bonus</Text>
-        </div>
-      ) : null}
-    </div>
-  );
-}
-
-const degreeOptions: IOption[] = [
-  { id: "bachelor", label: "Bachelor" },
-  { id: "master", label: "Master" },
-];
-
-interface SalaryCalculatorProps {
-  examinationYearValue: number;
-  minExaminationYear: number;
-  maxExaminationYear: number;
-  selectedDegree: Degree;
-  onDegreeChanged: (degree: Degree) => void;
-  onExaminationYearChanged: (examinationYear: number) => void;
-  action: (data: FormData) => void;
-}
-
-function SalaryCalculator({
-  examinationYearValue: yearValue,
-  minExaminationYear,
-  maxExaminationYear,
-  selectedDegree,
-  onDegreeChanged,
-  onExaminationYearChanged,
-  action,
-}: SalaryCalculatorProps) {
-  return (
-    <form
-      //TODO: replace aria-label with static translation from Sanity
-      aria-label="salary calculator"
-      action={action}
-    >
+    <form className={styles.formCalculator} aria-label="salary calculator">
       <RadioButtonGroup
         id="degree-group"
-        label="Velg utdanning"
+        label="Utdanning"
         options={degreeOptions}
-        selectedId={selectedDegree}
+        background={background}
+        selectedId={degree}
         onValueChange={(selectedOption) =>
-          onDegreeChanged(selectedOption.id as Degree)
+          setDegree(selectedOption.id as Degree)
         }
       />
-      <div>
+
+      <div className={styles.inputWrapper}>
         <InputField
-          label="Year"
+          label="Året du begynte i relevant arbeid"
           name="examinationYear"
           type="number"
-          min={minExaminationYear}
-          max={maxExaminationYear}
-          value={yearValue}
-          onChange={(_name, value) => onExaminationYearChanged(parseInt(value))}
+          min={1085}
+          max={2024}
+          value={year}
+          onChange={(_name, value) => setYear(parseInt(value))}
           required
         />
       </div>
+
+      {salary !== null ? (
+        <div aria-live="polite" className={styles.salaryTextContainer}>
+          <Text type="labelRegular">Din årslønn</Text>
+          <Text className={styles.salaryText}>
+            {formatAsCurrency(salary, locale.locale, locale.currency)}
+          </Text>
+          <Text type="labelRegular">+ bonus</Text>
+        </div>
+      ) : null}
     </form>
   );
 }
