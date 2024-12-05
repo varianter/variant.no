@@ -11,7 +11,8 @@
     "fix": "run-s lint format",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "prepare": "husky"
   },
   "dependencies": {
     "@sanity/color-input": "^4.0.1",
@@ -20,6 +21,7 @@
     "@sanity/preview-url-secret": "^1.6.11",
     "@sanity/react-loader": "^1.10.7",
     "@sanity/vision": "^3.39.1",
+    "husky": "^9.1.7",
     "negotiator": "^0.6.3",
     "next": "^14.2.15",
     "next-intl": "^3.24.0",

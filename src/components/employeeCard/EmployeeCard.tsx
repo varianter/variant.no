@@ -30,38 +30,58 @@ export default function EmployeeCard({
           <div className={styles.employeeImage}>
             <Image
               src={employee.imageUrl}
-              alt=""
+              alt={employee.name}
               style={{ objectFit: "cover" }}
               fill={true}
             />
           </div>
         </Link>
         <div className={styles.employeeInfoWrapper}>
-          <div className={styles.employeeInfo}>
-            <p className={styles.employeeName}>{employee.name}</p>
-            <div className={styles.employeeRole}>
-              {employee.competences.map((competence) => (
-                <>
-                  <Text
-                    className={styles.employeeRoleDot}
-                    type="labelRegular"
-                    key={competence}
-                  >
-                    {competence}
-                  </Text>
-                </>
-              ))}
-            </div>
+          <Text type="h4" as="h3">
+            <Link
+              href={`/${language}/${employeePageSlug}/${aliasFromEmail(employee.email)}`}
+              className={styles.employeeNameLink}
+            >
+              {employee.name}
+            </Link>
+          </Text>
+
+          <div className={styles.employeeRole}>
+            {employee.competences.map((competence) => (
+              <Text
+                className={styles.employeeRoleDot}
+                type="labelRegular"
+                key={competence}
+              >
+                {competence}
+              </Text>
+            ))}
           </div>
 
-          <div className={styles.employeeContactInfo}>
-            <p>{employee.email}</p>
-            {employee.telephone && (
-              <p>{formatPhoneNumber(employee.telephone)}</p>
-            )}
-          </div>
+          <Text type="bodyExtraSmall">
+            <a href={`mailto:${employee.email}`}>{employee.email}</a>
+          </Text>
+          {employee.telephone && (
+            <Text type="bodyExtraSmall">
+              <a href={`tel:${employee.telephone}`}>
+                {formatPhoneNumber(employee.telephone)}
+              </a>
+            </Text>
+          )}
         </div>
       </div>
     )
+  );
+}
+
+export function EmployeeCardSkeleton() {
+  return (
+    <div className={`${styles.employeeWrapper} ${styles.skeletonCard}`}>
+      <div className={styles.employeeImage} />
+      <div className={`${styles.skeletonText} ${styles.skeletonName}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonTitle}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+      <div className={`${styles.skeletonText} ${styles.skeletonContact}`} />
+    </div>
   );
 }
