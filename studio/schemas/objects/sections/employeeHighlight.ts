@@ -34,6 +34,9 @@ export const employeeHighlightSection = defineField({
       type: "image",
       title: "Employee photo",
       description: "A photo of the employee,",
+      options: {
+        hotspot: true,
+      },
     },
   ],
   preview: {
