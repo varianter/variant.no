@@ -97,6 +97,7 @@ html {
   --background-bg-blue: var(--Blue-500);
   --background-bg-yellow: var(--Yellow-500);
   --background-disabled: var(--Light-700);
+  --background-header-light-transparent: #fafafabf;
 
   --stroke-primary: var(--Dark-700);
   --stroke-secondary: var(--Dark-400);

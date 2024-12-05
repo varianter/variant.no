@@ -11,8 +11,8 @@ import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import Text from "src/components/text/Text";
+import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -28,9 +28,7 @@ export interface IHeader {
   assets: BrandAssets;
   announcement: Announcement | null;
   currentLanguage: string;
-  pathTitles: string[];
   pathTranslations: InternationalizedString;
-  showBreadcrumbs: boolean;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -40,13 +38,13 @@ export const Header = ({
   navigation,
   announcement,
   currentLanguage,
-  pathTitles,
   pathTranslations,
-  showBreadcrumbs,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
+
+  const scrollDirection = useScrollDirection();
 
   const links = filterLinks(navigation.main, linkID);
   const ctas = filterLinks(navigation.main, callToActionFieldID);
@@ -92,51 +90,63 @@ export const Header = ({
         className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
       >
         <header>
+          <div className={styles.spacer}></div>
           <nav aria-label="Main menu">
-            <div className={styles.wrapper}>
-              <Link href="/" aria-label="Home" className={styles.logo} />
-              {renderPageLinks(links, false, pathname)}
-              {renderPageCTAs(ctas, false)}
-              <div className={styles.languageSwitcher}>
-                {defaultLanguage && (
-                  <LanguageSwitcher
-                    currentLanguage={currentLanguage}
-                    pathTranslations={pathTranslations}
-                  />
-                )}
-                <Button size="large" type="primary" background="light">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
-                </Button>
+            <div
+              className={
+                styles.wrapper +
+                ` ` +
+                (scrollDirection === "down" ? `${styles.hidden}` : "")
+              }
+            >
+              <div className={styles.desktopWrapper}>
+                <Link href="/" aria-label="Home" className={styles.logo} />
+                {renderPageLinks(links, false, pathname)}
+                {renderPageCTAs(ctas, false)}
+                <div className={styles.languageSwitcher}>
+                  {defaultLanguage && (
+                    <LanguageSwitcher
+                      currentLanguage={currentLanguage}
+                      pathTranslations={pathTranslations}
+                    />
+                  )}
+                  <Button size="large" type="secondary" background="light">
+                    <Text type="labelRegular">{t("contact_us")}</Text>
+                  </Button>
+                </div>
+                <button
+                  aria-haspopup="true"
+                  aria-controls={sidebarID}
+                  className={isOpen ? styles.open : styles.closed}
+                  aria-expanded={isOpen}
+                  onClick={toggleMenu}
+                  aria-label="Mobile menu"
+                />
               </div>
-              <button
-                aria-haspopup="true"
-                aria-controls={sidebarID}
-                className={isOpen ? styles.open : styles.closed}
-                aria-expanded={isOpen}
-                onClick={toggleMenu}
-              />
+              {isOpen && (
+                <div
+                  className={styles.mobileMenu}
+                  id={sidebarID}
+                  aria-label="Mobile Menu"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {renderPageLinks(sidebarLinks, true, pathname)}
+                  {renderPageCTAs(sidebarCtas, true)}
+                  <hr className={styles.divider} />
+                  <div className={styles.mobileButtons}>
+                    {defaultLanguage && (
+                      <LanguageSwitcher
+                        currentLanguage={currentLanguage}
+                        pathTranslations={pathTranslations}
+                      />
+                    )}
+                    <Button size="large" type="primary" background="dark">
+                      <Text type="labelRegular">{t("contact_us")}</Text>
+                    </Button>
+                  </div>
+                </div>
+              )}
             </div>
-            {isOpen && (
-              <div
-                className={styles.mobileMenu}
-                id={sidebarID}
-                aria-label="Mobile Menu"
-                onClick={() => setIsOpen(false)}
-              >
-                {renderPageLinks(sidebarLinks, true, pathname)}
-                {renderPageCTAs(sidebarCtas, true)}
-                {defaultLanguage && (
-                  <LanguageSwitcher
-                    currentLanguage={currentLanguage}
-                    pathTranslations={pathTranslations}
-                  />
-                )}
-                {/* TODO: add styling for this section */}
-                <Button size="large" type="primary" background="light">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
-                </Button>
-              </div>
-            )}
           </nav>
           {showAnnouncement && (
             <div className={styles.announcementWrapper}>
@@ -156,13 +166,6 @@ export const Header = ({
           )}
         </header>
       </FocusOn>
-      {showBreadcrumbs && (
-        <BreadCrumbMenu
-          currentLanguage={currentLanguage}
-          pathTitles={pathTitles}
-          pathname={pathname}
-        />
-      )}
     </>
   );
 };
