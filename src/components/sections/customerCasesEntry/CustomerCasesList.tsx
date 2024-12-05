@@ -3,9 +3,9 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import Button from "src/components/buttons/Button";
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import styles from "src/components/sections/customerCasesEntry/customerCasesEntry.module.css";
-import Tag from "src/components/tags/Tag";
 import Text from "src/components/text/Text";
 import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
@@ -37,7 +37,7 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
             (customerCase: CustomerCaseEntry) =>
               customerCase && (
                 <div key={customerCase._id}>
-                  <Tag
+                  <Button
                     background={
                       selectedCustomerCase == customerCase ? "light" : "dark"
                     }
@@ -46,7 +46,7 @@ const CustomerCaseList = ({ customerCases }: CustomerCasesProps) => {
                     <Text type="labelRegular">
                       {capitalizeFirstLetter(customerCase.projectInfo.customer)}
                     </Text>
-                  </Tag>
+                  </Button>
                 </div>
               ),
           )}
