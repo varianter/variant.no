@@ -19,7 +19,7 @@ export default function ResultsBlock({
           <StackedHighlights
             section={section}
             blockColor={blockColor}
-          ></StackedHighlights>
+          />
         </div>
       </div>
     )
