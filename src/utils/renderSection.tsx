@@ -7,6 +7,7 @@ import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
+import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
@@ -258,6 +259,8 @@ const SectionRenderer = ({
       return <Employees language={language} section={section} />;
     case "jobs":
       return <Jobs language={language} section={section} />;
+    case "employeeHighlight":
+      return <EmployeeHighlight section={section} />;
     default:
       return null;
   }

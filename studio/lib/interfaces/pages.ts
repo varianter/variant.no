@@ -116,6 +116,15 @@ export interface JobsSection {
   subtitle: string;
 }
 
+export interface EmployeeHighlightSection {
+  _type: "employeeHighlight";
+  _key: string;
+  basicTitle: string;
+  name: string;
+  description: string;
+  employeePhoto: IImage;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -128,7 +137,8 @@ export type Section =
   | GridSection
   | ContactBoxSection
   | EmployeesSection
-  | JobsSection;
+  | JobsSection
+  | EmployeeHighlightSection;
 
 export interface PageBuilder {
   _createdAt: string;
