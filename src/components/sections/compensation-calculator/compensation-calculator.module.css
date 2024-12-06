@@ -1,0 +1,109 @@
+.container {
+  max-width: var(--max-content-width-large);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+.calculator,
+.handbook {
+  --_calcBg: var(--background-bg-light-secondary);
+  --_calcColor: var(--text-primary-dark);
+  padding: 3rem;
+  border-radius: var(--radius-small);
+
+  background-color: var(--_calcBg);
+  color: var(--_calcColor);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.lightFont {
+  font-weight: 300;
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding: 0 0.5em;
+  }
+  .calculator,
+  .handbook {
+    padding: 1rem;
+  }
+}
+
+.calculator {
+  --_calcBg: var(--background-bg-dark);
+  --_calcColor: var(--text-primary-light);
+}
+.calculator--violet {
+  --_calcBg: var(--surface-violet-light);
+  --_calcColor: var(--text-primary-dark);
+}
+.handbook--violet {
+  --_calcBg: var(--surface-violet);
+  --_calcColor: var(--text-primary-light);
+}
+
+.calculatorLink,
+.handbookLink {
+  margin-top: auto;
+  padding-top: 3rem;
+}
+
+.handbookLinks {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+.handbookLinks li {
+  padding: 0;
+  margin: 0;
+}
+
+.handbookLink {
+  font-size: 2rem;
+  color: currentColor;
+}
+.handbookLink:hover {
+  text-decoration: underline;
+}
+.handbookLinks li:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+
+.salaryTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.salaryText {
+  font-size: 2.5rem;
+  font-size: clamp(1rem, 10vw, 2.5rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.formCalculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}

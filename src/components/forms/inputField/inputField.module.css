@@ -8,7 +8,7 @@
 }
 
 .label {
-  color: var(--background-bg-dark);
+  color: currentColor;
 }
 
 .input {
@@ -16,10 +16,10 @@
   padding: 0.5rem 0.75rem;
   align-items: center;
   gap: 0.5rem;
-  align-self: stretch;
+  font-size: 1rem;
 
-  border-radius: 0.5rem;
-  border: 1px solid var(--background-bg-light-secondary, #ece1d3);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--stroke-primary, #ece1d3);
   background: var(--text-primary-light, #fff);
 }
 

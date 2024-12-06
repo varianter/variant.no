@@ -1,6 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
 import { SeoData } from "src/utils/seo";
+import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
@@ -116,6 +117,25 @@ export interface JobsSection {
   subtitle: string;
 }
 
+export interface CompensationCalculatorSection {
+  _type: "compensationCalculator";
+  _key: string;
+  moduleTitle: string;
+  background: CompensationCalculatorBackground;
+
+  calculatorBlock: {
+    calculatorTitle: string;
+    calculatorDescription: string;
+    calculatorLink: ILink;
+  };
+
+  handbookBlock: {
+    handbookTitle: string;
+    handbookDescription: string;
+    handbookLink: ILink;
+  };
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
@@ -137,8 +157,9 @@ export type Section =
   | GridSection
   | ContactBoxSection
   | EmployeesSection
-  | JobsSection
-  | EmployeeHighlightSection;
+  | EmployeeHighlightSection
+  | CompensationCalculatorSection
+  | JobsSection;
 
 export interface PageBuilder {
   _createdAt: string;

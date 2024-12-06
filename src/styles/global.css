@@ -124,6 +124,8 @@ html {
   --surface-red-light: var(--Red-100);
   --surface-yellow-light: var(--Yellow-50);
   --surface-white: var(--Light-50);
+  --surface-violet-light: var(--Violet-50);
+  --surface-violet: var(--Violet-700);
 
   /* breakpoints */
   --breakpoint-mobile: 425px;

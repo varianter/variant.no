@@ -33,15 +33,21 @@ type TagProps = {
   text: string;
 } & TagInner;
 
+export function tagComponentStyle(active: boolean, background: string) {
+  const activeClass = active ? styles["tag--active"] : "";
+  const bgClass = getBackgroundClass(background);
+  const className = `${styles.tag} ${activeClass} ${bgClass}`;
+  return className;
+}
+
 export const Tag = ({
   text,
   background = "light",
   active = false,
   ...props
 }: TagProps) => {
-  const activeClass = active ? styles["tag--active"] : "";
-  const bgClass = getBackgroundClass(background);
-  const className = `${styles.tag} ${activeClass} ${bgClass}`;
+  const className = tagComponentStyle(active, background);
+
   if (props.type === "button") {
     return (
       <button className={className} onClick={props.onClick}>

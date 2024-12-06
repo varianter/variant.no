@@ -71,10 +71,13 @@
 }
 
 .secondary {
-  /* Todo: this color needs to be changes */
-  color: var(--background-bg-dark);
+  --_borderColor: var(--text-secondary);
+  --_color: var(--background-bg-dark);
+  --_iconColor: var(--text-secondary);
+
+  color: var(--_color);
   background: rgba(255, 255, 255, 0);
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--_borderColor);
 
   &:hover {
     background: rgba(31, 31, 31, 0.05);
@@ -85,6 +88,15 @@
   }
 
   &::after {
-    background-color: var(--text-secondary);
+    background-color: var(--_iconColor);
+  }
+}
+.secondary--darkBg {
+  /* @TODO: this color needs to be changed */
+  --_borderColor: var(--background-bg-light-secondary);
+  --_color: currentColor;
+
+  &::after {
+    background-color: currentColor;
   }
 }
