@@ -19,7 +19,6 @@ const meta: Meta<typeof Text> = {
           "h6",
           "labelSmall",
           "labelRegular",
-          "labelBold",
           "quoteItalic",
           "quoteNormal",
           "bodyExtraSmall",

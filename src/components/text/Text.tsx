@@ -11,7 +11,6 @@ export type TextType =
   | "desktopLinkBig"
   | "labelSmall"
   | "labelRegular"
-  | "labelBold"
   | "labelLarge"
   | "quoteItalic"
   | "quoteNormal"
@@ -34,7 +33,6 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   desktopLinkBig: "p",
   labelSmall: "span",
   labelRegular: "span",
-  labelBold: "span",
   labelLarge: "span",
   quoteItalic: "p",
   quoteNormal: "p",
@@ -58,7 +56,6 @@ const classMap: { [key in TextType]?: string } = {
   desktopLinkBig: styles.desktopLinkBig,
   labelSmall: styles.labelSmall,
   labelRegular: styles.labelRegular,
-  labelBold: styles.labelBold,
   labelLarge: styles.labelLarge,
   quoteItalic: styles.quoteItalic,
   quoteNormal: styles.quoteNormal,

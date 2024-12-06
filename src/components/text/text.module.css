@@ -5,7 +5,6 @@
 
 .labelSmall,
 .labelRegular,
-.labelBold,
 .quoteItalic,
 .quoteNormal,
 .bodyExtraSmall,
@@ -122,13 +121,6 @@
   letter-spacing: 0.02rem;
 }
 
-.labelBold {
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 120%;
-}
-
 .labelLarge {
   font-size: 1.25rem;
   font-style: normal;
@@ -151,9 +143,3 @@
   line-height: 130%;
   white-space: pre-line;
 }
-
-/* TODO: add font variables */
-/* .labelBold */
-/* .quoteItalic */
-/* .labelBold, */
-/* .quoteItalic, */
