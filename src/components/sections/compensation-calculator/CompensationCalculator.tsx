@@ -55,13 +55,13 @@ export default async function CompensationCalculator({
             <Calculator
               localeRes={localeRes}
               salariesRes={salariesRes}
-              initialDegree={"master"}
+              initialDegree="master"
               background={radioBackground}
             />
           </Suspense>
 
           {section.calculatorBlock.calculatorLink?.linkTitle && (
-            <div className={styles.calculatorLink}>
+            <div className={styles.calculatorBottomLink}>
               <LinkButton
                 type="secondary"
                 background={
@@ -91,7 +91,7 @@ export default async function CompensationCalculator({
           )}
 
           {section.handbookBlock.handbookLink?.linkTitle && (
-            <div className={styles.handbookLink}>
+            <div className={styles.handbookBottomLink}>
               <LinkButton
                 type="secondary"
                 background={

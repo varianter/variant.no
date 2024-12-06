@@ -184,7 +184,7 @@ export const renderPageCTAs = (ctas: ILink[], isMobile: boolean) => (
       <li key={link._key}>
         <LinkButton
           link={link}
-          isSmall={true}
+          size="S"
           type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
         />
       </li>

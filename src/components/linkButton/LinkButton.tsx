@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { cn } from "src/utils/css";
 import { getHref } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
 
@@ -8,35 +9,33 @@ import styles from "./linkButton.module.css";
 type LinkButtonType = "primary" | "secondary";
 
 interface IButton {
-  isSmall?: boolean;
+  size?: "XL" | "L" | "M" | "S";
   type?: LinkButtonType;
   link: ILink;
+  withIcon?: boolean;
   background?: "dark" | "light";
 }
 
-const typeClassMap = (
-  background: IButton["background"],
-): {
-  [key in LinkButtonType]: string;
-} => ({
-  primary:
-    background === "dark"
-      ? `${styles.primary} ${styles["primary--darkBg"]}`
-      : styles.primary,
-  secondary:
-    background === "dark"
-      ? `${styles.secondary} ${styles["secondary--darkBg"]}`
-      : styles.secondary,
-});
-
 const LinkButton = ({
-  isSmall,
+  size = "XL",
   type = "primary",
   link,
+  withIcon = true,
   background,
 }: IButton) => {
-  const classMap = typeClassMap(background);
-  const className = `${styles.button} ${isSmall ? styles.small : ""} ${classMap[type]}`;
+  const modifierSize = styles[`button--${size.toLowerCase()}`];
+  const modifierType = styles[`button--${type}`];
+  const modifierBackground = styles[`button--${type}--${background}`];
+  const modifierWithIcon = withIcon ? styles["button--withIcon"] : "";
+
+  const className = cn(
+    styles.button,
+    modifierSize,
+    modifierType,
+    modifierBackground,
+    modifierWithIcon,
+  );
+
   const href = getHref(link);
   const linkTitleValue = link.linkTitle;
   return (

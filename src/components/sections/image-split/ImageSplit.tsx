@@ -39,7 +39,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
               <LinkButton
                 key={action._key}
                 type={index === 0 ? "primary" : "secondary"}
-                isSmall
+                size="S"
                 link={action}
               />
             ))}

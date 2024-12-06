@@ -1,102 +1,140 @@
 .button {
-  @media (max-width: 640px) {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  --_button-radius: var(--radius-small);
+  --_button-hoverRadius: var(--radius-large);
+  --_button-padding: 0.625rem 1.5rem;
+  --_button-font-size: 1.25rem;
+  --_button-border: none;
+  --_button-background: transparent;
+  --_button-color: currentColor;
+
+  box-sizing: content-box;
+
   max-width: 360px;
-  cursor: pointer;
+
   display: inline-flex;
   align-items: center;
   align-self: stretch;
   justify-content: space-between;
+  line-height: 1;
+
   gap: 0.6rem;
-  border-radius: 1.5625rem;
+
   border: none;
   font-family: var(--font-britti-sans);
   text-decoration: none;
-
-  padding: 0.5rem 1.25rem;
-  font-size: 1.25rem;
   font-weight: 400;
 
-  @media (min-width: 640px) {
-    text-wrap: nowrap;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
-    padding: 0.5rem 1.5rem;
-    justify-content: center;
-  }
-
-  &::after {
-    width: 1.5rem;
-    height: 1.5rem;
-    content: "";
-    -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
-    -webkit-mask-size: cover;
-    mask: url("/_assets/arrow-right.svg") no-repeat center;
-    mask-size: cover;
-  }
-}
-
-.small {
-  @media (min-width: 1024px) {
-    font-size: 1.25rem;
-    padding: 0.375rem 1.25rem;
-    font-weight: 400;
-
-    &::after {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-  }
-}
-
-.primary {
-  background: var(--background-bg-dark);
-  color: var(--background-bg-light-primary);
-  border: 1px solid var(--text-secondary);
+  /* Settings */
+  background: var(--_button-background);
+  padding: var(--_button-padding);
+  font-size: var(--_button-font-size);
+  border: var(--_button-border);
+  border-radius: var(--_button-radius);
+  color: var(--_button-color);
+  transition:
+    border-radius 150ms ease-in,
+    background-color 200ms ease-in;
 
   &:hover {
-    background: var(--text-primary);
+    --_button-radius: var(--_button-hoverRadius);
+  }
+  &:focus {
+    --_button-radius: var(--_button-hoverRadius);
+    outline: 2px solid var(--surface-yellow);
+    outline-offset: 1px;
+  }
+}
+.button--xl {
+  --_button-radius: var(--radius-small);
+  --_button-hoverRadius: var(--radius-large);
+  --_button-padding: 0.625rem 1.5rem;
+  --_button-font-size: 1.25rem;
+}
+.button--l {
+  --_button-hoverRadius: var(--radius-medium);
+  --_button-padding: 0.625rem 0.75rem;
+  --_button-font-size: 1.25rem;
+}
+.button--m {
+  --_button-padding: 0.375rem 0.5rem;
+  --_button-hoverRadius: var(--radius-medium);
+  --_button-font-size: 1rem;
+}
+.button--s {
+  --_button-padding: 0.125rem 0.25rem;
+  --_button-hoverRadius: var(--radius-medium);
+  --_button-font-size: 0.875rem;
+}
+
+.button--withIcon::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
+  -webkit-mask-size: cover;
+  mask: url("/_assets/arrow-right.svg") no-repeat center;
+  mask-size: cover;
+
+  background-color: var(--_button-color);
+}
+
+.button--primary {
+  --_button-border: 1px solid var(--text-secondary);
+  --_button-background: var(--background-bg-dark);
+  --_button-color: var(--background-bg-light-primary);
+
+  &:hover {
+    --_button-background: var(--background-bg-dark);
+  }
+  &:focus {
+    --_button-border: 1px solid var(--surface-yellow);
+  }
+  &:active {
+    --_button-background: var(--text-secondary);
+  }
+}
+
+.button--primary--dark {
+  --_button-border: none;
+  --_button-background: var(--background-bg-light-primary);
+  --_button-color: var(--text-primary);
+  --_button-border: 1px solid var(--background-bg-light-primary);
+
+  &:hover {
+    --_button-background: var(--background-bg-light-primary);
+  }
+  &:active {
+    --_button-background: var(--background-bg-light-secondary);
+  }
+}
+
+.button--secondary {
+  --_button-border: 1px solid var(--text-secondary);
+  --_button-color: var(--background-bg-dark);
+  --_button-background: transparent;
+
+  &:hover {
+    --_button-background: rgba(31, 31, 31, 0.05);
   }
 
   &:active {
-    background: var(--text-secondary);
-  }
-
-  &::after {
-    background-color: var(--text-primary-light);
+    --_button-background: rgba(31, 31, 31, 0.16);
   }
 }
+.button--secondary--dark {
+  /* --_button-border: 1px solid var(--background-bg-light-secondary);
+  --_button-color: currentColor; */
 
-.secondary {
-  --_borderColor: var(--text-secondary);
-  --_color: var(--background-bg-dark);
-  --_iconColor: var(--text-secondary);
-
-  color: var(--_color);
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid var(--_borderColor);
+  --_button-border: 1px solid var(--background-bg-light-secondary);
+  --_button-color: currentColor;
 
   &:hover {
-    background: rgba(31, 31, 31, 0.05);
+    --_button-background: var(--background-bg-dark);
   }
-
+  &:focus {
+    --_button-border: 1px solid var(--surface-yellow);
+  }
   &:active {
-    background: rgba(31, 31, 31, 0.16);
-  }
-
-  &::after {
-    background-color: var(--_iconColor);
-  }
-}
-.secondary--darkBg {
-  /* @TODO: this color needs to be changed */
-  --_borderColor: var(--background-bg-light-secondary);
-  --_color: currentColor;
-
-  &::after {
-    background-color: currentColor;
+    --_button-background: var(--text-secondary);
   }
 }
