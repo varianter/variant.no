@@ -91,7 +91,7 @@
 
 .bodySmall {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 150%;
 }
 
@@ -110,7 +110,7 @@
 .labelSmall {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 171.429%;
 }
 
 .labelRegular {
