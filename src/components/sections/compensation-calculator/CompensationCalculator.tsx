@@ -5,12 +5,13 @@ import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { cnIf } from "src/utils/css";
 import { getHref } from "src/utils/link";
-import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
-import { LOCALE_QUERY } from "studio/lib/queries/locale";
-import { loadStudioQuery } from "studio/lib/store";
 
-import { getHandbookLinksFromCompensationPage, getSalaryByYear } from "./api";
+import {
+  getHandbookLinksFromCompensationPage,
+  getLatestSalaries,
+  getLocale,
+} from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 
@@ -23,10 +24,9 @@ export default async function CompensationCalculator({
   section,
   language,
 }: CompensationCalculatorProps) {
-  const salariesRes = getSalaryByYear(2024, language);
-  const localeRes = loadStudioQuery<LocaleDocument>(LOCALE_QUERY).then(
-    (d) => d.data,
-  );
+  const salariesRes = getLatestSalaries();
+  const localeRes = getLocale();
+
   const handbookLinksRes = await getHandbookLinksFromCompensationPage(language);
 
   const calculatorBgClassname = cnIf({

@@ -26,20 +26,12 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     },
   }
 `;
-export const COMPENSATIONS_SALARIES = groq`
-  *[_type == "compensations"][0] {
-    "slug": ${translatedFieldFragment("slug")},
-    "salariesByLocation": salariesByLocation[] {
-      ...
-    },
-  }
-`;
 
 // Just select the first location and the first year..
-// @TODO: make this a bit more robust.
+// @TODO: Check if we need to make this more robust,
+// but yearlySalaries is sorted by year so [0] should be the latest
 export const COMPENSATIONS_SALARY_BY_YEAR = groq`
   *[_type == "compensations"][0] {
-    "slug": ${translatedFieldFragment("slug")},
     "salariesByLocation": salariesByLocation[0] {
       "yearlySalaries": yearlySalaries[0] {
         ...

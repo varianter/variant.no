@@ -1,5 +1,7 @@
 import { isSalariesType } from "studio/components/salariesInput/utils/parseSalaries";
+import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { ILink } from "studio/lib/interfaces/navigation";
+import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import {
   COMPENSATIONS_HANDBOOK_LINKS,
   COMPENSATIONS_SALARY_BY_YEAR,
@@ -26,19 +28,19 @@ export async function getHandbookLinksFromCompensationPage(
   return ResultOk(res.data.handbookLinks);
 }
 
-export async function getSalaryByYear(
-  year: number,
-  language: string,
-): Promise<Result<SalaryData, unknown>> {
+export async function getLocale() {
+  const res = await loadStudioQuery<LocaleDocument>(LOCALE_QUERY);
+  return res.data;
+}
+
+export async function getLatestSalaries(): Promise<
+  Result<SalaryData, unknown>
+> {
   const res = await loadStudioQuery<{
-    slug: string;
     salariesByLocation: { yearlySalaries: { salaries: string } };
   }>(
     COMPENSATIONS_SALARY_BY_YEAR,
-    {
-      year,
-      language,
-    },
+    {},
     {
       cache: "force-cache",
       next: {
@@ -52,7 +54,7 @@ export async function getSalaryByYear(
       res.data.salariesByLocation.yearlySalaries.salaries,
     );
 
-    if (!isSalariesType(parsedSalaries) || !parsedSalaries[year]) {
+    if (!isSalariesType(parsedSalaries)) {
       return ResultError("Parsed salaries data was not valid");
     }
 
