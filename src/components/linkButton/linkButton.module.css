@@ -9,13 +9,12 @@
 
   box-sizing: content-box;
 
-  max-width: 360px;
-
   display: inline-flex;
   align-items: center;
   align-self: stretch;
   justify-content: space-between;
   line-height: 1;
+  white-space: nowrap;
 
   gap: 0.6rem;
 
@@ -122,9 +121,6 @@
   }
 }
 .button--secondary--dark {
-  /* --_button-border: 1px solid var(--background-bg-light-secondary);
-  --_button-color: currentColor; */
-
   --_button-border: 1px solid var(--background-bg-light-secondary);
   --_button-color: currentColor;
 

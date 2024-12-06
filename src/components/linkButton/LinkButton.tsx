@@ -8,25 +8,26 @@ import styles from "./linkButton.module.css";
 
 type LinkButtonType = "primary" | "secondary";
 
-interface IButton {
+type LinkType = { link: ILink } | { link: string; linkTitle: string };
+
+type LinkButtonProps = {
   size?: "XL" | "L" | "M" | "S";
   type?: LinkButtonType;
-  link: ILink;
-  withIcon?: boolean;
+  withoutIcon?: boolean;
   background?: "dark" | "light";
-}
+} & LinkType;
 
 const LinkButton = ({
   size = "XL",
   type = "primary",
-  link,
-  withIcon = true,
+  withoutIcon = false,
   background,
-}: IButton) => {
+  ...props
+}: LinkButtonProps) => {
   const modifierSize = styles[`button--${size.toLowerCase()}`];
   const modifierType = styles[`button--${type}`];
   const modifierBackground = styles[`button--${type}--${background}`];
-  const modifierWithIcon = withIcon ? styles["button--withIcon"] : "";
+  const modifierWithIcon = !withoutIcon ? styles["button--withIcon"] : "";
 
   const className = cn(
     styles.button,
@@ -36,16 +37,29 @@ const LinkButton = ({
     modifierWithIcon,
   );
 
-  const href = getHref(link);
-  const linkTitleValue = link.linkTitle;
+  const { href, linkTitle } = getLinkData(props);
+
   return (
     href &&
-    linkTitleValue && (
+    linkTitle && (
       <Link className={className} href={href}>
-        {linkTitleValue}
+        {linkTitle}
       </Link>
     )
   );
 };
+
+function getLinkData(link: LinkType) {
+  if (isLinkTypeString(link)) {
+    return { href: link.link, linkTitle: link.linkTitle };
+  }
+  return { href: getHref(link.link), linkTitle: link.link.linkTitle };
+}
+
+function isLinkTypeString(
+  link: LinkType,
+): link is { link: string; linkTitle: string } {
+  return typeof link === "object" && "link" in link && "linkTitle" in link;
+}
 
 export default LinkButton;

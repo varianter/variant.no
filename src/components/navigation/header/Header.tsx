@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
-import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
@@ -102,9 +101,16 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
-                <Button size="large" type="secondary" background="light">
-                  <Text type="labelLarge">{t("contact_us")}</Text>
-                </Button>
+
+                {/* THIS SHOULD BE MOVED TO SANITY */}
+                <LinkButton
+                  link="mailto:post@variant.no"
+                  linkTitle={t("contact_us")}
+                  size="L"
+                  type="primary"
+                  background="light"
+                  withoutIcon
+                />
               </div>
               <button
                 aria-haspopup="true"
@@ -131,9 +137,16 @@ export const Header = ({
                       pathTranslations={pathTranslations}
                     />
                   )}
-                  <Button size="large" type="primary" background="dark">
-                    <Text type="labelRegular">{t("contact_us")}</Text>
-                  </Button>
+
+                  {/* THIS SHOULD BE MOVED TO SANITY */}
+                  <LinkButton
+                    link="mailto:post@variant.no"
+                    linkTitle={t("contact_us")}
+                    size="L"
+                    type="primary"
+                    background="light"
+                    withoutIcon
+                  />
                 </div>
               </div>
             )}
