@@ -35,7 +35,7 @@ export const compensationCalculator = defineField({
       title: "Background",
       type: "string",
       description:
-        "Select the whether the calculator should be purple or have dark background.",
+        "Select whether the calculator should have a purple or dark background.",
       options: {
         list: backgroundOptions,
         layout: "radio",
