@@ -30,7 +30,9 @@ export default function JobPosting({ jobPosting }: JobPostingProps) {
         <div className={styles.role}>
           <Text type={"h5"}>{jobPosting.role}</Text>
         </div>
-        <Badge>{jobPostingLocations}</Badge>
+        <div className={styles.locations}>
+          <Badge>{jobPostingLocations}</Badge>
+        </div>
       </div>
     </a>
   );
