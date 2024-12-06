@@ -34,61 +34,65 @@ const CustomerCaseList = ({
   ].filter(Boolean);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.info}>
-        <div className={styles.TagRow}>
-          <Text className={styles.font} type="labelRegular">
-            {t("customer_case_entry.case")}
-          </Text>
-          {customerCases.map(
-            (customerCase: CustomerCaseEntry) =>
-              customerCase && (
-                <div key={customerCase._id}>
-                  <Tag
-                    active={customerCase._id === selectedCustomerCase._id}
-                    type="button"
-                    background="dark"
-                    onClick={() => setSelectedCustomerCase(customerCase)}
-                    text={capitalizeFirstLetter(
-                      customerCase.projectInfo.customer,
-                    )}
-                  />
-                </div>
-              ),
-          )}
-        </div>
-        <Link
-          className={styles.link}
-          href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
-        >
-          <div className={styles.cardInfo}>
-            <Text type="h2" className={styles.heading}>
-              {" "}
-              {selectedCustomerCase.basicTitle}
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.info}>
+          <div className={styles.TagRow}>
+            <Text className={styles.font} type="labelRegular">
+              {t("customer_case_entry.case")}
             </Text>
-            <div className={styles.deliveries}>
-              <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
-              <div className={styles.deliveriesList}>
-                {deliveryNames.map((deliveryName, index) => (
-                  <Text key={index} type="h5" className={styles.dotSeparator}>
-                    {deliveryName}
-                  </Text>
-                ))}
+            {customerCases.map(
+              (customerCase: CustomerCaseEntry) =>
+                customerCase && (
+                  <div key={customerCase._id}>
+                    <Tag
+                      active={customerCase._id === selectedCustomerCase._id}
+                      type="button"
+                      background="dark"
+                      onClick={() => setSelectedCustomerCase(customerCase)}
+                      text={capitalizeFirstLetter(
+                        customerCase.projectInfo.customer,
+                      )}
+                    />
+                  </div>
+                ),
+            )}
+          </div>
+          <Link
+            className={styles.link}
+            href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+          >
+            <div className={styles.cardInfo}>
+              <Text type="h2" className={styles.heading}>
+                {" "}
+                {selectedCustomerCase.basicTitle}
+              </Text>
+              <div className={styles.deliveries}>
+                <Text type="labelRegular">
+                  {t("customer_case_entry.field")}
+                </Text>
+                <div className={styles.deliveriesList}>
+                  {deliveryNames.map((deliveryName, index) => (
+                    <Text key={index} type="h5" className={styles.dotSeparator}>
+                      {deliveryName}
+                    </Text>
+                  ))}
+                </div>
               </div>
             </div>
+          </Link>
+        </div>
+        <Link
+          className={styles.image}
+          href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+        >
+          <div>
+            {selectedCustomerCase.image && (
+              <SanitySharedImage image={selectedCustomerCase.image} />
+            )}
           </div>
         </Link>
       </div>
-      <Link
-        className={styles.link}
-        href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
-      >
-        {selectedCustomerCase.image && (
-          <div className={styles.imageWrapper}>
-            <SanitySharedImage image={selectedCustomerCase.image} />
-          </div>
-        )}
-      </Link>
     </div>
   );
 };
