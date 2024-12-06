@@ -44,7 +44,7 @@ export default function ContactSelector({
   return (
     <>
       <div className={styles.contactSelector}>
-        <div className={styles.tagList} role="tabList">
+        <div className={styles.tagList} role="tablist">
           {locations.map((location) => (
             <Tag
               key={location._id}
