@@ -71,7 +71,6 @@
 }
 
 .secondary {
-  /* Todo: this color needs to be changes */
   --_borderColor: var(--text-secondary);
   --_color: var(--background-bg-dark);
   --_iconColor: var(--text-secondary);
