@@ -15,6 +15,7 @@ import { Result } from "studio/utils/result";
 
 import styles from "./compensation-calculator.module.css";
 import { Degree, SalaryData } from "./types";
+import { useTranslations } from "next-intl";
 
 type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
@@ -24,11 +25,6 @@ type CalculatorProps = {
   initialYear: number;
 };
 
-const degreeOptions: IOption[] = [
-  { id: "bachelor", label: "Bachelor" },
-  { id: "master", label: "Master" },
-];
-
 export default function Calculator({
   localeRes,
   salariesRes,
@@ -36,6 +32,7 @@ export default function Calculator({
   initialYear,
   background,
 }: CalculatorProps) {
+  const t = useTranslations("compensation_calculator");
   const locale = use(localeRes);
   const salaries = use(salariesRes);
   const [year, setYear] = useState(initialYear);
@@ -48,13 +45,22 @@ export default function Calculator({
     return null;
   }
 
+  const { min, max } = getMinMaxYear(salaries.value);
   const salary = calculateSalary(year, degree, salaries.value) ?? 0;
 
+  const degreeOptions: IOption[] = [
+    { id: "bachelor", label: t("degreeOptions.bachelor") },
+    { id: "master", label: t("degreeOptions.master") },
+  ];
+
   return (
-    <form className={styles.formCalculator} aria-label="salary calculator">
+    <form
+      className={styles.formCalculator}
+      aria-label={t("calculator.formLabel")}
+    >
       <RadioButtonGroup
         id="degree-group"
-        label="Utdanning"
+        label={t("calculator.educationInput")}
         options={degreeOptions}
         background={background}
         selectedId={degree}
@@ -65,11 +71,11 @@ export default function Calculator({
 
       <div className={styles.inputWrapper}>
         <InputField
-          label="Året du begynte i relevant arbeid"
+          label={t("calculator.yearInput")}
           name="examinationYear"
           type="number"
-          min={1085}
-          max={2024}
+          min={min}
+          max={max}
           value={year}
           onChange={(_name, value) => setYear(parseInt(value))}
           required
@@ -78,13 +84,20 @@ export default function Calculator({
 
       {salary !== null ? (
         <div aria-live="polite" className={styles.salaryTextContainer}>
-          <Text type="labelRegular">Din årslønn</Text>
+          <Text type="labelRegular">{t("calculator.resultLabel")}</Text>
           <Text className={styles.salaryText}>
             {formatAsCurrency(salary, locale.locale, locale.currency)}
           </Text>
-          <Text type="labelRegular">+ bonus</Text>
+          <Text type="labelRegular">{t("calculator.bonusResult")}</Text>
         </div>
       ) : null}
     </form>
   );
+}
+
+function getMinMaxYear(salaries: SalaryData) {
+  const years = Object.keys(salaries).map((s) => parseInt(s));
+  const min = Math.min(...years);
+  const max = Math.max(...years);
+  return { min, max };
 }

@@ -12,6 +12,7 @@ import { loadStudioQuery } from "studio/lib/store";
 import { getHandbookLinksFromCompensationPage, getSalaryByYear } from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
+import { cnIf } from "src/utils/css";
 
 export interface CompensationCalculatorProps {
   language: string;
@@ -28,19 +29,16 @@ export default async function CompensationCalculator({
   );
   const handbookLinksRes = await getHandbookLinksFromCompensationPage(language);
 
-  // TODO: add cn util or andIf
-  const calculatorBgClassname =
-    section.background === "violet"
-      ? `${styles.calculator} ${styles["calculator--violet"]}`
-      : styles.calculator;
-  const handbookBgClassname =
-    section.background === "violet"
-      ? `${styles.handbook} ${styles["handbook--violet"]}`
-      : styles.handbook;
+  const calculatorBgClassname = cnIf({
+    [styles.calculator]: true,
+    [styles["calculator--violet"]]: section.background === "violet",
+  });
+  const handbookBgClassname = cnIf({
+    [styles.handbook]: true,
+    [styles["handbook--violet"]]: section.background === "violet",
+  });
 
   const radioBackground = section.background === "violet" ? "light" : "dark";
-
-  // @TODO add proper translations
 
   return (
     <div className={styles.container}>
