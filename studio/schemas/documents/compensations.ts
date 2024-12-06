@@ -45,7 +45,7 @@ const compensations = defineType({
       name: "handbookLinks",
       title: "Handbook Section Links",
       description:
-        "Ordered links to sections in handbook to show important information when it comes to benefints. Used by compensation calculator module.",
+        "Ordered links to sections in handbook to show important information when it comes to benefits. Used by compensation calculator module.",
       type: "array",
       of: [link],
     }),
