@@ -58,6 +58,7 @@ const CustomerCaseList = ({
           )}
         </div>
         <Link
+          className={styles.link}
           href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
         >
           <div className={styles.cardInfo}>
@@ -79,6 +80,7 @@ const CustomerCaseList = ({
         </Link>
       </div>
       <Link
+        className={styles.link}
         href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
       >
         {selectedCustomerCase.image && (

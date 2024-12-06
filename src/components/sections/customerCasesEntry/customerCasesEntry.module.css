@@ -5,19 +5,22 @@
   background-color: var(--background-bg-dark);
   height: fit-content;
   justify-content: space-between;
-  padding: 6px;
+  padding: 0.375rem;
   border-radius: 0.375rem;
+  height: 30rem;
+  overflow: hidden;
 
   @media (max-width: 834px) {
     flex-direction: column-reverse;
+    height: auto;
   }
 }
 
-.heading {
-  &:hover {
-   text-decoration: underline;
-  }
+.link:focus-visible .heading {
+  text-decoration: underline;
+}
 
+.heading {
   @media (max-width: 1130px) {
     font-size: 2.125rem;
   }
@@ -32,6 +35,7 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .info {
@@ -39,25 +43,29 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 20rem;
+  max-width: 32rem;
 }
 
 .cardInfo {
   color: var(--text-primary-light);
   display: flex;
-  gap: 48px;
+  width: fit-content;
+  gap: 2rem;
   flex-direction: column;
   height: fit-content;
 }
 
-.deliveries{
+.deliveries {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.deliveriesList{
+.deliveriesList {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .dotSeparator::after {
@@ -70,26 +78,25 @@
   margin: 0;
 }
 
-
 .imageWrapper {
-  max-width: 791px !important;
-  /* max-height: 27rem !important; */
-  min-height: 27rem !important;
+  max-width: 46rem;
+  min-width: 24rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden !important;
   padding: 0;
-  margin: 6px;
   border-radius: 24px;
-  flex:1; 
+  flex: 1;
 
   @media (max-width: 834px) {
     align-items: start;
     max-width: 54.3125rem !important;
     min-height: 18rem !important;
-    max-height: 18rem !important;
     margin: 0px;
+    width: 100%;
+    height: 100%;
   }
 }
 
