@@ -3,6 +3,7 @@ import { Suspense } from "react";
 
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
+import { cnIf } from "src/utils/css";
 import { getHref } from "src/utils/link";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
@@ -12,7 +13,6 @@ import { loadStudioQuery } from "studio/lib/store";
 import { getHandbookLinksFromCompensationPage, getSalaryByYear } from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
-import { cnIf } from "src/utils/css";
 
 export interface CompensationCalculatorProps {
   language: string;
@@ -55,7 +55,6 @@ export default async function CompensationCalculator({
             <Calculator
               localeRes={localeRes}
               salariesRes={salariesRes}
-              initialYear={2024}
               initialDegree={"master"}
               background={radioBackground}
             />

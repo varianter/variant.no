@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { use, useState } from "react";
 
 import { calculateSalary } from "src/components/compensations/utils/salary";
@@ -15,14 +16,13 @@ import { Result } from "studio/utils/result";
 
 import styles from "./compensation-calculator.module.css";
 import { Degree, SalaryData } from "./types";
-import { useTranslations } from "next-intl";
 
 type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
   salariesRes: Promise<Result<SalaryData, unknown>>;
   background: "light" | "dark" | "violet";
   initialDegree: Degree;
-  initialYear: number;
+  initialYear?: number;
 };
 
 export default function Calculator({
@@ -35,7 +35,9 @@ export default function Calculator({
   const t = useTranslations("compensation_calculator");
   const locale = use(localeRes);
   const salaries = use(salariesRes);
-  const [year, setYear] = useState(initialYear);
+  const [year, setYear] = useState(
+    initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
+  );
   const [degree, setDegree] = useState<Degree>(initialDegree);
 
   if (!locale || !salaries.ok) {
@@ -100,4 +102,9 @@ function getMinMaxYear(salaries: SalaryData) {
   const min = Math.min(...years);
   const max = Math.max(...years);
   return { min, max };
+}
+function getMaybeMaxYear(salaries: Result<SalaryData, unknown>) {
+  if (!salaries.ok) return undefined;
+  const years = Object.keys(salaries.value).map((s) => parseInt(s));
+  return Math.max(...years);
 }
