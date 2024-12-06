@@ -3,6 +3,7 @@ import React from "react";
 import styles from "src/components/forms/radioButtonGroup/radioButtonGroup.module.css";
 import { tagComponentStyle } from "src/components/tag";
 import Text from "src/components/text/Text";
+import { cnIf } from "src/utils/css";
 
 export interface IOption {
   id: string;
@@ -88,13 +89,14 @@ const RadioButton = ({
   onChange,
   background = "light",
 }: RadioButtonProps) => {
-  const className = tagComponentStyle(checked, background);
+  const className = cnIf({
+    [tagComponentStyle(checked, background)]: true,
+    [styles.inputLabelDisabled]: disabled ?? false,
+    [styles.inputLabel]: true,
+  });
 
   return (
-    <label
-      htmlFor={id}
-      className={`${className} ${disabled ? styles.disabledLabel : ""} ${styles.inputLabel}`}
-    >
+    <label htmlFor={id} className={className}>
       <input
         className={styles.input}
         type="radio"
