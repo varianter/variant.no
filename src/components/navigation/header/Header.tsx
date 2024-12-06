@@ -103,7 +103,7 @@ export const Header = ({
                   />
                 )}
                 <Button size="large" type="secondary" background="light">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
+                  <Text type="labelLarge">{t("contact_us")}</Text>
                 </Button>
               </div>
               <button
