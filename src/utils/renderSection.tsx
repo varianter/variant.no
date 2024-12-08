@@ -6,8 +6,10 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
+import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
@@ -267,6 +269,8 @@ const SectionRenderer = ({
           initialData={initialData}
         />
       );
+    case "compensationCalculator":
+      return <CompensationCalculator section={section} language={language} />;
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "customerCasesEntry":
@@ -283,6 +287,8 @@ const SectionRenderer = ({
       return <Employees language={language} section={section} />;
     case "jobs":
       return <Jobs language={language} section={section} />;
+    case "employeeHighlight":
+      return <EmployeeHighlight section={section} />;
     default:
       return null;
   }

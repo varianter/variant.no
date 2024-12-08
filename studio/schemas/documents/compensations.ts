@@ -6,6 +6,7 @@ import { benefitsByLocation } from "studio/schemas/objects/compensations/benefit
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
 import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
+import { link } from "studio/schemas/objects/link";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 
@@ -39,6 +40,16 @@ const compensations = defineType({
     bonusesByLocation,
     benefitsByLocation,
     salariesByLocation,
+
+    defineField({
+      name: "handbookLinks",
+      title: "Handbook Section Links",
+      description:
+        "Ordered links to sections in handbook to show important information when it comes to benefits. Used by compensation calculator module.",
+      type: "array",
+      of: [link],
+    }),
+
     {
       name: "seo",
       type: "internationalizedArraySeo",

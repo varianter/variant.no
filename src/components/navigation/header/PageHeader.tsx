@@ -4,6 +4,7 @@ import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { Navigation } from "studio/lib/interfaces/navigation";
+import { COMPANY_EMAIL_QUERY } from "studio/lib/queries/admin";
 import {
   ANNOUNCEMENT_QUERY,
   BRAND_ASSETS_QUERY,
@@ -16,16 +17,12 @@ import HeaderPreview from "./HeaderPreview";
 
 interface PageHeaderProps {
   language: string;
-  pathTitles: string[];
   pathTranslations: InternationalizedString;
-  showBreadcrumbs: boolean;
 }
 
 export default async function PageHeader({
   language,
-  pathTitles,
   pathTranslations,
-  showBreadcrumbs,
 }: PageHeaderProps) {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
@@ -47,6 +44,10 @@ export default async function PageHeader({
     { perspective },
   );
 
+  const initialCompanyEmail = await loadStudioQuery<
+    { companyEmail: string } | undefined
+  >(COMPANY_EMAIL_QUERY, {}, { perspective });
+
   return (
     isNonNullQueryResponse(initialBrandAssets) &&
     isNonNullQueryResponse(initialNav) &&
@@ -56,9 +57,8 @@ export default async function PageHeader({
         initialBrandAssets={initialBrandAssets}
         initialAnnouncement={initialAnnouncement}
         currentLanguage={language}
-        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
-        showBreadcrumbs={showBreadcrumbs}
+        contactEmail={initialCompanyEmail.data?.companyEmail}
       />
     ) : (
       <Header
@@ -66,9 +66,8 @@ export default async function PageHeader({
         assets={initialBrandAssets.data}
         announcement={initialAnnouncement.data}
         currentLanguage={language}
-        pathTitles={pathTitles}
         pathTranslations={pathTranslations}
-        showBreadcrumbs={showBreadcrumbs}
+        contactEmail={initialCompanyEmail.data?.companyEmail}
       />
     ))
   );

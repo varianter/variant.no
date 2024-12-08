@@ -1,7 +1,9 @@
 import React from "react";
 
 import styles from "src/components/forms/radioButtonGroup/radioButtonGroup.module.css";
-import textStyles from "src/components/text/text.module.css";
+import { tagComponentStyle } from "src/components/tag";
+import Text from "src/components/text/Text";
+import { cnIf } from "src/utils/css";
 
 export interface IOption {
   id: string;
@@ -17,6 +19,8 @@ interface RadioButtonProps {
   checked?: boolean;
   disabled?: boolean;
   defaultChecked?: boolean;
+  background?: "light" | "dark" | "violet";
+
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -26,6 +30,7 @@ interface RadioButtonGroupProps {
   options: IOption[];
   selectedId: string;
   onValueChange: (option: IOption) => void;
+  background?: "light" | "dark" | "violet";
 }
 
 export const RadioButtonGroup = ({
@@ -34,6 +39,7 @@ export const RadioButtonGroup = ({
   options,
   selectedId,
   onValueChange,
+  background = "light",
 }: RadioButtonGroupProps) => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedOption = options.find(
@@ -46,21 +52,28 @@ export const RadioButtonGroup = ({
 
   return (
     <fieldset className={styles.fieldset} id={id}>
-      <legend className={textStyles.h3}>{label}</legend>
-      <div className={styles.wrapper}>
-        {options.map(({ id, label, disabled }) => (
-          <RadioButton
-            key={id}
-            id={id}
-            label={label}
-            name="radio"
-            disabled={disabled}
-            value={id}
-            checked={id === selectedId}
-            onChange={onChange}
-          />
-        ))}
-      </div>
+      <legend className={styles.srOnly}>
+        <Text type="labelRegular" as="span">
+          {label}
+        </Text>
+      </legend>
+      <Text type="labelRegular" aria-hidden>
+        {label}
+      </Text>
+
+      {options.map(({ id, label, disabled }) => (
+        <RadioButton
+          key={id}
+          id={id}
+          label={label}
+          name="radio"
+          disabled={disabled}
+          value={id}
+          checked={id === selectedId}
+          background={background}
+          onChange={onChange}
+        />
+      ))}
     </fieldset>
   );
 };
@@ -70,16 +83,20 @@ const RadioButton = ({
   name,
   value,
   label,
-  checked,
+  checked = false,
   disabled,
   defaultChecked,
   onChange,
+  background = "light",
 }: RadioButtonProps) => {
+  const className = cnIf({
+    [tagComponentStyle(checked, background)]: true,
+    [styles.inputLabelDisabled]: disabled ?? false,
+    [styles.inputLabel]: true,
+  });
+
   return (
-    <label
-      htmlFor={id}
-      className={`${styles.container} ${textStyles.caption} ${disabled ? styles.disabledLabel : styles.label}`}
-    >
+    <label htmlFor={id} className={className}>
       <input
         className={styles.input}
         type="radio"

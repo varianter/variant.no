@@ -14,11 +14,11 @@
     "image"
     "tags"
     "content";
-  grid-template-columns: 1.5fr; 
+  grid-template-columns: 1.5fr;
   grid-template-rows: 18rem 1fr;
-  height: 100%; 
+  height: 100%;
   width: 100%;
-  }
+}
 @container customer-case-container (width > 834px) {
   .wrapper {
     grid-template-areas:
@@ -61,15 +61,15 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  height: fit-content; 
- padding: 2rem 0rem 0rem 2.625rem; 
+  height: fit-content;
+  padding: 2rem 0rem 0rem 2.625rem;
 }
 
 .imageWrapper {
-  grid-area: image; 
-  width: 100%; 
+  grid-area: image;
+  width: 100%;
   max-width: 100%;
-  max-height: 100%; 
+  max-height: 100%;
 }
 
 .imageWrapper img {

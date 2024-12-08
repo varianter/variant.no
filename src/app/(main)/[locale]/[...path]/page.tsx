@@ -86,16 +86,11 @@ async function Page({ params }: Props) {
     return Page404;
   }
 
-  const { queryResponse, docType, pathTitles, pathTranslations } = pageData;
+  const { queryResponse, docType, pathTranslations } = pageData;
 
   return (
     <>
-      <PageHeader
-        language={locale}
-        pathTitles={pathTitles}
-        pathTranslations={pathTranslations}
-        showBreadcrumbs={true}
-      />
+      <PageHeader language={locale} pathTranslations={pathTranslations} />
       <main id={"main"} tabIndex={-1}>
         {(() => {
           switch (docType) {

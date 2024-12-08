@@ -8,6 +8,14 @@ html {
   box-sizing: inherit;
 }
 
+:where(.debug) {
+  *,
+  *::before,
+  *::after {
+    outline: 1px solid lime;
+  }
+}
+
 :root {
   --Blue-500: #3840ff;
   --Blue-700: #0014cd;
@@ -97,6 +105,7 @@ html {
   --background-bg-blue: var(--Blue-500);
   --background-bg-yellow: var(--Yellow-500);
   --background-disabled: var(--Light-700);
+  --background-header-light-transparent: #fafafabf;
 
   --stroke-primary: var(--Dark-700);
   --stroke-secondary: var(--Dark-400);
@@ -115,6 +124,8 @@ html {
   --surface-red-light: var(--Red-100);
   --surface-yellow-light: var(--Yellow-50);
   --surface-white: var(--Light-50);
+  --surface-violet-light: var(--Violet-50);
+  --surface-violet: var(--Violet-700);
 
   /* breakpoints */
   --breakpoint-mobile: 425px;

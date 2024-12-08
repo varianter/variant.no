@@ -48,7 +48,11 @@ export default async function CustomerCase({
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (
-            <CustomerCaseSection key={section._key} section={section} />
+            <CustomerCaseSection
+              key={section._key}
+              section={section}
+              clientColors={customerCase.clientColors}
+            />
           ))}
         </div>
         {consultantsResult?.ok && (

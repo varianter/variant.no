@@ -7,6 +7,10 @@ import { translatedFieldFragment } from "./utils/i18n";
 //Parent Company
 export const COMPANY_INFO_QUERY = groq`*[_type == "${companyInfoID}"][0]`;
 
+export const COMPANY_EMAIL_QUERY = groq`*[_type == "${companyInfoID}"][0] {
+  companyEmail
+}`;
+
 //Company Locations
 export const COMPANY_LOCATIONS_QUERY = groq`*[_type == "companyLocation"]`;
 

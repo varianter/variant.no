@@ -29,6 +29,19 @@
     "contact_sale": "Kontakt salg!",
     "contact_us": "Kontakt oss"
   },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Lønnskalkulator",
+      "educationInput": "Utdanning",
+      "yearInput": "Året du begynte i relevant arbeid",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Din årslønn"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
+  },
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
     "read_more": "Les mer"

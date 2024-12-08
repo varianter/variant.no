@@ -48,7 +48,7 @@ export const BreadCrumbMenu = ({
                 className={
                   isLast ? styles.breadCrumbText : styles.breadCrumbLink
                 }
-                type={isLast ? "labelSemibold" : "desktopLink"}
+                type={isLast ? "labelRegular" : "desktopLink"}
               >
                 {title}
               </Text>
