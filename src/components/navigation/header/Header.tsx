@@ -28,6 +28,7 @@ export interface IHeader {
   announcement: Announcement | null;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
+  contactEmail: string | undefined;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -38,6 +39,7 @@ export const Header = ({
   announcement,
   currentLanguage,
   pathTranslations,
+  contactEmail,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -102,15 +104,16 @@ export const Header = ({
                   />
                 )}
 
-                {/* THIS SHOULD BE MOVED TO SANITY */}
-                <LinkButton
-                  link="mailto:post@variant.no"
-                  linkTitle={t("contact_us")}
-                  size="L"
-                  type="primary"
-                  background="light"
-                  withoutIcon
-                />
+                {contactEmail && (
+                  <LinkButton
+                    link={`mailto:${contactEmail}`}
+                    linkTitle={t("contact_us")}
+                    size="L"
+                    type="primary"
+                    background="light"
+                    withoutIcon
+                  />
+                )}
               </div>
               <button
                 aria-haspopup="true"
@@ -138,15 +141,16 @@ export const Header = ({
                     />
                   )}
 
-                  {/* THIS SHOULD BE MOVED TO SANITY */}
-                  <LinkButton
-                    link="mailto:post@variant.no"
-                    linkTitle={t("contact_us")}
-                    size="L"
-                    type="primary"
-                    background="light"
-                    withoutIcon
-                  />
+                  {contactEmail && (
+                    <LinkButton
+                      link={`mailto:${contactEmail}`}
+                      linkTitle={t("contact_us")}
+                      size="L"
+                      type="primary"
+                      background="light"
+                      withoutIcon
+                    />
+                  )}
                 </div>
               </div>
             )}
