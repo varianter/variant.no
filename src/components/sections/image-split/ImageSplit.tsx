@@ -17,13 +17,18 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
   const hasImage = section.imageExtended;
   const alignment = section.imageExtended?.imageAlignment;
   const showImageToLeft = hasImage && alignment == ImageAlignment.Left;
-  const is2vs3 = true;
 
   const imageSplitClass = cnIf({
     [styles.imageSplit]: true,
     [styles["imageSplit--imageLeft"]]: showImageToLeft,
     [styles["imageSplit--imageRight"]]: !showImageToLeft,
-    [styles["imageSplit--2vs3"]]: is2vs3,
+    [styles["imageSplit--2vs3"]]: section.is2vs3,
+    [styles["imageSplit--medium"]]: section.size === "medium",
+  });
+
+  const imageClass = cnIf({
+    [styles.image]: true,
+    [styles["image--fullHeight"]]: section.imageFullHeight,
   });
 
   return (
@@ -39,7 +44,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
               <LinkButton
                 key={action._key}
                 type={index === 0 ? "primary" : "secondary"}
-                size="S"
+                size="L"
                 link={action}
               />
             ))}
@@ -48,7 +53,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
       </div>
 
       {section.imageExtended && (
-        <div className={styles.image}>
+        <div className={imageClass}>
           <div>
             <SanityImage image={section.imageExtended} />
           </div>

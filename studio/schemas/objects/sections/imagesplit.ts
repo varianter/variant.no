@@ -49,6 +49,31 @@ export const imageSplitSection = defineField({
       ],
     },
 
+    {
+      name: "size",
+      title: "Size",
+      type: "string",
+      options: { list: ["small", "medium"] },
+      initialValue: "small",
+    },
+
+    {
+      name: "is2vs3",
+      title: "Ratio 2:3",
+      description:
+        "If true, the image will be displayed in a 2:3 ratio. Otherwise, it will be displayed in a 1:1 ratio.",
+      type: "boolean",
+      initialValue: false,
+    },
+
+    {
+      name: "imageFullHeight",
+      title: "Image Full Height",
+      description: "If true, the image will be displayed in full height.",
+      type: "boolean",
+      initialValue: true,
+    },
+
     imageExtended,
     {
       name: "actions",

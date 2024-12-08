@@ -72,6 +72,9 @@ export interface ImageSection {
 export interface ImageSplitSection {
   _type: "imageSplitSection";
   _key: string;
+  size: "small" | "medium";
+  is2vs3: boolean;
+  imageFullHeight: boolean;
   content: {
     _key: string;
     basicTitle: string;

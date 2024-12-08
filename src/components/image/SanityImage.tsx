@@ -92,6 +92,8 @@ export function SanityImage({ image }: { image: IImage }) {
         alt={image?.alt || ""}
         src={image.src.src}
         style={{ objectFit: "cover", height: "100%", width: "100%" }}
+        width={300}
+        height={300}
       />
     );
   }
