@@ -3,6 +3,7 @@ import { ElementType } from "react";
 import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text, { TextType } from "src/components/text/Text";
+import { cnIf } from "src/utils/css";
 import { ImageSplitSection } from "studio/lib/interfaces/pages";
 import { ImageAlignment } from "studio/schemas/fields/media";
 
@@ -16,16 +17,17 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
   const hasImage = section.imageExtended;
   const alignment = section.imageExtended?.imageAlignment;
   const showImageToLeft = hasImage && alignment == ImageAlignment.Left;
-  const showImageToRight = hasImage && alignment == ImageAlignment.Right;
+  const is2vs3 = true;
+
+  const imageSplitClass = cnIf({
+    [styles.imageSplit]: true,
+    [styles["imageSplit--imageLeft"]]: showImageToLeft,
+    [styles["imageSplit--imageRight"]]: !showImageToLeft,
+    [styles["imageSplit--2vs3"]]: is2vs3,
+  });
 
   return (
-    <article className={styles.imageSplit}>
-      {showImageToLeft && (
-        <div className={styles.image}>
-          <SanityImage image={section.imageExtended} />
-        </div>
-      )}
-
+    <article className={imageSplitClass}>
       <div className={styles.textContainer}>
         {section.content.map((content, index) => (
           <Content key={content._key} content={content} isFirst={index === 0} />
@@ -45,7 +47,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
         )}
       </div>
 
-      {showImageToRight && (
+      {section.imageExtended && (
         <div className={styles.image}>
           <div>
             <SanityImage image={section.imageExtended} />
