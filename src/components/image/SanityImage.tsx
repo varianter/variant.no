@@ -61,8 +61,6 @@ const SanityAssetImage = ({
         objectPosition,
         maxWidth: "100%",
         maxHeight: "100%",
-        height: "auto",
-        width: "auto",
       }}
     />
   );

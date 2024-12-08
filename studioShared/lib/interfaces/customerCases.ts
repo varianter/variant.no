@@ -76,3 +76,7 @@ export interface CustomerCase extends CustomerCaseBase {
   sections: CustomerCaseSection[];
   featuredCases?: CustomerCaseBase[] | null;
 }
+
+export interface CustomerCaseEntry extends CustomerCaseBase {
+  projectInfo: CustomerCaseProjectInfo;
+}
