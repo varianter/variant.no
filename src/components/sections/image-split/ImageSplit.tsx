@@ -1,6 +1,8 @@
+import { ElementType } from "react";
+
 import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
-import Text from "src/components/text/Text";
+import Text, { TextType } from "src/components/text/Text";
 import { ImageSplitSection } from "studio/lib/interfaces/pages";
 import { ImageAlignment } from "studio/schemas/fields/media";
 
@@ -25,15 +27,11 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
       )}
 
       <div className={styles.textContainer}>
-        <Text type="h4" as="h2">
-          {section.basicTitle}
-        </Text>
+        {section.content.map((content, index) => (
+          <Content key={content._key} content={content} isFirst={index === 0} />
+        ))}
 
-        {section.description && (
-          <Text type="bodyNormal">{section.description}</Text>
-        )}
-
-        {section.actions.length > 0 && (
+        {section.actions?.length > 0 && (
           <div className={styles.textContainer__link}>
             {section.actions.map((action, index) => (
               <LinkButton
@@ -49,11 +47,35 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
 
       {showImageToRight && (
         <div className={styles.image}>
-          <SanityImage image={section.imageExtended} />
+          <div>
+            <SanityImage image={section.imageExtended} />
+          </div>
         </div>
       )}
     </article>
   );
 };
+
+function Content({
+  content,
+  isFirst,
+}: {
+  content: ImageSplitProps["section"]["content"][0];
+  isFirst: boolean;
+}) {
+  const [type, asType] = isFirst ? ["h2", "h2"] : ["h4", "h3"];
+
+  return (
+    <>
+      <Text type={type as TextType} as={asType as ElementType}>
+        {content.basicTitle}
+      </Text>
+
+      {content.description && (
+        <Text type="bodyNormal">{content.description}</Text>
+      )}
+    </>
+  );
+}
 
 export default ImageSplitComponent;

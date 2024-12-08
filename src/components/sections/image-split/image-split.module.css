@@ -1,8 +1,8 @@
 .imageSplit {
   max-width: var(--max-content-width-small);
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: row;
 
   gap: 3rem;
   row-gap: 5.25rem;
@@ -14,6 +14,7 @@
 }
 
 .textContainer {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -29,4 +30,5 @@
 .image {
   display: flex;
   justify-content: center;
+  align-self: normal;
 }

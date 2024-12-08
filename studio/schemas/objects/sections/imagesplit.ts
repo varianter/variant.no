@@ -13,19 +13,40 @@ export const imageSplitSection = defineField({
   type: "object",
   fields: [
     {
-      name: titleID.basic,
-      type: "internationalizedArrayString",
-      title: "Title",
-      description:
-        "Enter the primary title that will be displayed at the top of the employees section.",
-    },
-
-    {
-      name: "description",
-      type: "internationalizedArrayString",
-      title: "Main content",
-      description:
-        "Enter the main content that will be displayed below the title.",
+      name: "content",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: titleID.basic,
+              type: "internationalizedArrayString",
+              title: "Title",
+              description:
+                "Enter the primary title that will be displayed at the top of the employees section.",
+            },
+            {
+              name: "description",
+              type: "internationalizedArrayString",
+              title: "Main content",
+              description:
+                "Enter the main content that will be displayed below the title.",
+            },
+          ],
+          preview: {
+            select: {
+              title: titleID.basic,
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: firstTranslation(title) ?? undefined,
+              };
+            },
+          },
+        },
+      ],
     },
 
     imageExtended,
@@ -38,12 +59,12 @@ export const imageSplitSection = defineField({
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      content: "content",
     },
     prepare(selection) {
-      const { title } = selection;
+      const { content } = selection;
       return {
-        title: firstTranslation(title) ?? undefined,
+        title: firstTranslation(content[0]?.basicTitle) ?? undefined,
       };
     },
   },
