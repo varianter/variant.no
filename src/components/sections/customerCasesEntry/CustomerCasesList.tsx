@@ -83,14 +83,15 @@ const CustomerCaseList = ({
           </Link>
         </div>
         <Link
-          className={styles.image}
+          tabIndex={-1}
+          className={styles.imageWrapper}
           href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
         >
-          <div>
-            {selectedCustomerCase.image && (
-              <SanitySharedImage image={selectedCustomerCase.image} />
-            )}
-          </div>
+          {/* <div className={styles.imageWrapper}> */}
+          {selectedCustomerCase.image && (
+            <SanitySharedImage image={selectedCustomerCase.image} />
+          )}
+          {/* </div> */}
         </Link>
       </div>
     </div>
