@@ -17,6 +17,12 @@
   white-space: nowrap;
 }
 
+.fieldset:focus-within {
+  outline: 2px solid var(--surface-yellow);
+  border-radius: var(--radius-small);
+  outline-offset: 0.5rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

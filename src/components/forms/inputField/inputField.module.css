@@ -21,6 +21,10 @@
   border-radius: var(--radius-small);
   border: 1px solid var(--stroke-primary, #ece1d3);
   background: var(--text-primary-light, #fff);
+
+  &:focus {
+    outline: 2px solid var(--surface-yellow);
+  }
 }
 
 .error {

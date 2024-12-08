@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
-import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
@@ -29,6 +28,7 @@ export interface IHeader {
   announcement: Announcement | null;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
+  contactEmail: string | undefined;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -39,6 +39,7 @@ export const Header = ({
   announcement,
   currentLanguage,
   pathTranslations,
+  contactEmail,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -102,9 +103,17 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
-                <Button size="large" type="secondary" background="light">
-                  <Text type="labelLarge">{t("contact_us")}</Text>
-                </Button>
+
+                {contactEmail && (
+                  <LinkButton
+                    link={`mailto:${contactEmail}`}
+                    linkTitle={t("contact_us")}
+                    size="L"
+                    type="primary"
+                    background="light"
+                    withoutIcon
+                  />
+                )}
               </div>
               <button
                 aria-haspopup="true"
@@ -131,9 +140,17 @@ export const Header = ({
                       pathTranslations={pathTranslations}
                     />
                   )}
-                  <Button size="large" type="primary" background="dark">
-                    <Text type="labelRegular">{t("contact_us")}</Text>
-                  </Button>
+
+                  {contactEmail && (
+                    <LinkButton
+                      link={`mailto:${contactEmail}`}
+                      linkTitle={t("contact_us")}
+                      size="L"
+                      type="primary"
+                      background="light"
+                      withoutIcon
+                    />
+                  )}
                 </div>
               </div>
             )}
@@ -184,7 +201,7 @@ export const renderPageCTAs = (ctas: ILink[], isMobile: boolean) => (
       <li key={link._key}>
         <LinkButton
           link={link}
-          isSmall={true}
+          size="S"
           type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
         />
       </li>
