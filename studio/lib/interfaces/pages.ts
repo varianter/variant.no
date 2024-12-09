@@ -72,9 +72,15 @@ export interface ImageSection {
 export interface ImageSplitSection {
   _type: "imageSplitSection";
   _key: string;
-  basicTitle: string;
+  size: "small" | "medium";
+  is2vs3: boolean;
+  imageFullHeight: boolean;
+  content: {
+    _key: string;
+    basicTitle: string;
+    description: string;
+  }[];
   imageExtended: ImageExtendedProps;
-  description: string;
   actions: ILink[];
 }
 
