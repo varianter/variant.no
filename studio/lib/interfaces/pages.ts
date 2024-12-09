@@ -116,6 +116,12 @@ export interface EmployeesSection {
   basicTitle: string;
 }
 
+export interface CustomerCasesEntrySection {
+  _type: "customerCasesEntry";
+  _key: string;
+  basicTitle: string;
+}
+
 export interface JobsSection {
   _type: "jobs";
   _key: string;
@@ -161,6 +167,8 @@ export type Section =
   | ImageSection
   | ImageSplitSection
   | GridSection
+  | EmployeesSection
+  | CustomerCasesEntrySection
   | ContactBoxSection
   | EmployeesSection
   | EmployeeHighlightSection

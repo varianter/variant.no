@@ -1,4 +1,7 @@
 {
+  "linking_words": {
+    "for": "for"
+  },
   "navigation": {
     "home": "Hjem"
   },
@@ -14,7 +17,12 @@
     "development": "Utvikling",
     "project_management": "Prosjektledelse",
     "url": "Link",
-    "collaborators": "Samarbeidspartnere"
+    "collaborators": "Samarbeidspartnere",
+    "customer_case_entry": {
+      "image": "bilde",
+      "case": "Case",
+      "field": "Fag"
+    }
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
@@ -45,9 +53,9 @@
     "location": "Lokasjon",
     "all": "Alle",
     "Project Management": "Prosjektledelse",
-    "Design": "Design",
-    "Utvikling": "Utvikling",
-    "Administasjon": "Administrasjon",
+    "design": "Design",
+    "development": "Utvikling",
+    "administration": "Administrasjon",
     "field": "Fag",
     "showMore": "Vis alle"
   },
