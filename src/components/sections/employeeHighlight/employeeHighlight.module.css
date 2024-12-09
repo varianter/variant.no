@@ -18,7 +18,7 @@
 .image {
   min-width: 20rem;
   width: 100%;
-  height: auto;
+  height: 24rem;
   object-fit: cover;
 
   & img {
