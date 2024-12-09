@@ -54,9 +54,9 @@
     "location": "Location",
     "all": "All",
     "Project Management": "Project Management",
-    "design": "Design",
-    "development": "Development",
-    "administration": "Administration",
+    "Design": "Design",
+    "Utvikling": "Development",
+    "Administasjon": "Administration",
     "field": "Field",
     "showMore": "Show all"
   },
