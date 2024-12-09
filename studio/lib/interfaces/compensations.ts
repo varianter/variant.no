@@ -2,6 +2,8 @@ import { PortableTextBlock, Reference } from "sanity";
 
 import { SeoData } from "src/utils/seo";
 
+import { ILink } from "./navigation";
+
 export interface Benefit {
   _type: string;
   _key: string;
@@ -86,5 +88,6 @@ export interface CompensationsPage {
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
+  handbookLinks: ILink[];
   seo: SeoData;
 }

@@ -10,10 +10,8 @@ export type TextType =
   | "desktopLink"
   | "desktopLinkBig"
   | "labelSmall"
-  | "labelLight"
   | "labelRegular"
-  | "labelSemibold"
-  | "labelBold"
+  | "labelLarge"
   | "quoteItalic"
   | "quoteNormal"
   | "bodyExtraSmall"
@@ -34,10 +32,8 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   desktopLink: "p",
   desktopLinkBig: "p",
   labelSmall: "span",
-  labelLight: "span",
   labelRegular: "span",
-  labelSemibold: "span",
-  labelBold: "span",
+  labelLarge: "span",
   quoteItalic: "p",
   quoteNormal: "p",
   bodyExtraSmall: "p",
@@ -59,10 +55,8 @@ const classMap: { [key in TextType]?: string } = {
   desktopLink: styles.desktopLink,
   desktopLinkBig: styles.desktopLinkBig,
   labelSmall: styles.labelSmall,
-  labelLight: styles.labelLight,
   labelRegular: styles.labelRegular,
-  labelSemibold: styles.labelSemibold,
-  labelBold: styles.labelBold,
+  labelLarge: styles.labelLarge,
   quoteItalic: styles.quoteItalic,
   quoteNormal: styles.quoteNormal,
   bodyExtraSmall: styles.bodyExtraSmall,
@@ -79,13 +73,15 @@ const Text = ({
   children,
   id,
   className,
+  as: asElement,
 }: {
   type?: TextType;
   children: React.ReactNode;
   id?: string;
+  as?: React.ElementType;
   className?: string;
 }) => {
-  const Element = elementMap[type];
+  const Element = asElement ?? elementMap[type];
   const generatedClassName = `${classMap[type]} ${className ?? ""}`;
 
   return (

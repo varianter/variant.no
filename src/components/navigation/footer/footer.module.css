@@ -1,6 +1,5 @@
 .footer {
-  background-color: var(--primary-black);
-  color: var(--primary-white);
+  color: var(--background-bg-light-primary);
   display: flex;
   padding: 3rem;
   flex-direction: column;
@@ -68,7 +67,7 @@
 }
 
 .whiteColor {
-  color: var(--primary-white) !important;
+  color: var(--background-bg-light-primary) !important;
   font-family: var(--font-britti-sans) !important;
   font-size: 2rem !important;
   font-weight: 400 !important;

@@ -8,7 +8,7 @@
 }
 
 .label {
-  color: var(--primary-black);
+  color: currentColor;
 }
 
 .input {
@@ -16,25 +16,29 @@
   padding: 0.5rem 0.75rem;
   align-items: center;
   gap: 0.5rem;
-  align-self: stretch;
+  font-size: 1rem;
 
-  border-radius: 0.5rem;
-  border: 1px solid var(--secondary-off-white-2, #ece1d3);
-  background: var(--primary-white-bright, #fff);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--stroke-primary, #ece1d3);
+  background: var(--text-primary-light, #fff);
+
+  &:focus {
+    outline: 2px solid var(--surface-yellow);
+  }
 }
 
 .error {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-red-error);
+  color: var(--surface-red);
   &::before {
     content: "";
     width: 1.25rem;
     height: 1.25rem;
     display: inline-block;
     -webkit-mask-size: cover;
-    background-color: var(--primary-red-error);
+    background-color: var(--surface-red);
     -webkit-mask: url("/_assets/alert-circle.svg") no-repeat 50% 50%;
   }
 

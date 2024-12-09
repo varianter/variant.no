@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-import { LANGUAGE_FIELD_FRAGMENT } from "./i18n";
+import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Compensations
@@ -26,6 +26,28 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     },
   }
 `;
+
+// Just select the first location and the first year..
+// @TODO: Check if we need to make this more robust,
+// but yearlySalaries is sorted by year so [0] should be the latest
+export const COMPENSATIONS_SALARY_BY_YEAR = groq`
+  *[_type == "compensations"][0] {
+    "salariesByLocation": salariesByLocation[0] {
+      "yearlySalaries": yearlySalaries[0] {
+        ...
+      }
+    }
+  }
+`;
+export const COMPENSATIONS_HANDBOOK_LINKS = groq`
+  *[_type == "compensations"][0] {
+    "handbookLinks": handbookLinks[] {
+      ...,
+      ${TRANSLATED_LINK_FRAGMENT}
+    }
+  }
+`;
+
 export const COMPENSATIONS_PAGE_SITEMAP_QUERY = groq`
   *[_type == "compensations"][0] {
     _updatedAt,

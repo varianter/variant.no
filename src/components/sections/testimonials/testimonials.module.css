@@ -1,7 +1,7 @@
 .article {
   display: flex;
   flex-direction: column;
-  background: var(--primary-white-bright);
+  background: var(--background-bg-light-primary);
   overflow: hidden;
 
   /* side-padding is set to 0 for scrollable tablist */
@@ -81,8 +81,8 @@
   position: relative;
   display: flex;
   padding: 0.5rem;
-  background-color: var(--primary-white);
-  color: var(--primary-black);
+  background-color: var(--background-bg-light-primary);
+  color: var(--text-primary);
   font-family: var(--font-britti-sans);
   align-items: center;
   gap: 0.5rem;
@@ -99,23 +99,23 @@
   }
 
   &:hover {
-    background-color: var(--secondary-off-white1);
+    background-color: var(--background-bg-light-secondary);
 
     &:after {
-      background-color: var(--secondary-off-white1);
+      background-color: var(--background-bg-light-secondary);
     }
   }
 
   &:active {
-    background-color: var(--secondary-off-white2);
+    background-color: var(--background-bg-light-primary);
 
     &:after {
-      background-color: var(--secondary-off-white2);
+      background-color: var(--background-bg-light-primary);
     }
   }
 
   &:focus {
-    outline: 2px solid var(--focus-color);
+    outline: 2px solid var(--stroke-primary);
     border-radius: 0.9375rem;
   }
 
@@ -125,7 +125,7 @@
     width: 0.975rem;
     height: 0.975rem;
     transform: rotate(45deg);
-    background-color: var(--primary-white);
+    background-color: var(--background-bg-light-primary);
     border-radius: 0.125rem;
     position: absolute;
     transition:
@@ -152,14 +152,12 @@
 }
 
 .selected {
-  background: var(--primary-black);
-  color: var(--primary-white);
+  color: var(--background-bg-light-primary);
   transition:
     color 100ms,
     background-color 100ms;
 
   &:after {
-    background-color: var(--primary-black);
     left: 50%;
     transition:
       left 100ms,
@@ -178,15 +176,6 @@
   @media (min-width: 1024px) {
     &:after {
       bottom: 40%;
-    }
-  }
-
-  &:hover,
-  &:active {
-    background-color: var(--primary-black);
-
-    &::after {
-      background-color: var(--primary-black);
     }
   }
 

@@ -18,10 +18,7 @@ const meta: Meta<typeof Text> = {
           "h5",
           "h6",
           "labelSmall",
-          "labelLight",
           "labelRegular",
-          "labelSemibold",
-          "labelBold",
           "quoteItalic",
           "quoteNormal",
           "bodyExtraSmall",
@@ -100,24 +97,10 @@ export const LabelSmall: Story = {
   },
 };
 
-export const LabelLight: Story = {
-  args: {
-    type: "labelLight",
-    children: "This is a Label Light text",
-  },
-};
-
 export const LabelRegular: Story = {
   args: {
     type: "labelRegular",
     children: "This is a Label Regular text",
-  },
-};
-
-export const LabelSemibold: Story = {
-  args: {
-    type: "labelSemibold",
-    children: "This is a Label Semibold text",
   },
 };
 

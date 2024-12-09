@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
@@ -9,8 +10,8 @@ import { defaultLanguage } from "i18n/supportedLanguages";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { BreadCrumbMenu } from "src/components/navigation/breadCrumbMenu/BreadCrumbMenu";
 import Text from "src/components/text/Text";
+import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -24,11 +25,10 @@ import styles from "./header.module.css";
 export interface IHeader {
   navigation: Navigation;
   assets: BrandAssets;
-  announcement: Announcement | null;
+  announcement?: Announcement | null;
   currentLanguage: string;
-  pathTitles: string[];
   pathTranslations: InternationalizedString;
-  showBreadcrumbs: boolean;
+  contactEmail: string | undefined;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -36,21 +36,21 @@ const filterLinks = (data: ILink[], type: string) =>
 
 export const Header = ({
   navigation,
-  announcement,
+  /* announcement, */
   currentLanguage,
-  pathTitles,
   pathTranslations,
-  showBreadcrumbs,
+  contactEmail,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
 
+  const scrollDirection = useScrollDirection();
+
   const links = filterLinks(navigation.main, linkID);
   const ctas = filterLinks(navigation.main, callToActionFieldID);
 
   const sidebarLinks = filterLinks(sidebarData, linkID);
-  const sidebarCtas = filterLinks(sidebarData, callToActionFieldID);
 
   const sidebarID = "sidebar";
 
@@ -74,22 +74,25 @@ export const Header = ({
     };
   }, []);
 
-  const showAnnouncement =
+  /* const showAnnouncement =
     announcement !== null &&
     announcement.text?.length > 0 &&
     (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
+ */
+  const t = useTranslations("contact_information");
 
   return (
     <>
       <FocusOn
         enabled={isOpen}
+        as="header"
         onClickOutside={toggleMenu}
         onEscapeKey={toggleMenu}
-        className={`${styles.focusOn} ${isOpen && styles.isOpen}`}
+        className={`${styles.header} ${styles.focusOn} ${isOpen && styles.isOpen} ${scrollDirection === "down" ? `${styles.hidden}` : ""} `}
       >
-        <header>
-          <nav aria-label="Main menu">
-            <div className={styles.wrapper}>
+        <nav className={styles.nav} aria-label="Main menu">
+          <div className={styles.wrapper}>
+            <div className={styles.desktopWrapper}>
               <Link href="/" aria-label="Home" className={styles.logo} />
               {renderPageLinks(links, false, pathname)}
               {renderPageCTAs(ctas, false)}
@@ -100,6 +103,17 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
+
+                {contactEmail && (
+                  <LinkButton
+                    link={`mailto:${contactEmail}`}
+                    linkTitle={t("contact_us")}
+                    size="L"
+                    type="primary"
+                    background="light"
+                    withoutIcon
+                  />
+                )}
               </div>
               <button
                 aria-haspopup="true"
@@ -107,6 +121,7 @@ export const Header = ({
                 className={isOpen ? styles.open : styles.closed}
                 aria-expanded={isOpen}
                 onClick={toggleMenu}
+                aria-label="Mobile menu"
               />
             </div>
             {isOpen && (
@@ -117,41 +132,47 @@ export const Header = ({
                 onClick={() => setIsOpen(false)}
               >
                 {renderPageLinks(sidebarLinks, true, pathname)}
-                {renderPageCTAs(sidebarCtas, true)}
-                {defaultLanguage && (
-                  <LanguageSwitcher
-                    currentLanguage={currentLanguage}
-                    pathTranslations={pathTranslations}
-                  />
-                )}
+                <hr className={styles.divider} />
+                <div className={styles.mobileButtons}>
+                  {defaultLanguage && (
+                    <LanguageSwitcher
+                      currentLanguage={currentLanguage}
+                      pathTranslations={pathTranslations}
+                    />
+                  )}
+
+                  {contactEmail && (
+                    <LinkButton
+                      link={`mailto:${contactEmail}`}
+                      linkTitle={t("contact_us")}
+                      size="L"
+                      type="primary"
+                      background="light"
+                      withoutIcon
+                    />
+                  )}
+                </div>
               </div>
             )}
-          </nav>
-          {showAnnouncement && (
-            <div className={styles.announcementWrapper}>
-              <div className={styles.announcementContent}>
-                <Text type={"bodySmall"}>{announcement.text}</Text>
-                {announcement.link && announcement.link.linkTitle && (
-                  <div>
-                    <CustomLink
-                      link={announcement.link}
-                      size={"small"}
-                      color={"light"}
-                    />
-                  </div>
-                )}
-              </div>
+          </div>
+        </nav>
+        {/* {showAnnouncement && (
+          <div className={styles.announcementWrapper}>
+            <div className={styles.announcementContent}>
+              <Text type={"bodySmall"}>{announcement.text}</Text>
+              {announcement.link && announcement.link.linkTitle && (
+                <div>
+                  <CustomLink
+                    link={announcement.link}
+                    size={"small"}
+                    color={"light"}
+                  />
+                </div>
+              )}
             </div>
-          )}
-        </header>
+          </div>
+        )} */}
       </FocusOn>
-      {showBreadcrumbs && (
-        <BreadCrumbMenu
-          currentLanguage={currentLanguage}
-          pathTitles={pathTitles}
-          pathname={pathname}
-        />
-      )}
     </>
   );
 };
@@ -180,7 +201,7 @@ export const renderPageCTAs = (ctas: ILink[], isMobile: boolean) => (
       <li key={link._key}>
         <LinkButton
           link={link}
-          isSmall={true}
+          size="S"
           type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
         />
       </li>

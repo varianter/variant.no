@@ -18,7 +18,21 @@
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
-    "contact_sale": "Kontakta sälj!"
+    "contact_sale": "Kontakta sälj!",
+    "contact_us": "Kontakt oss"
+  },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Lönskalkulator",
+      "educationInput": "Utbildning",
+      "yearInput": "Året du började i relevant arbete",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Din årslön"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
   },
   "custom_link": {
     "visit_cv": "Besök mini-CV",
@@ -33,6 +47,12 @@
     "Project Management": "Projektledning",
     "Design": "Design",
     "Utvikling": "Utveckling",
-    "Administasjon": "Administration"
+    "Administasjon": "Administration",
+    "field": "Fält",
+    "showMore": "Vis alla"
+  },
+  "job_posting": {
+    "office": "Kontor",
+    "all": "Alla"
   }
 }

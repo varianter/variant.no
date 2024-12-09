@@ -20,6 +20,7 @@ import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocati
 import { footerSection } from "./schemas/objects/footerSection";
 import jobPosting from "./schemas/objects/jobPosting";
 import { link } from "./schemas/objects/link";
+import { employeeHighlightSection } from "./schemas/objects/sections/employeeHighlight";
 import seo from "./schemas/objects/seo";
 import { socialMedia } from "./schemas/objects/socialMedia";
 
@@ -47,5 +48,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     announcement,
     jobPosting,
     jobPostings,
+    employeeHighlightSection,
   ],
 };

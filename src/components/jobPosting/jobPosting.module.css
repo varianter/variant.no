@@ -1,0 +1,46 @@
+.jobPosting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+  gap: 5rem;
+  width: 100%;
+  background-color: var(--text-primary-light);
+  color: var(--text-primary);
+
+  &::after {
+    justify-self: end;
+    width: 1.5rem;
+    height: 1.5rem;
+    content: "";
+    -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
+    -webkit-mask-size: cover;
+    mask: url("/_assets/arrow-right.svg") no-repeat center;
+    mask-size: cover;
+    background-color: var(--background-bg-dark);
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.role {
+  width: 250px;
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+.locations {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}

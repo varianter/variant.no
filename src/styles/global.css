@@ -9,32 +9,124 @@ html {
   box-sizing: inherit;
 }
 
+:where(.debug) {
+  *,
+  *::before,
+  *::after {
+    outline: 1px solid lime;
+  }
+}
+
 :root {
-  --primary-dark: #e61a6b;
-  --primary-darker: #8b0f40;
-  --primary-light: #f5a4c4;
-  --primary-bg: #fafafa;
-  --primary-bg-dark: #d9d9d9;
-  --primary-bg-blue: #0014cd;
-  --primary-white-bright: #ffffff;
-  --primary-white: #faf8f5;
-  --primary-black: #2d2d2d;
-  --primary-black-darker: #000000;
+  --Blue-500: #3840ff;
+  --Blue-700: #0014cd;
+  --Blue-300: #c3c8f6;
+  --Blue-400: #788aea;
+  --Blue-500: #3840ff;
+  --Blue-200: #bee0ff;
+  --Blue-50: #f2f3fd;
 
-  --secondary-off-white1: #f4efe8;
-  --secondary-off-white2: #ece1d3;
+  --Green-900: #024105;
+  --Green-800: #035506;
+  --Green-700: #046d08;
+  --Green-600: #058c0a;
+  --Green-500: #059a0b;
+  --Green-400: #37ae3c;
+  --Green-300: #58bb5c;
+  --Green-200: #8cd18f;
+  --Green-100: #b2e0b3;
+  --Green-50: #e6f5e7;
 
-  --primary-red-error: #b30b0b;
-  --primary-yellow-warning: #ffd02f;
+  --Red-900: #46100a;
+  --Red-700: #7c2318;
+  --Red-600: #b63729;
+  --Red-500: #f0503f;
+  --Red-300: #f3948f;
+  --Red-100: #fabbb4;
+  --Red-50: #fdedec;
 
-  --focus-color: #8b0f40;
+  --Yellow-900: #3b2800;
+  --Yellow-800: #634601;
+  --Yellow-700: #8e6703;
+  --Yellow-600: #bd8905;
+  --Yellow-500: #edad08;
+  --Yellow-400: #ffd02f;
+  --Yellow-300: #fbe186;
+  --Yellow-100: #fdefbb;
+  --Yellow-50: #fffbf6;
 
-  /* TODO: upgrade color-scheme with correct colors */
-  --secondary-red: #f0503f;
-  --text-primary: #222424;
-  --text-tertiary: #5e5e5e;
+  --Violet-900: #220548;
+  --Violet-800: #47128c;
+  --Violet-700: #7022d6;
+  --Violet-500: #a160f6;
+  --Violet-400: #ac8df7;
+  --Violet-300: #cdbdfa;
+  --Violet-200: #e8c8f0;
+  --Violet-50: #f0ebfe;
 
-  --background-bg-light-secondary: #eaeaea;
+  --Light-500: #eaeaea;
+  --Light-50: #fefefe;
+  --Light-100: #fafafa;
+  --Light-200: #f9f9f9;
+  --Light-300: #f6f6f6;
+  --Light-400: #f5f5f5;
+  --Light-700: #acacac;
+  --Light-600: #dcdcdc;
+  --Light-800: #858585;
+  --Light-900: #666666;
+
+  --Dark-50: #e7e7e7;
+  --Dark-100: #b4b5b5;
+  --Dark-200: #909191;
+  --Dark-300: #5e5e5e;
+  --Dark-400: #3e3f3f;
+  --Dark-500: #2d2d2d;
+  --Dark-600: #222424;
+  --Dark-700: #0a0b0b;
+  --Dark-800: #080808;
+  --Dark-900: #060606;
+
+  --text-primary: var(--Dark-600);
+  --text-link: var(--Blue-500);
+  --text-secondary: var(--Dark-400);
+  --text-tertiary: var(--Dark-300);
+  --text-primary-light: var(--Light-100);
+  --text-secondary-light: var(--Light-300);
+  --text-placeholder: var(--Dark-200);
+  --text-disabled: var(--Dark-200);
+  --text-warning: var(--Yellow-500);
+  --text-error: var(--Red-500);
+  --text-success: var(--Green-500);
+
+  --background-bg-dark: var(--Dark-500);
+  --background-bg-light-primary: var(--Light-100);
+  --background-bg-light-secondary: var(--Light-500);
+  --background-bg-green: var(--Green-500);
+  --background-bg-red: var(--Red-500);
+  --background-bg-blue: var(--Blue-500);
+  --background-bg-yellow: var(--Yellow-500);
+  --background-disabled: var(--Light-700);
+  --background-header-light-transparent: #fafafabf;
+
+  --stroke-primary: var(--Dark-700);
+  --stroke-secondary: var(--Dark-400);
+  --stroke-tertiary: var(--Dark-300);
+
+  --background-button-outline-dark: var(--background-bg-dark);
+  --background-button-disabled: var(--background-disabled);
+  --background-button-outline-light: var(--background-bg-light-primary);
+
+  --surface-yellow: var(--Yellow-400);
+  --surface-red: var(--Red-500);
+  --surface-blue: var(--Blue-500);
+  --surface-green: var(--Green-400);
+  --surface-green-light: var(--Green-100);
+  --surface-blue-light: var(--Blue-200);
+  --surface-red-light: var(--Red-100);
+  --surface-yellow-light: var(--Yellow-50);
+  --surface-white: var(--Light-50);
+  --surface-violet-light: var(--Violet-50);
+  --surface-violet: var(--Violet-700);
 
   /* breakpoints */
   --breakpoint-mobile: 425px;
@@ -45,15 +137,23 @@ html {
   --max-content-width-large: 1400px;
   --max-content-width-medium: 1200px;
   --max-content-width-small: 1000px;
+
+  /* Radius */
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 24px;
+
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
 }
 
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  background-color: var(--background-bg-light-primary);
   font-family: var(--font-britti-sans);
-  color: var(--primary-black);
+  line-height: 1.4;
+  font-weight: 300;
 }
 
 h1,
@@ -66,5 +166,6 @@ small {
 }
 
 a {
-  color: var(--focus-color);
+  color: var(--text-primary);
+  text-decoration: none;
 }

@@ -33,7 +33,7 @@ const CustomLink = ({
   const target = newTab ? "_blank" : undefined;
   const rel = newTab ? "noopener noreferrer" : undefined;
 
-  function getLinkClassName() {
+  /* function getLinkClassName() {
     if (type === "headerLink") {
       return `${styles.headerLink} ${isSelected ? styles.selected : ""}`;
     } else if (type === "footerLink") {
@@ -44,44 +44,66 @@ const CustomLink = ({
       return styles.footerLinkGrey;
     }
   }
-  const className = getLinkClassName();
+  const className = getLinkClassName(); */
 
-  return (
-    link.linkTitle &&
-    (type === "link" ? (
-      <div
-        className={
-          styles.wrapper +
-          (size === "small" ? ` ${styles.sizeSmall}` : "") +
-          (color === "light" ? ` ${styles.colorLight}` : "")
-        }
-      >
-        <Link
-          className={
-            link.linkType == "internal"
-              ? styles.internalLink
-              : styles.externalLink
-          }
-          href={href}
-          target={target}
-          rel={rel}
-          aria-label={link.ariaLabel}
-        >
-          <span className={styles.span}>{link.linkTitle}</span>
-        </Link>
-      </div>
-    ) : (
-      <Link
-        className={className}
-        href={href}
-        target={target}
-        rel={rel}
-        aria-label={link.ariaLabel}
-      >
-        {link.linkTitle}
-      </Link>
-    ))
-  );
+  switch (type) {
+    case "link":
+      return (
+        link.linkTitle && (
+          <div
+            className={
+              styles.wrapper +
+              (size === "small" ? ` ${styles.sizeSmall}` : "") +
+              (color === "light" ? ` ${styles.colorLight}` : "")
+            }
+          >
+            <Link
+              className={
+                link.linkType == "internal"
+                  ? styles.internalLink
+                  : styles.externalLink
+              }
+              href={href}
+              target={target}
+              rel={rel}
+              aria-label={link.ariaLabel}
+            >
+              <span className={styles.span}>{link.linkTitle}</span>
+            </Link>
+          </div>
+        )
+      );
+    case "headerLink":
+      return (
+        link.linkTitle && (
+          <Link
+            className={`${styles.headerLink} ${isSelected ? styles.selected : ""}`}
+            href={href}
+            target={target}
+            rel={rel}
+            aria-label={link.ariaLabel}
+          >
+            <span className={styles.dot}></span>
+            {link.linkTitle}
+          </Link>
+        )
+      );
+    case "footerLink":
+      return (
+        link.linkTitle && (
+          <Link
+            className={styles.footerLink}
+            href={href}
+            target={target}
+            rel={rel}
+            aria-label={link.ariaLabel}
+          >
+            <span className={styles.dot}></span>
+            {link.linkTitle}
+          </Link>
+        )
+      );
+  }
 };
 
 export default CustomLink;

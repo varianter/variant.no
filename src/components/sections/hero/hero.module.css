@@ -6,7 +6,6 @@
 }
 
 .secondaryColor {
-  background-color: var(--primary-bg);
   padding: 7.5rem 2rem;
 
   @media (min-width: 640px) {
@@ -20,7 +19,7 @@
 }
 
 .primaryColor {
-  background-color: var(--primary-white-bright);
+  background-color: var(--background-bg-light-primary);
   padding: 7.5rem 2rem 5rem 2rem;
 
   @media (min-width: 640px) {

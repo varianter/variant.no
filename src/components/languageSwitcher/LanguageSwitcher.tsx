@@ -21,23 +21,22 @@ export default function LanguageSwitcher({
         if (pathTranslation._key === undefined) {
           return null;
         }
-        const linkText = (
-          <Text type={"bodySmall"} className={styles.link}>
-            {pathTranslation._key.toUpperCase()}
-          </Text>
-        );
         return (
           <Fragment key={pathTranslation._key}>
             <li>
               {pathTranslation._key !== currentLanguage ? (
                 <Link
-                  className={styles.link}
+                  className={styles.notSelected}
                   href={`/${pathTranslation._key}/${pathTranslation.value}`}
                 >
-                  {linkText}
+                  <Text type={"bodySmall"} className={styles.link}>
+                    {pathTranslation._key.toUpperCase()}
+                  </Text>
                 </Link>
               ) : (
-                linkText
+                <Text type={"bodySmall"} className={styles.selectedLink}>
+                  {pathTranslation._key.toUpperCase()}
+                </Text>
               )}
             </li>
             {index < pathTranslations.length - 1 && (

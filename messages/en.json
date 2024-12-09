@@ -18,12 +18,27 @@
   },
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",
-    "contact_sale": "Contact sale!"
+    "contact_sale": "Contact sales!",
+    "contact_us": "Contact us"
   },
   "custom_link": {
     "visit_cv": "Visit mini-CV",
     "read_more": "Read more"
   },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Salary calculator",
+      "educationInput": "Education",
+      "yearInput": "The year you started in relevant work",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Your annual salary"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
+  },
+
   "employee_card": {
     "show": "Showing",
     "of": "out of",
@@ -33,6 +48,12 @@
     "Project Management": "Project Management",
     "Design": "Design",
     "Utvikling": "Development",
-    "Administasjon": "Administration"
+    "Administasjon": "Administration",
+    "field": "Field",
+    "showMore": "Show all"
+  },
+  "job_posting": {
+    "office": "Office",
+    "all": "All"
   }
 }

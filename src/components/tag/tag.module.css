@@ -1,0 +1,68 @@
+.tag {
+  --_tag-background: transparent;
+
+  /* @TODO Should be different property? */
+  --_tag-borderColor: var(--text-primary);
+  --_tag-color: var(--text-primary);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+
+  border: 1px solid var(--_tag-borderColor);
+  background: var(--_tag-background);
+  color: var(--_tag-color);
+}
+.tag:hover {
+  --_tag-background: var(--background-bg-light-secondary);
+}
+.tag:active {
+  --_tag-borderColor: var(--background-bg-light-secondary);
+}
+.tag:focus {
+  outline: 2px solid var(--surface-yellow, #ffd02f);
+}
+
+.tag--bgDark {
+  --_tag-borderColor: var(--background-bg-light-secondary);
+  --_tag-color: var(--text-primary-light);
+}
+.tag--bgDark:active {
+  --_tag-background: var(--background-bg-light-secondary);
+  --_tag-color: var(--text-primary);
+}
+.tag--bgDark:hover {
+  --_tag-color: var(--background-bg-light-secondary);
+  --_tag-background: transparent;
+}
+
+.tag--bgViolet {
+  --_tag-borderColor: var(--text-primary-light);
+  --_tag-color: var(--text-primary-light);
+}
+.tag--bgViolet:active {
+  --_tag-background: var(--text-primary-light);
+  --_tag-color: var(--text-primary);
+}
+.tag--bgViolet:hover {
+  --_tag-color: var(--text-primary-light);
+  --_tag-background: transparent;
+}
+
+.tag--active {
+  --_tag-background: var(--background-bg-dark);
+  --_tag-color: var(--text-primary-light);
+}
+.tag--active:hover {
+  --_tag-background: var(--background-bg-dark);
+}
+.tag--active.tag--bgDark {
+  --_tag-background: var(--background-bg-light-primary);
+  --_tag-color: var(--text-primary);
+}
+.tag--active.tag--bgViolet {
+  --_tag-background: var(--text-primary-light);
+  --_tag-color: var(--text-primary);
+}

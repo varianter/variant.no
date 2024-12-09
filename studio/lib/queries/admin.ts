@@ -2,8 +2,14 @@ import { groq } from "next-sanity";
 
 import { companyInfoID } from "studio/schemas/documents/admin/companyInfo";
 
+import { translatedFieldFragment } from "./utils/i18n";
+
 //Parent Company
 export const COMPANY_INFO_QUERY = groq`*[_type == "${companyInfoID}"][0]`;
+
+export const COMPANY_EMAIL_QUERY = groq`*[_type == "${companyInfoID}"][0] {
+  companyEmail
+}`;
 
 //Company Locations
 export const COMPANY_LOCATIONS_QUERY = groq`*[_type == "companyLocation"]`;
@@ -18,5 +24,19 @@ export const LEGAL_DOCUMENTS_SITEMAP_QUERY = groq`
     _updatedAt,
     language,
     slug
+  }
+`;
+
+// Job Postings
+export const JOB_POSTINGS_QUERY = groq`
+  *[_type == "jobPostings"][0] {
+    jobPostingsArray[] {
+      _key, 
+      recruiteeAdUrl,
+      "role": ${translatedFieldFragment("role")}, 
+      locations[] -> {
+        ...
+      }
+    }
   }
 `;

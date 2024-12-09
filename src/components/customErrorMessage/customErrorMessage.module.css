@@ -23,8 +23,8 @@
   align-self: stretch;
 
   border-radius: 1rem;
-  border: 2px solid var(--primary-red-error);
-  background: var(--primary-white, #faf8f5);
+  border: 2px solid var(--surface-red);
+  background: var(--text-primary-light, #fafafa);
 }
 
 .buttonWrapper {

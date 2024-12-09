@@ -27,6 +27,18 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
+    _type == "imageSplitSection" => {
+      ...,
+      "content": content[]{
+        ...,
+        "basicTitle": ${translatedFieldFragment("basicTitle")},
+        "description": ${translatedFieldFragment("description")},
+      },
+      actions[] {
+        ...,
+        ${TRANSLATED_LINK_FRAGMENT}
+      }
+    },
     _type == "ctaSection" => {
       ...,
       callToActions[] {
@@ -34,8 +46,43 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
+    _type == "compensationCalculator" => {
+      ...,
+      "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+
+      "calculatorBlock": calculatorBlock {
+        ...,
+        "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+        "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+        "calculatorLink": calculatorLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
+      },
+      "handbookBlock": handbookBlock {
+        ...,
+        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+        "handbookLink": handbookLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
+      }
+    },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
+    },
+    _type == "contactBox" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "optionalSubtitle": ${translatedFieldFragment("optionalSubtitle")}
+    },
+    _type == "jobs" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "subtitle": ${translatedFieldFragment("subtitle")}
+    },
+    _type == "employeeHighlight" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
     }
   }
 `;
