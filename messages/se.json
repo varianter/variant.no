@@ -53,9 +53,9 @@
     "location": "Kontor",
     "all": "Alla",
     "Project Management": "Projektledning",
-    "Design": "Design",
-    "Utvikling": "Utveckling",
-    "Administasjon": "Administration",
+    "design": "Design",
+    "development": "Utveckling",
+    "administration": "Administration",
     "field": "Fält",
     "showMore": "Vis alla"
   },
