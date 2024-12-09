@@ -4,18 +4,12 @@ import { use, useState } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
-import { ChewbaccaEmployee } from "src/types/employees";
 
 import styles from "./contact-box.module.css";
-
-export type EmployeeAndTag = {
-  employee: ChewbaccaEmployee;
-  tag: string;
-  tagSlug: string;
-};
+import { EmployeeAndMetadata } from "./types";
 
 export type ContactSelectorProps = {
-  contactPoints: Promise<EmployeeAndTag[]>;
+  contactPoints: Promise<EmployeeAndMetadata[]>;
   employeesPageSlug: string;
   language: string;
   background?: "dark" | "light";
@@ -68,6 +62,7 @@ export default function ContactSelector({
               employee={contactPoint.employee}
               employeePageSlug={employeesPageSlug}
               language={language}
+              overrideTitle={contactPoint.overrideTitle}
             />
           </div>
         ))}
