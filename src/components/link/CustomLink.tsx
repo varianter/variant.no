@@ -14,6 +14,7 @@ interface ICustomLink {
   isSelected?: boolean;
   size?: "normal" | "small";
   color?: "dark" | "light";
+  scroll?: boolean;
 }
 
 const CustomLink = ({
@@ -22,6 +23,7 @@ const CustomLink = ({
   isSelected,
   size = "normal",
   color = "dark",
+  scroll,
 }: ICustomLink) => {
   const href = getHref(link);
   const newTab = link.newTab;
@@ -64,6 +66,7 @@ const CustomLink = ({
             target={target}
             rel={rel}
             aria-label={link.ariaLabel}
+            scroll={scroll}
           >
             <span className={styles.dot}></span>
             {link.linkTitle}

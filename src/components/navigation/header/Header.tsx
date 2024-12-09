@@ -187,7 +187,12 @@ export const renderPageLinks = (
       const isSelected = pathname === `${linkUrl}`;
       return (
         <li key={link._key}>
-          <CustomLink link={link} type="headerLink" isSelected={isSelected} />
+          <CustomLink
+            link={link}
+            type="headerLink"
+            isSelected={isSelected}
+            scroll={false}
+          />
         </li>
       );
     })}
