@@ -25,7 +25,7 @@ import styles from "./header.module.css";
 export interface IHeader {
   navigation: Navigation;
   assets: BrandAssets;
-  announcement: Announcement | null;
+  announcement?: Announcement | null;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
   contactEmail: string | undefined;
@@ -36,7 +36,7 @@ const filterLinks = (data: ILink[], type: string) =>
 
 export const Header = ({
   navigation,
-  announcement,
+  /* announcement, */
   currentLanguage,
   pathTranslations,
   contactEmail,
@@ -74,11 +74,11 @@ export const Header = ({
     };
   }, []);
 
-  const showAnnouncement =
+  /* const showAnnouncement =
     announcement !== null &&
     announcement.text?.length > 0 &&
     (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
-
+ */
   const t = useTranslations("contact_information");
 
   return (
@@ -156,7 +156,7 @@ export const Header = ({
             )}
           </div>
         </nav>
-        {showAnnouncement && (
+        {/* {showAnnouncement && (
           <div className={styles.announcementWrapper}>
             <div className={styles.announcementContent}>
               <Text type={"bodySmall"}>{announcement.text}</Text>
@@ -171,7 +171,7 @@ export const Header = ({
               )}
             </div>
           </div>
-        )}
+        )} */}
       </FocusOn>
     </>
   );
