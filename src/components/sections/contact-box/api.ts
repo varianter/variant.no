@@ -1,9 +1,10 @@
 import { ChewbaccaEmployee } from "src/types/employees";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import { ContactBoxSection } from "studio/lib/interfaces/pages";
-import { EmployeeAndMetadata } from "./types";
-import { loadStudioQuery } from "studio/lib/store";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
+import { loadStudioQuery } from "studio/lib/store";
+
+import { EmployeeAndMetadata } from "./types";
 
 export async function getEmployeesPageSlug(
   language: string,

@@ -13,12 +13,14 @@ export interface EmployeeCardProps {
   employee: ChewbaccaEmployee;
   employeePageSlug?: string;
   language: string;
+  overrideTitle?: string;
 }
 
 export default function EmployeeCard({
   employee,
   employeePageSlug,
   language,
+  overrideTitle,
 }: EmployeeCardProps) {
   const t = useTranslations("employee_card");
   return (
@@ -51,16 +53,22 @@ export default function EmployeeCard({
             </Text>
 
             <div className={styles.employeeRole}>
-              {employee.competences.map((competence) => (
-                <Text
-                  className={styles.employeeRoleDot}
-                  type="labelRegular"
-                  key={competence}
-                  as="span"
-                >
-                  {t(competence)}
+              {overrideTitle ? (
+                <Text type="labelRegular" as="span">
+                  {overrideTitle}
                 </Text>
-              ))}
+              ) : (
+                employee.competences.map((competence) => (
+                  <Text
+                    className={styles.employeeRoleDot}
+                    type="labelRegular"
+                    key={competence}
+                    as="span"
+                  >
+                    {t(competence)}
+                  </Text>
+                ))
+              )}
             </div>
 
             <Text type="bodyExtraSmall" className={styles.employeeEmail}>

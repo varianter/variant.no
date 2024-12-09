@@ -3,8 +3,6 @@ import { Suspense } from "react";
 import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
 import Text from "src/components/text/Text";
 import { ContactBoxSection } from "studio/lib/interfaces/pages";
-import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
-import { loadStudioQuery } from "studio/lib/store";
 
 import { fetchEmployeesWithTags, getEmployeesPageSlug } from "./api";
 import styles from "./contact-box.module.css";

@@ -68,6 +68,13 @@ export const contactBox = defineField({
               },
             }),
             defineField({
+              name: "overrideTitle",
+              title: "Override title",
+              type: "internationalizedArrayString",
+              description:
+                "Specify a title for the contact point. If left empty, the employee's default title will be used.",
+            }),
+            defineField({
               name: "email",
               title: "Enter the email address for contact point",
               type: "email",

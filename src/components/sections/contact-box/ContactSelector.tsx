@@ -62,6 +62,7 @@ export default function ContactSelector({
               employee={contactPoint.employee}
               employeePageSlug={employeesPageSlug}
               language={language}
+              overrideTitle={contactPoint.overrideTitle}
             />
           </div>
         ))}
