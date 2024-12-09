@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { headers } from "next/headers";
 
 import Compensations from "src/components/compensations/Compensations";
-import CompensationsPreview from "src/components/compensations/CompensationsPreview";
 import CustomerCase from "src/components/customerCases/customerCase/CustomerCase";
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
@@ -111,14 +110,9 @@ async function Page({ params }: Props) {
                 </>
               );
             case "compensations":
-              return isDraftMode ? (
-                <CompensationsPreview
-                  initialCompensations={queryResponse.compensationsPage}
-                  initialLocations={queryResponse.companyLocations}
-                  initialLocale={queryResponse.locale}
-                />
-              ) : (
+              return isDraftMode ? null : (
                 <Compensations
+                  language={locale}
                   compensations={queryResponse.compensationsPage.data}
                   locations={queryResponse.companyLocations.data}
                   locale={queryResponse.locale.data}

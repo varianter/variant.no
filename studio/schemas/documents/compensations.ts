@@ -7,6 +7,7 @@ import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesB
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
 import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
 import { link } from "studio/schemas/objects/link";
+import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
 
@@ -28,14 +29,23 @@ const compensations = defineType({
       ...titleSlug,
       type: "internationalizedArrayString",
     },
+    // defineField({
+    //   name: "showSalaryCalculator",
+    //   title: "Show Salary Calculator",
+    //   description:
+    //     "Toggle this setting to show or hide the salary calculator on the page. The salary calculator helps users estimate their total compensation based on various factors such as salary data, pension and bonuses.",
+    //   type: "boolean",
+    //   initialValue: true,
+    // }),
+
     defineField({
-      name: "showSalaryCalculator",
-      title: "Show Salary Calculator",
-      description:
-        "Toggle this setting to show or hide the salary calculator on the page. The salary calculator helps users estimate their total compensation based on various factors such as salary data, pension and bonuses.",
-      type: "boolean",
-      initialValue: true,
+      ...compensationCalculator,
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
     }),
+
     pensionPercent,
     bonusesByLocation,
     benefitsByLocation,
