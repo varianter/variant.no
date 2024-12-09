@@ -23,14 +23,15 @@
   height: 100%;
   border-radius: 1.5rem;
   transition: all 0.3s ease;
-
+  opacity: 0.8;
   &:hover {
-  border-radius: 0.375rem; 
+    border-radius: 0.375rem;
   }
 }
 
-.link:hover .imageWrapper img {
+.info:hover ~ .imageWrapper img {
   border-radius: 0.375rem;
+  opacity: 1;
 }
 
 .info {
@@ -57,7 +58,7 @@
 }
 @container customer-case-container (width > 0) {
   .heading {
-   font-size: min(1.5em, 1.23em + 2cqi);
+    font-size: max(2em, 2rem + 1cqi);
   }
 }
 
