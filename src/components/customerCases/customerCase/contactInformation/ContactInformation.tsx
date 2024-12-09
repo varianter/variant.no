@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 
+import { EmployeeCardSkeleton } from "src/components/employeeCard/EmployeeCard";
 import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
@@ -8,9 +10,7 @@ import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./contactInformation.module.css";
-import ContactSelector, {
-  ContactByLocationMap,
-} from "./contactSelector/ContactSelector";
+import ContactSelector, { ContactByLocationMap } from "./ContactSelector";
 
 interface ContactInformationProps {
   language: string;
@@ -54,21 +54,30 @@ export default async function ContactInformation({
   );
   const t = await getTranslations("contact_information");
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}>
-        <div className={styles.titleSection}>
-          <Text type={"bodyXl"}>{t("help")}</Text>
-          <Text type="bodyBig">{t("contact_sale")} </Text>
+    <>
+      <section className={styles.contactBox}>
+        <div
+          className={`${styles.contactBox__inner} ${styles["contactBox__inner--light"]}`}
+        >
+          <div className={styles.textContent}>
+            <Text type="h3" as="h2">
+              {t("help")}
+            </Text>
+            <Text type="bodyBig">{t("contact_sale")} </Text>
+          </div>
+          <div className={styles.contactSelectorWrapper}>
+            <Suspense fallback={<EmployeeCardSkeleton background={"light"} />}>
+              <ContactSelector
+                language={language}
+                locations={locationsWithContact}
+                contactByLocation={contactByLocation}
+                employeePageSlug={employeePageSlug}
+                background={"light"}
+              />
+            </Suspense>
+          </div>
         </div>
-        <div className={styles.contactSection}>
-          <ContactSelector
-            language={language}
-            locations={locationsWithContact}
-            contactByLocation={contactByLocation}
-            employeePageSlug={employeePageSlug}
-          />
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
