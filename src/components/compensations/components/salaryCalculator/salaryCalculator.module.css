@@ -1,9 +1,0 @@
-.calculator {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.yearInputWrapper {
-  max-width: 20rem;
-}

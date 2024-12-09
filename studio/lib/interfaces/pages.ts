@@ -132,7 +132,7 @@ export interface JobsSection {
 export interface CompensationCalculatorSection {
   _type: "compensationCalculator";
   _key: string;
-  moduleTitle: string;
+  moduleTitle?: string;
   background: CompensationCalculatorBackground;
 
   calculatorBlock: {
