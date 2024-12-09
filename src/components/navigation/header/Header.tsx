@@ -92,7 +92,12 @@ export const Header = ({
         <nav className={styles.nav} aria-label="Main menu">
           <div className={styles.wrapper}>
             <div className={styles.desktopWrapper}>
-              <Link href="/" aria-label="Home" className={styles.logo} />
+              <Link
+                href="/"
+                aria-label="Home"
+                className={styles.logo}
+                scroll={false}
+              />
               {renderPageLinks(links, false, pathname)}
               {renderPageCTAs(ctas, false)}
               <div className={styles.languageSwitcher}>
