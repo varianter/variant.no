@@ -40,10 +40,6 @@
   cursor: not-allowed;
 }
 
-.inputLabel {
-  madgin: 0;
-  padding: 0;
-}
 .input {
   appearance: none;
   width: 0px;

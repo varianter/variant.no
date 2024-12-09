@@ -92,7 +92,6 @@ const RadioButton = ({
   const className = cnIf({
     [tagComponentStyle(checked, background)]: true,
     [styles.inputLabelDisabled]: disabled ?? false,
-    [styles.inputLabel]: true,
   });
 
   return (

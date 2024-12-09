@@ -87,9 +87,9 @@ export default function Calculator({
       {salary !== null ? (
         <div aria-live="polite" className={styles.salaryTextContainer}>
           <Text type="labelRegular">{t("calculator.resultLabel")}</Text>
-          <Text className={styles.salaryText}>
+          <p className={styles.salaryText}>
             {formatAsCurrency(salary, locale.locale, locale.currency)}
-          </Text>
+          </p>
           <Text type="labelRegular">{t("calculator.bonusResult")}</Text>
         </div>
       ) : null}
