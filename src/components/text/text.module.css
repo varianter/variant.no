@@ -136,7 +136,7 @@
   letter-spacing: 0.00875rem;
 
   @media (max-width: 425px) {
-    font-size: 0.75px;
+    font-size: 0.75rem;
     line-height: 150%;
     letter-spacing: 0.0075rem;
   }
