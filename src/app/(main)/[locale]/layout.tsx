@@ -80,7 +80,11 @@ export default async function Layout({
       { perspective },
     ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
-    loadStudioQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}),
+    loadStudioQuery<CompanyLocation[]>(
+      COMPANY_LOCATIONS_QUERY,
+      {},
+      { perspective },
+    ),
   ]);
 
   const hasNavData = hasValidData(initialNav.data);
@@ -101,6 +105,7 @@ export default async function Layout({
               initialSoMe={initialSoMe}
               initialLegal={initialLegal}
               language={params.locale}
+              initialCompanyLocations={initialCompanyLocations}
             />
           ) : (
             <Footer
