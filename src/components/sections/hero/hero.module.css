@@ -2,7 +2,15 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: var(--padding-l) 0rem;
+  padding: var(--padding-s);
+
+  @media (min-width: 640px) {
+    padding: var(--padding-m) 0rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: var(--padding-l) 0rem;
+  }
 }
 
 .shared {
@@ -15,10 +23,17 @@
 .secondary {
   composes: shared;
   align-self: center;
-  padding: var(--padding-xl) var(--padding-rem);
+  padding: var(--padding-s) var(--padding-rem);
+
+  @media (min-width: 640px) {
+    padding: var(--padding-m) 0rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: var(--padding-xl) var(--padding-rem);
+  }
 }
 
 .primary {
   composes: shared;
 }
-
