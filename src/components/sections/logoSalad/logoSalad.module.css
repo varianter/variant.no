@@ -14,26 +14,6 @@
   }
 }
 
-.logoSalad {
-  composes: shared;
-  max-width: 75rem;
-  gap: 1.5rem;
-
-  @media (min-width: 1024px) {
-    gap: 7.5rem;
-    width: 100%;
-  }
-}
-
-.logoList {
-  composes: shared;
-  gap: 1.5rem;
-
-  @media (min-width: 1024px) {
-    text-align: center;
-  }
-}
-
 .logoWrapper {
   padding: 0;
   margin: 0;
