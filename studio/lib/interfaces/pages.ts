@@ -106,6 +106,7 @@ export interface ContactBoxSection {
     _key: string;
     _type: string;
     tag: string;
+    overrideTitle?: string;
     email: string;
   }[];
 }
