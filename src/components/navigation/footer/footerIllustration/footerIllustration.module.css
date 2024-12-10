@@ -1,0 +1,11 @@
+.footerIllustrations {
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  & > svg {
+    width: 20%;
+    height: auto;
+  }
+}

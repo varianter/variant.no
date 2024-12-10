@@ -6,7 +6,12 @@ import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./link.module.css";
 
-type ComponentLinkType = "link" | "headerLink" | "footerLink";
+type ComponentLinkType =
+  | "link"
+  | "headerLink"
+  | "footerLink"
+  | "footerLinkNew"
+  | "footerLinkGrey";
 
 interface ICustomLink {
   type?: ComponentLinkType;
@@ -83,7 +88,20 @@ const CustomLink = ({
             rel={rel}
             aria-label={link.ariaLabel}
           >
-            <span className={styles.dot}></span>
+            {link.linkTitle}
+          </Link>
+        )
+      );
+    case "footerLinkGrey":
+      return (
+        link.linkTitle && (
+          <Link
+            className={styles.footerLinkGrey}
+            href={href}
+            target={target}
+            rel={rel}
+            aria-label={link.ariaLabel}
+          >
             {link.linkTitle}
           </Link>
         )

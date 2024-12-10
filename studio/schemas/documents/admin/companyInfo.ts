@@ -25,7 +25,8 @@ const companyInfo = defineType({
       name: "organizationNumber",
       type: "string",
       title: "Organization Number",
-      description: "Enter the organization number",
+      description:
+        "Enter the organization number, with formatting according to your country's standards e.g. in Norway: xxx xxx xxx, or Sweden: xxxxxx-xxxx",
     }),
     defineField({
       name: "companyPhone",
