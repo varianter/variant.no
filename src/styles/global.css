@@ -142,6 +142,15 @@ html {
   --radius-medium: 12px;
   --radius-large: 24px;
 
+  /* Padding */
+  --padding-xs: 0.25rem; 
+  --padding-s: 0.75rem;
+  --padding-rem: 1rem; 
+  --padding-m: 1.5rem;
+  --padding-l: 3rem;
+  --padding-xl: 6rem; 
+  --padding-xxl: 9rem;
+
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
 }
 

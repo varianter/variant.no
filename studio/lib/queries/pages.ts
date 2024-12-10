@@ -8,10 +8,7 @@ const SECTIONS_FRAGMENT = groq`
     ...,
     _type == "hero" => {
       ...,
-      callToActions[] {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
+      "description": ${translatedFieldFragment("description")},
     },
     _type == "article" => {
       ...,
