@@ -28,6 +28,7 @@ export default function LanguageSwitcher({
                 <Link
                   className={styles.notSelected}
                   href={`/${pathTranslation._key}/${pathTranslation.value}`}
+                  scroll={false}
                 >
                   <Text type={"bodySmall"} className={styles.link}>
                     {pathTranslation._key.toUpperCase()}
