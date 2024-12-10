@@ -101,7 +101,6 @@
 
   @media (max-width: 425px) {
     font-size: 1.125rem;
-    line-height: 120%;
   }
 }
 
@@ -114,7 +113,7 @@
 
   @media (max-width: 425px) {
     font-size: 0.875rem;
-    line-height: 120%;
+    line-height: 171.429%;
   }
 }
 
@@ -151,7 +150,8 @@
 
   @media (max-width: 425px) {
     font-size: 0.875rem;
-    line-height: 128.571%;
+    line-height: 114.286%;
+    letter-spacing: 0.0175rem;
   }
 }
 
