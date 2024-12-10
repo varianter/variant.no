@@ -140,6 +140,7 @@
 }
 
 .headerLink {
+  white-space: nowrap;
   color: var(--text-primary);
   cursor: pointer;
   text-decoration: none;
