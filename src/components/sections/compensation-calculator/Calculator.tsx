@@ -48,7 +48,7 @@ export default function Calculator({
   }
 
   const { min, max } = getMinMaxYear(salaries.value);
-  const salary = calculateSalary(year, degree, salaries.value) ?? 0;
+  const salary = calculateSalary(year + 1, degree, salaries.value) ?? 0;
 
   const degreeOptions: IOption[] = [
     { id: "bachelor", label: t("degreeOptions.bachelor") },
@@ -100,11 +100,13 @@ export default function Calculator({
 function getMinMaxYear(salaries: SalaryData) {
   const years = Object.keys(salaries).map((s) => parseInt(s));
   const min = Math.min(...years);
-  const max = Math.max(...years);
+  // We subtract 1 because we don't have data for the current year
+  const max = Math.max(...years) - 1;
   return { min, max };
 }
 function getMaybeMaxYear(salaries: Result<SalaryData, unknown>) {
   if (!salaries.ok) return undefined;
   const years = Object.keys(salaries.value).map((s) => parseInt(s));
-  return Math.max(...years);
+  // We subtract 1 because we don't have data for the current year
+  return Math.max(...years) - 1;
 }
