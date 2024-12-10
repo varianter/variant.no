@@ -11,7 +11,7 @@ export function calculateSalary(
   salaries: Salaries,
 ): number | undefined {
   const degreeValue = degree === "bachelor" ? 1 : 0;
-  const adjustedYear = examinationYear - degreeValue;
+  const adjustedYear = examinationYear + degreeValue;
   return salaries[adjustedYear];
 }
 
