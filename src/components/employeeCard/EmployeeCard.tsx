@@ -65,7 +65,7 @@ export default function EmployeeCard({
                     key={competence}
                     as="span"
                   >
-                    {t(competence)}
+                    {t.has(competence) ? t(competence) : competence}
                   </Text>
                 ))
               )}

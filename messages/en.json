@@ -53,10 +53,11 @@
     "consultants": "consultants",
     "location": "Location",
     "all": "All",
-    "Project Management": "Project Management",
     "Design": "Design",
     "Utvikling": "Development",
-    "Administasjon": "Administration",
+    "Ledelse": "  ",
+    "Prosjekt- og produktledelse": "Project and product management",
+    "Strategi": "Strategy",
     "field": "Field",
     "showMore": "Show all"
   },

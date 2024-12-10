@@ -17,9 +17,10 @@ import { EmployeeListSkeleton } from "./EmployeeSkeleton";
 
 const competences: Competence[] = [
   "Utvikling",
-  "Administasjon",
+  "Ledelse",
   "Design",
-  "Project Management",
+  "Prosjekt- og produktledelse",
+  "Strategi",
 ];
 
 export interface EmployeesProps {

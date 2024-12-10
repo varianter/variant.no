@@ -52,10 +52,11 @@
     "consultants": "konsulenter",
     "location": "Lokasjon",
     "all": "Alle",
-    "Project Management": "Prosjektledelse",
     "Design": "Design",
     "Utvikling": "Utvikling",
-    "Administasjon": "Administrasjon",
+    "Ledelse": "Ledelse",
+    "Prosjekt- og produktledelse": "Prosjekt- og produktledelse",
+    "Strategi": "Strategi",
     "field": "Fag",
     "showMore": "Vis alle"
   },
