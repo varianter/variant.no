@@ -12,6 +12,26 @@ export const employeeHighlightSection = defineField({
   type: "object",
   fields: [
     {
+      name: "styleType",
+      title: "Style type",
+      type: "string",
+      description: "The style type of the section.",
+      options: {
+        list: [
+          { title: "Plain", value: "plain" },
+          { title: "Detailed", value: "detailed" },
+        ],
+        layout: "radio",
+      },
+    },
+    {
+      name: "sectionTitle",
+      title: "Section title",
+      type: "internationalizedArrayString",
+      description: "The title of the section.",
+      hidden: ({ parent }) => parent?.styleType !== "detailed",
+    },
+    {
       name: titleID.basic,
       type: "internationalizedArrayString",
       title: "Title",
