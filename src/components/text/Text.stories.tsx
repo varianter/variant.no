@@ -17,7 +17,6 @@ const meta: Meta<typeof Text> = {
           "h4",
           "h5",
           "h6",
-          "labelSmall",
           "labelRegular",
           "quoteItalic",
           "quoteNormal",
@@ -87,13 +86,6 @@ export const H6: Story = {
   args: {
     type: "h6",
     children: "This is an H6 text",
-  },
-};
-
-export const LabelSmall: Story = {
-  args: {
-    type: "labelSmall",
-    children: "This is a Label Small text",
   },
 };
 
