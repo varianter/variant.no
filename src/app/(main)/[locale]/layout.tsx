@@ -10,13 +10,17 @@ import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
-import { CompanyInfo } from "studio/lib/interfaces/companyDetails";
+import {
+  CompanyInfo,
+  CompanyLocation,
+} from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { Navigation } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import LiveVisualEditing from "studio/lib/loaders/AutomaticVisualEditing";
 import {
   COMPANY_INFO_QUERY,
+  COMPANY_LOCATIONS_QUERY,
   LEGAL_DOCUMENTS_BY_LANG_QUERY,
 } from "studio/lib/queries/admin";
 import {
@@ -57,6 +61,7 @@ export default async function Layout({
     initialSoMe,
     initialLegal,
     initialBrandAssets,
+    initialCompanyLocations,
   ] = await Promise.all([
     loadStudioQuery<Navigation>(
       NAV_QUERY,
@@ -75,6 +80,7 @@ export default async function Layout({
       { perspective },
     ),
     loadStudioQuery<BrandAssets>(BRAND_ASSETS_QUERY, {}, { perspective }),
+    loadStudioQuery<CompanyLocation[]>(COMPANY_LOCATIONS_QUERY, {}),
   ]);
 
   const hasNavData = hasValidData(initialNav.data);
@@ -101,7 +107,8 @@ export default async function Layout({
               navigationData={initialNav.data}
               legalData={initialLegal.data}
               companyInfo={initialCompanyInfo.data}
-              brandAssets={initialBrandAssets.data}
+              companyLocations={initialCompanyLocations.data}
+              /* brandAssets={initialBrandAssets.data} */
               soMeData={initialSoMe.data}
             />
           )}

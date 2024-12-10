@@ -10,7 +10,6 @@ import { defaultLanguage } from "i18n/supportedLanguages";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import Text from "src/components/text/Text";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";

@@ -33,19 +33,6 @@ const CustomLink = ({
   const target = newTab ? "_blank" : undefined;
   const rel = newTab ? "noopener noreferrer" : undefined;
 
-  /* function getLinkClassName() {
-    if (type === "headerLink") {
-      return `${styles.headerLink} ${isSelected ? styles.selected : ""}`;
-    } else if (type === "footerLink") {
-      return styles.footerLink;
-    } else if (type === "footerLinkNew") {
-      return styles.footerLink_new;
-    } else if (type === "footerLinkGrey") {
-      return styles.footerLinkGrey;
-    }
-  }
-  const className = getLinkClassName(); */
-
   switch (type) {
     case "link":
       return (
@@ -98,7 +85,20 @@ const CustomLink = ({
             rel={rel}
             aria-label={link.ariaLabel}
           >
-            <span className={styles.dot}></span>
+            {link.linkTitle}
+          </Link>
+        )
+      );
+    case "footerLinkGrey":
+      return (
+        link.linkTitle && (
+          <Link
+            className={styles.footerLinkGrey}
+            href={href}
+            target={target}
+            rel={rel}
+            aria-label={link.ariaLabel}
+          >
             {link.linkTitle}
           </Link>
         )

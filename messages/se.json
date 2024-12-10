@@ -54,5 +54,12 @@
   "job_posting": {
     "office": "Kontor",
     "all": "Alla"
+  },
+  "footer": {
+    "text": "Vi har flera kontor i Sverige och Norge. Du är välkommen att komma förbi för en kopp kaffe eller bara en trevlig pratstund.",
+    "mainMenu": "Huvudmeny",
+    "other": "Övrigt",
+    "socialMedia": "Följ oss",
+    "contact": "Kontakt"
   }
 }

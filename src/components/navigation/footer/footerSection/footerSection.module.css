@@ -1,4 +1,4 @@
-.footer_section {
+.footerSection {
   /* NOTE: Padding top might be removed(Was in figma sketches) */
   padding-top: 1rem;
   display: flex;
@@ -10,7 +10,7 @@
   }
 }
 
-.footer_section_links {
+.footerSectionLinks {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

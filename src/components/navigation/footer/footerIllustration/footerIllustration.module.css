@@ -1,7 +1,7 @@
 .footerIllustrations {
   background-color: transparent;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-around;
 
   & > svg {
