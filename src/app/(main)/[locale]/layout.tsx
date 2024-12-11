@@ -1,3 +1,4 @@
+import localFont from "next/font/local";
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -25,6 +26,11 @@ import {
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 import "src/styles/global.css";
+
+const fontBrittiSans = localFont({
+  src: "../../../../public/_assets/britti-sans-variable.woff2",
+  variable: "--font-britti-sans",
+});
 
 const hasValidData = (data: unknown) => data && Object.keys(data).length > 0;
 
@@ -76,30 +82,32 @@ export default async function Layout({
   const hasFooterData = hasNavData && initialNav.data.footer;
 
   return (
-    <div>
-      <NextIntlClientProvider messages={messages}>
-        <SkipToMain />
-        {children}
-        {hasFooterData && isDraftMode ? (
-          <FooterPreview
-            initialNav={initialNav}
-            initialCompanyInfo={initialCompanyInfo}
-            initialBrandAssets={initialBrandAssets}
-            initialSoMe={initialSoMe}
-            initialLegal={initialLegal}
-            language={params.locale}
-          />
-        ) : (
-          <Footer
-            navigationData={initialNav.data}
-            legalData={initialLegal.data}
-            companyInfo={initialCompanyInfo.data}
-            brandAssets={initialBrandAssets.data}
-            soMeData={initialSoMe.data}
-          />
-        )}
-        {draftMode().isEnabled && <LiveVisualEditing />}
-      </NextIntlClientProvider>
-    </div>
+    <html lang={params.locale}>
+      <body className={fontBrittiSans.variable}>
+        <NextIntlClientProvider messages={messages}>
+          <SkipToMain />
+          {children}
+          {hasFooterData && isDraftMode ? (
+            <FooterPreview
+              initialNav={initialNav}
+              initialCompanyInfo={initialCompanyInfo}
+              initialBrandAssets={initialBrandAssets}
+              initialSoMe={initialSoMe}
+              initialLegal={initialLegal}
+              language={params.locale}
+            />
+          ) : (
+            <Footer
+              navigationData={initialNav.data}
+              legalData={initialLegal.data}
+              companyInfo={initialCompanyInfo.data}
+              brandAssets={initialBrandAssets.data}
+              soMeData={initialSoMe.data}
+            />
+          )}
+          {draftMode().isEnabled && <LiveVisualEditing />}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
