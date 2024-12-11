@@ -22,6 +22,7 @@ import ImageSectionComponentPreview from "src/components/sections/imageSection/I
 import Jobs from "src/components/sections/jobs/Jobs";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
+import Openness from "src/components/sections/openness/Openness";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import { Locale } from "src/i18n/routing";
@@ -289,6 +290,8 @@ const SectionRenderer = ({
       return <Jobs language={language} section={section} />;
     case "employeeHighlight":
       return <EmployeeHighlight section={section} />;
+    case "opennessSection":
+      return <Openness section={section} />;
     default:
       return null;
   }
