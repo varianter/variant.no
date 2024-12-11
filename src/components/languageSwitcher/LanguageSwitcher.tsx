@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import Text from "src/components/text/Text";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 
 import styles from "./languageSwitcher.module.css";
@@ -26,18 +25,16 @@ export default function LanguageSwitcher({
             <li>
               {pathTranslation._key !== currentLanguage ? (
                 <Link
-                  className={styles.notSelected}
+                  className={styles.link}
                   href={`/${pathTranslation._key}/${pathTranslation.value}`}
                   scroll={false}
                 >
-                  <Text type={"bodySmall"} className={styles.link}>
-                    {pathTranslation._key.toUpperCase()}
-                  </Text>
+                  {pathTranslation._key.toUpperCase()}
                 </Link>
               ) : (
-                <Text type={"bodySmall"} className={styles.selectedLink}>
+                <span className={styles.selectedLink}>
                   {pathTranslation._key.toUpperCase()}
-                </Text>
+                </span>
               )}
             </li>
             {index < pathTranslations.length - 1 && (

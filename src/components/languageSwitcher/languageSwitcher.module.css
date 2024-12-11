@@ -17,6 +17,8 @@
   line-height: 120%;
   font-weight: 300;
 
+  text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
@@ -28,20 +30,8 @@
   line-height: 120%;
   font-weight: 600;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
   &:active {
     font-weight: 600;
     text-decoration: none;
-  }
-}
-
-.notSelected {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
   }
 }
