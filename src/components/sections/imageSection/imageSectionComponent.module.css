@@ -1,7 +1,6 @@
 .article {
-  --container-padding: 0.375rem;
-  max-width: var(--max-content-width-large);
-  padding: var(--container-padding);
+  width: 100%;
+  max-width: var(--max-content-width-medium);
   display: flex;
   flex-direction: column;
   justify-self: center;

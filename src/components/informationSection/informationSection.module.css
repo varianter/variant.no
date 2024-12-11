@@ -14,7 +14,7 @@
 }
 
 .info {
-  max-width: 88rem;
+  max-width: var(--max-content-width-large);
   display: flex;
   padding: 3rem;
   flex-direction: column;

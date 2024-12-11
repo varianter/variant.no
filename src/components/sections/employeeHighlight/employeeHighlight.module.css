@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0 2rem;
-  max-width: 64rem;
+  max-width: var(--max-content-width-medium);
   margin: 5rem auto;
   gap: 1.5rem;
   color: var(--text-primary);

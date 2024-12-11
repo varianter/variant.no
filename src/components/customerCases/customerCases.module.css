@@ -8,7 +8,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: var(--max-content-width-large);
   gap: 5rem;
 }
 

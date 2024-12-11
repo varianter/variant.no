@@ -132,10 +132,10 @@ html {
   --breakpoint-tablet: 834px;
   --breakpoint-large: 1024px;
 
-  /* max widths */
-  --max-content-width-large: 1400px;
-  --max-content-width-medium: 1200px;
-  --max-content-width-small: 1000px;
+  /* max widths, corresponds to 'widest section', 'major 10 col' and '2-3 - 8col' in Figma variables */
+  --max-content-width-large: 1408px; /* 88rem */
+  --max-content-width-medium: 1091px; /* 68.1875rem */
+  --max-content-width-small: 869px; /* 54.3125rem */
 
   /* Radius */
   --radius-small: 6px;
@@ -156,12 +156,17 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   color: var(--text-primary);
   background-color: var(--background-bg-light-primary);
   font-family: var(--font-britti-sans);
   line-height: 1.4;
   font-weight: 300;
+  gap: 1rem;
+
+  @media (max-width: 425px) {
+    padding: 0 0.5rem;
+  }
 }
 
 h1,

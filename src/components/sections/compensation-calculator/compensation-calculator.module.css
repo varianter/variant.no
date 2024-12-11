@@ -1,7 +1,7 @@
 .container {
   max-width: var(--max-content-width-large);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .grid {
@@ -34,9 +34,6 @@
 }
 
 @media (max-width: 440px) {
-  .container {
-    padding: 0 0.5em;
-  }
   .calculator,
   .handbook {
     padding: 1rem;

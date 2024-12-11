@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0.375rem 0.375rem 0.375rem;
-  max-width: 53rem;
+  max-width: var(--max-content-width-small);
   margin: 7.5rem auto;
   border-radius: 0.375rem;
   gap: 1.5rem;

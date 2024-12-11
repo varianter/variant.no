@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.content {
+  max-width: var(--max-content-width-medium);
+}
+
 .highlightCard {
   border: 3px solid var(--block-color);
   border-radius: 0.25rem;
