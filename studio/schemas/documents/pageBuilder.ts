@@ -3,8 +3,6 @@ import { defineField, defineType } from "sanity";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
-import callout from "studio/schemas/objects/sections/callout";
-import callToAction from "studio/schemas/objects/sections/callToAction";
 import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
@@ -16,7 +14,6 @@ import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import { jobs } from "studio/schemas/objects/sections/jobs";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
-import testimonals from "studio/schemas/objects/sections/testimonials";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -49,9 +46,9 @@ const pageBuilder = defineType({
         hero,
         logoSalad,
         article,
-        callout,
-        callToAction,
-        testimonals,
+        // callout,
+        // callToAction,
+        // testimonals,
         imageSplitSection,
         imageSection,
         grid,

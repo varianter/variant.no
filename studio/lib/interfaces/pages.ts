@@ -65,7 +65,6 @@ export interface TestimonialsSection {
 export interface ImageSection {
   _type: "imageSection";
   _key: string;
-  basicTitle: string;
   image: IImage;
 }
 
