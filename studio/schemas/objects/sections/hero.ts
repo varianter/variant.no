@@ -10,6 +10,31 @@ export const hero = defineField({
   type: "object",
   fields: [
     {
+      name: "title",
+      title: "title",
+      type: "internationalizedArrayString",
+      validation: (rule) =>
+        rule.custom<{ value: string; _type: string; _key: string }[]>(
+          (value) => {
+            if (!value) return true;
+
+            const invalidItems = value.filter(
+              (item) =>
+                typeof item.value === "string" && item.value.length > 200,
+            );
+
+            if (invalidItems.length > 0) {
+              return invalidItems.map((item) => ({
+                message: "title cannot be more than 200 characters long.",
+                path: [{ _key: item._key }, "value"],
+              }));
+            }
+
+            return true;
+          },
+        ),
+    },
+    {
       name: "description",
       title: "Description",
       type: "internationalizedArrayString",
@@ -34,15 +59,23 @@ export const hero = defineField({
           },
         ),
     },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
   preview: {
     select: {
-      description: "description",
+      title: "title",
     },
     prepare(selection) {
-      const { description } = selection;
+      const { title } = selection;
       return {
-        title: allTranslation(description) ?? undefined,
+        title: allTranslation(title) ?? undefined,
         subtitle: "Hero Section",
       };
     },

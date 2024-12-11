@@ -10,7 +10,9 @@ import { ILink } from "./navigation";
 export interface HeroSection {
   _type: "hero";
   _key: string;
+  title: string;
   description: string;
+  image: IImage;
 }
 
 export interface LogoSaladSection {

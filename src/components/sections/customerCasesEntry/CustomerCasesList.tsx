@@ -24,47 +24,49 @@ const CustomerCaseList = ({
   customerCasePageSlug,
 }: CustomerCasesProps) => {
   const [selectedCustomerCase, setSelectedCustomerCase] =
-    useState<CustomerCaseEntry>(customerCases[0] || null);
+    useState<CustomerCaseEntry>(customerCases[0]);
 
   const deliveryNames = [
-    selectedCustomerCase.projectInfo.deliveries.projectManagement &&
+    selectedCustomerCase?.projectInfo.deliveries.projectManagement &&
       "Project Management",
-    selectedCustomerCase.projectInfo.deliveries.design && "Design",
-    selectedCustomerCase.projectInfo.deliveries.development && "Development",
+    selectedCustomerCase?.projectInfo.deliveries.design && "Design",
+    selectedCustomerCase?.projectInfo.deliveries.development && "Development",
   ].filter(Boolean);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.info}>
-          <div className={styles.infoInnerMaxWidth}>
-            <TagRow
-              customerCases={customerCases}
-              selectedCustomerCase={selectedCustomerCase}
-              setSelectedCustomerCase={setSelectedCustomerCase}
-            />
-            <Link
-              className={styles.link}
-              href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
-            >
-              <CardInfo
+    selectedCustomerCase && (
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <div className={styles.info}>
+            <div className={styles.infoInnerMaxWidth}>
+              <TagRow
+                customerCases={customerCases}
                 selectedCustomerCase={selectedCustomerCase}
-                deliveryNames={deliveryNames}
+                setSelectedCustomerCase={setSelectedCustomerCase}
               />
-            </Link>
+              <Link
+                className={styles.link}
+                href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+              >
+                <CardInfo
+                  selectedCustomerCase={selectedCustomerCase}
+                  deliveryNames={deliveryNames}
+                />
+              </Link>
+            </div>
           </div>
+          <Link
+            tabIndex={-1}
+            className={styles.imageWrapper}
+            href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+          >
+            {selectedCustomerCase.image && (
+              <SanitySharedImage image={selectedCustomerCase.image} />
+            )}
+          </Link>
         </div>
-        <Link
-          tabIndex={-1}
-          className={styles.imageWrapper}
-          href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
-        >
-          {selectedCustomerCase.image && (
-            <SanitySharedImage image={selectedCustomerCase.image} />
-          )}
-        </Link>
       </div>
-    </div>
+    )
   );
 };
 export default CustomerCaseList;

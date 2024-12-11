@@ -8,6 +8,7 @@ const SECTIONS_FRAGMENT = groq`
     ...,
     _type == "hero" => {
       ...,
+      "title": ${translatedFieldFragment("title")},
       "description": ${translatedFieldFragment("description")},
     },
     _type == "article" => {

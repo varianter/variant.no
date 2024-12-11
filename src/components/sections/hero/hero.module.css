@@ -24,6 +24,7 @@
   composes: shared;
   align-self: center;
   padding: var(--padding-xl) var(--padding-rem);
+  gap: var(--padding-rem); 
 
   @media (max-width: 834px) {
     padding: var(--padding-l) var(--padding-s);
@@ -32,6 +33,13 @@
   @media (max-width: 425px) {
     padding: var(--padding-l) var(--padding-s);
   }
+}
+
+.img{
+  width: 100%;
+  max-width: 60rem;
+  justify-content: flex-end;
+  display: flex !important; 
 }
 
 .primary {
