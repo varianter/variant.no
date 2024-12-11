@@ -1,6 +1,6 @@
 .article {
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--max-content-width-medium);
   display: flex;
   margin: auto;
   padding: 5rem 1rem;

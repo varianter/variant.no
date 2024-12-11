@@ -98,10 +98,12 @@ function ColoredTitle({
   const postColorText = title.slice(endColorIndex);
 
   return (
-    <Text type={"h1"} className={styles.mainTitle}>
-      <span>{preColorText}</span>
-      <span style={{ color: color }}>{colorText}</span>
-      <span>{postColorText}</span>
-    </Text>
+    <div className={styles.titleWrapper}>
+      <Text type={"h1"} className={styles.mainTitle}>
+        <span>{preColorText}</span>
+        <span style={{ color: color }}>{colorText}</span>
+        <span>{postColorText}</span>
+      </Text>
+    </div>
   );
 }
