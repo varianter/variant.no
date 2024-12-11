@@ -147,12 +147,17 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   color: var(--text-primary);
   background-color: var(--background-bg-light-primary);
   font-family: var(--font-britti-sans);
   line-height: 1.4;
   font-weight: 300;
+  gap: 1rem;
+
+  @media (max-width: 425px) {
+    padding: 0 0.5rem;
+  }
 }
 
 h1,

@@ -1,12 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 4rem 2rem;
+  margin: 4rem 0rem;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 1024px) {
-    margin: 2rem 1rem;
+    margin: 2rem 0rem;
   }
 }
 
@@ -16,11 +16,6 @@
   flex-direction: column;
   width: 100%;
   max-width: var(--max-content-width-large);
-  padding: 0 2rem;
-
-  @media (max-width: 1024px) {
-    padding: 0 1rem;
-  }
 }
 
 .titleWrapper {
