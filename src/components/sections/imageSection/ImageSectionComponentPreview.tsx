@@ -18,7 +18,7 @@ export default function ImageSectionComponentPreview({
     { initial: initialData },
   );
 
-  const testimonialsSection = newData
+  const imageSection = newData
     ? (newData.sections.find(
         (section, index) =>
           section._type === "imageSection" && index === sectionIndex,
@@ -30,7 +30,7 @@ export default function ImageSectionComponentPreview({
 
   return (
     <Suspense>
-      <ImageSectionComponent section={testimonialsSection} />
+      <ImageSectionComponent section={imageSection} />
     </Suspense>
   );
 }

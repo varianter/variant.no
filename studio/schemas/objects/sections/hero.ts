@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-import { allTranslation } from "studio/utils/i18n";
+import { allTranslations } from "studio/utils/i18n";
 
 export const heroID = "hero";
 
@@ -75,7 +75,7 @@ export const hero = defineField({
     prepare(selection) {
       const { title } = selection;
       return {
-        title: allTranslation(title) ?? undefined,
+        title: allTranslations(title) ?? undefined,
         subtitle: "Hero Section",
       };
     },

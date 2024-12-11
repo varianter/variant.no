@@ -1,7 +1,8 @@
 import { defineField } from "sanity";
 
-import image from "studio/schemas/fields/media";
-import { title } from "studio/schemas/fields/text";
+import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { internationalizedImage } from "studio/schemas/fields/media";
+import { allTranslations } from "studio/utils/i18n";
 
 export const imageID = "imageSection";
 
@@ -10,22 +11,31 @@ export const imageSection = defineField({
   title: "Image",
   type: "object",
   fields: [
-    title,
     defineField({
-      ...image,
+      ...internationalizedImage,
       description: "Upload a featured image for the section.",
       validation: (rule) => rule.required(),
     }),
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      image: "image",
+      fullWidth: "fullWidth",
     },
-    prepare(selection) {
-      const { title } = selection;
+    prepare: ({ image, fullWidth }) => {
+      const imageAlt = image.alt;
+      if (!isInternationalizedString(imageAlt)) {
+        throw new TypeError(
+          `Expected image 'alt' to be InternationalizedString, was ${typeof image.alt}`,
+        );
+      }
       return {
-        title: title,
-        subtitle: "Image",
+        title:
+          imageAlt !== undefined
+            ? (allTranslations(imageAlt) ?? undefined)
+            : undefined,
+        subtitle: fullWidth ? "Full Width" : undefined,
+        media: image,
       };
     },
   },

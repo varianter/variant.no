@@ -3,6 +3,14 @@ import { groq } from "next-sanity";
 import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
+const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
+  asset,
+  "metadata": asset -> metadata {
+    lqip
+  },
+  "alt": ${translatedFieldFragment("alt")}
+`;
+
 const SECTIONS_FRAGMENT = groq`
   sections[]{
     ...,
@@ -36,6 +44,10 @@ const SECTIONS_FRAGMENT = groq`
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
       }
+    },
+      _type == "imageSection" => {
+      ...,
+        "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
     _type == "ctaSection" => {
       ...,
