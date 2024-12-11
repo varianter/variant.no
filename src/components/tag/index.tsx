@@ -18,6 +18,8 @@ function getBackgroundClass(backgroundColor: string) {
   switch (backgroundColor) {
     case "light":
       return "";
+    case "transparent":
+      return "";
     case "dark":
       return styles["tag--bgDark"];
     case "violet":
@@ -29,7 +31,7 @@ function getBackgroundClass(backgroundColor: string) {
 
 type TagProps = {
   active?: boolean;
-  background?: "light" | "dark" | "violet";
+  background?: "light" | "dark" | "violet" | "transparent";
   text: string;
 } & TagInner;
 

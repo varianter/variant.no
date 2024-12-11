@@ -12,7 +12,7 @@ export type ContactSelectorProps = {
   contactPoints: Promise<EmployeeAndMetadata[]>;
   employeesPageSlug: string;
   language: string;
-  background?: "dark" | "light";
+  background?: "dark" | "light" | "transparent";
 };
 
 export default function ContactSelector({
