@@ -17,10 +17,11 @@ export function isChewbaccaEmployeesResponse(
 }
 
 export type Competence =
-  | "Project Management"
   | "Design"
   | "Utvikling"
-  | "Administasjon";
+  | "Prosjekt- og produktledelse"
+  | "Ledelse"
+  | "Strategi";
 
 export interface ChewbaccaEmployee {
   email?: string | null;
