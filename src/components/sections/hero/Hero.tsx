@@ -19,7 +19,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
         <div className={styles.secondary}>
           <Text type="bodyBig"> {hero.title}</Text>
           <Text type="h1">{hero.description}</Text>
-          <div className={styles.img}>
+          <div className={styles.image}>
             <SanityImage image={hero.image} />
           </div>
         </div>
