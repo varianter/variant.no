@@ -9,11 +9,13 @@ export const contactBoxID = "contactBox";
 export enum ContactBoxBackground {
   Dark = "dark",
   Light = "light",
+  Transparent = "transparent",
 }
 
 const backgroundOptions = [
   { title: "Dark", value: ContactBoxBackground.Dark },
   { title: "Light", value: ContactBoxBackground.Light },
+  { title: "Transparent", value: ContactBoxBackground.Transparent },
 ];
 
 export const contactBox = defineField({

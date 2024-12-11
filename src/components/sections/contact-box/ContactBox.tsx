@@ -25,8 +25,9 @@ export default async function ContactBox({
 
   const contactPoints = fetchEmployeesWithTags(section.contactPoints);
 
-  const backgroundClass =
-    section.background === "light" ? styles["contactBox__inner--light"] : "";
+  const backgroundClass = styles[`contactBox__inner--${section.background}`];
+  const employeeCardBackground =
+    section.background === "transparent" ? "light" : section.background;
 
   return (
     <section className={styles.contactBox}>
@@ -43,13 +44,15 @@ export default async function ContactBox({
 
         <div className={styles.contactSelectorWrapper}>
           <Suspense
-            fallback={<EmployeeCardSkeleton background={section.background} />}
+            fallback={
+              <EmployeeCardSkeleton background={employeeCardBackground} />
+            }
           >
             <ContactSelector
               employeesPageSlug={employeesPageSlug}
               contactPoints={contactPoints}
               language={language}
-              background={section.background}
+              background={employeeCardBackground}
             />
           </Suspense>
         </div>
