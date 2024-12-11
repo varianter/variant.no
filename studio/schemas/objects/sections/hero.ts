@@ -1,10 +1,6 @@
-// hero.ts
-import { StringInputProps, defineField } from "sanity";
+import { defineField } from "sanity";
 
-import CustomCallToActions from "studio/components/CustomCallToActions";
-import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
-import callToActionField from "studio/schemas/fields/callToActionFields";
-import { title } from "studio/schemas/fields/text";
+import { allTranslation } from "studio/utils/i18n";
 
 export const heroID = "hero";
 
@@ -13,51 +9,73 @@ export const hero = defineField({
   title: "Hero Section",
   type: "object",
   fields: [
-    title,
+    {
+      name: "title",
+      title: "title",
+      type: "internationalizedArrayString",
+      validation: (rule) =>
+        rule.custom<{ value: string; _type: string; _key: string }[]>(
+          (value) => {
+            if (!value) return true;
+
+            const invalidItems = value.filter(
+              (item) =>
+                typeof item.value === "string" && item.value.length > 200,
+            );
+
+            if (invalidItems.length > 0) {
+              return invalidItems.map((item) => ({
+                message: "title cannot be more than 200 characters long.",
+                path: [{ _key: item._key }, "value"],
+              }));
+            }
+
+            return true;
+          },
+        ),
+    },
     {
       name: "description",
       title: "Description",
-      type: "string",
-      validation: (rule) => rule.max(200),
-      components: {
-        input: (props: StringInputProps) =>
-          StringInputWithCharacterCount({ ...props, maxCount: 200 }),
-      },
+      type: "internationalizedArrayString",
+      validation: (rule) =>
+        rule.custom<{ value: string; _type: string; _key: string }[]>(
+          (value) => {
+            if (!value) return true;
+
+            const invalidItems = value.filter(
+              (item) =>
+                typeof item.value === "string" && item.value.length > 200,
+            );
+
+            if (invalidItems.length > 0) {
+              return invalidItems.map((item) => ({
+                message: "Description cannot be more than 200 characters long.",
+                path: [{ _key: item._key }, "value"],
+              }));
+            }
+
+            return true;
+          },
+        ),
     },
     {
-      name: "callToActions",
-      title: "Call to Actions",
-      description:
-        "Available only for landing pages, this feature helps improve user engagement by directing them to important areas or actions on your site. The first Call to Action (CTA) will be styled as a primary link button.",
-      type: "array",
-      of: [
-        {
-          type: "object",
-          fields: callToActionField.fields,
-          preview: callToActionField.preview,
-        },
-      ],
-      validation: (rule) =>
-        rule.custom((callToActions) => {
-          if (!Array.isArray(callToActions)) return true;
-          if (callToActions.length > 2) {
-            return "You can only have two Call to Action links";
-          }
-          return true;
-        }),
-      components: {
-        input: CustomCallToActions,
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
       },
     },
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      title: "title",
     },
     prepare(selection) {
       const { title } = selection;
       return {
-        title: title,
+        title: allTranslation(title) ?? undefined,
         subtitle: "Hero Section",
       };
     },

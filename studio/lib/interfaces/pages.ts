@@ -10,9 +10,9 @@ import { ILink } from "./navigation";
 export interface HeroSection {
   _type: "hero";
   _key: string;
-  basicTitle: string;
-  callToActions: ILink[];
+  title: string;
   description: string;
+  image: IImage;
 }
 
 export interface LogoSaladSection {
