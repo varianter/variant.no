@@ -55,7 +55,7 @@ const ImageSplitComponent = ({ section }: ImageSplitProps) => {
       {section.imageExtended && (
         <div className={imageClass}>
           <div>
-            <SanityImage image={section.imageExtended} />
+            <SanityImage image={section.imageExtended} objectFit="none" />
           </div>
         </div>
       )}

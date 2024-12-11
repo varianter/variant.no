@@ -39,9 +39,11 @@ const useNextSanityGlobalImage = (
 const SanityAssetImage = ({
   image,
   imageProps,
+  objectFit = "cover",
 }: {
   image: IImage;
   imageProps?: UseNextSanityImageProps;
+  objectFit?: "cover" | "none";
 }) => {
   const objectPosition = image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
@@ -56,12 +58,16 @@ const SanityAssetImage = ({
       width={imageProps.width}
       height={imageProps.height}
       blurDataURL={image.metadata?.lqip}
-      style={{
-        objectFit: "cover",
-        objectPosition,
-        maxWidth: "100%",
-        maxHeight: "100%",
-      }}
+      style={
+        objectFit === "none"
+          ? {}
+          : {
+              objectFit: "cover",
+              objectPosition,
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }
+      }
     />
   );
 };
@@ -76,24 +82,44 @@ export function SanitySharedImage({ image }: { image: IImage }) {
   return <SanityAssetImage image={image} imageProps={imageProps} />;
 }
 
-function SanityGlobalImage({ image }: { image: IImage }) {
+function SanityGlobalImage({
+  image,
+  objectFit = "cover",
+}: {
+  image: IImage;
+  objectFit?: "cover" | "none";
+}) {
   const imageProps = useNextSanityGlobalImage(image);
   return (
-    <SanityAssetImage image={image} imageProps={imageProps ?? undefined} />
+    <SanityAssetImage
+      objectFit={objectFit}
+      image={image}
+      imageProps={imageProps ?? undefined}
+    />
   );
 }
 
-export function SanityImage({ image }: { image: IImage }) {
+export function SanityImage({
+  image,
+  objectFit = "cover",
+}: {
+  image: IImage;
+  objectFit?: "cover" | "none";
+}) {
   if (image?.src) {
     return (
       <Image
         alt={image?.alt || ""}
         src={image.src.src}
-        style={{ objectFit: "cover", height: "100%", width: "100%" }}
+        style={
+          objectFit === "none"
+            ? {}
+            : { objectFit: "cover", height: "100%", width: "100%" }
+        }
         width={300}
         height={300}
       />
     );
   }
-  return <SanityGlobalImage image={image} />;
+  return <SanityGlobalImage image={image} objectFit={objectFit} />;
 }
