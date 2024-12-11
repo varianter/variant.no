@@ -65,6 +65,8 @@
 
   background-color: var(--background-bg-dark);
   border-radius: var(--medium, 12px);
+
+  overflow: hidden;
 }
 .employeeImage--dark {
   background-color: var(--background-bg-light-primary);
