@@ -1,6 +1,6 @@
 .contactBox {
-  margin: 8rem auto;
-  padding: 0 1rem;
+  margin: 1rem auto;
+  padding: 0;
   max-width: var(--max-content-width-large);
 }
 

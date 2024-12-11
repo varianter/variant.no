@@ -3,11 +3,7 @@
   font-family: var(--font-britti-sans);
 }
 
-.labelSmall,
-.labelLight,
 .labelRegular,
-.labelSemibold,
-.labelBold,
 .quoteItalic,
 .quoteNormal,
 .bodyExtraSmall,
@@ -22,123 +18,153 @@
 .h1 {
   font-size: 4.5rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+  font-weight: 450;
+  line-height: 111.111%;
+
+  @media (max-width: 834px) {
+    font-size: 3.5rem;
+    line-height: 114.286%;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 2.5rem;
+    line-height: 120%;
+  }
 }
 
 .h2 {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 120%;
+  font-size: 3.5rem;
+  font-weight: 450;
+  line-height: 114.286%;
+
+  @media (max-width: 834px) {
+    font-size: 2.5rem;
+    line-height: 120%;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 2rem;
+    line-height: 125%;
+  }
 }
 
 .h3 {
-  font-size: 2.125rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 450;
+  line-height: 125%;
+
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+    line-height: 133.333%;
+  }
 }
 
 .h4 {
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 120%; /* 1.8rem */
+  font-weight: 450;
+  line-height: 133.3%;
 }
 
 .h5 {
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 120%;
 }
-
-/* TODO: add font variables */
-/* .h6 */
 
 .desktopLink {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%;
-}
-
-.desktopLinkBig {
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
+  line-height: 150%;
   text-decoration-line: underline;
 }
 
 .bodyXl {
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 120%;
   letter-spacing: 0.025rem;
+
+  @media (max-width: 425px) {
+    font-size: 2rem;
+    line-height: 125%;
+  }
 }
 
 .bodyBig {
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
+  font-weight: 300;
+  line-height: 133.333%;
+
+  @media (max-width: 425px) {
+    font-size: 1.125rem;
+  }
 }
 
 .bodyNormal {
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 300;
+  line-height: 160%;
+  letter-spacing: 0.0125rem;
+
+  @media (max-width: 425px) {
+    font-size: 0.875rem;
+    line-height: 171.429%;
+  }
 }
 
 .bodySmall {
   font-size: 1rem;
   font-weight: 300;
   line-height: 150%;
-}
 
-.bodyExtraSmall {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.14px;
-
-  @media (max-width: 375px) {
-    font-size: 12px;
-    letter-spacing: 0.12px;
+  @media (max-width: 425px) {
+    font-size: 0.875rem;
+    line-height: 114.286%;
   }
 }
 
-.labelSmall {
+.bodyExtraSmall {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.5rem;
-}
+  line-height: 128.571%;
+  letter-spacing: 0.00875rem;
 
-.labelLight {
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
+  @media (max-width: 425px) {
+    font-size: 0.75rem;
+    line-height: 150%;
+    letter-spacing: 0.0075rem;
+  }
 }
 
 .labelRegular {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 150%;
+  letter-spacing: 0.02rem;
+
+  @media (max-width: 425px) {
+    font-size: 0.875rem;
+    line-height: 114.286%;
+    letter-spacing: 0.0175rem;
+  }
 }
 
-.labelSemibold {
-  font-size: 1rem;
+.labelLarge {
+  font-size: 1.25rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 120%;
-}
 
-.labelBold {
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 120%;
+  @media (max-width: 425px) {
+    font-size: 1.125rem;
+    line-height: 133.333%;
+  }
 }
 
 .quoteNormal {
@@ -149,9 +175,10 @@
   white-space: pre-line;
 }
 
-/* TODO: add font variables */
-/* .labelBold */
-/* .quoteItalic */
-/* .labelSemibold, */
-/* .labelBold, */
-/* .quoteItalic, */
+.quoteItalic {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 130%;
+  white-space: pre-line;
+}

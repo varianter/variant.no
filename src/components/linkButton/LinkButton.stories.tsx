@@ -17,10 +17,10 @@ const meta: Meta<typeof LinkButton> = {
     },
   },
   argTypes: {
-    isSmall: {
+    size: {
       control: {
         type: "select",
-        options: ["true", "false"],
+        options: ["XL", "L", "M", "S"],
       },
     },
     type: {
@@ -40,7 +40,7 @@ type Story = StoryObj<typeof LinkButton>;
 
 export const PrimaryLarge: Story = {
   args: {
-    isSmall: false,
+    size: "XL",
     type: "primary",
     link: {
       _key: "key",
@@ -54,7 +54,7 @@ export const PrimaryLarge: Story = {
 
 export const PrimarySmall: Story = {
   args: {
-    isSmall: true,
+    size: "S",
     type: "primary",
     link: {
       _key: "key",
@@ -68,7 +68,7 @@ export const PrimarySmall: Story = {
 
 export const SecondaryLarge: Story = {
   args: {
-    isSmall: false,
+    size: "XL",
     type: "secondary",
     link: {
       _key: "key",
@@ -82,7 +82,7 @@ export const SecondaryLarge: Story = {
 
 export const SecondarySmall: Story = {
   args: {
-    isSmall: true,
+    size: "S",
     type: "secondary",
     link: {
       _key: "key",

@@ -2,6 +2,9 @@ import { PortableTextBlock, Reference } from "sanity";
 
 import { SeoData } from "src/utils/seo";
 
+import { ILink } from "./navigation";
+import { CompensationCalculatorSection } from "./pages";
+
 export interface Benefit {
   _type: string;
   _key: string;
@@ -82,9 +85,11 @@ export interface CompensationsPage {
   page: string;
   slug: string;
   pensionPercent?: number;
+  compensationCalculator: CompensationCalculatorSection;
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   showSalaryCalculator: boolean;
+  handbookLinks: ILink[];
   seo: SeoData;
 }

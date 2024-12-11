@@ -13,19 +13,65 @@ export const imageSplitSection = defineField({
   type: "object",
   fields: [
     {
-      name: titleID.basic,
-      type: "internationalizedArrayString",
-      title: "Title",
-      description:
-        "Enter the primary title that will be displayed at the top of the employees section.",
+      name: "content",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: titleID.basic,
+              type: "internationalizedArrayString",
+              title: "Title",
+              description:
+                "Enter the primary title that will be displayed at the top of the employees section.",
+            },
+            {
+              name: "description",
+              type: "internationalizedArrayString",
+              title: "Main content",
+              description:
+                "Enter the main content that will be displayed below the title.",
+            },
+          ],
+          preview: {
+            select: {
+              title: titleID.basic,
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: firstTranslation(title) ?? undefined,
+              };
+            },
+          },
+        },
+      ],
     },
 
     {
-      name: "description",
-      type: "internationalizedArrayString",
-      title: "Main content",
+      name: "size",
+      title: "Size",
+      type: "string",
+      options: { list: ["small", "medium"] },
+      initialValue: "small",
+    },
+
+    {
+      name: "is2vs3",
+      title: "Ratio 2:3",
       description:
-        "Enter the main content that will be displayed below the title.",
+        "If true, the image will be displayed in a 2:3 ratio. Otherwise, it will be displayed in a 1:1 ratio.",
+      type: "boolean",
+      initialValue: false,
+    },
+
+    {
+      name: "imageFullHeight",
+      title: "Image Full Height",
+      description: "If true, the image will be displayed in full height.",
+      type: "boolean",
+      initialValue: true,
     },
 
     imageExtended,
@@ -38,12 +84,12 @@ export const imageSplitSection = defineField({
   ],
   preview: {
     select: {
-      title: "basicTitle",
+      content: "content",
     },
     prepare(selection) {
-      const { title } = selection;
+      const { content } = selection;
       return {
-        title: firstTranslation(title) ?? undefined,
+        title: firstTranslation(content[0]?.basicTitle) ?? undefined,
       };
     },
   },

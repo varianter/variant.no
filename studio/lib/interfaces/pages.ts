@@ -1,6 +1,7 @@
 import { PortableTextBlock } from "sanity";
 
 import { SeoData } from "src/utils/seo";
+import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
@@ -9,9 +10,9 @@ import { ILink } from "./navigation";
 export interface HeroSection {
   _type: "hero";
   _key: string;
-  basicTitle: string;
-  callToActions: ILink[];
+  title: string;
   description: string;
+  image: IImage;
 }
 
 export interface LogoSaladSection {
@@ -71,9 +72,15 @@ export interface ImageSection {
 export interface ImageSplitSection {
   _type: "imageSplitSection";
   _key: string;
-  basicTitle: string;
+  size: "small" | "medium";
+  is2vs3: boolean;
+  imageFullHeight: boolean;
+  content: {
+    _key: string;
+    basicTitle: string;
+    description: string;
+  }[];
   imageExtended: ImageExtendedProps;
-  description: string;
   actions: ILink[];
 }
 
@@ -99,6 +106,7 @@ export interface ContactBoxSection {
     _key: string;
     _type: string;
     tag: string;
+    overrideTitle?: string;
     email: string;
   }[];
 }
@@ -109,11 +117,36 @@ export interface EmployeesSection {
   basicTitle: string;
 }
 
+export interface CustomerCasesEntrySection {
+  _type: "customerCasesEntry";
+  _key: string;
+  basicTitle: string;
+}
+
 export interface JobsSection {
   _type: "jobs";
   _key: string;
   basicTitle: string;
   subtitle: string;
+}
+
+export interface CompensationCalculatorSection {
+  _type: "compensationCalculator";
+  _key: string;
+  moduleTitle?: string;
+  background: CompensationCalculatorBackground;
+
+  calculatorBlock: {
+    calculatorTitle: string;
+    calculatorDescription: string;
+    calculatorLink: ILink;
+  };
+
+  handbookBlock: {
+    handbookTitle: string;
+    handbookDescription: string;
+    handbookLink: ILink;
+  };
 }
 
 export interface EmployeeHighlightSection {
@@ -135,10 +168,13 @@ export type Section =
   | ImageSection
   | ImageSplitSection
   | GridSection
+  | EmployeesSection
+  | CustomerCasesEntrySection
   | ContactBoxSection
   | EmployeesSection
-  | JobsSection
-  | EmployeeHighlightSection;
+  | EmployeeHighlightSection
+  | CompensationCalculatorSection
+  | JobsSection;
 
 export interface PageBuilder {
   _createdAt: string;

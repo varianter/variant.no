@@ -8,10 +8,8 @@ const SECTIONS_FRAGMENT = groq`
     ...,
     _type == "hero" => {
       ...,
-      callToActions[] {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
+      "title": ${translatedFieldFragment("title")},
+      "description": ${translatedFieldFragment("description")},
     },
     _type == "article" => {
       ...,
@@ -29,8 +27,11 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "imageSplitSection" => {
       ...,
-      "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")},
+      "content": content[]{
+        ...,
+        "basicTitle": ${translatedFieldFragment("basicTitle")},
+        "description": ${translatedFieldFragment("description")},
+      },
       actions[] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
@@ -43,12 +44,39 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
+    _type == "compensationCalculator" => {
+      ...,
+      "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+
+      "calculatorBlock": calculatorBlock {
+        ...,
+        "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+        "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+        "calculatorLink": calculatorLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
+      },
+      "handbookBlock": handbookBlock {
+        ...,
+        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+        "handbookLink": handbookLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
+      }
+    },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
     },
     _type == "contactBox" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "optionalSubtitle": ${translatedFieldFragment("optionalSubtitle")}
+      "optionalSubtitle": ${translatedFieldFragment("optionalSubtitle")},
+      "contactPoints": contactPoints[] {
+        ...,
+        "overrideTitle": ${translatedFieldFragment("overrideTitle")}
+      }
     },
     _type == "jobs" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},

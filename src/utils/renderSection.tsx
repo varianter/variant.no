@@ -6,7 +6,9 @@ import Callout from "src/components/sections/callout/Callout";
 import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
+import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
+import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
 import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
 import Grid from "src/components/sections/grid/Grid";
@@ -22,10 +24,12 @@ import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
+import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
   CallToActionSection,
   CalloutSection,
+  CustomerCasesEntrySection,
   GridSection,
   HeroSection,
   ImageSection,
@@ -183,6 +187,20 @@ const renderGridSection = (
   );
 };
 
+const renderCustomerCasesEntrySection = (
+  section: CustomerCasesEntrySection,
+  sectionIndex: number,
+  isDraftMode: boolean,
+  initialData: QueryResponseInitial<PageBuilder>,
+  language: Locale,
+) => {
+  return isDraftMode ? (
+    <CustomerCasesEntry language={language} />
+  ) : (
+    <CustomerCasesEntry language={language} />
+  );
+};
+
 const SectionRenderer = ({
   language,
   section,
@@ -251,8 +269,18 @@ const SectionRenderer = ({
           initialData={initialData}
         />
       );
+    case "compensationCalculator":
+      return <CompensationCalculator section={section} language={language} />;
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
+    case "customerCasesEntry":
+      return renderCustomerCasesEntrySection(
+        section,
+        sectionIndex,
+        isDraftMode,
+        initialData,
+        language as Locale,
+      );
     case "contactBox":
       return <ContactBox section={section} language={language} />;
     case "employees":

@@ -1,6 +1,26 @@
 .fieldset {
   border: 0 none;
   padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.srOnly {
+  /* hide from everything but screen readers */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.fieldset:focus-within {
+  outline: 2px solid var(--surface-yellow);
+  border-radius: var(--radius-small);
+  outline-offset: 0.5rem;
 }
 
 .wrapper {
@@ -15,11 +35,6 @@
   align-items: center;
 }
 
-.label {
-  font-size: 1rem;
-  color: var(--dark-purple);
-}
-
 .disabledLabel {
   color: gray;
   cursor: not-allowed;
@@ -27,37 +42,12 @@
 
 .input {
   appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid black;
-  border-radius: 50%;
-  transition: all 0.1s ease-in-out;
-  box-sizing: border-box;
-  background-color: white;
-  position: relative;
-}
-
-.input:checked::after {
-  content: "";
+  width: 0px;
+  height: 0px;
+  border: none;
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--background-bg-dark);
-}
-
-.input:hover {
-  background-color: var(--background-bg-light-primary);
-  outline: 2px solid var(--background-button-outline-dark);
-}
-
-.input:focus {
-  outline: 2px solid var(--background-button-outline-dark);
-}
-
-.input[disabled] {
-  cursor: not-allowed;
-  border-color: grey;
+  /* hide from everything but screen readers */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

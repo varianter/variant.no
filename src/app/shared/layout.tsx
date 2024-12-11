@@ -10,7 +10,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"en"}>
+    <html>
       <body>
         {children}
         {draftMode().isEnabled && <LiveVisualEditing />}

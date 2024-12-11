@@ -4,6 +4,7 @@ import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { Navigation } from "studio/lib/interfaces/navigation";
+import { COMPANY_EMAIL_QUERY } from "studio/lib/queries/admin";
 import {
   ANNOUNCEMENT_QUERY,
   BRAND_ASSETS_QUERY,
@@ -43,6 +44,10 @@ export default async function PageHeader({
     { perspective },
   );
 
+  const initialCompanyEmail = await loadStudioQuery<
+    { companyEmail: string } | undefined
+  >(COMPANY_EMAIL_QUERY, {}, { perspective });
+
   return (
     isNonNullQueryResponse(initialBrandAssets) &&
     isNonNullQueryResponse(initialNav) &&
@@ -53,6 +58,7 @@ export default async function PageHeader({
         initialAnnouncement={initialAnnouncement}
         currentLanguage={language}
         pathTranslations={pathTranslations}
+        contactEmail={initialCompanyEmail.data?.companyEmail}
       />
     ) : (
       <Header
@@ -61,6 +67,7 @@ export default async function PageHeader({
         announcement={initialAnnouncement.data}
         currentLanguage={language}
         pathTranslations={pathTranslations}
+        contactEmail={initialCompanyEmail.data?.companyEmail}
       />
     ))
   );

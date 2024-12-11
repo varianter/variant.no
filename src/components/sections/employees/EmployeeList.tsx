@@ -17,9 +17,10 @@ import { EmployeeListSkeleton } from "./EmployeeSkeleton";
 
 const competences: Competence[] = [
   "Utvikling",
-  "Administasjon",
+  "Ledelse",
   "Design",
-  "Project Management",
+  "Prosjekt- og produktledelse",
+  "Strategi",
 ];
 
 export interface EmployeesProps {
@@ -99,7 +100,7 @@ export default function EmployeeList({
     <>
       <div className={styles.employeeFiltersWrapper}>
         <div className={styles.employeeFilterWrapper}>
-          <Text type="labelSemibold" className={styles.employeeFilterLabel}>
+          <Text type="labelRegular" className={styles.employeeFilterLabel}>
             {t("field")}
           </Text>
           <Tag
@@ -125,7 +126,7 @@ export default function EmployeeList({
           })}
         </div>
         <div className={styles.employeeFilterWrapper}>
-          <Text type="labelSemibold" className={styles.employeeFilterLabel}>
+          <Text type="labelRegular" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
           <Tag

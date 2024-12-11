@@ -7,11 +7,9 @@ import { useEffect, useState } from "react";
 import { FocusOn } from "react-focus-on";
 
 import { defaultLanguage } from "i18n/supportedLanguages";
-import Button from "src/components/buttons/Button";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
-import Text from "src/components/text/Text";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
@@ -26,9 +24,10 @@ import styles from "./header.module.css";
 export interface IHeader {
   navigation: Navigation;
   assets: BrandAssets;
-  announcement: Announcement | null;
+  announcement?: Announcement | null;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
+  contactEmail: string | undefined;
 }
 
 const filterLinks = (data: ILink[], type: string) =>
@@ -36,9 +35,10 @@ const filterLinks = (data: ILink[], type: string) =>
 
 export const Header = ({
   navigation,
-  announcement,
+  /* announcement, */
   currentLanguage,
   pathTranslations,
+  contactEmail,
 }: IHeader) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -73,11 +73,11 @@ export const Header = ({
     };
   }, []);
 
-  const showAnnouncement =
+  /* const showAnnouncement =
     announcement !== null &&
     announcement.text?.length > 0 &&
     (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
-
+ */
   const t = useTranslations("contact_information");
 
   return (
@@ -92,7 +92,12 @@ export const Header = ({
         <nav className={styles.nav} aria-label="Main menu">
           <div className={styles.wrapper}>
             <div className={styles.desktopWrapper}>
-              <Link href="/" aria-label="Home" className={styles.logo} />
+              <Link
+                href="/"
+                aria-label="Home"
+                className={styles.logo}
+                scroll={false}
+              />
               {renderPageLinks(links, false, pathname)}
               {renderPageCTAs(ctas, false)}
               <div className={styles.languageSwitcher}>
@@ -102,9 +107,17 @@ export const Header = ({
                     pathTranslations={pathTranslations}
                   />
                 )}
-                <Button size="large" type="secondary" background="light">
-                  <Text type="labelRegular">{t("contact_us")}</Text>
-                </Button>
+
+                {contactEmail && (
+                  <LinkButton
+                    link={`mailto:${contactEmail}`}
+                    linkTitle={t("contact_us")}
+                    size="L"
+                    type="primary"
+                    background="light"
+                    withoutIcon
+                  />
+                )}
               </div>
               <button
                 aria-haspopup="true"
@@ -131,15 +144,23 @@ export const Header = ({
                       pathTranslations={pathTranslations}
                     />
                   )}
-                  <Button size="large" type="primary" background="dark">
-                    <Text type="labelRegular">{t("contact_us")}</Text>
-                  </Button>
+
+                  {contactEmail && (
+                    <LinkButton
+                      link={`mailto:${contactEmail}`}
+                      linkTitle={t("contact_us")}
+                      size="L"
+                      type="primary"
+                      background="light"
+                      withoutIcon
+                    />
+                  )}
                 </div>
               </div>
             )}
           </div>
         </nav>
-        {showAnnouncement && (
+        {/* {showAnnouncement && (
           <div className={styles.announcementWrapper}>
             <div className={styles.announcementContent}>
               <Text type={"bodySmall"}>{announcement.text}</Text>
@@ -154,7 +175,7 @@ export const Header = ({
               )}
             </div>
           </div>
-        )}
+        )} */}
       </FocusOn>
     </>
   );
@@ -171,7 +192,12 @@ export const renderPageLinks = (
       const isSelected = pathname === `${linkUrl}`;
       return (
         <li key={link._key}>
-          <CustomLink link={link} type="headerLink" isSelected={isSelected} />
+          <CustomLink
+            link={link}
+            type="headerLink"
+            isSelected={isSelected}
+            scroll={false}
+          />
         </li>
       );
     })}
@@ -184,7 +210,7 @@ export const renderPageCTAs = (ctas: ILink[], isMobile: boolean) => (
       <li key={link._key}>
         <LinkButton
           link={link}
-          isSmall={true}
+          size="S"
           type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
         />
       </li>

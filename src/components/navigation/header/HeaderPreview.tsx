@@ -19,12 +19,14 @@ export default function HeaderPreview({
   initialAnnouncement,
   currentLanguage,
   pathTranslations,
+  contactEmail,
 }: {
   initialNav: QueryResponseInitial<Navigation>;
   initialBrandAssets: QueryResponseInitial<BrandAssets>;
   initialAnnouncement: QueryResponseInitial<Announcement | null>;
   currentLanguage: string;
   pathTranslations: InternationalizedString;
+  contactEmail: string | undefined;
 }) {
   const { data: newNav } = useQuery<Navigation | null>(
     NAV_QUERY,
@@ -51,6 +53,7 @@ export default function HeaderPreview({
         announcement={newAnnouncement}
         currentLanguage={currentLanguage}
         pathTranslations={pathTranslations}
+        contactEmail={contactEmail}
       />
     )
   );

@@ -48,7 +48,11 @@ export default async function CustomerCase({
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (
-            <CustomerCaseSection key={section._key} section={section} />
+            <CustomerCaseSection
+              key={section._key}
+              section={section}
+              clientColors={customerCase.clientColors}
+            />
           ))}
         </div>
         {consultantsResult?.ok && (
@@ -94,10 +98,12 @@ function ColoredTitle({
   const postColorText = title.slice(endColorIndex);
 
   return (
-    <Text type={"h1"} className={styles.mainTitle}>
-      <span>{preColorText}</span>
-      <span style={{ color: color }}>{colorText}</span>
-      <span>{postColorText}</span>
-    </Text>
+    <div className={styles.titleWrapper}>
+      <Text type={"h1"} className={styles.mainTitle}>
+        <span>{preColorText}</span>
+        <span style={{ color: color }}>{colorText}</span>
+        <span>{postColorText}</span>
+      </Text>
+    </div>
   );
 }

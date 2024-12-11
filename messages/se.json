@@ -1,4 +1,7 @@
 {
+  "linking_words": {
+    "for": "för"
+  },
   "navigation": {
     "home": "Hem"
   },
@@ -14,12 +17,30 @@
     "development": "Utveckling",
     "project_management": "Projektledning",
     "url": "Link",
-    "collaborators": "Samarbeidspartnere"
+    "collaborators": "Samarbeidspartnere",
+    "customer_case_entry": {
+      "image": "bild",
+      "case": "Case",
+      "field": "Fält"
+    }
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
     "contact_sale": "Kontakta sälj!",
     "contact_us": "Kontakt oss"
+  },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Lönskalkulator",
+      "educationInput": "Utbildning",
+      "yearInput": "Året du började i relevant arbete",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Din årslön"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
   },
   "custom_link": {
     "visit_cv": "Besök mini-CV",
@@ -31,10 +52,11 @@
     "consultants": "konsulter",
     "location": "Kontor",
     "all": "Alla",
-    "Project Management": "Projektledning",
+    "Prosjekt- og produktledelse": "Produkt- och projektledning",
     "Design": "Design",
     "Utvikling": "Utveckling",
-    "Administasjon": "Administration",
+    "Ledelse": "Ledelse",
+    "Strategi": "Strategi",
     "field": "Fält",
     "showMore": "Vis alla"
   },

@@ -5,7 +5,9 @@ import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
 import callout from "studio/schemas/objects/sections/callout";
 import callToAction from "studio/schemas/objects/sections/callToAction";
+import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
+import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
 import grid from "studio/schemas/objects/sections/grid";
@@ -54,9 +56,11 @@ const pageBuilder = defineType({
         imageSection,
         grid,
         employees,
+        customerCasesEntry,
         contactBox,
         jobs,
         employeeHighlightSection,
+        compensationCalculator,
       ],
     }),
   ],

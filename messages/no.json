@@ -1,4 +1,7 @@
 {
+  "linking_words": {
+    "for": "for"
+  },
   "navigation": {
     "home": "Hjem"
   },
@@ -14,12 +17,30 @@
     "development": "Utvikling",
     "project_management": "Prosjektledelse",
     "url": "Link",
-    "collaborators": "Samarbeidspartnere"
+    "collaborators": "Samarbeidspartnere",
+    "customer_case_entry": {
+      "image": "bilde",
+      "case": "Case",
+      "field": "Fag"
+    }
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
     "contact_sale": "Kontakt salg!",
     "contact_us": "Kontakt oss"
+  },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Lønnskalkulator",
+      "educationInput": "Utdanning",
+      "yearInput": "Året du begynte i relevant arbeid",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Din årslønn"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
   },
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
@@ -31,10 +52,11 @@
     "consultants": "konsulenter",
     "location": "Lokasjon",
     "all": "Alle",
-    "Project Management": "Prosjektledelse",
     "Design": "Design",
     "Utvikling": "Utvikling",
-    "Administasjon": "Administrasjon",
+    "Ledelse": "Ledelse",
+    "Prosjekt- og produktledelse": "Prosjekt- og produktledelse",
+    "Strategi": "Strategi",
     "field": "Fag",
     "showMore": "Vis alle"
   },

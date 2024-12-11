@@ -1,4 +1,7 @@
 {
+  "linking_words": {
+    "for": "for"
+  },
   "navigation": {
     "home": "Home"
   },
@@ -14,7 +17,12 @@
     "development": "Development",
     "project_management": "Project management",
     "url": "Url",
-    "collaborators": "Collaborators"
+    "collaborators": "Collaborators",
+    "customer_case_entry": {
+      "image": "image",
+      "case": "Case",
+      "field": "Field"
+    }
   },
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",
@@ -25,16 +33,31 @@
     "visit_cv": "Visit mini-CV",
     "read_more": "Read more"
   },
+  "compensation_calculator": {
+    "calculator": {
+      "formLabel": "Salary calculator",
+      "educationInput": "Education",
+      "yearInput": "The year you started in relevant work",
+      "bonusResult": "+ bonus",
+      "resultLabel": "Your annual salary"
+    },
+    "degreeOptions": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    }
+  },
+
   "employee_card": {
     "show": "Showing",
     "of": "out of",
     "consultants": "consultants",
     "location": "Location",
     "all": "All",
-    "Project Management": "Project Management",
     "Design": "Design",
     "Utvikling": "Development",
-    "Administasjon": "Administration",
+    "Ledelse": "  ",
+    "Prosjekt- og produktledelse": "Project and product management",
+    "Strategi": "Strategy",
     "field": "Field",
     "showMore": "Show all"
   },

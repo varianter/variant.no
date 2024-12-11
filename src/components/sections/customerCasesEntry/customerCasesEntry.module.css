@@ -1,0 +1,130 @@
+.container {
+  container-type: inline-size;
+  container-name: customer-case-container;
+}
+
+.wrapper {
+  --container-padding: 0.375rem;
+  background-color: var(--background-bg-dark);
+  padding: var(--container-padding);
+  border-radius: 0.375rem;
+  display: flex;
+  gap: 1rem;
+  max-width: var(--max-content-width-large);
+  justify-self: center;
+}
+
+.imageWrapper {
+  aspect-ratio: 16 / 9;
+  max-height: 30rem;
+  flex-shrink: 1;
+}
+.imageWrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    border-radius: 0.375rem;
+  }
+}
+
+.info:hover ~ .imageWrapper img {
+  border-radius: 0.375rem;
+  opacity: 1;
+}
+
+.info {
+  flex: 1;
+  box-sizing: border-box;
+  min-width: 28rem;
+  padding: 2rem 0 2rem 2rem;
+
+  @media (max-width: 500px) {
+    padding: 1rem 0 1rem 1rem;
+    min-width: 20rem;
+  }
+  @media (max-width: 400px) {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+  }
+}
+
+/* Used to take all width in flex but limit content width */
+.infoInnerMaxWidth {
+  max-width: 30.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@container customer-case-container (width > 0) {
+  .heading {
+    font-size: max(2em, 2rem + 1cqi);
+  }
+}
+
+@container customer-case-container (width < 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .imageWrapper {
+    order: 1;
+  }
+
+  .info {
+    order: 2;
+  }
+}
+
+.link:focus-visible .heading {
+  text-decoration: underline;
+}
+
+.heading {
+  text-wrap: balance;
+  overflow: hidden;
+
+  @media (max-width: 1130px) {
+    font-size: 2.125rem;
+  }
+}
+
+.font {
+  color: var(--text-primary-light);
+}
+
+.TagRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  grid-area: tags;
+}
+
+.cardInfo {
+  grid-area: content;
+  color: var(--text-primary-light);
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.deliveries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deliveriesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dotSeparator:not(:last-child)::after {
+  content: "·";
+  margin: 0.5rem;
+}

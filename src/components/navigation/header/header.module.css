@@ -18,7 +18,7 @@
 
 .nav {
   --nav-height: 5rem;
-  max-width: min(960px, calc(100vw - 2rem));
+  max-width: min(1091px, calc(100vw - 2rem));
   min-height: var(--nav-height);
   position: relative;
   margin-inline: auto;
@@ -41,12 +41,12 @@
 
 .wrapper {
   position: absolute;
-  padding: 0rem 3rem 0rem 3rem;
+  padding: 0 3rem;
   border-radius: 0.75rem;
   background: var(--background-header-light-transparent);
   box-shadow: 0px 0.5px 2px 0px #eaeaea;
   backdrop-filter: blur(40px);
-  max-width: min(960px, calc(100vw - 2rem));
+  max-width: min(1091px, calc(100vw - 2rem));
   width: 100%;
   justify-self: center;
 
