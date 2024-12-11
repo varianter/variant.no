@@ -90,7 +90,7 @@ const SECTIONS_FRAGMENT = groq`
 `;
 
 export const SEO_FRAGMENT = groq`
-  "seo": ${translatedFieldFragment("seo")} {
+  "seo": seo{
     "title": seoTitle,
     "description": seoDescription,
     "imageUrl": seoImage.asset->url,
