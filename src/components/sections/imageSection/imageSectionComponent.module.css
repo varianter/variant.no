@@ -9,15 +9,15 @@
 .image {
   flex-shrink: 1;
   max-width: 46rem;
-  padding: var(--padding-l) var(--container-padding);
+  padding: var(--padding-l) 0rem;
 
   @media (max-width: 834px) {
-    padding: var(--padding-l) var(--container-padding);
+    padding: var(--padding-l) 0rem;
     max-width: 43.24219rem;
   }
 
   @media (max-width: 425px) {
-    padding: var(--padding-l) var(--container-padding);
+    padding: var(--padding-l) 0rem;
     max-width: 22.375rem;
   }
 }
