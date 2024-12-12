@@ -21,6 +21,7 @@ import ImageSplitComponentPreview from "src/components/sections/image-split/Imag
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
 import Jobs from "src/components/sections/jobs/Jobs";
+import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
@@ -295,6 +296,8 @@ const SectionRenderer = ({
       return <Openness section={section} />;
     case "generositySection":
       return <Generosity section={section} language={language} />;
+    case "learningSection":
+      return <Learning section={section} />;
     default:
       return null;
   }

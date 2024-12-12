@@ -178,6 +178,14 @@ export interface OpennessSection {
   description: string;
 }
 
+export interface LearningSection {
+  _type: "learningSection";
+  _key: string;
+  basicTitle: string;
+  image: IImage;
+  description: string;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -196,7 +204,8 @@ export type Section =
   | CompensationCalculatorSection
   | JobsSection
   | OpennessSection
-  | GenerositySection;
+  | GenerositySection
+  | LearningSection;
 
 export interface PageBuilder {
   _createdAt: string;

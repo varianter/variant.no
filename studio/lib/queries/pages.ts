@@ -118,6 +118,10 @@ const SECTIONS_FRAGMENT = groq`
           ${TRANSLATED_LINK_FRAGMENT}
         }
       }
+    },
+    _type == "learningSection" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
     }
   }
 `;
