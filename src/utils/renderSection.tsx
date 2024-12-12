@@ -195,9 +195,9 @@ const renderCustomerCasesEntrySection = (
   language: Locale,
 ) => {
   return isDraftMode ? (
-    <CustomerCasesEntry language={language} />
+    <CustomerCasesEntry language={language} section={section} />
   ) : (
-    <CustomerCasesEntry language={language} />
+    <CustomerCasesEntry language={language} section={section} />
   );
 };
 

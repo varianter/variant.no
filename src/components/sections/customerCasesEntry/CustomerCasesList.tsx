@@ -28,9 +28,9 @@ const CustomerCaseList = ({
 
   const deliveryNames = [
     selectedCustomerCase?.projectInfo.deliveries.projectManagement &&
-      "Project Management",
-    selectedCustomerCase?.projectInfo.deliveries.design && "Design",
-    selectedCustomerCase?.projectInfo.deliveries.development && "Development",
+      "project_management",
+    selectedCustomerCase?.projectInfo.deliveries.design && "design",
+    selectedCustomerCase?.projectInfo.deliveries.development && "development",
   ].filter(Boolean);
 
   return (
@@ -90,7 +90,7 @@ function CardInfo({
         <div className={styles.deliveriesList}>
           {deliveryNames.map((deliveryName, index) => (
             <Text key={index} type="h5" className={styles.dotSeparator}>
-              {deliveryName}
+              {t(deliveryName)}
             </Text>
           ))}
         </div>
