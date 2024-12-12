@@ -1,14 +1,17 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--padding-s);
   margin: 4rem 0;
+
+  align-self: center;
+  width: 100%;
+  max-width: var(--max-content-width-medium);
 }
 
 .content {
   width: 100%;
-  gap: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  gap: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
