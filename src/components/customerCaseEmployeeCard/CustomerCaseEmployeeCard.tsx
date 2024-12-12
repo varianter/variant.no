@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
@@ -26,11 +26,11 @@ export default function CustomerCaseEmployeeCard({
     employee.email && (
       <div key={employee.email} className={styles.employee}>
         <div className={styles.employeeImage}>
-          <Image
-            src={employee.imageUrl ?? employee.imageThumbUrl}
-            alt={employee.name}
-            objectFit="cover"
-            fill={true}
+          <SanityImage
+            image={{
+              src: { src: employee.imageUrl ?? employee.imageThumbUrl },
+              alt: employee.name,
+            }}
           />
         </div>
         <div className={styles.employeeInfo}>
