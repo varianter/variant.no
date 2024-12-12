@@ -44,7 +44,10 @@ export default async function CustomerCase({
           />
         </div>
         <div className={styles.mainImageWrapper}>
-          <SanitySharedImage image={customerCase.image} />
+          <SanitySharedImage
+            image={customerCase.image}
+            showFigureDescription={true}
+          />
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (

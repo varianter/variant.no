@@ -10,6 +10,7 @@
 .bodySmall,
 .bodyNormal,
 .bodyBig,
+.imageLabel,
 .list {
   font-family: var(--font-britti-sans);
   line-height: 140%;
@@ -181,4 +182,13 @@
   font-weight: 400;
   line-height: 130%;
   white-space: pre-line;
+}
+
+.imageLabel {
+  font-size: var(--Font-size-Picture-label, 1rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.05rem;
+  padding: 0rem 9.25rem 0rem 4rem;
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { UseNextSanityImageProps, useNextSanityImage } from "next-sanity-image";
 import { useEffect, useState } from "react";
 
+import Text from "src/components/text/Text";
 import { client } from "studio/lib/client";
 import { IImage } from "studio/lib/interfaces/media";
 import { sharedClient } from "studioShared/lib/client";
@@ -40,10 +41,12 @@ const SanityAssetImage = ({
   image,
   imageProps,
   objectFit = "cover",
+  showFigureDescription,
 }: {
   image: IImage;
   imageProps?: UseNextSanityImageProps;
   objectFit?: "cover" | "none";
+  showFigureDescription?: boolean;
 }) => {
   const objectPosition = image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
@@ -52,23 +55,28 @@ const SanityAssetImage = ({
     return null;
   }
   return (
-    <Image
-      alt={image?.alt || ""}
-      {...imageProps}
-      width={imageProps.width}
-      height={imageProps.height}
-      blurDataURL={image.metadata?.lqip}
-      style={
-        objectFit === "none"
-          ? {}
-          : {
-              objectFit: "cover",
-              objectPosition,
-              maxWidth: "100%",
-              maxHeight: "100%",
-            }
-      }
-    />
+    <div>
+      <Image
+        alt={image?.alt || ""}
+        {...imageProps}
+        width={imageProps.width}
+        height={imageProps.height}
+        blurDataURL={image.metadata?.lqip}
+        style={
+          objectFit === "none"
+            ? {}
+            : {
+                objectFit: "cover",
+                objectPosition,
+                maxWidth: "100%",
+                maxHeight: "100%",
+              }
+        }
+      />
+      {showFigureDescription && (
+        <Text type="imageLabel"> {image.figureDescription}</Text>
+      )}
+    </div>
   );
 };
 
@@ -77,9 +85,21 @@ export function SanityStudioImage({ image }: { image: IImage }) {
   return <SanityAssetImage image={image} imageProps={imageProps} />;
 }
 
-export function SanitySharedImage({ image }: { image: IImage }) {
+export function SanitySharedImage({
+  image,
+  showFigureDescription,
+}: {
+  image: IImage;
+  showFigureDescription?: boolean;
+}) {
   const imageProps = useNextSanityImage(sharedClient, image);
-  return <SanityAssetImage image={image} imageProps={imageProps} />;
+  return (
+    <SanityAssetImage
+      image={image}
+      imageProps={imageProps}
+      showFigureDescription={showFigureDescription}
+    />
+  );
 }
 
 function SanityGlobalImage({
