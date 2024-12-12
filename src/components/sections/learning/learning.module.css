@@ -6,6 +6,7 @@
   max-width: var(--max-content-width-large);
   margin: 5rem auto;
   gap: 2rem;
+  margin-bottom: -2rem;
 }
 
 .title {
