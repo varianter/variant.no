@@ -120,7 +120,7 @@ export const compensationCalculator = defineField({
             {
               _key: "no",
               value:
-                "Ord og handling bør gå hånd i hånd. Alt om oss, regler og finner du i håndboken. Endrer vi på oss, endrer vi håndboken.",
+                "Ord og handling bør gå hånd i hånd. Alt om oss, regler og mer finner du i håndboken. Endrer vi på oss, endrer vi håndboken.",
             },
           ],
         },

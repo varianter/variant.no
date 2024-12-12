@@ -104,6 +104,20 @@ const SECTIONS_FRAGMENT = groq`
     _type == "opennessSection" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "description": ${translatedFieldFragment("description")},
+    },
+    _type == "generositySection" => {
+      ...,
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
+      "handbookBlock": handbookBlock {
+        ...,
+        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+        "handbookLink": handbookLink {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
+        }
+      }
     }
   }
 `;

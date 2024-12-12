@@ -7,7 +7,7 @@
   min-width: 19.75rem;
   padding: 2.25rem;
   border-radius: 6rem 6rem 0.375rem 0.375rem;
-  background-color: #dafbdc;
+  background-color: var(--smiley-background-color);
 
   @media (max-width: 834px) {
     align-self: stretch;
@@ -22,14 +22,16 @@
 }
 
 .smiley {
+  align-self: var(--smiley-align);
+
   &::before {
     content: "";
     display: block;
-    width: 4.86119rem;
-    height: 4.86119rem;
-    -webkit-mask: url("/_assets/happy-smiley-face.svg") no-repeat center;
+    width: var(--smiley-width);
+    height: var(--smiley-height);
+    -webkit-mask: var(--smiley-url) no-repeat center;
     -webkit-mask-size: cover;
-    mask: url("/_assets/happy-smiley-face.svg") no-repeat center;
+    mask: var(--smiley-url) no-repeat center;
     mask-size: cover;
     background-color: var(--text-primary);
   }
