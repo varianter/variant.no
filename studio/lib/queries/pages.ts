@@ -122,6 +122,14 @@ const SECTIONS_FRAGMENT = groq`
     _type == "logoSalad" => {
       "title": ${translatedFieldFragment("title")},
     },
+    _type == "learningSection" => {
+      ...,
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
+      "articleTag": ${translatedFieldFragment("articleTag")},
+      "articleTitle": ${translatedFieldFragment("articleTitle")},
+      "articleSubtitle": ${translatedFieldFragment("articleSubtitle")},
+    }
   }
 `;
 

@@ -33,7 +33,6 @@
 }
 
 .role {
-  width: 250px;
   @media (max-width: 640px) {
     width: 100%;
   }

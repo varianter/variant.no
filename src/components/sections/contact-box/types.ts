@@ -4,5 +4,5 @@ export type EmployeeAndMetadata = {
   employee: ChewbaccaEmployee;
   tag: string;
   tagSlug: string;
-  overrideTitle: string;
+  overrideTitle?: string;
 };
