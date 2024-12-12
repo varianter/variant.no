@@ -104,7 +104,7 @@ export default async function CustomerCaseProjectInfo({
                 _key: "go-to-external-link",
                 _type: "link",
                 linkType: LinkType.External,
-                linkTitle: projectInfo.url,
+                linkTitle: shortenUrl(projectInfo.url),
                 url: projectInfo.url,
                 ariaLabel: projectInfo.url,
               }}
@@ -174,4 +174,8 @@ export default async function CustomerCaseProjectInfo({
       )}
     </div>
   );
+}
+
+function shortenUrl(url: string) {
+  return url.replace(/^https?:\/\/(www\.)?/, "");
 }
