@@ -39,7 +39,6 @@ export default function ContactSelector({
   }
 
   const selectedOrDefaultLocationId = selectedLocationId ?? locationIds[0];
-  console.log(selectedLocationId);
 
   return (
     <>
