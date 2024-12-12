@@ -44,7 +44,6 @@ const SanityAssetImage = ({
   image: IImage;
   imageProps?: UseNextSanityImageProps;
   objectFit?: "cover" | "none";
-  showFigureDescription?: boolean;
 }) => {
   const objectPosition = image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
