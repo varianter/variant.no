@@ -7,7 +7,7 @@
   flex-wrap: wrap;
 
   max-width: var(--max-content-width-large);
-  margin: 0 auto;
+  margin: var(--padding-l) auto 0;
 
   background: var(--background-employees-green);
   padding: 3rem;
