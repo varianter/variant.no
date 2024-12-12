@@ -43,7 +43,7 @@
   padding: var(--padding-xl) var(--padding-rem) var(--padding-rem)
     var(--padding-rem);
 
-  max-width: 46rem !important;
+  max-width: 53rem !important;
   margin-left: auto;
 
   @media (max-width: 834px) {
