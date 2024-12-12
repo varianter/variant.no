@@ -40,92 +40,91 @@ const Footer = ({
 
   return (
     <footer className={styles.footer}>
-      <FooterIllustration color={"#FFD02F"} />
-      <div className={styles.footerContent}>
-        <nav className={styles.nav}>
-          <div className={styles.flex_container_left}>
-            <div>
-              <TextTertiary>{t("text")}</TextTertiary>
-              {/*  TODO:: Get offices and map through. Should these link to something?  */}
-              <ul className={styles.offices}>
-                {companyLocations.map((location) => (
-                  <li
-                    key={location.companyLocationName}
-                    className={styles.dotSeparator}
+      <div className={styles.wrapper}>
+        <FooterIllustration color={"#FFD02F"} />
+        <div className={styles.footerContent}>
+          <nav className={styles.nav}>
+            <div className={styles.flex_container_left}>
+              <div>
+                <TextTertiary>{t("text")}</TextTertiary>
+                {/*  TODO:: Get offices and map through. Should these link to something?  */}
+                <ul className={styles.offices}>
+                  {companyLocations.map((location) => (
+                    <li
+                      key={location.companyLocationName}
+                      className={styles.dotSeparator}
+                    >
+                      {location.companyLocationName}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <FooterSection title={t("contact")}>
+                  <Link
+                    href={`mailto:${companyInfo.companyEmail}`}
+                    className={styles.contactInfo}
                   >
-                    {location.companyLocationName}
+                    {companyInfo.companyEmail}
+                  </Link>
+                </FooterSection>
+              </div>
+            </div>
+            <div className={styles.flex_container_right}>
+              {navigationData.main && (
+                <FooterSection title={t("mainMenu")}>
+                  {renderPageLinks(navigationData)}
+                </FooterSection>
+              )}
+              {navigationData.footer && (
+                <FooterSection title={t("other")}>
+                  {renderOtherLinks(navigationData)}
+                </FooterSection>
+              )}
+              {soMeData && (
+                <FooterSection title={t("socialMedia")}>
+                  {renderSoMe(navigationData, soMeData)}
+                </FooterSection>
+              )}
+            </div>
+          </nav>
+          <Image
+            className={styles.logo}
+            src={"/_assets/variant-logo.svg"}
+            alt={"variant logo"}
+            width={310}
+            height={74}
+          />
+          <div className={styles.grey_links}>
+            {/* <ul className={styles.grey_links__language}>
+              <li>
+                <CustomLink link={dummyLink("English")} type="footerLink" />
+              </li>
+            </ul> */}
+            {/* THERE ARE NO LEGAL DOCUMENTS FOR LAUNCH, REINSTATE WHEN WE HAVE LEGAL DOCUMENTS TO SHOW */}
+            {/* <ul className={styles.credits}>
+              {legalData?.map((legal) => {
+                const link: ILink = {
+                  _key: legal._id,
+                  _type: legal._type,
+                  linkTitle: legal.basicTitle,
+                  linkType: LinkType.Internal,
+                  internalLink: {
+                    _ref: legal.slug.current,
+                  },
+                  language: legal.language,
+                };
+                return (
+                  <li key={legal._id}>
+                    <CustomLink link={link} type="footerLink" />
                   </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <FooterSection title={t("contact")}>
-                <Link
-                  href={`mailto:${companyInfo.companyEmail}`}
-                  className={styles.contactInfo}
-                >
-                  {companyInfo.companyEmail}
-                </Link>
-              </FooterSection>
-            </div>
+                );
+              })}
+            </ul> */}
+            <span className={styles.organisationNumber}>
+              Org. nr. {companyInfo.organizationNumber}
+            </span>
           </div>
-          <div className={styles.flex_container_right}>
-            {navigationData.main && (
-              <FooterSection title={t("mainMenu")}>
-                {renderPageLinks(navigationData)}
-              </FooterSection>
-            )}
-            {navigationData.footer && (
-              <FooterSection title={t("other")}>
-                {renderOtherLinks(navigationData)}
-              </FooterSection>
-            )}
-
-            {soMeData && (
-              <FooterSection title={t("socialMedia")}>
-                {renderSoMe(navigationData, soMeData)}
-              </FooterSection>
-            )}
-          </div>
-        </nav>
-        <Image
-          className={styles.logo}
-          src={"/_assets/variant-logo.svg"}
-          alt={"variant logo"}
-          width={310}
-          height={74}
-        />
-
-        <div className={styles.grey_links}>
-          {/* <ul className={styles.grey_links__language}>
-            <li>
-              <CustomLink link={dummyLink("English")} type="footerLink" />
-            </li>
-          </ul> */}
-          {/* THERE ARE NO LEGAL DOCUMENTS FOR LAUNCH, REINSTATE WHEN WE HAVE LEGAL DOCUMENTS TO SHOW */}
-          {/* <ul className={styles.credits}>
-            {legalData?.map((legal) => {
-              const link: ILink = {
-                _key: legal._id,
-                _type: legal._type,
-                linkTitle: legal.basicTitle,
-                linkType: LinkType.Internal,
-                internalLink: {
-                  _ref: legal.slug.current,
-                },
-                language: legal.language,
-              };
-              return (
-                <li key={legal._id}>
-                  <CustomLink link={link} type="footerLink" />
-                </li>
-              );
-            })}
-          </ul> */}
-
-          <span className={styles.organisationNumber}>
-            Org. nr. {companyInfo.organizationNumber}
-          </span>
         </div>
       </div>
     </footer>
