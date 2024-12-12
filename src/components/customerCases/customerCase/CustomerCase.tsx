@@ -45,6 +45,11 @@ export default async function CustomerCase({
         </div>
         <div className={styles.mainImageWrapper}>
           <SanitySharedImage image={customerCase.image} />
+          {customerCase.image.figureDescription && (
+            <Text type="imageLabel">
+              {customerCase.image.figureDescription}
+            </Text>
+          )}
         </div>
         <div className={styles.sectionsWrapper}>
           {customerCase.sections.map((section) => (

@@ -27,6 +27,7 @@ export interface IImage {
   metadata?: {
     lqip: string;
   };
+  figureDescription?: string;
 }
 
 export interface ImageExtendedProps extends IImage {

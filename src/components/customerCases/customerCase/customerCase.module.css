@@ -40,7 +40,7 @@
   height: 36.5rem;
   overflow: hidden;
   padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--padding-xl);
 }
 
 .mainImageWrapper img {

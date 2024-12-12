@@ -53,7 +53,16 @@ export const internationalizedImage = defineField({
   title: "Image",
   type: "image",
   options: { hotspot: true },
-  fields: [internationalizedImageAltField],
+  fields: [
+    internationalizedImageAltField,
+    {
+      name: "figureDescription",
+      type: "internationalizedArrayString",
+      title: "Figure Description",
+      description:
+        "Provide a figure description of the image. Leave empty if figure description is not needed.",
+    },
+  ],
   preview: {
     select: {
       alt: "alt",

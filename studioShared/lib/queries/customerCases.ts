@@ -8,7 +8,8 @@ const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
   "metadata": asset -> metadata {
     lqip
   },
-  "alt": ${translatedFieldFragment("alt")}
+  "alt": ${translatedFieldFragment("alt")},
+  "figureDescription": ${translatedFieldFragment("figureDescription")}
 `;
 
 const CUSTOMER_CASE_BASE_FRAGMENT = groq`
