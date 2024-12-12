@@ -18,7 +18,12 @@ export default function Learning({ section }: LearningProps) {
         {section.basicTitle}
       </Text>
       <div className={styles.content}>
-        <SmileyBox description={section.description} />
+        <SmileyBox
+          description={section.description}
+          smileySide="right"
+          smileyType="shock"
+          backgroundColor="blue"
+        />
         <div className={styles.image}>
           <SanityImage image={section.image} />
         </div>
