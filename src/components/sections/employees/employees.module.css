@@ -9,7 +9,7 @@
   max-width: var(--max-content-width-large);
   margin: 0 auto;
 
-  background: var(--background-bg-light-secondary);
+  background: var(--background-employees-green);
   padding: 3rem;
   border-radius: var(--radius-large, 24px);
 
