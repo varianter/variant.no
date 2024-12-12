@@ -73,7 +73,6 @@ export const imageSplitSection = defineField({
       type: "boolean",
       initialValue: true,
     },
-
     imageExtended,
     {
       name: "actions",

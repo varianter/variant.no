@@ -89,7 +89,7 @@ export const imageExtended = defineField({
   type: "image",
   options: { hotspot: true },
   fields: [
-    imageAltField,
+    internationalizedImageAltField,
     {
       name: "imageAlignment",
       title: "Image Alignment",

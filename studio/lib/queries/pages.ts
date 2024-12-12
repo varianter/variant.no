@@ -40,6 +40,7 @@ const SECTIONS_FRAGMENT = groq`
         "basicTitle": ${translatedFieldFragment("basicTitle")},
         "description": ${translatedFieldFragment("description")},
       },
+      "imageExtended": imageExtended {..., ${INTERNATIONALIZED_IMAGE_FRAGMENT} }, 
       actions[] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
