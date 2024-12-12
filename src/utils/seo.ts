@@ -42,11 +42,7 @@ export async function generateMetadataFromSeo(
     BRAND_ASSETS_QUERY,
   );
 
-  const title =
-    seo?.title ??
-    defaultSeo?.seo?.title ??
-    companyInfo?.companyName ??
-    "Variant";
+  const title = seo?.title ?? defaultSeo?.seo?.title;
   const description = seo?.description ?? defaultSeo?.seo?.description;
   const keywords = seo?.keywords ?? "";
 
@@ -58,7 +54,7 @@ export async function generateMetadataFromSeo(
   );
 
   const fallbackImageUrl = `/api/openGraphImage?${new URLSearchParams({
-    title: title,
+    title: title ?? companyInfo?.companyName ?? "Variant",
     ...(description ? { description: description } : {}),
   })}`;
   const sanityImageUrl = seo?.imageUrl || defaultSeo?.seo?.imageUrl;
@@ -74,7 +70,9 @@ export async function generateMetadataFromSeo(
     : fallbackImageUrl;
 
   return {
-    title: title,
+    title: title
+      ? `${title} - ${companyInfo?.companyName ?? "Variant"}`
+      : (companyInfo?.companyName ?? "Variant"),
     description: description,
     openGraph: {
       images: [imageUrl],

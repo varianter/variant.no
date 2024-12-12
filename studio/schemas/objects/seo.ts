@@ -27,8 +27,8 @@ const seo = defineField({
       validation: (rule) => [
         rule
           .required()
-          .min(15)
-          .error("A title of minimum 15 characters is required"),
+          .min(6)
+          .error("A title of minimum 6 characters is required"),
         rule.max(70),
       ],
       components: {
