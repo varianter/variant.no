@@ -156,6 +156,11 @@ html {
   font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
 }
 
+/* Fixes issue with variable fonts on Safari */
+* {
+  font-synthesis: none !important;
+}
+
 body {
   margin: 0;
   padding: 0 1rem;

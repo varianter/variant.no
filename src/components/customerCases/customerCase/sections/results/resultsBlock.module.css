@@ -48,7 +48,7 @@
 .highlightBlock {
   display: inline-flex;
   flex-direction: column;
-  align-self: start;
+  align-self: flex-start;
 }
 
 .highlightCard:not(:first-child) {
