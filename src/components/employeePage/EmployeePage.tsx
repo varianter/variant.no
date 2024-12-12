@@ -1,19 +1,26 @@
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
 
+import { getTranslations } from "next-intl/server";
+import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
+import { loadStudioQuery } from "studio/lib/store";
+import { SanityImage } from "../image/SanityImage";
+import LinkButton from "../linkButton/LinkButton";
 import styles from "./employeePage.module.css";
 
 export interface EmployeePageProps {
   employee: ChewbaccaEmployee;
+  language: string;
 }
 
-export default function EmployeePage({ employee }: EmployeePageProps) {
+export default async function EmployeePage({
+  employee,
+  language,
+}: EmployeePageProps) {
+  const employeePageSlug = await getEmployeePageSlug(language);
   const image = employee.imageUrl ?? employee.imageThumbUrl ?? null;
-  const t = useTranslations("employee_card");
+  const t = await getTranslations("employee_card");
 
   return (
     employee.name && (
@@ -22,11 +29,11 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
           <div className={styles.employee}>
             {image != null && (
               <div className={styles.employeeImage}>
-                <Image
-                  src={image}
-                  alt={employee.name}
-                  objectFit="cover"
-                  fill={true}
+                <SanityImage
+                  image={{
+                    src: { src: image },
+                    alt: employee.name,
+                  }}
                 />
               </div>
             )}
@@ -34,12 +41,14 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
               <Text type={"h2"}>{employee.name}</Text>
               {employee.email && (
                 <Text type={"bodyBig"} className={styles.employeeEmail}>
-                  {employee.email}
+                  <a href={`mailto:${employee.email}`}>{employee.email}</a>
                 </Text>
               )}
               {employee.telephone && (
                 <Text type={"bodyBig"} className={styles.employeeTelephone}>
-                  {formatPhoneNumber(employee.telephone)}
+                  <a href={`tel:${employee.telephone}`}>
+                    {formatPhoneNumber(employee.telephone)}
+                  </a>
                 </Text>
               )}
               {employee.officeName && (
@@ -49,13 +58,33 @@ export default function EmployeePage({ employee }: EmployeePageProps) {
               )}
               {employee.competences.map((competence) => (
                 <Text type="bodyNormal" key={competence}>
-                  {t(competence)}
+                  {t.has(competence) ? t(competence) : competence}
                 </Text>
               ))}
             </div>
+          </div>
+
+          <div className={styles.backToEmployees}>
+            <LinkButton
+              link={`/${language}/${employeePageSlug}`}
+              type="secondary"
+              size="S"
+              linkTitle={t("see_all_employees")}
+            />
           </div>
         </div>
       </div>
     )
   );
+}
+
+export async function getEmployeePageSlug(language: string) {
+  const employeePageSlug =
+    (
+      await loadStudioQuery<{ slug: string } | null>(EMPLOYEE_PAGE_SLUG_QUERY, {
+        language,
+      })
+    ).data?.slug ?? "";
+
+  return employeePageSlug;
 }
