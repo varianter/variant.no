@@ -10,7 +10,7 @@
 }
 
 .title {
-  width: 40rem;
+  width: 45rem;
   color: var(--text-primary);
 
   @media (max-width: 834px) {
