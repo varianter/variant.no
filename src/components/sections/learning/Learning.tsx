@@ -29,17 +29,16 @@ export default function Learning({ section }: LearningProps) {
         </div>
         <div className={styles.textContainer}>
           <div className={styles.textContent}>
-            <Text type="labelLarge" className={styles.articleTag}>
-              Artikkel · 5 min{" "}
+            <Text type="labelLarge" className={styles.text}>
+              {section.articleTag}
             </Text>
-            <Link href="https://blog.variant.no/tidenes-beste-konferansesesong-for-variant-700baa5e82a3">
-              <Text type="h3" className={styles.articleTitle}>
-                Tidenes beste konferansesesong for Variant
+            <Link href={section.articleLink}>
+              <Text type="h3" className={styles.text}>
+                {section.articleTitle}
               </Text>
             </Link>
-            <Text type="bodyBig" className={styles.articleSubtitle}>
-              I Variant har vi en veldig uttalt strategi rundt
-              kompetansebygging. Vi kaller den læreglede.
+            <Text type="bodyBig" className={styles.text}>
+              {section.articleSubtitle}
             </Text>
           </div>
         </div>

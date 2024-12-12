@@ -184,6 +184,10 @@ export interface LearningSection {
   basicTitle: string;
   image: IImage;
   description: string;
+  articleLink: string;
+  articleTag: string;
+  articleTitle: string;
+  articleSubtitle: string;
 }
 
 export type Section =

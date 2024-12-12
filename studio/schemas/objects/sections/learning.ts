@@ -34,6 +34,30 @@ export const learningSection = defineField({
       type: "internationalizedArrayString",
       validation: (rule) => rule.required(),
     },
+    {
+      name: "articleLink",
+      title: "Article link",
+      type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
+    },
+    {
+      name: "articleTag",
+      title: "Article tag",
+      type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
+    },
+    {
+      name: "articleTitle",
+      title: "Article title",
+      type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
+    },
+    {
+      name: "articleSubtitle",
+      title: "Article subtitle",
+      type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
+    },
   ],
   preview: {
     prepare() {

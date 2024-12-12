@@ -79,18 +79,6 @@
   align-self: stretch;
 }
 
-.textContainer {
-  color: var(--text-primary-light);
-}
-
-.articleTag {
-  color: var(--text-primary-light);
-}
-
-.articleTitle {
-  color: var(--text-primary-light);
-}
-
-.articleSubtitle {
+.text {
   color: var(--text-primary-light);
 }
