@@ -43,12 +43,12 @@ export async function generateMetadataFromSeo(
   );
 
   const title =
-    seo?.title ||
-    defaultSeo?.seo?.title ||
-    companyInfo?.companyName ||
+    seo?.title ??
+    defaultSeo?.seo?.title ??
+    companyInfo?.companyName ??
     "Variant";
-  const description = seo?.description || defaultSeo?.seo?.description;
-  const keywords = seo?.keywords || "";
+  const description = seo?.description ?? defaultSeo?.seo?.description;
+  const keywords = seo?.keywords ?? "";
 
   const favicon = brandAssets?.favicon;
   const faviconUrl = favicon ? urlFor(favicon).url() : "";
