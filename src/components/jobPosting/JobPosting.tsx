@@ -30,16 +30,13 @@ export default function JobPosting({
       target="_blank"
       className={styles.jobPosting}
     >
-      <div className={styles.details}>
-        <div className={styles.role}>
-          <Text type={"h5"}>{jobPosting.role}</Text>
-        </div>
+      <Text type={"h5"} as={"span"} className={styles.role}>
+        {jobPosting.role}
+
         {showLocations && (
-          <div className={styles.locations}>
-            <Badge>{jobPostingLocations}</Badge>
-          </div>
+          <Badge className={styles.locations}>{jobPostingLocations}</Badge>
         )}
-      </div>
+      </Text>
     </a>
   );
 }
