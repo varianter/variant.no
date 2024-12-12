@@ -1,6 +1,6 @@
 {
-  "name": "sankitty",
-  "version": "0.1.0",
+  "name": "@variant/homepage",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
