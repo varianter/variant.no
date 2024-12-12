@@ -10,14 +10,14 @@
 }
 
 .title {
-  width: 40rem;
+  max-width: 40rem;
 
   @media (max-width: 834px) {
-    width: 25.875rem;
+    max-width: 25.875rem;
   }
 
   @media (max-width: 425px) {
-    width: 19.4375rem;
+    max-width: 19.4375rem;
   }
 }
 
@@ -25,13 +25,11 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0.25rem;
   gap: 1rem;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
   }
 }
 
@@ -56,7 +54,7 @@
 .textContainer {
   display: flex;
   height: 30rem;
-  min-width: 26.625rem;
+  min-width: 20rem;
   max-width: 33.5625rem;
   padding: 1.5rem 0.375rem;
   flex-direction: column;
