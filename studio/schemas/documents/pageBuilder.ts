@@ -3,20 +3,19 @@ import { defineField, defineType } from "sanity";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
-import callout from "studio/schemas/objects/sections/callout";
-import callToAction from "studio/schemas/objects/sections/callToAction";
 import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
-import grid from "studio/schemas/objects/sections/grid";
+import { generositySection } from "studio/schemas/objects/sections/generosity";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import { jobs } from "studio/schemas/objects/sections/jobs";
+import { learningSection } from "studio/schemas/objects/sections/learning";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
-import testimonals from "studio/schemas/objects/sections/testimonials";
+import { opennessSection } from "studio/schemas/objects/sections/openness";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -49,18 +48,21 @@ const pageBuilder = defineType({
         hero,
         logoSalad,
         article,
-        callout,
-        callToAction,
-        testimonals,
+        // callout,
+        // callToAction,
+        // testimonals,
         imageSplitSection,
         imageSection,
-        grid,
+        // grid,
         employees,
         customerCasesEntry,
         contactBox,
         jobs,
         employeeHighlightSection,
         compensationCalculator,
+        opennessSection,
+        generositySection,
+        learningSection,
       ],
     }),
   ],

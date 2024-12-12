@@ -14,6 +14,9 @@ export const SoMePlatforms: { [key: string]: string } = {
   pinterest: "Pinterest",
   medium: "Medium",
   tikTok: "Tiktok",
+  github: "GitHub",
+  podcast: "Podcast",
+  bluesky: "Bluesky",
 };
 
 const detectPlatformFromUrl = (url: string): string | null => {
@@ -73,7 +76,7 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, unknown>>> = ({
       <Box>
         <Stack space={3}>
           <Label htmlFor={urlInputName} as={"label"}>
-            URL
+            URL, must include https
           </Label>
           <TextInput
             id={urlInputName}
@@ -87,7 +90,9 @@ const SoMeInputs: React.FC<ObjectInputProps<Record<string, unknown>>> = ({
       <Box>
         <Stack space={3}>
           <Label htmlFor={platformInputName} as={"label"}>
-            Platform
+            Platform (if you can not find the right platform for your link,
+            please add the link to the Footer directly through the Navigation
+            Manager)
           </Label>
           <Select
             id={platformInputName}

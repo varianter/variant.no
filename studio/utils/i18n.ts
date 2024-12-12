@@ -9,7 +9,7 @@ export function firstTranslation<T>(
   return internationalizedValue[0].value;
 }
 
-export function allTranslation<T>(
+export function allTranslations<T>(
   internationalizedValue: InternationalizedValue<T>,
 ): string | null {
   if (internationalizedValue.length === 0) {

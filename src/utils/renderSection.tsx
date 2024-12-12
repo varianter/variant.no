@@ -11,6 +11,7 @@ import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
 import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
+import Generosity from "src/components/sections/generosity/Generosity";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
@@ -20,8 +21,10 @@ import ImageSplitComponentPreview from "src/components/sections/image-split/Imag
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
 import Jobs from "src/components/sections/jobs/Jobs";
+import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
+import Openness from "src/components/sections/openness/Openness";
 import { Testimonials } from "src/components/sections/testimonials/Testimonials";
 import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import { Locale } from "src/i18n/routing";
@@ -195,9 +198,9 @@ const renderCustomerCasesEntrySection = (
   language: Locale,
 ) => {
   return isDraftMode ? (
-    <CustomerCasesEntry language={language} />
+    <CustomerCasesEntry language={language} section={section} />
   ) : (
-    <CustomerCasesEntry language={language} />
+    <CustomerCasesEntry language={language} section={section} />
   );
 };
 
@@ -289,6 +292,12 @@ const SectionRenderer = ({
       return <Jobs language={language} section={section} />;
     case "employeeHighlight":
       return <EmployeeHighlight section={section} />;
+    case "opennessSection":
+      return <Openness section={section} />;
+    case "generositySection":
+      return <Generosity section={section} language={language} />;
+    case "learningSection":
+      return <Learning section={section} />;
     default:
       return null;
   }

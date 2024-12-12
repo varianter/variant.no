@@ -65,7 +65,6 @@ export interface TestimonialsSection {
 export interface ImageSection {
   _type: "imageSection";
   _key: string;
-  basicTitle: string;
   image: IImage;
 }
 
@@ -149,6 +148,19 @@ export interface CompensationCalculatorSection {
   };
 }
 
+export interface GenerositySection {
+  _type: "generositySection";
+  _key: string;
+  basicTitle: string;
+  description: string;
+
+  handbookBlock: {
+    handbookTitle: string;
+    handbookDescription: string;
+    handbookLink: ILink;
+  };
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
@@ -156,6 +168,26 @@ export interface EmployeeHighlightSection {
   name: string;
   description: string;
   employeePhoto: IImage;
+}
+
+export interface OpennessSection {
+  _type: "opennessSection";
+  _key: string;
+  basicTitle: string;
+  image: IImage;
+  description: string;
+}
+
+export interface LearningSection {
+  _type: "learningSection";
+  _key: string;
+  basicTitle: string;
+  image: IImage;
+  description: string;
+  articleLink: string;
+  articleTag: string;
+  articleTitle: string;
+  articleSubtitle: string;
 }
 
 export type Section =
@@ -174,7 +206,10 @@ export type Section =
   | EmployeesSection
   | EmployeeHighlightSection
   | CompensationCalculatorSection
-  | JobsSection;
+  | JobsSection
+  | OpennessSection
+  | GenerositySection
+  | LearningSection;
 
 export interface PageBuilder {
   _createdAt: string;

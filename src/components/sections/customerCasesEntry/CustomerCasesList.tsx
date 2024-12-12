@@ -7,7 +7,6 @@ import { useState } from "react";
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
-import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCasesEntry.module.css";
@@ -28,9 +27,9 @@ const CustomerCaseList = ({
 
   const deliveryNames = [
     selectedCustomerCase?.projectInfo.deliveries.projectManagement &&
-      "Project Management",
-    selectedCustomerCase?.projectInfo.deliveries.design && "Design",
-    selectedCustomerCase?.projectInfo.deliveries.development && "Development",
+      "project_management",
+    selectedCustomerCase?.projectInfo.deliveries.design && "design",
+    selectedCustomerCase?.projectInfo.deliveries.development && "development",
   ].filter(Boolean);
 
   return (
@@ -90,7 +89,7 @@ function CardInfo({
         <div className={styles.deliveriesList}>
           {deliveryNames.map((deliveryName, index) => (
             <Text key={index} type="h5" className={styles.dotSeparator}>
-              {deliveryName}
+              {t(deliveryName)}
             </Text>
           ))}
         </div>
@@ -124,7 +123,7 @@ function TagRow({
                 type="button"
                 background="dark"
                 onClick={() => setSelectedCustomerCase(customerCase)}
-                text={capitalizeFirstLetter(customerCase.projectInfo.customer)}
+                text={customerCase.projectInfo.customer}
               />
             </div>
           ),
