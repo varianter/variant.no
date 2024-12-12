@@ -29,7 +29,6 @@ const backgroundColors = {
 } as const;
 
 type SmileyBoxProps = {
-  background?: "dark" | "light";
   backgroundColor?: keyof typeof backgroundColors;
   smileyType?: keyof typeof smileys;
   smileySide?: "left" | "right";
@@ -37,10 +36,10 @@ type SmileyBoxProps = {
 };
 
 export default function SmileyBox({
-  description,
   backgroundColor,
   smileySide,
   smileyType,
+  description,
 }: SmileyBoxProps) {
   const smiley = smileys[smileyType ?? "happy"];
   const cssVariables = {

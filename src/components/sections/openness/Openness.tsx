@@ -19,7 +19,12 @@ export default function Openness({ section }: OpennessProps) {
         <div className={styles.image}>
           <SanityImage image={section.image} />
         </div>
-        <SmileyBox description={section.description} />
+        <SmileyBox
+          description={section.description}
+          smileySide="left"
+          smileyType="happy"
+          backgroundColor="green"
+        />
       </div>
     </div>
   );

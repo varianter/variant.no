@@ -13,6 +13,7 @@ import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import { jobs } from "studio/schemas/objects/sections/jobs";
+import { learningSection } from "studio/schemas/objects/sections/learning";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import { opennessSection } from "studio/schemas/objects/sections/openness";
 import seo from "studio/schemas/objects/seo";
@@ -61,6 +62,7 @@ const pageBuilder = defineType({
         compensationCalculator,
         opennessSection,
         generositySection,
+        learningSection,
       ],
     }),
   ],
