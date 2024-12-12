@@ -1,6 +1,8 @@
 .container {
   container-type: inline-size;
   container-name: customer-case-container;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
@@ -11,7 +13,6 @@
   display: flex;
   gap: 1rem;
   max-width: var(--max-content-width-large);
-  justify-self: center;
 }
 
 .imageWrapper {
