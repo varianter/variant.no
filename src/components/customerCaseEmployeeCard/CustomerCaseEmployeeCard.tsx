@@ -13,6 +13,8 @@ export interface CustomerCaseEmployeeCardProps {
   employeePageSlug?: string;
 }
 
+// TODO: Remove this component
+// SHOULD USE SAME AS OTHER PLACES
 export default function CustomerCaseEmployeeCard({
   employee,
 }: CustomerCaseEmployeeCardProps) {
@@ -48,13 +50,15 @@ export default function CustomerCaseEmployeeCard({
           </div>
           <div>
             {employee.email && (
-              <Text type="bodyExtraSmall" className={styles.employeeEmail}>
-                {employee.email}
+              <Text type="bodyExtraSmall">
+                <a href={`mailto:${employee.email}`}>{employee.email}</a>
               </Text>
             )}
             {employee.telephone && (
-              <Text type="bodyExtraSmall" className={styles.employeeTelephone}>
-                {formatPhoneNumber(employee.telephone)}
+              <Text type="bodyExtraSmall">
+                <a href={`tel:${employee.telephone}`}>
+                  {formatPhoneNumber(employee.telephone)}
+                </a>
               </Text>
             )}
           </div>

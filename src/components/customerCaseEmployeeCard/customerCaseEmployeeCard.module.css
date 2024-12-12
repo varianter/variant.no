@@ -1,8 +1,7 @@
 .employee {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   gap: 1rem;
-  min-width: 375px;
-  flex: 1;
 }
 
 .employeeImage {
@@ -10,16 +9,17 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--background-bg-dark);
-  border-radius: 12px;
   position: relative;
   width: 112px;
   height: 112px;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  aspect-ratio: 1/1;
 }
 
 .employeeInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
 
@@ -30,20 +30,11 @@
 }
 
 .employeeRole {
-  display: flex;
-  width: fit-content;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.employeeRoleDot::after {
+.employeeRoleDot:not(:last-child)::after {
   content: "·";
-  margin: 0 0.5rem;
-}
-
-.employeeRoleDot:last-child:after {
-  content: "";
-  margin: 0;
+  margin: 0 0.25rem;
 }
 
 .employeeRole {
