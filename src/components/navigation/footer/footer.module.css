@@ -165,6 +165,7 @@
   font-weight: 500;
   line-height: 120%;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .dotSeparator:not(:last-child)::after {
