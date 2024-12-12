@@ -157,6 +157,14 @@ export interface EmployeeHighlightSection {
   employeePhoto: IImage;
 }
 
+export interface OpennessSection {
+  _type: "opennessSection";
+  _key: string;
+  basicTitle: string;
+  image: IImage;
+  description: string;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -173,7 +181,8 @@ export type Section =
   | EmployeesSection
   | EmployeeHighlightSection
   | CompensationCalculatorSection
-  | JobsSection;
+  | JobsSection
+  | OpennessSection;
 
 export interface PageBuilder {
   _createdAt: string;

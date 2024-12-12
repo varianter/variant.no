@@ -100,6 +100,10 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "customerCasesEntry" => {
       "basicTitle":${translatedFieldFragment("basicTitle")},
+    },
+    _type == "opennessSection" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "description": ${translatedFieldFragment("description")},
     }
   }
 `;
