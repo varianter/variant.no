@@ -20,6 +20,7 @@ const CUSTOMER_CASE_BASE_FRAGMENT = groq`
   "basicTitleColorPart": ${translatedFieldFragment("basicTitleColorPart")},
   "description": ${translatedFieldFragment("description")},
   "image": image {
+    ...,
     ${INTERNATIONALIZED_IMAGE_FRAGMENT}
   },
   "clientColors": {
@@ -43,7 +44,10 @@ export const SPLIT_SECTIONS_FRAGMENT = groq`
      textBlockType,
   },
   _type == "imageBlock" => {
-    "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
+    "image": image {
+      ...,
+      ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+    },
     fullWidth
   },
 `;
@@ -108,9 +112,12 @@ export const CUSTOMER_CASE_QUERY = groq`
           },
         },
       _type == "imageBlock" => {
-        "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
-        fullWidth
+        "image": image {
+          ...,
+          ${INTERNATIONALIZED_IMAGE_FRAGMENT}
         },
+        fullWidth
+      },
     },
     "featuredCases": featuredCases[] -> {
       ${CUSTOMER_CASE_BASE_FRAGMENT}
