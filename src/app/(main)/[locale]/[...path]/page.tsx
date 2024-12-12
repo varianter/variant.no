@@ -90,7 +90,7 @@ async function Page({ params }: Props) {
   return (
     <>
       <PageHeader language={locale} pathTranslations={pathTranslations} />
-      <main id={"main"} tabIndex={-1}>
+      <main id={"main"} tabIndex={-1} className="animate-fadein">
         {(() => {
           switch (docType) {
             case "pageBuilder":
