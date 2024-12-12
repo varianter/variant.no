@@ -16,7 +16,7 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   return (
     <ul className={styles.list}>
-      {pathTranslations?.map((pathTranslation, index) => {
+      {pathTranslations?.map((pathTranslation) => {
         if (pathTranslation._key === undefined) {
           return null;
         }
@@ -37,9 +37,6 @@ export default function LanguageSwitcher({
                 </span>
               )}
             </li>
-            {index < pathTranslations.length - 1 && (
-              <span className={styles.divider}></span>
-            )}
           </Fragment>
         );
       })}

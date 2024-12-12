@@ -58,6 +58,7 @@ const CustomerCaseList = ({
             tabIndex={-1}
             className={styles.imageWrapper}
             href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+            title={selectedCustomerCase.basicTitle}
           >
             {selectedCustomerCase.image && (
               <SanitySharedImage image={selectedCustomerCase.image} />
@@ -88,7 +89,12 @@ function CardInfo({
         <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
         <div className={styles.deliveriesList}>
           {deliveryNames.map((deliveryName, index) => (
-            <Text key={index} type="h5" className={styles.dotSeparator}>
+            <Text
+              key={index}
+              type="h5"
+              as="span"
+              className={styles.dotSeparator}
+            >
               {t(deliveryName)}
             </Text>
           ))}

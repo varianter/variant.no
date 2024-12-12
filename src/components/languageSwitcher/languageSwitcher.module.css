@@ -5,6 +5,14 @@
   padding: 0;
   margin: auto 0;
 }
+.list li {
+  display: flex;
+  gap: 0.25rem;
+}
+.list li:first-child::after {
+  content: "|";
+  display: block;
+}
 
 .divider {
   border-left: 1px solid var(--text-primary);
