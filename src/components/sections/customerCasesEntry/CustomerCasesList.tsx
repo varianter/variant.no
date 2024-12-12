@@ -7,7 +7,6 @@ import { useState } from "react";
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
-import { capitalizeFirstLetter } from "src/components/utils/formatCapitalizedFirstLetter";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCasesEntry.module.css";
@@ -124,7 +123,7 @@ function TagRow({
                 type="button"
                 background="dark"
                 onClick={() => setSelectedCustomerCase(customerCase)}
-                text={capitalizeFirstLetter(customerCase.projectInfo.customer)}
+                text={customerCase.projectInfo.customer}
               />
             </div>
           ),
