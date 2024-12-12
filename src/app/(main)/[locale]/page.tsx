@@ -75,7 +75,7 @@ const Home = async ({ params }: Props) => {
         language={params.locale}
         pathTranslations={pathTranslations}
       />
-      <main id={"main"} tabIndex={-1}>
+      <main id={"main"} tabIndex={-1} className="animate-fadein">
         {initialLandingPage.data.sections.map((section, index) => (
           <SectionRenderer
             key={section._key}

@@ -15,7 +15,7 @@ const socialMediaLinks = defineType({
       type: "array",
       of: [{ type: SocialMediaID.link }],
       description:
-        "Add links to your social media profiles. This allows visitors to connect with you on social platforms.",
+        "Add links to your social media profiles. This allows visitors to connect with you on social platforms. If the link does not match any of the predefined platforms listed, please add the link directly to the footer through the Navigation Manager",
     },
   ],
   preview: {
