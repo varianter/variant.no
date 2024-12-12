@@ -114,7 +114,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--stroke-primary);
     border-radius: 0.9375rem;
   }
@@ -179,7 +179,7 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid #3995ef;
     border-radius: 0.9375rem;
   }
