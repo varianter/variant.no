@@ -1,0 +1,23 @@
+.footerSection {
+  /* NOTE: Padding top might be removed(Was in figma sketches) */
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.12rem;
+
+  @media (min-width: 802px) {
+    padding-top: 0;
+  }
+}
+
+.footerSectionLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    list-style: none;
+  }
+}
