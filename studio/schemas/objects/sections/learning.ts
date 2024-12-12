@@ -1,6 +1,7 @@
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
+
 export const learningID = "learningSection";
 
 export const learningSection = defineField({
@@ -37,7 +38,7 @@ export const learningSection = defineField({
     {
       name: "articleLink",
       title: "Article link",
-      type: "internationalizedArrayString",
+      type: "string",
       validation: (rule) => rule.required(),
     },
     {

@@ -63,6 +63,12 @@
   gap: 0.75rem;
   background-color: var(--surface-blue);
   color: var(--text-primary-light);
+  border-radius: 6px;
+
+  &:hover {
+    background-color: var(--Blue-700);
+    border-radius: 24px;
+  }
 }
 
 .textContent {

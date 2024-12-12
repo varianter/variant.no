@@ -120,9 +120,9 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "learningSection" => {
+      ...,
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "description": ${translatedFieldFragment("description")},
-      "articleLink": ${translatedFieldFragment("articleLink")},
       "articleTag": ${translatedFieldFragment("articleTag")},
       "articleTitle": ${translatedFieldFragment("articleTitle")},
       "articleSubtitle": ${translatedFieldFragment("articleSubtitle")},

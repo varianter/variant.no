@@ -27,21 +27,21 @@ export default function Learning({ section }: LearningProps) {
         <div className={styles.image}>
           <SanityImage image={section.image} />
         </div>
-        <div className={styles.textContainer}>
-          <div className={styles.textContent}>
-            <Text type="labelLarge" className={styles.text}>
-              {section.articleTag}
-            </Text>
-            <Link href={section.articleLink}>
+        <Link href={section.articleLink}>
+          <div className={styles.textContainer}>
+            <div className={styles.textContent}>
+              <Text type="labelLarge" className={styles.text}>
+                {section.articleTag}
+              </Text>
               <Text type="h3" className={styles.text}>
                 {section.articleTitle}
               </Text>
-            </Link>
-            <Text type="bodyBig" className={styles.text}>
-              {section.articleSubtitle}
-            </Text>
+              <Text type="bodyBig" className={styles.text}>
+                {section.articleSubtitle}
+              </Text>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
