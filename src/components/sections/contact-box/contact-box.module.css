@@ -26,6 +26,10 @@
   --_contactBox__background: var(--background-bg-light-secondary);
   --_contactBox__color: var(--text-primary);
 }
+.contactBox__inner--transparent {
+  --_contactBox__background: transparent;
+  --_contactBox__color: var(--text-primary);
+}
 
 .textContent {
   height: 100%;
