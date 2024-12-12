@@ -118,7 +118,10 @@ const SECTIONS_FRAGMENT = groq`
           ${TRANSLATED_LINK_FRAGMENT}
         }
       }
-    }
+    },
+    _type == "logoSalad" => {
+      "title": ${translatedFieldFragment("title")},
+    },
   }
 `;
 

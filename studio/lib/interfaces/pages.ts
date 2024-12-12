@@ -19,7 +19,7 @@ export interface LogoSaladSection {
   _type: "logoSalad";
   _key: string;
   logos: IImage[];
-  richText?: PortableTextBlock[];
+  title: string;
   supporting: string;
 }
 
