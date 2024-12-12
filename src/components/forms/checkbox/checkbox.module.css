@@ -55,7 +55,7 @@
 }
 
 /* Focus Styles */
-.input:focus + .checkbox {
+.input:focus-visible + .checkbox {
   outline: 2px solid var(--stroke-primary);
   outline-offset: 2px;
 }

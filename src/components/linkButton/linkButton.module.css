@@ -37,7 +37,7 @@
   &:hover {
     --_button-radius: var(--_button-hoverRadius);
   }
-  &:focus {
+  &:focus-visible {
     --_button-radius: var(--_button-hoverRadius);
     outline: 2px solid var(--surface-yellow);
     outline-offset: 1px;
@@ -85,7 +85,7 @@
   &:hover {
     --_button-background: var(--background-bg-dark);
   }
-  &:focus {
+  &:focus-visible {
     --_button-border: 1px solid var(--surface-yellow);
   }
   &:active {
@@ -127,7 +127,7 @@
   &:hover {
     --_button-background: var(--background-bg-dark);
   }
-  &:focus {
+  &:focus-visible {
     --_button-border: 1px solid var(--surface-yellow);
   }
   &:active {

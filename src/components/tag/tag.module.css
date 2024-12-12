@@ -22,7 +22,7 @@
 .tag:active {
   --_tag-borderColor: var(--background-bg-light-secondary);
 }
-.tag:focus {
+.tag:focus-visible {
   outline: 2px solid var(--surface-yellow, #ffd02f);
 }
 
