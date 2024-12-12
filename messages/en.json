@@ -46,7 +46,6 @@
       "master": "Master"
     }
   },
-
   "employee_card": {
     "show": "Showing",
     "of": "out of",
@@ -59,7 +58,8 @@
     "Prosjekt- og produktledelse": "Project and product management",
     "Strategi": "Strategy",
     "field": "Field",
-    "showMore": "Show all"
+    "showMore": "Show all",
+    "see_all_employees": "See all people"
   },
   "job_posting": {
     "office": "Office",

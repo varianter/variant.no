@@ -138,7 +138,9 @@ async function Page({ params }: Props) {
                 <Legal document={queryResponse.data} />
               );
             case "employee":
-              return <EmployeePage employee={queryResponse} />;
+              return (
+                <EmployeePage employee={queryResponse} language={locale} />
+              );
           }
           return Page404;
         })()}

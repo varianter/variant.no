@@ -7,7 +7,7 @@
 
 .content {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-content-width-small);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,33 +15,16 @@
 }
 
 .employee {
-  display: flex;
+  display: grid;
   gap: 3rem;
-  flex-direction: column;
-  margin: 1rem;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    align-items: center;
-  }
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .employeeImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--Dark-500);
-  border-radius: 12px;
-  width: 300px;
-  height: 300px;
-  padding: 1rem;
-  position: relative;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    width: 200px;
-    height: 200px;
-  }
+  border-radius: var(--radius-medium);
+  overflow: hidden;
 }
 
 .employeeInfo {
@@ -65,4 +48,12 @@
 .employeeTelephone {
   color: var(--Dark-500);
   font-weight: 300;
+}
+
+.backToEmployees {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: var(--padding-l);
 }
