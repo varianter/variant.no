@@ -2,7 +2,7 @@ import { UlistIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
-import { allTranslation } from "studio/utils/i18n";
+import { allTranslations } from "studio/utils/i18n";
 
 export const customerCaseProjectInfo = defineField({
   name: "projectInfo",
@@ -45,7 +45,7 @@ export const customerCaseProjectInfo = defineField({
                 );
               }
               return {
-                title: allTranslation(customerSector) ?? undefined,
+                title: allTranslations(customerSector) ?? undefined,
               };
             },
           },
@@ -127,7 +127,8 @@ export const customerCaseProjectInfo = defineField({
                     );
                   }
                   return {
-                    title: allTranslation(design) ?? "No translation available",
+                    title:
+                      allTranslations(design) ?? "No translation available",
                   };
                 },
               },
@@ -160,7 +161,8 @@ export const customerCaseProjectInfo = defineField({
                   }
                   return {
                     title:
-                      allTranslation(development) ?? "No translation available",
+                      allTranslations(development) ??
+                      "No translation available",
                   };
                 },
               },
@@ -193,7 +195,7 @@ export const customerCaseProjectInfo = defineField({
                   }
                   return {
                     title:
-                      allTranslation(projectManagement) ??
+                      allTranslations(projectManagement) ??
                       "No translation available",
                   };
                 },
