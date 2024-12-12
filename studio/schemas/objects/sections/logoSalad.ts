@@ -10,6 +10,12 @@ export const logoSalad = defineField({
   type: "object",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      description: "Add a title to the logo salad section",
+      type: "internationalizedArrayString",
+    },
+    {
       name: "logos",
       title: "Logos",
       description: "Add the logos you want to display.",
