@@ -9,11 +9,11 @@ type SmileyBoxProps = {
 
 export default function SmileyBox({ description }: SmileyBoxProps) {
   return (
-    description && (
-      <div className={styles.wrapper}>
-        <div className={styles.smiley} />
+    <div className={styles.wrapper}>
+      <div className={styles.smiley} />
+      <div className={styles.description}>
         <Text type={"h3"}>{description}</Text>
       </div>
-    )
+    </div>
   );
 }

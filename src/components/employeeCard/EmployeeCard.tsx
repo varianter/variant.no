@@ -91,7 +91,7 @@ export default function EmployeeCard({
 export function EmployeeCardSkeleton({
   background = "light",
 }: {
-  background?: "light" | "dark" | "transparent";
+  background?: "light" | "dark";
 }) {
   const backgroundClass =
     background === "dark" ? styles["employeeImage--dark"] : "";

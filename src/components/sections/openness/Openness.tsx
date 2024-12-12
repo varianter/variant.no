@@ -12,9 +12,9 @@ export interface OpennessProps {
 export default function Openness({ section }: OpennessProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>
-        <Text type={"h2"}>{section.basicTitle}</Text>
-      </div>
+      <Text type={"h2"} className={styles.title}>
+        {section.basicTitle}
+      </Text>
       <div className={styles.content}>
         <div className={styles.image}>
           <SanityImage image={section.image} />
