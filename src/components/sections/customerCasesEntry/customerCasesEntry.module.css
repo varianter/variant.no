@@ -138,6 +138,6 @@
 }
 
 .title {
-  max-width: var(--max-content-width-medium);
+  max-width: var(--max-content-width-large);
   width: 100%;
 }
