@@ -14,6 +14,7 @@ export const opennessSection = defineField({
       description:
         "Enter the primary title that will be displayed at the top of the section.",
       type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
     },
     {
       name: "image",
@@ -23,6 +24,7 @@ export const opennessSection = defineField({
       options: {
         hotspot: true,
       },
+      validation: (rule) => rule.required(),
     },
     {
       name: "description",
@@ -30,6 +32,7 @@ export const opennessSection = defineField({
       description:
         "Enter the description that will be displayed in the smiley block.",
       type: "internationalizedArrayString",
+      validation: (rule) => rule.required(),
     },
   ],
   preview: {
