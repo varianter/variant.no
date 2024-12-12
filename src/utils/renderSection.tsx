@@ -11,6 +11,7 @@ import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
 import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
+import Generosity from "src/components/sections/generosity/Generosity";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
 import { Hero } from "src/components/sections/hero/Hero";
@@ -292,6 +293,8 @@ const SectionRenderer = ({
       return <EmployeeHighlight section={section} />;
     case "opennessSection":
       return <Openness section={section} />;
+    case "generositySection":
+      return <Generosity section={section} language={language} />;
     default:
       return null;
   }

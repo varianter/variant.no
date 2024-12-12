@@ -148,6 +148,19 @@ export interface CompensationCalculatorSection {
   };
 }
 
+export interface GenerositySection {
+  _type: "generositySection";
+  _key: string;
+  basicTitle: string;
+  description: string;
+
+  handbookBlock: {
+    handbookTitle: string;
+    handbookDescription: string;
+    handbookLink: ILink;
+  };
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
@@ -182,7 +195,8 @@ export type Section =
   | EmployeeHighlightSection
   | CompensationCalculatorSection
   | JobsSection
-  | OpennessSection;
+  | OpennessSection
+  | GenerositySection;
 
 export interface PageBuilder {
   _createdAt: string;

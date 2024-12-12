@@ -8,6 +8,7 @@ import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
+import { generositySection } from "studio/schemas/objects/sections/generosity";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
@@ -59,6 +60,7 @@ const pageBuilder = defineType({
         employeeHighlightSection,
         compensationCalculator,
         opennessSection,
+        generositySection,
       ],
     }),
   ],
