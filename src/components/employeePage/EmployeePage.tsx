@@ -1,12 +1,13 @@
+import { getTranslations } from "next-intl/server";
+
+import { SanityImage } from "src/components/image/SanityImage";
+import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
-
-import { getTranslations } from "next-intl/server";
 import { EMPLOYEE_PAGE_SLUG_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
-import { SanityImage } from "../image/SanityImage";
-import LinkButton from "../linkButton/LinkButton";
+
 import styles from "./employeePage.module.css";
 
 export interface EmployeePageProps {
