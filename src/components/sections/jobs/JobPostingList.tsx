@@ -95,7 +95,11 @@ export default function JobPostingList({
       </div>
       <div className={styles.jobPostings}>
         {filteredJobPostings?.map((jobPosting: IJobPosting) => (
-          <JobPosting jobPosting={jobPosting} key={jobPosting._key} />
+          <JobPosting
+            jobPosting={jobPosting}
+            key={jobPosting._key}
+            showLocations={locationFilter == null}
+          />
         ))}
       </div>
     </div>

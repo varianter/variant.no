@@ -11,9 +11,13 @@ function sortAlphabetically(list: string[]) {
 
 interface JobPostingProps {
   jobPosting: IJobPosting;
+  showLocations?: boolean;
 }
 
-export default function JobPosting({ jobPosting }: JobPostingProps) {
+export default function JobPosting({
+  jobPosting,
+  showLocations = true,
+}: JobPostingProps) {
   const jobPostingLocations = sortAlphabetically(
     jobPosting.locations.map(
       (location: CompanyLocation) => location.companyLocationName,
@@ -30,9 +34,11 @@ export default function JobPosting({ jobPosting }: JobPostingProps) {
         <div className={styles.role}>
           <Text type={"h5"}>{jobPosting.role}</Text>
         </div>
-        <div className={styles.locations}>
-          <Badge>{jobPostingLocations}</Badge>
-        </div>
+        {showLocations && (
+          <div className={styles.locations}>
+            <Badge>{jobPostingLocations}</Badge>
+          </div>
+        )}
       </div>
     </a>
   );
