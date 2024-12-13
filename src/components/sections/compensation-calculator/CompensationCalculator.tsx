@@ -6,14 +6,17 @@ import Text from "src/components/text/Text";
 import { cnIf } from "src/utils/css";
 import { getHref } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
-import { CompensationCalculatorSection } from "studio/lib/interfaces/pages";
-import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
+import {
+  CompensationCalculatorBackground,
+  CompensationCalculatorSection,
+} from "studio/lib/interfaces/pages";
 
 import {
   getHandbookLinksFromCompensationPage,
   getLatestSalaries,
   getLocale,
 } from "./api";
+
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 

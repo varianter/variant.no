@@ -3,7 +3,7 @@ import { defineField } from "sanity";
 import { titleID } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
 
-export const generosityID = "generositySection";
+const generosityID = "generositySection";
 
 export const generositySection = defineField({
   name: generosityID,

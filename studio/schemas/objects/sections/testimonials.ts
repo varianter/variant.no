@@ -3,7 +3,7 @@ import { defineField } from "sanity";
 import { title } from "studio/schemas/fields/text";
 import testimony from "studio/schemas/objects/testimony";
 
-export const testimonialsID = "testimonials";
+const testimonialsID = "testimonials";
 
 export const testimonals = defineField({
   name: testimonialsID,

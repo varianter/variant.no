@@ -5,7 +5,7 @@ import { titleID } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
 import { firstTranslation } from "studio/utils/i18n";
 
-export const imageID = "imageSplitSection";
+const imageID = "imageSplitSection";
 
 export const imageSplitSection = defineField({
   name: imageID,

@@ -4,7 +4,7 @@ import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
 import { firstTranslation } from "studio/utils/i18n";
 
-export const employeeHighlightID = "employeeHighlight";
+const employeeHighlightID = "employeeHighlight";
 
 export const employeeHighlightSection = defineField({
   name: employeeHighlightID,

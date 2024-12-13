@@ -2,7 +2,7 @@ import { defineField } from "sanity";
 
 import image from "studio/schemas/fields/media";
 
-export const logoSaladID = "logoSalad";
+const logoSaladID = "logoSalad";
 
 export const logoSalad = defineField({
   name: logoSaladID,

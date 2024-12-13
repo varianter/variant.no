@@ -2,7 +2,7 @@ import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
 
-export const employeesID = "employees";
+const employeesID = "employees";
 
 export const employees = defineField({
   name: employeesID,

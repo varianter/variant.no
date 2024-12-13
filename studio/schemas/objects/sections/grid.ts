@@ -3,7 +3,7 @@ import { defineField } from "sanity";
 import image from "studio/schemas/fields/media";
 import { richText, title } from "studio/schemas/fields/text";
 
-export const gridID = "grid";
+const gridID = "grid";
 
 export const grid = defineField({
   name: gridID,

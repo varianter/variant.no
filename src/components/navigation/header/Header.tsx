@@ -16,8 +16,6 @@ import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
-import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
-import { linkID } from "studio/schemas/objects/link";
 
 import styles from "./header.module.css";
 
@@ -29,6 +27,9 @@ export interface IHeader {
   pathTranslations: InternationalizedString;
   contactEmail: string | undefined;
 }
+
+const callToActionFieldID = "callToActionField";
+const linkID = "link";
 
 const filterLinks = (data: ILink[], type: string) =>
   data?.filter((link) => link._type === type);

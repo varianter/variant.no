@@ -2,7 +2,7 @@ import { defineField } from "sanity";
 
 import { allTranslations } from "studio/utils/i18n";
 
-export const heroID = "hero";
+const heroID = "hero";
 
 export const hero = defineField({
   name: heroID,

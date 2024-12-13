@@ -4,7 +4,7 @@ import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { internationalizedImage } from "studio/schemas/fields/media";
 import { allTranslations } from "studio/utils/i18n";
 
-export const imageID = "imageSection";
+const imageID = "imageSection";
 
 export const imageSection = defineField({
   name: imageID,
