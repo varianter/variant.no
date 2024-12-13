@@ -22,7 +22,9 @@ export default async function Compensations({
 }: CompensationsProps) {
   return (
     <div className={styles.wrapper}>
-      <Text type="h1">{compensations.basicTitle}</Text>
+      <Text className={styles.text} type="h1">
+        {compensations.basicTitle}
+      </Text>
 
       <CompensationCalculator
         section={compensations.compensationCalculator}
