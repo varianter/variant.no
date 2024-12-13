@@ -1,14 +1,14 @@
 .article {
   width: 100%;
-  max-width: var(--max-content-width-medium);
   display: flex;
-  flex-direction: column;
-  justify-self: center;
+  justify-content: center;
 }
 
 .image {
+  display: flex;
   flex-shrink: 1;
-  max-width: 46rem;
+  max-width: var(--max-content-width-large);
+  width: 100%;
   padding: var(--padding-l) 0rem;
 
   @media (max-width: 834px) {
@@ -23,16 +23,16 @@
 }
 
 .image img {
-  max-width: var(--max-content-width-large);
+  max-width: var(--max-content-width-medium) !important;
   width: 100%;
   height: 100%;
   display: block;
 
   @media (max-width: 834px) {
-    max-width: var(--max-content-width-medium);
+    max-width: var(--max-content-width-medium) !important;
   }
 
   @media (max-width: 425px) {
-    max-width: var(--max-content-width-small);
+    max-width: var(--max-content-width-small) !important;
   }
 }

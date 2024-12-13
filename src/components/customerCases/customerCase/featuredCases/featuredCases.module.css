@@ -27,6 +27,14 @@
 }
 
 .caseImageWrapper img {
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
   width: 100% !important;
+  &:hover {
+    border-radius: 0.375rem;
+  }
+}
+
+.content:hover img {
+  border-radius: 0.375rem;
 }
