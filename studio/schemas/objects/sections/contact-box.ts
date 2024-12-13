@@ -4,7 +4,7 @@ import { StringInputWithCharacterCount } from "studio/components/stringInputWith
 import { subtitleID, titleID } from "studio/schemas/fields/text";
 import { firstTranslation } from "studio/utils/i18n";
 
-export const contactBoxID = "contactBox";
+const contactBoxID = "contactBox";
 
 export enum ContactBoxBackground {
   Dark = "dark",

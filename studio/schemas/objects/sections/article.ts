@@ -5,7 +5,7 @@ import { imageExtended } from "studio/schemas/fields/media";
 import { richText, title } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
 
-export const articleID = "article";
+const articleID = "article";
 
 export const article = defineField({
   name: articleID,

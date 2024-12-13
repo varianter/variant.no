@@ -3,7 +3,7 @@ import { defineField } from "sanity";
 import { richText, richTextID } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
 
-export const calloutID = "callout";
+const calloutID = "callout";
 
 export const callout = defineField({
   name: calloutID,

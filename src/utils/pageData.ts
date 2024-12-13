@@ -26,18 +26,19 @@ import {
   CUSTOMER_CASES_PAGE_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
-import { legalDocumentID } from "studio/schemas/documents/admin/legalDocuments";
-import { compensationsId } from "studio/schemas/documents/compensations";
-import { pageBuilderID } from "studio/schemas/documents/pageBuilder";
-import { customerCasesPageID } from "studio/schemas/documents/specialPages/customerCasesPage";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
-import { customerCaseID } from "studioShared/schemas/documents/customerCase";
 
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
+
+const legalDocumentID = "legalDocument";
+const compensationsId = "compensations";
+const pageBuilderID = "pageBuilder";
+const customerCasesPageID = "customerCasesPage";
+const customerCaseID = "customerCase";
 
 type PageFromParams<D, T> = {
   queryResponse: D;

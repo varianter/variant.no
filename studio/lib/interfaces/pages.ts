@@ -1,7 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
 import { SeoData } from "src/utils/seo";
-import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
 
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
@@ -127,6 +126,11 @@ export interface JobsSection {
   _key: string;
   basicTitle: string;
   subtitle: string;
+}
+
+export enum CompensationCalculatorBackground {
+  Dark = "dark",
+  Violet = "violet",
 }
 
 export interface CompensationCalculatorSection {

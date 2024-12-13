@@ -2,9 +2,9 @@ import { defineField } from "sanity";
 
 import { link } from "studio/schemas/objects/link";
 
-export const compensationCalculatorId = "compensationCalculator";
+const compensationCalculatorId = "compensationCalculator";
 
-export enum CompensationCalculatorBackground {
+enum CompensationCalculatorBackground {
   Dark = "dark",
   Violet = "violet",
 }

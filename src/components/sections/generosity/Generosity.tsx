@@ -1,8 +1,10 @@
 import { Handbook } from "src/components/sections/compensation-calculator/CompensationCalculator";
 import SmileyBox from "src/components/smileyBox/SmileyBox";
 import Text from "src/components/text/Text";
-import { GenerositySection } from "studio/lib/interfaces/pages";
-import { CompensationCalculatorBackground } from "studio/schemas/objects/sections/compensation-calculator";
+import {
+  CompensationCalculatorBackground,
+  GenerositySection,
+} from "studio/lib/interfaces/pages";
 
 import styles from "./generosity.module.css";
 
