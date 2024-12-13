@@ -1,4 +1,9 @@
-import { SeoData } from "src/utils/seo";
+export type SeoData = {
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  keywords?: string;
+};
 
 export type DefaultSeo = {
   _id: string;

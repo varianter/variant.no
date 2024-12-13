@@ -21,6 +21,7 @@ module.exports = {
     "no-relative-import-paths",
     "import",
     "prettier",
+    "eslint-plugin-boundaries",
   ],
   ignorePatterns: ["dist", "node_modules", ".sanity"],
   settings: {
@@ -29,7 +30,39 @@ module.exports = {
         project: "./tsconfig.json",
       },
     },
+
+    "boundaries/elements": [
+      {
+        mode: "full",
+        type: "schema",
+        pattern: ["studioShared/schema/**/*", "studio/schema/**/*"],
+      },
+      {
+        mode: "full",
+        type: "app",
+        pattern: [
+          "src/app/**/*",
+          "src/components/**/*",
+          "src/i18n/**/*",
+          "src/stories/**/*",
+          "src/middlewares/**/*",
+          "src/types/**/*",
+          "src/utils/**/*",
+        ],
+      },
+      {
+        mode: "full",
+        type: "studioComponents",
+        pattern: ["studio/components/**/*", "sharedStudio/components/**/*"],
+      },
+      {
+        mode: "full",
+        type: "studioLib",
+        pattern: ["studio/lib/**/*", "sharedStudio/lib/**/*"],
+      },
+    ],
   },
+
   rules: {
     "unused-imports/no-unused-imports": "error",
     "import/no-named-as-default": "off",
@@ -37,6 +70,33 @@ module.exports = {
     "no-relative-import-paths/no-relative-import-paths": [
       "warn",
       { allowSameFolder: true },
+    ],
+
+    "boundaries/element-types": [
+      "error",
+      {
+        default: "disallow",
+        rules: [
+          {
+            from: ["schema"],
+            allow: ["schema", "studioComponents"],
+          },
+          {
+            from: ["studioComponents"],
+            allow: ["app", "studioComponents", "studioLib"],
+          },
+          {
+            from: ["studioLib"],
+            allow: ["studioLib"],
+            disallow: ["schema", "studioComponents"],
+          },
+          {
+            from: ["app"],
+            allow: ["app", "studioLib"],
+            disallow: ["schema", "studioComponents"],
+          },
+        ],
+      },
     ],
     "import/order": [
       "error",

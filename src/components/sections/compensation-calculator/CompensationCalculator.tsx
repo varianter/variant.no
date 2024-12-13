@@ -16,7 +16,6 @@ import {
   getLatestSalaries,
   getLocale,
 } from "./api";
-
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 

@@ -1,4 +1,3 @@
-import { isSalariesType } from "studio/components/salariesInput/utils/parseSalaries";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { ILink } from "studio/lib/interfaces/navigation";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
@@ -62,4 +61,18 @@ export async function getLatestSalaries(): Promise<
   } catch {
     return ResultError("Parsed salaries data was not valid");
   }
+}
+
+interface Salaries {
+  [year: string]: number;
+}
+
+export function isSalariesType(value: unknown): value is Salaries {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    Object.entries(value).every(
+      ([k, v]) => !isNaN(Number(k)) && typeof v === "number",
+    )
+  );
 }
