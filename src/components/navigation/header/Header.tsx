@@ -113,7 +113,7 @@ export const Header = ({
                     link={`mailto:${contactEmail}`}
                     linkTitle={t("contact_us")}
                     size="L"
-                    type="primary"
+                    type="secondary"
                     background="light"
                     withoutIcon
                   />
