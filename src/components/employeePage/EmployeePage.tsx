@@ -69,7 +69,7 @@ export default async function EmployeePage({
             <LinkButton
               link={`/${language}/${employeePageSlug}`}
               type="secondary"
-              size="S"
+              size="M"
               linkTitle={t("see_all_employees")}
             />
           </div>

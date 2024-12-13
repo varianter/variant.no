@@ -21,7 +21,7 @@
     "customer_case_entry": {
       "image": "image",
       "case": "Case",
-      "field": "Field"
+      "field": "Fields"
     },
     "featured_cases": {
       "projects": "Featured Projects"
