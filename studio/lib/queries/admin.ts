@@ -1,13 +1,11 @@
 import { groq } from "next-sanity";
 
-import { companyInfoID } from "studio/schemas/documents/admin/companyInfo";
-
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Parent Company
-export const COMPANY_INFO_QUERY = groq`*[_type == "${companyInfoID}"][0]`;
+export const COMPANY_INFO_QUERY = groq`*[_type == "companyInfo"][0]`;
 
-export const COMPANY_EMAIL_QUERY = groq`*[_type == "${companyInfoID}"][0] {
+export const COMPANY_EMAIL_QUERY = groq`*[_type == "companyInfo"][0] {
   companyEmail
 }`;
 
