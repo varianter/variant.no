@@ -1,12 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 4rem 0rem;
+  margin: 5rem 0rem;
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1024px) {
-    margin: 2rem 0rem;
+  @media (max-width: 834px) {
+    margin: 3rem 0rem;
   }
 }
 
@@ -68,5 +68,5 @@
 .sectionsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 6rem;
 }
