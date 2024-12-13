@@ -7,12 +7,12 @@
   width: 100%;
 }
 
-.text{
-  max-width: var(--max-content-width-large); 
+.text {
+  max-width: var(--max-content-width-large);
   align-self: center;
 }
 
-.compensationWrapper{
+.compensationWrapper {
   max-width: var(--max-content-width-large);
   align-self: center;
 }
