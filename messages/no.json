@@ -22,6 +22,9 @@
       "image": "bilde",
       "case": "Case",
       "field": "Fag"
+    },
+    "featured_cases": {
+      "projects": "Lignende prosjekter"
     }
   },
   "contact_information": {

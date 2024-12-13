@@ -22,6 +22,9 @@
       "image": "bild",
       "case": "Case",
       "field": "Fält"
+    },
+    "featured_cases": {
+      "projects": "Liknande Projekt"
     }
   },
   "contact_information": {

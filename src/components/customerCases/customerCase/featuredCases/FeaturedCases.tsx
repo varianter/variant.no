@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { SanitySharedImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
@@ -15,24 +16,26 @@ export default function FeaturedCases({
   featuredCases,
   customerCasesPath,
 }: FeaturedCasesProps) {
+  const t = useTranslations("customer_case");
+
   return (
     featuredCases.length > 0 && (
       <div className={styles.wrapper}>
-        <Text type={"h3"}>Lignende prosjekter</Text>
+        <Text type={"h3"}>{t("featured_cases.projects")}</Text>
         <div className={styles.content}>
           {featuredCases.map((featuredCase) => (
             <div key={featuredCase._id} className={styles.caseWrapper}>
-              <div className={styles.caseImageWrapper}>
-                <SanitySharedImage image={featuredCase.image} />
-              </div>
-              <div>
-                <Link
-                  href={`/${[...customerCasesPath, featuredCase.slug].join("/")}`}
-                >
+              <Link
+                href={`/${[...customerCasesPath, featuredCase.slug].join("/")}`}
+              >
+                <div className={styles.caseImageWrapper}>
+                  <SanitySharedImage image={featuredCase.image} />
+                </div>
+                <div>
                   <Text type={"bodyBig"}>{featuredCase.basicTitle}</Text>
-                </Link>
-                <Text type={"bodySmall"}>{featuredCase.description}</Text>
-              </div>
+                  <Text type={"bodySmall"}>{featuredCase.description}</Text>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
