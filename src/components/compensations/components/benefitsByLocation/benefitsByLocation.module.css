@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 5rem;
   max-width: var(--max-content-width-medium);
+  padding-top: 4rem;
 }
 
 .benefitWrapper {

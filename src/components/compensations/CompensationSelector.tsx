@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import {
@@ -24,8 +25,13 @@ export default function CompensationSelector({
   locations,
   locale,
 }: CompensationsProps) {
+  const t = useTranslations("compensation_calculator");
+
   const [selectedLocation, setSelectedLocation] = useState<string>(
     locations[0]._id,
+  );
+  const [selectedLocationLabel, setSelectedLocationLabel] = useState<string>(
+    locations[0].companyLocationName,
   );
 
   const locationOptions: IOption[] = locations.map((companyLocation) => ({
@@ -44,18 +50,27 @@ export default function CompensationSelector({
 
   return (
     <div className={styles.compensationWrapper}>
-      {yearlyBonusesForLocation && (
-        <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
-      )}
       <RadioButtonGroup
         id="location-group"
         label="Velg lokasjon"
         options={locationOptions}
         selectedId={selectedLocation}
-        onValueChange={(option) => setSelectedLocation(option.id)}
+        onValueChange={(option) => {
+          setSelectedLocation(option.id);
+          setSelectedLocationLabel(option.label);
+        }}
       />
 
-      <BenefitsByLocation benefits={benefitsFilteredByLocation} />
+      {yearlyBonusesForLocation && (
+        <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
+      )}
+      {benefitsFilteredByLocation.length > 0 ? (
+        <BenefitsByLocation benefits={benefitsFilteredByLocation} />
+      ) : (
+        <span>
+          {t("no_compensation_data", { city: selectedLocationLabel })}
+        </span>
+      )}
     </div>
   );
 }
