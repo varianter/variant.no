@@ -9,6 +9,7 @@ import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 
+import styles from "./compensations.module.css";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 import YearlyBonuses from "./components/yearlyBonuses/YearlyBonuses";
 
@@ -42,7 +43,7 @@ export default function CompensationSelector({
   )?.yearlyBonuses;
 
   return (
-    <>
+    <div className={styles.compensationWrapper}>
       {yearlyBonusesForLocation && (
         <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
       )}
@@ -55,6 +56,6 @@ export default function CompensationSelector({
       />
 
       <BenefitsByLocation benefits={benefitsFilteredByLocation} />
-    </>
+    </div>
   );
 }

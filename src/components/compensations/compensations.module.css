@@ -3,4 +3,16 @@
   flex-direction: column;
   padding: 10rem 5rem;
   gap: 5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.text{
+  max-width: var(--max-content-width-large); 
+  align-self: center;
+}
+
+.compensationWrapper{
+  max-width: var(--max-content-width-large);
+  align-self: center;
 }
