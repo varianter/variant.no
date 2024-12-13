@@ -56,6 +56,7 @@ const CustomLink = ({
               target={target}
               rel={rel}
               aria-label={link.ariaLabel}
+              scroll={scroll}
             >
               <span className={styles.span}>{link.linkTitle}</span>
             </Link>
@@ -87,6 +88,7 @@ const CustomLink = ({
             target={target}
             rel={rel}
             aria-label={link.ariaLabel}
+            scroll={scroll}
           >
             {link.linkTitle}
           </Link>
@@ -101,6 +103,7 @@ const CustomLink = ({
             target={target}
             rel={rel}
             aria-label={link.ariaLabel}
+            scroll={scroll}
           >
             {link.linkTitle}
           </Link>

@@ -11,6 +11,7 @@ import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
+import useScrollToTop from "src/utils/hooks/useScrollToTop";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -45,6 +46,7 @@ export const Header = ({
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
 
+  useScrollToTop();
   const scrollDirection = useScrollDirection();
 
   const links = filterLinks(navigation.main, linkID);
@@ -99,8 +101,8 @@ export const Header = ({
                 className={styles.logo}
                 scroll={false}
               />
-              {renderPageLinks(links, false, pathname)}
-              {renderPageCTAs(ctas, false)}
+              <PageLinks links={links} isMobile={false} pathname={pathname} />
+              <PageCTAs ctas={ctas} isMobile={false} />
               <div className={styles.languageSwitcher}>
                 {defaultLanguage && (
                   <LanguageSwitcher
@@ -136,7 +138,11 @@ export const Header = ({
                 aria-label="Mobile Menu"
                 onClick={() => setIsOpen(false)}
               >
-                {renderPageLinks(sidebarLinks, true, pathname)}
+                <PageLinks
+                  links={sidebarLinks}
+                  isMobile={true}
+                  pathname={pathname}
+                />
                 <hr className={styles.divider} />
                 <div className={styles.mobileButtons}>
                   {defaultLanguage && (
@@ -182,39 +188,47 @@ export const Header = ({
   );
 };
 
-export const renderPageLinks = (
-  links: ILink[],
-  isMobile: boolean,
-  pathname: string,
-) => (
-  <ul className={isMobile ? styles.listMobile : styles.desktopLinks}>
-    {links?.map((link: ILink) => {
-      const linkUrl = getHref(link);
-      const isSelected = pathname === `${linkUrl}`;
-      return (
+function PageLinks({
+  links,
+  isMobile,
+  pathname,
+}: {
+  links: ILink[];
+  isMobile: boolean;
+  pathname: string;
+}) {
+  return (
+    <ul className={isMobile ? styles.listMobile : styles.desktopLinks}>
+      {links?.map((link: ILink) => {
+        const linkUrl = getHref(link);
+        const isSelected = pathname === `${linkUrl}`;
+        return (
+          <li key={link._key}>
+            <CustomLink
+              link={link}
+              type="headerLink"
+              isSelected={isSelected}
+              scroll={false}
+            />
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function PageCTAs({ ctas, isMobile }: { ctas: ILink[]; isMobile: boolean }) {
+  return (
+    <ul className={isMobile ? styles.listMobile : styles.desktopCtas}>
+      {ctas?.map((link: ILink, index) => (
         <li key={link._key}>
-          <CustomLink
+          <LinkButton
             link={link}
-            type="headerLink"
-            isSelected={isSelected}
-            scroll={false}
+            size="S"
+            type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
           />
         </li>
-      );
-    })}
-  </ul>
-);
-
-export const renderPageCTAs = (ctas: ILink[], isMobile: boolean) => (
-  <ul className={isMobile ? styles.listMobile : styles.desktopCtas}>
-    {ctas?.map((link: ILink, index) => (
-      <li key={link._key}>
-        <LinkButton
-          link={link}
-          size="S"
-          type={ctas.length < 2 || index === 1 ? "primary" : "secondary"}
-        />
-      </li>
-    ))}
-  </ul>
-);
+      ))}
+    </ul>
+  );
+}
