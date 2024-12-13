@@ -21,21 +21,23 @@ export default async function Compensations({
   language,
 }: CompensationsProps) {
   return (
-    <div className={styles.wrapper}>
-      <Text className={styles.text} type="h1">
-        {compensations.basicTitle}
-      </Text>
+    <div className={styles.outerWrapper}>
+      <div className={styles.wrapper}>
+        <Text className={styles.text} type="h1">
+          {compensations.basicTitle}
+        </Text>
 
-      <CompensationCalculator
-        section={compensations.compensationCalculator}
-        language={language}
-      />
+        <CompensationCalculator
+          section={compensations.compensationCalculator}
+          language={language}
+        />
 
-      <CompensationSelector
-        compensations={compensations}
-        locations={locations}
-        locale={locale}
-      />
+        <CompensationSelector
+          compensations={compensations}
+          locations={locations}
+          locale={locale}
+        />
+      </div>
     </div>
   );
 }

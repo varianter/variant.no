@@ -1,18 +1,25 @@
+.outerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: 10rem 5rem;
-  gap: 5rem;
-  justify-content: center;
+  gap: 3rem;
   width: 100%;
+  max-width: var(--max-content-width-large);
 }
 
 .text {
   max-width: var(--max-content-width-large);
-  align-self: center;
 }
 
 .compensationWrapper {
+  display: flex;
+  flex-direction: column;
   max-width: var(--max-content-width-large);
-  align-self: center;
+  gap: 2rem;
 }

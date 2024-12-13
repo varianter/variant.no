@@ -71,10 +71,10 @@ export default async function CompensationCalculator({
           )}
         </div>
         <Handbook
-          title={section.handbookBlock.handbookTitle}
-          description={section.handbookBlock.handbookDescription}
+          title={section.handbookBlock?.handbookTitle}
+          description={section.handbookBlock?.handbookDescription}
           language={language}
-          link={section.handbookBlock.handbookLink}
+          link={section.handbookBlock?.handbookLink}
           sectionBackground={section.background}
         />
       </div>

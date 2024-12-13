@@ -47,7 +47,8 @@
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
-    }
+    },
+    "no_compensation_data": "Whoops, the accounts seem to be on holiday. {city}, huh..."
   },
   "employee_card": {
     "show": "Showing",
