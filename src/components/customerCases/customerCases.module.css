@@ -25,7 +25,12 @@
   gap: 3rem;
 }
 
+.caseTextWrapper {
+  flex: 1;
+}
+
 .caseImageWrapper {
+  flex: 1;
   min-width: 20rem;
   max-width: 20rem;
   width: 20rem;
