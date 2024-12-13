@@ -28,6 +28,8 @@
   align-items: stretch;
   gap: 1rem;
 
+  min-height: 30rem;
+
   & > :first-child {
     flex: 1;
   }
