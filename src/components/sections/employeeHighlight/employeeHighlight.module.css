@@ -9,8 +9,6 @@
 
   @media (max-width: 834px) {
     flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 }
 
@@ -25,6 +23,7 @@
 
   @media (max-width: 834px) {
     max-width: 60%;
+    margin: auto;
   }
 }
 
