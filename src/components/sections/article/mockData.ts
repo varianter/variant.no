@@ -1,9 +1,9 @@
 import { PortableTextBlock } from "sanity";
 
 import placeholder from "src/stories/assets/image-placeholder.png";
+import { ImageAlignment } from "studio/lib/interfaces/media";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import { ArticleSection } from "studio/lib/interfaces/pages";
-import { ImageAlignment } from "studio/schemas/fields/media";
 
 const commonRichText: PortableTextBlock[] = [
   {

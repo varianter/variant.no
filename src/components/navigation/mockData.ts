@@ -8,9 +8,9 @@ import {
   SectionType,
 } from "studio/lib/interfaces/navigation";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
-import { callToActionFieldID } from "studio/schemas/fields/callToActionFields";
-import { linkID } from "studio/schemas/objects/link";
 
+const callToActionFieldID = "callToActionField";
+const linkID = "link";
 // Mock Navigation Data
 export const mockNavigation: Navigation = {
   _id: "main-navigation",

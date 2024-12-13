@@ -15,11 +15,11 @@ import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
 import {
-  SeoData,
   generateMetadataFromSeo,
   seoDataFromChewbaccaEmployee,
   seoDataFromCustomerCase,
 } from "src/utils/seo";
+import { SeoData } from "studio/lib/interfaces/seo";
 
 export const dynamic = "force-dynamic";
 

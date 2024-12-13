@@ -2,17 +2,8 @@ import { StringInputProps, defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { ImageAlignment } from "studio/lib/interfaces/media";
 import { firstTranslation } from "studio/utils/i18n";
-
-export enum ImageAlignment {
-  Left = "left",
-  Right = "right",
-}
-
-export enum ImageSize {
-  Large = "large",
-  Small = "small",
-}
 
 const alignmentOptions = [
   { title: "Left", value: ImageAlignment.Left },

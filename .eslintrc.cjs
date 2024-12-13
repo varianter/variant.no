@@ -35,7 +35,7 @@ module.exports = {
       {
         mode: "full",
         type: "schema",
-        pattern: ["studioShared/schema/**/*", "studio/schema/**/*"],
+        pattern: ["studioShared/schemas/**/*", "studio/schemas/**/*"],
       },
       {
         mode: "full",
@@ -53,12 +53,12 @@ module.exports = {
       {
         mode: "full",
         type: "studioComponents",
-        pattern: ["studio/components/**/*", "sharedStudio/components/**/*"],
+        pattern: ["studio/components/**/*", "studioShared/components/**/*"],
       },
       {
         mode: "full",
         type: "studioLib",
-        pattern: ["studio/lib/**/*", "sharedStudio/lib/**/*"],
+        pattern: ["studio/lib/**/*", "studioShared/lib/**/*"],
       },
     ],
   },
@@ -79,7 +79,7 @@ module.exports = {
         rules: [
           {
             from: ["schema"],
-            allow: ["schema", "studioComponents"],
+            allow: ["schema", "studioComponents", "studioLib"],
           },
           {
             from: ["studioComponents"],
@@ -88,7 +88,7 @@ module.exports = {
           {
             from: ["studioLib"],
             allow: ["studioLib"],
-            disallow: ["schema", "studioComponents"],
+            disallow: ["schema", "studioComponents", "app"],
           },
           {
             from: ["app"],
