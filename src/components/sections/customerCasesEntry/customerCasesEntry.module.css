@@ -1,3 +1,7 @@
+.firstWrapper {
+  padding-top: 5rem;
+}
+
 .container {
   container-type: inline-size;
   container-name: customer-case-container;

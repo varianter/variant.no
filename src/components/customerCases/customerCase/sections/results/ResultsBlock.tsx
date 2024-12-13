@@ -38,7 +38,7 @@ function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
           {section.quote?.map((quote) => (
             <div className={styles.highlightCard} key={quote._key}>
               <div className={styles.innerContent}>
-                <Text type="h2">{quote.quoteText}</Text>
+                <Text type="h3">{quote.quoteText}</Text>
                 <p className={styles.subtitle}>{quote.quoteAuthor}</p>
               </div>
             </div>

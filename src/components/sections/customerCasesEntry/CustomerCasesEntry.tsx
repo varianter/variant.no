@@ -45,7 +45,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
 
   return (
     customerCaseResult && (
-      <>
+      <div className={styles.firstWrapper}>
         <div className={styles.titleWrapper}>
           <Text type="h3" className={styles.title}>
             {section.basicTitle}
@@ -56,7 +56,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
           language={language}
           customerCasePageSlug={customerCasePageSlug}
         />
-      </>
+      </div>
     )
   );
 }
