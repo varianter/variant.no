@@ -25,10 +25,8 @@
 .content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 1rem;
-
-  height: 30rem;
 
   & > :first-child {
     flex: 1;
@@ -40,7 +38,7 @@
 
   & > :first-child,
   & > :last-child {
-    height: 100%;
+    height: unset;
   }
 
   @media (max-width: 768px) {
