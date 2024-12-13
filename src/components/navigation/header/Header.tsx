@@ -11,6 +11,7 @@ import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
+import useScrollToTop from "src/utils/hooks/useScrollToTop";
 import { getHref } from "src/utils/link";
 import { Announcement } from "studio/lib/interfaces/announcement";
 import { BrandAssets } from "studio/lib/interfaces/brandAssets";
@@ -45,6 +46,7 @@ export const Header = ({
   const [isOpen, setIsOpen] = useState(false);
   const sidebarData = navigation.sidebar || navigation.main;
 
+  useScrollToTop();
   const scrollDirection = useScrollDirection();
 
   const links = filterLinks(navigation.main, linkID);
