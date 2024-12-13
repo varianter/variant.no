@@ -1,8 +1,9 @@
 import { InlineIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
+import { isSanityKeyTypeObject } from "studio/lib/interfaces/global";
 import { humanizeCamelCase } from "studio/utils/stringUtils";
-import { isSplitSectionSections } from "studioShared/lib/interfaces/splitSection";
+import { SplitSectionSection } from "studioShared/lib/interfaces/splitSection";
 
 import emptySection from "./emptySection";
 import imageBlock from "./imageBlock";
@@ -43,5 +44,18 @@ const splitSection = defineField({
     },
   },
 });
+
+function isSplitSectionSections(
+  value: unknown,
+): value is SplitSectionSection[] {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (item) =>
+        isSanityKeyTypeObject(item) &&
+        splitSectionSections.some((s) => s.name === item._type),
+    )
+  );
+}
 
 export default splitSection;

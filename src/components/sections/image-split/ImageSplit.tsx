@@ -4,8 +4,8 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text, { TextType } from "src/components/text/Text";
 import { cnIf } from "src/utils/css";
+import { ImageAlignment } from "studio/lib/interfaces/media";
 import { ImageSplitSection } from "studio/lib/interfaces/pages";
-import { ImageAlignment } from "studio/schemas/fields/media";
 
 import styles from "./image-split.module.css";
 

@@ -1,6 +1,14 @@
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
-import { ImageAlignment } from "studio/schemas/fields/media";
+export enum ImageAlignment {
+  Left = "left",
+  Right = "right",
+}
+
+export enum ImageSize {
+  Large = "large",
+  Small = "small",
+}
 
 interface IHotspot {
   x: number;

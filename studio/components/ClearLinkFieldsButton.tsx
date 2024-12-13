@@ -4,7 +4,8 @@ import { Button } from "@sanity/ui";
 import { useFormValue } from "sanity";
 
 import { client } from "studio/lib/client";
-import { linkID } from "studio/schemas/objects/link";
+
+const linkID = "link";
 
 interface ClearLinkFieldsButtonProps {
   path: Array<string | { _key: string }>;
