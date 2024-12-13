@@ -1,4 +1,4 @@
-import { SeoData } from "src/utils/seo";
+import { SeoData } from "./seo";
 
 export interface CustomerCasePage {
   _createdAt: string;

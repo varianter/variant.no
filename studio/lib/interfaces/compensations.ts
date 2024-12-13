@@ -1,9 +1,8 @@
 import { PortableTextBlock, Reference } from "sanity";
 
-import { SeoData } from "src/utils/seo";
-
 import { ILink } from "./navigation";
 import { CompensationCalculatorSection } from "./pages";
+import { SeoData } from "./seo";
 
 export interface Benefit {
   _type: string;

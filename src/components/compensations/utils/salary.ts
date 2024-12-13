@@ -1,7 +1,3 @@
-import {
-  Salaries,
-  isSalariesType,
-} from "studio/components/salariesInput/utils/parseSalaries";
 import { SalariesByLocation } from "studio/lib/interfaces/compensations";
 import { Result, ResultError, ResultOk } from "studio/utils/result";
 
@@ -68,4 +64,18 @@ export function salariesFromLocation(
     return ResultError("Parsed salaries data was not valid");
   }
   return ResultOk(parsedSalaries);
+}
+
+interface Salaries {
+  [year: string]: number;
+}
+
+function isSalariesType(value: unknown): value is Salaries {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    Object.entries(value).every(
+      ([k, v]) => !isNaN(Number(k)) && typeof v === "number",
+    )
+  );
 }
