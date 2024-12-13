@@ -50,7 +50,11 @@ export const Tag = ({
 
   if (props.type === "button") {
     return (
-      <button className={className} onClick={props.onClick}>
+      <button
+        className={className}
+        style={{ cursor: "pointer" }}
+        onClick={props.onClick}
+      >
         <Text type="labelRegular">{text}</Text>
       </button>
     );
