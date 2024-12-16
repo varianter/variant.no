@@ -1,5 +1,4 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import {
@@ -25,19 +24,19 @@ export default function CompensationSelector({
   locations,
   locale,
 }: CompensationsProps) {
-  const t = useTranslations("compensation_calculator");
+  const hasBenefits = (id: string) =>
+    compensations.benefitsByLocation.some((b) => b.location._ref === id);
+
+  const locationOptions: IOption[] = locations
+    .map((companyLocation) => ({
+      id: companyLocation._id,
+      label: companyLocation.companyLocationName,
+    }))
+    .filter((l) => hasBenefits(l.id));
 
   const [selectedLocation, setSelectedLocation] = useState<string>(
-    locations[0]._id,
+    locationOptions[0]?.id,
   );
-  const [selectedLocationLabel, setSelectedLocationLabel] = useState<string>(
-    locations[0].companyLocationName,
-  );
-
-  const locationOptions: IOption[] = locations.map((companyLocation) => ({
-    id: companyLocation._id,
-    label: companyLocation.companyLocationName,
-  }));
 
   const benefitsFilteredByLocation =
     compensations.benefitsByLocation.find(
@@ -57,20 +56,13 @@ export default function CompensationSelector({
         selectedId={selectedLocation}
         onValueChange={(option) => {
           setSelectedLocation(option.id);
-          setSelectedLocationLabel(option.label);
         }}
       />
 
       {yearlyBonusesForLocation && (
         <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
       )}
-      {benefitsFilteredByLocation.length > 0 ? (
-        <BenefitsByLocation benefits={benefitsFilteredByLocation} />
-      ) : (
-        <span>
-          {t("no_compensation_data", { city: selectedLocationLabel })}
-        </span>
-      )}
+      <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>
   );
 }

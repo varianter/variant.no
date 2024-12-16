@@ -44,8 +44,7 @@
       "bachelor": "Bachelor",
       "master": "Master"
     },
-    "test": "test",
-    "no_compensation_data": "Woops, regnskapet er på avveie. {city} altså..."
+    "test": "test"
   },
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
