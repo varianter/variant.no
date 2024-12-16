@@ -43,8 +43,7 @@
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
-    },
-    "no_compensation_data": "Hoppsan, bokföringen är på villovägar. {city} alltså..."
+    }
   },
   "custom_link": {
     "visit_cv": "Besök mini-CV",

@@ -1,5 +1,4 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import {
@@ -25,8 +24,6 @@ export default function CompensationSelector({
   locations,
   locale,
 }: CompensationsProps) {
-  const t = useTranslations("compensation_calculator");
-
   const hasBenefits = (id: string) =>
     compensations.benefitsByLocation.some((b) => b.location._ref === id);
 
@@ -39,9 +36,6 @@ export default function CompensationSelector({
 
   const [selectedLocation, setSelectedLocation] = useState<string>(
     locationOptions[0]?.id,
-  );
-  const [selectedLocationLabel, setSelectedLocationLabel] = useState<string>(
-    locationOptions[0]?.label,
   );
 
   const benefitsFilteredByLocation =
@@ -62,20 +56,13 @@ export default function CompensationSelector({
         selectedId={selectedLocation}
         onValueChange={(option) => {
           setSelectedLocation(option.id);
-          setSelectedLocationLabel(option.label);
         }}
       />
 
       {yearlyBonusesForLocation && (
         <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
       )}
-      {benefitsFilteredByLocation.length > 0 ? (
-        <BenefitsByLocation benefits={benefitsFilteredByLocation} />
-      ) : (
-        <span>
-          {t("no_compensation_data", { city: selectedLocationLabel })}
-        </span>
-      )}
+      <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>
   );
 }
