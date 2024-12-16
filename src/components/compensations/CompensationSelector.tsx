@@ -27,17 +27,22 @@ export default function CompensationSelector({
 }: CompensationsProps) {
   const t = useTranslations("compensation_calculator");
 
+  const hasBenefits = (id: string) =>
+    compensations.benefitsByLocation.some((b) => b.location._ref === id);
+
+  const locationOptions: IOption[] = locations
+    .map((companyLocation) => ({
+      id: companyLocation._id,
+      label: companyLocation.companyLocationName,
+    }))
+    .filter((l) => hasBenefits(l.id));
+
   const [selectedLocation, setSelectedLocation] = useState<string>(
-    locations[0]._id,
+    locationOptions[0]?.id,
   );
   const [selectedLocationLabel, setSelectedLocationLabel] = useState<string>(
-    locations[0].companyLocationName,
+    locationOptions[0]?.label,
   );
-
-  const locationOptions: IOption[] = locations.map((companyLocation) => ({
-    id: companyLocation._id,
-    label: companyLocation.companyLocationName,
-  }));
 
   const benefitsFilteredByLocation =
     compensations.benefitsByLocation.find(
