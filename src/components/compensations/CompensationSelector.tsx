@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import {
@@ -24,6 +25,8 @@ export default function CompensationSelector({
   locations,
   locale,
 }: CompensationsProps) {
+  const t = useTranslations("compensation");
+
   const hasBenefits = (id: string) =>
     compensations.benefitsByLocation.some((b) => b.location._ref === id);
 
@@ -51,7 +54,7 @@ export default function CompensationSelector({
     <div className={styles.compensationWrapper}>
       <RadioButtonGroup
         id="location-group"
-        label="Velg lokasjon"
+        label={t("bonus.location")}
         options={locationOptions}
         selectedId={selectedLocation}
         onValueChange={(option) => {

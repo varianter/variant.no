@@ -36,7 +36,7 @@
     "visit_cv": "Visit mini-CV",
     "read_more": "Read more"
   },
-  "compensation_calculator": {
+  "compensation": {
     "calculator": {
       "formLabel": "Salary calculator",
       "educationInput": "Education",
@@ -47,6 +47,12 @@
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
+    },
+    "bonus": {
+      "location": "Location",
+      "bonuses": "Bonuses",
+      "year": "Year",
+      "amount": "Amount"
     }
   },
   "employee_card": {

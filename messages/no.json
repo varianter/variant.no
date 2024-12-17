@@ -32,7 +32,7 @@
     "contact_sale": "Kontakt salg!",
     "contact_us": "Kontakt oss"
   },
-  "compensation_calculator": {
+  "compensation": {
     "calculator": {
       "formLabel": "Lønnskalkulator",
       "educationInput": "Utdanning",
@@ -44,7 +44,12 @@
       "bachelor": "Bachelor",
       "master": "Master"
     },
-    "test": "test"
+    "bonus": {
+      "location": "Lokasjon",
+      "bonuses": "Bonuser",
+      "year": "År",
+      "amount": "Beløp"
+    }
   },
   "custom_link": {
     "visit_cv": "Gå til mini-CV",
