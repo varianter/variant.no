@@ -25,9 +25,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/stories/Typography.mdx",
-    "src/stories/Colors/ColorBox"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
