@@ -1,4 +1,4 @@
-import { SanitySharedImage } from "src/components/image/SanityImage";
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { fetchEmployeesByEmails } from "src/utils/employees";
 import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
@@ -44,7 +44,7 @@ export default async function CustomerCase({
           />
         </div>
         <div className={styles.mainImageWrapper}>
-          <SanitySharedImage image={customerCase.image} />
+          <SanityImage image={customerCase.image} isShared />
           {customerCase.image.figureDescription && (
             <Text type="imageLabel">
               {customerCase.image.figureDescription}
