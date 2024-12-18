@@ -32,7 +32,7 @@ export default function Calculator({
   initialYear,
   background,
 }: CalculatorProps) {
-  const t = useTranslations("compensation_calculator");
+  const t = useTranslations("compensation");
   const locale = use(localeRes);
   const salaries = use(salariesRes);
   const [year, setYear] = useState(

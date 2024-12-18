@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import Text from "src/components/text/Text";
 import { formatAsCurrency } from "src/utils/i18n";
 import { BonusPage } from "studio/lib/interfaces/compensations";
@@ -11,17 +13,18 @@ interface YearlyBonusesProps {
 }
 
 const YearlyBonuses = ({ bonuses, locale }: YearlyBonusesProps) => {
+  const t = useTranslations("compensation");
   return (
     <div className={styles.wrapper}>
-      <Text type={"h3"}>Historisk bonus</Text>
+      <Text type={"h3"}>{t("bonus.bonuses")}</Text>
       <table className={styles.table}>
         <thead>
           <tr>
             <th>
-              <Text>År</Text>
+              <Text type="h5">{t("bonus.year")}</Text>
             </th>
             <th className={styles.bonusHeader}>
-              <Text>Beløp</Text>
+              <Text type="h5">{t("bonus.amount")}</Text>
             </th>
           </tr>
         </thead>

@@ -32,7 +32,7 @@
     "contact_sale": "Kontakta sälj!",
     "contact_us": "Kontakt oss"
   },
-  "compensation_calculator": {
+  "compensation": {
     "calculator": {
       "formLabel": "Lönskalkulator",
       "educationInput": "Utbildning",
@@ -43,6 +43,12 @@
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
+    },
+    "bonus": {
+      "location": "Kontor",
+      "bonuses": "Tidigare bonusar",
+      "year": "År",
+      "amount": "Belopp"
     }
   },
   "custom_link": {
