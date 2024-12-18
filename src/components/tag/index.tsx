@@ -54,6 +54,7 @@ export const Tag = ({
         className={className}
         style={{ cursor: "pointer" }}
         onClick={props.onClick}
+        {...props}
       >
         <Text type="labelRegular">{text}</Text>
       </button>
