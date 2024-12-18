@@ -56,7 +56,7 @@ export default async function Layout({
     initialSoMe,
     initialLegal,
     initialCompanyLocations,
-    initialColorPallette,
+    initialColorPalette,
   ] = await Promise.all([
     loadStudioQuery<Navigation>(
       NAV_QUERY,
