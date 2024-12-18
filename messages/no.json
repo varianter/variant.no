@@ -46,7 +46,7 @@
     },
     "bonus": {
       "location": "Lokasjon",
-      "bonuses": "Bonuser",
+      "bonuses": "Tidligere bonuser",
       "year": "År",
       "amount": "Beløp"
     }

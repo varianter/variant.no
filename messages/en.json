@@ -50,7 +50,7 @@
     },
     "bonus": {
       "location": "Location",
-      "bonuses": "Bonuses",
+      "bonuses": "Previous bonuses",
       "year": "Year",
       "amount": "Amount"
     }
