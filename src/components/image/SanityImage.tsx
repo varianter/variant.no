@@ -29,8 +29,12 @@ const useNextSanityGlobalImage = (
     useState<UseNextSanityImageProps | null>(null);
 
   useEffect(() => {
-    fetch(studioImage.src).then((r) => r.ok && setGlobalImage(studioImage));
-    fetch(sharedImage.src).then((r) => r.ok && setGlobalImage(sharedImage));
+    if (studioImage) {
+      fetch(studioImage.src).then((r) => r.ok && setGlobalImage(studioImage));
+    }
+    if (sharedImage) {
+      fetch(sharedImage.src).then((r) => r.ok && setGlobalImage(sharedImage));
+    }
   }, [studioImage, sharedImage]);
 
   return globalImage;
