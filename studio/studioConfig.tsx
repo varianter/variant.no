@@ -1,3 +1,4 @@
+import { colorInput } from "@sanity/color-input";
 import { documentInternationalization } from "@sanity/document-internationalization";
 import { visionTool } from "@sanity/vision";
 import { WorkspaceOptions } from "sanity";
@@ -55,6 +56,7 @@ const config: WorkspaceOptions = {
       },
     }),
     media(),
+    colorInput(),
   ],
 };
 

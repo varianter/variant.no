@@ -225,4 +225,10 @@ export interface PageBuilder {
   sections: Section[];
   slug: Slug;
   seo: SeoData;
+  footerWidgetColor?: string;
+}
+
+export interface ColorPalette {
+  footerWidgetColor: string;
+  slug: string;
 }
