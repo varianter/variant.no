@@ -16,7 +16,7 @@
     "@sanity/document-internationalization": "^3.0.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^1.6.11",
-    "@sanity/react-loader": "^1.10.7",
+    "@sanity/react-loader": "^1.10.30",
     "@sanity/vision": "^3.39.1",
     "husky": "^9.1.7",
     "negotiator": "^0.6.3",
