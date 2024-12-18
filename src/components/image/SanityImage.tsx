@@ -30,10 +30,14 @@ const useNextSanityGlobalImage = (
 
   useEffect(() => {
     if (studioImage) {
-      fetch(studioImage.src).then((r) => r.ok && setGlobalImage(studioImage));
+      fetch(studioImage.src, {
+        method: "HEAD",
+      }).then((r) => r.ok && setGlobalImage(studioImage));
     }
     if (sharedImage) {
-      fetch(sharedImage.src).then((r) => r.ok && setGlobalImage(sharedImage));
+      fetch(sharedImage.src, {
+        method: "HEAD",
+      }).then((r) => r.ok && setGlobalImage(sharedImage));
     }
   }, [studioImage, sharedImage]);
 
