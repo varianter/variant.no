@@ -57,7 +57,7 @@ export default function FooterPreview({
     COMPANY_LOCATIONS_QUERY,
     initialCompanyLocations,
   );
-  const newFooterColorPallette = useInitialData(
+  const newFooterColorPalette = useInitialData(
     FOOTER_COLOR_QUERY,
     initialFooterColor,
   );
@@ -73,14 +73,14 @@ export default function FooterPreview({
     newSoMedata &&
     newLegal &&
     newCompanyLocations &&
-    newFooterColorPallette && (
+    newFooterColorPalette && (
       <Footer
         navigationData={newNav}
         companyInfo={newCompanyInfo}
         companyLocations={newCompanyLocations}
         soMeData={newSoMedata}
         legalData={newLegal}
-        footerColorPalette={newFooterColorPallette}
+        footerColorPalette={newFooterColorPalette}
       />
     )
   );

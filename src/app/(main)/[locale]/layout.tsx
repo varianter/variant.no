@@ -98,7 +98,7 @@ export default async function Layout({
             companyInfo={initialCompanyInfo.data}
             companyLocations={initialCompanyLocations.data}
             soMeData={initialSoMe.data}
-            footerColorPalette={initialColorPallette.data}
+            footerColorPalette={initialColorPalette.data}
           />
         </NextIntlClientProvider>
 
