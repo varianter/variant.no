@@ -65,6 +65,13 @@ const pageBuilder = defineType({
         learningSection,
       ],
     }),
+    defineField({
+      name: "footerWidgetColor",
+      type: "color",
+      title: "Footer Widget Color",
+      description: "This color will be used for the widgets in the footer.",
+      options: { disableAlpha: true },
+    }),
   ],
   preview: {
     select: {

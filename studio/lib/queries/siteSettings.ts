@@ -67,6 +67,14 @@ export const EMPLOYEE_PAGE_SLUG_AND_TITLE_QUERY = groq`
   }
 `;
 
+//Color Palette Query
+export const FOOTER_COLOR_QUERY = groq`
+  *[_type == "pageBuilder"]{
+    "footerWidgetColor": footerWidgetColor.hex,
+    "slug": ${translatedFieldFragment("slug")}
+    }
+`;
+
 //Social Media Profiles
 export const SOME_PROFILES_QUERY = groq`
   *[_type == "soMeLinksID" && _id == "soMeLinksID"][0]
