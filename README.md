@@ -32,7 +32,6 @@
 ## Key Features
 
 - **CMS-Driven Content Management:** Pages are dynamically constructed using content blocks defined in Sanity. This CMS-like approach enables content creators to manage all aspects of the site, from page content to menus and SEO, without touching the codebase.
-- **Storybook Integration:** Storybook enables isolated component development and testing. This allows for the visual verification of UI components, ensuring design consistency and usability across the application.
 - **Scoped Styling with CSS Modules:** CSS Modules are used for local scoping of styles, preventing naming conflicts and making it easier to maintain and scale the styling of components.
 - **Universal Content Control:** Manage everything from a single location in Sanity—menus, SEO settings, logos and pages—offering a unified content management experience.
 - **Custom Theming and Typography:** Global styles such as colors are managed in global.css, while typography is primarily controlled within Text.tsx, ensuring a consistent design language throughout the application.
@@ -112,7 +111,6 @@ The project follows a component-based architecture with a focus on modularity an
 - **src/components:** Houses reusable UI components, such as buttons, forms, navigation elements, and content sections. These components are the building blocks for pages.
 - **src/lib:** Utility functions, data-fetching logic, and other shared code that supports the application’s functionality.
 - **src/schemas:** Sanity content models (schemas) defining the structure of the content stored in the CMS.
-- **src/stories:** Contains Storybook stories for the UI components, used for visual testing and component documentation.
 
 ## Custom Desk Structure
 
@@ -280,10 +278,6 @@ background: url("data:image/png;base64,...");
 
 Sanity Preview, or Presentation, is not yet fully supported in this project. Bugs and instabilities should be expected.
 
-### Testing
-
-- Storybook Accessibility Testing: Storybook is set up with accessibility (a11y) testing tools, but you’ll need to add tests to each story manually.
-
 ## Key Dependencies
 
 - [Next.js](https://nextjs.org/): React framework for building server-rendered and statically-generated web applications.
@@ -298,7 +292,6 @@ Sanity Preview, or Presentation, is not yet fully supported in this project. Bug
 
 - [Next.js Documentation](https://nextjs.org/docs) - Learn more about the Next.js framework.
 - [Sanity Documentation](https://www.sanity.io/docs) - Explore Sanity’s powerful CMS features.
-- [Storybook Documentation](https://storybook.js.org/docs) - Get started with component-driven development.
 - [Sanity Slack Community](https://slack.sanity.io) - Join the community for support and collaboration.
 
 ## Credits

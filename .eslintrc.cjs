@@ -6,7 +6,6 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
     // "plugin:@typescript-eslint/recommended-type-checked",  // TODO
     // "plugin:@typescript-eslint/stylistic-type-checked",  // TODO
@@ -44,7 +43,6 @@ module.exports = {
           "src/app/**/*",
           "src/components/**/*",
           "src/i18n/**/*",
-          "src/stories/**/*",
           "src/middlewares/**/*",
           "src/types/**/*",
           "src/utils/**/*",
