@@ -1,9 +1,10 @@
 "use client";
 
-import { use, useState } from "react";
+import { use } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
+import useTabs from "src/utils/hooks/useTabs";
 
 import styles from "./contact-box.module.css";
 import { EmployeeAndMetadata } from "./types";
@@ -22,10 +23,7 @@ export default function ContactSelector({
   background = "dark",
 }: ContactSelectorProps) {
   const contactPoints = use(contactPointsPromise);
-
-  const [selectedTag, setSelectedTag] = useState<string | null>(
-    contactPoints[0]?.tagSlug,
-  );
+  const { tabListRef, selectedTabIndex } = useTabs();
 
   if (!contactPoints.length) {
     return null;
@@ -33,30 +31,32 @@ export default function ContactSelector({
 
   return (
     <div className={styles.contactSelector}>
-      <div className={styles.tagList} role="tablist">
-        {contactPoints.map((contactPoint) => (
-          <Tag
-            key={contactPoint.tagSlug}
-            type="button"
-            role="tab"
-            background={background}
-            aria-selected={selectedTag === contactPoint.tagSlug}
-            aria-controls={`panel-${contactPoint.tagSlug}`}
-            id={`tab-${contactPoint.tagSlug}`}
-            active={selectedTag === contactPoint.tagSlug}
-            onClick={() => setSelectedTag(contactPoint.tagSlug)}
-            text={contactPoint.tag}
-          />
+      <ul className={styles.tagList} role="tablist" ref={tabListRef}>
+        {contactPoints.map((contactPoint, index) => (
+          <li key={contactPoint.tagSlug}>
+            <Tag
+              type="button"
+              role="tab"
+              background={background}
+              aria-selected={selectedTabIndex === index}
+              aria-controls={`panel-${contactPoint.tagSlug}`}
+              id={`tab-${contactPoint.tagSlug}`}
+              active={selectedTabIndex === index}
+              text={contactPoint.tag}
+              tabIndex={selectedTabIndex === index ? 0 : -1}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
       <div className={styles.employeeCard}>
-        {contactPoints.map((contactPoint) => (
+        {contactPoints.map((contactPoint, index) => (
           <div
             key={contactPoint.tagSlug}
             role="tabpanel"
             id={`panel-${contactPoint.tagSlug}`}
             aria-labelledby={`tab-${contactPoint.tagSlug}`}
-            hidden={selectedTag !== contactPoint.tagSlug}
+            hidden={selectedTabIndex !== index}
+            tabIndex={selectedTabIndex === index ? 0 : -1}
           >
             <EmployeeCard
               employee={contactPoint.employee}

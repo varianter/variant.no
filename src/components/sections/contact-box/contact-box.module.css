@@ -61,6 +61,11 @@
 
   align-items: flex-start;
   min-width: 120px;
+  margin: 0;
+  padding: 0;
+}
+.tagList li {
+  list-style: none;
 }
 
 .employeeCard {
