@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
-import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
@@ -30,11 +30,12 @@ export default async function EmployeePage({
           <div className={styles.employee}>
             {image != null && (
               <div className={styles.employeeImage}>
-                <SanityImage
-                  image={{
-                    src: { src: image },
-                    alt: employee.name,
-                  }}
+                <Image
+                  src={image}
+                  alt={employee.name}
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover", height: "100%", width: "100%" }}
                 />
               </div>
             )}
