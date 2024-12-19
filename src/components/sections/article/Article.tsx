@@ -14,7 +14,7 @@ export default function Article({ article }: ArticleProps) {
   return (
     <article className={styles.wrapper} id={article._key}>
       <div className={styles.article}>
-        {hasImage(article) && (
+        {article.imageExtended && (
           <div className={styles.image}>
             <SanityImage image={article.imageExtended} />
           </div>
@@ -30,8 +30,4 @@ export default function Article({ article }: ArticleProps) {
       </div>
     </article>
   );
-}
-
-function hasImage(article: ArticleSection) {
-  return Boolean(article?.imageExtended?.src || article?.imageExtended?.asset);
 }
