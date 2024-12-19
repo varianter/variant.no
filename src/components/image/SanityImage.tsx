@@ -1,27 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { UseNextSanityImageProps, useNextSanityImage } from "next-sanity-image";
+import { useNextSanityImage } from "next-sanity-image";
 
 import { client } from "studio/lib/client";
 import { IImage } from "studio/lib/interfaces/media";
 import { sharedClient } from "studioShared/lib/client";
 
-const SanityAssetImage = ({
+export function SanityImage({
   image,
-  imageProps,
   objectFit = "cover",
+  isShared = false,
 }: {
   image: IImage;
-  imageProps?: UseNextSanityImageProps;
   objectFit?: "cover" | "none";
-}) => {
+  isShared?: boolean;
+}) {
+  const sanityClient = isShared ? sharedClient : client;
+  const imageProps = useNextSanityImage(sanityClient, image);
   const objectPosition = image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
     : "50% 50%"; // Default to center if no hotspot is defined
+
   if (!imageProps) {
     return null;
   }
+
   return (
     <Image
       alt={image?.alt || ""}
@@ -39,26 +43,6 @@ const SanityAssetImage = ({
               maxHeight: "100%",
             }
       }
-    />
-  );
-};
-
-export function SanityImage({
-  image,
-  objectFit = "cover",
-  isShared = false,
-}: {
-  image: IImage;
-  objectFit?: "cover" | "none";
-  isShared?: boolean;
-}) {
-  const sanityClient = isShared ? sharedClient : client;
-  const imageProps = useNextSanityImage(sanityClient, image);
-  return (
-    <SanityAssetImage
-      image={image}
-      imageProps={imageProps}
-      objectFit={objectFit}
     />
   );
 }
