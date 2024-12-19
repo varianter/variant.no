@@ -1,7 +1,7 @@
 import { headers } from "next/headers";
 import Link from "next/link";
 
-import { SanitySharedImage } from "src/components/image/SanityImage";
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { domainFromHostname } from "src/utils/url";
@@ -37,7 +37,7 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
           sharedCustomerCases.data.map((customerCase) => (
             <div key={customerCase._id} className={styles.caseWrapper}>
               <div className={styles.caseImageWrapper}>
-                <SanitySharedImage image={customerCase.image} />
+                <SanityImage image={customerCase.image} isShared />
               </div>
               <div className={styles.caseTextWrapper}>
                 <Link href={`${customerCasesPage.slug}/${customerCase.slug}`}>

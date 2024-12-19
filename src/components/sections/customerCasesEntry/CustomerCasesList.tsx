@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-import { SanitySharedImage } from "src/components/image/SanityImage";
+import { SanityImage } from "src/components/image/SanityImage";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
@@ -61,7 +61,7 @@ const CustomerCaseList = ({
             title={selectedCustomerCase.basicTitle}
           >
             {selectedCustomerCase.image && (
-              <SanitySharedImage image={selectedCustomerCase.image} />
+              <SanityImage image={selectedCustomerCase.image} isShared />
             )}
           </Link>
         </div>

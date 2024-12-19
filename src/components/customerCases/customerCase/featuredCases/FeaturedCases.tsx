@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { SanitySharedImage } from "src/components/image/SanityImage";
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { CustomerCaseBase } from "studioShared/lib/interfaces/customerCases";
 
@@ -29,7 +29,7 @@ export default function FeaturedCases({
                 href={`/${[...customerCasesPath, featuredCase.slug].join("/")}`}
               >
                 <div className={styles.caseImageWrapper}>
-                  <SanitySharedImage image={featuredCase.image} />
+                  <SanityImage image={featuredCase.image} isShared />
                 </div>
                 <div>
                   <Text type={"bodyBig"}>{featuredCase.basicTitle}</Text>

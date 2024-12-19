@@ -1,4 +1,4 @@
-import { SanitySharedImage } from "src/components/image/SanityImage";
+import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { ImageBlock } from "studioShared/lib/interfaces/imageBlock";
 
@@ -15,7 +15,7 @@ export default function ImageSection({ section }: ImageSectionProps) {
         className={`${styles.content}${section.fullWidth ? ` ${styles.fullWidth}` : ""}`}
       >
         <div className={styles.imageContent}>
-          <SanitySharedImage image={section.image} />
+          <SanityImage image={section.image} isShared />
           {section.image.figureDescription && (
             <Text type="imageLabel">{section.image.figureDescription}</Text>
           )}
