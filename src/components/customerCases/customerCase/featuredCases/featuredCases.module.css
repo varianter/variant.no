@@ -30,9 +30,17 @@
 .caseImageWrapper img {
   border-radius: 1.5rem;
   transition: all 0.3s ease;
+  opacity: 0.8;
   width: 100%;
 
   &:hover {
+    opacity: 1;
     border-radius: 0.375rem;
   }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
