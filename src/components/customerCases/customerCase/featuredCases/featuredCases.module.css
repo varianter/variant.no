@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-s);
+  gap: var(--padding-rem);
   margin: 4rem auto;
   width: 100%;
   max-width: var(--max-content-width-medium);
@@ -28,11 +28,19 @@
 }
 
 .caseImageWrapper img {
-  border-radius: 1.5rem;
+  border-radius: 0.375rem;
   transition: all 0.3s ease;
+  opacity: 0.8;
   width: 100%;
 
   &:hover {
-    border-radius: 0.375rem;
+    opacity: 1;
+    border-radius: 1.5rem;
   }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }

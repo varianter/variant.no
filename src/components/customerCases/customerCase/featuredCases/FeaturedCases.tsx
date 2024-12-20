@@ -21,7 +21,7 @@ export default function FeaturedCases({
   return (
     featuredCases.length > 0 && (
       <div className={styles.wrapper}>
-        <Text type={"h3"}>{t("featured_cases.projects")}</Text>
+        <Text type={"h2"}>{t("featured_cases.projects")}</Text>
         <div className={styles.content}>
           {featuredCases.map((featuredCase) => (
             <Link
@@ -32,8 +32,10 @@ export default function FeaturedCases({
               <div className={styles.caseImageWrapper}>
                 <SanityImage image={featuredCase.image} isShared />
               </div>
-              <Text type={"h4"}>{featuredCase.basicTitle}</Text>
-              <Text type={"bodySmall"}>{featuredCase.description}</Text>
+              <div className={styles.textContent}>
+                <Text type={"h4"}>{featuredCase.basicTitle}</Text>
+                <Text type={"bodySmall"}>{featuredCase.description}</Text>
+              </div>
             </Link>
           ))}
         </div>
