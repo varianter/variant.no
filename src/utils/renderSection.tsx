@@ -2,10 +2,6 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
-import Callout from "src/components/sections/callout/Callout";
-import CalloutPreview from "src/components/sections/callout/CalloutPreview";
-import CallToAction from "src/components/sections/callToAction/CallToAction";
-import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -25,13 +21,9 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
-import { Testimonials } from "src/components/sections/testimonials/Testimonials";
-import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
-  CallToActionSection,
-  CalloutSection,
   CustomerCasesEntrySection,
   GridSection,
   HeroSection,
@@ -40,7 +32,6 @@ import {
   LogoSaladSection,
   PageBuilder,
   Section,
-  TestimonialsSection,
 } from "studio/lib/interfaces/pages";
 
 interface SectionRendererProps {
@@ -93,51 +84,6 @@ const renderArticleSection = (
     <ArticlePreview initialData={initialData} sectionIndex={sectionIndex} />
   ) : (
     <Article article={section} />
-  );
-};
-
-const renderCalloutSection = (
-  section: CalloutSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <CalloutPreview initialData={initialData} sectionIndex={sectionIndex} />
-  ) : (
-    <Callout callout={section} />
-  );
-};
-
-const renderCallToActionSection = (
-  section: CallToActionSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <CallToActionPreview
-      initialData={initialData}
-      sectionIndex={sectionIndex}
-    />
-  ) : (
-    <CallToAction callToAction={section} />
-  );
-};
-
-const renderTestimonialsSection = (
-  section: TestimonialsSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <TestimonialsPreview
-      initialData={initialData}
-      sectionIndex={sectionIndex}
-    />
-  ) : (
-    <Testimonials testimonials={section} />
   );
 };
 
@@ -230,27 +176,6 @@ const SectionRenderer = ({
       );
     case "article":
       return renderArticleSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "callout":
-      return renderCalloutSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "ctaSection":
-      return renderCallToActionSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "testimonials":
-      return renderTestimonialsSection(
         section,
         sectionIndex,
         isDraftMode,

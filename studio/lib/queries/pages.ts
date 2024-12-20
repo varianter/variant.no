@@ -26,13 +26,6 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
-    _type == "callout" => {
-      ...,
-      link {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
-    },
     _type == "imageSplitSection" => {
       ...,
       "content": content[]{
@@ -49,13 +42,6 @@ const SECTIONS_FRAGMENT = groq`
       _type == "imageSection" => {
       ...,
         "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
-    },
-    _type == "ctaSection" => {
-      ...,
-      callToActions[] {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
     },
     _type == "compensationCalculator" => {
       ...,

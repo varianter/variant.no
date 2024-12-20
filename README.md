@@ -42,7 +42,7 @@ In addition to the primary Sanity Studio (accessible at http://localhost:3000/st
 
 ### Features of Shared Studio
 
-- Customer Cases: Customer Cases is another content type available in the Shared Studio, enabling you to showcase client stories or testimonials.
+- Customer Cases: Customer Cases is another content type available in the Shared Studio, enabling you to showcase client stories.
 
 Accessing Shared Studio
 
@@ -138,7 +138,7 @@ The `Company Information` menu allows you to configure global settings for your 
 ### Pages
 
 - **Creating Pages**: Content editors can create and manage pages under the `Pages` menu in the Sanity Studio.
-- **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, testimonials, features, callToAction, grid, and callout.
+- **Adding Sections**: Each page can be customized with structured content that includes various predefined sections such as hero, article, features and grid.
 
 ## Development
 
