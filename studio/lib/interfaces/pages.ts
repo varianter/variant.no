@@ -38,21 +38,6 @@ export interface CallToActionSection {
   callToActions?: ILink[];
 }
 
-export interface TestimonialsSection {
-  _type: "testimonials";
-  _key: string;
-  basicTitle?: string;
-  imagesAsCircles: boolean;
-  listOfTestimonials: {
-    _type: string;
-    _key: string;
-    image: IImage;
-    basicTitle: string;
-    subTitle: string;
-    richText: PortableTextBlock[];
-  }[];
-}
-
 export interface ImageSection {
   _type: "imageSection";
   _key: string;
@@ -191,7 +176,6 @@ export type Section =
   | LogoSaladSection
   | ArticleSection
   | CallToActionSection
-  | TestimonialsSection
   | ImageSection
   | ImageSplitSection
   | GridSection

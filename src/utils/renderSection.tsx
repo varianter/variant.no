@@ -23,8 +23,6 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
-import { Testimonials } from "src/components/sections/testimonials/Testimonials";
-import TestimonialsPreview from "src/components/sections/testimonials/TestimonialsPreview";
 import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
@@ -37,7 +35,6 @@ import {
   LogoSaladSection,
   PageBuilder,
   Section,
-  TestimonialsSection,
 } from "studio/lib/interfaces/pages";
 
 interface SectionRendererProps {
@@ -106,22 +103,6 @@ const renderCallToActionSection = (
     />
   ) : (
     <CallToAction callToAction={section} />
-  );
-};
-
-const renderTestimonialsSection = (
-  section: TestimonialsSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <TestimonialsPreview
-      initialData={initialData}
-      sectionIndex={sectionIndex}
-    />
-  ) : (
-    <Testimonials testimonials={section} />
   );
 };
 
@@ -221,13 +202,6 @@ const SectionRenderer = ({
       );
     case "ctaSection":
       return renderCallToActionSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "testimonials":
-      return renderTestimonialsSection(
         section,
         sectionIndex,
         isDraftMode,
