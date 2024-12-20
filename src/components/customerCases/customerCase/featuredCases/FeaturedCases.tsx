@@ -24,19 +24,17 @@ export default function FeaturedCases({
         <Text type={"h3"}>{t("featured_cases.projects")}</Text>
         <div className={styles.content}>
           {featuredCases.map((featuredCase) => (
-            <div key={featuredCase._id} className={styles.caseWrapper}>
-              <Link
-                href={`/${[...customerCasesPath, featuredCase.slug].join("/")}`}
-              >
-                <div className={styles.caseImageWrapper}>
-                  <SanityImage image={featuredCase.image} isShared />
-                </div>
-                <div>
-                  <Text type={"bodyBig"}>{featuredCase.basicTitle}</Text>
-                  <Text type={"bodySmall"}>{featuredCase.description}</Text>
-                </div>
-              </Link>
-            </div>
+            <Link
+              href={`/${[...customerCasesPath, featuredCase.slug].join("/")}`}
+              className={styles.caseWrapper}
+              key={featuredCase._id}
+            >
+              <div className={styles.caseImageWrapper}>
+                <SanityImage image={featuredCase.image} isShared />
+              </div>
+              <Text type={"h4"}>{featuredCase.basicTitle}</Text>
+              <Text type={"bodySmall"}>{featuredCase.description}</Text>
+            </Link>
           ))}
         </div>
       </div>
