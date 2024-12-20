@@ -2,8 +2,6 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
-import Callout from "src/components/sections/callout/Callout";
-import CalloutPreview from "src/components/sections/callout/CalloutPreview";
 import CallToAction from "src/components/sections/callToAction/CallToAction";
 import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
@@ -31,7 +29,6 @@ import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
   CallToActionSection,
-  CalloutSection,
   CustomerCasesEntrySection,
   GridSection,
   HeroSection,
@@ -93,19 +90,6 @@ const renderArticleSection = (
     <ArticlePreview initialData={initialData} sectionIndex={sectionIndex} />
   ) : (
     <Article article={section} />
-  );
-};
-
-const renderCalloutSection = (
-  section: CalloutSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <CalloutPreview initialData={initialData} sectionIndex={sectionIndex} />
-  ) : (
-    <Callout callout={section} />
   );
 };
 
@@ -230,13 +214,6 @@ const SectionRenderer = ({
       );
     case "article":
       return renderArticleSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "callout":
-      return renderCalloutSection(
         section,
         sectionIndex,
         isDraftMode,

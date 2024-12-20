@@ -26,13 +26,6 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
-    _type == "callout" => {
-      ...,
-      link {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
-    },
     _type == "imageSplitSection" => {
       ...,
       "content": content[]{

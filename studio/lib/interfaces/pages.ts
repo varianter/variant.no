@@ -31,13 +31,6 @@ export interface ArticleSection {
   imageExtended: ImageExtendedProps;
 }
 
-export interface CalloutSection {
-  _type: "callout";
-  _key: string;
-  richText?: PortableTextBlock[];
-  link?: ILink;
-}
-
 export interface CallToActionSection {
   _type: "ctaSection";
   _key: string;
@@ -197,7 +190,6 @@ export type Section =
   | HeroSection
   | LogoSaladSection
   | ArticleSection
-  | CalloutSection
   | CallToActionSection
   | TestimonialsSection
   | ImageSection
