@@ -2,8 +2,6 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
-import CallToAction from "src/components/sections/callToAction/CallToAction";
-import CallToActionPreview from "src/components/sections/callToAction/CallToActionPreview";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -26,7 +24,6 @@ import Openness from "src/components/sections/openness/Openness";
 import { Locale } from "src/i18n/routing";
 import {
   ArticleSection,
-  CallToActionSection,
   CustomerCasesEntrySection,
   GridSection,
   HeroSection,
@@ -87,22 +84,6 @@ const renderArticleSection = (
     <ArticlePreview initialData={initialData} sectionIndex={sectionIndex} />
   ) : (
     <Article article={section} />
-  );
-};
-
-const renderCallToActionSection = (
-  section: CallToActionSection,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <CallToActionPreview
-      initialData={initialData}
-      sectionIndex={sectionIndex}
-    />
-  ) : (
-    <CallToAction callToAction={section} />
   );
 };
 
@@ -195,13 +176,6 @@ const SectionRenderer = ({
       );
     case "article":
       return renderArticleSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
-    case "ctaSection":
-      return renderCallToActionSection(
         section,
         sectionIndex,
         isDraftMode,

@@ -48,8 +48,6 @@ const pageBuilder = defineType({
         hero,
         logoSalad,
         article,
-        // callToAction,
-        // testimonals,
         imageSplitSection,
         imageSection,
         // grid,

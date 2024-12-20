@@ -31,13 +31,6 @@ export interface ArticleSection {
   imageExtended: ImageExtendedProps;
 }
 
-export interface CallToActionSection {
-  _type: "ctaSection";
-  _key: string;
-  basicTitle?: string;
-  callToActions?: ILink[];
-}
-
 export interface ImageSection {
   _type: "imageSection";
   _key: string;
@@ -175,7 +168,6 @@ export type Section =
   | HeroSection
   | LogoSaladSection
   | ArticleSection
-  | CallToActionSection
   | ImageSection
   | ImageSplitSection
   | GridSection

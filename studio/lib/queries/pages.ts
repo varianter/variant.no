@@ -43,13 +43,6 @@ const SECTIONS_FRAGMENT = groq`
       ...,
         "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
-    _type == "ctaSection" => {
-      ...,
-      callToActions[] {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
-    },
     _type == "compensationCalculator" => {
       ...,
       "moduleTitle": ${translatedFieldFragment("moduleTitle")},
