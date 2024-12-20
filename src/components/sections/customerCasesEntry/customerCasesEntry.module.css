@@ -84,7 +84,7 @@
 
 .link:focus-visible .heading {
   text-decoration: underline;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .heading {
