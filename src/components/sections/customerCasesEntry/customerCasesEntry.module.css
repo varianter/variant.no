@@ -84,11 +84,14 @@
 
 .link:focus-visible .heading {
   text-decoration: underline;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 .heading {
   text-wrap: balance;
   overflow: hidden;
+  padding: 0.5rem 0 0.5rem 0;
+
 
   @media (max-width: 1130px) {
     font-size: 2.125rem;
