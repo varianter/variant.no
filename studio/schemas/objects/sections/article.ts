@@ -1,3 +1,4 @@
+import { BlockContentIcon } from "@sanity/icons";
 import { StringInputProps, defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
@@ -11,6 +12,7 @@ export const article = defineField({
   name: articleID,
   title: "Article",
   type: "object",
+  icon: BlockContentIcon,
   fields: [
     {
       name: "tag",

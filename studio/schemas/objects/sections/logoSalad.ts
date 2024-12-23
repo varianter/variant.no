@@ -1,3 +1,4 @@
+import { ProjectsIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import image from "studio/schemas/fields/media";
@@ -8,6 +9,7 @@ export const logoSalad = defineField({
   name: logoSaladID,
   title: "Logo Salad",
   type: "object",
+  icon: ProjectsIcon,
   fields: [
     {
       name: "title",
@@ -18,7 +20,8 @@ export const logoSalad = defineField({
     {
       name: "logos",
       title: "Logos",
-      description: "Add the logos you want to display.",
+      description:
+        "Add the logos you want to display, remember to use the correct size as defined in Figma.",
       type: "array",
       of: [image],
       validation: (rule) =>

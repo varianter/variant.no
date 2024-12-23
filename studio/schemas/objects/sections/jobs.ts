@@ -1,3 +1,4 @@
+import { UlistIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
@@ -8,6 +9,7 @@ export const jobs = defineField({
   name: jobsID,
   title: "Jobs",
   type: "object",
+  icon: UlistIcon,
   fields: [
     {
       name: titleID.basic,

@@ -1,3 +1,4 @@
+import { BellIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
@@ -22,6 +23,7 @@ export const contactBox = defineField({
   name: contactBoxID,
   title: "Contact Box",
   type: "object",
+  icon: BellIcon,
   fields: [
     {
       name: titleID.basic,

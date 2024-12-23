@@ -1,3 +1,4 @@
+import { HeartIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
@@ -9,6 +10,7 @@ export const generositySection = defineField({
   name: generosityID,
   title: "Generosity",
   type: "object",
+  icon: HeartIcon,
   fields: [
     {
       name: titleID.basic,

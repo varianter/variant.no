@@ -1,3 +1,4 @@
+import { BulbOutlineIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
@@ -8,6 +9,7 @@ export const learningSection = defineField({
   name: learningID,
   title: "Learning",
   type: "object",
+  icon: BulbOutlineIcon,
   fields: [
     {
       name: titleID.basic,
@@ -21,7 +23,7 @@ export const learningSection = defineField({
       name: "image",
       type: "image",
       title: "Image",
-      description: "An image of the learning",
+      description: "An image representing learning in Variant",
       options: {
         hotspot: true,
       },
