@@ -13,7 +13,7 @@ export const hero = defineField({
   fields: [
     {
       name: "title",
-      title: "title",
+      title: "Title",
       type: "internationalizedArrayString",
       validation: (rule) =>
         rule.custom<{ value: string; _type: string; _key: string }[]>(
@@ -27,7 +27,7 @@ export const hero = defineField({
 
             if (invalidItems.length > 0) {
               return invalidItems.map((item) => ({
-                message: "title cannot be more than 200 characters long.",
+                message: "Title cannot be more than 200 characters long.",
                 path: [{ _key: item._key }, "value"],
               }));
             }

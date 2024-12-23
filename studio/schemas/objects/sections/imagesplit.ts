@@ -26,7 +26,7 @@ export const imageSplitSection = defineField({
               type: "internationalizedArrayString",
               title: "Title",
               description:
-                "Enter the primary title that will be displayed at the top of the employees section.",
+                "Enter the primary title that will be displayed at the top of the section.",
             },
             {
               name: "description",

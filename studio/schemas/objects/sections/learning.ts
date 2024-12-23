@@ -23,7 +23,7 @@ export const learningSection = defineField({
       name: "image",
       type: "image",
       title: "Image",
-      description: "An image of the learning",
+      description: "An image representing learning in Variant",
       options: {
         hotspot: true,
       },

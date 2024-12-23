@@ -22,7 +22,7 @@ export const opennessSection = defineField({
       name: "image",
       type: "image",
       title: "Image",
-      description: "An image of the openness",
+      description: "Add an image to the section",
       options: {
         hotspot: true,
       },

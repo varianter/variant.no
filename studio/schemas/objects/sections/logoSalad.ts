@@ -20,7 +20,8 @@ export const logoSalad = defineField({
     {
       name: "logos",
       title: "Logos",
-      description: "Add the logos you want to display.",
+      description:
+        "Add the logos you want to display, remember to use the correct size as defined in Figma.",
       type: "array",
       of: [image],
       validation: (rule) =>
