@@ -1,3 +1,4 @@
+import { ProjectsIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import image from "studio/schemas/fields/media";
@@ -8,6 +9,7 @@ export const logoSalad = defineField({
   name: logoSaladID,
   title: "Logo Salad",
   type: "object",
+  icon: ProjectsIcon,
   fields: [
     {
       name: "title",

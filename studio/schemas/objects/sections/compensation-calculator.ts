@@ -1,3 +1,4 @@
+import { ControlsIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { link } from "studio/schemas/objects/link";
@@ -18,6 +19,7 @@ export const compensationCalculator = defineField({
   name: compensationCalculatorId,
   title: "Compensation Calculator",
   type: "object",
+  icon: ControlsIcon,
   fields: [
     {
       name: "moduleTitle",

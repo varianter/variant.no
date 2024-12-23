@@ -1,3 +1,4 @@
+import { ImageIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -10,6 +11,7 @@ export const imageSection = defineField({
   name: imageID,
   title: "Image",
   type: "object",
+  icon: ImageIcon,
   fields: [
     defineField({
       ...internationalizedImage,

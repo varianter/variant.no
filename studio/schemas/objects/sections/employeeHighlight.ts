@@ -1,3 +1,4 @@
+import { HighlightIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
@@ -10,6 +11,7 @@ export const employeeHighlightSection = defineField({
   name: employeeHighlightID,
   title: "Employee Highlight",
   type: "object",
+  icon: HighlightIcon,
   fields: [
     {
       name: titleID.basic,

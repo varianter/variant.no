@@ -1,3 +1,4 @@
+import { BoltIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { allTranslations } from "studio/utils/i18n";
@@ -8,6 +9,7 @@ export const hero = defineField({
   name: heroID,
   title: "Hero Section",
   type: "object",
+  icon: BoltIcon,
   fields: [
     {
       name: "title",

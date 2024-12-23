@@ -1,3 +1,4 @@
+import { InlineIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { imageExtended } from "studio/schemas/fields/media";
@@ -11,6 +12,7 @@ export const imageSplitSection = defineField({
   name: imageID,
   title: "Image Split",
   type: "object",
+  icon: InlineIcon,
   fields: [
     {
       name: "content",
