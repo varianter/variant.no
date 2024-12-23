@@ -201,57 +201,10 @@ As part of the Next.js middlewares setup, a [matcher config](src/middleware.ts) 
 
 ### OpenGraph image customization
 
-As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified. Fonts and background can be customized as shown below.
+As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified.
 
-#### Custom fonts
-
-The following font utils file can be defined:
-
-> fonts must be placed in `/public/fonts`
-
-```tsx
-import { readFile } from "fs/promises";
-import { join } from "path";
-
-type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-type FontStyle = "normal" | "italic";
-interface FontOptions {
-  data: Buffer | ArrayBuffer;
-  name: string;
-  weight?: Weight;
-  style?: FontStyle;
-  lang?: string;
-}
-
-function readFont(filename: string) {
-  return readFile(join(process.cwd(), "public/fonts", filename));
-}
-
-export async function getFonts(): Promise<FontOptions[]> {
-  return [
-    {
-      data: await readFont("graphik_regular.woff"),
-      name: "Graphik",
-      weight: 400,
-      style: "normal",
-    },
-    {
-      data: await readFont("graphik_medium.woff"),
-      name: "Graphik",
-      weight: 600,
-      style: "normal",
-    },
-    {
-      data: await readFont("recoleta.ttf"),
-      name: "Recoleta",
-      weight: 600,
-      style: "normal",
-    },
-  ];
-}
-```
-
-followed by a modification of the image route response:
+````
+a modification of the image route response:
 
 ```tsx
 (<OpenGraphImage title={title} description={description ?? undefined} />),
@@ -260,7 +213,7 @@ followed by a modification of the image route response:
     height: 630,
     fonts: await getFonts(), // add this line
   };
-```
+````
 
 #### Custom background
 

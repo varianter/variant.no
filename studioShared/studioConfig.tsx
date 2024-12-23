@@ -15,7 +15,7 @@ import { schema } from "./schema";
 const config: WorkspaceOptions = {
   name: "sharedStudio",
   title: "Shared Studio",
-  subtitle: "Sharing is Caring!",
+  subtitle: "Customer cases and other shared content",
   icon: () => <StudioIcon variant="shared" />,
   basePath: "/shared",
   projectId,

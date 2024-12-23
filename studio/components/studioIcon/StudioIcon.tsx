@@ -11,8 +11,8 @@ const StudioIcon = ({ variant }: { variant: "studio" | "shared" }) => {
       className={styles.icon}
       src={
         variant === "studio"
-          ? "/_assets/studioIcon.png"
-          : "/_assets/sharedStudioIcon.png"
+          ? "/_assets/smile-square-figure.svg"
+          : "/_assets/shook-square-figure.svg"
       }
     />
   );
