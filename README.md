@@ -201,9 +201,9 @@ As part of the Next.js middlewares setup, a [matcher config](src/middleware.ts) 
 
 ### OpenGraph image customization
 
-As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified. 
+As part of providing the basic metadata for the [OpenGraph Protocol](https://ogp.me), a fallback image is generated if no other is specified.
 
-```
+````
 a modification of the image route response:
 
 ```tsx
@@ -213,7 +213,7 @@ a modification of the image route response:
     height: 630,
     fonts: await getFonts(), // add this line
   };
-```
+````
 
 #### Custom background
 
