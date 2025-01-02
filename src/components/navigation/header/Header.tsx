@@ -96,7 +96,7 @@ export const Header = ({
           <div className={styles.wrapper}>
             <div className={styles.desktopWrapper}>
               <Link
-                href="/"
+                href={`/${currentLanguage}`}
                 aria-label="Home"
                 className={styles.logo}
                 scroll={false}
