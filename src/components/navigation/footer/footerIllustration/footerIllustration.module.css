@@ -35,13 +35,5 @@
   @media (max-width: 425px) {
     padding-left: 1.25rem;
     gap: 0rem;
-
-    & > .svgLeft {
-      width: 141px;
-    }
-
-    & > .svgRight {
-      width: 211px;
-    }
   }
 }
