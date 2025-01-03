@@ -10,6 +10,7 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
   return (
     <div className={styles.footerIllustrations}>
       <svg
+        className={styles.svgLeft}
         xmlns="http://www.w3.org/2000/svg"
         width="147"
         height="71"
@@ -44,6 +45,7 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
         />
       </svg>
       <svg
+        className={styles.svgRight}
         xmlns="http://www.w3.org/2000/svg"
         width="215"
         height="84"

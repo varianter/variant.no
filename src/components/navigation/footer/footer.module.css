@@ -21,6 +21,9 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   padding-bottom: 2.25rem;
+  position: relative;
+  z-index: 1;
+
   @media (min-width: 802px) {
     padding: 2.25rem;
   }
@@ -81,8 +84,7 @@
     justify-content: space-between;
   }
 
-  @media (min-width: 1408px) {
-  }
+  @media (min-width: 1408px) {}
 }
 
 .contactInfo {
@@ -91,6 +93,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
+
   &:hover {
     text-decoration: underline;
   }
@@ -136,7 +139,7 @@
   gap: 1rem;
   flex-wrap: wrap;
 
-  & > li {
+  &>li {
     text-wrap: nowrap;
   }
 
