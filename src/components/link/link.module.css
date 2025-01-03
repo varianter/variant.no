@@ -63,11 +63,6 @@
     font-size: 1.25rem;
   }
 
-  &:hover {
-    gap: 1rem;
-    font-weight: 400;
-  }
-
   &::after {
     content: "";
     width: 24px;
