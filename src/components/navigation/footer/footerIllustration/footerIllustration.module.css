@@ -8,12 +8,12 @@
   top: 2rem;
   z-index: 0;
 
-  &>.svgLeft {
+  & > .svgLeft {
     width: 283px;
     height: auto;
   }
 
-  &>.svgRight {
+  & > .svgRight {
     width: 421px;
     height: auto;
   }
@@ -23,11 +23,11 @@
     padding-left: 5.25rem;
     gap: 10rem;
 
-    &>.svgLeft {
+    & > .svgLeft {
       width: 141px;
     }
 
-    &>.svgRight {
+    & > .svgRight {
       width: 211px;
     }
   }
@@ -36,11 +36,11 @@
     padding-left: 1.25rem;
     gap: 0rem;
 
-    &>.svgLeft {
+    & > .svgLeft {
       width: 141px;
     }
 
-    &>.svgRight {
+    & > .svgRight {
       width: 211px;
     }
   }
