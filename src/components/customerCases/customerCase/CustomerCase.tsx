@@ -34,13 +34,13 @@ export default async function CustomerCase({
         <ColoredTitle
           title={customerCase.basicTitle}
           colorPart={customerCase.basicTitleColorPart}
-          color={customerCase.clientColors.color}
+          color={customerCase.clientColor}
         />
         <hr className={styles.divider} />
         <div className={styles.projectInfoWrapper}>
           <CustomerCaseProjectInfo
             projectInfo={customerCase.projectInfo}
-            clientColors={customerCase.clientColors}
+            clientColor={customerCase.clientColor}
           />
         </div>
         <div className={styles.mainImageWrapper}>
@@ -56,7 +56,7 @@ export default async function CustomerCase({
             <CustomerCaseSection
               key={section._key}
               section={section}
-              clientColors={customerCase.clientColors}
+              clientColor={customerCase.clientColor}
             />
           ))}
         </div>
