@@ -62,6 +62,16 @@
   @media (min-width: 1024px) {
     font-size: 1.25rem;
   }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    background-color: var(--text-primary);
+    -webkit-mask: url("/_assets/arrow-up-right.svg") no-repeat 50% 50%;
+  }
 }
 
 .colorLight .internalLink {
