@@ -4,7 +4,6 @@ import { client } from "studio/lib/client";
 import {
   DocumentTranslatedSitemapData,
   FieldTranslatedSitemapData,
-  SingleTranslationSitemapData,
   SitemapBaseData,
 } from "studio/lib/interfaces/sitemap";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
@@ -14,19 +13,15 @@ import {
   LANDING_PAGE_SITEMAP_QUERY,
   LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
-import {
-  COMPENSATIONS_PAGE_SITEMAP_QUERY,
-  CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
-} from "studio/lib/queries/specialPages";
+import { COMPENSATIONS_PAGE_SITEMAP_QUERY } from "studio/lib/queries/specialPages";
 import { token as studioToken } from "studio/lib/token";
-import { sharedClient } from "studioShared/lib/client";
-import { CUSTOMER_CASES_SITEMAP_QUERY } from "studioShared/lib/queries/customerCases";
-import { token as sharedToken } from "studioShared/lib/token";
+//import { sharedClient } from "studioShared/lib/client";
+//import { token as sharedToken } from "studioShared/lib/token";
 
 import { readBaseUrl } from "./env";
 
 const clientWithToken = client.withConfig({ token: studioToken });
-const sharedClientWithToken = sharedClient.withConfig({ token: sharedToken });
+//const sharedClientWithToken = sharedClient.withConfig({ token: sharedToken });
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "default-no-store";
@@ -87,7 +82,7 @@ async function dynamicPagesSitemap(): Promise<RelativeSiteMap> {
   return [];
 }
 
-async function customerCasesSitemap(): Promise<RelativeSiteMap> {
+/*async function customerCasesSitemap(): Promise<RelativeSiteMap> {
   const page = await clientWithToken.fetch<FieldTranslatedSitemapData | null>(
     CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
   );
@@ -115,7 +110,7 @@ async function customerCasesSitemap(): Promise<RelativeSiteMap> {
     }
   }
   return siteMap;
-}
+}*/
 
 async function legalDocumentsSitemap(): Promise<RelativeSiteMap> {
   const pages = await clientWithToken.fetch<
@@ -142,7 +137,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       landingPageSitemap(),
       compensationsPageSitemap(),
       dynamicPagesSitemap(),
-      customerCasesSitemap(),
+      //customerCasesSitemap(), // TODO: This function is breaking the sitemap. Description: 'param $language referenced, but not provided'. Maybe take a look at TRANSLATED_SLUG_VALUE_FRAGMENT and CUSTOMER_CASES_PAGE_SITEMAP_QUERY?
       legalDocumentsSitemap(),
     ])
   )
