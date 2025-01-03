@@ -163,7 +163,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1rem !important;
   color: var(--text-primary);
   background-color: var(--background-bg-light-primary);
   font-family: var(--font-britti-sans);
