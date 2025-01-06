@@ -80,6 +80,10 @@ export default function Calculator({
           max={max}
           value={year}
           onChange={(_name, value) => setYear(parseInt(value))}
+          onBlur={() => {
+            if (year < min || isNaN(year)) setYear(min);
+            if (year > max) setYear(max);
+          }}
           required
         />
       </div>
