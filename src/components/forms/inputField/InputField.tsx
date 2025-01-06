@@ -18,6 +18,7 @@ interface InputFieldProps {
   autoCapitalize?: string;
   value: string | number;
   onChange: (name: string, value: string) => void;
+  onBlur?: () => void;
   required?: boolean;
 }
 
@@ -34,6 +35,7 @@ const InputField = ({
   autoCapitalize,
   value,
   onChange,
+  onBlur,
   required,
 }: InputFieldProps) => {
   if (type == "email") {
@@ -67,6 +69,7 @@ const InputField = ({
         className={styles.input}
         spellCheck={spellCheck}
         value={value}
+        onBlur={onBlur}
         onChange={handleChange}
         aria-describedby={hintID}
         aria-required={required}
