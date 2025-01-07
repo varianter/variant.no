@@ -36,6 +36,25 @@ interface EmployeeFilters {
 
 const DEFAULT_LIMIT = 4 * 2;
 
+const URL_KEY_MAP = {
+  field: {
+    en: "field",
+    no: "fag",
+    se: "fält", // Add the 'se' property
+  },
+  location: {
+    en: "location",
+    no: "sted",
+    se: "plats", // Add the 'se' property
+  },
+};
+
+type Language = "en" | "no" | "se";
+
+function getTranslatedKey(key: keyof typeof URL_KEY_MAP, language: Language) {
+  return URL_KEY_MAP[key][language] || key;
+}
+
 export default function EmployeeList({
   employees: employeesPromise,
   language,
@@ -61,8 +80,12 @@ export default function EmployeeList({
   const searchParams = useSearchParams();
 
   const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
-    competenceFilter: searchParams.get("field") as Competence,
-    locationFilter: searchParams.get("location"),
+    competenceFilter: searchParams.get(
+      getTranslatedKey("field", language as Language),
+    ) as Competence,
+    locationFilter: searchParams.get(
+      getTranslatedKey("location", language as Language),
+    ),
   });
 
   useEffect(() => {
@@ -90,8 +113,12 @@ export default function EmployeeList({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const filters: EmployeeFilters = {
-      competenceFilter: params.get("field") as Competence,
-      locationFilter: params.get("location"),
+      competenceFilter: params.get(
+        getTranslatedKey("field", language as Language),
+      ) as Competence,
+      locationFilter: params.get(
+        getTranslatedKey("location", language as Language),
+      ),
     };
     setEmployeeFilters(filters);
   }, [searchParams]);
@@ -111,10 +138,16 @@ export default function EmployeeList({
 
     const params = new URLSearchParams();
     if (combinedFilters.competenceFilter) {
-      params.set("field", combinedFilters.competenceFilter);
+      params.set(
+        getTranslatedKey("field", language as Language),
+        combinedFilters.competenceFilter,
+      );
     }
     if (combinedFilters.locationFilter) {
-      params.set("location", combinedFilters.locationFilter);
+      params.set(
+        getTranslatedKey("location", language as Language),
+        combinedFilters.locationFilter,
+      );
     }
     history.pushState(null, "", `${pathname}?${params.toString()}`);
   }
