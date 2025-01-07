@@ -40,12 +40,12 @@ const URL_KEY_MAP = {
   field: {
     en: "field",
     no: "fag",
-    se: "fält", // Add the 'se' property
+    se: "fält",
   },
   location: {
     en: "location",
-    no: "sted",
-    se: "plats", // Add the 'se' property
+    no: "lokasjon",
+    se: "plats",
   },
 };
 
