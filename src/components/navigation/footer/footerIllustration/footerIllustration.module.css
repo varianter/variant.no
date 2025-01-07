@@ -2,10 +2,38 @@
   background-color: transparent;
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  padding-left: 6.5rem;
+  gap: 9.3rem;
+  position: relative;
+  top: 2rem;
+  z-index: 0;
 
-  & > svg {
-    width: 20%;
+  & > .svgLeft {
+    width: 283px;
     height: auto;
+  }
+
+  & > .svgRight {
+    width: 421px;
+    height: auto;
+  }
+
+  @media (max-width: 834px) {
+    top: 0;
+    padding-left: 5.25rem;
+    gap: 10rem;
+
+    & > .svgLeft {
+      width: 141px;
+    }
+
+    & > .svgRight {
+      width: 211px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding-left: 1.25rem;
+    gap: 0rem;
   }
 }

@@ -21,6 +21,9 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   padding-bottom: 2.25rem;
+  position: relative;
+  z-index: 1;
+
   @media (min-width: 802px) {
     padding: 2.25rem;
   }
@@ -91,6 +94,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
+
   &:hover {
     text-decoration: underline;
   }
