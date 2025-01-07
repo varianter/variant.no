@@ -54,17 +54,6 @@ const customerCase = defineType({
       options: { disableAlpha: true },
     }),
     defineField({
-      name: "clientColorBadgeText",
-      type: "color",
-      title: "Client Color (Badge Text)",
-      description:
-        "This color will be used for the text on the badges. There are predefined colors for text in the component",
-      options: {
-        disableAlpha: true,
-        colorList: ["#222424", "#faf8f5"],
-      },
-    }),
-    defineField({
       name: "description",
       type: "internationalizedArrayText",
       title: "Description",

@@ -57,12 +57,7 @@ export interface CustomerCaseBase {
   basicTitleColorPart: string;
   description: string;
   image: IImage;
-  clientColors: CustomerCaseClientColors;
-}
-
-export interface CustomerCaseClientColors {
-  color?: string;
-  badgeText?: string;
+  clientColor: string;
 }
 
 export type CustomerCaseSection =

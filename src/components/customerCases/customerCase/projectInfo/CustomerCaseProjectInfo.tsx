@@ -6,7 +6,6 @@ import Text from "src/components/text/Text";
 import { LinkType } from "studio/lib/interfaces/navigation";
 import {
   CustomerCaseProjectInfo as CustomerCaseCaseProjectInfoObject,
-  CustomerCaseClientColors,
   CustomerSector,
 } from "studioShared/lib/interfaces/customerCases";
 
@@ -14,12 +13,12 @@ import styles from "./customerCaseProjectInfo.module.css";
 
 interface CustomerCaseProjectInfoProps {
   projectInfo: CustomerCaseCaseProjectInfoObject;
-  clientColors: CustomerCaseClientColors;
+  clientColor: string;
 }
 
 export default async function CustomerCaseProjectInfo({
   projectInfo,
-  clientColors,
+  clientColor,
 }: CustomerCaseProjectInfoProps) {
   const t = await getTranslations("customer_case");
 
@@ -41,11 +40,7 @@ export default async function CustomerCaseProjectInfo({
             </Text>
             <div className={styles.badgeWrapper}>
               {projectInfo.customerSectors.map((sector: CustomerSector) => (
-                <Badge
-                  key={sector._key}
-                  badgeColor={clientColors.color}
-                  textColor={clientColors.badgeText}
-                >
+                <Badge key={sector._key} badgeColor={clientColor}>
                   {sector.customerSector}
                 </Badge>
               ))}
@@ -59,7 +54,7 @@ export default async function CustomerCaseProjectInfo({
             </Text>
             <div className={styles.varianter}>
               <Text className={styles.preFancyCharacter}>
-                <span style={{ color: clientColors.color }}>【 </span>
+                <span style={{ color: clientColor }}>【 </span>
               </Text>
               {consultantsFirstNames.map((name) => (
                 <Text
@@ -71,7 +66,7 @@ export default async function CustomerCaseProjectInfo({
                 </Text>
               ))}
               <Text className={styles.afterFancyCharacter}>
-                <span style={{ color: clientColors.color }}> 】</span>
+                <span style={{ color: clientColor }}> 】</span>
               </Text>
             </div>
           </div>
