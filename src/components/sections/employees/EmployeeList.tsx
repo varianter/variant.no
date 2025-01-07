@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { use, useState, useTransition } from "react";
+import { use, useEffect, useState, useTransition } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
@@ -57,10 +57,44 @@ export default function EmployeeList({
   const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
 
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
-    competenceFilter: null,
-    locationFilter: null,
+    competenceFilter: searchParams.get("field") as Competence,
+    locationFilter: searchParams.get("location"),
   });
+
+  useEffect(() => {
+    const newFilteredEmployees = employees.filter((e) => {
+      if (
+        employeeFilters.competenceFilter !== null &&
+        !e.competences.includes(employeeFilters.competenceFilter)
+      ) {
+        return false;
+      }
+
+      if (
+        employeeFilters.locationFilter !== null &&
+        e.officeName !== employeeFilters.locationFilter
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+
+    setFilteredEmployees(newFilteredEmployees);
+  }, [employeeFilters, employees]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const filters: EmployeeFilters = {
+      competenceFilter: params.get("field") as Competence,
+      locationFilter: params.get("location"),
+    };
+    setEmployeeFilters(filters);
+  }, [searchParams]);
 
   function filterEmployees(newFilters: Partial<EmployeeFilters>) {
     const combinedFilters = { ...employeeFilters, ...newFilters };
@@ -75,25 +109,14 @@ export default function EmployeeList({
 
     setEmployeeFilters(combinedFilters);
 
-    const newFilteredEmployees = employees.filter((e) => {
-      if (
-        combinedFilters.competenceFilter !== null &&
-        !e.competences.includes(combinedFilters.competenceFilter)
-      ) {
-        return false;
-      }
-
-      if (
-        combinedFilters.locationFilter !== null &&
-        e.officeName !== combinedFilters.locationFilter
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-
-    setFilteredEmployees(newFilteredEmployees);
+    const params = new URLSearchParams();
+    if (combinedFilters.competenceFilter) {
+      params.set("field", combinedFilters.competenceFilter);
+    }
+    if (combinedFilters.locationFilter) {
+      params.set("location", combinedFilters.locationFilter);
+    }
+    history.pushState(null, "", `${pathname}?${params.toString()}`);
   }
 
   return (
@@ -222,14 +245,16 @@ function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
   const currentPath = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
-  const limitEmployees = !searchParams.has("showAll");
-  const limitedEmployees = limitEmployees
-    ? filteredEmployees.slice(0, DEFAULT_LIMIT)
-    : filteredEmployees;
+  const showAll = searchParams.has("showAll");
+  const limitedEmployees = showAll
+    ? filteredEmployees
+    : filteredEmployees.slice(0, DEFAULT_LIMIT);
 
   const showMoreHandler = () =>
     startTransition(() => {
-      replace(`${currentPath}?showAll`);
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("showAll", "true");
+      replace(`${currentPath}?${params.toString()}`);
     });
 
   return {
@@ -237,8 +262,8 @@ function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
     showMoreHandler,
     isShowMorePending: isPending,
     showShowMoreButton:
-      limitEmployees && !isPending && filteredEmployees.length > DEFAULT_LIMIT,
-    showMoreHref: `${currentPath}?showAll`,
+      !showAll && !isPending && filteredEmployees.length > DEFAULT_LIMIT,
+    showMoreHref: `${currentPath}?${searchParams.toString()}&showAll=true`,
   };
 }
 
