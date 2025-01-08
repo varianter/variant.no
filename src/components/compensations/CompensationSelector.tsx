@@ -12,7 +12,6 @@ import { LocaleDocument } from "studio/lib/interfaces/locale";
 
 import styles from "./compensations.module.css";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
-import YearlyBonuses from "./components/yearlyBonuses/YearlyBonuses";
 
 interface CompensationsProps {
   compensations: CompensationsPage;
@@ -23,7 +22,7 @@ interface CompensationsProps {
 export default function CompensationSelector({
   compensations,
   locations,
-  locale,
+  // locale
 }: CompensationsProps) {
   const t = useTranslations("compensation");
 
@@ -46,9 +45,9 @@ export default function CompensationSelector({
       (benefit) => benefit.location._ref === selectedLocation,
     )?.benefits || [];
 
-  const yearlyBonusesForLocation = compensations.bonusesByLocation.find(
-    (b) => b.location._ref === selectedLocation,
-  )?.yearlyBonuses;
+  // const yearlyBonusesForLocation = compensations.bonusesByLocation.find(
+  //   (b) => b.location._ref === selectedLocation,
+  // )?.yearlyBonuses;
 
   return (
     <div className={styles.compensationWrapper}>
@@ -61,10 +60,11 @@ export default function CompensationSelector({
           setSelectedLocation(option.id);
         }}
       />
-
+      {/* 
+      TODO: Un-comment this once a yearly bonuses are accurate (or it has been decided to just remove this)
       {yearlyBonusesForLocation && (
         <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
-      )}
+      )} */}
       <BenefitsByLocation benefits={benefitsFilteredByLocation} />
     </div>
   );
