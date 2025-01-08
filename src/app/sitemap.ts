@@ -86,6 +86,8 @@ async function dynamicPagesSitemap(): Promise<RelativeSiteMap> {
   }
   return [];
 }
+
+// Function in commented out due to bug in Sitemap. TODO: Fix bug. Maybe take a look at CUSTOMER_CASES_PAGE_SITEMAP_QUERY and TRANSLATED_INTERNAL_LINK_FRAGMENT. Read more about the issue here: https://variantas.slack.com/archives/C07TKNC7H46/p1736191768607249
 /*
 async function customerCasesSitemap(): Promise<RelativeSiteMap> {
   const page = await clientWithToken.fetch<FieldTranslatedSitemapData | null>(
