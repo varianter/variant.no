@@ -16,6 +16,8 @@ interface JobPostingListProps {
   companyLocations: CompanyLocation[];
 }
 
+const hiddenLocations = new Set(["Norge", "Norway", "Sverige", "Sweden"]);
+
 function sortAlphabetically(filter: CompanyLocation[]) {
   return filter.sort(
     (a, b) =>
@@ -69,6 +71,10 @@ export default function JobPostingList({
     }
   }, [locationFilter, jobPostings, jobPostingLocations]);
 
+  const filteredLocations = companyLocations.filter(
+    (location) => !hiddenLocations.has(location.companyLocationName),
+  );
+
   return (
     <div className={styles.jobPostingsContainer}>
       <div className={styles.filters}>
@@ -80,7 +86,7 @@ export default function JobPostingList({
           text={`${t("all")} (${jobPostings.length})`}
           background="violet"
         />
-        {sortAlphabetically(companyLocations).map(
+        {sortAlphabetically(filteredLocations).map(
           (location: CompanyLocation) => (
             <Tag
               active={locationFilter === location}
