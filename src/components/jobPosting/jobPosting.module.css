@@ -10,6 +10,17 @@
   width: 100%;
   background-color: var(--text-primary-light);
   color: var(--text-primary);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--Background-secondary, #eaeaea);
+    border-radius: 0.375rem;
+  }
+
+  &:focus {
+    outline: 2px solid var(--surface-yellow, #ffd02f);
+    transition: none;
+  }
 
   &::after {
     width: 1.5rem;
