@@ -4,7 +4,7 @@ import { client } from "studio/lib/client";
 import {
   DocumentTranslatedSitemapData,
   FieldTranslatedSitemapData,
-//  SingleTranslationSitemapData,
+  //  SingleTranslationSitemapData,
   SitemapBaseData,
 } from "studio/lib/interfaces/sitemap";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
@@ -16,7 +16,7 @@ import {
 } from "studio/lib/queries/siteSettings";
 import {
   COMPENSATIONS_PAGE_SITEMAP_QUERY,
-//  CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
+  //  CUSTOMER_CASES_PAGE_SITEMAP_QUERY,
 } from "studio/lib/queries/specialPages";
 import { token as studioToken } from "studio/lib/token";
 //import { sharedClient } from "studioShared/lib/client";
