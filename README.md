@@ -243,9 +243,7 @@ Sanity Preview, or Presentation, is not yet fully supported in this project. Bug
 
 ## Documentation and Resources
 
-- [Next.js Documentation](https://nextjs.org/docs) - Learn more about the Next.js framework.
-- [Sanity Documentation](https://www.sanity.io/docs) - Explore Sanity’s powerful CMS features.
-- [Sanity Slack Community](https://slack.sanity.io) - Join the community for support and collaboration.
+- [Importing production data for local development](./docs/import-sanity-dataset.md)
 
 ## Credits
 

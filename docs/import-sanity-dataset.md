@@ -5,7 +5,7 @@ Here's how you can do that!
 
 ### Preparations
 
-First, copy the Sanity CLI config from either `studio/` or `studioShared/`, depending on what studio you want to import.
+First, copy the Sanity CLI config from either `studio/` or `studioShared/`, depending on what studio you're working in.
 Assuming you are in the root of the project, i.e. the `variant.no` directory, run one of the following commands in your terminal of choice:
 
 #### Studio
