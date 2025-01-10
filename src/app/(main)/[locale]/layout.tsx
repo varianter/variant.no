@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import Footer from "src/components/navigation/footer/Footer";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
@@ -89,22 +90,23 @@ export default async function Layout({
   return (
     <html lang={params.locale}>
       <body className={fontBrittiSans.variable}>
-        <NextIntlClientProvider messages={messages}>
-          <SkipToMain />
-          {children}
-          <Footer
-            navigationData={initialNav.data}
-            legalData={initialLegal.data}
-            companyInfo={initialCompanyInfo.data}
-            companyLocations={initialCompanyLocations.data}
-            soMeData={initialSoMe.data}
-            footerColorPalette={initialColorPalette.data}
-          />
-        </NextIntlClientProvider>
+        <NuqsAdapter>
+          <NextIntlClientProvider messages={messages}>
+            <SkipToMain />
+            {children}
+            <Footer
+              navigationData={initialNav.data}
+              legalData={initialLegal.data}
+              companyInfo={initialCompanyInfo.data}
+              companyLocations={initialCompanyLocations.data}
+              soMeData={initialSoMe.data}
+              footerColorPalette={initialColorPalette.data}
+            />
+          </NextIntlClientProvider>
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                   var _paq = _paq || [];
                   _paq.push(["disableCookies"]);
                   _paq.push(["trackPageView"]);
@@ -122,8 +124,9 @@ export default async function Layout({
                     g.src = u + "piwik.js";
                     s.parentNode.insertBefore(g, s);
                   })();`,
-          }}
-        />
+            }}
+          />
+        </NuqsAdapter>
       </body>
     </html>
   );

@@ -1,19 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { use, useEffect, useState, useTransition } from "react";
+import { useQueryState } from "nuqs";
+import { use, useState } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { ChewbaccaEmployee, Competence } from "src/types/employees";
 import { Result } from "studio/utils/result";
+import { capitalizeFirstLetter } from "studio/utils/stringUtils";
 
 import styles from "./employees.module.css";
-import { EmployeeListSkeleton } from "./EmployeeSkeleton";
 
 const competences: Competence[] = [
   "Utvikling",
@@ -29,128 +28,36 @@ export interface EmployeesProps {
   employeesPageSlug: string;
 }
 
-interface EmployeeFilters {
-  competenceFilter: Competence | null;
-  locationFilter: string | null;
-}
-
+// 4 columns * 2 rows
 const DEFAULT_LIMIT = 4 * 2;
-
-const URL_KEY_MAP = {
-  field: {
-    en: "field",
-    no: "fag",
-    se: "fält",
-  },
-  location: {
-    en: "location",
-    no: "lokasjon",
-    se: "plats",
-  },
-};
-
-type Language = "en" | "no" | "se";
-
-function getTranslatedKey(key: keyof typeof URL_KEY_MAP, language: Language) {
-  return URL_KEY_MAP[key][language] || key;
-}
 
 export default function EmployeeList({
   employees: employeesPromise,
   language,
   employeesPageSlug,
 }: EmployeesProps) {
-  const employeesRes = use(employeesPromise);
-  const employees = employeesRes.ok ? employeesRes.value : [];
-  const [filteredEmployees, setFilteredEmployees] =
-    useState<ChewbaccaEmployee[]>(employees);
-
-  const {
-    showShowMoreButton,
-    isShowMorePending,
-    limitedEmployees,
-    showMoreHandler,
-    showMoreHref,
-  } = useShowAll(filteredEmployees);
-
-  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
   const t = useTranslations("employee_card");
+  const employeesRes = use(employeesPromise);
 
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const employees = employeesRes.ok ? employeesRes.value : [];
+  const locations = Array.from(new Set(employees.map((e) => e.officeName)));
 
-  const [employeeFilters, setEmployeeFilters] = useState<EmployeeFilters>({
-    competenceFilter: searchParams.get(
-      getTranslatedKey("field", language as Language),
-    ) as Competence,
-    locationFilter: searchParams.get(
-      getTranslatedKey("location", language as Language),
-    ),
+  const [showAll, setShowAll] = useState(false);
+
+  const [competenceFilter, setCompetenceFilter] = useQueryState("competence", {
+    parse: (value) => capitalizeFirstLetter(value) as Competence,
+    serialize: (value) => value.toLowerCase(),
+  });
+  const [locationFilter, setLocationFilter] = useQueryState("location", {
+    parse: (value) => capitalizeFirstLetter(value),
+    serialize: (value) => value.toLowerCase(),
   });
 
-  useEffect(() => {
-    const newFilteredEmployees = employees.filter((e) => {
-      if (
-        employeeFilters.competenceFilter !== null &&
-        !e.competences.includes(employeeFilters.competenceFilter)
-      ) {
-        return false;
-      }
-
-      if (
-        employeeFilters.locationFilter !== null &&
-        e.officeName !== employeeFilters.locationFilter
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-
-    setFilteredEmployees(newFilteredEmployees);
-  }, [employeeFilters, employees]);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const filters: EmployeeFilters = {
-      competenceFilter: params.get(
-        getTranslatedKey("field", language as Language),
-      ) as Competence,
-      locationFilter: params.get(
-        getTranslatedKey("location", language as Language),
-      ),
-    };
-    setEmployeeFilters(filters);
-  }, [searchParams]);
-
-  function filterEmployees(newFilters: Partial<EmployeeFilters>) {
-    const combinedFilters = { ...employeeFilters, ...newFilters };
-
-    if (newFilters.competenceFilter === employeeFilters.competenceFilter) {
-      combinedFilters.competenceFilter = null;
-    }
-
-    if (newFilters.locationFilter === employeeFilters.locationFilter) {
-      combinedFilters.locationFilter = null;
-    }
-
-    setEmployeeFilters(combinedFilters);
-
-    const params = new URLSearchParams();
-    if (combinedFilters.competenceFilter) {
-      params.set(
-        getTranslatedKey("field", language as Language),
-        combinedFilters.competenceFilter,
-      );
-    }
-    if (combinedFilters.locationFilter) {
-      params.set(
-        getTranslatedKey("location", language as Language),
-        combinedFilters.locationFilter,
-      );
-    }
-    history.pushState(null, "", `${pathname}?${params.toString()}`);
-  }
+  const filteredEmployees = getFilteredEmployees(
+    employees,
+    competenceFilter,
+    locationFilter,
+  );
 
   return (
     <>
@@ -160,22 +67,24 @@ export default function EmployeeList({
             {t("field")}
           </Text>
           <Tag
-            active={!employeeFilters.competenceFilter}
+            active={!competenceFilter}
             type="button"
-            onClick={() => filterEmployees({ competenceFilter: null })}
+            onClick={() => {
+              setCompetenceFilter(null);
+            }}
             text={t("all")}
           />
 
           {sortCompetenceAlphabetically(competences).map((competence) => {
-            const active = employeeFilters.competenceFilter == competence;
+            const active = competenceFilter == competence;
             return (
               <Tag
                 key={competence}
                 active={active}
                 type="button"
-                onClick={() =>
-                  filterEmployees({ competenceFilter: competence })
-                }
+                onClick={() => {
+                  setCompetenceFilter(competence);
+                }}
                 text={t(competence)}
               />
             );
@@ -185,22 +94,27 @@ export default function EmployeeList({
           <Text type="labelRegular" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
+          {/* TODO: legg til aria og fieldset på tags for UU */}
           <Tag
-            active={!employeeFilters.locationFilter}
+            active={!locationFilter}
             type="button"
-            onClick={() => filterEmployees({ locationFilter: null })}
+            onClick={() => {
+              setLocationFilter(null);
+            }}
             text={t("all")}
           />
 
           {sortAlphabetically(locations).map((location) => {
             if (!location) return null;
-            const active = employeeFilters.locationFilter == location;
+            const active = locationFilter == location;
             return (
               <Tag
                 key={location}
                 active={active}
                 type="button"
-                onClick={() => filterEmployees({ locationFilter: location })}
+                onClick={() => {
+                  setLocationFilter(location);
+                }}
                 text={location}
               />
             );
@@ -218,92 +132,65 @@ export default function EmployeeList({
         </p>
 
         <div className={styles.peopleContainer}>
-          {limitedEmployees.map((employee) => (
-            <EmployeeCard
-              employee={employee}
-              employeePageSlug={employeesPageSlug}
-              language={language}
-              key={employee.name}
-            />
-          ))}
+          {filteredEmployees
+            .slice(0, showAll ? filteredEmployees.length : DEFAULT_LIMIT)
+            .map((employee) => (
+              <EmployeeCard
+                employee={employee}
+                employeePageSlug={employeesPageSlug}
+                language={language}
+                key={employee.name}
+              />
+            ))}
         </div>
-        {isShowMorePending && <EmployeeListSkeleton />}
 
-        {showShowMoreButton && (
-          <ShowMoreButton
-            showMoreHandler={showMoreHandler}
-            showMoreHref={showMoreHref}
-          />
+        {!showAll && filteredEmployees.length > DEFAULT_LIMIT && (
+          <div className={styles.showMore}>
+            <button
+              className={styles.showMore__button}
+              onClick={() => setShowAll(true)}
+            >
+              {t("showMore")}
+              <Image
+                src="/_assets/arrow-down.svg"
+                alt=""
+                role="none"
+                width={24}
+                height={24}
+              />
+            </button>
+          </div>
         )}
       </div>
     </>
   );
 }
 
-function ShowMoreButton({
-  showMoreHandler,
-  showMoreHref,
-}: {
-  showMoreHandler: () => void;
-  showMoreHref: string;
-}) {
-  const t = useTranslations("employee_card");
+function getFilteredEmployees(
+  employees: ChewbaccaEmployee[],
+  competenceFilter: string | null,
+  locationFilter: string | null,
+) {
+  return employees.filter((e) => {
+    if (
+      competenceFilter &&
+      !e.competences.includes(competenceFilter as Competence)
+    ) {
+      return false;
+    }
 
-  // @TODO Replace with Button component when actually implemented
-  return (
-    <div className={styles.showMore}>
-      <Link
-        className={styles.showMore__button}
-        onClick={showMoreHandler}
-        href={showMoreHref}
-        shallow
-        scroll={false}
-      >
-        {t("showMore")}{" "}
-        <Image
-          src="/_assets/arrow-down.svg"
-          alt=""
-          role="none"
-          width={24}
-          height={24}
-        />
-      </Link>
-    </div>
-  );
-}
+    if (locationFilter && e.officeName !== locationFilter) {
+      return false;
+    }
 
-function useShowAll(filteredEmployees: ChewbaccaEmployee[]) {
-  const [isPending, startTransition] = useTransition();
-
-  const currentPath = usePathname();
-  const searchParams = useSearchParams();
-  const { replace } = useRouter();
-  const showAll = searchParams.has("showAll");
-  const limitedEmployees = showAll
-    ? filteredEmployees
-    : filteredEmployees.slice(0, DEFAULT_LIMIT);
-
-  const showMoreHandler = () =>
-    startTransition(() => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set("showAll", "true");
-      replace(`${currentPath}?${params.toString()}`);
-    });
-
-  return {
-    limitedEmployees,
-    showMoreHandler,
-    isShowMorePending: isPending,
-    showShowMoreButton:
-      !showAll && !isPending && filteredEmployees.length > DEFAULT_LIMIT,
-    showMoreHref: `${currentPath}?${searchParams.toString()}&showAll=true`,
-  };
+    return true;
+  });
 }
 
 function sortAlphabetically(filter: (string | null | undefined)[]) {
-  return filter.sort((a, b) => a?.localeCompare(b ?? "") ?? 0);
+  return filter.toSorted((a, b) => a?.localeCompare(b ?? "") ?? 0);
 }
 
 function sortCompetenceAlphabetically(competences: Competence[]) {
-  return competences.sort((a, b) => a?.localeCompare(b ?? "") ?? 0);
+  return competences.toSorted((a, b) => a?.localeCompare(b ?? "") ?? 0);
 }
