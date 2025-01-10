@@ -75,6 +75,10 @@
 .handbookLink {
   font-size: 2rem;
   color: currentColor;
+
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+  }
 }
 .handbookLink:hover {
   text-decoration: underline;
@@ -83,6 +87,10 @@
   content: "·";
   margin-left: 0.5rem;
   font-size: 2rem;
+
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+  }
 }
 
 .salaryTextContainer {
