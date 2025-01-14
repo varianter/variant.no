@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { use, useState } from "react";
+import { useQueryState } from "nuqs";
+import { use } from "react";
 
 import { calculateSalary } from "src/components/compensations/utils/salary";
 import InputField from "src/components/forms/inputField/InputField";
@@ -35,10 +36,19 @@ export default function Calculator({
   const t = useTranslations("compensation");
   const locale = use(localeRes);
   const salaries = use(salariesRes);
-  const [year, setYear] = useState(
-    initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
-  );
-  const [degree, setDegree] = useState<Degree>(initialDegree);
+
+  const [year, setYear] = useQueryState<number | null>("year", {
+    defaultValue:
+      initialYear || getMaybeMaxYear(salaries) || new Date().getFullYear(),
+    parse: (value) => (value ? parseInt(value, 10) : null),
+    serialize: (value) => (value ? value.toString() : ""),
+  });
+
+  const [degree, setDegree] = useQueryState<string | null>("degree", {
+    defaultValue: initialDegree,
+    parse: (value) => value ?? null,
+    serialize: (value) => value ?? "",
+  });
 
   if (!locale || !salaries.ok) {
     console.error(
@@ -55,6 +65,15 @@ export default function Calculator({
     { id: "master", label: t("degreeOptions.master") },
   ];
 
+  const handleRadioChange = (selectedOption: { id: string }) => {
+    setDegree(selectedOption.id);
+  };
+
+  const handleYearChange = (name: string, value: string) => {
+    const parsedValue = parseInt(value, 10);
+    setYear(parsedValue);
+  };
+
   return (
     <form
       className={styles.formCalculator}
@@ -66,9 +85,7 @@ export default function Calculator({
         options={degreeOptions}
         background={background}
         selectedId={degree}
-        onValueChange={(selectedOption) =>
-          setDegree(selectedOption.id as Degree)
-        }
+        onValueChange={handleRadioChange}
       />
 
       <div className={styles.inputWrapper}>
@@ -79,7 +96,7 @@ export default function Calculator({
           min={min}
           max={max}
           value={year}
-          onChange={(_name, value) => setYear(parseInt(value))}
+          onChange={handleYearChange}
           required
         />
       </div>
