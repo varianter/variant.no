@@ -65,15 +65,6 @@ export default function Calculator({
     { id: "master", label: t("degreeOptions.master") },
   ];
 
-  const handleRadioChange = (selectedOption: { id: string }) => {
-    setDegree(selectedOption.id);
-  };
-
-  const handleYearChange = (name: string, value: string) => {
-    const parsedValue = parseInt(value, 10);
-    setYear(parsedValue);
-  };
-
   return (
     <form
       className={styles.formCalculator}
@@ -85,7 +76,9 @@ export default function Calculator({
         options={degreeOptions}
         background={background}
         selectedId={degree}
-        onValueChange={handleRadioChange}
+        onValueChange={(selectedOption) =>
+          setDegree(selectedOption.id as Degree)
+        }
       />
 
       <div className={styles.inputWrapper}>
@@ -96,7 +89,7 @@ export default function Calculator({
           min={min}
           max={max}
           value={year}
-          onChange={handleYearChange}
+          onChange={(_name, value) => setYear(parseInt(value))}
           required
         />
       </div>
