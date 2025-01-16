@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import { getHref } from "src/utils/link";
+import { getLinkAttributes } from "src/utils/link";
 import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./link.module.css";
@@ -30,10 +30,7 @@ const CustomLink = ({
   color = "dark",
   scroll,
 }: ICustomLink) => {
-  const href = getHref(link);
-  const newTab = link.newTab;
-  const target = newTab ? "_blank" : undefined;
-  const rel = newTab ? "noopener noreferrer" : undefined;
+  const attributes = getLinkAttributes(link);
 
   switch (type) {
     case "link":
@@ -47,14 +44,12 @@ const CustomLink = ({
             }
           >
             <Link
+              {...attributes}
               className={
                 link.linkType == "internal"
                   ? styles.internalLink
                   : styles.externalLink
               }
-              href={href}
-              target={target}
-              rel={rel}
               aria-label={link.ariaLabel}
               scroll={scroll}
             >
@@ -67,10 +62,8 @@ const CustomLink = ({
       return (
         link.linkTitle && (
           <Link
+            {...attributes}
             className={`${styles.headerLink} ${isSelected ? styles.selected : ""}`}
-            href={href}
-            target={target}
-            rel={rel}
             aria-label={link.ariaLabel}
             scroll={scroll}
           >
@@ -83,10 +76,8 @@ const CustomLink = ({
       return (
         link.linkTitle && (
           <Link
+            {...attributes}
             className={styles.footerLink}
-            href={href}
-            target={target}
-            rel={rel}
             aria-label={link.ariaLabel}
             scroll={scroll}
           >
@@ -98,10 +89,8 @@ const CustomLink = ({
       return (
         link.linkTitle && (
           <Link
+            {...attributes}
             className={styles.footerLinkGrey}
-            href={href}
-            target={target}
-            rel={rel}
             aria-label={link.ariaLabel}
             scroll={scroll}
           >
