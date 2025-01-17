@@ -17,3 +17,17 @@ export const getHref = (link: ILink): string => {
       return `tel:${link.phone}`;
   }
 };
+
+export function getLinkAttributes(link: ILink): LinkAttributes {
+  const newTab = link.newTab;
+  const target = newTab ? "_blank" : undefined;
+  const rel = newTab ? "noopener noreferrer" : undefined;
+  const href = getHref(link);
+  return { href, target, rel };
+}
+
+type LinkAttributes = {
+  href: string;
+  target?: string;
+  rel?: string;
+};
