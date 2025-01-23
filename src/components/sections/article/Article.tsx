@@ -2,12 +2,12 @@ import { SanityImage } from "src/components/image/SanityImage";
 import CustomLink from "src/components/link/CustomLink";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { ArticleSection } from "studio/lib/interfaces/pages";
+import { IArticle } from "studio/lib/interfaces/pages";
 
 import styles from "./article.module.css";
 
 interface ArticleProps {
-  article: ArticleSection;
+  article: IArticle;
 }
 
 export default function Article({ article }: ArticleProps) {
