@@ -5,7 +5,7 @@
   "navigation": {
     "home": "Hem"
   },
-  "CustomerCase": {
+  "customer_case": {
     "customer": "Kund",
     "project": "Projekt",
     "duration": "Varaktighet",
