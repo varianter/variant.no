@@ -18,9 +18,11 @@ export function SanityImage({
 }) {
   const sanityClient = isShared ? sharedClient : client;
   const imageProps = useNextSanityImage(sanityClient, image);
-  const objectPosition = image.hotspot
-    ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
-    : "50% 50%"; // Default to center if no hotspot is defined
+
+  const objectPosition =
+    image && image.hotspot
+      ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
+      : "50% 50%"; // Default to center if no hotspot is defined
 
   if (!imageProps) {
     return null;
