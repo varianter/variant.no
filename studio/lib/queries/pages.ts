@@ -116,6 +116,26 @@ const SECTIONS_FRAGMENT = groq`
       "articleTag": ${translatedFieldFragment("articleTag")},
       "articleTitle": ${translatedFieldFragment("articleTitle")},
       "articleSubtitle": ${translatedFieldFragment("articleSubtitle")},
+    },
+     _type == "articleSection" => {
+     ..., 
+      "articleSectionType": articleSectionType,
+      
+        "articleTitle": articleTitle {
+          ..., 
+          "title": ${translatedFieldFragment("title")},
+          "eyebrow": ${translatedFieldFragment("eyebrow")},
+        },
+        "articleParagraph": articleParagraph {
+          ..., 
+          "title": ${translatedFieldFragment("title")},
+          "textContent": ${translatedFieldFragment("textContent")},
+        },
+        "articleQuote": articleQuote {
+          ..., 
+          "author": ${translatedFieldFragment("author")},
+          "quote": ${translatedFieldFragment("quote")},
+        } 
     }
   }
 `;

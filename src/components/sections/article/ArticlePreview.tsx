@@ -4,7 +4,7 @@ import { useQuery } from "@sanity/react-loader";
 import { Suspense } from "react";
 
 import { PreviewProps } from "src/types/preview";
-import { ArticleSection, PageBuilder } from "studio/lib/interfaces/pages";
+import { IArticle, PageBuilder } from "studio/lib/interfaces/pages";
 import { PAGE_QUERY } from "studio/lib/queries/pages";
 
 import Article from "./Article";
@@ -21,7 +21,7 @@ export default function ArticlePreview({
 
   const articleSection = data.sections.find(
     (section, index) => section._type === "article" && index === sectionIndex,
-  ) as ArticleSection;
+  ) as IArticle;
 
   return (
     <Suspense>
