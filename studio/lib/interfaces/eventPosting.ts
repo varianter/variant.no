@@ -1,4 +1,5 @@
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
+import { Consultants } from "studioShared/lib/interfaces/customerCases";
 
 export interface IEventPosting {
   _key: string;
@@ -6,8 +7,8 @@ export interface IEventPosting {
   locations: CompanyLocation[];
   externalLink: string;
   eventDescription: string;
-  date: Date;
-  tags: array;
+  date: string;
+  tags: string[];
   consultants: Consultants[];
 }
 

@@ -61,7 +61,7 @@ export default function EventPosting({
         <div>
           {eventPosting.tags &&
             eventPosting.tags
-              .filter((tag) => tag) // Fjerner tomme eller falsy verdier
+              .filter((tag) => tag)
               .map((tag, index) => (
                 <Badge
                   key={index}
