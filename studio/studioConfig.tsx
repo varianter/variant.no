@@ -1,10 +1,14 @@
 import { colorInput } from "@sanity/color-input";
 import { documentInternationalization } from "@sanity/document-internationalization";
 import { visionTool } from "@sanity/vision";
+import { SanityClient } from "next-sanity";
 import { WorkspaceOptions } from "sanity";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
-import { internationalizedArray } from "sanity-plugin-internationalized-array";
+import {
+  Language,
+  internationalizedArray,
+} from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
 
 import { languageID } from "i18n/languageSchemaField";
@@ -16,6 +20,21 @@ import { schema } from "./schema";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 
 const SUPPORTED_LANGUAGES_QUERY = `*[_type == "languageSettings" && !(_id in path("drafts.*"))].languages[]{id, title}`;
+
+let cachedSupportedLanguages: Promise<Language[]> | null = null;
+//TODO: This might not be the perfect solution, but it works for now.
+function getSupportedLanguages(client: SanityClient) {
+  if (!cachedSupportedLanguages) {
+    cachedSupportedLanguages = client
+      .fetch(SUPPORTED_LANGUAGES_QUERY)
+      .catch((err: Error) => {
+        cachedSupportedLanguages = null; // Reset cache on error
+        throw err;
+      });
+  }
+
+  return cachedSupportedLanguages;
+}
 
 const config: WorkspaceOptions = {
   name: "studio",
@@ -32,20 +51,13 @@ const config: WorkspaceOptions = {
     }),
     visionTool({ defaultApiVersion: apiVersion }),
     documentInternationalization({
-      supportedLanguages: (client) => {
-        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
-      },
+      supportedLanguages: (client) => getSupportedLanguages(client),
       schemaTypes: [legalDocumentID],
       languageField: languageID,
       apiVersion,
-      // Optional. Adds UI for publishing all translations at once. Requires access to the Scheduling API
-      // https://www.sanity.io/docs/scheduling-api
-      // bulkPublish: true,
     }),
     internationalizedArray({
-      languages: (client) => {
-        return client.fetch(SUPPORTED_LANGUAGES_QUERY);
-      },
+      languages: (client) => getSupportedLanguages(client),
       fieldTypes: ["string", "richText", "seo", "text"],
     }),
     presentationTool({
