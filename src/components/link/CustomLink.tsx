@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import { getHref } from "src/utils/link";
-import { ILink } from "studio/lib/interfaces/navigation";
+import { getLinkAttributes } from "src/utils/link";
+import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 
 import styles from "./link.module.css";
 
@@ -30,85 +30,55 @@ const CustomLink = ({
   color = "dark",
   scroll,
 }: ICustomLink) => {
-  const href = getHref(link);
-  const newTab = link.newTab;
-  const target = newTab ? "_blank" : undefined;
-  const rel = newTab ? "noopener noreferrer" : undefined;
+  const className = getLinkClassName(type, link.linkType, isSelected);
+  const attributes = getLinkAttributes(link);
 
-  switch (type) {
+  return (
+    link.linkTitle &&
+    (type === "link" ? (
+      <div
+        className={
+          styles.wrapper +
+          (size === "small" ? ` ${styles.sizeSmall}` : "") +
+          (color === "light" ? ` ${styles.colorLight}` : "")
+        }
+      >
+        <Link
+          {...attributes}
+          className={className}
+          aria-label={link.ariaLabel}
+          scroll={scroll}
+        >
+          {link.linkTitle}
+        </Link>
+      </div>
+    ) : (
+      <Link
+        {...attributes}
+        className={className}
+        aria-label={link.ariaLabel}
+        scroll={scroll}
+      >
+        {link.linkTitle}
+      </Link>
+    ))
+  );
+};
+
+const getLinkClassName = (
+  componentType: ComponentLinkType,
+  linkType: LinkType,
+  isSelected: boolean | undefined,
+) => {
+  switch (componentType) {
     case "link":
-      return (
-        link.linkTitle && (
-          <div
-            className={
-              styles.wrapper +
-              (size === "small" ? ` ${styles.sizeSmall}` : "") +
-              (color === "light" ? ` ${styles.colorLight}` : "")
-            }
-          >
-            <Link
-              className={
-                link.linkType == "internal"
-                  ? styles.internalLink
-                  : styles.externalLink
-              }
-              href={href}
-              target={target}
-              rel={rel}
-              aria-label={link.ariaLabel}
-              scroll={scroll}
-            >
-              <span className={styles.span}>{link.linkTitle}</span>
-            </Link>
-          </div>
-        )
-      );
+      return linkType == "internal" ? styles.internalLink : styles.externalLink;
     case "headerLink":
-      return (
-        link.linkTitle && (
-          <Link
-            className={`${styles.headerLink} ${isSelected ? styles.selected : ""}`}
-            href={href}
-            target={target}
-            rel={rel}
-            aria-label={link.ariaLabel}
-            scroll={scroll}
-          >
-            <span className={styles.dot}></span>
-            {link.linkTitle}
-          </Link>
-        )
-      );
+      return `${styles.headerLink} ${isSelected ? styles.selected : ""}`;
     case "footerLink":
-      return (
-        link.linkTitle && (
-          <Link
-            className={styles.footerLink}
-            href={href}
-            target={target}
-            rel={rel}
-            aria-label={link.ariaLabel}
-            scroll={scroll}
-          >
-            {link.linkTitle}
-          </Link>
-        )
-      );
+      return styles.footerLink;
     case "footerLinkGrey":
-      return (
-        link.linkTitle && (
-          <Link
-            className={styles.footerLinkGrey}
-            href={href}
-            target={target}
-            rel={rel}
-            aria-label={link.ariaLabel}
-            scroll={scroll}
-          >
-            {link.linkTitle}
-          </Link>
-        )
-      );
+      return styles.footerLinkGrey;
   }
 };
 
