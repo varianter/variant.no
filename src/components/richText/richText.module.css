@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 1.5rem;
   max-width: var(--max-content-width-medium);
-  background-color: lightgreen;
 }
 
 .list {
@@ -13,16 +12,15 @@
   line-height: 160%;
   letter-spacing: 0.0125rem;
 
-  /* @media (max-width: 425px) {
+  @media (max-width: 425px) {
     font-size: 0.875rem;
     line-height: 171.429%;
-  } */
+  }
 }
 
 .image {
   overflow: hidden;
   margin: auto;
-
   border-radius: var(--radius-medium);
 
   & img {
@@ -33,9 +31,4 @@
 
 .blockquote {
   font-style: italic;
-}
-
-.italic {
-  /* font-style: italic; */
-  background-color: red;
 }

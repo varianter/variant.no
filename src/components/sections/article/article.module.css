@@ -10,10 +10,14 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  /* max-width: var(--max-content-width-large); */
   margin: 3rem auto;
-  background-color: green;
   padding: 1rem;
+
+  @media (max-width: 425px) {
+    gap: 0.5rem; 
+    padding: 0; 
+    margin: 0;
+  }
 }
 
 .content {
@@ -24,8 +28,6 @@
   gap: 1.5rem;
   align-self: stretch;
   margin: auto;
-
-  /* max-width: 600px; */
 }
 
 .image {
