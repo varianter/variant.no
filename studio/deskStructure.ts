@@ -1,4 +1,5 @@
 import {
+  CalendarIcon,
   CaseIcon,
   CogIcon,
   ConfettiIcon,
@@ -19,6 +20,7 @@ import { StructureBuilder } from "sanity/structure";
 import { companyInfoID } from "./schemas/documents/admin/companyInfo";
 import { companyLocationID } from "./schemas/documents/admin/companyLocation";
 import { defaultSeoID } from "./schemas/documents/admin/defaultSeo";
+import { eventPostingsID } from "./schemas/documents/admin/eventPostings";
 import { jobPostingsID } from "./schemas/documents/admin/jobPostings";
 import { legalDocumentID } from "./schemas/documents/admin/legalDocuments";
 import { compensationsId } from "./schemas/documents/compensations";
@@ -68,6 +70,15 @@ const adminSection = (S: StructureBuilder) =>
                 .schemaType(jobPostingsID)
                 .documentId(jobPostingsID)
                 .title("Job Postings"),
+            ),
+          S.listItem()
+            .title("Event Postings")
+            .icon(CalendarIcon)
+            .child(
+              S.document()
+                .schemaType(eventPostingsID)
+                .documentId(eventPostingsID)
+                .title("Event Postings"),
             ),
         ]),
     );

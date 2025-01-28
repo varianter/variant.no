@@ -74,6 +74,10 @@
     "office": "Office",
     "all": "All"
   },
+  "office_selector": {
+    "location": "Location",
+    "all": "All"
+  },
   "footer": {
     "text": "We have multiple offices in Norway and Sweden. Feel free to drop by for a cup of coffee or just a friendly chat.",
     "mainMenu": "Main menu",

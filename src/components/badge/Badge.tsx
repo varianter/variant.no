@@ -8,13 +8,15 @@ interface IBadge {
   children: React.ReactNode;
   badgeColor?: string;
   className?: string;
+  borderColor?: string;
 }
 
 const DEFAULT_BADGE_COLOR = "#EAEAEA";
 
-const Badge = ({ children, badgeColor, className }: IBadge) => {
+const Badge = ({ children, badgeColor, className, borderColor }: IBadge) => {
   const bgColor = badgeColor ?? DEFAULT_BADGE_COLOR;
   const textColor = getTextColor(bgColor);
+  const brColor = borderColor ?? "";
 
   return (
     <div
@@ -22,6 +24,11 @@ const Badge = ({ children, badgeColor, className }: IBadge) => {
       style={{
         backgroundColor: bgColor,
         color: textColor,
+        ...(brColor && {
+          borderColor: brColor,
+          borderWidth: "1px",
+          borderStyle: "solid",
+        }),
       }}
     >
       <Text type="bodySmall">{children}</Text>
