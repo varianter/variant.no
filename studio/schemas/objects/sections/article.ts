@@ -1,9 +1,8 @@
 import { BlockContentIcon } from "@sanity/icons";
-import { StringInputProps, defineField } from "sanity";
+import { defineField } from "sanity";
 
-import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import { imageExtended } from "studio/schemas/fields/media";
-import { richText, title } from "studio/schemas/fields/text";
+import { title } from "studio/schemas/fields/text";
 import { link } from "studio/schemas/objects/link";
 
 const articleID = "article";
@@ -15,17 +14,17 @@ export const article = defineField({
   icon: BlockContentIcon,
   fields: [
     {
-      name: "tag",
-      title: "Tag",
-      type: "string",
-      validation: (rule) => rule.max(60),
-      components: {
-        input: (props: StringInputProps) =>
-          StringInputWithCharacterCount({ ...props, maxCount: 60 }),
-      },
+      name: "eyebrow",
+      title: "Eyebrow",
+      type: "internationalizedArrayString",
     },
     title,
-    richText,
+    {
+      name: "richText",
+      title: "BodyNormal",
+      type: "internationalizedArrayRichText",
+      description: "Add and format rich text content.",
+    },
     imageExtended,
     link,
   ],

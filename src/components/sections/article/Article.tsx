@@ -1,13 +1,13 @@
 import { SanityImage } from "src/components/image/SanityImage";
-import CustomLink from "src/components/link/CustomLink";
+import LinkButton from "src/components/linkButton/LinkButton";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
-import { ArticleSection } from "studio/lib/interfaces/pages";
+import { IArticle } from "studio/lib/interfaces/pages";
 
 import styles from "./article.module.css";
 
 interface ArticleProps {
-  article: ArticleSection;
+  article: IArticle;
 }
 
 export default function Article({ article }: ArticleProps) {
@@ -21,11 +21,11 @@ export default function Article({ article }: ArticleProps) {
         )}
         <div className={styles.content}>
           <div>
-            <Text type="labelRegular">{article.tag}</Text>
+            <Text type="labelRegular">{article.eyebrow}</Text>
             <Text type="h1">{article.basicTitle}</Text>
           </div>
           {article.richText && <RichText value={article.richText} />}
-          {article.link && <CustomLink link={article.link} />}
+          {article.link && <LinkButton link={article.link} />}
         </div>
       </div>
     </article>

@@ -21,6 +21,10 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "article" => {
       ...,
+      "eyebrow": ${translatedFieldFragment("eyebrow")},
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "richText": ${translatedFieldFragment("richText")},
+      "imageExtended": imageExtended {..., ${INTERNATIONALIZED_IMAGE_FRAGMENT} }, 
       link {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}

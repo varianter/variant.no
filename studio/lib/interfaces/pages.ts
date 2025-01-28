@@ -21,14 +21,14 @@ export interface LogoSaladSection {
   supporting: string;
 }
 
-export interface ArticleSection {
+export interface IArticle {
   _type: "article";
   _key: string;
-  tag?: string;
+  eyebrow?: string;
   basicTitle: string;
   richText?: PortableTextBlock[];
   link?: ILink;
-  imageExtended: ImageExtendedProps;
+  imageExtended?: ImageExtendedProps;
 }
 
 export interface ImageSection {
@@ -167,7 +167,7 @@ export interface LearningSection {
 export type Section =
   | HeroSection
   | LogoSaladSection
-  | ArticleSection
+  | IArticle
   | ImageSection
   | ImageSplitSection
   | GridSection

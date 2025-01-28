@@ -32,6 +32,11 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
         {children}
       </Text>
     ),
+    italic: ({ children }) => (
+      <Text type="quoteItalic" className={styles.italic}>
+        {children} hei
+      </Text>
+    ),
     normal: ({ children }) => <Text type="bodyNormal">{children}</Text>,
     blockquote: ({ children }) => (
       <blockquote className={`${styles.blockquote} ${textStyles.body}`}>
@@ -102,6 +107,8 @@ const groupBlocks = (blocks: PortableTextBlock[]): Group[] => {
       }
     } else if (block._type === "image" || block.style === "blockquote") {
       // Start a new group for images or blockquotes
+      groups.push(createNewGroup(block));
+    } else if (block.style === "italic") {
       groups.push(createNewGroup(block));
     } else if (block.style === "normal") {
       // Add normal text to the last group if it exists, otherwise start a new group

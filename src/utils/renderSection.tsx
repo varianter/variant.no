@@ -23,10 +23,10 @@ import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview
 import Openness from "src/components/sections/openness/Openness";
 import { Locale } from "src/i18n/routing";
 import {
-  ArticleSection,
   CustomerCasesEntrySection,
   GridSection,
   HeroSection,
+  IArticle,
   ImageSection,
   ImageSplitSection,
   LogoSaladSection,
@@ -74,8 +74,8 @@ const renderLogoSaladSection = (
   );
 };
 
-const renderArticleSection = (
-  section: ArticleSection,
+const renderArticle = (
+  section: IArticle,
   sectionIndex: number,
   isDraftMode: boolean,
   initialData: QueryResponseInitial<PageBuilder>,
@@ -175,12 +175,7 @@ const SectionRenderer = ({
         initialData,
       );
     case "article":
-      return renderArticleSection(
-        section,
-        sectionIndex,
-        isDraftMode,
-        initialData,
-      );
+      return renderArticle(section, sectionIndex, isDraftMode, initialData);
     case "imageSection":
       return renderImageSection(
         section,
