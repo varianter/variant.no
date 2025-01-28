@@ -61,18 +61,19 @@ export default function OfficeSelector({
         text={`${t("all")} (${eventPostingsCount})`}
         background="dark"
       />
-      {sortAlphabetically(filteredLocations).map((location) => (
-        eventPostingsPerLocation[location.companyLocationName] > 0 && (
-          <Tag
-            key={location._id}
-            active={locationFilter === location}
-            type="button"
-            onClick={() => handleFilterChange(location)}
-            text={`${location.companyLocationName} (${eventPostingsPerLocation[location.companyLocationName] || 0})`}
-            background="dark"
-          />
-        )
-      ))}
+      {sortAlphabetically(filteredLocations).map(
+        (location) =>
+          eventPostingsPerLocation[location.companyLocationName] > 0 && (
+            <Tag
+              key={location._id}
+              active={locationFilter === location}
+              type="button"
+              onClick={() => handleFilterChange(location)}
+              text={`${location.companyLocationName} (${eventPostingsPerLocation[location.companyLocationName] || 0})`}
+              background="dark"
+            />
+          ),
+      )}
     </div>
   );
 }
