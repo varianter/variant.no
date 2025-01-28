@@ -3,6 +3,7 @@ import { defineField, defineType } from "sanity";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
 import article from "studio/schemas/objects/sections/article";
+import { articleSection } from "studio/schemas/objects/sections/articleSection";
 import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
@@ -62,6 +63,7 @@ const pageBuilder = defineType({
         opennessSection,
         generositySection,
         learningSection,
+        articleSection,
       ],
     }),
     defineField({
