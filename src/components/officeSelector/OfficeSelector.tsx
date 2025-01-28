@@ -53,7 +53,7 @@ export default function OfficeSelector({
 
   return (
     <div className={styles.filters}>
-      <Text type="labelRegular">{`${t("location")}`}</Text>
+      <Text type="labelRegular">{t("location")}</Text>
       <Tag
         active={!locationFilter}
         type="button"
@@ -62,14 +62,16 @@ export default function OfficeSelector({
         background="dark"
       />
       {sortAlphabetically(filteredLocations).map((location) => (
-        <Tag
-          key={location._id}
-          active={locationFilter === location}
-          type="button"
-          onClick={() => handleFilterChange(location)}
-          text={`${location.companyLocationName} (${eventPostingsPerLocation[location.companyLocationName] || 0})`}
-          background="dark"
-        />
+        eventPostingsPerLocation[location.companyLocationName] > 0 && (
+          <Tag
+            key={location._id}
+            active={locationFilter === location}
+            type="button"
+            onClick={() => handleFilterChange(location)}
+            text={`${location.companyLocationName} (${eventPostingsPerLocation[location.companyLocationName] || 0})`}
+            background="dark"
+          />
+        )
       ))}
     </div>
   );
