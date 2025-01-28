@@ -31,6 +31,30 @@ export interface IArticle {
   imageExtended?: ImageExtendedProps;
 }
 
+export interface IArticleSection {
+  _type: "articleSection";
+  _key: string;
+  articleSectionType: "title" | "paragraph" | "quote";
+  articleTitle?: ITitleArticleSection;
+  articleParagraph?: IParagraphArticleSection;
+  articleQuote?: IQuoteArticleSection;
+}
+
+export interface ITitleArticleSection {
+  eyebrow?: string;
+  title?: string;
+}
+
+export interface IParagraphArticleSection {
+  title?: string;
+  textContent?: string;
+}
+
+export interface IQuoteArticleSection {
+  author?: string;
+  quote?: string;
+}
+
 export interface ImageSection {
   _type: "imageSection";
   _key: string;
@@ -64,6 +88,7 @@ export interface GridSection {
     image: IImage;
   }[];
 }
+
 export interface ContactBoxSection {
   _type: "contactBox";
   _key: string;
@@ -168,6 +193,7 @@ export type Section =
   | HeroSection
   | LogoSaladSection
   | IArticle
+  | IArticleSection
   | ImageSection
   | ImageSplitSection
   | GridSection

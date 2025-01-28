@@ -2,6 +2,7 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 
 import Article from "src/components/sections/article/Article";
 import ArticlePreview from "src/components/sections/article/ArticlePreview";
+import ArticleSection from "src/components/sections/articleSection/ArticleSection";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -218,6 +219,8 @@ const SectionRenderer = ({
       return <Generosity section={section} language={language} />;
     case "learningSection":
       return <Learning section={section} />;
+    case "articleSection":
+      return <ArticleSection section={section} />;
     default:
       return null;
   }
