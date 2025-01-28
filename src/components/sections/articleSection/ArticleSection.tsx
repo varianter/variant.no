@@ -44,7 +44,10 @@ const renderArticleParagraph = ({
 }: IParagraphArticleSection) => (
   <div className={styles.container}>
     <div className={styles.paragraphWrapper}>
-      <Text type="h4" as="h2"> {title} </Text>
+      <Text type="h4" as="h2">
+        {" "}
+        {title}{" "}
+      </Text>
       <Text type="bodySmall">{textContent}</Text>
     </div>
   </div>
