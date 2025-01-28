@@ -21,36 +21,27 @@ export interface LogoSaladSection {
   supporting: string;
 }
 
-export interface IArticle {
-  _type: "article";
+export interface ITextContent {
+  _type: "textContent";
   _key: string;
-  eyebrow?: string;
-  basicTitle: string;
+  textType: "title" | "paragraph" | "richText" | "quote";
+  textTitle?: ITextTitle;
+  textParagraph?: ITextParagraph;
+  textQuote?: ITextQuote;
   richText?: PortableTextBlock[];
-  link?: ILink;
-  imageExtended?: ImageExtendedProps;
 }
 
-export interface IArticleSection {
-  _type: "articleSection";
-  _key: string;
-  articleSectionType: "title" | "paragraph" | "quote";
-  articleTitle?: ITitleArticleSection;
-  articleParagraph?: IParagraphArticleSection;
-  articleQuote?: IQuoteArticleSection;
-}
-
-export interface ITitleArticleSection {
+export interface ITextTitle {
   eyebrow?: string;
   title?: string;
 }
 
-export interface IParagraphArticleSection {
-  title?: string;
+export interface ITextParagraph {
+  paragraphHeader?: string;
   textContent?: string;
 }
 
-export interface IQuoteArticleSection {
+export interface ITextQuote {
   author?: string;
   quote?: string;
 }
@@ -192,8 +183,7 @@ export interface LearningSection {
 export type Section =
   | HeroSection
   | LogoSaladSection
-  | IArticle
-  | IArticleSection
+  | ITextContent
   | ImageSection
   | ImageSplitSection
   | GridSection
