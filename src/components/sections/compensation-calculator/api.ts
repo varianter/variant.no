@@ -17,10 +17,10 @@ export async function getHandbookLinksFromCompensationPage(
     COMPENSATIONS_HANDBOOK_LINKS,
     { language },
     {
-      cache: "force-cache",
-      next: {
-        revalidate: 60 * 60,
-      },
+      // cache: "no-store",
+      // next: {
+      //   revalidate: 60,
+      // },
     },
   );
 
