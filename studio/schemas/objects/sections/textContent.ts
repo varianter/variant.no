@@ -27,7 +27,7 @@ export const textContent = defineField({
         list: [
           { title: "Title", value: "title" },
           { title: "Paragraph", value: "paragraph" },
-          { title: "RichText", value: "richText" },
+          { title: "Rich Text", value: "richText" },
           { title: "Quote", value: "quote" },
         ],
         layout: "radio",

@@ -35,8 +35,11 @@
 
 .link {
   color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
 
   &:hover {
     color: var(--text-tertiary);
+    cursor: pointer;
   }
 }
