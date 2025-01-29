@@ -1,4 +1,4 @@
-import { StringRule, defineField } from "sanity";
+import { defineField } from "sanity";
 
 import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 
@@ -18,29 +18,12 @@ interface CreateFieldProps {
   maxLength?: number;
 }
 
-const createField = ({
-  name,
-  title,
-  isRequired = false,
-  maxLength = 60,
-}: CreateFieldProps) => {
-  const validationRules = (rule: StringRule) => {
-    let rules = rule.max(maxLength);
-    if (isRequired) {
-      rules = rules.required();
-    }
-    return rules;
-  };
-
+const createField = ({ name, title }: CreateFieldProps) => {
   return defineField({
     name,
     title,
-    type: "string",
-    validation: validationRules,
-    components: {
-      input: (props) =>
-        StringInputWithCharacterCount({ ...props, maxCount: maxLength }),
-    },
+    type: "internationalizedArrayString",
+    validation: (rule) => rule.required(),
   });
 };
 

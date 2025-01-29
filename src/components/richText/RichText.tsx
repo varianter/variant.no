@@ -47,6 +47,21 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     bullet: ({ children }) => <li className={textStyles.body}>{children}</li>,
     number: ({ children }) => <li className={textStyles.body}>{children}</li>,
   },
+  marks: {
+    em: ({ children }) => (
+      <Text type="italic" as="em">
+        {children}
+      </Text>
+    ),
+    link: ({ value, children }) => {
+      const { href } = value;
+      return (
+        <a href={href} className={styles.link}>
+          {children}
+        </a>
+      );
+    },
+  },
   types: {
     image: ({ value }) => (
       <div className={styles.image}>

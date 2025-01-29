@@ -6,9 +6,8 @@
   --_button-border: none;
   --_button-background: transparent;
   --_button-color: currentColor;
-
   box-sizing: content-box;
-
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   align-self: stretch;

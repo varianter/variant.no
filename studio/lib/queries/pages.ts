@@ -19,13 +19,6 @@ const SECTIONS_FRAGMENT = groq`
       "title": ${translatedFieldFragment("title")},
       "description": ${translatedFieldFragment("description")},
     },
-    _type == "article" => {
-      ...,
-      link {
-        ...,
-        ${TRANSLATED_LINK_FRAGMENT}
-      }
-    },
     _type == "imageSplitSection" => {
       ...,
       "content": content[]{
@@ -121,21 +114,22 @@ const SECTIONS_FRAGMENT = groq`
       "articleTitle": ${translatedFieldFragment("articleTitle")},
       "articleSubtitle": ${translatedFieldFragment("articleSubtitle")},
     },
-     _type == "articleSection" => {
+     _type == "textContent" => {
      ..., 
-      "articleSectionType": articleSectionType,
+      "textType": textType,
       
-        "articleTitle": articleTitle {
+        "textTitle": textTitle {
           ..., 
           "title": ${translatedFieldFragment("title")},
           "eyebrow": ${translatedFieldFragment("eyebrow")},
         },
-        "articleParagraph": articleParagraph {
+        "textParagraph": textParagraph {
           ..., 
-          "title": ${translatedFieldFragment("title")},
+          "paragraphHeader": ${translatedFieldFragment("paragraphHeader")},
           "textContent": ${translatedFieldFragment("textContent")},
         },
-        "articleQuote": articleQuote {
+        "richText": ${translatedFieldFragment("richText")},
+        "textQuote": textQuote {
           ..., 
           "author": ${translatedFieldFragment("author")},
           "quote": ${translatedFieldFragment("quote")},

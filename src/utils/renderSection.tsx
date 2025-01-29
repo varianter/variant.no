@@ -1,8 +1,5 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
 
-import Article from "src/components/sections/article/Article";
-import ArticlePreview from "src/components/sections/article/ArticlePreview";
-import ArticleSection from "src/components/sections/articleSection/ArticleSection";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -23,12 +20,12 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
+import TextContent from "src/components/sections/textContent/TextContent";
 import { Locale } from "src/i18n/routing";
 import {
   CustomerCasesEntrySection,
   GridSection,
   HeroSection,
-  IArticle,
   ImageSection,
   ImageSplitSection,
   LogoSaladSection,
@@ -73,19 +70,6 @@ const renderLogoSaladSection = (
     <LogoSaladPreview initialData={initialData} sectionIndex={sectionIndex} />
   ) : (
     <LogoSalad logoSalad={section} />
-  );
-};
-
-const renderArticle = (
-  section: IArticle,
-  sectionIndex: number,
-  isDraftMode: boolean,
-  initialData: QueryResponseInitial<PageBuilder>,
-) => {
-  return isDraftMode ? (
-    <ArticlePreview initialData={initialData} sectionIndex={sectionIndex} />
-  ) : (
-    <Article article={section} />
   );
 };
 
@@ -176,8 +160,6 @@ const SectionRenderer = ({
         isDraftMode,
         initialData,
       );
-    case "article":
-      return renderArticle(section, sectionIndex, isDraftMode, initialData);
     case "imageSection":
       return renderImageSection(
         section,
@@ -220,10 +202,10 @@ const SectionRenderer = ({
       return <Generosity section={section} language={language} />;
     case "learningSection":
       return <Learning section={section} />;
+    case "textContent":
+      return <TextContent section={section} />;
     case "events":
       return <Events language={language} section={section} />;
-    case "articleSection":
-      return <ArticleSection section={section} />;
     default:
       return null;
   }

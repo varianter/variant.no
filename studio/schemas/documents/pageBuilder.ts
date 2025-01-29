@@ -2,8 +2,6 @@ import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
-import article from "studio/schemas/objects/sections/article";
-import { articleSection } from "studio/schemas/objects/sections/articleSection";
 import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
@@ -18,6 +16,7 @@ import { jobs } from "studio/schemas/objects/sections/jobs";
 import { learningSection } from "studio/schemas/objects/sections/learning";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import { opennessSection } from "studio/schemas/objects/sections/openness";
+import { textContent } from "studio/schemas/objects/sections/textContent";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
 import { firstTranslation } from "studio/utils/i18n";
@@ -49,7 +48,6 @@ const pageBuilder = defineType({
       of: [
         hero,
         logoSalad,
-        article,
         imageSplitSection,
         imageSection,
         // grid,
@@ -63,7 +61,7 @@ const pageBuilder = defineType({
         opennessSection,
         generositySection,
         learningSection,
-        articleSection,
+        textContent,
       ],
     }),
     defineField({

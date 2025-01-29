@@ -19,7 +19,8 @@ export type TextType =
   | "bodyXl"
   | "mobileH1"
   | "mobileBodyNormal"
-  | "imageLabel";
+  | "imageLabel"
+  | "italic";
 
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   h1: "h1",
@@ -41,6 +42,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   mobileH1: "h1",
   mobileBodyNormal: "p",
   imageLabel: "span",
+  italic: "p",
 };
 
 const classMap: { [key in TextType]?: string } = {
@@ -63,6 +65,7 @@ const classMap: { [key in TextType]?: string } = {
   mobileH1: styles.mobileH1,
   mobileBodyNormal: styles.mobileBodyNormal,
   imageLabel: styles.imageLabel,
+  italic: styles.italic,
 };
 
 const Text = ({
