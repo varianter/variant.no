@@ -33,13 +33,10 @@ export default function TextContent({ section }: textContentProps) {
 }
 
 const renderTextTitle = ({ eyebrow, title }: ITextTitle) => (
-  console.log(eyebrow),
-  (
-    <div className={styles.container}>
-      <Text type="bodyNormal"> {eyebrow} </Text>
-      <Text type="h1">{title}</Text>
-    </div>
-  )
+  <div className={styles.container}>
+    <Text type="bodyNormal"> {eyebrow} </Text>
+    <Text type="h1">{title}</Text>
+  </div>
 );
 
 const renderTextParagraph = ({
