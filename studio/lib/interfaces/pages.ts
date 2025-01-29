@@ -114,6 +114,13 @@ export interface JobsSection {
   subtitle: string;
 }
 
+export interface EventsSection {
+  _type: "events";
+  _key: string;
+  basicTitle: string;
+  subtitle: string;
+}
+
 export enum CompensationCalculatorBackground {
   Dark = "dark",
   Violet = "violet",
@@ -194,6 +201,7 @@ export type Section =
   | EmployeeHighlightSection
   | CompensationCalculatorSection
   | JobsSection
+  | EventsSection
   | OpennessSection
   | GenerositySection
   | LearningSection;

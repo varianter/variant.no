@@ -38,3 +38,21 @@ export const JOB_POSTINGS_QUERY = groq`
     }
   }
 `;
+
+// Event Postings
+export const EVENT_POSTINGS_QUERY = groq`
+  *[_type == "eventPostings"][0] {
+    eventPostingsArray[] {
+      _key, 
+      externalLink,
+      "eventTitle": ${translatedFieldFragment("eventTitle")}, 
+      locations[] -> {
+        ...
+      }, 
+      date, 
+      eventDescription, 
+      tags,
+      consultants,
+    }
+  }
+`;

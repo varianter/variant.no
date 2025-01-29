@@ -28,9 +28,24 @@ import {
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
-
 const fontBrittiSans = localFont({
-  src: "../../../../public/_assets/britti-sans-variable.woff2",
+  src: [
+    {
+      path: "../../../../public/_assets/britti-sans-variable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../../../../public/_assets/britti-sans-regularitalic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../../../public/_assets/britti-sans-semibolditalic.woff2",
+      weight: "600",
+      style: "italic",
+    },
+  ],
   variable: "--font-britti-sans",
 });
 
