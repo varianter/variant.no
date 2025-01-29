@@ -81,6 +81,7 @@ export interface CompensationsPage {
   _updatedAt: string;
   language: string;
   basicTitle: string;
+  richText: PortableTextBlock[];
   page: string;
   slug: string;
   pensionPercent?: number;

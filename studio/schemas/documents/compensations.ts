@@ -1,7 +1,7 @@
 import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
-import { title, titleID } from "studio/schemas/fields/text";
+import { richTextID, title, titleID } from "studio/schemas/fields/text";
 import { benefitsByLocation } from "studio/schemas/objects/compensations/benefitsByLocation";
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
@@ -24,6 +24,13 @@ const compensations = defineType({
       title: "Compensation Page Title",
       description:
         "Enter the primary title that will be displayed at the top of the compensation page. This is what users will see when they visit the page.",
+    },
+    {
+      name: richTextID,
+      title: "Description",
+      type: "internationalizedArrayRichText",
+      description:
+        "Enter a brief description to provide more context about the compensation page. This will appear under the title.",
     },
     {
       ...titleSlug,
