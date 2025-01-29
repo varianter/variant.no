@@ -1,0 +1,72 @@
+.eventPosting {
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background-color: var(--text-primary-light);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: 2px solid var(--surface-yellow, #ffd02f);
+    transition: none;
+  }
+
+  &:is(a) {
+    position: relative;
+    cursor: pointer;
+
+    &:is(:hover, :focus, :active) {
+      background-color: var(--Background-secondary, #eaeaea);
+      border-radius: 0.375rem;
+    }
+
+    &::after {
+      width: 1.5rem;
+      height: 1.5rem;
+      content: "";
+      -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
+      -webkit-mask-size: cover;
+      mask: url("/_assets/arrow-right.svg") no-repeat center;
+      mask-size: cover;
+      background-color: var(--background-bg-dark);
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.eventTitle {
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
+}
+
+.consultants {
+  margin-left: 0.5rem;
+}
+
+.dotSeperator::after {
+  content: "·";
+  margin-left: 0.38rem;
+}
+
+.dotSeperator:nth-last-child(2)::after {
+  content: "";
+  margin: 0rem;
+}
+
+.flex {
+  display: flex;
+  gap: 0.38rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.themes {
+  margin-left: var(--padding-xs);
+}
+
+.eventCardBottomfield {
+  margin-top: var(--padding-s);
+}

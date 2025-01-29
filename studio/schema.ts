@@ -3,6 +3,7 @@ import { type SchemaTypeDefinition } from "sanity";
 import companyInfo from "./schemas/documents/admin/companyInfo";
 import companyLocation from "./schemas/documents/admin/companyLocation";
 import defaultSeo from "./schemas/documents/admin/defaultSeo";
+import eventPostings from "./schemas/documents/admin/eventPostings";
 import jobPostings from "./schemas/documents/admin/jobPostings";
 import legalDocument from "./schemas/documents/admin/legalDocuments";
 import compensations from "./schemas/documents/compensations";
@@ -17,6 +18,7 @@ import customerCasesPage from "./schemas/documents/specialPages/customerCasesPag
 import callToActionField from "./schemas/fields/callToActionFields";
 import { richText } from "./schemas/fields/text";
 import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
+import eventPosting from "./schemas/objects/eventPosting";
 import { footerSection } from "./schemas/objects/footerSection";
 import jobPosting from "./schemas/objects/jobPosting";
 import { link } from "./schemas/objects/link";
@@ -49,6 +51,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     announcement,
     jobPosting,
     jobPostings,
+    eventPosting,
+    eventPostings,
     employeeHighlightSection,
     compensationCalculator,
   ],

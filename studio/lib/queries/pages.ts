@@ -81,6 +81,10 @@ const SECTIONS_FRAGMENT = groq`
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "subtitle": ${translatedFieldFragment("subtitle")}
     },
+    _type == "events" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "subtitle": ${translatedFieldFragment("subtitle")}
+    },
     _type == "employeeHighlight" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "description": ${translatedFieldFragment("description")},
