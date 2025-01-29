@@ -1,7 +1,8 @@
 import { TextIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
-import { allTranslations } from "studio/utils/i18n";
+import { isInternationalizedRichText } from "studio/lib/interfaces/global";
+import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import { richTextPreview } from "studio/utils/preview";
 
 const textContentID = "textContent";
@@ -121,6 +122,21 @@ export const textContent = defineField({
     prepare(selection) {
       const { title, paragraph, richText, quote, textContentType } = selection;
 
+      if (textContentType === "richText") {
+        if (!isInternationalizedRichText(richText)) {
+          throw new TypeError(
+            `Expected 'richText' to be InternationalizedRichText, was ${typeof richText}`,
+          );
+        }
+        const translatedRichText = firstTranslation(richText);
+        return {
+          title:
+            translatedRichText !== null
+              ? richTextPreview(translatedRichText)
+              : undefined,
+          subtitle: "Text content type: " + textContentType,
+        };
+      }
       if (textContentType === "title") {
         return {
           title: allTranslations(title) || undefined,
@@ -130,12 +146,6 @@ export const textContent = defineField({
       if (textContentType === "paragraph") {
         return {
           title: allTranslations(paragraph) || undefined,
-          subtitle: "Text  content type: " + textContentType,
-        };
-      }
-      if (textContentType === "richText") {
-        return {
-          title: richTextPreview(richText) || undefined, //This will not work in preview
           subtitle: "Text  content type: " + textContentType,
         };
       }

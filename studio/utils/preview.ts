@@ -13,8 +13,9 @@ export function richTextPreview(
   if (!isPortableTextTextBlock(block)) {
     return undefined;
   }
-  return block.children
+  const hei = block.children
     .filter((child) => isPortableTextSpan(child))
     .map((span) => span.text)
     .join("");
+  return hei;
 }
