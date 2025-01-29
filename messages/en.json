@@ -43,7 +43,8 @@
       "educationInput": "Education",
       "yearInput": "The year you started in relevant work",
       "bonusResult": "+ bonus",
-      "resultLabel": "Your annual salary"
+      "resultLabel": "Your annual salary",
+      "notice": "Note! All Variants receive a salary increase on January 1st every year. While we wait for new salary statistics from Tekna, you will find last year's salary data."
     },
     "degreeOptions": {
       "bachelor": "Bachelor",

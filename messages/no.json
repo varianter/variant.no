@@ -39,7 +39,8 @@
       "educationInput": "Utdanning",
       "yearInput": "Året du begynte i relevant arbeid",
       "bonusResult": "+ bonus",
-      "resultLabel": "Din årslønn"
+      "resultLabel": "Din årslønn",
+      "notice": "Obs! Alle varianter går opp i lønn 1. januar hvert år. Imens vi venter på ny lønnsstatistikk fra Tekna, vil du finne lønnsdata fra i fjor."
     },
     "degreeOptions": {
       "bachelor": "Bachelor",

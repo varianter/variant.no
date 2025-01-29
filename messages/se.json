@@ -39,7 +39,8 @@
       "educationInput": "Utbildning",
       "yearInput": "Året du började i relevant arbete",
       "bonusResult": "+ bonus",
-      "resultLabel": "Din årslön"
+      "resultLabel": "Din årslön",
+      "notice": "Obs! Alla varianter får en löneökning den 1 januari varje år. Medan vi väntar på ny lönestatistik från Tekna hittar du förra årets lönedata."
     },
     "degreeOptions": {
       "bachelor": "Bachelor",
