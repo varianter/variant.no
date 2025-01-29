@@ -2,14 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import { useQueryState } from "nuqs";
-import { use } from "react";
+import { use, useEffect } from "react";
 
-import { calculateSalary } from "src/components/compensations/utils/salary";
-import InputField from "src/components/forms/inputField/InputField";
 import {
-  IOption,
-  RadioButtonGroup,
-} from "src/components/forms/radioButtonGroup/RadioButtonGroup";
+  calculateSalary,
+  getDegreeOptions,
+  getMaybeMaxYear,
+  getMinMaxYear,
+} from "src/components/compensations/utils/salary";
+import InputField from "src/components/forms/inputField/InputField";
+import { RadioButtonGroup } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Text from "src/components/text/Text";
 import { formatAsCurrency } from "src/utils/i18n";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
@@ -22,14 +24,12 @@ type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
   salariesRes: Promise<Result<SalaryData, unknown>>;
   background: "light" | "dark" | "violet";
-  initialDegree: Degree;
   initialYear?: number;
 };
 
 export default function Calculator({
   localeRes,
   salariesRes,
-  initialDegree,
   initialYear,
   background,
 }: CalculatorProps) {
@@ -39,16 +39,36 @@ export default function Calculator({
 
   const [year, setYear] = useQueryState<number | null>("year", {
     defaultValue:
-      initialYear || getMaybeMaxYear(salaries) || new Date().getFullYear(),
+      initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
     parse: (value) => (value ? parseInt(value, 10) : null),
     serialize: (value) => (value ? value.toString() : ""),
   });
 
-  const [degree, setDegree] = useQueryState<string | null>("degree", {
-    defaultValue: initialDegree,
-    parse: (value) => value ?? null,
+  const [degree, setDegree] = useQueryState<Degree>("degree", {
+    defaultValue: "master",
+    parse: (value) => (value as Degree) ?? null,
     serialize: (value) => value ?? "",
   });
+
+  const [salary, setSalary] = useQueryState<number | null>("salary", {
+    defaultValue: salaries.ok
+      ? (calculateSalary(
+          initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
+          "master",
+          salaries.value,
+        ) ?? 0)
+      : 0,
+    parse: (value) => (value ? parseFloat(value) : null),
+    serialize: (value) => (value ? value.toString() : ""),
+  });
+
+  // Update calculatedSalary whenever year, degree, or salaries change
+  useEffect(() => {
+    if (salaries.ok) {
+      const newSalary = calculateSalary(year, degree, salaries.value) ?? 0;
+      setSalary(newSalary);
+    }
+  }, [year, degree, salaries, setSalary]);
 
   if (!locale || !salaries.ok) {
     console.error(
@@ -58,12 +78,7 @@ export default function Calculator({
   }
 
   const { min, max } = getMinMaxYear(salaries.value);
-  const salary = calculateSalary(year + 1, degree, salaries.value) ?? 0;
-
-  const degreeOptions: IOption[] = [
-    { id: "bachelor", label: t("degreeOptions.bachelor") },
-    { id: "master", label: t("degreeOptions.master") },
-  ];
+  const degreeOptions = getDegreeOptions(t);
 
   return (
     <form
@@ -80,7 +95,6 @@ export default function Calculator({
           setDegree(selectedOption.id as Degree)
         }
       />
-
       <div className={styles.inputWrapper}>
         <InputField
           label={t("calculator.yearInput")}
@@ -93,7 +107,6 @@ export default function Calculator({
           required
         />
       </div>
-
       {salary !== null ? (
         <div aria-live="polite" className={styles.salaryTextContainer}>
           <Text type="labelRegular">{t("calculator.resultLabel")}</Text>
@@ -171,18 +184,4 @@ export default function Calculator({
       </div>
     </form>
   );
-}
-
-function getMinMaxYear(salaries: SalaryData) {
-  const years = Object.keys(salaries).map((s) => parseInt(s));
-  const min = Math.min(...years);
-  // We subtract 1 because we don't have data for the current year
-  const max = Math.max(...years) - 1;
-  return { min, max };
-}
-function getMaybeMaxYear(salaries: Result<SalaryData, unknown>) {
-  if (!salaries.ok) return undefined;
-  const years = Object.keys(salaries.value).map((s) => parseInt(s));
-  // We subtract 1 because we don't have data for the current year
-  return Math.max(...years) - 1;
 }

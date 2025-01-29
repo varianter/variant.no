@@ -51,6 +51,17 @@
       "bonuses": "Tidligere bonuser",
       "year": "År",
       "amount": "Beløp"
+    },
+    "pension": {
+      "comparison": "Sammenligning",
+      "salaryAtCurrentEmployer": "Årslønn hos nåværende arbeidsgiver",
+      "percentPension": "Pensjon (% mellom 0 og 7,1 G)",
+      "IPS": "Innskuddspensjon (% over 7,1 G)",
+      "whatIsIPS": "Hva er innskuddspensjon?"
+    },
+    "salary": {
+      "historicalGrowth": "— historisk vekst",
+      "basedOnExperience": "- - - basert på X år mer erfaring"
     }
   },
   "custom_link": {
