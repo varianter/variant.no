@@ -29,22 +29,21 @@ import {
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
-
 const fontBrittiSans = localFont({
   src: [
     {
       path: "../../../../public/_assets/britti-sans-variable.woff2",
-      weight: "100 900", // Angir hele vektspekteret hvis det er en variabel font
+      weight: "100 900",
       style: "normal",
     },
     {
       path: "../../../../public/_assets/britti-sans-regularitalic.woff2",
-      weight: "400", // Regular italic (400)
+      weight: "400",
       style: "italic",
     },
     {
       path: "../../../../public/_assets/britti-sans-semibolditalic.woff2",
-      weight: "600", // Semibold italic (600)
+      weight: "600",
       style: "italic",
     },
   ],
