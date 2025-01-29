@@ -36,7 +36,7 @@ const renderTextTitle = ({ eyebrow, title }: ITextTitle) => (
   console.log(eyebrow),
   (
     <div className={styles.container}>
-      <Text type="bodyNormal"> hei</Text>
+      <Text type="bodyNormal"> {eyebrow} </Text>
       <Text type="h1">{title}</Text>
     </div>
   )
@@ -66,7 +66,7 @@ const renderTextRichText = (richText: PortableTextBlock[]) => (
 
 const renderTextQuote = ({ author, quote }: ITextQuote) => (
   <div className={styles.container}>
-    <Text className={styles.authorText} type="bodyNormal">
+    <Text className={styles.authorText} type="quoteItalic">
       {author}
     </Text>
     <Text type="bodyXl">{quote}</Text>
