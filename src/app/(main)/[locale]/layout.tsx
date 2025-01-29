@@ -28,7 +28,6 @@ import {
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
-
 const fontBrittiSans = localFont({
   src: [
     {
