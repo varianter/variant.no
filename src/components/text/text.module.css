@@ -193,9 +193,6 @@
   padding: 0rem 0.5rem;
 }
 
-/* TODO: search why italic won't work */
 .italic {
   font-style: italic;
-  margin: 0;
-  padding: 0;
 }

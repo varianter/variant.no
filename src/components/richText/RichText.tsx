@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 import { PortableTextBlock } from "sanity";
 
 import { SanityImage } from "src/components/image/SanityImage";
-import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
 import { getReactNodeTextContent } from "src/utils/reactNode";
@@ -56,8 +55,11 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     ),
     link: ({ value, children }) => {
       const { href } = value;
-      const linkTitle = children?.toString();
-      return <LinkButton link={href} linkTitle={linkTitle} />;
+      return (
+        <a href={href} className={styles.link}>
+          {children}
+        </a>
+      );
     },
   },
   types: {
