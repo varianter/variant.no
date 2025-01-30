@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { SanityImage } from "src/components/image/SanityImage";
+import LinkButton from "src/components/linkButton/LinkButton";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
@@ -42,6 +43,7 @@ const CustomerCaseList = ({
                 customerCases={customerCases}
                 selectedCustomerCase={selectedCustomerCase}
                 setSelectedCustomerCase={setSelectedCustomerCase}
+                language={language}
               />
               <Link
                 className={styles.link}
@@ -82,7 +84,7 @@ function CardInfo({
 
   return (
     <div className={styles.cardInfo}>
-      <Text type="h2" className={styles.heading}>
+      <Text type="h2" as="h3" className={styles.heading}>
         {selectedCustomerCase.basicTitle}
       </Text>
       <div className={styles.deliveries}>
@@ -108,31 +110,43 @@ function TagRow({
   customerCases,
   selectedCustomerCase,
   setSelectedCustomerCase,
+  language,
 }: {
   customerCases: CustomerCaseEntry[];
   selectedCustomerCase: CustomerCaseEntry;
   setSelectedCustomerCase: (customerCase: CustomerCaseEntry) => void;
+  language: string;
 }) {
   const t = useTranslations("customer_case");
+
+  const visibleCases = customerCases.slice(0, 3);
 
   return (
     <div className={styles.TagRow}>
       <Text className={styles.font} type="labelRegular">
         {t("customer_case_entry.case")}
       </Text>
-      {customerCases.map(
-        (customerCase: CustomerCaseEntry) =>
-          customerCase && (
-            <div key={customerCase._id}>
-              <Tag
-                active={customerCase._id === selectedCustomerCase._id}
-                type="button"
-                background="dark"
-                onClick={() => setSelectedCustomerCase(customerCase)}
-                text={customerCase.projectInfo.customer}
-              />
-            </div>
-          ),
+      {visibleCases.map((customerCase) => (
+        <div key={customerCase._id}>
+          <Tag
+            active={customerCase._id === selectedCustomerCase._id}
+            type="button"
+            background="dark"
+            onClick={() => setSelectedCustomerCase(customerCase)}
+            text={customerCase.projectInfo.customer}
+          />
+        </div>
+      ))}
+      {customerCases.length > 3 && (
+        <div className={styles.customerLink}>
+          <LinkButton
+            link={`/${language}/cases`}
+            background="dark"
+            type="primary"
+            size="M"
+            linkTitle={t("showAll")}
+          />
+        </div>
       )}
     </div>
   );
