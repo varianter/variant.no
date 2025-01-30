@@ -5,12 +5,12 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { SanityImage } from "src/components/image/SanityImage";
+import LinkButton from "src/components/linkButton/LinkButton";
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCasesEntry.module.css";
-import LinkButton from "src/components/linkButton/LinkButton";
 
 interface CustomerCasesProps {
   customerCases: CustomerCaseEntry[];
