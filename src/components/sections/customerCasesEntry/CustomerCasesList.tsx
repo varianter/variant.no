@@ -122,21 +122,23 @@ function TagRow({
   const visibleCases = customerCases.slice(0, 3);
 
   return (
-    <div className={styles.TagRow}>
-      <Text className={styles.font} type="labelRegular">
-        {t("customer_case_entry.case")}
-      </Text>
-      {visibleCases.map((customerCase) => (
-        <div key={customerCase._id}>
-          <Tag
-            active={customerCase._id === selectedCustomerCase._id}
-            type="button"
-            background="dark"
-            onClick={() => setSelectedCustomerCase(customerCase)}
-            text={customerCase.projectInfo.customer}
-          />
-        </div>
-      ))}
+    <div>
+      <div className={styles.TagRow}>
+        <Text className={styles.font} type="labelRegular">
+          {t("customer_case_entry.case")}
+        </Text>
+        {visibleCases.map((customerCase) => (
+          <div key={customerCase._id}>
+            <Tag
+              active={customerCase._id === selectedCustomerCase._id}
+              type="button"
+              background="dark"
+              onClick={() => setSelectedCustomerCase(customerCase)}
+              text={customerCase.projectInfo.customer}
+            />
+          </div>
+        ))}
+      </div>
       {customerCases.length > 3 && (
         <div className={styles.customerLink}>
           <LinkButton
