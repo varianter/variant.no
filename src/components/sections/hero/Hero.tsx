@@ -17,16 +17,24 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
     <div className={styles.wrapper}>
       {isLanding ? (
         <div className={styles.secondary}>
-          <Text type="bodyBig"> {hero.title}</Text>
-          <Text type="h1">{hero.description}</Text>
-          <div className={styles.image}>
-            <SanityImage image={hero.image} />
-          </div>
+          {hero.title && <Text type="bodyBig">{hero.title}</Text>}
+          {hero.description && <Text type="h1">{hero.description}</Text>}
+          {hero.image && (
+            <div className={styles.image}>
+              <SanityImage image={hero.image} />
+            </div>
+          )}
         </div>
       ) : (
-        // If splashy segments are added to the hero section in the landing page, this serves as a great fallback option.
-        <div className={styles.primary}>
-          <Text type="h1">{hero.description}</Text>
+        // This section is prepared for a custom hero section for pages that are not landing pages.
+        <div className={styles.secondary}>
+          {hero.title && <Text type="bodyBig">{hero.title}</Text>}
+          {hero.description && <Text type="h1">{hero.description}</Text>}
+          {hero.image && (
+            <div className={styles.image}>
+              <SanityImage image={hero.image} />
+            </div>
+          )}
         </div>
       )}
     </div>
