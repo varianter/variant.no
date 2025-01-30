@@ -110,6 +110,10 @@
   grid-area: tags;
 }
 
+.customerLink {
+  margin-top: 1rem;
+}
+
 .cardInfo {
   grid-area: content;
   color: var(--text-primary-light);

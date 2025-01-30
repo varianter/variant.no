@@ -25,7 +25,8 @@
     },
     "featured_cases": {
       "projects": "Featured Projects"
-    }
+    },
+    "showAll": "Show all costumers"
   },
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",

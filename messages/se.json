@@ -25,7 +25,8 @@
     },
     "featured_cases": {
       "projects": "Liknande Projekt"
-    }
+    },
+    "showAll": "Vis alla kunder"
   },
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",

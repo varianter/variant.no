@@ -25,7 +25,8 @@
     },
     "featured_cases": {
       "projects": "Lignende prosjekter"
-    }
+    },
+    "showAll": "Vis alle kunder"
   },
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
