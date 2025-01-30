@@ -52,9 +52,9 @@ export default function EventsClient({
         );
 
   // Function to only show 3 events
-  const limitedEventPostings = filteredEventPostings
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .slice(0, 3);
+  const limitedEventPostings = filteredEventPostings.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+  );
 
   return (
     <>
