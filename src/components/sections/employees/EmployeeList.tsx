@@ -59,6 +59,10 @@ export default function EmployeeList({
     locationFilter,
   );
 
+  const employeeCompetences = Array.from(
+    new Set(employees.flatMap((e) => e.competences)),
+  );
+
   return (
     <>
       <div className={styles.employeeFiltersWrapper}>
@@ -74,21 +78,22 @@ export default function EmployeeList({
             }}
             text={t("all")}
           />
-
-          {sortCompetenceAlphabetically(competences).map((competence) => {
-            const active = competenceFilter == competence;
-            return (
-              <Tag
-                key={competence}
-                active={active}
-                type="button"
-                onClick={() => {
-                  setCompetenceFilter(competence);
-                }}
-                text={t(competence)}
-              />
-            );
-          })}
+          {sortCompetenceAlphabetically(competences)
+            .filter((competence) => employeeCompetences.includes(competence))
+            .map((competence) => {
+              const active = competenceFilter == competence;
+              return (
+                <Tag
+                  key={competence}
+                  active={active}
+                  type="button"
+                  onClick={() => {
+                    setCompetenceFilter(competence);
+                  }}
+                  text={t(competence)}
+                />
+              );
+            })}
         </div>
         <div className={styles.employeeFilterWrapper}>
           <Text type="labelRegular" className={styles.employeeFilterLabel}>
