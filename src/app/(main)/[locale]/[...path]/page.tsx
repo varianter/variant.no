@@ -103,7 +103,7 @@ async function Page({ params }: Props) {
                       section={section}
                       isDraftMode={isDraftMode}
                       initialData={queryResponse}
-                      isLandingPage={false}
+                      isLandingPage={true}
                       sectionIndex={index}
                     />
                   ))}
