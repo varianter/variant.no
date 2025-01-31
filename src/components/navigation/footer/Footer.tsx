@@ -78,6 +78,14 @@ const Footer = ({
                   >
                     {companyInfo.companyEmail}
                   </Link>
+                  {companyInfo.companyPhone && (
+                    <Link
+                      href={`tel:${companyInfo.companyPhone}`}
+                      className={styles.contactInfo}
+                    >
+                      {companyInfo.companyPhone}
+                    </Link>
+                  )}
                 </FooterSection>
               </div>
             </div>
