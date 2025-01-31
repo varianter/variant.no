@@ -17,7 +17,7 @@ export async function getHandbookLinksFromCompensationPage(
     COMPENSATIONS_HANDBOOK_LINKS,
     { language },
     {
-      cache: "no-store",
+      cache: "force-cache",
       next: {
         revalidate: 60 * 60,
       },
