@@ -67,9 +67,9 @@ export const COMPENSATIONS_SALARY_BY_YEAR = groq`
   }
 `;
 export const COMPENSATIONS_HANDBOOK_LINKS = groq`
-  *[_type == "compensations"][0] {
+  *[_type == "compensations"][1]{
     "handbookLinks": handbookLinks[] {
-      ...,
+      ..., 
       ${TRANSLATED_LINK_FRAGMENT}
     }
   }

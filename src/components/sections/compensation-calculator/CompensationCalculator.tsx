@@ -102,8 +102,6 @@ export async function Handbook({
     [styles["handbook--violet"]]: sectionBackground === "violet",
   });
 
-  console.log("handbook", handbookLinksRes);
-
   return (
     <div className={handbookBgClassname}>
       <Text type="h3">{title}</Text>
@@ -116,7 +114,7 @@ export async function Handbook({
           {handbookLinksRes.value.map((link) => (
             <li key={link._key}>
               <Link className={styles.handbookLink} href={getHref(link)}>
-                {link.linkTitle}hi
+                {link.linkTitle}
               </Link>
             </li>
           ))}
