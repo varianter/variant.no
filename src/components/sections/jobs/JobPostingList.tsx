@@ -16,8 +16,6 @@ interface JobPostingListProps {
   companyLocations: CompanyLocation[];
 }
 
-const hiddenLocations = new Set(["Norge", "Norway", "Sverige", "Sweden"]);
-
 function sortAlphabetically(filter: CompanyLocation[]) {
   return filter.sort(
     (a, b) =>
@@ -72,7 +70,7 @@ export default function JobPostingList({
   }, [locationFilter, jobPostings, jobPostingLocations]);
 
   const filteredLocations = companyLocations.filter(
-    (location) => !hiddenLocations.has(location.companyLocationName),
+    (location) => jobPostingsPerLocation[location.companyLocationName] > 0,
   );
 
   return (
