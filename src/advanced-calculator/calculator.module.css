@@ -1,0 +1,235 @@
+.wrapper {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.formWrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.formFieldset {
+  border: 0 none;
+  padding: 0;
+}
+
+.payscale {
+  aspect-ratio: 4/3;
+}
+
+.pension {
+  display: grid;
+  grid-template-columns: subgrid;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.pensionControls {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 1fr;
+  max-width: 550px;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  grid-column: 1;
+  grid-row: 2;
+
+  @media (max-width: 834px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pensionGraph {
+  height: 20rem;
+  width: 100%;
+  align-items: center;
+
+  @media (min-width: 834px) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.pensionGraphTextWrapper {
+  line-height: 1;
+  display: grid;
+  height: 100%;
+  align-content: end;
+  padding-bottom: 0.5rem;
+  color: "var(--text-primary-dark)";
+}
+
+.pensionGraphTextWrapper[data-position="left"] {
+  direction: rtl;
+}
+
+.pensionGraphPercentage {
+  font-size: calc((12 / 16) * 1rem);
+  white-space: nowrap;
+  padding-left: 0.5rem;
+}
+
+.pensionGraphNumber {
+  padding-left: 0.5rem;
+}
+
+.pensionGraphText {
+  font-size: 1rem;
+}
+
+/* Pension mobile stuff */
+@media (max-width: 900px) {
+  .pension {
+    grid-template-columns: 1fr;
+  }
+
+  .pensionControls {
+    max-width: unset;
+  }
+
+  .pensionGraph {
+    height: 20rem;
+    margin: auto;
+  }
+}
+
+.rangeSliderTitle {
+  font-weight: 400;
+}
+
+.rangeSliderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.rangeInputValue {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rangeInput {
+  padding: 0.25rem 0.5rem;
+}
+
+.inputNumber {
+  font-size: inherit;
+  height: fit-content;
+  padding: 0.75rem;
+  margin-top: 22px;
+  border-radius: 1.5rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  border: 0 none;
+  background-color: var(--background-bg-light-primary);
+  font-weight: 200;
+
+  @media (max-width: 834px) {
+    display: none;
+  }
+}
+
+/* TODO: Its a bad idea to have a different input for mobile and pc */
+.mobileInputNumber {
+  display: none;
+  @media (max-width: 834px) {
+    font-size: inherit;
+    display: block;
+    font-weight: 200;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    color: var(--text-tertiary);
+    text-align: center;
+    border: 0 none;
+    background-color: var(--background-bg-light-primary);
+  }
+}
+
+.mobileInputWrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputRange {
+  --thumb-width: 3em;
+  --thumb-height: 2em;
+  --thumb-color: var(--surface-violet-vivid);
+  --thumb-background: var(--background-bg-light-primary);
+
+  --track-height: 0.5em;
+  --track-lower-background: var(--surface-violet-vivid);
+  --track-upper-background: yellow;
+  --track-border-radius: 0.5em;
+
+  height: var(--track-height);
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--track-lower-background);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.inputRange:disabled {
+  --thumb-color: #ccc;
+  --track-lower-background: #ccc;
+}
+
+.inputRange::-webkit-slider-runnable-track {
+  background-color: inherit;
+  border-radius: var(--track-border-radius, 0);
+  height: var(--track-height);
+  width: 100%;
+  color: red;
+}
+
+.inputRange:hover::-webkit-slider-thumb {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.inputRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--thumb-background);
+  border: 2px solid var(--thumb-color);
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+  margin: calc((var(--track-height) / 2) + (var(--thumb-height) / 2) * -1) 0 0;
+
+  position: relative;
+  z-index: 3;
+
+  cursor: grab;
+  border-radius: 1em;
+  transition: all 300ms ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.inputRange:active::-webkit-slider-thumb {
+  transform: scale(0.9);
+}
+
+.markerText {
+  text-align: center;
+}
+
+.markerTextContainer {
+  text-align: center;
+}
+
+.markerYear {
+  color: var(--text-tertiary);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+.markerPay {
+  line-height: 1;
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+.ips:hover {
+  text-decoration: underline;
+}

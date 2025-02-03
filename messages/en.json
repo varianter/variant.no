@@ -43,7 +43,8 @@
       "educationInput": "Education",
       "yearInput": "The year you started in relevant work",
       "bonusResult": "+ bonus",
-      "resultLabel": "Your annual salary"
+      "resultLabel": "Your annual salary",
+      "notice": "Note! All Variants receive a salary increase on January 1st every year. While we wait for new salary statistics from Tekna, you will find last year's salary data."
     },
     "degreeOptions": {
       "bachelor": "Bachelor",
@@ -54,6 +55,17 @@
       "bonuses": "Previous bonuses",
       "year": "Year",
       "amount": "Amount"
+    },
+    "pension": {
+      "comparison": "Comparison",
+      "salaryAtCurrentEmployer": "Salary at current employer",
+      "percentPension": "Pension (% between 0 and 7.1 G)",
+      "IPS": "IPS (% over 7.1 G)",
+      "whatIsIPS": "What is IPS?"
+    },
+    "salary": {
+      "historicalGrowth": "— historical growth",
+      "basedOnExperience": "- - - based on X years more experience"
     }
   },
   "employee_card": {

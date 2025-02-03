@@ -14,6 +14,7 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     ${LANGUAGE_FIELD_FRAGMENT},
     "slug": ${translatedFieldFragment("slug")},
     "basicTitle": ${translatedFieldFragment("basicTitle")},
+    "richText": ${translatedFieldFragment("richText")},
     "benefitsByLocation": benefitsByLocation[] {
       ...,
       "benefits": benefits[] {

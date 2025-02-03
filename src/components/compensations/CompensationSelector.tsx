@@ -8,21 +8,17 @@ import {
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
-import { LocaleDocument } from "studio/lib/interfaces/locale";
 
-import styles from "./compensations.module.css";
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 
 interface CompensationsProps {
   compensations: CompensationsPage;
   locations: CompanyLocation[];
-  locale: LocaleDocument;
 }
 
 export default function CompensationSelector({
   compensations,
   locations,
-  // locale
 }: CompensationsProps) {
   const t = useTranslations("compensation");
 
@@ -45,12 +41,16 @@ export default function CompensationSelector({
       (benefit) => benefit.location._ref === selectedLocation,
     )?.benefits || [];
 
-  // const yearlyBonusesForLocation = compensations.bonusesByLocation.find(
-  //   (b) => b.location._ref === selectedLocation,
-  // )?.yearlyBonuses;
+  const yearlyBonusesForLocation = compensations.bonusesByLocation
+    .find((b) => b.location._ref === selectedLocation)
+    ?.yearlyBonuses?.toReversed();
+
+  const yearlySalaryForLocation = compensations.salariesByLocation.find(
+    (s) => s.location._ref === selectedLocation,
+  );
 
   return (
-    <div className={styles.compensationWrapper}>
+    <>
       <RadioButtonGroup
         id="location-group"
         label={t("bonus.location")}
@@ -60,12 +60,11 @@ export default function CompensationSelector({
           setSelectedLocation(option.id);
         }}
       />
-      {/* 
-      TODO: Un-comment this once a yearly bonuses are accurate (or it has been decided to just remove this)
-      {yearlyBonusesForLocation && (
-        <YearlyBonuses bonuses={yearlyBonusesForLocation} locale={locale} />
-      )} */}
-      <BenefitsByLocation benefits={benefitsFilteredByLocation} />
-    </div>
+      <BenefitsByLocation
+        benefits={benefitsFilteredByLocation}
+        yearlyBonusesForLocation={yearlyBonusesForLocation}
+        yearlySalaryForLocation={yearlySalaryForLocation}
+      />
+    </>
   );
 }

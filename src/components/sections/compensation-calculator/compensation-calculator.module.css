@@ -1,6 +1,5 @@
 .container {
-  max-width: var(--max-content-width-large);
-  margin: 0 auto;
+  max-width: var(--max-content-width-half);
   padding: 0;
 }
 
@@ -19,7 +18,7 @@
 .handbook {
   --_calcBg: var(--background-bg-light-secondary);
   --_calcColor: var(--text-primary-dark);
-  padding: 3rem;
+  padding: 3rem 1.5rem;
   border-radius: var(--radius-small);
 
   background-color: var(--_calcBg);
@@ -44,11 +43,11 @@
   --_calcBg: var(--background-bg-dark);
   --_calcColor: var(--text-primary-light);
 }
-.calculator--violet {
+.calculatorViolet {
   --_calcBg: var(--surface-violet-light);
   --_calcColor: var(--text-primary-dark);
 }
-.handbook--violet {
+.handbookViolet {
   --_calcBg: var(--surface-violet);
   --_calcColor: var(--text-primary-light);
 }
@@ -99,12 +98,13 @@
   align-items: flex-start;
   margin-top: 2rem;
 }
+
 .salaryText {
-  font-size: 2.5rem;
-  font-size: clamp(1rem, 10vw, 2.5rem);
-  font-variant-numeric: tabular-nums;
-  font-weight: bold;
-  line-height: 1;
+  color: var(--Text-primary, #0a0b0b);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
 }
 
 .formCalculator {

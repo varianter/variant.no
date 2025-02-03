@@ -4,9 +4,16 @@ import { ILink } from "./navigation";
 import { CompensationCalculatorSection } from "./pages";
 import { SeoData } from "./seo";
 
+export enum BenefitTypeEnum {
+  Bonus = "bonus",
+  Salary = "salaryGrowth",
+  Pension = "pension",
+}
+
 export interface Benefit {
   _type: string;
   _key: string;
+  benefitType: BenefitTypeEnum;
   basicTitle: string;
   richText: PortableTextBlock[];
 }
@@ -81,6 +88,7 @@ export interface CompensationsPage {
   _updatedAt: string;
   language: string;
   basicTitle: string;
+  richText: PortableTextBlock[];
   page: string;
   slug: string;
   pensionPercent?: number;
