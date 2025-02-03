@@ -1,5 +1,5 @@
 import groq from "groq";
-import { createClient } from "studio/lib/sanity/client";
+//import { createClient } from "studio/lib/sanity/client";
 
 export async function getEventBySlug(slug: string, language: string) {
   console.log("Fetching event:", { slug, language }); // Debugging

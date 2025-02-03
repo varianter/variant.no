@@ -36,8 +36,6 @@ export default function EventPosting({
     );
   }
 
-  const Wrapper = eventPosting.externalLink ? "a" : "div";
-
   return (
     <Link
       key={eventPosting._key}
