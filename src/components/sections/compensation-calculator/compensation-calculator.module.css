@@ -48,7 +48,7 @@
   --_calcColor: var(--text-primary-dark);
 }
 .handbookViolet {
-  --_calcBg: var(--surface-violet);
+  --_calcBg: var(--surface-violet-vivid);
   --_calcColor: var(--text-primary-light);
 }
 
