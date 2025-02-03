@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Badge from "src/components/badge/Badge";
 import Text from "src/components/text/Text";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
@@ -12,11 +14,13 @@ function sortAlphabetically(list: string[]) {
 interface EventPostingProps {
   eventPosting: IEventPosting;
   showLocations?: boolean;
+  language: string;
 }
 
 export default function EventPosting({
   eventPosting,
   showLocations = true,
+  language,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
     eventPosting.locations.map(
@@ -35,12 +39,9 @@ export default function EventPosting({
   const Wrapper = eventPosting.externalLink ? "a" : "div";
 
   return (
-    <Wrapper
-      {...(eventPosting.externalLink && {
-        href: eventPosting.externalLink,
-        target: "_blank",
-        rel: "noopener noreferrer",
-      })}
+    <Link
+      key={eventPosting._key}
+      href={`/${language}/${eventPosting._key}`}
       className={styles.eventPosting}
     >
       <div className={styles.flex}>
@@ -93,6 +94,6 @@ export default function EventPosting({
           </div>
         )}
       </div>
-    </Wrapper>
+    </Link>
   );
 }
