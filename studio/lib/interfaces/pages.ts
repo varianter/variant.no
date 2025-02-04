@@ -8,9 +8,10 @@ import { SeoData } from "./seo";
 export interface HeroSection {
   _type: "hero";
   _key: string;
+  eyebrow?: string;
   title: string;
-  description: string;
-  image: IImage;
+  description?: string;
+  image?: IImage;
 }
 
 export interface LogoSaladSection {

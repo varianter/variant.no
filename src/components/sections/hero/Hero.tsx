@@ -17,8 +17,8 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
     <div className={styles.wrapper}>
       {isLanding ? (
         <div className={styles.secondary}>
-          {hero.title && <Text type="bodyBig">{hero.title}</Text>}
-          {hero.description && <Text type="h1">{hero.description}</Text>}
+          {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
+          {hero.title && <Text type="h1">{hero.title}</Text>}
           {hero.image && (
             <div className={styles.image}>
               <SanityImage image={hero.image} />
@@ -28,10 +28,11 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
       ) : (
         // This section is prepared for a custom hero section for pages that are not landing pages.
         <div className={styles.secondary}>
-          {hero.title && <Text type="bodyBig">{hero.title}</Text>}
-          {hero.description && <Text type="h1">{hero.description}</Text>}
+          {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
+          {hero.title && <Text type="h1">{hero.title}</Text>}
+          {hero.description && <Text type="h4">{hero.description}</Text>}
           {hero.image && (
-            <div className={styles.image}>
+            <div className={styles.imageSecondaryPages}>
               <SanityImage image={hero.image} />
             </div>
           )}

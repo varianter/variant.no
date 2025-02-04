@@ -16,8 +16,10 @@ const SECTIONS_FRAGMENT = groq`
     ...,
     _type == "hero" => {
       ...,
+      "eyebrow": ${translatedFieldFragment("eyebrow")},
       "title": ${translatedFieldFragment("title")},
       "description": ${translatedFieldFragment("description")},
+      "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
     _type == "imageSplitSection" => {
       ...,
