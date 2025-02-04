@@ -3,48 +3,28 @@ import { useState } from "react";
 
 import { Tag } from "src/components/tag";
 import Text from "src/components/text/Text";
-import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 
 import styles from "./officeSelector.module.css";
 
 interface OfficeSelectorProps {
-  companyLocations: CompanyLocation[];
+  locations: string[];
   eventPostingsCount: number;
   eventPostingsPerLocation: Record<string, number>;
-  hiddenLocations?: Set<string>;
-  onFilterChange: (location: CompanyLocation | null) => void;
+  onFilterChange: (location: string | null) => void;
 }
 
-const defaultHiddenLocations = new Set([
-  "Norge",
-  "Norway",
-  "Sverige",
-  "Sweden",
-]);
-
-function sortAlphabetically(locations: CompanyLocation[]) {
-  return locations.sort(
-    (a, b) =>
-      a?.companyLocationName.localeCompare(b.companyLocationName ?? "") ?? 0,
-  );
+function sortAlphabetically(locations: string[]) {
+  return locations.sort((a, b) => a.localeCompare(b));
 }
 
 export default function OfficeSelector({
-  companyLocations,
+  locations,
   eventPostingsCount,
   eventPostingsPerLocation,
-  hiddenLocations = defaultHiddenLocations,
   onFilterChange,
 }: OfficeSelectorProps) {
-  const [locationFilter, setLocationFilter] = useState<CompanyLocation | null>(
-    null,
-  );
-
-  const filteredLocations = companyLocations.filter(
-    (location) => !hiddenLocations.has(location.companyLocationName),
-  );
-
-  const handleFilterChange = (location: CompanyLocation | null) => {
+  const [locationFilter, setLocationFilter] = useState<string | null>(null);
+  const handleFilterChange = (location: string | null) => {
     setLocationFilter(location);
     onFilterChange(location);
   };
@@ -61,15 +41,15 @@ export default function OfficeSelector({
         text={`${t("all")} (${eventPostingsCount})`}
         background="dark"
       />
-      {sortAlphabetically(filteredLocations).map(
+      {sortAlphabetically(locations).map(
         (location) =>
-          eventPostingsPerLocation[location.companyLocationName] > 0 && (
+          eventPostingsPerLocation[location] > 0 && (
             <Tag
-              key={location._id}
+              key={location}
               active={locationFilter === location}
               type="button"
               onClick={() => handleFilterChange(location)}
-              text={`${location.companyLocationName} (${eventPostingsPerLocation[location.companyLocationName] || 0})`}
+              text={`${location} (${eventPostingsPerLocation[location] || 0})`}
               background="dark"
             />
           ),

@@ -1,10 +1,6 @@
-import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
-import { IEventPostings } from "studio/lib/interfaces/eventPosting";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventsSection } from "studio/lib/interfaces/pages";
-import {
-  COMPANY_LOCATIONS_QUERY,
-  EVENT_POSTINGS_QUERY,
-} from "studio/lib/queries/admin";
+import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./events.module.css";
@@ -16,27 +12,27 @@ export interface EventsProps {
 }
 
 export default async function Events({ language, section }: EventsProps) {
-  const { data: eventPostings } = await loadStudioQuery<IEventPostings | null>(
-    EVENT_POSTINGS_QUERY,
-    {
-      language,
-    },
-  );
+  // Check if eventPostingsArray in section has events
+  const hasLocalEvents =
+    section.eventPostingsArray && section.eventPostingsArray.length > 0;
 
-  const { data: companyLocations } = await loadStudioQuery<CompanyLocation[]>(
-    COMPANY_LOCATIONS_QUERY,
-    {},
-  );
+  let eventPostings: IEventPosting[] = [];
+
+  if (hasLocalEvents) {
+    eventPostings = section.eventPostingsArray.map((event) => ({
+      ...event,
+    }));
+  } else {
+    const { data } = await loadStudioQuery<{
+      eventPostingsArray: IEventPosting[];
+    }>(EVENT_POSTINGS_QUERY, { language });
+    eventPostings = data?.eventPostingsArray ?? [];
+  }
 
   return (
-    eventPostings &&
-    companyLocations && (
+    eventPostings && (
       <div className={styles.wrapper}>
-        <EventsClient
-          section={section}
-          eventPostings={eventPostings.eventPostingsArray}
-          companyLocations={companyLocations}
-        />
+        <EventsClient section={section} eventPostings={eventPostings} />
       </div>
     )
   );

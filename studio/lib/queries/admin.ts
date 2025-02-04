@@ -44,15 +44,16 @@ export const EVENT_POSTINGS_QUERY = groq`
   *[_type == "eventPostings"][0] {
     eventPostingsArray[] {
       _key, 
-      externalLink,
-      "eventTitle": ${translatedFieldFragment("eventTitle")}, 
-      locations[] -> {
-        ...
-      }, 
-      date, 
-      eventDescription, 
-      tags,
-      consultants,
+      "eventTitle": ${translatedFieldFragment("eventTitle")},
+      "eventDescription": ${translatedFieldFragment("eventDescription")},
+      "locations": locations[],
+      "date": date,
+      "tags": tags[],
+      "consultants": consultants[]{
+        employeeEmail,
+        employeeFirstName
+      },
+      "externalLink": externalLink
     }
   }
 `;
