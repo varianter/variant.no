@@ -1,7 +1,6 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
-import { companyLocationID } from "studio/schemas/documents/admin/companyLocation";
 import { firstTranslation } from "studio/utils/i18n";
 
 export const eventPostingID = "eventPosting";
@@ -21,21 +20,14 @@ const eventPosting = defineType({
     {
       title: "Event description",
       name: "eventDescription",
-      type: "text",
+      type: "internationalizedArrayString",
       description: "Describe the event",
     },
     {
       title: "Locations",
       name: "locations",
       type: "array",
-      description: "The date of the event",
-      of: [
-        {
-          type: "reference",
-          to: [{ type: companyLocationID }],
-        },
-      ],
-      validation: (rule) => rule.required(),
+      of: [{ type: "string" }],
     },
     {
       title: "Date",

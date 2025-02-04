@@ -1,5 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
+import { IEventPosting } from "./eventPosting";
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
@@ -119,6 +120,7 @@ export interface EventsSection {
   _key: string;
   basicTitle: string;
   subtitle: string;
+  eventPostingsArray: IEventPosting[];
 }
 
 export enum CompensationCalculatorBackground {

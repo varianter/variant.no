@@ -2,6 +2,7 @@ import { UlistIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
+import { eventPostingID } from "studio/schemas/objects/eventPosting";
 
 const eventsID = "events";
 
@@ -30,6 +31,12 @@ export const events = defineField({
       type: "internationalizedArrayString",
       title: "Intro",
       description: "Intro text on event segment ",
+    },
+    {
+      name: "eventPostingsArray",
+      title: "Event Postings",
+      type: "array",
+      of: [{ type: eventPostingID }],
     },
   ],
   preview: {
