@@ -1,6 +1,7 @@
 import { BoltIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
+import image from "studio/schemas/fields/media";
 import { allTranslations } from "studio/utils/i18n";
 
 const heroID = "hero";
@@ -11,6 +12,32 @@ export const hero = defineField({
   type: "object",
   icon: BoltIcon,
   fields: [
+    {
+      name: "eyebrow",
+      title: "Eyebrow",
+      type: "internationalizedArrayString",
+      description: "Optional: A short text displayed above the title.",
+      validation: (rule) =>
+        rule.custom<{ value: string; _type: string; _key: string }[]>(
+          (value) => {
+            if (!value) return true;
+
+            const invalidItems = value.filter(
+              (item) =>
+                typeof item.value === "string" && item.value.length > 200,
+            );
+
+            if (invalidItems.length > 0) {
+              return invalidItems.map((item) => ({
+                message: "Eyebrow cannot be more than 200 characters long.",
+                path: [{ _key: item._key }, "value"],
+              }));
+            }
+
+            return true;
+          },
+        ),
+    },
     {
       name: "title",
       title: "Title",
@@ -40,6 +67,8 @@ export const hero = defineField({
       name: "description",
       title: "Description",
       type: "internationalizedArrayString",
+      description:
+        "Optional: A short description that appears below the title. This will not be visible on the landing page.",
       validation: (rule) =>
         rule.custom<{ value: string; _type: string; _key: string }[]>(
           (value) => {
@@ -61,14 +90,7 @@ export const hero = defineField({
           },
         ),
     },
-    {
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
+    image,
   ],
   preview: {
     select: {
