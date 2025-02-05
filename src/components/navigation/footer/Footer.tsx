@@ -96,7 +96,8 @@ const Footer = ({
                 </FooterSection>
               )}
               {navigationData.footer?.some(
-                (section) => section.linksAndContent,
+                (section) =>
+                  section.linksAndContent && section.linksAndContent.length > 0,
               ) && (
                 <FooterSection title={t("other")}>
                   {renderOtherLinks(navigationData)}
