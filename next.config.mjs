@@ -32,7 +32,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -43,7 +43,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -54,7 +54,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -65,7 +65,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -76,7 +76,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -87,7 +87,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -98,7 +98,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -109,7 +109,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -120,7 +120,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -131,7 +131,73 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/vd-till-variant-linkoping",
+        destination: "https://jobs.variant.no/l/sv/o/vd-till-linkoping",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/cto-till-variant-sverige",
+        destination: "https://jobs.variant.no/l/sv/o/cto-till-variant-sverige",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/designer",
+        destination: "https://jobs.variant.no/l/sv/o/designer-se",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/nyfiken-och-driven-webbutvecklare",
+        destination: "https://jobs.variant.no/l/sv/o/utvecklare",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/tech-lead-frontend",
+        destination: "https://jobs.variant.no/l/sv/o/utvecklare",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
+          },
+        ],
+        permanent: true,
+      },
+      {
+        source: "/jobs/tech-lead-backend",
+        destination: "https://jobs.variant.no/l/sv/o/utvecklare",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
