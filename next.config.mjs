@@ -32,7 +32,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -43,7 +43,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -54,7 +54,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -65,7 +65,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -76,7 +76,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -87,7 +87,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -98,7 +98,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -109,7 +109,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -120,7 +120,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -131,7 +131,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -142,7 +142,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -153,7 +153,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -164,7 +164,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -175,7 +175,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -186,7 +186,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
@@ -197,7 +197,7 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "variant.se",
+            value: "www.variant.se",
           },
         ],
         permanent: true,
