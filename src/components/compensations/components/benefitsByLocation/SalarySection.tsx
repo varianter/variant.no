@@ -1,7 +1,6 @@
 "use client";
 
 import { useQueryState } from "nuqs";
-import React from "react";
 
 import SalaryGraphParent from "src/advanced-calculator/Graphs/SalaryGraph";
 import getPayscale, {
@@ -22,34 +21,19 @@ import {
 
 import styles from "./benefitsByLocation.module.css";
 
-function transformToPayscaleFormat(
-  yearlySalaries: SalariesPage[],
-): HistoricalPayscaleData {
-  return yearlySalaries.reduce((payscaleData, { year, salaries }) => {
-    const parsedSalaries = JSON.parse(salaries) as SalaryData;
-    payscaleData[year.toString()] = Object.fromEntries(
-      Object.entries(parsedSalaries).map(([expYear, salary]) => [
-        expYear,
-        salary.toString(),
-      ]),
-    );
-    return payscaleData;
-  }, {} as HistoricalPayscaleData);
-}
-
 interface SalarySectionProps {
   benefit: Benefit;
   yearlySalaryForLocation?: SalariesByLocation;
+  initialSalaryYear: number;
 }
 
-const SalarySection = ({
+export default function SalarySection({
   benefit,
   yearlySalaryForLocation,
-}: SalarySectionProps) => {
+  initialSalaryYear,
+}: SalarySectionProps) {
   const [year] = useQueryState<number | null>("year", {
-    //TODO: Do not hardcode this, find a better solution
-    // This will break once the default year is changed in the calculator
-    defaultValue: 2023,
+    defaultValue: initialSalaryYear,
     parse: (value) => (value ? parseInt(value, 10) : null),
     serialize: (value) => (value ? value.toString() : ""),
   });
@@ -63,12 +47,12 @@ const SalarySection = ({
   // Safely extract yearlySalaries
   const yearlySalaries = yearlySalaryForLocation?.yearlySalaries ?? [];
 
-  const transformedPayscale = transformToPayscaleFormat(yearlySalaries);
+  // Convert the year/salaries list into a HistoricalPayscaleData structure
+  const payscaleData = convertYearlySalariesToPayscale(yearlySalaries);
 
-  const payscale = getPayscale(
-    getAdjustedYear(year, degree),
-    transformedPayscale,
-  );
+  // Calculate the payscale for the chosen year and degree
+  const adjustedYear = getAdjustedYear(year, degree);
+  const payscale = getPayscale(adjustedYear, payscaleData);
 
   return (
     <>
@@ -81,6 +65,22 @@ const SalarySection = ({
       </div>
     </>
   );
-};
+}
 
-export default SalarySection;
+function convertYearlySalariesToPayscale(
+  yearlySalaries: SalariesPage[],
+): HistoricalPayscaleData {
+  return yearlySalaries.reduce<HistoricalPayscaleData>(
+    (acc, { year, salaries }) => {
+      const parsedSalaries = JSON.parse(salaries) as SalaryData;
+      acc[year.toString()] = Object.fromEntries(
+        Object.entries(parsedSalaries).map(([expYear, salary]) => [
+          expYear,
+          salary.toString(),
+        ]),
+      );
+      return acc;
+    },
+    {},
+  );
+}

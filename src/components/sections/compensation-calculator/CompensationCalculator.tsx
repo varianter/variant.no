@@ -20,7 +20,6 @@ import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 
 export interface CompensationCalculatorProps {
-  language: string;
   section: CompensationCalculatorSection;
 }
 
