@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { ReactNode } from "react";
 
 import CustomLink from "src/components/link/CustomLink";
 import SoMeLink from "src/components/link/SoMeLink";
@@ -129,25 +128,17 @@ const Footer = ({
 };
 
 const renderOtherLinks = (data: Navigation) => {
-  return renderList(
-    data.footer?.map((footer) =>
-      footer.linksAndContent?.map((link: ILink) => (
-        <li key={link._key}>
-          <CustomLink link={link} type="footerLink" />
-        </li>
-      )),
-    ),
+  return data.footer?.map((footer) =>
+    footer.linksAndContent?.map((link: ILink) => (
+      <CustomLink key={link._key} link={link} type="footerLink" />
+    )),
   );
 };
 
 const renderPageLinks = (data: Navigation) => {
-  return renderList(
-    data.main.map((p: ILink) => (
-      <li key={p._key}>
-        <CustomLink link={p} type="footerLink" />
-      </li>
-    )),
-  );
+  return data.main.map((p: ILink) => (
+    <CustomLink key={p._key} link={p} type="footerLink" />
+  ));
 };
 
 const renderSoMe = (data: Navigation, soMeData: SocialMediaProfiles) => {
@@ -156,13 +147,9 @@ const renderSoMe = (data: Navigation, soMeData: SocialMediaProfiles) => {
     socialMediaSections &&
     socialMediaSections.length > 0 &&
     soMeData.soMeLinkArray &&
-    renderList(
-      soMeData.soMeLinkArray.map((link: SocialMediaLink) => (
-        <li key={link._key}>
-          <SoMeLink link={link} />
-        </li>
-      )),
-    )
+    soMeData.soMeLinkArray.map((link: SocialMediaLink) => (
+      <SoMeLink key={link._key} link={link} />
+    ))
   );
 };
 
@@ -170,9 +157,5 @@ const filterSectionsByType = (
   data: Navigation,
   type: "content" | "socialMedia",
 ) => data.footer?.filter((section) => section.sectionType === type);
-
-const renderList = (children: ReactNode) => (
-  <ul className={styles.linkColumn}>{children}</ul>
-);
 
 export default Footer;
