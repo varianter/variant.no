@@ -3,7 +3,9 @@ export function formatAsCurrency(
   locale: string,
   currency: string,
 ) {
-  return new Intl.NumberFormat(locale, { style: "currency", currency }).format(
-    number,
-  );
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(number);
 }

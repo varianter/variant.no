@@ -16,8 +16,10 @@ const SECTIONS_FRAGMENT = groq`
     ...,
     _type == "hero" => {
       ...,
+      "eyebrow": ${translatedFieldFragment("eyebrow")},
       "title": ${translatedFieldFragment("title")},
       "description": ${translatedFieldFragment("description")},
+      "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
     _type == "imageSplitSection" => {
       ...,
@@ -76,7 +78,20 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "events" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "subtitle": ${translatedFieldFragment("subtitle")}
+      "subtitle": ${translatedFieldFragment("subtitle")},
+      "eventPostingsArray": eventPostingsArray[] {
+        ...,
+        "eventTitle": ${translatedFieldFragment("eventTitle")},
+        "eventDescription": ${translatedFieldFragment("eventDescription")},
+        "locations": locations[],
+        "date": date,
+        "tags": tags[],
+        "consultants": consultants[]{
+          employeeEmail,
+          employeeFirstName
+        },
+        "externalLink": externalLink
+      }
     },
     _type == "employeeHighlight" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},

@@ -1,5 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
+import { IEventPosting } from "./eventPosting";
 import { Slug } from "./global";
 import { IImage, ImageExtendedProps } from "./media";
 import { ILink } from "./navigation";
@@ -8,9 +9,10 @@ import { SeoData } from "./seo";
 export interface HeroSection {
   _type: "hero";
   _key: string;
+  eyebrow?: string;
   title: string;
-  description: string;
-  image: IImage;
+  description?: string;
+  image?: IImage;
 }
 
 export interface LogoSaladSection {
@@ -119,6 +121,7 @@ export interface EventsSection {
   _key: string;
   basicTitle: string;
   subtitle: string;
+  eventPostingsArray: IEventPosting[];
 }
 
 export enum CompensationCalculatorBackground {

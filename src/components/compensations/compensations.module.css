@@ -7,7 +7,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10rem 5rem;
+  padding: 6rem 3rem;
   gap: 3rem;
   width: 100%;
   max-width: var(--max-content-width-large);
@@ -17,13 +17,20 @@
   }
 }
 
-.text {
-  max-width: var(--max-content-width-large);
-}
-
-.compensationWrapper {
+.calculatorWrapper {
   display: flex;
   flex-direction: column;
-  max-width: var(--max-content-width-large);
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.compensationTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 834px) {
+  .calculatorWrapper {
+    flex-direction: row;
+  }
 }

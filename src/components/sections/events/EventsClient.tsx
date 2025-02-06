@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import OfficeSelector from "src/components/officeSelector/OfficeSelector";
 import Text from "src/components/text/Text";
-import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventsSection } from "studio/lib/interfaces/pages";
 
@@ -14,47 +13,38 @@ import styles from "./events.module.css";
 interface EventsClientProps {
   section: EventsSection;
   eventPostings: IEventPosting[];
-  companyLocations: CompanyLocation[];
 }
 
 export default function EventsClient({
   section,
   eventPostings,
-  companyLocations,
 }: EventsClientProps) {
-  const [locationFilter, setLocationFilter] = useState<CompanyLocation | null>(
-    null,
+  const [locationFilter, setLocationFilter] = useState<string | null>(null);
+
+  const allLocations = Array.from(
+    new Set(eventPostings.flatMap((event) => event.locations)),
   );
 
-  // Count events per location
-  const eventPostingsPerLocation = companyLocations.reduce(
+  const eventPostingsPerLocation = allLocations.reduce(
     (acc, location) => {
-      acc[location.companyLocationName] = eventPostings.filter((eventPosting) =>
-        eventPosting.locations.some(
-          (loc) => loc.companyLocationName === location.companyLocationName,
-        ),
+      acc[location] = eventPostings.filter((event) =>
+        event.locations.includes(location),
       ).length;
       return acc;
     },
     {} as Record<string, number>,
   );
 
-  // Filter events by locations
-  const filteredEventPostings =
-    locationFilter === null
-      ? eventPostings
-      : eventPostings.filter((eventPosting) =>
-          eventPosting.locations.some(
-            (location) =>
-              location.companyLocationName ===
-              locationFilter.companyLocationName,
-          ),
-        );
+  const filteredEventPostings = eventPostings
+    .filter((event) => new Date(event.date) >= new Date()) // Filter away old events
+    .filter(
+      (event) =>
+        locationFilter === null || event.locations.includes(locationFilter),
+    );
 
-  // Function to only show 3 events
-  const limitedEventPostings = filteredEventPostings
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .slice(0, 3);
+  const limitedEventPostings = filteredEventPostings.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+  );
 
   return (
     <>
@@ -65,18 +55,15 @@ export default function EventsClient({
         </Text>
 
         <OfficeSelector
-          companyLocations={companyLocations}
+          locations={allLocations}
           eventPostingsCount={eventPostings.length}
           eventPostingsPerLocation={eventPostingsPerLocation}
-          onFilterChange={(location) => setLocationFilter(location)}
+          onFilterChange={setLocationFilter}
         />
       </div>
 
       <div className={styles.eventsSection}>
-        <EventPostingList
-          eventPostings={limitedEventPostings}
-          companyLocations={companyLocations}
-        />
+        <EventPostingList eventPostings={limitedEventPostings} />
       </div>
     </>
   );

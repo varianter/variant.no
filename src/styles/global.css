@@ -127,9 +127,12 @@ html {
   --surface-yellow-light: var(--Yellow-50);
   --surface-white: var(--Light-50);
   --surface-violet-light: var(--Violet-50);
-  --surface-violet: var(--Violet-700);
+  --surface-violet-accent: var(--Violet-200);
+  --surface-violet-vivid: var(--Violet-700);
 
   /* breakpoints */
+  /* NOTE: Media queries does not accept variables,
+  so use pixel values instead */
   --breakpoint-mobile: 425px;
   --breakpoint-tablet: 834px;
   --breakpoint-large: 1024px;
@@ -138,6 +141,7 @@ html {
   --max-content-width-large: 1408px; /* 88rem */
   --max-content-width-medium: 1091px; /* 68.1875rem */
   --max-content-width-small: 869px; /* 54.3125rem */
+  --max-content-width-half: 50%; /* 54.3125rem */
 
   /* Radius */
   --radius-small: 6px;

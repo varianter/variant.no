@@ -66,3 +66,30 @@
 .primary {
   composes: shared;
 }
+
+.imageSecondaryPages {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex !important;
+  padding: var(--padding-xl) var(--padding-rem) var(--padding-rem)
+    var(--padding-rem);
+
+  max-width: 53rem !important;
+  margin-left: auto;
+
+  @media (max-width: 834px) {
+    padding: var(--padding-l) var(--padding-rem) var(--padding-rem)
+      var(--padding-rem);
+  }
+
+  @media (max-width: 425px) {
+    padding: var(--padding-s) var(--padding-rem) var(--padding-rem)
+      var(--padding-rem);
+  }
+}
+
+.imageSecondaryPages img {
+  display: block;
+  width: 60%;
+  height: 60%;
+}

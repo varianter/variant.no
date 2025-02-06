@@ -1,6 +1,5 @@
-import { StringInputProps, defineField } from "sanity";
+import { defineField } from "sanity";
 
-import { StringInputWithCharacterCount } from "studio/components/stringInputWithCharacterCount/StringInputWithCharacterCount";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { ImageAlignment } from "studio/lib/interfaces/media";
 import { firstTranslation } from "studio/utils/i18n";
@@ -12,15 +11,10 @@ const alignmentOptions = [
 
 const imageAltField = defineField({
   name: "alt",
-  type: "string",
+  type: "internationalizedArrayString",
   title: "Alternative Text",
   description:
     "Provide a description of the image for accessibility. Leave empty if the image is purely decorative.",
-  validation: (rule) => rule.max(100),
-  components: {
-    input: (props: StringInputProps) =>
-      StringInputWithCharacterCount({ ...props, maxCount: 100 }),
-  },
 });
 
 const internationalizedImageAltField = defineField({

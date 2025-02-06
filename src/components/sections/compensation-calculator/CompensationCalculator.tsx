@@ -26,22 +26,16 @@ export interface CompensationCalculatorProps {
 
 export default async function CompensationCalculator({
   section,
-  language,
 }: CompensationCalculatorProps) {
   const salariesRes = getLatestSalaries();
   const localeRes = getLocale();
 
-  const calculatorBgClassname = cnIf({
-    [styles.calculator]: true,
-    [styles["calculator--violet"]]: section.background === "violet",
-  });
-
-  const radioBackground = section.background === "violet" ? "light" : "dark";
+  const calculatorBgClassname = getCalculatorBgClassname(section.background);
+  const radioBackground = getRadioBackground(section.background);
 
   return (
     <div className={styles.container}>
       {section.moduleTitle && <Text type="h2">{section.moduleTitle}</Text>}
-
       <div className={styles.grid}>
         <div className={calculatorBgClassname}>
           <Text type="h3">{section.calculatorBlock.calculatorTitle}</Text>
@@ -53,30 +47,10 @@ export default async function CompensationCalculator({
             <Calculator
               localeRes={localeRes}
               salariesRes={salariesRes}
-              initialDegree="master"
               background={radioBackground}
             />
           </Suspense>
-
-          {section.calculatorBlock.calculatorLink?.linkTitle && (
-            <div className={styles.calculatorBottomLink}>
-              <LinkButton
-                type="secondary"
-                background={
-                  section.background === "violet" ? undefined : "dark"
-                }
-                link={section.calculatorBlock.calculatorLink}
-              />
-            </div>
-          )}
         </div>
-        <Handbook
-          title={section.handbookBlock?.handbookTitle}
-          description={section.handbookBlock?.handbookDescription}
-          language={language}
-          link={section.handbookBlock?.handbookLink}
-          sectionBackground={section.background}
-        />
       </div>
     </div>
   );
@@ -96,11 +70,7 @@ export async function Handbook({
   sectionBackground: CompensationCalculatorBackground;
 }) {
   const handbookLinksRes = await getHandbookLinksFromCompensationPage(language);
-
-  const handbookBgClassname = cnIf({
-    [styles.handbook]: true,
-    [styles["handbook--violet"]]: sectionBackground === "violet",
-  });
+  const handbookBgClassname = getHandbookBgClassname(sectionBackground);
 
   return (
     <div className={handbookBgClassname}>
@@ -132,4 +102,24 @@ export async function Handbook({
       )}
     </div>
   );
+}
+
+function getCalculatorBgClassname(
+  background: CompensationCalculatorBackground,
+) {
+  return cnIf({
+    [styles.calculator]: true,
+    [styles.calculatorViolet]: background === "violet",
+  });
+}
+
+function getRadioBackground(background: CompensationCalculatorBackground) {
+  return background === "violet" ? "light" : "dark";
+}
+
+function getHandbookBgClassname(background: CompensationCalculatorBackground) {
+  return cnIf({
+    [styles.handbook]: true,
+    [styles.handbookViolet]: background === "violet",
+  });
 }

@@ -39,7 +39,8 @@
       "educationInput": "Utbildning",
       "yearInput": "Året du började i relevant arbete",
       "bonusResult": "+ bonus",
-      "resultLabel": "Din årslön"
+      "resultLabel": "Din årslön",
+      "notice": "Obs! Alla varianter får en löneökning den 1 januari varje år. Medan vi väntar på ny lönestatistik från Tekna hittar du förra årets lönedata."
     },
     "degreeOptions": {
       "bachelor": "Bachelor",
@@ -50,6 +51,17 @@
       "bonuses": "Tidigare bonusar",
       "year": "År",
       "amount": "Belopp"
+    },
+    "pension": {
+      "comparison": "Jämförelse",
+      "salaryAtCurrentEmployer": "Årslön hos nuvarande arbetsgivare",
+      "percentPension": "Pension (% mellan 0 och 7,1 G)",
+      "IPS": "Pensionsinbetalning (% över 7,1 G)",
+      "whatIsIPS": "Vad är inkomstpension?"
+    },
+    "salary": {
+      "historicalGrowth": "— historisk tillväxt",
+      "basedOnExperience": "- - - baserat på X år mer erfarenhet"
     }
   },
   "custom_link": {
@@ -65,7 +77,7 @@
     "Prosjekt- og produktledelse": "Produkt- och projektledning",
     "Design": "Design",
     "Utvikling": "Utveckling",
-    "Ledelse": "Ledelse",
+    "Ledelse": "Ledning",
     "Strategi": "Strategi",
     "field": "Fält",
     "showMore": "Vis alla",
