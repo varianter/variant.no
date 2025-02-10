@@ -27,12 +27,6 @@ export const events = defineField({
         "Enter the subtitle that will be displayed below the title in the events section.",
     },
     {
-      name: "intro",
-      type: "internationalizedArrayString",
-      title: "Intro",
-      description: "Intro text on event segment ",
-    },
-    {
       name: "eventPostingsArray",
       title: "Event Postings",
       type: "array",
