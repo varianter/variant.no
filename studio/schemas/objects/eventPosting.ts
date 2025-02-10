@@ -76,6 +76,17 @@ const eventPosting = defineType({
               title: "Tag",
             },
           ],
+          preview: {
+            select: {
+              title: "tag",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: allTranslations(title) || "No tags",
+              };
+            },
+          },
         },
       ],
     },

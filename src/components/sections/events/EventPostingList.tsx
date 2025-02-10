@@ -30,14 +30,22 @@ export default function EventPostingList({
   );
 
   const eventPostingsPerLocation = Object.fromEntries(
-    eventPostings.flatMap((eventPosting) =>
-      eventPosting.locations.map((location) => [location, 0]),
+    eventPostings.flatMap(
+      (eventPosting) =>
+        eventPosting.locations?.map((location) => [
+          location.locationObject,
+          0,
+        ]) ?? [],
     ),
   );
 
   for (const eventPosting of eventPostings) {
-    for (const location of eventPosting.locations) {
-      eventPostingsPerLocation[location]++;
+    for (const location of eventPosting.locations ?? []) {
+      const locationName = location.locationObject;
+      if (locationName) {
+        eventPostingsPerLocation[locationName] =
+          (eventPostingsPerLocation[locationName] || 0) + 1;
+      }
     }
   }
 

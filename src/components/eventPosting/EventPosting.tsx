@@ -18,22 +18,26 @@ export default function EventPosting({
   showLocations = true,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations ?? [],
+    eventPosting.locations?.map((loc) => loc.locationObject) ?? [],
   ).join(", ");
 
   const consultantsFirstNames = eventPosting.consultants?.map(
     (n) => n.employeeFirstName,
   );
 
+  const eventPostingTags = eventPosting.tags?.map((tag) => tag) ?? [];
+
   const Wrapper = eventPosting.externalLink ? "a" : "div";
 
   return (
     <Wrapper
-      {...(eventPosting.externalLink && {
-        href: eventPosting.externalLink,
-        target: "_blank",
-        rel: "noopener noreferrer",
-      })}
+      {...(eventPosting.externalLink
+        ? {
+            href: eventPosting.externalLink,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          }
+        : {})}
       className={styles.eventPosting}
     >
       <div className={styles.flex}>
@@ -53,14 +57,14 @@ export default function EventPosting({
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
         <div>
-          {eventPosting.tags?.filter(Boolean).map((tag, index) => (
+          {eventPostingTags.filter(Boolean).map((tag, index) => (
             <Badge
               key={index}
               className={styles.themes}
               badgeColor="#FAFAFA"
               borderColor="#2D2D2D"
             >
-              {tag.trim()}
+              {tag.tag}
             </Badge>
           ))}
         </div>

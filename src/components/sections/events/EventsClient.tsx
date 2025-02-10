@@ -22,13 +22,19 @@ export default function EventsClient({
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
 
   const allLocations = Array.from(
-    new Set(eventPostings.flatMap((event) => event.locations)),
+    new Set(
+      eventPostings.flatMap(
+        (event) => event.locations?.map((loc) => loc.locationObject) ?? [],
+      ),
+    ),
   );
 
   const eventPostingsPerLocation = allLocations.reduce(
     (acc, location) => {
-      acc[location] = eventPostings.filter((event) =>
-        event.locations.includes(location),
+      acc[location] = eventPostings.filter(
+        (event) =>
+          event.locations?.some((loc) => loc.locationObject === location) ??
+          false,
       ).length;
       return acc;
     },
@@ -43,7 +49,8 @@ export default function EventsClient({
     .filter((event) => new Date(event.date) >= yesterday) // Filter away old events
     .filter(
       (event) =>
-        locationFilter === null || event.locations.includes(locationFilter),
+        locationFilter === null ||
+        event.locations?.some((loc) => loc.locationObject === locationFilter),
     );
 
   const limitedEventPostings = filteredEventPostings.sort(
