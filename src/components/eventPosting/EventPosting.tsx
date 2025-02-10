@@ -29,10 +29,22 @@ export default function EventPosting({
     (n) => n.employeeFirstName,
   );
 
+  const getSlug = (slug: string | { current: string } | undefined) => {
+    return typeof slug === "string" ? slug : slug?.current;
+  };
+
+  const Wrapper = eventPosting.slug || eventPosting.externalLink ? Link : "div";
+
   return (
-    <Link
+    <Wrapper
       key={eventPosting._key}
-      href={`/${language}/${eventPosting._key}`}
+      {...(eventPosting.slug || eventPosting.externalLink
+        ? {
+            href: eventPosting.slug
+              ? `/${language}/events/${getSlug(eventPosting.slug)}`
+              : eventPosting.externalLink,
+          }
+        : {})}
       className={styles.eventPosting}
     >
       <div className={styles.flex}>
@@ -84,6 +96,6 @@ export default function EventPosting({
           </div>
         )}
       </div>
-    </Link>
+    </Wrapper>
   );
 }

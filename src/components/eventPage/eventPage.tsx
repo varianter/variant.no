@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
-import { getEventBySlug } from "studio/lib/queries/eventQueries";
 
 import styles from "./eventPage.module.css";
 

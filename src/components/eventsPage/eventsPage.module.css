@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.375rem;
+  margin: 7.5rem auto;
+  border-radius: var(--radius-medium);
+  gap: 0.375rem;
+  background-color: var(--Blue-500);
+  color: var(--text-primary-light);
+  max-width: var(--max-content-width-large);
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}

@@ -11,6 +11,7 @@ import { PageBuilder } from "studio/lib/interfaces/pages";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import {
   COMPANY_LOCATIONS_QUERY,
+  EVENT_POSTINGS_QUERY,
   LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
@@ -355,12 +356,55 @@ export interface PageDataParams {
   hostname: string | null;
 }
 
+async function fetchEventPage({
+  language,
+  path,
+  perspective,
+}: PageDataParams): Promise<PageFromParams<
+  { event: QueryResponseInitial<EventType> }, // EventType må defineres
+  "event"
+> | null> {
+  if (path.length !== 2 || path[0] !== "events") {
+    return null;
+  }
+
+  const queryResponse = await loadStudioQuery<EventType | null>(
+    EVENT_POSTINGS_QUERY,
+    {
+      slug: path[1], // Henter slug fra URL
+      language,
+    },
+    { perspective },
+  );
+
+  if (!isNonNullQueryResponse(queryResponse)) {
+    return null;
+  }
+
+  const pathTranslations =
+    await loadStudioQuery<InternationalizedString | null>(
+      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
+      {
+        slug: path[1],
+        language,
+      },
+    );
+
+  return {
+    queryResponse: { event: queryResponse },
+    docType: "event",
+    pathTitles: [queryResponse.data.title],
+    pathTranslations: pathTranslations.data ?? [],
+  };
+}
+
 export async function fetchPageDataFromParams(params: PageDataParams) {
   return (
     (await fetchEmployeePage(params)) ??
     (await fetchDynamicPage(params)) ??
     (await fetchCompensationsPage(params)) ??
     (await fetchCustomerCase(params)) ??
-    (await fetchLegalDocument(params))
+    (await fetchLegalDocument(params)) ??
+    (await fetchEventPage(params))
   );
 }

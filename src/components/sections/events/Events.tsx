@@ -32,7 +32,11 @@ export default async function Events({ language, section }: EventsProps) {
   return (
     eventPostings && (
       <div className={styles.wrapper}>
-        <EventsClient section={section} eventPostings={eventPostings} />
+        <EventsClient
+          section={section}
+          eventPostings={eventPostings}
+          language={language}
+        />
       </div>
     )
   );

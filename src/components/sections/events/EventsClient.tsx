@@ -13,12 +13,15 @@ import styles from "./events.module.css";
 interface EventsClientProps {
   section: EventsSection;
   eventPostings: IEventPosting[];
+  language: string;
 }
 
 export default function EventsClient({
   section,
   eventPostings,
+  language,
 }: EventsClientProps) {
+  console.log("EventsClient: " + language);
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
 
   const allLocations = Array.from(
@@ -67,7 +70,10 @@ export default function EventsClient({
       </div>
 
       <div className={styles.eventsSection}>
-        <EventPostingList eventPostings={limitedEventPostings} />
+        <EventPostingList
+          eventPostings={limitedEventPostings}
+          language={language}
+        />
       </div>
     </>
   );

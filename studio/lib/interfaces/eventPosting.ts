@@ -1,3 +1,5 @@
+import { Slug } from "sanity";
+
 import { Consultants } from "studioShared/lib/interfaces/customerCases";
 
 export interface IEventPosting {
@@ -9,6 +11,7 @@ export interface IEventPosting {
   date: string;
   tags: string[];
   consultants: Consultants[];
+  slug: Slug;
 }
 
 export interface IEventPostings {
