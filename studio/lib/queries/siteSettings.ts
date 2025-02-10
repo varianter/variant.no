@@ -23,7 +23,7 @@ export const NAV_QUERY = groq`
     },
     "footer": footer[] {
       ...,
-      linksAndContent[] {
+      linksAndContent[!(_type == "richTextObject")] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
       },

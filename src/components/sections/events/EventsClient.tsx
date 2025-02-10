@@ -35,8 +35,12 @@ export default function EventsClient({
     {} as Record<string, number>,
   );
 
+  const today = new Date();
+  const yesterday = new Date();
+  yesterday.setDate(today.getDate() - 1);
+
   const filteredEventPostings = eventPostings
-    .filter((event) => new Date(event.date) >= new Date()) // Filter away old events
+    .filter((event) => new Date(event.date) >= yesterday) // Filter away old events
     .filter(
       (event) =>
         locationFilter === null || event.locations.includes(locationFilter),

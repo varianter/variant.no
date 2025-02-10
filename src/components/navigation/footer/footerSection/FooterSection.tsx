@@ -15,7 +15,7 @@ export const FooterSection = ({ title, children }: IFooterSection) => {
   return (
     <div className={styles.footerSection}>
       <TextTertiary>{title}</TextTertiary>
-      <ul className={styles.footerSectionLinks}>
+      <ul className={styles.linkColumn}>
         {childrenArray.map((child, index) => (
           <li key={index}>{child}</li>
         ))}
