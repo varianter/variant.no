@@ -1,7 +1,7 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
-import { firstTranslation } from "studio/utils/i18n";
+import { allTranslations, firstTranslation } from "studio/utils/i18n";
 
 export const eventPostingID = "eventPosting";
 
@@ -27,7 +27,31 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
-      of: [{ type: "string" }],
+      of: [
+        {
+          title: "Location",
+          name: "location",
+          type: "object",
+          fields: [
+            {
+              name: "locationObject",
+              type: "internationalizedArrayString",
+              title: "Location",
+            },
+          ],
+          preview: {
+            select: {
+              title: "locationObject",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: allTranslations(title) || "No location",
+              };
+            },
+          },
+        },
+      ],
     },
     {
       title: "Date",
@@ -36,11 +60,24 @@ const eventPosting = defineType({
       description: "Where is the role located?",
     },
     {
-      title: "Subject tags",
+      title: "Subject Tags",
       name: "tags",
       type: "array",
-      of: [{ type: "string" }],
-      description: "Tag tags to event and separate them with ,",
+      description: "Add tags to categorize the event.",
+      of: [
+        {
+          title: "Tag",
+          name: "tags",
+          type: "object",
+          fields: [
+            {
+              name: "tag",
+              type: "internationalizedArrayString",
+              title: "Tag",
+            },
+          ],
+        },
+      ],
     },
     {
       title: "Connected consultants",
