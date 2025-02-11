@@ -30,6 +30,36 @@ const SECTIONS_FRAGMENT = groq`
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
+    _type == "splitSection" => {
+      ...,
+      "title": ${translatedFieldFragment("splitSectionTitle")},
+      "sections": sections[]{
+        ...,
+       _type == "handbookSection" => {
+          ...,
+          "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+          "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+          "handbookLink": handbookLink {
+            ...,
+            ${TRANSLATED_LINK_FRAGMENT}
+          }
+        },
+        _type == "compensationCalculator" => {
+          ...,
+          "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+
+          "calculatorBlock": calculatorBlock {
+            ...,
+            "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+            "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+            "calculatorLink": calculatorLink {
+              ...,
+              ${TRANSLATED_LINK_FRAGMENT}
+            }
+          },
+        },
+      }
+    },
     _type == "imageSplitSection" => {
       ...,
       "content": content[]{

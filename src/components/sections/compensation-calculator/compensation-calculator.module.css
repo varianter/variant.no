@@ -1,6 +1,5 @@
 .container {
-  max-width: var(--max-content-width-half);
-  padding: 0;
+  max-width: var(--max-content-width-medium);
 }
 
 .grid {

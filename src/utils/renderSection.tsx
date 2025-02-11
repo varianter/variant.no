@@ -9,6 +9,7 @@ import Events from "src/components/sections/events/Events";
 import Generosity from "src/components/sections/generosity/Generosity";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
+import { Handbook } from "src/components/sections/handbook/HandbookSection";
 import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
 import ImageSplitComponent from "src/components/sections/image-split/ImageSplit";
@@ -20,6 +21,7 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
+import SplitSection from "src/components/sections/splitSection/SplitSection";
 import TextContent from "src/components/sections/textContent/TextContent";
 import { Locale } from "src/i18n/routing";
 import {
@@ -206,6 +208,10 @@ const SectionRenderer = ({
       return <TextContent section={section} />;
     case "events":
       return <Events language={language} section={section} />;
+    case "handbookSection":
+      return <Handbook section={section} language={language} />;
+    case "splitSection":
+      return <SplitSection section={section} language={language} />;
     default:
       return null;
   }
