@@ -68,8 +68,6 @@ function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
       height={parentHeight}
       style={{ overflow: "visible" }}
     >
-      {/*  <GradientTealBlue id="teal" /> */}
-
       <Group top={verticalMargin}>
         {data.map((d, index) => {
           const text = getText(d);
@@ -89,7 +87,6 @@ function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
                 fill={d.color}
                 rx={10}
               />
-
               <motion.g animate={{ x: barX, y: barY - 50 }}>
                 <motion.foreignObject
                   width={barWidth}

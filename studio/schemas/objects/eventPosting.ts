@@ -27,6 +27,7 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
+      validation: (rule) => rule.required().error("Location is required"),
       of: [
         {
           title: "Location",
@@ -34,14 +35,14 @@ const eventPosting = defineType({
           type: "object",
           fields: [
             {
-              name: "locationObject",
+              name: "locationString",
               type: "internationalizedArrayString",
               title: "Location",
             },
           ],
           preview: {
             select: {
-              title: "locationObject",
+              title: "locationString",
             },
             prepare(selection) {
               const { title } = selection;
@@ -76,6 +77,17 @@ const eventPosting = defineType({
               title: "Tag",
             },
           ],
+          preview: {
+            select: {
+              title: "tag",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: allTranslations(title) || "No tags",
+              };
+            },
+          },
         },
       ],
     },

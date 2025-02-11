@@ -1,4 +1,5 @@
 "use client";
+
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -6,19 +7,23 @@ import {
   IOption,
   RadioButtonGroup,
 } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
+import { SalaryData } from "src/components/sections/compensation-calculator/types";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { Result } from "studio/utils/result";
 
 import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
 
 interface CompensationsProps {
   compensations: CompensationsPage;
   locations: CompanyLocation[];
+  salariesRes: Promise<Result<SalaryData, unknown>>;
 }
 
 export default function CompensationSelector({
   compensations,
   locations,
+  salariesRes,
 }: CompensationsProps) {
   const t = useTranslations("compensation");
 
@@ -64,6 +69,7 @@ export default function CompensationSelector({
         benefits={benefitsFilteredByLocation}
         yearlyBonusesForLocation={yearlyBonusesForLocation}
         yearlySalaryForLocation={yearlySalaryForLocation}
+        salariesRes={salariesRes}
       />
     </>
   );

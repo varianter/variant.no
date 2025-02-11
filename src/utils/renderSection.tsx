@@ -177,7 +177,7 @@ const SectionRenderer = ({
         />
       );
     case "compensationCalculator":
-      return <CompensationCalculator section={section} language={language} />;
+      return <CompensationCalculator section={section} />;
     case "grid":
       return renderGridSection(section, sectionIndex, isDraftMode, initialData);
     case "customerCasesEntry":
