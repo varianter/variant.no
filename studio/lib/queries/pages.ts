@@ -84,7 +84,7 @@ const SECTIONS_FRAGMENT = groq`
         "eventTitle": ${translatedFieldFragment("eventTitle")},
         "eventDescription": ${translatedFieldFragment("eventDescription")},
         "locations": locations[]{
-          "locationObject": ${translatedFieldFragment("locationObject")}
+          "locationString": ${translatedFieldFragment("locationString")}
         },
         "date": date,
         "tags": tags[]{

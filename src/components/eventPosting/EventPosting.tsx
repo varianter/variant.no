@@ -18,7 +18,7 @@ export default function EventPosting({
   showLocations = true,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations.map((loc) => loc.locationObject),
+    eventPosting.locations.map((loc) => loc.locationString),
   ).join(", ");
 
   const consultantsFirstNames =
@@ -53,18 +53,20 @@ export default function EventPosting({
       <Text type="bodySmall">{eventPosting.eventDescription}</Text>
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
-        <div>
-          {eventPostingTags.filter(Boolean).map((tag, index) => (
-            <Badge
-              key={index}
-              className={styles.themes}
-              badgeColor="#FAFAFA"
-              borderColor="#2D2D2D"
-            >
-              {tag.tag}
-            </Badge>
-          ))}
-        </div>
+        {eventPostingTags.length > 0 && (
+          <div>
+            {eventPostingTags.map((tag, index) => (
+              <Badge
+                key={index}
+                className={styles.themes}
+                badgeColor="#FAFAFA"
+                borderColor="#2D2D2D"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
 
         {consultantsFirstNames?.length > 0 && (
           <div className={`${styles.flex} ${styles.consultants}`}>

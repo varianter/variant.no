@@ -35,14 +35,14 @@ const eventPosting = defineType({
           type: "object",
           fields: [
             {
-              name: "locationObject",
+              name: "locationString",
               type: "internationalizedArrayString",
               title: "Location",
             },
           ],
           preview: {
             select: {
-              title: "locationObject",
+              title: "locationString",
             },
             prepare(selection) {
               const { title } = selection;

@@ -24,7 +24,7 @@ export default function EventsClient({
   const allLocations = Array.from(
     new Set(
       eventPostings.flatMap((event) =>
-        event.locations.map((loc) => loc.locationObject),
+        event.locations.map((loc) => loc.locationString),
       ),
     ),
   );
@@ -32,7 +32,7 @@ export default function EventsClient({
   const eventPostingsPerLocation = allLocations.reduce(
     (acc, location) => {
       acc[location] = eventPostings.filter((event) =>
-        event.locations.some((loc) => loc.locationObject === location),
+        event.locations.some((loc) => loc.locationString === location),
       ).length;
       return acc;
     },
@@ -48,7 +48,7 @@ export default function EventsClient({
     .filter(
       (event) =>
         locationFilter === null ||
-        event.locations.some((loc) => loc.locationObject === locationFilter),
+        event.locations.some((loc) => loc.locationString === locationFilter),
     );
 
   const limitedEventPostings = filteredEventPostings.sort(

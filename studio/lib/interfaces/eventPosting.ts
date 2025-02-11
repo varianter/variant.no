@@ -16,5 +16,5 @@ export interface IEventPostings {
 }
 
 export interface ILocation {
-  locationObject: string;
+  locationString: string;
 }
