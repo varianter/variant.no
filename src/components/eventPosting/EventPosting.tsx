@@ -5,7 +5,7 @@ import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import styles from "./eventPosting.module.css";
 
 function sortAlphabetically(list: string[]) {
-  return list.filter(Boolean).sort((a, b) => a.localeCompare(b));
+  return list.sort((a, b) => a.localeCompare(b));
 }
 
 interface EventPostingProps {
@@ -18,12 +18,13 @@ export default function EventPosting({
   showLocations = true,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations ?? [],
+    eventPosting.locations.map((loc) => loc.locationString),
   ).join(", ");
 
-  const consultantsFirstNames = eventPosting.consultants?.map(
-    (n) => n.employeeFirstName,
-  );
+  const consultantsFirstNames =
+    eventPosting.consultants?.map((n) => n.employeeFirstName) ?? [];
+
+  const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
   const Wrapper = eventPosting.externalLink ? "a" : "div";
 
@@ -52,18 +53,20 @@ export default function EventPosting({
       <Text type="bodySmall">{eventPosting.eventDescription}</Text>
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
-        <div>
-          {eventPosting.tags?.filter(Boolean).map((tag, index) => (
-            <Badge
-              key={index}
-              className={styles.themes}
-              badgeColor="#FAFAFA"
-              borderColor="#2D2D2D"
-            >
-              {tag.trim()}
-            </Badge>
-          ))}
-        </div>
+        {eventPostingTags.length > 0 && (
+          <div>
+            {eventPostingTags.map((tag, index) => (
+              <Badge
+                key={index}
+                className={styles.themes}
+                badgeColor="#FAFAFA"
+                borderColor="#2D2D2D"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
 
         {consultantsFirstNames?.length > 0 && (
           <div className={`${styles.flex} ${styles.consultants}`}>
