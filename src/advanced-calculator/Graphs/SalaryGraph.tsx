@@ -41,8 +41,8 @@ const SalaryGraph = ({
   };
 
   const yMin = padding.top;
-  const yMax = height - (padding.top + padding.bottom);
-  const xMax = width - (padding.left + padding.right);
+  const yMax = Math.max(0, height - (padding.top + padding.bottom));
+  const xMax = Math.max(0, width - (padding.left + padding.right));
 
   const { historic, prognosis } = payscale;
   const projectedPayscale = [getLastInArray(historic), ...prognosis];

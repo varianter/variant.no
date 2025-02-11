@@ -44,8 +44,8 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     number: ({ children }) => <ol className={styles.list}>{children}</ol>,
   },
   listItem: {
-    bullet: ({ children }) => <li className={textStyles.body}>{children}</li>,
-    number: ({ children }) => <li className={textStyles.body}>{children}</li>,
+    bullet: ({ children }) => <li className={styles.list}>{children}</li>,
+    number: ({ children }) => <li className={styles.list}>{children}</li>,
   },
   marks: {
     em: ({ children }) => (
