@@ -23,29 +23,22 @@ export default function EventPostingList({
       Object.fromEntries(
         eventPostings.map((eventPosting) => [
           eventPosting._key,
-          eventPosting.locations ?? [],
+          eventPosting.locations.map((loc) => loc.locationObject),
         ]),
       ),
     [eventPostings],
   );
 
   const eventPostingsPerLocation = Object.fromEntries(
-    eventPostings.flatMap(
-      (eventPosting) =>
-        eventPosting.locations?.map((location) => [
-          location.locationObject,
-          0,
-        ]) ?? [],
+    eventPostings.flatMap((eventPosting) =>
+      eventPosting.locations.map((location) => [location.locationObject, 0]),
     ),
   );
 
   for (const eventPosting of eventPostings) {
-    for (const location of eventPosting.locations ?? []) {
-      const locationName = location.locationObject;
-      if (locationName) {
-        eventPostingsPerLocation[locationName] =
-          (eventPostingsPerLocation[locationName] || 0) + 1;
-      }
+    for (const location of eventPosting.locations) {
+      eventPostingsPerLocation[location.locationObject] =
+        eventPostingsPerLocation[location.locationObject] + 1;
     }
   }
 

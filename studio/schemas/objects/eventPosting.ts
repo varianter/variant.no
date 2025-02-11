@@ -27,6 +27,7 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
+      validation: (rule) => rule.required().error("Location is required"),
       of: [
         {
           title: "Location",

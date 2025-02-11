@@ -5,7 +5,7 @@ import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import styles from "./eventPosting.module.css";
 
 function sortAlphabetically(list: string[]) {
-  return list.filter(Boolean).sort((a, b) => a.localeCompare(b));
+  return list.sort((a, b) => a.localeCompare(b));
 }
 
 interface EventPostingProps {
@@ -18,26 +18,23 @@ export default function EventPosting({
   showLocations = true,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations?.map((loc) => loc.locationObject) ?? [],
+    eventPosting.locations.map((loc) => loc.locationObject),
   ).join(", ");
 
-  const consultantsFirstNames = eventPosting.consultants?.map(
-    (n) => n.employeeFirstName,
-  );
+  const consultantsFirstNames =
+    eventPosting.consultants?.map((n) => n.employeeFirstName) ?? [];
 
-  const eventPostingTags = eventPosting.tags?.map((tag) => tag) ?? [];
+  const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
   const Wrapper = eventPosting.externalLink ? "a" : "div";
 
   return (
     <Wrapper
-      {...(eventPosting.externalLink
-        ? {
-            href: eventPosting.externalLink,
-            target: "_blank",
-            rel: "noopener noreferrer",
-          }
-        : {})}
+      {...(eventPosting.externalLink && {
+        href: eventPosting.externalLink,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      })}
       className={styles.eventPosting}
     >
       <div className={styles.flex}>

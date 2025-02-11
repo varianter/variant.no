@@ -7,7 +7,7 @@ export interface IEventPosting {
   externalLink: string;
   eventDescription: string;
   date: string;
-  tags: string[];
+  tags: { tag: string }[];
   consultants: Consultants[];
 }
 
