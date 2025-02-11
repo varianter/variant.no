@@ -112,7 +112,6 @@ async function Page({ params }: Props) {
             case "compensations":
               return isDraftMode ? null : (
                 <Compensations
-                  language={locale}
                   compensations={queryResponse.compensationsPage.data}
                   locations={queryResponse.companyLocations.data}
                 />

@@ -18,28 +18,27 @@ import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { Result } from "studio/utils/result";
 
 import styles from "./compensation-calculator.module.css";
+import getDefaultSalary from "./getDefaultSalary";
 import { Degree, SalaryData } from "./types";
 
 type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
   salariesRes: Promise<Result<SalaryData, unknown>>;
   background: "light" | "dark" | "violet";
-  initialYear?: number;
 };
 
 export default function Calculator({
   localeRes,
   salariesRes,
-  initialYear,
   background,
 }: CalculatorProps) {
   const t = useTranslations("compensation");
+
   const locale = use(localeRes);
   const salaries = use(salariesRes);
 
   const [year, setYear] = useQueryState<number | null>("year", {
-    defaultValue:
-      initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
+    defaultValue: getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
     parse: (value) => (value ? parseInt(value, 10) : null),
     serialize: (value) => (value ? value.toString() : ""),
   });
@@ -51,13 +50,7 @@ export default function Calculator({
   });
 
   const [salary, setSalary] = useQueryState<number | null>("salary", {
-    defaultValue: salaries.ok
-      ? (calculateSalary(
-          initialYear ?? getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
-          "master",
-          salaries.value,
-        ) ?? 0)
-      : 0,
+    defaultValue: getDefaultSalary(salaries, year),
     parse: (value) => (value ? parseFloat(value) : null),
     serialize: (value) => (value ? value.toString() : ""),
   });
@@ -107,7 +100,7 @@ export default function Calculator({
           required
         />
       </div>
-      {salary !== null ? (
+      {salary !== null && (
         <div aria-live="polite" className={styles.salaryTextContainer}>
           <Text type="labelRegular">{t("calculator.resultLabel")}</Text>
           <p className={styles.salaryText}>
@@ -115,7 +108,8 @@ export default function Calculator({
           </p>
           <Text type="labelRegular">{t("calculator.bonusResult")}</Text>
         </div>
-      ) : null}
+      )}
+
       {/* This is very temporary, remove once new data is available */}
       <div
         style={{
