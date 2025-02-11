@@ -2,7 +2,8 @@ import { HeartIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
-import { link } from "studio/schemas/objects/link";
+
+import { handbookSection } from "./handbook";
 
 const generosityID = "generositySection";
 
@@ -29,32 +30,10 @@ export const generositySection = defineField({
       validation: (rule) => rule.required(),
     },
     {
+      ...handbookSection,
       name: "handbookBlock",
-      type: "object",
-
-      fields: [
-        {
-          name: "handbookTitle",
-          type: "internationalizedArrayString",
-          title: "Handbook Title",
-          description:
-            "Title that will be displayed inside the handbook section.",
-        },
-        {
-          name: "handbookDescription",
-          title: "Handbook Description",
-          type: "internationalizedArrayString",
-          description:
-            "Description that will be displayed inside the handbook section.",
-        },
-
-        {
-          ...link,
-          name: "handbookLink",
-          description:
-            "Bottom link that will be displayed inside the handbook section.",
-        },
-      ],
+      title: "Handbook Block",
+      description: "Handbook section within the generosity section.",
     },
   ],
   preview: {

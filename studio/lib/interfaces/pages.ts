@@ -129,6 +129,36 @@ export enum CompensationCalculatorBackground {
   Violet = "violet",
 }
 
+export type SplitSectionSection =
+  | HandbookSection
+  | CompensationCalculatorSection;
+
+export interface SplitSection {
+  _key: string;
+  _type: "splitSection";
+  sections: SplitSectionSection[];
+  title?: string;
+}
+
+export interface SplitSectionProps {
+  section: SplitSection;
+  language: string;
+}
+
+export enum HandbookBackground {
+  Light = "light",
+  Violet = "violet",
+}
+
+export interface HandbookSection {
+  _type: "handbookSection";
+  _key: string;
+  handbookTitle: string;
+  handbookDescription: string;
+  handbookLink: ILink;
+  handbookBackground: HandbookBackground;
+}
+
 export interface CompensationCalculatorSection {
   _type: "compensationCalculator";
   _key: string;
@@ -140,12 +170,6 @@ export interface CompensationCalculatorSection {
     calculatorDescription: string;
     calculatorLink: ILink;
   };
-
-  handbookBlock: {
-    handbookTitle: string;
-    handbookDescription: string;
-    handbookLink: ILink;
-  };
 }
 
 export interface GenerositySection {
@@ -154,11 +178,7 @@ export interface GenerositySection {
   basicTitle: string;
   description: string;
 
-  handbookBlock: {
-    handbookTitle: string;
-    handbookDescription: string;
-    handbookLink: ILink;
-  };
+  handbookBlock: HandbookSection;
 }
 
 export interface EmployeeHighlightSection {
@@ -200,14 +220,15 @@ export type Section =
   | EmployeesSection
   | CustomerCasesEntrySection
   | ContactBoxSection
-  | EmployeesSection
   | EmployeeHighlightSection
   | CompensationCalculatorSection
   | JobsSection
   | EventsSection
   | OpennessSection
   | GenerositySection
-  | LearningSection;
+  | LearningSection
+  | HandbookSection
+  | SplitSection;
 
 export interface PageBuilder {
   _createdAt: string;

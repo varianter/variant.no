@@ -26,7 +26,6 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     "compensationCalculator": compensationCalculator {
       ...,
       "moduleTitle": ${translatedFieldFragment("moduleTitle")},
-
       "calculatorBlock": calculatorBlock {
         ...,
         "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
@@ -36,15 +35,6 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
           ${TRANSLATED_LINK_FRAGMENT}
         }
       },
-      "handbookBlock": handbookBlock {
-        ...,
-        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
-        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
-        "handbookLink": handbookLink {
-          ...,
-          ${TRANSLATED_LINK_FRAGMENT}
-        }
-      }
     },
     "seo": ${translatedFieldFragment("seo")} {
       "title": seoTitle,

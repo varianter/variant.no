@@ -1,21 +1,13 @@
-import Link from "next/link";
 import { Suspense } from "react";
 
-import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
 import { cnIf } from "src/utils/css";
-import { getHref } from "src/utils/link";
-import { ILink } from "studio/lib/interfaces/navigation";
 import {
   CompensationCalculatorBackground,
   CompensationCalculatorSection,
 } from "studio/lib/interfaces/pages";
 
-import {
-  getHandbookLinksFromCompensationPage,
-  getLatestSalaries,
-  getLocale,
-} from "./api";
+import { getLatestSalaries, getLocale } from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 
@@ -55,54 +47,6 @@ export default async function CompensationCalculator({
   );
 }
 
-export async function Handbook({
-  title,
-  description,
-  language,
-  link,
-  sectionBackground,
-}: {
-  title: string;
-  description: string;
-  language: string;
-  link: ILink;
-  sectionBackground: CompensationCalculatorBackground;
-}) {
-  const handbookLinksRes = await getHandbookLinksFromCompensationPage(language);
-  const handbookBgClassname = getHandbookBgClassname(sectionBackground);
-
-  return (
-    <div className={handbookBgClassname}>
-      <Text type="h3">{title}</Text>
-      <Text type="bodyBig" className={styles.lightFont}>
-        {description}
-      </Text>
-
-      {handbookLinksRes.ok && (
-        <ul className={styles.handbookLinks}>
-          {handbookLinksRes.value.map((link) => (
-            <li key={link._key}>
-              <Link className={styles.handbookLink} href={getHref(link)}>
-                {link.linkTitle}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {link?.linkTitle && (
-        <div className={styles.handbookBottomLink}>
-          <LinkButton
-            type="secondary"
-            background={sectionBackground === "violet" ? "dark" : undefined}
-            link={link}
-          />
-        </div>
-      )}
-    </div>
-  );
-}
-
 function getCalculatorBgClassname(
   background: CompensationCalculatorBackground,
 ) {
@@ -114,11 +58,4 @@ function getCalculatorBgClassname(
 
 function getRadioBackground(background: CompensationCalculatorBackground) {
   return background === "violet" ? "light" : "dark";
-}
-
-function getHandbookBgClassname(background: CompensationCalculatorBackground) {
-  return cnIf({
-    [styles.handbook]: true,
-    [styles.handbookViolet]: background === "violet",
-  });
 }
