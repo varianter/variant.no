@@ -58,7 +58,7 @@ export const EVENT_POSTINGS_QUERY = groq`
         employeeFirstName
       },
       "externalLink": externalLink,
-      "slug": slug.current
+      "internalLink": internalLink,
     }
   }
 `;

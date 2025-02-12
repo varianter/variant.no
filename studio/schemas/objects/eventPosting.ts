@@ -132,15 +132,11 @@ const eventPosting = defineType({
       ],
     },
     {
-      title: "Slug",
-      name: "slug",
-      type: "slug",
-      description:
-        "Add unique URL text to make a separate page for the event. Only do this to global events that are made in Admin and not in sections.",
-      options: {
-        source: "eventTitle",
-        maxLength: 96,
-      },
+      title: "Internal link",
+      name: "internalLink",
+      type: "reference",
+      description: "Choose an internal site this event is linked to.",
+      to: [{ type: "page" }],
     },
   ],
   preview: {

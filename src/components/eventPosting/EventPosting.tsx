@@ -30,19 +30,16 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  const getSlug = (slug: string | { current: string } | undefined) => {
-    return typeof slug === "string" ? slug : slug?.current;
-  };
-
-  const Wrapper = eventPosting.slug || eventPosting.externalLink ? Link : "div";
+  const Wrapper =
+    eventPosting.internalLink || eventPosting.externalLink ? Link : "div";
 
   return (
     <Wrapper
       key={eventPosting._key}
-      {...(eventPosting.slug || eventPosting.externalLink
+      {...(eventPosting.internalLink || eventPosting.externalLink
         ? {
-            href: eventPosting.slug
-              ? `/${language}/events/${getSlug(eventPosting.slug)}`
+            href: eventPosting.internalLink
+              ? `/${language}/events/${eventPosting.internalLink._ref}`
               : eventPosting.externalLink,
           }
         : {})}
