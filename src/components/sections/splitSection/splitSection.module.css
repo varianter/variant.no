@@ -1,6 +1,6 @@
 .wrapper {
-  margin: 4rem auto;
   max-width: var(--max-content-width-large);
+  margin: 0 auto;
 }
 
 .content {
@@ -13,4 +13,15 @@
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
+}
+
+/* TODO: This is just to get some gap between the title and the section above in the jobs page.
+In the calculator page, the title is not there, 
+and will not create a gap. A better solution is to go through 
+how section and its components are structured. Now each 
+component has a margin/padding, but it would be better to have 
+a spesific gap in the parent
+*/
+.title {
+  margin-top: 3rem;
 }

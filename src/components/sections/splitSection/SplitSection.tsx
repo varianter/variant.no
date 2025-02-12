@@ -34,7 +34,11 @@ export default function SplitSection({ section, language }: SplitSectionProps) {
 
   return (
     <div className={styles.wrapper}>
-      <Text type="h2">{title}</Text>
+      {title && (
+        <Text type="h2" className={styles.title}>
+          {title}
+        </Text>
+      )}
       <div className={styles.content}>
         {sections.map((section) => (
           <GetSplitSectionSection

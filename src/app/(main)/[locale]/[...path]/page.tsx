@@ -114,6 +114,7 @@ async function Page({ params }: Props) {
                 <Compensations
                   compensations={queryResponse.compensationsPage.data}
                   locations={queryResponse.companyLocations.data}
+                  language={locale}
                 />
               );
             case "customerCasesPage":

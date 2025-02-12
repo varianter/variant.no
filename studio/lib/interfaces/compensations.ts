@@ -1,7 +1,7 @@
 import { PortableTextBlock, Reference } from "sanity";
 
 import { ILink } from "./navigation";
-import { CompensationCalculatorSection } from "./pages";
+import { SplitSection } from "./pages";
 import { SeoData } from "./seo";
 
 export enum BenefitTypeEnum {
@@ -92,10 +92,10 @@ export interface CompensationsPage {
   page: string;
   slug: string;
   pensionPercent?: number;
-  compensationCalculator: CompensationCalculatorSection;
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   handbookLinks: ILink[];
   seo: SeoData;
+  splitSection: SplitSection;
 }
