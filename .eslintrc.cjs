@@ -11,7 +11,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:prettier/recommended",
     "next/core-web-vitals",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
   ],
   plugins: [
     "@typescript-eslint",
