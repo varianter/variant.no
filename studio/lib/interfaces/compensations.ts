@@ -96,7 +96,6 @@ export interface CompensationsPage {
   benefitsByLocation: BenefitsByLocation[];
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
-  showSalaryCalculator: boolean;
   handbookLinks: ILink[];
   seo: SeoData;
 }
