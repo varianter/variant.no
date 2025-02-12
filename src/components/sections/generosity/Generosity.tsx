@@ -1,10 +1,7 @@
-import { Handbook } from "src/components/sections/compensation-calculator/CompensationCalculator";
+import { Handbook } from "src/components/sections/handbook/HandbookSection";
 import SmileyBox from "src/components/smileyBox/SmileyBox";
 import Text from "src/components/text/Text";
-import {
-  CompensationCalculatorBackground,
-  GenerositySection,
-} from "studio/lib/interfaces/pages";
+import { GenerositySection } from "studio/lib/interfaces/pages";
 
 import styles from "./generosity.module.css";
 
@@ -26,13 +23,7 @@ export default function Generosity({ section, language }: GenerosityProps) {
           smileyType="smug"
           backgroundColor="purple"
         />
-        <Handbook
-          title={section.handbookBlock.handbookTitle}
-          description={section.handbookBlock.handbookDescription}
-          link={section.handbookBlock.handbookLink}
-          sectionBackground={CompensationCalculatorBackground.Violet}
-          language={language}
-        />
+        <Handbook section={section.handbookBlock} language={language} />
       </div>
     </div>
   );

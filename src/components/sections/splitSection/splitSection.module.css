@@ -1,0 +1,16 @@
+.wrapper {
+  margin: 4rem auto;
+  max-width: var(--max-content-width-large);
+}
+
+.content {
+  width: 100%;
+  max-width: var(--max-content-width-large);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}

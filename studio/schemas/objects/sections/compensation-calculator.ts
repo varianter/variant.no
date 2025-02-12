@@ -89,52 +89,6 @@ export const compensationCalculator = defineField({
         },
       ],
     },
-
-    {
-      name: "handbookBlock",
-      type: "object",
-
-      fields: [
-        {
-          name: "handbookTitle",
-          type: "internationalizedArrayString",
-          title: "Handbook Title",
-          description:
-            "Title that will be displayed inside the handbook section.",
-          initialValue: [
-            { _key: "en", value: "Handbook" },
-            { _key: "no", value: "Håndbok" },
-          ],
-        },
-        {
-          name: "handbookDescription",
-          title: "Handbook Description",
-          type: "internationalizedArrayString",
-          description:
-            "Description that will be displayed inside the handbook section.",
-
-          initialValue: [
-            {
-              _key: "en",
-              value:
-                "Words and actions should go hand in hand. All about us, rules and more you can find in the handbook. If we change, we change the handbook.",
-            },
-            {
-              _key: "no",
-              value:
-                "Ord og handling bør gå hånd i hånd. Alt om oss, regler og mer finner du i håndboken. Endrer vi på oss, endrer vi håndboken.",
-            },
-          ],
-        },
-
-        {
-          ...link,
-          name: "handbookLink",
-          description:
-            "Bottom link that will be displayed inside the handbook section.",
-        },
-      ],
-    },
   ],
   preview: {
     prepare() {

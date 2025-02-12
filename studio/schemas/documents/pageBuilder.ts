@@ -9,6 +9,7 @@ import { employeeHighlightSection } from "studio/schemas/objects/sections/employ
 import { employees } from "studio/schemas/objects/sections/employees";
 import { events } from "studio/schemas/objects/sections/events";
 import { generositySection } from "studio/schemas/objects/sections/generosity";
+import { handbookSection } from "studio/schemas/objects/sections/handbook";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
@@ -16,6 +17,7 @@ import { jobs } from "studio/schemas/objects/sections/jobs";
 import { learningSection } from "studio/schemas/objects/sections/learning";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import { opennessSection } from "studio/schemas/objects/sections/openness";
+import splitSection from "studio/schemas/objects/sections/splitSection";
 import { textContent } from "studio/schemas/objects/sections/textContent";
 import seo from "studio/schemas/objects/seo";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
@@ -50,7 +52,6 @@ const pageBuilder = defineType({
         logoSalad,
         imageSplitSection,
         imageSection,
-        // grid,
         employees,
         customerCasesEntry,
         contactBox,
@@ -62,6 +63,8 @@ const pageBuilder = defineType({
         generositySection,
         learningSection,
         textContent,
+        handbookSection,
+        splitSection,
       ],
     }),
     defineField({

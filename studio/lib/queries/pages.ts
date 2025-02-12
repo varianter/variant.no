@@ -21,6 +21,45 @@ const SECTIONS_FRAGMENT = groq`
       "description": ${translatedFieldFragment("description")},
       "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
+    _type == "handbookSection" => {
+      ...,
+      "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+      "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+      "handbookLink": handbookLink {
+        ...,
+        ${TRANSLATED_LINK_FRAGMENT}
+      }
+    },
+    _type == "splitSection" => {
+      ...,
+      "title": ${translatedFieldFragment("splitSectionTitle")},
+      "sections": sections[]{
+        ...,
+       _type == "handbookSection" => {
+          ...,
+          "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+          "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+          "handbookLink": handbookLink {
+            ...,
+            ${TRANSLATED_LINK_FRAGMENT}
+          }
+        },
+        _type == "compensationCalculator" => {
+          ...,
+          "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+
+          "calculatorBlock": calculatorBlock {
+            ...,
+            "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+            "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+            "calculatorLink": calculatorLink {
+              ...,
+              ${TRANSLATED_LINK_FRAGMENT}
+            }
+          },
+        },
+      }
+    },
     _type == "imageSplitSection" => {
       ...,
       "content": content[]{
@@ -51,15 +90,6 @@ const SECTIONS_FRAGMENT = groq`
           ${TRANSLATED_LINK_FRAGMENT}
         }
       },
-      "handbookBlock": handbookBlock {
-        ...,
-        "handbookTitle": ${translatedFieldFragment("handbookTitle")},
-        "handbookDescription": ${translatedFieldFragment("handbookDescription")},
-        "handbookLink": handbookLink {
-          ...,
-          ${TRANSLATED_LINK_FRAGMENT}
-        }
-      }
     },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
