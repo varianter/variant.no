@@ -7,12 +7,11 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    // "plugin:@typescript-eslint/recommended-type-checked",  // TODO
-    // "plugin:@typescript-eslint/stylistic-type-checked",  // TODO
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
     "next/core-web-vitals",
+    "plugin:storybook/recommended"
   ],
   plugins: [
     "@typescript-eslint",

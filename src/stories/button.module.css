@@ -1,0 +1,90 @@
+@import "../styles/global.css";
+
+.button {
+  max-width: 320px;
+  height: fit-content;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  border-radius: 0.5rem;
+}
+
+.dark {
+  background-color: var(--background-button-outline-dark);
+  color: var(--text-primary-light);
+}
+
+.light {
+  background-color: var(--background-bg-light-primary);
+  color: var(--text-primary);
+}
+
+.large {
+  gap: 0.375rem;
+  padding: 10px 12px;
+}
+
+.medium {
+  gap: 0.25rem;
+  padding: 6px 8px;
+}
+
+.small {
+  gap: 0.25rem;
+  padding: 2px 4px;
+}
+
+.primary {
+  border: none;
+}
+
+.secondary.large.dark {
+  border: 1px solid var(--background-button-outline-light);
+}
+
+.secondary.large.light {
+  border: 1px solid var(--background-button-outline-dark);
+}
+
+.secondary.medium.dark {
+  border: 1px solid var(--background-button-outline-light);
+}
+
+.secondary.medium.light {
+  border: 1px solid var(--background-button-outline-dark);
+}
+
+.secondary.small.dark {
+  border: 0.5px solid var(--background-button-outline-light);
+}
+
+.secondary.small.light {
+  border: 0.5px solid var(--background-button-outline-dark);
+}
+
+.loading {
+  &::before {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
+    mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
+    background-color: var(--Dark-500);
+    animation: rotateSpinner 750ms linear infinite;
+  }
+}
+
+@keyframes rotateSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotateSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
