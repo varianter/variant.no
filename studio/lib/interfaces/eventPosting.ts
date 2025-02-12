@@ -1,5 +1,3 @@
-import { Slug } from "sanity";
-
 import { Consultants } from "studioShared/lib/interfaces/customerCases";
 
 export interface IEventPosting {
