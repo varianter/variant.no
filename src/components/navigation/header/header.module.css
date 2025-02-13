@@ -49,13 +49,19 @@
   max-width: min(1091px, calc(100vw - 2rem));
   width: 100%;
   justify-self: center;
-
   display: grid;
   grid-template-rows: var(--nav-height);
+
   @media (max-width: 375px) {
     width: 100vw;
   }
 }
+
+.withAnnouncement {
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0px 0px 2px 0px #eaeaea;
+}
+
 .desktopWrapper {
   display: flex;
   align-items: center;
@@ -172,20 +178,18 @@
   background: url("/_assets/menu-close.svg") no-repeat 50% 50%;
 }
 
-.announcementWrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0.75rem;
-  background-color: var(--background-bg-blue);
-  align-items: center;
-}
-
 .announcementContent {
   display: flex;
   gap: 2rem;
+  background-color: var(--background-bg-blue);
+  padding: 0.75rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  max-width: min(1091px, calc(100vw - 2rem));
+  margin: 0 auto;
 
   @media (max-width: 834px) {
-    align-items: center;
     flex-direction: column;
     gap: 0.5rem;
   }
