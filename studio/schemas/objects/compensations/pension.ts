@@ -11,14 +11,5 @@ export const pensionPercent = defineField({
       .min(0)
       .max(100)
       .error("The pension percentage must be a number between 0 and 100."),
-    rule.custom((value, context) => {
-      if (
-        context.document?.showSalaryCalculator &&
-        (value === undefined || value === null)
-      ) {
-        return "Please enter a pension percentage. This is required when the salary calculator is enabled.";
-      }
-      return true;
-    }),
   ],
 });

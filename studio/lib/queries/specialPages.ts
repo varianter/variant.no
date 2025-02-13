@@ -7,7 +7,6 @@ import {
 } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
-//Compensations
 export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
   *[_type == "compensations" && ${translatedFieldFragment("slug")} == $slug][0] {
     ...,
@@ -23,25 +22,41 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
         "richText": ${translatedFieldFragment("richText")}
       }
     },
-    "compensationCalculator": compensationCalculator {
+    splitSection {
       ...,
-      "moduleTitle": ${translatedFieldFragment("moduleTitle")},
-      "calculatorBlock": calculatorBlock {
+      "title": ${translatedFieldFragment("splitSectionTitle")},
+      "sections": sections[] {
         ...,
-        "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
-        "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
-        "calculatorLink": calculatorLink {
+        _type == "handbookSection" => {
           ...,
-          ${TRANSLATED_LINK_FRAGMENT}
+          "handbookTitle": ${translatedFieldFragment("handbookTitle")},
+          "handbookDescription": ${translatedFieldFragment("handbookDescription")},
+          "handbookLink": handbookLink {
+            ...,
+            ${TRANSLATED_LINK_FRAGMENT}
+          }
+        },
+        _type == "compensationCalculator" => {
+          ...,
+          "moduleTitle": ${translatedFieldFragment("moduleTitle")},
+          "calculatorBlock": calculatorBlock {
+            ...,
+            "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
+            "calculatorDescription": ${translatedFieldFragment("calculatorDescription")},
+            "calculatorLink": calculatorLink {
+              ...,
+              ${TRANSLATED_LINK_FRAGMENT}
+            }
+          }
         }
-      },
+      }
     },
     "seo": ${translatedFieldFragment("seo")} {
       "title": seoTitle,
       "description": seoDescription,
       "imageUrl": seoImage.asset->url,
       "keywords": seoKeywords
-    },
+    }
   }
 `;
 

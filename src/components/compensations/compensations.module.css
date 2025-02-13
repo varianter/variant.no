@@ -16,21 +16,3 @@
     padding: 10rem 0;
   }
 }
-
-.calculatorWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.compensationTitleWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media (min-width: 834px) {
-  .calculatorWrapper {
-    flex-direction: row;
-  }
-}
