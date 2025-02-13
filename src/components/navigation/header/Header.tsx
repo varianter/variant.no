@@ -10,6 +10,7 @@ import { defaultLanguage } from "i18n/supportedLanguages";
 import LanguageSwitcher from "src/components/languageSwitcher/LanguageSwitcher";
 import CustomLink from "src/components/link/CustomLink";
 import LinkButton from "src/components/linkButton/LinkButton";
+import Text from "src/components/text/Text";
 import useScrollDirection from "src/utils/hooks/useScrollDirection";
 import useScrollToTop from "src/utils/hooks/useScrollToTop";
 import { getHref } from "src/utils/link";
@@ -37,7 +38,7 @@ const filterLinks = (data: ILink[], type: string) =>
 
 export const Header = ({
   navigation,
-  /* announcement, */
+  announcement,
   currentLanguage,
   pathTranslations,
   contactEmail,
@@ -76,34 +77,76 @@ export const Header = ({
     };
   }, []);
 
-  /* const showAnnouncement =
-    announcement !== null &&
-    announcement.text?.length > 0 &&
-    (!announcement.hideAfter || new Date(announcement.hideAfter) > new Date());
- */
+  const showAnnouncement =
+    announcement &&
+    announcement?.text?.length > 0 &&
+    (!announcement?.hideAfter || new Date(announcement.hideAfter) > new Date());
+
   const t = useTranslations("contact_information");
 
   return (
-    <>
-      <FocusOn
-        enabled={isOpen}
-        as="header"
-        onClickOutside={toggleMenu}
-        onEscapeKey={toggleMenu}
-        className={`${styles.header} ${styles.focusOn} ${isOpen && styles.isOpen} ${scrollDirection === "down" ? `${styles.hidden}` : ""} `}
-      >
-        <nav className={styles.nav} aria-label="Main menu">
-          <div className={styles.wrapper}>
-            <div className={styles.desktopWrapper}>
-              <Link
-                href={`/${currentLanguage}`}
-                aria-label="Home"
-                className={styles.logo}
-                scroll={false}
+    <FocusOn
+      enabled={isOpen}
+      as="header"
+      onClickOutside={toggleMenu}
+      onEscapeKey={toggleMenu}
+      className={`${styles.header} ${styles.focusOn} ${isOpen && styles.isOpen} ${scrollDirection === "down" ? `${styles.hidden}` : ""} `}
+    >
+      <nav className={styles.nav} aria-label="Main menu">
+        <div
+          className={`${styles.wrapper} ${showAnnouncement && styles.withAnnouncement}`}
+        >
+          <div className={styles.desktopWrapper}>
+            <Link
+              href={`/${currentLanguage}`}
+              aria-label="Home"
+              className={styles.logo}
+              scroll={false}
+            />
+            <PageLinks links={links} isMobile={false} pathname={pathname} />
+            <PageCTAs ctas={ctas} isMobile={false} />
+            <div className={styles.languageSwitcher}>
+              {defaultLanguage && (
+                <LanguageSwitcher
+                  currentLanguage={currentLanguage}
+                  pathTranslations={pathTranslations}
+                />
+              )}
+
+              {contactEmail && (
+                <LinkButton
+                  link={`mailto:${contactEmail}`}
+                  linkTitle={t("contact_us")}
+                  size="L"
+                  type="secondary"
+                  background="light"
+                  withoutIcon
+                />
+              )}
+            </div>
+            <button
+              aria-haspopup="true"
+              aria-controls={sidebarID}
+              className={isOpen ? styles.open : styles.closed}
+              aria-expanded={isOpen}
+              onClick={toggleMenu}
+              aria-label="Mobile menu"
+            />
+          </div>
+          {isOpen && (
+            <div
+              className={styles.mobileMenu}
+              id={sidebarID}
+              aria-label="Mobile Menu"
+              onClick={() => setIsOpen(false)}
+            >
+              <PageLinks
+                links={sidebarLinks}
+                isMobile={true}
+                pathname={pathname}
               />
-              <PageLinks links={links} isMobile={false} pathname={pathname} />
-              <PageCTAs ctas={ctas} isMobile={false} />
-              <div className={styles.languageSwitcher}>
+              <hr className={styles.divider} />
+              <div className={styles.mobileButtons}>
                 {defaultLanguage && (
                   <LanguageSwitcher
                     currentLanguage={currentLanguage}
@@ -116,75 +159,31 @@ export const Header = ({
                     link={`mailto:${contactEmail}`}
                     linkTitle={t("contact_us")}
                     size="L"
-                    type="secondary"
+                    type="primary"
                     background="light"
                     withoutIcon
                   />
                 )}
               </div>
-              <button
-                aria-haspopup="true"
-                aria-controls={sidebarID}
-                className={isOpen ? styles.open : styles.closed}
-                aria-expanded={isOpen}
-                onClick={toggleMenu}
-                aria-label="Mobile menu"
-              />
             </div>
-            {isOpen && (
-              <div
-                className={styles.mobileMenu}
-                id={sidebarID}
-                aria-label="Mobile Menu"
-                onClick={() => setIsOpen(false)}
-              >
-                <PageLinks
-                  links={sidebarLinks}
-                  isMobile={true}
-                  pathname={pathname}
-                />
-                <hr className={styles.divider} />
-                <div className={styles.mobileButtons}>
-                  {defaultLanguage && (
-                    <LanguageSwitcher
-                      currentLanguage={currentLanguage}
-                      pathTranslations={pathTranslations}
-                    />
-                  )}
-
-                  {contactEmail && (
-                    <LinkButton
-                      link={`mailto:${contactEmail}`}
-                      linkTitle={t("contact_us")}
-                      size="L"
-                      type="primary"
-                      background="light"
-                      withoutIcon
-                    />
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        </nav>
-        {/* {showAnnouncement && (
-          <div className={styles.announcementWrapper}>
-            <div className={styles.announcementContent}>
-              <Text type={"bodySmall"}>{announcement.text}</Text>
-              {announcement.link && announcement.link.linkTitle && (
-                <div>
-                  <CustomLink
-                    link={announcement.link}
-                    size={"small"}
-                    color={"light"}
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        )} */}
-      </FocusOn>
-    </>
+          )}
+        </div>
+      </nav>
+      {showAnnouncement && announcement && (
+        <div className={styles.announcementContent}>
+          {announcement?.text && (
+            <Text type={"bodySmall"}>{announcement.text}</Text>
+          )}
+          {announcement.link?.linkTitle && (
+            <CustomLink
+              link={announcement.link}
+              size={"small"}
+              color={"light"}
+            />
+          )}
+        </div>
+      )}
+    </FocusOn>
   );
 };
 
