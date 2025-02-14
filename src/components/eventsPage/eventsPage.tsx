@@ -1,9 +1,6 @@
 import EventPosting from "src/components/eventPosting/EventPosting";
 import Text from "src/components/text/Text";
-import {
-  IEventPosting,
-  IEventPostings,
-} from "studio/lib/interfaces/eventPosting";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventsPage.module.css";
 
@@ -12,7 +9,7 @@ export default async function EventsPage({
   eventPostings,
 }: {
   params: { locale: string };
-  eventPostings: { eventPostings: IEventPosting[] };
+  eventPostings: IEventPosting[];
 }) {
   return (
     <div className={styles.eventSection}>
