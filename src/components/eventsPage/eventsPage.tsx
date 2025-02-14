@@ -12,7 +12,7 @@ export default async function EventsPage({
   eventPostings,
 }: {
   params: { locale: string };
-  eventPostings: { eventPostings: IEventPostings[] };
+  eventPostings: { eventPostings: IEventPosting[] };
 }) {
   return (
     <div className={styles.eventSection}>

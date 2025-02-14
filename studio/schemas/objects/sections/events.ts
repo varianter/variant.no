@@ -39,7 +39,7 @@ export const events = defineField({
       title: "Event Postings",
       type: "array",
       description:
-        "Add events to this block to override the global events you find in Admin/EventPostings. Only the events you add to this section will be presented. Remember to regularly remove old events. If you wan't to add a global event and present it with other global events, you can go to 'Admin' and 'Event Postings' and add events there. Events added here will not get their own page, but you can link to an event added in Admin",
+        "Add events to this block to override the global events you find in Admin/EventPostings. Only the events you add to this section will be presented. Remember to regularly remove old events. If you wan't to add a global event and present it with other global events, you can go to 'Admin' and 'Event Postings' and add events there.",
       of: [{ type: eventPostingID }],
     },
     {
