@@ -4,7 +4,10 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
-import { IEventPosting } from "studio/lib/interfaces/eventPosting";
+import {
+  IEventPosting,
+  IEventPostings,
+} from "studio/lib/interfaces/eventPosting";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
@@ -35,6 +38,7 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
+import { SeoData } from "studio/lib/interfaces/seo";
 
 const legalDocumentID = "legalDocument";
 const compensationsId = "compensations";
@@ -361,12 +365,15 @@ async function fetchEventsPage({
   language,
   perspective,
 }: PageDataParams): Promise<PageFromParams<
-  { eventPostings: QueryResponseInitial<IEventPosting[]>; seo: SeoData | null },
+  {
+    eventPostings: QueryResponseInitial<IEventPostings[]>;
+    seo: SeoData | null;
+  },
   "eventsPage"
 > | null> {
   const queryResponse = await loadStudioQuery<{
     eventPostingsArray: IEventPosting[];
-    seo: SeoData | null; // Hent SEO-data her
+    seo: SeoData | null;
   } | null>(EVENT_POSTINGS_QUERY, { language }, { perspective });
 
   if (!queryResponse || !queryResponse.data?.eventPostingsArray) {
@@ -376,10 +383,9 @@ async function fetchEventsPage({
   return {
     queryResponse: {
       eventPostings: queryResponse.data.eventPostingsArray,
-      seo: queryResponse.data.seo, // Returner SEO-data også
+      seo: queryResponse.data.seo,
     },
     docType: "eventsPage",
-    pathTitles: ["Alle arrangementer"],
     pathTranslations: [],
   };
 }
