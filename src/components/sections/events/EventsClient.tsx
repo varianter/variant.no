@@ -1,7 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import LinkButton from "src/components/linkButton/LinkButton";
 import OfficeSelector from "src/components/officeSelector/OfficeSelector";
 import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
@@ -9,8 +11,6 @@ import { EventsSection } from "studio/lib/interfaces/pages";
 
 import EventPostingList from "./EventPostingList";
 import styles from "./events.module.css";
-import { useTranslations } from "next-intl";
-import LinkButton from "src/components/linkButton/LinkButton";
 
 interface EventsClientProps {
   section: EventsSection;

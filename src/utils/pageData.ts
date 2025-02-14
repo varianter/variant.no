@@ -4,6 +4,7 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
@@ -34,7 +35,6 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
-import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 const legalDocumentID = "legalDocument";
 const compensationsId = "compensations";
