@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { ElementType } from "react";
 
 import Badge from "src/components/badge/Badge";
 import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventPosting.module.css";
-import { ElementType } from "react";
 
 function sortAlphabetically(list: string[]) {
   return list.sort((a, b) => a.localeCompare(b));
