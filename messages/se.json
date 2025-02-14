@@ -87,6 +87,9 @@
     "office": "Kontor",
     "all": "Alla"
   },
+  "event_section": {
+    "see_all_events": "Sjå alle arrangement"
+  },
   "office_selector": {
     "location": "Kontor",
     "all": "Alla"

@@ -40,3 +40,11 @@
   gap: 0.5rem;
   text-wrap: wrap;
 }
+
+.allEventsButton {
+  margin-top: 3.3rem;
+
+  @media (max-width: 800px) {
+    margin-top: 1.5rem;
+  }
+}

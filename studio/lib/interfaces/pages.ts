@@ -121,6 +121,8 @@ export interface EventsSection {
   _key: string;
   basicTitle: string;
   subtitle: string;
+  all_events: boolean;
+  eventSectionColor: string;
   eventPostingsArray: IEventPosting[];
 }
 

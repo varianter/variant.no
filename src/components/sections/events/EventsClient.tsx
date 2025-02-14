@@ -9,20 +9,24 @@ import { EventsSection } from "studio/lib/interfaces/pages";
 
 import EventPostingList from "./EventPostingList";
 import styles from "./events.module.css";
+import { useTranslations } from "next-intl";
+import LinkButton from "src/components/linkButton/LinkButton";
 
 interface EventsClientProps {
   section: EventsSection;
   eventPostings: IEventPosting[];
   language: string;
+  textColor: string;
 }
 
 export default function EventsClient({
   section,
   eventPostings,
   language,
+  textColor,
 }: EventsClientProps) {
-  console.log("EventsClient: " + language);
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
+  const t = useTranslations("event_section");
 
   const allLocations = Array.from(
     new Set(
@@ -71,7 +75,21 @@ export default function EventsClient({
           eventPostingsCount={eventPostings.length}
           eventPostingsPerLocation={eventPostingsPerLocation}
           onFilterChange={setLocationFilter}
+          textColor={textColor}
         />
+
+        {section.all_events && (
+          <div className={styles.allEventsButton}>
+            <LinkButton
+              link={`/events`}
+              linkTitle={t("see_all_events")}
+              size="L"
+              type="primary"
+              background="dark"
+              withoutIcon
+            />
+          </div>
+        )}
       </div>
 
       <div className={styles.eventsSection}>

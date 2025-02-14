@@ -87,6 +87,9 @@
     "office": "Office",
     "all": "All"
   },
+  "event_section": {
+    "see_all_events": "See all events"
+  },
   "office_selector": {
     "location": "Location",
     "all": "All"

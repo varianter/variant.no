@@ -30,8 +30,13 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
+  console.log(eventPostingLocations);
+
   const Wrapper =
-    eventPosting.internalLink || eventPosting.externalLink ? Link : "div";
+    (eventPosting.internalLink && eventPosting.internalLink.url) ||
+    eventPosting.externalLink
+      ? Link
+      : "div";
 
   return (
     <Wrapper
@@ -39,7 +44,7 @@ export default function EventPosting({
       {...(eventPosting.internalLink || eventPosting.externalLink
         ? {
             href: eventPosting.internalLink
-              ? `/${language}/events/${eventPosting.internalLink._ref}`
+              ? `/${language}/${eventPosting.internalLink.url}`
               : eventPosting.externalLink,
           }
         : {})}

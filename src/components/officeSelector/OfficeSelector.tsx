@@ -11,6 +11,7 @@ interface OfficeSelectorProps {
   eventPostingsCount: number;
   eventPostingsPerLocation: Record<string, number>;
   onFilterChange: (location: string | null) => void;
+  textColor: string;
 }
 
 function sortAlphabetically(locations: string[]) {
@@ -22,6 +23,7 @@ export default function OfficeSelector({
   eventPostingsCount,
   eventPostingsPerLocation,
   onFilterChange,
+  textColor,
 }: OfficeSelectorProps) {
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
   const handleFilterChange = (location: string | null) => {
@@ -39,7 +41,7 @@ export default function OfficeSelector({
         type="button"
         onClick={() => handleFilterChange(null)}
         text={`${t("all")} (${eventPostingsCount})`}
-        background="dark"
+        background={textColor === "#ffffff" ? "dark" : "light"}
       />
       {sortAlphabetically(locations).map(
         (location) =>
@@ -50,7 +52,7 @@ export default function OfficeSelector({
               type="button"
               onClick={() => handleFilterChange(location)}
               text={`${location} (${eventPostingsPerLocation[location] || 0})`}
-              background="dark"
+              background={textColor === "#ffffff" ? "dark" : "light"}
             />
           ),
       )}

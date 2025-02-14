@@ -39,6 +39,10 @@ export const JOB_POSTINGS_QUERY = groq`
   }
 `;
 
+export const INTERNAL_URL_QUERY = groq`
+
+`;
+
 // Event Postings
 export const EVENT_POSTINGS_QUERY = groq`
   *[_type == "eventPostings"][0] {
@@ -58,7 +62,9 @@ export const EVENT_POSTINGS_QUERY = groq`
         employeeFirstName
       },
       "externalLink": externalLink,
-      "internalLink": internalLink,
+      "internalLink": internalLink->{
+        "url": ${translatedFieldFragment("slug")}
+      }
     }
   }
 `;

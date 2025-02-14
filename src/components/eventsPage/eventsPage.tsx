@@ -14,9 +14,8 @@ export default async function EventsPage({
   params: { locale: string };
   eventPostings: { eventPostings: IEventPostings[] };
 }) {
-  console.log(eventPostings);
   return (
-    <>
+    <div className={styles.eventSection}>
       <Text type="h1">Alle arrangementer</Text>
 
       <div className={styles.wrapper}>
@@ -24,11 +23,11 @@ export default async function EventsPage({
           <EventPosting
             eventPosting={event}
             key={event._key}
-            showLocations={0}
+            showLocations={1}
             language={params.locale}
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

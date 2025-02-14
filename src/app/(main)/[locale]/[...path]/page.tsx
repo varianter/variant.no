@@ -7,6 +7,7 @@ import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
 import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
 import EmployeePage from "src/components/employeePage/EmployeePage";
+import EventsPage from "src/components/eventsPage/eventsPage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
@@ -19,7 +20,10 @@ import {
   seoDataFromChewbaccaEmployee,
   seoDataFromCustomerCase,
 } from "src/utils/seo";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { SeoData } from "studio/lib/interfaces/seo";
+import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
+import { loadStudioQuery } from "studio/lib/store";
 
 export const dynamic = "force-dynamic";
 
@@ -44,6 +48,8 @@ function seoDataFromPageData(
       return data.queryResponse.compensationsPage.data.seo;
     case "employee":
       return seoDataFromChewbaccaEmployee(data.queryResponse);
+    case "eventsPage":
+      return data.queryResponse.seo;
     case "legalDocument":
       return null;
   }
@@ -84,6 +90,13 @@ async function Page({ params }: Props) {
   if (pageData == null) {
     return Page404;
   }
+
+  let eventPostings: IEventPosting[] = [];
+
+  const { data } = await loadStudioQuery<{
+    eventPostingsArray: IEventPosting[];
+  }>(EVENT_POSTINGS_QUERY, { language: params.locale });
+  eventPostings = data?.eventPostingsArray ?? [];
 
   const { queryResponse, docType, pathTranslations } = pageData;
 
@@ -138,6 +151,10 @@ async function Page({ params }: Props) {
             case "employee":
               return (
                 <EmployeePage employee={queryResponse} language={locale} />
+              );
+            case "eventsPage":
+              return (
+                <EventsPage params={params} eventPostings={eventPostings} />
               );
           }
           return Page404;

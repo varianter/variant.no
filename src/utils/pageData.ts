@@ -34,6 +34,7 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 const legalDocumentID = "legalDocument";
 const compensationsId = "compensations";
@@ -356,55 +357,43 @@ export interface PageDataParams {
   hostname: string | null;
 }
 
-async function fetchEventPage({
+async function fetchEventsPage({
   language,
-  path,
   perspective,
 }: PageDataParams): Promise<PageFromParams<
-  { event: QueryResponseInitial<EventType> }, // EventType må defineres
-  "event"
+  { eventPostings: QueryResponseInitial<IEventPosting[]>; seo: SeoData | null },
+  "eventsPage"
 > | null> {
-  if (path.length !== 2 || path[0] !== "events") {
+  const queryResponse = await loadStudioQuery<{
+    eventPostingsArray: IEventPosting[];
+    seo: SeoData | null; // Hent SEO-data her
+  } | null>(EVENT_POSTINGS_QUERY, { language }, { perspective });
+
+  if (!queryResponse || !queryResponse.data?.eventPostingsArray) {
     return null;
   }
-
-  const queryResponse = await loadStudioQuery<EventType | null>(
-    EVENT_POSTINGS_QUERY,
-    {
-      slug: path[1], // Henter slug fra URL
-      language,
-    },
-    { perspective },
-  );
-
-  if (!isNonNullQueryResponse(queryResponse)) {
-    return null;
-  }
-
-  const pathTranslations =
-    await loadStudioQuery<InternationalizedString | null>(
-      SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
-      {
-        slug: path[1],
-        language,
-      },
-    );
 
   return {
-    queryResponse: { event: queryResponse },
-    docType: "event",
-    pathTitles: [queryResponse.data.title],
-    pathTranslations: pathTranslations.data ?? [],
+    queryResponse: {
+      eventPostings: queryResponse.data.eventPostingsArray,
+      seo: queryResponse.data.seo, // Returner SEO-data også
+    },
+    docType: "eventsPage",
+    pathTitles: ["Alle arrangementer"],
+    pathTranslations: [],
   };
 }
 
 export async function fetchPageDataFromParams(params: PageDataParams) {
+  if (params.path[0] === "events") {
+    return await fetchEventsPage(params);
+  }
+
   return (
     (await fetchEmployeePage(params)) ??
     (await fetchDynamicPage(params)) ??
     (await fetchCompensationsPage(params)) ??
     (await fetchCustomerCase(params)) ??
-    (await fetchLegalDocument(params)) ??
-    (await fetchEventPage(params))
+    (await fetchLegalDocument(params))
   );
 }
