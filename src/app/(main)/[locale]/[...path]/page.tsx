@@ -91,12 +91,12 @@ async function Page({ params }: Props) {
     return Page404;
   }
 
-  let eventPostings: IEventPosting[] = [];
+  let eventPostings: { eventPostings: IEventPosting[] } = { eventPostings: [] };
 
   const { data } = await loadStudioQuery<{
     eventPostingsArray: IEventPosting[];
   }>(EVENT_POSTINGS_QUERY, { language: params.locale });
-  eventPostings = data?.eventPostingsArray ?? [];
+  eventPostings.eventPostings = data?.eventPostingsArray ?? [];
 
   const { queryResponse, docType, pathTranslations } = pageData;
 

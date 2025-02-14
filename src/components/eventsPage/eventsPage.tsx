@@ -9,14 +9,14 @@ export default async function EventsPage({
   eventPostings,
 }: {
   params: { locale: string };
-  eventPostings: IEventPosting[];
+  eventPostings: { eventPostings: IEventPosting[] };
 }) {
   return (
     <div className={styles.eventSection}>
       <Text type="h1">Alle arrangementer</Text>
 
       <div className={styles.wrapper}>
-        {eventPostings.map((event: IEventPosting) => (
+        {eventPostings.eventPostings.map((event: IEventPosting) => (
           <EventPosting
             eventPosting={event}
             key={event._key}
