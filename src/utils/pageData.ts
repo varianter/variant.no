@@ -12,6 +12,7 @@ import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { PageBuilder } from "studio/lib/interfaces/pages";
+import { SeoData } from "studio/lib/interfaces/seo";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import {
   COMPANY_LOCATIONS_QUERY,
@@ -38,7 +39,6 @@ import { loadSharedQuery } from "studioShared/lib/store";
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
-import { SeoData } from "studio/lib/interfaces/seo";
 
 const legalDocumentID = "legalDocument";
 const compensationsId = "compensations";
