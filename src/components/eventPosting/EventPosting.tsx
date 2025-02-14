@@ -30,8 +30,6 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  console.log(eventPostingLocations);
-
   const Wrapper =
     (eventPosting.internalLink && eventPosting.internalLink.url) ||
     eventPosting.externalLink

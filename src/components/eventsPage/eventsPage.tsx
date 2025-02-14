@@ -23,7 +23,7 @@ export default async function EventsPage({
           <EventPosting
             eventPosting={event}
             key={event._key}
-            showLocations={1}
+            showLocations={true}
             language={params.locale}
           />
         ))}
