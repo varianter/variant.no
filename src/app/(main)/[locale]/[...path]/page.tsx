@@ -91,7 +91,9 @@ async function Page({ params }: Props) {
     return Page404;
   }
 
-  let eventPostings: { eventPostings: IEventPosting[] } = { eventPostings: [] };
+  const eventPostings: { eventPostings: IEventPosting[] } = {
+    eventPostings: [],
+  };
 
   const { data } = await loadStudioQuery<{
     eventPostingsArray: IEventPosting[];
