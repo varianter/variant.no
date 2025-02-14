@@ -5,6 +5,7 @@ import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventPosting.module.css";
+import { ElementType } from "react";
 
 function sortAlphabetically(list: string[]) {
   return list.sort((a, b) => a.localeCompare(b));
@@ -30,7 +31,7 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  const Wrapper =
+  const Wrapper: ElementType =
     (eventPosting.internalLink && eventPosting.internalLink.url) ||
     eventPosting.externalLink
       ? Link

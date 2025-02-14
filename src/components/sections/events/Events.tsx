@@ -59,7 +59,7 @@ export default async function Events({ language, section }: EventsProps) {
     return contrastBlack > contrastWhite ? "#000" : "#fff";
   };
 
-  const backgroundColor = section.eventSectionColor?.hex;
+  const backgroundColor = section.eventSectionColor;
   const textColor = backgroundColor
     ? getContrastTextColor(backgroundColor)
     : "#ffffff";

@@ -366,7 +366,7 @@ async function fetchEventsPage({
   perspective,
 }: PageDataParams): Promise<PageFromParams<
   {
-    eventPostings: QueryResponseInitial<IEventPostings[]>;
+    eventPostings: IEventPosting[];
     seo: SeoData | null;
   },
   "eventsPage"
@@ -382,10 +382,11 @@ async function fetchEventsPage({
 
   return {
     queryResponse: {
-      eventPostings: queryResponse.data.eventPostingsArray,
+      eventPostings: queryResponse.data.eventPostingsArray, // Nå matcher dette typen
       seo: queryResponse.data.seo,
     },
     docType: "eventsPage",
+    pathTitles: ["Events"],
     pathTranslations: [],
   };
 }

@@ -10,7 +10,7 @@ export interface IEventPosting {
   tags: { tag: string }[];
   consultants: Consultants[];
   internalLink?: {
-    url: { _type: "reference"; _ref: string } | undefined;
+    url: string;
     _type: "reference";
     _ref: string;
   };
