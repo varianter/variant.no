@@ -88,7 +88,8 @@
     "all": "Alla"
   },
   "event_section": {
-    "see_all_events": "Sjå alle arrangement"
+    "see_all_events": "Se alla arrangemang",
+    "go_to_event": "Gå till arrangemang"
   },
   "office_selector": {
     "location": "Kontor",

@@ -88,7 +88,8 @@
     "all": "All"
   },
   "event_section": {
-    "see_all_events": "See all events"
+    "see_all_events": "See all events",
+    "go_to_event": "Go to event"
   },
   "office_selector": {
     "location": "Location",
