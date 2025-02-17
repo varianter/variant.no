@@ -41,18 +41,21 @@ export default function Calculator({
     defaultValue: getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
     parse: (value) => (value ? parseInt(value, 10) : null),
     serialize: (value) => (value ? value.toString() : ""),
+    clearOnDefault: false,
   });
 
   const [degree, setDegree] = useQueryState<Degree>("degree", {
     defaultValue: "master",
     parse: (value) => (value as Degree) ?? null,
     serialize: (value) => value ?? "",
+    clearOnDefault: false,
   });
 
   const [salary, setSalary] = useQueryState<number | null>("salary", {
     defaultValue: getDefaultSalary(salaries, year),
     parse: (value) => (value ? parseFloat(value) : null),
     serialize: (value) => (value ? value.toString() : ""),
+    clearOnDefault: false,
   });
 
   // Update calculatedSalary whenever year, degree, or salaries change
