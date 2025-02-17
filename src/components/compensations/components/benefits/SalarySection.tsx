@@ -19,7 +19,7 @@ import {
   SalariesPage,
 } from "studio/lib/interfaces/compensations";
 
-import styles from "./benefitsByLocation.module.css";
+import styles from "./benefits.module.css";
 
 interface SalarySectionProps {
   benefit: Benefit;

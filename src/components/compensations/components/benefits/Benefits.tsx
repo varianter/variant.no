@@ -14,24 +14,24 @@ import {
 } from "studio/lib/interfaces/compensations";
 import { Result } from "studio/utils/result";
 
-import styles from "./benefitsByLocation.module.css";
+import styles from "./benefits.module.css";
 import BonusSection from "./BonusSection";
 import PensionSection from "./PensionSection";
 import SalarySection from "./SalarySection";
 
-interface BenefitsByLocationProps {
+interface BenefitsProps {
   benefits: Benefit[];
   yearlyBonusesForLocation?: BonusPage[];
   yearlySalaryForLocation?: SalariesByLocation;
   salariesRes: Promise<Result<SalaryData, unknown>>;
 }
 
-export default function BenefitsByLocation({
+export default function Benefits({
   benefits,
   yearlyBonusesForLocation,
   yearlySalaryForLocation,
   salariesRes,
-}: BenefitsByLocationProps) {
+}: BenefitsProps) {
   const salaries = use(salariesRes);
   //Grunnbeløp
   const oneG = useOneG();
@@ -80,7 +80,7 @@ export default function BenefitsByLocation({
 
   return (
     <>
-      {benefits.map((benefit) => (
+      {benefits?.map((benefit) => (
         <div key={benefit._key} className={styles.benefitWrapper}>
           {renderBenefit(benefit)}
         </div>

@@ -17,7 +17,7 @@ import socialMediaLinks from "./schemas/documents/siteSettings/socialMediaProfil
 import customerCasesPage from "./schemas/documents/specialPages/customerCasesPage";
 import callToActionField from "./schemas/fields/callToActionFields";
 import { richText } from "./schemas/fields/text";
-import benefitsByLocation from "./schemas/objects/compensations/benefitsByLocation";
+import benefits from "./schemas/objects/compensations/benefits";
 import eventPosting from "./schemas/objects/eventPosting";
 import { footerSection } from "./schemas/objects/footerSection";
 import jobPosting from "./schemas/objects/jobPosting";
@@ -40,7 +40,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     legalDocument,
     compensations,
     customerCasesPage,
-    benefitsByLocation,
+    benefits,
     companyLocation,
     defaultSeo,
     brandAssets,
