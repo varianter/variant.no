@@ -35,16 +35,13 @@ export default async function Events({ language, section }: EventsProps) {
     ? getTextColor(String(backgroundColor))
     : "#ffffff";
 
-  console.log(backgroundColor);
+  const styleProps = backgroundColor
+    ? { style: { backgroundColor, color: textColor } }
+    : {};
 
   return (
     eventPostings && (
-      <div
-        className={styles.wrapper}
-        {...(backgroundColor
-          ? { style: { backgroundColor, color: textColor } }
-          : {})}
-      >
+      <div className={styles.wrapper} {...styleProps}>
         <EventsClient
           section={section}
           eventPostings={eventPostings}
