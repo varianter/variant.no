@@ -124,7 +124,8 @@ const SECTIONS_FRAGMENT = groq`
           employeeEmail,
           employeeFirstName
         },
-        "externalLink": externalLink
+        "externalLink": externalLink,
+        "internalLink": internalLink
       }
     },
     _type == "employeeHighlight" => {

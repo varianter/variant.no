@@ -1,4 +1,4 @@
-import { UlistIcon } from "@sanity/icons";
+import { CalendarIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
@@ -10,7 +10,7 @@ export const events = defineField({
   name: eventsID,
   title: "Events",
   type: "object",
-  icon: UlistIcon,
+  icon: CalendarIcon,
   fields: [
     {
       name: titleID.basic,
@@ -27,12 +27,27 @@ export const events = defineField({
         "Enter the subtitle that will be displayed below the title in the events section.",
     },
     {
+      name: "allEvents",
+      title: "Show all events button",
+      description:
+        "Add a button to section that links to a page to see all events.",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
       name: "eventPostingsArray",
       title: "Event Postings",
       type: "array",
       description:
         "Add events to this block to override the global events you find in Admin/EventPostings. Only the events you add to this section will be presented. Remember to regularly remove old events. If you wan't to add a global event and present it with other global events, you can go to 'Admin' and 'Event Postings' and add events there.",
       of: [{ type: eventPostingID }],
+    },
+    {
+      name: "eventSectionColor",
+      type: "color",
+      title: "Event Section Color",
+      description: "Override the basic color with a custom one",
+      options: { disableAlpha: true },
     },
   ],
   preview: {

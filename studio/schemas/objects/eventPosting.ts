@@ -5,6 +5,9 @@ import { allTranslations, firstTranslation } from "studio/utils/i18n";
 
 export const eventPostingID = "eventPosting";
 
+// Lazy reference to avoid circular dependency
+const lazyPageBuilderID = () => "pageBuilder";
+
 const eventPosting = defineType({
   name: eventPostingID,
   title: "Event Posting",
@@ -130,6 +133,14 @@ const eventPosting = defineType({
           allowRelative: false,
         }),
       ],
+    },
+    {
+      name: "internalLink",
+      title: "Internal Link",
+      description:
+        "Select the page you want to link to. The page has to have a slug for the link to work.",
+      type: "reference",
+      to: [{ type: lazyPageBuilderID() }],
     },
   ],
   preview: {

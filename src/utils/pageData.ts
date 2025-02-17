@@ -4,13 +4,16 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { PageBuilder } from "studio/lib/interfaces/pages";
+import { SeoData } from "studio/lib/interfaces/seo";
 import { CustomerCasePage } from "studio/lib/interfaces/specialPages";
 import {
   COMPANY_LOCATIONS_QUERY,
+  EVENT_POSTINGS_QUERY,
   LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
 } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
@@ -355,7 +358,41 @@ export interface PageDataParams {
   hostname: string | null;
 }
 
+async function fetchEventsPage({
+  language,
+  perspective,
+}: PageDataParams): Promise<PageFromParams<
+  {
+    eventPostings: IEventPosting[];
+    seo: SeoData | null;
+  },
+  "eventsPage"
+> | null> {
+  const queryResponse = await loadStudioQuery<{
+    eventPostingsArray: IEventPosting[];
+    seo: SeoData | null;
+  } | null>(EVENT_POSTINGS_QUERY, { language }, { perspective });
+
+  if (!queryResponse || !queryResponse.data?.eventPostingsArray) {
+    return null;
+  }
+
+  return {
+    queryResponse: {
+      eventPostings: queryResponse.data.eventPostingsArray, // Nå matcher dette typen
+      seo: queryResponse.data.seo,
+    },
+    docType: "eventsPage",
+    pathTitles: ["Events"],
+    pathTranslations: [],
+  };
+}
+
 export async function fetchPageDataFromParams(params: PageDataParams) {
+  if (params.path[0] === "events") {
+    return await fetchEventsPage(params);
+  }
+
   return (
     (await fetchEmployeePage(params)) ??
     (await fetchDynamicPage(params)) ??

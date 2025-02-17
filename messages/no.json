@@ -86,6 +86,11 @@
     "office": "Kontor",
     "all": "Alle"
   },
+  "event_section": {
+    "see_all_events": "Se alle arrangementer",
+    "go_to_event": "Gå til arrangement",
+    "all_events": "Alle arrangementer"
+  },
   "office_selector": {
     "location": "Lokasjon",
     "all": "Alle"

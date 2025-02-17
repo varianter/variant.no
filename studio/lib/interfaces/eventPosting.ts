@@ -9,6 +9,11 @@ export interface IEventPosting {
   date: string;
   tags: { tag: string }[];
   consultants: Consultants[];
+  internalLink?: {
+    url: string;
+    _type: "reference";
+    _ref: string;
+  };
 }
 
 export interface IEventPostings {

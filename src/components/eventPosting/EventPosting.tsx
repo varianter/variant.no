@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { ElementType } from "react";
+
 import Badge from "src/components/badge/Badge";
 import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
@@ -11,30 +15,45 @@ function sortAlphabetically(list: string[]) {
 interface EventPostingProps {
   eventPosting: IEventPosting;
   showLocations?: boolean;
+  language: string;
 }
 
 export default function EventPosting({
   eventPosting,
   showLocations = true,
+  language,
 }: EventPostingProps) {
   const eventPostingLocations = sortAlphabetically(
     eventPosting.locations.map((loc) => loc.locationString),
   ).join(", ");
+  const t = useTranslations("event_section");
 
   const consultantsFirstNames =
     eventPosting.consultants?.map((n) => n.employeeFirstName) ?? [];
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  const Wrapper = eventPosting.externalLink ? "a" : "div";
+  const isInternal =
+    eventPosting.internalLink && eventPosting.internalLink?.url;
+  const isExternal = eventPosting.externalLink;
+
+  const Wrapper: ElementType = isInternal || isExternal ? Link : "div";
+
+  const linkProps =
+    isInternal || isExternal
+      ? {
+          href: isInternal
+            ? `/${language}/${eventPosting.internalLink?.url}`
+            : eventPosting.externalLink,
+          target: isExternal ? "_blank" : undefined,
+          "aria-label": `${t("go_to_event")} ${eventPosting.eventTitle}`,
+        }
+      : {};
 
   return (
     <Wrapper
-      {...(eventPosting.externalLink && {
-        href: eventPosting.externalLink,
-        target: "_blank",
-        rel: "noopener noreferrer",
-      })}
+      key={eventPosting._key}
+      {...linkProps}
       className={styles.eventPosting}
     >
       <div className={styles.flex}>

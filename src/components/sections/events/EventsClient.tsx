@@ -1,7 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import LinkButton from "src/components/linkButton/LinkButton";
 import OfficeSelector from "src/components/officeSelector/OfficeSelector";
 import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
@@ -13,13 +15,18 @@ import styles from "./events.module.css";
 interface EventsClientProps {
   section: EventsSection;
   eventPostings: IEventPosting[];
+  language: string;
+  textColor: string;
 }
 
 export default function EventsClient({
   section,
   eventPostings,
+  language,
+  textColor,
 }: EventsClientProps) {
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
+  const t = useTranslations("event_section");
 
   const allLocations = Array.from(
     new Set(
@@ -68,11 +75,28 @@ export default function EventsClient({
           eventPostingsCount={eventPostings.length}
           eventPostingsPerLocation={eventPostingsPerLocation}
           onFilterChange={setLocationFilter}
+          textColor={textColor}
         />
+
+        {section.allEvents && (
+          <div className={styles.allEventsButton}>
+            <LinkButton
+              link={`/events`}
+              linkTitle={t("see_all_events")}
+              size="L"
+              type="primary"
+              background="dark"
+              withoutIcon
+            />
+          </div>
+        )}
       </div>
 
       <div className={styles.eventsSection}>
-        <EventPostingList eventPostings={limitedEventPostings} />
+        <EventPostingList
+          eventPostings={limitedEventPostings}
+          language={language}
+        />
       </div>
     </>
   );

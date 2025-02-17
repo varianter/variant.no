@@ -9,10 +9,12 @@ import styles from "./events.module.css";
 
 interface EventPostingListProps {
   eventPostings: IEventPosting[];
+  language: string;
 }
 
 export default function EventPostingList({
   eventPostings,
+  language,
 }: EventPostingListProps) {
   const [locationFilter] = useState<string | null>(null);
   const [filteredEventPostings, setFilteredEventPostings] =
@@ -61,6 +63,7 @@ export default function EventPostingList({
           eventPosting={eventPosting}
           key={eventPosting._key}
           showLocations={locationFilter == null}
+          language={language}
         />
       ))}
     </div>

@@ -1,3 +1,4 @@
+import { getTextColor } from "src/utils/color/getTextColor";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventsSection } from "studio/lib/interfaces/pages";
 import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
@@ -29,10 +30,24 @@ export default async function Events({ language, section }: EventsProps) {
     eventPostings = data?.eventPostingsArray ?? [];
   }
 
+  const backgroundColor = section.eventSectionColor?.hex;
+  const textColor = backgroundColor
+    ? getTextColor(String(backgroundColor))
+    : "#ffffff";
+
+  const styleProps = backgroundColor
+    ? { style: { backgroundColor, color: textColor } }
+    : {};
+
   return (
     eventPostings && (
-      <div className={styles.wrapper}>
-        <EventsClient section={section} eventPostings={eventPostings} />
+      <div className={styles.wrapper} {...styleProps}>
+        <EventsClient
+          section={section}
+          eventPostings={eventPostings}
+          language={language}
+          textColor={textColor}
+        />
       </div>
     )
   );
