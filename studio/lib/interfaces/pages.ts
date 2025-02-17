@@ -122,6 +122,7 @@ export interface EventsSection {
   basicTitle: string;
   subtitle: string;
   allEvents: boolean;
+  oldEvents: boolean;
   eventSectionColor?: { hex: string };
   eventPostingsArray: IEventPosting[];
 }
