@@ -12,8 +12,7 @@ export default async function EventsPage({
   eventPostings: { eventPostings: IEventPosting[] };
 }) {
   const today = new Date();
-  const yesterday = new Date();
-  yesterday.setDate(today.getDate() - 1);
+  const yesterday = new Date(today.setDate(today.getDate() - 1));
 
   const filteredEventPostings = eventPostings.eventPostings.filter((event) => {
     const eventDate = event.date ? new Date(event.date) : null;

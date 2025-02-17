@@ -47,8 +47,7 @@ export default function EventsClient({
   );
 
   const today = new Date();
-  const yesterday = new Date();
-  yesterday.setDate(today.getDate() - 1);
+  const yesterday = new Date(today.setDate(today.getDate() - 1));
 
   const filteredEventPostings = eventPostings
     .filter((event) => {
