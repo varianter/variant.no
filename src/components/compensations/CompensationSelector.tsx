@@ -12,7 +12,13 @@ import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { CompensationsPage } from "studio/lib/interfaces/compensations";
 import { Result } from "studio/utils/result";
 
-import BenefitsByLocation from "./components/benefitsByLocation/BenefitsByLocation";
+import Benefits from "./components/benefits/Benefits";
+
+interface CompensationsProps {
+  compensations: CompensationsPage;
+  locations: CompanyLocation[];
+  salariesRes: Promise<Result<SalaryData, unknown>>;
+}
 
 interface CompensationsProps {
   compensations: CompensationsPage;
@@ -28,23 +34,32 @@ export default function CompensationSelector({
   const t = useTranslations("compensation");
 
   const hasBenefits = (id: string) =>
-    compensations.benefitsByLocation.some((b) => b.location._ref === id);
+    compensations.benefits.some(
+      (b) =>
+        b.location?._id === id && b.location?.companyLocationName !== "Norge",
+    );
+
+  const hasBonuses = (id: string) =>
+    compensations.bonusesByLocation.some((b) => b.location?._ref === id);
+
+  const hasBenefitsOrBonus = (id: string) => hasBenefits(id) || hasBonuses(id);
 
   const locationOptions: IOption[] = locations
+    .filter((companyLocation) => hasBenefitsOrBonus(companyLocation._id))
     .map((companyLocation) => ({
       id: companyLocation._id,
       label: companyLocation.companyLocationName,
-    }))
-    .filter((l) => hasBenefits(l.id));
+    }));
 
   const [selectedLocation, setSelectedLocation] = useState<string>(
     locationOptions[0]?.id,
   );
 
-  const benefitsFilteredByLocation =
-    compensations.benefitsByLocation.find(
-      (benefit) => benefit.location._ref === selectedLocation,
-    )?.benefits || [];
+  const benefitsFilteredByLocation = compensations.benefits.filter(
+    (benefit) =>
+      benefit.location?._id === selectedLocation ||
+      benefit.location?.companyLocationName === "Norge",
+  );
 
   const yearlyBonusesForLocation = compensations.bonusesByLocation
     .find((b) => b.location._ref === selectedLocation)
@@ -65,7 +80,7 @@ export default function CompensationSelector({
           setSelectedLocation(option.id);
         }}
       />
-      <BenefitsByLocation
+      <Benefits
         benefits={benefitsFilteredByLocation}
         yearlyBonusesForLocation={yearlyBonusesForLocation}
         yearlySalaryForLocation={yearlySalaryForLocation}

@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { richTextID, title, titleID } from "studio/schemas/fields/text";
-import { benefitsByLocation } from "studio/schemas/objects/compensations/benefitsByLocation";
+import benefits from "studio/schemas/objects/compensations/benefits";
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
 import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
@@ -36,12 +36,10 @@ const compensations = defineType({
       ...titleSlug,
       type: "internationalizedArrayString",
     },
-
     splitSection,
-
     pensionPercent,
     bonusesByLocation,
-    benefitsByLocation,
+    benefits,
     salariesByLocation,
 
     defineField({

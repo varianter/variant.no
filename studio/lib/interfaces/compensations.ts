@@ -1,5 +1,6 @@
 import { PortableTextBlock, Reference } from "sanity";
 
+import { CompanyLocation } from "./companyDetails";
 import { ILink } from "./navigation";
 import { SplitSection } from "./pages";
 import { SeoData } from "./seo";
@@ -16,12 +17,7 @@ export interface Benefit {
   benefitType: BenefitTypeEnum;
   basicTitle: string;
   richText: PortableTextBlock[];
-}
-
-export interface BenefitsByLocation {
-  _key: string;
-  location: Reference;
-  benefits: Benefit[];
+  location?: CompanyLocation;
 }
 
 export interface SalariesPage {
@@ -92,7 +88,7 @@ export interface CompensationsPage {
   page: string;
   slug: string;
   pensionPercent?: number;
-  benefitsByLocation: BenefitsByLocation[];
+  benefits: Benefit[];
   bonusesByLocation: BonusesByLocationPage[];
   salariesByLocation: SalariesByLocation[];
   handbookLinks: ILink[];

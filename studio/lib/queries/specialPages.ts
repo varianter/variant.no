@@ -14,12 +14,14 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
     "slug": ${translatedFieldFragment("slug")},
     "basicTitle": ${translatedFieldFragment("basicTitle")},
     "richText": ${translatedFieldFragment("richText")},
-    "benefitsByLocation": benefitsByLocation[] {
+    "benefits": benefits[] {
       ...,
-      "benefits": benefits[] {
-        ...,
-        "basicTitle": ${translatedFieldFragment("basicTitle")},
-        "richText": ${translatedFieldFragment("richText")}
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "richText": ${translatedFieldFragment("richText")},
+      "location": location->{
+        _id,
+        _type,
+        companyLocationName
       }
     },
     splitSection {
