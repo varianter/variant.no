@@ -27,7 +27,7 @@ export const events = defineField({
         "Enter the subtitle that will be displayed below the title in the events section.",
     },
     {
-      name: "all_events",
+      name: "allEvents",
       title: "Show all events button",
       description:
         "Add a button to section that links to a page to see all events.",

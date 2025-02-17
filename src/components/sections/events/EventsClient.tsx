@@ -78,7 +78,7 @@ export default function EventsClient({
           textColor={textColor}
         />
 
-        {section.all_events && (
+        {section.allEvents && (
           <div className={styles.allEventsButton}>
             <LinkButton
               link={`/events`}
