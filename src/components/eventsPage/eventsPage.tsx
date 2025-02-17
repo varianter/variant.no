@@ -1,8 +1,8 @@
 import EventPosting from "src/components/eventPosting/EventPosting";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
-import styles from "./eventsPage.module.css";
 import EventsHeader from "./eventsHeader";
+import styles from "./eventsPage.module.css";
 
 export default async function EventsPage({
   params,
@@ -13,7 +13,7 @@ export default async function EventsPage({
 }) {
   return (
     <div className={styles.eventSection}>
-      <EventsHeader locale={params.locale} />
+      <EventsHeader />
 
       <div className={styles.wrapper}>
         {eventPostings.eventPostings.map((event: IEventPosting) => (
