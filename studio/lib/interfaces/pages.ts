@@ -123,6 +123,7 @@ export interface EventsSection {
   subtitle: string;
   allEvents: boolean;
   oldEvents: boolean;
+  noLocationFilters: boolean;
   eventSectionColor?: { hex: string };
   eventPostingsArray: IEventPosting[];
 }

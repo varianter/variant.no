@@ -42,6 +42,13 @@ export const events = defineField({
       initialValue: false,
     },
     {
+      name: "noLocationFilters",
+      title: "Remove location filters",
+      description: "Check this to remove location filters in section",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
       name: "eventPostingsArray",
       title: "Event Postings",
       type: "array",
