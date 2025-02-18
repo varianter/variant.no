@@ -20,14 +20,7 @@ export interface Benefit {
   location?: CompanyLocation;
 }
 
-export interface SalariesPage {
-  _type?: string;
-  _key: string;
-  year: number;
-  salaries: string;
-}
-
-export const isSalariesPage = (value: unknown): value is SalariesPage => {
+export const isSalariesPage = (value: unknown): value is YearlySalaries => {
   return (
     typeof value === "object" &&
     value !== null &&
@@ -69,11 +62,11 @@ export const isBonusPage = (value: unknown): value is BonusPage => {
   );
 };
 
-export interface SalariesByLocation {
+export interface YearlySalaries {
   _key: string;
   _type: string;
-  location: Reference;
-  yearlySalaries: SalariesPage[];
+  salaries: string;
+  year: number;
 }
 
 export interface CompensationsPage {
@@ -90,7 +83,7 @@ export interface CompensationsPage {
   pensionPercent?: number;
   benefits: Benefit[];
   bonusesByLocation: BonusesByLocationPage[];
-  salariesByLocation: SalariesByLocation[];
+  yearlySalaries: YearlySalaries[];
   handbookLinks: ILink[];
   seo: SeoData;
   splitSection: SplitSection;
