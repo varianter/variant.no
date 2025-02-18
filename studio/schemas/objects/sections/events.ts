@@ -42,7 +42,7 @@ export const events = defineField({
       initialValue: false,
     },
     {
-      name: "noLocationFilters",
+      name: "hideLocationFilters",
       title: "Remove location filters",
       description: "Check this to remove location filters in section",
       type: "boolean",

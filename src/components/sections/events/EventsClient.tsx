@@ -80,7 +80,7 @@ export default function EventsClient({
           {section.subtitle}
         </Text>
 
-        {section.noLocationFilters !== true && (
+        {section.hideLocationFilters !== true && (
           <OfficeSelector
             locations={allLocations}
             eventPostingsCount={eventPostings.length}
