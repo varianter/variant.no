@@ -47,20 +47,25 @@ export default function EventsClient({
   );
 
   const today = new Date();
-  const yesterday = new Date();
-  yesterday.setDate(today.getDate() - 1);
+  const yesterday = new Date(today.setDate(today.getDate() - 1));
 
   const filteredEventPostings = eventPostings
-    .filter((event) => new Date(event.date) >= yesterday) // Filter away old events
+    .filter((event) => {
+      const eventDate = event.date ? new Date(event.date) : null;
+      if (!eventDate) return true;
+      return section.oldEvents || eventDate >= yesterday;
+    })
     .filter(
       (event) =>
         locationFilter === null ||
         event.locations.some((loc) => loc.locationString === locationFilter),
     );
 
-  const limitedEventPostings = filteredEventPostings.sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-  );
+  const limitedEventPostings = filteredEventPostings.sort((a, b) => {
+    const dateA = a.date ? new Date(a.date).getTime() : Infinity;
+    const dateB = b.date ? new Date(b.date).getTime() : Infinity;
+    return dateA - dateB;
+  });
 
   return (
     <>
@@ -81,7 +86,7 @@ export default function EventsClient({
         {section.allEvents && (
           <div className={styles.allEventsButton}>
             <LinkButton
-              link={`/events`}
+              link={`/${language}/events`}
               linkTitle={t("see_all_events")}
               size="L"
               type="primary"

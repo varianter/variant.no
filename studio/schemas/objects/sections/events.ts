@@ -35,6 +35,13 @@ export const events = defineField({
       initialValue: false,
     },
     {
+      name: "oldEvents",
+      title: "Show old events",
+      description: "Make old events visible",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
       name: "eventPostingsArray",
       title: "Event Postings",
       type: "array",
