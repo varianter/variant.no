@@ -28,17 +28,29 @@ export default function EventsClient({
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
   const t = useTranslations("event_section");
 
+  const today = new Date();
+  const yesterday = new Date(today.setDate(today.getDate() - 1));
+
+  // Filter away old events if oldEvents is unchecked
+  const activeEventPostings = eventPostings.filter((event) => {
+    const eventDate = event.date ? new Date(event.date) : null;
+    if (!eventDate) return true;
+    return section.oldEvents || eventDate >= yesterday;
+  });
+
+  // Get locations from all new events
   const allLocations = Array.from(
     new Set(
-      eventPostings.flatMap((event) =>
+      activeEventPostings.flatMap((event) =>
         event.locations.map((loc) => loc.locationString),
       ),
     ),
   );
 
+  // Get filters and amount of events per filter
   const eventPostingsPerLocation = allLocations.reduce(
     (acc, location) => {
-      acc[location] = eventPostings.filter((event) =>
+      acc[location] = activeEventPostings.filter((event) =>
         event.locations.some((loc) => loc.locationString === location),
       ).length;
       return acc;
@@ -46,21 +58,14 @@ export default function EventsClient({
     {} as Record<string, number>,
   );
 
-  const today = new Date();
-  const yesterday = new Date(today.setDate(today.getDate() - 1));
+  // Filter events per location
+  const filteredEventPostings = activeEventPostings.filter(
+    (event) =>
+      locationFilter === null ||
+      event.locations.some((loc) => loc.locationString === locationFilter),
+  );
 
-  const filteredEventPostings = eventPostings
-    .filter((event) => {
-      const eventDate = event.date ? new Date(event.date) : null;
-      if (!eventDate) return true;
-      return section.oldEvents || eventDate >= yesterday;
-    })
-    .filter(
-      (event) =>
-        locationFilter === null ||
-        event.locations.some((loc) => loc.locationString === locationFilter),
-    );
-
+  // Sort by date
   const limitedEventPostings = filteredEventPostings.sort((a, b) => {
     const dateA = a.date ? new Date(a.date).getTime() : Infinity;
     const dateB = b.date ? new Date(b.date).getTime() : Infinity;
