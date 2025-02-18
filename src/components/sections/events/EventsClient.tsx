@@ -80,13 +80,15 @@ export default function EventsClient({
           {section.subtitle}
         </Text>
 
-        <OfficeSelector
-          locations={allLocations}
-          eventPostingsCount={eventPostings.length}
-          eventPostingsPerLocation={eventPostingsPerLocation}
-          onFilterChange={setLocationFilter}
-          textColor={textColor}
-        />
+        {section.hideLocationFilters !== true && (
+          <OfficeSelector
+            locations={allLocations}
+            eventPostingsCount={eventPostings.length}
+            eventPostingsPerLocation={eventPostingsPerLocation}
+            onFilterChange={setLocationFilter}
+            textColor={textColor}
+          />
+        )}
 
         {section.allEvents && (
           <div className={styles.allEventsButton}>
