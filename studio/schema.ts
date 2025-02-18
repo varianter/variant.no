@@ -24,6 +24,8 @@ import jobPosting from "./schemas/objects/jobPosting";
 import { link } from "./schemas/objects/link";
 import { compensationCalculator } from "./schemas/objects/sections/compensation-calculator";
 import { employeeHighlightSection } from "./schemas/objects/sections/employeeHighlight";
+import { fieldGrid } from "./schemas/objects/sections/fieldGrid";
+import { fields } from "./schemas/objects/sections/fields";
 import seo from "./schemas/objects/seo";
 import { socialMedia } from "./schemas/objects/socialMedia";
 
@@ -55,5 +57,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     eventPostings,
     employeeHighlightSection,
     compensationCalculator,
+    fields,
+    fieldGrid,
   ],
 };

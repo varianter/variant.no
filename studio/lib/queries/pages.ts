@@ -224,3 +224,18 @@ export const PAGE_BY_SLUG_QUERY = groq`
     ${PAGE_FRAGMENT}
   }
 `;
+
+export const FIELD_GRID_QUERY = groq`
+  *[_type == "fieldGrid" && _id == $id][0]{
+    "title": ${translatedFieldFragment("title")},
+    fields[]->{
+      ...,
+      "title": ${translatedFieldFragment("title")},
+      "description": ${translatedFieldFragment("description")},
+      "link": link {
+        ...,
+        ${TRANSLATED_LINK_FRAGMENT}
+      },
+    }
+  }
+`;

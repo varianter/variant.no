@@ -212,6 +212,8 @@ const SectionRenderer = ({
       return <Handbook section={section} language={language} />;
     case "splitSection":
       return <SplitSection section={section} language={language} />;
+    case "fieldGrid":
+      return <div> Bruk grid section her </div>;
     default:
       return null;
   }
