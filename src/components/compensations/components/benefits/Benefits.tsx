@@ -10,7 +10,7 @@ import {
   Benefit,
   BenefitTypeEnum,
   BonusPage,
-  SalariesByLocation,
+  YearlySalaries,
 } from "studio/lib/interfaces/compensations";
 import { Result } from "studio/utils/result";
 
@@ -22,14 +22,14 @@ import SalarySection from "./SalarySection";
 interface BenefitsProps {
   benefits: Benefit[];
   yearlyBonusesForLocation?: BonusPage[];
-  yearlySalaryForLocation?: SalariesByLocation;
+  yearlySalaries: YearlySalaries[];
   salariesRes: Promise<Result<SalaryData, unknown>>;
 }
 
 export default function Benefits({
   benefits,
   yearlyBonusesForLocation,
-  yearlySalaryForLocation,
+  yearlySalaries,
   salariesRes,
 }: BenefitsProps) {
   const salaries = use(salariesRes);
@@ -63,7 +63,7 @@ export default function Benefits({
         return (
           <SalarySection
             benefit={benefit}
-            yearlySalaryForLocation={yearlySalaryForLocation}
+            yearlySalaries={yearlySalaries}
             initialSalaryYear={initialSalaryYear}
           />
         );

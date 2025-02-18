@@ -13,23 +13,19 @@ import {
   SalaryData,
 } from "src/components/sections/compensation-calculator/types";
 import Text from "src/components/text/Text";
-import {
-  Benefit,
-  SalariesByLocation,
-  SalariesPage,
-} from "studio/lib/interfaces/compensations";
+import { Benefit, YearlySalaries } from "studio/lib/interfaces/compensations";
 
 import styles from "./benefits.module.css";
 
 interface SalarySectionProps {
   benefit: Benefit;
-  yearlySalaryForLocation?: SalariesByLocation;
+  yearlySalaries: YearlySalaries[];
   initialSalaryYear: number;
 }
 
 export default function SalarySection({
   benefit,
-  yearlySalaryForLocation,
+  yearlySalaries,
   initialSalaryYear,
 }: SalarySectionProps) {
   const [year] = useQueryState<number | null>("year", {
@@ -43,9 +39,6 @@ export default function SalarySection({
     parse: (value) => (value as Degree) ?? null,
     serialize: (value) => value ?? "",
   });
-
-  // Safely extract yearlySalaries
-  const yearlySalaries = yearlySalaryForLocation?.yearlySalaries ?? [];
 
   // Convert the year/salaries list into a HistoricalPayscaleData structure
   const payscaleData = convertYearlySalariesToPayscale(yearlySalaries);
@@ -68,7 +61,7 @@ export default function SalarySection({
 }
 
 function convertYearlySalariesToPayscale(
-  yearlySalaries: SalariesPage[],
+  yearlySalaries: YearlySalaries[],
 ): HistoricalPayscaleData {
   return yearlySalaries.reduce<HistoricalPayscaleData>(
     (acc, { year, salaries }) => {

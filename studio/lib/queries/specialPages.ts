@@ -62,18 +62,12 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
   }
 `;
 
-// Just select the first location and the first year..
-// @TODO: Check if we need to make this more robust,
-// but yearlySalaries is sorted by year so [0] should be the latest
-export const COMPENSATIONS_SALARY_BY_YEAR = groq`
-  *[_id == "compensations"][0] {
-    "salariesByLocation": salariesByLocation[0] {
-      "yearlySalaries": yearlySalaries[2] {
-        ...
-      }
-    }
+export const LATEST_YEARLY_SALARIES_QUERY = groq`
+  *[_id == "compensations"] {
+    yearlySalaries | order(year desc)[0]
   }
 `;
+
 export const COMPENSATIONS_HANDBOOK_LINKS = groq`
   *[_type == "compensations"][0] {
     "handbookLinks": handbookLinks[] {

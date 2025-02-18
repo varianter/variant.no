@@ -20,12 +20,6 @@ interface CompensationsProps {
   salariesRes: Promise<Result<SalaryData, unknown>>;
 }
 
-interface CompensationsProps {
-  compensations: CompensationsPage;
-  locations: CompanyLocation[];
-  salariesRes: Promise<Result<SalaryData, unknown>>;
-}
-
 export default function CompensationSelector({
   compensations,
   locations,
@@ -65,10 +59,6 @@ export default function CompensationSelector({
     .find((b) => b.location._ref === selectedLocation)
     ?.yearlyBonuses?.toReversed();
 
-  const yearlySalaryForLocation = compensations.salariesByLocation.find(
-    (s) => s.location._ref === selectedLocation,
-  );
-
   return (
     <>
       <RadioButtonGroup
@@ -83,7 +73,7 @@ export default function CompensationSelector({
       <Benefits
         benefits={benefitsFilteredByLocation}
         yearlyBonusesForLocation={yearlyBonusesForLocation}
-        yearlySalaryForLocation={yearlySalaryForLocation}
+        yearlySalaries={compensations.yearlySalaries}
         salariesRes={salariesRes}
       />
     </>

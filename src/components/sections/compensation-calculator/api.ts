@@ -3,7 +3,7 @@ import { ILink } from "studio/lib/interfaces/navigation";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import {
   COMPENSATIONS_HANDBOOK_LINKS,
-  COMPENSATIONS_SALARY_BY_YEAR,
+  LATEST_YEARLY_SALARIES_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 import { Result, ResultError, ResultOk } from "studio/utils/result";
@@ -32,33 +32,43 @@ export async function getLocale() {
   return res.data;
 }
 
+interface SalaryEntry {
+  year: number;
+  _key: string;
+  salaries: string; // JSON string that needs to be parsed
+}
+
+interface QueryResponse {
+  yearlySalaries: SalaryEntry;
+}
+
 export async function getLatestSalaries(): Promise<
   Result<SalaryData, unknown>
 > {
-  const res = await loadStudioQuery<{
-    salariesByLocation: { yearlySalaries: { salaries: string } };
-  }>(
-    COMPENSATIONS_SALARY_BY_YEAR,
+  const res = await loadStudioQuery<QueryResponse[]>(
+    LATEST_YEARLY_SALARIES_QUERY,
     {},
     {
       cache: "force-cache",
-      next: {
-        revalidate: 60 * 60 * 24 * 120,
-      },
+      next: { revalidate: 60 * 60 * 24 * 120 },
     },
   );
 
   try {
-    const parsedSalaries = JSON.parse(
-      res.data.salariesByLocation.yearlySalaries.salaries,
-    );
+    if (!res.data) {
+      return ResultError("No salary data found");
+    }
 
-    if (!isSalariesType(parsedSalaries)) {
+    const latestSalariesEntry = res.data[0].yearlySalaries;
+    const salaries = JSON.parse(latestSalariesEntry.salaries);
+
+    if (!isSalariesType(salaries)) {
       return ResultError("Parsed salaries data was not valid");
     }
 
-    return ResultOk(parsedSalaries);
-  } catch {
+    return ResultOk(salaries);
+  } catch (error) {
+    console.error("Error parsing salary data:", error);
     return ResultError("Parsed salaries data was not valid");
   }
 }

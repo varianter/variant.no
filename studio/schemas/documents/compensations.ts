@@ -5,7 +5,7 @@ import { richTextID, title, titleID } from "studio/schemas/fields/text";
 import benefits from "studio/schemas/objects/compensations/benefits";
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
-import { salariesByLocation } from "studio/schemas/objects/compensations/salariesByLocation";
+import { yearlySalaries } from "studio/schemas/objects/compensations/salaries";
 import { link } from "studio/schemas/objects/link";
 import splitSection from "studio/schemas/objects/sections/splitSection";
 import { titleSlug } from "studio/schemas/schemaTypes/slug";
@@ -40,8 +40,7 @@ const compensations = defineType({
     pensionPercent,
     bonusesByLocation,
     benefits,
-    salariesByLocation,
-
+    yearlySalaries,
     defineField({
       name: "handbookLinks",
       title: "Handbook Section Links",
