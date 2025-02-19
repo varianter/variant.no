@@ -214,6 +214,23 @@ export interface LearningSection {
   articleSubtitle: string;
 }
 
+export interface Field {
+  title: string;
+  description?: string;
+  type: "article" | "audio" | "video" | "other";
+  image?: IImage;
+  link?: string;
+  size?: string;
+  readingListeningTime?: string;
+}
+
+export interface FieldGrid {
+  _type: "fieldGrid";
+  _key: string;
+  title: string;
+  fields: Field[];
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -232,7 +249,8 @@ export type Section =
   | GenerositySection
   | LearningSection
   | HandbookSection
-  | SplitSection;
+  | SplitSection
+  | FieldGrid;
 
 export interface PageBuilder {
   _createdAt: string;

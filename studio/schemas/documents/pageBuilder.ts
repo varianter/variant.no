@@ -8,6 +8,7 @@ import { customerCasesEntry } from "studio/schemas/objects/sections/customerCase
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
 import { events } from "studio/schemas/objects/sections/events";
+import { fieldGrid } from "studio/schemas/objects/sections/fieldGrid";
 import { generositySection } from "studio/schemas/objects/sections/generosity";
 import { handbookSection } from "studio/schemas/objects/sections/handbook";
 import hero from "studio/schemas/objects/sections/hero";
@@ -65,6 +66,7 @@ const pageBuilder = defineType({
         textContent,
         handbookSection,
         splitSection,
+        fieldGrid,
       ],
     }),
     defineField({
