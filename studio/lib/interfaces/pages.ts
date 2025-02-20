@@ -215,12 +215,13 @@ export interface LearningSection {
 }
 
 export interface Field {
+  _id: string;
   title: string;
   description?: string;
-  type: "article" | "audio" | "video" | "other";
+  type: "article" | "podcast" | "video" | "other";
   image?: IImage;
-  link?: string;
-  size?: string;
+  link?: ILink;
+  size?: "large" | "medium" | "small";
   readingListeningTime?: string;
 }
 

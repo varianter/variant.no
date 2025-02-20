@@ -101,5 +101,11 @@
     "other": "Annet",
     "socialMedia": "Steder vi deler",
     "contact": "Generell kontakt"
+  },
+  "gridSection": {
+    "video": "Video",
+    "podcast": "Podcast",
+    "article": "Artikkel",
+    "other": "Annet"
   }
 }

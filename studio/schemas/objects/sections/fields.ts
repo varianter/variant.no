@@ -1,8 +1,12 @@
-export const fieldsName = "Fields";
-import { link } from "studio/schemas/objects/link";
+import { defineField } from "sanity";
 
-export const fields = {
-  name: fieldsName,
+import { link } from "studio/schemas/objects/link";
+import { firstTranslation } from "studio/utils/i18n";
+
+export const fieldsID = "Fields";
+
+export const fields = defineField({
+  name: fieldsID,
   title: "Fields",
   type: "document",
   fields: [
@@ -12,6 +16,7 @@ export const fields = {
       type: "internationalizedArrayString",
       description:
         "The main heading or name of the field, used for identification.",
+      validation: (rule) => rule.required().error("Title is required"),
     },
     {
       name: "description",
@@ -27,11 +32,12 @@ export const fields = {
       options: {
         list: [
           { title: "Article", value: "article" },
-          { title: "Audio", value: "audio" },
+          { title: "Podcast", value: "podcast" },
           { title: "Video", value: "video" },
           { title: "Other", value: "other" },
         ],
       },
+      validation: (rule) => rule.required().error("Type is required"),
     },
     {
       name: "image",
@@ -64,6 +70,7 @@ export const fields = {
           { title: "Large (3 columns)", value: "large" },
         ],
       },
+      validation: (rule) => rule.required().error("Size is required"),
     },
     {
       name: "readingListeningTime",
@@ -73,4 +80,20 @@ export const fields = {
         'An optional field for estimated duration (e.g., "5 min") to help users gauge the time required.',
     },
   ],
-};
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "type",
+      media: "image",
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: firstTranslation(title) ?? "Untitled",
+        subtitle: subtitle ? `Type: ${subtitle}` : "No type defined",
+        media,
+      };
+    },
+  },
+});
+
+export default fields;
