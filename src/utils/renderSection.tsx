@@ -9,6 +9,7 @@ import Events from "src/components/sections/events/Events";
 import Generosity from "src/components/sections/generosity/Generosity";
 import Grid from "src/components/sections/grid/Grid";
 import GridPreview from "src/components/sections/grid/GridPreview";
+import GridSectionComponent from "src/components/sections/gridSection/GridSection";
 import { Handbook } from "src/components/sections/handbook/HandbookSection";
 import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
@@ -213,7 +214,7 @@ const SectionRenderer = ({
     case "splitSection":
       return <SplitSection section={section} language={language} />;
     case "fieldGrid":
-      return <div> Bruk grid section her </div>;
+      return <GridSectionComponent section={section} />;
     default:
       return null;
   }

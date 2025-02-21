@@ -102,5 +102,11 @@
     "other": "Övrigt",
     "socialMedia": "Platser vi delar",
     "contact": "Kontakt"
+  },
+  "gridSection": {
+    "video": "Video",
+    "podcast": "Podcast",
+    "article": "Artikel",
+    "other": "Annat"
   }
 }

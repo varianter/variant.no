@@ -35,7 +35,7 @@ const SECTIONS_FRAGMENT = groq`
       "title": ${translatedFieldFragment("splitSectionTitle")},
       "sections": sections[]{
         ...,
-       _type == "handbookSection" => {
+        _type == "handbookSection" => {
           ...,
           "handbookTitle": ${translatedFieldFragment("handbookTitle")},
           "handbookDescription": ${translatedFieldFragment("handbookDescription")},
@@ -47,7 +47,6 @@ const SECTIONS_FRAGMENT = groq`
         _type == "compensationCalculator" => {
           ...,
           "moduleTitle": ${translatedFieldFragment("moduleTitle")},
-
           "calculatorBlock": calculatorBlock {
             ...,
             "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
@@ -56,8 +55,8 @@ const SECTIONS_FRAGMENT = groq`
               ...,
               ${TRANSLATED_LINK_FRAGMENT}
             }
-          },
-        },
+          }
+        }
       }
     },
     _type == "imageSplitSection" => {
@@ -65,22 +64,21 @@ const SECTIONS_FRAGMENT = groq`
       "content": content[]{
         ...,
         "basicTitle": ${translatedFieldFragment("basicTitle")},
-        "description": ${translatedFieldFragment("description")},
+        "description": ${translatedFieldFragment("description")}
       },
-      "imageExtended": imageExtended {..., ${INTERNATIONALIZED_IMAGE_FRAGMENT} }, 
-      actions[] {
+      "imageExtended": imageExtended { ..., ${INTERNATIONALIZED_IMAGE_FRAGMENT} }, 
+      "actions": actions[] {
         ...,
         ${TRANSLATED_LINK_FRAGMENT}
       }
     },
-      _type == "imageSection" => {
+    _type == "imageSection" => {
       ...,
-        "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
+      "image": image {${INTERNATIONALIZED_IMAGE_FRAGMENT}},
     },
     _type == "compensationCalculator" => {
       ...,
       "moduleTitle": ${translatedFieldFragment("moduleTitle")},
-
       "calculatorBlock": calculatorBlock {
         ...,
         "calculatorTitle": ${translatedFieldFragment("calculatorTitle")},
@@ -89,7 +87,7 @@ const SECTIONS_FRAGMENT = groq`
           ...,
           ${TRANSLATED_LINK_FRAGMENT}
         }
-      },
+      }
     },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
@@ -130,14 +128,14 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "employeeHighlight" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")},
+      "description": ${translatedFieldFragment("description")}
     },
     _type == "customerCasesEntry" => {
-      "basicTitle":${translatedFieldFragment("basicTitle")},
+      "basicTitle": ${translatedFieldFragment("basicTitle")}
     },
     _type == "opennessSection" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")},
+      "description": ${translatedFieldFragment("description")}
     },
     _type == "generositySection" => {
       ...,
@@ -154,7 +152,7 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "logoSalad" => {
-      "title": ${translatedFieldFragment("title")},
+      "title": ${translatedFieldFragment("title")}
     },
     _type == "learningSection" => {
       ...,
@@ -162,28 +160,41 @@ const SECTIONS_FRAGMENT = groq`
       "description": ${translatedFieldFragment("description")},
       "articleTag": ${translatedFieldFragment("articleTag")},
       "articleTitle": ${translatedFieldFragment("articleTitle")},
-      "articleSubtitle": ${translatedFieldFragment("articleSubtitle")},
+      "articleSubtitle": ${translatedFieldFragment("articleSubtitle")}
     },
-     _type == "textContent" => {
-     ..., 
+    _type == "textContent" => {
+      ...,
       "textType": textType,
-      
-        "textTitle": textTitle {
-          ..., 
-          "title": ${translatedFieldFragment("title")},
-          "eyebrow": ${translatedFieldFragment("eyebrow")},
+      "textTitle": textTitle {
+        ...,
+        "title": ${translatedFieldFragment("title")},
+        "eyebrow": ${translatedFieldFragment("eyebrow")}
+      },
+      "textParagraph": textParagraph {
+        ...,
+        "paragraphHeader": ${translatedFieldFragment("paragraphHeader")},
+        "textContent": ${translatedFieldFragment("textContent")}
+      },
+      "richText": ${translatedFieldFragment("richText")},
+      "textQuote": textQuote {
+        ...,
+        "author": ${translatedFieldFragment("author")},
+        "quote": ${translatedFieldFragment("quote")}
+      }
+    },
+    _type == "fieldGrid" => {
+      ...,
+      "title": ${translatedFieldFragment("title")},
+      "fields": fields[]->{
+        ...,
+        "title": ${translatedFieldFragment("title")},
+        "description": ${translatedFieldFragment("description")},
+        "link": link {
+          ...,
+          ${TRANSLATED_LINK_FRAGMENT}
         },
-        "textParagraph": textParagraph {
-          ..., 
-          "paragraphHeader": ${translatedFieldFragment("paragraphHeader")},
-          "textContent": ${translatedFieldFragment("textContent")},
-        },
-        "richText": ${translatedFieldFragment("richText")},
-        "textQuote": textQuote {
-          ..., 
-          "author": ${translatedFieldFragment("author")},
-          "quote": ${translatedFieldFragment("quote")},
-        } 
+        "readingListeningTime": ${translatedFieldFragment("readingListeningTime")},
+      }
     }
   }
 `;

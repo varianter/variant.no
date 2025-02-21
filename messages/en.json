@@ -102,5 +102,11 @@
     "other": "Other",
     "socialMedia": "Places we share",
     "contact": "General contact"
+  },
+  "gridSection": {
+    "video": "Video",
+    "podcast": "Podcast",
+    "article": "Article",
+    "other": "Other"
   }
 }

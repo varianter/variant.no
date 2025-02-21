@@ -129,6 +129,7 @@ html {
   --surface-violet-light: var(--Violet-50);
   --surface-violet-accent: var(--Violet-200);
   --surface-violet-vivid: var(--Violet-700);
+  --surface-blue-subtle: var(--Blue-50);
 
   /* breakpoints */
   /* NOTE: Media queries does not accept variables,
