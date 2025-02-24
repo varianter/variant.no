@@ -51,6 +51,7 @@
   justify-self: center;
   display: grid;
   grid-template-rows: var(--nav-height);
+  z-index: 1;
 
   @media (max-width: 375px) {
     width: 100vw;
