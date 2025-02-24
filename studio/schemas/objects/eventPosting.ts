@@ -18,7 +18,24 @@ const eventPosting = defineType({
       name: "eventTitle",
       type: "internationalizedArrayString",
       description: "The name of the event",
-      validation: (rule) => rule.required().error("Event name is required"),
+      validation: (rule) =>
+        rule
+          .required()
+          .error("Event name is required")
+          .custom((value) => {
+            if (!value || !Array.isArray(value)) {
+              return "Event title must be an array";
+            }
+
+            const missingLanguages = ["en", "no"].filter(
+              (lang) =>
+                !value.some((entry) => entry._key === lang && entry.value),
+            );
+
+            return missingLanguages.length > 0
+              ? `Missing translations for: ${missingLanguages.join(", ")}`
+              : true;
+          }),
     },
     {
       title: "Event description",
@@ -30,7 +47,42 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
-      validation: (rule) => rule.required().error("Location is required"),
+      validation: (rule) =>
+        rule
+          .required()
+          .error("At least one location is required")
+          .custom((locations) => {
+            if (
+              !locations ||
+              !Array.isArray(locations) ||
+              locations.length === 0
+            ) {
+              return "At least one location is required";
+            }
+
+            for (const location of locations) {
+              if (
+                !location.locationString ||
+                !Array.isArray(location.locationString)
+              ) {
+                return "Each location must have a valid internationalized name";
+              }
+
+              const missingLanguages = ["en", "no"].filter(
+                (lang) =>
+                  !location.locationString.some(
+                    (entry: { _key: string; value?: string }) =>
+                      entry._key === lang && entry.value,
+                  ),
+              );
+
+              if (missingLanguages.length > 0) {
+                return `Location "${allTranslations(location.locationString)}" is missing translations for: ${missingLanguages.join(", ")}`;
+              }
+            }
+
+            return true;
+          }),
       of: [
         {
           title: "Location",

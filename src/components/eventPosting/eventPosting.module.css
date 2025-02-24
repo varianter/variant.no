@@ -43,10 +43,6 @@
   line-height: 1.2em;
 }
 
-.consultants {
-  margin-left: 0.5rem;
-}
-
 .dotSeperator::after {
   content: "·";
   margin-left: 0.38rem;
