@@ -1,10 +1,10 @@
+import type { Rule } from "sanity";
+
 import { client } from "studio/lib/client";
 import {
-  LANGUAGES_QUERY,
   DEFAULT_LANGUAGE_QUERY,
+  LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
-import type { Rule } from "sanity";
-import { allTranslations } from "./i18n";
 
 // Function to get languages, so the validator can be used om both no and se
 export async function getStudioLanguages(): Promise<{
