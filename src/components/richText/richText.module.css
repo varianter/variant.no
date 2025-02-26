@@ -1,8 +1,9 @@
 .paragraph {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   max-width: var(--max-content-width-small);
+}
+
+.paragraph > * + * {
+  margin-top: 1.5rem;
 }
 
 .list {
@@ -27,6 +28,22 @@
     display: block;
     max-width: 100%;
   }
+}
+
+.imageLeft {
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.imageRight {
+  float: right;
+  margin-left: 1.5rem;
+}
+
+.imageRight img,
+.imageLeft img {
+  max-width: 250px;
+  height: auto;
 }
 
 .blockquote {

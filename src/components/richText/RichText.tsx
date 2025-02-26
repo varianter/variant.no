@@ -32,6 +32,16 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
         {children}
       </Text>
     ),
+    h4: ({ children }) => (
+      <Text type="h4" id={formatId(children)}>
+        {children}
+      </Text>
+    ),
+    h5: ({ children }) => (
+      <Text type="h5" id={formatId(children)}>
+        {children}
+      </Text>
+    ),
     normal: ({ children }) => <Text type="bodyNormal">{children}</Text>,
     blockquote: ({ children }) => (
       <blockquote className={`${styles.blockquote} ${textStyles.body}`}>
@@ -63,11 +73,22 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
     },
   },
   types: {
-    image: ({ value }) => (
-      <div className={styles.image}>
-        <SanityImage image={value} />
-      </div>
-    ),
+    image: ({ value }) => {
+      return (
+        <div
+          className={`${styles.image} ${
+            value.alignment === "left" ? styles.imageLeft : ""
+          } ${value.alignment === "right" ? styles.imageRight : ""}`}
+          style={
+            value.alignment === "left" || value.alignment === "right"
+              ? { maxWidth: "16rem" }
+              : undefined
+          }
+        >
+          <SanityImage image={value} />
+        </div>
+      );
+    },
   },
 };
 
@@ -126,6 +147,10 @@ const groupBlocks = (blocks: PortableTextBlock[]): Group[] => {
         groups.push(createNewGroup(null));
         groups[groups.length - 1].paragraphs.push(block);
       }
+    } else if (block.style === "h4") {
+      groups.push(createNewGroup(block));
+    } else if (block.style === "h5") {
+      groups.push(createNewGroup(block));
     }
     return groups;
   }, []);
