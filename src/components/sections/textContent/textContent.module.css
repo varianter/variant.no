@@ -19,10 +19,13 @@
 
 .paragraphWrapper {
   max-width: 40.5rem;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Code to let all elements that are right below wrapper and has a sibling get 1rem margin top */
+.paragraphWrapper > * + * {
+  margin-top: 1.5rem;
 }
 
 .authorText {

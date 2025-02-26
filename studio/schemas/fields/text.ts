@@ -62,11 +62,35 @@ export const richText = defineField({
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
+        { title: "H5", value: "h5" },
         { title: "Quote", value: "blockquote" },
       ],
     },
     {
       type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+          description: "For accessibility purposes",
+        },
+        {
+          name: "alignment",
+          type: "string",
+          title: "Alignment",
+          description: "Choose how the image should be aligned",
+          options: {
+            list: [
+              { title: "Left", value: "left" },
+              { title: "Center", value: "center" },
+              { title: "Right", value: "right" },
+            ],
+            layout: "radio",
+          },
+        },
+      ],
     },
   ],
   description: "Add and format rich text content.",
