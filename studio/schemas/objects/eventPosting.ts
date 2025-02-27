@@ -2,6 +2,10 @@ import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
+import {
+  validateInternationalizedArray,
+  validateInternationalizedField,
+} from "studio/utils/internationalizedFieldValidator";
 
 export const eventPostingID = "eventPosting";
 
@@ -18,7 +22,7 @@ const eventPosting = defineType({
       name: "eventTitle",
       type: "internationalizedArrayString",
       description: "The name of the event",
-      validation: (rule) => rule.required().error("Event name is required"),
+      validation: validateInternationalizedField("Event title"),
     },
     {
       title: "Event description",
@@ -30,7 +34,8 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
-      validation: (rule) => rule.required().error("Location is required"),
+      validation: validateInternationalizedArray("Location", "locationString"),
+
       of: [
         {
           title: "Location",
