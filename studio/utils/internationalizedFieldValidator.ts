@@ -23,14 +23,11 @@ export async function getStudioLanguages(): Promise<{
   };
 }
 
-const REQUIRED_LANGUAGES: string[] = [];
-
-async function initializeLanguages() {
+async function getRequiredLanguages(): Promise<string[]> {
   const { available } = await getStudioLanguages();
-  REQUIRED_LANGUAGES.push(...available);
+  return available;
 }
-
-initializeLanguages();
+const REQUIRED_LANGUAGES = await getRequiredLanguages();
 
 export const validateInternationalizedField =
   (fieldName: string) => (rule: Rule) =>
