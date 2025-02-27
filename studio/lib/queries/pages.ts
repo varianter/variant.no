@@ -123,7 +123,9 @@ const SECTIONS_FRAGMENT = groq`
           employeeFirstName
         },
         "externalLink": externalLink,
-        "internalLink": internalLink
+        "internalLink": internalLink->{
+          "url": ${translatedFieldFragment("slug")}
+        }
       }
     },
     _type == "employeeHighlight" => {
