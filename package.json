@@ -21,7 +21,7 @@
     "@visx/visx": "^3.12.0",
     "husky": "^9.1.7",
     "negotiator": "^0.6.3",
-    "next": "^14.2.15",
+    "next": "^15.2.2",
     "next-intl": "^3.24.0",
     "next-sanity": "^7.1.4",
     "next-sanity-image": "^6.1.1",
