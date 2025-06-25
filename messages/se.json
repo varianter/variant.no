@@ -11,13 +11,13 @@
     "duration": "Varaktighet",
     "industry": "Bransch",
     "delivery": "Leverans",
-    "variants": "Variantene",
+    "variants": "Varianter",
     "in_project": "Varianter i projektet",
     "design": "Design",
     "development": "Utveckling",
     "project_management": "Projektledning",
-    "url": "Link",
-    "collaborators": "Samarbeidspartnere",
+    "url": "Länk",
+    "collaborators": "Samarbetspartners",
     "customer_case_entry": {
       "image": "bild",
       "case": "Case",
@@ -31,11 +31,11 @@
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
     "contact_sale": "Kontakta sälj!",
-    "contact_us": "Kontakt oss"
+    "contact_us": "Kontakta oss"
   },
   "compensation": {
     "calculator": {
-      "formLabel": "Lönskalkulator",
+      "formLabel": "Lönekalkylator",
       "educationInput": "Utbildning",
       "yearInput": "Året du började i relevant arbete",
       "bonusResult": "+ bonus",
