@@ -22,9 +22,9 @@ export default async function CustomerCase({
   let consultantsResult;
 
   if (customerCase.projectInfo.consultants) {
-    const consultantsEmail = customerCase.projectInfo.consultants.map(
-      (e) => e.employeeEmail,
-    );
+    const consultantsEmail = customerCase.projectInfo.consultants
+      .map((e) => e.employeeEmail)
+      .filter(Boolean);
     consultantsResult = await fetchEmployeesByEmails(consultantsEmail);
   }
 
