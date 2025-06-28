@@ -1,17 +1,16 @@
 import { Metadata } from "next";
 import { headers } from "next/headers";
+import { notFound } from "next/navigation";
 
 import Compensations from "src/components/compensations/Compensations";
 import CustomerCase from "src/components/customerCases/customerCase/CustomerCase";
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
-import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
 import EmployeePage from "src/components/employeePage/EmployeePage";
 import EventsPage from "src/components/eventsPage/eventsPage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
-import { homeLink } from "src/components/utils/linkTypes";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
@@ -67,14 +66,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateMetadataFromSeo(seoDataFromPageData(pageData), language);
 }
 
-const Page404 = (
-  <CustomErrorMessage
-    title="404 — Something went wrong"
-    body="The page you are looking for does not exist. There may be an error in the URL, or the page may have been moved or deleted."
-    link={homeLink}
-  />
-);
-
 async function Page({ params }: Props) {
   const { locale, path } = params;
 
@@ -88,7 +79,7 @@ async function Page({ params }: Props) {
   });
 
   if (pageData == null) {
-    return Page404;
+    return notFound();
   }
 
   const eventPostings: { eventPostings: IEventPosting[] } = {
@@ -160,7 +151,7 @@ async function Page({ params }: Props) {
                 <EventsPage params={params} eventPostings={eventPostings} />
               );
           }
-          return Page404;
+          return notFound();
         })()}
       </main>
     </>
