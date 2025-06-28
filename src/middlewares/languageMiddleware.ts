@@ -309,9 +309,12 @@ async function rewriteWithLanguage(
     if (newPath !== request.nextUrl.pathname) {
       request.nextUrl.pathname = newPath;
     }
-  } else {
-    request.nextUrl.pathname = `/${pathWithoutLanguage.join("/")}`;
   }
+  // @TODO There is a bug here, it causes a redirect loop. Need to find why this is needed and what the intention is.
+  // else {
+  //   console.log("rewriteMissingLanguage", `/${pathWithoutLanguage.join("/")}`);
+  //   request.nextUrl.pathname = `/${pathWithoutLanguage.join("/")}`;
+  // }
 }
 
 /**
