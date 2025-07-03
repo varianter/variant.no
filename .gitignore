@@ -1,13 +1,29 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# ide
+.vscode
+.idea
+.iml
+
+# file system
+.DS_Store
+
 # dependencies
 /node_modules
+/.npm
 /.pnp
 .pnp.js
 .yarn/install-state.gz
 
+# logs
+*.log
+
+# local env files
+.env*.local
+
 # testing
 /coverage
+junit.xml
 
 # next.js
 /.next/
@@ -17,14 +33,7 @@
 /build
 
 # misc
-.DS_Store
 *.pem
-
-# debug
-npm-debug.log*
-
-# local env files
-.env*.local
 
 # vercel
 .vercel
