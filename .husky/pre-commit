@@ -1,1 +1,1 @@
-npm run fix
+npx lint-staged
