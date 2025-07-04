@@ -11,26 +11,26 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
   padding: 1.5rem 3rem;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   gap: var(--Padding-l, 48px);
   align-self: stretch;
-
   border-radius: var(--radius-small);
   background: var(--_contactBox__background);
   color: var(--_contactBox__color);
 
-  @media (max-width: 400px) {
-    padding: 1rem 1rem;
+  @media (width <= 400px) {
+    padding: 1rem;
   }
 }
+
 .contactBox__inner--light {
   --_contactBox__background: var(--background-bg-light-secondary);
   --_contactBox__color: var(--text-primary);
 }
+
 .contactBox__inner--transparent {
   --_contactBox__background: transparent;
   --_contactBox__color: var(--text-primary);
@@ -45,7 +45,7 @@
 
 .contactSelectorWrapper {
   container-type: inline-size;
-  container-name: contactSelectorWrapper;
+  container-name: contactselectorwrapper;
 }
 
 .contactSelector {
@@ -55,15 +55,14 @@
 
 .tagList {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: var(--padding-s);
-  flex-wrap: wrap;
-
   align-items: flex-start;
   min-width: 120px;
   margin: 0;
   padding: 0;
 }
+
 .tagList li {
   list-style: none;
 }
@@ -72,9 +71,9 @@
   flex: 1;
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
   .contactBox__inner {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 }
 

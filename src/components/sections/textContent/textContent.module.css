@@ -8,11 +8,11 @@
   width: 100%;
   margin: 8rem auto;
 
-  @media (max-width: 1091px) {
+  @media (width <= 1091px) {
     margin: 6rem auto;
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     margin: 4rem auto;
   }
 }

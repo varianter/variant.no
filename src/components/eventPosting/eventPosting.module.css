@@ -12,7 +12,7 @@
     transition: none;
   }
 
-  &:is(a) {
+  &a {
     position: relative;
     cursor: pointer;
 
@@ -25,8 +25,6 @@
       width: 1.5rem;
       height: 1.5rem;
       content: "";
-      -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
-      -webkit-mask-size: cover;
       mask: url("/_assets/arrow-right.svg") no-repeat center;
       mask-size: cover;
       background-color: var(--background-bg-dark);
@@ -50,7 +48,7 @@
 
 .dotSeperator:nth-last-child(2)::after {
   content: "";
-  margin: 0rem;
+  margin: 0;
 }
 
 .flex {

@@ -6,7 +6,7 @@
   padding-top: 7.5rem;
   padding-bottom: 1rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     padding-top: 2rem;
   }
 }
@@ -24,11 +24,11 @@
   position: relative;
   z-index: 1;
 
-  @media (min-width: 802px) {
+  @media (width >= 802px) {
     padding: 2.25rem;
   }
 
-  @media (min-width: 1408px) {
+  @media (width >= 1408px) {
     padding: 3rem;
   }
 }
@@ -36,11 +36,10 @@
 .nav {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 3rem;
-  flex-wrap: wrap;
 
-  @media (min-width: 1408px) {
+  @media (width >= 1408px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -58,13 +57,9 @@
   flex-direction: column;
   gap: 1.25rem;
 
-  @media (min-width: 802px) {
-    flex-direction: row;
-    flex-wrap: wrap;
+  @media (width >= 802px) {
+    flex-flow: row wrap;
     justify-content: space-between;
-  }
-
-  @media (min-width: 1408px) {
   }
 }
 
@@ -85,11 +80,11 @@
   width: 100%;
   height: auto;
 
-  @media (min-width: 802px) {
+  @media (width >= 802px) {
     padding-top: 2rem;
   }
 
-  @media (min-width: 1408px) {
+  @media (width >= 1408px) {
     padding-top: 7.5rem;
     padding-bottom: 3rem;
   }
@@ -100,7 +95,7 @@
   flex-direction: column;
   gap: 2rem;
 
-  @media (min-width: 1408px) {
+  @media (width >= 1408px) {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -117,7 +112,7 @@
 
 .offices {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: flex-start;
   align-self: stretch;
   list-style: none;
@@ -126,7 +121,6 @@
   font-weight: 500;
   line-height: 120%;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .dotSeparator:not(:last-child)::after {

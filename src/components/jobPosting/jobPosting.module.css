@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
   gap: var(--padding-s);
@@ -26,8 +25,6 @@
     width: 1.5rem;
     height: 1.5rem;
     content: "";
-    -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
-    -webkit-mask-size: cover;
     mask: url("/_assets/arrow-right.svg") no-repeat center;
     mask-size: cover;
     background-color: var(--background-bg-dark);
@@ -42,7 +39,7 @@
   margin-left: var(--padding-xs);
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .locations {
     display: none;
   }

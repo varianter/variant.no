@@ -5,7 +5,6 @@
   row-gap: 3rem;
   width: 100%;
   max-width: var(--max-content-width-medium);
-
   margin: var(--padding-m) auto;
 }
 
@@ -30,15 +29,14 @@
   margin: 0 0.38rem;
 }
 
-.dotSeperator:last-child:after {
+.dotSeperator:last-child::after {
   content: "";
   margin: 0;
 }
 
 .varianter {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   max-width: 80%;
 }
 
@@ -49,13 +47,12 @@
 
 .dotSeperatorVarianter:nth-last-child(2)::after {
   content: "";
-  margin: 0rem;
+  margin: 0;
 }
 
 .projectInfoItem {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 .title {
@@ -64,9 +61,8 @@
 
 .deliveries {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .preFancyCharacter {

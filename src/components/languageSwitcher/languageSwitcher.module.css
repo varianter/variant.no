@@ -5,10 +5,12 @@
   padding: 0;
   margin: auto 0;
 }
+
 .list li {
   display: flex;
   gap: 0.25rem;
 }
+
 .list li:first-child::after {
   content: "|";
   display: block;
@@ -24,7 +26,6 @@
   letter-spacing: 0.1rem;
   line-height: 120%;
   font-weight: 300;
-
   text-decoration: none;
 
   &:hover {

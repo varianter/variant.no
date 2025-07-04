@@ -18,7 +18,7 @@
     height: auto;
   }
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     top: 0;
     padding-left: 5.25rem;
     gap: 10rem;
@@ -32,8 +32,8 @@
     }
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     padding-left: 1.25rem;
-    gap: 0rem;
+    gap: 0;
   }
 }

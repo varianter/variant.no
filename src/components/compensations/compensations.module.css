@@ -12,7 +12,7 @@
   width: 100%;
   max-width: var(--max-content-width-large);
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     padding: 10rem 0;
   }
 }
