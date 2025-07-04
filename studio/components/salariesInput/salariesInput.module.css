@@ -1,5 +1,6 @@
 .uploadInput {
   /* visually hidden input to still receive focus and support screen readers */
+
   /* https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_a_label_element_to_trigger_a_hidden_file_input_element */
   position: absolute !important;
   height: 1px;
@@ -30,9 +31,9 @@
   }
 
   &.hasValue {
-    background-color: rgb(246, 246, 248);
+    background-color: rgb(246 246 248);
     color: black;
-    border: 1px solid rgb(230, 230, 234);
+    border: 1px solid rgb(230 230 234);
   }
 }
 
@@ -41,9 +42,9 @@
   color: black;
 
   &.hasValue {
-    background-color: rgb(25, 26, 36);
-    color: rgb(228, 229, 233);
-    border: 1px solid rgb(228, 229, 233);
+    background-color: rgb(25 26 36);
+    color: rgb(228 229 233);
+    border: 1px solid rgb(228 229 233);
   }
 }
 

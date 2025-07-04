@@ -29,9 +29,6 @@
   flex-direction: column;
 }
 
-.employeeRole {
-}
-
 .employeeRoleDot:not(:last-child)::after {
   content: "·";
   margin: 0 0.25rem;
@@ -40,6 +37,7 @@
 .employeeRole {
   color: var(--text-tertiary);
 }
+
 .employeeEmail,
 .employeeTelephone {
   color: var(--text-tertiary);

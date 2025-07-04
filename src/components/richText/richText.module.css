@@ -13,7 +13,7 @@
   line-height: 160%;
   letter-spacing: 0.0125rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 0.875rem;
     line-height: 171.429%;
   }

@@ -8,7 +8,7 @@
   background-color: var(--Blue-500);
   color: var(--text-primary-light);
 
-  @media (max-width: 1024px) {
+  @media (width <= 1024px) {
     flex-direction: column;
   }
 }

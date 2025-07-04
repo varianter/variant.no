@@ -4,8 +4,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -18,14 +18,12 @@ html {
 }
 
 :root {
-  --Blue-500: #3840ff;
   --Blue-700: #0014cd;
   --Blue-300: #c3c8f6;
   --Blue-400: #788aea;
   --Blue-500: #3840ff;
   --Blue-200: #bee0ff;
   --Blue-50: #f2f3fd;
-
   --Green-900: #024105;
   --Green-800: #035506;
   --Green-700: #046d08;
@@ -36,7 +34,6 @@ html {
   --Green-200: #8cd18f;
   --Green-100: #b2e0b3;
   --Green-50: #e6f5e7;
-
   --Red-900: #46100a;
   --Red-700: #7c2318;
   --Red-600: #b63729;
@@ -44,7 +41,6 @@ html {
   --Red-300: #f3948f;
   --Red-100: #fabbb4;
   --Red-50: #fdedec;
-
   --Yellow-900: #3b2800;
   --Yellow-800: #634601;
   --Yellow-700: #8e6703;
@@ -54,7 +50,6 @@ html {
   --Yellow-300: #fbe186;
   --Yellow-100: #fdefbb;
   --Yellow-50: #fffbf6;
-
   --Violet-900: #220548;
   --Violet-800: #47128c;
   --Violet-700: #7022d6;
@@ -63,7 +58,6 @@ html {
   --Violet-300: #cdbdfa;
   --Violet-200: #e8c8f0;
   --Violet-50: #f0ebfe;
-
   --Light-500: #eaeaea;
   --Light-50: #fefefe;
   --Light-100: #fafafa;
@@ -73,8 +67,7 @@ html {
   --Light-700: #acacac;
   --Light-600: #dcdcdc;
   --Light-800: #858585;
-  --Light-900: #666666;
-
+  --Light-900: #666;
   --Dark-50: #e7e7e7;
   --Dark-100: #b4b5b5;
   --Dark-200: #909191;
@@ -85,7 +78,6 @@ html {
   --Dark-700: #0a0b0b;
   --Dark-800: #080808;
   --Dark-900: #060606;
-
   --text-primary: var(--Dark-600);
   --text-link: var(--Blue-500);
   --text-secondary: var(--Dark-400);
@@ -97,7 +89,6 @@ html {
   --text-warning: var(--Yellow-500);
   --text-error: var(--Red-500);
   --text-success: var(--Green-500);
-
   --background-bg-dark: var(--Dark-500);
   --background-bg-light-primary: var(--Light-100);
   --background-bg-light-secondary: var(--Light-500);
@@ -108,15 +99,12 @@ html {
   --background-disabled: var(--Light-700);
   --background-header-light-transparent: #fafafabf;
   --background-employees-green: #dafbdc;
-
   --stroke-primary: var(--Dark-700);
   --stroke-secondary: var(--Dark-400);
   --stroke-tertiary: var(--Dark-300);
-
   --background-button-outline-dark: var(--background-bg-dark);
   --background-button-disabled: var(--background-disabled);
   --background-button-outline-light: var(--background-bg-light-primary);
-
   --surface-yellow: var(--Yellow-400);
   --surface-red: var(--Red-500);
   --surface-blue: var(--Blue-500);
@@ -132,6 +120,7 @@ html {
   --surface-blue-subtle: var(--Blue-50);
 
   /* breakpoints */
+
   /* NOTE: Media queries does not accept variables,
   so use pixel values instead */
   --breakpoint-mobile: 425px;
@@ -176,7 +165,7 @@ body {
   font-weight: 300;
   gap: 1rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     padding: 0 0.5rem;
   }
 }
@@ -204,6 +193,7 @@ a {
     transform: translateY(40px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;

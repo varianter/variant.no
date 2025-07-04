@@ -22,12 +22,12 @@
   font-weight: 450;
   line-height: 111.111%;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     font-size: 3.5rem;
     line-height: 114.286%;
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 2.5rem;
     line-height: 120%;
   }
@@ -38,12 +38,12 @@
   font-weight: 450;
   line-height: 114.286%;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     font-size: 2.5rem;
     line-height: 120%;
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 2rem;
     line-height: 125%;
   }
@@ -54,7 +54,7 @@
   font-weight: 450;
   line-height: 125%;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 1.5rem;
     line-height: 133.333%;
   }
@@ -88,7 +88,7 @@
   line-height: 120%;
   letter-spacing: 0.025rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 2rem;
     line-height: 125%;
   }
@@ -100,7 +100,7 @@
   font-weight: 300;
   line-height: 133.333%;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 1.125rem;
   }
 }
@@ -112,7 +112,7 @@
   line-height: 160%;
   letter-spacing: 0.0125rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 0.875rem;
     line-height: 171.429%;
   }
@@ -123,7 +123,7 @@
   font-weight: 300;
   line-height: 150%;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 0.875rem;
     line-height: 114.286%;
   }
@@ -133,9 +133,9 @@
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 128.571%;
-  letter-spacing: 0.00875rem;
+  letter-spacing: 0.0088rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 0.75rem;
     line-height: 150%;
     letter-spacing: 0.0075rem;
@@ -149,7 +149,7 @@
   line-height: 150%;
   letter-spacing: 0.02rem;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 0.875rem;
     line-height: 114.286%;
     letter-spacing: 0.0175rem;
@@ -162,7 +162,7 @@
   font-weight: 400;
   line-height: 120%;
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     font-size: 1.125rem;
     line-height: 133.333%;
   }
@@ -190,7 +190,7 @@
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.05rem;
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .italic {
