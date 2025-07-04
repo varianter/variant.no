@@ -7,6 +7,59 @@ const withBundleAnalyzer = withNextBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+/* TODO: add nonce middleware & remove script-src 'unsafe-inline' */
+const contentSecurityPolicy = `
+  default-src 'self';
+  connect-src 'self' https://variant.innocraft.cloud/ https://g.nav.no/api/v1/;
+  script-src 'self' https://variant.innocraft.cloud/ 'unsafe-inline' ${
+    process.env.NODE_ENV !== "production" ? "'unsafe-eval'" : ""
+  };
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https://cdn.sanity.io/;
+  media-src 'self';
+  frame-src 'self';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  object-src 'none';
+`;
+
+const securityHeaders = [
+  {
+    key: "X-DNS-Prefetch-Control",
+    value: "on",
+  },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload",
+  },
+  {
+    key: "X-XSS-Protection",
+    value: "1; mode=block",
+  },
+  {
+    key: "X-Frame-Options",
+    value: "DENY",
+  },
+  {
+    key: "Permissions-Policy",
+    value:
+      "accelerometer=(), autoplay=(), camera=(), display-capture=(), fullscreen=(), geolocation=(), gyroscope=(), microphone=(), payment=(), storage-access=(), web-share=(), xr-spatial-tracking=()",
+  },
+  {
+    key: "X-Content-Type-Options",
+    value: "nosniff",
+  },
+  {
+    key: "Referrer-Policy",
+    value: "strict-origin-when-cross-origin",
+  },
+  {
+    key: "Content-Security-Policy",
+    value: contentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+  },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -23,6 +76,14 @@ const nextConfig = {
   },
   experimental: {
     taint: true,
+  },
+  async headers() {
+    return [
+      {
+        source: "/((?!studio|shared).*)",
+        headers: securityHeaders,
+      },
+    ];
   },
   async redirects() {
     return [

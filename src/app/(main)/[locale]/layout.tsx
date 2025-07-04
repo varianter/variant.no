@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
@@ -119,9 +120,8 @@ export default async function Layout({
             />
           </NextIntlClientProvider>
 
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+          <Script id="matomoAnalytics" strategy="afterInteractive">
+            {`
                   var _paq = _paq || [];
                   _paq.push(["disableCookies"]);
                   _paq.push(["trackPageView"]);
@@ -138,9 +138,9 @@ export default async function Layout({
                     g.defer = true;
                     g.src = u + "piwik.js";
                     s.parentNode.insertBefore(g, s);
-                  })();`,
-            }}
-          />
+                  })();
+            `}
+          </Script>
         </NuqsAdapter>
       </body>
     </html>
