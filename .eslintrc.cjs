@@ -12,6 +12,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
     "next/core-web-vitals",
   ],
   plugins: [
@@ -21,6 +22,7 @@ module.exports = {
     "import",
     "prettier",
     "eslint-plugin-boundaries",
+    "jsx-a11y",
   ],
   ignorePatterns: ["dist", "node_modules", ".sanity"],
   settings: {
