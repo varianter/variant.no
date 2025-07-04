@@ -90,7 +90,9 @@
   "event_section": {
     "see_all_events": "Se alla arrangemang",
     "go_to_event": "Gå till arrangemang",
-    "all_events": "Alla arrangemang"
+    "all_events": "Alla arrangemang",
+    "future_events": "Kommende arrangemang",
+    "past_events": "Tidigare arrangemang"
   },
   "office_selector": {
     "location": "Kontor",

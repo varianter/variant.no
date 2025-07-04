@@ -1,8 +1,16 @@
+import { getTranslations } from "next-intl/server";
+
 import EventPosting from "src/components/eventPosting/EventPosting";
+import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
-import EventsHeader from "./eventsHeader";
 import styles from "./eventsPage.module.css";
+
+const sortByDateAsc = (a: IEventPosting, b: IEventPosting) => {
+  const dateA = a.date ? new Date(a.date).getTime() : Infinity;
+  const dateB = b.date ? new Date(b.date).getTime() : Infinity;
+  return dateA - dateB;
+};
 
 export default async function EventsPage({
   params,
@@ -11,35 +19,76 @@ export default async function EventsPage({
   params: { locale: string };
   eventPostings: { eventPostings: IEventPosting[] };
 }) {
+  const t = await getTranslations("event_section");
+  const allEventsId = "all-events-id";
+  const futureEventsId = "future-events-id";
+  const pastEventsId = "past-events-id";
   const today = new Date();
   const yesterday = new Date(today.setDate(today.getDate() - 1));
 
-  const filteredEventPostings = eventPostings.eventPostings.filter((event) => {
+  const futureEventPostings = eventPostings.eventPostings.filter((event) => {
     const eventDate = event.date ? new Date(event.date) : null;
     if (!eventDate) return true;
     return eventDate >= yesterday;
   });
 
-  const limitedEventPostings = filteredEventPostings.sort((a, b) => {
-    const dateA = a.date ? new Date(a.date).getTime() : Infinity;
-    const dateB = b.date ? new Date(b.date).getTime() : Infinity;
-    return dateA - dateB;
+  const pastEventPostings = eventPostings.eventPostings.filter((event) => {
+    const eventDate = event.date ? new Date(event.date) : null;
+    if (!eventDate) return true;
+    return eventDate < yesterday;
   });
 
-  return (
-    <div className={styles.eventSection}>
-      <EventsHeader />
+  const sortedFutureEventPostings = futureEventPostings.sort(sortByDateAsc);
+  const sortedPastEventPostings = pastEventPostings
+    .sort(sortByDateAsc)
+    .reverse();
 
-      <div className={styles.wrapper}>
-        {limitedEventPostings.map((event: IEventPosting) => (
-          <EventPosting
-            eventPosting={event}
-            key={event._key}
-            showLocations={true}
-            language={params.locale}
-          />
-        ))}
-      </div>
-    </div>
+  return (
+    <>
+      <section className={styles.eventSection} aria-labelledby={allEventsId}>
+        <Text type="h1" id={allEventsId}>
+          {t("all_events")}
+        </Text>
+
+        <section aria-labelledby={futureEventsId}>
+          <Text type="h2" id={futureEventsId} className="visually-hidden">
+            {t("future_events")}
+          </Text>
+
+          <div className={styles.wrapper}>
+            {sortedFutureEventPostings.map((event: IEventPosting) => (
+              <EventPosting
+                eventPosting={event}
+                key={event._key}
+                showLocations={true}
+                language={params.locale}
+              />
+            ))}
+          </div>
+        </section>
+
+        {sortedPastEventPostings.length > 0 && (
+          <section
+            className={styles.eventSection}
+            aria-labelledby={pastEventsId}
+          >
+            <Text type="h2" id={pastEventsId}>
+              {t("past_events")}
+            </Text>
+
+            <div className={styles.wrapper}>
+              {sortedPastEventPostings.map((event: IEventPosting) => (
+                <EventPosting
+                  eventPosting={event}
+                  key={event._key}
+                  showLocations={true}
+                  language={params.locale}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+      </section>
+    </>
   );
 }

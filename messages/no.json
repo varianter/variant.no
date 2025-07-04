@@ -89,7 +89,9 @@
   "event_section": {
     "see_all_events": "Se alle arrangementer",
     "go_to_event": "Gå til arrangement",
-    "all_events": "Alle arrangementer"
+    "all_events": "Alle arrangementer",
+    "future_events": "Kommende arrangementer",
+    "past_events": "Tidligere arrangementer"
   },
   "office_selector": {
     "location": "Lokasjon",
