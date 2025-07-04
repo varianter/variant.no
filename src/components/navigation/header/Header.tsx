@@ -134,12 +134,7 @@ export const Header = ({
             />
           </div>
           {isOpen && (
-            <div
-              className={styles.mobileMenu}
-              id={sidebarID}
-              aria-label="Mobile Menu"
-              onClick={() => setIsOpen(false)}
-            >
+            <div className={styles.mobileMenu} id={sidebarID}>
               <PageLinks
                 links={sidebarLinks}
                 isMobile={true}
