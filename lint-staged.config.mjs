@@ -4,6 +4,7 @@ const buildEslintCommand = (filenames) =>
   `next lint --fix --no-cache --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(" --file ")}`;
 
 export default {
+  "**/*.{css}": "stylelint --fix",
   "*.[tj]s?(x)": [buildEslintCommand],
   "**/*": "prettier --write --ignore-unknown",
 };
