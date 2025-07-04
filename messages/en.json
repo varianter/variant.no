@@ -90,7 +90,9 @@
   "event_section": {
     "see_all_events": "See all events",
     "go_to_event": "Go to event",
-    "all_events": "All events"
+    "all_events": "All events",
+    "future_events": "Coming events",
+    "past_events": "Past events"
   },
   "office_selector": {
     "location": "Location",
