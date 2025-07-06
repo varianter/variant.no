@@ -7,23 +7,6 @@ const withBundleAnalyzer = withNextBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-/* TODO: add nonce middleware & remove script-src 'unsafe-inline' */
-const contentSecurityPolicy = `
-  default-src 'self';
-  connect-src 'self' https://variant.innocraft.cloud/ https://g.nav.no/api/v1/;
-  script-src 'self' https://variant.innocraft.cloud/ 'unsafe-inline' ${
-    process.env.NODE_ENV !== "production" ? "'unsafe-eval'" : ""
-  };
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://cdn.sanity.io/;
-  media-src 'self';
-  frame-src 'self';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
-  object-src 'none';
-`;
-
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -53,10 +36,6 @@ const securityHeaders = [
   {
     key: "Referrer-Policy",
     value: "strict-origin-when-cross-origin",
-  },
-  {
-    key: "Content-Security-Policy",
-    value: contentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
   },
 ];
 
