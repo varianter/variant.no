@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
@@ -63,6 +64,8 @@ export default async function Layout({
     notFound();
   }
 
+  const nonce = (await headers()).get("x-nonce");
+
   const messages = await getMessages();
 
   const { perspective } = getDraftModeInfo();
@@ -120,7 +123,11 @@ export default async function Layout({
             />
           </NextIntlClientProvider>
 
-          <Script id="matomoAnalytics" strategy="afterInteractive">
+          <Script
+            id="matomoAnalytics"
+            strategy="afterInteractive"
+            nonce={nonce ?? undefined}
+          >
             {`
                   var _paq = _paq || [];
                   _paq.push(["disableCookies"]);
