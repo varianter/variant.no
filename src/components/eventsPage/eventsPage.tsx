@@ -46,26 +46,28 @@ export default async function EventsPage({
   return (
     <>
       <section className={styles.eventSection} aria-labelledby={allEventsId}>
-        <Text type="h1" id={allEventsId}>
+        <Text type="h1" id={allEventsId} className="visually-hidden">
           {t("all_events")}
         </Text>
 
-        <section aria-labelledby={futureEventsId}>
-          <Text type="h2" id={futureEventsId} className="visually-hidden">
-            {t("future_events")}
-          </Text>
+        {sortedFutureEventPostings.length > 0 && (
+          <section aria-labelledby={futureEventsId}>
+            <Text type="h2" id={futureEventsId}>
+              {t("future_events")}
+            </Text>
 
-          <div className={styles.wrapper}>
-            {sortedFutureEventPostings.map((event: IEventPosting) => (
-              <EventPosting
-                eventPosting={event}
-                key={event._key}
-                showLocations={true}
-                language={params.locale}
-              />
-            ))}
-          </div>
-        </section>
+            <div className={styles.wrapper}>
+              {sortedFutureEventPostings.map((event: IEventPosting) => (
+                <EventPosting
+                  eventPosting={event}
+                  key={event._key}
+                  showLocations={true}
+                  language={params.locale}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         {sortedPastEventPostings.length > 0 && (
           <section
