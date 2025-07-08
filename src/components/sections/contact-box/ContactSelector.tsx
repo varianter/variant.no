@@ -31,23 +31,22 @@ export default function ContactSelector({
 
   return (
     <div className={styles.contactSelector}>
-      <ul className={styles.tagList} role="tablist" ref={tabListRef}>
+      <div className={styles.tagList} role="tablist" ref={tabListRef}>
         {contactPoints.map((contactPoint, index) => (
-          <li key={contactPoint.tagSlug}>
-            <Tag
-              type="button"
-              role="tab"
-              background={background}
-              aria-selected={selectedTabIndex === index}
-              aria-controls={`panel-${contactPoint.tagSlug}`}
-              id={`tab-${contactPoint.tagSlug}`}
-              active={selectedTabIndex === index}
-              text={contactPoint.tag}
-              tabIndex={selectedTabIndex === index ? 0 : -1}
-            />
-          </li>
+          <Tag
+            type="button"
+            role="tab"
+            background={background}
+            aria-selected={selectedTabIndex === index}
+            aria-controls={`panel-${contactPoint.tagSlug}`}
+            id={`tab-${contactPoint.tagSlug}`}
+            active={selectedTabIndex === index}
+            text={contactPoint.tag}
+            tabIndex={selectedTabIndex === index ? 0 : -1}
+            key={contactPoint.tagSlug}
+          />
         ))}
-      </ul>
+      </div>
       <div className={styles.employeeCard}>
         {contactPoints.map((contactPoint, index) => (
           <div
