@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const useTabs = () => {
-  const tabListRef = useRef<HTMLUListElement | null>(null);
+  const tabListRef = useRef<HTMLDivElement | null>(null);
   const [tabFocus, setTabFocus] = useState(0);
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
