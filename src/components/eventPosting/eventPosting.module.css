@@ -12,7 +12,7 @@
     transition: none;
   }
 
-  &a {
+  a& {
     position: relative;
     cursor: pointer;
 
