@@ -9,7 +9,7 @@ const contentSecurityPolicy = (nonce: string) => {
   const csp = `
     default-src 'self';
     connect-src 'self' https://variant.innocraft.cloud/ https://g.nav.no/api/v1/;
-    script-src 'self' 'nonce-${nonce}' https://variant.innocraft.cloud/ ${
+    script-src 'self' 'unsafe-inline' 'nonce-${nonce}' 'strict-dynamic' https://variant.innocraft.cloud/ https://vercel.live/ ${
       process.env.NODE_ENV !== "production" ? "'unsafe-eval'" : ""
     };
     style-src 'self' 'unsafe-inline';
