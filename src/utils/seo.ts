@@ -27,12 +27,26 @@ export async function generateMetadataFromSeo(
   const { data: defaultSeo } = await loadStudioQuery<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
     { language },
+    {
+      cache: "default",
+      next: { revalidate: 60 * 60 * 24 },
+    },
   );
   const { data: companyInfo } = await loadStudioQuery<CompanyInfo | null>(
     COMPANY_INFO_QUERY,
+    {},
+    {
+      cache: "default",
+      next: { revalidate: 60 * 60 * 24 },
+    },
   );
   const { data: brandAssets } = await loadStudioQuery<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
+    {},
+    {
+      cache: "default",
+      next: { revalidate: 60 * 60 * 24 },
+    },
   );
 
   const title = seo?.title ?? defaultSeo?.seo?.title;
