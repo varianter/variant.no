@@ -109,6 +109,8 @@ async function fetchCompensationsPage({
       },
       {
         perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
       },
     );
   if (!isNonNullQueryResponse(compensationsPageResult)) {
@@ -117,7 +119,11 @@ async function fetchCompensationsPage({
   const companyLocationsResult = await loadStudioQuery<CompanyLocation[]>(
     COMPANY_LOCATIONS_QUERY,
     {},
-    { perspective },
+    {
+      perspective,
+      cache: "force-cache",
+      next: { revalidate: 60 * 60 * 24 },
+    },
   );
   if (!isNonNullQueryResponse(companyLocationsResult)) {
     return null;
@@ -179,7 +185,11 @@ async function fetchCustomerCase({
         slug: path[0],
         language,
       },
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     );
   if (!isNonNullQueryResponse(customerCasesPageResult)) {
     return null;
@@ -190,6 +200,10 @@ async function fetchCustomerCase({
       {
         slug: path[0],
         language,
+      },
+      {
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
       },
     );
   if (path.length === 1) {
@@ -209,6 +223,8 @@ async function fetchCustomerCase({
     },
     {
       perspective,
+      cache: "force-cache",
+      next: { revalidate: 60 * 60 * 24 },
     },
   );
   if (!isNonNullQueryResponse(customerCaseResult)) {
@@ -221,6 +237,10 @@ async function fetchCustomerCase({
         slug: path[1],
         language,
         type: customerCaseID,
+      },
+      {
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
       },
     );
   return {
@@ -274,7 +294,11 @@ async function fetchEmployeePage({
     {
       language,
     },
-    { perspective },
+    {
+      perspective,
+      cache: "force-cache",
+      next: { revalidate: 60 * 60 * 24 },
+    },
   );
   if (!isNonNullQueryResponse(employeePageSlugAndTitleRes)) {
     return null;
@@ -295,7 +319,11 @@ async function fetchEmployeePage({
         slug: path[0],
         language,
       },
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     );
   return {
     queryResponse: employee.value,
@@ -327,6 +355,8 @@ async function fetchLegalDocument({
     },
     {
       perspective,
+      cache: "force-cache",
+      next: { revalidate: 60 * 60 * 24 },
     },
   );
   if (!isNonNullQueryResponse(queryResponse)) {
@@ -338,6 +368,10 @@ async function fetchLegalDocument({
       {
         slug: path[0],
         language,
+      },
+      {
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
       },
     );
   return {
