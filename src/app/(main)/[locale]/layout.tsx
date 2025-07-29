@@ -62,28 +62,56 @@ export default async function Layout({
     loadStudioQuery<Navigation>(
       NAV_QUERY,
       { language: params.locale },
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQuery<CompanyInfo>(COMPANY_INFO_QUERY, {}, { perspective }),
+    loadStudioQuery<CompanyInfo>(
+      COMPANY_INFO_QUERY,
+      {},
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
+    ),
     loadStudioQuery<SocialMediaProfiles | null>(
       SOME_PROFILES_QUERY,
       {},
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
     loadStudioQuery<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
       { language: params.locale },
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
     loadStudioQuery<CompanyLocation[]>(
       COMPANY_LOCATIONS_QUERY,
       {},
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
     loadStudioQuery<ColorPalette[] | null>(
       FOOTER_COLOR_QUERY,
       { language: params.locale },
-      { perspective },
+      {
+        perspective,
+        cache: "force-cache",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
   ]);
 
