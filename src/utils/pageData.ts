@@ -109,7 +109,7 @@ async function fetchCompensationsPage({
       },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );
@@ -121,7 +121,7 @@ async function fetchCompensationsPage({
     {},
     {
       perspective,
-      cache: "force-cache",
+      cache: "default",
       next: { revalidate: 60 * 60 * 24 },
     },
   );
@@ -187,7 +187,7 @@ async function fetchCustomerCase({
       },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );
@@ -202,7 +202,7 @@ async function fetchCustomerCase({
         language,
       },
       {
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );
@@ -223,7 +223,7 @@ async function fetchCustomerCase({
     },
     {
       perspective,
-      cache: "force-cache",
+      cache: "default",
       next: { revalidate: 60 * 60 * 24 },
     },
   );
@@ -239,7 +239,7 @@ async function fetchCustomerCase({
         type: customerCaseID,
       },
       {
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );
@@ -296,7 +296,7 @@ async function fetchEmployeePage({
     },
     {
       perspective,
-      cache: "force-cache",
+      cache: "default",
       next: { revalidate: 60 * 60 * 24 },
     },
   );
@@ -321,7 +321,7 @@ async function fetchEmployeePage({
       },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );
@@ -355,7 +355,7 @@ async function fetchLegalDocument({
     },
     {
       perspective,
-      cache: "force-cache",
+      cache: "default",
       next: { revalidate: 60 * 60 * 24 },
     },
   );
@@ -370,7 +370,7 @@ async function fetchLegalDocument({
         language,
       },
       {
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     );

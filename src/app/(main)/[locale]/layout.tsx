@@ -64,7 +64,7 @@ export default async function Layout({
       { language: params.locale },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
@@ -73,7 +73,7 @@ export default async function Layout({
       {},
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
@@ -82,7 +82,7 @@ export default async function Layout({
       {},
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
@@ -91,7 +91,7 @@ export default async function Layout({
       { language: params.locale },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
@@ -100,7 +100,7 @@ export default async function Layout({
       {},
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
@@ -109,7 +109,7 @@ export default async function Layout({
       { language: params.locale },
       {
         perspective,
-        cache: "force-cache",
+        cache: "default",
         next: { revalidate: 60 * 60 * 24 },
       },
     ),
