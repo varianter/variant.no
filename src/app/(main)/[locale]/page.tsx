@@ -19,9 +19,8 @@ import { loadStudioQuery } from "studio/lib/store";
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } = await loadStudioQuery<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    {
-      language: params.locale,
-    },
+    { language: params.locale },
+    { cache: "default", next: { revalidate: 60 * 60 * 24 } },
   );
   return generateMetadataFromSeo(landingPage?.seo ?? null, params.locale);
 }
@@ -44,7 +43,7 @@ const Home = async ({ params }: Props) => {
   const initialLandingPage = await loadStudioQuery<PageBuilder | null>(
     LANDING_PAGE_QUERY,
     { language: params.locale },
-    { perspective },
+    { perspective, cache: "default", next: { revalidate: 60 * 60 * 24 } },
   );
 
   if (!isNonNullQueryResponse(initialLandingPage)) {
@@ -61,6 +60,8 @@ const Home = async ({ params }: Props) => {
 
   const languages = await loadStudioQuery<LanguageObject[] | null>(
     LANGUAGES_QUERY,
+    {},
+    { cache: "default", next: { revalidate: 60 * 60 * 24 } },
   );
 
   const pathTranslations: InternationalizedString =
