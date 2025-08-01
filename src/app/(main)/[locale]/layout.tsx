@@ -8,6 +8,7 @@ import Footer from "src/components/navigation/footer/Footer";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
 import "src/styles/global.css";
+import { createSanityFetcher } from "src/utils/cache";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import {
   CompanyInfo,
@@ -27,7 +28,6 @@ import {
   NAV_QUERY,
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
-import { loadStudioQuery } from "studio/lib/store";
 
 const fontBrittiSans = localFont({
   src: "../../../../public/_assets/britti-sans-variable.woff2",
@@ -59,60 +59,32 @@ export default async function Layout({
     initialCompanyLocations,
     initialColorPalette,
   ] = await Promise.all([
-    loadStudioQuery<Navigation>(
-      NAV_QUERY,
-      { language: params.locale },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
-    loadStudioQuery<CompanyInfo>(
+    createSanityFetcher<Navigation>(NAV_QUERY, params.locale, perspective)(),
+    createSanityFetcher<CompanyInfo>(
       COMPANY_INFO_QUERY,
-      {},
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
-    loadStudioQuery<SocialMediaProfiles | null>(
+      undefined,
+      perspective,
+    )(),
+    createSanityFetcher<SocialMediaProfiles | null>(
       SOME_PROFILES_QUERY,
-      {},
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
-    loadStudioQuery<LegalDocument[]>(
+      undefined,
+      perspective,
+    )(),
+    createSanityFetcher<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
-      { language: params.locale },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
-    loadStudioQuery<CompanyLocation[]>(
+      params.locale,
+      perspective,
+    )(),
+    createSanityFetcher<CompanyLocation[]>(
       COMPANY_LOCATIONS_QUERY,
-      {},
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
-    loadStudioQuery<ColorPalette[] | null>(
+      undefined,
+      perspective,
+    )(),
+    createSanityFetcher<ColorPalette[] | null>(
       FOOTER_COLOR_QUERY,
-      { language: params.locale },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    ),
+      params.locale,
+      perspective,
+    )(),
   ]);
 
   return (
