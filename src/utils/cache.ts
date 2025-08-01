@@ -9,7 +9,7 @@ function hashQuery(query: string): string {
   return createHash("sha256").update(query).digest("hex");
 }
 
-export function createSanityFetcher(
+export function createSanityFetcher<T>(
   query: string,
   language?: string,
   perspective?: ClientPerspective,
@@ -20,10 +20,12 @@ export function createSanityFetcher(
     perspective && `perspective:${perspective}`,
   ].filter(Boolean) as string[];
 
+  const params = language ? { language } : {};
+
   return unstable_cache(
     async () => {
       "use cache";
-      const value = await loadStudioQuery(query, { language }, { perspective });
+      const value = await loadStudioQuery<T>(query, params, { perspective });
       return value;
     },
     cacheKey,
