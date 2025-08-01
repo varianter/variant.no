@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import InformationSection from "src/components/informationSection/InformationSection";
 import PageHeader from "src/components/navigation/header/PageHeader";
+import { createSanityFetcher } from "src/utils/cache";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { isNonNullQueryResponse } from "src/utils/queryResponse";
 import SectionRenderer from "src/utils/renderSection";
@@ -14,14 +15,13 @@ import {
   LANDING_PAGE_QUERY,
   LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
-import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { data: landingPage } = await loadStudioQuery<PageBuilder | null>(
+  const { data: landingPage } = await createSanityFetcher<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    { language: params.locale },
-    { cache: "default", next: { revalidate: 60 * 60 * 24 } },
-  );
+    params.locale,
+  )();
+
   return generateMetadataFromSeo(landingPage?.seo ?? null, params.locale);
 }
 
@@ -40,11 +40,11 @@ type Props = {
 const Home = async ({ params }: Props) => {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const initialLandingPage = await loadStudioQuery<PageBuilder | null>(
+  const initialLandingPage = await createSanityFetcher<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    { language: params.locale },
-    { perspective, cache: "default", next: { revalidate: 60 * 60 * 24 } },
-  );
+    params.locale,
+    perspective,
+  )();
 
   if (!isNonNullQueryResponse(initialLandingPage)) {
     return (
@@ -58,11 +58,9 @@ const Home = async ({ params }: Props) => {
     );
   }
 
-  const languages = await loadStudioQuery<LanguageObject[] | null>(
+  const languages = await createSanityFetcher<LanguageObject[] | null>(
     LANGUAGES_QUERY,
-    {},
-    { cache: "default", next: { revalidate: 60 * 60 * 24 } },
-  );
+  )();
 
   const pathTranslations: InternationalizedString =
     languages?.data?.map((language) => ({
