@@ -11,9 +11,9 @@ import {
   BRAND_ASSETS_QUERY,
   DEFAULT_SEO_QUERY,
 } from "studio/lib/queries/siteSettings";
-import { loadStudioQuery } from "studio/lib/store";
 import { sharedClient } from "studioShared/lib/client";
 import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
+import { createSanityFetcher } from "./cache";
 
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
   width: 1200,
@@ -24,30 +24,16 @@ export async function generateMetadataFromSeo(
   seo: SeoData | null,
   language: string,
 ): Promise<Metadata> {
-  const { data: defaultSeo } = await loadStudioQuery<DefaultSeo | null>(
+  const { data: defaultSeo } = await createSanityFetcher<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
-    { language },
-    {
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
-  const { data: companyInfo } = await loadStudioQuery<CompanyInfo | null>(
+    language,
+  )();
+  const { data: companyInfo } = await createSanityFetcher<CompanyInfo | null>(
     COMPANY_INFO_QUERY,
-    {},
-    {
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
-  const { data: brandAssets } = await loadStudioQuery<BrandAssets | null>(
+  )();
+  const { data: brandAssets } = await createSanityFetcher<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
-    {},
-    {
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
+  )();
 
   const title = seo?.title ?? defaultSeo?.seo?.title;
   const description = seo?.description ?? defaultSeo?.seo?.description;
