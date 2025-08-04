@@ -28,8 +28,8 @@ import {
 import { loadStudioQuery } from "studio/lib/store";
 import { CustomerCase } from "studioShared/lib/interfaces/customerCases";
 import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
-import { loadSharedQuery } from "studioShared/lib/store";
 
+import { createSanityFetcher } from "./cache";
 import { fetchChewbaccaEmployee } from "./employees";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
@@ -101,30 +101,22 @@ async function fetchCompensationsPage({
     return null;
   }
   const compensationsPageResult =
-    await loadStudioQuery<CompensationsPage | null>(
+    await createSanityFetcher<CompensationsPage | null>(
       COMPENSATIONS_PAGE_BY_SLUG_QUERY,
       {
         slug: path[0],
         language,
       },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+      perspective,
+    )();
   if (!isNonNullQueryResponse(compensationsPageResult)) {
     return null;
   }
-  const companyLocationsResult = await loadStudioQuery<CompanyLocation[]>(
+  const companyLocationsResult = await createSanityFetcher<CompanyLocation[]>(
     COMPANY_LOCATIONS_QUERY,
     {},
-    {
-      perspective,
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
+    perspective,
+  )();
   if (!isNonNullQueryResponse(companyLocationsResult)) {
     return null;
   }
@@ -179,33 +171,25 @@ async function fetchCustomerCase({
   const domain = hostname === null ? null : domainFromHostname(hostname);
 
   const customerCasesPageResult =
-    await loadStudioQuery<CustomerCasePage | null>(
+    await createSanityFetcher<CustomerCasePage | null>(
       CUSTOMER_CASES_PAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+      perspective,
+    )();
   if (!isNonNullQueryResponse(customerCasesPageResult)) {
     return null;
   }
   const pagePathTranslations =
-    await loadStudioQuery<InternationalizedString | null>(
+    await createSanityFetcher<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      {
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+    )();
   if (path.length === 1) {
     return {
       queryResponse: customerCasesPageResult,
@@ -214,35 +198,27 @@ async function fetchCustomerCase({
       pathTranslations: pagePathTranslations.data ?? [],
     };
   }
-  const customerCaseResult = await loadSharedQuery<CustomerCase | null>(
+  const customerCaseResult = await createSanityFetcher<CustomerCase | null>(
     CUSTOMER_CASE_QUERY,
     {
-      domain,
+      domain: domain ? domain : "",
       slug: path[1],
       language,
     },
-    {
-      perspective,
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
+    perspective,
+  )();
   if (!isNonNullQueryResponse(customerCaseResult)) {
     return null;
   }
   const casePathTranslations =
-    await loadSharedQuery<InternationalizedString | null>(
+    await createSanityFetcher<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
       {
         slug: path[1],
         language,
         type: customerCaseID,
       },
-      {
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+    )();
   return {
     queryResponse: {
       customerCase: customerCaseResult,
@@ -286,7 +262,7 @@ async function fetchEmployeePage({
   if (path.length !== 2) {
     return null;
   }
-  const employeePageSlugAndTitleRes = await loadStudioQuery<{
+  const employeePageSlugAndTitleRes = await createSanityFetcher<{
     slug: string;
     basicTitle: string;
   } | null>(
@@ -294,12 +270,8 @@ async function fetchEmployeePage({
     {
       language,
     },
-    {
-      perspective,
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
+    perspective,
+  )();
   if (!isNonNullQueryResponse(employeePageSlugAndTitleRes)) {
     return null;
   }
@@ -313,18 +285,14 @@ async function fetchEmployeePage({
     return null;
   }
   const pathTranslations =
-    await loadStudioQuery<InternationalizedString | null>(
+    await createSanityFetcher<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      {
-        perspective,
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+      perspective,
+    )();
   return {
     queryResponse: employee.value,
     docType: "employee",
@@ -347,33 +315,25 @@ async function fetchLegalDocument({
   if (path.length !== 1) {
     return null;
   }
-  const queryResponse = await loadStudioQuery<LegalDocument | null>(
+  const queryResponse = await createSanityFetcher<LegalDocument | null>(
     LEGAL_DOCUMENT_BY_SLUG_AND_LANG_QUERY,
     {
       slug: path[0],
       language,
     },
-    {
-      perspective,
-      cache: "default",
-      next: { revalidate: 60 * 60 * 24 },
-    },
-  );
+    perspective,
+  )();
   if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
   const pathTranslations =
-    await loadStudioQuery<InternationalizedString | null>(
+    await createSanityFetcher<InternationalizedString | null>(
       SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      {
-        cache: "default",
-        next: { revalidate: 60 * 60 * 24 },
-      },
-    );
+    )();
   return {
     queryResponse,
     docType: legalDocumentID,
