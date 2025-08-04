@@ -27,7 +27,7 @@ export async function generateMetadataFromSeo(
 ): Promise<Metadata> {
   const { data: defaultSeo } = await createSanityFetcher<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
-    language,
+    { language },
   )();
   const { data: companyInfo } = await createSanityFetcher<CompanyInfo | null>(
     COMPANY_INFO_QUERY,

@@ -19,7 +19,7 @@ import {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } = await createSanityFetcher<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    params.locale,
+    { language: params.locale },
   )();
 
   return generateMetadataFromSeo(landingPage?.seo ?? null, params.locale);
@@ -42,7 +42,7 @@ const Home = async ({ params }: Props) => {
 
   const initialLandingPage = await createSanityFetcher<PageBuilder | null>(
     LANDING_PAGE_QUERY,
-    params.locale,
+    { language: params.locale },
     perspective,
   )();
 
