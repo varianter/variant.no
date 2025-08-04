@@ -13,6 +13,7 @@ import {
 } from "studio/lib/queries/siteSettings";
 import { sharedClient } from "studioShared/lib/client";
 import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
+
 import { createSanityFetcher } from "./cache";
 
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
