@@ -2,6 +2,7 @@ import { createHash } from "crypto";
 
 import { unstable_cache } from "next/cache";
 import { ClientPerspective } from "next-sanity";
+import { QueryParams } from "sanity";
 
 import { loadStudioQuery } from "studio/lib/store";
 
@@ -11,16 +12,14 @@ function hashQuery(query: string): string {
 
 export function createSanityFetcher<T>(
   query: string,
-  language?: string,
+  params: QueryParams = {},
   perspective?: ClientPerspective,
 ) {
   const cacheKey = [
     `query:${hashQuery(query)}`,
-    language && `lang:${language}`,
+    params && `lang:${params.language}`,
     perspective && `perspective:${perspective}`,
   ].filter(Boolean) as string[];
-
-  const params = language ? { language } : {};
 
   return unstable_cache(
     async () => {

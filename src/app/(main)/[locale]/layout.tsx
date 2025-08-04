@@ -59,7 +59,11 @@ export default async function Layout({
     initialCompanyLocations,
     initialColorPalette,
   ] = await Promise.all([
-    createSanityFetcher<Navigation>(NAV_QUERY, params.locale, perspective)(),
+    createSanityFetcher<Navigation>(
+      NAV_QUERY,
+      { language: params.locale },
+      perspective,
+    )(),
     createSanityFetcher<CompanyInfo>(
       COMPANY_INFO_QUERY,
       undefined,
@@ -72,7 +76,7 @@ export default async function Layout({
     )(),
     createSanityFetcher<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
-      params.locale,
+      { language: params.locale },
       perspective,
     )(),
     createSanityFetcher<CompanyLocation[]>(
@@ -82,7 +86,7 @@ export default async function Layout({
     )(),
     createSanityFetcher<ColorPalette[] | null>(
       FOOTER_COLOR_QUERY,
-      params.locale,
+      { language: params.locale },
       perspective,
     )(),
   ]);
