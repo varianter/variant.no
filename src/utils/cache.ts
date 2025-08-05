@@ -16,20 +16,22 @@ export function createSanityFetcher<T>(
   perspective?: ClientPerspective,
 ) {
   const cacheKey = [
-    `query:${hashQuery(query)}`,
-    params && `lang:${params.language}`,
-    perspective && `perspective:${perspective}`,
-  ].filter(Boolean) as string[];
+    "query",
+    hashQuery(query),
+    JSON.stringify(params),
+    perspective,
+  ].filter((v): v is string => typeof v === "string");
 
   return unstable_cache(
     async () => {
       "use cache";
       const value = await loadStudioQuery<T>(query, params, { perspective });
+
       return value;
     },
     cacheKey,
     {
-      tags: cacheKey,
+      tags: ["queries"],
     },
   );
 }
