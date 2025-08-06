@@ -7,6 +7,7 @@ import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
 import { employeeHighlightSection } from "studio/schemas/objects/sections/employeeHighlight";
 import { employees } from "studio/schemas/objects/sections/employees";
+import { eventRegistrationSection } from "studio/schemas/objects/sections/eventRegistration";
 import { events } from "studio/schemas/objects/sections/events";
 import { fieldGrid } from "studio/schemas/objects/sections/fieldGrid";
 import { generositySection } from "studio/schemas/objects/sections/generosity";
@@ -67,6 +68,7 @@ const pageBuilder = defineType({
         handbookSection,
         splitSection,
         fieldGrid,
+        eventRegistrationSection,
       ],
     }),
     defineField({
