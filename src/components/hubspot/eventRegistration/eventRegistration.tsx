@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 
+import Checkbox from "src/components/forms/checkbox/Checkbox";
 import InputField from "src/components/forms/inputField/InputField";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
@@ -14,6 +15,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
+  const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     success?: boolean;
@@ -32,6 +34,10 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     errorMessage,
   } = section;
 
+  function toggleTerms() {
+    setHasAcceptedTerms((prev) => !prev);
+  }
+
   function resetForm() {
     setEmail("");
     setName("");
@@ -45,6 +51,13 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     setSubmitStatus({});
 
     try {
+      if (!hasAcceptedTerms) {
+        setSubmitStatus({
+          success: false,
+          message: "Du må godta vilkårene for å registrere deg",
+        });
+        throw new Error("You must accept the terms to register");
+      }
       const response = await fetch("/api/hubSpot/eventRegistration/register", {
         method: "POST",
         headers: {
@@ -116,6 +129,13 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         required
         value={phone}
         onChange={(_name, value) => setPhone(value)}
+      />
+      <Checkbox
+        name="terms"
+        label={"Jeg godtar at min personlige informasjon blir lagret i HubSpot"}
+        value={hasAcceptedTerms}
+        onChange={toggleTerms}
+        required
       />
       {submitStatus.message && <div>{submitStatus.message}</div>}
       <button type="submit" disabled={isLoading}>
