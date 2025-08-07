@@ -20,13 +20,17 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     message?: string;
   }>({});
 
-  const { basicTitle, emailLabel, firstNameLabel, lastNameLabel, phoneLabel } =
-    section;
-
-  const eventId = 724148959453;
-  const submitButtonText = "Register";
-  const successMessage = "Registration successful!";
-  const errorMessage = "Registration failed. Please try again.";
+  const {
+    recordID,
+    basicTitle,
+    emailLabel,
+    firstNameLabel,
+    lastNameLabel,
+    phoneLabel,
+    submitButtonText,
+    successMessage,
+    errorMessage,
+  } = section;
 
   function resetForm() {
     setEmail("");
@@ -51,7 +55,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           firstname: name,
           lastname: lastName,
           phone,
-          eventId,
+          recordID,
         }),
       });
 

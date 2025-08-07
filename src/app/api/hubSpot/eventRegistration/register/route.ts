@@ -6,10 +6,10 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // Extract necessary data from the request
-    const { email, firstname, lastname, phone, eventId } = body;
+    const { email, firstname, lastname, phone, recordID } = body;
 
     // Validation
-    if (!email || !eventId) {
+    if (!email || !recordID) {
       return NextResponse.json(
         { error: "Email and event ID are required" },
         { status: 400 },
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
 
     // Make API call to HubSpot
     const hubspotResponse = await fetch(
-      `https://api.hubapi.com/marketing/v3/marketing-events/${eventId}/attendance/register/email-create`,
+      `https://api.hubapi.com/marketing/v3/marketing-events/${recordID}/attendance/register/email-create`,
       {
         method: "POST",
         headers: {

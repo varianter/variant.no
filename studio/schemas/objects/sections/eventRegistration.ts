@@ -10,6 +10,13 @@ export const eventRegistrationSection = defineField({
   type: "object",
   fields: [
     {
+      name: "recordID",
+      type: "number",
+      title: "Record ID",
+      description:
+        "The unique identifier for the event registration record in HubSpot. This is used to track registrations.",
+    },
+    {
       name: titleID.basic,
       type: "internationalizedArrayString",
       title: "Title",
@@ -39,6 +46,26 @@ export const eventRegistrationSection = defineField({
       type: "internationalizedArrayString",
       title: "Phone Label",
       description: "The label for the phone input field.",
+    },
+    {
+      name: "submitButtonText",
+      type: "internationalizedArrayString",
+      title: "Submit Button Text",
+      description: "The text displayed on the submit button.",
+    },
+    {
+      name: "successMessage",
+      type: "internationalizedArrayString",
+      title: "Success Message",
+      description:
+        "The message displayed to the user after a successful registration.",
+    },
+    {
+      name: "errorMessage",
+      type: "internationalizedArrayString",
+      title: "Error Message",
+      description:
+        "The message displayed to the user if there is an error during registration.",
     },
   ],
   preview: {

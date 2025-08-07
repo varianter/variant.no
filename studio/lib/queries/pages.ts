@@ -190,7 +190,10 @@ const SECTIONS_FRAGMENT = groq`
       "emailLabel": ${translatedFieldFragment("emailLabel")},
       "firstNameLabel": ${translatedFieldFragment("firstNameLabel")},
       "lastNameLabel": ${translatedFieldFragment("lastNameLabel")},
-      "phoneLabel": ${translatedFieldFragment("phoneLabel")}
+      "phoneLabel": ${translatedFieldFragment("phoneLabel")},
+      "submitButtonText": ${translatedFieldFragment("submitButtonText")},
+      "successMessage": ${translatedFieldFragment("successMessage")},
+      "errorMessage": ${translatedFieldFragment("errorMessage")}
     },
     _type == "fieldGrid" => {
       ...,
