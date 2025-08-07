@@ -184,6 +184,14 @@ const SECTIONS_FRAGMENT = groq`
         "quote": ${translatedFieldFragment("quote")}
       }
     },
+    _type == "eventRegistration" => {
+      ...,
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "emailLabel": ${translatedFieldFragment("emailLabel")},
+      "firstNameLabel": ${translatedFieldFragment("firstNameLabel")},
+      "lastNameLabel": ${translatedFieldFragment("lastNameLabel")},
+      "phoneLabel": ${translatedFieldFragment("phoneLabel")}
+    },
     _type == "fieldGrid" => {
       ...,
       "title": ${translatedFieldFragment("title")},
@@ -199,6 +207,7 @@ const SECTIONS_FRAGMENT = groq`
       }
     }
   }
+  
 `;
 
 export const SEO_FRAGMENT = groq`

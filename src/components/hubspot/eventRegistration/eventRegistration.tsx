@@ -3,20 +3,27 @@
 import React, { useState } from "react";
 
 import InputField from "src/components/forms/inputField/InputField";
+import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
-export default function EventRegistration() {
+interface EventRegistrationProps {
+  section: EventRegistrationSection;
+}
+
+export default function EventRegistration({ section }: EventRegistrationProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
 
-  // TODO: Get label from sanity with translations
+  const { basicTitle, emailLabel, firstNameLabel, lastNameLabel, phoneLabel } =
+    section;
 
   return (
     <form>
+      <h2>{basicTitle}</h2>
       <InputField
         name="email"
-        label="email"
+        label={emailLabel}
         type="email"
         required
         value={email}
@@ -24,7 +31,7 @@ export default function EventRegistration() {
       />
       <InputField
         name="firstName"
-        label="First Name"
+        label={firstNameLabel}
         type="text"
         required
         value={name}
@@ -32,7 +39,7 @@ export default function EventRegistration() {
       />
       <InputField
         name="lastName"
-        label="Last Name"
+        label={lastNameLabel}
         type="text"
         required
         value={lastName}
@@ -40,7 +47,7 @@ export default function EventRegistration() {
       />
       <InputField
         name="phone"
-        label="Phone"
+        label={phoneLabel}
         type="text"
         required
         value={phone}

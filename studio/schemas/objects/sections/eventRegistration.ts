@@ -2,7 +2,7 @@ import { defineField } from "sanity";
 
 import { titleID } from "studio/schemas/fields/text";
 
-const eventRegistrationID = "Event Registration";
+const eventRegistrationID = "eventRegistration";
 
 export const eventRegistrationSection = defineField({
   name: eventRegistrationID,
