@@ -241,6 +241,7 @@ export interface EventRegistrationSection {
   firstNameLabel: string;
   lastNameLabel: string;
   phoneLabel: string;
+  termsAndConditionsLabel: string;
   submitButtonText: string;
   successMessage: string;
   errorMessage: string;

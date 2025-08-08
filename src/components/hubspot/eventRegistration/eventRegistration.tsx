@@ -29,6 +29,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     firstNameLabel,
     lastNameLabel,
     phoneLabel,
+    termsAndConditionsLabel,
     submitButtonText,
     successMessage,
     errorMessage,
@@ -132,7 +133,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       />
       <Checkbox
         name="terms"
-        label={"Jeg godtar at min personlige informasjon blir lagret i HubSpot"}
+        label={termsAndConditionsLabel}
         value={hasAcceptedTerms}
         onChange={toggleTerms}
         required

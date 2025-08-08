@@ -48,6 +48,13 @@ export const eventRegistrationSection = defineField({
       description: "The label for the phone input field.",
     },
     {
+      name: "termsAndConditionsLabel",
+      type: "internationalizedArrayString",
+      title: "Terms and Conditions",
+      description:
+        "The text for the terms and conditions that users must agree to before registering.",
+    },
+    {
       name: "submitButtonText",
       type: "internationalizedArrayString",
       title: "Submit Button Text",
