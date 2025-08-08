@@ -17,10 +17,11 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   const [phone, setPhone] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    success?: boolean;
-    message?: string;
-  }>({});
+
+  const [formStatus, setFormStatus] = useState<{
+    type: "error" | "success" | null;
+    message: string | null;
+  }>({ type: null, message: null });
 
   const {
     recordID,
@@ -49,16 +50,57 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setIsLoading(true);
-    setSubmitStatus({});
+    setFormStatus({ type: null, message: null });
 
+    // Check all form fields
+    if (!email) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter your email address",
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter a valid email address",
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!name) {
+      setFormStatus({ type: "error", message: "Please enter your first name" });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!lastName) {
+      setFormStatus({ type: "error", message: "Please enter your last name" });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!phone) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter your phone number",
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!hasAcceptedTerms) {
+      setFormStatus({
+        type: "error",
+        message: "Du må godta vilkårene for å registrere deg",
+      });
+      setIsLoading(false);
+      return;
+    }
     try {
-      if (!hasAcceptedTerms) {
-        setSubmitStatus({
-          success: false,
-          message: "Du må godta vilkårene for å registrere deg",
-        });
-        throw new Error("You must accept the terms to register");
-      }
       const response = await fetch("/api/hubSpot/eventRegistration/register", {
         method: "POST",
         headers: {
@@ -79,16 +121,16 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         throw new Error(data.error || "Something went wrong");
       }
 
-      setSubmitStatus({
-        success: true,
+      setFormStatus({
+        type: "success",
         message: successMessage,
       });
 
       resetForm();
     } catch (error) {
       console.error("Registration error:", error);
-      setSubmitStatus({
-        success: false,
+      setFormStatus({
+        type: "error",
         message: errorMessage,
       });
     } finally {
@@ -138,7 +180,13 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         onChange={toggleTerms}
         required
       />
-      {submitStatus.message && <div>{submitStatus.message}</div>}
+      {formStatus.message && (
+        <div
+          className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
+        >
+          {formStatus.message}
+        </div>
+      )}
       <button type="submit" disabled={isLoading}>
         {isLoading ? "Submitting..." : submitButtonText}
       </button>
