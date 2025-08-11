@@ -4,9 +4,9 @@ import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
 import { CheckboxProps } from "studio/lib/interfaces/forms/checkbox";
 
-import styles from "./checkbox.module.css";
+import styles from "./checkboxColor.module.css";
 
-const Checkbox = ({
+const CheckboxColor = ({
   label,
   name,
   error,
@@ -51,4 +51,4 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;
+export default CheckboxColor;

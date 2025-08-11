@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import Checkbox from "src/components/forms/checkbox/Checkbox";
+import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
@@ -180,7 +180,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           onChange={(_name, value) => setPhone(value)}
         />
       </div>
-      <Checkbox
+      <CheckboxColor
         name="terms"
         label={termsAndConditionsLabel}
         value={hasAcceptedTerms}
