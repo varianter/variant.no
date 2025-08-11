@@ -17,6 +17,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -32,6 +33,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     firstNameLabel,
     lastNameLabel,
     phoneLabel,
+    companyLabel,
     termsAndConditionsLabel,
     submitButtonText,
     successMessage,
@@ -47,6 +49,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     setName("");
     setLastName("");
     setPhone("");
+    setCompany("");
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -113,6 +116,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           firstname: name,
           lastname: lastName,
           phone,
+          company,
           recordID,
         }),
       });
@@ -161,7 +165,13 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           onChange={(_name, value) => setLastName(value)}
         />
       </div>
-
+      <InputFieldColor
+        name="company"
+        label={companyLabel}
+        type="text"
+        value={company}
+        onChange={(_name, value) => setCompany(value)}
+      />
       <div className={style.eventRegistration__wrapper}>
         <InputFieldColor
           name="email"
@@ -175,7 +185,6 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           name="phone"
           label={phoneLabel}
           type="text"
-          required
           value={phone}
           onChange={(_name, value) => setPhone(value)}
         />

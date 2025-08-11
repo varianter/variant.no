@@ -18,7 +18,7 @@
   border: 2px solid var(--Blue-500);
   border-radius: 0 0.25rem 0.25rem;
   padding: 0.25rem;
-  width: fit-content;
+  width: 100%;
   background-color: var(--Blue-500);
 }
 
@@ -26,5 +26,6 @@
   border: none;
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
+  width: 100%;
   font-size: 1.5rem;
 }

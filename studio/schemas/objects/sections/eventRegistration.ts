@@ -48,6 +48,12 @@ export const eventRegistrationSection = defineField({
       description: "The label for the phone input field.",
     },
     {
+      name: "companyLabel",
+      type: "internationalizedArrayString",
+      title: "Company Label",
+      description: "The label for the company input field.",
+    },
+    {
       name: "termsAndConditionsLabel",
       type: "internationalizedArrayString",
       title: "Terms and Conditions",

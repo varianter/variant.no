@@ -191,6 +191,7 @@ const SECTIONS_FRAGMENT = groq`
       "firstNameLabel": ${translatedFieldFragment("firstNameLabel")},
       "lastNameLabel": ${translatedFieldFragment("lastNameLabel")},
       "phoneLabel": ${translatedFieldFragment("phoneLabel")},
+      "companyLabel": ${translatedFieldFragment("companyLabel")},
       "termsAndConditionsLabel": ${translatedFieldFragment("termsAndConditionsLabel")},
       "submitButtonText": ${translatedFieldFragment("submitButtonText")},
       "successMessage": ${translatedFieldFragment("successMessage")},

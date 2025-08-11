@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     // Extract necessary data from the request
-    const { email, firstname, lastname, phone, recordID } = body;
+    const { email, firstname, lastname, phone, company, recordID } = body;
 
     // Validation
     if (!email || !recordID) {
@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
             firstname,
             lastname,
             phone,
+            company,
           },
         },
       ],
