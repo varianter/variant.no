@@ -7,7 +7,6 @@
 
 .input {
   appearance: none;
-  appearance: none;
   width: 2.25rem;
   height: 2.25rem;
   border: 4px solid var(--Blue-500);
@@ -22,10 +21,14 @@
 }
 
 .input:checked::after {
-  content: "✓";
+  content: "";
   position: absolute;
-  color: white;
-  font-size: 1.2rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-image: url("/_assets/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
