@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 
 import Checkbox from "src/components/forms/checkbox/Checkbox";
-import InputField from "src/components/forms/inputField/InputField";
+import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
+
+import style from "./eventRegistration.module.css";
 
 interface EventRegistrationProps {
   section: EventRegistrationSection;
@@ -139,40 +141,45 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={style.eventRegistration}>
       <h2>{basicTitle}</h2>
-      <InputField
-        name="email"
-        label={emailLabel}
-        type="email"
-        required
-        value={email}
-        onChange={(_name, value) => setEmail(value)}
-      />
-      <InputField
-        name="firstName"
-        label={firstNameLabel}
-        type="text"
-        required
-        value={name}
-        onChange={(_name, value) => setName(value)}
-      />
-      <InputField
-        name="lastName"
-        label={lastNameLabel}
-        type="text"
-        required
-        value={lastName}
-        onChange={(_name, value) => setLastName(value)}
-      />
-      <InputField
-        name="phone"
-        label={phoneLabel}
-        type="text"
-        required
-        value={phone}
-        onChange={(_name, value) => setPhone(value)}
-      />
+      <div className={style.eventRegistration__wrapper}>
+        <InputFieldColor
+          name="firstName"
+          label={firstNameLabel}
+          type="text"
+          required
+          value={name}
+          onChange={(_name, value) => setName(value)}
+        />
+        <InputFieldColor
+          name="lastName"
+          label={lastNameLabel}
+          type="text"
+          required
+          value={lastName}
+          onChange={(_name, value) => setLastName(value)}
+        />
+      </div>
+
+      <div className={style.eventRegistration__wrapper}>
+        <InputFieldColor
+          name="email"
+          label={emailLabel}
+          type="email"
+          required
+          value={email}
+          onChange={(_name, value) => setEmail(value)}
+        />
+        <InputFieldColor
+          name="phone"
+          label={phoneLabel}
+          type="text"
+          required
+          value={phone}
+          onChange={(_name, value) => setPhone(value)}
+        />
+      </div>
       <Checkbox
         name="terms"
         label={termsAndConditionsLabel}
@@ -187,7 +194,11 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           {formStatus.message}
         </div>
       )}
-      <button type="submit" disabled={isLoading}>
+      <button
+        type="submit"
+        disabled={isLoading}
+        className={style.eventRegistration__submit}
+      >
         {isLoading ? "Submitting..." : submitButtonText}
       </button>
     </form>
