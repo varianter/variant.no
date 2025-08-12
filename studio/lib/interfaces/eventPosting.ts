@@ -1,4 +1,8 @@
+import { PortableTextBlock } from "sanity";
+
 import { Consultants } from "studioShared/lib/interfaces/customerCases";
+
+import { IImage } from "./media";
 
 export interface IEventPosting {
   _key: string;
@@ -11,6 +15,9 @@ export interface IEventPosting {
   consultants: Consultants[];
   createInternalPage: boolean;
   recordID: number;
+  eventImage?: IImage;
+  subtitle?: string;
+  textContent?: PortableTextBlock[];
 }
 
 export interface IEventPostings {

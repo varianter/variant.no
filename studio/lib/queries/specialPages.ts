@@ -128,7 +128,10 @@ export const EVENT_BY_RECORD_ID_QUERY = groq`
       "internalLink": internalLink->{
         "url": ${translatedFieldFragment("slug")}
       },
-      createInternalPage
+      createInternalPage,
+      eventImage,
+      "subtitle": ${translatedFieldFragment("subtitle")},
+      textContent
     }
   }
 `;

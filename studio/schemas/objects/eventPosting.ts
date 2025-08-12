@@ -2,6 +2,7 @@ import { defineType } from "sanity";
 
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { richText } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
   validateInternationalizedArray,
@@ -160,6 +161,27 @@ const eventPosting = defineType({
           }
           return true;
         }),
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "eventImage",
+      title: "Event image",
+      type: "image",
+      description: "An image representing the event",
+      options: {
+        hotspot: true,
+      },
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "internationalizedArrayString",
+      description: "An optional subtitle for the event",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...richText,
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
