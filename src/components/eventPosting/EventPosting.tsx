@@ -4,6 +4,7 @@ import { ElementType } from "react";
 
 import Badge from "src/components/badge/Badge";
 import Text from "src/components/text/Text";
+import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventPosting.module.css";
@@ -89,23 +90,10 @@ export default function EventPosting({
         )}
 
         {consultantsFirstNames?.length > 0 && (
-          <div className={`${styles.flex} ${styles.consultants}`}>
-            <Text type="labelRegular">
-              <span>【 </span>
-            </Text>
-            {consultantsFirstNames.map((name) => (
-              <Text
-                key={name}
-                className={styles.dotSeperator}
-                type="labelRegular"
-              >
-                {name}
-              </Text>
-            ))}
-            <Text type="labelRegular">
-              <span> 】</span>
-            </Text>
-          </div>
+          <EventSpeakers
+            textType="labelRegular"
+            consultantsFirstNames={consultantsFirstNames}
+          />
         )}
       </div>
     </Wrapper>
