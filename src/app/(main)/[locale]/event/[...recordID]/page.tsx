@@ -6,6 +6,8 @@ import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 import { EVENT_BY_RECORD_ID_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
+import styles from "./event.module.css";
+
 interface EventPageProps {
   params: {
     recordID: string;
@@ -17,6 +19,8 @@ interface EventPageProps {
 
 export default async function EventPage({ params }: EventPageProps) {
   const recordID = parseInt(params.recordID);
+
+  console.log(recordID);
 
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
@@ -35,8 +39,8 @@ export default async function EventPage({ params }: EventPageProps) {
   };
 
   return (
-    <div>
-      <h1>{eventTitle}</h1>
+    <div className={styles.eventPage}>
+      <h1 className={styles.eventPage__title}>{eventTitle}</h1>
       <p>{eventDescription}</p>
       <p>{date}</p>
       {locations &&
