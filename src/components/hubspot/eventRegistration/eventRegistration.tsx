@@ -26,19 +26,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     message: string | null;
   }>({ type: null, message: null });
 
-  const {
-    recordID,
-    basicTitle,
-    emailLabel,
-    firstNameLabel,
-    lastNameLabel,
-    phoneLabel,
-    companyLabel,
-    termsAndConditionsLabel,
-    submitButtonText,
-    successMessage,
-    errorMessage,
-  } = section;
+  const { recordID } = section;
 
   function toggleTerms() {
     setHasAcceptedTerms((prev) => !prev);
@@ -129,7 +117,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
 
       setFormStatus({
         type: "success",
-        message: successMessage,
+        message: "Du er nå registrert for arrangementet!",
       });
 
       resetForm();
@@ -137,7 +125,8 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       console.error("Registration error:", error);
       setFormStatus({
         type: "error",
-        message: errorMessage,
+        message:
+          "Noe gikk galt under registreringen. Vennligst prøv igjen senere.",
       });
     } finally {
       setIsLoading(false);
@@ -146,11 +135,10 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
 
   return (
     <form onSubmit={handleSubmit} className={style.eventRegistration}>
-      <h2>{basicTitle}</h2>
       <div className={style.eventRegistration__wrapper}>
         <InputFieldColor
           name="firstName"
-          label={firstNameLabel}
+          label="Fornavn"
           type="text"
           required
           value={name}
@@ -158,7 +146,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         />
         <InputFieldColor
           name="lastName"
-          label={lastNameLabel}
+          label="Etternavn"
           type="text"
           required
           value={lastName}
@@ -167,7 +155,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       </div>
       <InputFieldColor
         name="company"
-        label={companyLabel}
+        label="Bedrift"
         type="text"
         value={company}
         onChange={(_name, value) => setCompany(value)}
@@ -175,7 +163,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       <div className={style.eventRegistration__wrapper}>
         <InputFieldColor
           name="email"
-          label={emailLabel}
+          label="Email"
           type="email"
           required
           value={email}
@@ -183,15 +171,15 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         />
         <InputFieldColor
           name="phone"
-          label={phoneLabel}
-          type="text"
+          label="Telefon"
+          type="tel"
           value={phone}
           onChange={(_name, value) => setPhone(value)}
         />
       </div>
       <CheckboxColor
         name="terms"
-        label={termsAndConditionsLabel}
+        label="Jeg godtar vilkårene for registrering"
         value={hasAcceptedTerms}
         onChange={toggleTerms}
         required
@@ -208,7 +196,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         disabled={isLoading}
         className={style.eventRegistration__submit}
       >
-        {isLoading ? "Submitting..." : submitButtonText}
+        {isLoading ? "Submitting..." : "Meld interesse"}
       </button>
     </form>
   );

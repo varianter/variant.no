@@ -236,16 +236,6 @@ export interface EventRegistrationSection {
   _type: "eventRegistration";
   _key: string;
   recordID: string;
-  basicTitle: string;
-  emailLabel: string;
-  firstNameLabel: string;
-  lastNameLabel: string;
-  phoneLabel: string;
-  companyLabel: string;
-  termsAndConditionsLabel: string;
-  submitButtonText: string;
-  successMessage: string;
-  errorMessage: string;
 }
 
 export type Section =

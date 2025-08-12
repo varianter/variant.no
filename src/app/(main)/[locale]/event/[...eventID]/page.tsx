@@ -1,18 +1,22 @@
 import React from "react";
 
+import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
+import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 import { EVENT_BY_RECORD_ID_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
 interface EventPageProps {
   params: {
-    eventID: string[];
+    recordID: string;
     locale: string;
   };
 }
 
+// TODO: Create as specialPage
+
 export default async function EventPage({ params }: EventPageProps) {
-  const recordID = parseInt(params.eventID[0]);
+  const recordID = parseInt(params.recordID);
 
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
@@ -21,7 +25,14 @@ export default async function EventPage({ params }: EventPageProps) {
     language: params.locale,
   });
 
-  const { eventTitle, eventDescription, date, locations, tags } = data.event;
+  const { eventTitle, eventDescription, date, locations, tags, _key } =
+    data.event;
+
+  const section: EventRegistrationSection = {
+    _type: "eventRegistration",
+    _key: _key,
+    recordID: recordID.toString(),
+  };
 
   return (
     <div>
@@ -38,6 +49,8 @@ export default async function EventPage({ params }: EventPageProps) {
             {tag.tag}
           </span>
         ))}
+
+      <EventRegistration section={section} />
     </div>
   );
 }
