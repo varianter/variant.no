@@ -5,6 +5,7 @@ import EventRegistration from "src/components/hubspot/eventRegistration/eventReg
 import { SanityImage } from "src/components/image/SanityImage";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
+import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 import { EVENT_BY_RECORD_ID_QUERY } from "studio/lib/queries/specialPages";
@@ -49,6 +50,9 @@ export default async function EventPage({ params }: EventPageProps) {
     recordID: recordID.toString(),
   };
 
+  const consultantsFirstNames =
+    consultants?.map((n) => n.employeeFirstName) ?? [];
+
   return (
     <div className={styles.eventPage}>
       <div className={styles.eventInfo}>
@@ -81,14 +85,12 @@ export default async function EventPage({ params }: EventPageProps) {
                 <Text type="labelLarge">{tag.tag}</Text>
               </Badge>
             ))}
-          <Text type="labelLarge">[</Text>
-          {consultants &&
-            consultants.map((consultant, index) => (
-              <Text type="labelLarge" key={index}>
-                {consultant.employeeFirstName}
-              </Text>
-            ))}
-          <Text type="labelLarge">]</Text>
+          {consultantsFirstNames && (
+            <EventSpeakers
+              textType="labelLarge"
+              consultantsFirstNames={consultantsFirstNames}
+            />
+          )}
         </div>
         {richText && <RichText value={richText} />}
       </div>
