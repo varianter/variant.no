@@ -17,7 +17,7 @@ export interface IEventPosting {
   recordID: number;
   eventImage?: IImage;
   subtitle?: string;
-  textContent?: PortableTextBlock[];
+  richText?: PortableTextBlock[];
 }
 
 export interface IEventPostings {

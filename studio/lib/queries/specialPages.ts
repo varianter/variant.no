@@ -131,7 +131,7 @@ export const EVENT_BY_RECORD_ID_QUERY = groq`
       createInternalPage,
       eventImage,
       "subtitle": ${translatedFieldFragment("subtitle")},
-      textContent
+      richText
     }
   }
 `;
