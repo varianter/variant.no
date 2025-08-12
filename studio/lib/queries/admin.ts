@@ -58,9 +58,8 @@ export const EVENT_POSTINGS_QUERY = groq`
         employeeFirstName
       },
       "externalLink": externalLink,
-      "internalLink": internalLink->{
-        "url": ${translatedFieldFragment("slug")}
-      }
+      createInternalPage,
+      recordID
     }
   }
 `;

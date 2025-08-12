@@ -33,8 +33,7 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  const isInternal =
-    eventPosting.internalLink && eventPosting.internalLink?.url;
+  const isInternal = eventPosting.createInternalPage;
   const isExternal = eventPosting.externalLink;
 
   const Wrapper: ElementType = isInternal || isExternal ? Link : "div";
@@ -43,7 +42,7 @@ export default function EventPosting({
     isInternal || isExternal
       ? {
           href: isInternal
-            ? `/${language}/${eventPosting.internalLink?.url}`
+            ? `/${language}/event/${eventPosting.recordID}`
             : eventPosting.externalLink,
           target: isExternal ? "_blank" : undefined,
           "aria-label": `${t("go_to_event")} ${eventPosting.eventTitle}`,

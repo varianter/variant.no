@@ -105,3 +105,30 @@ export const CUSTOMER_CASES_PAGE_SITEMAP_QUERY = groq`
     "slug": ${TRANSLATED_SLUG_VALUE_FRAGMENT}
   }
 `;
+
+export const EVENT_BY_RECORD_ID_QUERY = groq`
+  *[_type == "eventPostings"][0] {
+    "event": eventPostingsArray[recordID == $recordID][0] {
+      _key,
+      recordID,
+      "eventTitle": ${translatedFieldFragment("eventTitle")},
+      "eventDescription": ${translatedFieldFragment("eventDescription")},
+      "locations": locations[]{
+        "locationString": ${translatedFieldFragment("locationString")}
+      },
+      "date": date,
+      "tags": tags[]{
+        "tag": ${translatedFieldFragment("tag")}
+      },
+      "consultants": consultants[]{
+        employeeEmail,
+        employeeFirstName
+      },
+      "externalLink": externalLink,
+      "internalLink": internalLink->{
+        "url": ${translatedFieldFragment("slug")}
+      },
+      createInternalPage
+    }
+  }
+`;

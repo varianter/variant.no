@@ -9,11 +9,8 @@ export interface IEventPosting {
   date: string;
   tags: { tag: string }[];
   consultants: Consultants[];
-  internalLink?: {
-    url: string;
-    _type: "reference";
-    _ref: string;
-  };
+  createInternalPage: boolean;
+  recordID: number;
 }
 
 export interface IEventPostings {

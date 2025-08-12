@@ -1,5 +1,6 @@
 import { defineType } from "sanity";
 
+import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
@@ -8,9 +9,6 @@ import {
 } from "studio/utils/internationalizedFieldValidator";
 
 export const eventPostingID = "eventPosting";
-
-// Lazy reference to avoid circular dependency
-const lazyPageBuilderID = () => "pageBuilder";
 
 const eventPosting = defineType({
   name: eventPostingID,
@@ -138,14 +136,31 @@ const eventPosting = defineType({
           allowRelative: false,
         }),
       ],
+      hidden: ({ parent }) => parent?.createInternalPage,
     },
     {
-      name: "internalLink",
-      title: "Internal Link",
+      name: "createInternalPage",
+      title: "Create an internal page",
+      type: "boolean",
       description:
-        "Select the page you want to link to. The page has to have a slug for the link to work.",
-      type: "reference",
-      to: [{ type: lazyPageBuilderID() }],
+        "If you want to create a page in the Page Builder for this event, check this box.",
+      initialValue: false,
+    },
+    {
+      name: "recordID",
+      type: "number",
+      title: "Record ID",
+      description:
+        "The unique identifier for the event registration record in HubSpot. This is used to track registrations.",
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const parent = context.parent as IEventPosting;
+          if (parent?.createInternalPage && !value) {
+            return "Record ID is required when creating an internal page";
+          }
+          return true;
+        }),
+      hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
   preview: {
