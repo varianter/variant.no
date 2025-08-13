@@ -24,7 +24,6 @@ export default function EventRegistration({
   const { t } = useTranslation(lang);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
@@ -45,7 +44,6 @@ export default function EventRegistration({
   function resetForm() {
     setEmail("");
     setName("");
-    setLastName("");
     setPhone("");
     setCompany("");
   }
@@ -82,16 +80,7 @@ export default function EventRegistration({
     if (!name) {
       setFormStatus({
         type: "error",
-        message: t("eventRegistration.firstNameRequired"),
-      });
-      setIsLoading(false);
-      return;
-    }
-
-    if (!lastName) {
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.lastNameRequired"),
+        message: t("eventRegistration.nameRequired"),
       });
       setIsLoading(false);
       return;
@@ -106,6 +95,10 @@ export default function EventRegistration({
       return;
     }
     try {
+      const nameParts = name.split(" ");
+      const lastName = nameParts[nameParts.length - 1];
+      const firstName = nameParts.slice(0, -1).join(" ");
+
       const response = await fetch("/api/hubSpot/eventRegistration/register", {
         method: "POST",
         headers: {
@@ -113,7 +106,7 @@ export default function EventRegistration({
         },
         body: JSON.stringify({
           email,
-          firstname: name,
+          firstname: firstName,
           lastname: lastName,
           phone,
           company,
@@ -149,24 +142,14 @@ export default function EventRegistration({
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={style.eventRegistration}>
-          <div className={style.eventRegistration__wrapper}>
-            <InputFieldColor
-              name="firstName"
-              label={t("eventRegistration.firstName")}
-              type="text"
-              required
-              value={name}
-              onChange={(_name, value) => setName(value)}
-            />
-            <InputFieldColor
-              name="lastName"
-              label={t("eventRegistration.lastName")}
-              type="text"
-              required
-              value={lastName}
-              onChange={(_name, value) => setLastName(value)}
-            />
-          </div>
+          <InputFieldColor
+            name="firstName"
+            label={t("eventRegistration.name")}
+            type="text"
+            required
+            value={name}
+            onChange={(_name, value) => setName(value)}
+          />
           <InputFieldColor
             name="company"
             label={t("eventRegistration.company")}

@@ -1,7 +1,6 @@
 {
   "eventRegistration": {
-    "firstName": "First Name",
-    "lastName": "Last Name",
+    "name": "Name",
     "company": "Company",
     "email": "Email",
     "phone": "Phone",
@@ -13,8 +12,7 @@
     "errors": {
       "emailRequired": "Please enter your email address",
       "emailInvalid": "Please enter a valid email address",
-      "firstNameRequired": "Please enter your first name",
-      "lastNameRequired": "Please enter your last name",
+      "nameRequired": "Please enter your name",
       "termsRequired": "You must accept the terms to register",
       "registrationFailed": "Something went wrong during registration. Please try again later."
     }

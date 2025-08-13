@@ -1,7 +1,6 @@
 {
   "eventRegistration": {
-    "firstName": "Fornavn",
-    "lastName": "Etternavn",
+    "name": "Navn",
     "company": "Bedrift",
     "email": "Email",
     "phone": "Telefon",
@@ -13,8 +12,7 @@
     "errors": {
       "emailRequired": "Vennligst skriv inn din e-postadresse",
       "emailInvalid": "Vennligst skriv inn en gyldig e-postadresse",
-      "firstNameRequired": "Vennligst skriv inn ditt fornavn",
-      "lastNameRequired": "Vennligst skriv inn ditt etternavn",
+      "nameRequired": "Vennligst skriv inn ditt navn",
       "termsRequired": "Du må godta vilkårene for å registrere deg",
       "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
     }
