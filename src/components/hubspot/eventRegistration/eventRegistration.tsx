@@ -113,11 +113,6 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       if (!response.ok) {
         throw new Error(data.error || "Something went wrong");
       }
-
-      setFormStatus({
-        type: "success",
-        message: "Du er nå registrert for arrangementet!",
-      });
       setIsSubmitted(true);
     } catch (error) {
       console.error("Registration error:", error);
