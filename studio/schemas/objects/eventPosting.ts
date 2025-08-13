@@ -1,6 +1,5 @@
 import { defineType } from "sanity";
 
-import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { richText } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
@@ -153,14 +152,6 @@ const eventPosting = defineType({
       title: "Record ID",
       description:
         "The unique identifier for the event registration record in HubSpot. This is used to track registrations.",
-      validation: (rule) =>
-        rule.custom((value, context) => {
-          const parent = context.parent as IEventPosting;
-          if (parent?.createInternalPage && !value) {
-            return "Record ID is required when creating an internal page";
-          }
-          return true;
-        }),
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
