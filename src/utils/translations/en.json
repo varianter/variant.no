@@ -1,0 +1,22 @@
+{
+  "eventRegistration": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "terms": "I accept the terms and conditions for registration",
+    "submit": "Register Interest",
+    "submitting": "Submitting...",
+    "successTitle": "Thank you for your registration!",
+    "registerAnother": "Register another user",
+    "errors": {
+      "emailRequired": "Please enter your email address",
+      "emailInvalid": "Please enter a valid email address",
+      "firstNameRequired": "Please enter your first name",
+      "lastNameRequired": "Please enter your last name",
+      "termsRequired": "You must accept the terms to register",
+      "registrationFailed": "Something went wrong during registration. Please try again later."
+    }
+  }
+}

@@ -6,15 +6,22 @@ import Button from "src/components/buttons/Button";
 import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
 import Text from "src/components/text/Text";
+import { useTranslation } from "src/utils/hooks/useTranslation";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
 
 interface EventRegistrationProps {
   section: EventRegistrationSection;
+  language?: "en" | "no";
 }
 
-export default function EventRegistration({ section }: EventRegistrationProps) {
+export default function EventRegistration({
+  section,
+  language,
+}: EventRegistrationProps) {
+  const lang = language || "no";
+  const { t } = useTranslation(lang);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -57,7 +64,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     if (!email) {
       setFormStatus({
         type: "error",
-        message: "Please enter your email address",
+        message: t("eventRegistration.emailRequired"),
       });
       setIsLoading(false);
       return;
@@ -66,20 +73,26 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     if (!/\S+@\S+\.\S+/.test(email)) {
       setFormStatus({
         type: "error",
-        message: "Please enter a valid email address",
+        message: t("eventRegistration.emailInvalid"),
       });
       setIsLoading(false);
       return;
     }
 
     if (!name) {
-      setFormStatus({ type: "error", message: "Please enter your first name" });
+      setFormStatus({
+        type: "error",
+        message: t("eventRegistration.firstNameRequired"),
+      });
       setIsLoading(false);
       return;
     }
 
     if (!lastName) {
-      setFormStatus({ type: "error", message: "Please enter your last name" });
+      setFormStatus({
+        type: "error",
+        message: t("eventRegistration.lastNameRequired"),
+      });
       setIsLoading(false);
       return;
     }
@@ -87,7 +100,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     if (!hasAcceptedTerms) {
       setFormStatus({
         type: "error",
-        message: "Du må godta vilkårene for å registrere deg",
+        message: t("eventRegistration.termsRequired"),
       });
       setIsLoading(false);
       return;
@@ -118,8 +131,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       console.error("Registration error:", error);
       setFormStatus({
         type: "error",
-        message:
-          "Noe gikk galt under registreringen. Vennligst prøv igjen senere.",
+        message: t("eventRegistration.registrationFailed"),
       });
     } finally {
       setIsLoading(false);
@@ -130,15 +142,17 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     <div>
       {isSubmitted ? (
         <div className={style.registrationSuccess}>
-          <Text type="labelLarge">Takk for din påmelding!</Text>
-          <Button onClick={registerAgain}>Meld på en annen bruker</Button>
+          <Text type="labelLarge">{t("eventRegistration.successTitle")}</Text>
+          <Button onClick={registerAgain}>
+            {t("eventRegistration.registerAnother")}
+          </Button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={style.eventRegistration}>
           <div className={style.eventRegistration__wrapper}>
             <InputFieldColor
               name="firstName"
-              label="Fornavn"
+              label={t("eventRegistration.firstName")}
               type="text"
               required
               value={name}
@@ -146,7 +160,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
             />
             <InputFieldColor
               name="lastName"
-              label="Etternavn"
+              label={t("eventRegistration.lastName")}
               type="text"
               required
               value={lastName}
@@ -155,7 +169,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           </div>
           <InputFieldColor
             name="company"
-            label="Bedrift"
+            label={t("eventRegistration.company")}
             type="text"
             value={company}
             onChange={(_name, value) => setCompany(value)}
@@ -163,7 +177,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           <div className={style.eventRegistration__wrapper}>
             <InputFieldColor
               name="email"
-              label="Email"
+              label={t("eventRegistration.email")}
               type="email"
               required
               value={email}
@@ -171,7 +185,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
             />
             <InputFieldColor
               name="phone"
-              label="Telefon"
+              label={t("eventRegistration.phone")}
               type="tel"
               value={phone}
               onChange={(_name, value) => setPhone(value)}
@@ -179,7 +193,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
           </div>
           <CheckboxColor
             name="terms"
-            label="Jeg godtar vilkårene for registrering"
+            label={t("eventRegistration.terms")}
             value={hasAcceptedTerms}
             onChange={toggleTerms}
             required
@@ -196,7 +210,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
             disabled={isLoading}
             className={style.eventRegistration__submit}
           >
-            {isLoading ? "Submitting..." : "Meld interesse"}
+            {isLoading ? t("eventRegistration.submitting") : "Meld interesse"}
           </button>
         </form>
       )}

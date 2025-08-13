@@ -16,7 +16,7 @@ import styles from "./event.module.css";
 interface EventPageProps {
   params: {
     recordID: string;
-    locale: string;
+    locale: "en" | "no";
   };
 }
 
@@ -94,7 +94,7 @@ export default async function EventPage({ params }: EventPageProps) {
         </div>
         {richText && <RichText value={richText} />}
       </div>
-      <EventRegistration section={section} />
+      <EventRegistration section={section} language={params.locale} />
     </div>
   );
 }
