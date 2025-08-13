@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 
+import Button from "src/components/buttons/Button";
 import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
+import Text from "src/components/text/Text";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
@@ -20,6 +22,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formStatus, setFormStatus] = useState<{
     type: "error" | "success" | null;
@@ -38,6 +41,11 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
     setLastName("");
     setPhone("");
     setCompany("");
+  }
+
+  function registerAgain() {
+    resetForm();
+    setIsSubmitted(false);
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -76,15 +84,6 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
       return;
     }
 
-    if (!phone) {
-      setFormStatus({
-        type: "error",
-        message: "Please enter your phone number",
-      });
-      setIsLoading(false);
-      return;
-    }
-
     if (!hasAcceptedTerms) {
       setFormStatus({
         type: "error",
@@ -119,8 +118,7 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
         type: "success",
         message: "Du er nå registrert for arrangementet!",
       });
-
-      resetForm();
+      setIsSubmitted(true);
     } catch (error) {
       console.error("Registration error:", error);
       setFormStatus({
@@ -134,70 +132,79 @@ export default function EventRegistration({ section }: EventRegistrationProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={style.eventRegistration}>
-      <div className={style.eventRegistration__wrapper}>
-        <InputFieldColor
-          name="firstName"
-          label="Fornavn"
-          type="text"
-          required
-          value={name}
-          onChange={(_name, value) => setName(value)}
-        />
-        <InputFieldColor
-          name="lastName"
-          label="Etternavn"
-          type="text"
-          required
-          value={lastName}
-          onChange={(_name, value) => setLastName(value)}
-        />
-      </div>
-      <InputFieldColor
-        name="company"
-        label="Bedrift"
-        type="text"
-        value={company}
-        onChange={(_name, value) => setCompany(value)}
-      />
-      <div className={style.eventRegistration__wrapper}>
-        <InputFieldColor
-          name="email"
-          label="Email"
-          type="email"
-          required
-          value={email}
-          onChange={(_name, value) => setEmail(value)}
-        />
-        <InputFieldColor
-          name="phone"
-          label="Telefon"
-          type="tel"
-          value={phone}
-          onChange={(_name, value) => setPhone(value)}
-        />
-      </div>
-      <CheckboxColor
-        name="terms"
-        label="Jeg godtar vilkårene for registrering"
-        value={hasAcceptedTerms}
-        onChange={toggleTerms}
-        required
-      />
-      {formStatus.message && (
-        <div
-          className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
-        >
-          {formStatus.message}
+    <div>
+      {isSubmitted ? (
+        <div className={style.registrationSuccess}>
+          <Text type="labelLarge">Takk for din påmelding!</Text>
+          <Button onClick={registerAgain}>Meld på en annen bruker</Button>
         </div>
+      ) : (
+        <form onSubmit={handleSubmit} className={style.eventRegistration}>
+          <div className={style.eventRegistration__wrapper}>
+            <InputFieldColor
+              name="firstName"
+              label="Fornavn"
+              type="text"
+              required
+              value={name}
+              onChange={(_name, value) => setName(value)}
+            />
+            <InputFieldColor
+              name="lastName"
+              label="Etternavn"
+              type="text"
+              required
+              value={lastName}
+              onChange={(_name, value) => setLastName(value)}
+            />
+          </div>
+          <InputFieldColor
+            name="company"
+            label="Bedrift"
+            type="text"
+            value={company}
+            onChange={(_name, value) => setCompany(value)}
+          />
+          <div className={style.eventRegistration__wrapper}>
+            <InputFieldColor
+              name="email"
+              label="Email"
+              type="email"
+              required
+              value={email}
+              onChange={(_name, value) => setEmail(value)}
+            />
+            <InputFieldColor
+              name="phone"
+              label="Telefon"
+              type="tel"
+              value={phone}
+              onChange={(_name, value) => setPhone(value)}
+            />
+          </div>
+          <CheckboxColor
+            name="terms"
+            label="Jeg godtar vilkårene for registrering"
+            value={hasAcceptedTerms}
+            onChange={toggleTerms}
+            required
+          />
+          {formStatus.message && (
+            <div
+              className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
+            >
+              {formStatus.message}
+            </div>
+          )}
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={style.eventRegistration__submit}
+          >
+            {isLoading ? "Submitting..." : "Meld interesse"}
+          </button>
+        </form>
       )}
-      <button
-        type="submit"
-        disabled={isLoading}
-        className={style.eventRegistration__submit}
-      >
-        {isLoading ? "Submitting..." : "Meld interesse"}
-      </button>
-    </form>
+    </div>
   );
 }
