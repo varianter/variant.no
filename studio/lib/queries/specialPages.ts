@@ -106,9 +106,9 @@ export const CUSTOMER_CASES_PAGE_SITEMAP_QUERY = groq`
   }
 `;
 
-export const EVENT_BY_RECORD_ID_QUERY = groq`
+export const EVENT_BY_KEY_QUERY = groq`
   *[_type == "eventPostings"][0] {
-    "event": eventPostingsArray[recordID == $recordID][0] {
+    "event": eventPostingsArray[_key == $key][0] {
       _key,
       recordID,
       "eventTitle": ${translatedFieldFragment("eventTitle")},

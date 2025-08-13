@@ -8,14 +8,14 @@ import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
-import { EVENT_BY_RECORD_ID_QUERY } from "studio/lib/queries/specialPages";
+import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./event.module.css";
 
 interface EventPageProps {
   params: {
-    recordID: string;
+    key: string;
     locale: "en" | "no";
   };
 }
@@ -23,12 +23,10 @@ interface EventPageProps {
 // TODO: Create as specialPage
 
 export default async function EventPage({ params }: EventPageProps) {
-  const recordID = parseInt(params.recordID);
-
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
-  }>(EVENT_BY_RECORD_ID_QUERY, {
-    recordID: recordID,
+  }>(EVENT_BY_KEY_QUERY, {
+    key: params.key.toString(),
     language: params.locale,
   });
 
@@ -42,6 +40,7 @@ export default async function EventPage({ params }: EventPageProps) {
     subtitle,
     consultants,
     richText,
+    recordID,
   } = data.event;
 
   const section: EventRegistrationSection = {
@@ -94,7 +93,9 @@ export default async function EventPage({ params }: EventPageProps) {
         </div>
         {richText && <RichText value={richText} />}
       </div>
-      <EventRegistration section={section} language={params.locale} />
+      {recordID && (
+        <EventRegistration section={section} language={params.locale} />
+      )}
     </div>
   );
 }
