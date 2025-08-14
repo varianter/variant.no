@@ -7,7 +7,6 @@ import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
-import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
@@ -42,12 +41,6 @@ export default async function EventPage({ params }: EventPageProps) {
     richText,
     recordID,
   } = data.event;
-
-  const section: EventRegistrationSection = {
-    _type: "eventRegistration",
-    _key: _key,
-    recordID: recordID.toString(),
-  };
 
   const consultantsFirstNames =
     consultants?.map((n) => n.employeeFirstName) ?? [];
@@ -94,7 +87,14 @@ export default async function EventPage({ params }: EventPageProps) {
         {richText && <RichText value={richText} />}
       </div>
       {recordID && (
-        <EventRegistration section={section} language={params.locale} />
+        <EventRegistration
+          section={{
+            _type: "eventRegistration",
+            _key: _key,
+            recordID: recordID.toString(),
+          }}
+          language={params.locale}
+        />
       )}
     </div>
   );
