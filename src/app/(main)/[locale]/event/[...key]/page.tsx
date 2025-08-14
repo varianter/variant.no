@@ -92,6 +92,7 @@ export default async function EventPage({ params }: EventPageProps) {
             _type: "eventRegistration",
             _key: _key,
             recordID: recordID.toString(),
+            date: date,
           }}
           language={params.locale}
         />

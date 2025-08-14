@@ -35,7 +35,11 @@ export default function EventRegistration({
     message: string | null;
   }>({ type: null, message: null });
 
-  const { recordID } = section;
+  const { recordID, date } = section;
+
+  const today = new Date();
+  const eventDate = date ? new Date(date) : null;
+  const isActive = eventDate ? eventDate.getDate() >= today.getDate() : false;
 
   function toggleTerms() {
     setHasAcceptedTerms((prev) => !prev);
@@ -132,71 +136,79 @@ export default function EventRegistration({
   }
 
   return (
-    <div>
-      {isSubmitted ? (
-        <div className={style.registrationSuccess}>
-          <Text type="labelLarge">{t("eventRegistration.successTitle")}</Text>
-          <Button onClick={registerAgain}>
-            {t("eventRegistration.registerAnother")}
-          </Button>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className={style.eventRegistration}>
-          <InputFieldColor
-            name="firstName"
-            label={t("eventRegistration.name")}
-            type="text"
-            required
-            value={name}
-            onChange={(_name, value) => setName(value)}
-          />
-          <InputFieldColor
-            name="company"
-            label={t("eventRegistration.company")}
-            type="text"
-            value={company}
-            onChange={(_name, value) => setCompany(value)}
-          />
-          <div className={style.eventRegistration__wrapper}>
-            <InputFieldColor
-              name="email"
-              label={t("eventRegistration.email")}
-              type="email"
-              required
-              value={email}
-              onChange={(_name, value) => setEmail(value)}
-            />
-            <InputFieldColor
-              name="phone"
-              label={t("eventRegistration.phone")}
-              type="tel"
-              value={phone}
-              onChange={(_name, value) => setPhone(value)}
-            />
-          </div>
-          <CheckboxColor
-            name="terms"
-            label={t("eventRegistration.terms")}
-            value={hasAcceptedTerms}
-            onChange={toggleTerms}
-            required
-          />
-          {formStatus.message && (
-            <div
-              className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
-            >
-              {formStatus.message}
+    <>
+      {isActive && (
+        <div>
+          {isSubmitted ? (
+            <div className={style.registrationSuccess}>
+              <Text type="labelLarge">
+                {t("eventRegistration.successTitle")}
+              </Text>
+              <Button onClick={registerAgain}>
+                {t("eventRegistration.registerAnother")}
+              </Button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className={style.eventRegistration}>
+              <InputFieldColor
+                name="firstName"
+                label={t("eventRegistration.name")}
+                type="text"
+                required
+                value={name}
+                onChange={(_name, value) => setName(value)}
+              />
+              <InputFieldColor
+                name="company"
+                label={t("eventRegistration.company")}
+                type="text"
+                value={company}
+                onChange={(_name, value) => setCompany(value)}
+              />
+              <div className={style.eventRegistration__wrapper}>
+                <InputFieldColor
+                  name="email"
+                  label={t("eventRegistration.email")}
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(_name, value) => setEmail(value)}
+                />
+                <InputFieldColor
+                  name="phone"
+                  label={t("eventRegistration.phone")}
+                  type="tel"
+                  value={phone}
+                  onChange={(_name, value) => setPhone(value)}
+                />
+              </div>
+              <CheckboxColor
+                name="terms"
+                label={t("eventRegistration.terms")}
+                value={hasAcceptedTerms}
+                onChange={toggleTerms}
+                required
+              />
+              {formStatus.message && (
+                <div
+                  className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
+                >
+                  {formStatus.message}
+                </div>
+              )}
+              <button
+                type="submit"
+                disabled={isLoading}
+                className={style.eventRegistration__submit}
+              >
+                {isLoading
+                  ? t("eventRegistration.submitting")
+                  : "Meld interesse"}
+              </button>
+            </form>
           )}
-          <button
-            type="submit"
-            disabled={isLoading}
-            className={style.eventRegistration__submit}
-          >
-            {isLoading ? t("eventRegistration.submitting") : "Meld interesse"}
-          </button>
-        </form>
+        </div>
       )}
-    </div>
+    </>
   );
 }
