@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 
 import Badge from "src/components/badge/Badge";
@@ -6,6 +7,7 @@ import { SanityImage } from "src/components/image/SanityImage";
 import { RichText } from "src/components/richText/RichText";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
+import { generateMetadataFromSeo } from "src/utils/seo";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
@@ -19,8 +21,45 @@ interface EventPageProps {
   };
 }
 
-// TODO: Create as specialPage
+export async function generateMetadata({
+  params,
+}: EventPageProps): Promise<Metadata> {
+  const { data } = await loadStudioQuery<{
+    event: IEventPosting;
+  }>(EVENT_BY_KEY_QUERY, {
+    key: params.key.toString(),
+    language: params.locale,
+  });
 
+  const { eventTitle, _key } = data.event;
+
+  const baseMetadata = await generateMetadataFromSeo(
+    {
+      title: eventTitle,
+      description: "test",
+      imageUrl: `/api/og?language=${params.locale}&key=${_key}`,
+      keywords: "test",
+    },
+    params.locale,
+  );
+
+  // Override the openGraph image to prevent Next.js optimization
+  return {
+    ...baseMetadata,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
+}
+
+// TODO: Create as specialPage
 export default async function EventPage({ params }: EventPageProps) {
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
