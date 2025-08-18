@@ -1,0 +1,14 @@
+.statusTemplate {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.image {
+  width: 320px;
+}
+
+.statusTemplate a {
+  color: #3840ff;
+  text-decoration: underline;
+}
