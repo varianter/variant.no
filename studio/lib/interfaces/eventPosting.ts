@@ -3,6 +3,7 @@ import { PortableTextBlock } from "sanity";
 import { Consultants } from "studioShared/lib/interfaces/customerCases";
 
 import { IImage } from "./media";
+import { SeoData } from "./seo";
 
 export interface IEventPosting {
   _key: string;
@@ -18,6 +19,7 @@ export interface IEventPosting {
   eventImage?: IImage;
   subtitle?: string;
   richText?: PortableTextBlock[];
+  seo?: SeoData;
 }
 
 export interface IEventPostings {

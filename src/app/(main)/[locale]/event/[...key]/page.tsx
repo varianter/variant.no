@@ -31,14 +31,14 @@ export async function generateMetadata({
     language: params.locale,
   });
 
-  const { eventTitle, _key } = data.event;
+  const { eventTitle, _key, seo } = data.event;
 
   const baseMetadata = await generateMetadataFromSeo(
     {
-      title: eventTitle,
-      description: "test",
+      title: seo?.title || eventTitle,
+      description: seo?.description,
       imageUrl: `/api/og?language=${params.locale}&key=${_key}`,
-      keywords: "test",
+      keywords: seo?.keywords,
     },
     params.locale,
   );
