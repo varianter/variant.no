@@ -30,7 +30,7 @@ export async function GET(request: Request) {
     language: language,
   });
 
-  const { eventTitle, date, locations } = data.event;
+  const { eventTitle, date, time, locations } = data.event;
   return new ImageResponse(
     (
       <div style={backgroundStyle}>
@@ -38,7 +38,7 @@ export async function GET(request: Request) {
           <h1 style={titleStyle}>{eventTitle}</h1>
           <div style={eventInfoContainerStyle}>
             <p style={eventInfoStyle}>{date}</p>
-            <p style={eventInfoStyle}>TID</p>
+            <p style={eventInfoStyle}>{time}</p>
             {locations.map((location, index) => (
               <p key={index} style={eventInfoStyle}>
                 {location.locationString}
