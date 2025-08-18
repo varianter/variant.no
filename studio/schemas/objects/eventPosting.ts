@@ -8,6 +8,8 @@ import {
   validateInternationalizedField,
 } from "studio/utils/internationalizedFieldValidator";
 
+import seoWithoutImage from "./seoWithoutImage";
+
 export const eventPostingID = "eventPosting";
 
 const eventPosting = defineType({
@@ -145,6 +147,10 @@ const eventPosting = defineType({
       description:
         "If you want to create a page in the Page Builder for this event, check this box.",
       initialValue: false,
+    },
+    {
+      ...seoWithoutImage,
+      hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
       name: "recordID",
