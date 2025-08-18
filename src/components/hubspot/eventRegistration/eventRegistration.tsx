@@ -10,6 +10,7 @@ import { useTranslation } from "src/utils/hooks/useTranslation";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
+import Closed from "./status/closed";
 
 interface EventRegistrationProps {
   section: EventRegistrationSection;
@@ -137,7 +138,7 @@ export default function EventRegistration({
 
   return (
     <>
-      {isActive && (
+      {isActive ? (
         <div>
           {isSubmitted ? (
             <div className={style.registrationSuccess}>
@@ -208,6 +209,8 @@ export default function EventRegistration({
             </form>
           )}
         </div>
+      ) : (
+        <Closed />
       )}
     </>
   );
