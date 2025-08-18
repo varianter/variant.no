@@ -79,6 +79,7 @@ export default async function EventPage({ params }: EventPageProps) {
     consultants,
     richText,
     recordID,
+    time,
   } = data.event;
 
   const consultantsFirstNames =
@@ -94,6 +95,7 @@ export default async function EventPage({ params }: EventPageProps) {
         <Text type="bodyXl">{subtitle}</Text>
         <div className={styles.eventDetails}>
           <Text type="labelLarge">{date}</Text>
+          <Text type="labelLarge">{time}</Text>
           {locations &&
             locations.map((location, index) => (
               <Text type="labelLarge" key={index}>

@@ -69,6 +69,12 @@ const eventPosting = defineType({
       description: "Where is the role located?",
     },
     {
+      title: "Time",
+      name: "time",
+      type: "string",
+      description: "The time of the event (e.g. 14:00, 09:00-17:00)",
+    },
+    {
       title: "Subject Tags",
       name: "tags",
       type: "array",

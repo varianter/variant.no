@@ -117,7 +117,8 @@ export const EVENT_BY_KEY_QUERY = groq`
       "locations": locations[]{
         "locationString": ${translatedFieldFragment("locationString")}
       },
-      "date": date,
+      date,
+      time,
       "tags": tags[]{
         "tag": ${translatedFieldFragment("tag")}
       },
