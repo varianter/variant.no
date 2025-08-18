@@ -59,21 +59,23 @@ export async function GET(request: Request) {
             style={{
               margin: 0,
               textAlign: "left",
-              padding: "0 40px",
+              padding: "0 116px",
               fontSize: "86px",
               fontFamily: "BrittiSansVariable",
             }}
           >
             {eventTitle}
           </h1>
+
           <div
             style={{
               display: "flex",
               alignItems: "center",
               gap: "2rem",
-              padding: "0 40px",
+              padding: "0 116px",
               width: "100%",
               height: "100%",
+              position: "relative",
             }}
           >
             <p style={eventInfoStyling}>{date}</p>
@@ -84,6 +86,16 @@ export async function GET(request: Request) {
               </p>
             ))}
           </div>
+          <img
+            style={{
+              width: "175px",
+              height: "42px",
+              position: "absolute",
+              bottom: "80px",
+              left: "116px",
+            }}
+            src={`${new URL(request.url).origin}/_assets/variant-logo-white.svg`}
+          />
         </div>
       </div>
     ),
