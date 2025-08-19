@@ -83,7 +83,7 @@ export default function EventsClient({
         {section.hideLocationFilters !== true && (
           <OfficeSelector
             locations={allLocations}
-            eventPostingsCount={eventPostings.length}
+            eventPostingsCount={filteredEventPostings.length}
             eventPostingsPerLocation={eventPostingsPerLocation}
             onFilterChange={setLocationFilter}
             textColor={textColor}
