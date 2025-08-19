@@ -15,6 +15,14 @@
       "nameRequired": "Please enter your name",
       "termsRequired": "You must accept the terms to register",
       "registrationFailed": "Something went wrong during registration. Please try again later."
+    },
+    "registrationComplete": {
+      "title": "Thank you!",
+      "successMessage": "We appreciate your interest",
+      "emailConfirmation": "You will receive a confirmation email.",
+      "registerAnother": "Would you like to register more people?",
+      "linkText": "Show form",
+      "unsubscribeNote": "To unsubscribe, see email."
     }
   }
 }

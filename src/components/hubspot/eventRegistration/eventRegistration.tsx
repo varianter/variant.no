@@ -28,7 +28,7 @@ export default function EventRegistration({
   const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const [formStatus, setFormStatus] = useState<{
     type: "error" | "success" | null;
@@ -140,7 +140,11 @@ export default function EventRegistration({
       {isActive ? (
         <div>
           {isSubmitted ? (
-            <RegistrationComplete name={name} onClick={registerAgain} />
+            <RegistrationComplete
+              name={name}
+              onClick={registerAgain}
+              language={language}
+            />
           ) : (
             <form onSubmit={handleSubmit} className={style.eventRegistration}>
               <InputFieldColor
