@@ -8,7 +8,12 @@
   width: 320px;
 }
 
-.statusTemplate a {
+.statusTemplate a,
+.statusTemplate button {
   color: #3840ff;
   text-decoration: underline;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit;
 }

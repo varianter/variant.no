@@ -2,15 +2,14 @@
 
 import React, { useState } from "react";
 
-import Button from "src/components/buttons/Button";
 import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
-import Text from "src/components/text/Text";
 import { useTranslation } from "src/utils/hooks/useTranslation";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
 import Closed from "./status/closed";
+import RegistrationComplete from "./status/registrationComplete";
 
 interface EventRegistrationProps {
   section: EventRegistrationSection;
@@ -141,14 +140,7 @@ export default function EventRegistration({
       {isActive ? (
         <div>
           {isSubmitted ? (
-            <div className={style.registrationSuccess}>
-              <Text type="labelLarge">
-                {t("eventRegistration.successTitle")}
-              </Text>
-              <Button onClick={registerAgain}>
-                {t("eventRegistration.registerAnother")}
-              </Button>
-            </div>
+            <RegistrationComplete name={name} onClick={registerAgain} />
           ) : (
             <form onSubmit={handleSubmit} className={style.eventRegistration}>
               <InputFieldColor

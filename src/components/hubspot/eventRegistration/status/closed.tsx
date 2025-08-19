@@ -7,7 +7,7 @@ import StatusTemplate from "./statusTemplate/statusTemplate";
 export default function Closed() {
   return (
     <StatusTemplate
-      imgSrc="/_assets/sad-box.svg"
+      imgSrc="/_assets/box-sad.svg"
       imgAlt="Påmelding lukket"
       title="Påmelding lukket"
     >
