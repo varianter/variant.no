@@ -38,7 +38,7 @@ const CheckboxColor = ({
       {error && (
         <span>
           <Text
-            type="bodySmall"
+            type="bodyNormal"
             className={styles.error}
             id={hintID}
             aria-live="assertive"
