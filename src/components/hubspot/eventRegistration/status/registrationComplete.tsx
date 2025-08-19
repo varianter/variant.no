@@ -22,7 +22,7 @@ export default function RegistrationComplete({
   return (
     <StatusTemplate
       imgSrc="/_assets/box-happy.svg"
-      imgAlt={t("successTitle")}
+      imgAlt={t("eventRegistration.registrationComplete.imgAlt")}
       title={t("eventRegistration.registrationComplete.title")}
     >
       <Text type="bodyBig">

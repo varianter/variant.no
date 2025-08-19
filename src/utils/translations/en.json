@@ -20,7 +20,8 @@
       "title": "Registration Closed",
       "message": "This event is over and it is therefore not possible to register. Hope to see you at the next event!",
       "otherEventText": "Feel free to take a look at our other",
-      "events": "events"
+      "events": "events",
+      "imgAlt": "blue box with sad face"
     },
     "registrationComplete": {
       "title": "Thank you!",
@@ -28,7 +29,8 @@
       "emailConfirmation": "You will receive a confirmation email.",
       "registerAnother": "Would you like to register more people?",
       "linkText": "Show form",
-      "unsubscribeNote": "To unsubscribe, see email."
+      "unsubscribeNote": "To unsubscribe, see email.",
+      "imgAlt": "blue box with happy face"
     }
   }
 }

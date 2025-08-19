@@ -20,7 +20,8 @@
       "title": "Påmelding lukket",
       "message": "Dette arrangementet er over og det er derfor ikke mulig å melde seg på. Håper vi ser deg på neste arrangement!",
       "otherEventText": "Ta gjerne en kikk på våre andre",
-      "events": "arrangementer"
+      "events": "arrangementer",
+      "imgAlt": "blå boks med trist ansikt"
     },
     "registrationComplete": {
       "title": "Takk!",
@@ -28,7 +29,8 @@
       "emailConfirmation": "Du vil motta en bekreftelse på epost.",
       "registerAnother": "Ønsker du å melde på flere?",
       "linkText": "Vis skjema",
-      "unsubscribeNote": "For avmelding se epost."
+      "unsubscribeNote": "For avmelding se epost.",
+      "imgAlt": "blå boks med glad ansikt"
     }
   }
 }

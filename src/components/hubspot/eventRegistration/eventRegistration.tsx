@@ -28,7 +28,7 @@ export default function EventRegistration({
   const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formStatus, setFormStatus] = useState<{
     type: "error" | "success" | null;

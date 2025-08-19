@@ -16,7 +16,7 @@ export default function Closed({ language }: ClosedProps) {
   return (
     <StatusTemplate
       imgSrc="/_assets/box-sad.svg"
-      imgAlt="Påmelding lukket"
+      imgAlt={t("eventRegistration.closed.imgAlt")}
       title={t("eventRegistration.closed.title")}
     >
       <Text type="bodyBig">{t("eventRegistration.closed.message")}</Text>
