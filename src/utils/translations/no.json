@@ -16,6 +16,12 @@
       "termsRequired": "Du må godta vilkårene for å registrere deg",
       "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
     },
+    "closed": {
+      "title": "Påmelding lukket",
+      "message": "Dette arrangementet er over og det er derfor ikke mulig å melde seg på. Håper vi ser deg på neste arrangement!",
+      "otherEventText": "Ta gjerne en kikk på våre andre",
+      "events": "arrangementer"
+    },
     "registrationComplete": {
       "title": "Takk!",
       "successMessage": "Vi setter pris på din interesse",

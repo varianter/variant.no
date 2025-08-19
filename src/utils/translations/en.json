@@ -16,6 +16,12 @@
       "termsRequired": "You must accept the terms to register",
       "registrationFailed": "Something went wrong during registration. Please try again later."
     },
+    "closed": {
+      "title": "Registration Closed",
+      "message": "This event is over and it is therefore not possible to register. Hope to see you at the next event!",
+      "otherEventText": "Feel free to take a look at our other",
+      "events": "events"
+    },
     "registrationComplete": {
       "title": "Thank you!",
       "successMessage": "We appreciate your interest",

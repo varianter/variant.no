@@ -1,22 +1,28 @@
 import React from "react";
 
 import Text from "src/components/text/Text";
+import { useTranslation } from "src/utils/hooks/useTranslation";
 
 import StatusTemplate from "./statusTemplate/statusTemplate";
 
-export default function Closed() {
+interface ClosedProps {
+  language?: "en" | "no";
+}
+
+export default function Closed({ language }: ClosedProps) {
+  const lang = language || "no";
+  const { t } = useTranslation(lang);
+
   return (
     <StatusTemplate
       imgSrc="/_assets/box-sad.svg"
       imgAlt="Påmelding lukket"
-      title="Påmelding lukket"
+      title={t("eventRegistration.closed.title")}
     >
+      <Text type="bodyBig">{t("eventRegistration.closed.message")}</Text>
       <Text type="bodyBig">
-        Dette arrangementet er over og det er derfor ikke mulig å melde seg på.
-        Håper vi ser deg på neste arrangement!
-      </Text>
-      <Text type="bodyBig">
-        Ta gjerne en kikk på våre andre <a href="/events">arrangementer</a>.
+        {t("eventRegistration.closed.otherEventText")}
+        <a href="/events"> {t("eventRegistration.closed.events")}</a>.
       </Text>
     </StatusTemplate>
   );

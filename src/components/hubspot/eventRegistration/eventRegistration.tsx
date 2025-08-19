@@ -206,7 +206,7 @@ export default function EventRegistration({
           )}
         </div>
       ) : (
-        <Closed />
+        <Closed language={language} />
       )}
     </>
   );
