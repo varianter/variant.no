@@ -16,6 +16,13 @@ interface EventRegistrationProps {
   language?: "en" | "no";
 }
 
+type Statuses =
+  | "emailRequired"
+  | "emailValid"
+  | "nameRequired"
+  | "termsRequired"
+  | "phoneValid";
+
 export default function EventRegistration({
   section,
   language,
@@ -29,11 +36,12 @@ export default function EventRegistration({
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const [formStatus, setFormStatus] = useState<{
-    type: "error" | "success" | null;
-    message: string | null;
-  }>({ type: null, message: null });
+  const [formStatus, setFormStatus] = useState<
+    {
+      type: Statuses;
+      message: string;
+    }[]
+  >([]);
 
   const { recordID, date } = section;
 
@@ -60,44 +68,52 @@ export default function EventRegistration({
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setIsLoading(true);
-    setFormStatus({ type: null, message: null });
+    setFormStatus([]);
+
+    const newErrors: { type: Statuses; message: string }[] = [];
 
     // Check all form fields
     if (!email) {
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.emailRequired"),
+      newErrors.push({
+        type: "emailRequired",
+        message: t("eventRegistration.errors.emailRequired"),
       });
-      setIsLoading(false);
-      return;
     }
 
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.emailInvalid"),
+    if (email && !/\S+@\S+\.\S+/.test(email)) {
+      newErrors.push({
+        type: "emailValid",
+        message: t("eventRegistration.errors.emailInvalid"),
       });
-      setIsLoading(false);
-      return;
     }
 
     if (!name) {
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.nameRequired"),
+      newErrors.push({
+        type: "nameRequired",
+        message: t("eventRegistration.errors.nameRequired"),
       });
+    }
+
+    if (phone && !/^\+?[0-9\s]+$/.test(phone)) {
+      newErrors.push({
+        type: "phoneValid",
+        message: t("eventRegistration.errors.phoneInvalid"),
+      });
+    }
+
+    if (!hasAcceptedTerms) {
+      newErrors.push({
+        type: "termsRequired",
+        message: t("eventRegistration.errors.termsRequired"),
+      });
+    }
+
+    if (newErrors.length > 0) {
+      setFormStatus(newErrors);
       setIsLoading(false);
       return;
     }
 
-    if (!hasAcceptedTerms) {
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.termsRequired"),
-      });
-      setIsLoading(false);
-      return;
-    }
     try {
       const nameParts = name.split(" ");
       const lastName = nameParts[nameParts.length - 1];
@@ -126,10 +142,6 @@ export default function EventRegistration({
       setIsSubmitted(true);
     } catch (error) {
       console.error("Registration error:", error);
-      setFormStatus({
-        type: "error",
-        message: t("eventRegistration.registrationFailed"),
-      });
     } finally {
       setIsLoading(false);
     }
@@ -154,6 +166,10 @@ export default function EventRegistration({
                 required
                 value={name}
                 onChange={(_name, value) => setName(value)}
+                error={
+                  formStatus.find((status) => status.type === "nameRequired")
+                    ?.message
+                }
               />
               <InputFieldColor
                 name="company"
@@ -170,6 +186,13 @@ export default function EventRegistration({
                   required
                   value={email}
                   onChange={(_name, value) => setEmail(value)}
+                  error={
+                    formStatus.find(
+                      (status) =>
+                        status.type === "emailRequired" ||
+                        status.type === "emailValid",
+                    )?.message
+                  }
                 />
                 <InputFieldColor
                   name="phone"
@@ -177,6 +200,10 @@ export default function EventRegistration({
                   type="tel"
                   value={phone}
                   onChange={(_name, value) => setPhone(value)}
+                  error={
+                    formStatus.find((status) => status.type === "phoneValid")
+                      ?.message
+                  }
                 />
               </div>
               <CheckboxColor
@@ -185,14 +212,11 @@ export default function EventRegistration({
                 value={hasAcceptedTerms}
                 onChange={toggleTerms}
                 required
+                error={
+                  formStatus.find((status) => status.type === "termsRequired")
+                    ?.message
+                }
               />
-              {formStatus.message && (
-                <div
-                  className={`form-message ${formStatus.type === "error" ? "error" : "success"}`}
-                >
-                  {formStatus.message}
-                </div>
-              )}
               <button
                 type="submit"
                 disabled={isLoading}

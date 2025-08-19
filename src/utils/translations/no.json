@@ -10,10 +10,11 @@
     "successTitle": "Takk for din påmelding!",
     "registerAnother": "Meld på en annen bruker",
     "errors": {
-      "emailRequired": "Vennligst skriv inn din e-postadresse",
-      "emailInvalid": "Vennligst skriv inn en gyldig e-postadresse",
-      "nameRequired": "Vennligst skriv inn ditt navn",
-      "termsRequired": "Du må godta vilkårene for å registrere deg",
+      "emailRequired": "Må fylles inn for å sende inn skjema",
+      "emailInvalid": "Fyll inn en gyldig e-postadresse",
+      "nameRequired": "Må fylles inn for å sende inn skjema",
+      "termsRequired": "Du må samtykke for å sende inn skjema",
+      "phoneInvalid": "Fyll inn et gyldig telefonnummer",
       "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
     },
     "closed": {

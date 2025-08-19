@@ -10,10 +10,11 @@
     "successTitle": "Thank you for your registration!",
     "registerAnother": "Register another user",
     "errors": {
-      "emailRequired": "Please enter your email address",
-      "emailInvalid": "Please enter a valid email address",
-      "nameRequired": "Please enter your name",
-      "termsRequired": "You must accept the terms to register",
+      "emailRequired": "Must be filled in to submit the form",
+      "emailInvalid": "Enter a valid email address",
+      "nameRequired": "Must be filled in to submit the form",
+      "termsRequired": "You must consent to submit the form",
+      "phoneInvalid": "Enter a valid phone number",
       "registrationFailed": "Something went wrong during registration. Please try again later."
     },
     "closed": {
