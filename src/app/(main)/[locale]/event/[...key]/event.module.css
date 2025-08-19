@@ -31,6 +31,8 @@
 .eventImage {
   max-width: 100%;
   height: 370px;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
 }
 
 .tags {
