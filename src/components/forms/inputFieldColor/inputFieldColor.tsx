@@ -2,9 +2,9 @@ import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
 import { InputFieldProps } from "studio/lib/interfaces/forms/inputField";
 
-import styles from "./inputField.module.css";
+import styles from "./inputFieldColor.module.css";
 
-const InputField = ({
+const InputFieldColor = ({
   label,
   name,
   error,
@@ -38,26 +38,28 @@ const InputField = ({
       <label htmlFor={name} className={`${textStyles.caption} ${styles.label}`}>
         {labelText}
       </label>
-      <input
-        id={name}
-        name={name}
-        autoCapitalize={autoCapitalize}
-        autoComplete={autoComplete}
-        autoCorrect={autoCorrect}
-        type={type}
-        max={type === "number" ? max : undefined}
-        min={type === "number" ? min : undefined}
-        className={styles.input}
-        spellCheck={spellCheck}
-        value={value}
-        onChange={handleChange}
-        aria-describedby={hintID}
-        aria-required={required}
-      />
+      <div className={styles.inputContainer}>
+        <input
+          id={name}
+          name={name}
+          autoCapitalize={autoCapitalize}
+          autoComplete={autoComplete}
+          autoCorrect={autoCorrect}
+          type={type}
+          max={type === "number" ? max : undefined}
+          min={type === "number" ? min : undefined}
+          className={styles.input}
+          spellCheck={spellCheck}
+          value={value}
+          onChange={handleChange}
+          aria-describedby={hintID}
+          aria-required={required}
+        />
+      </div>
       {error && (
         <span>
           <Text
-            type="bodySmall"
+            type="bodyNormal"
             className={styles.error}
             id={hintID}
             aria-live="assertive"
@@ -70,4 +72,4 @@ const InputField = ({
   );
 };
 
-export default InputField;
+export default InputFieldColor;

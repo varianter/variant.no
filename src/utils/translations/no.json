@@ -1,0 +1,37 @@
+{
+  "eventRegistration": {
+    "name": "Navn",
+    "company": "Bedrift",
+    "email": "Email",
+    "phone": "Telefon",
+    "terms": "Jeg godtar vilkårene for registrering",
+    "submit": "Meld interesse",
+    "submitting": "Sender...",
+    "successTitle": "Takk for din påmelding!",
+    "registerAnother": "Meld på en annen bruker",
+    "errors": {
+      "emailRequired": "Må fylles inn for å sende inn skjema",
+      "emailInvalid": "Fyll inn en gyldig e-postadresse",
+      "nameRequired": "Må fylles inn for å sende inn skjema",
+      "termsRequired": "Du må samtykke for å sende inn skjema",
+      "phoneInvalid": "Fyll inn et gyldig telefonnummer",
+      "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
+    },
+    "closed": {
+      "title": "Påmelding lukket",
+      "message": "Dette arrangementet er over og det er derfor ikke mulig å melde seg på. Håper vi ser deg på neste arrangement!",
+      "otherEventText": "Ta gjerne en kikk på våre andre",
+      "events": "arrangementer",
+      "imgAlt": "blå boks med trist ansikt"
+    },
+    "registrationComplete": {
+      "title": "Takk!",
+      "successMessage": "Vi setter pris på din interesse",
+      "emailConfirmation": "Du vil motta en bekreftelse på epost.",
+      "registerAnother": "Ønsker du å melde på flere?",
+      "linkText": "Vis skjema",
+      "unsubscribeNote": "For avmelding se epost.",
+      "imgAlt": "blå boks med glad ansikt"
+    }
+  }
+}

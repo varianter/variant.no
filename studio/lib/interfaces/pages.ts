@@ -232,6 +232,13 @@ export interface FieldGrid {
   fields: Field[];
 }
 
+export interface EventRegistrationSection {
+  _type: "eventRegistration";
+  _key: string;
+  recordID: string;
+  date: string;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -251,7 +258,8 @@ export type Section =
   | LearningSection
   | HandbookSection
   | SplitSection
-  | FieldGrid;
+  | FieldGrid
+  | EventRegistrationSection;
 
 export interface PageBuilder {
   _createdAt: string;

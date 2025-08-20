@@ -41,16 +41,6 @@
   line-height: 1.2em;
 }
 
-.dotSeperator::after {
-  content: "·";
-  margin-left: 0.38rem;
-}
-
-.dotSeperator:nth-last-child(2)::after {
-  content: "";
-  margin: 0;
-}
-
 .flex {
   display: flex;
   gap: 0.38rem;

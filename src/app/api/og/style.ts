@@ -1,0 +1,52 @@
+import { CSSProperties } from "react";
+
+export const backgroundStyle: CSSProperties = {
+  height: "100%",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "center",
+  padding: "1rem",
+  backgroundColor: "#FFFFFF",
+  fontSize: 60,
+  fontWeight: 700,
+  color: "#FFFFFF",
+};
+
+export const blueBackgroundStyle: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "6rem",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "#3840FF",
+  borderRadius: "48px 48px 200px 48px",
+  padding: "0 116px",
+};
+
+export const titleStyle: CSSProperties = {
+  margin: 0,
+  fontSize: "86px",
+};
+
+export const eventInfoContainerStyle: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "2rem",
+  width: "100%",
+  height: "100%",
+};
+
+export const eventInfoStyle: CSSProperties = {
+  fontSize: "38px",
+  color: "#FFFFFF",
+};
+
+export const imgStyle: CSSProperties = {
+  width: "175px",
+  height: "42px",
+  position: "absolute",
+  bottom: "80px",
+  left: "116px",
+};

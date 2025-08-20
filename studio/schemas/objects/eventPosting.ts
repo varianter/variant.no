@@ -1,16 +1,16 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import { richText } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
   validateInternationalizedArray,
   validateInternationalizedField,
 } from "studio/utils/internationalizedFieldValidator";
 
-export const eventPostingID = "eventPosting";
+import seoWithoutImage from "./seoWithoutImage";
 
-// Lazy reference to avoid circular dependency
-const lazyPageBuilderID = () => "pageBuilder";
+export const eventPostingID = "eventPosting";
 
 const eventPosting = defineType({
   name: eventPostingID,
@@ -67,6 +67,12 @@ const eventPosting = defineType({
       name: "date",
       type: "date",
       description: "Where is the role located?",
+    },
+    {
+      title: "Time",
+      name: "time",
+      type: "string",
+      description: "The time of the event (e.g. 14:00, 09:00-17:00)",
     },
     {
       title: "Subject Tags",
@@ -138,14 +144,48 @@ const eventPosting = defineType({
           allowRelative: false,
         }),
       ],
+      hidden: ({ parent }) => parent?.createInternalPage,
     },
     {
-      name: "internalLink",
-      title: "Internal Link",
+      name: "createInternalPage",
+      title: "Create an internal page",
+      type: "boolean",
       description:
-        "Select the page you want to link to. The page has to have a slug for the link to work.",
-      type: "reference",
-      to: [{ type: lazyPageBuilderID() }],
+        "If you want to create a page in the Page Builder for this event, check this box.",
+      initialValue: false,
+    },
+    {
+      ...seoWithoutImage,
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "recordID",
+      type: "number",
+      title: "Record ID",
+      description:
+        "The unique identifier for the event registration record in HubSpot. This is used to track registrations.",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "eventImage",
+      title: "Event image",
+      type: "image",
+      description: "An image representing the event",
+      options: {
+        hotspot: true,
+      },
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "internationalizedArrayString",
+      description: "An optional subtitle for the event",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...richText,
+      hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
   preview: {

@@ -1,0 +1,37 @@
+{
+  "eventRegistration": {
+    "name": "Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "terms": "I accept the terms and conditions for registration",
+    "submit": "Register Interest",
+    "submitting": "Submitting...",
+    "successTitle": "Thank you for your registration!",
+    "registerAnother": "Register another user",
+    "errors": {
+      "emailRequired": "Must be filled in to submit the form",
+      "emailInvalid": "Enter a valid email address",
+      "nameRequired": "Must be filled in to submit the form",
+      "termsRequired": "You must consent to submit the form",
+      "phoneInvalid": "Enter a valid phone number",
+      "registrationFailed": "Something went wrong during registration. Please try again later."
+    },
+    "closed": {
+      "title": "Registration Closed",
+      "message": "This event is over and it is therefore not possible to register. Hope to see you at the next event!",
+      "otherEventText": "Feel free to take a look at our other",
+      "events": "events",
+      "imgAlt": "blue box with sad face"
+    },
+    "registrationComplete": {
+      "title": "Thank you!",
+      "successMessage": "We appreciate your interest",
+      "emailConfirmation": "You will receive a confirmation email.",
+      "registerAnother": "Would you like to register more people?",
+      "linkText": "Show form",
+      "unsubscribeNote": "To unsubscribe, see email.",
+      "imgAlt": "blue box with happy face"
+    }
+  }
+}
