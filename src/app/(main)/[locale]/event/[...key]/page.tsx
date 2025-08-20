@@ -93,58 +93,60 @@ export default async function EventPage({ params }: EventPageProps) {
     consultants?.map((n) => n.employeeFirstName) ?? [];
 
   return (
-    <div className={styles.eventPage}>
-      <div className={styles.eventInfo}>
-        <Badge badgeColor="#3840FF" className={styles.badge}>
-          Event
-        </Badge>
-        <Text type="h1">{eventTitle}</Text>
-        <Text type="bodyXl">{subtitle}</Text>
-        <div className={styles.eventDetails}>
-          <Text type="labelLarge">{date}</Text>
-          <Text type="labelLarge">{time}</Text>
-          {locations &&
-            locations.map((location, index) => (
-              <Text type="labelLarge" key={index}>
-                {location.locationString}
-              </Text>
-            ))}
+    <div>
+      <div className={styles.contentWrapper}>
+        <div className={styles.eventInfo}>
+          <Badge badgeColor="#3840FF" className={styles.badge}>
+            Event
+          </Badge>
+          <Text type="h1">{eventTitle}</Text>
+          <Text type="bodyXl">{subtitle}</Text>
+          <div className={styles.eventDetails}>
+            <Text type="labelLarge">{date}</Text>
+            <Text type="labelLarge">{time}</Text>
+            {locations &&
+              locations.map((location, index) => (
+                <Text type="labelLarge" key={index}>
+                  {location.locationString}
+                </Text>
+              ))}
+          </div>
         </div>
-      </div>
-      {eventImage && (
-        <div className={styles.eventImage}>
-          <SanityImage image={eventImage} objectFit="cover" />
-        </div>
-      )}
+        {eventImage && (
+          <div className={styles.eventImage}>
+            <SanityImage image={eventImage} objectFit="cover" />
+          </div>
+        )}
 
-      <div className={styles.description}>
-        <div className={styles.tags}>
-          {tags &&
-            tags.map((tag, index) => (
-              <Badge key={index} badgeColor="#FFFFFF" borderColor="#000000">
-                <Text type="labelLarge">{tag.tag}</Text>
-              </Badge>
-            ))}
-          {consultantsFirstNames && (
-            <EventSpeakers
-              textType="labelLarge"
-              consultantsFirstNames={consultantsFirstNames}
-            />
-          )}
+        <div className={styles.description}>
+          <div className={styles.tags}>
+            {tags &&
+              tags.map((tag, index) => (
+                <Badge key={index} badgeColor="#FFFFFF" borderColor="#000000">
+                  <Text type="labelLarge">{tag.tag}</Text>
+                </Badge>
+              ))}
+            {consultantsFirstNames && (
+              <EventSpeakers
+                textType="labelLarge"
+                consultantsFirstNames={consultantsFirstNames}
+              />
+            )}
+          </div>
+          {richText && <RichText value={richText} />}
         </div>
-        {richText && <RichText value={richText} />}
+        {recordID && (
+          <EventRegistration
+            section={{
+              _type: "eventRegistration",
+              _key: _key,
+              recordID: recordID.toString(),
+              date: date,
+            }}
+            language={params.locale}
+          />
+        )}
       </div>
-      {recordID && (
-        <EventRegistration
-          section={{
-            _type: "eventRegistration",
-            _key: _key,
-            recordID: recordID.toString(),
-            date: date,
-          }}
-          language={params.locale}
-        />
-      )}
       <Events language={params.locale} section={events as EventsSection} />
     </div>
   );
