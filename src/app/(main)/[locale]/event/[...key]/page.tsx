@@ -53,7 +53,7 @@ export async function generateMetadata({
       ...baseMetadata.openGraph,
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}`,
+          url: `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}`,
           width: 1200,
           height: 630,
         },
