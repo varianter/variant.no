@@ -47,6 +47,7 @@ export async function GET(request: Request) {
           </div>
           <img
             style={imgStyle}
+            alt="Variant logo"
             src={`${new URL(request.url).origin}/_assets/variant-logo-white.svg`}
           />
         </div>
