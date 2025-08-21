@@ -4,14 +4,18 @@ import React from "react";
 import Badge from "src/components/badge/Badge";
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import { SanityImage } from "src/components/image/SanityImage";
+import PageHeader from "src/components/navigation/header/PageHeader";
 import { RichText } from "src/components/richText/RichText";
 import Events from "src/components/sections/events/Events";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
+import { InternationalizedString } from "studio/lib/interfaces/global";
 import { EventsSection } from "studio/lib/interfaces/pages";
+import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
+import { LANGUAGES_QUERY } from "studio/lib/queries/siteSettings";
 import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
@@ -92,8 +96,22 @@ export default async function EventPage({ params }: EventPageProps) {
   const consultantsFirstNames =
     consultants?.map((n) => n.employeeFirstName) ?? [];
 
+  const languages = await loadStudioQuery<LanguageObject[] | null>(
+    LANGUAGES_QUERY,
+  );
+
+  const pathTranslations: InternationalizedString =
+    languages?.data?.map((language) => ({
+      _key: language.id,
+      value: "",
+    })) ?? [];
+
   return (
     <div>
+      <PageHeader
+        language={params.locale}
+        pathTranslations={pathTranslations}
+      />
       <div className={styles.contentWrapper}>
         <div className={styles.eventInfo}>
           <Badge badgeColor="#3840FF" className={styles.badge}>
