@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 
 import Badge from "src/components/badge/Badge";
+import EventInformation from "src/components/eventInformation/eventInformation";
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import { SanityImage } from "src/components/image/SanityImage";
 import PageHeader from "src/components/navigation/header/PageHeader";
@@ -119,16 +120,13 @@ export default async function EventPage({ params }: EventPageProps) {
           </Badge>
           <Text type="h1">{eventTitle}</Text>
           <Text type="bodyXl">{subtitle}</Text>
-          <div className={styles.eventDetails}>
-            <Text type="labelLarge">{date}</Text>
-            <Text type="labelLarge">{time}</Text>
-            {locations &&
-              locations.map((location, index) => (
-                <Text type="labelLarge" key={index}>
-                  {location.locationString}
-                </Text>
-              ))}
-          </div>
+          <EventInformation
+            date={date}
+            time={time}
+            locations={locations}
+            showLocations={true}
+            fontsize="labelLarge"
+          />
         </div>
         {eventImage && (
           <div className={styles.eventImage}>
