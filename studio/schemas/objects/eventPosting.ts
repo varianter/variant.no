@@ -154,10 +154,7 @@ const eventPosting = defineType({
         "If you want to create a page in the Page Builder for this event, check this box.",
       initialValue: false,
     },
-    {
-      ...seoWithoutImage,
-      hidden: ({ parent }) => !parent?.createInternalPage,
-    },
+
     {
       name: "recordID",
       type: "number",
@@ -185,6 +182,10 @@ const eventPosting = defineType({
     },
     {
       ...richText,
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...seoWithoutImage,
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
