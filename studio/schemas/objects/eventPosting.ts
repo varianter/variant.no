@@ -155,10 +155,6 @@ const eventPosting = defineType({
       initialValue: false,
     },
     {
-      ...seoWithoutImage,
-      hidden: ({ parent }) => !parent?.createInternalPage,
-    },
-    {
       name: "recordID",
       type: "number",
       title: "Record ID",
@@ -185,6 +181,10 @@ const eventPosting = defineType({
     },
     {
       ...richText,
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...seoWithoutImage,
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
