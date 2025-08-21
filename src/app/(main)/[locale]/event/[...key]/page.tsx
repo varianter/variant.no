@@ -147,7 +147,11 @@ export default async function EventPage({ params }: EventPageProps) {
           />
         )}
       </div>
-      <Events language={params.locale} section={events as EventsSection} />
+
+      <Events
+        language={params.locale}
+        section={{ ...events, allEvents: true } as EventsSection}
+      />
     </div>
   );
 }
