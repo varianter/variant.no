@@ -3,15 +3,12 @@ import { useTranslations } from "next-intl";
 import { ElementType } from "react";
 
 import Badge from "src/components/badge/Badge";
+import EventInformation from "src/components/eventInformation/eventInformation";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventPosting.module.css";
-
-function sortAlphabetically(list: string[]) {
-  return list.sort((a, b) => a.localeCompare(b));
-}
 
 interface EventPostingProps {
   eventPosting: IEventPosting;
@@ -24,9 +21,6 @@ export default function EventPosting({
   showLocations = true,
   language,
 }: EventPostingProps) {
-  const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations.map((loc) => loc.locationString),
-  ).join(", ");
   const t = useTranslations("event_section");
 
   const consultantsFirstNames =
@@ -56,16 +50,12 @@ export default function EventPosting({
       {...linkProps}
       className={styles.eventPosting}
     >
-      <div className={styles.flex}>
-        {eventPosting.date && (
-          <Text type="labelRegular">{eventPosting.date}</Text>
-        )}
-        {eventPosting.date && showLocations && <span> · </span>}
-        {showLocations && (
-          <Text type="labelRegular">{eventPostingLocations}</Text>
-        )}
-      </div>
-
+      <EventInformation
+        date={eventPosting.date}
+        time={eventPosting.time}
+        locations={eventPosting.locations}
+        showLocations={showLocations}
+      />
       <Text type="h3" className={styles.eventTitle}>
         {eventPosting.eventTitle}
       </Text>
