@@ -1,6 +1,6 @@
 import React from "react";
 
-import Text from "src/components/text/Text";
+import Text, { TextType } from "src/components/text/Text";
 import { ILocation } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventInformation.module.css";
@@ -10,6 +10,7 @@ interface EventInformationProps {
   time?: string;
   locations?: ILocation[];
   showLocations?: boolean;
+  fontsize?: TextType;
 }
 
 export default function EventInformation({
@@ -17,6 +18,7 @@ export default function EventInformation({
   time,
   locations,
   showLocations,
+  fontsize = "labelRegular",
 }: EventInformationProps) {
   function sortAlphabetically(list: string[]) {
     return list.sort((a, b) => a.localeCompare(b));
@@ -28,10 +30,10 @@ export default function EventInformation({
 
   return (
     <div className={styles.eventInformation}>
-      {date && <Text type="labelRegular">{date}</Text>}
-      {time && <Text type="labelRegular">{time}</Text>}
+      {date && <Text type={fontsize}>{date}</Text>}
+      {time && <Text type={fontsize}>{time}</Text>}
       {locations && showLocations && (
-        <Text type="labelRegular">{eventPostingLocations}</Text>
+        <Text type={fontsize}>{eventPostingLocations}</Text>
       )}
     </div>
   );
