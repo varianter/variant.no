@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
 import Badge from "src/components/badge/Badge";
@@ -115,9 +116,12 @@ export default async function EventPage({ params }: EventPageProps) {
       />
       <div className={styles.contentWrapper}>
         <div className={styles.eventInfo}>
-          <Badge badgeColor="#3840FF" className={styles.badge}>
-            Event
-          </Badge>
+          <Link href={`/${params.locale}/events`}>
+            <Badge badgeColor="#3840FF" className={styles.badge}>
+              Event
+            </Badge>
+          </Link>
+
           <Text type="h1">{eventTitle}</Text>
           <Text type="bodyXl">{subtitle}</Text>
           <EventInformation
