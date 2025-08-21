@@ -23,7 +23,7 @@ export const blueBackgroundStyle: CSSProperties = {
   height: "100%",
   backgroundColor: "#3840FF",
   borderRadius: "48px 48px 200px 48px",
-  padding: "0 116px",
+  padding: "64px 100px",
 };
 
 export const titleStyle: CSSProperties = {
