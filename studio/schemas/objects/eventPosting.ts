@@ -154,7 +154,6 @@ const eventPosting = defineType({
         "If you want to create a page in the Page Builder for this event, check this box.",
       initialValue: false,
     },
-
     {
       name: "recordID",
       type: "number",
