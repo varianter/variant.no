@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
 
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
@@ -22,6 +25,10 @@ export async function GET(request: Request) {
     width: 1200,
     height: 630,
   };
+
+  const fontData = await readFile(
+    join(process.cwd(), "public/_assets/Britti-Sans-Regular.otf"),
+  );
 
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
@@ -53,6 +60,15 @@ export async function GET(request: Request) {
         </div>
       </div>
     ),
-    dimensions,
+    {
+      ...dimensions,
+      fonts: [
+        {
+          name: "Britti Sans Regular",
+          data: fontData,
+          style: "normal",
+        },
+      ],
+    },
   );
 }
