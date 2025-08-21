@@ -10,6 +10,7 @@ export const backgroundStyle: CSSProperties = {
   padding: "1rem",
   backgroundColor: "#FFFFFF",
   fontSize: 60,
+  fontFamily: "Britti Sans Regular",
   fontWeight: 700,
   color: "#FFFFFF",
 };
@@ -28,6 +29,7 @@ export const blueBackgroundStyle: CSSProperties = {
 export const titleStyle: CSSProperties = {
   margin: 0,
   fontSize: "86px",
+  fontFamily: "Britti Sans Regular",
 };
 
 export const eventInfoContainerStyle: CSSProperties = {
@@ -40,6 +42,7 @@ export const eventInfoContainerStyle: CSSProperties = {
 
 export const eventInfoStyle: CSSProperties = {
   fontSize: "38px",
+  fontFamily: "Britti Sans Regular",
   color: "#FFFFFF",
 };
 
