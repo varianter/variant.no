@@ -162,6 +162,7 @@ export default async function EventPage({ params }: EventPageProps) {
               _key: _key,
               recordID: recordID.toString(),
               date: date,
+              interests: tags.map((tag) => tag.tag),
             }}
             language={params.locale}
           />
