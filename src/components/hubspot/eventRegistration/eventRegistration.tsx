@@ -4,7 +4,9 @@ import React, { useState } from "react";
 
 import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
+import Text from "src/components/text/Text";
 import { useTranslation } from "src/utils/hooks/useTranslation";
+import { HubSpotRegistrationResponse } from "studio/lib/interfaces/hubSpot";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
@@ -21,7 +23,8 @@ type Statuses =
   | "emailValid"
   | "nameRequired"
   | "termsRequired"
-  | "phoneValid";
+  | "phoneValid"
+  | "generalError";
 
 export default function EventRegistration({
   section,
@@ -48,6 +51,9 @@ export default function EventRegistration({
   const today = new Date();
   const eventDate = date ? new Date(date) : null;
   const isActive = eventDate ? eventDate.getDate() >= today.getDate() : false;
+  const generalError = formStatus.find(
+    (status) => status.type === "generalError",
+  );
 
   function toggleTerms() {
     setHasAcceptedTerms((prev) => !prev);
@@ -134,10 +140,17 @@ export default function EventRegistration({
         }),
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Something went wrong");
+      const data: HubSpotRegistrationResponse = await response.json();
+      const error = data.data.errors ? data.data.errors[0] : null;
+      if (error) {
+        setFormStatus([
+          {
+            type: "generalError",
+            message: error.message,
+          },
+        ]);
+        setIsLoading(false);
+        return;
       }
       setIsSubmitted(true);
     } catch (error) {
@@ -217,6 +230,11 @@ export default function EventRegistration({
                     ?.message
                 }
               />
+              {generalError && (
+                <span className={style.eventRegistration__error}>
+                  <Text type="bodyNormal">{generalError.message}</Text>
+                </span>
+              )}
               <button
                 type="submit"
                 disabled={isLoading}
