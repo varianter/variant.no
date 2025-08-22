@@ -237,6 +237,7 @@ export interface EventRegistrationSection {
   _key: string;
   recordID: string;
   date: string;
+  interests: string[];
 }
 
 export type Section =
