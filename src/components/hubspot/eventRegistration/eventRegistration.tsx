@@ -6,7 +6,7 @@ import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
 import InputFieldColor from "src/components/forms/inputFieldColor/inputFieldColor";
 import Text from "src/components/text/Text";
 import { useTranslation } from "src/utils/hooks/useTranslation";
-import { HubSpotRegistrationResponse } from "studio/lib/interfaces/hubSpot";
+import { IHubSpotRegistrationResponse } from "studio/lib/interfaces/hubSpot";
 import { EventRegistrationSection } from "studio/lib/interfaces/pages";
 
 import style from "./eventRegistration.module.css";
@@ -140,7 +140,7 @@ export default function EventRegistration({
         }),
       });
 
-      const data: HubSpotRegistrationResponse = await response.json();
+      const data: IHubSpotRegistrationResponse = await response.json();
       const error = data.data.errors ? data.data.errors[0] : null;
       if (error) {
         setFormStatus([

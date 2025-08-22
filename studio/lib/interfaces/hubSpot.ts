@@ -1,4 +1,4 @@
-export interface HubSpotError {
+export interface IHubSpotError {
   status: string;
   category: string;
   message: string;
@@ -9,17 +9,17 @@ export interface HubSpotError {
   };
 }
 
-export interface HubSpotApiResponse {
+export interface IHubSpotApiResponse {
   status: string;
   results: unknown[];
   numErrors: number;
-  errors?: HubSpotError[];
+  errors?: IHubSpotError[];
   startedAt: string;
   completedAt: string;
 }
 
-export interface HubSpotRegistrationResponse {
+export interface IHubSpotRegistrationResponse {
   success: boolean;
   message: string;
-  data: HubSpotApiResponse;
+  data: IHubSpotApiResponse;
 }
