@@ -28,8 +28,6 @@
   background-color: var(--Blue-700);
 }
 
-.registrationSuccess {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.eventRegistration__error {
+  color: var(--Red-500);
 }
