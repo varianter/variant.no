@@ -37,6 +37,7 @@ export default function EventRegistration({
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
+  const [hasAcceptedInterests, setHasAcceptedInterests] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formStatus, setFormStatus] = useState<
@@ -46,7 +47,7 @@ export default function EventRegistration({
     }[]
   >([]);
 
-  const { recordID, date } = section;
+  const { recordID, date, interests } = section;
 
   const today = new Date();
   const eventDate = date ? new Date(date) : null;
@@ -54,9 +55,14 @@ export default function EventRegistration({
   const generalError = formStatus.find(
     (status) => status.type === "generalError",
   );
+  const interestsString: string = interests.join(";");
 
   function toggleTerms() {
     setHasAcceptedTerms((prev) => !prev);
+  }
+
+  function toggleInterests() {
+    setHasAcceptedInterests((prev) => !prev);
   }
 
   function resetForm() {
@@ -137,6 +143,7 @@ export default function EventRegistration({
           phone,
           company,
           recordID,
+          ...(hasAcceptedInterests && { interests: interestsString }),
         }),
       });
 
@@ -219,6 +226,13 @@ export default function EventRegistration({
                   }
                 />
               </div>
+
+              <CheckboxColor
+                name="interests"
+                label={t("eventRegistration.interests")}
+                value={hasAcceptedInterests}
+                onChange={toggleInterests}
+              />
               <CheckboxColor
                 name="terms"
                 label={t("eventRegistration.terms")}

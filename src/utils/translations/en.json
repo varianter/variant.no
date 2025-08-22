@@ -5,6 +5,7 @@
     "email": "Email",
     "phone": "Phone",
     "terms": "I accept the terms and conditions for registration",
+    "interests": "Contact me about similar events (optional)",
     "submit": "Register Interest",
     "submitting": "Submitting...",
     "successTitle": "Thank you for your registration!",
