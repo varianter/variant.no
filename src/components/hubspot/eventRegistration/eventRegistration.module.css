@@ -31,3 +31,12 @@
 .eventRegistration__error {
   color: var(--Red-500);
 }
+
+.terms > a {
+  color: #3840ff;
+  text-decoration: underline;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit;
+}

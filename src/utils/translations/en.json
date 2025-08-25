@@ -4,7 +4,14 @@
     "company": "Company",
     "email": "Email",
     "phone": "Phone",
-    "terms": "I consent to Variant storing and using my contact information to provide information related to this event.",
+    "terms": {
+      "gerneral": "For more information about how we process and protect your data, see our",
+      "link": {
+        "text": "privacy policy",
+        "url": "https://variant.no/privacy-policy/"
+      },
+      "forEvent": "for events."
+    },
     "interests": "Variant may contact me about upcoming events and similar content in the future. (optional)",
     "submit": "Register Interest",
     "submitting": "Submitting...",

@@ -22,7 +22,6 @@ type Statuses =
   | "emailRequired"
   | "emailValid"
   | "nameRequired"
-  | "termsRequired"
   | "phoneValid"
   | "generalError";
 
@@ -36,7 +35,6 @@ export default function EventRegistration({
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
-  const [hasAcceptedTerms, setHasAcceptedTerms] = useState(false);
   const [hasAcceptedInterests, setHasAcceptedInterests] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -56,10 +54,6 @@ export default function EventRegistration({
     (status) => status.type === "generalError",
   );
   const interestsString: string = interests.join(";");
-
-  function toggleTerms() {
-    setHasAcceptedTerms((prev) => !prev);
-  }
 
   function toggleInterests() {
     setHasAcceptedInterests((prev) => !prev);
@@ -110,13 +104,6 @@ export default function EventRegistration({
       newErrors.push({
         type: "phoneValid",
         message: t("eventRegistration.errors.phoneInvalid"),
-      });
-    }
-
-    if (!hasAcceptedTerms) {
-      newErrors.push({
-        type: "termsRequired",
-        message: t("eventRegistration.errors.termsRequired"),
       });
     }
 
@@ -233,17 +220,14 @@ export default function EventRegistration({
                 value={hasAcceptedInterests}
                 onChange={toggleInterests}
               />
-              <CheckboxColor
-                name="terms"
-                label={t("eventRegistration.terms")}
-                value={hasAcceptedTerms}
-                onChange={toggleTerms}
-                required
-                error={
-                  formStatus.find((status) => status.type === "termsRequired")
-                    ?.message
-                }
-              />
+              <Text type="bodyBig" className={style.terms}>
+                {t("eventRegistration.terms.gerneral")}{" "}
+                <a href={t("eventRegistration.terms.link.url")}>
+                  {" "}
+                  {t("eventRegistration.terms.link.text")}
+                </a>{" "}
+                {t("eventRegistration.terms.forEvent")}
+              </Text>
               {generalError && (
                 <span className={style.eventRegistration__error}>
                   <Text type="bodyNormal">{generalError.message}</Text>

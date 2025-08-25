@@ -4,7 +4,14 @@
     "company": "Bedrift",
     "email": "Email",
     "phone": "Telefon",
-    "terms": "Jeg samtykker til at Variant lagrer og bruker mine kontaktopplysninger for å gi informasjon relatert til dette arrangementet.",
+    "terms": {
+      "gerneral": "For mer informasjon om hvordan vi behandler og beskytter dine data se vår",
+      "link": {
+        "text": "personvernerklæring",
+        "url": "https://variant.no/personvern/"
+      },
+      "forEvent": "for arrangementer"
+    },
     "interests": "Variant kan kontakte meg om kommende arrangementer og lignende innhold i fremtiden.(valgfritt)",
     "submit": "Meld interesse",
     "submitting": "Sender...",
