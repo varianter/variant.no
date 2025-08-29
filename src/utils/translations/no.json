@@ -35,10 +35,11 @@
     "registrationComplete": {
       "title": "Takk!",
       "successMessage": "Vi setter pris på din interesse",
-      "emailConfirmation": "Du vil motta en bekreftelse på epost.",
+      "emailConfirmation": "Vi sender kun epost til deg som en påminnelse eller om det er endringer",
       "registerAnother": "Ønsker du å melde på flere?",
-      "linkText": "Vis skjema",
-      "unsubscribeNote": "For avmelding se epost.",
+      "linkText": "Vis skjema.",
+      "unsubscribeNote": "For avmelding se se vår",
+      "forEvent": "for arrangementer",
       "imgAlt": "blå boks med glad ansikt"
     }
   }

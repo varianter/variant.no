@@ -35,10 +35,11 @@
     "registrationComplete": {
       "title": "Thank you!",
       "successMessage": "We appreciate your interest",
-      "emailConfirmation": "You will receive a confirmation email.",
+      "emailConfirmation": "We only send emails to you as a reminder or if there are changes",
       "registerAnother": "Would you like to register more people?",
-      "linkText": "Show form",
-      "unsubscribeNote": "To unsubscribe, see email.",
+      "linkText": "Show form.",
+      "unsubscribeNote": "To unsubscribe, see our",
+      "forEvent": "for events",
       "imgAlt": "blue box with happy face"
     }
   }

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 import CheckboxColor from "src/components/forms/checkboxColor/checkboxColor";
@@ -225,10 +226,10 @@ export default function EventRegistration({
               />
               <Text type="bodyBig" className={style.terms}>
                 {t("eventRegistration.terms.gerneral")}{" "}
-                <a href={t("eventRegistration.terms.link.url")}>
+                <Link href={t("eventRegistration.terms.link.url")}>
                   {" "}
                   {t("eventRegistration.terms.link.text")}
-                </a>{" "}
+                </Link>{" "}
                 {t("eventRegistration.terms.forEvent")}
               </Text>
               {generalError && (

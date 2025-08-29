@@ -8,10 +8,11 @@
   width: 320px;
 }
 
-.statusTemplate a,
-.statusTemplate button {
+.statusTemplate > p > a,
+.statusTemplate > p > button {
   color: #3840ff;
   text-decoration: underline;
+  font-weight: 400;
   border: none;
   background: transparent;
   cursor: pointer;
