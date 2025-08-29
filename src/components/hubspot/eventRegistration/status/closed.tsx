@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import Text from "src/components/text/Text";
@@ -22,7 +23,7 @@ export default function Closed({ language }: ClosedProps) {
       <Text type="bodyBig">{t("eventRegistration.closed.message")}</Text>
       <Text type="bodyBig">
         {t("eventRegistration.closed.otherEventText")}
-        <a href="/events"> {t("eventRegistration.closed.events")}</a>.
+        <Link href="/events"> {t("eventRegistration.closed.events")}</Link>.
       </Text>
     </StatusTemplate>
   );

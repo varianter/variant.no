@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import Text from "src/components/text/Text";
@@ -18,6 +19,7 @@ export default function RegistrationComplete({
 }: RegistrationCompleteProps) {
   const lang = language || "no";
   const { t } = useTranslation(lang);
+  const textType = "bodyBig";
 
   return (
     <StatusTemplate
@@ -25,16 +27,22 @@ export default function RegistrationComplete({
       imgAlt={t("eventRegistration.registrationComplete.imgAlt")}
       title={t("eventRegistration.registrationComplete.title")}
     >
-      <Text type="bodyBig">
+      <Text type={textType}>
         {t("eventRegistration.registrationComplete.successMessage")} {name}!{" "}
         {t("eventRegistration.registrationComplete.emailConfirmation")}
       </Text>
-      <Text type="bodyBig">
+      <Text type={textType}>
         {t("eventRegistration.registrationComplete.registerAnother")}
         <button onClick={onClick}>
           {t("eventRegistration.registrationComplete.linkText")}
         </button>
-        {t("eventRegistration.registrationComplete.unsubscribeNote")}
+      </Text>
+      <Text type={textType}>
+        {t("eventRegistration.registrationComplete.unsubscribeNote")}{" "}
+        <Link href={t("eventRegistration.terms.link.url")}>
+          {t("eventRegistration.terms.link.text")}
+        </Link>{" "}
+        {t("eventRegistration.registrationComplete.forEvent")}
       </Text>
     </StatusTemplate>
   );
