@@ -48,8 +48,11 @@ export default function EventRegistration({
   const { recordID, date, interests } = section;
 
   const today = new Date();
+  const oneDay = 24 * 60 * 60 * 1000;
   const eventDate = date ? new Date(date) : null;
-  const isActive = eventDate ? eventDate.getDate() >= today.getDate() : false;
+  const isActive = eventDate
+    ? new Date(eventDate.getTime() + oneDay) > today
+    : false;
   const generalError = formStatus.find(
     (status) => status.type === "generalError",
   );
