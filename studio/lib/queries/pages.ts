@@ -154,7 +154,10 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "logoSalad" => {
-      "title": ${translatedFieldFragment("title")}
+      "title": ${translatedFieldFragment("title")},
+      "logos": logos[] {
+        ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+      }
     },
     _type == "learningSection" => {
       ...,
