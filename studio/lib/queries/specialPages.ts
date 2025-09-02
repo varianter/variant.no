@@ -5,7 +5,7 @@ import {
   TRANSLATED_LINK_FRAGMENT,
   TRANSLATED_SLUG_VALUE_FRAGMENT,
 } from "./i18n";
-import { SEO_FRAGMENT } from "./pages";
+import { INTERNATIONALIZED_IMAGE_FRAGMENT, SEO_FRAGMENT } from "./pages";
 import { translatedFieldFragment } from "./utils/i18n";
 
 export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
@@ -131,7 +131,7 @@ export const EVENT_BY_KEY_QUERY = groq`
         "url": ${translatedFieldFragment("slug")}
       },
       createInternalPage,
-      eventImage,
+      "eventImage": eventImage { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
       "subtitle": ${translatedFieldFragment("subtitle")},
       richText,
       ${SEO_FRAGMENT}

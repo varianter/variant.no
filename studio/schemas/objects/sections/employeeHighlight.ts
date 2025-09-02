@@ -2,6 +2,7 @@ import { HighlightIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import image from "studio/schemas/fields/media";
 import { titleID } from "studio/schemas/fields/text";
 import { firstTranslation } from "studio/utils/i18n";
 
@@ -32,13 +33,10 @@ export const employeeHighlightSection = defineField({
       description: "The body text in the section.",
     },
     {
+      ...image,
       name: "employeePhoto",
-      type: "image",
       title: "Employee photo",
       description: "A photo of the employee,",
-      options: {
-        hotspot: true,
-      },
     },
   ],
   preview: {

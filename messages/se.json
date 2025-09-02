@@ -42,6 +42,11 @@
       "resultLabel": "Din årslön",
       "notice": "Obs! Alla varianter får en löneökning den 1 januari varje år. Medan vi väntar på ny lönestatistik från Tekna hittar du förra årets lönedata."
     },
+    "graphs": {
+      "bonusChart": "Historiska bonusbelopp per år",
+      "salaryChart": "Löneutveckling över tid med framtida prognoser",
+      "pensionChart": "Jämförelse av pensionsinsatser"
+    },
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
@@ -103,7 +108,11 @@
     "mainMenu": "Huvudmeny",
     "other": "Övrigt",
     "socialMedia": "Platser vi delar",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "illustration": {
+      "leftCharacter": "Glad leende karaktär illustration",
+      "rightCharacter": "Glad leende karaktär illustration"
+    }
   },
   "gridSection": {
     "video": "Video",

@@ -46,6 +46,11 @@
       "resultLabel": "Your annual salary",
       "notice": "Note! All Variants receive a salary increase on January 1st every year. While we wait for new salary statistics from Tekna, you will find last year's salary data."
     },
+    "graphs": {
+      "bonusChart": "Historical bonus amounts by year",
+      "salaryChart": "Salary progression over time with future projections",
+      "pensionChart": "Pension contribution comparison"
+    },
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
@@ -103,7 +108,11 @@
     "mainMenu": "Main menu",
     "other": "Other",
     "socialMedia": "Places we share",
-    "contact": "General contact"
+    "contact": "General contact",
+    "illustration": {
+      "leftCharacter": "Happy smiling character illustration",
+      "rightCharacter": "Happy smiling character illustration"
+    }
   },
   "gridSection": {
     "video": "Video",
