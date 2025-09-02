@@ -240,7 +240,7 @@ export default function EventRegistration({
               >
                 {isLoading
                   ? t("eventRegistration.submitting")
-                  : "Meld interesse"}
+                  : t("eventRegistration.submit")}
               </button>
             </form>
           )}
