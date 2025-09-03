@@ -8,7 +8,7 @@ interface FooterIllustrationProps {
 }
 
 export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
-  const t = useTranslations("footer.illustration");
+  const t = useTranslations("footer");
 
   return (
     <div className={styles.footerIllustrations}>
@@ -22,7 +22,7 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
         role="img"
         aria-labelledby="left-illustration-title"
       >
-        <title id="left-illustration-title">{t("leftCharacter")}</title>
+        <title id="left-illustration-title">{t("characterIllustration")}</title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -60,7 +60,9 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
         role="img"
         aria-labelledby="right-illustration-title"
       >
-        <title id="right-illustration-title">{t("rightCharacter")}</title>
+        <title id="right-illustration-title">
+          {t("characterIllustration")}
+        </title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"

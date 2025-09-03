@@ -108,10 +108,7 @@
     "other": "Annet",
     "socialMedia": "Steder vi deler",
     "contact": "Generell kontakt",
-    "illustration": {
-      "leftCharacter": "Glad smilende karakter illustrasjon",
-      "rightCharacter": "Glad smilende karakter illustrasjon"
-    }
+    "characterIllustration": "Glad smilende karakter illustrasjon"
   },
   "gridSection": {
     "video": "Video",

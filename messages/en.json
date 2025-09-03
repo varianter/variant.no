@@ -109,10 +109,7 @@
     "other": "Other",
     "socialMedia": "Places we share",
     "contact": "General contact",
-    "illustration": {
-      "leftCharacter": "Happy smiling character illustration",
-      "rightCharacter": "Happy smiling character illustration"
-    }
+    "characterIllustration": "Happy smiling character illustration"
   },
   "gridSection": {
     "video": "Video",
