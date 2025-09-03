@@ -1,6 +1,7 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import image from "studio/schemas/fields/media";
 import { richText } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
@@ -163,13 +164,10 @@ const eventPosting = defineType({
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
+      ...image,
       name: "eventImage",
       title: "Event image",
-      type: "image",
       description: "An image representing the event",
-      options: {
-        hotspot: true,
-      },
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {

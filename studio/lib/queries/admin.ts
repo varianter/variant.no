@@ -1,5 +1,6 @@
 import { groq } from "next-sanity";
 
+import { INTERNATIONALIZED_IMAGE_FRAGMENT } from "./pages";
 import { translatedFieldFragment } from "./utils/i18n";
 
 //Parent Company
@@ -60,7 +61,8 @@ export const EVENT_POSTINGS_QUERY = groq`
       "externalLink": externalLink,
       createInternalPage,
       recordID,
-      time
+      time,
+      "eventImage": eventImage { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     }
   }
 `;

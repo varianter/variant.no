@@ -2,6 +2,7 @@ import { Group } from "@visx/group";
 import { ParentSize } from "@visx/responsive";
 import { scaleBand, scaleLinear } from "@visx/scale";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
 
 import styles from "src/advanced-calculator/calculator.module.css";
@@ -27,6 +28,7 @@ type BarData = {
 };
 
 function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
+  const t = useTranslations("compensation.graphs");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -67,7 +69,10 @@ function PensionGraph({ data, parentWidth, parentHeight }: BarsProps) {
       width={parentWidth}
       height={parentHeight}
       style={{ overflow: "visible" }}
+      role="img"
+      aria-labelledby="pension-chart-title"
     >
+      <title id="pension-chart-title">{t("pensionChart")}</title>
       <Group top={verticalMargin}>
         {data.map((d, index) => {
           const text = getText(d);

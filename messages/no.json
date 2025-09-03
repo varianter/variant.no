@@ -41,6 +41,11 @@
       "bonusResult": "+ bonus",
       "resultLabel": "Din årslønn"
     },
+    "graphs": {
+      "bonusChart": "Historiske bonusbeløp per år",
+      "salaryChart": "Lønnsutvikling over tid med fremtidige prognoser",
+      "pensionChart": "Sammenligning av pensjonsinnskudd"
+    },
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
@@ -102,7 +107,8 @@
     "mainMenu": "Hovedmeny",
     "other": "Annet",
     "socialMedia": "Steder vi deler",
-    "contact": "Generell kontakt"
+    "contact": "Generell kontakt",
+    "characterIllustration": "Glad smilende karakter illustrasjon"
   },
   "gridSection": {
     "video": "Video",

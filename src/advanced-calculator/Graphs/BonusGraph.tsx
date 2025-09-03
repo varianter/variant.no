@@ -2,6 +2,7 @@ import { Group } from "@visx/group";
 import { ParentSize } from "@visx/responsive";
 import { scaleBand, scaleLinear } from "@visx/scale";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -25,6 +26,7 @@ function BonusGraph({
   parentWidth,
   parentHeight,
 }: BarsProps) {
+  const t = useTranslations("compensation.graphs");
   const [visible, setVisible] = useState(false);
   const { ref, inView } = useInView({
     /* Optional options */
@@ -68,7 +70,10 @@ function BonusGraph({
       width={parentWidth}
       height={parentHeight}
       style={{ overflow: "visible", display: "block" }}
+      role="img"
+      aria-labelledby="bonus-chart-title"
     >
+      <title id="bonus-chart-title">{t("bonusChart")}</title>
       <Group top={verticalMargin}>
         {yearlyBonusesForLocation.map((d, index) => {
           const text = getText(d);

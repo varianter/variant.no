@@ -3,7 +3,7 @@ import { groq } from "next-sanity";
 import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
-const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
+export const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
   asset,
   "metadata": asset -> metadata {
     lqip
@@ -130,14 +130,16 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "employeeHighlight" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")}
+      "description": ${translatedFieldFragment("description")},
+      "employeePhoto": employeePhoto { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },
     _type == "customerCasesEntry" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
     },
     _type == "opennessSection" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")}
+      "description": ${translatedFieldFragment("description")},
+      "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },
     _type == "generositySection" => {
       ...,
@@ -163,6 +165,7 @@ const SECTIONS_FRAGMENT = groq`
       ...,
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "description": ${translatedFieldFragment("description")},
+      "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
       "articleTag": ${translatedFieldFragment("articleTag")},
       "articleTitle": ${translatedFieldFragment("articleTitle")},
       "articleSubtitle": ${translatedFieldFragment("articleSubtitle")}

@@ -31,6 +31,7 @@ const SalaryGraph = ({
   parentHeight: number;
   parentWidth: number;
 }) => {
+  const t = useTranslations("compensation.graphs");
   const height = parentHeight;
   const width = parentWidth;
   const padding = {
@@ -81,7 +82,10 @@ const SalaryGraph = ({
         width={width}
         height={height}
         style={{ overflow: "visible" }}
+        role="img"
+        aria-labelledby="salary-chart-title"
       >
+        <title id="salary-chart-title">{t("salaryChart")}</title>
         <rect
           x={padding.left}
           y={padding.top}
