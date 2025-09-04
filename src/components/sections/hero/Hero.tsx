@@ -19,6 +19,11 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
         <div className={styles.secondary}>
           {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
           {hero.title && <Text type="h1">{hero.title}</Text>}
+          {hero.description && (
+            <Text type="h6" as="p">
+              {hero.description}
+            </Text>
+          )}
           {hero.image && (
             <div className={styles.image}>
               <SanityImage image={hero.image} />

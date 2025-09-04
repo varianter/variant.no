@@ -37,24 +37,9 @@
 
 .image {
   width: 100%;
-
-  /* max-width: 30rem; */
   justify-content: flex-end;
   display: flex !important;
-  padding: var(--padding-xl) var(--padding-rem) var(--padding-rem)
-    var(--padding-rem);
   max-width: 53rem !important;
-  margin-left: auto;
-
-  @media (width <= 834px) {
-    padding: var(--padding-l) var(--padding-rem) var(--padding-rem)
-      var(--padding-rem);
-  }
-
-  @media (width <= 425px) {
-    padding: var(--padding-s) var(--padding-rem) var(--padding-rem)
-      var(--padding-rem);
-  }
 }
 
 .image img {
