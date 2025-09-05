@@ -35,6 +35,22 @@
   }
 }
 
+.landingPageSecondary {
+  composes: shared;
+  align-self: center;
+  gap: var(--padding-rem);
+  padding: 0 var(--padding-rem);
+  max-width: 800px;
+
+  @media (width <= 834px) {
+    padding: var(--padding-l) var(--padding-s);
+  }
+
+  @media (width <= 425px) {
+    padding: var(--padding-l) var(--padding-s);
+  }
+}
+
 .image {
   width: 100%;
   justify-content: flex-end;
