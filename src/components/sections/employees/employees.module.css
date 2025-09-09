@@ -97,6 +97,7 @@
 }
 
 .showMore__button {
+  font: inherit;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -109,6 +110,7 @@
   text-decoration: none;
   z-index: 2;
   position: relative;
+  cursor: pointer;
 }
 
 .showMore__button img {
