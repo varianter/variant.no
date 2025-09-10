@@ -129,7 +129,17 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "employeeHighlight" => {
+      // New array of employees; fallback to legacy single fields
+      employees[]{
+        "basicTitle": ${translatedFieldFragment("basicTitle")},
+        "name": name,
+        "description": ${translatedFieldFragment("description")},
+        "employeePhoto": employeePhoto { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
+        "email": email,
+        "phone": phone
+      },
       "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "name": name,
       "description": ${translatedFieldFragment("description")},
       "employeePhoto": employeePhoto { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },

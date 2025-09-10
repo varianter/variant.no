@@ -1,0 +1,62 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 300ms ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.navButton {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--Dark-600);
+  background-color: white !important;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+  background-image: url("/_assets/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.25rem 1.25rem;
+  top: 23.4rem;
+  transform: translateY(-50%);
+
+  /* Desktop position */
+  @media (width >= 835px) {
+    width: 2rem;
+    height: 2rem;
+    background-size: 1rem 1rem;
+    top: 16rem;
+  }
+}
+
+/* Buttons */
+.prev {
+  left: calc(50% - 9.65rem);
+  transform: translateY(-50%) rotate(180deg);
+
+  @media (width >= 835px) {
+    left: max(0.5rem, calc(50% - var(--max-content-width-small) / 2 - 3rem));
+  }
+}
+
+.next {
+  right: calc(50% - 9.65rem);
+
+  @media (width >= 835px) {
+    right: max(0.5rem, calc(50% - var(--max-content-width-small) / 2 - 3rem));
+  }
+}
+
+.navButton:focus-visible {
+  outline: 2px solid var(--surface-yellow);
+  outline-offset: 1px;
+}
