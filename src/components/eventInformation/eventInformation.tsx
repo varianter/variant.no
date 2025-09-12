@@ -1,6 +1,7 @@
 import React from "react";
 
 import Text, { TextType } from "src/components/text/Text";
+import formatDate from "src/components/utils/formatDate";
 import { ILocation } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventInformation.module.css";
@@ -30,7 +31,7 @@ export default function EventInformation({
 
   return (
     <div className={styles.eventInformation}>
-      {date && <Text type={fontsize}>{date}</Text>}
+      {date && <Text type={fontsize}>{formatDate(date)}</Text>}
       {time && <Text type={fontsize}>{time}</Text>}
       {locations && showLocations && (
         <Text type={fontsize}>{eventPostingLocations}</Text>
