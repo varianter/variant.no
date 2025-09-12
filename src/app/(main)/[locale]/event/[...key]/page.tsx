@@ -95,14 +95,6 @@ export default async function EventPage({ params }: EventPageProps) {
     time,
   } = data.event;
 
-  const formattedDate = new Date(date)
-    .toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    })
-    .replace(/\//g, "-");
-
   const consultantsFirstNames =
     consultants?.map((n) => n.employeeFirstName) ?? [];
 
@@ -133,7 +125,7 @@ export default async function EventPage({ params }: EventPageProps) {
           <Text type="h1">{eventTitle}</Text>
           <Text type="bodyXl">{subtitle}</Text>
           <EventInformation
-            date={formattedDate}
+            date={date}
             time={time}
             locations={locations}
             showLocations={true}

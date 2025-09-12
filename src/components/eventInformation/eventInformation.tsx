@@ -28,9 +28,19 @@ export default function EventInformation({
     locations &&
     sortAlphabetically(locations.map((loc) => loc.locationString)).join(", ");
 
+  const formattedDate =
+    date &&
+    new Date(date)
+      .toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      })
+      .replace(/\//g, ".");
+
   return (
     <div className={styles.eventInformation}>
-      {date && <Text type={fontsize}>{date}</Text>}
+      {date && <Text type={fontsize}>{formattedDate}</Text>}
       {time && <Text type={fontsize}>{time}</Text>}
       {locations && showLocations && (
         <Text type={fontsize}>{eventPostingLocations}</Text>
