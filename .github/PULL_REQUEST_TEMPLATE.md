@@ -1,5 +1,7 @@
 ## Checklist
+
 <!-- All must be checked before you merge -->
+
 - [ ] Give Sweden a headsup of the changes made so that they can update their website
 - [ ] The design works for both desktop and mobile
 - [ ] The new component doesn't already exist and exisitng component can't be expanded to cover the new functionality
