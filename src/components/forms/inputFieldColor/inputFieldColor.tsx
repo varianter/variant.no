@@ -35,7 +35,7 @@ const InputFieldColor = ({
 
   return (
     <div className={styles.container}>
-      <label htmlFor={name} className={`${textStyles.caption} ${styles.label}`}>
+      <label htmlFor={name} className={`${textStyles.h4} ${styles.label}`}>
         {labelText}
       </label>
       <div className={styles.inputContainer}>
@@ -48,7 +48,7 @@ const InputFieldColor = ({
           type={type}
           max={type === "number" ? max : undefined}
           min={type === "number" ? min : undefined}
-          className={styles.input}
+          className={`${textStyles.bodyBig} ${styles.input}`}
           spellCheck={spellCheck}
           value={value}
           onChange={handleChange}

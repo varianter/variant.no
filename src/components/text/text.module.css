@@ -65,6 +65,11 @@
   font-style: normal;
   font-weight: 450;
   line-height: 133.3%;
+
+  @media (width <= 425px) {
+    font-size: 1.25rem;
+    line-height: 120%;
+  }
 }
 
 .h5 {

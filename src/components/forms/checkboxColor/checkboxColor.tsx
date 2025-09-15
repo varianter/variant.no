@@ -19,7 +19,7 @@ const CheckboxColor = ({
   return (
     <>
       <label
-        className={`${styles.container} ${textStyles.caption} ${styles.label}`}
+        className={`${styles.container} ${textStyles.bodyBig} ${styles.label}`}
         htmlFor={name}
       >
         <input
