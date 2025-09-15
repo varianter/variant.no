@@ -58,25 +58,26 @@ async function fetchDynamicPage({
   if (path.length === 0) {
     return null;
   }
-  const queryResponse = await loadStudioQuery<PageBuilder | null>(
+  const queryResponse = await createSanityFetcher<PageBuilder | null>(
     PAGE_BY_SLUG_QUERY,
     {
       slug: path[0],
       language,
     },
-    { perspective },
-  );
+    perspective,
+  )();
   if (!isNonNullQueryResponse(queryResponse)) {
     return null;
   }
   const pathTranslations =
-    await loadStudioQuery<InternationalizedString | null>(
+    await createSanityFetcher<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-    );
+      perspective,
+    )();
   return {
     queryResponse,
     docType: pageBuilderID,

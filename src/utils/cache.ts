@@ -22,6 +22,12 @@ export function createSanityFetcher<T>(
     perspective,
   ].filter((v): v is string => typeof v === "string");
 
+  // Add pageBuilder tag if the query is for pageBuilder
+  const tags = ["queries"];
+  if (query.includes('_type == "pageBuilder"')) {
+    tags.push("pageBuilder");
+  }
+
   return unstable_cache(
     async () => {
       "use cache";
@@ -31,7 +37,7 @@ export function createSanityFetcher<T>(
     },
     cacheKey,
     {
-      tags: ["queries"],
+      tags,
     },
   );
 }
