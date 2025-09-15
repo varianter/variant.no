@@ -61,7 +61,6 @@ export default async function EventsPage({
                 <EventPosting
                   eventPosting={event}
                   key={event._key}
-                  showLocations={true}
                   language={params.locale}
                 />
               ))}
@@ -83,7 +82,6 @@ export default async function EventsPage({
                 <EventPosting
                   eventPosting={event}
                   key={event._key}
-                  showLocations={true}
                   language={params.locale}
                 />
               ))}

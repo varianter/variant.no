@@ -128,7 +128,6 @@ export default async function EventPage({ params }: EventPageProps) {
             date={date}
             time={time}
             locations={locations}
-            showLocations={true}
             fontsize="labelLarge"
           />
         </div>

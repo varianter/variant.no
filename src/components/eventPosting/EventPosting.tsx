@@ -53,8 +53,7 @@ export default function EventPosting({
       <EventInformation
         date={eventPosting.date}
         time={eventPosting.time}
-        locations={eventPosting.locations}
-        showLocations={showLocations}
+        locations={showLocations ? eventPosting.locations : undefined}
       />
       <Text type="h3" className={styles.eventTitle}>
         {eventPosting.eventTitle}
