@@ -14,7 +14,7 @@ import {
 import { sharedClient } from "studioShared/lib/client";
 import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
 
-import { createSanityFetcher } from "./cache";
+import { loadStudioQueryCached } from "./cache";
 
 export const OPEN_GRAPH_IMAGE_DIMENSIONS = {
   width: 1200,
@@ -25,16 +25,16 @@ export async function generateMetadataFromSeo(
   seo: SeoData | null,
   language: string,
 ): Promise<Metadata> {
-  const { data: defaultSeo } = await createSanityFetcher<DefaultSeo | null>(
+  const { data: defaultSeo } = await loadStudioQueryCached<DefaultSeo | null>(
     DEFAULT_SEO_QUERY,
     { language },
-  )();
-  const { data: companyInfo } = await createSanityFetcher<CompanyInfo | null>(
+  );
+  const { data: companyInfo } = await loadStudioQueryCached<CompanyInfo | null>(
     COMPANY_INFO_QUERY,
-  )();
-  const { data: brandAssets } = await createSanityFetcher<BrandAssets | null>(
+  );
+  const { data: brandAssets } = await loadStudioQueryCached<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
-  )();
+  );
 
   const title = seo?.title ?? defaultSeo?.seo?.title;
   const description = seo?.description ?? defaultSeo?.seo?.description;

@@ -1,8 +1,10 @@
+import { createHash } from "crypto";
+
 import { unstable_cache } from "next/cache";
 import { ClientPerspective } from "next-sanity";
 import { QueryParams } from "sanity";
+
 import { loadStudioQuery } from "studio/lib/store";
-import { createHash } from "crypto";
 
 function hashQuery(query: string): string {
   return createHash("sha256").update(query).digest("hex");

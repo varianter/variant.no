@@ -8,7 +8,7 @@ import Footer from "src/components/navigation/footer/Footer";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
 import "src/styles/global.css";
-import { createSanityFetcher } from "src/utils/cache";
+import { loadStudioQueryCached } from "src/utils/cache";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import {
   CompanyInfo,
@@ -59,36 +59,36 @@ export default async function Layout({
     initialCompanyLocations,
     initialColorPalette,
   ] = await Promise.all([
-    createSanityFetcher<Navigation>(
+    loadStudioQueryCached<Navigation>(
       NAV_QUERY,
       { language: params.locale },
       perspective,
-    )(),
-    createSanityFetcher<CompanyInfo>(
+    ),
+    loadStudioQueryCached<CompanyInfo>(
       COMPANY_INFO_QUERY,
       undefined,
       perspective,
-    )(),
-    createSanityFetcher<SocialMediaProfiles | null>(
+    ),
+    loadStudioQueryCached<SocialMediaProfiles | null>(
       SOME_PROFILES_QUERY,
       undefined,
       perspective,
-    )(),
-    createSanityFetcher<LegalDocument[]>(
+    ),
+    loadStudioQueryCached<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
       { language: params.locale },
       perspective,
-    )(),
-    createSanityFetcher<CompanyLocation[]>(
+    ),
+    loadStudioQueryCached<CompanyLocation[]>(
       COMPANY_LOCATIONS_QUERY,
       undefined,
       perspective,
-    )(),
-    createSanityFetcher<ColorPalette[] | null>(
+    ),
+    loadStudioQueryCached<ColorPalette[] | null>(
       FOOTER_COLOR_QUERY,
       { language: params.locale },
       perspective,
-    )(),
+    ),
   ]);
 
   return (
