@@ -50,6 +50,7 @@ const CustomLink = ({
           scroll={scroll}
         >
           {link.linkTitle}
+          <span className={styles.dot} />
         </Link>
       </div>
     ) : (
@@ -60,6 +61,7 @@ const CustomLink = ({
         scroll={scroll}
       >
         {link.linkTitle}
+        <span className={styles.dot} />
       </Link>
     ))
   );
