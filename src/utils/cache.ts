@@ -10,7 +10,7 @@ function hashQuery(query: string): string {
   return createHash("sha256").update(query).digest("hex");
 }
 
-export async function loadStudioQueryCached<T>(
+export async function loadStudioQueryCached<T extends { _id: string }>(
   query: string,
   params: QueryParams = {},
   perspective?: ClientPerspective,
@@ -23,13 +23,9 @@ export async function loadStudioQueryCached<T>(
   ].filter((v): v is string => typeof v === "string");
 
   // Get the data to extract the ID for tagging
-  const initialData = await loadStudioQuery<T & { _id: string }>(
-    query,
-    params,
-    {
-      perspective: perspective,
-    },
-  );
+  const initialData = await loadStudioQuery<T>(query, params, {
+    perspective: perspective,
+  });
 
   const id = initialData.data._id;
   const idTag = id ? [id] : [];
