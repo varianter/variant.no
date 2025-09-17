@@ -31,6 +31,8 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
+    }
+    &[target="_blank"].eventPosting::after {
       transform: rotate(-45deg);
     }
   }
