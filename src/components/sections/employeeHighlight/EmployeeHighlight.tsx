@@ -3,8 +3,8 @@ import {
   EmployeeHighlightSection,
 } from "studio/lib/interfaces/pages";
 
-import { EmployeeCard } from "./EmployeeCard";
 import { EmployeeCarousel } from "./EmployeeCarousel";
+import { EmployeeHighlightCard } from "./EmployeeHighlightCard";
 
 /**
  * Main component that decides whether to show a single employee or a carousel.
@@ -34,7 +34,7 @@ export default function EmployeeHighlight({
 
   // Single employee: render card directly
   if (employees.length === 1) {
-    return <EmployeeCard employee={employees[0]} />;
+    return <EmployeeHighlightCard employee={employees[0]} />;
   }
 
   // Multiple employees: render carousel

@@ -2,13 +2,13 @@ import { SanityImage } from "src/components/image/SanityImage";
 import Text from "src/components/text/Text";
 import { EmployeeHighlightItem } from "studio/lib/interfaces/pages";
 
-import styles from "./employeeCard.module.css";
+import styles from "./employeeHighlightCard.module.css";
 
 /**
  * Renders a single employee card with photo, title, name, description and contact info.
  * Used by both single employee display and carousel slides.
  */
-export function EmployeeCard({
+export function EmployeeHighlightCard({
   employee,
 }: {
   employee: EmployeeHighlightItem;

@@ -4,8 +4,8 @@ import { useId, useState } from "react";
 
 import { EmployeeHighlightItem } from "studio/lib/interfaces/pages";
 
-import { EmployeeCard } from "./EmployeeCard";
 import styles from "./employeeCarousel.module.css";
+import { EmployeeHighlightCard } from "./EmployeeHighlightCard";
 
 /**
  * Carousel for multiple employees.
@@ -64,7 +64,7 @@ export function EmployeeCarousel({
                 aria-label={`${slideIndex + 1} of ${employees.length}`}
                 aria-hidden={!isCurrentSlide}
               >
-                <EmployeeCard employee={employee} />
+                <EmployeeHighlightCard employee={employee} />
               </div>
             );
           })}
