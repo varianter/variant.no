@@ -198,11 +198,6 @@ export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
   employees?: EmployeeHighlightItem[];
-  // Backward compatibility for single entry
-  basicTitle?: string;
-  name?: string;
-  description?: string;
-  employeePhoto?: IImage;
 }
 
 export interface OpennessSection {

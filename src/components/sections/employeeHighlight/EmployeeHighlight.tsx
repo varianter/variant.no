@@ -1,7 +1,4 @@
-import {
-  EmployeeHighlightItem,
-  EmployeeHighlightSection,
-} from "studio/lib/interfaces/pages";
+import { EmployeeHighlightSection } from "studio/lib/interfaces/pages";
 
 import { EmployeeCarousel } from "./EmployeeCarousel";
 import { EmployeeHighlightCard } from "./EmployeeHighlightCard";
@@ -14,21 +11,10 @@ export default function EmployeeHighlight({
 }: {
   section: EmployeeHighlightSection;
 }) {
-  const employees: EmployeeHighlightItem[] = section.employees?.length
-    ? section.employees
-    : section.name
-      ? [
-          {
-            basicTitle: section.basicTitle,
-            name: section.name,
-            description: section.description,
-            employeePhoto: section.employeePhoto,
-          },
-        ]
-      : [];
+  const employees = section.employees;
 
   // Early return if no valid employee data
-  if (employees.length === 0) {
+  if (!employees) {
     return null;
   }
 

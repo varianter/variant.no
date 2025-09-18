@@ -66,16 +66,15 @@ export const employeeHighlightSection = defineField({
           ],
           preview: {
             select: {
-              title: "basicTitle",
+              title: titleID.basic,
               name: "name",
             },
             prepare({ title, name }) {
               try {
                 if (isInternationalizedString(title)) {
                   return {
-                    title:
-                      `${firstTranslation(title) ?? ""} ${name ?? ""}`.trim(),
-                    subtitle: "Employee highlight",
+                    title: `${firstTranslation(title) ?? ""}`.trim(),
+                    subtitle: name,
                   };
                 }
               } catch {
@@ -90,52 +89,11 @@ export const employeeHighlightSection = defineField({
         },
       ],
     },
-    {
-      name: titleID.basic,
-      type: "internationalizedArrayString",
-      title: "Title",
-      description: "The title/prefix that will appear above the name block.",
-    },
-    {
-      name: "name",
-      type: "string",
-      title: "Name",
-      description: "The name of the employee.",
-    },
-    {
-      name: "description",
-      type: "internationalizedArrayText",
-      title: "Description",
-      description: "The body text in the section.",
-    },
-    {
-      ...image,
-      name: "employeePhoto",
-      title: "Employee photo",
-      description: "A photo of the employee,",
-    },
   ],
   preview: {
-    select: {
-      title: "basicTitle",
-      name: "name",
-      employees: "employees",
-    },
-    prepare({ title, name, employees }) {
-      let previewTitle = "";
-      if (isInternationalizedString(title)) {
-        previewTitle = firstTranslation(title) ?? "";
-      } else if (Array.isArray(employees) && employees.length > 0) {
-        const first = employees[0];
-        if (first && isInternationalizedString(first.basicTitle)) {
-          previewTitle = firstTranslation(first.basicTitle) ?? "";
-        }
-        name = name ?? first?.name;
-      }
-
+    prepare() {
       return {
-        title: `${previewTitle} ${name ?? ""}`.trim() || "Employee highlight",
-        subtitle: "Employee highlight",
+        title: "Employee Highlight",
       };
     },
   },
