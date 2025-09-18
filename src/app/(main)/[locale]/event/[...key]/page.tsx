@@ -161,7 +161,7 @@ export default async function EventPage({ params }: EventPageProps) {
               _type: "eventRegistration",
               _key: _key,
               recordID: recordID.toString(),
-              submitButtonText: submitButtonText ?? "",
+              submitButtonText: submitButtonText,
               date: date,
               interests: tags.map((tag) => tag.tag),
             }}
