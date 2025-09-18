@@ -92,6 +92,7 @@ export default async function EventPage({ params }: EventPageProps) {
     consultants,
     richText,
     recordID,
+    submitButtonText,
     time,
   } = data.event;
 
@@ -160,6 +161,9 @@ export default async function EventPage({ params }: EventPageProps) {
               _type: "eventRegistration",
               _key: _key,
               recordID: recordID.toString(),
+              submitButtonText:
+                submitButtonText ||
+                (params.locale === "en" ? "Register interest" : "Meld meg på"),
               date: date,
               interests: tags.map((tag) => tag.tag),
             }}

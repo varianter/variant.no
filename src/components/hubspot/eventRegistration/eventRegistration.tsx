@@ -244,7 +244,7 @@ export default function EventRegistration({
               >
                 {isLoading
                   ? t("eventRegistration.submitting")
-                  : t("eventRegistration.submit")}
+                  : section.submitButtonText}
               </button>
             </form>
           )}

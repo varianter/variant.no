@@ -17,6 +17,7 @@ export interface IEventPosting {
   consultants: Consultants[];
   createInternalPage: boolean;
   recordID: number;
+  submitButtonText?: string;
   eventImage?: IImage;
   subtitle?: string;
   richText?: PortableTextBlock[];
