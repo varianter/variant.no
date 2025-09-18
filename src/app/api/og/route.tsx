@@ -10,6 +10,7 @@ import { loadStudioQuery } from "studio/lib/store";
 import {
   backgroundStyle,
   blueBackgroundStyle,
+  dot,
   eventInfoContainerStyle,
   eventInfoStyle,
   imgStyle,
@@ -37,15 +38,34 @@ export async function GET(request: Request) {
     language: language,
   });
 
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  };
+
   const { eventTitle, date, time, locations } = data.event;
   return new ImageResponse(
     (
       <div style={backgroundStyle}>
         <div style={blueBackgroundStyle}>
           <h1 style={titleStyle}>{eventTitle}</h1>
+          {/* {subtitle && <p> {subtitle} </p>} */}
           <div style={eventInfoContainerStyle}>
-            <p style={eventInfoStyle}>{date}</p>
+            <p style={eventInfoStyle}>
+              {new Date(date).toLocaleDateString("nb-NO", options)}
+            </p>
+            <img
+              style={dot}
+              alt="text seperator dot"
+              src={`${new URL(request.url).origin}/_assets/dot-white.svg`}
+            />
             <p style={eventInfoStyle}>{time}</p>
+            <img
+              style={dot}
+              alt="text seperator dot"
+              src={`${new URL(request.url).origin}/_assets/dot-white.svg`}
+            />
             {locations.map((location, index) => (
               <p key={index} style={eventInfoStyle}>
                 {location.locationString}

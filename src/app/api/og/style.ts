@@ -51,5 +51,10 @@ export const imgStyle: CSSProperties = {
   height: "42px",
   position: "absolute",
   bottom: "80px",
-  left: "116px",
+  left: "100px",
+};
+
+export const dot: CSSProperties = {
+  width: "0.5rem",
+  height: "0.5rem",
 };
