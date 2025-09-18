@@ -19,7 +19,7 @@
   height: 2.5rem;
   border-radius: 0.25rem;
   border: 1px solid var(--Dark-600);
-  background-color: white !important;
+  background-color: white;
   cursor: pointer;
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
   background-image: url("/_assets/arrow-right.svg");
@@ -30,7 +30,7 @@
   transform: translateY(-50%);
 
   /* Desktop position */
-  @media (width >= 835px) {
+  @media (width >=835px) {
     width: 2rem;
     height: 2rem;
     background-size: 1rem 1rem;
@@ -43,7 +43,7 @@
   left: calc(50% - 9.65rem);
   transform: translateY(-50%) rotate(180deg);
 
-  @media (width >= 835px) {
+  @media (width >=835px) {
     left: max(0.5rem, calc(50% - var(--max-content-width-small) / 2 - 3rem));
   }
 }
@@ -51,7 +51,7 @@
 .next {
   right: calc(50% - 9.65rem);
 
-  @media (width >= 835px) {
+  @media (width >=835px) {
     right: max(0.5rem, calc(50% - var(--max-content-width-small) / 2 - 3rem));
   }
 }
