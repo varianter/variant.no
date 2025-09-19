@@ -185,13 +185,19 @@ export interface GenerositySection {
   handbookBlock: HandbookSection;
 }
 
+export interface EmployeeHighlightItem {
+  basicTitle?: string;
+  name?: string;
+  description?: string;
+  employeePhoto?: IImage;
+  email?: string;
+  phone?: string;
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
-  basicTitle: string;
-  name: string;
-  description: string;
-  employeePhoto: IImage;
+  employees?: EmployeeHighlightItem[];
 }
 
 export interface OpennessSection {

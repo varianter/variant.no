@@ -1,32 +1,28 @@
-import { SanityImage } from "src/components/image/SanityImage";
-import Text from "src/components/text/Text";
 import { EmployeeHighlightSection } from "studio/lib/interfaces/pages";
 
-import styles from "./employeeHighlight.module.css";
+import { EmployeeCarousel } from "./EmployeeCarousel";
+import { EmployeeHighlightCard } from "./EmployeeHighlightCard";
 
-export interface EmployeeHighlightProps {
+/**
+ * Main component that decides whether to show a single employee or a carousel.
+ */
+export default function EmployeeHighlight({
+  section,
+}: {
   section: EmployeeHighlightSection;
-}
+}) {
+  const employees = section.employees;
 
-export default function EmployeeHighLight({ section }: EmployeeHighlightProps) {
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.image}>
-        <SanityImage image={section.employeePhoto} />
-      </div>
-      <div className={styles.textContainer}>
-        <div className={styles.titleContainer}>
-          <Text type={"h5"} className={styles.title}>
-            {section.basicTitle}
-          </Text>
-          <div className={styles.nameContainer}>
-            <Text type={"h2"} className={styles.name}>
-              {section.name}
-            </Text>
-          </div>
-        </div>
-        <Text type={"bodyNormal"}>{section.description}</Text>
-      </div>
-    </div>
-  );
+  // Early return if no valid employee data
+  if (!employees) {
+    return null;
+  }
+
+  // Single employee: render card directly
+  if (employees.length === 1) {
+    return <EmployeeHighlightCard employee={employees[0]} />;
+  }
+
+  // Multiple employees: render carousel
+  return <EmployeeCarousel employees={employees} />;
 }
