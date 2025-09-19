@@ -77,6 +77,7 @@ const eventPosting = defineType({
       name: "date",
       type: "date",
       description: "The date of the event (e.g. 2025-10-02).",
+      validation: (rule) => rule.required(),
     },
     {
       title: "Time",
