@@ -9,6 +9,7 @@ export interface IEventPosting {
   _key: string;
   eventTitle: string;
   locations: ILocation[];
+  address?: string;
   externalLink: string;
   eventDescription: string;
   date: string;

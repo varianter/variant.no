@@ -85,6 +85,7 @@ export default async function EventPage({ params }: EventPageProps) {
     eventTitle,
     date,
     locations,
+    address,
     tags,
     _key,
     eventImage,
@@ -129,6 +130,7 @@ export default async function EventPage({ params }: EventPageProps) {
             date={date}
             time={time}
             locations={locations}
+            address={address}
             fontsize="labelLarge"
           />
         </div>
