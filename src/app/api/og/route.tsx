@@ -3,6 +3,8 @@ import { join } from "node:path";
 
 import { ImageResponse } from "next/og";
 
+import formatDate from "src/components/utils/formatDate";
+import formatLongStrings from "src/components/utils/formatLongStrings";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
@@ -39,50 +41,27 @@ export async function GET(request: Request) {
     language: language,
   });
 
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  };
-
   const { eventTitle, subtitle, date, time, locations } = data.event;
+  const dotWhiteSrc = `${new URL(request.url).origin}/_assets/dot-white.svg`;
+  const variantLogoWhiteSrc = `${new URL(request.url).origin}/_assets/variant-logo-white.svg`;
   return new ImageResponse(
     (
       <div style={backgroundStyle}>
         <div style={blueBackgroundStyle}>
           <h1 style={titleStyle}>{eventTitle}</h1>
-          <p style={subTitleStyle}>
-            {(() => {
-              const text = (subtitle ? subtitle : "") || "\u00A0";
-              return text.length > 80 ? text.slice(0, 147) + "..." : text;
-            })()}
-          </p>
+          <p style={subTitleStyle}>{formatLongStrings(80, subtitle)}</p>
           <div style={eventInfoContainerStyle}>
-            <p style={eventInfoStyle}>
-              {new Date(date).toLocaleDateString("nb-NO", options)}
-            </p>
-            <img
-              style={dot}
-              alt="text seperator dot"
-              src={`${new URL(request.url).origin}/_assets/dot-white.svg`}
-            />
+            <p style={eventInfoStyle}>{formatDate(date)}</p>
+            <img style={dot} alt="text seperator dot" src={dotWhiteSrc} />
             <p style={eventInfoStyle}>{time}</p>
-            <img
-              style={dot}
-              alt="text seperator dot"
-              src={`${new URL(request.url).origin}/_assets/dot-white.svg`}
-            />
+            <img style={dot} alt="text seperator dot" src={dotWhiteSrc} />
             {locations.map((location, index) => (
               <p key={index} style={eventInfoStyle}>
                 {location.locationString}
               </p>
             ))}
           </div>
-          <img
-            style={imgStyle}
-            alt="Variant logo"
-            src={`${new URL(request.url).origin}/_assets/variant-logo-white.svg`}
-          />
+          <img style={imgStyle} alt="Variant logo" src={variantLogoWhiteSrc} />
         </div>
       </div>
     ),
