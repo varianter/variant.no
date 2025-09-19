@@ -32,12 +32,23 @@ export const titleStyle: CSSProperties = {
   fontFamily: "Britti Sans Regular",
 };
 
+export const subTitleStyle: CSSProperties = {
+  margin: 0,
+  fontSize: "48px",
+  fontFamily: "Britti Sans Regular",
+  color: "#FFFFFF",
+  minHeight: "24px",
+  marginBottom: "2rem",
+  height: "auto",
+};
+
 export const eventInfoContainerStyle: CSSProperties = {
   display: "flex",
   alignItems: "center",
   gap: "2rem",
   width: "100%",
-  height: "100%",
+  height: "auto",
+  marginTop: "2rem",
 };
 
 export const eventInfoStyle: CSSProperties = {
@@ -50,7 +61,7 @@ export const imgStyle: CSSProperties = {
   width: "175px",
   height: "42px",
   position: "absolute",
-  bottom: "80px",
+  bottom: "70px",
   left: "100px",
 };
 

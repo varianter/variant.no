@@ -14,6 +14,7 @@ import {
   eventInfoContainerStyle,
   eventInfoStyle,
   imgStyle,
+  subTitleStyle,
   titleStyle,
 } from "./style";
 
@@ -44,13 +45,18 @@ export async function GET(request: Request) {
     day: "2-digit",
   };
 
-  const { eventTitle, date, time, locations } = data.event;
+  const { eventTitle, subtitle, date, time, locations } = data.event;
   return new ImageResponse(
     (
       <div style={backgroundStyle}>
         <div style={blueBackgroundStyle}>
           <h1 style={titleStyle}>{eventTitle}</h1>
-          {/* {subtitle && <p> {subtitle} </p>} */}
+          <p style={subTitleStyle}>
+            {(() => {
+              const text = (subtitle ? subtitle : "") || "\u00A0";
+              return text.length > 80 ? text.slice(0, 147) + "..." : text;
+            })()}
+          </p>
           <div style={eventInfoContainerStyle}>
             <p style={eventInfoStyle}>
               {new Date(date).toLocaleDateString("nb-NO", options)}
