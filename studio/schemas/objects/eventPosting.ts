@@ -164,6 +164,13 @@ const eventPosting = defineType({
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
+      name: "submitButtonText",
+      type: "internationalizedArrayString",
+      title: "Submit Button Text",
+      description: "The text displayed on the submit button.",
+      hidden: ({ parent }) => !parent?.createInternalPage || !parent?.recordID,
+    },
+    {
       ...image,
       name: "eventImage",
       title: "Event image",

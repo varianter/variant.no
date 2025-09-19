@@ -236,6 +236,7 @@ export interface EventRegistrationSection {
   _type: "eventRegistration";
   _key: string;
   recordID: string;
+  submitButtonText: string | undefined;
   date: string;
   interests: string[];
 }

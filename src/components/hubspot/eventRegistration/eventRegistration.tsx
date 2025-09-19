@@ -46,7 +46,7 @@ export default function EventRegistration({
     }[]
   >([]);
 
-  const { recordID, date, interests } = section;
+  const { recordID, submitButtonText, date, interests } = section;
 
   const today = new Date();
   const oneDay = 24 * 60 * 60 * 1000;
@@ -244,7 +244,7 @@ export default function EventRegistration({
               >
                 {isLoading
                   ? t("eventRegistration.submitting")
-                  : t("eventRegistration.submit")}
+                  : submitButtonText || t("eventRegistration.submit")}
               </button>
             </form>
           )}
