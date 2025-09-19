@@ -116,5 +116,8 @@
     "podcast": "Podcast",
     "article": "Article",
     "other": "Other"
+  },
+  "employeeCarousel": {
+    "screenReaderNavigation": "Navigate this employee carousel using the Left and Right arrow keys, or use the Previous and Next buttons."
   }
 }

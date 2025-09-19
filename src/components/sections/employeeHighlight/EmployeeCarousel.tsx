@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId, useState } from "react";
 
 import { EmployeeHighlightItem } from "studio/lib/interfaces/pages";
@@ -20,6 +21,9 @@ export function EmployeeCarousel({
 
   // Accessibility IDs
   const ids = { slides: useId(), helpText: useId() };
+
+  // Translations
+  const t = useTranslations("employeeCarousel");
 
   // Navigation functions
   const goToPreviousSlide = () => {
@@ -43,8 +47,7 @@ export function EmployeeCarousel({
         aria-describedby={ids.helpText}
       >
         <p id={ids.helpText} className="visually-hidden">
-          Navigate this employee carousel using the Left and Right arrow keys,
-          or use the Previous and Next buttons.
+          {t("screenReaderNavigation")}
         </p>
         <div
           className={styles.slides}
