@@ -35,6 +35,8 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
+      description:
+        "Which city is the event located in? Do not include address here.",
       validation: validateInternationalizedArray("Location", "locationString"),
 
       of: [
@@ -64,10 +66,17 @@ const eventPosting = defineType({
       ],
     },
     {
+      title: "Address",
+      name: "address",
+      type: "string",
+      description:
+        "The address of the event (e.g. Kongens gate 36). Don't include postal code.",
+    },
+    {
       title: "Date",
       name: "date",
       type: "date",
-      description: "Where is the role located?",
+      description: "The date of the event (e.g. 2025-10-02).",
     },
     {
       title: "Time",
