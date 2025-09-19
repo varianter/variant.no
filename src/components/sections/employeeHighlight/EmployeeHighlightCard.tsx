@@ -31,23 +31,21 @@ export function EmployeeHighlightCard({
         </div>
       </div>
       <div className={styles.textContainer}>
-        <Text type={"bodyNormal"} className={styles.description}>
-          {description}
-        </Text>
+        <Text type={"bodyNormal"}>{description}</Text>
         <div className={styles.contactInfo}>
           {email && (
-            <div className={styles.contactBracket}>
+            <Text type="bodyNormal" className={styles.contactBracket}>
               <span className={styles.bracket}>【</span>
               {email}
               <span className={styles.bracket}>】</span>
-            </div>
+            </Text>
           )}
           {phone && (
-            <div className={styles.contactBracket}>
+            <Text type="bodyNormal" className={styles.contactBracket}>
               <span className={styles.bracket}>【</span>
               {phone}
               <span className={styles.bracket}>】</span>
-            </div>
+            </Text>
           )}
         </div>
       </div>
