@@ -1,10 +1,8 @@
 import { HighlightIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
-import { isInternationalizedString } from "studio/lib/interfaces/global";
 import image from "studio/schemas/fields/media";
 import { titleID } from "studio/schemas/fields/text";
-import { firstTranslation } from "studio/utils/i18n";
 
 const employeeHighlightID = "employeeHighlight";
 
@@ -18,8 +16,7 @@ export const employeeHighlightSection = defineField({
       name: "employees",
       type: "array",
       title: "Employees",
-      description:
-        "Add one or more employees. If empty, the legacy single fields below will be used.",
+      description: "Add one or more employees",
       of: [
         {
           type: "object",
@@ -69,20 +66,9 @@ export const employeeHighlightSection = defineField({
               title: titleID.basic,
               name: "name",
             },
-            prepare({ title, name }) {
-              try {
-                if (isInternationalizedString(title)) {
-                  return {
-                    title: `${firstTranslation(title) ?? ""}`.trim(),
-                    subtitle: name,
-                  };
-                }
-              } catch {
-                // no-op, fallthrough to generic preview
-              }
+            prepare({ name }) {
               return {
-                title: name ?? "Employee highlight",
-                subtitle: "Employee highlight",
+                title: name ?? "No name",
               };
             },
           },
