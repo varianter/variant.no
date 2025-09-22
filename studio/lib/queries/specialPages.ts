@@ -112,6 +112,7 @@ export const EVENT_BY_KEY_QUERY = groq`
     "event": eventPostingsArray[_key == $key][0] {
       _key,
       recordID,
+      address,
       "submitButtonText": ${translatedFieldFragment("submitButtonText")},
       "eventTitle": ${translatedFieldFragment("eventTitle")},
       "eventDescription": ${translatedFieldFragment("eventDescription")},

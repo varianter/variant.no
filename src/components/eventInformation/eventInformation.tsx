@@ -10,6 +10,7 @@ interface EventInformationProps {
   date?: string;
   time?: string;
   locations?: ILocation[];
+  address?: string;
   fontsize?: TextType;
 }
 
@@ -17,6 +18,7 @@ export default function EventInformation({
   date,
   time,
   locations,
+  address,
   fontsize = "labelRegular",
 }: EventInformationProps) {
   function sortAlphabetically(list: string[]) {
@@ -32,6 +34,7 @@ export default function EventInformation({
       {date && <Text type={fontsize}>{formatDate(date)}</Text>}
       {time && <Text type={fontsize}>{time}</Text>}
       {locations && <Text type={fontsize}>{eventPostingLocations}</Text>}
+      {address && <Text type={fontsize}>{address}</Text>}
     </div>
   );
 }
