@@ -10,7 +10,7 @@ interface EventInformationProps {
   date?: string;
   time?: string;
   locations?: ILocation[];
-  address?: string | undefined;
+  address?: string;
   fontsize?: TextType;
 }
 
