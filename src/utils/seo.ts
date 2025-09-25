@@ -11,6 +11,7 @@ import {
   BRAND_ASSETS_QUERY,
   DEFAULT_SEO_QUERY,
 } from "studio/lib/queries/siteSettings";
+import { loadStudioQuery } from "studio/lib/store";
 import { sharedClient } from "studioShared/lib/client";
 import { CustomerCase as CustomerCaseDocument } from "studioShared/lib/interfaces/customerCases";
 
@@ -29,10 +30,10 @@ export async function generateMetadataFromSeo(
     DEFAULT_SEO_QUERY,
     { language },
   );
-  const { data: companyInfo } = await loadStudioQueryCached<CompanyInfo | null>(
+  const { data: companyInfo } = await loadStudioQuery<CompanyInfo | null>(
     COMPANY_INFO_QUERY,
   );
-  const { data: brandAssets } = await loadStudioQueryCached<BrandAssets | null>(
+  const { data: brandAssets } = await loadStudioQuery<BrandAssets | null>(
     BRAND_ASSETS_QUERY,
   );
 

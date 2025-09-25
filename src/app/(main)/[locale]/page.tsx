@@ -15,6 +15,7 @@ import {
   LANDING_PAGE_QUERY,
   LANGUAGES_QUERY,
 } from "studio/lib/queries/siteSettings";
+import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } = await loadStudioQueryCached<PageBuilder | null>(
@@ -58,7 +59,7 @@ const Home = async ({ params }: Props) => {
     );
   }
 
-  const languages = await loadStudioQueryCached<LanguageObject[] | null>(
+  const languages = await loadStudioQuery<LanguageObject[] | null>(
     LANGUAGES_QUERY,
   );
 

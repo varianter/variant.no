@@ -8,7 +8,6 @@ import Footer from "src/components/navigation/footer/Footer";
 import SkipToMain from "src/components/skipToMain/SkipToMain";
 import { Locale, routing } from "src/i18n/routing";
 import "src/styles/global.css";
-import { loadStudioQueryCached } from "src/utils/cache";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import {
   CompanyInfo,
@@ -28,6 +27,7 @@ import {
   NAV_QUERY,
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
+import { loadStudioQuery } from "studio/lib/store";
 
 const fontBrittiSans = localFont({
   src: "../../../../public/_assets/britti-sans-variable.woff2",
@@ -59,35 +59,58 @@ export default async function Layout({
     initialCompanyLocations,
     initialColorPalette,
   ] = await Promise.all([
-    loadStudioQueryCached<Navigation>(
+    loadStudioQuery<Navigation>(
       NAV_QUERY,
       { language: params.locale },
-      perspective,
+      {
+        perspective,
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQueryCached<CompanyInfo>(
+    loadStudioQuery<CompanyInfo>(
       COMPANY_INFO_QUERY,
-      undefined,
-      perspective,
+      {},
+      {
+        perspective,
+        cache: "default",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQueryCached<SocialMediaProfiles | null>(
+    loadStudioQuery<SocialMediaProfiles | null>(
       SOME_PROFILES_QUERY,
-      undefined,
-      perspective,
+      {},
+      {
+        perspective,
+        cache: "default",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQueryCached<LegalDocument[]>(
+    loadStudioQuery<LegalDocument[]>(
       LEGAL_DOCUMENTS_BY_LANG_QUERY,
       { language: params.locale },
-      perspective,
+      {
+        perspective,
+        cache: "default",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQueryCached<CompanyLocation[]>(
+    loadStudioQuery<CompanyLocation[]>(
       COMPANY_LOCATIONS_QUERY,
-      undefined,
-      perspective,
+      {},
+      {
+        perspective,
+        cache: "default",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
-    loadStudioQueryCached<ColorPalette[] | null>(
+    loadStudioQuery<ColorPalette[] | null>(
       FOOTER_COLOR_QUERY,
       { language: params.locale },
-      perspective,
+      {
+        perspective,
+        cache: "default",
+        next: { revalidate: 60 * 60 * 24 },
+      },
     ),
   ]);
 

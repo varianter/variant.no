@@ -70,13 +70,15 @@ async function fetchDynamicPage({
     return null;
   }
   const pathTranslations =
-    await loadStudioQueryCached<InternationalizedString | null>(
+    await loadStudioQuery<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      perspective,
+      {
+        perspective,
+      },
     );
   return {
     queryResponse,
@@ -113,10 +115,12 @@ async function fetchCompensationsPage({
   if (!isNonNullQueryResponse(compensationsPageResult)) {
     return null;
   }
-  const companyLocationsResult = await loadStudioQueryCached<CompanyLocation[]>(
+  const companyLocationsResult = await loadStudioQuery<CompanyLocation[]>(
     COMPANY_LOCATIONS_QUERY,
     {},
-    perspective,
+    {
+      perspective,
+    },
   );
   if (!isNonNullQueryResponse(companyLocationsResult)) {
     return null;
@@ -184,7 +188,7 @@ async function fetchCustomerCase({
     return null;
   }
   const pagePathTranslations =
-    await loadStudioQueryCached<InternationalizedString | null>(
+    await loadStudioQuery<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
@@ -212,7 +216,7 @@ async function fetchCustomerCase({
     return null;
   }
   const casePathTranslations =
-    await loadStudioQueryCached<InternationalizedString | null>(
+    await loadStudioQuery<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_BY_TYPE_QUERY,
       {
         slug: path[1],
@@ -263,7 +267,7 @@ async function fetchEmployeePage({
   if (path.length !== 2) {
     return null;
   }
-  const employeePageSlugAndTitleRes = await loadStudioQueryCached<{
+  const employeePageSlugAndTitleRes = await loadStudioQuery<{
     slug: string;
     basicTitle: string;
   } | null>(
@@ -271,7 +275,9 @@ async function fetchEmployeePage({
     {
       language,
     },
-    perspective,
+    {
+      perspective,
+    },
   );
   if (!isNonNullQueryResponse(employeePageSlugAndTitleRes)) {
     return null;
@@ -286,13 +292,15 @@ async function fetchEmployeePage({
     return null;
   }
   const pathTranslations =
-    await loadStudioQueryCached<InternationalizedString | null>(
+    await loadStudioQuery<InternationalizedString | null>(
       SLUG_FIELD_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
         language,
       },
-      perspective,
+      {
+        perspective,
+      },
     );
   return {
     queryResponse: employee.value,
@@ -328,7 +336,7 @@ async function fetchLegalDocument({
     return null;
   }
   const pathTranslations =
-    await loadStudioQueryCached<InternationalizedString | null>(
+    await loadStudioQuery<InternationalizedString | null>(
       SLUG_TRANSLATIONS_FROM_LANGUAGE_QUERY,
       {
         slug: path[0],
