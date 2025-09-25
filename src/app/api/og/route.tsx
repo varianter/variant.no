@@ -49,7 +49,7 @@ export async function GET(request: Request) {
       <div style={backgroundStyle}>
         <div style={blueBackgroundStyle}>
           <h1 style={titleStyle}>{eventTitle}</h1>
-          <p style={subTitleStyle}>{formatLongStrings(80, subtitle)}</p>
+          <p style={subTitleStyle}>{formatLongStrings(86, subtitle)}</p>
           <div style={eventInfoContainerStyle}>
             <p style={eventInfoStyle}>{formatDate(date)}</p>
             <img style={dot} alt="text seperator dot" src={dotWhiteSrc} />
