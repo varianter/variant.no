@@ -3,11 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 import Badge from "src/components/badge/Badge";
+import TextSection from "src/components/customerCases/customerCase/sections/text/TextSection";
 import EventInformation from "src/components/eventInformation/eventInformation";
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import { SanityImage } from "src/components/image/SanityImage";
 import PageHeader from "src/components/navigation/header/PageHeader";
-import { RichText } from "src/components/richText/RichText";
 import Events from "src/components/sections/events/Events";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
@@ -91,7 +91,7 @@ export default async function EventPage({ params }: EventPageProps) {
     eventImage,
     subtitle,
     consultants,
-    richText,
+    text,
     recordID,
     submitButtonText,
     time,
@@ -155,7 +155,13 @@ export default async function EventPage({ params }: EventPageProps) {
               />
             )}
           </div>
-          {richText && <RichText value={richText} />}
+          {text && (
+            <div>
+              {text.map((section) => {
+                return <TextSection key={section._key} section={section} />;
+              })}
+            </div>
+          )}
         </div>
         {recordID && (
           <EventRegistration
