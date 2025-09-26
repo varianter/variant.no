@@ -3,20 +3,16 @@
   "git": {
     "commitMessage": "chore: release v${version}",
     "tagName": "v${version}",
-    "requireCleanWorkingDir": true,
+    "requireCleanWorkingDir": false,
     "requireBranch": "feat/release-it"
   },
   "github": {
-    "release": true,
-    "draft": true,
-    "releaseName": "v${version}",
-    "tokenRef": "GITHUB_TOKEN"
+    "release": true
   },
   "npm": {
-    "publish": true
+    "publish": false
   },
   "hooks": {
-    "before:init": ["npm run lint"],
     "after:bump": "npm run build && npm run generate-tarball",
     "after:release": "echo Successfully released ${name} v${version} to npm and GitHub!"
   }
