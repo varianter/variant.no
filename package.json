@@ -11,7 +11,8 @@
     "lint:css": "stylelint \"**/*.css\" --fix",
     "format": "prettier . --write",
     "fix": "run-s lint format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "changelog": "auto-changelog --starting-version v3.0.0 --output CHANGELOG.md"
   },
   "dependencies": {
     "@sanity/color-input": "^4.0.3",
@@ -21,6 +22,7 @@
     "@sanity/react-loader": "^1.10.44",
     "@sanity/vision": "^3.39.1",
     "@visx/visx": "^3.12.0",
+    "auto-changelog": "^2.5.0",
     "husky": "^9.1.7",
     "negotiator": "^0.6.3",
     "next": "^14.2.15",
