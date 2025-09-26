@@ -1,5 +1,6 @@
+import { PortableTextBlock } from "sanity";
+
 import { Consultants } from "studioShared/lib/interfaces/customerCases";
-import { TextBlock } from "studioShared/lib/interfaces/textBlock";
 
 import { IImage } from "./media";
 import { SeoData } from "./seo";
@@ -20,7 +21,8 @@ export interface IEventPosting {
   submitButtonText?: string;
   eventImage?: IImage;
   subtitle?: string;
-  text?: TextBlock[];
+  richTextInternalized?: PortableTextBlock[];
+
   seo?: SeoData;
 }
 

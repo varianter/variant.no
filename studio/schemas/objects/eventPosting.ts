@@ -7,7 +7,6 @@ import {
   validateInternationalizedArray,
   validateInternationalizedField,
 } from "studio/utils/internationalizedFieldValidator";
-import textBlock from "studioShared/schemas/objects/textBlock";
 
 import seoWithoutImage from "./seoWithoutImage";
 
@@ -195,11 +194,10 @@ const eventPosting = defineType({
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
-      name: "text",
-      title: "Blocks of text",
-      type: "array",
-      description: "Adds text blocks to the page",
-      of: [textBlock],
+      name: "richTextInternalized",
+      title: "Rich text field",
+      type: "internationalizedArrayRichText",
+      description: "Adds text under the page",
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {

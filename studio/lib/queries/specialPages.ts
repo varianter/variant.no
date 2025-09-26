@@ -135,11 +135,7 @@ export const EVENT_BY_KEY_QUERY = groq`
       createInternalPage,
       "eventImage": eventImage { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
       "subtitle": ${translatedFieldFragment("subtitle")},
-      "text": text[]{
-        ...,
-        "sectionTitle": ${translatedFieldFragment("sectionTitle")},
-        "text": ${translatedFieldFragment("text")}
-      },
+      "richTextInternalized": ${translatedFieldFragment("richTextInternalized")},
       ${SEO_FRAGMENT}
     }
   }
