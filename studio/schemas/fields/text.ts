@@ -100,6 +100,6 @@ export const richTextInternalizedID = "richTextInternalized";
 
 export const richTextInternalized = defineField({
   name: richTextInternalizedID,
-  title: "Rich text Inernalized",
+  title: "Rich text internalized",
   type: "internationalizedArrayRichText",
 });
