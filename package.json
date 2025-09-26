@@ -11,7 +11,8 @@
     "lint:css": "stylelint \"**/*.css\" --fix",
     "format": "prettier . --write",
     "fix": "run-s lint format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "release-it"
   },
   "dependencies": {
     "@sanity/color-input": "^4.0.3",
@@ -58,6 +59,7 @@
     "lint-staged": "^16.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
+    "release-it": "^19.0.5",
     "stylelint": "^16.21.1",
     "stylelint-config-standard": "^38.0.0",
     "typescript": "^5.6.2"

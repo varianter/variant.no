@@ -1,0 +1,23 @@
+{
+  "$schema": "<https://unpkg.com/release-it@18/schema/release-it.json>",
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}",
+    "requireCleanWorkingDir": true,
+    "requireBranch": "v3"
+  },
+  "github": {
+    "release": true,
+    "draft": true,
+    "releaseName": "v${version}",
+    "tokenRef": "GITHUB_TOKEN"
+  },
+  "npm": {
+    "publish": true
+  },
+  "hooks": {
+    "before:init": ["npm run lint"],
+    "after:bump": "npm run build && npm run generate-tarball",
+    "after:release": "echo Successfully released ${name} v${version} to npm and GitHub!"
+  }
+}
