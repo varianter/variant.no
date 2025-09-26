@@ -155,9 +155,7 @@ export default async function EventPage({ params }: EventPageProps) {
               />
             )}
           </div>
-          {richTextInternalized && (
-            <div>{<RichText value={richTextInternalized} />}</div>
-          )}
+          {richTextInternalized && <RichText value={richTextInternalized} />}
         </div>
         {recordID && (
           <EventRegistration
