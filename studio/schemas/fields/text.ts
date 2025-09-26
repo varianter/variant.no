@@ -95,3 +95,11 @@ export const richText = defineField({
   ],
   description: "Add and format rich text content.",
 });
+
+export const richTextInternalizedID = "richTextInternalized";
+
+export const richTextInternalized = defineField({
+  name: richTextInternalizedID,
+  title: "Rich text Inernalized",
+  type: "internationalizedArrayRichText",
+});

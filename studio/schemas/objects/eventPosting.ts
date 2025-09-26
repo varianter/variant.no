@@ -2,6 +2,7 @@ import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import image from "studio/schemas/fields/media";
+import { richTextInternalized } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
   validateInternationalizedArray,
@@ -194,9 +195,7 @@ const eventPosting = defineType({
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
     {
-      name: "richTextInternalized",
-      title: "Rich text field",
-      type: "internationalizedArrayRichText",
+      ...richTextInternalized,
       description: "Adds text under the page",
       hidden: ({ parent }) => !parent?.createInternalPage,
     },
