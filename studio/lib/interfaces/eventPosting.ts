@@ -22,7 +22,6 @@ export interface IEventPosting {
   eventImage?: IImage;
   subtitle?: string;
   richTextInternalized?: PortableTextBlock[];
-
   seo?: SeoData;
 }
 
