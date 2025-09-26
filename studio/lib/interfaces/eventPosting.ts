@@ -21,7 +21,7 @@ export interface IEventPosting {
   submitButtonText?: string;
   eventImage?: IImage;
   subtitle?: string;
-  richText?: PortableTextBlock[];
+  richTextInternalized?: PortableTextBlock[];
   seo?: SeoData;
 }
 

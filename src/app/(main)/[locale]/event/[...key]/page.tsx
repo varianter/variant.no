@@ -91,7 +91,7 @@ export default async function EventPage({ params }: EventPageProps) {
     eventImage,
     subtitle,
     consultants,
-    richText,
+    richTextInternalized,
     recordID,
     submitButtonText,
     time,
@@ -155,7 +155,7 @@ export default async function EventPage({ params }: EventPageProps) {
               />
             )}
           </div>
-          {richText && <RichText value={richText} />}
+          {richTextInternalized && <RichText value={richTextInternalized} />}
         </div>
         {recordID && (
           <EventRegistration
