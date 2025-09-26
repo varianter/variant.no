@@ -6,7 +6,6 @@
 
 .content {
   max-width: var(--max-content-width-medium);
-  word-wrap: break-word;
 }
 
 .content.framed {
