@@ -97,8 +97,6 @@ export default async function EventPage({ params }: EventPageProps) {
     time,
   } = data.event;
 
-  console.log(richTextInternalized);
-
   const consultantsFirstNames =
     consultants?.map((n) => n.employeeFirstName) ?? [];
 
