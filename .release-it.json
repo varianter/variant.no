@@ -13,7 +13,6 @@
     "publish": false
   },
   "hooks": {
-    "after:bump": "npm run build && npm run generate-tarball",
     "after:release": "echo Successfully released ${name} v${version} to npm and GitHub!"
   }
 }
