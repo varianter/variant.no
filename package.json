@@ -12,7 +12,7 @@
     "format": "prettier . --write",
     "fix": "run-s lint format",
     "prepare": "husky",
-    "changelog": "auto-changelog --starting-version v3.0.0 --output CHANGELOG.md"
+    "changelog": "auto-changelog"
   },
   "dependencies": {
     "@sanity/color-input": "^4.0.3",
