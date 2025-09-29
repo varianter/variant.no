@@ -1,0 +1,32 @@
+# Changelog
+{{#each releases}}
+  ## Release
+  {{title}}
+  >
+  {{niceDate}}
+  {{#if merges.length}}
+    ### Merged to Main
+    {{#each merges}}
+      -
+      {{message}}
+      [{{id}}]({{href}})
+    {{/each}}
+  {{/if}}
+  {{#if commits.length}}
+    ### Features
+    {{#each commits}}
+      -
+      {{subject}}, [{{shorthash}}]({{href}}) --
+      {{author}}
+    {{/each}}
+  {{/if}}
+  {{#if fixes.length}}
+    ### Fixes
+    {{#each fixes}}
+      -
+      {{commit}},
+      {{commit.subject}}
+      [{{id}}]({{href}})
+    {{/each}}
+  {{/if}}
+{{/each}}
