@@ -5,7 +5,7 @@
   {{#if merges.length}}
     ### Merged to Main 🔀
     {{#each merges}}
-      - {{message}} [{{id}}]({{href}})
+      - {{message}} [{{id}}]({{href}}) --{{author}}
     {{/each}}
   {{/if}}
   {{#if commits.length}}
@@ -17,7 +17,7 @@
   {{#if fixes.length}}
     ### Fixes 🐛
     {{#each fixes}}
-      - {{commit}}, {{commit.subject}} [{{id}}]({{href}})
+      - {{commit}}, {{commit.subject}} [{{id}}]({{href}}) --{{author}}
     {{/each}}
   {{/if}}
 {{/each}}

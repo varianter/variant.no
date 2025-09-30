@@ -14,7 +14,7 @@
 
 ### Merged to Main 🔀
 
-- feat(event): Internalized rich text field [1345](https://github.com/varianter/variant.no/pull/1345)
+- feat(event): Internalized rich text field [1345](https://github.com/varianter/variant.no/pull/1345) --Trym Veiby
 
 ### Features ✨
 
@@ -38,4 +38,4 @@
 
 ### Merged to Main 🔀
 
-- fix: adds new design to CustomLink [1344](https://github.com/varianter/variant.no/pull/1344)
+- fix: adds new design to CustomLink [1344](https://github.com/varianter/variant.no/pull/1344) --Tuvald
