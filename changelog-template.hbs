@@ -1,32 +1,23 @@
-# Changelog
+# Changelog 🧾
 {{#each releases}}
-  ## Release
-  {{title}}
-  >
-  {{niceDate}}
+  ## Release {{title}}
+  > {{niceDate}}
   {{#if merges.length}}
-    ### Merged to Main
+    ### Merged to Main 🔀
     {{#each merges}}
-      -
-      {{message}}
-      [{{id}}]({{href}})
+      - {{message}} [{{id}}]({{href}})
     {{/each}}
   {{/if}}
   {{#if commits.length}}
-    ### Features
+    ### Features ✨
     {{#each commits}}
-      -
-      {{subject}}, [{{shorthash}}]({{href}}) --
-      {{author}}
+      - {{subject}}, [{{shorthash}}]({{href}}) --{{author}}
     {{/each}}
   {{/if}}
   {{#if fixes.length}}
-    ### Fixes
+    ### Fixes 🐛
     {{#each fixes}}
-      -
-      {{commit}},
-      {{commit.subject}}
-      [{{id}}]({{href}})
+      - {{commit}}, {{commit.subject}} [{{id}}]({{href}})
     {{/each}}
   {{/if}}
 {{/each}}
