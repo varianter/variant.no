@@ -34,7 +34,7 @@ import { CUSTOMER_CASE_QUERY } from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
 
 import { fetchChewbaccaEmployee } from "./employees";
-import { loadStudioQueryWithCache } from "./loadStudioQueryWithCache";
+import { fetchStudioQueryIfCache } from "./loadStudioQueryWithCache";
 import { isNonNullQueryResponse } from "./queryResponse";
 import { domainFromHostname } from "./url";
 
@@ -62,7 +62,7 @@ async function fetchDynamicPage({
   if (path.length === 0) {
     return null;
   }
-  const queryResponse = await loadStudioQueryWithCache<PageBuilder | null>(
+  const queryResponse = await fetchStudioQueryIfCache<PageBuilder | null>(
     PAGE_BY_SLUG_QUERY,
     {
       slug: path[0],

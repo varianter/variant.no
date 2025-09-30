@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import InformationSection from "src/components/informationSection/InformationSection";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { getDraftModeInfo } from "src/utils/draftmode";
-import { loadStudioQueryWithCache } from "src/utils/loadStudioQueryWithCache";
+import { fetchStudioQueryIfCache } from "src/utils/loadStudioQueryWithCache";
 import { isNonNullQueryResponse } from "src/utils/queryResponse";
 import SectionRenderer from "src/utils/renderSection";
 import { generateMetadataFromSeo } from "src/utils/seo";
@@ -19,7 +19,7 @@ import { loadStudioQuery } from "studio/lib/store";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data: landingPage } =
-    await loadStudioQueryWithCache<PageBuilder | null>(LANDING_PAGE_QUERY, {
+    await fetchStudioQueryIfCache<PageBuilder | null>(LANDING_PAGE_QUERY, {
       language: params.locale,
     });
   return generateMetadataFromSeo(landingPage?.seo ?? null, params.locale);
@@ -40,7 +40,7 @@ type Props = {
 const Home = async ({ params }: Props) => {
   const { perspective, isDraftMode } = getDraftModeInfo();
 
-  const initialLandingPage = await loadStudioQueryWithCache<PageBuilder | null>(
+  const initialLandingPage = await fetchStudioQueryIfCache<PageBuilder | null>(
     LANDING_PAGE_QUERY,
     { language: params.locale },
     { perspective },

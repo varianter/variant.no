@@ -44,3 +44,23 @@ export async function loadStudioQueryWithCache<
 
   return cachedFn();
 }
+
+/**
+ * Fetch a Sanity query, using a cached version if caching is enabled via the
+ * `CACHE` environment variable.
+ *
+ * @param query - The GROQ query string to execute.
+ * @param params - Optional parameters for the GROQ query.
+ * @param options - Optional settings for the query execution.
+ * @returns eighter a function wich tags the query or the result of the query.
+ **/
+export async function fetchStudioQueryIfCache<T extends { _id: string } | null>(
+  query: string,
+  params: QueryParams = {},
+  options?: Options,
+) {
+  if (process.env.CACHE === "true") {
+    return loadStudioQueryWithCache<T>(query, params, options);
+  }
+  return loadStudioQuery<T>(query, params, options);
+}
