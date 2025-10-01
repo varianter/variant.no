@@ -7,6 +7,7 @@ import { SeoData } from "./seo";
 
 export interface IEventPosting {
   _key: string;
+  _updatedAt: Date;
   eventTitle: string;
   locations: ILocation[];
   address?: string;

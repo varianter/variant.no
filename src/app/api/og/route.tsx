@@ -9,8 +9,6 @@ import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EVENT_BY_KEY_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 
-export const dynamic = "force-dynamic";
-
 import {
   backgroundStyle,
   blueBackgroundStyle,

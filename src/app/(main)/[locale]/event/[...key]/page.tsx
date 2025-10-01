@@ -40,13 +40,16 @@ export async function generateMetadata({
     language: params.locale,
   });
 
-  const { eventTitle, _key, seo } = data.event;
+  const { eventTitle, _key, seo, _updatedAt } = data.event;
+
+  // Create a version string from the updated date
+  const version = _updatedAt ? new Date(_updatedAt).getTime() : Date.now();
 
   const baseMetadata = await generateMetadataFromSeo(
     {
       title: seo?.title || eventTitle,
       description: seo?.description,
-      imageUrl: `/api/og?language=${params.locale}&key=${_key}`,
+      imageUrl: `/api/og?language=${params.locale}&key=${_key}&v=${version}`,
       keywords: seo?.keywords,
     },
     params.locale,
@@ -59,7 +62,7 @@ export async function generateMetadata({
       ...baseMetadata.openGraph,
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}`,
+          url: `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}&v=${version}`,
           width: 1200,
           height: 630,
         },
