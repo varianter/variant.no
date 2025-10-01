@@ -23,6 +23,9 @@ import { loadStudioQuery } from "studio/lib/store";
 
 import styles from "./event.module.css";
 
+// Force dynamic rendering
+export const dynamic = "force-dynamic";
+
 interface EventPageProps {
   params: {
     key: string;
