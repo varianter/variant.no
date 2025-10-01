@@ -66,6 +66,10 @@ export async function GET(request: Request) {
       </div>
     ),
     {
+      headers: {
+        "Cache-Control": "public, max-age=60, must-revalidate",
+      },
+
       ...dimensions,
       fonts: [
         {
