@@ -194,6 +194,14 @@ export interface EmployeeHighlightItem {
   phone?: string;
 }
 
+export interface PunchLineBoxSection {
+  _type: "punchLineBox";
+  _key: string;
+  mainPunchLine?: string;
+  actionLine?: string;
+  email?: string;
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
@@ -262,6 +270,7 @@ export type Section =
   | JobsSection
   | EventsSection
   | OpennessSection
+  | PunchLineBoxSection
   | GenerositySection
   | LearningSection
   | HandbookSection

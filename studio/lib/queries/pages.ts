@@ -151,6 +151,11 @@ const SECTIONS_FRAGMENT = groq`
       "description": ${translatedFieldFragment("description")},
       "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },
+    _type == "opennessSection" => {
+      ...,
+      "mainPunchLine": ${translatedFieldFragment("basicTitle")},
+      "actionLine": ${translatedFieldFragment("description")}
+    },
     _type == "generositySection" => {
       ...,
       "basicTitle": ${translatedFieldFragment("basicTitle")},

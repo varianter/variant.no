@@ -23,6 +23,7 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
+import PunchLineBox from "src/components/sections/punchLineBox/PunchLineBox";
 import SplitSection from "src/components/sections/splitSection/SplitSection";
 import TextContent from "src/components/sections/textContent/TextContent";
 import { Locale } from "src/i18n/routing";
@@ -192,6 +193,8 @@ const SectionRenderer = ({
         initialData,
         language as Locale,
       );
+    case "punchLineBox":
+      return <PunchLineBox section={section} language={language} />;
     case "contactBox":
       return <ContactBox section={section} language={language} />;
     case "employees":

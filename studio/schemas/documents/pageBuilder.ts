@@ -19,6 +19,7 @@ import { jobs } from "studio/schemas/objects/sections/jobs";
 import { learningSection } from "studio/schemas/objects/sections/learning";
 import logoSalad from "studio/schemas/objects/sections/logoSalad";
 import { opennessSection } from "studio/schemas/objects/sections/openness";
+import { punchLineBox } from "studio/schemas/objects/sections/punchLineBox";
 import splitSection from "studio/schemas/objects/sections/splitSection";
 import { textContent } from "studio/schemas/objects/sections/textContent";
 import seo from "studio/schemas/objects/seo";
@@ -64,6 +65,7 @@ const pageBuilder = defineType({
         opennessSection,
         generositySection,
         learningSection,
+        punchLineBox,
         textContent,
         handbookSection,
         splitSection,
