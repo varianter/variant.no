@@ -41,9 +41,15 @@ function RotatingText({
   const currentText = Array.isArray(text) ? text[index] : text;
 
   return (
-    <div className={cn(style.overflowHidden, containerClassName)}>
+    <span
+      className={cn(
+        style.textOverflow,
+        style.overflowHidden,
+        containerClassName,
+      )}
+    >
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.span
           key={currentText}
           transition={transition}
           initial={{ opacity: 0, y: -y }}
@@ -52,9 +58,9 @@ function RotatingText({
           {...props}
         >
           {currentText}
-        </motion.div>
+        </motion.span>
       </AnimatePresence>
-    </div>
+    </span>
   );
 }
 
