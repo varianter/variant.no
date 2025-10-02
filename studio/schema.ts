@@ -26,6 +26,7 @@ import { compensationCalculator } from "./schemas/objects/sections/compensation-
 import { employeeHighlightSection } from "./schemas/objects/sections/employeeHighlight";
 import { fieldGrid } from "./schemas/objects/sections/fieldGrid";
 import { fields } from "./schemas/objects/sections/fields";
+import { punchLineBox } from "./schemas/objects/sections/punchLineBox";
 import seo from "./schemas/objects/seo";
 import { socialMedia } from "./schemas/objects/socialMedia";
 
@@ -57,6 +58,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     eventPostings,
     employeeHighlightSection,
     compensationCalculator,
+    punchLineBox,
     fields,
     fieldGrid,
   ],
