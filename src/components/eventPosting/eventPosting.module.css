@@ -32,6 +32,7 @@
       top: 1rem;
       right: 1rem;
     }
+
     &[target="_blank"].eventPosting::after {
       transform: rotate(-45deg);
     }
@@ -50,8 +51,10 @@
   flex-wrap: wrap;
 }
 
-.themes {
-  margin-left: var(--padding-xs);
+.badgeWrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .eventCardBottomfield {
