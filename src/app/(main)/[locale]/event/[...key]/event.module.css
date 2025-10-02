@@ -8,14 +8,11 @@
   padding-bottom: var(--padding-xl);
 }
 
-.badge {
-  width: fit-content;
-}
-
 .eventInfo {
   display: flex;
   flex-direction: column;
   gap: var(--padding-m);
+  padding-top: var(--padding-m);
 }
 
 .title {
