@@ -62,16 +62,11 @@ export default function EventPosting({
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
         {eventPostingTags.length > 0 && (
-          <div>
+          <div className={styles.badgeWrapper}>
             {eventPostingTags
               .filter((tag) => tag)
               .map((tag, index) => (
-                <Badge
-                  key={index}
-                  className={styles.themes}
-                  badgeColor="#FAFAFA"
-                  borderColor="#2D2D2D"
-                >
+                <Badge key={index} badgeColor="#FAFAFA" borderColor="#2D2D2D">
                   {tag}
                 </Badge>
               ))}
