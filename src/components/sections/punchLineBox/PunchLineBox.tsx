@@ -25,7 +25,7 @@ export default async function PunchLineBox({ section }: PunchLineBoxProps) {
       <div className={style.content}>
         <PunchLineBoxClient
           section={section}
-          initialSentence={pickRandomSentence(section.sentences)}
+          initialSentence={pickRandomSentence(section.sentences)[0]}
           contactPoints={contactPoints.value}
         />
       </div>

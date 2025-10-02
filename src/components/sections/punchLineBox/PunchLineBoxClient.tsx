@@ -5,7 +5,7 @@ import Text from "src/components/text/Text";
 import { ChewbaccaEmployee } from "src/types/employees";
 import { PunchLineBoxSection } from "studio/lib/interfaces/pages";
 
-import { FadingText } from "./FadedText";
+import { FadingText } from "./FadingText";
 import style from "./punchLineBox.module.css";
 import { RotatingText } from "./RotatingText";
 import { pickRandomSentence } from "./utils";
@@ -14,23 +14,29 @@ export interface PunchLineBoxProps {
   section: PunchLineBoxSection;
   initialSentence: PunchLineBoxSection["sentences"][number];
   contactPoints: ChewbaccaEmployee[];
+  intervalInSeconds?: number;
 }
 
 export default function PunchLineBoxClient({
   section,
   initialSentence,
   contactPoints,
+  intervalInSeconds = 10,
 }: PunchLineBoxProps) {
-  const randomSentence = usePickPeriodicallyRandomSentence(
+  const [randomSentence, key] = usePickPeriodicallyRandomSentence(
     section.sentences,
     initialSentence,
+    intervalInSeconds,
   );
   return (
     <>
       <Text type="h2">
-        <RotatingText text={randomSentence.mainPunchLine} />
+        <RotatingText
+          animationKey={`${key}-title`}
+          text={randomSentence.mainPunchLine}
+        />
       </Text>
-      <FadingText key={randomSentence.mainPunchLine}>
+      <FadingText animationKey={`${key}-line`}>
         <ActionLineTemplate
           email={randomSentence.email}
           contactPoints={contactPoints}
@@ -80,17 +86,20 @@ function usePickPeriodicallyRandomSentence(
   sentences: PunchLineBoxSection["sentences"],
   initialSentence: PunchLineBoxSection["sentences"][number],
   intervalInSeconds: number = 10,
-) {
+): [PunchLineBoxSection["sentences"][number], number] {
   const [randomSentence, setRandomSentence] =
     useState<PunchLineBoxSection["sentences"][number]>(initialSentence);
+  const [key, setKey] = useState<number>(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setRandomSentence(pickRandomSentence(sentences));
+      const [randomSentence, key] = pickRandomSentence(sentences);
+      setRandomSentence(randomSentence);
+      setKey(key);
     }, intervalInSeconds * 1000);
 
     return () => clearInterval(intervalId);
   }, [sentences, intervalInSeconds]);
 
-  return randomSentence;
+  return [randomSentence, key];
 }
