@@ -1,38 +1,34 @@
-"use client";
-import { useEffect, useState } from "react";
-
+import Smiley from "src/components/smiley/Smiley";
+import { fetchEmployeesByEmails } from "src/utils/employees";
 import { PunchLineBoxSection } from "studio/lib/interfaces/pages";
+
+import style from "./punchLineBox.module.css";
+import PunchLineBoxClient from "./PunchLineBoxClient";
+import { pickRandomSentence } from "./utils";
 
 export interface PunchLineBoxProps {
   section: PunchLineBoxSection;
-  language: string;
 }
 
-export default function PunchLineBox({ section }: PunchLineBoxProps) {
-  console.log(section);
-  const randomSentence = usePickPeriodicallyRandomSentence(section.sentences);
-  return <div>{randomSentence.mainPunchLine}</div>;
-}
+export default async function PunchLineBox({ section }: PunchLineBoxProps) {
+  const contactPoints = await fetchEmployeesByEmails(
+    section.sentences.map((sentence) => sentence.email),
+  );
 
-function usePickPeriodicallyRandomSentence(
-  sentences: PunchLineBoxSection["sentences"],
-  intervalInSeconds: number = 10,
-) {
-  const [randomSentence, setRandomSentence] = useState<
-    PunchLineBoxSection["sentences"][number]
-  >(pickRandomSentence(sentences));
+  if (!contactPoints.ok) {
+    return null;
+  }
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setRandomSentence(pickRandomSentence(sentences));
-    }, intervalInSeconds * 1000);
-
-    return () => clearInterval(intervalId);
-  }, [sentences, intervalInSeconds]);
-
-  return randomSentence;
-}
-
-function pickRandomSentence(sentences: PunchLineBoxSection["sentences"]) {
-  return sentences[Math.floor(Math.random() * sentences.length)];
+  return (
+    <article className={style.punchLineBox}>
+      <Smiley smileyType="shock" smileySide="right" />
+      <div className={style.content}>
+        <PunchLineBoxClient
+          section={section}
+          initialSentence={pickRandomSentence(section.sentences)}
+          contactPoints={contactPoints.value}
+        />
+      </div>
+    </article>
+  );
 }

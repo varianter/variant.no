@@ -153,10 +153,9 @@ const SECTIONS_FRAGMENT = groq`
     },
     _type == "punchLineBox" => {
       "sentences": sentences[] {
-      ...,
+        ...,
         "mainPunchLine": ${translatedFieldFragment("mainPunchLine")},
         "actionLine": ${translatedFieldFragment("actionLine")},
-        "email": ${translatedFieldFragment("email")}
       }
     },
     _type == "generositySection" => {

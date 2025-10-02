@@ -110,6 +110,7 @@ html {
   --surface-blue: var(--Blue-500);
   --surface-green: var(--Green-400);
   --surface-green-light: var(--Green-100);
+  --surface-green-subtle: var(--Green-50);
   --surface-blue-light: var(--Blue-200);
   --surface-red-light: var(--Red-100);
   --surface-yellow-light: var(--Yellow-50);
