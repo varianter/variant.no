@@ -11,6 +11,7 @@ import { RichText } from "src/components/richText/RichText";
 import Events from "src/components/sections/events/Events";
 import Text from "src/components/text/Text";
 import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
+import { VersionQueryHandler } from "src/components/versionQueryHandler/VersionQueryHandler";
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { InternationalizedString } from "studio/lib/interfaces/global";
@@ -28,6 +29,7 @@ interface EventPageProps {
     key: string;
     locale: "en" | "no";
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export async function generateMetadata({
@@ -69,7 +71,10 @@ export async function generateMetadata({
 }
 
 // TODO: Create as specialPage
-export default async function EventPage({ params }: EventPageProps) {
+export default async function EventPage({
+  params,
+  searchParams,
+}: EventPageProps) {
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
   }>(EVENT_BY_KEY_QUERY, {
@@ -112,6 +117,11 @@ export default async function EventPage({ params }: EventPageProps) {
 
   return (
     <div>
+      <VersionQueryHandler
+        hasVersionParam={!!searchParams.v}
+        eventKey={_key}
+        locale={params.locale}
+      />
       <PageHeader
         language={params.locale}
         pathTranslations={pathTranslations}
