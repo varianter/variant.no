@@ -52,11 +52,14 @@ export async function generateMetadata({
     params.locale,
   );
 
+  const version = new Date();
+
   // Override the openGraph image to prevent Next.js optimization
   return {
     ...baseMetadata,
     openGraph: {
       ...baseMetadata.openGraph,
+      url: `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/${params.locale}/event/${params.key}?v=${version.getTime()}`,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_URL || "http://localhost:3000"}/api/og?language=${params.locale}&key=${_key}`,
