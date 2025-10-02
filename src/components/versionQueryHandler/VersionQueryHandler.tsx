@@ -15,7 +15,7 @@ export const VersionQueryHandler = ({
   locale,
 }: VersionQueryHandlerProps) => {
   const router = useRouter();
-  const versionDate = new Date();
+  const versionDate = new Date().getTime();
 
   useEffect(() => {
     if (!hasVersionParam) {
