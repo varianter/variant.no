@@ -151,10 +151,13 @@ const SECTIONS_FRAGMENT = groq`
       "description": ${translatedFieldFragment("description")},
       "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },
-    _type == "opennessSection" => {
+    _type == "punchLineBox" => {
+      "sentences": sentences[] {
       ...,
-      "mainPunchLine": ${translatedFieldFragment("basicTitle")},
-      "actionLine": ${translatedFieldFragment("description")}
+        "mainPunchLine": ${translatedFieldFragment("mainPunchLine")},
+        "actionLine": ${translatedFieldFragment("actionLine")},
+        "email": ${translatedFieldFragment("email")}
+      }
     },
     _type == "generositySection" => {
       ...,

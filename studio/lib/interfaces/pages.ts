@@ -197,9 +197,11 @@ export interface EmployeeHighlightItem {
 export interface PunchLineBoxSection {
   _type: "punchLineBox";
   _key: string;
-  mainPunchLine?: string;
-  actionLine?: string;
-  email?: string;
+  sentences: {
+    mainPunchLine: string;
+    actionLine: string;
+    email: string;
+  }[];
 }
 
 export interface EmployeeHighlightSection {

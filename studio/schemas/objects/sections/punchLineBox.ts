@@ -12,42 +12,68 @@ export const punchLineBox = defineField({
   icon: BoltIcon,
   fields: [
     {
-      name: "mainPunchLine",
-      title: "Main Punch Line",
-      type: "internationalizedArrayString",
-      validation: (rule) =>
-        rule
-          .required()
-          .custom<
-            { value: string; _type: string; _key: string }[]
-          >(max200ValidationRule),
+      name: "sentences",
+      title: "Sentences",
+      description: "Collection of punch line sentences to show.",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "mainPunchLine",
+              title: "Main Punch Line",
+              type: "internationalizedArrayString",
+              validation: (rule) =>
+                rule
+                  .required()
+                  .custom<
+                    { value: string; _type: string; _key: string }[]
+                  >(max200ValidationRule),
+            },
+            {
+              name: "actionLine",
+              title: "Take Action Line",
+              type: "internationalizedArrayString",
+              validation: (rule) =>
+                rule
+                  .required()
+                  .custom<
+                    { value: string; _type: string; _key: string }[]
+                  >(max200ValidationRule),
+            },
+            defineField({
+              name: "email",
+              title: "Enter the email address for contact point",
+              type: "email",
+              initialValue: "mb@variant.no",
+            }),
+          ],
+          validation: (rule) =>
+            rule.required().error("A list of punch lines is required."),
+          preview: {
+            select: {
+              mainPunchLine: "mainPunchLine",
+            },
+            prepare(selection) {
+              const { mainPunchLine } = selection;
+              return {
+                title: allTranslations(mainPunchLine) ?? undefined,
+              };
+            },
+          },
+        },
+      ],
     },
-    {
-      name: "actionLine",
-      title: "Take Action Line",
-      type: "internationalizedArrayString",
-      validation: (rule) =>
-        rule
-          .required()
-          .custom<
-            { value: string; _type: string; _key: string }[]
-          >(max200ValidationRule),
-    },
-    defineField({
-      name: "email",
-      title: "Enter the email address for contact point",
-      type: "email",
-      initialValue: "mb@variant.no",
-    }),
   ],
   preview: {
     select: {
-      mainPunchLine: "mainPunchLine",
+      sentences: "sentences",
     },
     prepare(selection) {
-      const { mainPunchLine } = selection;
+      const { sentences } = selection;
       return {
-        title: allTranslations(mainPunchLine) ?? undefined,
+        title: `${sentences.length} punch lines`,
       };
     },
   },
