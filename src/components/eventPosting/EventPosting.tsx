@@ -37,7 +37,7 @@ export default function EventPosting({
     isInternal || isExternal
       ? {
           href: isInternal
-            ? `/${language}/event/${eventPosting._key}`
+            ? `/${language}/event/${eventPosting._key}/${new Date().getTime()}`
             : eventPosting.externalLink,
           target: isExternal ? "_blank" : undefined,
           "aria-label": `${t("go_to_event")} ${eventPosting.eventTitle}`,
