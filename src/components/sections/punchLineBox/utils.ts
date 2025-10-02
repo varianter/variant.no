@@ -1,5 +1,8 @@
+import { PunchLineBoxSection } from "studio/lib/interfaces/pages";
+
 export function pickRandomSentence(
   sentences: PunchLineBoxSection["sentences"],
-) {
-  return sentences[Math.floor(Math.random() * sentences.length)];
+): [PunchLineBoxSection["sentences"][number], number] {
+  const key = Math.floor(Math.random() * sentences.length);
+  return [sentences[key], key];
 }
