@@ -194,7 +194,7 @@ const SectionRenderer = ({
         language as Locale,
       );
     case "punchLineBox":
-      return <PunchLineBox section={section} language={language} />;
+      return <PunchLineBox section={section} />;
     case "contactBox":
       return <ContactBox section={section} language={language} />;
     case "employees":

@@ -21,20 +21,6 @@
   }
 }
 
-.smiley {
-  align-self: var(--smiley-align);
-
-  &::before {
-    content: "";
-    display: block;
-    width: var(--smiley-width);
-    height: var(--smiley-height);
-    mask: var(--smiley-url) no-repeat center;
-    mask-size: cover;
-    background-color: var(--text-primary);
-  }
-}
-
 .description {
   align-self: stretch;
 
