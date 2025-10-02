@@ -2,6 +2,11 @@
   overflow: hidden;
 }
 
+.textOverflow {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 .actionLink {
   color: var(--text-link);
 }
