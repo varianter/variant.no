@@ -34,6 +34,8 @@ export const punchLineBox = defineField({
             {
               name: "actionLine",
               title: "Take Action Line",
+              description:
+                "Description of what the visitor should do (send email, contact etc). [[contact]] will be replaced with the contact point's name and link to email.",
               type: "internationalizedArrayString",
               validation: (rule) =>
                 rule
