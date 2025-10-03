@@ -40,7 +40,7 @@ function RotatingText({
           exit={{ opacity: 0, y }}
           {...props}
         >
-          {text}
+          <span className={style.textOverflow}>{text}</span>
         </motion.div>
       </AnimatePresence>
     </div>

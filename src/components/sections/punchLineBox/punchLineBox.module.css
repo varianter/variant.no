@@ -33,6 +33,11 @@
     var(--radius-small) var(--radius-small);
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
+
+  @media (width <= 834px) {
+    padding: var(--padding-m) var(--padding-s) var(--padding-s);
+  }
 }
 
 .content {
