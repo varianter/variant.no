@@ -27,6 +27,7 @@
   - [Testing](#testing)
 - [Key Dependencies](#key-dependencies)
 - [Documentation and Resources](#documentation-and-resources)
+- [Changelog](#changelog)
 - [Credits](#credits)
 
 ## Key Features
@@ -227,6 +228,11 @@ Sanity Preview, or Presentation, is not yet fully supported in this project. Bug
 ## Documentation and Resources
 
 - [Importing production data for local development](./docs/import-sanity-dataset.md)
+
+## Changelog
+
+Changelog can be found in [CHANGELOG.md](./CHANGELOG.md).
+This changelog is generated with the help of [auto-changelog](https://github.com/cookpete/auto-changelog) and can be generated using the script `npm run changelog`.
 
 ## Credits
 
