@@ -46,7 +46,7 @@ export default async function EventsPage({
   return (
     <>
       <section className={styles.eventSection} aria-labelledby={allEventsId}>
-        <Text type="h1" id={allEventsId} className="visually-hidden">
+        <Text type="titleXL" id={allEventsId} className="visually-hidden">
           {t("all_events")}
         </Text>
 

@@ -36,7 +36,7 @@ const Legal = ({ document }: { document: LegalDocument }) => {
   return (
     <div>
       <div className={styles.hero}>
-        <Text type="h1">{document.basicTitle}</Text>
+        <Text type="titleXL">{document.basicTitle}</Text>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.body}>

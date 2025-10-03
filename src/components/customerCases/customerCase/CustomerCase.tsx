@@ -90,7 +90,7 @@ function ColoredTitle({
 }) {
   if (!colorPart)
     return (
-      <Text type={"h1"} className={styles.mainTitle}>
+      <Text type={"titleXL"} className={styles.mainTitle}>
         {title}
       </Text>
     );
@@ -104,7 +104,7 @@ function ColoredTitle({
 
   return (
     <div className={styles.titleWrapper}>
-      <Text type={"h1"} className={styles.mainTitle}>
+      <Text type={"titleXL"} className={styles.mainTitle}>
         <span>{preColorText}</span>
         <span style={{ color: color }}>{colorText}</span>
         <span>{postColorText}</span>

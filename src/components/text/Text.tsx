@@ -1,7 +1,7 @@
 import styles from "./text.module.css";
 
 export type TextType =
-  | "h1"
+  | "titleXL"
   | "h2"
   | "h3"
   | "h4"
@@ -23,7 +23,7 @@ export type TextType =
   | "italic";
 
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
-  h1: "h1",
+  titleXL: "h1",
   h2: "h2",
   h3: "h3",
   h4: "h4",
@@ -46,7 +46,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
 };
 
 const classMap: { [key in TextType]?: string } = {
-  h1: styles.h1,
+  titleXL: styles.titleXL,
   h2: styles.h2,
   h3: styles.h3,
   h4: styles.h4,
