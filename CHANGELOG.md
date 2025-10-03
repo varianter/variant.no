@@ -14,7 +14,7 @@
 - fix: remove hidden overflow to show focus [1348](https://github.com/varianter/variant.no/pull/1348) --Tuvald
 - feat(event): Internalized rich text field [1345](https://github.com/varianter/variant.no/pull/1345) --Trym Veiby
 
-### Features ✨
+### Features not yet merged ✨
 
 - feat: adds animated text, [36f5fd1](https://github.com/varianter/variant.no/commit/36f5fd10eb364614ffb0da28a17d0e651057c650) --Mikael Brevik
 - feat: randomly select sentence, [64bc511](https://github.com/varianter/variant.no/commit/64bc51106e4ea7d5b09b15054c88708318092e65) --Mikael Brevik
