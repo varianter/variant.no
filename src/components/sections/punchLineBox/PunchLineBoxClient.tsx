@@ -60,8 +60,8 @@ function ActionLineTemplate({
   const contactPoint = contactPoints?.find((cp) => cp.email === email);
   const matches = children.matchAll(/([^\\[]*)(\[\[contact\]\])([^\\[]*)/gm);
 
-  const newChildren = matches
-    .map((match, i) => {
+  const newChildren = Array.from(
+    matches.map((match, i) => {
       return [
         <Fragment key={i + "-1"}>{match[1]}</Fragment>,
         !contactPoint ? (
@@ -77,8 +77,8 @@ function ActionLineTemplate({
         ),
         <Fragment key={i + "-3"}>{match[3]}</Fragment>,
       ];
-    })
-    .toArray();
+    }),
+  );
   return <Text type="bodyBig">{newChildren.flat()}</Text>;
 }
 
