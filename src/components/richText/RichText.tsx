@@ -23,7 +23,7 @@ const formatId = (children: ReactNode): string => {
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   block: {
     h2: ({ children }) => (
-      <Text type="h2" id={formatId(children)}>
+      <Text type="titleL" id={formatId(children)}>
         {children}
       </Text>
     ),

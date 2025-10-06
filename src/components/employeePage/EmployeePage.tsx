@@ -40,7 +40,7 @@ export default async function EmployeePage({
               </div>
             )}
             <div className={styles.employeeInfo}>
-              <Text type={"h2"}>{employee.name}</Text>
+              <Text type={"titleL"}>{employee.name}</Text>
               {employee.email && (
                 <Text type={"bodyBig"} className={styles.employeeEmail}>
                   <a href={`mailto:${employee.email}`}>{employee.email}</a>

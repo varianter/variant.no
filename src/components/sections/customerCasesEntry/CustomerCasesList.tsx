@@ -84,7 +84,7 @@ function CardInfo({
 
   return (
     <div className={styles.cardInfo}>
-      <Text type="h2" as="h3" className={styles.heading}>
+      <Text type="titleL" as="h3" className={styles.heading}>
         {selectedCustomerCase.basicTitle}
       </Text>
       <div className={styles.deliveries}>

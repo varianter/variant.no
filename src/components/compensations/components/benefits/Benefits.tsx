@@ -71,7 +71,7 @@ export default function Benefits({
       default:
         return (
           <div>
-            <Text type="h2">{benefit.basicTitle}</Text>
+            <Text type="titleL">{benefit.basicTitle}</Text>
             <RichText value={benefit.richText} />
           </div>
         );

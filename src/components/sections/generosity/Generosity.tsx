@@ -13,7 +13,7 @@ export interface GenerosityProps {
 export default function Generosity({ section, language }: GenerosityProps) {
   return (
     <div className={styles.wrapper}>
-      <Text type={"h2"} className={styles.title}>
+      <Text type={"titleL"} className={styles.title}>
         {section.basicTitle}
       </Text>
       <div className={styles.content}>

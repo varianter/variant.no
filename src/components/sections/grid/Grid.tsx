@@ -13,7 +13,7 @@ const Grid = ({ grid }: { grid: GridSection }) => {
   return (
     <article className={styles.article}>
       <div className={styles.grid}>
-        <Text type="h2" id="grid-title">
+        <Text type="titleL" id="grid-title">
           {grid.basicTitle}
         </Text>
         <ul aria-labelledby="grid-title" className={styles.list}>

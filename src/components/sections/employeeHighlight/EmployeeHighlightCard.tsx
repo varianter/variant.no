@@ -24,7 +24,7 @@ export function EmployeeHighlightCard({
             {basicTitle}
           </Text>
           <div className={styles.nameContainer}>
-            <Text type={"h2"} className={styles.name}>
+            <Text type={"titleL"} className={styles.name}>
               {name}
             </Text>
           </div>

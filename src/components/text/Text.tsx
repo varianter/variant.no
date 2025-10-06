@@ -2,7 +2,7 @@ import styles from "./text.module.css";
 
 export type TextType =
   | "titleXL"
-  | "h2"
+  | "titleL"
   | "h3"
   | "h4"
   | "h5"
@@ -24,7 +24,7 @@ export type TextType =
 
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   titleXL: "h1",
-  h2: "h2",
+  titleL: "h2",
   h3: "h3",
   h4: "h4",
   h5: "h5",
@@ -47,7 +47,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
 
 const classMap: { [key in TextType]?: string } = {
   titleXL: styles.titleXL,
-  h2: styles.h2,
+  titleL: styles.titleL,
   h3: styles.h3,
   h4: styles.h4,
   h5: styles.h5,

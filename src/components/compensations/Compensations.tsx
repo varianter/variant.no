@@ -24,7 +24,7 @@ export default async function Compensations({
   return (
     <div className={styles.outerWrapper}>
       <div className={styles.wrapper}>
-        <Text type="h2">{compensations.basicTitle}</Text>
+        <Text type="titleL">{compensations.basicTitle}</Text>
         <RichText value={compensations.richText} />
         <SplitSection
           section={compensations.splitSection}

@@ -26,7 +26,7 @@ export default async function CompensationCalculator({
 
   return (
     <div className={styles.container}>
-      {section.moduleTitle && <Text type="h2">{section.moduleTitle}</Text>}
+      {section.moduleTitle && <Text type="titleL">{section.moduleTitle}</Text>}
       <div className={styles.grid}>
         <div className={calculatorBgClassname}>
           <Text type="h3">{section.calculatorBlock.calculatorTitle}</Text>

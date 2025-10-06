@@ -41,7 +41,7 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
               </div>
               <div className={styles.caseTextWrapper}>
                 <Link href={`${customerCasesPage.slug}/${customerCase.slug}`}>
-                  <Text type="h2">{customerCase.basicTitle}</Text>
+                  <Text type="titleL">{customerCase.basicTitle}</Text>
                 </Link>
                 {customerCase.description && (
                   <Text>{customerCase.description}</Text>

@@ -52,7 +52,7 @@ export default async function EventsPage({
 
         {sortedFutureEventPostings.length > 0 && (
           <section aria-labelledby={futureEventsId}>
-            <Text type="h2" id={futureEventsId}>
+            <Text type="titleL" id={futureEventsId}>
               {t("future_events")}
             </Text>
 
@@ -73,7 +73,7 @@ export default async function EventsPage({
             className={styles.eventSection}
             aria-labelledby={pastEventsId}
           >
-            <Text type="h2" id={pastEventsId}>
+            <Text type="titleL" id={pastEventsId}>
               {t("past_events")}
             </Text>
 
