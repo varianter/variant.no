@@ -117,7 +117,7 @@ export default async function EventPage({ params }: EventPageProps) {
       />
       <div className={styles.contentWrapper}>
         <div className={styles.eventInfo}>
-          <Text type="h1">{eventTitle}</Text>
+          <Text type="titleXL">{eventTitle}</Text>
           <Text type="bodyXl">{subtitle}</Text>
           <EventInformation
             date={date}

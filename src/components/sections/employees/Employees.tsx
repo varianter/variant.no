@@ -34,7 +34,7 @@ export default async function Employees({ language, section }: EmployeesProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.employees}>
-        <Text type="h1">{section.basicTitle}</Text>
+        <Text type="titleXL">{section.basicTitle}</Text>
 
         <Suspense fallback={<EmployeeListSkeleton />}>
           <EmployeeList

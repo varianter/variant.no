@@ -16,7 +16,7 @@ const InformationSection = ({ title, body, link }: InformationSectionProps) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.info}>
-        <Text type="h1">{title}</Text>
+        <Text type="titleXL">{title}</Text>
         <span>
           {body.split("\n").map((line, index) => (
             <Text key={index}>
