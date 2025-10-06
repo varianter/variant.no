@@ -42,15 +42,21 @@ jobs:
         run: npm run changelog
 
       - name: Commit changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           branch="chore/update-changelog-${{ github.run_id }}"
-          git checkout -b "$branch"
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "✅ Saved branch name: $branch"
+
           git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update changelog [skip ci]"
-          git push origin "$branch"
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update changelog [skip ci]"
+          fi
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
