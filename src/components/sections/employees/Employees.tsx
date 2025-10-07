@@ -26,7 +26,7 @@ export default async function Employees({ language, section }: EmployeesProps) {
   );
   const employeesPageSlug = employeesPageRes.data.slug;
 
-  const countryTld = domainFromHostname(headers().get("host"))
+  const countryTld = domainFromHostname((await headers()).get("host"))
     .split(".")
     .at(-1);
   const employees = fetchAllChewbaccaEmployees(countryTld);

@@ -17,7 +17,8 @@ import {
 } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const { data: landingPage } =
     await fetchStudioQueryIfCache<PageBuilder | null>(LANDING_PAGE_QUERY, {
       language: params.locale,
@@ -34,10 +35,11 @@ const navigationManagerLink = {
 };
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-const Home = async ({ params }: Props) => {
+const Home = async (props: Props) => {
+  const params = await props.params;
   const { perspective, isDraftMode } = getDraftModeInfo();
 
   const initialLandingPage = await fetchStudioQueryIfCache<PageBuilder | null>(

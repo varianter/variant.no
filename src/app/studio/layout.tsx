@@ -14,7 +14,7 @@ export default async function RootLayout({
       {/* Override padding from global.css. Hackish but just for studio, as the padding is annoying */}
       <body style={{ padding: "0 !important" }}>
         {children}
-        {draftMode().isEnabled && <LiveVisualEditing />}
+        {(await draftMode()).isEnabled && <LiveVisualEditing />}
       </body>
     </html>
   );

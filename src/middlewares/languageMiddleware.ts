@@ -1,5 +1,5 @@
 import Negotiator from "negotiator";
-import { headers } from "next/headers";
+import { type UnsafeUnwrappedHeaders, headers } from "next/headers";
 import { NextRequest } from "next/server";
 import { SanityClient } from "next-sanity";
 
@@ -200,7 +200,9 @@ async function translatePath(
 function negotiateClientLanguage(
   availableLanguages: string[],
 ): string | undefined {
-  const acceptLanguage = headers().get("Accept-Language");
+  const acceptLanguage = (headers() as unknown as UnsafeUnwrappedHeaders).get(
+    "Accept-Language",
+  );
   if (acceptLanguage === null) return undefined;
   return new Negotiator({
     headers: { "accept-language": acceptLanguage },

@@ -23,15 +23,16 @@ import { loadStudioQuery } from "studio/lib/store";
 import styles from "./event.module.css";
 
 interface EventPageProps {
-  params: {
+  params: Promise<{
     key: string;
     locale: "en" | "no";
-  };
+  }>;
 }
 
-export async function generateMetadata({
-  params,
-}: EventPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: EventPageProps,
+): Promise<Metadata> {
+  const params = await props.params;
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
   }>(EVENT_BY_KEY_QUERY, {
@@ -68,7 +69,8 @@ export async function generateMetadata({
 }
 
 // TODO: Create as specialPage
-export default async function EventPage({ params }: EventPageProps) {
+export default async function EventPage(props: EventPageProps) {
+  const params = await props.params;
   const { data } = await loadStudioQuery<{
     event: IEventPosting;
   }>(EVENT_BY_KEY_QUERY, {
