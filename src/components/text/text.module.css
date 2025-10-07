@@ -196,3 +196,15 @@
 .italic {
   font-style: italic;
 }
+
+.dark {
+  color: var(--text-primary);
+}
+
+.light {
+  color: var(--text-primary-light);
+}
+
+.tertiary {
+  color: var(--text-tertiary);
+}

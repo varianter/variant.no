@@ -22,6 +22,8 @@ export type TextType =
   | "imageLabel"
   | "italic";
 
+export type TextColor = "dark" | "light" | "tertiary";
+
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   titleXL: "h1",
   titleL: "h2",
@@ -68,21 +70,27 @@ const classMap: { [key in TextType]?: string } = {
   italic: styles.italic,
 };
 
+const colorMap: { [key in TextColor]: string } = {
+  dark: styles.dark,
+  light: styles.light,
+  tertiary: styles.tertiary,
+};
+
 const Text = ({
   type = "bodyNormal",
   children,
   id,
-  className,
   as: asElement,
+  color = "dark",
 }: {
   type?: TextType;
   children: React.ReactNode;
   id?: string;
   as?: React.ElementType;
-  className?: string;
+  color?: TextColor;
 }) => {
   const Element = asElement ?? elementMap[type];
-  const generatedClassName = `${classMap[type]} ${className ?? ""}`;
+  const generatedClassName = `${classMap[type]} ${colorMap[color]}`;
 
   return (
     <Element className={generatedClassName} id={id}>
