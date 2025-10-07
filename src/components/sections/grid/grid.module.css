@@ -11,13 +11,13 @@
   flex-direction: column;
   gap: 1.5rem;
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     padding: 5rem 2rem;
     justify-content: center;
     gap: 1.5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     padding: 5rem;
   }
 }
@@ -34,7 +34,7 @@
     minmax(100%, 1fr)
   ); /* Single column by default */
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     gap: 1.5rem;
     grid-template-columns: repeat(
       auto-fill,
@@ -42,7 +42,7 @@
     ); /* Up to two columns */
   }
 
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     grid-template-columns: repeat(
       3,
       minmax(272px, 1fr)
@@ -58,7 +58,7 @@
   word-wrap: break-word;
   border-radius: 0.5rem;
   border: 1px solid var(--background-bg-yellow, #f5f3e5);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgb(255 255 255 / 60%);
 }
 
 .image {
@@ -67,7 +67,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
 
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     width: 100%; /* Adjust width to 100% */
     height: auto; /* Maintain aspect ratio */
   }

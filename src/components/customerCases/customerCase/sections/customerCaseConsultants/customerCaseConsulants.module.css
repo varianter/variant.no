@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: var(--padding-s);
   margin: 4rem 0;
-
   align-self: center;
   width: 100%;
   max-width: var(--max-content-width-medium);

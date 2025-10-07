@@ -68,7 +68,6 @@
     display: block;
     width: 1.5rem;
     height: 1.5rem;
-    -webkit-mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
     mask: url("/_assets/spinner.svg") no-repeat 50% 50%;
     background-color: var(--Dark-500);
     animation: rotateSpinner 750ms linear infinite;
@@ -81,7 +80,7 @@
   }
 }
 
-@-webkit-keyframes rotateSpinner {
+@keyframes rotateSpinner {
   to {
     transform: rotate(360deg);
   }

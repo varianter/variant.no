@@ -1,6 +1,7 @@
 import { BulbOutlineIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
+import image from "studio/schemas/fields/media";
 import { titleID } from "studio/schemas/fields/text";
 
 const learningID = "learningSection";
@@ -20,13 +21,8 @@ export const learningSection = defineField({
       validation: (rule) => rule.required(),
     },
     {
-      name: "image",
-      type: "image",
-      title: "Image",
+      ...image,
       description: "An image representing learning in Variant",
-      options: {
-        hotspot: true,
-      },
       validation: (rule) => rule.required(),
     },
     {

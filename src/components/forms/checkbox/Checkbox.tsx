@@ -1,19 +1,10 @@
 import { PortableText } from "@portabletext/react";
-import { PortableTextBlock } from "sanity";
 
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
+import { CheckboxProps } from "studio/lib/interfaces/forms/checkbox";
 
 import styles from "./checkbox.module.css";
-
-interface CheckboxProps {
-  label: string | PortableTextBlock[];
-  name: string;
-  error?: string;
-  value: boolean;
-  required?: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
 
 const Checkbox = ({
   label,

@@ -41,6 +41,11 @@
       "bonusResult": "+ bonus",
       "resultLabel": "Din årslønn"
     },
+    "graphs": {
+      "bonusChart": "Historiske bonusbeløp per år",
+      "salaryChart": "Lønnsutvikling over tid med fremtidige prognoser",
+      "pensionChart": "Sammenligning av pensjonsinnskudd"
+    },
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
@@ -89,7 +94,9 @@
   "event_section": {
     "see_all_events": "Se alle arrangementer",
     "go_to_event": "Gå til arrangement",
-    "all_events": "Alle arrangementer"
+    "all_events": "Alle arrangementer",
+    "future_events": "Kommende arrangementer",
+    "past_events": "Tidligere arrangementer"
   },
   "office_selector": {
     "location": "Lokasjon",
@@ -100,12 +107,16 @@
     "mainMenu": "Hovedmeny",
     "other": "Annet",
     "socialMedia": "Steder vi deler",
-    "contact": "Generell kontakt"
+    "contact": "Generell kontakt",
+    "characterIllustration": "Glad smilende karakter illustrasjon"
   },
   "gridSection": {
     "video": "Video",
     "podcast": "Podcast",
     "article": "Artikkel",
     "other": "Annet"
+  },
+  "employeeCarousel": {
+    "screenReaderNavigation": "Naviger i denne ansattkarusellen med piltastene venstre og høyre, eller bruk knappene Forrige og Neste."
   }
 }

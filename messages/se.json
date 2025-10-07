@@ -11,13 +11,13 @@
     "duration": "Varaktighet",
     "industry": "Bransch",
     "delivery": "Leverans",
-    "variants": "Variantene",
+    "variants": "Varianter",
     "in_project": "Varianter i projektet",
     "design": "Design",
     "development": "Utveckling",
     "project_management": "Projektledning",
-    "url": "Link",
-    "collaborators": "Samarbeidspartnere",
+    "url": "Länk",
+    "collaborators": "Samarbetspartners",
     "customer_case_entry": {
       "image": "bild",
       "case": "Case",
@@ -31,16 +31,21 @@
   "contact_information": {
     "help": "Nyfiken på Variant och vill utforska vad vi erbjuder?",
     "contact_sale": "Kontakta sälj!",
-    "contact_us": "Kontakt oss"
+    "contact_us": "Kontakta oss"
   },
   "compensation": {
     "calculator": {
-      "formLabel": "Lönskalkulator",
+      "formLabel": "Lönekalkylator",
       "educationInput": "Utbildning",
       "yearInput": "Året du började i relevant arbete",
       "bonusResult": "+ bonus",
       "resultLabel": "Din årslön",
       "notice": "Obs! Alla varianter får en löneökning den 1 januari varje år. Medan vi väntar på ny lönestatistik från Tekna hittar du förra årets lönedata."
+    },
+    "graphs": {
+      "bonusChart": "Historiska bonusbelopp per år",
+      "salaryChart": "Löneutveckling över tid med framtida prognoser",
+      "pensionChart": "Jämförelse av pensionsinsatser"
     },
     "degreeOptions": {
       "bachelor": "Bachelor",
@@ -90,7 +95,9 @@
   "event_section": {
     "see_all_events": "Se alla arrangemang",
     "go_to_event": "Gå till arrangemang",
-    "all_events": "Alla arrangemang"
+    "all_events": "Alla arrangemang",
+    "future_events": "Kommende arrangemang",
+    "past_events": "Tidigare arrangemang"
   },
   "office_selector": {
     "location": "Kontor",
@@ -101,12 +108,16 @@
     "mainMenu": "Huvudmeny",
     "other": "Övrigt",
     "socialMedia": "Platser vi delar",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "characterIllustration": "Glad leende karaktär illustration"
   },
   "gridSection": {
     "video": "Video",
     "podcast": "Podcast",
     "article": "Artikel",
     "other": "Annat"
+  },
+  "employeeCarousel": {
+    "screenReaderNavigation": "Navigera i denna medarbetarkarusell med vänster- och högerpiltangenterna, eller använd knapparna Föregående och Nästa."
   }
 }

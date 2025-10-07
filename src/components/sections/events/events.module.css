@@ -9,7 +9,7 @@
   color: var(--text-primary-light);
   max-width: var(--max-content-width-large);
 
-  @media (max-width: 1024px) {
+  @media (width <= 1024px) {
     flex-direction: column;
   }
 }
@@ -44,7 +44,7 @@
 .allEventsButton {
   margin-top: 3.3rem;
 
-  @media (max-width: 800px) {
+  @media (width <= 800px) {
     margin-top: 1.5rem;
   }
 }

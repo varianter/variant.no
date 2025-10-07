@@ -35,7 +35,7 @@ export default function TextContent({ section }: textContentProps) {
 const renderTextTitle = ({ eyebrow, title }: ITextTitle) => (
   <div className={styles.container}>
     <Text type="bodyNormal"> {eyebrow} </Text>
-    <Text type="h1">{title}</Text>
+    <Text type="titleXL">{title}</Text>
   </div>
 );
 

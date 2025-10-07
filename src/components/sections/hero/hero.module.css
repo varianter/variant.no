@@ -4,12 +4,12 @@
   overflow: hidden;
   padding: 5rem 0;
 
-  @media (max-width: 834px) {
-    padding: 5rem 0rem;
+  @media (width <= 834px) {
+    padding: 5rem 0;
   }
 
-  @media (max-width: 425px) {
-    padding: 0rem;
+  @media (width <= 425px) {
+    padding: 0;
   }
 }
 
@@ -26,35 +26,36 @@
   gap: var(--padding-rem);
   padding: 0 var(--padding-rem);
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     padding: var(--padding-l) var(--padding-s);
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
+    padding: var(--padding-l) var(--padding-s);
+  }
+}
+
+.landingPageSecondary {
+  composes: shared;
+  align-self: center;
+  gap: var(--padding-rem);
+  padding: 0 var(--padding-rem);
+  max-width: 800px;
+
+  @media (width <= 834px) {
+    padding: var(--padding-l) var(--padding-s);
+  }
+
+  @media (width <= 425px) {
     padding: var(--padding-l) var(--padding-s);
   }
 }
 
 .image {
   width: 100%;
-  /* max-width: 30rem; */
   justify-content: flex-end;
   display: flex !important;
-  padding: var(--padding-xl) var(--padding-rem) var(--padding-rem)
-    var(--padding-rem);
-
   max-width: 53rem !important;
-  margin-left: auto;
-
-  @media (max-width: 834px) {
-    padding: var(--padding-l) var(--padding-rem) var(--padding-rem)
-      var(--padding-rem);
-  }
-
-  @media (max-width: 425px) {
-    padding: var(--padding-s) var(--padding-rem) var(--padding-rem)
-      var(--padding-rem);
-  }
 }
 
 .image img {
@@ -73,16 +74,15 @@
   display: flex !important;
   padding: var(--padding-xl) var(--padding-rem) var(--padding-rem)
     var(--padding-rem);
-
   max-width: 53rem !important;
   margin-left: auto;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     padding: var(--padding-l) var(--padding-rem) var(--padding-rem)
       var(--padding-rem);
   }
 
-  @media (max-width: 425px) {
+  @media (width <= 425px) {
     padding: var(--padding-s) var(--padding-rem) var(--padding-rem)
       var(--padding-rem);
   }

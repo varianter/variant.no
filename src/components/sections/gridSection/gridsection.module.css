@@ -9,9 +9,11 @@
 .gridItem.large {
   grid-column: span 3;
 }
+
 .gridItem.medium {
   grid-column: span 2;
 }
+
 .gridItem.small {
   grid-column: span 1;
 }
@@ -26,6 +28,7 @@
 .fieldCard.large {
   flex-direction: row;
 }
+
 .fieldCard.medium {
   flex-direction: column;
 }
@@ -80,37 +83,40 @@
   color: white;
 }
 
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .gridSection {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .gridItem.large {
     grid-column: span 2;
   }
 }
 
-@media (max-width: 834px) {
+@media (width <= 834px) {
   .gridSection {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .gridItem.large,
   .gridItem.medium,
   .gridItem.small {
     grid-column: span 1;
   }
+
   .fieldContent {
     padding: 16px;
   }
 }
 
-@media (max-width: 834px) {
+@media (width <= 834px) {
   .fieldImageLargeWrapper {
     height: 250px;
     width: 100%;
   }
 }
 
-@media (max-width: 834px) {
+@media (width <= 834px) {
   .fieldCard.large {
     flex-direction: column;
   }

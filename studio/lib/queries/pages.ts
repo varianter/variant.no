@@ -3,7 +3,7 @@ import { groq } from "next-sanity";
 import { LANGUAGE_FIELD_FRAGMENT, TRANSLATED_LINK_FRAGMENT } from "./i18n";
 import { translatedFieldFragment } from "./utils/i18n";
 
-const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
+export const INTERNATIONALIZED_IMAGE_FRAGMENT = groq`
   asset,
   "metadata": asset -> metadata {
     lqip
@@ -129,15 +129,34 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "employeeHighlight" => {
+      // New array of employees; fallback to legacy single fields
+      employees[]{
+        "basicTitle": ${translatedFieldFragment("basicTitle")},
+        "name": name,
+        "description": ${translatedFieldFragment("description")},
+        "employeePhoto": employeePhoto { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
+        "email": email,
+        "phone": phone
+      },
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")}
+      "name": name,
+      "description": ${translatedFieldFragment("description")},
+      "employeePhoto": employeePhoto { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
     },
     _type == "customerCasesEntry" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
     },
     _type == "opennessSection" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")},
-      "description": ${translatedFieldFragment("description")}
+      "description": ${translatedFieldFragment("description")},
+      "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} }
+    },
+    _type == "punchLineBox" => {
+      "sentences": sentences[] {
+        ...,
+        "mainPunchLine": ${translatedFieldFragment("mainPunchLine")},
+        "actionLine": ${translatedFieldFragment("actionLine")},
+      }
     },
     _type == "generositySection" => {
       ...,
@@ -154,12 +173,16 @@ const SECTIONS_FRAGMENT = groq`
       }
     },
     _type == "logoSalad" => {
-      "title": ${translatedFieldFragment("title")}
+      "title": ${translatedFieldFragment("title")},
+      "logos": logos[] {
+        ${INTERNATIONALIZED_IMAGE_FRAGMENT}
+      }
     },
     _type == "learningSection" => {
       ...,
       "basicTitle": ${translatedFieldFragment("basicTitle")},
       "description": ${translatedFieldFragment("description")},
+      "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
       "articleTag": ${translatedFieldFragment("articleTag")},
       "articleTitle": ${translatedFieldFragment("articleTitle")},
       "articleSubtitle": ${translatedFieldFragment("articleSubtitle")}
@@ -184,6 +207,19 @@ const SECTIONS_FRAGMENT = groq`
         "quote": ${translatedFieldFragment("quote")}
       }
     },
+    _type == "eventRegistration" => {
+      ...,
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "emailLabel": ${translatedFieldFragment("emailLabel")},
+      "firstNameLabel": ${translatedFieldFragment("firstNameLabel")},
+      "lastNameLabel": ${translatedFieldFragment("lastNameLabel")},
+      "phoneLabel": ${translatedFieldFragment("phoneLabel")},
+      "companyLabel": ${translatedFieldFragment("companyLabel")},
+      "termsAndConditionsLabel": ${translatedFieldFragment("termsAndConditionsLabel")},
+      "submitButtonText": ${translatedFieldFragment("submitButtonText")},
+      "successMessage": ${translatedFieldFragment("successMessage")},
+      "errorMessage": ${translatedFieldFragment("errorMessage")}
+    },
     _type == "fieldGrid" => {
       ...,
       "title": ${translatedFieldFragment("title")},
@@ -199,6 +235,7 @@ const SECTIONS_FRAGMENT = groq`
       }
     }
   }
+  
 `;
 
 export const SEO_FRAGMENT = groq`

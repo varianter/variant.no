@@ -57,7 +57,7 @@ export default function CompensationSelector({
 
   const yearlyBonusesForLocation = compensations.bonusesByLocation
     .find((b) => b.location._ref === selectedLocation)
-    ?.yearlyBonuses?.toReversed();
+    ?.yearlyBonuses?.toSorted((a, b) => a.year - b.year);
 
   return (
     <>

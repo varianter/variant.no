@@ -5,6 +5,7 @@ import {
   TRANSLATED_LINK_FRAGMENT,
   TRANSLATED_SLUG_VALUE_FRAGMENT,
 } from "./i18n";
+import { INTERNATIONALIZED_IMAGE_FRAGMENT, SEO_FRAGMENT } from "./pages";
 import { translatedFieldFragment } from "./utils/i18n";
 
 export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
@@ -103,5 +104,39 @@ export const CUSTOMER_CASES_PAGE_SITEMAP_QUERY = groq`
   *[_type == "customerCasesPage"][0] {
     _updatedAt,
     "slug": ${TRANSLATED_SLUG_VALUE_FRAGMENT}
+  }
+`;
+
+export const EVENT_BY_KEY_QUERY = groq`
+  *[_type == "eventPostings"][0] {
+    "event": eventPostingsArray[_key == $key][0] {
+      _key,
+      recordID,
+      address,
+      "submitButtonText": ${translatedFieldFragment("submitButtonText")},
+      "eventTitle": ${translatedFieldFragment("eventTitle")},
+      "eventDescription": ${translatedFieldFragment("eventDescription")},
+      "locations": locations[]{
+        "locationString": ${translatedFieldFragment("locationString")}
+      },
+      date,
+      time,
+      "tags": tags[]{
+        "tag": ${translatedFieldFragment("tag")}
+      },
+      "consultants": consultants[]{
+        employeeEmail,
+        employeeFirstName
+      },
+      "externalLink": externalLink,
+      "internalLink": internalLink->{
+        "url": ${translatedFieldFragment("slug")}
+      },
+      createInternalPage,
+      "eventImage": eventImage { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
+      "subtitle": ${translatedFieldFragment("subtitle")},
+      "richTextInternalized": ${translatedFieldFragment("richTextInternalized")},
+      ${SEO_FRAGMENT}
+    }
   }
 `;

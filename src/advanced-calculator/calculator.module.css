@@ -34,7 +34,7 @@
   grid-column: 1;
   grid-row: 2;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     grid-template-columns: 1fr;
   }
 }
@@ -44,7 +44,7 @@
   width: 100%;
   align-items: center;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     grid-column: 2;
     grid-row: 2;
   }
@@ -56,7 +56,7 @@
   height: 100%;
   align-content: end;
   padding-bottom: 0.5rem;
-  color: "var(--text-primary-dark)";
+  color: var(--text-primary-dark);
 }
 
 .pensionGraphTextWrapper[data-position="left"] {
@@ -78,7 +78,7 @@
 }
 
 /* Pension mobile stuff */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .pension {
     grid-template-columns: 1fr;
   }
@@ -125,7 +125,7 @@
   background-color: var(--background-bg-light-primary);
   font-weight: 200;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     display: none;
   }
 }
@@ -133,7 +133,8 @@
 /* TODO: Its a bad idea to have a different input for mobile and pc */
 .mobileInputNumber {
   display: none;
-  @media (max-width: 834px) {
+
+  @media (width <= 834px) {
     font-size: inherit;
     display: block;
     font-weight: 200;
@@ -157,14 +158,13 @@
   --thumb-height: 2em;
   --thumb-color: var(--surface-violet-vivid);
   --thumb-background: var(--background-bg-light-primary);
-
   --track-height: 0.5em;
   --track-lower-background: var(--surface-violet-vivid);
   --track-upper-background: yellow;
   --track-border-radius: 0.5em;
 
   height: var(--track-height);
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   border-radius: 8px;
   background-color: var(--track-lower-background);
@@ -186,26 +186,24 @@
   color: red;
 }
 
-.inputRange:hover::-webkit-slider-thumb {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .inputRange::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   background: var(--thumb-background);
   border: 2px solid var(--thumb-color);
   height: var(--thumb-height);
   width: var(--thumb-width);
   margin: calc((var(--track-height) / 2) + (var(--thumb-height) / 2) * -1) 0 0;
-
   position: relative;
   z-index: 3;
-
   cursor: grab;
   border-radius: 1em;
   transition: all 300ms ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+}
+
+.inputRange:hover::-webkit-slider-thumb {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .inputRange:active::-webkit-slider-thumb {

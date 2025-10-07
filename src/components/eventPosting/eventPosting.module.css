@@ -12,7 +12,7 @@
     transition: none;
   }
 
-  &:is(a) {
+  a& {
     position: relative;
     cursor: pointer;
 
@@ -25,14 +25,15 @@
       width: 1.5rem;
       height: 1.5rem;
       content: "";
-      -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
-      -webkit-mask-size: cover;
       mask: url("/_assets/arrow-right.svg") no-repeat center;
       mask-size: cover;
       background-color: var(--background-bg-dark);
       position: absolute;
       top: 1rem;
       right: 1rem;
+    }
+
+    &[target="_blank"].eventPosting::after {
       transform: rotate(-45deg);
     }
   }
@@ -43,16 +44,6 @@
   line-height: 1.2em;
 }
 
-.dotSeperator::after {
-  content: "·";
-  margin-left: 0.38rem;
-}
-
-.dotSeperator:nth-last-child(2)::after {
-  content: "";
-  margin: 0rem;
-}
-
 .flex {
   display: flex;
   gap: 0.38rem;
@@ -60,8 +51,10 @@
   flex-wrap: wrap;
 }
 
-.themes {
-  margin-left: var(--padding-xs);
+.badgeWrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .eventCardBottomfield {

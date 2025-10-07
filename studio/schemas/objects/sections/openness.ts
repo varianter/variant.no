@@ -1,6 +1,7 @@
 import { SparkleIcon } from "@sanity/icons";
 import { defineField } from "sanity";
 
+import image from "studio/schemas/fields/media";
 import { titleID } from "studio/schemas/fields/text";
 const opennessID = "opennessSection";
 
@@ -19,13 +20,8 @@ export const opennessSection = defineField({
       validation: (rule) => rule.required(),
     },
     {
-      name: "image",
-      type: "image",
-      title: "Image",
+      ...image,
       description: "Add an image to the section",
-      options: {
-        hotspot: true,
-      },
       validation: (rule) => rule.required(),
     },
     {

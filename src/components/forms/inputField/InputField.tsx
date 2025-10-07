@@ -1,25 +1,8 @@
-import { HTMLInputAutoCompleteAttribute, HTMLInputTypeAttribute } from "react";
-
 import Text from "src/components/text/Text";
 import textStyles from "src/components/text/text.module.css";
+import { InputFieldProps } from "studio/lib/interfaces/forms/inputField";
 
 import styles from "./inputField.module.css";
-
-interface InputFieldProps {
-  label: string;
-  name: string;
-  error?: string;
-  autoComplete?: HTMLInputAutoCompleteAttribute;
-  autoCorrect?: string;
-  type?: HTMLInputTypeAttribute;
-  max?: number;
-  min?: number;
-  spellCheck?: "true" | "false";
-  autoCapitalize?: string;
-  value: string | number;
-  onChange: (name: string, value: string) => void;
-  required?: boolean;
-}
 
 const InputField = ({
   label,

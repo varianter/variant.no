@@ -1,0 +1,40 @@
+.contentWrapper {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-xl);
+  padding-top: var(--padding-l);
+  padding-bottom: var(--padding-xl);
+}
+
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-m);
+  padding-top: var(--padding-m);
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 450;
+}
+
+.eventImage {
+  max-width: 100%;
+  height: 370px;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-s);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-m);
+}

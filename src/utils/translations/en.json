@@ -1,0 +1,46 @@
+{
+  "eventRegistration": {
+    "name": "Name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "terms": {
+      "gerneral": "For more information about how we process and protect your data, see our",
+      "link": {
+        "text": "privacy policy",
+        "url": "https://variant.no/en/privacy-policy-event/"
+      },
+      "forEvent": "for events."
+    },
+    "interests": "Variant may contact me about upcoming events and similar content in the future. (optional)",
+    "submit": "Register Interest",
+    "submitting": "Submitting...",
+    "successTitle": "Thank you for your registration!",
+    "registerAnother": "Register another user",
+    "errors": {
+      "emailRequired": "Must be filled in to submit the form",
+      "emailInvalid": "Enter a valid email address",
+      "nameRequired": "Must be filled in to submit the form",
+      "termsRequired": "You must consent to submit the form",
+      "phoneInvalid": "Enter a valid phone number",
+      "registrationFailed": "Something went wrong during registration. Please try again later."
+    },
+    "closed": {
+      "title": "Registration Closed",
+      "message": "This event is over and it is therefore not possible to register. Hope to see you at the next event!",
+      "otherEventText": "Feel free to take a look at our other",
+      "events": "events",
+      "imgAlt": "blue box with sad face"
+    },
+    "registrationComplete": {
+      "title": "Thank you!",
+      "successMessage": "We appreciate your interest",
+      "emailConfirmation": "We only send emails to you as a reminder or if there are changes",
+      "registerAnother": "Would you like to register more people?",
+      "linkText": "Show form.",
+      "unsubscribeNote": "To unsubscribe, see our",
+      "forEvent": "for events",
+      "imgAlt": "blue box with happy face"
+    }
+  }
+}

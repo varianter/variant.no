@@ -5,7 +5,8 @@
   --_button-font-size: 1.25rem;
   --_button-border: none;
   --_button-background: transparent;
-  --_button-color: currentColor;
+  --_button-color: currentcolor;
+
   box-sizing: content-box;
   width: fit-content;
   display: inline-flex;
@@ -14,10 +15,7 @@
   justify-content: space-between;
   line-height: 1;
   white-space: nowrap;
-
   gap: 0.6rem;
-
-  border: none;
   font-family: var(--font-britti-sans);
   text-decoration: none;
   font-weight: 400;
@@ -36,28 +34,34 @@
   &:hover {
     --_button-radius: var(--_button-hoverRadius);
   }
+
   &:focus-visible {
     --_button-radius: var(--_button-hoverRadius);
+
     outline: 2px solid var(--surface-yellow);
     outline-offset: 1px;
   }
 }
+
 .button--xl {
   --_button-radius: var(--radius-small);
   --_button-hoverRadius: var(--radius-large);
   --_button-padding: 0.625rem 1.5rem;
   --_button-font-size: 1.25rem;
 }
+
 .button--l {
   --_button-hoverRadius: var(--radius-medium);
   --_button-padding: 0.625rem 0.75rem;
   --_button-font-size: 1.25rem;
 }
+
 .button--m {
   --_button-padding: 0.375rem 0.5rem;
   --_button-hoverRadius: var(--radius-medium);
   --_button-font-size: 1rem;
 }
+
 .button--s {
   --_button-padding: 0.125rem 0.25rem;
   --_button-hoverRadius: var(--radius-medium);
@@ -68,11 +72,8 @@
   width: 1.5rem;
   height: 1.5rem;
   content: "";
-  -webkit-mask: url("/_assets/arrow-right.svg") no-repeat center;
-  -webkit-mask-size: cover;
   mask: url("/_assets/arrow-right.svg") no-repeat center;
   mask-size: cover;
-
   background-color: var(--_button-color);
 }
 
@@ -84,16 +85,17 @@
   &:hover {
     --_button-background: var(--background-bg-dark);
   }
+
   &:focus-visible {
     --_button-border: 1px solid var(--surface-yellow);
   }
+
   &:active {
     --_button-background: var(--text-secondary);
   }
 }
 
 .button--primary--dark {
-  --_button-border: none;
   --_button-background: var(--background-bg-light-primary);
   --_button-color: var(--text-primary);
   --_button-border: 1px solid var(--background-bg-light-primary);
@@ -101,6 +103,7 @@
   &:hover {
     --_button-background: var(--background-bg-light-primary);
   }
+
   &:active {
     --_button-background: var(--background-bg-light-secondary);
   }
@@ -112,23 +115,26 @@
   --_button-background: transparent;
 
   &:hover {
-    --_button-background: rgba(31, 31, 31, 0.05);
+    --_button-background: rgb(31 31 31 / 5%);
   }
 
   &:active {
-    --_button-background: rgba(31, 31, 31, 0.16);
+    --_button-background: rgb(31 31 31 / 16%);
   }
 }
+
 .button--secondary--dark {
   --_button-border: 1px solid var(--background-bg-light-secondary);
-  --_button-color: currentColor;
+  --_button-color: currentcolor;
 
   &:hover {
     --_button-background: var(--background-bg-dark);
   }
+
   &:focus-visible {
     --_button-border: 1px solid var(--surface-yellow);
   }
+
   &:active {
     --_button-background: var(--text-secondary);
   }

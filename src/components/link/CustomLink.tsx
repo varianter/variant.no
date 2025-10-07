@@ -60,6 +60,7 @@ const CustomLink = ({
         scroll={scroll}
       >
         {link.linkTitle}
+        {type === "headerLink" && <span className={styles.dot} />}
       </Link>
     ))
   );

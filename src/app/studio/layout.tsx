@@ -10,8 +10,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
-      <body>
+    <html lang="en">
+      {/* Override padding from global.css. Hackish but just for studio, as the padding is annoying */}
+      <body style={{ padding: "0 !important" }}>
         {children}
         {draftMode().isEnabled && <LiveVisualEditing />}
       </body>

@@ -1,16 +1,17 @@
 import { defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
+import image from "studio/schemas/fields/media";
+import { richTextInternalized } from "studio/schemas/fields/text";
 import { allTranslations, firstTranslation } from "studio/utils/i18n";
 import {
   validateInternationalizedArray,
   validateInternationalizedField,
 } from "studio/utils/internationalizedFieldValidator";
 
-export const eventPostingID = "eventPosting";
+import seoWithoutImage from "./seoWithoutImage";
 
-// Lazy reference to avoid circular dependency
-const lazyPageBuilderID = () => "pageBuilder";
+export const eventPostingID = "eventPosting";
 
 const eventPosting = defineType({
   name: eventPostingID,
@@ -34,6 +35,8 @@ const eventPosting = defineType({
       title: "Locations",
       name: "locations",
       type: "array",
+      description:
+        "Which city is the event located in? Do not include address here.",
       validation: validateInternationalizedArray("Location", "locationString"),
 
       of: [
@@ -63,10 +66,24 @@ const eventPosting = defineType({
       ],
     },
     {
+      title: "Address",
+      name: "address",
+      type: "string",
+      description:
+        "The address of the event (e.g. Kongens gate 36). Don't include postal code.",
+    },
+    {
       title: "Date",
       name: "date",
       type: "date",
-      description: "Where is the role located?",
+      description: "The date of the event (e.g. 2025-10-02).",
+      validation: (rule) => rule.required(),
+    },
+    {
+      title: "Time",
+      name: "time",
+      type: "string",
+      description: "The time of the event (e.g. 14:00, 09:00-17:00)",
     },
     {
       title: "Subject Tags",
@@ -138,14 +155,53 @@ const eventPosting = defineType({
           allowRelative: false,
         }),
       ],
+      hidden: ({ parent }) => parent?.createInternalPage,
     },
     {
-      name: "internalLink",
-      title: "Internal Link",
+      name: "createInternalPage",
+      title: "Create an internal page",
+      type: "boolean",
       description:
-        "Select the page you want to link to. The page has to have a slug for the link to work.",
-      type: "reference",
-      to: [{ type: lazyPageBuilderID() }],
+        "If you want to create a page in the Page Builder for this event, check this box.",
+      initialValue: false,
+    },
+    {
+      name: "recordID",
+      type: "number",
+      title: "Record ID",
+      description:
+        "The unique identifier for the event registration record in HubSpot. This is used to track registrations.",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "submitButtonText",
+      type: "internationalizedArrayString",
+      title: "Submit Button Text",
+      description: "The text displayed on the submit button.",
+      hidden: ({ parent }) => !parent?.createInternalPage || !parent?.recordID,
+    },
+    {
+      ...image,
+      name: "eventImage",
+      title: "Event image",
+      description: "An image representing the event",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "internationalizedArrayString",
+      description: "An optional subtitle for the event",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...richTextInternalized,
+      description: "Adds text under the page",
+      hidden: ({ parent }) => !parent?.createInternalPage,
+    },
+    {
+      ...seoWithoutImage,
+      hidden: ({ parent }) => !parent?.createInternalPage,
     },
   ],
   preview: {

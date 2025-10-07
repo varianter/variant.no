@@ -46,6 +46,11 @@
       "resultLabel": "Your annual salary",
       "notice": "Note! All Variants receive a salary increase on January 1st every year. While we wait for new salary statistics from Tekna, you will find last year's salary data."
     },
+    "graphs": {
+      "bonusChart": "Historical bonus amounts by year",
+      "salaryChart": "Salary progression over time with future projections",
+      "pensionChart": "Pension contribution comparison"
+    },
     "degreeOptions": {
       "bachelor": "Bachelor",
       "master": "Master"
@@ -90,7 +95,9 @@
   "event_section": {
     "see_all_events": "See all events",
     "go_to_event": "Go to event",
-    "all_events": "All events"
+    "all_events": "All events",
+    "future_events": "Coming events",
+    "past_events": "Past events"
   },
   "office_selector": {
     "location": "Location",
@@ -101,12 +108,16 @@
     "mainMenu": "Main menu",
     "other": "Other",
     "socialMedia": "Places we share",
-    "contact": "General contact"
+    "contact": "General contact",
+    "characterIllustration": "Happy smiling character illustration"
   },
   "gridSection": {
     "video": "Video",
     "podcast": "Podcast",
     "article": "Article",
     "other": "Other"
+  },
+  "employeeCarousel": {
+    "screenReaderNavigation": "Navigate this employee carousel using the Left and Right arrow keys, or use the Previous and Next buttons."
   }
 }

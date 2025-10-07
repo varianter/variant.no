@@ -1,19 +1,15 @@
 /* Employees.tsx */
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
-  margin: 5rem 1rem;
-  flex-wrap: wrap;
-
   max-width: var(--max-content-width-large);
   margin: var(--padding-l) auto 0;
-
   background: var(--background-employees-green);
   padding: 3rem;
   border-radius: var(--radius-large, 24px);
 
-  @media (max-width: 375px) {
+  @media (width <= 375px) {
     padding: 1.5rem;
   }
 }
@@ -53,7 +49,8 @@
 
 .employeeFilterLabel {
   flex-shrink: 0;
-  @media (min-width: 375px) {
+
+  @media (width >= 375px) {
     min-width: 4.5rem;
     width: 4.5rem;
   }
@@ -100,21 +97,22 @@
 }
 
 .showMore__button {
+  font: inherit;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0.25rem 0.5rem;
   gap: 0.25rem;
-
   border-radius: var(--radius-small);
   border: 1px solid var(--background-button-outline-dark);
   background: var(--background-bg-light-primary);
   text-decoration: none;
   z-index: 2;
   position: relative;
+  cursor: pointer;
 }
+
 .showMore__button img {
   display: block;
   height: 1.5rem;

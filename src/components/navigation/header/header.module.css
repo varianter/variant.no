@@ -2,7 +2,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  @media (max-width: 834px) {
+
+  @media (width <= 834px) {
     & > header {
       display: flex;
       flex-direction: column;
@@ -18,6 +19,7 @@
 
 .nav {
   --nav-height: 5rem;
+
   max-width: min(1091px, calc(100vw - 2rem));
   min-height: var(--nav-height);
   position: relative;
@@ -44,7 +46,7 @@
   padding: 0 3rem;
   border-radius: 0.75rem;
   background: var(--background-header-light-transparent);
-  box-shadow: 0px 0.5px 2px 0px #eaeaea;
+  box-shadow: 0 0.5px 2px 0 #eaeaea;
   backdrop-filter: blur(40px);
   max-width: min(1091px, calc(100vw - 2rem));
   width: 100%;
@@ -53,14 +55,14 @@
   grid-template-rows: var(--nav-height);
   z-index: 1;
 
-  @media (max-width: 375px) {
+  @media (width <= 375px) {
     width: 100vw;
   }
 }
 
 .withAnnouncement {
   border-radius: 12px 12px 0 0;
-  box-shadow: 0px 0px 2px 0px #eaeaea;
+  box-shadow: 0 0 2px 0 #eaeaea;
 }
 
 .desktopWrapper {
@@ -78,11 +80,10 @@
 .listMobile {
   composes: list;
   display: flex;
-  align-items: space-between;
   flex-direction: column;
   gap: 1.5rem;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     display: none;
   }
 }
@@ -91,7 +92,7 @@
   composes: list;
   display: none;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,7 +110,7 @@
   margin: 0;
   padding: 0;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     display: none;
   }
 }
@@ -124,7 +125,7 @@
 .languageSwitcher {
   display: none;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     align-items: center;
     gap: 0.75rem;
     display: flex;
@@ -142,7 +143,7 @@
 .mobileMenu {
   padding: 1.5rem 0;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     display: none;
   }
 }
@@ -164,7 +165,7 @@
   background-color: transparent;
   border: none;
 
-  @media (min-width: 834px) {
+  @media (width >= 834px) {
     display: none;
   }
 }
@@ -190,7 +191,7 @@
   max-width: min(1091px, calc(100vw - 2rem));
   margin: 0 auto;
 
-  @media (max-width: 834px) {
+  @media (width <= 834px) {
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -205,8 +206,8 @@
   height: 1.5rem;
   aspect-ratio: 101 / 24;
   display: block;
-  mask-image: url(/_assets/variant-logo.svg);
+  mask-image: url("/_assets/variant-logo.svg");
   mask-repeat: no-repeat;
   mask-size: cover;
-  background: currentColor;
+  background: currentcolor;
 }

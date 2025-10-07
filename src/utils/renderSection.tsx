@@ -1,5 +1,6 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
 
+import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -22,6 +23,7 @@ import Learning from "src/components/sections/learning/Learning";
 import { LogoSalad } from "src/components/sections/logoSalad/LogoSalad";
 import LogoSaladPreview from "src/components/sections/logoSalad/LogoSaladPreview";
 import Openness from "src/components/sections/openness/Openness";
+import PunchLineBox from "src/components/sections/punchLineBox/PunchLineBox";
 import SplitSection from "src/components/sections/splitSection/SplitSection";
 import TextContent from "src/components/sections/textContent/TextContent";
 import { Locale } from "src/i18n/routing";
@@ -191,6 +193,8 @@ const SectionRenderer = ({
         initialData,
         language as Locale,
       );
+    case "punchLineBox":
+      return <PunchLineBox section={section} />;
     case "contactBox":
       return <ContactBox section={section} language={language} />;
     case "employees":
@@ -215,6 +219,8 @@ const SectionRenderer = ({
       return <SplitSection section={section} language={language} />;
     case "fieldGrid":
       return <GridSectionComponent section={section} />;
+    case "eventRegistration":
+      return <EventRegistration section={section} />;
     default:
       return null;
   }

@@ -1,0 +1,46 @@
+{
+  "eventRegistration": {
+    "name": "Navn",
+    "company": "Bedrift",
+    "email": "Email",
+    "phone": "Telefon",
+    "terms": {
+      "gerneral": "For mer informasjon om hvordan vi behandler og beskytter dine data se vår",
+      "link": {
+        "text": "personvernerklæring",
+        "url": "https://variant.no/no/personvern-event/"
+      },
+      "forEvent": "for arrangementer"
+    },
+    "interests": "Variant kan kontakte meg om kommende arrangementer og lignende innhold i fremtiden.(valgfritt)",
+    "submit": "Meld interesse",
+    "submitting": "Sender...",
+    "successTitle": "Takk for din påmelding!",
+    "registerAnother": "Meld på en annen bruker",
+    "errors": {
+      "emailRequired": "Må fylles inn for å sende inn skjema",
+      "emailInvalid": "Fyll inn en gyldig e-postadresse",
+      "nameRequired": "Må fylles inn for å sende inn skjema",
+      "termsRequired": "Du må samtykke for å sende inn skjema",
+      "phoneInvalid": "Fyll inn et gyldig telefonnummer",
+      "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
+    },
+    "closed": {
+      "title": "Påmelding lukket",
+      "message": "Dette arrangementet er over og det er derfor ikke mulig å melde seg på. Håper vi ser deg på neste arrangement!",
+      "otherEventText": "Ta gjerne en kikk på våre andre",
+      "events": "arrangementer",
+      "imgAlt": "blå boks med trist ansikt"
+    },
+    "registrationComplete": {
+      "title": "Takk!",
+      "successMessage": "Vi setter pris på din interesse",
+      "emailConfirmation": "Vi sender kun epost til deg som en påminnelse eller om det er endringer",
+      "registerAnother": "Ønsker du å melde på flere?",
+      "linkText": "Vis skjema.",
+      "unsubscribeNote": "For avmelding se vår",
+      "forEvent": "for arrangementer",
+      "imgAlt": "blå boks med glad ansikt"
+    }
+  }
+}

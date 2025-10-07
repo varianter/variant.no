@@ -40,7 +40,7 @@
   z-index: 2;
   line-height: 1.5;
   margin-right: auto;
-  border-radius: 0.25rem 0.25rem 0rem 0rem;
+  border-radius: 0.25rem 0.25rem 0 0;
   margin-bottom: 3px;
   font-weight: 500;
 }
@@ -58,10 +58,6 @@
 .highlightBlock .highlightCard {
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.highlightWrapper:has(.highlightRow:empty) .highlightCard {
-  border-bottom-right-radius: 0.25rem;
 }
 
 .highlightWrapper {
@@ -98,7 +94,11 @@
   border-top-left-radius: 0;
 }
 
-@media (max-width: 425px) {
+.highlightWrapper:has(.highlightRow:empty) .highlightCard {
+  border-bottom-right-radius: 0.25rem;
+}
+
+@media (width <= 425px) {
   div:has(> .highlightWrapper) {
     width: 100%;
   }

@@ -27,6 +27,7 @@
   - [Testing](#testing)
 - [Key Dependencies](#key-dependencies)
 - [Documentation and Resources](#documentation-and-resources)
+- [Changelog](#changelog)
 - [Credits](#credits)
 
 ## Key Features
@@ -62,24 +63,7 @@ To get started, follow these steps:
    ```
 
 3. **Set Up Environment Variables:**
-   Ensure that the following environment variables are configured in your .env.local file:
-
-   ```
-   # ENV KEYS FOR UNIQUE STUDIO
-   NEXT_PUBLIC_SANITY_PROJECT_ID=<Your Sanity Project ID>
-   NEXT_PUBLIC_SANITY_DATASET=<Your Sanity Dataset>
-   NEXT_PUBLIC_SANITY_API_VERSION=<Your Sanity API Version>
-   SANITY_API_TOKEN_DEV=<Your Sanity API Developer Token>
-   SANITY_API_TOKEN_PROD=<Your Sanity API Viewer Token>
-
-   # ENV KEYS FOR SHARED STUDIO
-
-   NEXT_PUBLIC_SANITY_SHARED_PROJECT_ID=<Your Sanity SHARED Project ID>
-   NEXT_PUBLIC_SANITY_SHARED_DATASET=<Your Sanity SHARED Dataset>
-   NEXT_PUBLIC_SANITY_SHARED_API_VERSION=<Your Sanity SHARED API Version>
-   SANITY_SHARED_API_TOKEN_DEV=<Your Sanity SHARED API Developer Token>
-   SANITY_SHARED_API_TOKEN_PROD=<Your Sanity SHARED API Viewer Token>
-   ```
+   Copy .env.example to .env.local and configure variables.
 
 4. **Configure Sanity:**
    You will need access to a Sanity project. Set up a new project or gain access to an existing one. Ensure you have the necessary API tokens and credentials.
@@ -244,6 +228,11 @@ Sanity Preview, or Presentation, is not yet fully supported in this project. Bug
 ## Documentation and Resources
 
 - [Importing production data for local development](./docs/import-sanity-dataset.md)
+
+## Changelog
+
+Changelog can be found in [CHANGELOG.md](./CHANGELOG.md).
+This changelog is generated with the help of [auto-changelog](https://github.com/cookpete/auto-changelog) and can be generated using the script `npm run changelog`.
 
 ## Credits
 

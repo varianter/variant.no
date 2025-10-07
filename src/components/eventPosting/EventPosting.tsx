@@ -3,14 +3,12 @@ import { useTranslations } from "next-intl";
 import { ElementType } from "react";
 
 import Badge from "src/components/badge/Badge";
+import EventInformation from "src/components/eventInformation/eventInformation";
 import Text from "src/components/text/Text";
+import EventSpeakers from "src/components/utils/eventSpeakers/eventSpeakers";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventPosting.module.css";
-
-function sortAlphabetically(list: string[]) {
-  return list.sort((a, b) => a.localeCompare(b));
-}
 
 interface EventPostingProps {
   eventPosting: IEventPosting;
@@ -23,9 +21,6 @@ export default function EventPosting({
   showLocations = true,
   language,
 }: EventPostingProps) {
-  const eventPostingLocations = sortAlphabetically(
-    eventPosting.locations.map((loc) => loc.locationString),
-  ).join(", ");
   const t = useTranslations("event_section");
 
   const consultantsFirstNames =
@@ -33,8 +28,7 @@ export default function EventPosting({
 
   const eventPostingTags = eventPosting.tags?.map((tag) => tag.tag) ?? [];
 
-  const isInternal =
-    eventPosting.internalLink && eventPosting.internalLink?.url;
+  const isInternal = eventPosting.createInternalPage;
   const isExternal = eventPosting.externalLink;
 
   const Wrapper: ElementType = isInternal || isExternal ? Link : "div";
@@ -43,7 +37,7 @@ export default function EventPosting({
     isInternal || isExternal
       ? {
           href: isInternal
-            ? `/${language}/${eventPosting.internalLink?.url}`
+            ? `/${language}/event/${eventPosting._key}`
             : eventPosting.externalLink,
           target: isExternal ? "_blank" : undefined,
           "aria-label": `${t("go_to_event")} ${eventPosting.eventTitle}`,
@@ -56,16 +50,11 @@ export default function EventPosting({
       {...linkProps}
       className={styles.eventPosting}
     >
-      <div className={styles.flex}>
-        {eventPosting.date && (
-          <Text type="labelRegular">{eventPosting.date}</Text>
-        )}
-        {eventPosting.date && showLocations && <span> · </span>}
-        {showLocations && (
-          <Text type="labelRegular">{eventPostingLocations}</Text>
-        )}
-      </div>
-
+      <EventInformation
+        date={eventPosting.date}
+        time={eventPosting.time}
+        locations={showLocations ? eventPosting.locations : undefined}
+      />
       <Text type="h3" className={styles.eventTitle}>
         {eventPosting.eventTitle}
       </Text>
@@ -73,16 +62,11 @@ export default function EventPosting({
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
         {eventPostingTags.length > 0 && (
-          <div>
+          <div className={styles.badgeWrapper}>
             {eventPostingTags
               .filter((tag) => tag)
               .map((tag, index) => (
-                <Badge
-                  key={index}
-                  className={styles.themes}
-                  badgeColor="#FAFAFA"
-                  borderColor="#2D2D2D"
-                >
+                <Badge key={index} badgeColor="#FAFAFA" borderColor="#2D2D2D">
                   {tag}
                 </Badge>
               ))}
@@ -90,23 +74,10 @@ export default function EventPosting({
         )}
 
         {consultantsFirstNames?.length > 0 && (
-          <div className={`${styles.flex} ${styles.consultants}`}>
-            <Text type="labelRegular">
-              <span>【 </span>
-            </Text>
-            {consultantsFirstNames.map((name) => (
-              <Text
-                key={name}
-                className={styles.dotSeperator}
-                type="labelRegular"
-              >
-                {name}
-              </Text>
-            ))}
-            <Text type="labelRegular">
-              <span> 】</span>
-            </Text>
-          </div>
+          <EventSpeakers
+            textType="labelRegular"
+            consultantsFirstNames={consultantsFirstNames}
+          />
         )}
       </div>
     </Wrapper>

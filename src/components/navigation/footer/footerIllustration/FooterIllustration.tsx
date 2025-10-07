@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import styles from "./footerIllustration.module.css";
@@ -7,6 +8,8 @@ interface FooterIllustrationProps {
 }
 
 export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
+  const t = useTranslations("footer");
+
   return (
     <div className={styles.footerIllustrations}>
       <svg
@@ -16,7 +19,10 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
         height="71"
         viewBox="0 0 147 71"
         fill="none"
+        role="img"
+        aria-labelledby="left-illustration-title"
       >
+        <title id="left-illustration-title">{t("characterIllustration")}</title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -51,7 +57,12 @@ export const FooterIllustration = ({ color }: FooterIllustrationProps) => {
         height="84"
         viewBox="0 0 215 84"
         fill="none"
+        role="img"
+        aria-labelledby="right-illustration-title"
       >
+        <title id="right-illustration-title">
+          {t("characterIllustration")}
+        </title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"

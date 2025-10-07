@@ -74,7 +74,11 @@ const LanguageSelector = (props: ArrayOfObjectsInputProps<Language>) => {
           : colorMap[themeType].default;
 
         return (
-          <label htmlFor={lang.id} key={lang.id}>
+          <label
+            htmlFor={lang.id}
+            key={lang.id}
+            aria-label={`Select ${lang.title}`}
+          >
             <Card
               padding={4}
               radius={2}

@@ -76,12 +76,12 @@ export const hero = defineField({
 
             const invalidItems = value.filter(
               (item) =>
-                typeof item.value === "string" && item.value.length > 200,
+                typeof item.value === "string" && item.value.length > 300,
             );
 
             if (invalidItems.length > 0) {
               return invalidItems.map((item) => ({
-                message: "Description cannot be more than 200 characters long.",
+                message: "Description cannot be more than 300 characters long.",
                 path: [{ _key: item._key }, "value"],
               }));
             }

@@ -185,13 +185,29 @@ export interface GenerositySection {
   handbookBlock: HandbookSection;
 }
 
+export interface EmployeeHighlightItem {
+  basicTitle?: string;
+  name?: string;
+  description?: string;
+  employeePhoto?: IImage;
+  email?: string;
+  phone?: string;
+}
+
+export interface PunchLineBoxSection {
+  _type: "punchLineBox";
+  _key: string;
+  sentences: {
+    mainPunchLine: string;
+    actionLine: string;
+    email: string;
+  }[];
+}
+
 export interface EmployeeHighlightSection {
   _type: "employeeHighlight";
   _key: string;
-  basicTitle: string;
-  name: string;
-  description: string;
-  employeePhoto: IImage;
+  employees?: EmployeeHighlightItem[];
 }
 
 export interface OpennessSection {
@@ -232,6 +248,15 @@ export interface FieldGrid {
   fields: Field[];
 }
 
+export interface EventRegistrationSection {
+  _type: "eventRegistration";
+  _key: string;
+  recordID: string;
+  submitButtonText: string | undefined;
+  date: string;
+  interests: string[];
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -247,11 +272,13 @@ export type Section =
   | JobsSection
   | EventsSection
   | OpennessSection
+  | PunchLineBoxSection
   | GenerositySection
   | LearningSection
   | HandbookSection
   | SplitSection
-  | FieldGrid;
+  | FieldGrid
+  | EventRegistrationSection;
 
 export interface PageBuilder {
   _createdAt: string;

@@ -32,7 +32,7 @@ const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <Text type="h1"> {customerCasesPage.basicTitle} </Text>
+        <Text type="titleXL"> {customerCasesPage.basicTitle} </Text>
         {sharedCustomerCases && sharedCustomerCases.data.length > 0 ? (
           sharedCustomerCases.data.map((customerCase) => (
             <div key={customerCase._id} className={styles.caseWrapper}>

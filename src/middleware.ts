@@ -3,10 +3,12 @@ import createMiddleware from "next-intl/middleware";
 
 import { routing } from "./i18n/routing";
 import { languageMiddleware } from "./middlewares/languageMiddleware";
+import { nonceMiddleware } from "./middlewares/nonceMiddleware";
 
 export async function middleware(request: NextRequest) {
   await languageMiddleware(request);
-  return createMiddleware(routing)(request);
+  const res = createMiddleware(routing)(request);
+  return nonceMiddleware(res);
 }
 
 export const config = {
