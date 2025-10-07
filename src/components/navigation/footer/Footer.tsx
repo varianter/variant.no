@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 import CustomLink from "src/components/link/CustomLink";
 import SoMeLink from "src/components/link/SoMeLink";
+import Text from "src/components/text/Text";
 import {
   CompanyInfo,
   CompanyLocation,
@@ -22,7 +23,6 @@ import {
 import styles from "./footer.module.css";
 import { FooterIllustration } from "./footerIllustration/FooterIllustration";
 import { FooterSection } from "./footerSection/FooterSection";
-import { TextTertiary } from "./textTertiary/TextTertiary";
 
 export interface IFooter {
   navigationData: Navigation;
@@ -57,7 +57,9 @@ const Footer = ({
           <nav className={styles.nav}>
             <div className={styles.flex_container_left}>
               <div>
-                <TextTertiary>{t("text")}</TextTertiary>
+                <Text type="bodySmall" color="tertiary">
+                  {t("text")}
+                </Text>
                 <ul className={styles.offices}>
                   {companyLocations.map((location) => (
                     <li

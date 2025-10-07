@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 
-import { TextTertiary } from "src/components/navigation/footer/textTertiary/TextTertiary";
+import Text from "src/components/text/Text";
 
 import styles from "./footerSection.module.css";
 
@@ -14,7 +14,9 @@ export const FooterSection = ({ title, children }: IFooterSection) => {
 
   return (
     <div className={styles.footerSection}>
-      <TextTertiary>{title}</TextTertiary>
+      <Text type="bodySmall" color="tertiary">
+        {title}
+      </Text>
       <ul className={styles.linkColumn}>
         {childrenArray.map((child, index) => (
           <li key={index}>{child}</li>
