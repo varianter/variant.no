@@ -16,7 +16,7 @@ const bonusSection = ({
 }: BonusSectionProps) => {
   return (
     <div>
-      <Text type="h2">{benefit.basicTitle}</Text>
+      <Text type="titleL">{benefit.basicTitle}</Text>
       <RichText value={benefit.richText} />
       {yearlyBonusesForLocation && (
         <BonusGraphParent yearlyBonusesForLocation={yearlyBonusesForLocation} />

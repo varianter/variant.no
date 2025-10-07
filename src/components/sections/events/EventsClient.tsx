@@ -75,7 +75,7 @@ export default function EventsClient({
   return (
     <>
       <div className={styles.titleSection}>
-        <Text type={"h2"}>{section.basicTitle}</Text>
+        <Text type={"titleL"}>{section.basicTitle}</Text>
         <Text type={"bodyNormal"} className={styles.introText}>
           {section.subtitle}
         </Text>

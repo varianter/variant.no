@@ -48,7 +48,7 @@ function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
           {section.resultsList?.map((result) => (
             <div className={styles.highlightCard} key={result._key}>
               <div className={styles.innerContent}>
-                <Text type="h2" className={styles.result}>
+                <Text type="titleL" className={styles.result}>
                   {result.result}
                 </Text>
                 <p className={styles.subtitle}>{result.description}</p>

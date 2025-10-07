@@ -35,7 +35,7 @@ export default function SplitSection({ section, language }: SplitSectionProps) {
   return (
     <div className={styles.wrapper}>
       {title && (
-        <Text type="h2" className={styles.title}>
+        <Text type="titleL" className={styles.title}>
           {title}
         </Text>
       )}

@@ -21,7 +21,7 @@ export default function FeaturedCases({
   return (
     featuredCases.length > 0 && (
       <div className={styles.wrapper}>
-        <Text type={"h2"}>{t("featured_cases.projects")}</Text>
+        <Text type={"titleL"}>{t("featured_cases.projects")}</Text>
         <div className={styles.content}>
           {featuredCases.map((featuredCase) => (
             <Link

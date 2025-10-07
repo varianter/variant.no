@@ -12,7 +12,7 @@ export interface OpennessProps {
 export default function Openness({ section }: OpennessProps) {
   return (
     <div className={styles.wrapper}>
-      <Text type={"h2"} className={styles.title}>
+      <Text type={"titleL"} className={styles.title}>
         {section.basicTitle}
       </Text>
       <div className={styles.content}>

@@ -30,7 +30,7 @@ export default function PunchLineBoxClient({
   );
   return (
     <>
-      <Text type="h2">
+      <Text type="titleL">
         <RotatingText
           animationKey={`${key}-title`}
           text={randomSentence.mainPunchLine}

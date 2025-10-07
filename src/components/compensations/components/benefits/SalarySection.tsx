@@ -50,7 +50,7 @@ export default function SalarySection({
   return (
     <>
       <div className={styles.sectionText}>
-        <Text type="h2">{benefit.basicTitle}</Text>
+        <Text type="titleL">{benefit.basicTitle}</Text>
         <RichText value={benefit.richText} />
       </div>
       <div style={{ gridColumn: "1 / -1" }}>

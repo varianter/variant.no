@@ -34,7 +34,7 @@ export default async function Jobs({ language, section }: JobsProps) {
     companyLocations && (
       <div className={styles.wrapper}>
         <div className={styles.titleSection}>
-          <Text type={"h2"}>{section.basicTitle}</Text>
+          <Text type={"titleL"}>{section.basicTitle}</Text>
           <Text type={"bodyNormal"}>{section.subtitle}</Text>
         </div>
         <JobPostingList
