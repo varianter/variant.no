@@ -20,6 +20,7 @@
     "@sanity/preview-url-secret": "^2.1.15",
     "@sanity/react-loader": "^1.10.44",
     "@sanity/vision": "^4.10.2",
+    "@visx/shape": "^3.13.0-alpha.0",
     "auto-changelog": "^2.5.0",
     "husky": "^9.1.7",
     "motion": "^12.23.22",
@@ -66,6 +67,10 @@
   },
   "overrides": {
     "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1"
+    "@types/react-dom": "19.2.1",
+    "@visx/xychart": {
+      "react-spring": "^10.0.0",
+      "@react-spring/web": "^10.0.0"
+    }
   }
 }
