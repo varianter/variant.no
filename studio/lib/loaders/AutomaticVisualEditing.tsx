@@ -3,7 +3,6 @@
 "use client";
 
 import { useLiveMode } from "@sanity/react-loader";
-import { VisualEditing } from "next-sanity";
 import { useEffect } from "react";
 
 import { client } from "studio/lib/client";
@@ -20,5 +19,5 @@ export default function LiveVisualEditing() {
     }
   }, []);
 
-  return <VisualEditing />;
+  return <LiveVisualEditing />;
 }
