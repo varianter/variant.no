@@ -1,4 +1,4 @@
-import Text from "src/components/text/Text";
+import Text, { TextColor } from "src/components/text/Text";
 import { getTextColor } from "src/utils/color/getTextColor";
 import { cn } from "src/utils/css";
 
@@ -23,7 +23,6 @@ const Badge = ({ children, badgeColor, className, borderColor }: IBadge) => {
       className={cn(styles.badgeWrapper, className)}
       style={{
         backgroundColor: bgColor,
-        color: textColor,
         ...(brColor && {
           borderColor: brColor,
           borderWidth: "1px",
@@ -31,7 +30,9 @@ const Badge = ({ children, badgeColor, className, borderColor }: IBadge) => {
         }),
       }}
     >
-      <Text type="bodySmall">{children}</Text>
+      <Text type="bodySmall" color={textColor as TextColor}>
+        {children}
+      </Text>
     </div>
   );
 };

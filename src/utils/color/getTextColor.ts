@@ -2,12 +2,12 @@
  * Determines the appropriate text color (light or dark) based on the background color's luminance.
  *
  * @param {string} bgColor - The background color in hexadecimal format (e.g., `#RRGGBB`).
- * @returns {string} The hexadecimal color code for the text color:
- *   - Light text color (`#faf8f5`) if the background is dark.
- *   - Dark text color (`#222424`) if the background is light.
+ * @returns {string} The name of the text color, corresponding to the `TextColor`type:
+ *   - Light text color (--text-primary-light) if the background is dark.
+ *   - Dark text color (--text-primary) if the background is light.
  */
-const LIGHT_TEXT_COLOR = "#faf8f5"; // For dark backgrounds
-const DARK_TEXT_COLOR = "#222424"; // For light backgrounds
+const LIGHT_TEXT_COLOR = "light"; // For dark backgrounds
+const DARK_TEXT_COLOR = "dark"; // For light backgrounds
 
 export const getTextColor = (bgColor: string): string => {
   const rgb = bgColor
