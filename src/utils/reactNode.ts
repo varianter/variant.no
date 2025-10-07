@@ -1,8 +1,10 @@
-import { ReactNode, isValidElement } from "react";
+import { ReactElement, ReactNode, isValidElement } from "react";
 
 export function getReactNodeTextContent(node: ReactNode): string {
+  if (node == null) return "";
+
   if (typeof node === "string" || typeof node === "number") {
-    return node.toString();
+    return String(node);
   }
 
   if (Array.isArray(node)) {
@@ -10,9 +12,9 @@ export function getReactNodeTextContent(node: ReactNode): string {
   }
 
   if (isValidElement(node)) {
-    const children = node.props.children;
-    if (children) {
-      return getReactNodeTextContent(children);
+    const element = node as ReactElement<{ children?: ReactNode }>;
+    if (element.props.children) {
+      return getReactNodeTextContent(element.props.children);
     }
   }
 
