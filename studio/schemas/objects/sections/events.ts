@@ -58,7 +58,7 @@ export const events = defineField({
     },
     {
       name: "eventSectionColor",
-      type: "color",
+      type: "simplerColor",
       title: "Event Section Color",
       description: "Override the basic color with a custom one",
       options: { disableAlpha: true },

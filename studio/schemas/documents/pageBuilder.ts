@@ -75,7 +75,7 @@ const pageBuilder = defineType({
     }),
     defineField({
       name: "footerWidgetColor",
-      type: "color",
+      type: "simplerColor",
       title: "Footer Widget Color",
       description: "This color will be used for the widgets in the footer.",
       options: { disableAlpha: true },

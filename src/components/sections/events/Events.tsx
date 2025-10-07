@@ -30,7 +30,7 @@ export default async function Events({ language, section }: EventsProps) {
     eventPostings = data?.eventPostingsArray ?? [];
   }
 
-  const backgroundColor = section.eventSectionColor?.hex;
+  const backgroundColor = section.eventSectionColor?.value;
   const textColor = backgroundColor
     ? getTextColor(String(backgroundColor))
     : "#ffffff";

@@ -24,7 +24,7 @@ const CUSTOMER_CASE_BASE_FRAGMENT = groq`
     ...,
     ${INTERNATIONALIZED_IMAGE_FRAGMENT}
   },
-  "clientColor": clientColor.hex
+  "clientColor": clientColor.value
 `;
 
 export const CUSTOMER_CASES_QUERY = groq`
