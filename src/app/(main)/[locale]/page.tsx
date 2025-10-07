@@ -40,7 +40,7 @@ type Props = {
 
 const Home = async (props: Props) => {
   const params = await props.params;
-  const { perspective, isDraftMode } = getDraftModeInfo();
+  const { perspective, isDraftMode } = await getDraftModeInfo();
 
   const initialLandingPage = await fetchStudioQueryIfCache<PageBuilder | null>(
     LANDING_PAGE_QUERY,

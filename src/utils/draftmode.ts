@@ -1,4 +1,4 @@
-import { type UnsafeUnwrappedDraftMode, draftMode } from "next/headers";
+import { draftMode } from "next/headers";
 import { ClientPerspective } from "next-sanity";
 
 export interface DraftModeInfo {
@@ -6,9 +6,9 @@ export interface DraftModeInfo {
   perspective: ClientPerspective | undefined;
 }
 
-export function getDraftModeInfo(): DraftModeInfo {
-  const isDraftMode = (draftMode() as unknown as UnsafeUnwrappedDraftMode)
-    .isEnabled;
+export async function getDraftModeInfo(): Promise<DraftModeInfo> {
+  const draftModeResult = await draftMode();
+  const isDraftMode = draftModeResult.isEnabled;
   const perspective = isDraftMode ? "previewDrafts" : "published";
   return { isDraftMode, perspective };
 }

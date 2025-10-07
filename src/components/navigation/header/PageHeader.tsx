@@ -24,7 +24,7 @@ export default async function PageHeader({
   language,
   pathTranslations,
 }: PageHeaderProps) {
-  const { perspective, isDraftMode } = getDraftModeInfo();
+  const { perspective, isDraftMode } = await getDraftModeInfo();
 
   const initialNav = await loadStudioQuery<Navigation | null>(
     NAV_QUERY,

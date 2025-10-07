@@ -17,7 +17,7 @@ interface CustomerCasesProps {
 }
 
 const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
 
   const domain = domainFromHostname((await headers()).get("host"));
 
