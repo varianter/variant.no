@@ -56,7 +56,7 @@ function seoDataFromPageData(
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
   const language = params.locale;
   const pageData = await fetchPageDataFromParams({
     language,
@@ -71,7 +71,7 @@ async function Page(props: Props) {
   const params = await props.params;
   const { locale, path } = params;
 
-  const { perspective, isDraftMode } = getDraftModeInfo();
+  const { perspective, isDraftMode } = await getDraftModeInfo();
 
   const pageData = await fetchPageDataFromParams({
     language: locale,

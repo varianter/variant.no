@@ -59,7 +59,7 @@ export default async function Layout(
     };
   }>,
 ) {
-  const params = await props.params;
+  const params = props.params;
 
   const { children } = props;
 
@@ -71,7 +71,7 @@ export default async function Layout(
 
   const messages = await getMessages();
 
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
 
   const [
     initialNav,

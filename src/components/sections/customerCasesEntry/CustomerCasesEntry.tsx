@@ -20,7 +20,7 @@ interface CustomerCasesProps {
 }
 
 async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
   const domain = domainFromHostname((await headers()).get("host"));
 
   const customerCaseResult = await loadSharedQuery<CustomerCaseEntry[]>(
