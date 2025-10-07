@@ -1,5 +1,5 @@
 import Negotiator from "negotiator";
-import { type UnsafeUnwrappedHeaders, headers } from "next/headers";
+import { headers } from "next/headers";
 import { NextRequest } from "next/server";
 import { SanityClient } from "next-sanity";
 
@@ -197,12 +197,11 @@ async function translatePath(
   return undefined;
 }
 
-function negotiateClientLanguage(
+async function negotiateClientLanguage(
   availableLanguages: string[],
-): string | undefined {
-  const acceptLanguage = (headers() as unknown as UnsafeUnwrappedHeaders).get(
-    "Accept-Language",
-  );
+): Promise<string | undefined> {
+  const headersList = await headers();
+  const acceptLanguage = headersList.get("Accept-Language");
   if (acceptLanguage === null) return undefined;
   return new Negotiator({
     headers: { "accept-language": acceptLanguage },
@@ -335,9 +334,9 @@ async function rewriteMissingLanguage(
   defaultLanguageId: string,
 ): Promise<void> {
   const preferredLanguage =
-    negotiateClientLanguage(
+    (await negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
-    ) ?? defaultLanguageId;
+    )) ?? defaultLanguageId;
 
   let translatedPath = await translatePath(
     path,
