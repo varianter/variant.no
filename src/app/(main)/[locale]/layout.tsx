@@ -54,12 +54,12 @@ const fontBrittiSans = localFont({
 export default async function Layout(
   props: Readonly<{
     children: React.ReactNode;
-    params: {
+    params: Promise<{
       locale: string;
-    };
+    }>;
   }>,
 ) {
-  const params = props.params;
+  const params = await props.params;
 
   const { children } = props;
 
