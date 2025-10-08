@@ -128,20 +128,12 @@ const SalaryGraph = ({
               strokeWidth="2"
               fill="var(--surface-violet-light)"
             />
-            <foreignObject
-              x="-50"
-              y="10"
-              width="100"
-              height="50"
-              className={styles.markerText}
-            >
+            <foreignObject x="-50" y="10" width="100" height="55">
               <div className={styles.markerTextContainer}>
-                <Text type="labelRegular" className={styles.markerYear}>
+                <Text type="labelRegular" color="tertiary">
                   {year}
                 </Text>
-                <Text type="h5" className={styles.markerPay}>
-                  {formatCurrencyFromNumber(pay)}
-                </Text>
+                <Text type="labelLarge">{formatCurrencyFromNumber(pay)}</Text>
               </div>
             </foreignObject>
           </g>
@@ -165,8 +157,10 @@ const SalaryGraphParent = ({ payscale }: { payscale: Payscale }) => {
           />
         )}
       </ParentSize>
-      <p>{t("historicalGrowth")}</p>
-      <p>{t("basedOnExperience")}</p>
+      <div className={styles.growthWrapper}>
+        <p>{t("historicalGrowth")}</p>
+        <p>{t("basedOnExperience")}</p>
+      </div>
     </div>
   );
 };
