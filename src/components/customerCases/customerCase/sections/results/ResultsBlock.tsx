@@ -32,14 +32,16 @@ function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
     <div className={styles.highlightWrapper} style={style}>
       <div className={styles.content}>
         <div className={styles.highlightBlock}>
-          <Text type="labelRegular" className={styles.highlightOutside}>
-            {section.resultsBlockTitle}
-          </Text>
+          <div className={styles.highlightOutside}>
+            <Text type="labelRegular">{section.resultsBlockTitle}</Text>
+          </div>
           {section.quote?.map((quote) => (
             <div className={styles.highlightCard} key={quote._key}>
               <div className={styles.innerContent}>
                 <Text type="h3">{quote.quoteText}</Text>
-                <p className={styles.subtitle}>{quote.quoteAuthor}</p>
+                <Text type="bodySmall" color="tertiary">
+                  {quote.quoteAuthor}
+                </Text>
               </div>
             </div>
           ))}
@@ -48,10 +50,10 @@ function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
           {section.resultsList?.map((result) => (
             <div className={styles.highlightCard} key={result._key}>
               <div className={styles.innerContent}>
-                <Text type="titleL" className={styles.result}>
-                  {result.result}
+                <Text type="titleL">{result.result}</Text>
+                <Text type="bodySmall" color="tertiary">
+                  {result.description}
                 </Text>
-                <p className={styles.subtitle}>{result.description}</p>
               </div>
             </div>
           ))}
