@@ -88,7 +88,7 @@ function CardInfo({
         {selectedCustomerCase.basicTitle}
       </Text>
       <div className={styles.deliveries}>
-        <Text type="labelRegular">{t("customer_case_entry.field")}</Text>
+        <Text type="label">{t("customer_case_entry.field")}</Text>
         <div className={styles.deliveriesList}>
           {deliveryNames.map((deliveryName, index) => (
             <Text
@@ -124,7 +124,7 @@ function TagRow({
   return (
     <div>
       <div className={styles.TagRow}>
-        <Text className={styles.font} type="labelRegular">
+        <Text className={styles.font} type="label">
           {t("customer_case_entry.case")}
         </Text>
         {visibleCases.map((customerCase) => (

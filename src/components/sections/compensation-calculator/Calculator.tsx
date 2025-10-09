@@ -105,11 +105,11 @@ export default function Calculator({
       </div>
       {salary !== null && (
         <div aria-live="polite" className={styles.salaryTextContainer}>
-          <Text type="labelRegular">{t("calculator.resultLabel")}</Text>
+          <Text type="label">{t("calculator.resultLabel")}</Text>
           <p className={styles.salaryText}>
             {formatAsCurrency(salary, locale.locale, locale.currency)}
           </p>
-          <Text type="labelRegular">{t("calculator.bonusResult")}</Text>
+          <Text type="label">{t("calculator.bonusResult")}</Text>
         </div>
       )}
     </form>

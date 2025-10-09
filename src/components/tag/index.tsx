@@ -56,14 +56,14 @@ export const Tag = ({
         onClick={props.onClick}
         {...props}
       >
-        <Text type="labelRegular">{text}</Text>
+        <Text type="label">{text}</Text>
       </button>
     );
   }
 
   return (
     <Link className={className} href={props.href}>
-      <Text type="labelRegular">{text}</Text>
+      <Text type="label">{text}</Text>
     </Link>
   );
 };

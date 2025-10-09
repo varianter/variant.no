@@ -3,7 +3,7 @@
   font-family: var(--font-britti-sans);
 }
 
-.labelRegular,
+.label,
 .quoteItalic,
 .quoteNormal,
 .bodyExtraSmall,
@@ -22,12 +22,12 @@
   font-weight: 450;
   line-height: 111.111%;
 
-  @media (width <= 834px) {
+  @media (width <=834px) {
     font-size: 3.5rem;
     line-height: 114.286%;
   }
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 2.5rem;
     line-height: 120%;
   }
@@ -38,12 +38,12 @@
   font-weight: 450;
   line-height: 114.286%;
 
-  @media (width <= 834px) {
+  @media (width <=834px) {
     font-size: 2.5rem;
     line-height: 120%;
   }
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 2rem;
     line-height: 125%;
   }
@@ -54,7 +54,7 @@
   font-weight: 450;
   line-height: 125%;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 1.5rem;
     line-height: 133.333%;
   }
@@ -88,7 +88,7 @@
   line-height: 120%;
   letter-spacing: 0.025rem;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 2rem;
     line-height: 125%;
   }
@@ -100,7 +100,7 @@
   font-weight: 300;
   line-height: 133.333%;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 1.125rem;
   }
 }
@@ -112,7 +112,7 @@
   line-height: 160%;
   letter-spacing: 0.0125rem;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 0.875rem;
     line-height: 171.429%;
   }
@@ -123,7 +123,7 @@
   font-weight: 300;
   line-height: 150%;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 0.875rem;
     line-height: 114.286%;
   }
@@ -135,21 +135,21 @@
   line-height: 128.571%;
   letter-spacing: 0.0088rem;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 0.75rem;
     line-height: 150%;
     letter-spacing: 0.0075rem;
   }
 }
 
-.labelRegular {
+.label {
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
   letter-spacing: 0.02rem;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 0.875rem;
     line-height: 114.286%;
     letter-spacing: 0.0175rem;
@@ -162,7 +162,7 @@
   font-weight: 400;
   line-height: 120%;
 
-  @media (width <= 425px) {
+  @media (width <=425px) {
     font-size: 1.125rem;
     line-height: 133.333%;
   }

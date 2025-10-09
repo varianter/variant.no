@@ -8,7 +8,7 @@ export type TextType =
   | "h5"
   | "h6"
   | "desktopLink"
-  | "labelRegular"
+  | "label"
   | "labelLarge"
   | "quoteItalic"
   | "quoteNormal"
@@ -30,7 +30,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   h5: "h5",
   h6: "h6",
   desktopLink: "p",
-  labelRegular: "span",
+  label: "span",
   labelLarge: "span",
   quoteItalic: "p",
   quoteNormal: "p",
@@ -53,7 +53,7 @@ const classMap: { [key in TextType]?: string } = {
   h5: styles.h5,
   h6: styles.h6,
   desktopLink: styles.desktopLink,
-  labelRegular: styles.labelRegular,
+  label: styles.label,
   labelLarge: styles.labelLarge,
   quoteItalic: styles.quoteItalic,
   quoteNormal: styles.quoteNormal,

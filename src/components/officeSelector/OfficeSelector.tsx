@@ -35,7 +35,7 @@ export default function OfficeSelector({
 
   return (
     <div className={styles.filters}>
-      <Text type="labelRegular">{t("location")}</Text>
+      <Text type="label">{t("location")}</Text>
       <Tag
         active={!locationFilter}
         type="button"
