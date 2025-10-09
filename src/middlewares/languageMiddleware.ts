@@ -325,14 +325,14 @@ async function rewriteWithLanguage(
  * @param path - The path segments of the URL.
  * @param availableLanguages - A list of available languages supported by the site.
  * @param defaultLanguageId - The ID of the default language.
- * @returns Returns a NextResponse for redirects, or undefined when rewriting the request path directly.
+ * @returns Returns NextResponse for rewrites, or undefined when no rewrite is needed.
  */
 async function rewriteMissingLanguage(
   request: NextRequest,
   path: string[],
   availableLanguages: LanguageObject[],
   defaultLanguageId: string,
-) {
+): Promise<NextResponse | undefined> {
   const preferredLanguage =
     (await negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
@@ -349,11 +349,12 @@ async function rewriteMissingLanguage(
   }
 
   if (translatedPath !== undefined) {
-    const newPath = `/${preferredLanguage}/${translatedPath.join("/")}`;
-    request.nextUrl.pathname = newPath;
+    const url = request.nextUrl.clone();
+    url.pathname = `/${preferredLanguage}/${translatedPath.join("/")}`;
+    return NextResponse.rewrite(url);
   } else {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLanguageId}/${path.join("/")}`;
-    return NextResponse.redirect(url);
+    return NextResponse.rewrite(url);
   }
 }
