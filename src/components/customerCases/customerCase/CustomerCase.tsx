@@ -88,12 +88,7 @@ function ColoredTitle({
   colorPart?: string;
   color?: string;
 }) {
-  if (!colorPart)
-    return (
-      <Text type={"titleXL"} className={styles.mainTitle}>
-        {title}
-      </Text>
-    );
+  if (!colorPart) return <Text type="titleXL">{title}</Text>;
 
   const startColorIndex = title.indexOf(colorPart);
   const endColorIndex = startColorIndex + colorPart.length;
@@ -104,7 +99,7 @@ function ColoredTitle({
 
   return (
     <div className={styles.titleWrapper}>
-      <Text type={"titleXL"} className={styles.mainTitle}>
+      <Text type="titleXL">
         <span>{preColorText}</span>
         <span style={{ color: color }}>{colorText}</span>
         <span>{postColorText}</span>

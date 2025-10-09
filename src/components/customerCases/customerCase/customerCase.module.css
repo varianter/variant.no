@@ -20,18 +20,10 @@
 .titleWrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.mainTitle {
-  font-weight: 600;
+  align-self: center;
   gap: 1.62rem;
-  max-width: var(--max-content-width-medium);
   width: 100%;
-
-  @media (width <= 425px) {
-    font-size: 1.75rem;
-  }
+  max-width: var(--max-content-width-medium);
 }
 
 .mainImageWrapper {

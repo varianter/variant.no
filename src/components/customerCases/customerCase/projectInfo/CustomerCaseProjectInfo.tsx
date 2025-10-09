@@ -35,7 +35,7 @@ export default async function CustomerCaseProjectInfo({
       <div className={styles.projectInfoInner}>
         {projectInfo.customerSectors && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text type="labelRegular" color="tertiary">
               {t("customer").toUpperCase()}
             </Text>
             <div className={styles.badgeWrapper}>
@@ -49,41 +49,50 @@ export default async function CustomerCaseProjectInfo({
         )}
         {consultantsFirstNames && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text type="labelRegular" color="tertiary">
               {t("variants").toUpperCase()}
             </Text>
             <div className={styles.varianter}>
-              <Text className={styles.preFancyCharacter}>
-                <span style={{ color: clientColor }}>【 </span>
-              </Text>
-              {consultantsFirstNames.map((name) => (
-                <Text
-                  key={name}
-                  type="bodyNormal"
-                  className={styles.dotSeperatorVarianter}
+              <Text>
+                <span
+                  className={styles.preFancyCharacter}
+                  style={{ color: clientColor }}
                 >
+                  【{" "}
+                </span>
+              </Text>
+              {consultantsFirstNames.map((name, idx, arr) => (
+                <Text key={name} type="bodyNormal">
                   {name}
+                  {idx < arr.length - 1 && (
+                    <span className={styles.dotSeperator} />
+                  )}
                 </Text>
               ))}
-              <Text className={styles.afterFancyCharacter}>
-                <span style={{ color: clientColor }}> 】</span>
+              <Text>
+                <span
+                  className={styles.afterFancyCharacter}
+                  style={{ color: clientColor }}
+                >
+                  {" "}
+                  】
+                </span>
               </Text>
             </div>
           </div>
         )}
         {projectInfo.collaborators && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text type="labelRegular" color="tertiary">
               {t("collaborators").toUpperCase()}
             </Text>
             <div className={styles.projectInfoItem}>
-              {projectInfo.collaborators.map((collaborator) => (
-                <Text
-                  type="bodyNormal"
-                  key={collaborator}
-                  className={styles.dotSeperator}
-                >
+              {projectInfo.collaborators.map((collaborator, idx, arr) => (
+                <Text type="bodyNormal" key={collaborator}>
                   {collaborator}
+                  {idx < arr.length - 1 && (
+                    <span className={styles.dotSeperator} />
+                  )}
                 </Text>
               ))}
             </div>
@@ -91,8 +100,8 @@ export default async function CustomerCaseProjectInfo({
         )}
         {projectInfo.url && (
           <div className={styles.urlWrapper}>
-            <Text className={styles.title} type="labelRegular">
-              {t("url")}
+            <Text type="labelRegular" color="tertiary">
+              {t("url").toUpperCase()}
             </Text>
             <CustomLink
               link={{
@@ -111,18 +120,17 @@ export default async function CustomerCaseProjectInfo({
         <div className={styles.deliveries}>
           {projectInfo.deliveries["projectManagement"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text type="labelRegular" color="tertiary">
                 {t("project_management").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["projectManagement"].map(
-                  (projectManagement) => (
-                    <Text
-                      type="bodyNormal"
-                      key={projectManagement.key}
-                      className={styles.dotSeperator}
-                    >
+                  (projectManagement, idx, arr) => (
+                    <Text type="bodyNormal" key={projectManagement.key}>
                       {projectManagement.projectManagementDelivery}
+                      {idx < arr.length - 1 && (
+                        <span className={styles.dotSeperator} />
+                      )}
                     </Text>
                   ),
                 )}
@@ -131,17 +139,16 @@ export default async function CustomerCaseProjectInfo({
           )}
           {projectInfo.deliveries["design"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text type="labelRegular" color="tertiary">
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.deliveries["design"].map((design) => (
-                  <Text
-                    key={design.key}
-                    type="bodyNormal"
-                    className={styles.dotSeperator}
-                  >
+                {projectInfo.deliveries["design"].map((design, idx, arr) => (
+                  <Text key={design.key} type="bodyNormal">
                     {design.designDelivery}
+                    {idx < arr.length - 1 && (
+                      <span className={styles.dotSeperator} />
+                    )}
                   </Text>
                 ))}
               </div>
@@ -149,19 +156,20 @@ export default async function CustomerCaseProjectInfo({
           )}
           {projectInfo.deliveries["development"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text type="labelRegular" color="tertiary">
                 {t("development").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.deliveries["development"].map((development) => (
-                  <Text
-                    key={development.key}
-                    type="bodyNormal"
-                    className={styles.dotSeperator}
-                  >
-                    {development.developmentDelivery}
-                  </Text>
-                ))}
+                {projectInfo.deliveries["development"].map(
+                  (development, idx, arr) => (
+                    <Text key={development.key} type="bodyNormal">
+                      {development.developmentDelivery}
+                      {idx < arr.length - 1 && (
+                        <span className={styles.dotSeperator} />
+                      )}
+                    </Text>
+                  ),
+                )}
               </div>
             </div>
           )}

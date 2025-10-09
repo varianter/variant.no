@@ -68,12 +68,6 @@
   gap: 1.5rem;
 }
 
-@container customer-case-container (width > 0) {
-  .heading {
-    font-size: max(2em, 2rem + 1cqi);
-  }
-}
-
 @container customer-case-container (width < 900px) {
   .wrapper {
     flex-direction: column;
@@ -88,23 +82,9 @@
   }
 }
 
-.heading {
-  text-wrap: balance;
-  overflow: hidden;
-  padding: 0.5rem 0;
-
-  @media (width <= 1130px) {
-    font-size: 2.125rem;
-  }
-}
-
 .link:focus-visible .heading {
   text-decoration: underline;
   padding: 0.5rem 0;
-}
-
-.font {
-  color: var(--text-primary-light);
 }
 
 .TagRow {
@@ -125,6 +105,9 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
+  text-wrap: balance;
+  overflow: hidden;
+  padding: 0.5rem 0;
 }
 
 .deliveries {
@@ -138,20 +121,21 @@
   flex-flow: row wrap;
 }
 
-.dotSeparator:not(:last-child)::after {
+.dotSeparator {
+  display: inline-block;
+}
+
+.dotSeperator::after {
   content: "·";
-  margin: 0.5rem;
+  margin: 0 0.38rem;
 }
 
 .titleWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 1.5rem;
-}
-
-.title {
   max-width: var(--max-content-width-large);
   width: 100%;
 }

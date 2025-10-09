@@ -24,14 +24,13 @@
   padding-top: 0.25rem;
 }
 
+.dotSeparator {
+  display: inline-block;
+}
+
 .dotSeperator::after {
   content: "·";
   margin: 0 0.38rem;
-}
-
-.dotSeperator:last-child::after {
-  content: "";
-  margin: 0;
 }
 
 .varianter {
@@ -40,23 +39,9 @@
   max-width: 80%;
 }
 
-.dotSeperatorVarianter::after {
-  content: "·";
-  margin: 0 0.38rem;
-}
-
-.dotSeperatorVarianter:nth-last-child(2)::after {
-  content: "";
-  margin: 0;
-}
-
 .projectInfoItem {
   display: flex;
   flex-flow: row wrap;
-}
-
-.title {
-  color: var(--text-tertiary);
 }
 
 .deliveries {
