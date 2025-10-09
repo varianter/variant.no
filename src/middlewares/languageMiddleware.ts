@@ -1,6 +1,6 @@
 import Negotiator from "negotiator";
 import { headers } from "next/headers";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { SanityClient } from "next-sanity";
 
 import { client } from "studio/lib/client";
@@ -91,7 +91,7 @@ async function translateSlug(
   project: "studio" | "shared" = "studio",
 ): Promise<string | undefined> {
   const queryClient = project === "studio" ? client : sharedClient;
-  let slugTranslations = null;
+  let slugTranslations: null | InternationalizedString = null;
   if (translationType === "document" || translationType === undefined) {
     slugTranslations = await translateDocumentSlug(
       queryClient,
@@ -321,18 +321,18 @@ async function rewriteWithLanguage(
 /**
  * Handles cases where no language is provided in the URL by negotiating the preferred language.
  *
- * @param {NextRequest} request - The incoming request.
- * @param {string[]} path - The path segments of the URL.
- * @param {LanguageObject[]} availableLanguages - A list of available languages supported by the site.
- * @param {string} defaultLanguageId - The ID of the default language.
- * @returns {Promise<void>} - No return; modifies `request.nextUrl.pathname` directly.
+ * @param request - The incoming request.
+ * @param path - The path segments of the URL.
+ * @param availableLanguages - A list of available languages supported by the site.
+ * @param defaultLanguageId - The ID of the default language.
+ * @returns Returns a NextResponse for redirects, or undefined when rewriting the request path directly.
  */
 async function rewriteMissingLanguage(
   request: NextRequest,
   path: string[],
   availableLanguages: LanguageObject[],
   defaultLanguageId: string,
-): Promise<void> {
+) {
   const preferredLanguage =
     (await negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
@@ -352,6 +352,8 @@ async function rewriteMissingLanguage(
     const newPath = `/${preferredLanguage}/${translatedPath.join("/")}`;
     request.nextUrl.pathname = newPath;
   } else {
-    request.nextUrl.pathname = `/${defaultLanguageId}/${path.join("/")}`;
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLanguageId}/${path.join("/")}`;
+    return NextResponse.redirect(url);
   }
 }
