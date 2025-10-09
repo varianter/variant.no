@@ -67,7 +67,8 @@ export default async function Layout(
     notFound();
   }
 
-  const nonce = (await headers()).get("x-nonce");
+  const header = await headers();
+  const nonce = header.get("x-nonce") ?? undefined;
 
   const messages = await getMessages();
 
@@ -129,7 +130,7 @@ export default async function Layout(
           <Script
             id="matomoAnalytics"
             strategy="afterInteractive"
-            nonce={nonce ?? undefined}
+            nonce={nonce}
           >
             {`
                   var _paq = _paq || [];
