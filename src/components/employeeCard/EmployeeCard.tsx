@@ -58,24 +58,23 @@ export default function EmployeeCard({
                   {overrideTitle}
                 </Text>
               ) : (
-                employee.competences.map((competence) => (
-                  <Text
-                    className={styles.employeeRoleDot}
-                    type="labelRegular"
-                    key={competence}
-                    as="span"
-                  >
+                employee.competences.map((competence, idx, arr) => (
+                  <Text type="labelRegular" key={competence} as="span">
                     {t.has(competence) ? t(competence) : competence}
+                    {idx < arr.length - 1 && (
+                      <span className={styles.dotSeperator}></span>
+                    )}
                   </Text>
                 ))
               )}
             </div>
-
-            <Text type="bodyExtraSmall" className={styles.employeeEmail}>
-              <a href={`mailto:${employee.email}`}>{employee.email}</a>
-            </Text>
+            <div className={styles.employeeEmail}>
+              <Text type="bodyExtraSmall">
+                <a href={`mailto:${employee.email}`}>{employee.email}</a>
+              </Text>
+            </div>
             {employee.telephone && (
-              <Text type="bodyExtraSmall" className={styles.employeePhone}>
+              <Text type="bodyExtraSmall">
                 <a href={`tel:${employee.telephone}`}>
                   {formatPhoneNumber(employee.telephone)}
                 </a>
