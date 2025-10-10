@@ -12,10 +12,9 @@ export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {
   return (
     <article className={styles.wrapper} id={logoSalad._key}>
       <div>
-        <Text type="h3" className={styles.title}>
-          {logoSalad.title}
-        </Text>
-
+        <div className={styles.title}>
+          <Text type="h3">{logoSalad.title}</Text>
+        </div>
         <ul className={styles.logoWrapper}>
           {logoSalad.logos.map((logo) => (
             <li key={logo._key}>
