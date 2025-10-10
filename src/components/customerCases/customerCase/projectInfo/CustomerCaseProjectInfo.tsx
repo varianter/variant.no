@@ -116,15 +116,17 @@ export default async function CustomerCaseProjectInfo({
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["projectManagement"].map(
-                  (projectManagement) => (
-                    <Text
-                      type="bodyNormal"
-                      key={projectManagement.key}
-                      className={styles.dotSeperator}
-                    >
-                      {projectManagement.projectManagementDelivery}
-                    </Text>
-                  ),
+                  (projectManagement) => {
+                    return (
+                      <Text
+                        type="bodyNormal"
+                        key={projectManagement._key}
+                        className={styles.dotSeperator}
+                      >
+                        {projectManagement.projectManagementDelivery}
+                      </Text>
+                    );
+                  },
                 )}
               </div>
             </div>
@@ -137,7 +139,7 @@ export default async function CustomerCaseProjectInfo({
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["design"].map((design) => (
                   <Text
-                    key={design.key}
+                    key={design._key}
                     type="bodyNormal"
                     className={styles.dotSeperator}
                   >
@@ -155,7 +157,7 @@ export default async function CustomerCaseProjectInfo({
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["development"].map((development) => (
                   <Text
-                    key={development.key}
+                    key={development._key}
                     type="bodyNormal"
                     className={styles.dotSeperator}
                   >

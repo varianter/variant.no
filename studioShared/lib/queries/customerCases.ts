@@ -62,12 +62,15 @@ export const CUSTOMER_CASE_QUERY = groq`
       url,
       "deliveries": {
         "design": deliveries.design[] {
+          _key,
           "designDelivery": ${translatedFieldFragment("designDelivery")}
         },
         "development": deliveries.development[] {
+          _key,
           "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
         },
         "projectManagement": deliveries.projectManagement[] {
+          _key,
           "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
         }
       },
@@ -130,12 +133,15 @@ export const CUSTOMER_CASE_ENTRY_QUERY = groq`
       customer,
       "deliveries": {
         "design": deliveries.design[] {
+          _key,
           "designDelivery": ${translatedFieldFragment("designDelivery")}
         },
         "development": deliveries.development[] {
+          _key,
           "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
         },
         "projectManagement": deliveries.projectManagement[] {
+          _key,
           "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
         }
       },
