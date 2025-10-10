@@ -15,11 +15,7 @@ export default function ListBlock({ section }: ListBlockProps) {
           <Text type="h4">{section.description}</Text>
           <div className={styles.tagwrapper}>
             {section.list?.map((listItem) => (
-              <Text
-                type="labelRegular"
-                key={listItem._key}
-                className={styles.tag}
-              >
+              <Text type="label" key={listItem._key} className={styles.tag}>
                 {listItem.text}
               </Text>
             ))}

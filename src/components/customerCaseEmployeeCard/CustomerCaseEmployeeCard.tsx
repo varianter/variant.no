@@ -41,7 +41,7 @@ export default function CustomerCaseEmployeeCard({
               {employee.competences.map((competence) => (
                 <Text
                   className={styles.employeeRoleDot}
-                  type="labelRegular"
+                  type="label"
                   key={competence}
                 >
                   {t(competence)}

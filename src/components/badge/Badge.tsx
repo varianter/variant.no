@@ -31,7 +31,7 @@ const Badge = ({ children, badgeColor, className, borderColor }: IBadge) => {
         }),
       }}
     >
-      <Text type="bodySmall">{children}</Text>
+      <Text type="description">{children}</Text>
     </div>
   );
 };

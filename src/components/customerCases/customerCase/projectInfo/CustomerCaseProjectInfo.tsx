@@ -35,7 +35,7 @@ export default async function CustomerCaseProjectInfo({
       <div className={styles.projectInfoInner}>
         {projectInfo.customerSectors && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text className={styles.title} type="label">
               {t("customer").toUpperCase()}
             </Text>
             <div className={styles.badgeWrapper}>
@@ -49,7 +49,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {consultantsFirstNames && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text className={styles.title} type="label">
               {t("variants").toUpperCase()}
             </Text>
             <div className={styles.varianter}>
@@ -73,7 +73,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {projectInfo.collaborators && (
           <div>
-            <Text className={styles.title} type="labelRegular">
+            <Text className={styles.title} type="label">
               {t("collaborators").toUpperCase()}
             </Text>
             <div className={styles.projectInfoItem}>
@@ -91,7 +91,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {projectInfo.url && (
           <div className={styles.urlWrapper}>
-            <Text className={styles.title} type="labelRegular">
+            <Text className={styles.title} type="label">
               {t("url")}
             </Text>
             <CustomLink
@@ -111,7 +111,7 @@ export default async function CustomerCaseProjectInfo({
         <div className={styles.deliveries}>
           {projectInfo.deliveries["projectManagement"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text className={styles.title} type="label">
                 {t("project_management").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
@@ -131,7 +131,7 @@ export default async function CustomerCaseProjectInfo({
           )}
           {projectInfo.deliveries["design"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text className={styles.title} type="label">
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
@@ -149,7 +149,7 @@ export default async function CustomerCaseProjectInfo({
           )}
           {projectInfo.deliveries["development"] && (
             <div>
-              <Text className={styles.title} type="labelRegular">
+              <Text className={styles.title} type="label">
                 {t("development").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>

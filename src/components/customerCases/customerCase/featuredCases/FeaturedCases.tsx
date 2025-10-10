@@ -34,7 +34,7 @@ export default function FeaturedCases({
               </div>
               <div className={styles.textContent}>
                 <Text type={"h4"}>{featuredCase.basicTitle}</Text>
-                <Text type={"bodySmall"}>{featuredCase.description}</Text>
+                <Text type={"description"}>{featuredCase.description}</Text>
               </div>
             </Link>
           ))}

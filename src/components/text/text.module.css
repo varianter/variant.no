@@ -3,11 +3,11 @@
   font-family: var(--font-britti-sans);
 }
 
-.labelRegular,
+.label,
 .quoteItalic,
 .quoteNormal,
 .bodyExtraSmall,
-.bodySmall,
+.description,
 .bodyNormal,
 .bodyBig,
 .caption,
@@ -118,7 +118,7 @@
   }
 }
 
-.bodySmall {
+.description {
   font-size: 1rem;
   font-weight: 300;
   line-height: 150%;
@@ -142,7 +142,7 @@
   }
 }
 
-.labelRegular {
+.label {
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;

@@ -8,7 +8,7 @@ interface IText {
 
 export const TextTertiary = ({ children }: IText) => {
   return (
-    <Text type="bodySmall" className={styles.text_tertiary}>
+    <Text type="description" className={styles.text_tertiary}>
       {children}
     </Text>
   );
