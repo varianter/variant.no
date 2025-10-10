@@ -55,9 +55,9 @@ export default function EventPosting({
         time={eventPosting.time}
         locations={showLocations ? eventPosting.locations : undefined}
       />
-      <Text type="h3" className={styles.eventTitle}>
-        {eventPosting.eventTitle}
-      </Text>
+      <div className={styles.eventTitle}>
+        <Text type="h3">{eventPosting.eventTitle}</Text>
+      </div>
       <Text type="bodySmall">{eventPosting.eventDescription}</Text>
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>

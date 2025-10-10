@@ -20,10 +20,15 @@ export default function EventSpeakers({
           <Text type={textType}>
             <span>【 </span>
           </Text>
-          {consultantsFirstNames.map((name) => (
-            <Text key={name} className={styles.dotSeperator} type={textType}>
-              {name}
-            </Text>
+          {consultantsFirstNames.map((name, idx, arr) => (
+            <div key={name}>
+              <Text type={textType}>
+                {name}
+                {idx < arr.length - 1 && (
+                  <span className={styles.dotSeperator}></span>
+                )}
+              </Text>
+            </div>
           ))}
           <Text type={textType}>
             <span> 】</span>

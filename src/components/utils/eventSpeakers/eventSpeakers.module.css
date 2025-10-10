@@ -1,11 +1,10 @@
+.dotSeparator {
+  display: inline-block;
+}
+
 .dotSeperator::after {
   content: "·";
   margin-left: 0.38rem;
-}
-
-.dotSeperator:nth-last-child(2)::after {
-  content: "";
-  margin: 0;
 }
 
 .flex {

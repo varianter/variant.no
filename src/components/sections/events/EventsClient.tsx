@@ -75,10 +75,14 @@ export default function EventsClient({
   return (
     <>
       <div className={styles.titleSection}>
-        <Text type={"titleL"}>{section.basicTitle}</Text>
-        <Text type={"bodyNormal"} className={styles.introText}>
-          {section.subtitle}
+        <Text type={"titleL"} color="light">
+          {section.basicTitle}
         </Text>
+        <div className={styles.introText}>
+          <Text type={"bodyNormal"} color="light">
+            {section.subtitle}
+          </Text>
+        </div>
 
         {section.hideLocationFilters !== true && (
           <OfficeSelector
