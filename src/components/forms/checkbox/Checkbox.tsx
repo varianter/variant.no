@@ -38,7 +38,7 @@ const Checkbox = ({
       {error && (
         <span>
           <Text
-            type="bodySmall"
+            type="description"
             className={styles.error}
             id={hintID}
             aria-live="assertive"
