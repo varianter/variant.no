@@ -124,7 +124,7 @@ export default async function EventPage({ params }: EventPageProps) {
             time={time}
             locations={locations}
             address={address}
-            fontsize="labelLarge"
+            fontsize="labelL"
           />
         </div>
         {eventImage && (
@@ -138,12 +138,12 @@ export default async function EventPage({ params }: EventPageProps) {
             {tags &&
               tags.map((tag, index) => (
                 <Badge key={index} badgeColor="#FFFFFF" borderColor="#000000">
-                  <Text type="labelLarge">{tag.tag}</Text>
+                  <Text type="labelL">{tag.tag}</Text>
                 </Badge>
               ))}
             {consultantsFirstNames && (
               <EventSpeakers
-                textType="labelLarge"
+                textType="labelL"
                 consultantsFirstNames={consultantsFirstNames}
               />
             )}
