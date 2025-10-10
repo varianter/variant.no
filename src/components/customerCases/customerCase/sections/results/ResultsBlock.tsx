@@ -32,7 +32,7 @@ function StackedHighlights({ section, blockColor }: ResultsBlockProps) {
     <div className={styles.highlightWrapper} style={style}>
       <div className={styles.content}>
         <div className={styles.highlightBlock}>
-          <Text type="labelRegular" className={styles.highlightOutside}>
+          <Text type="label" className={styles.highlightOutside}>
             {section.resultsBlockTitle}
           </Text>
           {section.quote?.map((quote) => (

@@ -54,14 +54,14 @@ export default function EmployeeCard({
 
             <div className={styles.employeeRole}>
               {overrideTitle ? (
-                <Text type="labelRegular" as="span">
+                <Text type="label" as="span">
                   {overrideTitle}
                 </Text>
               ) : (
                 employee.competences.map((competence) => (
                   <Text
                     className={styles.employeeRoleDot}
-                    type="labelRegular"
+                    type="label"
                     key={competence}
                     as="span"
                   >

@@ -67,7 +67,7 @@ export default function EmployeeList({
     <>
       <div className={styles.employeeFiltersWrapper}>
         <div className={styles.employeeFilterWrapper}>
-          <Text type="labelRegular" className={styles.employeeFilterLabel}>
+          <Text type="label" className={styles.employeeFilterLabel}>
             {t("field")}
           </Text>
           <Tag
@@ -96,7 +96,7 @@ export default function EmployeeList({
             })}
         </div>
         <div className={styles.employeeFilterWrapper}>
-          <Text type="labelRegular" className={styles.employeeFilterLabel}>
+          <Text type="label" className={styles.employeeFilterLabel}>
             {t("location")}
           </Text>
           {/* TODO: legg til aria og fieldset på tags for UU */}

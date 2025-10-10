@@ -53,11 +53,11 @@ export const RadioButtonGroup = ({
   return (
     <fieldset className={styles.fieldset} id={id}>
       <legend className={styles.srOnly}>
-        <Text type="labelRegular" as="span">
+        <Text type="label" as="span">
           {label}
         </Text>
       </legend>
-      <Text type="labelRegular" aria-hidden>
+      <Text type="label" aria-hidden>
         {label}
       </Text>
 

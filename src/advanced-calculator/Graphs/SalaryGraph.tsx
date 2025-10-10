@@ -136,7 +136,7 @@ const SalaryGraph = ({
               className={styles.markerText}
             >
               <div className={styles.markerTextContainer}>
-                <Text type="labelRegular" className={styles.markerYear}>
+                <Text type="label" className={styles.markerYear}>
                   {year}
                 </Text>
                 <Text type="h5" className={styles.markerPay}>

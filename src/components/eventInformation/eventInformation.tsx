@@ -19,7 +19,7 @@ export default function EventInformation({
   time,
   locations,
   address,
-  fontsize = "labelRegular",
+  fontsize = "label",
 }: EventInformationProps) {
   function sortAlphabetically(list: string[]) {
     return list.sort((a, b) => a.localeCompare(b));

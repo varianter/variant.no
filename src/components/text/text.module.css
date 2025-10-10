@@ -3,7 +3,7 @@
   font-family: var(--font-britti-sans);
 }
 
-.labelRegular,
+.label,
 .quoteItalic,
 .quoteNormal,
 .bodyExtraSmall,
@@ -142,7 +142,7 @@
   }
 }
 
-.labelRegular {
+.label {
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;

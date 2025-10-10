@@ -75,7 +75,7 @@ export default function EventPosting({
 
         {consultantsFirstNames?.length > 0 && (
           <EventSpeakers
-            textType="labelRegular"
+            textType="label"
             consultantsFirstNames={consultantsFirstNames}
           />
         )}
