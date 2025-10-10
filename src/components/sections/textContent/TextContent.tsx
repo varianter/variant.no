@@ -63,7 +63,7 @@ const renderTextRichText = (richText: PortableTextBlock[]) => (
 
 const renderTextQuote = ({ author, quote }: ITextQuote) => (
   <div className={styles.container}>
-    <Text className={styles.authorText} type="bodyNormal">
+    <Text color="tertiary" type="bodyNormal">
       {author}
     </Text>
     <Text type="bodyXl">{quote}</Text>
