@@ -13,7 +13,7 @@ export type TextType =
   | "quoteItalic"
   | "quoteNormal"
   | "bodyExtraSmall"
-  | "bodySmall"
+  | "description"
   | "bodyNormal"
   | "bodyBig"
   | "bodyXl"
@@ -35,7 +35,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   quoteItalic: "p",
   quoteNormal: "p",
   bodyExtraSmall: "p",
-  bodySmall: "p",
+  description: "p",
   bodyNormal: "p",
   bodyBig: "p",
   bodyXl: "p",
@@ -58,7 +58,7 @@ const classMap: { [key in TextType]?: string } = {
   quoteItalic: styles.quoteItalic,
   quoteNormal: styles.quoteNormal,
   bodyExtraSmall: styles.bodyExtraSmall,
-  bodySmall: styles.bodySmall,
+  description: styles.description,
   bodyNormal: styles.bodyNormal,
   bodyBig: styles.bodyBig,
   bodyXl: styles.bodyXl,

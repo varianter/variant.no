@@ -167,7 +167,7 @@ export const Header = ({
       {showAnnouncement && announcement && (
         <div className={styles.announcementContent}>
           {announcement?.text && (
-            <Text type={"bodySmall"}>{announcement.text}</Text>
+            <Text type={"description"}>{announcement.text}</Text>
           )}
           {announcement.link?.linkTitle && (
             <CustomLink
