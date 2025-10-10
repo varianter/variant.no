@@ -55,10 +55,10 @@ const InputField = ({
         aria-required={required}
       />
       {error && (
-        <span>
+        <span className={styles.error}>
           <Text
             type="bodySmall"
-            className={styles.error}
+            color="error"
             id={hintID}
             aria-live="assertive"
           >

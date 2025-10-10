@@ -60,7 +60,7 @@ const InputFieldColor = ({
         <span>
           <Text
             type="bodyNormal"
-            className={styles.error}
+            color="error"
             id={hintID}
             aria-live="assertive"
           >

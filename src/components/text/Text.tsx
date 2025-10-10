@@ -22,7 +22,7 @@ export type TextType =
   | "imageLabel"
   | "italic";
 
-export type TextColor = "dark" | "light" | "tertiary";
+export type TextColor = "dark" | "light" | "tertiary" | "error";
 
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   titleXL: "h1",
@@ -74,6 +74,7 @@ const colorMap: { [key in TextColor]: string } = {
   dark: styles.dark,
   light: styles.light,
   tertiary: styles.tertiary,
+  error: styles.error,
 };
 
 const Text = ({

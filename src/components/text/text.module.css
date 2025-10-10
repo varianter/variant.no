@@ -208,3 +208,7 @@
 .tertiary {
   color: var(--text-tertiary);
 }
+
+.error {
+  color: var(--Red-500);
+}

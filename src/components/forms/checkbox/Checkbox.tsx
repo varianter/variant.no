@@ -36,10 +36,10 @@ const Checkbox = ({
         {typeof label === "string" ? label : <PortableText value={label} />}
       </label>
       {error && (
-        <span>
+        <span className={styles.error}>
           <Text
             type="bodySmall"
-            className={styles.error}
+            color="error"
             id={hintID}
             aria-live="assertive"
           >
