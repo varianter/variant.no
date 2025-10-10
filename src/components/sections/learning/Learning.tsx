@@ -14,9 +14,9 @@ export interface LearningProps {
 export default function Learning({ section }: LearningProps) {
   return (
     <div className={styles.wrapper}>
-      <Text type={"titleL"} className={styles.title}>
-        {section.basicTitle}
-      </Text>
+      <div className={styles.title}>
+        <Text type={"titleL"}>{section.basicTitle}</Text>
+      </div>
       <div className={styles.content}>
         <SmileyBox
           description={section.description}
@@ -30,13 +30,13 @@ export default function Learning({ section }: LearningProps) {
         <Link href={section.articleLink}>
           <div className={styles.textContainer}>
             <div className={styles.textContent}>
-              <Text type="labelLarge" className={styles.text}>
+              <Text type="labelLarge" color="light">
                 {section.articleTag}
               </Text>
-              <Text type="h3" className={styles.text}>
+              <Text type="h3" color="light">
                 {section.articleTitle}
               </Text>
-              <Text type="bodyBig" className={styles.text}>
+              <Text type="bodyBig" color="light">
                 {section.articleSubtitle}
               </Text>
             </div>
