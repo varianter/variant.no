@@ -74,7 +74,6 @@
   padding: 0.25rem 1rem;
   border-radius: 0.25rem 0.25rem 0 0;
   background-color: var(--Violet-700);
-  color: var(--text-primary-light);
 }
 
 .nameContainer {
@@ -103,7 +102,6 @@
 }
 
 .contactBracket {
-  color: var(--Neutral-600);
   text-decoration: none;
   display: inline-flex;
   align-items: center;

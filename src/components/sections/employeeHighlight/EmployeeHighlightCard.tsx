@@ -20,13 +20,15 @@ export function EmployeeHighlightCard({
       <div className={styles.image}>
         {employeePhoto && <SanityImage image={employeePhoto} />}
         <div className={styles.titleContainer}>
-          <Text type={"h5"} className={styles.title}>
-            {basicTitle}
-          </Text>
-          <div className={styles.nameContainer}>
-            <Text type={"titleL"} className={styles.name}>
-              {name}
+          <div className={styles.title}>
+            <Text type={"h5"} color="light">
+              {basicTitle}
             </Text>
+          </div>
+          <div className={styles.nameContainer}>
+            <div className={styles.name}>
+              <Text type={"titleL"}>{name}</Text>
+            </div>
           </div>
         </div>
       </div>
@@ -34,18 +36,22 @@ export function EmployeeHighlightCard({
         <Text type={"bodyNormal"}>{description}</Text>
         <div className={styles.contactInfo}>
           {email && (
-            <Text type="bodyNormal" className={styles.contactBracket}>
-              <span className={styles.bracket}>【</span>
-              {email}
-              <span className={styles.bracket}>】</span>
-            </Text>
+            <div className={styles.contactBracket}>
+              <Text type="bodyNormal">
+                <span className={styles.bracket}>【</span>
+                {email}
+                <span className={styles.bracket}>】</span>
+              </Text>
+            </div>
           )}
           {phone && (
-            <Text type="bodyNormal" className={styles.contactBracket}>
-              <span className={styles.bracket}>【</span>
-              {phone}
-              <span className={styles.bracket}>】</span>
-            </Text>
+            <div className={styles.contactBracket}>
+              <Text type="bodyNormal">
+                <span className={styles.bracket}>【</span>
+                {phone}
+                <span className={styles.bracket}>】</span>
+              </Text>
+            </div>
           )}
         </div>
       </div>
