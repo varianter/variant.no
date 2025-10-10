@@ -50,11 +50,11 @@ const FieldCard = ({ field }: { field: Field }) => {
         <FieldImage image={image} size={size} />
         <div className={styles.fieldContent}>
           <div className={styles.fieldMeta}>
-            <Text className="labelLarge">{t(type)}</Text>
+            <Text type="labelLarge">{t(type)}</Text>
             {readingListeningTime && (
               <>
-                <Text className="labelLarge">·</Text>
-                <Text className="labelLarge">{readingListeningTime}</Text>
+                <Text type="labelLarge">·</Text>
+                <Text type="labelLarge">{readingListeningTime}</Text>
               </>
             )}
           </div>
