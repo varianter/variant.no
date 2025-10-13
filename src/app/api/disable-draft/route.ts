@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { absoluteUrlFromNextRequest } from "src/utils/url";
 
-export function GET(request: NextRequest) {
-  draftMode().disable();
+export async function GET(request: NextRequest) {
+  (await draftMode()).disable();
   return NextResponse.redirect(absoluteUrlFromNextRequest(request, "/"));
 }

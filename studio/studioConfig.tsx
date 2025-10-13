@@ -1,4 +1,3 @@
-import { colorInput } from "@sanity/color-input";
 import { documentInternationalization } from "@sanity/document-internationalization";
 import { visionTool } from "@sanity/vision";
 import { SanityClient } from "next-sanity";
@@ -10,6 +9,7 @@ import {
   internationalizedArray,
 } from "sanity-plugin-internationalized-array";
 import { media } from "sanity-plugin-media";
+import { simplerColorInput } from "sanity-plugin-simpler-color-input";
 
 import { languageID } from "i18n/languageSchemaField";
 
@@ -68,7 +68,7 @@ const config: WorkspaceOptions = {
       },
     }),
     media(),
-    colorInput(),
+    simplerColorInput(),
   ],
 };
 

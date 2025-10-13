@@ -51,24 +51,28 @@ const fontBrittiSans = localFont({
   variable: "--font-britti-sans",
 });
 
-export default async function Layout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: {
-    locale: string;
-  };
-}>) {
+export default async function Layout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: Promise<{
+      locale: string;
+    }>;
+  }>,
+) {
+  const params = await props.params;
+
+  const { children } = props;
+
   if (!routing.locales.includes(params.locale as Locale)) {
     notFound();
   }
 
-  const nonce = (await headers()).get("x-nonce");
+  const header = await headers();
+  const nonce = header.get("x-nonce") ?? undefined;
 
   const messages = await getMessages();
 
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
 
   const [
     initialNav,
@@ -126,7 +130,7 @@ export default async function Layout({
           <Script
             id="matomoAnalytics"
             strategy="afterInteractive"
-            nonce={nonce ?? undefined}
+            nonce={nonce}
           >
             {`
                   var _paq = _paq || [];

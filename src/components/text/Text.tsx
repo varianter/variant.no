@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import styles from "./text.module.css";
 
 export type TextType =

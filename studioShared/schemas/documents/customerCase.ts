@@ -48,7 +48,7 @@ const customerCase = defineType({
     defineField({ ...domainsField, validation: (rule) => rule.required() }),
     defineField({
       name: "clientColor",
-      type: "color",
+      type: "simplerColor",
       title: "Client Color (Title & Badges)",
       description: "This color will be used for parts of the title and badges",
       options: { disableAlpha: true },

@@ -27,7 +27,7 @@ import { loadStudioQuery } from "studio/lib/store";
 export const dynamic = "force-dynamic";
 
 type Props = {
-  params: { locale: string; path: string[] };
+  params: Promise<{ locale: string; path: string[] }>;
 };
 
 function seoDataFromPageData(
@@ -54,28 +54,30 @@ function seoDataFromPageData(
   }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { perspective } = getDraftModeInfo();
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
+  const { perspective } = await getDraftModeInfo();
   const language = params.locale;
   const pageData = await fetchPageDataFromParams({
     language,
     path: params.path,
     perspective: perspective ?? "published",
-    hostname: headers().get("host"),
+    hostname: (await headers()).get("host"),
   });
   return generateMetadataFromSeo(seoDataFromPageData(pageData), language);
 }
 
-async function Page({ params }: Props) {
+async function Page(props: Props) {
+  const params = await props.params;
   const { locale, path } = params;
 
-  const { perspective, isDraftMode } = getDraftModeInfo();
+  const { perspective, isDraftMode } = await getDraftModeInfo();
 
   const pageData = await fetchPageDataFromParams({
     language: locale,
     path,
     perspective: perspective ?? "published",
-    hostname: headers().get("host"),
+    hostname: (await headers()).get("host"),
   });
 
   if (pageData == null) {

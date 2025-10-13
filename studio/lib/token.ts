@@ -1,6 +1,5 @@
 // Server-Only Token Management
 
-// eslint-disable-next-line import/no-unresolved
 import "server-only";
 import { experimental_taintUniqueValue } from "react";
 

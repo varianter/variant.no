@@ -1,6 +1,6 @@
 import Negotiator from "negotiator";
 import { headers } from "next/headers";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { SanityClient } from "next-sanity";
 
 import { client } from "studio/lib/client";
@@ -91,7 +91,7 @@ async function translateSlug(
   project: "studio" | "shared" = "studio",
 ): Promise<string | undefined> {
   const queryClient = project === "studio" ? client : sharedClient;
-  let slugTranslations = null;
+  let slugTranslations: null | InternationalizedString = null;
   if (translationType === "document" || translationType === undefined) {
     slugTranslations = await translateDocumentSlug(
       queryClient,
@@ -197,10 +197,11 @@ async function translatePath(
   return undefined;
 }
 
-function negotiateClientLanguage(
+async function negotiateClientLanguage(
   availableLanguages: string[],
-): string | undefined {
-  const acceptLanguage = headers().get("Accept-Language");
+): Promise<string | undefined> {
+  const headersList = await headers();
+  const acceptLanguage = headersList.get("Accept-Language");
   if (acceptLanguage === null) return undefined;
   return new Negotiator({
     headers: { "accept-language": acceptLanguage },
@@ -320,22 +321,22 @@ async function rewriteWithLanguage(
 /**
  * Handles cases where no language is provided in the URL by negotiating the preferred language.
  *
- * @param {NextRequest} request - The incoming request.
- * @param {string[]} path - The path segments of the URL.
- * @param {LanguageObject[]} availableLanguages - A list of available languages supported by the site.
- * @param {string} defaultLanguageId - The ID of the default language.
- * @returns {Promise<void>} - No return; modifies `request.nextUrl.pathname` directly.
+ * @param request - The incoming request.
+ * @param path - The path segments of the URL.
+ * @param availableLanguages - A list of available languages supported by the site.
+ * @param defaultLanguageId - The ID of the default language.
+ * @returns Returns NextResponse for rewrites, or undefined when no rewrite is needed.
  */
 async function rewriteMissingLanguage(
   request: NextRequest,
   path: string[],
   availableLanguages: LanguageObject[],
   defaultLanguageId: string,
-): Promise<void> {
+): Promise<NextResponse | undefined> {
   const preferredLanguage =
-    negotiateClientLanguage(
+    (await negotiateClientLanguage(
       availableLanguages.map((language) => language.id),
-    ) ?? defaultLanguageId;
+    )) ?? defaultLanguageId;
 
   let translatedPath = await translatePath(
     path,
@@ -348,9 +349,12 @@ async function rewriteMissingLanguage(
   }
 
   if (translatedPath !== undefined) {
-    const newPath = `/${preferredLanguage}/${translatedPath.join("/")}`;
-    request.nextUrl.pathname = newPath;
+    const url = request.nextUrl.clone();
+    url.pathname = `/${preferredLanguage}/${translatedPath.join("/")}`;
+    return NextResponse.rewrite(url);
   } else {
-    request.nextUrl.pathname = `/${defaultLanguageId}/${path.join("/")}`;
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLanguageId}/${path.join("/")}`;
+    return NextResponse.rewrite(url);
   }
 }
