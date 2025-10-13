@@ -1,5 +1,7 @@
 .firstWrapper {
-  padding-top: 5rem;
+  padding: 5rem 0;
+  max-width: var(--max-content-width-large);
+  margin: 0 auto;
 }
 
 .container {
@@ -131,11 +133,5 @@
 }
 
 .titleWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-bottom: 1.5rem;
-  max-width: var(--max-content-width-large);
-  width: 100%;
+  padding-bottom: 2rem;
 }
