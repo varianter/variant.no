@@ -39,7 +39,7 @@ export default function CustomerCaseEmployeeCard({
             <Text type="bodyNormal">{employee.name}</Text>
             <div className={styles.employeeRole}>
               {employee.competences.map((competence, idx, arr) => (
-                <Text type="labelRegular" key={competence} color="tertiary">
+                <Text type="label" key={competence} color="tertiary">
                   {t(competence)}
                   {idx < arr.length - 1 && (
                     <span className={styles.dotSeperator}></span>

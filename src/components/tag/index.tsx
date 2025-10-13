@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { JSX } from "react";
 
 import Text, { TextColor } from "src/components/text/Text";
 
@@ -90,7 +91,7 @@ export const Tag = ({
         onClick={props.onClick}
         {...props}
       >
-        <Text type="labelRegular" color={textColor}>
+        <Text type="label" color={textColor}>
           {text}
         </Text>
       </button>
@@ -99,7 +100,7 @@ export const Tag = ({
 
   return (
     <Link className={className} href={props.href}>
-      <Text type="labelRegular" color={textColor}>
+      <Text type="label" color={textColor}>
         {text}
       </Text>
     </Link>

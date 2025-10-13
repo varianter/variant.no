@@ -30,22 +30,22 @@ export interface Deliveries {
   design: DesignDelivery[];
   development: DevelopmentDelivery[];
   projectManagement: ProjectManagementDelivery[];
-  key: string;
+  _key: string;
 }
 
 export interface DesignDelivery {
   designDelivery: string;
-  key: string;
+  _key: string;
 }
 
 export interface DevelopmentDelivery {
   developmentDelivery: string;
-  key: string;
+  _key: string;
 }
 
 export interface ProjectManagementDelivery {
   projectManagementDelivery: string;
-  key: string;
+  _key: string;
 }
 
 export interface CustomerCaseBase {

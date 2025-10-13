@@ -66,7 +66,7 @@ export const EMPLOYEE_PAGE_SLUG_AND_TITLE_QUERY = groq`
 //Color Palette Query
 export const FOOTER_COLOR_QUERY = groq`
   *[_type == "pageBuilder"]{
-    "footerWidgetColor": footerWidgetColor.hex,
+    "footerWidgetColor": footerWidgetColor.value,
     "slug": ${translatedFieldFragment("slug")}
     }
 `;

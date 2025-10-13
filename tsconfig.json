@@ -25,7 +25,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "eslint.config.cjs",
+    "lint-staged.config.mjs",
+    "stylelint.config.mjs"
   ],
   "exclude": ["node_modules"]
 }

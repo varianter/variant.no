@@ -35,7 +35,7 @@ export default async function CustomerCaseProjectInfo({
       <div className={styles.projectInfoInner}>
         {projectInfo.customerSectors && (
           <div>
-            <Text type="labelRegular" color="tertiary">
+            <Text type="label" color="tertiary">
               {t("customer").toUpperCase()}
             </Text>
             <div className={styles.badgeWrapper}>
@@ -49,7 +49,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {consultantsFirstNames && (
           <div>
-            <Text type="labelRegular" color="tertiary">
+            <Text type="label" color="tertiary">
               {t("variants").toUpperCase()}
             </Text>
             <div className={styles.varianter}>
@@ -83,7 +83,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {projectInfo.collaborators && (
           <div>
-            <Text type="labelRegular" color="tertiary">
+            <Text type="label" color="tertiary">
               {t("collaborators").toUpperCase()}
             </Text>
             <div className={styles.projectInfoItem}>
@@ -100,7 +100,7 @@ export default async function CustomerCaseProjectInfo({
         )}
         {projectInfo.url && (
           <div className={styles.urlWrapper}>
-            <Text type="labelRegular" color="tertiary">
+            <Text type="label" color="tertiary">
               {t("url").toUpperCase()}
             </Text>
             <CustomLink
@@ -120,31 +120,33 @@ export default async function CustomerCaseProjectInfo({
         <div className={styles.deliveries}>
           {projectInfo.deliveries["projectManagement"] && (
             <div>
-              <Text type="labelRegular" color="tertiary">
+              <Text type="label" color="tertiary">
                 {t("project_management").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["projectManagement"].map(
-                  (projectManagement, idx, arr) => (
-                    <Text type="bodyNormal" key={projectManagement.key}>
-                      {projectManagement.projectManagementDelivery}
-                      {idx < arr.length - 1 && (
-                        <span className={styles.dotSeperator} />
-                      )}
-                    </Text>
-                  ),
+                  (projectManagement, idx, arr) => {
+                    return (
+                      <Text type="bodyNormal" key={projectManagement._key}>
+                        {projectManagement.projectManagementDelivery}
+                        {idx < arr.length - 1 && (
+                          <span className={styles.dotSeperator} />
+                        )}
+                      </Text>
+                    );
+                  },
                 )}
               </div>
             </div>
           )}
           {projectInfo.deliveries["design"] && (
             <div>
-              <Text type="labelRegular" color="tertiary">
+              <Text type="label" color="tertiary">
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["design"].map((design, idx, arr) => (
-                  <Text key={design.key} type="bodyNormal">
+                  <Text key={design._key} type="bodyNormal">
                     {design.designDelivery}
                     {idx < arr.length - 1 && (
                       <span className={styles.dotSeperator} />
@@ -156,13 +158,13 @@ export default async function CustomerCaseProjectInfo({
           )}
           {projectInfo.deliveries["development"] && (
             <div>
-              <Text type="labelRegular" color="tertiary">
+              <Text type="label" color="tertiary">
                 {t("development").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["development"].map(
                   (development, idx, arr) => (
-                    <Text key={development.key} type="bodyNormal">
+                    <Text key={development._key} type="bodyNormal">
                       {development.developmentDelivery}
                       {idx < arr.length - 1 && (
                         <span className={styles.dotSeperator} />

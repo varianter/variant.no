@@ -58,7 +58,7 @@ export default function EventPosting({
       <div className={styles.eventTitle}>
         <Text type="h3">{eventPosting.eventTitle}</Text>
       </div>
-      <Text type="bodySmall">{eventPosting.eventDescription}</Text>
+      <Text type="description">{eventPosting.eventDescription}</Text>
 
       <div className={`${styles.flex} ${styles.eventCardBottomfield}`}>
         {eventPostingTags.length > 0 && (
@@ -75,7 +75,7 @@ export default function EventPosting({
 
         {consultantsFirstNames?.length > 0 && (
           <EventSpeakers
-            textType="labelRegular"
+            textType="label"
             consultantsFirstNames={consultantsFirstNames}
           />
         )}

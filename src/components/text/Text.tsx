@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import styles from "./text.module.css";
 
 export type TextType =
@@ -8,18 +10,18 @@ export type TextType =
   | "h5"
   | "h6"
   | "desktopLink"
-  | "labelRegular"
-  | "labelLarge"
+  | "labelL"
+  | "label"
   | "quoteItalic"
   | "quoteNormal"
   | "bodyExtraSmall"
-  | "bodySmall"
+  | "description"
   | "bodyNormal"
   | "bodyBig"
   | "bodyXl"
   | "mobileH1"
   | "mobileBodyNormal"
-  | "imageLabel"
+  | "caption"
   | "italic";
 
 export type TextColor = "dark" | "light" | "tertiary" | "error";
@@ -32,18 +34,18 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   h5: "h5",
   h6: "h6",
   desktopLink: "p",
-  labelRegular: "span",
-  labelLarge: "span",
+  labelL: "span",
+  label: "span",
   quoteItalic: "p",
   quoteNormal: "p",
   bodyExtraSmall: "p",
-  bodySmall: "p",
+  description: "p",
   bodyNormal: "p",
   bodyBig: "p",
   bodyXl: "p",
   mobileH1: "h1",
   mobileBodyNormal: "p",
-  imageLabel: "span",
+  caption: "span",
   italic: "p",
 };
 
@@ -55,18 +57,18 @@ const classMap: { [key in TextType]?: string } = {
   h5: styles.h5,
   h6: styles.h6,
   desktopLink: styles.desktopLink,
-  labelRegular: styles.labelRegular,
-  labelLarge: styles.labelLarge,
+  labelL: styles.labelL,
+  label: styles.label,
   quoteItalic: styles.quoteItalic,
   quoteNormal: styles.quoteNormal,
   bodyExtraSmall: styles.bodyExtraSmall,
-  bodySmall: styles.bodySmall,
+  description: styles.description,
   bodyNormal: styles.bodyNormal,
   bodyBig: styles.bodyBig,
   bodyXl: styles.bodyXl,
   mobileH1: styles.mobileH1,
   mobileBodyNormal: styles.mobileBodyNormal,
-  imageLabel: styles.imageLabel,
+  caption: styles.caption,
   italic: styles.italic,
 };
 

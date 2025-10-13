@@ -64,7 +64,7 @@ export async function generateMetadataFromSeo(
 
   return {
     title: title
-      ? `${title} - ${companyInfo?.companyName ?? "Variant"}`
+      ? `${companyInfo?.companyName ?? "Variant"} - ${title}`
       : (companyInfo?.companyName ?? "Variant"),
     description: description,
     openGraph: {

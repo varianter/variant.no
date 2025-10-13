@@ -130,10 +130,10 @@ const SalaryGraph = ({
             />
             <foreignObject x="-50" y="10" width="100" height="55">
               <div className={styles.markerTextContainer}>
-                <Text type="labelRegular" color="tertiary">
+                <Text type="label" color="tertiary">
                   {year}
                 </Text>
-                <Text type="labelLarge">{formatCurrencyFromNumber(pay)}</Text>
+                <Text type="labelL">{formatCurrencyFromNumber(pay)}</Text>
               </div>
             </foreignObject>
           </g>

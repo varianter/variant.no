@@ -124,7 +124,7 @@ export interface EventsSection {
   allEvents: boolean;
   oldEvents: boolean;
   hideLocationFilters: boolean;
-  eventSectionColor?: { hex: string };
+  eventSectionColor?: { value: string };
   eventPostingsArray: IEventPosting[];
 }
 

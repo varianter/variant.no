@@ -43,6 +43,7 @@ const CustomerCaseList = ({
                 customerCases={customerCases}
                 selectedCustomerCase={selectedCustomerCase}
                 setSelectedCustomerCase={setSelectedCustomerCase}
+                customerCasePageSlug={customerCasePageSlug}
                 language={language}
               />
               <Link
@@ -88,7 +89,7 @@ function CardInfo({
         {selectedCustomerCase.basicTitle}
       </Text>
       <div className={styles.deliveries}>
-        <Text type="labelRegular" color="light">
+        <Text type="label" color="light">
           {t("customer_case_entry.field")}
         </Text>
         <div className={styles.deliveriesList}>
@@ -110,11 +111,13 @@ function TagRow({
   customerCases,
   selectedCustomerCase,
   setSelectedCustomerCase,
+  customerCasePageSlug,
   language,
 }: {
   customerCases: CustomerCaseEntry[];
   selectedCustomerCase: CustomerCaseEntry;
   setSelectedCustomerCase: (customerCase: CustomerCaseEntry) => void;
+  customerCasePageSlug?: string;
   language: string;
 }) {
   const t = useTranslations("customer_case");
@@ -124,7 +127,7 @@ function TagRow({
   return (
     <div>
       <div className={styles.TagRow}>
-        <Text type="labelRegular" color="light">
+        <Text type="label" color="light">
           {t("customer_case_entry.case")}
         </Text>
         {visibleCases.map((customerCase) => (
@@ -142,7 +145,7 @@ function TagRow({
       {customerCases.length > 3 && (
         <div className={styles.customerLink}>
           <LinkButton
-            link={`/${language}/cases`}
+            link={`/${language}/${customerCasePageSlug}`}
             background="dark"
             type="primary"
             size="M"

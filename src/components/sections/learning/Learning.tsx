@@ -30,7 +30,7 @@ export default function Learning({ section }: LearningProps) {
         <Link href={section.articleLink}>
           <div className={styles.textContainer}>
             <div className={styles.textContent}>
-              <Text type="labelLarge" color="light">
+              <Text type="labelL" color="light">
                 {section.articleTag}
               </Text>
               <Text type="h3" color="light">

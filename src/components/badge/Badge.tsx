@@ -30,7 +30,7 @@ const Badge = ({ children, badgeColor, className, borderColor }: IBadge) => {
         }),
       }}
     >
-      <Text type="bodySmall" color={textColor as TextColor}>
+      <Text type="description" color={textColor as TextColor}>
         {children}
       </Text>
     </div>

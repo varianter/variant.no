@@ -48,7 +48,7 @@ const InputTextArea = ({
       {error && (
         <span className={styles.error}>
           <Text
-            type="bodySmall"
+            type="description"
             color="error"
             id={hintID}
             aria-live="assertive"

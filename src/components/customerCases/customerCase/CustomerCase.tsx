@@ -46,9 +46,7 @@ export default async function CustomerCase({
         <div className={styles.mainImageWrapper}>
           <SanityImage image={customerCase.image} isShared />
           {customerCase.image.figureDescription && (
-            <Text type="imageLabel">
-              {customerCase.image.figureDescription}
-            </Text>
+            <Text type="caption">{customerCase.image.figureDescription}</Text>
           )}
         </div>
         <div className={styles.sectionsWrapper}>

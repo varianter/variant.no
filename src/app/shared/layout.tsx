@@ -13,7 +13,7 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         {children}
-        {draftMode().isEnabled && <LiveVisualEditing />}
+        {(await draftMode()).isEnabled && <LiveVisualEditing />}
       </body>
     </html>
   );

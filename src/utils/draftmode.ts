@@ -6,8 +6,9 @@ export interface DraftModeInfo {
   perspective: ClientPerspective | undefined;
 }
 
-export function getDraftModeInfo(): DraftModeInfo {
-  const isDraftMode = draftMode().isEnabled;
+export async function getDraftModeInfo(): Promise<DraftModeInfo> {
+  const draftModeResult = await draftMode();
+  const isDraftMode = draftModeResult.isEnabled;
   const perspective = isDraftMode ? "previewDrafts" : "published";
   return { isDraftMode, perspective };
 }

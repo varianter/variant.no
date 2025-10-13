@@ -60,8 +60,8 @@ export default function RangeSlider({
         />
       </div>
       <div className={styles.rangeInputValue}>
-        <Text type="labelRegular">{formatValue(min)}</Text>
-        <Text type="labelRegular">{formatValue(max)}</Text>
+        <Text type="label">{formatValue(min)}</Text>
+        <Text type="label">{formatValue(max)}</Text>
       </div>
     </div>
   );

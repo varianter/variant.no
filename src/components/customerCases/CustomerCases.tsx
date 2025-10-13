@@ -17,9 +17,9 @@ interface CustomerCasesProps {
 }
 
 const CustomerCases = async ({ customerCasesPage }: CustomerCasesProps) => {
-  const { perspective } = getDraftModeInfo();
+  const { perspective } = await getDraftModeInfo();
 
-  const domain = domainFromHostname(headers().get("host"));
+  const domain = domainFromHostname((await headers()).get("host"));
 
   const [sharedCustomerCases] = await Promise.all([
     loadSharedQuery<CustomerCaseBase[]>(
