@@ -57,7 +57,7 @@ const Footer = ({
           <nav className={styles.nav}>
             <div className={styles.flex_container_left}>
               <div>
-                <Text type="bodySmall" color="tertiary">
+                <Text type="description" color="tertiary">
                   {t("text")}
                 </Text>
                 <ul className={styles.offices}>

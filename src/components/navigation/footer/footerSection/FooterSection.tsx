@@ -14,7 +14,7 @@ export const FooterSection = ({ title, children }: IFooterSection) => {
 
   return (
     <div className={styles.footerSection}>
-      <Text type="bodySmall" color="tertiary">
+      <Text type="description" color="tertiary">
         {title}
       </Text>
       <ul className={styles.linkColumn}>
