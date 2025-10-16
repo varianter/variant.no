@@ -87,7 +87,7 @@ export default async function CustomerCaseProjectInfo({
               {t("collaborators").toUpperCase()}
             </Text>
             <div className={styles.projectInfoItem}>
-              {projectInfo.collaborators.map((collaborator, idx, arr) => (
+              {projectInfo.collaborators.map((collaborator, index, array) => (
                 <Text type="bodyNormal" key={collaborator}>
                   {collaborator}
                   {idx < arr.length - 1 && (
