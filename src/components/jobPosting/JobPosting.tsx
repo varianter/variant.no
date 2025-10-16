@@ -31,7 +31,7 @@ export default function JobPosting({
       className={styles.jobPosting}
     >
       <div className={styles.role}>
-        <Text type={"h5"} as={"span"}>
+        <Text type={"titleXS"} as={"span"}>
           {jobPosting.role}
 
           {showLocations && (
