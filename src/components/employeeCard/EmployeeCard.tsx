@@ -61,7 +61,7 @@ export default function EmployeeCard({
                 employee.competences.map((competence, index, array) => (
                   <Text type="label" key={competence} as="span">
                     {t.has(competence) ? t(competence) : competence}
-                    {idx < arr.length - 1 && (
+                    {index < array.length - 1 && (
                       <span className={styles.dotSeperator}></span>
                     )}
                   </Text>
