@@ -36,7 +36,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
           {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
           {hero.title && <Text type="titleXL">{hero.title}</Text>}
           {hero.description && (
-            <Text type="h4" as="p">
+            <Text type="titleS" as="p">
               {hero.description}
             </Text>
           )}

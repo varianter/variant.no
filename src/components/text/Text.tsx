@@ -6,7 +6,7 @@ export type TextType =
   | "titleXL"
   | "titleL"
   | "h3"
-  | "h4"
+  | "titleS"
   | "h5"
   | "h6"
   | "desktopLink"
@@ -30,7 +30,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   titleXL: "h1",
   titleL: "h2",
   h3: "h3",
-  h4: "h4",
+  titleS: "h4",
   h5: "h5",
   h6: "h6",
   desktopLink: "p",
@@ -53,7 +53,7 @@ const classMap: { [key in TextType]?: string } = {
   titleXL: styles.titleXL,
   titleL: styles.titleL,
   h3: styles.h3,
-  h4: styles.h4,
+  titleS: styles.titleS,
   h5: styles.h5,
   h6: styles.h6,
   desktopLink: styles.desktopLink,
