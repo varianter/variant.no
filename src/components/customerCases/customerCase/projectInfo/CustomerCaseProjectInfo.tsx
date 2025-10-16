@@ -64,7 +64,7 @@ export default async function CustomerCaseProjectInfo({
               {consultantsFirstNames.map((name, index, array) => (
                 <Text key={name} type="bodyNormal">
                   {name}
-                  {idx < arr.length - 1 && (
+                  {index < array.length - 1 && (
                     <span className={styles.dotSeperator} />
                   )}
                 </Text>
@@ -145,14 +145,16 @@ export default async function CustomerCaseProjectInfo({
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.deliveries["design"].map((design, index, array) => (
-                  <Text key={design._key} type="bodyNormal">
-                    {design.designDelivery}
-                    {index < array.length - 1 && (
-                      <span className={styles.dotSeperator} />
-                    )}
-                  </Text>
-                ))}
+                {projectInfo.deliveries["design"].map(
+                  (design, index, array) => (
+                    <Text key={design._key} type="bodyNormal">
+                      {design.designDelivery}
+                      {index < array.length - 1 && (
+                        <span className={styles.dotSeperator} />
+                      )}
+                    </Text>
+                  ),
+                )}
               </div>
             </div>
           )}
