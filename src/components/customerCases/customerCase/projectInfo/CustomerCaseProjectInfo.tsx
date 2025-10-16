@@ -166,7 +166,7 @@ export default async function CustomerCaseProjectInfo({
                   (development, index, array) => (
                     <Text key={development._key} type="bodyNormal">
                       {development.developmentDelivery}
-                      {idx < arr.length - 1 && (
+                      {index < array.length - 1 && (
                         <span className={styles.dotSeperator} />
                       )}
                     </Text>
