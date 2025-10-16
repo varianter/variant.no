@@ -145,7 +145,7 @@ export default async function CustomerCaseProjectInfo({
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.deliveries["design"].map((design, idx, arr) => (
+                {projectInfo.deliveries["design"].map((design, index, array) => (
                   <Text key={design._key} type="bodyNormal">
                     {design.designDelivery}
                     {idx < arr.length - 1 && (
