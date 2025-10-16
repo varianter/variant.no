@@ -90,7 +90,7 @@ export default async function CustomerCaseProjectInfo({
               {projectInfo.collaborators.map((collaborator, index, array) => (
                 <Text type="bodyNormal" key={collaborator}>
                   {collaborator}
-                  {idx < arr.length - 1 && (
+                  {index < array.length - 1 && (
                     <span className={styles.dotSeperator} />
                   )}
                 </Text>
