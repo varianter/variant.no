@@ -96,7 +96,7 @@ function CardInfo({
           {deliveryNames.map((deliveryName, index, arr) => (
             <Text key={index} type="h5" as="span" color="light">
               {t(deliveryName)}
-              {index < arr.length - 1 && (
+              {index < array.length - 1 && (
                 <span className={styles.dotSeperator} />
               )}
             </Text>
