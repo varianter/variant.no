@@ -32,7 +32,7 @@ export default async function ContactBoxContent({
     <section className={styles.contactBox}>
       <div className={`${styles.contactBox__inner} ${backgroundClass}`}>
         <div className={styles.textContent}>
-          <Text type="h3" as="h2">
+          <Text type="titleM" as="h2">
             {data.basicTitle}
           </Text>
 
