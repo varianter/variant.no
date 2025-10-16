@@ -58,7 +58,7 @@ export default function EmployeeCard({
                   {overrideTitle}
                 </Text>
               ) : (
-                employee.competences.map((competence, idx, arr) => (
+                employee.competences.map((competence, index, array) => (
                   <Text type="label" key={competence} as="span">
                     {t.has(competence) ? t(competence) : competence}
                     {idx < arr.length - 1 && (
