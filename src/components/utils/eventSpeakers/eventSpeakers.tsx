@@ -24,7 +24,7 @@ export default function EventSpeakers({
             <div key={name}>
               <Text type={textType}>
                 {name}
-                {idx < arr.length - 1 && (
+                {index < array.length - 1 && (
                   <span className={styles.dotSeperator}></span>
                 )}
               </Text>
