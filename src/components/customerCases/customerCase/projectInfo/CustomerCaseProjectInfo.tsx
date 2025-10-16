@@ -129,7 +129,7 @@ export default async function CustomerCaseProjectInfo({
                     return (
                       <Text type="bodyNormal" key={projectManagement._key}>
                         {projectManagement.projectManagementDelivery}
-                        {idx < arr.length - 1 && (
+                        {index < array.length - 1 && (
                           <span className={styles.dotSeperator} />
                         )}
                       </Text>
