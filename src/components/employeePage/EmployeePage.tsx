@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import React from "react";
 
 import LinkButton from "src/components/linkButton/LinkButton";
 import Text from "src/components/text/Text";
@@ -42,26 +43,26 @@ export default async function EmployeePage({
             <div className={styles.employeeInfo}>
               <Text type={"titleL"}>{employee.name}</Text>
               {employee.email && (
-                <Text type={"bodyBig"} className={styles.employeeEmail}>
+                <Text type={"bodyBig"}>
                   <a href={`mailto:${employee.email}`}>{employee.email}</a>
                 </Text>
               )}
               {employee.telephone && (
-                <Text type={"bodyBig"} className={styles.employeeTelephone}>
+                <Text type={"bodyBig"}>
                   <a href={`tel:${employee.telephone}`}>
                     {formatPhoneNumber(employee.telephone)}
                   </a>
                 </Text>
               )}
               {employee.officeName && (
-                <Text type={"bodyNormal"} className={styles.employeeRole}>
-                  {employee.officeName}
-                </Text>
+                <Text type={"bodyNormal"}>{employee.officeName}</Text>
               )}
               {employee.competences.map((competence) => (
-                <Text type="bodyNormal" key={competence}>
-                  {t.has(competence) ? t(competence) : competence}
-                </Text>
+                <div key={competence}>
+                  <Text type="bodyNormal">
+                    {t.has(competence) ? t(competence) : competence}
+                  </Text>
+                </div>
               ))}
             </div>
           </div>

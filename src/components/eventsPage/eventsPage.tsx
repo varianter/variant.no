@@ -46,9 +46,11 @@ export default async function EventsPage({
   return (
     <>
       <section className={styles.eventSection} aria-labelledby={allEventsId}>
-        <Text type="titleXL" id={allEventsId} className="visually-hidden">
-          {t("all_events")}
-        </Text>
+        <div className="visually-hidden">
+          <Text type="titleXL" id={allEventsId}>
+            {t("all_events")}
+          </Text>
+        </div>
 
         {sortedFutureEventPostings.length > 0 && (
           <section aria-labelledby={futureEventsId}>

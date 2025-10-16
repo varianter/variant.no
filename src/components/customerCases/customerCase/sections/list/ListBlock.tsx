@@ -1,3 +1,5 @@
+import React from "react";
+
 import Text from "src/components/text/Text";
 import { ListBlock as ListBlockObject } from "studioShared/lib/interfaces/listBlock";
 
@@ -15,9 +17,9 @@ export default function ListBlock({ section }: ListBlockProps) {
           <Text type="h4">{section.description}</Text>
           <div className={styles.tagwrapper}>
             {section.list?.map((listItem) => (
-              <Text type="label" key={listItem._key} className={styles.tag}>
-                {listItem.text}
-              </Text>
+              <div className={styles.tag} key={listItem._key}>
+                <Text type="label">{listItem.text}</Text>
+              </div>
             ))}
           </div>
         </div>

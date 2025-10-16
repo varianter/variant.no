@@ -35,9 +35,9 @@ export default function SplitSection({ section, language }: SplitSectionProps) {
   return (
     <div className={styles.wrapper}>
       {title && (
-        <Text type="titleL" className={styles.title}>
-          {title}
-        </Text>
+        <div className={styles.title}>
+          <Text type="titleL">{title}</Text>
+        </div>
       )}
       <div className={styles.content}>
         {sections.map((section) => (

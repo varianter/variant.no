@@ -38,13 +38,12 @@ export default function CustomerCaseEmployeeCard({
           <div className={styles.employeeName}>
             <Text type="bodyNormal">{employee.name}</Text>
             <div className={styles.employeeRole}>
-              {employee.competences.map((competence) => (
-                <Text
-                  className={styles.employeeRoleDot}
-                  type="label"
-                  key={competence}
-                >
+              {employee.competences.map((competence, index, array) => (
+                <Text type="label" key={competence} color="tertiary">
                   {t(competence)}
+                  {index < array.length - 1 && (
+                    <span className={styles.dotSeperator}></span>
+                  )}
                 </Text>
               ))}
             </div>

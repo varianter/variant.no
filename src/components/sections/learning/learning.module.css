@@ -79,7 +79,3 @@
   gap: 0.75rem;
   align-self: stretch;
 }
-
-.text {
-  color: var(--text-primary-light);
-}

@@ -7,12 +7,10 @@
   margin: 0 auto;
   padding: 5rem 0;
   gap: 2rem;
-  color: var(--text-primary);
 }
 
 .title {
   max-width: 40rem;
-  color: var(--text-primary);
 
   @media (width <= 834px) {
     max-width: 25.875rem;

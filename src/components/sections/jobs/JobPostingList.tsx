@@ -76,7 +76,9 @@ export default function JobPostingList({
   return (
     <div className={styles.jobPostingsContainer}>
       <div className={styles.filters}>
-        <Text type="label">{t("office")}</Text>
+        <Text type="label" color="light">
+          {t("office")}
+        </Text>
         <Tag
           active={!locationFilter}
           type="button"

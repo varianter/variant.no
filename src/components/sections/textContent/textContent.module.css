@@ -27,7 +27,3 @@
 .paragraphWrapper > * + * {
   margin-top: 1.5rem;
 }
-
-.authorText {
-  color: var(--text-placeholder);
-}

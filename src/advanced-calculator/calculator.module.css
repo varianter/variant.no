@@ -93,10 +93,6 @@
   }
 }
 
-.rangeSliderTitle {
-  font-weight: 400;
-}
-
 .rangeSliderWrapper {
   display: flex;
   flex-direction: column;
@@ -210,24 +206,16 @@
   transform: scale(0.9);
 }
 
-.markerText {
-  text-align: center;
-}
-
 .markerTextContainer {
   text-align: center;
-}
-
-.markerYear {
-  color: var(--text-tertiary);
-  font-size: clamp(0.75rem, 3vw, 1rem);
-}
-
-.markerPay {
-  line-height: 1;
-  font-size: clamp(0.75rem, 3vw, 1rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .ips:hover {
   text-decoration: underline;
+}
+
+.growthWrapper {
+  padding-top: 1rem;
 }

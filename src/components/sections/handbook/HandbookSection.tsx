@@ -29,10 +29,14 @@ export async function Handbook({ section, language }: HandbookProps) {
 
   return (
     <div className={handbookBgClassname}>
-      <Text type="h3">{handbookTitle}</Text>
-      <Text type="bodyBig" className={styles.lightFont}>
-        {handbookDescription}
+      <Text type="h3" color="light">
+        {handbookTitle}
       </Text>
+      <div className={styles.lightFont}>
+        <Text type="bodyBig" color="light">
+          {handbookDescription}
+        </Text>
+      </div>
 
       {handbookLinksRes.ok && (
         <ul className={styles.handbookLinks}>

@@ -85,20 +85,20 @@ function CardInfo({
 
   return (
     <div className={styles.cardInfo}>
-      <Text type="titleL" as="h3" className={styles.heading}>
+      <Text type="titleL" as="h3" color="light">
         {selectedCustomerCase.basicTitle}
       </Text>
       <div className={styles.deliveries}>
-        <Text type="label">{t("customer_case_entry.field")}</Text>
+        <Text type="label" color="light">
+          {t("customer_case_entry.field")}
+        </Text>
         <div className={styles.deliveriesList}>
-          {deliveryNames.map((deliveryName, index) => (
-            <Text
-              key={index}
-              type="h5"
-              as="span"
-              className={styles.dotSeparator}
-            >
+          {deliveryNames.map((deliveryName, index, array) => (
+            <Text key={index} type="h5" as="span" color="light">
               {t(deliveryName)}
+              {index < array.length - 1 && (
+                <span className={styles.dotSeperator} />
+              )}
             </Text>
           ))}
         </div>
@@ -127,7 +127,7 @@ function TagRow({
   return (
     <div>
       <div className={styles.TagRow}>
-        <Text className={styles.font} type="label">
+        <Text type="label" color="light">
           {t("customer_case_entry.case")}
         </Text>
         {visibleCases.map((customerCase) => (

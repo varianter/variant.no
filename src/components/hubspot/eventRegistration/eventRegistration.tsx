@@ -224,14 +224,16 @@ export default function EventRegistration({
                 value={hasAcceptedInterests}
                 onChange={toggleInterests}
               />
-              <Text type="bodyBig" className={style.terms}>
-                {t("eventRegistration.terms.gerneral")}{" "}
-                <Link href={t("eventRegistration.terms.link.url")}>
-                  {" "}
-                  {t("eventRegistration.terms.link.text")}
-                </Link>{" "}
-                {t("eventRegistration.terms.forEvent")}
-              </Text>
+              <div className={style.terms}>
+                <Text type="bodyBig">
+                  {t("eventRegistration.terms.gerneral")}{" "}
+                  <Link href={t("eventRegistration.terms.link.url")}>
+                    {" "}
+                    {t("eventRegistration.terms.link.text")}
+                  </Link>{" "}
+                  {t("eventRegistration.terms.forEvent")}
+                </Text>
+              </div>
               {generalError && (
                 <span className={style.eventRegistration__error}>
                   <Text type="bodyNormal">{generalError.message}</Text>

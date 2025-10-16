@@ -44,14 +44,13 @@ export const BreadCrumbMenu = ({
                   •
                 </span>
               )}
-              <Text
+              <div
                 className={
                   isLast ? styles.breadCrumbText : styles.breadCrumbLink
                 }
-                type={isLast ? "label" : "desktopLink"}
               >
-                {title}
-              </Text>
+                <Text type={isLast ? "label" : "desktopLink"}>{title}</Text>
+              </div>
             </Link>
           </li>
         );

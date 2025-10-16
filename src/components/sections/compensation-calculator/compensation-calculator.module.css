@@ -28,10 +28,6 @@
   flex-direction: column;
 }
 
-.lightFont {
-  font-weight: 300;
-}
-
 @media (width <= 440px) {
   .calculator,
   .handbook {
