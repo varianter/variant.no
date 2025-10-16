@@ -93,7 +93,7 @@ function CardInfo({
           {t("customer_case_entry.field")}
         </Text>
         <div className={styles.deliveriesList}>
-          {deliveryNames.map((deliveryName, index, arr) => (
+          {deliveryNames.map((deliveryName, index, array) => (
             <Text key={index} type="h5" as="span" color="light">
               {t(deliveryName)}
               {index < array.length - 1 && (
