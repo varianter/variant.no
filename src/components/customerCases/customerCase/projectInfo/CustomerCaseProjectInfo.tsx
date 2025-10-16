@@ -148,7 +148,7 @@ export default async function CustomerCaseProjectInfo({
                 {projectInfo.deliveries["design"].map((design, index, array) => (
                   <Text key={design._key} type="bodyNormal">
                     {design.designDelivery}
-                    {idx < arr.length - 1 && (
+                    {index < array.length - 1 && (
                       <span className={styles.dotSeperator} />
                     )}
                   </Text>
