@@ -61,7 +61,7 @@ export default async function CustomerCaseProjectInfo({
                   【{" "}
                 </span>
               </Text>
-              {consultantsFirstNames.map((name, idx, arr) => (
+              {consultantsFirstNames.map((name, index, array) => (
                 <Text key={name} type="bodyNormal">
                   {name}
                   {idx < arr.length - 1 && (
