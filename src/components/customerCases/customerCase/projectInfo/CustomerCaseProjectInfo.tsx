@@ -163,7 +163,7 @@ export default async function CustomerCaseProjectInfo({
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["development"].map(
-                  (development, idx, arr) => (
+                  (development, index, array) => (
                     <Text key={development._key} type="bodyNormal">
                       {development.developmentDelivery}
                       {idx < arr.length - 1 && (
