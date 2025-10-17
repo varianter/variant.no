@@ -1,4 +1,13 @@
-:where(.desktopLink, .titleXL, .titleL, .titleM, .titleS, .titleXS, .h6, .bodyXl) {
+:where(
+  .desktopLink,
+  .titleXL,
+  .titleL,
+  .titleM,
+  .titleS,
+  .titleXS,
+  .h6,
+  .bodyXl
+) {
   margin: 0;
   font-family: var(--font-britti-sans);
 }
