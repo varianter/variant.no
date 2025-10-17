@@ -20,8 +20,8 @@ export default function Closed({ language }: ClosedProps) {
       imgAlt={t("eventRegistration.closed.imgAlt")}
       title={t("eventRegistration.closed.title")}
     >
-      <Text type="bodyBig">{t("eventRegistration.closed.message")}</Text>
-      <Text type="bodyBig">
+      <Text type="lead">{t("eventRegistration.closed.message")}</Text>
+      <Text type="lead">
         {t("eventRegistration.closed.otherEventText")}
         <Link href="/events"> {t("eventRegistration.closed.events")}</Link>.
       </Text>

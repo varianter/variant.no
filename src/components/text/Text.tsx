@@ -17,7 +17,7 @@ export type TextType =
   | "bodyExtraSmall"
   | "description"
   | "bodyNormal"
-  | "bodyBig"
+  | "lead"
   | "bodyXl"
   | "mobileH1"
   | "mobileBodyNormal"
@@ -41,7 +41,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   bodyExtraSmall: "p",
   description: "p",
   bodyNormal: "p",
-  bodyBig: "p",
+  lead: "p",
   bodyXl: "p",
   mobileH1: "h1",
   mobileBodyNormal: "p",
@@ -64,7 +64,7 @@ const classMap: { [key in TextType]?: string } = {
   bodyExtraSmall: styles.bodyExtraSmall,
   description: styles.description,
   bodyNormal: styles.bodyNormal,
-  bodyBig: styles.bodyBig,
+  lead: styles.lead,
   bodyXl: styles.bodyXl,
   mobileH1: styles.mobileH1,
   mobileBodyNormal: styles.mobileBodyNormal,
