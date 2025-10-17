@@ -47,7 +47,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
     customerCaseResult && (
       <div className={styles.firstWrapper}>
         <div className={styles.titleWrapper}>
-          <Text type="h3" as="h2">
+          <Text type="titleM" as="h2">
             {section.basicTitle}
           </Text>
         </div>

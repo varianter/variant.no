@@ -29,7 +29,7 @@ export async function Handbook({ section, language }: HandbookProps) {
 
   return (
     <div className={handbookBgClassname}>
-      <Text type="h3" color="light">
+      <Text type="titleM" color="light">
         {handbookTitle}
       </Text>
       <div className={styles.lightFont}>
