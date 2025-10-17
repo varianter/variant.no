@@ -56,7 +56,7 @@ export default function EventPosting({
         locations={showLocations ? eventPosting.locations : undefined}
       />
       <div className={styles.eventTitle}>
-        <Text type="h3">{eventPosting.eventTitle}</Text>
+        <Text type="titleM">{eventPosting.eventTitle}</Text>
       </div>
       <Text type="description">{eventPosting.eventDescription}</Text>
 

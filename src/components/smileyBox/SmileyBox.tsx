@@ -32,7 +32,7 @@ export default function SmileyBox({
     <div className={styles.wrapper} style={cssVariables}>
       <Smiley smileySide={smileySide} smileyType={smileyType} />
       <div className={styles.description}>
-        <Text type={"h3"}>{description}</Text>
+        <Text type={"titleM"}>{description}</Text>
       </div>
     </div>
   );
