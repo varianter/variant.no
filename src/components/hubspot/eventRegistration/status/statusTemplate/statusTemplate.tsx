@@ -20,7 +20,7 @@ export default function StatusTemplate({
   return (
     <div className={styles.statusTemplate}>
       <img className={styles.image} src={imgSrc} alt={imgAlt} />
-      <Text type="h3">{title}</Text>
+      <Text type="titleM">{title}</Text>
       {children}
     </div>
   );

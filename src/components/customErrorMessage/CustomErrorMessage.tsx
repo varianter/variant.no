@@ -24,7 +24,7 @@ const CustomErrorMessage = ({
   return (
     <section className={styles.wrapper} role="alert" aria-live="assertive">
       <div className={styles.error}>
-        <Text type="h3">{title}</Text>
+        <Text type="titleM">{title}</Text>
         <Text>{body}</Text>
         <div className={styles.buttonWrapper}>
           {button && (

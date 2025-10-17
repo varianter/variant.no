@@ -13,7 +13,7 @@ export const LogoSalad = ({ logoSalad }: LogoSaladProps) => {
     <article className={styles.wrapper} id={logoSalad._key}>
       <div>
         <div className={styles.title}>
-          <Text type="h3">{logoSalad.title}</Text>
+          <Text type="titleM">{logoSalad.title}</Text>
         </div>
         <ul className={styles.logoWrapper}>
           {logoSalad.logos.map((logo) => (
