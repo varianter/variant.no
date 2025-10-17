@@ -25,7 +25,7 @@ export default function TextSection({ section }: TextSectionProps) {
           <div>
             {section.sectionTitle && (
               <div className={styles.title}>
-                <Text type={"h4"}>{section.sectionTitle}</Text>
+                <Text type={"titleS"}>{section.sectionTitle}</Text>
               </div>
             )}
             <Text

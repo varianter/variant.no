@@ -5,9 +5,9 @@ import styles from "./text.module.css";
 export type TextType =
   | "titleXL"
   | "titleL"
-  | "h3"
-  | "h4"
-  | "h5"
+  | "titleM"
+  | "titleS"
+  | "titleXS"
   | "h6"
   | "desktopLink"
   | "labelL"
@@ -29,9 +29,9 @@ export type TextColor = "dark" | "light" | "tertiary" | "error";
 const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   titleXL: "h1",
   titleL: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
+  titleM: "h3",
+  titleS: "h4",
+  titleXS: "h5",
   h6: "h6",
   desktopLink: "p",
   labelL: "span",
@@ -52,9 +52,9 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
 const classMap: { [key in TextType]?: string } = {
   titleXL: styles.titleXL,
   titleL: styles.titleL,
-  h3: styles.h3,
-  h4: styles.h4,
-  h5: styles.h5,
+  titleM: styles.titleM,
+  titleS: styles.titleS,
+  titleXS: styles.titleXS,
   h6: styles.h6,
   desktopLink: styles.desktopLink,
   labelL: styles.labelL,

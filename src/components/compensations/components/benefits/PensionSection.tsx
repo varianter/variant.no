@@ -88,7 +88,7 @@ export default function Pension({
       <div className={styles.pensionControls}>
         <div className={styles.formWrapper}>
           <fieldset className={styles.formFieldset}>
-            <Text type="h5">{t("pension.salaryAtCurrentEmployer")}</Text>
+            <Text type="titleXS">{t("pension.salaryAtCurrentEmployer")}</Text>
             <div className={styles.mobileInputWrapper}>
               <RangeSlider
                 min={MIN_SALARY}
@@ -123,7 +123,7 @@ export default function Pension({
           </fieldset>
 
           <fieldset className={styles.formFieldset}>
-            <Text type="h5">
+            <Text type="titleXS">
               <legend>{t("pension.percentPension")}</legend>
             </Text>
             <RangeSlider
@@ -139,7 +139,7 @@ export default function Pension({
           </fieldset>
 
           <fieldset className={styles.formFieldset}>
-            <Text type="h5">
+            <Text type="titleXS">
               <legend>{t("pension.IPS")}</legend>
             </Text>
             <RangeSlider

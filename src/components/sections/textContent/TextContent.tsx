@@ -45,7 +45,7 @@ const renderTextParagraph = ({
 }: ITextParagraph) => (
   <div className={styles.container}>
     <div className={styles.paragraphWrapper}>
-      <Text type="h4" as="h2">
+      <Text type="titleS" as="h2">
         {paragraphHeader}
       </Text>
       <Text type="bodyNormal">{textContent}</Text>
