@@ -1,4 +1,4 @@
-:where(.desktopLink, .titleXL, .titleL, .titleM, .h4, .h5, .h6, .bodyXl) {
+:where(.desktopLink, .titleXL, .titleL, .titleM, .titleS, .h5, .h6, .bodyXl) {
   margin: 0;
   font-family: var(--font-britti-sans);
 }
@@ -60,7 +60,7 @@
   }
 }
 
-.h4 {
+.titleS {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 450;

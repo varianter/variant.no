@@ -33,7 +33,7 @@ export default function FeaturedCases({
                 <SanityImage image={featuredCase.image} isShared />
               </div>
               <div className={styles.textContent}>
-                <Text type={"h4"}>{featuredCase.basicTitle}</Text>
+                <Text type={"titleS"}>{featuredCase.basicTitle}</Text>
                 <Text type={"description"}>{featuredCase.description}</Text>
               </div>
             </Link>

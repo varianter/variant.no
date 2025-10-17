@@ -70,7 +70,7 @@ function Content({
   content: ImageSplitProps["section"]["content"][0];
   isFirst: boolean;
 }) {
-  const [type, asType] = isFirst ? ["titleL", "h2"] : ["h4", "h3"];
+  const [type, asType] = isFirst ? ["titleL", "h2"] : ["titleS", "h3"];
 
   return (
     <>

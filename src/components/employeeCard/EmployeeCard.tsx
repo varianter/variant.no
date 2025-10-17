@@ -43,7 +43,7 @@ export default function EmployeeCard({
             </div>
           </Link>
           <div className={styles.employeeInfoWrapper}>
-            <Text type="h4" as="h3">
+            <Text type="titleS" as="h3">
               <Link
                 href={`/${language}/${employeePageSlug}/${aliasFromEmail(employee.email)}`}
                 className={styles.employeeNameLink}
