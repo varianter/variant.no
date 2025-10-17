@@ -1,4 +1,13 @@
-:where(.desktopLink, .titleXL, .titleL, .titleM, .titleS, .h5, .h6, .bodyXl) {
+:where(
+  .desktopLink,
+  .titleXL,
+  .titleL,
+  .titleM,
+  .titleS,
+  .titleXS,
+  .h6,
+  .bodyXl
+) {
   margin: 0;
   font-family: var(--font-britti-sans);
 }
@@ -67,7 +76,7 @@
   line-height: 133.3%;
 }
 
-.h5 {
+.titleXS {
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 450;

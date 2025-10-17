@@ -21,7 +21,7 @@ export function EmployeeHighlightCard({
         {employeePhoto && <SanityImage image={employeePhoto} />}
         <div className={styles.titleContainer}>
           <div className={styles.title}>
-            <Text type={"h5"} color="light">
+            <Text type={"titleXS"} color="light">
               {basicTitle}
             </Text>
           </div>

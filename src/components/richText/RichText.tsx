@@ -38,7 +38,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
       </Text>
     ),
     h5: ({ children }) => (
-      <Text type="h5" id={formatId(children)}>
+      <Text type="titleXS" id={formatId(children)}>
         {children}
       </Text>
     ),
