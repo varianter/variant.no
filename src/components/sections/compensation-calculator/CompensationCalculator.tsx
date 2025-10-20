@@ -30,7 +30,7 @@ export default async function CompensationCalculator({
       <div className={styles.grid}>
         <div className={calculatorBgClassname}>
           <Text type="titleM">{section.calculatorBlock.calculatorTitle}</Text>
-          <Text type="bodyBig">
+          <Text type="lead">
             {section.calculatorBlock.calculatorDescription}
           </Text>
 

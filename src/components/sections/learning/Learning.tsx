@@ -36,7 +36,7 @@ export default function Learning({ section }: LearningProps) {
               <Text type="titleM" color="light">
                 {section.articleTitle}
               </Text>
-              <Text type="bodyBig" color="light">
+              <Text type="lead" color="light">
                 {section.articleSubtitle}
               </Text>
             </div>

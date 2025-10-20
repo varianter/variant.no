@@ -225,7 +225,7 @@ export default function EventRegistration({
                 onChange={toggleInterests}
               />
               <div className={style.terms}>
-                <Text type="bodyBig">
+                <Text type="lead">
                   {t("eventRegistration.terms.gerneral")}{" "}
                   <Link href={t("eventRegistration.terms.link.url")}>
                     {" "}

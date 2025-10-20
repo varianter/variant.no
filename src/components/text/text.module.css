@@ -18,7 +18,7 @@
 .bodyExtraSmall,
 .description,
 .bodyNormal,
-.bodyBig,
+.lead,
 .caption,
 .list {
   font-family: var(--font-britti-sans);
@@ -103,7 +103,7 @@
   }
 }
 
-.bodyBig {
+.lead {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;

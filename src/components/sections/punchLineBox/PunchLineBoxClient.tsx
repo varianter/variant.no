@@ -79,7 +79,7 @@ function ActionLineTemplate({
       ];
     }),
   );
-  return <Text type="bodyBig">{newChildren.flat()}</Text>;
+  return <Text type="lead">{newChildren.flat()}</Text>;
 }
 
 function usePickPeriodicallyRandomSentence(

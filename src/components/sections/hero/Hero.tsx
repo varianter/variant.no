@@ -17,7 +17,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
     <div className={styles.wrapper}>
       {isLanding ? (
         <div className={styles.landingPageSecondary}>
-          {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
+          {hero.eyebrow && <Text type="lead">{hero.eyebrow}</Text>}
           {hero.title && <Text type="titleXL">{hero.title}</Text>}
           {hero.description && (
             <Text type="h6" as="p">
@@ -33,7 +33,7 @@ export const Hero = ({ hero, isLanding = false }: HeroProps) => {
       ) : (
         // This section is prepared for a custom hero section for pages that are not landing pages.
         <div className={styles.secondary}>
-          {hero.eyebrow && <Text type="bodyBig">{hero.eyebrow}</Text>}
+          {hero.eyebrow && <Text type="lead">{hero.eyebrow}</Text>}
           {hero.title && <Text type="titleXL">{hero.title}</Text>}
           {hero.description && (
             <Text type="titleS" as="p">
