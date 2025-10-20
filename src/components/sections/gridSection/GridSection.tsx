@@ -61,7 +61,7 @@ const FieldCard = ({ field }: { field: Field }) => {
           <Text type="titleM" as="h2">
             {title}
           </Text>
-          {description && <Text type="bodyBig">{description}</Text>}
+          {description && <Text type="lead">{description}</Text>}
         </div>
       </div>
     </Link>

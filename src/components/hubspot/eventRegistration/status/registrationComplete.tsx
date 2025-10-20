@@ -19,7 +19,7 @@ export default function RegistrationComplete({
 }: RegistrationCompleteProps) {
   const lang = language || "no";
   const { t } = useTranslation(lang);
-  const textType = "bodyBig";
+  const textType = "lead";
 
   return (
     <StatusTemplate

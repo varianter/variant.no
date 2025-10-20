@@ -43,12 +43,12 @@ export default async function EmployeePage({
             <div className={styles.employeeInfo}>
               <Text type={"titleL"}>{employee.name}</Text>
               {employee.email && (
-                <Text type={"bodyBig"}>
+                <Text type={"lead"}>
                   <a href={`mailto:${employee.email}`}>{employee.email}</a>
                 </Text>
               )}
               {employee.telephone && (
-                <Text type={"bodyBig"}>
+                <Text type={"lead"}>
                   <a href={`tel:${employee.telephone}`}>
                     {formatPhoneNumber(employee.telephone)}
                   </a>

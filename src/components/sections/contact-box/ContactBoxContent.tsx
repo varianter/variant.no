@@ -37,7 +37,7 @@ export default async function ContactBoxContent({
           </Text>
 
           {data.optionalSubtitle && (
-            <Text type="bodyBig">{data.optionalSubtitle}</Text>
+            <Text type="lead">{data.optionalSubtitle}</Text>
           )}
         </div>
 

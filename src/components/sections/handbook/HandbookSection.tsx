@@ -33,7 +33,7 @@ export async function Handbook({ section, language }: HandbookProps) {
         {handbookTitle}
       </Text>
       <div className={styles.lightFont}>
-        <Text type="bodyBig" color="light">
+        <Text type="lead" color="light">
           {handbookDescription}
         </Text>
       </div>
