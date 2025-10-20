@@ -78,9 +78,7 @@ function Content({
         {content.basicTitle}
       </Text>
 
-      {content.description && (
-        <Text type="bodyNormal">{content.description}</Text>
-      )}
+      {content.description && <Text type="normal">{content.description}</Text>}
     </>
   );
 }

@@ -30,9 +30,7 @@ export default function TextSection({ section }: TextSectionProps) {
             )}
             <Text
               type={
-                section.textBlockType === "highlighted"
-                  ? "subtitle"
-                  : "bodyNormal"
+                section.textBlockType === "highlighted" ? "subtitle" : "normal"
               }
             >
               {section.text}

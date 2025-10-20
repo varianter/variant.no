@@ -55,11 +55,11 @@ export default async function EmployeePage({
                 </Text>
               )}
               {employee.officeName && (
-                <Text type={"bodyNormal"}>{employee.officeName}</Text>
+                <Text type={"normal"}>{employee.officeName}</Text>
               )}
               {employee.competences.map((competence) => (
                 <div key={competence}>
-                  <Text type="bodyNormal">
+                  <Text type="normal">
                     {t.has(competence) ? t(competence) : competence}
                   </Text>
                 </div>

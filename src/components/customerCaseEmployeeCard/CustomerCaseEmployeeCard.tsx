@@ -36,7 +36,7 @@ export default function CustomerCaseEmployeeCard({
         </div>
         <div className={styles.employeeInfo}>
           <div className={styles.employeeName}>
-            <Text type="bodyNormal">{employee.name}</Text>
+            <Text type="normal">{employee.name}</Text>
             <div className={styles.employeeRole}>
               {employee.competences.map((competence, index, array) => (
                 <Text type="label" key={competence} color="tertiary">

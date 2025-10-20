@@ -236,7 +236,7 @@ export default function EventRegistration({
               </div>
               {generalError && (
                 <span className={style.eventRegistration__error}>
-                  <Text type="bodyNormal">{generalError.message}</Text>
+                  <Text type="normal">{generalError.message}</Text>
                 </span>
               )}
               <button

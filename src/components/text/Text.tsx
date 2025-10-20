@@ -16,7 +16,7 @@ export type TextType =
   | "quoteNormal"
   | "bodyExtraSmall"
   | "description"
-  | "bodyNormal"
+  | "normal"
   | "lead"
   | "subtitle"
   | "mobileH1"
@@ -40,7 +40,7 @@ const elementMap: { [key in TextType]: keyof JSX.IntrinsicElements } = {
   quoteNormal: "p",
   bodyExtraSmall: "p",
   description: "p",
-  bodyNormal: "p",
+  normal: "p",
   lead: "p",
   subtitle: "p",
   mobileH1: "h1",
@@ -63,7 +63,7 @@ const classMap: { [key in TextType]?: string } = {
   quoteNormal: styles.quoteNormal,
   bodyExtraSmall: styles.bodyExtraSmall,
   description: styles.description,
-  bodyNormal: styles.bodyNormal,
+  normal: styles.normal,
   lead: styles.lead,
   subtitle: styles.subtitle,
   mobileH1: styles.mobileH1,
@@ -80,7 +80,7 @@ const colorMap: { [key in TextColor]: string } = {
 };
 
 const Text = ({
-  type = "bodyNormal",
+  type = "normal",
   children,
   id,
   as: asElement,
