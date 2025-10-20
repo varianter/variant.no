@@ -31,7 +31,7 @@ export default function TextSection({ section }: TextSectionProps) {
             <Text
               type={
                 section.textBlockType === "highlighted"
-                  ? "bodyXl"
+                  ? "subtitle"
                   : "bodyNormal"
               }
             >
