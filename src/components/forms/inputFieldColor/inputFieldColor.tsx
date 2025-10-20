@@ -58,12 +58,7 @@ const InputFieldColor = ({
       </div>
       {error && (
         <span>
-          <Text
-            type="bodyNormal"
-            color="error"
-            id={hintID}
-            aria-live="assertive"
-          >
+          <Text type="normal" color="error" id={hintID} aria-live="assertive">
             {error}
           </Text>
         </span>

@@ -17,7 +17,7 @@
 .quoteNormal,
 .bodyExtraSmall,
 .description,
-.bodyNormal,
+.normal,
 .bodyBig,
 .caption,
 .list {
@@ -114,7 +114,7 @@
   }
 }
 
-.bodyNormal {
+.normal {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 300;

@@ -34,7 +34,7 @@ export default function TextContent({ section }: textContentProps) {
 
 const renderTextTitle = ({ eyebrow, title }: ITextTitle) => (
   <div className={styles.container}>
-    <Text type="bodyNormal"> {eyebrow} </Text>
+    <Text type="normal"> {eyebrow} </Text>
     <Text type="titleXL">{title}</Text>
   </div>
 );
@@ -48,7 +48,7 @@ const renderTextParagraph = ({
       <Text type="titleS" as="h2">
         {paragraphHeader}
       </Text>
-      <Text type="bodyNormal">{textContent}</Text>
+      <Text type="normal">{textContent}</Text>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ const renderTextRichText = (richText: PortableTextBlock[]) => (
 
 const renderTextQuote = ({ author, quote }: ITextQuote) => (
   <div className={styles.container}>
-    <Text color="tertiary" type="bodyNormal">
+    <Text color="tertiary" type="normal">
       {author}
     </Text>
     <Text type="bodyXl">{quote}</Text>

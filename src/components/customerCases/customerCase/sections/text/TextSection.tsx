@@ -30,9 +30,7 @@ export default function TextSection({ section }: TextSectionProps) {
             )}
             <Text
               type={
-                section.textBlockType === "highlighted"
-                  ? "bodyXl"
-                  : "bodyNormal"
+                section.textBlockType === "highlighted" ? "bodyXl" : "normal"
               }
             >
               {section.text}

@@ -79,7 +79,7 @@ export default function EventsClient({
           {section.basicTitle}
         </Text>
         <div className={styles.introText}>
-          <Text type={"bodyNormal"} color="light">
+          <Text type={"normal"} color="light">
             {section.subtitle}
           </Text>
         </div>

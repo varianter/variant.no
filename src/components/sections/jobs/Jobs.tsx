@@ -37,7 +37,7 @@ export default async function Jobs({ language, section }: JobsProps) {
           <Text type={"titleL"} color="light">
             {section.basicTitle}
           </Text>
-          <Text type={"bodyNormal"} color="light">
+          <Text type={"normal"} color="light">
             {section.subtitle}
           </Text>
         </div>

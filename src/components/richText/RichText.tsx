@@ -42,7 +42,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
         {children}
       </Text>
     ),
-    normal: ({ children }) => <Text type="bodyNormal">{children}</Text>,
+    normal: ({ children }) => <Text type="normal">{children}</Text>,
     blockquote: ({ children }) => (
       <blockquote className={`${styles.blockquote} ${textStyles.body}`}>
         {children}

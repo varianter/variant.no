@@ -62,7 +62,7 @@ export default async function CustomerCaseProjectInfo({
                 </span>
               </Text>
               {consultantsFirstNames.map((name, index, array) => (
-                <Text key={name} type="bodyNormal">
+                <Text key={name} type="normal">
                   {name}
                   {index < array.length - 1 && (
                     <span className={styles.dotSeperator} />
@@ -88,7 +88,7 @@ export default async function CustomerCaseProjectInfo({
             </Text>
             <div className={styles.projectInfoItem}>
               {projectInfo.collaborators.map((collaborator, index, array) => (
-                <Text type="bodyNormal" key={collaborator}>
+                <Text type="normal" key={collaborator}>
                   {collaborator}
                   {index < array.length - 1 && (
                     <span className={styles.dotSeperator} />
@@ -127,7 +127,7 @@ export default async function CustomerCaseProjectInfo({
                 {projectInfo.deliveries["projectManagement"].map(
                   (projectManagement, index, array) => {
                     return (
-                      <Text type="bodyNormal" key={projectManagement._key}>
+                      <Text type="normal" key={projectManagement._key}>
                         {projectManagement.projectManagementDelivery}
                         {index < array.length - 1 && (
                           <span className={styles.dotSeperator} />
@@ -147,7 +147,7 @@ export default async function CustomerCaseProjectInfo({
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["design"].map(
                   (design, index, array) => (
-                    <Text key={design._key} type="bodyNormal">
+                    <Text key={design._key} type="normal">
                       {design.designDelivery}
                       {index < array.length - 1 && (
                         <span className={styles.dotSeperator} />
@@ -166,7 +166,7 @@ export default async function CustomerCaseProjectInfo({
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["development"].map(
                   (development, index, array) => (
-                    <Text key={development._key} type="bodyNormal">
+                    <Text key={development._key} type="normal">
                       {development.developmentDelivery}
                       {index < array.length - 1 && (
                         <span className={styles.dotSeperator} />
