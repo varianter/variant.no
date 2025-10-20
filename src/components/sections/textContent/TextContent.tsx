@@ -66,6 +66,6 @@ const renderTextQuote = ({ author, quote }: ITextQuote) => (
     <Text color="tertiary" type="normal">
       {author}
     </Text>
-    <Text type="bodyXl">{quote}</Text>
+    <Text type="subtitle">{quote}</Text>
   </div>
 );
