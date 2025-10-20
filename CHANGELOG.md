@@ -1,33 +1,25 @@
 # Changelog 🧾
 
-## Release v3.0.1
+## Release v3.0.3
 
-> 3 October 2025
-
-### Merged to Main 🔀
-
-- fix: gap between tag elements in evenPostings [1372](https://github.com/varianter/variant.no/pull/1372) --anemne
-- feat: Remove button tag from event page [1370](https://github.com/varianter/variant.no/pull/1370) --anemne
-- feat: adds changelog script [1353](https://github.com/varianter/variant.no/pull/1353) --Trym Veiby
-- feat: add caching for pageBuilder [1343](https://github.com/varianter/variant.no/pull/1343) --Trym Veiby
-- fix: event registration unsubscribe typo [1352](https://github.com/varianter/variant.no/pull/1352) --Trym Veiby
-- fix: remove hidden overflow to show focus [1348](https://github.com/varianter/variant.no/pull/1348) --Tuvald
-- feat(event): Internalized rich text field [1345](https://github.com/varianter/variant.no/pull/1345) --Trym Veiby
+> 26 September 2025
 
 ### Features not yet merged ✨
 
-- feat: adds animated text, [36f5fd1](https://github.com/varianter/variant.no/commit/36f5fd10eb364614ffb0da28a17d0e651057c650) --Mikael Brevik
-- feat: randomly select sentence, [64bc511](https://github.com/varianter/variant.no/commit/64bc51106e4ea7d5b09b15054c88708318092e65) --Mikael Brevik
-- feat: adds section for sales punch line, [e1ffe99](https://github.com/varianter/variant.no/commit/e1ffe994b6340b2c5b3e2aca45a8e28a9c185a40) --Mikael Brevik
-- fix animation, [151b98d](https://github.com/varianter/variant.no/commit/151b98d03829c817b7b15f80d202710f346fc876) --Mikael Brevik
-- adds overflowing, [0e4a570](https://github.com/varianter/variant.no/commit/0e4a570722eb5710a4ccf7ad787ea682276eed45) --Mikael Brevik
-- add description, [00d8044](https://github.com/varianter/variant.no/commit/00d8044e929c69cb6f65298c50307c3abd48887b) --Mikael Brevik
-- fix: remove padding for body temp, bad fix, [27cd4bf](https://github.com/varianter/variant.no/commit/27cd4bfa05ba421370ff651e7ed2c4f53fff8ada) --Mikael Brevik
+- chore: release v3.0.3, [83934ef](https://github.com/varianter/variant.no/commit/83934efcf3ceaef8132c4f2ad84102db89da1d8a) --TrymVei
 
-## Release v3.0.0
+## Release v3.0.2
 
-> 25 September 2025
+> 26 September 2025
 
 ### Merged to Main 🔀
 
+- feat(event): Internalized rich text field [1345](https://github.com/varianter/variant.no/pull/1345) --Trym Veiby
 - fix: adds new design to CustomLink [1344](https://github.com/varianter/variant.no/pull/1344) --Tuvald
+
+### Features not yet merged ✨
+
+- feat: add release-it, [847be16](https://github.com/varianter/variant.no/commit/847be1678dbac1251eb6c1a867feb44eb0a1bbe7) --TrymVei
+- chore: change config for testing, [f3076ea](https://github.com/varianter/variant.no/commit/f3076ea19af5a5a0c3ac3c3d4281840e8b6f2542) --TrymVei
+- chore: release v3.0.2, [7363842](https://github.com/varianter/variant.no/commit/7363842355a602256493be7b43cfea2c87be64df) --TrymVei
+- chore: change brach for testing, [2f4a077](https://github.com/varianter/variant.no/commit/2f4a07748be87b4ca75c0cc4e13a1e876e8cd85c) --TrymVei
