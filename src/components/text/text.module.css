@@ -22,166 +22,103 @@
 .caption,
 .list {
   font-family: var(--font-britti-sans);
-  line-height: 140%;
 }
 
 .titleXL {
-  font-size: 4.5rem;
-  font-style: normal;
   font-weight: 450;
-  line-height: 111.111%;
-
-  @media (width <=834px) {
-    font-size: 3.5rem;
-    line-height: 114.286%;
-  }
-
-  @media (width <=425px) {
-    font-size: 2.5rem;
-    line-height: 120%;
-  }
+  font-size: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+  line-height: 1.11em;
 }
 
 .titleL {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
   font-weight: 450;
-  line-height: 114.286%;
-
-  @media (width <=834px) {
-    font-size: 2.5rem;
-    line-height: 120%;
-  }
-
-  @media (width <=425px) {
-    font-size: 2rem;
-    line-height: 125%;
-  }
+  line-height: 1.1429em;
 }
 
 .titleM {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
   font-weight: 450;
-  line-height: 125%;
-
-  @media (width <=425px) {
-    font-size: 1.5rem;
-    line-height: 133.333%;
-  }
+  line-height: 1.25em;
 }
 
 .titleS {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 450;
-  line-height: 133.3%;
+  line-height: 1.333em;
 }
 
 .titleXS {
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 450;
-  line-height: 120%;
+  line-height: 1.2em;
 }
 
 .desktopLink {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 1.5em;
   text-decoration-line: underline;
 }
 
 .subtitle {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
   font-weight: 300;
-  line-height: 120%;
   letter-spacing: 0.025rem;
-
-  @media (width <=425px) {
-    font-size: 2rem;
-    line-height: 125%;
-  }
+  line-height: 1.2em;
 }
 
 .lead {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 1.75vw + 0.5rem, 1.5rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 133.333%;
-
-  @media (width <=425px) {
-    font-size: 1.125rem;
-  }
+  line-height: 1.3333em;
 }
 
 .normal {
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 2vw + 0.35rem, 1.125rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 160%;
+  line-height: 1.6em;
   letter-spacing: 0.0125rem;
-
-  @media (width <=425px) {
-    font-size: 0.875rem;
-    line-height: 171.429%;
-  }
 }
 
 .description {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw + 0.35rem, 1rem);
   font-weight: 300;
-  line-height: 150%;
-
-  @media (width <=425px) {
-    font-size: 0.875rem;
-    line-height: 114.286%;
-  }
+  line-height: clamp(1.1429em, 2vw + 0.5rem, 1.5em);
 }
 
 .bodyExtraSmall {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
   font-weight: 400;
-  line-height: 128.571%;
+  line-height: 1.2857em;
   letter-spacing: 0.0088rem;
-
-  @media (width <=425px) {
-    font-size: 0.75rem;
-    line-height: 150%;
-    letter-spacing: 0.0075rem;
-  }
 }
 
 .label {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2vw + 0.35rem, 1rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 150%;
+  line-height: 1.1429em;
   letter-spacing: 0.02rem;
-
-  @media (width <=425px) {
-    font-size: 0.875rem;
-    line-height: 114.286%;
-    letter-spacing: 0.0175rem;
-  }
 }
 
 .labelL {
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 1.25rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
-
-  @media (width <=425px) {
-    font-size: 1.125rem;
-    line-height: 133.333%;
-  }
+  line-height: 1.2em;
 }
 
 .quoteNormal {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 1.3em;
   white-space: pre-line;
 }
 
@@ -189,7 +126,7 @@
   font-size: 1.5rem;
   font-style: italic;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 1.3em;
   white-space: pre-line;
 }
 
@@ -197,7 +134,7 @@
   font-size: var(--Font-size-Picture-label, 1rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 1.5em;
   letter-spacing: 0.05rem;
   padding: 0 0.5rem;
 }
