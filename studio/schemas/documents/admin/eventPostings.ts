@@ -7,7 +7,7 @@ export const eventPostingsID = "eventPostings";
 const eventPostings = defineType({
   name: eventPostingsID,
   type: "document",
-  title: "Event Postings",
+  title: "Events hereeeeee",
   fields: [
     {
       name: "eventPostingsArray",
@@ -16,6 +16,13 @@ const eventPostings = defineType({
       of: [{ type: eventPostingID }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Event Postings",
+      };
+    },
+  },
 });
 
 export default eventPostings;
