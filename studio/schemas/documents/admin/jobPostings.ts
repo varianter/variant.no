@@ -16,6 +16,13 @@ const jobPostings = defineType({
       of: [{ type: jobPostingID }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Job Postings",
+      };
+    },
+  },
 });
 
 export default jobPostings;

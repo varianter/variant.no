@@ -16,6 +16,13 @@ const eventPostings = defineType({
       of: [{ type: eventPostingID }],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Event Postings",
+      };
+    },
+  },
 });
 
 export default eventPostings;
