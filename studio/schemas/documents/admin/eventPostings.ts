@@ -7,7 +7,7 @@ export const eventPostingsID = "eventPostings";
 const eventPostings = defineType({
   name: eventPostingsID,
   type: "document",
-  title: "Events hereeeeee",
+  title: "Event Postings",
   fields: [
     {
       name: "eventPostingsArray",
