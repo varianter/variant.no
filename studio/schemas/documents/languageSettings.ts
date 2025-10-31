@@ -29,6 +29,13 @@ const languageSettings = defineType({
       initialValue: () => [defaultLanguage],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Languages",
+      };
+    },
+  },
 });
 
 export default languageSettings;
