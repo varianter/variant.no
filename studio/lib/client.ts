@@ -9,10 +9,10 @@ export const client = createClient({
   dataset,
   projectId,
   useCdn,
-  perspective:
-    process.env.NODE_ENV === "development" ? "previewDrafts" : "published",
+  perspective: process.env.NODE_ENV === "development" ? "drafts" : "published",
   stega: {
     enabled: false,
     studioUrl: "/studio",
   },
+  token: process.env.SANITY_PREVIEW_SECRET,
 });
