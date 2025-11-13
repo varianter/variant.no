@@ -1,9 +1,18 @@
 import { draftMode } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-import { absoluteUrlFromNextRequest } from "src/utils/url";
-
 export async function GET(request: NextRequest) {
+  const slug = request.nextUrl.searchParams.get("slug");
+  const locale = request.nextUrl.searchParams.get("locale");
   (await draftMode()).disable();
-  return NextResponse.redirect(absoluteUrlFromNextRequest(request, "/"));
+
+  const previewLocale = locale || "no";
+  const previewSlug = slug || "";
+  const path =
+    previewSlug === "/" || previewSlug === ""
+      ? `/${previewLocale}`
+      : `/${previewLocale}/${previewSlug}`;
+
+  const url = new URL(path, request.nextUrl.origin);
+  return NextResponse.redirect(url);
 }

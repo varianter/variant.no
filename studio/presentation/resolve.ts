@@ -1,25 +1,62 @@
 // resolveProductionUrl.ts
-import type { SanityDocument } from "sanity";
+import type { SanityDocument, Slug } from "sanity";
 
 const remoteUrl = process.env.NEXT_PUBLIC_URL || "https://www.variant.no";
 const localUrl = `http://localhost:3000`;
 
-const secret = process.env.SANITY_STUDIO_PREVIEW_SECRET || "";
+const secret = process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_SECRET || "";
 
-//function getSlug(slug: any) {
-//  if (!slug) return "/";
-//  if (slug.current) return slug.current;
-//  return "/";
-//}
+interface InternationalizedSlug {
+  _key: string;
+  value: string;
+}
+
+function getSlug(
+  slug: Slug | string | InternationalizedSlug[] | undefined | null,
+  locale?: string,
+): string {
+  if (!slug) return "";
+
+  if (Array.isArray(slug)) {
+    const localizedSlug = slug.find((s) => s._key === locale);
+    return localizedSlug?.value || slug[0]?.value || "";
+  }
+
+  if (typeof slug === "object" && "current" in slug && slug.current) {
+    return slug.current;
+  }
+
+  if (typeof slug === "string") return slug;
+
+  return "";
+}
+
+function getLanguage(doc: SanityDocument): string {
+  if (doc.language && typeof doc.language === "string") return doc.language;
+  if (doc._lang && typeof doc._lang === "string") return doc._lang;
+  // Default to 'no' if no language is specified
+  return "no";
+}
 
 export default function resolveProductionUrl(doc: SanityDocument) {
-  console.log(doc); //bare for at doc skal brukes og den slutter å klage
   const baseUrl =
     window.location.hostname === "localhost" ? localUrl : remoteUrl;
   const previewUrl = new URL(baseUrl);
-  //const slug = doc.slug;
-  console.log("Resolving preview URL for slug:", secret);
-  previewUrl.searchParams.append(`/api/draft`, secret);
-  //previewUrl.searchParams.append(`slug`, getSlug(slug));
-  return previewUrl.pathname.toString();
+  previewUrl.pathname = "/api/draft";
+  const isDraft = doc._id.startsWith("drafts.");
+  if (!isDraft) {
+    previewUrl.pathname = "/api/disable-draft";
+  }
+  previewUrl.searchParams.append("secret", secret);
+  const language = getLanguage(doc);
+  const slug = getSlug(
+    doc.slug as Slug | string | InternationalizedSlug[] | undefined,
+    language,
+  );
+  console.log("Document slug for preview:", slug);
+  if (slug) {
+    previewUrl.searchParams.append("slug", slug);
+  }
+  previewUrl.searchParams.append("locale", language);
+  return previewUrl.toString();
 }
