@@ -8,6 +8,7 @@ export const localeID = "locale";
 const locale = defineType({
   name: localeID,
   type: "document",
+  title: "Region",
   fields: [
     defineField({
       name: "locale",
@@ -36,6 +37,13 @@ const locale = defineType({
       },
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Region",
+      };
+    },
+  },
 });
 
 export default locale;

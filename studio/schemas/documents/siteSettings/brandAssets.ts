@@ -27,6 +27,13 @@ const brandAssets = defineType({
         "Upload the favicon for your site. It appears in the browser tab.",
     }),
   ],
+  preview: {
+    prepare() {
+      return {
+        title: "Brand Assets",
+      };
+    },
+  },
 });
 
 export default brandAssets;
