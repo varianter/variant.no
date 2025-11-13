@@ -33,7 +33,11 @@ const CheckboxColor = ({
           onChange={onChange}
         />
         <span className={styles.checkbox} />
-        {typeof label === "string" ? label : <PortableText value={label} />}
+        {typeof label === "string" ? (
+          <Text type="lead">{label}</Text>
+        ) : (
+          <PortableText value={label} />
+        )}
       </label>
       {error && (
         <span>
