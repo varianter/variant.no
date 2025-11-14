@@ -9,7 +9,6 @@ import {
 } from "@sanity/ui";
 import { useEffect, useRef, useState } from "react";
 import { AiOutlineReload } from "react-icons/ai";
-import { BiLinkExternal } from "react-icons/bi";
 import type { SanityDocument } from "sanity";
 
 import resolveProductionUrl from "studio/presentation/resolve";
