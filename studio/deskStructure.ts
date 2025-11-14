@@ -176,7 +176,7 @@ const pagesSection = (S: StructureBuilder) =>
     );
 
 //Section for set pages
-export const specialPagesSection = (S: StructureBuilder) =>
+const specialPagesSection = (S: StructureBuilder) =>
   S.listItem()
     .title("Special Pages")
     .icon(SparkleIcon)
