@@ -64,6 +64,7 @@ const config: WorkspaceOptions = {
       previewUrl: {
         previewMode: {
           enable: "/api/draft",
+          disable: "/api/disable-draft",
         },
       },
     }),

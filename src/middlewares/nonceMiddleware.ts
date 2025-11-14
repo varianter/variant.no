@@ -18,7 +18,7 @@ const contentSecurityPolicy = (nonce: string) => {
     frame-src 'self' https://vercel.live/;
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'none';
+    frame-ancestors 'self';
     object-src 'none';
   `;
   return csp.replace(/\s{2,}/g, " ").trim();

@@ -17,6 +17,7 @@ import {
 } from "@sanity/icons";
 import { StructureBuilder } from "sanity/structure";
 
+import { PreviewIFrame } from "./components/Preview";
 import { companyInfoID } from "./schemas/documents/admin/companyInfo";
 import { companyLocationID } from "./schemas/documents/admin/companyLocation";
 import { defaultSeoID } from "./schemas/documents/admin/defaultSeo";
@@ -160,7 +161,19 @@ const pagesSection = (S: StructureBuilder) =>
   S.listItem()
     .title("Pages")
     .icon(ProjectsIcon)
-    .child(S.documentTypeList(pageBuilderID).title("Pages"));
+    .child(
+      S.documentTypeList(pageBuilderID)
+        .title("Pages")
+        .child((documentId) =>
+          S.document()
+            .documentId(documentId)
+            .schemaType(pageBuilderID)
+            .views([
+              S.view.form(),
+              S.view.component(PreviewIFrame).title("Preview"),
+            ]),
+        ),
+    );
 
 //Section for set pages
 const specialPagesSection = (S: StructureBuilder) =>
@@ -178,7 +191,11 @@ const specialPagesSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(compensationsId)
                 .documentId(compensationsId)
-                .title("Compensations"),
+                .title("Compensations")
+                .views([
+                  S.view.form(),
+                  S.view.component(PreviewIFrame).title("Preview"),
+                ]),
             ),
           S.listItem()
             .title("Customer Cases")
@@ -187,7 +204,11 @@ const specialPagesSection = (S: StructureBuilder) =>
               S.document()
                 .schemaType(customerCasesPageID)
                 .documentId(customerCasesPageID)
-                .title("Customer Cases"),
+                .title("Customer Cases")
+                .views([
+                  S.view.form(),
+                  S.view.component(PreviewIFrame).title("Preview"),
+                ]),
             ),
         ]),
     );

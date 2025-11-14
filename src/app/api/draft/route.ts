@@ -1,31 +1,29 @@
 export const dynamic = "force-dynamic";
 
-import { validatePreviewUrl } from "@sanity/preview-url-secret";
 import { draftMode } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-import { absoluteUrlFromNextRequest } from "src/utils/url";
-import { client } from "studio/lib/client";
-import { token } from "studio/lib/token";
-
-const clientWithToken = client.withConfig({ token });
-
 export async function GET(request: NextRequest) {
-  try {
-    const { isValid, redirectTo = "/" } = await validatePreviewUrl(
-      clientWithToken,
-      request.url,
-    );
+  const secret = request.nextUrl.searchParams.get("secret");
+  const slug = request.nextUrl.searchParams.get("slug");
+  const locale = request.nextUrl.searchParams.get("locale");
 
-    if (!isValid) {
+  try {
+    if (!secret || secret !== process.env.SANITY_PREVIEW_SECRET) {
       return new Response("Invalid secret", { status: 401 });
     }
 
     (await draftMode()).enable();
 
-    return NextResponse.redirect(
-      absoluteUrlFromNextRequest(request, redirectTo),
-    );
+    const previewLocale = locale || "no";
+    const previewSlug = slug || "";
+    const path =
+      previewSlug === "/" || previewSlug === ""
+        ? `/${previewLocale}`
+        : `/${previewLocale}/${previewSlug}`;
+
+    const url = new URL(path, request.nextUrl.origin);
+    return NextResponse.redirect(url);
   } catch (error) {
     console.error("Error in /api/draft:", error);
     return new Response("Internal Server Error", { status: 500 });
