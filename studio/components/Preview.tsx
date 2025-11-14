@@ -40,7 +40,6 @@ export function PreviewIFrame({ document }: PreviewIFrameProps) {
 
     const url = resolveProductionUrl(displayedDoc) ?? "";
     setDisplayUrl(url);
-    console.log("Preview URL:", url);
   }, [displayedDoc]);
 
   if (!displayUrl) {

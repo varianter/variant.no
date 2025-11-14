@@ -170,10 +170,7 @@ const pagesSection = (S: StructureBuilder) =>
             .schemaType(pageBuilderID)
             .views([
               S.view.form(),
-              S.view
-                .component(PreviewIFrame)
-                .options({}) // language? locale params? slug?
-                .title("Preview"),
+              S.view.component(PreviewIFrame).title("Preview"),
             ]),
         ),
     );

@@ -53,7 +53,6 @@ export default function resolveProductionUrl(doc: SanityDocument) {
     doc.slug as Slug | string | InternationalizedSlug[] | undefined,
     language,
   );
-  console.log("Document slug for preview:", slug);
   if (slug) {
     previewUrl.searchParams.append("slug", slug);
   }
