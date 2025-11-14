@@ -1,7 +1,7 @@
 // resolveProductionUrl.ts
 import type { SanityDocument, Slug } from "sanity";
 
-const remoteUrl = "https://www.variant.no";
+const remoteUrl = process.env.NEXT_PUBLIC_URL || "https://www.variant.no";
 const localUrl = `http://localhost:3000`;
 
 const secret = process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_SECRET || "";
