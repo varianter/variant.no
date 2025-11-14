@@ -72,14 +72,6 @@ export function PreviewIFrame({ document }: PreviewIFrameProps) {
                 aria-label="Reload"
                 onClick={handleReload}
               />
-              <Button
-                fontSize={[1]}
-                icon={BiLinkExternal}
-                padding={[2]}
-                text="Open"
-                tone="primary"
-                onClick={() => window.open(displayUrl, "_blank")}
-              />
             </Flex>
           </Flex>
         </Card>
