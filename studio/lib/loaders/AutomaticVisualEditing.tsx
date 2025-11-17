@@ -3,6 +3,7 @@
 "use client";
 
 import { useLiveMode } from "@sanity/react-loader";
+import { VisualEditing } from "next-sanity/visual-editing";
 import { useEffect } from "react";
 
 import { client } from "studio/lib/client";
@@ -18,6 +19,5 @@ export default function LiveVisualEditing() {
       location.href = "/api/disable-draft";
     }
   }, []);
-
-  return <LiveVisualEditing />;
+  return <VisualEditing />;
 }
