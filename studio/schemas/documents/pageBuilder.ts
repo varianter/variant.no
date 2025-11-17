@@ -89,19 +89,18 @@ const pageBuilder = defineType({
       slug: titleSlug.name,
     },
     prepare({ title, slug }) {
-      if (!isInternationalizedString(title)) {
-        throw new TypeError(
-          `Expected 'title' to be InternationalizedString, was ${typeof title}`,
-        );
-      }
-      if (!isInternationalizedString(slug)) {
-        throw new TypeError(
-          `Expected 'slug' to be InternationalizedString, was ${typeof slug}`,
-        );
-      }
+      // Handle cases where the field might not be properly initialized yet
+      const titleText = isInternationalizedString(title)
+        ? (firstTranslation(title) ?? undefined)
+        : undefined;
+
+      const slugText = isInternationalizedString(slug)
+        ? (firstTranslation(slug) ?? undefined)
+        : undefined;
+
       return {
-        title: firstTranslation(title) ?? undefined,
-        subtitle: firstTranslation(slug) ?? undefined,
+        title: titleText || "Untitled",
+        subtitle: slugText,
       };
     },
   },
