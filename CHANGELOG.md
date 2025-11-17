@@ -1,5 +1,82 @@
 # Changelog 🧾
 
+## Release v3.0.0
+
+> 17 November 2025
+
+### Merged to Main 🔀
+
+- fix: remoteURL [1465](https://github.com/varianter/variant.no/pull/1465) --anemne
+- fix: remove line from remoteurl to enable previewmode [1463](https://github.com/varianter/variant.no/pull/1463) --anemne
+- feat: preview mode in studio [1461](https://github.com/varianter/variant.no/pull/1461) --anemne
+- fix: use text component for label text [1460](https://github.com/varianter/variant.no/pull/1460) --Tuvald
+- fix: add preview for language, brand and region titles in studio [1442](https://github.com/varianter/variant.no/pull/1442) --Tuvald
+- fix: endre label på se alle caser [1452](https://github.com/varianter/variant.no/pull/1452) --anemne
+- chore(deps): bump tar from 7.5.1 to 7.5.2 [1449](https://github.com/varianter/variant.no/pull/1449) --dependabot[bot]
+- chore(deps-dev): bump @eslint/compat from 1.4.0 to 1.4.1 [1448](https://github.com/varianter/variant.no/pull/1448) --dependabot[bot]
+- chore(deps): bump next-sanity from 11.4.2 to 11.6.3 [1447](https://github.com/varianter/variant.no/pull/1447) --dependabot[bot]
+- chore(deps): bump nuqs from 2.7.1 to 2.7.2 [1446](https://github.com/varianter/variant.no/pull/1446) --dependabot[bot]
+- chore(deps): bump @sanity/vision from 4.10.3 to 4.12.0 [1445](https://github.com/varianter/variant.no/pull/1445) --dependabot[bot]
+- chore(deps-dev): bump @types/node from 24.7.0 to 24.9.2 [1444](https://github.com/varianter/variant.no/pull/1444) --dependabot[bot]
+- 1438 titles of job posting and event posting is missing [1439](https://github.com/varianter/variant.no/pull/1439) --Tuvald
+- Fix time autochangelog [1437](https://github.com/varianter/variant.no/pull/1437) --anemne
+- chore(deps-dev): bump @typescript-eslint/eslint-plugin [1434](https://github.com/varianter/variant.no/pull/1434) --dependabot[bot]
+- chore(deps): bump motion from 12.23.22 to 12.23.24 [1435](https://github.com/varianter/variant.no/pull/1435) --dependabot[bot]
+- chore(deps): bump sanity-plugin-internationalized-array [1436](https://github.com/varianter/variant.no/pull/1436) --dependabot[bot]
+- chore(deps): bump @sanity/document-internationalization [1433](https://github.com/varianter/variant.no/pull/1433) --dependabot[bot]
+- chore(deps): bump @sanity/react-loader from 1.11.19 to 1.11.22 [1432](https://github.com/varianter/variant.no/pull/1432) --dependabot[bot]
+- fix(Text): substitutes media tag with clamp for font-size [1431](https://github.com/varianter/variant.no/pull/1431) --Tuvald
+- Fix: releasetime for autochangelog [1430](https://github.com/varianter/variant.no/pull/1430) --anemne
+- chore(deps): bump vite from 7.1.9 to 7.1.11 [1427](https://github.com/varianter/variant.no/pull/1427) --dependabot[bot]
+- chore: update changelog [skip ci] [1420](https://github.com/varianter/variant.no/pull/1420) --github-actions[bot]
+- chore(deps): bump @sanity/vision from 4.10.2 to 4.10.3 [1421](https://github.com/varianter/variant.no/pull/1421) --dependabot[bot]
+- chore(deps-dev): bump @typescript-eslint/parser from 8.46.0 to 8.46.1 [1422](https://github.com/varianter/variant.no/pull/1422) --dependabot[bot]
+- chore(deps): bump next from 15.5.4 to 15.5.6 [1423](https://github.com/varianter/variant.no/pull/1423) --dependabot[bot]
+- chore: rename bodyNormal to normal [1426](https://github.com/varianter/variant.no/pull/1426) --Tuvald
+- chore: rename bodyBig to lead [1419](https://github.com/varianter/variant.no/pull/1419) --Tuvald
+- chore: rename bodyXL to subtitle [1418](https://github.com/varianter/variant.no/pull/1418) --Tuvald
+- chore(deps-dev): bump eslint-config-next from 15.5.4 to 15.5.6 [1424](https://github.com/varianter/variant.no/pull/1424) --dependabot[bot]
+- chore(deps-dev): bump @eslint/js from 9.37.0 to 9.38.0 [1425](https://github.com/varianter/variant.no/pull/1425) --dependabot[bot]
+- chore: rename h5 to titleXS [1417](https://github.com/varianter/variant.no/pull/1417) --Tuvald
+- chore: rename h4 to titleS [1416](https://github.com/varianter/variant.no/pull/1416) --Tuvald
+- chore: rename h3 to titleM [1415](https://github.com/varianter/variant.no/pull/1415) --Tuvald
+- 1394 remove classname from text and add color prop [1412](https://github.com/varianter/variant.no/pull/1412) --Tuvald
+- fix: use customer case page slug on customer case list link [1411](https://github.com/varianter/variant.no/pull/1411) --Trym Veiby
+- chore: update prettier [1410](https://github.com/varianter/variant.no/pull/1410) --Trym Veiby
+- feat: update to next 15 and update packages [1397](https://github.com/varianter/variant.no/pull/1397) --Trym Veiby
+- feat: rename labelLarge to labelL [1402](https://github.com/varianter/variant.no/pull/1402) --Trym Veiby
+- feat: replace order in slug [1404](https://github.com/varianter/variant.no/pull/1404) --anemne
+- feat: rename bodySmall to description [1403](https://github.com/varianter/variant.no/pull/1403) --Trym Veiby
+- feat: rename labelRegular to label [1399](https://github.com/varianter/variant.no/pull/1399) --Trym Veiby
+- feat: rename imageLabel to caption [1398](https://github.com/varianter/variant.no/pull/1398) --Trym Veiby
+- chore: rename h2 type to titleL in Text.tsx [1383](https://github.com/varianter/variant.no/pull/1383) --Tuvald
+- chore(deps): bump vite from 5.4.14 to 5.4.19 [1243](https://github.com/varianter/variant.no/pull/1243) --dependabot[bot]
+- chore(deps): bump undici from 5.28.5 to 5.29.0 [1247](https://github.com/varianter/variant.no/pull/1247) --dependabot[bot]
+- chore(deps): bump next from 14.2.23 to 14.2.28 [1248](https://github.com/varianter/variant.no/pull/1248) --dependabot[bot]
+- fix: errors in action changelog [1381](https://github.com/varianter/variant.no/pull/1381) --Trym Veiby
+- Ci/action changelog [1380](https://github.com/varianter/variant.no/pull/1380) --Trym Veiby
+- chore: rename h1 to titleXL in Text [1376](https://github.com/varianter/variant.no/pull/1376) --Tuvald
+- docs: add section about the changelog in README [1375](https://github.com/varianter/variant.no/pull/1375) --Trym Veiby
+- docs: update documentation for week 1 [1374](https://github.com/varianter/variant.no/pull/1374) --Trym Veiby
+- fix: gap between tag elements in evenPostings [1372](https://github.com/varianter/variant.no/pull/1372) --anemne
+- feat: Remove button tag from event page [1370](https://github.com/varianter/variant.no/pull/1370) --anemne
+- feat: adds changelog script [1353](https://github.com/varianter/variant.no/pull/1353) --Trym Veiby
+- feat: add caching for pageBuilder [1343](https://github.com/varianter/variant.no/pull/1343) --Trym Veiby
+- fix: event registration unsubscribe typo [1352](https://github.com/varianter/variant.no/pull/1352) --Trym Veiby
+- fix: remove hidden overflow to show focus [1348](https://github.com/varianter/variant.no/pull/1348) --Tuvald
+
+### Features not yet merged ✨
+
+- feat: adds animated text, [36f5fd1](https://github.com/varianter/variant.no/commit/36f5fd10eb364614ffb0da28a17d0e651057c650) --Mikael Brevik
+- feat: randomly select sentence, [64bc511](https://github.com/varianter/variant.no/commit/64bc51106e4ea7d5b09b15054c88708318092e65) --Mikael Brevik
+- feat: adds section for sales punch line, [e1ffe99](https://github.com/varianter/variant.no/commit/e1ffe994b6340b2c5b3e2aca45a8e28a9c185a40) --Mikael Brevik
+- fix animation, [151b98d](https://github.com/varianter/variant.no/commit/151b98d03829c817b7b15f80d202710f346fc876) --Mikael Brevik
+- adds overflowing, [0e4a570](https://github.com/varianter/variant.no/commit/0e4a570722eb5710a4ccf7ad787ea682276eed45) --Mikael Brevik
+- add description, [00d8044](https://github.com/varianter/variant.no/commit/00d8044e929c69cb6f65298c50307c3abd48887b) --Mikael Brevik
+- fix: punch box min height, [26c8b45](https://github.com/varianter/variant.no/commit/26c8b4555847686431fa42330c9ac823eb0d5d7a) --Mikael Brevik
+- fix: readds missing breakwords for punch, [6a691c1](https://github.com/varianter/variant.no/commit/6a691c1b57796f785923a80d67f7d1e313dc0737) --Mikael Brevik
+- fix: remove padding for body temp, bad fix, [27cd4bf](https://github.com/varianter/variant.no/commit/27cd4bfa05ba421370ff651e7ed2c4f53fff8ada) --Mikael Brevik
+
 ## Release v3.0.3
 
 > 26 September 2025
