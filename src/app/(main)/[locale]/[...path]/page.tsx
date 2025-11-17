@@ -19,10 +19,14 @@ import {
   seoDataFromChewbaccaEmployee,
   seoDataFromCustomerCase,
 } from "src/utils/seo";
+import { domainFromHostname } from "src/utils/url";
+import { client } from "studio/lib/client";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { SeoData } from "studio/lib/interfaces/seo";
 import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
-import { loadStudioQuery } from "studio/lib/store";
+import { CustomerCaseBase } from "studioShared/lib/interfaces/customerCases";
+import { CUSTOMER_CASES_QUERY } from "studioShared/lib/queries/customerCases";
+import { loadSharedQuery } from "studioShared/lib/store";
 
 export const dynamic = "force-dynamic";
 
@@ -88,73 +92,92 @@ async function Page(props: Props) {
     eventPostings: [],
   };
 
-  const { data } = await loadStudioQuery<{
+  const eventPostingsData = await client.fetch<{
     eventPostingsArray: IEventPosting[];
-  }>(EVENT_POSTINGS_QUERY, { language: params.locale });
-  eventPostings.eventPostings = data?.eventPostingsArray ?? [];
+  }>(EVENT_POSTINGS_QUERY, { language: params.locale }, { perspective });
+  eventPostings.eventPostings = eventPostingsData?.eventPostingsArray ?? [];
 
   const { queryResponse, docType, pathTranslations } = pageData;
+  let content = null;
+  switch (docType) {
+    case "pageBuilder":
+      content = (
+        <>
+          {queryResponse.data?.sections?.map((section, index) => (
+            <SectionRenderer
+              key={section._key}
+              language={locale}
+              section={section}
+              isDraftMode={isDraftMode}
+              initialData={queryResponse}
+              isLandingPage={false}
+              sectionIndex={index}
+            />
+          ))}
+        </>
+      );
+      break;
+    case "compensations":
+      content = isDraftMode ? null : (
+        <Compensations
+          compensations={queryResponse.compensationsPage.data}
+          locations={queryResponse.companyLocations.data}
+          language={locale}
+        />
+      );
+      break;
+    case "customerCasesPage": {
+      const domain = domainFromHostname((await headers()).get("host"));
+      const customerCasesListResult = await loadSharedQuery<CustomerCaseBase[]>(
+        CUSTOMER_CASES_QUERY,
+        { language: locale, domain },
+        { perspective },
+      );
+      content = isDraftMode ? (
+        <CustomerCasesPreview
+          initialCustomerCases={queryResponse}
+          initialCustomerCasesList={customerCasesListResult}
+          domain={domain}
+        />
+      ) : (
+        <CustomerCases
+          customerCasesPage={queryResponse.data}
+          customerCases={customerCasesListResult.data}
+        />
+      );
+      break;
+    }
+    case "customerCase":
+      content = (
+        <CustomerCase
+          customerCase={queryResponse.customerCase.data}
+          customerCasesPagePath={queryResponse.customerCasesPagePath}
+        />
+      );
+      break;
+    case "legalDocument":
+      content = isDraftMode ? (
+        <LegalPreview initialDocument={queryResponse} />
+      ) : (
+        <Legal document={queryResponse.data} />
+      );
+      break;
+    case "employee":
+      content = <EmployeePage employee={queryResponse} language={locale} />;
+      break;
+    case "eventsPage":
+      content = <EventsPage params={params} eventPostings={eventPostings} />;
+      break;
+  }
+  if (content === null) {
+    return notFound();
+  }
 
   return (
     <>
       <PageHeader language={locale} pathTranslations={pathTranslations} />
       <main id={"main"} tabIndex={-1} className="animate-fadein">
-        {(() => {
-          switch (docType) {
-            case "pageBuilder":
-              return (
-                <>
-                  {queryResponse.data?.sections?.map((section, index) => (
-                    <SectionRenderer
-                      key={section._key}
-                      language={locale}
-                      section={section}
-                      isDraftMode={isDraftMode}
-                      initialData={queryResponse}
-                      isLandingPage={false}
-                      sectionIndex={index}
-                    />
-                  ))}
-                </>
-              );
-            case "compensations":
-              return isDraftMode ? null : (
-                <Compensations
-                  compensations={queryResponse.compensationsPage.data}
-                  locations={queryResponse.companyLocations.data}
-                  language={locale}
-                />
-              );
-            case "customerCasesPage":
-              return isDraftMode ? (
-                <CustomerCasesPreview initialCustomerCases={queryResponse} />
-              ) : (
-                <CustomerCases customerCasesPage={queryResponse.data} />
-              );
-            case "customerCase":
-              return (
-                <CustomerCase
-                  customerCase={queryResponse.customerCase.data}
-                  customerCasesPagePath={queryResponse.customerCasesPagePath}
-                />
-              );
-            case "legalDocument":
-              return isDraftMode ? (
-                <LegalPreview initialDocument={queryResponse} />
-              ) : (
-                <Legal document={queryResponse.data} />
-              );
-            case "employee":
-              return (
-                <EmployeePage employee={queryResponse} language={locale} />
-              );
-            case "eventsPage":
-              return (
-                <EventsPage params={params} eventPostings={eventPostings} />
-              );
-          }
-          return notFound();
-        })()}
+        {content}
       </main>
     </>
   );
