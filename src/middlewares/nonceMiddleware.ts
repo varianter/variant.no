@@ -13,7 +13,7 @@ const contentSecurityPolicy = (nonce: string) => {
       process.env.NODE_ENV !== "production" ? "'unsafe-eval'" : ""
     };
     style-src 'self' 'unsafe-inline';
-    img-src 'self' data: https://cdn.sanity.io/;
+    img-src 'self' data: https://cdn.sanity.io/ https://cdn-images-1.medium.com/ https://miro.medium.com/;
     media-src 'self';
     frame-src 'self' https://vercel.live/;
     base-uri 'self';
