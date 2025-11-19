@@ -1,0 +1,82 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  border: 2px solid;
+  border-radius: 1rem;
+  border-color: var(--background-bg-light-primary);
+  justify-content: space-between;
+  background-color: var(--background-bg-light-primary);
+
+  @media (width <= 834px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 60%;
+  justify-content: space-between;
+
+  @media (width <= 834px) {
+    max-width: 100%;
+  }
+}
+
+.cardSubtitle {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+
+.cardImage {
+  display: flex;
+  max-width: 20rem;
+  object-fit: contain;
+
+  @media (width <= 834px) {
+    display: flex;
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: var(--max-content-width-large);
+  margin: 0 auto;
+  padding: 5rem 0;
+  gap: 2rem;
+}
+
+.articles {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--background-bg-yellow);
+}
+
+.articleButton {
+  margin-top: auto;
+  width: fit-content;
+}
+
+.dotSeparator {
+  display: inline-block;
+}
+
+.dotSeperator::after {
+  content: "·";
+  margin: 0 0.38rem;
+}
