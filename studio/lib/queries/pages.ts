@@ -90,6 +90,11 @@ const SECTIONS_FRAGMENT = groq`
         }
       }
     },
+    _type == "blogSection" => {
+      "basicTitle": ${translatedFieldFragment("basicTitle")},
+      "buttonTitle": ${translatedFieldFragment("buttonTitle")},
+      "postNumber": postNumber,
+    },
     _type == "employees" => {
       "basicTitle": ${translatedFieldFragment("basicTitle")}
     },
