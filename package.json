@@ -34,7 +34,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-focus-on": "^3.9.4",
-    "react-intersection-observer": "^9.15.1",
+    "react-intersection-observer": "^10.0.0",
     "rss-parser": "^3.13.0",
     "sanity": "^4.10.2",
     "sanity-plugin-iframe-pane": "^4.0.0",
