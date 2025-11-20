@@ -3,23 +3,24 @@
 import React, { useEffect, useState } from "react";
 
 import Text from "src/components/text/Text";
+import { MediumCardProps } from "studio/lib/interfaces/mediumCard";
 import { BlogSection } from "studio/lib/interfaces/pages";
 
 import styles from "./blog.module.css";
-import MediumCard, { MediumCardProps } from "./MediumCard";
+import MediumCard from "./MediumCard";
 
 export interface BlogSectionProps {
   section: BlogSection;
 }
 
 export default function Blog({ section }: BlogSectionProps) {
-  const [articles, setArticles] = useState<MediumCardProps[]>([]);
+  const [blogArticles, setArticles] = useState<MediumCardProps[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch("/api/blog-articles");
+        const response = await fetch("/api/blogArticles");
         const data = await response.json();
         setArticles(data);
       } catch (error) {
@@ -39,7 +40,7 @@ export default function Blog({ section }: BlogSectionProps) {
         <div>Loading...</div>
       ) : (
         <div className={styles.articles}>
-          {articles.slice(0, section.postNumber).map((article, index) => (
+          {blogArticles.slice(0, section.postNumber).map((article, index) => (
             <MediumCard
               key={index}
               article={{

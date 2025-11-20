@@ -15,14 +15,15 @@ export const blogSection = defineField({
       name: titleID.basic,
       title: "Title",
       description:
-        "Enter the title for the blog section (e.g., 'Latest from Variant Blog')",
+        "Enter the title for the blog section with blog posts from our Medium " +
+        "blog at https://blog.variant.no (e.g., 'Latest from Variant Blog').",
       type: "internationalizedArrayString",
       validation: (rule) => rule.required(),
     },
     {
       name: "buttonTitle",
       title: "Button Title",
-      description: "Enter the title for the 'Read More' button",
+      description: "Enter the title for the 'Read More' button.",
       type: "internationalizedArrayString",
       validation: (rule) => rule.required(),
     },
@@ -30,7 +31,8 @@ export const blogSection = defineField({
       name: "postNumber",
       title: "Number of blog posts",
       description:
-        "Enter the number of blog posts you want to show in the Blog Section. It has to be between 1-10.",
+        "Enter the number of blog posts you want to show in the Blog Section. " +
+        "It has to be between 1-10.",
       type: "number",
       validation: (rule) =>
         rule

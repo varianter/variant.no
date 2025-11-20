@@ -36,7 +36,7 @@ export async function GET() {
       return {
         title: item.title || "No title",
         url: item.link || "",
-        pubDate: item.pubDate || "",
+        publishedDate: item.pubDate || "",
         thumbnail,
         description,
         creator: item.creator || "",

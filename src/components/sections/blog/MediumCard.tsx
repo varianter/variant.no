@@ -2,23 +2,14 @@ import React from "react";
 
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
+import { MediumCardProps } from "studio/lib/interfaces/mediumCard";
 import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 
 import styles from "./blog.module.css";
 
-export interface MediumCardProps {
-  title: string;
-  url?: string;
-  pubDate?: string;
-  thumbnail?: { src: string; alt: string } | null;
-  description?: string;
-  creator?: string;
-  buttonTitle?: string;
-}
-
 const MediumCard: React.FC<{ article: MediumCardProps }> = ({ article }) => {
-  const formattedDate = article.pubDate
-    ? new Date(article.pubDate).toLocaleDateString("no-NO")
+  const formattedDate = article.publishedDate
+    ? new Date(article.publishedDate).toLocaleDateString("no-NO")
     : "";
 
   const link: ILink | undefined = article.url
