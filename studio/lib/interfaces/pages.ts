@@ -257,6 +257,14 @@ export interface EventRegistrationSection {
   interests: string[];
 }
 
+export interface BlogSection {
+  _type: "blogSection";
+  _key: string;
+  basicTitle: string;
+  buttonTitle: string;
+  postNumber: number;
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -278,7 +286,8 @@ export type Section =
   | HandbookSection
   | SplitSection
   | FieldGrid
-  | EventRegistrationSection;
+  | EventRegistrationSection
+  | BlogSection;
 
 export interface PageBuilder {
   _createdAt: string;

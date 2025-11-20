@@ -2,6 +2,7 @@ import { defineField, defineType } from "sanity";
 
 import { isInternationalizedString } from "studio/lib/interfaces/global";
 import { titleID } from "studio/schemas/fields/text";
+import { blogSection } from "studio/schemas/objects/sections/blog";
 import { compensationCalculator } from "studio/schemas/objects/sections/compensation-calculator";
 import contactBox from "studio/schemas/objects/sections/contact-box";
 import { customerCasesEntry } from "studio/schemas/objects/sections/customerCasesEntry";
@@ -55,6 +56,7 @@ const pageBuilder = defineType({
         logoSalad,
         imageSplitSection,
         imageSection,
+        blogSection,
         employees,
         customerCasesEntry,
         contactBox,

@@ -1,6 +1,7 @@
 import { QueryResponseInitial } from "@sanity/react-loader";
 
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
+import Blog from "src/components/sections/blog/Blog";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
@@ -221,6 +222,8 @@ const SectionRenderer = ({
       return <GridSectionComponent section={section} />;
     case "eventRegistration":
       return <EventRegistration section={section} />;
+    case "blogSection":
+      return <Blog section={section} />;
     default:
       return null;
   }
