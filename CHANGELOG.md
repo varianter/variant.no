@@ -2,10 +2,13 @@
 
 ## Release v3.0.0
 
-> 17 November 2025
+> 20 November 2025
 
 ### Merged to Main 🔀
 
+- feat: small change in locale no, for testing automatic changelog [1472](https://github.com/varianter/variant.no/pull/1472) --anemne
+- fix: fetch commits for changelog [1471](https://github.com/varianter/variant.no/pull/1471) --anemne
+- fix: remove recursive call to LiveVisualEditing [1470](https://github.com/varianter/variant.no/pull/1470) --Robin Hovind
 - fix: remoteURL [1465](https://github.com/varianter/variant.no/pull/1465) --anemne
 - fix: remove line from remoteurl to enable previewmode [1463](https://github.com/varianter/variant.no/pull/1463) --anemne
 - feat: preview mode in studio [1461](https://github.com/varianter/variant.no/pull/1461) --anemne
@@ -75,6 +78,7 @@
 - add description, [00d8044](https://github.com/varianter/variant.no/commit/00d8044e929c69cb6f65298c50307c3abd48887b) --Mikael Brevik
 - fix: punch box min height, [26c8b45](https://github.com/varianter/variant.no/commit/26c8b4555847686431fa42330c9ac823eb0d5d7a) --Mikael Brevik
 - fix: readds missing breakwords for punch, [6a691c1](https://github.com/varianter/variant.no/commit/6a691c1b57796f785923a80d67f7d1e313dc0737) --Mikael Brevik
+- fix: remove recursive call (LiveVisualEditing), reintroduce call to VisualEditing component instead, [52cd4e1](https://github.com/varianter/variant.no/commit/52cd4e1ecf98588a365099e3c4f24ccc7efcc7ef) --Robin Hovind
 - fix: remove padding for body temp, bad fix, [27cd4bf](https://github.com/varianter/variant.no/commit/27cd4bfa05ba421370ff651e7ed2c4f53fff8ada) --Mikael Brevik
 
 ## Release v3.0.3

@@ -3,8 +3,7 @@ name: Update Changelog
 on:
   # Runs every Friday at 2:00 PM UTC
   schedule:
-    - cron: "0 13 * * 2"
-      # - cron: "0 13 * * 5" //Change to Friday once tested
+    - cron: "0 13 * * 5"
   workflow_dispatch: # allows manual trigger
 
 jobs:

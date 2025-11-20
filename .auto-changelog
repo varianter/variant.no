@@ -4,5 +4,6 @@
   "unreleased": false,
   "commitLimit": false,
   "startingVersion": "v3.0.0",
-  "package": true
+  "package": true,
+  "releaseLimit": 4
 }
