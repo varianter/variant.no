@@ -50,7 +50,7 @@
     "@types/css-modules": "^1.0.5",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^24.9.2",
-    "@types/react": "19.2.2",
+    "@types/react": "19.2.6",
     "@types/react-dom": "19.2.1",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.1",
