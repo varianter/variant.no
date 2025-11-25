@@ -78,15 +78,6 @@
   color: currentcolor;
 }
 
-.dotSeparator {
-  display: inline-block;
-}
-
-.dotSeperator::after {
-  content: "·";
-  margin: 0 0.38rem;
-}
-
 .employeeContactInfo {
   font-weight: 400;
   line-height: 120%;

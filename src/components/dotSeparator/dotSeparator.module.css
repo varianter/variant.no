@@ -1,0 +1,14 @@
+.dotSeparator {
+  display: inline-block;
+  margin: 0 0.38rem;
+  background-color: pink;
+  align-self: center;
+}
+
+.dotSeparator::after {
+  content: "•";
+}
+
+.dotSeparator:last-child::after {
+  content: "";
+}

@@ -29,15 +29,6 @@
   flex-direction: column;
 }
 
-.dotSeparator {
-  display: inline-block;
-}
-
-.dotSeperator::after {
-  content: "·";
-  margin: 0 0.38rem;
-}
-
 .employeeRole {
   color: var(--text-tertiary);
 }

@@ -122,8 +122,3 @@
   line-height: 120%;
   padding: 0;
 }
-
-.dotSeparator:not(:last-child)::after {
-  content: "·";
-  margin: 0.5rem;
-}

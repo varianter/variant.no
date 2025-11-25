@@ -24,15 +24,6 @@
   padding-top: 0.25rem;
 }
 
-.dotSeparator {
-  display: inline-block;
-}
-
-.dotSeperator::after {
-  content: "·";
-  margin: 0 0.38rem;
-}
-
 .varianter {
   display: flex;
   flex-flow: row wrap;
