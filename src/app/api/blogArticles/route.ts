@@ -11,7 +11,25 @@ export async function GET() {
   const FEED_URL = "https://blog.variant.no/feed";
 
   try {
-    const feed = await parser.parseURL(FEED_URL);
+    const response = await fetch(FEED_URL, {
+      headers: {
+        "User-Agent": "VariantWebsite (+https://variant.no)",
+        Accept: "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
+      },
+    });
+
+    if (!response.ok) {
+      console.error(
+        `RSS fetch failed: ${response.status} ${response.statusText}`,
+      );
+      return NextResponse.json(
+        { error: "Could not fetch articles" },
+        { status: 500 },
+      );
+    }
+
+    const xml = await response.text();
+    const feed = await parser.parseString(xml);
 
     const articles = feed.items.map((item) => {
       let thumbnail: { src: string; alt: string } | null = null;
