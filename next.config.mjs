@@ -246,6 +246,17 @@ const nextConfig = {
         ],
         permanent: true,
       },
+      {
+        source: "/en/kalkulator",
+        destination: "https://www.variant.no/en/compensations",
+        has: [
+          {
+            type: "host",
+            value: "www.variant.no",
+          },
+        ],
+        permanent: true,
+      },
     ];
   },
 };
