@@ -1,6 +1,5 @@
 .flex {
   display: flex;
-  gap: 0.38rem;
   align-items: center;
   flex-wrap: wrap;
 }

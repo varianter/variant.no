@@ -60,7 +60,7 @@ export default async function CustomerCaseProjectInfo({
                   className={styles.preFancyCharacter}
                   style={{ color: clientColor }}
                 >
-                  【{" "}
+                  【
                 </span>
               </Text>
               {consultantsFirstNames.map((name, _key) => (

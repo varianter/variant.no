@@ -1,7 +1,6 @@
 .dotSeparator {
   display: inline-block;
   margin: 0 0.38rem;
-  background-color: pink;
   align-self: center;
 }
 
@@ -9,6 +8,10 @@
   content: "•";
 }
 
+.dotSeparator:last-of-type {
+  margin: 0;
+}
+
 .dotSeparator:last-of-type::after {
-  content: "";
+  content: none;
 }

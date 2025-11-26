@@ -1,12 +1,5 @@
 .eventInformation {
   display: flex;
-  gap: 0.38rem;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.eventInformation > span:not(:last-child)::after {
-  content: "·";
-  margin-left: 0.38rem;
-  line-height: 1;
 }

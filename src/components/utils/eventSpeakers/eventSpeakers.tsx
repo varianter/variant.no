@@ -19,16 +19,18 @@ export default function EventSpeakers({
       {consultantsFirstNames?.length > 0 && (
         <div className={styles.flex}>
           <Text type={textType}>
-            <span>【 </span>
+            <span className={styles.preFancyCharacter}>【 </span>
           </Text>
-          {consultantsFirstNames.map((name, _key) => (
-            <Fragment key={_key}>
-              <Text type={textType}>{name}</Text>
-              <DotSeparator />
-            </Fragment>
-          ))}
+          <div>
+            {consultantsFirstNames.map((name, _key) => (
+              <Fragment key={_key}>
+                <Text type={textType}>{name}</Text>
+                <DotSeparator />
+              </Fragment>
+            ))}
+          </div>
           <Text type={textType}>
-            <span> 】</span>
+            <span className={styles.afterFancyCharacter}> 】</span>
           </Text>
         </div>
       )}
