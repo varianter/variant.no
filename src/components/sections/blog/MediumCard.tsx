@@ -1,5 +1,6 @@
 import React from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
 import { MediumCardProps } from "studio/lib/interfaces/mediumCard";
@@ -29,7 +30,7 @@ const MediumCard: React.FC<{ article: MediumCardProps }> = ({ article }) => {
         <Text type="titleM">{article.title}</Text>
         <div className={styles.cardSubtitle}>
           <Text type="labelL">{formattedDate}</Text>
-          <span className={styles.dotSeparator}>•</span>
+          <DotSeparator />
           <Text type="labelL">{article.creator}</Text>
         </div>
         <Text type="normal">{article.description}</Text>

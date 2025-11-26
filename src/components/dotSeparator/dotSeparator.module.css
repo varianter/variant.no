@@ -9,6 +9,6 @@
   content: "•";
 }
 
-.dotSeparator:last-child::after {
+.dotSeparator:last-of-type::after {
   content: "";
 }

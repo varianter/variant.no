@@ -76,7 +76,6 @@ export default async function CustomerCaseProjectInfo({
                   className={styles.afterFancyCharacter}
                   style={{ color: clientColor }}
                 >
-                  {" "}
                   】
                 </span>
               </Text>

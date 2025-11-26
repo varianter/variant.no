@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import Text, { TextType } from "src/components/text/Text";
 
 import styles from "./eventSpeakers.module.css";
@@ -20,15 +21,11 @@ export default function EventSpeakers({
           <Text type={textType}>
             <span>【 </span>
           </Text>
-          {consultantsFirstNames.map((name, index, array) => (
-            <div key={name}>
-              <Text type={textType}>
-                {name}
-                {index < array.length - 1 && (
-                  <span className={styles.dotSeperator}></span>
-                )}
-              </Text>
-            </div>
+          {consultantsFirstNames.map((name, _key) => (
+            <Fragment key={_key}>
+              <Text type={textType}>{name}</Text>
+              <DotSeparator />
+            </Fragment>
           ))}
           <Text type={textType}>
             <span> 】</span>
