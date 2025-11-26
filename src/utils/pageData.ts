@@ -393,12 +393,11 @@ export async function fetchPageDataFromParams(params: PageDataParams) {
   if (params.path[0] === "events") {
     return await fetchEventsPage(params);
   }
-
   return (
+    (await fetchCustomerCase(params)) ??
     (await fetchEmployeePage(params)) ??
     (await fetchDynamicPage(params)) ??
     (await fetchCompensationsPage(params)) ??
-    (await fetchCustomerCase(params)) ??
     (await fetchLegalDocument(params))
   );
 }
