@@ -1,8 +1,5 @@
-import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import Parser from "rss-parser";
-
-import { domainFromHostname } from "src/utils/url";
 
 const parser = new Parser({
   customFields: {
@@ -11,15 +8,16 @@ const parser = new Parser({
 });
 
 export async function GET() {
-  const domain = domainFromHostname((await headers()).get("host"));
-  const FEED_URL = domain.toLowerCase().includes("variant.se")
-    ? "https://medium.com/feed/variant-swe"
-    : "https://blog.variant.no/feed";
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
+  const FEED_URL =
+    process.env.COUNTRY === "sweden"
+      ? "https://medium.com/feed/variant-swe"
+      : "https://blog.variant.no/feed";
 
   try {
     const response = await fetch(FEED_URL, {
       headers: {
-        "User-Agent": "VariantWebsite (+https://variant.no)",
+        "User-Agent": `VariantWebsite (+${baseUrl})`,
         Accept: "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
       },
     });
