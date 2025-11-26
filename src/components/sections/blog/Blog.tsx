@@ -34,23 +34,25 @@ export default function Blog({ section }: BlogSectionProps) {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
-      <Text type="titleL">{section.basicTitle}</Text>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <div className={styles.articles}>
-          {blogArticles.slice(0, section.postNumber).map((article, index) => (
-            <MediumCard
-              key={index}
-              article={{
-                ...article,
-                buttonTitle: section.buttonTitle || "Les mer",
-              }}
-            />
-          ))}
-        </div>
-      )}
-    </div>
+    blogArticles && (
+      <div className={styles.wrapper}>
+        <Text type="titleL">{section.basicTitle}</Text>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <div className={styles.articles}>
+            {blogArticles.slice(0, section.postNumber).map((article, index) => (
+              <MediumCard
+                key={index}
+                article={{
+                  ...article,
+                  buttonTitle: section.buttonTitle || "Les mer",
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    )
   );
 }
