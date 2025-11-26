@@ -12,10 +12,9 @@ const parser = new Parser({
 
 export async function GET() {
   const domain = domainFromHostname((await headers()).get("host"));
-  const FEED_URL =
-    domain === "Variant.se"
-      ? "https://medium.com/feed/variant-swe"
-      : "https://blog.variant.no/feed";
+  const FEED_URL = domain.toLowerCase().includes("variant.se")
+    ? "https://medium.com/feed/variant-swe"
+    : "https://blog.variant.no/feed";
 
   try {
     const response = await fetch(FEED_URL, {
