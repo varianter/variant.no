@@ -2,10 +2,18 @@
 
 ## Release v3.0.0
 
-> 20 November 2025
+> 21 November 2025
 
 ### Merged to Main 🔀
 
+- chore(deps): bump js-yaml [1473](https://github.com/varianter/variant.no/pull/1473) --dependabot[bot]
+- chore(deps): bump min-document from 2.19.0 to 2.19.2 [1462](https://github.com/varianter/variant.no/pull/1462) --dependabot[bot]
+- chore(deps): bump nuqs from 2.7.2 to 2.7.3 [1457](https://github.com/varianter/variant.no/pull/1457) --dependabot[bot]
+- chore(deps): bump react-intersection-observer from 9.16.0 to 10.0.0 [1455](https://github.com/varianter/variant.no/pull/1455) --dependabot[bot]
+- chore(deps): bump sanity from 4.12.0 to 4.14.2 [1454](https://github.com/varianter/variant.no/pull/1454) --dependabot[bot]
+- chore(deps-dev): bump @next/bundle-analyzer from 15.5.4 to 16.0.1 [1453](https://github.com/varianter/variant.no/pull/1453) --dependabot[bot]
+- 1467 lage blogpost eventsection i sanity [1478](https://github.com/varianter/variant.no/pull/1478) --Tuvald
+- fix: Update relasetime and number of releases to show in changelog [1479](https://github.com/varianter/variant.no/pull/1479) --anemne
 - feat: small change in locale no, for testing automatic changelog [1472](https://github.com/varianter/variant.no/pull/1472) --anemne
 - fix: fetch commits for changelog [1471](https://github.com/varianter/variant.no/pull/1471) --anemne
 - fix: remove recursive call to LiveVisualEditing [1470](https://github.com/varianter/variant.no/pull/1470) --Robin Hovind
