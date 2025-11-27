@@ -1,0 +1,17 @@
+.dotSeparator {
+  display: inline-block;
+  margin: 0 0.38rem;
+  align-self: center;
+}
+
+.dotSeparator::after {
+  content: "•";
+}
+
+.dotSeparator:last-of-type {
+  margin: 0;
+}
+
+.dotSeparator:last-of-type::after {
+  content: none;
+}

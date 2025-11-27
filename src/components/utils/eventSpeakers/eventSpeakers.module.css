@@ -1,15 +1,13 @@
-.dotSeparator {
-  display: inline-block;
-}
-
-.dotSeperator::after {
-  content: "·";
-  margin-left: 0.38rem;
-}
-
 .flex {
   display: flex;
-  gap: 0.38rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.preFancyCharacter {
+  margin-right: 0.38rem;
+}
+
+.afterFancyCharacter {
+  margin-left: 0.38rem;
 }

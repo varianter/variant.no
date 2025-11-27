@@ -123,15 +123,6 @@
   flex-flow: row wrap;
 }
 
-.dotSeparator {
-  display: inline-block;
-}
-
-.dotSeperator::after {
-  content: "·";
-  margin: 0 0.38rem;
-}
-
 .titleWrapper {
   padding-bottom: 2rem;
 }

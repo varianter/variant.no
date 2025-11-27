@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
 import { Tag } from "src/components/tag";
@@ -93,13 +94,13 @@ function CardInfo({
           {t("customer_case_entry.field")}
         </Text>
         <div className={styles.deliveriesList}>
-          {deliveryNames.map((deliveryName, index, array) => (
-            <Text key={index} type="titleXS" as="span" color="light">
-              {t(deliveryName)}
-              {index < array.length - 1 && (
-                <span className={styles.dotSeperator} />
-              )}
-            </Text>
+          {deliveryNames.map((deliveryName, _key) => (
+            <Fragment key={_key}>
+              <Text key={_key} type="titleXS" as="span" color="light">
+                {t(deliveryName)}
+              </Text>
+              <DotSeparator />
+            </Fragment>
           ))}
         </div>
       </div>

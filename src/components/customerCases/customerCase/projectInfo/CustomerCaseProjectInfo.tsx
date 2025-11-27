@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
+import { Fragment } from "react";
 
 import Badge from "src/components/badge/Badge";
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
 import { LinkType } from "studio/lib/interfaces/navigation";
@@ -58,23 +60,22 @@ export default async function CustomerCaseProjectInfo({
                   className={styles.preFancyCharacter}
                   style={{ color: clientColor }}
                 >
-                  【{" "}
+                  【
                 </span>
               </Text>
-              {consultantsFirstNames.map((name, index, array) => (
-                <Text key={name} type="normal">
-                  {name}
-                  {index < array.length - 1 && (
-                    <span className={styles.dotSeperator} />
-                  )}
-                </Text>
+              {consultantsFirstNames.map((name, _key) => (
+                <Fragment key={_key}>
+                  <Text key={name} type="normal">
+                    {name}
+                  </Text>
+                  <DotSeparator />
+                </Fragment>
               ))}
               <Text>
                 <span
                   className={styles.afterFancyCharacter}
                   style={{ color: clientColor }}
                 >
-                  {" "}
                   】
                 </span>
               </Text>
@@ -87,13 +88,13 @@ export default async function CustomerCaseProjectInfo({
               {t("collaborators").toUpperCase()}
             </Text>
             <div className={styles.projectInfoItem}>
-              {projectInfo.collaborators.map((collaborator, index, array) => (
-                <Text type="normal" key={collaborator}>
-                  {collaborator}
-                  {index < array.length - 1 && (
-                    <span className={styles.dotSeperator} />
-                  )}
-                </Text>
+              {projectInfo.collaborators.map((collaborator, _key) => (
+                <Fragment key={_key}>
+                  <Text type="normal" key={collaborator}>
+                    {collaborator}
+                  </Text>
+                  <DotSeparator />
+                </Fragment>
               ))}
             </div>
           </div>
@@ -125,14 +126,14 @@ export default async function CustomerCaseProjectInfo({
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["projectManagement"].map(
-                  (projectManagement, index, array) => {
+                  (projectManagement, _key) => {
                     return (
-                      <Text type="normal" key={projectManagement._key}>
-                        {projectManagement.projectManagementDelivery}
-                        {index < array.length - 1 && (
-                          <span className={styles.dotSeperator} />
-                        )}
-                      </Text>
+                      <Fragment key={_key}>
+                        <Text type="normal" key={projectManagement._key}>
+                          {projectManagement.projectManagementDelivery}
+                        </Text>
+                        <DotSeparator />
+                      </Fragment>
                     );
                   },
                 )}
@@ -145,16 +146,14 @@ export default async function CustomerCaseProjectInfo({
                 {t("design").toUpperCase()}
               </Text>
               <div className={styles.projectInfoItem}>
-                {projectInfo.deliveries["design"].map(
-                  (design, index, array) => (
+                {projectInfo.deliveries["design"].map((design, _key) => (
+                  <Fragment key={_key}>
                     <Text key={design._key} type="normal">
                       {design.designDelivery}
-                      {index < array.length - 1 && (
-                        <span className={styles.dotSeperator} />
-                      )}
                     </Text>
-                  ),
-                )}
+                    <DotSeparator />
+                  </Fragment>
+                ))}
               </div>
             </div>
           )}
@@ -165,13 +164,13 @@ export default async function CustomerCaseProjectInfo({
               </Text>
               <div className={styles.projectInfoItem}>
                 {projectInfo.deliveries["development"].map(
-                  (development, index, array) => (
-                    <Text key={development._key} type="normal">
-                      {development.developmentDelivery}
-                      {index < array.length - 1 && (
-                        <span className={styles.dotSeperator} />
-                      )}
-                    </Text>
+                  (development, _key) => (
+                    <Fragment key={_key}>
+                      <Text key={development._key} type="normal">
+                        {development.developmentDelivery}
+                      </Text>
+                      <DotSeparator />
+                    </Fragment>
                   ),
                 )}
               </div>

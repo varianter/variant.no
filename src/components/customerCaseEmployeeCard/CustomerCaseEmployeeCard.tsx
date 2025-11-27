@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Fragment } from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
@@ -38,13 +40,13 @@ export default function CustomerCaseEmployeeCard({
           <div className={styles.employeeName}>
             <Text type="normal">{employee.name}</Text>
             <div className={styles.employeeRole}>
-              {employee.competences.map((competence, index, array) => (
-                <Text type="label" key={competence} color="tertiary">
-                  {t(competence)}
-                  {index < array.length - 1 && (
-                    <span className={styles.dotSeperator}></span>
-                  )}
-                </Text>
+              {employee.competences.map((competence, _key) => (
+                <Fragment key={_key}>
+                  <Text type="label" color="tertiary">
+                    {t(competence)}
+                  </Text>
+                  <DotSeparator />
+                </Fragment>
               ))}
             </div>
           </div>

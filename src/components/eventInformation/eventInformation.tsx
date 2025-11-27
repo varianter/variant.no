@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import Text, { TextType } from "src/components/text/Text";
 import formatDate from "src/components/utils/formatDate";
 import { ILocation } from "studio/lib/interfaces/eventPosting";
@@ -31,9 +32,24 @@ export default function EventInformation({
 
   return (
     <div className={styles.eventInformation}>
-      {date && <Text type={fontsize}>{formatDate(date)}</Text>}
-      {time && <Text type={fontsize}>{time}</Text>}
-      {locations && <Text type={fontsize}>{eventPostingLocations}</Text>}
+      {date && (
+        <Fragment>
+          <Text type={fontsize}>{formatDate(date)}</Text>
+          <DotSeparator />
+        </Fragment>
+      )}
+      {time && (
+        <Fragment>
+          <Text type={fontsize}>{time}</Text>
+          <DotSeparator />
+        </Fragment>
+      )}
+      {locations && (
+        <Fragment>
+          <Text type={fontsize}>{eventPostingLocations}</Text>
+          <DotSeparator />
+        </Fragment>
+      )}
       {address && <Text type={fontsize}>{address}</Text>}
     </div>
   );

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Fragment } from "react";
 
+import DotSeparator from "src/components/dotSeparator/dotSeparator";
 import Text from "src/components/text/Text";
 import formatPhoneNumber from "src/components/utils/formatPhoneNumber";
 import { ChewbaccaEmployee } from "src/types/employees";
@@ -58,13 +60,13 @@ export default function EmployeeCard({
                   {overrideTitle}
                 </Text>
               ) : (
-                employee.competences.map((competence, index, array) => (
-                  <Text type="label" key={competence} as="span">
-                    {t.has(competence) ? t(competence) : competence}
-                    {index < array.length - 1 && (
-                      <span className={styles.dotSeperator}></span>
-                    )}
-                  </Text>
+                employee.competences.map((competence, _key) => (
+                  <Fragment key={_key}>
+                    <Text type="label" key={competence} as="span">
+                      {t.has(competence) ? t(competence) : competence}
+                    </Text>
+                    <DotSeparator />
+                  </Fragment>
                 ))
               )}
             </div>
