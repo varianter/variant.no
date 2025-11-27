@@ -51,6 +51,11 @@
 .contactSelector {
   display: flex;
   gap: 1rem;
+
+  /* Mobile */
+  @media (width <= 440px) {
+    flex-direction: column;
+  }
 }
 
 .tagList {
@@ -61,6 +66,11 @@
   min-width: 120px;
   margin: 0;
   padding: 0;
+
+  /* Mobile */
+  @media (width <= 440px) {
+    flex-direction: row;
+  }
 }
 
 .tagList li {

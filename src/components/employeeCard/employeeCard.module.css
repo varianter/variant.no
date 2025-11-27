@@ -53,13 +53,23 @@
 .employeeImage {
   display: block;
   height: 206px;
-  min-width: 206px;
+  min-width: 150px; /* Mobile */
   width: 100%;
   max-width: var(--Text-paragraph, 537px);
   position: relative;
   background-color: var(--background-bg-dark);
   border-radius: var(--medium, 12px);
   overflow: hidden;
+
+  /* Desktop */
+  @media (width >= 800px) {
+    min-width: 206px;
+  }
+
+  /* Most tablets and bigger phones */
+  @media (width >= 400px) and (width < 800px) {
+    min-width: 170px;
+  }
 }
 
 .employeeImage--dark {
