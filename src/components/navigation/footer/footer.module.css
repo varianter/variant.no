@@ -65,9 +65,6 @@
 
 .contactInfo {
   color: var(--stroke-primary);
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 500;
   line-height: 120%;
 
   &:hover {
@@ -116,9 +113,6 @@
   align-items: flex-start;
   align-self: stretch;
   list-style: none;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 500;
   line-height: 120%;
   padding: 0;
 }

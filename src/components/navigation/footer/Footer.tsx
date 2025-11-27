@@ -66,7 +66,9 @@ const Footer = ({
                   {companyLocations.map((location, _key) => (
                     <Fragment key={_key}>
                       <li key={location._key}>
-                        {location.companyLocationName}
+                        <Text type="titleXS" as="span">
+                          {location.companyLocationName}
+                        </Text>
                       </li>
                       <DotSeparator />
                     </Fragment>
@@ -79,14 +81,18 @@ const Footer = ({
                     href={`mailto:${companyInfo.companyEmail}`}
                     className={styles.contactInfo}
                   >
-                    {companyInfo.companyEmail}
+                    <Text type="titleXS" as="span">
+                      {companyInfo.companyEmail}
+                    </Text>
                   </Link>
                   {companyInfo.companyPhone && (
                     <Link
                       href={`tel:${companyInfo.companyPhone}`}
                       className={styles.contactInfo}
                     >
-                      {companyInfo.companyPhone}
+                      <Text type="titleXS" as="span">
+                        {companyInfo.companyPhone}
+                      </Text>
                     </Link>
                   )}
                 </FooterSection>
