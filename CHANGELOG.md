@@ -2,10 +2,16 @@
 
 ## Release v3.0.0
 
-> 21 November 2025
+> 28 November 2025
 
 ### Merged to Main 🔀
 
+- 1486 contact box bug på mobil [1494](https://github.com/varianter/variant.no/pull/1494) --Tuvald
+- Feat: create dotseparator component and replaced it where it is used [1491](https://github.com/varianter/variant.no/pull/1491) --anemne
+- fix: amend customercases preview component, use initial data from server and fetch live data from client [1475](https://github.com/varianter/variant.no/pull/1475) --Robin Hovind
+- fix: route /en/kalkulator to /en/compensations [1490](https://github.com/varianter/variant.no/pull/1490) --Robin Hovind
+- Fix: fetching blogarticles properly [1489](https://github.com/varianter/variant.no/pull/1489) --anemne
+- chore: update changelog [skip ci] [1480](https://github.com/varianter/variant.no/pull/1480) --github-actions[bot]
 - chore(deps): bump js-yaml [1473](https://github.com/varianter/variant.no/pull/1473) --dependabot[bot]
 - chore(deps): bump min-document from 2.19.0 to 2.19.2 [1462](https://github.com/varianter/variant.no/pull/1462) --dependabot[bot]
 - chore(deps): bump nuqs from 2.7.2 to 2.7.3 [1457](https://github.com/varianter/variant.no/pull/1457) --dependabot[bot]
@@ -86,6 +92,7 @@
 - add description, [00d8044](https://github.com/varianter/variant.no/commit/00d8044e929c69cb6f65298c50307c3abd48887b) --Mikael Brevik
 - fix: punch box min height, [26c8b45](https://github.com/varianter/variant.no/commit/26c8b4555847686431fa42330c9ac823eb0d5d7a) --Mikael Brevik
 - fix: readds missing breakwords for punch, [6a691c1](https://github.com/varianter/variant.no/commit/6a691c1b57796f785923a80d67f7d1e313dc0737) --Mikael Brevik
+- fix: use NEXT_PUBLIC_VERCEL_URL if NEXT_PUBLIC_URL is not defined, [8f8f595](https://github.com/varianter/variant.no/commit/8f8f595995e167857a3512c504d317b1a7d02e5c) --Robin Hovind
 - fix: remove recursive call (LiveVisualEditing), reintroduce call to VisualEditing component instead, [52cd4e1](https://github.com/varianter/variant.no/commit/52cd4e1ecf98588a365099e3c4f24ccc7efcc7ef) --Robin Hovind
 - fix: remove padding for body temp, bad fix, [27cd4bf](https://github.com/varianter/variant.no/commit/27cd4bfa05ba421370ff651e7ed2c4f53fff8ada) --Mikael Brevik
 
