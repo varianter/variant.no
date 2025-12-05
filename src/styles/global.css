@@ -47,7 +47,7 @@ html {
   --Yellow-600: #bd8905;
   --Yellow-500: #edad08;
   --Yellow-400: #ffd02f;
-  --Yellow-300: #fbe186;
+  --Yellow-300: #ffe085;
   --Yellow-100: #fdefbb;
   --Yellow-50: #fffbf6;
   --Violet-900: #220548;
@@ -208,7 +208,7 @@ a {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(0 0 0 0); /* clip is deprecated */
   white-space: nowrap;
   border-width: 0;
 }

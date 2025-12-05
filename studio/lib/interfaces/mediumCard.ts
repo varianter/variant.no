@@ -1,3 +1,5 @@
+export type BlogCardType = "small" | "medium" | "large";
+
 export interface MediumCardProps {
   title: string;
   url?: string;
@@ -5,5 +7,5 @@ export interface MediumCardProps {
   thumbnail?: { src: string; alt: string } | null;
   description?: string;
   creator?: string;
-  buttonTitle?: string;
+  variant?: BlogCardType;
 }

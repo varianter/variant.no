@@ -20,27 +20,6 @@ export const blogSection = defineField({
       type: "internationalizedArrayString",
       validation: (rule) => rule.required(),
     },
-    {
-      name: "buttonTitle",
-      title: "Button Title",
-      description: "Enter the title for the 'Read More' button.",
-      type: "internationalizedArrayString",
-      validation: (rule) => rule.required(),
-    },
-    {
-      name: "postNumber",
-      title: "Number of blog posts",
-      description:
-        "Enter the number of blog posts you want to show in the Blog Section. " +
-        "It has to be between 1-10.",
-      type: "number",
-      validation: (rule) =>
-        rule
-          .required()
-          .min(1)
-          .max(10)
-          .error("Please enter a number between 1 and 10"),
-    },
   ],
   preview: {
     prepare() {

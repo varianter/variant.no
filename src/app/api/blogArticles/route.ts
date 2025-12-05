@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import Parser from "rss-parser";
 
+import formatLongStrings from "src/components/utils/formatLongStrings";
+
 const parser = new Parser({
   customFields: {
     item: [["content:encoded", "content"]],
@@ -51,8 +53,8 @@ export async function GET() {
           }
         }
 
-        const text = item.content.replace(/<[^>]*>?/gm, "");
-        description = text.substring(0, 125) + "...";
+        const text = item.content.replace(/<[^>]*>?/gm, " ");
+        description = formatLongStrings(155, text);
       }
 
       return {
@@ -61,7 +63,6 @@ export async function GET() {
         publishedDate: item.pubDate || "",
         thumbnail,
         description,
-        creator: item.creator || "",
       };
     });
 

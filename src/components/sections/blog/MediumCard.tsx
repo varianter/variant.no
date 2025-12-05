@@ -1,51 +1,51 @@
 import React from "react";
 
-import DotSeparator from "src/components/dotSeparator/dotSeparator";
-import CustomLink from "src/components/link/CustomLink";
 import Text from "src/components/text/Text";
+import { formatShortDate } from "src/components/utils/formatDate";
 import { MediumCardProps } from "studio/lib/interfaces/mediumCard";
-import { ILink, LinkType } from "studio/lib/interfaces/navigation";
 
 import styles from "./blog.module.css";
 
 const MediumCard: React.FC<{ article: MediumCardProps }> = ({ article }) => {
-  const formattedDate = article.publishedDate
-    ? new Date(article.publishedDate).toLocaleDateString("no-NO")
-    : "";
+  const variant = article.variant || "medium";
 
-  const link: ILink | undefined = article.url
-    ? {
-        _key: article.url,
-        _type: "link",
-        linkTitle: article.buttonTitle || "Les mer",
-        linkType: LinkType.External,
-        url: article.url,
-        newTab: true,
-      }
-    : undefined;
+  const formattedDate = formatShortDate(
+    article.publishedDate?.toString() || "",
+  );
 
   return (
-    <div className={styles.cardWrapper}>
-      <div className={styles.cardContent}>
-        <Text type="titleM">{article.title}</Text>
-        <div className={styles.cardSubtitle}>
-          <Text type="labelL">{formattedDate}</Text>
-          <DotSeparator />
-          <Text type="labelL">{article.creator}</Text>
-        </div>
-        <Text type="normal">{article.description}</Text>
-        <div className={styles.articleButton}>
-          {link && <CustomLink link={link} />}
-        </div>
-      </div>
+    <a
+      href={article.url || ""}
+      target="_blank"
+      className={`${styles.cardWrapper} ${styles[variant]}`}
+    >
       {article.thumbnail && (
         <img
           src={article.thumbnail.src}
           alt={article.thumbnail.alt}
-          className={styles.cardImage}
+          className={`${styles.cardImage} ${styles[variant]}`}
         />
       )}
-    </div>
+      <div className={`${styles.cardContent} ${styles[variant]}`}>
+        {variant == "small" && article.title ? (
+          <Text type="titleS">{article.title}</Text>
+        ) : (
+          <Text type="titleM">{article.title}</Text>
+        )}
+        <div className={`${styles.cardInner} ${styles[variant]}`}>
+          {variant == "large" && article.description ? (
+            <div className={styles.cardDescription}>
+              <Text type="description">{article.description}</Text>
+            </div>
+          ) : null}
+          <div>
+            <Text type="label" color="tertiary">
+              {formattedDate}
+            </Text>
+          </div>
+        </div>
+      </div>
+    </a>
   );
 };
 

@@ -261,8 +261,6 @@ export interface BlogSection {
   _type: "blogSection";
   _key: string;
   basicTitle: string;
-  buttonTitle: string;
-  postNumber: number;
 }
 
 export type Section =
