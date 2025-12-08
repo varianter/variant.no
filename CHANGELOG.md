@@ -2,10 +2,12 @@
 
 ## Release v3.0.0
 
-> 28 November 2025
+> 5 December 2025
 
 ### Merged to Main 🔀
 
+- chore(deps): bump next from 15.5.6 to 15.5.7 [1500](https://github.com/varianter/variant.no/pull/1500) --dependabot[bot]
+- chore: update changelog [skip ci] [1497](https://github.com/varianter/variant.no/pull/1497) --github-actions[bot]
 - 1486 contact box bug på mobil [1494](https://github.com/varianter/variant.no/pull/1494) --Tuvald
 - Feat: create dotseparator component and replaced it where it is used [1491](https://github.com/varianter/variant.no/pull/1491) --anemne
 - fix: amend customercases preview component, use initial data from server and fetch live data from client [1475](https://github.com/varianter/variant.no/pull/1475) --Robin Hovind
