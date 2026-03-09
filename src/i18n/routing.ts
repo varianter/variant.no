@@ -2,7 +2,7 @@ import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
 const defaultLocale = process.env.NEXT_PUBLIC_SWEDISH ? "se" : "no";
-const locales = process.env.NEXT_PUBLIC_SWEDISH ? ["se", "en"] : ["en", "no"];
+const locales = process.env.NEXT_PUBLIC_SWEDISH ? ["se", "en"] : ["no", "en"];
 export type Locale = (typeof locales)[number];
 
 export const routing = defineRouting({ locales, defaultLocale: defaultLocale });
