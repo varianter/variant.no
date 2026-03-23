@@ -19,6 +19,7 @@ export interface IEventPosting {
   createInternalPage: boolean;
   recordID: number;
   submitButtonText?: string;
+  companyRequired?: boolean;
   eventImage?: IImage;
   subtitle?: string;
   richTextInternalized?: PortableTextBlock[];

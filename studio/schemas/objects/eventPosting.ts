@@ -181,6 +181,15 @@ const eventPosting = defineType({
       hidden: ({ parent }) => !parent?.createInternalPage || !parent?.recordID,
     },
     {
+      name: "companyRequired",
+      type: "boolean",
+      title: "Make company field mandatory",
+      description:
+        "If checked, the company field will be required for registration.",
+      initialValue: false,
+      hidden: ({ parent }) => !parent?.createInternalPage || !parent?.recordID,
+    },
+    {
       ...image,
       name: "eventImage",
       title: "Event image",

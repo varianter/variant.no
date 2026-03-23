@@ -23,6 +23,7 @@
       "nameRequired": "Må fylles inn for å sende inn skjema",
       "termsRequired": "Du må samtykke for å sende inn skjema",
       "phoneInvalid": "Fyll inn et gyldig telefonnummer",
+      "companyRequired": "Må fylles inn for å sende inn skjema",
       "registrationFailed": "Noe gikk galt under registreringen. Vennligst prøv igjen senere."
     },
     "closed": {
