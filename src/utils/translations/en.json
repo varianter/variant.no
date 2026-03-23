@@ -23,6 +23,7 @@
       "nameRequired": "Must be filled in to submit the form",
       "termsRequired": "You must consent to submit the form",
       "phoneInvalid": "Enter a valid phone number",
+      "companyRequired": "Must be filled in to submit the form",
       "registrationFailed": "Something went wrong during registration. Please try again later."
     },
     "closed": {

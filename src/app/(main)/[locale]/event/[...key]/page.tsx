@@ -95,6 +95,7 @@ export default async function EventPage(props: EventPageProps) {
     richTextInternalized,
     recordID,
     submitButtonText,
+    companyRequired,
     time,
   } = data.event;
 
@@ -161,6 +162,7 @@ export default async function EventPage(props: EventPageProps) {
               submitButtonText: submitButtonText,
               date: date,
               interests: tags.map((tag) => tag.tag),
+              companyRequired: companyRequired,
             }}
             language={params.locale}
           />

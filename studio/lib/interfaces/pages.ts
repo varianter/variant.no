@@ -255,6 +255,7 @@ export interface EventRegistrationSection {
   submitButtonText: string | undefined;
   date: string;
   interests: string[];
+  companyRequired?: boolean;
 }
 
 export interface BlogSection {

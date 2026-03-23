@@ -24,6 +24,7 @@ type Statuses =
   | "emailValid"
   | "nameRequired"
   | "phoneValid"
+  | "companyRequired"
   | "generalError";
 
 export default function EventRegistration({
@@ -46,7 +47,8 @@ export default function EventRegistration({
     }[]
   >([]);
 
-  const { recordID, submitButtonText, date, interests } = section;
+  const { recordID, submitButtonText, date, interests, companyRequired } =
+    section;
 
   const today = new Date();
   const oneDay = 24 * 60 * 60 * 1000;
@@ -108,6 +110,13 @@ export default function EventRegistration({
       newErrors.push({
         type: "phoneValid",
         message: t("eventRegistration.errors.phoneInvalid"),
+      });
+    }
+
+    if (companyRequired && !company) {
+      newErrors.push({
+        type: "companyRequired",
+        message: t("eventRegistration.errors.companyRequired"),
       });
     }
 
@@ -186,8 +195,13 @@ export default function EventRegistration({
                 name="company"
                 label={t("eventRegistration.company")}
                 type="text"
+                required={companyRequired}
                 value={company}
                 onChange={(_name, value) => setCompany(value)}
+                error={
+                  formStatus.find((status) => status.type === "companyRequired")
+                    ?.message
+                }
               />
               <div className={style.eventRegistration__wrapper}>
                 <InputFieldColor
