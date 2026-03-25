@@ -7,9 +7,12 @@ import { useState } from "react";
 import styles from "src/advanced-calculator/calculator.module.css";
 import RangeSlider from "src/advanced-calculator/Components/RangeSlider";
 import PensionGraph from "src/advanced-calculator/Graphs/PensionGraph";
+import { calculateSalary } from "src/components/compensations/utils/salary";
 import { RichText } from "src/components/richText/RichText";
-import getDefaultSalary from "src/components/sections/compensation-calculator/getDefaultSalary";
-import { SalaryData } from "src/components/sections/compensation-calculator/types";
+import {
+  Degree,
+  SalaryData,
+} from "src/components/sections/compensation-calculator/types";
 import Text from "src/components/text/Text";
 import { Benefit } from "studio/lib/interfaces/compensations";
 import { Result } from "studio/utils/result";
@@ -42,11 +45,25 @@ export default function Pension({
     above7G: 5,
   });
 
-  const [salary] = useQueryState<number | null>("salary", {
-    defaultValue: getDefaultSalary(salaries, initialSalaryYear),
-    parse: (value) => (value ? parseFloat(value) : null),
+  const [year] = useQueryState<number | null>("year", {
+    defaultValue: initialSalaryYear,
+    parse: (value) => (value ? parseInt(value, 10) : null),
     serialize: (value) => (value ? value.toString() : ""),
   });
+
+  const [degree] = useQueryState<Degree>("degree", {
+    defaultValue: "master",
+    parse: (value) => (value as Degree) ?? null,
+    serialize: (value) => value ?? "",
+  });
+
+  const salary = salaries.ok
+    ? (calculateSalary(
+        year ?? initialSalaryYear,
+        degree ?? "master",
+        salaries.value,
+      ) ?? 0)
+    : 0;
 
   function differenceAbove7G(currentSalary: number) {
     const diff = currentSalary - oneG * 7.1;

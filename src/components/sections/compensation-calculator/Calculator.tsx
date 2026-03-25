@@ -2,8 +2,9 @@
 
 import { useTranslations } from "next-intl";
 import { useQueryState } from "nuqs";
-import { use, useEffect } from "react";
+import { use, useMemo } from "react";
 
+import { useLocationContext } from "src/components/compensations/LocationContext";
 import {
   calculateSalary,
   getDegreeOptions,
@@ -15,10 +16,9 @@ import { RadioButtonGroup } from "src/components/forms/radioButtonGroup/RadioBut
 import Text from "src/components/text/Text";
 import { formatAsCurrency } from "src/utils/i18n";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
-import { Result } from "studio/utils/result";
+import { Result, ResultError, ResultOk } from "studio/utils/result";
 
 import styles from "./compensation-calculator.module.css";
-import getDefaultSalary from "./getDefaultSalary";
 import { Degree, SalaryData } from "./types";
 
 type CalculatorProps = {
@@ -35,7 +35,23 @@ export default function Calculator({
   const t = useTranslations("compensation");
 
   const locale = use(localeRes);
-  const salaries = use(salariesRes);
+  const serverSalaries = use(salariesRes);
+
+  const locationCtx = useLocationContext();
+  const salaries = useMemo(() => {
+    if (!locationCtx) return serverSalaries;
+    const entries = locationCtx.yearlySalariesForLocation;
+    if (entries.length === 0)
+      return ResultError<SalaryData, unknown>("No salary data");
+    const latest = entries[entries.length - 1];
+    try {
+      return ResultOk<SalaryData, unknown>(
+        JSON.parse(latest.salaries) as SalaryData,
+      );
+    } catch {
+      return ResultError<SalaryData, unknown>("Failed to parse salary data");
+    }
+  }, [locationCtx, serverSalaries]);
 
   const [year, setYear] = useQueryState<number | null>("year", {
     defaultValue: getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
@@ -51,21 +67,6 @@ export default function Calculator({
     clearOnDefault: false,
   });
 
-  const [salary, setSalary] = useQueryState<number | null>("salary", {
-    defaultValue: getDefaultSalary(salaries, year),
-    parse: (value) => (value ? parseFloat(value) : null),
-    serialize: (value) => (value ? value.toString() : ""),
-    clearOnDefault: false,
-  });
-
-  // Update calculatedSalary whenever year, degree, or salaries change
-  useEffect(() => {
-    if (salaries.ok) {
-      const newSalary = calculateSalary(year, degree, salaries.value) ?? 0;
-      setSalary(newSalary);
-    }
-  }, [year, degree, salaries, setSalary]);
-
   if (!locale || !salaries.ok) {
     console.error(
       "[CompensationCalculator]: Sanity data not found. Not rendering CompensationCalculator.",
@@ -73,6 +74,7 @@ export default function Calculator({
     return null;
   }
 
+  const salary = calculateSalary(year, degree, salaries.value) ?? 0;
   const { min, max } = getMinMaxYear(salaries.value);
   const degreeOptions = getDegreeOptions(t);
 

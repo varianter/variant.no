@@ -1,8 +1,6 @@
 "use client";
-import { use } from "react";
 
 import { useOneG } from "src/advanced-calculator/use-g";
-import { getMaybeMaxYear } from "src/components/compensations/utils/salary";
 import { RichText } from "src/components/richText/RichText";
 import { SalaryData } from "src/components/sections/compensation-calculator/types";
 import Text from "src/components/text/Text";
@@ -23,21 +21,19 @@ interface BenefitsProps {
   benefits: Benefit[];
   yearlyBonusesForLocation?: BonusPage[];
   yearlySalaries: YearlySalaries[];
-  salariesRes: Promise<Result<SalaryData, unknown>>;
+  salaryData: Result<SalaryData, unknown>;
+  initialSalaryYear: number;
 }
 
 export default function Benefits({
   benefits,
   yearlyBonusesForLocation,
   yearlySalaries,
-  salariesRes,
+  salaryData,
+  initialSalaryYear,
 }: BenefitsProps) {
-  const salaries = use(salariesRes);
   //Grunnbeløp
   const oneG = useOneG();
-
-  const initialSalaryYear =
-    getMaybeMaxYear(salaries) ?? new Date().getFullYear();
 
   function renderBenefit(benefit: Benefit) {
     switch (benefit.benefitType) {
@@ -53,7 +49,7 @@ export default function Benefits({
         return (
           <PensionSection
             benefit={benefit}
-            salaries={salaries}
+            salaries={salaryData}
             initialSalaryYear={initialSalaryYear}
             oneG={oneG}
           />
