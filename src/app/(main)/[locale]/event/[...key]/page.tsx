@@ -109,7 +109,7 @@ export default async function EventPage(props: EventPageProps) {
   const pathTranslations: InternationalizedString =
     languages?.data?.map((language) => ({
       _key: language.id,
-      value: "",
+      value: `event/${_key}`,
     })) ?? [];
 
   return (
