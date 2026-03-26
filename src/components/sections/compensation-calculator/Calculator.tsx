@@ -13,9 +13,17 @@ import {
   getMinMaxYear,
 } from "src/components/compensations/utils/salary";
 import InputField from "src/components/forms/inputField/InputField";
-import { RadioButtonGroup } from "src/components/forms/radioButtonGroup/RadioButtonGroup";
+import {
+  IOption,
+  RadioButtonGroup,
+} from "src/components/forms/radioButtonGroup/RadioButtonGroup";
 import Text from "src/components/text/Text";
 import { formatAsCurrency } from "src/utils/i18n";
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
+import {
+  SalariesByLocationPage,
+  YearlySalaries,
+} from "studio/lib/interfaces/compensations";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { Result } from "studio/utils/result";
 
@@ -24,31 +32,78 @@ import { Degree, SalaryData } from "./types";
 
 type CalculatorProps = {
   localeRes: Promise<LocaleDocument>;
-  salariesRes: Promise<Result<SalaryData, unknown>>;
+  salariesByLocationRes: Promise<{
+    salariesByLocation: SalariesByLocationPage[];
+    locations: CompanyLocation[];
+    globalSalaries: YearlySalaries[];
+  }>;
   background: "light" | "dark" | "violet";
 };
 
 export default function Calculator({
   localeRes,
-  salariesRes,
+  salariesByLocationRes,
   background,
 }: CalculatorProps) {
   const t = useTranslations("compensation");
 
   const locale = use(localeRes);
-  const serverSalaries = use(salariesRes);
+  const { salariesByLocation, locations, globalSalaries } = use(
+    salariesByLocationRes,
+  );
 
   const locationCtx = useLocationContext();
-  const salaries = useMemo<Result<SalaryData, unknown>>(() => {
-    if (!locationCtx) return serverSalaries;
-    // @deprecated REMOVE - simplify to just: return getLatestSalaryResult(locationCtx.yearlySalariesForLocation).salaryData
-    const locationResult = getLatestSalaryResult(
-      locationCtx.yearlySalariesForLocation,
-    );
-    return locationResult.salaryData.ok
-      ? locationResult.salaryData
-      : serverSalaries;
-  }, [locationCtx, serverSalaries]);
+
+  // Build location options for standalone picker
+  const locationOptions: IOption[] = useMemo(
+    () =>
+      locations
+        .filter((loc) =>
+          salariesByLocation.some((s) => s.location?._ref === loc._id),
+        )
+        .map((loc) => ({
+          id: loc._id,
+          label: loc.companyLocationName,
+        })),
+    [locations, salariesByLocation],
+  );
+
+  const [standaloneLocation, setStandaloneLocation] = useQueryState(
+    "location",
+    {
+      defaultValue: locationOptions[0]?.id,
+      parse: (value) => {
+        const ids = new Set(locationOptions.map((o) => o.id));
+        return value && ids.has(value) ? value : locationOptions[0]?.id;
+      },
+      serialize: (value) => value ?? "",
+    },
+  );
+
+  const isStandalone = !locationCtx;
+
+  const { yearlySalariesForLocation, isGlobal } = useMemo(() => {
+    if (locationCtx) {
+      return {
+        yearlySalariesForLocation: locationCtx.yearlySalariesForLocation,
+        isGlobal: locationCtx.isUsingGlobalSalaries,
+      };
+    }
+    // @deprecated REMOVE - fallback to global during migration
+    const locationSalaries = salariesByLocation
+      .find((s) => s.location._ref === standaloneLocation)
+      ?.yearlySalaries?.toSorted((a, b) => a.year - b.year);
+    return {
+      yearlySalariesForLocation:
+        locationSalaries ?? globalSalaries.toSorted((a, b) => a.year - b.year),
+      isGlobal: !locationSalaries,
+    };
+  }, [locationCtx, salariesByLocation, standaloneLocation, globalSalaries]);
+
+  const salaries = useMemo<Result<SalaryData, unknown>>(
+    () => getLatestSalaryResult(yearlySalariesForLocation).salaryData,
+    [yearlySalariesForLocation],
+  );
 
   const [year, setYear] = useQueryState<number | null>("year", {
     defaultValue: getMaybeMaxYear(salaries) ?? new Date().getFullYear(),
@@ -71,9 +126,6 @@ export default function Calculator({
     return null;
   }
 
-  // @deprecated REMOVE - global salary indicator only relevant during migration
-  const isGlobal = locationCtx?.isUsingGlobalSalaries ?? false;
-
   const salary = calculateSalary(year, degree, salaries.value) ?? 0;
   const { min, max } = getMinMaxYear(salaries.value);
   const degreeOptions = getDegreeOptions(t);
@@ -95,6 +147,16 @@ export default function Calculator({
         >
           ⚠ Landsdekkende data
         </span>
+      )}
+      {isStandalone && locationOptions.length > 0 && (
+        <RadioButtonGroup
+          id="calculator-location-group"
+          label={t("bonus.location")}
+          options={locationOptions}
+          background={background}
+          selectedId={standaloneLocation}
+          onValueChange={(option) => setStandaloneLocation(option.id)}
+        />
       )}
       <RadioButtonGroup
         id="degree-group"

@@ -7,7 +7,7 @@ import {
   CompensationCalculatorSection,
 } from "studio/lib/interfaces/pages";
 
-import { getLatestSalaries, getLocale } from "./api";
+import { getLocale, getSalariesByLocation } from "./api";
 import Calculator from "./Calculator";
 import styles from "./compensation-calculator.module.css";
 
@@ -18,7 +18,7 @@ export interface CompensationCalculatorProps {
 export default async function CompensationCalculator({
   section,
 }: CompensationCalculatorProps) {
-  const salariesRes = getLatestSalaries();
+  const salariesByLocationRes = getSalariesByLocation();
   const localeRes = getLocale();
 
   const calculatorBgClassname = getCalculatorBgClassname(section.background);
@@ -37,7 +37,7 @@ export default async function CompensationCalculator({
           <Suspense fallback={<div>Loading...</div>}>
             <Calculator
               localeRes={localeRes}
-              salariesRes={salariesRes}
+              salariesByLocationRes={salariesByLocationRes}
               background={radioBackground}
             />
           </Suspense>
