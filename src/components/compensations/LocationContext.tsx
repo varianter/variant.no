@@ -21,6 +21,8 @@ interface LocationContextValue {
   setSelectedLocation: (id: string) => void;
   locationOptions: IOption[];
   yearlySalariesForLocation: YearlySalaries[];
+  // @deprecated REMOVE - only relevant during migration
+  isUsingGlobalSalaries: boolean;
   benefitsForLocation: Benefit[];
   yearlyBonusesForLocation: BonusPage[] | undefined;
 }
@@ -77,14 +79,15 @@ export function LocationProvider({
   });
 
   // @deprecated REMOVE - fallback to global yearlySalaries during migration
+  const locationSalaries = salariesByLocation
+    .find((s) => s.location._ref === selectedLocation)
+    ?.yearlySalaries?.toSorted((a, b) => a.year - b.year);
+
+  // @deprecated REMOVE - isUsingGlobalSalaries only relevant during migration
+  const isUsingGlobalSalaries = !locationSalaries;
   const yearlySalariesForLocation =
-    salariesByLocation.length > 0
-      ? (salariesByLocation
-          .find((s) => s.location._ref === selectedLocation)
-          ?.yearlySalaries?.toSorted((a, b) => a.year - b.year) ?? [])
-      : (compensations.yearlySalaries ?? []).toSorted(
-          (a, b) => a.year - b.year,
-        );
+    locationSalaries ??
+    (compensations.yearlySalaries ?? []).toSorted((a, b) => a.year - b.year);
 
   const benefitsForLocation = compensations.benefits.filter(
     (benefit) =>
@@ -103,6 +106,7 @@ export function LocationProvider({
         setSelectedLocation,
         locationOptions,
         yearlySalariesForLocation,
+        isUsingGlobalSalaries,
         benefitsForLocation,
         yearlyBonusesForLocation,
       }}

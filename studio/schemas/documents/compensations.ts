@@ -5,6 +5,7 @@ import { richTextID, title, titleID } from "studio/schemas/fields/text";
 import benefits from "studio/schemas/objects/compensations/benefits";
 import { bonusesByLocation } from "studio/schemas/objects/compensations/bonusesByLocation";
 import { pensionPercent } from "studio/schemas/objects/compensations/pension";
+import { yearlySalaries } from "studio/schemas/objects/compensations/salaries";
 import { yearlySalariesByLocation } from "studio/schemas/objects/compensations/yearlySalariesByLocation";
 import { link } from "studio/schemas/objects/link";
 import splitSection from "studio/schemas/objects/sections/splitSection";
@@ -41,6 +42,14 @@ const compensations = defineType({
     bonusesByLocation,
     benefits,
     yearlySalariesByLocation,
+    // @deprecated REMOVE - keep visible during migration, then remove
+    {
+      ...yearlySalaries,
+      title: "[DEPRECATED] Yearly salaries (global)",
+      description:
+        "This field is deprecated and will be removed. Use 'Yearly Salaries by Location' instead. Data here is used as fallback for cities not yet migrated.",
+      readOnly: true,
+    },
     defineField({
       name: "handbookLinks",
       title: "Handbook Section Links",

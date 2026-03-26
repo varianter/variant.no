@@ -41,8 +41,13 @@ export default function Calculator({
   const locationCtx = useLocationContext();
   const salaries = useMemo<Result<SalaryData, unknown>>(() => {
     if (!locationCtx) return serverSalaries;
-    return getLatestSalaryResult(locationCtx.yearlySalariesForLocation)
-      .salaryData;
+    // @deprecated REMOVE - simplify to just: return getLatestSalaryResult(locationCtx.yearlySalariesForLocation).salaryData
+    const locationResult = getLatestSalaryResult(
+      locationCtx.yearlySalariesForLocation,
+    );
+    return locationResult.salaryData.ok
+      ? locationResult.salaryData
+      : serverSalaries;
   }, [locationCtx, serverSalaries]);
 
   const [year, setYear] = useQueryState<number | null>("year", {
@@ -66,6 +71,9 @@ export default function Calculator({
     return null;
   }
 
+  // @deprecated REMOVE - global salary indicator only relevant during migration
+  const isGlobal = locationCtx?.isUsingGlobalSalaries ?? false;
+
   const salary = calculateSalary(year, degree, salaries.value) ?? 0;
   const { min, max } = getMinMaxYear(salaries.value);
   const degreeOptions = getDegreeOptions(t);
@@ -75,6 +83,19 @@ export default function Calculator({
       className={styles.formCalculator}
       aria-label={t("calculator.formLabel")}
     >
+      {/* @deprecated REMOVE - indicator only relevant during migration */}
+      {isGlobal && (
+        <span
+          title="Bruker landsdekkende lønnsdata — byspesifikke data er ikke lagt inn ennå"
+          style={{
+            cursor: "help",
+            fontSize: "0.85em",
+            opacity: 0.7,
+          }}
+        >
+          ⚠ Landsdekkende data
+        </span>
+      )}
       <RadioButtonGroup
         id="degree-group"
         label={t("calculator.educationInput")}
