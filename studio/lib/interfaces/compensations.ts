@@ -91,6 +91,8 @@ export interface CompensationsPage {
   benefits: Benefit[];
   bonusesByLocation: BonusesByLocationPage[];
   yearlySalariesByLocation: SalariesByLocationPage[];
+  // @deprecated REMOVE - fallback during migration
+  yearlySalaries?: YearlySalaries[];
   handbookLinks: ILink[];
   seo: SeoData;
   splitSection: SplitSection;

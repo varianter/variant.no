@@ -76,10 +76,15 @@ export function LocationProvider({
     serialize: (value) => value ?? "",
   });
 
+  // @deprecated REMOVE - fallback to global yearlySalaries during migration
   const yearlySalariesForLocation =
-    salariesByLocation
-      .find((s) => s.location._ref === selectedLocation)
-      ?.yearlySalaries?.toSorted((a, b) => a.year - b.year) ?? [];
+    salariesByLocation.length > 0
+      ? (salariesByLocation
+          .find((s) => s.location._ref === selectedLocation)
+          ?.yearlySalaries?.toSorted((a, b) => a.year - b.year) ?? [])
+      : (compensations.yearlySalaries ?? []).toSorted(
+          (a, b) => a.year - b.year,
+        );
 
   const benefitsForLocation = compensations.benefits.filter(
     (benefit) =>
