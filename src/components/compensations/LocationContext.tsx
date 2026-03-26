@@ -51,8 +51,10 @@ export function LocationProvider({
   const hasBonuses = (id: string) =>
     compensations.bonusesByLocation.some((b) => b.location?._ref === id);
 
+  const salariesByLocation = compensations.yearlySalariesByLocation ?? [];
+
   const hasSalaries = (id: string) =>
-    compensations.yearlySalariesByLocation.some((s) => s.location?._ref === id);
+    salariesByLocation.some((s) => s.location?._ref === id);
 
   const hasLocationData = (id: string) =>
     hasBenefits(id) || hasBonuses(id) || hasSalaries(id);
@@ -64,14 +66,18 @@ export function LocationProvider({
       label: companyLocation.companyLocationName,
     }));
 
+  const defaultLocation = locationOptions[0]?.id;
+  const locationIds = new Set(locationOptions.map((o) => o.id));
+
   const [selectedLocation, setSelectedLocation] = useQueryState("location", {
-    defaultValue: locationOptions[0]?.id,
-    parse: (value) => value || locationOptions[0]?.id,
+    defaultValue: defaultLocation,
+    parse: (value) =>
+      value && locationIds.has(value) ? value : defaultLocation,
     serialize: (value) => value ?? "",
   });
 
   const yearlySalariesForLocation =
-    compensations.yearlySalariesByLocation
+    salariesByLocation
       .find((s) => s.location._ref === selectedLocation)
       ?.yearlySalaries?.toSorted((a, b) => a.year - b.year) ?? [];
 

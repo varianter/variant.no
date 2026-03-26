@@ -17,18 +17,18 @@ export default defineMigration({
         | Array<{ _key: string; location: { _type: string; _ref: string } }>
         | undefined;
 
-      if (!yearlySalaries || !bonusesByLocation) continue;
-
-      const yearlySalariesByLocation = bonusesByLocation.map((bonus) => ({
-        _key: randomUUID(),
-        _type: "salaryData",
-        location: { ...bonus.location },
-        yearlySalaries: yearlySalaries.map((entry) => ({
+      const yearlySalariesByLocation = (bonusesByLocation ?? []).map(
+        (bonus) => ({
           _key: randomUUID(),
-          year: entry.year,
-          salaries: entry.salaries,
-        })),
-      }));
+          _type: "salaryData",
+          location: { ...bonus.location },
+          yearlySalaries: (yearlySalaries ?? []).map((entry) => ({
+            _key: randomUUID(),
+            year: entry.year,
+            salaries: entry.salaries,
+          })),
+        }),
+      );
 
       yield patch(doc._id, [
         at("yearlySalariesByLocation", set(yearlySalariesByLocation)),

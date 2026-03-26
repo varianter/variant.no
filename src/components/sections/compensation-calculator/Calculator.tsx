@@ -8,6 +8,7 @@ import { useLocationContext } from "src/components/compensations/LocationContext
 import {
   calculateSalary,
   getDegreeOptions,
+  getLatestSalaryResult,
   getMaybeMaxYear,
   getMinMaxYear,
 } from "src/components/compensations/utils/salary";
@@ -16,7 +17,7 @@ import { RadioButtonGroup } from "src/components/forms/radioButtonGroup/RadioBut
 import Text from "src/components/text/Text";
 import { formatAsCurrency } from "src/utils/i18n";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
-import { Result, ResultError, ResultOk } from "studio/utils/result";
+import { Result } from "studio/utils/result";
 
 import styles from "./compensation-calculator.module.css";
 import { Degree, SalaryData } from "./types";
@@ -38,19 +39,10 @@ export default function Calculator({
   const serverSalaries = use(salariesRes);
 
   const locationCtx = useLocationContext();
-  const salaries = useMemo(() => {
+  const salaries = useMemo<Result<SalaryData, unknown>>(() => {
     if (!locationCtx) return serverSalaries;
-    const entries = locationCtx.yearlySalariesForLocation;
-    if (entries.length === 0)
-      return ResultError<SalaryData, unknown>("No salary data");
-    const latest = entries[entries.length - 1];
-    try {
-      return ResultOk<SalaryData, unknown>(
-        JSON.parse(latest.salaries) as SalaryData,
-      );
-    } catch {
-      return ResultError<SalaryData, unknown>("Failed to parse salary data");
-    }
+    return getLatestSalaryResult(locationCtx.yearlySalariesForLocation)
+      .salaryData;
   }, [locationCtx, serverSalaries]);
 
   const [year, setYear] = useQueryState<number | null>("year", {
