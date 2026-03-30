@@ -63,9 +63,11 @@ export const COMPENSATIONS_PAGE_BY_SLUG_QUERY = groq`
   }
 `;
 
-export const LATEST_YEARLY_SALARIES_QUERY = groq`
-  *[_id == "compensations"] {
-    yearlySalaries | order(year desc)[0]
+export const SALARIES_BY_LOCATION_QUERY = groq`
+  *[_id == "compensations"][0] {
+    yearlySalariesByLocation,
+    // @deprecated REMOVE - fallback during migration
+    yearlySalaries
   }
 `;
 

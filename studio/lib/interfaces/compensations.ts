@@ -41,6 +41,13 @@ export interface BonusesByLocationPage {
   yearlyBonuses: BonusPage[];
 }
 
+export interface SalariesByLocationPage {
+  _type: string;
+  _key: string;
+  location: Reference;
+  yearlySalaries: YearlySalaries[];
+}
+
 export interface BonusPage {
   _type?: string;
   _key: string;
@@ -83,7 +90,9 @@ export interface CompensationsPage {
   pensionPercent?: number;
   benefits: Benefit[];
   bonusesByLocation: BonusesByLocationPage[];
-  yearlySalaries: YearlySalaries[];
+  yearlySalariesByLocation: SalariesByLocationPage[];
+  // @deprecated REMOVE - fallback during migration
+  yearlySalaries?: YearlySalaries[];
   handbookLinks: ILink[];
   seo: SeoData;
   splitSection: SplitSection;

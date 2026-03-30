@@ -40,6 +40,8 @@ export default function SalarySection({
     serialize: (value) => value ?? "",
   });
 
+  if (yearlySalaries.length === 0) return null;
+
   // Convert the year/salaries list into a HistoricalPayscaleData structure
   const payscaleData = convertYearlySalariesToPayscale(yearlySalaries);
 

@@ -1,18 +1,20 @@
+import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
+import {
+  SalariesByLocationPage,
+  YearlySalaries,
+} from "studio/lib/interfaces/compensations";
 import { LocaleDocument } from "studio/lib/interfaces/locale";
 import { ILink } from "studio/lib/interfaces/navigation";
+import { COMPANY_LOCATIONS_QUERY } from "studio/lib/queries/admin";
 import { LOCALE_QUERY } from "studio/lib/queries/locale";
 import {
   COMPENSATIONS_HANDBOOK_LINKS,
-  LATEST_YEARLY_SALARIES_QUERY,
+  SALARIES_BY_LOCATION_QUERY,
 } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
-import { Result, ResultError, ResultOk } from "studio/utils/result";
+import { ResultOk } from "studio/utils/result";
 
-import { SalaryData } from "./types";
-
-export async function getHandbookLinksFromCompensationPage(
-  language: string,
-): Promise<Result<ILink[], unknown>> {
+export async function getHandbookLinksFromCompensationPage(language: string) {
   const res = await loadStudioQuery<{ handbookLinks: ILink[] }>(
     COMPENSATIONS_HANDBOOK_LINKS,
     { language },
@@ -32,52 +34,41 @@ export async function getLocale() {
   return res.data;
 }
 
-interface SalaryEntry {
-  year: number;
-  _key: string;
-  salaries: string; // JSON string that needs to be parsed
+interface SalariesByLocationResponse {
+  yearlySalariesByLocation?: SalariesByLocationPage[];
+  // @deprecated REMOVE - fallback during migration
+  yearlySalaries?: YearlySalaries[];
 }
 
-interface QueryResponse {
-  yearlySalaries: SalaryEntry;
+export async function getSalariesByLocation(): Promise<{
+  salariesByLocation: SalariesByLocationPage[];
+  locations: CompanyLocation[];
+  // @deprecated REMOVE - fallback during migration
+  globalSalaries: YearlySalaries[];
+}> {
+  const [salariesRes, locationsRes] = await Promise.all([
+    loadStudioQuery<SalariesByLocationResponse>(
+      SALARIES_BY_LOCATION_QUERY,
+      {},
+      { cache: "force-cache", next: { revalidate: 60 * 60 * 24 } },
+    ),
+    loadStudioQuery<CompanyLocation[]>(
+      COMPANY_LOCATIONS_QUERY,
+      {},
+      { cache: "force-cache", next: { revalidate: 60 * 60 * 24 } },
+    ),
+  ]);
+
+  return {
+    salariesByLocation: salariesRes.data?.yearlySalariesByLocation ?? [],
+    locations: locationsRes.data ?? [],
+    globalSalaries: salariesRes.data?.yearlySalaries ?? [],
+  };
 }
 
-export async function getLatestSalaries(): Promise<
-  Result<SalaryData, unknown>
-> {
-  const res = await loadStudioQuery<QueryResponse[]>(
-    LATEST_YEARLY_SALARIES_QUERY,
-    {},
-    {
-      cache: "force-cache",
-      next: { revalidate: 60 * 60 * 24 * 120 },
-    },
-  );
-
-  try {
-    if (!res.data) {
-      return ResultError("No salary data found");
-    }
-
-    const latestSalariesEntry = res.data[0].yearlySalaries;
-    const salaries = JSON.parse(latestSalariesEntry.salaries);
-
-    if (!isSalariesType(salaries)) {
-      return ResultError("Parsed salaries data was not valid");
-    }
-
-    return ResultOk(salaries);
-  } catch (error) {
-    console.error("Error parsing salary data:", error);
-    return ResultError("Parsed salaries data was not valid");
-  }
-}
-
-interface Salaries {
-  [year: string]: number;
-}
-
-export function isSalariesType(value: unknown): value is Salaries {
+export function isSalariesType(
+  value: unknown,
+): value is Record<string, number> {
   return (
     typeof value === "object" &&
     value !== null &&
