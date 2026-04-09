@@ -17,8 +17,6 @@ export const deskStructure: StructureResolver = (S) =>
         .title("Frontpage Settings")
         .icon(StarIcon)
         .child(
-          S.document()
-            .schemaType(frontpageSettingsID)
-            .documentId(frontpageSettingsID),
+          S.documentTypeList(frontpageSettingsID).title("Frontpage Settings"),
         ),
     ]);

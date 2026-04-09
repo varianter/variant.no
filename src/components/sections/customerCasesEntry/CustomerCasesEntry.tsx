@@ -31,7 +31,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
   try {
     const featuredCasesResult = await loadSharedQuery<
       CustomerCaseEntry[] | null
-    >(FRONTPAGE_FEATURED_CASES_QUERY, { language }, { perspective });
+    >(FRONTPAGE_FEATURED_CASES_QUERY, { language, domain }, { perspective });
 
     if (featuredCasesResult.data && featuredCasesResult.data.length > 0) {
       customerCases = featuredCasesResult.data;

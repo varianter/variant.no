@@ -1,6 +1,8 @@
 import { StarIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
+import { domainsField } from "studioShared/schemas/fields/domains";
+
 import { customerCaseID } from "./customerCase";
 
 export const frontpageSettingsID = "frontpageSettings";
@@ -11,6 +13,7 @@ const frontpageSettings = defineType({
   title: "Frontpage Settings",
   icon: StarIcon,
   fields: [
+    defineField({ ...domainsField, validation: (rule) => rule.required() }),
     defineField({
       name: "featuredCases",
       title: "Featured Cases",
@@ -30,9 +33,13 @@ const frontpageSettings = defineType({
     }),
   ],
   preview: {
-    prepare() {
+    select: {
+      domains: "domains",
+    },
+    prepare({ domains }) {
       return {
-        title: "Frontpage Settings",
+        title: `Frontpage Settings`,
+        subtitle: Array.isArray(domains) ? domains.join(", ") : undefined,
       };
     },
   },

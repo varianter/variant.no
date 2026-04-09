@@ -150,7 +150,7 @@ export const CUSTOMER_CASE_ENTRY_QUERY = groq`
 `;
 
 export const FRONTPAGE_FEATURED_CASES_QUERY = groq`
-  *[_type == "frontpageSettings"][0].featuredCases[] -> {
+  *[_type == "frontpageSettings" && $domain in domains][0].featuredCases[] -> {
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
       customer,
