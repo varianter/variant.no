@@ -15,7 +15,9 @@ export function absoluteUrlFromNextRequest(
   return absoluteUrl;
 }
 
-const FALLBACK_DOMAIN = "variant.no";
+const FALLBACK_DOMAIN = process.env.NEXT_PUBLIC_SWEDISH
+  ? "variant.se"
+  : "variant.no";
 
 /**
  * attempts to extract the relevant Variant domain, without subdomains, from the given hostname
