@@ -149,6 +149,29 @@ export const CUSTOMER_CASE_ENTRY_QUERY = groq`
   }
 `;
 
+export const FRONTPAGE_FEATURED_CASES_QUERY = groq`
+  *[_type == "frontpageSettings"][0].featuredCases[] -> {
+    ${CUSTOMER_CASE_BASE_FRAGMENT},
+    "projectInfo": projectInfo {
+      customer,
+      "deliveries": {
+        "design": deliveries.design[] {
+          _key,
+          "designDelivery": ${translatedFieldFragment("designDelivery")}
+        },
+        "development": deliveries.development[] {
+          _key,
+          "developmentDelivery": ${translatedFieldFragment("developmentDelivery")}
+        },
+        "projectManagement": deliveries.projectManagement[] {
+          _key,
+          "projectManagementDelivery": ${translatedFieldFragment("projectManagementDelivery")}
+        }
+      },
+    },
+  }
+`;
+
 export const CUSTOMER_CASES_SITEMAP_QUERY = groq`
   *[_type == "customerCase"] {
     _updatedAt,

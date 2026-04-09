@@ -8,7 +8,10 @@ import { CustomerCasesEntrySection } from "studio/lib/interfaces/pages";
 import { CUSTOMER_CASES_PAGE_SITEMAP_QUERY } from "studio/lib/queries/specialPages";
 import { loadStudioQuery } from "studio/lib/store";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
-import { CUSTOMER_CASE_ENTRY_QUERY } from "studioShared/lib/queries/customerCases";
+import {
+  CUSTOMER_CASE_ENTRY_QUERY,
+  FRONTPAGE_FEATURED_CASES_QUERY,
+} from "studioShared/lib/queries/customerCases";
 import { loadSharedQuery } from "studioShared/lib/store";
 
 import styles from "./customerCasesEntry.module.css";
@@ -23,16 +26,28 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
   const { perspective } = await getDraftModeInfo();
   const domain = domainFromHostname((await headers()).get("host"));
 
-  const customerCaseResult = await loadSharedQuery<CustomerCaseEntry[]>(
-    CUSTOMER_CASE_ENTRY_QUERY,
-    {
-      domain,
-      language,
-    },
-    {
-      perspective,
-    },
-  );
+  let customerCases: CustomerCaseEntry[] = [];
+
+  try {
+    const featuredCasesResult = await loadSharedQuery<
+      CustomerCaseEntry[] | null
+    >(FRONTPAGE_FEATURED_CASES_QUERY, { language }, { perspective });
+
+    if (featuredCasesResult.data && featuredCasesResult.data.length > 0) {
+      customerCases = featuredCasesResult.data;
+    }
+  } catch {
+    // Singleton document may not exist yet
+  }
+
+  if (customerCases.length === 0) {
+    const allCasesResult = await loadSharedQuery<CustomerCaseEntry[]>(
+      CUSTOMER_CASE_ENTRY_QUERY,
+      { domain, language },
+      { perspective },
+    );
+    customerCases = allCasesResult.data ?? [];
+  }
 
   const customerCasePageSlug = (
     await loadStudioQuery<{ slug: string } | null>(
@@ -44,7 +59,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
   ).data?.slug;
 
   return (
-    customerCaseResult && (
+    customerCases.length > 0 && (
       <div className={styles.firstWrapper}>
         <div className={styles.titleWrapper}>
           <Text type="titleM" as="h2">
@@ -52,7 +67,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
           </Text>
         </div>
         <CustomerCasesList
-          customerCases={customerCaseResult.data}
+          customerCases={customerCases}
           language={language}
           customerCasePageSlug={customerCasePageSlug}
         />
