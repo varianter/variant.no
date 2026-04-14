@@ -33,9 +33,7 @@ async function CustomerCasesEntry({ language, section }: CustomerCasesProps) {
       CustomerCaseEntry[] | null
     >(FRONTPAGE_FEATURED_CASES_QUERY, { language, domain }, { perspective });
 
-    if (featuredCasesResult.data && featuredCasesResult.data.length > 0) {
-      customerCases = featuredCasesResult.data;
-    }
+    customerCases = featuredCasesResult.data ?? [];
   } catch {
     // Singleton document may not exist yet
   }
