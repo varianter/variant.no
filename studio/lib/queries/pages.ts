@@ -239,6 +239,14 @@ const SECTIONS_FRAGMENT = groq`
         },
         "readingListeningTime": ${translatedFieldFragment("readingListeningTime")},
       }
+    },
+    _type == "imageCarousel" => {
+      "title": ${translatedFieldFragment("title")},
+      "images": images[] {
+        _key,
+        "image": image { ${INTERNATIONALIZED_IMAGE_FRAGMENT} },
+        "caption": ${translatedFieldFragment("caption")}
+      }
     }
   }
   
