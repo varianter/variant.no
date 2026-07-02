@@ -98,6 +98,10 @@
     "future_events": "Kommende arrangementer",
     "past_events": "Tidligere arrangementer"
   },
+  "year_selector": {
+    "year": "År",
+    "all": "Alle"
+  },
   "office_selector": {
     "location": "Lokasjon",
     "all": "Alle"

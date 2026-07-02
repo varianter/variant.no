@@ -99,6 +99,10 @@
     "future_events": "Kommende arrangemang",
     "past_events": "Tidigare arrangemang"
   },
+  "year_selector": {
+    "year": "År",
+    "all": "Alla"
+  },
   "office_selector": {
     "location": "Kontor",
     "all": "Alla"

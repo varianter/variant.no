@@ -1,8 +1,9 @@
 import { getTranslations } from "next-intl/server";
 
 import EventPosting from "src/components/eventPosting/EventPosting";
+import EventPostingListWithYearFilter from "src/components/sections/events/EventPostingListWithYearFilter";
 import Text from "src/components/text/Text";
-import { IEventPosting } from "studio/lib/interfaces/eventPosting";
+import { type IEventPosting } from "studio/lib/interfaces/eventPosting";
 
 import styles from "./eventsPage.module.css";
 
@@ -79,15 +80,10 @@ export default async function EventsPage({
               {t("past_events")}
             </Text>
 
-            <div className={styles.wrapper}>
-              {sortedPastEventPostings.map((event: IEventPosting) => (
-                <EventPosting
-                  eventPosting={event}
-                  key={event._key}
-                  language={params.locale}
-                />
-              ))}
-            </div>
+            <EventPostingListWithYearFilter
+              eventPostings={sortedPastEventPostings}
+              language={params.locale}
+            />
           </section>
         )}
       </section>

@@ -99,6 +99,10 @@
     "future_events": "Coming events",
     "past_events": "Past events"
   },
+  "year_selector": {
+    "year": "Year",
+    "all": "All"
+  },
   "office_selector": {
     "location": "Location",
     "all": "All"
