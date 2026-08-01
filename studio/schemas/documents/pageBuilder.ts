@@ -15,6 +15,7 @@ import { generositySection } from "studio/schemas/objects/sections/generosity";
 import { handbookSection } from "studio/schemas/objects/sections/handbook";
 import hero from "studio/schemas/objects/sections/hero";
 import imageSection from "studio/schemas/objects/sections/image";
+import imageCarousel from "studio/schemas/objects/sections/imageCarousel";
 import imageSplitSection from "studio/schemas/objects/sections/imagesplit";
 import { jobs } from "studio/schemas/objects/sections/jobs";
 import { learningSection } from "studio/schemas/objects/sections/learning";
@@ -73,6 +74,7 @@ const pageBuilder = defineType({
         splitSection,
         fieldGrid,
         eventRegistrationSection,
+        imageCarousel,
       ],
     }),
     defineField({

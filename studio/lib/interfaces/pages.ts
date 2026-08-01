@@ -266,6 +266,17 @@ export interface BlogSection {
   postNumber: number;
 }
 
+export interface ImageCarouselSection {
+  _type: "imageCarousel";
+  _key: string;
+  title?: string;
+  images: {
+    _key: string;
+    image: IImage;
+    caption?: string;
+  }[];
+}
+
 export type Section =
   | HeroSection
   | LogoSaladSection
@@ -288,7 +299,8 @@ export type Section =
   | SplitSection
   | FieldGrid
   | EventRegistrationSection
-  | BlogSection;
+  | BlogSection
+  | ImageCarouselSection;
 
 export interface PageBuilder {
   _createdAt: string;
