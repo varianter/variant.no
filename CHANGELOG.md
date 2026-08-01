@@ -2,10 +2,15 @@
 
 ## Release v3.0.0
 
-> 5 December 2025
+> 27 March 2026
 
 ### Merged to Main 🔀
 
+- chore(deps): bump valibot from 1.1.0 to 1.2.0 [1492](https://github.com/varianter/variant.no/pull/1492) --dependabot[bot]
+- chore(deps): bump @sanity/preview-url-secret from 2.1.15 to 3.0.0 [1483](https://github.com/varianter/variant.no/pull/1483) --dependabot[bot]
+- chore(deps-dev): bump @eslint/compat from 1.4.1 to 2.0.0 [1482](https://github.com/varianter/variant.no/pull/1482) --dependabot[bot]
+- chore(deps): bump @visx/shape from 3.13.0-alpha.0 to 4.0.0-alpha.0 [1481](https://github.com/varianter/variant.no/pull/1481) --dependabot[bot]
+- chore: update changelog [skip ci] [1501](https://github.com/varianter/variant.no/pull/1501) --github-actions[bot]
 - chore(deps): bump next from 15.5.6 to 15.5.7 [1500](https://github.com/varianter/variant.no/pull/1500) --dependabot[bot]
 - chore: update changelog [skip ci] [1497](https://github.com/varianter/variant.no/pull/1497) --github-actions[bot]
 - 1486 contact box bug på mobil [1494](https://github.com/varianter/variant.no/pull/1494) --Tuvald
@@ -90,13 +95,17 @@
 - feat: randomly select sentence, [64bc511](https://github.com/varianter/variant.no/commit/64bc51106e4ea7d5b09b15054c88708318092e65) --Mikael Brevik
 - feat: adds section for sales punch line, [e1ffe99](https://github.com/varianter/variant.no/commit/e1ffe994b6340b2c5b3e2aca45a8e28a9c185a40) --Mikael Brevik
 - fix animation, [151b98d](https://github.com/varianter/variant.no/commit/151b98d03829c817b7b15f80d202710f346fc876) --Mikael Brevik
+- feat: add optional company required toggle to event registration, [33f6623](https://github.com/varianter/variant.no/commit/33f66238ca7f41a406b83c7758f1a75dbc68b4d1) --yngvetoppen
 - adds overflowing, [0e4a570](https://github.com/varianter/variant.no/commit/0e4a570722eb5710a4ccf7ad787ea682276eed45) --Mikael Brevik
 - add description, [00d8044](https://github.com/varianter/variant.no/commit/00d8044e929c69cb6f65298c50307c3abd48887b) --Mikael Brevik
+- fix: issue with unwanted /no redirect on swedish site, [207a11d](https://github.com/varianter/variant.no/commit/207a11d69b98161ae30483123ccd4c97849c966a) --Mikael Brevik
 - fix: punch box min height, [26c8b45](https://github.com/varianter/variant.no/commit/26c8b4555847686431fa42330c9ac823eb0d5d7a) --Mikael Brevik
 - fix: readds missing breakwords for punch, [6a691c1](https://github.com/varianter/variant.no/commit/6a691c1b57796f785923a80d67f7d1e313dc0737) --Mikael Brevik
 - fix: use NEXT_PUBLIC_VERCEL_URL if NEXT_PUBLIC_URL is not defined, [8f8f595](https://github.com/varianter/variant.no/commit/8f8f595995e167857a3512c504d317b1a7d02e5c) --Robin Hovind
 - fix: remove recursive call (LiveVisualEditing), reintroduce call to VisualEditing component instead, [52cd4e1](https://github.com/varianter/variant.no/commit/52cd4e1ecf98588a365099e3c4f24ccc7efcc7ef) --Robin Hovind
 - fix: remove padding for body temp, bad fix, [27cd4bf](https://github.com/varianter/variant.no/commit/27cd4bfa05ba421370ff651e7ed2c4f53fff8ada) --Mikael Brevik
+- fix: language switcher on event pages now links to same event instead of front page, [8161201](https://github.com/varianter/variant.no/commit/8161201d48479d502fe8573eab4e87d7103afd9f) --yngvetoppen
+- fix: default locale no for .no, [05a3044](https://github.com/varianter/variant.no/commit/05a3044cb3602738d53fd68fb36bac22fde01b41) --Mikael Brevik
 
 ## Release v3.0.3
 
