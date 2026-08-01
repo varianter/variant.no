@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@sanity/document-internationalization": "^4.1.0",
-    "@sanity/image-url": "^1.2.0",
+    "@sanity/image-url": "^2.0.2",
     "@sanity/preview-url-secret": "^3.0.0",
     "@sanity/react-loader": "^1.11.22",
     "@sanity/vision": "^4.12.0",
