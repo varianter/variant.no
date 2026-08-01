@@ -27,7 +27,7 @@ export default function Learning({ section }: LearningProps) {
         <div className={styles.image}>
           <SanityImage image={section.image} />
         </div>
-        <Link href={section.articleLink}>
+        <Link href={section.articleLink} hrefLang="nb">
           <div className={styles.textContainer}>
             <div className={styles.textContent}>
               <Text type="labelL" color="light">
