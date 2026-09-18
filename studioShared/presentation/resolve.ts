@@ -11,16 +11,16 @@ const CUSTOMER_CASES_PAGE_SLUG_QUERY = groq`
 `;
 
 const localUrl = "http://localhost:3000";
-const remoteUrl =
-  process.env.NEXT_PUBLIC_URL ||
-  `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-const isPreviewDeployment = process.env.NEXT_PUBLIC_VERCEL_ENV === "preview";
 const secret = process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_SECRET || "";
 
 export const previewDomains = ["variant.no", "variant.se"] as const;
 export type PreviewDomain = (typeof previewDomains)[number];
 export const previewLocales = ["no", "en", "se"] as const;
 export type PreviewLocale = (typeof previewLocales)[number];
+
+const productionHostnames = new Set(
+  previewDomains.map((domain) => `www.${domain}`),
+);
 
 const customerCasesPageSlugFallbacks: Record<PreviewLocale, string> = {
   no: "arbeid",
@@ -52,16 +52,19 @@ function getSlug(
 }
 
 function getOrigin(domain: PreviewDomain): string {
-  if (
-    typeof window !== "undefined" &&
-    window.location.hostname === "localhost"
-  ) {
+  if (typeof window === "undefined") {
+    return `https://www.${domain}`;
+  }
+
+  const { hostname, origin } = window.location;
+  if (hostname === "localhost") {
     return localUrl;
   }
 
-  // Preview deployments don't have a stable per-domain hostname, so frame the deployment itself to stay same-origin.
-  if (isPreviewDeployment) {
-    return remoteUrl;
+  // Any hostname other than the known production domains (Vercel previews, etc.) isn't reachable
+  // as www.variant.{no,se}, so frame the deployment itself to stay same-origin.
+  if (!productionHostnames.has(hostname)) {
+    return origin;
   }
 
   return `https://www.${domain}`;
