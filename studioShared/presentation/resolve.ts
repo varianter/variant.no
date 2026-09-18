@@ -11,6 +11,10 @@ const CUSTOMER_CASES_PAGE_SLUG_QUERY = groq`
 `;
 
 const localUrl = "http://localhost:3000";
+const remoteUrl =
+  process.env.NEXT_PUBLIC_URL ||
+  `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+const isPreviewDeployment = process.env.NEXT_PUBLIC_VERCEL_ENV === "preview";
 const secret = process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_SECRET || "";
 
 export const previewDomains = ["variant.no", "variant.se"] as const;
@@ -53,6 +57,11 @@ function getOrigin(domain: PreviewDomain): string {
     window.location.hostname === "localhost"
   ) {
     return localUrl;
+  }
+
+  // Preview deployments don't have a stable per-domain hostname, so frame the deployment itself to stay same-origin.
+  if (isPreviewDeployment) {
+    return remoteUrl;
   }
 
   return `https://www.${domain}`;
