@@ -6,11 +6,13 @@ import Compensations from "src/components/compensations/Compensations";
 import CustomerCase from "src/components/customerCases/customerCase/CustomerCase";
 import CustomerCases from "src/components/customerCases/CustomerCases";
 import CustomerCasesPreview from "src/components/customerCases/CustomerCasesPreview";
+import CustomErrorMessage from "src/components/customErrorMessage/CustomErrorMessage";
 import EmployeePage from "src/components/employeePage/EmployeePage";
 import EventsPage from "src/components/eventsPage/eventsPage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
 import PageHeader from "src/components/navigation/header/PageHeader";
+import { getMissingCustomerCaseFields } from "src/utils/customerCaseValidation";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchPageDataFromParams } from "src/utils/pageData";
 import SectionRenderer from "src/utils/renderSection";
@@ -148,12 +150,24 @@ async function Page(props: Props) {
       break;
     }
     case "customerCase":
-      content = (
-        <CustomerCase
-          customerCase={queryResponse.customerCase.data}
-          customerCasesPagePath={queryResponse.customerCasesPagePath}
-        />
-      );
+      {
+        const missingFields = getMissingCustomerCaseFields(
+          queryResponse.customerCase.data,
+          locale,
+        );
+        content =
+          missingFields.length > 0 ? (
+            <CustomErrorMessage
+              title="Customer case preview is incomplete"
+              body={`Complete the following fields before previewing: ${missingFields.join(", ")}.`}
+            />
+          ) : (
+            <CustomerCase
+              customerCase={queryResponse.customerCase.data}
+              customerCasesPagePath={queryResponse.customerCasesPagePath}
+            />
+          );
+      }
       break;
     case "legalDocument":
       content = isDraftMode ? (

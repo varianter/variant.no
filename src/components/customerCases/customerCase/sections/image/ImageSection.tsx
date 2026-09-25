@@ -16,7 +16,7 @@ export default function ImageSection({ section }: ImageSectionProps) {
       >
         <div className={styles.imageContent}>
           <SanityImage image={section.image} isShared />
-          {section.image.figureDescription && (
+          {section.image?.figureDescription && (
             <Text type="caption">{section.image.figureDescription}</Text>
           )}
         </div>

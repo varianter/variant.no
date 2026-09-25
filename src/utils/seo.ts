@@ -87,20 +87,24 @@ export function seoDataFromChewbaccaEmployee(employee: ChewbaccaEmployee) {
 }
 
 export function seoDataFromCustomerCase(customerCase: CustomerCaseDocument) {
+  const imageUrl = customerCase.image
+    ? imageUrlBuilder(sharedClient).image(customerCase.image).url()
+    : undefined;
+
   return {
-    title: customerCase.basicTitle,
-    description: customerCase.description,
-    imageUrl: imageUrlBuilder(sharedClient).image(customerCase.image).url(),
+    title: customerCase.basicTitle ?? undefined,
+    description: customerCase.description ?? undefined,
+    imageUrl,
     keywords: [
-      customerCase.projectInfo.customer,
-      customerCase.projectInfo.sector,
-      customerCase.projectInfo.deliveries.projectManagement &&
+      customerCase.projectInfo?.customer,
+      customerCase.projectInfo?.sector,
+      customerCase.projectInfo?.deliveries?.projectManagement &&
         customerCase.projectInfo.deliveries.projectManagement.map(
           (d) => d.projectManagementDelivery,
         ),
-      customerCase.projectInfo.deliveries.design &&
+      customerCase.projectInfo?.deliveries?.design &&
         customerCase.projectInfo.deliveries.design.map((d) => d.designDelivery),
-      customerCase.projectInfo.deliveries.development &&
+      customerCase.projectInfo?.deliveries?.development &&
         customerCase.projectInfo.deliveries.development.map(
           (d) => d.developmentDelivery,
         ),
