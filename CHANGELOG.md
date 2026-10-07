@@ -2,10 +2,15 @@
 
 ## Release v3.0.0
 
-> 5 December 2025
+> 20 February 2026
 
 ### Merged to Main 🔀
 
+- chore(deps): bump valibot from 1.1.0 to 1.2.0 [1492](https://github.com/varianter/variant.no/pull/1492) --dependabot[bot]
+- chore(deps): bump @sanity/preview-url-secret from 2.1.15 to 3.0.0 [1483](https://github.com/varianter/variant.no/pull/1483) --dependabot[bot]
+- chore(deps-dev): bump @eslint/compat from 1.4.1 to 2.0.0 [1482](https://github.com/varianter/variant.no/pull/1482) --dependabot[bot]
+- chore(deps): bump @visx/shape from 3.13.0-alpha.0 to 4.0.0-alpha.0 [1481](https://github.com/varianter/variant.no/pull/1481) --dependabot[bot]
+- chore: update changelog [skip ci] [1501](https://github.com/varianter/variant.no/pull/1501) --github-actions[bot]
 - chore(deps): bump next from 15.5.6 to 15.5.7 [1500](https://github.com/varianter/variant.no/pull/1500) --dependabot[bot]
 - chore: update changelog [skip ci] [1497](https://github.com/varianter/variant.no/pull/1497) --github-actions[bot]
 - 1486 contact box bug på mobil [1494](https://github.com/varianter/variant.no/pull/1494) --Tuvald
