@@ -17,6 +17,7 @@ import { Hero } from "src/components/sections/hero/Hero";
 import HeroPreview from "src/components/sections/hero/HeroPreview";
 import ImageSplitComponent from "src/components/sections/image-split/ImageSplit";
 import ImageSplitComponentPreview from "src/components/sections/image-split/ImageSplitPreview";
+import ImageCarousel from "src/components/sections/imageCarousel/ImageCarousel";
 import ImageSectionComponent from "src/components/sections/imageSection/ImageSectionComponent";
 import ImageSectionComponentPreview from "src/components/sections/imageSection/ImageSectionComponentPreview";
 import Jobs from "src/components/sections/jobs/Jobs";
@@ -224,6 +225,8 @@ const SectionRenderer = ({
       return <EventRegistration section={section} />;
     case "blogSection":
       return <Blog section={section} />;
+    case "imageCarousel":
+      return <ImageCarousel section={section} />;
     default:
       return null;
   }
