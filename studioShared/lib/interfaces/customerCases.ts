@@ -7,6 +7,7 @@ import { SplitSection } from "./splitSection";
 
 export interface CustomerCaseProjectInfo {
   customer: string;
+  customerLogo?: IImage;
   customerSectors: CustomerSector[];
   url: string;
   sector: string[];
