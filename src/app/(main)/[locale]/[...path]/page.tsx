@@ -11,6 +11,7 @@ import EmployeePage from "src/components/employeePage/EmployeePage";
 import EventsPage from "src/components/eventsPage/eventsPage";
 import Legal from "src/components/legal/Legal";
 import LegalPreview from "src/components/legal/LegalPreview";
+import FooterContactBox from "src/components/navigation/footer/footerContactBox/FooterContactBox";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { getMissingCustomerCaseFields } from "src/utils/customerCaseValidation";
 import { getDraftModeInfo } from "src/utils/draftmode";
@@ -24,6 +25,7 @@ import {
 import { domainFromHostname } from "src/utils/url";
 import { client } from "studio/lib/client";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
+import { ContactBoxSection } from "studio/lib/interfaces/pages";
 import { SeoData } from "studio/lib/interfaces/seo";
 import { EVENT_POSTINGS_QUERY } from "studio/lib/queries/admin";
 import { CustomerCaseBase } from "studioShared/lib/interfaces/customerCases";
@@ -187,12 +189,28 @@ async function Page(props: Props) {
     return notFound();
   }
 
+  // Contact boxes live in the footer. A page-builder page may bring its own;
+  // pages with their own contact block (customer cases) only get the illustrations.
+  const pageContactBox =
+    docType === "pageBuilder"
+      ? (queryResponse.data?.sections?.find(
+          (section): section is ContactBoxSection =>
+            section._type === "contactBox",
+        ) ?? null)
+      : null;
+
   return (
     <>
       <PageHeader language={locale} pathTranslations={pathTranslations} />
       <main id={"main"} tabIndex={-1} className="animate-fadein">
         {content}
       </main>
+      <FooterContactBox
+        language={locale}
+        path={path}
+        section={pageContactBox}
+        hideBox={docType === "customerCase"}
+      />
     </>
   );
 }

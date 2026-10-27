@@ -3,12 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 7.5rem;
   padding-bottom: 1rem;
-
-  @media (width <= 425px) {
-    padding-top: 2rem;
-  }
 }
 
 .wrapper {

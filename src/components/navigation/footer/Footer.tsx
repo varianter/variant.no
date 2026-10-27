@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Fragment } from "react";
 
@@ -16,14 +15,12 @@ import {
 } from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { ILink, Navigation } from "studio/lib/interfaces/navigation";
-import { ColorPalette } from "studio/lib/interfaces/pages";
 import {
   SocialMediaLink,
   SocialMediaProfiles,
 } from "studio/lib/interfaces/socialMedia";
 
 import styles from "./footer.module.css";
-import { FooterIllustration } from "./footerIllustration/FooterIllustration";
 import { FooterSection } from "./footerSection/FooterSection";
 
 export interface IFooter {
@@ -32,7 +29,6 @@ export interface IFooter {
   legalData: LegalDocument[];
   companyInfo: CompanyInfo;
   companyLocations: CompanyLocation[];
-  footerColorPalette: ColorPalette[] | null;
 }
 
 const Footer = ({
@@ -41,20 +37,12 @@ const Footer = ({
   /* legalData, */
   companyInfo,
   companyLocations,
-  footerColorPalette,
 }: IFooter) => {
   const t = useTranslations("footer");
-  const pathname = usePathname();
 
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <FooterIllustration
-          color={
-            footerColorPalette?.find((item) => pathname.includes(item.slug))
-              ?.footerWidgetColor || "#FFD02F"
-          }
-        />
         <div className={styles.footerContent}>
           <nav className={styles.nav}>
             <div className={styles.flex_container_left}>

@@ -1,0 +1,17 @@
+.footerContactBox {
+  max-width: var(--max-content-width-large);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+/* Sits above the illustrations (which overlap it by 2rem) and leaves a 16px gap to the footer */
+.box {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 16px;
+}
+
+.box > section {
+  margin: 0;
+}
