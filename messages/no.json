@@ -31,7 +31,8 @@
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
     "contact_sale": "Kontakt salg!",
-    "contact_us": "Kontakt oss"
+    "contact_us": "Kontakt oss",
+    "contact_point": "Kontaktpunkt"
   },
   "compensation": {
     "calculator": {
