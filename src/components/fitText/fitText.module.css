@@ -1,0 +1,30 @@
+.box {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.text {
+  display: block;
+  width: 100%;
+  margin: 0;
+
+  /* Pre-hydration fallback: start at the CSS cap (unitless --fit-max). */
+  font-size: calc(var(--fit-max, 40) * 1px);
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Text that cannot fit even at minSize: clamp it with an ellipsis. */
+.box[data-at-min] .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--fit-lines);
+  line-clamp: var(--fit-lines);
+  overflow: hidden;
+}
