@@ -3,17 +3,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 1.5rem;
+  border-radius: var(--radius-small);
   padding: 1rem 1.5rem;
   gap: var(--padding-s);
   width: 100%;
   background-color: var(--text-primary-light);
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition:
+    border-radius 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms ease;
 
   &:hover {
     background-color: var(--Background-secondary, #eaeaea);
-    border-radius: 0.375rem;
+    border-radius: var(--radius-large);
   }
 
   &:focus {
@@ -33,6 +35,8 @@
 
 .role {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .locations {

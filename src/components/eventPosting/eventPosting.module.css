@@ -1,10 +1,13 @@
 .eventPosting {
-  border-radius: 1.5rem;
+  border-radius: var(--radius-small);
   padding: 1rem 1.5rem;
   width: 100%;
+  overflow-wrap: break-word;
   background-color: var(--text-primary-light);
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition:
+    border-radius 250ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms ease;
   display: block;
 
   &:focus {
@@ -15,10 +18,11 @@
   a& {
     position: relative;
     cursor: pointer;
+    padding-right: 3rem;
 
     &:is(:hover, :focus, :active) {
       background-color: var(--Background-secondary, #eaeaea);
-      border-radius: 0.375rem;
+      border-radius: var(--radius-large);
     }
 
     &::after {
