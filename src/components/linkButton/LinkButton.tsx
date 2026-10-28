@@ -6,7 +6,7 @@ import { ILink } from "studio/lib/interfaces/navigation";
 
 import styles from "./linkButton.module.css";
 
-type LinkButtonType = "primary" | "secondary";
+type LinkButtonType = "primary" | "secondary" | "tertiary";
 
 type LinkType = { link: ILink } | { link: string; linkTitle: string };
 

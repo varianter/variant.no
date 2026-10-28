@@ -21,3 +21,9 @@
   gap: 0.5rem;
   text-wrap: wrap;
 }
+
+/* Link to the Swedish site, below the section */
+.sweden {
+  display: flex;
+  padding-top: 0.75rem;
+}

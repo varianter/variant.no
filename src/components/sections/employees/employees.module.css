@@ -67,11 +67,6 @@
 
 .employeeFilterLabel {
   flex-shrink: 0;
-
-  @media (width >= 375px) {
-    min-width: 4.5rem;
-    width: 4.5rem;
-  }
 }
 
 .peopleCountWrapper {

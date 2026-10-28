@@ -89,7 +89,7 @@ export default function EmployeeList({
     activeLocationFilter,
   );
   const tabs = buildLocationTabs({
-    allLabel: t("all"),
+    allLabel: t("all_cities"),
     allCount: countFor(null),
     locations: sortedLocations.map((location) => ({
       id: location,
@@ -110,7 +110,11 @@ export default function EmployeeList({
       }}
     >
       <div className={styles.content}>
-        <Text type="titleXL">{title}</Text>
+        <Text type="titleXL">
+          {activeLocationFilter
+            ? t("variants_in", { location: activeLocationFilter })
+            : title}
+        </Text>
         <div className={styles.employeeFiltersWrapper}>
           <div className={styles.employeeFilterWrapper}>
             <div className={styles.employeeFilterLabel}>

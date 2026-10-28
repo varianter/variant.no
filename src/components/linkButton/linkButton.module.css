@@ -109,6 +109,19 @@
   }
 }
 
+/* Tertiary: text only, a background shows on hover */
+.button--tertiary {
+  --_button-color: currentcolor;
+
+  &:hover {
+    --_button-background: rgb(31 31 31 / 5%);
+  }
+
+  &:active {
+    --_button-background: rgb(31 31 31 / 16%);
+  }
+}
+
 .button--secondary {
   --_button-border: 1px solid var(--text-secondary);
   --_button-color: var(--background-bg-dark);
