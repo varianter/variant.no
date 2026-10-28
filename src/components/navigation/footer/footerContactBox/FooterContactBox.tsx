@@ -1,5 +1,6 @@
 import { FooterIllustration } from "src/components/navigation/footer/footerIllustration/FooterIllustration";
 import ContactBox from "src/components/sections/contact-box/ContactBox";
+import { getDraftModeInfo } from "src/utils/draftmode";
 import { ColorPalette, ContactBoxSection } from "studio/lib/interfaces/pages";
 import { FOOTER_COLOR_QUERY } from "studio/lib/queries/siteSettings";
 import { loadStudioQuery } from "studio/lib/store";
@@ -22,10 +23,13 @@ export default async function FooterContactBox({
   section,
   hideBox = false,
 }: FooterContactBoxProps) {
+  const { perspective } = await getDraftModeInfo();
   const palette = (
-    await loadStudioQuery<ColorPalette[] | null>(FOOTER_COLOR_QUERY, {
-      language,
-    })
+    await loadStudioQuery<ColorPalette[] | null>(
+      FOOTER_COLOR_QUERY,
+      { language },
+      { perspective },
+    )
   ).data;
   const pathname = `/${path.join("/")}`;
   const color =
