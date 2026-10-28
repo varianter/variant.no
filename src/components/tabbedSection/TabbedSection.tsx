@@ -90,6 +90,13 @@ export default function TabbedSection({
       listRef.current?.querySelectorAll<HTMLButtonElement>('[role="tab"]') ??
         [],
     );
+    // Follow the visual order: when wrapped, the lead tab comes first
+    if (wrapped) {
+      const lead = buttons.findIndex(
+        (button) => button.id === `${baseId}-tab-${leadId}`,
+      );
+      if (lead > 0) buttons.unshift(...buttons.splice(lead, 1));
+    }
     const current = buttons.indexOf(
       document.activeElement as HTMLButtonElement,
     );
@@ -292,7 +299,13 @@ export default function TabbedSection({
                     id={`${baseId}-tab-${tab.id}`}
                     aria-selected={active}
                     aria-controls={`${baseId}-panel`}
-                    tabIndex={active ? 0 : -1}
+                    // Without a selected tab the first one takes focus, so
+                    // the tab list stays reachable by keyboard
+                    tabIndex={
+                      active || (!hasActiveTab && tab.id === tabs[0].id)
+                        ? 0
+                        : -1
+                    }
                     aria-label={shortLabel ? tab.label : undefined}
                     className={styles.tab}
                     onClick={() => select(tab.id)}

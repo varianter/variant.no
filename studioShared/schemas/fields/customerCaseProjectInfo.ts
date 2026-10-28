@@ -17,13 +17,6 @@ export const customerCaseProjectInfo = defineField({
       type: "string",
     }),
     defineField({
-      name: "customerLogo",
-      title: "Customer logo",
-      description:
-        "Logo of the customer, shown in the case highlight on the frontpage. Use a single-color SVG or transparent PNG, ideally in white.",
-      type: "image",
-    }),
-    defineField({
       name: "customerSectors",
       description:
         "The sector or industry the customer belongs to for this project. You can add multiple sectors, such as such as public transport and public sector.",

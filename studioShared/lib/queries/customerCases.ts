@@ -131,7 +131,6 @@ export const CUSTOMER_CASE_ENTRY_QUERY = groq`
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
       customer,
-      "customerLogo": customerLogo { asset, "metadata": asset -> metadata { lqip } },
       "deliveries": {
         "design": deliveries.design[] {
           _key,
@@ -155,7 +154,6 @@ export const FRONTPAGE_FEATURED_CASES_QUERY = groq`
     ${CUSTOMER_CASE_BASE_FRAGMENT},
     "projectInfo": projectInfo {
       customer,
-      "customerLogo": customerLogo { asset, "metadata": asset -> metadata { lqip } },
       "deliveries": {
         "design": deliveries.design[] {
           _key,
