@@ -8,6 +8,7 @@ import {
   useCallback,
   useEffect,
   useId,
+  useLayoutEffect,
   useRef,
   useState,
 } from "react";
@@ -23,7 +24,12 @@ import {
 
 export type { TabbedSectionBackground } from "./tabbedSectionBackground";
 
-export type TabbedSectionTab = { id: string; label: string };
+export type TabbedSectionTab = {
+  id: string;
+  label: string;
+  /** Shown instead of `label` when the tabs wrap, e.g. a city code */
+  shortLabel?: string;
+};
 
 interface TabbedSectionProps {
   /** Accessible name for the tab list */
@@ -68,6 +74,9 @@ export default function TabbedSection({
   const panelRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const [wrapped, setWrapped] = useState(false);
+  // When the tabs wrap, this tab comes first: bottom left, next to the section
+  const [leadId, setLeadId] = useState(activeId);
+  const fullWidth = useRef(0);
   const busy = useRef(true);
   const busyTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
@@ -122,17 +131,61 @@ export default function TabbedSection({
   }, []);
 
   // Do the tabs fit in one row? Measured from widths, not positions, so the
-  // answer doesn't depend on the order the browser has laid them out in.
+  // answer doesn't depend on the order the browser has laid them out in. Only
+  // measured while the full labels show, so short labels can't flip it back.
   const updateWrapped = useCallback(() => {
     const list = listRef.current;
     if (!list) return;
-    const items = Array.from(list.children) as HTMLElement[];
-    const gap = parseFloat(getComputedStyle(list).columnGap) || 0;
-    const needed =
-      items.reduce((sum, item) => sum + item.offsetWidth, 0) +
-      gap * Math.max(0, items.length - 1);
-    setWrapped(needed > list.clientWidth + 1);
+    if (list.dataset.wrapped !== "true") {
+      const items = Array.from(list.children) as HTMLElement[];
+      const gap = parseFloat(getComputedStyle(list).columnGap) || 0;
+      fullWidth.current =
+        items.reduce((sum, item) => sum + item.offsetWidth, 0) +
+        gap * Math.max(0, items.length - 1);
+    }
+    setWrapped(fullWidth.current > list.clientWidth + 1);
   }, []);
+
+  // Wrapped tabs stack upwards from the row next to the section. Rows above it
+  // are right-aligned, so that row stays as full as it can.
+  const alignRows = useCallback(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const items = Array.from(list.children) as HTMLElement[];
+    items.forEach((item) => item.style.removeProperty("margin-inline-start"));
+    if (list.dataset.wrapped !== "true") return;
+    const bottom = Math.max(...items.map((item) => item.offsetTop));
+    const rowStarts = new Map<number, HTMLElement>();
+    for (const item of items) {
+      if (item.offsetTop === bottom) continue;
+      const start = rowStarts.get(item.offsetTop);
+      if (!start || item.offsetLeft < start.offsetLeft) {
+        rowStarts.set(item.offsetTop, item);
+      }
+    }
+    rowStarts.forEach((item) =>
+      item.style.setProperty("margin-inline-start", "auto"),
+    );
+  }, []);
+
+  const isOnBottomRow = useCallback((id: string) => {
+    const items = Array.from(listRef.current?.children ?? []) as HTMLElement[];
+    const item = items.find((el) => el.dataset.tabId === id);
+    if (!item) return true;
+    return item.offsetTop === Math.max(...items.map((el) => el.offsetTop));
+  }, []);
+
+  // A tab picked from a row above moves first, next to the section. Picking
+  // within the bottom row keeps every tab in place; the indicator slides.
+  const select = (id: string) => {
+    if (wrapped && !isOnBottomRow(id)) setLeadId(id);
+    onSelect(id);
+  };
+
+  // Same rule when the selection changes from outside, e.g. the URL
+  useLayoutEffect(() => {
+    if (wrapped && !isOnBottomRow(activeId)) setLeadId(activeId);
+  }, [wrapped, activeId, tabKey, isOnBottomRow]);
 
   const keepUpdating = useCallback((ms: number) => {
     busy.current = true;
@@ -148,6 +201,7 @@ export default function TabbedSection({
     keepUpdating(600);
     const observer = new ResizeObserver(() => {
       updateWrapped();
+      alignRows();
       updateRadii();
     });
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -157,7 +211,12 @@ export default function TabbedSection({
       observer.disconnect();
       clearTimeout(busyTimeout.current);
     };
-  }, [activeId, tabKey, keepUpdating, updateRadii, updateWrapped]);
+  }, [activeId, tabKey, keepUpdating, updateRadii, updateWrapped, alignRows]);
+
+  useLayoutEffect(() => {
+    alignRows();
+    keepUpdating(600);
+  }, [wrapped, activeId, tabKey, alignRows, keepUpdating]);
 
   return (
     <div className={styles.root}>
@@ -188,6 +247,7 @@ export default function TabbedSection({
           >
             {tabs.map((tab) => {
               const active = tab.id === activeId;
+              const shortLabel = wrapped ? tab.shortLabel : undefined;
               return (
                 <li
                   key={tab.id}
@@ -196,7 +256,11 @@ export default function TabbedSection({
                     styles.item,
                     active ? styles.itemActive : undefined,
                   )}
+                  style={
+                    wrapped && tab.id === leadId ? { order: -1 } : undefined
+                  }
                   data-active={active}
+                  data-tab-id={tab.id}
                 >
                   {active && (
                     <>
@@ -229,11 +293,12 @@ export default function TabbedSection({
                     aria-selected={active}
                     aria-controls={`${baseId}-panel`}
                     tabIndex={active ? 0 : -1}
+                    aria-label={shortLabel ? tab.label : undefined}
                     className={styles.tab}
-                    onClick={() => onSelect(tab.id)}
+                    onClick={() => select(tab.id)}
                   >
                     <Text type="titleXS" as="span" color="dark">
-                      {tab.label}
+                      {shortLabel ?? tab.label}
                     </Text>
                   </button>
                 </li>

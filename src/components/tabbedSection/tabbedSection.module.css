@@ -64,6 +64,8 @@
 
 /* Tab group */
 .tabList {
+  --_tab-height: 48px;
+
   grid-area: tabs;
   align-self: end; /* always flush with the section, whatever the action's height */
   display: flex;
@@ -73,6 +75,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  /* Mobile: the M button size (padding 6px 8px, 1rem text, see LinkButton) */
+  @container (width < 500px) {
+    --_tab-height: 36px;
+    --_tab-padding: 6px 8px;
+  }
 }
 
 .item {
@@ -84,10 +92,10 @@
   padding-bottom: 12px; /* gap between the tabs and the section, and between rows */
 }
 
-/* When the tabs wrap, the selected tab takes the last row, next to the section.
-   The others wrap above it. */
-.tabList[data-wrapped="true"] .itemActive {
-  order: 1;
+/* When the tabs wrap, rows stack upwards from the section. TabbedSection.tsx
+   puts the lead tab first (bottom left) and right-aligns the rows above. */
+.tabList[data-wrapped="true"] {
+  flex-wrap: wrap-reverse;
 }
 
 /* Tab button. Same type size in every state, so switching never reflows text.
@@ -98,8 +106,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
-  padding: 10px 12px;
+  height: var(--_tab-height);
+  padding: var(--_tab-padding, 10px 12px);
   border: 1px solid var(--background-button-outline-dark);
   border-radius: var(--radius-small);
   background: var(--background-bg-light-primary);
@@ -109,6 +117,13 @@
   /* The Text component sets its own colour class; take the button's instead */
   & > span {
     color: inherit;
+  }
+
+  /* Mobile: M button text size */
+  @container (width < 500px) {
+    & > span {
+      font-size: 1rem;
+    }
   }
 
   cursor: inherit;
@@ -155,7 +170,7 @@
    overflowing sideways */
 .tabList[data-wrapped="true"] .tab {
   height: auto;
-  min-height: 48px;
+  min-height: var(--_tab-height);
   white-space: normal;
   overflow-wrap: anywhere;
 }

@@ -12,7 +12,21 @@ export interface LocationOption {
   count: number;
 }
 
-/** "All (allCount)" followed by one "label (count)" tab per location. */
+/** City codes shown instead of the city name when the tabs wrap */
+const CITY_CODES: Record<string, string> = {
+  oslo: "OSL",
+  bergen: "BGO",
+  trondheim: "TRD",
+  stavanger: "SVG",
+  stockholm: "STO",
+  göteborg: "GOT",
+  linköping: "LPI",
+};
+
+/**
+ * "All (allCount)" followed by one "label (count)" tab per location. When the
+ * tabs wrap they drop the counts, and known cities show their city code.
+ */
 export function buildLocationTabs({
   allLabel,
   allCount,
@@ -23,10 +37,16 @@ export function buildLocationTabs({
   locations: LocationOption[];
 }): TabbedSectionTab[] {
   return [
-    { id: ALL_LOCATIONS, label: `${allLabel} (${allCount})` },
+    {
+      id: ALL_LOCATIONS,
+      label: `${allLabel} (${allCount})`,
+      shortLabel: allLabel,
+    },
     ...locations.map((location) => ({
       id: location.id,
       label: `${location.label} (${location.count})`,
+      shortLabel:
+        CITY_CODES[location.label.trim().toLowerCase()] ?? location.label,
     })),
   ];
 }
