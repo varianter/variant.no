@@ -9,7 +9,6 @@ import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
 import TabbedSection from "src/components/tabbedSection/TabbedSection";
 import Text from "src/components/text/Text";
-import { IImage } from "studio/lib/interfaces/media";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
 import styles from "./customerCasesEntry.module.css";
@@ -74,8 +73,6 @@ const CustomerCaseList = ({
             <Link className={styles.link} href={caseHref}>
               <CardInfo
                 title={selectedCustomerCase.basicTitle}
-                customer={selectedCustomerCase.projectInfo.customer}
-                logo={selectedCustomerCase.projectInfo.customerLogo}
                 deliveryNames={deliveryNames}
               />
             </Link>
@@ -99,37 +96,20 @@ export default CustomerCaseList;
 
 function CardInfo({
   title,
-  customer,
-  logo,
   deliveryNames,
 }: {
   title: string;
-  customer: string;
-  logo?: IImage;
   deliveryNames: string[];
 }) {
   const t = useTranslations("customer_case");
 
   return (
     <div className={styles.cardInfo}>
-      <div className={styles.logo}>
-        {logo ? (
-          <SanityImage
-            image={{ ...logo, alt: customer }}
-            objectFit="none"
-            isShared
-          />
-        ) : (
-          <Text type="titleXS" as="span" color="light">
-            {customer}
-          </Text>
-        )}
-      </div>
-      <FitText className={styles.title} as="h2">
+      <FitText className={styles.title} as="h3">
         {title}
       </FitText>
       {deliveryNames.length > 0 && (
-        <Text type="titleXS" as="span" color="light">
+        <Text type="label" as="span" color="light">
           {`【${deliveryNames.map((name) => t(name)).join(" · ")}】`}
         </Text>
       )}

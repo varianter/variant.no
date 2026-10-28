@@ -18,23 +18,6 @@
   height: 26rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 2.5rem;
-  flex: none;
-}
-
-.logo img {
-  display: block;
-  width: auto;
-  max-width: 12rem;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
-}
-
 .imageWrapper {
   position: relative;
   flex: none;
@@ -92,12 +75,13 @@
   overflow: hidden;
 }
 
-/* Room for exactly three lines of the h2; FitText scales within it. */
+/* Room for exactly three lines of the h3; FitText scales within it. On
+   desktop it caps at the h3 size (Text titleM, max 2rem). */
 .cardInfo .title {
-  --fit-max: 72;
+  --fit-max: 2rem;
 
   flex: none;
-  height: calc(var(--fit-max) * 3.15 * 1px);
+  height: calc(var(--fit-max) * 3.15);
   color: var(--text-primary-light);
 }
 
@@ -119,19 +103,36 @@
   }
 
   .cardInfo .title {
-    --fit-max: 48;
+    --fit-max: 48px;
   }
 }
 
 @container customer-case-container (width < 500px) {
+  /* Mobile: the image comes first, above the text */
+  .imageWrapper {
+    order: -1;
+  }
+
+  /* No gap: the text sits right under the image */
+  .content {
+    gap: 0;
+  }
+
+  /* The text hugs its content: three title lines, the tags, 16px above and
+     below */
   .info {
     height: auto;
-    min-height: 15rem;
-    padding: 1rem 0.25rem 0.25rem 0.5rem;
+    padding: 1rem 0.25rem 1rem 0.5rem;
+  }
+
+  .cardInfo {
+    justify-content: flex-start;
+    gap: 0.75rem;
+    height: auto;
   }
 
   .cardInfo .title {
-    --fit-max: 32;
+    --fit-max: 32px;
   }
 }
 

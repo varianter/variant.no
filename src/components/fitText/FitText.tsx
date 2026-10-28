@@ -56,12 +56,12 @@ export default function FitText({
       // Measure unclamped: the line clamp must not affect fits().
       box.removeAttribute("data-at-min");
       text.style.removeProperty("--fit-lines");
-      // The cap can come from CSS (--fit-max, in px) so it follows breakpoints.
-      const cssMax = parseFloat(
-        getComputedStyle(box).getPropertyValue("--fit-max"),
-      );
+      // The cap can come from CSS (--fit-max, any length) so it follows
+      // breakpoints and type tokens. Resolved to px through the font size.
+      text.style.fontSize = "var(--fit-max, 160px)";
+      const cssMax = parseFloat(getComputedStyle(text).fontSize);
       let low = minSize;
-      let high = maxSize ?? (Number.isFinite(cssMax) ? cssMax : 160);
+      let high = maxSize ?? cssMax;
       while (high - low > 0.5) {
         const mid = (low + high) / 2;
         if (fits(mid)) low = mid;
