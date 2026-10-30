@@ -1,9 +1,0 @@
-{
-  "output": "CHANGELOG.md",
-  "template": "changelog-template.hbs",
-  "unreleased": false,
-  "commitLimit": false,
-  "startingVersion": "v3.0.0",
-  "package": true,
-  "releaseLimit": 4
-}
