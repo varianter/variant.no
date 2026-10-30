@@ -1,0 +1,248 @@
+/* Container for the layout breakpoints, so they follow the space the section
+   gets rather than the viewport */
+.root {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.section {
+  --_bg: var(--background-bg-dark);
+  --_fg: var(--text-primary-light);
+  --_radius: 10px;
+  --_radius-left: 0;
+  --_p-left: 0;
+  --_cutout: 8px;
+  --_ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "tabs action"
+    "panel panel";
+  column-gap: 12px;
+  width: 100%;
+
+  /* Not enough room for the action next to the tabs: it moves below the section */
+  @container (width < 700px) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "tabs"
+      "panel"
+      "action";
+  }
+}
+
+.section--dark {
+  --_bg: var(--background-bg-dark);
+  --_fg: var(--text-primary-light);
+}
+
+.section--violet {
+  --_bg: var(--Violet-700);
+  --_fg: var(--text-primary-light);
+}
+
+.section--blue {
+  --_bg: var(--Blue-500);
+  --_fg: var(--text-primary-light);
+}
+
+.section--light {
+  --_bg: var(--background-bg-light-secondary);
+  --_fg: var(--text-primary);
+}
+
+.section--transparent {
+  --_bg: transparent;
+  --_fg: var(--text-primary);
+}
+
+/* Without tabs the section is a plain box with all corners rounded */
+.section--noTabs {
+  --_radius-left: var(--_radius);
+}
+
+/* Tab group */
+.tabList {
+  --_tab-height: 48px;
+
+  grid-area: tabs;
+  align-self: end; /* always flush with the section, whatever the action's height */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 12px; /* the row gap comes from each item's bottom padding */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* Mobile: the M button size (padding 6px 8px, 1rem text, see LinkButton) */
+  @container (width < 500px) {
+    --_tab-height: 36px;
+    --_tab-padding: 6px 8px;
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  max-width: 100%;
+  align-items: flex-start;
+  padding-bottom: 12px; /* gap between the tabs and the section, and between rows */
+}
+
+/* When the tabs wrap, rows stack upwards from the section. TabbedSection.tsx
+   puts the lead tab first (bottom left) and right-aligns the rows above. */
+.tabList[data-wrapped="true"] {
+  flex-wrap: wrap-reverse;
+}
+
+/* Tab button. Same type size in every state, so switching never reflows text.
+   The label is a Text titleXS span (see TabbedSection.tsx). */
+.tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--_tab-height);
+  padding: var(--_tab-padding, 10px 12px);
+  border: 1px solid var(--background-button-outline-dark);
+  border-radius: var(--radius-small);
+  background: var(--background-bg-light-primary);
+  color: var(--text-primary);
+  white-space: nowrap;
+
+  /* The Text component sets its own colour class; take the button's instead */
+  & > span {
+    color: inherit;
+  }
+
+  /* Mobile: M button text size */
+  @container (width < 500px) {
+    & > span {
+      font-size: 1rem;
+    }
+  }
+
+  cursor: inherit;
+  transition:
+    color 200ms var(--_ease-out),
+    background-color 200ms var(--_ease-out),
+    border-color 200ms var(--_ease-out),
+    border-radius 150ms var(--_ease-out),
+    transform 160ms var(--_ease-out);
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:focus-visible {
+    border-radius: var(--radius-medium);
+    outline: 2px solid var(--surface-yellow);
+    outline-offset: 1px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-radius: var(--radius-medium);
+      background: var(--background-bg-light-secondary);
+    }
+  }
+}
+
+/* Selected tab: same box, padding and text position as the other tabs. The
+   button turns transparent and the shared indicator shows through; it also
+   covers the 12px gap below the button, which connects the tab to the section.
+   The indicator slides between tabs (see TabbedSection.tsx). */
+.itemActive .tab {
+  border-color: transparent;
+  background: transparent;
+  color: var(--_fg);
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+/* When the tabs wrap, a label wider than the list wraps instead of
+   overflowing sideways */
+.tabList[data-wrapped="true"] .tab {
+  height: auto;
+  min-height: var(--_tab-height);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.indicator {
+  position: absolute;
+  inset: 0;
+  border-top-left-radius: var(--_radius);
+  border-top-right-radius: var(--_radius);
+  background: var(--_bg);
+  pointer-events: none;
+}
+
+/* Concave corners where the selected tab meets the section */
+.cutout {
+  position: absolute;
+  bottom: 0;
+  width: var(--_cutout);
+  height: var(--_cutout);
+  pointer-events: none;
+
+  & i {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cutoutLeft {
+  left: calc(var(--_cutout) * -1);
+
+  /* Straightens out when the tab reaches the left edge */
+  & i {
+    transform: scale(var(--_p-left));
+    transform-origin: 100% 100%;
+    background: radial-gradient(
+      circle at 0 0,
+      transparent var(--_cutout),
+      var(--_bg) var(--_cutout)
+    );
+  }
+}
+
+.cutoutRight {
+  right: calc(var(--_cutout) * -1);
+
+  & i {
+    background: radial-gradient(
+      circle at 100% 0,
+      transparent var(--_cutout),
+      var(--_bg) var(--_cutout)
+    );
+  }
+}
+
+/* Primary action */
+.action {
+  grid-area: action;
+  display: flex;
+  align-items: flex-start; /* top-aligned with the tab buttons */
+  align-self: start;
+
+  @container (width < 700px) {
+    padding-top: 12px;
+  }
+}
+
+.panel {
+  grid-area: panel;
+  padding: 0.375rem;
+  border-radius: var(--_radius-left) var(--_radius) var(--_radius)
+    var(--_radius);
+  background: var(--_bg);
+  color: var(--_fg);
+}

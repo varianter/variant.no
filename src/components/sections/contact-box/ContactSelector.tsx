@@ -1,10 +1,11 @@
 "use client";
 
-import { use } from "react";
+import { useTranslations } from "next-intl";
+import { use, useState } from "react";
 
 import EmployeeCard from "src/components/employeeCard/EmployeeCard";
-import { Tag } from "src/components/tag";
-import useTabs from "src/utils/hooks/useTabs";
+import TabbedSection from "src/components/tabbedSection/TabbedSection";
+import Text from "src/components/text/Text";
 
 import styles from "./contact-box.module.css";
 import { EmployeeAndMetadata } from "./types";
@@ -13,7 +14,9 @@ export type ContactSelectorProps = {
   contactPoints: Promise<EmployeeAndMetadata[]>;
   employeesPageSlug: string;
   language: string;
-  background?: "dark" | "light";
+  background?: "dark" | "light" | "transparent";
+  title: string;
+  subtitle?: string;
 };
 
 export default function ContactSelector({
@@ -21,51 +24,47 @@ export default function ContactSelector({
   employeesPageSlug,
   language,
   background = "dark",
+  title,
+  subtitle,
 }: ContactSelectorProps) {
+  const t = useTranslations("contact_information");
   const contactPoints = use(contactPointsPromise);
-  const { tabListRef, selectedTabIndex } = useTabs();
+  const [selectedSlug, setSelectedSlug] = useState(contactPoints[0]?.tagSlug);
 
-  if (!contactPoints.length) {
-    return null;
-  }
+  const selected =
+    contactPoints.find(
+      (contactPoint) => contactPoint.tagSlug === selectedSlug,
+    ) ?? contactPoints[0];
 
   return (
-    <div className={styles.contactSelector}>
-      <div className={styles.tagList} role="tablist" ref={tabListRef}>
-        {contactPoints.map((contactPoint, index) => (
-          <Tag
-            type="button"
-            role="tab"
-            background={background}
-            aria-selected={selectedTabIndex === index}
-            aria-controls={`panel-${contactPoint.tagSlug}`}
-            id={`tab-${contactPoint.tagSlug}`}
-            active={selectedTabIndex === index}
-            text={contactPoint.tag}
-            tabIndex={selectedTabIndex === index ? 0 : -1}
-            key={contactPoint.tagSlug}
-          />
-        ))}
-      </div>
-      <div className={styles.employeeCard}>
-        {contactPoints.map((contactPoint, index) => (
-          <div
-            key={contactPoint.tagSlug}
-            role="tabpanel"
-            id={`panel-${contactPoint.tagSlug}`}
-            aria-labelledby={`tab-${contactPoint.tagSlug}`}
-            hidden={selectedTabIndex !== index}
-            tabIndex={selectedTabIndex === index ? 0 : -1}
-          >
+    <TabbedSection
+      label={t("contact_point")}
+      tabs={contactPoints.map((contactPoint) => ({
+        id: contactPoint.tagSlug,
+        label: contactPoint.tag,
+      }))}
+      activeId={selected?.tagSlug ?? ""}
+      onSelect={setSelectedSlug}
+      background={background}
+    >
+      <div className={styles.contactGrid}>
+        <div className={styles.textContent}>
+          <Text type="titleM" as="h2">
+            {title}
+          </Text>
+          {subtitle && <Text type="lead">{subtitle}</Text>}
+        </div>
+        {selected && (
+          <div className={styles.contactSelectorWrapper}>
             <EmployeeCard
-              employee={contactPoint.employee}
+              employee={selected.employee}
               employeePageSlug={employeesPageSlug}
               language={language}
-              overrideTitle={contactPoint.overrideTitle}
+              overrideTitle={selected.overrideTitle}
             />
           </div>
-        ))}
+        )}
       </div>
-    </div>
+    </TabbedSection>
   );
 }

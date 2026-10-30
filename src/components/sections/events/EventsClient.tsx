@@ -4,7 +4,11 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import LinkButton from "src/components/linkButton/LinkButton";
-import OfficeSelector from "src/components/officeSelector/OfficeSelector";
+import {
+  ALL_LOCATIONS,
+  buildLocationTabs,
+} from "src/components/tabbedSection/locationTabs";
+import TabbedSection from "src/components/tabbedSection/TabbedSection";
 import Text from "src/components/text/Text";
 import { IEventPosting } from "studio/lib/interfaces/eventPosting";
 import { EventsSection } from "studio/lib/interfaces/pages";
@@ -16,6 +20,8 @@ interface EventsClientProps {
   section: EventsSection;
   eventPostings: IEventPosting[];
   language: string;
+  /** Editor-chosen section color; the default blue is used when missing */
+  backgroundColor?: string;
   textColor: string;
 }
 
@@ -23,10 +29,12 @@ export default function EventsClient({
   section,
   eventPostings,
   language,
+  backgroundColor,
   textColor,
 }: EventsClientProps) {
   const [locationFilter, setLocationFilter] = useState<string | null>(null);
   const t = useTranslations("event_section");
+  const tOffice = useTranslations("office_selector");
 
   const today = new Date();
   const yesterday = new Date(today.setDate(today.getDate() - 1));
@@ -72,48 +80,67 @@ export default function EventsClient({
     return dateA - dateB;
   });
 
+  const sortedLocations = [...allLocations].sort((a, b) => a.localeCompare(b));
+
+  const tabs =
+    section.hideLocationFilters === true
+      ? []
+      : buildLocationTabs({
+          allLabel: tOffice("all"),
+          allCount: activeEventPostings.length,
+          locations: sortedLocations
+            .filter((location) => eventPostingsPerLocation[location] > 0)
+            .map((location) => ({
+              id: location,
+              label: location,
+              count: eventPostingsPerLocation[location],
+            })),
+        });
+
   return (
-    <>
-      <div className={styles.titleSection}>
-        <Text type={"titleL"} color="light">
-          {section.basicTitle}
-        </Text>
-        <div className={styles.introText}>
-          <Text type={"normal"} color="light">
-            {section.subtitle}
+    <TabbedSection
+      label={tOffice("location")}
+      tabs={tabs}
+      activeId={locationFilter ?? ALL_LOCATIONS}
+      onSelect={(id) => setLocationFilter(id === ALL_LOCATIONS ? null : id)}
+      background="blue"
+      customColors={
+        backgroundColor
+          ? { background: backgroundColor, text: textColor }
+          : undefined
+      }
+      action={
+        section.allEvents && (
+          <LinkButton
+            link={`/${language}/events`}
+            linkTitle={t("see_all_events")}
+            size="L"
+            type="primary"
+            background="dark"
+            withoutIcon
+          />
+        )
+      }
+    >
+      <div className={styles.content}>
+        <div className={styles.titleSection}>
+          <Text type={"titleL"} color="light">
+            {section.basicTitle}
           </Text>
+          <div className={styles.introText}>
+            <Text type={"normal"} color="light">
+              {section.subtitle}
+            </Text>
+          </div>
         </div>
 
-        {section.hideLocationFilters !== true && (
-          <OfficeSelector
-            locations={allLocations}
-            eventPostingsCount={activeEventPostings.length}
-            eventPostingsPerLocation={eventPostingsPerLocation}
-            onFilterChange={setLocationFilter}
-            textColor={textColor}
+        <div className={styles.eventsSection}>
+          <EventPostingList
+            eventPostings={limitedEventPostings}
+            language={language}
           />
-        )}
-
-        {section.allEvents && (
-          <div className={styles.allEventsButton}>
-            <LinkButton
-              link={`/${language}/events`}
-              linkTitle={t("see_all_events")}
-              size="L"
-              type="primary"
-              background="dark"
-              withoutIcon
-            />
-          </div>
-        )}
+        </div>
       </div>
-
-      <div className={styles.eventsSection}>
-        <EventPostingList
-          eventPostings={limitedEventPostings}
-          language={language}
-        />
-      </div>
-    </>
+    </TabbedSection>
   );
 }

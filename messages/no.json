@@ -31,7 +31,8 @@
   "contact_information": {
     "help": "Trenger du hjelp med lignende eller noe helt annet?",
     "contact_sale": "Kontakt salg!",
-    "contact_us": "Kontakt oss"
+    "contact_us": "Kontakt oss",
+    "contact_point": "Kontaktpunkt"
   },
   "compensation": {
     "calculator": {
@@ -85,11 +86,14 @@
     "Strategi": "Strategi",
     "field": "Fag",
     "showMore": "Vis alle",
-    "see_all_employees": "Se alle folk"
+    "see_all_employees": "Se alle folk",
+    "all_cities": "Alle byer",
+    "variants_in": "Varianter i {location}"
   },
   "job_posting": {
     "office": "Kontor",
-    "all": "Alle"
+    "all": "Alle byer",
+    "see_sweden": "Se stillinger i Sverige"
   },
   "event_section": {
     "see_all_events": "Se alle arrangementer",
@@ -104,7 +108,7 @@
   },
   "office_selector": {
     "location": "Lokasjon",
-    "all": "Alle"
+    "all": "Alle byer"
   },
   "footer": {
     "text": "Vi har flere kontorer i Norge og Sverige. Kom gjerne innom for en kopp kaffe eller bare en hyggelig prat.",

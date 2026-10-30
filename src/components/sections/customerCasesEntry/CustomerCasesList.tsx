@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
-import DotSeparator from "src/components/dotSeparator/dotSeparator";
+import FitText from "src/components/fitText/FitText";
 import { SanityImage } from "src/components/image/SanityImage";
 import LinkButton from "src/components/linkButton/LinkButton";
-import { Tag } from "src/components/tag";
+import TabbedSection from "src/components/tabbedSection/TabbedSection";
 import Text from "src/components/text/Text";
 import { CustomerCaseEntry } from "studioShared/lib/interfaces/customerCases";
 
@@ -19,49 +19,68 @@ interface CustomerCasesProps {
   customerCasePageSlug?: string;
 }
 
+const MAX_VISIBLE_CASES = 4;
+
 const CustomerCaseList = ({
   customerCases,
   language,
   customerCasePageSlug,
 }: CustomerCasesProps) => {
-  const [selectedCustomerCase, setSelectedCustomerCase] =
-    useState<CustomerCaseEntry>(customerCases[0]);
+  const t = useTranslations("customer_case");
+  const [selectedId, setSelectedId] = useState<string>(customerCases[0]?._id);
+
+  const visibleCases = customerCases.slice(0, MAX_VISIBLE_CASES);
+  const selectedCustomerCase =
+    customerCases.find((customerCase) => customerCase._id === selectedId) ??
+    customerCases[0];
+
+  if (!selectedCustomerCase) {
+    return null;
+  }
 
   const deliveryNames = [
-    selectedCustomerCase?.projectInfo.deliveries.projectManagement &&
+    selectedCustomerCase.projectInfo.deliveries.design && "design",
+    selectedCustomerCase.projectInfo.deliveries.projectManagement &&
       "project_management",
-    selectedCustomerCase?.projectInfo.deliveries.design && "design",
-    selectedCustomerCase?.projectInfo.deliveries.development && "development",
-  ].filter(Boolean);
+    selectedCustomerCase.projectInfo.deliveries.development && "development",
+  ].filter((name): name is string => Boolean(name));
+
+  const caseHref = `/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`;
 
   return (
-    selectedCustomerCase && (
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
+    <div className={styles.container}>
+      <TabbedSection
+        label={t("customer_case_entry.case")}
+        tabs={visibleCases.map((customerCase) => ({
+          id: customerCase._id,
+          label: customerCase.projectInfo.customer,
+        }))}
+        activeId={selectedCustomerCase._id}
+        onSelect={setSelectedId}
+        background="dark"
+        action={
+          customerCasePageSlug && (
+            <LinkButton
+              link={`/${language}/${customerCasePageSlug}`}
+              linkTitle={t("showAll")}
+              size="L"
+            />
+          )
+        }
+      >
+        <div className={styles.content}>
           <div className={styles.info}>
-            <div className={styles.infoInnerMaxWidth}>
-              <TagRow
-                customerCases={customerCases}
-                selectedCustomerCase={selectedCustomerCase}
-                setSelectedCustomerCase={setSelectedCustomerCase}
-                customerCasePageSlug={customerCasePageSlug}
-                language={language}
+            <Link className={styles.link} href={caseHref}>
+              <CardInfo
+                title={selectedCustomerCase.basicTitle}
+                deliveryNames={deliveryNames}
               />
-              <Link
-                className={styles.link}
-                href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
-              >
-                <CardInfo
-                  selectedCustomerCase={selectedCustomerCase}
-                  deliveryNames={deliveryNames}
-                />
-              </Link>
-            </div>
+            </Link>
           </div>
           <Link
             tabIndex={-1}
             className={styles.imageWrapper}
-            href={`/${language}/${customerCasePageSlug}/${selectedCustomerCase.slug}`}
+            href={caseHref}
             title={selectedCustomerCase.basicTitle}
           >
             {selectedCustomerCase.image && (
@@ -69,90 +88,30 @@ const CustomerCaseList = ({
             )}
           </Link>
         </div>
-      </div>
-    )
+      </TabbedSection>
+    </div>
   );
 };
 export default CustomerCaseList;
 
 function CardInfo({
-  selectedCustomerCase,
+  title,
   deliveryNames,
 }: {
-  selectedCustomerCase: CustomerCaseEntry;
+  title: string;
   deliveryNames: string[];
 }) {
   const t = useTranslations("customer_case");
 
   return (
     <div className={styles.cardInfo}>
-      <Text type="titleL" as="h3" color="light">
-        {selectedCustomerCase.basicTitle}
-      </Text>
-      <div className={styles.deliveries}>
-        <Text type="label" color="light">
-          {t("customer_case_entry.field")}
+      <FitText className={styles.title} as="h3">
+        {title}
+      </FitText>
+      {deliveryNames.length > 0 && (
+        <Text type="label" as="span" color="light">
+          {`【${deliveryNames.map((name) => t(name)).join(" · ")}】`}
         </Text>
-        <div className={styles.deliveriesList}>
-          {deliveryNames.map((deliveryName, _key) => (
-            <Fragment key={_key}>
-              <Text key={_key} type="titleXS" as="span" color="light">
-                {t(deliveryName)}
-              </Text>
-              <DotSeparator />
-            </Fragment>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TagRow({
-  customerCases,
-  selectedCustomerCase,
-  setSelectedCustomerCase,
-  customerCasePageSlug,
-  language,
-}: {
-  customerCases: CustomerCaseEntry[];
-  selectedCustomerCase: CustomerCaseEntry;
-  setSelectedCustomerCase: (customerCase: CustomerCaseEntry) => void;
-  customerCasePageSlug?: string;
-  language: string;
-}) {
-  const t = useTranslations("customer_case");
-
-  const visibleCases = customerCases.slice(0, 3);
-
-  return (
-    <div>
-      <div className={styles.TagRow}>
-        <Text type="label" color="light">
-          {t("customer_case_entry.case")}
-        </Text>
-        {visibleCases.map((customerCase) => (
-          <div key={customerCase._id}>
-            <Tag
-              active={customerCase._id === selectedCustomerCase._id}
-              type="button"
-              background="dark"
-              onClick={() => setSelectedCustomerCase(customerCase)}
-              text={customerCase.projectInfo.customer}
-            />
-          </div>
-        ))}
-      </div>
-      {customerCases.length > 3 && (
-        <div className={styles.customerLink}>
-          <LinkButton
-            link={`/${language}/${customerCasePageSlug}`}
-            background="dark"
-            type="primary"
-            size="M"
-            linkTitle={t("showAll")}
-          />
-        </div>
       )}
     </div>
   );

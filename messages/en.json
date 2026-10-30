@@ -31,7 +31,8 @@
   "contact_information": {
     "help": "Curious about Variant and want to explore what we offer?",
     "contact_sale": "Contact sales!",
-    "contact_us": "Contact us"
+    "contact_us": "Contact us",
+    "contact_point": "Contact"
   },
   "custom_link": {
     "visit_cv": "Visit mini-CV",
@@ -86,11 +87,14 @@
     "Strategi": "Strategy",
     "field": "Field",
     "showMore": "Show all",
-    "see_all_employees": "See all people"
+    "see_all_employees": "See all people",
+    "all_cities": "All cities",
+    "variants_in": "Variants in {location}"
   },
   "job_posting": {
     "office": "Office",
-    "all": "All"
+    "all": "All cities",
+    "see_sweden": "See jobs in Sweden"
   },
   "event_section": {
     "see_all_events": "See all events",
@@ -105,7 +109,7 @@
   },
   "office_selector": {
     "location": "Location",
-    "all": "All"
+    "all": "All cities"
   },
   "footer": {
     "text": "We have multiple offices in Norway and Sweden. Feel free to drop by for a cup of coffee or just a friendly chat.",

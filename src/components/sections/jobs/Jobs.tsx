@@ -1,4 +1,3 @@
-import Text from "src/components/text/Text";
 import { CompanyLocation } from "studio/lib/interfaces/companyDetails";
 import { IJobPostings } from "studio/lib/interfaces/jobPosting";
 import { JobsSection } from "studio/lib/interfaces/pages";
@@ -33,17 +32,11 @@ export default async function Jobs({ language, section }: JobsProps) {
     jobPostings &&
     companyLocations && (
       <div className={styles.wrapper}>
-        <div className={styles.titleSection}>
-          <Text type={"titleL"} color="light">
-            {section.basicTitle}
-          </Text>
-          <Text type={"normal"} color="light">
-            {section.subtitle}
-          </Text>
-        </div>
         <JobPostingList
           jobPostings={jobPostings.jobPostingsArray}
           companyLocations={companyLocations}
+          title={section.basicTitle}
+          subtitle={section.subtitle}
         />
       </div>
     )

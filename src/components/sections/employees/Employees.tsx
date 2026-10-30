@@ -33,17 +33,23 @@ export default async function Employees({ language, section }: EmployeesProps) {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.employees}>
-        <Text type="titleXL">{section.basicTitle}</Text>
-
-        <Suspense fallback={<EmployeeListSkeleton />}>
-          <EmployeeList
-            employees={employees}
-            employeesPageSlug={employeesPageSlug}
-            language={language}
-          />
-        </Suspense>
-      </div>
+      <Suspense
+        fallback={
+          <div className={styles.fallback}>
+            <div className={styles.employees}>
+              <Text type="titleXL">{section.basicTitle}</Text>
+              <EmployeeListSkeleton />
+            </div>
+          </div>
+        }
+      >
+        <EmployeeList
+          employees={employees}
+          employeesPageSlug={employeesPageSlug}
+          language={language}
+          title={section.basicTitle}
+        />
+      </Suspense>
     </div>
   );
 }
