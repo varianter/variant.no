@@ -11,8 +11,7 @@
     "lint:css": "stylelint \"**/*.css\" --fix",
     "format": "prettier . --write",
     "fix": "run-s lint format",
-    "prepare": "husky",
-    "changelog": "auto-changelog"
+    "prepare": "husky"
   },
   "dependencies": {
     "@sanity/document-internationalization": "^4.1.0",
@@ -22,7 +21,6 @@
     "@sanity/vision": "^4.12.0",
     "@visx/responsive": "^3.13.2-alpha.0",
     "@visx/shape": "^4.0.0-alpha.0",
-    "auto-changelog": "^2.5.0",
     "husky": "^9.1.7",
     "motion": "^12.23.24",
     "negotiator": "^1.0.0",
