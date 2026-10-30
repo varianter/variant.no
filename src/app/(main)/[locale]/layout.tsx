@@ -17,7 +17,6 @@ import {
 } from "studio/lib/interfaces/companyDetails";
 import { LegalDocument } from "studio/lib/interfaces/legalDocuments";
 import { Navigation } from "studio/lib/interfaces/navigation";
-import { ColorPalette } from "studio/lib/interfaces/pages";
 import { SocialMediaProfiles } from "studio/lib/interfaces/socialMedia";
 import {
   COMPANY_INFO_QUERY,
@@ -25,7 +24,6 @@ import {
   LEGAL_DOCUMENTS_BY_LANG_QUERY,
 } from "studio/lib/queries/admin";
 import {
-  FOOTER_COLOR_QUERY,
   NAV_QUERY,
   SOME_PROFILES_QUERY,
 } from "studio/lib/queries/siteSettings";
@@ -80,7 +78,6 @@ export default async function Layout(
     initialSoMe,
     initialLegal,
     initialCompanyLocations,
-    initialColorPalette,
   ] = await Promise.all([
     loadStudioQuery<Navigation>(
       NAV_QUERY,
@@ -103,11 +100,6 @@ export default async function Layout(
       {},
       { perspective },
     ),
-    loadStudioQuery<ColorPalette[] | null>(
-      FOOTER_COLOR_QUERY,
-      { language: params.locale },
-      { perspective },
-    ),
   ]);
 
   return (
@@ -123,7 +115,6 @@ export default async function Layout(
               companyInfo={initialCompanyInfo.data}
               companyLocations={initialCompanyLocations.data}
               soMeData={initialSoMe.data}
-              footerColorPalette={initialColorPalette.data}
             />
           </NextIntlClientProvider>
 

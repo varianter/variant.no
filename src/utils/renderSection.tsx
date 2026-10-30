@@ -3,7 +3,6 @@ import { QueryResponseInitial } from "@sanity/react-loader";
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import Blog from "src/components/sections/blog/Blog";
 import CompensationCalculator from "src/components/sections/compensation-calculator/CompensationCalculator";
-import ContactBox from "src/components/sections/contact-box/ContactBox";
 import CustomerCasesEntry from "src/components/sections/customerCasesEntry/CustomerCasesEntry";
 import EmployeeHighlight from "src/components/sections/employeeHighlight/EmployeeHighlight";
 import Employees from "src/components/sections/employees/Employees";
@@ -197,7 +196,8 @@ const SectionRenderer = ({
     case "punchLineBox":
       return <PunchLineBox section={section} />;
     case "contactBox":
-      return <ContactBox section={section} language={language} />;
+      // Rendered in the footer (see FooterContactBox)
+      return null;
     case "employees":
       return <Employees language={language} section={section} />;
     case "jobs":

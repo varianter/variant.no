@@ -80,7 +80,6 @@ export default function FooterPreview({
         companyLocations={newCompanyLocations}
         soMeData={newSoMedata}
         legalData={newLegal}
-        footerColorPalette={newFooterColorPalette}
       />
     )
   );

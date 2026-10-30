@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import InformationSection from "src/components/informationSection/InformationSection";
+import FooterContactBox from "src/components/navigation/footer/footerContactBox/FooterContactBox";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { getDraftModeInfo } from "src/utils/draftmode";
 import { fetchStudioQueryIfCache } from "src/utils/loadStudioQueryWithCache";
@@ -9,7 +10,7 @@ import SectionRenderer from "src/utils/renderSection";
 import { generateMetadataFromSeo } from "src/utils/seo";
 import { InternationalizedString } from "studio/lib/interfaces/global";
 import { LinkType } from "studio/lib/interfaces/navigation";
-import { PageBuilder } from "studio/lib/interfaces/pages";
+import { ContactBoxSection, PageBuilder } from "studio/lib/interfaces/pages";
 import { LanguageObject } from "studio/lib/interfaces/supportedLanguages";
 import {
   LANDING_PAGE_QUERY,
@@ -70,6 +71,12 @@ const Home = async (props: Props) => {
       value: "",
     })) ?? [];
 
+  // Contact boxes live in the footer; the landing page may bring its own
+  const pageContactBox =
+    initialLandingPage.data.sections.find(
+      (section): section is ContactBoxSection => section._type === "contactBox",
+    ) ?? null;
+
   return (
     <>
       <PageHeader
@@ -89,6 +96,11 @@ const Home = async (props: Props) => {
           />
         ))}
       </main>
+      <FooterContactBox
+        language={params.locale}
+        path={[]}
+        section={pageContactBox}
+      />
     </>
   );
 };

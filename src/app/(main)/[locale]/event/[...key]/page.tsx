@@ -5,6 +5,7 @@ import Badge from "src/components/badge/Badge";
 import EventInformation from "src/components/eventInformation/eventInformation";
 import EventRegistration from "src/components/hubspot/eventRegistration/eventRegistration";
 import { SanityImage } from "src/components/image/SanityImage";
+import FooterContactBox from "src/components/navigation/footer/footerContactBox/FooterContactBox";
 import PageHeader from "src/components/navigation/header/PageHeader";
 import { RichText } from "src/components/richText/RichText";
 import Events from "src/components/sections/events/Events";
@@ -172,6 +173,10 @@ export default async function EventPage(props: EventPageProps) {
       <Events
         language={params.locale}
         section={{ ...events, allEvents: true } as EventsSection}
+      />
+      <FooterContactBox
+        language={params.locale}
+        path={["event", ...params.key]}
       />
     </div>
   );
